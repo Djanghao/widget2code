@@ -9,9 +9,24 @@ Recommended pipeline: WidgetSpec → JSX → rendered result. Generated JSX is u
 npm install
 npm run build:icons
 cd playground
-npm run dev
+npm run dev:full
 ```
-Open http://localhost:5173 (by default) to access demo.
+This will start:
+- Frontend at http://localhost:5173
+- Backend at http://localhost:8000
+
+Backend requires Python environment setup (first time only):
+```bash
+cd playground/api
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Create `playground/api/.env` with:
+```
+ARK_API_KEY=your_volcengine_api_key
+```
 
 ## Minimal Usage
 ```js
