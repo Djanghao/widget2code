@@ -14,5 +14,13 @@ export default defineConfig({
       '@widget-factory/compiler': path.resolve(__dirname, '../packages/compiler/src'),
       '@widget-factory/icons': path.resolve(__dirname, '../packages/icons/src'),
     }
+  },
+  server: {
+    proxy: {
+      '^/api/(?!.*\\.md).*': {
+        target: 'http://localhost:8000',
+        changeOrigin: true
+      }
+    }
   }
 })

@@ -2,20 +2,19 @@ assets/
 docs/
 
 node_modules/
+venv/
 
-# OS junk
 .DS_Store
 
-# Build outputs
 dist/
 demo/dist/
 packages/icons/src/generated/
 packages/icons/src/components/
 
-# Logs
 npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
 
-# Vite cache
 .vite/
+
+.env

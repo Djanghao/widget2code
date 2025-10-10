@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "api": "cd api && python server.py",
+    "dev:full": "concurrently \"npm run dev\" \"npm run api\""
   },
   "dependencies": {
     "@widget-factory/primitives": "*",
@@ -12,10 +14,12 @@
     "@widget-factory/icons": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
     "react-syntax-highlighter": "^15.6.6"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
     "vite": "^5.0.0"
   }
 }

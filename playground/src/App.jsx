@@ -4,6 +4,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
 import TreeView from './TreeView.jsx';
 import Widget from './generated/Widget.jsx';
+import ImageToWidget from './ImageToWidget.jsx';
 import weatherSmallLight from './examples/weather-small-light.json';
 import weatherMediumDark from './examples/weather-medium-dark.json';
 import calendarSmallLight from './examples/calendar-small-light.json';
@@ -16,6 +17,7 @@ import photoMediumLight from './examples/photo-medium-light.json';
 import mapMediumDark from './examples/map-medium-dark.json';
 
 function App() {
+  const [activeTab, setActiveTab] = useState('presets');
   const [selectedExample, setSelectedExample] = useState('weatherSmallLight');
   const [editedSpec, setEditedSpec] = useState('');
   const [showComponentsModal, setShowComponentsModal] = useState(false);
@@ -31,6 +33,8 @@ function App() {
   const latestWriteTokenRef = useRef(0);
   const expectedSizeRef = useRef(null);
   const resizingRef = useRef(false);
+  const [ratioInput, setRatioInput] = useState('');
+  const [autoSizing, setAutoSizing] = useState(false);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
 
@@ -175,6 +179,182 @@ function App() {
     setEditedSpec(JSON.stringify(formatSpecWithRootLast(next), null, 2));
   };
 
+  const parseAspectRatio = (str) => {
+    if (!str) return null;
+    const s = String(str).trim();
+    if (!s) return null;
+    if (s.includes(':')) {
+      const [a, b] = s.split(':');
+      const na = parseFloat(a);
+      const nb = parseFloat(b);
+      if (!isFinite(na) || !isFinite(nb) || nb <= 0) return null;
+      return na / nb;
+    }
+    const v = parseFloat(s);
+    if (!isFinite(v) || v <= 0) return null;
+    return v;
+  };
+
+  const waitForFrameToSize = async (targetW, targetH, timeoutMs = 3000) => {
+    const start = Date.now();
+    for (;;) {
+      const node = widgetFrameRef.current;
+      if (!node) break;
+      const rect = node.getBoundingClientRect();
+      if (Math.round(rect.width) === Math.round(targetW) && Math.round(rect.height) === Math.round(targetH)) {
+        await new Promise((r) => requestAnimationFrame(r));
+        await new Promise((r) => requestAnimationFrame(r));
+        return true;
+      }
+      if (Date.now() - start > timeoutMs) return false;
+      await new Promise((r) => setTimeout(r, 16));
+    }
+    return false;
+  };
+
+  const measureOverflow = () => {
+    const frame = widgetFrameRef.current;
+    if (!frame) return { fits: false };
+    const root = frame.firstElementChild;
+    if (!root) return { fits: false };
+    const cw = root.clientWidth;
+    const ch = root.clientHeight;
+    const sw = root.scrollWidth;
+    const sh = root.scrollHeight;
+
+    // Base fit by scroll overflows
+    let fits = sw <= cw && sh <= ch;
+
+    // Treat root padding as a “protected zone”: descendants must not intersect it,
+    // and nothing may extend outside the root bounds either.
+    try {
+      const rootRect = root.getBoundingClientRect();
+      const cs = window.getComputedStyle(root);
+      const padL = parseFloat(cs.paddingLeft) || 0;
+      const padR = parseFloat(cs.paddingRight) || 0;
+      const padT = parseFloat(cs.paddingTop) || 0;
+      const padB = parseFloat(cs.paddingBottom) || 0;
+      const innerLeft = rootRect.left + padL;
+      const innerRight = rootRect.right - padR;
+      const innerTop = rootRect.top + padT;
+      const innerBottom = rootRect.bottom - padB;
+
+      // Allow tiny sub-pixel tolerance to avoid flapping due to rounding
+      const tol = 0.5;
+
+      let crossesPaddingOrOutside = false;
+      // Check all descendant boxes (skip the root itself)
+      const all = root.querySelectorAll('*');
+      for (let i = 0; i < all.length; i++) {
+        const el = all[i];
+        if (el === root) continue;
+        const r = el.getBoundingClientRect();
+        // Ignore zero-size boxes
+        if ((r.width || 0) <= 0 && (r.height || 0) <= 0) continue;
+
+        // Outside root bounds at all (shouldn’t happen with overflow hidden, but guard anyway)
+        if (r.left < rootRect.left - tol || r.right > rootRect.right + tol || r.top < rootRect.top - tol || r.bottom > rootRect.bottom + tol) {
+          crossesPaddingOrOutside = true;
+          break;
+        }
+        // Intersects root padding ring (i.e., breaches into padding area)
+        if (r.left < innerLeft - tol || r.right > innerRight + tol || r.top < innerTop - tol || r.bottom > innerBottom + tol) {
+          crossesPaddingOrOutside = true;
+          break;
+        }
+      }
+
+      if (crossesPaddingOrOutside) {
+        fits = false;
+      }
+      return { fits, cw, ch, sw, sh };
+    } catch (e) {
+      // If any unexpected error occurs, fall back to the basic overflow check
+      return { fits, cw, ch, sw, sh };
+    }
+  };
+
+  const applySizeAndMeasure = async (w, h) => {
+    resizingRef.current = true;
+    applySizeToSpec(w, h);
+    await waitForFrameToSize(w, h);
+    const m = measureOverflow();
+    return m;
+  };
+
+  const handleAutoResizeByRatio = async () => {
+    if (autoSizing) return;
+    const r = parseAspectRatio(ratioInput);
+    if (!r) return;
+    setAutoSizing(true);
+    try {
+      const frame = widgetFrameRef.current;
+      const rect = frame ? frame.getBoundingClientRect() : null;
+      const startW = rect ? Math.max(40, Math.round(rect.width)) : 200;
+      const startH = Math.max(40, Math.round(startW / r));
+      let m = await applySizeAndMeasure(startW, startH);
+      if (m.fits) {
+        let low = 40;
+        let high = startW;
+        let best = { w: startW, h: startH };
+        let lfit = false;
+        const lm = await applySizeAndMeasure(low, Math.max(40, Math.round(low / r)));
+        lfit = lm.fits;
+        if (lfit) {
+          best = { w: low, h: Math.max(40, Math.round(low / r)) };
+        } else {
+          while (high - low > 1) {
+            const mid = Math.floor((low + high) / 2);
+            const mh = Math.max(40, Math.round(mid / r));
+            const mm = await applySizeAndMeasure(mid, mh);
+            if (mm.fits) {
+              best = { w: mid, h: mh };
+              high = mid;
+            } else {
+              low = mid;
+            }
+          }
+        }
+        await applySizeAndMeasure(best.w, best.h);
+      } else {
+        let low = startW;
+        let high = startW;
+        let mm = m;
+        const maxCap = 4096;
+        while (!mm.fits && high < maxCap) {
+          low = high;
+          high = Math.min(maxCap, high * 2);
+          const hh = Math.max(40, Math.round(high / r));
+          mm = await applySizeAndMeasure(high, hh);
+        }
+        let best = mm.fits ? { w: high, h: Math.max(40, Math.round(high / r)) } : { w: low, h: Math.max(40, Math.round(low / r)) };
+        if (mm.fits) {
+          while (high - low > 1) {
+            const mid = Math.floor((low + high) / 2);
+            const mh = Math.max(40, Math.round(mid / r));
+            const m2 = await applySizeAndMeasure(mid, mh);
+            if (m2.fits) {
+              best = { w: mid, h: mh };
+              high = mid;
+            } else {
+              low = mid;
+            }
+          }
+          await applySizeAndMeasure(best.w, best.h);
+        }
+      }
+    } finally {
+      resizingRef.current = false;
+      setAutoSizing(false);
+    }
+  };
+
+  const handleWidgetGenerated = async (widgetSpec, aspectRatio) => {
+    const specStr = JSON.stringify(widgetSpec, null, 2);
+    setEditedSpec(specStr);
+    setRatioInput(aspectRatio.toString());
+  };
+
   return (
     <div style={{
       height: '100vh',
@@ -186,7 +366,7 @@ function App() {
       overflow: 'hidden'
     }}>
       <header style={{ marginBottom: 20, flexShrink: 0 }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
           <div>
             <h1 style={{ fontSize: 36, fontWeight: 700, margin: 0, color: '#f5f5f7', letterSpacing: '-0.5px' }}>
               Widget Factory
@@ -213,44 +393,83 @@ function App() {
             </button>
           </div>
         </div>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <button
+            onClick={() => setActiveTab('presets')}
+            style={{
+              padding: '8px 16px',
+              fontSize: 14,
+              fontWeight: 500,
+              backgroundColor: activeTab === 'presets' ? '#007AFF' : '#2c2c2e',
+              color: '#f5f5f7',
+              border: activeTab === 'presets' ? 'none' : '1px solid #3a3a3c',
+              borderRadius: 6,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              boxShadow: activeTab === 'presets' ? '0 0 0 3px rgba(0, 122, 255, 0.2)' : 'none'
+            }}
+          >
+            Presets
+          </button>
+          <button
+            onClick={() => setActiveTab('widget2spec')}
+            style={{
+              padding: '8px 16px',
+              fontSize: 14,
+              fontWeight: 500,
+              backgroundColor: activeTab === 'widget2spec' ? '#007AFF' : '#2c2c2e',
+              color: '#f5f5f7',
+              border: activeTab === 'widget2spec' ? 'none' : '1px solid #3a3a3c',
+              borderRadius: 6,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              boxShadow: activeTab === 'widget2spec' ? '0 0 0 3px rgba(0, 122, 255, 0.2)' : 'none'
+            }}
+          >
+            Widget2Spec
+          </button>
+        </div>
       </header>
 
-      <div style={{ marginBottom: 16, flexShrink: 0 }}>
-        <h3 style={{
-          fontSize: 11,
-          fontWeight: 600,
-          marginBottom: 12,
-          color: '#6e6e73',
-          textTransform: 'uppercase',
-          letterSpacing: '0.5px'
-        }}>
-          Presets
-        </h3>
-        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-          {Object.entries(examples).map(([key, { name }]) => (
-            <button
-              key={key}
-              onClick={() => handleExampleChange(key)}
-              style={{
-                padding: '8px 14px',
-                fontSize: 13,
-                fontWeight: 500,
-                backgroundColor: selectedExample === key ? '#007AFF' : '#2c2c2e',
-                color: '#f5f5f7',
-                border: selectedExample === key ? 'none' : '1px solid #3a3a3c',
-                borderRadius: 6,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                boxShadow: selectedExample === key ? '0 0 0 3px rgba(0, 122, 255, 0.2)' : 'none'
-              }}
-            >
-              {name}
-            </button>
-          ))}
+      {activeTab === 'presets' && (
+        <div style={{ marginBottom: 16, flexShrink: 0 }}>
+          <h3 style={{
+            fontSize: 11,
+            fontWeight: 600,
+            marginBottom: 12,
+            color: '#6e6e73',
+            textTransform: 'uppercase',
+            letterSpacing: '0.5px'
+          }}>
+            Presets
+          </h3>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            {Object.entries(examples).map(([key, { name }]) => (
+              <button
+                key={key}
+                onClick={() => handleExampleChange(key)}
+                style={{
+                  padding: '8px 14px',
+                  fontSize: 13,
+                  fontWeight: 500,
+                  backgroundColor: selectedExample === key ? '#007AFF' : '#2c2c2e',
+                  color: '#f5f5f7',
+                  border: selectedExample === key ? 'none' : '1px solid #3a3a3c',
+                  borderRadius: 6,
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  boxShadow: selectedExample === key ? '0 0 0 3px rgba(0, 122, 255, 0.2)' : 'none'
+                }}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
-      <div style={{
+      {activeTab === 'presets' && (
+        <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gridTemplateRows: '1fr 1fr',
@@ -379,26 +598,65 @@ function App() {
                 backgroundColor: '#007AFF'
               }} />
               Preview
-              <button
-                onClick={restoreSizeInSpec}
-                style={{
-                  marginLeft: 'auto',
-                  padding: '6px 10px',
-                  fontSize: 12,
-                  fontWeight: 500,
-                  backgroundColor: '#2c2c2e',
-                  color: '#f5f5f7',
-                  border: '1px solid #3a3a3c',
-                  borderRadius: 6,
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3a3a3c'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2c2c2e'}
-                title="Restore widget size"
-              >
-                Restore
-              </button>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto' }}>
+                <input
+                  value={ratioInput}
+                  onChange={(e) => setRatioInput(e.target.value)}
+                  placeholder="16:9 or 1.777"
+                  style={{
+                    width: 120,
+                    height: 28,
+                    fontSize: 12,
+                    color: '#f5f5f7',
+                    backgroundColor: '#2c2c2e',
+                    border: '1px solid #3a3a3c',
+                    borderRadius: 6,
+                    padding: '0 8px',
+                    outline: 'none'
+                  }}
+                  onFocus={(e) => e.currentTarget.style.borderColor = '#007AFF'}
+                  onBlur={(e) => e.currentTarget.style.borderColor = '#3a3a3c'}
+                />
+                <button
+                  onClick={handleAutoResizeByRatio}
+                  disabled={autoSizing}
+                  style={{
+                    padding: '6px 10px',
+                    fontSize: 12,
+                    fontWeight: 500,
+                    backgroundColor: autoSizing ? '#3a3a3c' : '#2c2c2e',
+                    color: '#f5f5f7',
+                    border: '1px solid #3a3a3c',
+                    borderRadius: 6,
+                    cursor: autoSizing ? 'default' : 'pointer',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => { if (!autoSizing) e.currentTarget.style.backgroundColor = '#3a3a3c'; }}
+                  onMouseLeave={(e) => { if (!autoSizing) e.currentTarget.style.backgroundColor = '#2c2c2e'; }}
+                  title="Auto-resize to aspect ratio"
+                >
+                  {autoSizing ? 'Sizing…' : 'Auto-Resize'}
+                </button>
+                <button
+                  onClick={restoreSizeInSpec}
+                  style={{
+                    padding: '6px 10px',
+                    fontSize: 12,
+                    fontWeight: 500,
+                    backgroundColor: '#2c2c2e',
+                    color: '#f5f5f7',
+                    border: '1px solid #3a3a3c',
+                    borderRadius: 6,
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3a3a3c'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2c2c2e'}
+                  title="Restore widget size"
+                >
+                  Restore
+                </button>
+              </div>
             </h2>
           <div style={{
               backgroundColor: '#0d0d0d',
@@ -628,6 +886,13 @@ function App() {
             />
           </div>
         </div>
+      )}
+
+      {activeTab === 'widget2spec' && (
+        <div style={{ flex: 1, minHeight: 0 }}>
+          <ImageToWidget onWidgetGenerated={handleWidgetGenerated} />
+        </div>
+      )}
 
       {showComponentsModal && (
         <div
