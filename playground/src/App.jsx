@@ -1034,8 +1034,23 @@ function App() {
                     <div style={{ fontSize: 12, color: '#6e6e73', fontFamily: 'Monaco, monospace' }}>
                       Default flex: none (0 0 auto). Use flex to override if needed.
                     </div>
+                    <div style={{ fontSize: 12, color: '#98989d', marginTop: 8, marginBottom: 4 }}>
+                      Common Icons:
+                    </div>
+                    <div style={{ fontSize: 12, color: '#6e6e73', marginBottom: 4 }}>
+                      • Weather: moon.fill, moon.stars.fill, sun.max.fill, cloud.fill, cloud.drizzle.fill, cloud.heavyrain.fill, cloud.bolt.rain.fill
+                    </div>
+                    <div style={{ fontSize: 12, color: '#6e6e73', marginBottom: 4 }}>
+                      • Calendar: 1.calendar ~ 31.calendar, 1.circle.fill ~ 31.circle.fill
+                    </div>
+                    <div style={{ fontSize: 12, color: '#6e6e73', marginBottom: 4 }}>
+                      • Tasks: circle, circle.fill, record.circle.fill
+                    </div>
+                    <div style={{ fontSize: 12, color: '#6e6e73', marginBottom: 4 }}>
+                      • Files: folder.fill, folder.badge.plus
+                    </div>
                     <div style={{ fontSize: 12, color: '#6e6e73' }}>
-                      Available: heart.fill, star.fill, circle.fill, checkmark.circle.fill, cloud.sun.fill, flame.fill, bolt.fill, calendar
+                      • Navigation: chevron.right, chevron.left, chevron.up, chevron.down, arrow.up, arrow.down, arrow.clockwise, location.fill
                     </div>
                   </div>
                   <div>
