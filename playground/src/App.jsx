@@ -5,6 +5,7 @@ import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
 import TreeView from './TreeView.jsx';
 import Widget from './generated/Widget.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
+import { Icon } from '@widget-factory/primitives';
 import weatherSmallLight from './examples/weather-small-light.json';
 import weatherMediumDark from './examples/weather-medium-dark.json';
 import calendarSmallLight from './examples/calendar-small-light.json';
@@ -21,6 +22,7 @@ function App() {
   const [selectedExample, setSelectedExample] = useState('weatherSmallLight');
   const [editedSpec, setEditedSpec] = useState('');
   const [showComponentsModal, setShowComponentsModal] = useState(false);
+  const [modalTab, setModalTab] = useState('components');
   const [selectedPath, setSelectedPath] = useState(null);
   const [generatedCode, setGeneratedCode] = useState('');
   const [treeRoot, setTreeRoot] = useState(null);
@@ -436,7 +438,7 @@ function App() {
             onMouseEnter={(e) => e.target.style.backgroundColor = '#3a3a3c'}
             onMouseLeave={(e) => e.target.style.backgroundColor = '#2c2c2e'}
           >
-            Components
+            Materials
           </button>
         </div>
       </header>
@@ -911,17 +913,67 @@ function App() {
               backgroundColor: '#1c1c1e',
               borderRadius: 16,
               padding: 32,
-              maxWidth: '900px',
-              maxHeight: '80vh',
-              overflow: 'auto',
+              maxWidth: '1200px',
+              width: '90vw',
+              maxHeight: '85vh',
+              display: 'flex',
+              flexDirection: 'column',
               border: '1px solid #3a3a3c'
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
-              <h2 style={{ fontSize: 28, fontWeight: 700, margin: 0, color: '#f5f5f7' }}>
-                Component Library
-              </h2>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
+                <h2 style={{ fontSize: 28, fontWeight: 700, margin: 0, color: '#f5f5f7' }}>
+                  Materials
+                </h2>
+                <div style={{ display: 'flex', gap: 0, alignItems: 'center' }}>
+                  <button
+                    onClick={() => setModalTab('components')}
+                    style={{
+                      padding: '8px 16px',
+                      fontSize: 14,
+                      fontWeight: 500,
+                      backgroundColor: 'transparent',
+                      color: modalTab === 'components' ? '#f5f5f7' : '#8e8e93',
+                      border: 'none',
+                      borderBottom: modalTab === 'components' ? '2px solid #007AFF' : '2px solid transparent',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      if (modalTab !== 'components') e.target.style.color = '#f5f5f7';
+                    }}
+                    onMouseLeave={(e) => {
+                      if (modalTab !== 'components') e.target.style.color = '#8e8e93';
+                    }}
+                  >
+                    Components
+                  </button>
+                  <button
+                    onClick={() => setModalTab('icons')}
+                    style={{
+                      padding: '8px 16px',
+                      fontSize: 14,
+                      fontWeight: 500,
+                      backgroundColor: 'transparent',
+                      color: modalTab === 'icons' ? '#f5f5f7' : '#8e8e93',
+                      border: 'none',
+                      borderBottom: modalTab === 'icons' ? '2px solid #007AFF' : '2px solid transparent',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s ease'
+                    }}
+                    onMouseEnter={(e) => {
+                      if (modalTab !== 'icons') e.target.style.color = '#f5f5f7';
+                    }}
+                    onMouseLeave={(e) => {
+                      if (modalTab !== 'icons') e.target.style.color = '#8e8e93';
+                    }}
+                  >
+                    Icons
+                  </button>
+                </div>
+              </div>
               <button
                 onClick={() => setShowComponentsModal(false)}
                 style={{
@@ -938,11 +990,13 @@ function App() {
                   justifyContent: 'center'
                 }}
               >
-                Close
+                ✕
               </button>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 20 }}>
+            <div style={{ flex: 1, overflow: 'auto', minHeight: 0 }}>
+              {modalTab === 'components' && (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 20 }}>
               <div style={{ backgroundColor: '#2c2c2e', borderRadius: 12, padding: 24 }}>
                 <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 16, color: '#f5f5f7' }}>
                   Flex Usage
@@ -1034,23 +1088,8 @@ function App() {
                     <div style={{ fontSize: 12, color: '#6e6e73', fontFamily: 'Monaco, monospace' }}>
                       Default flex: none (0 0 auto). Use flex to override if needed.
                     </div>
-                    <div style={{ fontSize: 12, color: '#98989d', marginTop: 8, marginBottom: 4 }}>
-                      Common Icons:
-                    </div>
-                    <div style={{ fontSize: 12, color: '#6e6e73', marginBottom: 4 }}>
-                      • Weather: moon.fill, moon.stars.fill, sun.max.fill, cloud.fill, cloud.drizzle.fill, cloud.heavyrain.fill, cloud.bolt.rain.fill
-                    </div>
-                    <div style={{ fontSize: 12, color: '#6e6e73', marginBottom: 4 }}>
-                      • Calendar: 1.calendar ~ 31.calendar, 1.circle.fill ~ 31.circle.fill
-                    </div>
-                    <div style={{ fontSize: 12, color: '#6e6e73', marginBottom: 4 }}>
-                      • Tasks: circle, circle.fill, record.circle.fill
-                    </div>
-                    <div style={{ fontSize: 12, color: '#6e6e73', marginBottom: 4 }}>
-                      • Files: folder.fill, folder.badge.plus
-                    </div>
-                    <div style={{ fontSize: 12, color: '#6e6e73' }}>
-                      • Navigation: chevron.right, chevron.left, chevron.up, chevron.down, arrow.up, arrow.down, arrow.clockwise, location.fill
+                    <div style={{ fontSize: 12, color: '#98989d', marginTop: 12 }}>
+                      View all icons in the "Icons" tab above.
                     </div>
                   </div>
                   <div>
@@ -1160,6 +1199,94 @@ function App() {
                   </div>
                 </div>
               </div>
+            </div>
+              )}
+
+              {modalTab === 'icons' && (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 20 }}>
+                  {(() => {
+                    const iconCategories = {
+                      'Weather': ['moon.fill', 'moon.stars.fill', 'sun.max.fill', 'sun.min.fill', 'cloud.fill', 'cloud.drizzle.fill', 'cloud.heavyrain.fill', 'cloud.bolt.rain.fill', 'drop.fill', 'umbrella.fill', 'snowflake', 'wind'],
+                      'Calendar/Time': ['1.calendar', '7.calendar', '15.calendar', '31.calendar', '1.circle.fill', '7.circle.fill', 'clock.fill', 'bell.fill', 'alarm.fill'],
+                      'Tasks/Status': ['circle', 'circle.fill', 'checkmark.circle.fill', 'xmark.circle.fill', 'record.circle.fill'],
+                      'Files/Content': ['folder.fill', 'folder.badge.plus', 'document.fill', 'book.fill', 'bookmark.fill', 'tag.fill'],
+                      'Navigation': ['chevron.right', 'chevron.left', 'chevron.up', 'chevron.down', 'arrow.up', 'arrow.down', 'arrow.clockwise', 'location.fill', 'location.north.fill', 'house.fill'],
+                      'Communication': ['envelope.fill', 'phone.fill', 'message.fill', 'bubble.left.fill', 'paperplane.fill'],
+                      'Media': ['photo.fill', 'camera.fill', 'play.fill', 'pause.fill', 'forward.fill', 'backward.fill', 'music.note', 'headphones', 'speaker.wave.2.fill', 'microphone.fill'],
+                      'Social': ['heart.fill', 'star.fill', 'person.fill', 'person.2.fill', 'person.crop.circle.fill'],
+                      'Shopping': ['cart.fill', 'bag.fill', 'creditcard.fill', 'giftcard.fill'],
+                      'Health/Fitness': ['heart.circle.fill', 'flame.fill', 'figure.walk', 'figure.run', 'bicycle', 'dumbbell.fill'],
+                      'Transportation': ['car.fill', 'bus.fill', 'airplane', 'train.side.front.car'],
+                      'System': ['wifi', 'antenna.radiowaves.left.and.right', 'battery.100percent', 'gear', 'lock.fill', 'key.fill', 'bolt.fill'],
+                      'Actions': ['plus.circle.fill', 'minus.circle.fill', 'magnifyingglass', 'slider.horizontal.3', 'square.and.arrow.up', 'square.and.arrow.down'],
+                      'Charts/Trends': ['triangle.fill', 'chart.bar.fill', 'chart.line.uptrend.xyaxis', 'waveform']
+                    };
+
+                    return Object.entries(iconCategories).map(([category, icons]) => (
+                      <div key={category} style={{ backgroundColor: '#2c2c2e', borderRadius: 12, padding: 24, marginBottom: 16 }}>
+                        <h3 style={{ fontSize: 18, color: '#f5f5f7', fontWeight: 600, marginBottom: 16 }}>
+                          {category}
+                        </h3>
+                        <div style={{
+                          display: 'grid',
+                          gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))',
+                          gap: 12
+                        }}>
+                          {icons.map(iconName => (
+                            <div
+                              key={iconName}
+                              title={`Click to copy: ${iconName}`}
+                              style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                gap: 8,
+                                padding: 12,
+                                backgroundColor: '#0d0d0d',
+                                borderRadius: 8,
+                                cursor: 'pointer',
+                                transition: 'all 0.2s ease',
+                                border: '1px solid transparent'
+                              }}
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.backgroundColor = '#1a1a1a';
+                                e.currentTarget.style.borderColor = '#007AFF';
+                              }}
+                              onMouseLeave={(e) => {
+                                e.currentTarget.style.backgroundColor = '#0d0d0d';
+                                e.currentTarget.style.borderColor = 'transparent';
+                              }}
+                              onClick={() => {
+                                navigator.clipboard.writeText(iconName);
+                                const el = document.createElement('div');
+                                el.textContent = 'Copied!';
+                                el.style.cssText = 'position:fixed;top:20px;right:20px;background:#34C759;color:white;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:600;z-index:10000;animation:fadeIn 0.2s ease';
+                                document.body.appendChild(el);
+                                setTimeout(() => {
+                                  el.style.animation = 'fadeOut 0.2s ease';
+                                  setTimeout(() => el.remove(), 200);
+                                }, 1500);
+                              }}
+                            >
+                              <Icon name={iconName} size={32} color="#f5f5f7" />
+                              <div style={{
+                                fontSize: 10,
+                                color: '#8e8e93',
+                                textAlign: 'center',
+                                wordBreak: 'break-word',
+                                fontFamily: 'Monaco, monospace',
+                                lineHeight: 1.3
+                              }}>
+                                {iconName}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ));
+                  })()}
+                </div>
+              )}
             </div>
           </div>
         </div>
