@@ -116,10 +116,9 @@ function App() {
     setEditedSpec(value);
   };
 
-  // Track live widget frame size using ResizeObserver for accurate measurement guides
   useEffect(() => {
-    if (!widgetFrameRef.current) return;
     const el = widgetFrameRef.current;
+    if (!el) return;
     const update = () => {
       const rect = el.getBoundingClientRect();
       const next = { width: Math.round(rect.width), height: Math.round(rect.height) };
@@ -137,7 +136,7 @@ function App() {
       ro.disconnect();
       window.removeEventListener('resize', update);
     };
-  }, [widgetFrameRef.current]);
+  }, []);
 
   // Ensure `widget.root` is serialized as the last key in `widget`
   const formatSpecWithRootLast = (spec) => {
