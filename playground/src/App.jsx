@@ -359,134 +359,108 @@ function App() {
     <div style={{
       height: '100vh',
       backgroundColor: '#1c1c1e',
-      padding: '24px 32px',
+      padding: '16px 24px',
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
       display: 'flex',
       flexDirection: 'column',
       overflow: 'hidden'
     }}>
-      <header style={{ marginBottom: 20, flexShrink: 0 }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
-          <div>
-            <h1 style={{ fontSize: 36, fontWeight: 700, margin: 0, color: '#f5f5f7', letterSpacing: '-0.5px' }}>
+      <header style={{ marginBottom: 12, flexShrink: 0, borderBottom: '1px solid #2c2c2e', paddingBottom: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
+            <h1 style={{ fontSize: 24, fontWeight: 600, margin: 0, color: '#f5f5f7', letterSpacing: '-0.3px' }}>
               Widget Factory
             </h1>
+            <div style={{ display: 'flex', gap: 0, alignItems: 'center' }}>
+              <button
+                onClick={() => setActiveTab('presets')}
+                style={{
+                  padding: '8px 16px',
+                  fontSize: 15,
+                  fontWeight: 500,
+                  backgroundColor: 'transparent',
+                  color: activeTab === 'presets' ? '#f5f5f7' : '#8e8e93',
+                  border: 'none',
+                  borderBottom: activeTab === 'presets' ? '2px solid #007AFF' : '2px solid transparent',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  if (activeTab !== 'presets') e.target.style.color = '#f5f5f7';
+                }}
+                onMouseLeave={(e) => {
+                  if (activeTab !== 'presets') e.target.style.color = '#8e8e93';
+                }}
+              >
+                Presets
+              </button>
+              <button
+                onClick={() => setActiveTab('widget2spec')}
+                style={{
+                  padding: '8px 16px',
+                  fontSize: 15,
+                  fontWeight: 500,
+                  backgroundColor: 'transparent',
+                  color: activeTab === 'widget2spec' ? '#f5f5f7' : '#8e8e93',
+                  border: 'none',
+                  borderBottom: activeTab === 'widget2spec' ? '2px solid #007AFF' : '2px solid transparent',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  if (activeTab !== 'widget2spec') e.target.style.color = '#f5f5f7';
+                }}
+                onMouseLeave={(e) => {
+                  if (activeTab !== 'widget2spec') e.target.style.color = '#8e8e93';
+                }}
+              >
+                Widget2Spec
+              </button>
+            </div>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <button
-              onClick={() => setShowComponentsModal(true)}
-              style={{
-                padding: '10px 20px',
-                fontSize: 14,
-                fontWeight: 500,
-                backgroundColor: '#2c2c2e',
-                color: '#f5f5f7',
-                border: '1px solid #3a3a3c',
-                borderRadius: 8,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => e.target.style.backgroundColor = '#3a3a3c'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = '#2c2c2e'}
-            >
-              Component Library
-            </button>
-          </div>
-        </div>
-        <div style={{ display: 'flex', gap: 8 }}>
           <button
-            onClick={() => setActiveTab('presets')}
+            onClick={() => setShowComponentsModal(true)}
             style={{
               padding: '8px 16px',
-              fontSize: 14,
+              fontSize: 13,
               fontWeight: 500,
-              backgroundColor: activeTab === 'presets' ? '#007AFF' : '#2c2c2e',
+              backgroundColor: '#2c2c2e',
               color: '#f5f5f7',
-              border: activeTab === 'presets' ? 'none' : '1px solid #3a3a3c',
+              border: '1px solid #3a3a3c',
               borderRadius: 6,
               cursor: 'pointer',
-              transition: 'all 0.2s ease',
-              boxShadow: activeTab === 'presets' ? '0 0 0 3px rgba(0, 122, 255, 0.2)' : 'none'
+              transition: 'all 0.2s ease'
             }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = '#3a3a3c'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = '#2c2c2e'}
           >
-            Presets
-          </button>
-          <button
-            onClick={() => setActiveTab('widget2spec')}
-            style={{
-              padding: '8px 16px',
-              fontSize: 14,
-              fontWeight: 500,
-              backgroundColor: activeTab === 'widget2spec' ? '#007AFF' : '#2c2c2e',
-              color: '#f5f5f7',
-              border: activeTab === 'widget2spec' ? 'none' : '1px solid #3a3a3c',
-              borderRadius: 6,
-              cursor: 'pointer',
-              transition: 'all 0.2s ease',
-              boxShadow: activeTab === 'widget2spec' ? '0 0 0 3px rgba(0, 122, 255, 0.2)' : 'none'
-            }}
-          >
-            Widget2Spec
+            Components
           </button>
         </div>
       </header>
 
       {activeTab === 'presets' && (
-        <div style={{ marginBottom: 16, flexShrink: 0 }}>
-          <h3 style={{
-            fontSize: 11,
-            fontWeight: 600,
-            marginBottom: 12,
-            color: '#6e6e73',
-            textTransform: 'uppercase',
-            letterSpacing: '0.5px'
-          }}>
-            Presets
-          </h3>
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {Object.entries(examples).map(([key, { name }]) => (
-              <button
-                key={key}
-                onClick={() => handleExampleChange(key)}
-                style={{
-                  padding: '8px 14px',
-                  fontSize: 13,
-                  fontWeight: 500,
-                  backgroundColor: selectedExample === key ? '#007AFF' : '#2c2c2e',
-                  color: '#f5f5f7',
-                  border: selectedExample === key ? 'none' : '1px solid #3a3a3c',
-                  borderRadius: 6,
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                  boxShadow: selectedExample === key ? '0 0 0 3px rgba(0, 122, 255, 0.2)' : 'none'
-                }}
-              >
-                {name}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {activeTab === 'presets' && (
-        <div style={{
+        <div key="presets" style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gridTemplateRows: '1fr 1fr',
           gridTemplateAreas: '"spec preview" "code tree"',
-          gap: 16,
+          gap: 12,
           minWidth: 0,
           flex: 1,
           minHeight: 0,
-          paddingBottom: 24,
-          gridAutoRows: 'minmax(0, 1fr)'
+          paddingBottom: 16,
+          gridAutoRows: 'minmax(0, 1fr)',
+          animation: 'fadeIn 0.2s ease-in-out'
         }}>
 
           <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'spec' }}>
             <h2 style={{
-              fontSize: 16,
+              fontSize: 15,
               fontWeight: 600,
-              marginBottom: 12,
+              marginBottom: 8,
               color: '#f5f5f7',
               display: 'flex',
               alignItems: 'center',
@@ -500,6 +474,28 @@ function App() {
                 backgroundColor: '#34C759'
               }} />
               WidgetSpec
+              <select
+                value={selectedExample}
+                onChange={(e) => handleExampleChange(e.target.value)}
+                style={{
+                  padding: '6px 10px',
+                  fontSize: 13,
+                  fontWeight: 500,
+                  backgroundColor: '#2c2c2e',
+                  color: '#f5f5f7',
+                  border: '1px solid #3a3a3c',
+                  borderRadius: 6,
+                  cursor: 'pointer',
+                  outline: 'none',
+                  marginLeft: 'auto'
+                }}
+                onFocus={(e) => e.target.style.borderColor = '#007AFF'}
+                onBlur={(e) => e.target.style.borderColor = '#3a3a3c'}
+              >
+                {Object.entries(examples).map(([key, { name }]) => (
+                  <option key={key} value={key}>{name}</option>
+                ))}
+              </select>
             </h2>
             <div style={{ position: 'relative', flex: 1, minHeight: 0 }}>
               <textarea
@@ -532,9 +528,9 @@ function App() {
 
           <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'code' }}>
             <h2 style={{
-              fontSize: 16,
+              fontSize: 15,
               fontWeight: 600,
-              marginBottom: 12,
+              marginBottom: 8,
               color: '#f5f5f7',
               display: 'flex',
               alignItems: 'center',
@@ -582,9 +578,9 @@ function App() {
 
           <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'preview' }}>
             <h2 style={{
-              fontSize: 16,
+              fontSize: 15,
               fontWeight: 600,
-              marginBottom: 12,
+              marginBottom: 8,
               color: '#f5f5f7',
               display: 'flex',
               alignItems: 'center',
@@ -660,7 +656,7 @@ function App() {
             </h2>
           <div style={{
               backgroundColor: '#0d0d0d',
-              padding: 40,
+              padding: 24,
               borderRadius: 10,
               display: 'flex',
               justifyContent: 'center',
@@ -861,9 +857,9 @@ function App() {
 
           <div ref={treeContainerRef} style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'tree' }}>
             <h2 style={{
-              fontSize: 16,
+              fontSize: 15,
               fontWeight: 600,
-              marginBottom: 12,
+              marginBottom: 8,
               color: '#f5f5f7',
               display: 'flex',
               alignItems: 'center',
@@ -889,7 +885,7 @@ function App() {
       )}
 
       {activeTab === 'widget2spec' && (
-        <div style={{ flex: 1, minHeight: 0 }}>
+        <div key="widget2spec" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
           <ImageToWidget onWidgetGenerated={handleWidgetGenerated} />
         </div>
       )}

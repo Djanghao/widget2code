@@ -142,17 +142,17 @@ function ImageToWidget({ onWidgetGenerated }) {
   return (
     <div style={{
       display: 'grid',
-      gridTemplateColumns: '400px 1fr',
-      gap: 16,
+      gridTemplateColumns: '350px 1fr',
+      gap: 12,
       height: '100%',
       minHeight: 0
     }}>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 16, minHeight: 0 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 12, minHeight: 0 }}>
         <div style={{ flex: '0 0 auto' }}>
           <h2 style={{
-            fontSize: 16,
+            fontSize: 15,
             fontWeight: 600,
-            marginBottom: 12,
+            marginBottom: 8,
             color: '#f5f5f7',
             display: 'flex',
             alignItems: 'center',
@@ -287,10 +287,10 @@ function ImageToWidget({ onWidgetGenerated }) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            marginBottom: 12
+            marginBottom: 8
           }}>
             <h2 style={{
-              fontSize: 16,
+              fontSize: 15,
               fontWeight: 600,
               margin: 0,
               color: '#f5f5f7',
@@ -356,16 +356,16 @@ function ImageToWidget({ onWidgetGenerated }) {
         gridTemplateColumns: '1fr 1fr',
         gridTemplateRows: '1fr 1fr',
         gridTemplateAreas: '"spec preview" "code tree"',
-        gap: 16,
+        gap: 12,
         minWidth: 0,
         minHeight: 0,
         gridAutoRows: 'minmax(0, 1fr)'
       }}>
         <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'spec' }}>
           <h2 style={{
-            fontSize: 16,
+            fontSize: 15,
             fontWeight: 600,
-            marginBottom: 12,
+            marginBottom: 8,
             color: '#f5f5f7',
             display: 'flex',
             alignItems: 'center',
@@ -407,9 +407,9 @@ function ImageToWidget({ onWidgetGenerated }) {
 
         <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'preview' }}>
           <h2 style={{
-            fontSize: 16,
+            fontSize: 15,
             fontWeight: 600,
-            marginBottom: 12,
+            marginBottom: 8,
             color: '#f5f5f7',
             display: 'flex',
             alignItems: 'center',
@@ -427,7 +427,7 @@ function ImageToWidget({ onWidgetGenerated }) {
           <div style={{
             flex: 1,
             backgroundColor: '#0d0d0d',
-            padding: 40,
+            padding: 24,
             borderRadius: 10,
             display: 'flex',
             justifyContent: 'center',
@@ -480,9 +480,9 @@ function ImageToWidget({ onWidgetGenerated }) {
 
         <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'code' }}>
           <h2 style={{
-            fontSize: 16,
+            fontSize: 15,
             fontWeight: 600,
-            marginBottom: 12,
+            marginBottom: 8,
             color: '#f5f5f7',
             display: 'flex',
             alignItems: 'center',
@@ -530,9 +530,9 @@ function ImageToWidget({ onWidgetGenerated }) {
 
         <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'tree' }}>
           <h2 style={{
-            fontSize: 16,
+            fontSize: 15,
             fontWeight: 600,
-            marginBottom: 12,
+            marginBottom: 8,
             color: '#f5f5f7',
             display: 'flex',
             alignItems: 'center',
