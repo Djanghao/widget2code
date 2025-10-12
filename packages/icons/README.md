@@ -1,24 +1,56 @@
 # @widget-factory/icons
 
-Convert SF Symbols SVGs to React icon components. Exports `iconsMap` & `metadata` (consumed by `@widget-factory/primitives` `<Icon />`).
+Icon library supporting both SF Symbols and Lucide icons. Exports `sfIconsMap` and `lucideIconsMap` (consumed by `@widget-factory/primitives` `<Icon />`).
 
 ## Usage
-- Build: `npm run build:icons`
-- Dynamic color: `<Icon name="cloud.sun.fill" size={24} color="#FF9500" />`
-- Direct map: `const C = iconsMap['cloud.sun.fill']; return <C />`
 
-## Dynamic Colors
-- Icons are prepared to use CSS variable `--icon-color` for fills/strokes.
+### SF Symbols (default)
+```jsx
+<Icon name="cloud.sun.fill" size={24} color="#FF9500" />
+<Icon name="sf:house.fill" size={20} color="#007AFF" />
+```
+
+### Lucide Icons
+```jsx
+<Icon name="lucide:Sun" size={24} color="#FFD700" />
+<Icon name="lucide:Heart" size={20} color="#FF3B30" />
+```
+
+## Icon Naming Rules
+- **SF Symbols**: `sf:icon.name` or `icon.name` (no prefix defaults to SF)
+  - Use lowercase with dots: `house.fill`, `bolt.fill`, `calendar`
+- **Lucide**: `lucide:IconName` (prefix required)
+  - Use PascalCase: `Sun`, `Moon`, `ArrowRight`, `ChevronDown`
+
+## Structure
+```
+packages/icons/
+├── sf-symbols/          # SF Symbols icons
+│   ├── scripts/         # Generation scripts
+│   └── src/            # Generated React components
+├── lucide/             # Lucide icons
+│   └── src/            # Thin wrapper around lucide-react
+└── src/                # Main exports
+    └── index.jsx       # Exports both icon libraries
+```
+
+## SF Symbols - Dynamic Colors
+- Icons use CSS variable `--icon-color` for fills/strokes.
 - Default color: `rgba(255, 255, 255, 0.85)`.
-- `<Icon />` sets `--icon-color` via its `color` prop for consistent coloring.
+- `<Icon />` sets `--icon-color` via its `color` prop.
 
-## Implementation
-- One-time prepare (only when refreshing source SVGs): `npm run prepare:dynamic`
+## SF Symbols - Build Process
+- One-time prepare: `npm run prepare:dynamic` (only when refreshing source SVGs)
   - Converts multicolor SF Symbols to use `var(--icon-color, rgba(255, 255, 255, 0.85))`.
 - Source: `assets/icons/sf-symbols-dynamic/`
-- Generation: normalize `width/height=100%`, emit React components to `src/components/`, write `src/map.js` and `src/metadata.json` (`supportsDynamicColor: true`).
+- Generation: `npm run build:icons`
+  - Normalizes SVGs, generates React components
+  - Outputs to `sf-symbols/src/`
 
-Auto-generated files are gitignored: `src/components/`, `src/map.js`, `src/metadata.json`.
+## Lucide Icons
+- Uses `lucide-react` package directly (no generation needed)
+- All Lucide icons are available dynamically
+- Tree-shaking supported
 
 ## Common SF Symbols for iOS Widgets
 

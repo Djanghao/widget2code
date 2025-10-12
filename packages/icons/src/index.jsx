@@ -1,2 +1,2 @@
-export { iconsMap } from './map.js';
-export { default as metadata } from './metadata.json'
+export { iconsMap as sfIconsMap, metadata as sfMetadata } from '../sf-symbols/src/index.jsx';
+export { lucideIconsMap } from '../lucide/src/index.jsx';

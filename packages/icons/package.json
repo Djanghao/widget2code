@@ -4,7 +4,12 @@
   "type": "module",
   "main": "./src/index.jsx",
   "exports": {
-    ".": "./src/index.jsx"
+    ".": "./src/index.jsx",
+    "./sf-symbols": "./sf-symbols/src/index.jsx",
+    "./lucide": "./lucide/src/index.jsx"
+  },
+  "dependencies": {
+    "lucide-react": "^0.344.0"
   },
   "peerDependencies": {
     "react": "^18.0.0"
