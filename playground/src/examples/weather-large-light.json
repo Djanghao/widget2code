@@ -3,6 +3,7 @@
     "backgroundColor": "#4A90E2",
     "borderRadius": 20,
     "padding": 16,
+    "aspectRatio": 0.955,
     "root": {
       "type": "container",
       "direction": "col",
@@ -42,4 +43,3 @@
     }
   }
 }
-
