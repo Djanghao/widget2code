@@ -19,15 +19,16 @@ Props: `fontSize`, `color`, `align` (left/center/right), `fontWeight`, `lineHeig
 
 ### Icon
 Props: `name`, `size`, `color`
-- **IMPORTANT**: Always use prefix for icon names
-- Supports two icon libraries:
-  - **SF Symbols**: Use `sf:` prefix (required). Examples: `"sf:bolt.fill"`, `"sf:star.fill"`, `"sf:calendar"`
-  - **Lucide**: Use `lucide:` prefix (required). Examples: `"lucide:Sun"`, `"lucide:Heart"`, `"lucide:Calendar"`
-- Common SF Symbols: `"sf:cloud.sun.fill"`, `"sf:calendar"`, `"sf:checkmark.circle.fill"`, `"sf:magnifyingglass"`, `"sf:fork.knife"`
-- Common Lucide icons: `"lucide:Sun"`, `"lucide:Moon"`, `"lucide:Heart"`, `"lucide:Star"`, `"lucide:Home"`, `"lucide:User"`, `"lucide:Settings"`, `"lucide:Calendar"`
-- **Naming formats**:
-  - SF Symbols: lowercase with dots (e.g., `"sf:house.fill"`, `"sf:bolt.fill"`)
-  - Lucide: PascalCase (e.g., `"lucide:ArrowRight"`, `"lucide:ChevronDown"`)
+- **IMPORTANT**: Always use `sf:` prefix for icon names
+- Uses SF Symbols icon library
+- Examples: `"sf:bolt.fill"`, `"sf:star.fill"`, `"sf:calendar"`, `"sf:house.fill"`
+- Common icons:
+  - Weather: `"sf:cloud.sun.fill"`, `"sf:moon.fill"`, `"sf:sun.max.fill"`, `"sf:cloud.rain.fill"`
+  - UI: `"sf:checkmark.circle.fill"`, `"sf:xmark.circle.fill"`, `"sf:star.fill"`, `"sf:heart.fill"`
+  - Navigation: `"sf:chevron.right"`, `"sf:arrow.up"`, `"sf:location.fill"`, `"sf:map.fill"`
+  - Time: `"sf:calendar"`, `"sf:clock.fill"`, `"sf:alarm.fill"`, `"sf:timer"`
+  - Tools: `"sf:magnifyingglass"`, `"sf:gear"`, `"sf:bell.fill"`, `"sf:folder.fill"`
+- **Naming format**: lowercase with dots (e.g., `"sf:house.fill"`, `"sf:bolt.circle.fill"`)
 - Single-color icons support color customization via `color` prop
 - Can have `flex` prop (typically `"none"` for icons)
 
@@ -127,11 +128,9 @@ Your output must be valid JSON following this structure:
    - Ensure good contrast (e.g., white text on dark backgrounds)
    - Use alpha values sparingly
 5. **Icons**:
-   - **ALWAYS use prefix**: `sf:` for SF Symbols, `lucide:` for Lucide
-   - **SF Symbols**: Use `sf:` prefix + lowercase with dots (e.g., `"sf:bolt.fill"`, `"sf:star.fill"`)
-   - **Lucide**: Use `lucide:` prefix + PascalCase (e.g., `"lucide:Sun"`, `"lucide:ArrowRight"`)
+   - **ALWAYS use `sf:` prefix**: e.g., `"sf:bolt.fill"`, `"sf:star.fill"`
+   - Use lowercase with dots (SF Symbols naming)
    - Always set `flex: "none"` for icons to prevent stretching
-   - Choose icon library based on design style: SF Symbols for iOS-style, Lucide for modern/minimal
 6. **Images**:
    - **MUST use Unsplash URLs**: `https://images.unsplash.com/photo-[ID]`
    - Choose appropriate images that match the widget context
@@ -145,164 +144,11 @@ Your output must be valid JSON following this structure:
    - `alignCross`: controls cross axis alignment (start/end/center/stretch)
 10. **Container Padding**: Can be applied at container level for section backgrounds
 
-## Examples
-
-### Example 1: Notes Widget
-
-Input: Notes widget with yellow header showing calendar icon and "Notes" title, main content "Steve's Surprise Birthday Party Checklist", and "Yesterday" timestamp
-
-Output:
-```json
-{
-  "widget": {
-    "backgroundColor": "#ffffff",
-    "borderRadius": 20,
-    "padding": 0,
-    "root": {
-      "type": "container",
-      "direction": "col",
-      "gap": 0,
-      "flex": 1,
-      "children": [
-        {
-          "type": "container",
-          "direction": "row",
-          "gap": 8,
-          "flex": 0,
-          "padding": 16,
-          "alignCross": "center",
-          "backgroundColor": "#FFCC00",
-          "children": [
-            {
-              "type": "leaf",
-              "component": "Icon",
-              "flex": "none",
-              "props": {
-                "size": 20,
-                "color": "#ffffff",
-                "name": "sf:calendar"
-              }
-            },
-            {
-              "type": "leaf",
-              "component": "Text",
-              "flex": 1,
-              "props": {
-                "fontSize": 16,
-                "color": "#ffffff",
-                "fontWeight": 600
-              },
-              "content": "Notes"
-            }
-          ]
-        },
-        {
-          "type": "container",
-          "direction": "col",
-          "gap": 12,
-          "flex": 1,
-          "padding": 16,
-          "children": [
-            {
-              "type": "leaf",
-              "component": "Text",
-              "flex": 0,
-              "props": {
-                "fontSize": 16,
-                "color": "#000000",
-                "fontWeight": 400,
-                "lineHeight": 1.3
-              },
-              "content": "Steve's Surprise Birthday Party Checklist"
-            },
-            {
-              "type": "leaf",
-              "component": "Text",
-              "flex": 0,
-              "props": {
-                "fontSize": 14,
-                "color": "#999999"
-              },
-              "content": "Yesterday"
-            }
-          ]
-        }
-      ]
-    }
-  }
-}
-```
-
-### Example 2: Photo Widget
-
-Input: Photo memories widget showing landscape image at top with "ON THIS DAY" title and date "June 7, 2020"
-
-Output:
-```json
-{
-  "widget": {
-    "backgroundColor": "#ffffff",
-    "borderRadius": 20,
-    "padding": 0,
-    "root": {
-      "type": "container",
-      "direction": "col",
-      "gap": 0,
-      "flex": 1,
-      "children": [
-        {
-          "type": "leaf",
-          "component": "Image",
-          "flex": "none",
-          "props": {
-            "width": 338,
-            "height": 120,
-            "url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
-            "borderRadius": 0
-          }
-        },
-        {
-          "type": "container",
-          "direction": "row",
-          "gap": 8,
-          "flex": 0,
-          "padding": 12,
-          "alignCross": "center",
-          "children": [
-            {
-              "type": "leaf",
-              "component": "Text",
-              "flex": 1,
-              "props": {
-                "fontSize": 17,
-                "color": "#000000",
-                "fontWeight": 700
-              },
-              "content": "ON THIS DAY"
-            },
-            {
-              "type": "leaf",
-              "component": "Text",
-              "flex": 0,
-              "props": {
-                "fontSize": 15,
-                "color": "#666666"
-              },
-              "content": "June 7, 2020"
-            }
-          ]
-        }
-      ]
-    }
-  }
-}
-```
-
 ## Important Notes
 
 - Output **only** valid JSON, no explanations or markdown
 - Ensure all brackets, braces, and quotes are balanced
 - Do not invent data; if text is unclear, use placeholder like "..."
-- **Icon names must include prefix**: `sf:icon.name` or `lucide:IconName`
+- **Icon names must include `sf:` prefix**: e.g., `"sf:house.fill"`, `"sf:calendar"`
 - All numeric values should be numbers, not strings
 - Boolean values: `true`/`false` (not strings)
