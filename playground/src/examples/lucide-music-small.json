@@ -1,0 +1,135 @@
+{
+  "widget": {
+    "backgroundColor": "#F472B6",
+    "borderRadius": 20,
+    "padding": 16,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 40,
+                "color": "#FFFFFF",
+                "name": "lucide:Music"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#FFFFFF",
+                    "fontWeight": 600
+                  },
+                  "content": "Now Playing"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#FDE2ED",
+                    "fontWeight": 400
+                  },
+                  "content": "Spotify"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 6,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 18,
+                "color": "#FFFFFF",
+                "fontWeight": 700
+              },
+              "content": "Midnight City"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 14,
+                "color": "#FDE2ED",
+                "fontWeight": 400
+              },
+              "content": "M83"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 20,
+                "color": "#FFFFFF",
+                "name": "lucide:SkipBack"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 32,
+                "color": "#FFFFFF",
+                "name": "lucide:Play"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 20,
+                "color": "#FFFFFF",
+                "name": "lucide:SkipForward"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -35,7 +35,7 @@
               "props": {
                 "size": 14,
                 "color": "#ffffff",
-                "name": "bolt.fill"
+                "name": "sf:bolt.fill"
               }
             }
           ]
@@ -71,7 +71,7 @@
                   "props": {
                     "size": 24,
                     "color": "#FFD700",
-                    "name": "star.fill"
+                    "name": "sf:star.fill"
                   }
                 },
                 {

@@ -16,7 +16,7 @@
           "props": {
             "width": 338,
             "height": 158,
-            "url": "https://api.mapbox.com/styles/v1/mapbox/dark-v11/static/-122.4194,37.7749,10/338x158@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"
+            "url": "https://images.unsplash.com/photo-1524661135-423995f22d0b"
           }
         },
         {
@@ -42,7 +42,7 @@
                   "props": {
                     "size": 40,
                     "color": "#8E8E93",
-                    "name": "circle.fill"
+                    "name": "sf:circle.fill"
                   }
                 }
               ]
@@ -60,7 +60,7 @@
                   "props": {
                     "size": 40,
                     "color": "#FF9500",
-                    "name": "circle.fill"
+                    "name": "sf:circle.fill"
                   }
                 }
               ]
