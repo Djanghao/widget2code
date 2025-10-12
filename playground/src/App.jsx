@@ -31,6 +31,7 @@ function App() {
   const [treeRoot, setTreeRoot] = useState(null);
   const previewContainerRef = useRef(null);
   const widgetFrameRef = useRef(null);
+  const [frameEl, setFrameEl] = useState(null);
   const treeContainerRef = useRef(null);
   const specTextareaRef = useRef(null);
   const [frameSize, setFrameSize] = useState({ width: 0, height: 0 });
@@ -125,8 +126,8 @@ function App() {
   };
 
   useEffect(() => {
-    const el = widgetFrameRef.current;
-    if (!el) return;
+    if (!frameEl) return;
+    const el = frameEl;
     const update = () => {
       const rect = el.getBoundingClientRect();
       const next = { width: Math.round(rect.width), height: Math.round(rect.height) };
@@ -144,7 +145,7 @@ function App() {
       ro.disconnect();
       window.removeEventListener('resize', update);
     };
-  }, []);
+  }, [frameEl]);
 
   // Ensure `widget.root` is serialized as the last key in `widget`
   const formatSpecWithRootLast = (spec) => {
@@ -678,7 +679,10 @@ function App() {
               overflow: 'auto'
             }} ref={previewContainerRef}>
               <div
-                ref={widgetFrameRef}
+                ref={(node) => {
+                  setFrameEl(node);
+                  widgetFrameRef.current = node;
+                }}
                 style={{ position: 'relative', display: 'inline-block' }}
               >
                 <Widget />
