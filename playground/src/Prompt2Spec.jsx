@@ -13,6 +13,7 @@ function Prompt2Spec() {
   const [promptType, setPromptType] = useState('both');
   const [systemPrompt, setSystemPrompt] = useState(bothIconsPrompt);
   const [defaultPrompt, setDefaultPrompt] = useState(bothIconsPrompt);
+  const [model, setModel] = useState('qwen3-vl-plus');
   const [userPrompt, setUserPrompt] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState(null);
@@ -43,6 +44,7 @@ function Prompt2Spec() {
       const formData = new FormData();
       formData.append('system_prompt', systemPrompt);
       formData.append('user_prompt', userPrompt);
+      if (model) formData.append('model', model);
       const response = await fetch('/api/generate-widget-text', { method: 'POST', body: formData });
       const data = await response.json();
       if (!response.ok || !data.success) throw new Error(data.error || 'Failed to generate');
@@ -88,6 +90,16 @@ function Prompt2Spec() {
               <option value="sf">SF Symbols Only</option>
               <option value="lucide">Lucide Only</option>
               <option value="both">Both Icons</option>
+            </select>
+            <select value={model} onChange={(e) => setModel(e.target.value)} title="Qwen Models" style={{ padding: '6px 10px', fontSize: 12, fontWeight: 500, backgroundColor: '#2c2c2e', color: '#f5f5f7', border: '1px solid #3a3a3c', borderRadius: 6, cursor: 'pointer', outline: 'none' }}>
+              <option value="qwen3-max-preview">Qwen3 Max Preview</option>
+              <option value="qwen-plus">Qwen Plus</option>
+              <option value="qwen-flash">Qwen Flash</option>
+              <option value="qwen3-coder-plus">Qwen3 Coder Plus</option>
+              <option value="qwen3-coder-flash">Qwen3 Coder Flash</option>
+              <option value="qwen-vl-plus">Qwen VL Plus</option>
+              <option value="qwen-vl-max">Qwen VL Max</option>
+              <option value="qwen3-vl-plus">Qwen3 VL Plus</option>
             </select>
             <button onClick={() => setSystemPrompt(defaultPrompt)} style={{ padding: '6px 12px', fontSize: 12, fontWeight: 500, backgroundColor: '#2c2c2e', color: '#f5f5f7', border: '1px solid #3a3a3c', borderRadius: 6, cursor: 'pointer' }}>Reset</button>
           </div>

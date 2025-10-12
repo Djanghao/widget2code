@@ -2,6 +2,7 @@ from fastapi import FastAPI, File, UploadFile, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from provider_hub import LLM, ChatMessage, prepare_image_content
+from provider_hub.providers.qwen import QwenProvider
 from PIL import Image
 import io
 import json
@@ -35,7 +36,8 @@ async def get_default_prompt():
 @app.post("/api/generate-widget")
 async def generate_widget(
     image: UploadFile = File(...),
-    system_prompt: str = Form(None)
+    system_prompt: str = Form(None),
+    model: str = Form(None),
 ):
     import tempfile
     temp_file = None
@@ -52,8 +54,20 @@ async def generate_widget(
 
         prompt = system_prompt if system_prompt else load_default_prompt()
 
+        # Determine model (vision-only for widget2spec)
+        vision_models = {"qwen-vl-plus", "qwen-vl-max", "qwen3-vl-plus"}
+        model_to_use = (model or "qwen3-vl-plus").strip()
+        if model and model_to_use not in vision_models:
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "success": False,
+                    "error": f"Model '{model_to_use}' is not a supported vision model for image → spec. Use one of: {sorted(vision_models)}"
+                }
+            )
+
         vision_llm = LLM(
-            model="qwen3-vl-plus",
+            model=model_to_use,
             temperature=0.5,
             max_tokens=2000,
             timeout=60,
@@ -121,11 +135,24 @@ async def generate_widget(
 @app.post("/api/generate-widget-text")
 async def generate_widget_text(
     system_prompt: str = Form(...),
-    user_prompt: str = Form(...)
+    user_prompt: str = Form(...),
+    model: str = Form(None),
 ):
     try:
+        # Allow both text and multimodal Qwen models
+        qwen_supported = set(QwenProvider.SUPPORTED_MODELS) | {"qwen3-vl-plus"}
+        model_to_use = (model or "qwen3-vl-plus").strip()
+        if model and model_to_use not in qwen_supported:
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "success": False,
+                    "error": f"Model '{model_to_use}' is not supported. Use one of: {sorted(qwen_supported)}"
+                }
+            )
+
         text_llm = LLM(
-            model="qwen3-vl-plus",
+            model=model_to_use,
             temperature=0.5,
             max_tokens=2000,
             timeout=60,

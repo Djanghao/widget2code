@@ -17,6 +17,7 @@ function ImageToWidget({ onWidgetGenerated }) {
   const [promptType, setPromptType] = useState('both');
   const [systemPrompt, setSystemPrompt] = useState(bothIconsPrompt);
   const [defaultPrompt, setDefaultPrompt] = useState(bothIconsPrompt);
+  const [model, setModel] = useState('qwen3-vl-plus');
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState(null);
   const [previewSpec, setPreviewSpec] = useState(null);
@@ -98,6 +99,7 @@ function ImageToWidget({ onWidgetGenerated }) {
       const formData = new FormData();
       formData.append('image', image);
       formData.append('system_prompt', systemPrompt);
+      if (model) formData.append('model', model);
 
       const response = await fetch('/api/generate-widget', {
         method: 'POST',
@@ -301,7 +303,9 @@ function ImageToWidget({ onWidgetGenerated }) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            marginBottom: 8
+            marginBottom: 8,
+            flexWrap: 'wrap',
+            rowGap: 8
           }}>
             <h2 style={{
               fontSize: 15,
@@ -320,7 +324,7 @@ function ImageToWidget({ onWidgetGenerated }) {
               }} />
               System Prompt
             </h2>
-            <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexShrink: 0 }}>
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexShrink: 0, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
               <select
                 value={promptType}
                 onChange={(e) => setPromptType(e.target.value)}
@@ -334,12 +338,35 @@ function ImageToWidget({ onWidgetGenerated }) {
                   borderRadius: 6,
                   cursor: 'pointer',
                   outline: 'none',
-                  whiteSpace: 'nowrap'
+                  whiteSpace: 'nowrap',
+                  maxWidth: 180
                 }}
               >
                 <option value="sf">SF Symbols Only</option>
                 <option value="lucide">Lucide Only</option>
                 <option value="both">Both Icons</option>
+              </select>
+              <select
+                value={model}
+                onChange={(e) => setModel(e.target.value)}
+                title="Qwen Vision Models"
+                style={{
+                  padding: '6px 10px',
+                  fontSize: 12,
+                  fontWeight: 500,
+                  backgroundColor: '#2c2c2e',
+                  color: '#f5f5f7',
+                  border: '1px solid #3a3a3c',
+                  borderRadius: 6,
+                  cursor: 'pointer',
+                  outline: 'none',
+                  whiteSpace: 'nowrap',
+                  maxWidth: 200
+                }}
+              >
+                <option value="qwen3-vl-plus">Qwen3 VL Plus</option>
+                <option value="qwen-vl-plus">Qwen VL Plus</option>
+                <option value="qwen-vl-max">Qwen VL Max</option>
               </select>
               <button
                 onClick={handleResetPrompt}
