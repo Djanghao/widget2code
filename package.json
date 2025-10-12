@@ -9,8 +9,8 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
-    "prepare:dynamic": "node packages/icons/scripts/prepare-dynamic-icons.js",
-    "build:icons": "node packages/icons/scripts/generate-icons.js"
+    "prepare:dynamic": "node packages/icons/sf-symbols/scripts/prepare-dynamic-icons.js",
+    "build:icons": "node packages/icons/sf-symbols/scripts/generate-icons.js"
   },
   "devDependencies": {
     "vite": "^5.0.0"

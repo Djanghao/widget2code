@@ -1,8 +1,21 @@
 import React from 'react'
-import { iconsMap, metadata as iconsMetadata } from '@widget-factory/icons'
+import { sfIconsMap, lucideIconsMap } from '@widget-factory/icons'
 
 export function Icon({ name, size = 20, color = 'rgba(255, 255, 255, 0.85)', flex, flexGrow, flexShrink, flexBasis, style = {}, ...rest }) {
-  const IconComp = name ? iconsMap?.[name] : null
+  let IconComp = null
+  let isLucide = false
+
+  if (name) {
+    if (name.startsWith('lucide:')) {
+      const lucideName = name.replace('lucide:', '')
+      IconComp = lucideIconsMap?.[lucideName]
+      isLucide = true
+    } else {
+      const sfName = name.startsWith('sf:') ? name.replace('sf:', '') : name
+      IconComp = sfIconsMap?.[sfName]
+    }
+  }
+
   const wrapperStyle = {
     '--icon-color': color,
     width: size,
@@ -18,6 +31,7 @@ export function Icon({ name, size = 20, color = 'rgba(255, 255, 255, 0.85)', fle
     ...(flexShrink !== undefined ? { flexShrink } : {}),
     ...(flexBasis !== undefined ? { flexBasis } : {})
   }
+
   if (!IconComp) {
     return (
       <div {...rest} style={wrapperStyle}>
@@ -28,6 +42,15 @@ export function Icon({ name, size = 20, color = 'rgba(255, 255, 255, 0.85)', fle
       </div>
     )
   }
+
+  if (isLucide) {
+    return (
+      <div {...rest} style={wrapperStyle}>
+        <IconComp size={size} color={color} />
+      </div>
+    )
+  }
+
   return (
     <div {...rest} style={wrapperStyle}>
       <IconComp />

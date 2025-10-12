@@ -4,6 +4,7 @@ export function compileWidgetSpecToJSX(widgetSpec) {
   }
 
   const imports = new Set();
+  const lucideIcons = new Set();
   imports.add("import React from 'react';");
   imports.add("import { WidgetShell } from '@widget-factory/primitives';");
 
@@ -47,6 +48,33 @@ export function compileWidgetSpecToJSX(widgetSpec) {
       if (!componentName) {
         throw new Error('Invalid leaf node: missing component (kind is deprecated).');
       }
+
+      const isIcon = componentName === 'Icon';
+      const iconName = isIcon ? props?.name : null;
+      const isLucideIcon = iconName && typeof iconName === 'string' && iconName.startsWith('lucide:');
+
+      if (isLucideIcon) {
+        const lucideName = iconName.replace('lucide:', '');
+        lucideIcons.add(lucideName);
+
+        const mergedProps = { ...props };
+        delete mergedProps.name;
+
+        const propsCode = [];
+        for (const [key, value] of Object.entries(mergedProps)) {
+          if (typeof value === 'string') propsCode.push(`${key}="${value}"`);
+          else propsCode.push(`${key}={${JSON.stringify(value)}}`);
+        }
+        if (flex !== undefined) {
+          if (typeof flex === 'string') propsCode.push(`flex="${flex}"`);
+          else propsCode.push(`flex={${JSON.stringify(flex)}}`);
+        }
+
+        const propsStr = propsCode.length > 0 ? ' ' + propsCode.join(' ') : '';
+        write(`${indent}<${lucideName}${propsStr} />`);
+        return;
+      }
+
       imports.add(`import { ${componentName} } from '@widget-factory/primitives';`);
 
       const mergedProps = { ...props };
@@ -75,7 +103,12 @@ export function compileWidgetSpecToJSX(widgetSpec) {
 
   renderNode(widgetSpec.widget.root, 2);
 
-  const importsCode = Array.from(imports).join('\n');
+  let importsCode = Array.from(imports).join('\n');
+  if (lucideIcons.size > 0) {
+    const lucideImport = `import { ${Array.from(lucideIcons).join(', ')} } from 'lucide-react';`;
+    importsCode += '\n' + lucideImport;
+  }
+
   const { backgroundColor, borderRadius, padding, width, height } = widgetSpec.widget;
   const shellProps = [];
   if (backgroundColor) shellProps.push(`backgroundColor="${backgroundColor}"`);
