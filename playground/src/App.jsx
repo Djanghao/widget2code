@@ -16,6 +16,9 @@ import stockMediumDark from './examples/stock-medium-dark.json';
 import remindersLargeLight from './examples/reminders-large-light.json';
 import photoMediumLight from './examples/photo-medium-light.json';
 import mapMediumDark from './examples/map-medium-dark.json';
+import lucideWeatherSmall from './examples/lucide-weather-small.json';
+import lucideTasksMedium from './examples/lucide-tasks-medium.json';
+import lucideMusicSmall from './examples/lucide-music-small.json';
 
 function App() {
   const [activeTab, setActiveTab] = useState('presets');
@@ -38,6 +41,7 @@ function App() {
   const [ratioInput, setRatioInput] = useState('');
   const [autoSizing, setAutoSizing] = useState(false);
   const [iconColor, setIconColor] = useState('rgba(255, 255, 255, 0.85)');
+  const [iconLibrary, setIconLibrary] = useState('sf');
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
 
@@ -62,7 +66,10 @@ function App() {
     stockMediumDark: { name: 'Stock M-Dark', spec: stockMediumDark },
     remindersLargeLight: { name: 'Reminders L-Light', spec: remindersLargeLight },
     photoMediumLight: { name: 'Photo M-Light', spec: photoMediumLight },
-    mapMediumDark: { name: 'Map M-Dark', spec: mapMediumDark }
+    mapMediumDark: { name: 'Map M-Dark', spec: mapMediumDark },
+    lucideWeatherSmall: { name: 'Lucide Weather', spec: lucideWeatherSmall },
+    lucideTasksMedium: { name: 'Lucide Tasks', spec: lucideTasksMedium },
+    lucideMusicSmall: { name: 'Lucide Music', spec: lucideMusicSmall }
   };
 
   const currentExample = examples[selectedExample];
@@ -1265,9 +1272,46 @@ function App() {
                     >
                       Restore Default
                     </button>
+                    <div style={{ display: 'flex', gap: 0, marginLeft: 'auto' }}>
+                      <button
+                        onClick={() => setIconLibrary('sf')}
+                        style={{
+                          padding: '8px 16px',
+                          fontSize: 13,
+                          fontWeight: 500,
+                          backgroundColor: iconLibrary === 'sf' ? '#007AFF' : '#2c2c2e',
+                          color: iconLibrary === 'sf' ? 'white' : '#8e8e93',
+                          border: '1px solid #3a3a3c',
+                          borderRight: 'none',
+                          borderTopLeftRadius: 6,
+                          borderBottomLeftRadius: 6,
+                          cursor: 'pointer',
+                          transition: 'all 0.2s ease'
+                        }}
+                      >
+                        SF Symbols
+                      </button>
+                      <button
+                        onClick={() => setIconLibrary('lucide')}
+                        style={{
+                          padding: '8px 16px',
+                          fontSize: 13,
+                          fontWeight: 500,
+                          backgroundColor: iconLibrary === 'lucide' ? '#007AFF' : '#2c2c2e',
+                          color: iconLibrary === 'lucide' ? 'white' : '#8e8e93',
+                          border: '1px solid #3a3a3c',
+                          borderTopRightRadius: 6,
+                          borderBottomRightRadius: 6,
+                          cursor: 'pointer',
+                          transition: 'all 0.2s ease'
+                        }}
+                      >
+                        Lucide
+                      </button>
+                    </div>
                   </div>
                   {(() => {
-                    const iconCategories = {
+                    const sfIconCategories = {
                       'Common Symbols': ['circle.fill', 'checkmark', 'xmark', 'checkmark.circle.fill', 'xmark.circle.fill', 'exclamationmark.triangle.fill', 'exclamationmark.circle.fill', 'questionmark.circle.fill', 'info.circle.fill', 'plus', 'minus', 'plus.circle.fill', 'minus.circle.fill', 'ellipsis', 'ellipsis.circle.fill', 'star.fill', 'star.circle.fill', 'heart.fill', 'heart.circle.fill', 'bell.fill', 'bell.badge.fill', 'house.fill', 'gear', 'gearshape.fill', 'person.fill', 'person.crop.circle.fill', 'person.2.fill', 'flag.fill', 'bookmark.fill'],
                       'Calendar & Time': ['calendar', 'calendar.badge.plus', 'calendar.circle.fill', '1.calendar', '7.calendar', '15.calendar', '22.calendar', '31.calendar', 'clock.fill', 'clock.circle.fill', 'alarm.fill', 'timer', 'stopwatch.fill', 'hourglass', 'hourglass.bottomhalf.filled', 'deskclock.fill'],
                       'Weather': ['sun.max.fill', 'sun.min.fill', 'sun.and.horizon.fill', 'sunrise.fill', 'sunset.fill', 'moon.fill', 'moon.circle.fill', 'moon.stars.fill', 'moon.zzz.fill', 'sparkles', 'cloud.fill', 'cloud.sun.fill', 'cloud.moon.fill', 'cloud.drizzle.fill', 'cloud.rain.fill', 'cloud.heavyrain.fill', 'cloud.bolt.fill', 'cloud.bolt.rain.fill', 'cloud.sleet.fill', 'cloud.snow.fill', 'cloud.hail.fill', 'cloud.fog.fill', 'smoke.fill', 'wind', 'wind.snow', 'tornado', 'tropicalstorm', 'hurricane', 'snowflake', 'thermometer', 'thermometer.sun.fill', 'thermometer.snowflake', 'thermometer.low', 'thermometer.medium', 'thermometer.high', 'drop.fill', 'humidity.fill', 'aqi.low', 'aqi.medium', 'aqi.high'],
@@ -1288,6 +1332,24 @@ function App() {
                       'Transportation': ['car.fill', 'car.2.fill', 'car.circle.fill', 'bolt.car.fill', 'car.front.waves.up.fill', 'bus.fill', 'tram.fill', 'cablecar.fill', 'bicycle', 'bicycle.circle.fill', 'scooter', 'airplane', 'airplane.circle.fill', 'airplane.departure', 'airplane.arrival', 'sailboat.fill', 'ferry.fill', 'fuelpump.fill', 'ev.charger.fill', 'parkingsign.circle.fill', 'road.lanes', 'signpost.right.fill', 'figure.walk', 'figure.run'],
                       'Food & Drink': ['cup.and.saucer.fill', 'mug.fill', 'takeoutbag.and.cup.and.straw.fill', 'waterbottle.fill', 'wineglass.fill', 'birthday.cake.fill', 'fork.knife', 'fork.knife.circle.fill', 'carrot.fill', 'leaf.fill', 'fish.fill', 'flame.fill']
                     };
+
+                    const lucideIconCategories = {
+                      'Common': ['Home', 'Heart', 'Star', 'User', 'Settings', 'Search', 'Menu', 'X', 'Check', 'ChevronRight', 'ChevronLeft', 'ChevronUp', 'ChevronDown', 'Plus', 'Minus', 'Circle', 'Square', 'Triangle', 'Info', 'AlertCircle', 'AlertTriangle', 'HelpCircle', 'Bell', 'BellOff'],
+                      'Weather': ['Sun', 'Moon', 'Cloud', 'CloudRain', 'CloudSnow', 'CloudLightning', 'CloudDrizzle', 'CloudFog', 'Wind', 'Snowflake', 'Droplet', 'Sunrise', 'Sunset', 'Thermometer', 'ThermometerSun', 'ThermometerSnowflake'],
+                      'Navigation': ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowUpCircle', 'ArrowDownCircle', 'ArrowLeftCircle', 'ArrowRightCircle', 'Navigation', 'Compass', 'Map', 'MapPin', 'Navigation2', 'Locate', 'LocateFixed'],
+                      'Communication': ['Mail', 'Send', 'MessageCircle', 'MessageSquare', 'Phone', 'PhoneCall', 'PhoneIncoming', 'PhoneOutgoing', 'Video', 'VideoOff', 'Mic', 'MicOff', 'Inbox', 'Archive'],
+                      'Media': ['Play', 'Pause', 'Stop', 'SkipForward', 'SkipBack', 'FastForward', 'Rewind', 'Volume', 'Volume1', 'Volume2', 'VolumeX', 'Music', 'Headphones', 'Camera', 'CameraOff', 'Image', 'Film', 'Youtube'],
+                      'Files': ['File', 'FileText', 'Folder', 'FolderOpen', 'FolderPlus', 'Download', 'Upload', 'Save', 'Copy', 'Clipboard', 'Paperclip', 'Link', 'ExternalLink', 'Trash', 'Trash2'],
+                      'Edit': ['Edit', 'Edit2', 'Edit3', 'Pen', 'PenTool', 'Type', 'Bold', 'Italic', 'Underline', 'AlignLeft', 'AlignCenter', 'AlignRight', 'AlignJustify', 'Scissors', 'Eraser'],
+                      'Time': ['Clock', 'Calendar', 'CalendarDays', 'Timer', 'Hourglass', 'Watch', 'Alarm', 'AlarmClock'],
+                      'Devices': ['Laptop', 'Monitor', 'Smartphone', 'Tablet', 'Watch', 'Tv', 'Speaker', 'Headphones', 'Wifi', 'WifiOff', 'Bluetooth', 'Battery', 'BatteryCharging', 'BatteryLow', 'Power', 'PowerOff'],
+                      'Shopping': ['ShoppingCart', 'ShoppingBag', 'CreditCard', 'DollarSign', 'Tag', 'Gift', 'Package', 'Percent', 'TrendingUp', 'TrendingDown', 'BarChart', 'PieChart', 'Activity'],
+                      'Social': ['ThumbsUp', 'ThumbsDown', 'Share', 'Share2', 'Eye', 'EyeOff', 'Users', 'UserPlus', 'UserMinus', 'UserCheck', 'UserX', 'Flag', 'Bookmark'],
+                      'Actions': ['Lock', 'Unlock', 'Key', 'LogIn', 'LogOut', 'Refresh', 'RotateCw', 'RotateCcw', 'Repeat', 'Shuffle', 'Filter', 'Maximize', 'Minimize', 'ZoomIn', 'ZoomOut']
+                    };
+
+                    const iconCategories = iconLibrary === 'sf' ? sfIconCategories : lucideIconCategories;
+                    const iconPrefix = iconLibrary === 'sf' ? 'sf:' : 'lucide:';
 
                     return Object.entries(iconCategories).map(([category, icons]) => (
                       <div key={category} style={{ backgroundColor: '#2c2c2e', borderRadius: 12, padding: 24, marginBottom: 16 }}>
@@ -1324,7 +1386,8 @@ function App() {
                                 e.currentTarget.style.borderColor = 'transparent';
                               }}
                               onClick={() => {
-                                navigator.clipboard.writeText(iconName);
+                                const copyText = iconPrefix + iconName;
+                                navigator.clipboard.writeText(copyText);
                                 const el = document.createElement('div');
                                 el.textContent = 'Copied!';
                                 el.style.cssText = 'position:fixed;top:20px;right:20px;background:#34C759;color:white;padding:12px 20px;border-radius:8px;font-size:14px;font-weight:600;z-index:10000;animation:fadeIn 0.2s ease';
@@ -1335,7 +1398,7 @@ function App() {
                                 }, 1500);
                               }}
                             >
-                              <Icon name={iconName} size={32} color={iconColor} />
+                              <Icon name={iconPrefix + iconName} size={32} color={iconColor} />
                               <div style={{
                                 fontSize: 10,
                                 color: '#8e8e93',
