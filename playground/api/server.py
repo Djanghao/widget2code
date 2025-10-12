@@ -83,13 +83,17 @@ async def generate_widget(
         result_text = result_text.strip()
 
         widget_spec = json.loads(result_text)
+        try:
+            if isinstance(widget_spec, dict) and isinstance(widget_spec.get("widget"), dict):
+                widget_spec["widget"]["aspectRatio"] = round(aspect_ratio, 3)
+        except Exception:
+            pass
 
         return {
             "success": True,
             "widgetSpec": widget_spec,
             "aspectRatio": round(aspect_ratio, 3)
         }
-
     except json.JSONDecodeError as e:
         return JSONResponse(
             status_code=400,
@@ -113,6 +117,62 @@ async def generate_widget(
                 os.unlink(temp_file_path)
             except:
                 pass
+
+@app.post("/api/generate-widget-text")
+async def generate_widget_text(
+    system_prompt: str = Form(...),
+    user_prompt: str = Form(...)
+):
+    try:
+        text_llm = LLM(
+            model="qwen3-vl-plus",
+            temperature=0.5,
+            max_tokens=2000,
+            timeout=60,
+            system_prompt=system_prompt
+        )
+
+        messages = [ChatMessage(
+            role="user",
+            content=[
+                {"type": "text", "text": user_prompt}
+            ]
+        )]
+
+        response = text_llm.chat(messages)
+        result_text = response.content.strip()
+
+        if result_text.startswith("```json"):
+            result_text = result_text[7:]
+        if result_text.startswith("```"):
+            result_text = result_text[3:]
+        if result_text.endswith("```"):
+            result_text = result_text[:-3]
+        result_text = result_text.strip()
+
+        widget_spec = json.loads(result_text)
+
+        return {
+            "success": True,
+            "widgetSpec": widget_spec
+        }
+    except json.JSONDecodeError as e:
+        return JSONResponse(
+            status_code=400,
+            content={
+                "success": False,
+                "error": f"Invalid JSON from LLM: {str(e)}",
+                "raw_response": result_text if 'result_text' in locals() else ""
+            }
+        )
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={
+                "success": False,
+                "error": str(e)
+            }
+        )
 
 if __name__ == "__main__":
     import uvicorn

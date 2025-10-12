@@ -6,12 +6,14 @@ export function WidgetShell({
   padding = 16,
   width,
   height,
+  aspectRatio,
   children,
   style = {}
 }) {
   const sizeStyle = {};
   if (width !== undefined) sizeStyle.width = width;
   if (height !== undefined) sizeStyle.height = height;
+  if (aspectRatio !== undefined) sizeStyle.aspectRatio = aspectRatio;
 
   return (
     <div

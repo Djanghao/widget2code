@@ -5,6 +5,7 @@ import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
 import TreeView from './TreeView.jsx';
 import Widget from './generated/Widget.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
+import Prompt2Spec from './Prompt2Spec.jsx';
 import { Icon } from '@widget-factory/primitives';
 import weatherSmallLight from './examples/weather-small-light.json';
 import weatherMediumDark from './examples/weather-medium-dark.json';
@@ -428,6 +429,29 @@ function App() {
               >
                 Widget2Spec
               </button>
+              <button
+                onClick={() => setActiveTab('prompt2spec')}
+                style={{
+                  padding: '8px 16px',
+                  fontSize: 15,
+                  fontWeight: 500,
+                  backgroundColor: 'transparent',
+                  color: activeTab === 'prompt2spec' ? '#f5f5f7' : '#8e8e93',
+                  border: 'none',
+                  borderBottom: activeTab === 'prompt2spec' ? '2px solid #007AFF' : '2px solid transparent',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  if (activeTab !== 'prompt2spec') e.target.style.color = '#f5f5f7';
+                }}
+                onMouseLeave={(e) => {
+                  if (activeTab !== 'prompt2spec') e.target.style.color = '#8e8e93';
+                }}
+              >
+                Prompt2Spec
+              </button>
             </div>
           </div>
           <button
@@ -833,13 +857,25 @@ function App() {
                     const startW = rect.width;
                     const startH = rect.height;
                     resizingRef.current = true;
+                    let r = null;
+                    try {
+                      const obj = parseCurrentSpecObject();
+                      const v = obj?.widget?.aspectRatio;
+                      if (typeof v === 'number' && isFinite(v) && v > 0) r = v;
+                    } catch {}
 
                     const onMove = (ev) => {
                       const dx = ev.clientX - startX;
-                      const dy = ev.clientY - startY;
-                      const nw = Math.max(40, Math.round(startW + dx));
-                      const nh = Math.max(40, Math.round(startH + dy));
-                      applySizeToSpec(nw, nh);
+                      if (r) {
+                        const nw = Math.max(40, Math.round(startW + dx));
+                        const nh = Math.max(40, Math.round(nw / r));
+                        applySizeToSpec(nw, nh);
+                      } else {
+                        const dy = ev.clientY - startY;
+                        const nw = Math.max(40, Math.round(startW + dx));
+                        const nh = Math.max(40, Math.round(startH + dy));
+                        applySizeToSpec(nw, nh);
+                      }
                     };
                     const onUp = () => {
                       window.removeEventListener('mousemove', onMove);
@@ -900,6 +936,12 @@ function App() {
       {activeTab === 'widget2spec' && (
         <div key="widget2spec" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
           <ImageToWidget onWidgetGenerated={handleWidgetGenerated} />
+        </div>
+      )}
+
+      {activeTab === 'prompt2spec' && (
+        <div key="prompt2spec" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
+          <Prompt2Spec />
         </div>
       )}
 

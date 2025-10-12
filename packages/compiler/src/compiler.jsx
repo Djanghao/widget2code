@@ -109,13 +109,14 @@ export function compileWidgetSpecToJSX(widgetSpec) {
     importsCode += '\n' + lucideImport;
   }
 
-  const { backgroundColor, borderRadius, padding, width, height } = widgetSpec.widget;
+  const { backgroundColor, borderRadius, padding, width, height, aspectRatio } = widgetSpec.widget;
   const shellProps = [];
   if (backgroundColor) shellProps.push(`backgroundColor="${backgroundColor}"`);
   if (borderRadius !== undefined) shellProps.push(`borderRadius={${borderRadius}}`);
   if (padding !== undefined) shellProps.push(`padding={${padding}}`);
   if (width !== undefined) shellProps.push(`width${formatJsxPropValue(width)}`);
   if (height !== undefined) shellProps.push(`height${formatJsxPropValue(height)}`);
+  if (aspectRatio !== undefined) shellProps.push(`aspectRatio${formatJsxPropValue(aspectRatio)}`);
   const shellPropsStr = shellProps.length > 0 ? ' ' + shellProps.join(' ') : '';
 
   const prefix = `${importsCode}\n\nexport default function Widget() {\n  return (\n    <WidgetShell${shellPropsStr}>\n`;
