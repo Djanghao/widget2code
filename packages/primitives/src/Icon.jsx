@@ -1,11 +1,10 @@
 import React from 'react'
 import { iconsMap, metadata as iconsMetadata } from '@widget-factory/icons'
 
-export function Icon({ name, size = 20, color = '#000000', flex, flexGrow, flexShrink, flexBasis, style = {}, ...rest }) {
+export function Icon({ name, size = 20, color = 'rgba(255, 255, 255, 0.85)', flex, flexGrow, flexShrink, flexBasis, style = {}, ...rest }) {
   const IconComp = name ? iconsMap?.[name] : null
-  const isSingle = name && iconsMetadata && iconsMetadata[name] ? !!iconsMetadata[name].isSingleColor : false
-  const applyColor = IconComp ? isSingle : true
   const wrapperStyle = {
+    '--icon-color': color,
     width: size,
     height: size,
     display: 'flex',
@@ -13,7 +12,6 @@ export function Icon({ name, size = 20, color = '#000000', flex, flexGrow, flexS
     justifyContent: 'center',
     flex: '0 0 auto',
     flexShrink: 0,
-    ...(applyColor ? { color } : {}),
     ...style,
     ...(flex !== undefined ? { flex } : {}),
     ...(flexGrow !== undefined ? { flexGrow } : {}),

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const ICONS_SOURCE_ROOT = path.resolve(__dirname, '../../../assets/icons')
+const ICONS_SOURCE_ROOT = path.resolve(__dirname, '../../../assets/icons/sf-symbols-dynamic')
 const ICONS_OUTPUT_DIR = path.resolve(__dirname, '../src/components')
 const ICONS_OLD_OUTPUT_DIR = path.resolve(__dirname, '../src/generated')
 const ICONS_PREV_OUTPUT_DIR = path.resolve(__dirname, '../src/icons')
@@ -126,14 +126,12 @@ for (const file of svgFiles) {
   const name = path.basename(file, '.svg')
   const raw = fs.readFileSync(file, 'utf-8')
   const normalized = normalizeSvg(raw)
-  const colors = extractColors(normalized)
-  const isSingle = colors.length <= 1
-  const svgFinal = isSingle ? toSingleColor(normalized) : normalized
+  const svgFinal = normalized
   const compName = toComponentName(name)
   const outPath = path.join(ICONS_OUTPUT_DIR, `${compName}.jsx`)
   fs.writeFileSync(outPath, generateComponentCode(compName, svgFinal))
   entries.push({ name, compName })
-  meta[name] = { isSingleColor: isSingle }
+  meta[name] = { supportsDynamicColor: true }
   process.stdout.write(`Generated ${compName}\n`)
 }
 

@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "npm run build --workspaces --if-present",
+    "prepare:dynamic": "node packages/icons/scripts/prepare-dynamic-icons.js",
     "build:icons": "node packages/icons/scripts/generate-icons.js"
   },
   "devDependencies": {
