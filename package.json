@@ -8,6 +8,9 @@
     "playground"
   ],
   "scripts": {
+    "dev": "npm run dev --workspace=playground",
+    "dev:full": "npm run dev:full --workspace=playground",
+    "api": "npm run api --workspace=playground",
     "build": "npm run build --workspaces --if-present",
     "prepare:dynamic": "node packages/icons/sf-symbols/scripts/prepare-dynamic-icons.js",
     "build:icons": "node packages/icons/sf-symbols/scripts/generate-icons.js"

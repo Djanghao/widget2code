@@ -5,16 +5,23 @@ Compile structured WidgetSpec (JSON) into portable JSX files. Includes primitive
 Pipeline: WidgetSpec → JSX file → rendered result.
 
 ## Quick Start
+
 ```bash
+# Install dependencies
 npm install
-cd playground
+
+# Start development server (frontend only)
+npm run dev
+
+# Or start with backend API
 npm run dev:full
 ```
+
 This starts:
 - Frontend at http://localhost:5173
-- Backend at http://localhost:8000
+- Backend at http://localhost:8000 (with `dev:full`)
 
-Backend setup (first time only):
+**Backend setup** (first time only, required for `dev:full`):
 ```bash
 cd playground/api
 python -m venv venv
