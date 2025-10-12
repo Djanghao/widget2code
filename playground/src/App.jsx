@@ -37,6 +37,7 @@ function App() {
   const resizingRef = useRef(false);
   const [ratioInput, setRatioInput] = useState('');
   const [autoSizing, setAutoSizing] = useState(false);
+  const [iconColor, setIconColor] = useState('rgba(255, 255, 255, 0.85)');
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
 
@@ -1203,6 +1204,77 @@ function App() {
 
               {modalTab === 'icons' && (
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 20 }}>
+                  <div style={{
+                    backgroundColor: '#2c2c2e',
+                    borderRadius: 12,
+                    padding: 20,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 16,
+                    flexWrap: 'wrap'
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <input
+                        type="color"
+                        value={iconColor.startsWith('#') ? iconColor : '#ffffff'}
+                        onChange={(e) => setIconColor(e.target.value)}
+                        style={{
+                          width: 40,
+                          height: 40,
+                          border: 'none',
+                          borderRadius: 6,
+                          cursor: 'pointer',
+                          backgroundColor: 'transparent'
+                        }}
+                      />
+                      <input
+                        type="text"
+                        value={iconColor}
+                        onChange={(e) => setIconColor(e.target.value)}
+                        placeholder="Color (hex, rgba, etc.)"
+                        style={{
+                          backgroundColor: '#1c1c1e',
+                          border: '1px solid #3a3a3c',
+                          borderRadius: 6,
+                          padding: '8px 12px',
+                          color: '#f5f5f7',
+                          fontSize: 13,
+                          fontFamily: 'Monaco, monospace',
+                          width: 220,
+                          outline: 'none'
+                        }}
+                        onFocus={(e) => e.target.style.borderColor = '#007AFF'}
+                        onBlur={(e) => e.target.style.borderColor = '#3a3a3c'}
+                      />
+                    </div>
+                    <button
+                      onClick={() => setIconColor('rgba(255, 255, 255, 0.85)')}
+                      style={{
+                        backgroundColor: '#007AFF',
+                        border: 'none',
+                        borderRadius: 6,
+                        padding: '8px 16px',
+                        color: 'white',
+                        fontSize: 13,
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                        transition: 'all 0.2s ease'
+                      }}
+                      onMouseEnter={(e) => e.target.style.backgroundColor = '#0051D5'}
+                      onMouseLeave={(e) => e.target.style.backgroundColor = '#007AFF'}
+                    >
+                      Restore Default
+                    </button>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 8,
+                      marginLeft: 'auto'
+                    }}>
+                      <span style={{ fontSize: 12, color: '#8e8e93' }}>Preview:</span>
+                      <Icon name="star.fill" size={28} color={iconColor} />
+                    </div>
+                  </div>
                   {(() => {
                     const iconCategories = {
                       'Common': ['circle.fill', 'checkmark', 'xmark', 'checkmark.circle.fill', 'xmark.circle.fill', 'exclamationmark.triangle.fill', 'info.circle.fill', 'plus', 'minus', 'ellipsis', 'star.fill', 'heart.fill', 'bell.fill', 'house.fill', 'gear', 'person.fill'],
@@ -1279,7 +1351,7 @@ function App() {
                                 }, 1500);
                               }}
                             >
-                              <Icon name={iconName} size={32} color="#f5f5f7" />
+                              <Icon name={iconName} size={32} color={iconColor} />
                               <div style={{
                                 fontSize: 10,
                                 color: '#8e8e93',
