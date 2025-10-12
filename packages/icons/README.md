@@ -1,16 +1,22 @@
 # @widget-factory/icons
 
-Convert SF Symbols SVGs to React icon components, export `iconsMap` & `metadata` (for `@widget-factory/primitives` `<Icon />`).
+Convert SF Symbols SVGs to React icon components. Exports `iconsMap` & `metadata` (consumed by `@widget-factory/primitives` `<Icon />`).
 
 ## Usage
 - Build: `npm run build:icons`
-- Recommended: `<Icon name="cloud.sun.fill" size={24} color="#FF9500" />`
-- Direct: `const C = iconsMap['cloud.sun.fill']; return <C />`
+- Dynamic color: `<Icon name="cloud.sun.fill" size={24} color="#FF9500" />`
+- Direct map: `const C = iconsMap['cloud.sun.fill']; return <C />`
+
+## Dynamic Colors
+- Icons are prepared to use CSS variable `--icon-color` for fills/strokes.
+- Default color: `rgba(255, 255, 255, 0.85)`.
+- `<Icon />` sets `--icon-color` via its `color` prop for consistent coloring.
 
 ## Implementation
-- Scan `assets/icons/sf-symbols/`, clean SVGs, normalize `width/height=100%`
-- Single-color detection → replace with `currentColor` (enables external coloring)
-- Generate to `src/components/`, write `src/map.js` & `src/metadata.json`
+- One-time prepare (only when refreshing source SVGs): `npm run prepare:dynamic`
+  - Converts multicolor SF Symbols to use `var(--icon-color, rgba(255, 255, 255, 0.85))`.
+- Source: `assets/icons/sf-symbols-dynamic/`
+- Generation: normalize `width/height=100%`, emit React components to `src/components/`, write `src/map.js` and `src/metadata.json` (`supportsDynamicColor: true`).
 
 Auto-generated files are gitignored: `src/components/`, `src/map.js`, `src/metadata.json`.
 
