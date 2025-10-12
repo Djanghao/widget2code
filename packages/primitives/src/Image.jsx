@@ -10,18 +10,20 @@ export function Image({
   flexShrink,
   flexBasis,
   style = {},
+  children,
   ...rest
 }) {
   return (
-    <img
-      src={url}
-      alt="Widget Image"
+    <div
       {...rest}
       style={{
         width,
         height,
         borderRadius,
-        objectFit: 'cover',
+        backgroundImage: `url(${url})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
         display: 'block',
         flex: '0 0 auto',
         flexShrink: 0,
@@ -31,6 +33,8 @@ export function Image({
         ...(flexShrink !== undefined ? { flexShrink } : {}),
         ...(flexBasis !== undefined ? { flexBasis } : {})
       }}
-    />
+    >
+      {children}
+    </div>
   );
 }
