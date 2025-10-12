@@ -1,0 +1,33 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 10,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 16, "color": "#ff2d55", "name": "sf:heart.fill" } },
+            { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 14, "color": "#f5f5f7", "fontWeight": 600 }, "content": "Heart Rate" }
+          ]
+        },
+        { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 44, "color": "#ffffff", "fontWeight": 700 }, "content": "72" },
+        { "type": "container", "direction": "row", "gap": 6, "flex": 0, "alignCross": "center", "children": [
+          { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 14, "color": "#d1d1d6" }, "content": "BPM" },
+          { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 12, "color": "#34C759", "name": "sf:arrow.up" } },
+          { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 13, "color": "#d1d1d6" }, "content": "Resting" }
+        ] }
+      ]
+    }
+  }
+}
+

@@ -20,6 +20,16 @@ import mapMediumDark from './examples/map-medium-dark.json';
 import lucideWeatherSmall from './examples/lucide-weather-small.json';
 import lucideTasksMedium from './examples/lucide-tasks-medium.json';
 import lucideMusicSmall from './examples/lucide-music-small.json';
+import batterySmallDark from './examples/battery-small-dark.json';
+import fitnessSmallLight from './examples/fitness-small-light.json';
+import musicMediumLight from './examples/music-medium-light.json';
+import newsMediumDark from './examples/news-medium-dark.json';
+import calendarMediumLight from './examples/calendar-medium-light.json';
+import photosSmallLight from './examples/photos-small-light.json';
+import healthSmallDark from './examples/health-small-dark.json';
+import batteryMediumLight from './examples/battery-medium-light.json';
+import stocksMediumLight from './examples/stocks-medium-light.json';
+import weatherLargeLight from './examples/weather-large-light.json';
 
 function App() {
   const [activeTab, setActiveTab] = useState('presets');
@@ -71,7 +81,17 @@ function App() {
     mapMediumDark: { name: 'Map M-Dark', spec: mapMediumDark },
     lucideWeatherSmall: { name: 'Lucide Weather', spec: lucideWeatherSmall },
     lucideTasksMedium: { name: 'Lucide Tasks', spec: lucideTasksMedium },
-    lucideMusicSmall: { name: 'Lucide Music', spec: lucideMusicSmall }
+    lucideMusicSmall: { name: 'Lucide Music', spec: lucideMusicSmall },
+    batterySmallDark: { name: 'Battery S-Dark', spec: batterySmallDark },
+    fitnessSmallLight: { name: 'Activity S-Light', spec: fitnessSmallLight },
+    musicMediumLight: { name: 'Music M-Light', spec: musicMediumLight },
+    newsMediumDark: { name: 'News M-Dark', spec: newsMediumDark },
+    calendarMediumLight: { name: 'Calendar M-Light', spec: calendarMediumLight },
+    photosSmallLight: { name: 'Photos S-Light', spec: photosSmallLight },
+    healthSmallDark: { name: 'Health S-Dark', spec: healthSmallDark },
+    batteryMediumLight: { name: 'Battery M-Light', spec: batteryMediumLight },
+    stocksMediumLight: { name: 'Stocks M-Light', spec: stocksMediumLight },
+    weatherLargeLight: { name: 'Weather L-Light', spec: weatherLargeLight }
   };
 
   const currentExample = examples[selectedExample];

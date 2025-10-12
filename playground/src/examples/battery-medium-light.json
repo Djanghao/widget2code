@@ -1,0 +1,45 @@
+{
+  "widget": {
+    "backgroundColor": "#f2f2f7",
+    "borderRadius": 20,
+    "padding": 16,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 18, "color": "#000000", "fontWeight": 700 }, "content": "Batteries" },
+            { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 18, "color": "#8e8e93", "name": "sf:battery.100percent" } }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 10,
+          "flex": 1,
+          "children": [
+            { "type": "container", "direction": "row", "gap": 10, "flex": 0, "alignCross": "center", "children": [
+              { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 28, "color": "#34C759", "name": "sf:iphone" } },
+              { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 15, "color": "#000000" }, "content": "iPhone" },
+              { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 15, "color": "#000000", "fontWeight": 600 }, "content": "85%" }
+            ] },
+            { "type": "container", "direction": "row", "gap": 10, "flex": 0, "alignCross": "center", "children": [
+              { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 28, "color": "#FF9500", "name": "sf:airpods.gen3" } },
+              { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 15, "color": "#000000" }, "content": "AirPods" },
+              { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 15, "color": "#000000", "fontWeight": 600 }, "content": "67%" }
+            ] }
+          ]
+        }
+      ]
+    }
+  }
+}

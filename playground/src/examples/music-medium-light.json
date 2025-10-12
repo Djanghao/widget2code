@@ -1,0 +1,49 @@
+{
+  "widget": {
+    "backgroundColor": "#f2f2f7",
+    "borderRadius": 20,
+    "padding": 16,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            { "type": "leaf", "component": "Image", "flex": "none", "props": { "width": 72, "height": 72, "borderRadius": 12, "url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d" } },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 6,
+              "flex": 1,
+              "children": [
+                { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 16, "color": "#000000", "fontWeight": 600 }, "content": "Night Drive" },
+                { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 13, "color": "#6c6c70" }, "content": "The Midnight" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 28, "color": "#000000", "name": "sf:backward.fill" } },
+            { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 36, "color": "#000000", "name": "sf:play.fill" } },
+            { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 28, "color": "#000000", "name": "sf:forward.fill" } }
+          ]
+        }
+      ]
+    }
+  }
+}
+
