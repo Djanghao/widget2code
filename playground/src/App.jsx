@@ -3,7 +3,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
 import TreeView from './TreeView.jsx';
-import Widget from './generated/Widget.jsx';
+import WidgetFrame from './WidgetFrame.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
 import Prompt2Spec from './Prompt2Spec.jsx';
 import { Icon } from '@widget-factory/primitives';
@@ -709,7 +709,7 @@ function App() {
                 }}
                 style={{ position: 'relative', display: 'inline-block' }}
               >
-                <Widget />
+                <WidgetFrame resetKey={currentSpec} />
                 {isLoading && (
                   <div
                     style={{

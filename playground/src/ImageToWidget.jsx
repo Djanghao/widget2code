@@ -3,7 +3,7 @@ import { useDropzone } from 'react-dropzone';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
-import WidgetPreview from './generated/WidgetPreview.jsx';
+import WidgetPreviewFrame from './WidgetPreviewFrame.jsx';
 import TreeView from './TreeView.jsx';
 import sfOnlyPrompt from '../api/sf-only-prompt.md?raw';
 import lucideOnlyPrompt from '../api/lucide-only-prompt.md?raw';
@@ -477,7 +477,7 @@ function ImageToWidget({ onWidgetGenerated }) {
           }}>
             {previewSpec ? (
               <div ref={widgetFrameRef} style={{ display: 'inline-block', position: 'relative' }}>
-                <WidgetPreview />
+                <WidgetPreviewFrame resetKey={previewSpec ? JSON.stringify(previewSpec) : ''} />
                 {autoSizing && (
                   <div style={{
                     position: 'absolute',

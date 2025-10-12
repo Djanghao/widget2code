@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
-import WidgetPreview from './generated/WidgetPreview.jsx';
+import WidgetPreviewFrame from './WidgetPreviewFrame.jsx';
 import TreeView from './TreeView.jsx';
 import { useAutoResize } from './hooks/useAutoResize';
 import sfOnlyPrompt from '../api/prompt2spec-sf-only.md?raw';
@@ -212,7 +212,7 @@ function Prompt2Spec() {
           }}>
             {previewSpec ? (
               <div ref={widgetFrameRef} style={{ display: 'inline-block', position: 'relative' }}>
-                <WidgetPreview />
+                <WidgetPreviewFrame resetKey={previewSpec ? JSON.stringify(previewSpec) : ''} />
                 {autoSizing && (
                   <div style={{ position: 'absolute', left: 0, top: 0, right: 0, bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.12)', zIndex: 3, pointerEvents: 'none' }}>
                     <svg width="32" height="32" viewBox="0 0 24 24" role="img">
