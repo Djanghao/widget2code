@@ -5,15 +5,18 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
 import WidgetPreview from './generated/WidgetPreview.jsx';
 import TreeView from './TreeView.jsx';
-import defaultPromptContent from '../api/default-prompt.md?raw';
+import sfOnlyPrompt from '../api/sf-only-prompt.md?raw';
+import lucideOnlyPrompt from '../api/lucide-only-prompt.md?raw';
+import bothIconsPrompt from '../api/both-icons-prompt.md?raw';
 import { useAutoResize } from './hooks/useAutoResize';
 
 function ImageToWidget({ onWidgetGenerated }) {
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [aspectRatio, setAspectRatio] = useState(null);
-  const [systemPrompt, setSystemPrompt] = useState(defaultPromptContent);
-  const [defaultPrompt, setDefaultPrompt] = useState(defaultPromptContent);
+  const [promptType, setPromptType] = useState('both');
+  const [systemPrompt, setSystemPrompt] = useState(bothIconsPrompt);
+  const [defaultPrompt, setDefaultPrompt] = useState(bothIconsPrompt);
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState(null);
   const [previewSpec, setPreviewSpec] = useState(null);
@@ -33,6 +36,17 @@ function ImageToWidget({ onWidgetGenerated }) {
     document.addEventListener('click', onDocClick);
     return () => document.removeEventListener('click', onDocClick);
   }, []);
+
+  useEffect(() => {
+    const promptMap = {
+      'sf': sfOnlyPrompt,
+      'lucide': lucideOnlyPrompt,
+      'both': bothIconsPrompt
+    };
+    const selectedPrompt = promptMap[promptType];
+    setSystemPrompt(selectedPrompt);
+    setDefaultPrompt(selectedPrompt);
+  }, [promptType]);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
 
@@ -142,7 +156,7 @@ function ImageToWidget({ onWidgetGenerated }) {
   return (
     <div style={{
       display: 'grid',
-      gridTemplateColumns: '350px 1fr',
+      gridTemplateColumns: '420px 1fr',
       gap: 12,
       height: '100%',
       minHeight: 0
@@ -306,8 +320,29 @@ function ImageToWidget({ onWidgetGenerated }) {
               }} />
               System Prompt
             </h2>
-            <button
-              onClick={handleResetPrompt}
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexShrink: 0 }}>
+              <select
+                value={promptType}
+                onChange={(e) => setPromptType(e.target.value)}
+                style={{
+                  padding: '6px 10px',
+                  fontSize: 12,
+                  fontWeight: 500,
+                  backgroundColor: '#2c2c2e',
+                  color: '#f5f5f7',
+                  border: '1px solid #3a3a3c',
+                  borderRadius: 6,
+                  cursor: 'pointer',
+                  outline: 'none',
+                  whiteSpace: 'nowrap'
+                }}
+              >
+                <option value="sf">SF Symbols Only</option>
+                <option value="lucide">Lucide Only</option>
+                <option value="both">Both Icons</option>
+              </select>
+              <button
+                onClick={handleResetPrompt}
               style={{
                 padding: '6px 12px',
                 fontSize: 12,
@@ -317,13 +352,15 @@ function ImageToWidget({ onWidgetGenerated }) {
                 border: '1px solid #3a3a3c',
                 borderRadius: 6,
                 cursor: 'pointer',
-                transition: 'all 0.2s ease'
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap'
               }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3a3a3c'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2c2c2e'}
             >
               Reset to Default
             </button>
+          </div>
           </div>
           <textarea
             value={systemPrompt}
