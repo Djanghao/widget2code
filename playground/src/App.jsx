@@ -142,7 +142,7 @@ function App() {
     };
 
     compileAndWrite();
-  }, [currentExample, editedSpec]);
+  }, [selectedExample, editedSpec]);
 
   const handleSpecChange = (value) => {
     setEditedSpec(value);
