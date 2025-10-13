@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 Create `playground/api/.env` with:
 ```
-ARK_API_KEY=your_volcengine_api_key
+DASHSCOPE_API_KEY=your-qwen-api-key
 ```
 
 ### Regenerating Icons (Optional)
