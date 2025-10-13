@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Icon } from '@widget-factory/primitives';
 import { Text } from '@widget-factory/primitives';
 import { Image } from '@widget-factory/primitives';
@@ -7,31 +7,434 @@ import { Sparkline } from '@widget-factory/primitives';
 import { WidgetShell } from '@widget-factory/primitives';
 
 export default function Documentation() {
+  const [activeSection, setActiveSection] = useState('widgetshell');
+  const [expandedSections, setExpandedSections] = useState({
+    'widgetshell': true,
+    'icon-system': true,
+    'component-types': true
+  });
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const container = document.querySelector('[data-content-scroll]');
+      if (container) {
+        const offsetTop = element.offsetTop - container.offsetTop - 80;
+        container.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      }
+      setActiveSection(sectionId);
+    }
+  };
+
+  const toggleSection = (sectionId) => {
+    setExpandedSections(prev => ({
+      ...prev,
+      [sectionId]: !prev[sectionId]
+    }));
+  };
+
+  useEffect(() => {
+    const container = document.querySelector('[data-content-scroll]');
+    if (!container) return;
+
+    const handleScroll = () => {
+      const sections = [
+        'widgetshell', 'css-priority', 'examples', 'autoresize', 'visual-examples',
+        'icon-system', 'sf-symbols', 'lucide-icons',
+        'component-types', 'container-components', 'fixed-size-components', 'image-components'
+      ];
+      const scrollPosition = container.scrollTop + 100;
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const offsetTop = element.offsetTop - container.offsetTop;
+          const offsetHeight = element.offsetHeight;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    container.addEventListener('scroll', handleScroll);
+    return () => container.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div style={{
       display: 'flex',
-      flexDirection: 'column',
       height: '100%',
       backgroundColor: '#1c1c1e',
       color: '#f5f5f7',
-      overflow: 'auto'
+      overflow: 'hidden'
     }}>
       <div style={{
-        maxWidth: '80%',
-        margin: '0 auto',
-        padding: '40px 24px',
-        width: '100%'
+        width: 240,
+        flexShrink: 0,
+        backgroundColor: '#202020',
+        borderRight: '1px solid #333',
+        overflowY: 'auto',
+        overflowX: 'hidden',
+        paddingTop: 16
       }}>
-        <h1 style={{
-          fontSize: 32,
-          fontWeight: 600,
-          marginBottom: 48,
-          color: '#f5f5f7'
-        }}>
-          Guides
-        </h1>
+        <nav>
+          <div style={{ marginBottom: 20 }}>
+            <button
+              onClick={() => scrollToSection('widgetshell')}
+              style={{
+                width: '100%',
+                padding: '8px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'widgetshell' ? '#3a3a3a' : 'transparent',
+                color: '#fff',
+                fontSize: 15,
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6,
+                marginTop: 16
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'widgetshell') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'widgetshell') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              WidgetShell Size Rules
+            </button>
+            <button
+              onClick={() => scrollToSection('css-priority')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'css-priority' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'css-priority' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'css-priority') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'css-priority') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              CSS Priority Rules
+            </button>
+            <button
+              onClick={() => scrollToSection('examples')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'examples' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'examples' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'examples') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'examples') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Examples
+            </button>
+            <button
+              onClick={() => scrollToSection('autoresize')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'autoresize' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'autoresize' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'autoresize') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'autoresize') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              AutoResize
+            </button>
+            <button
+              onClick={() => scrollToSection('visual-examples')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'visual-examples' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'visual-examples' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'visual-examples') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'visual-examples') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Visual Examples
+            </button>
 
-        <section style={{ marginBottom: 60 }}>
+            <button
+              onClick={() => scrollToSection('icon-system')}
+              style={{
+                width: '100%',
+                padding: '8px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'icon-system' ? '#3a3a3a' : 'transparent',
+                color: '#fff',
+                fontSize: 15,
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6,
+                marginTop: 24
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'icon-system') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'icon-system') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Icon System
+            </button>
+            <button
+              onClick={() => scrollToSection('sf-symbols')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'sf-symbols' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'sf-symbols' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'sf-symbols') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'sf-symbols') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              SF Symbols
+            </button>
+            <button
+              onClick={() => scrollToSection('lucide-icons')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'lucide-icons' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'lucide-icons' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'lucide-icons') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'lucide-icons') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Lucide Icons
+            </button>
+
+            <button
+              onClick={() => scrollToSection('component-types')}
+              style={{
+                width: '100%',
+                padding: '8px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'component-types' ? '#3a3a3a' : 'transparent',
+                color: '#fff',
+                fontSize: 15,
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6,
+                marginTop: 24
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'component-types') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'component-types') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Component Types
+            </button>
+            <button
+              onClick={() => scrollToSection('container-components')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'container-components' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'container-components' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'container-components') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'container-components') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Container Components
+            </button>
+            <button
+              onClick={() => scrollToSection('fixed-size-components')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'fixed-size-components' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'fixed-size-components' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'fixed-size-components') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'fixed-size-components') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Fixed-Size Components
+            </button>
+            <button
+              onClick={() => scrollToSection('image-components')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'image-components' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'image-components' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'image-components') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'image-components') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Image Components
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      <div
+        data-content-scroll
+        style={{
+          flex: 1,
+          overflowY: 'auto',
+          padding: '40px 60px'
+        }}
+      >
+        <section id="widgetshell" style={{ marginBottom: 60, scrollMarginTop: 20 }}>
           <h2 style={{
             fontSize: 28,
             fontWeight: 600,
@@ -43,7 +446,7 @@ export default function Documentation() {
             WidgetShell Container Size Rules
           </h2>
 
-          <div style={{ marginBottom: 32 }}>
+          <div id="css-priority" style={{ marginBottom: 32, scrollMarginTop: 80 }}>
             <h3 style={{
               fontSize: 20,
               fontWeight: 600,
@@ -72,7 +475,7 @@ export default function Documentation() {
             </ul>
           </div>
 
-          <div style={{ marginBottom: 32 }}>
+          <div id="examples" style={{ marginBottom: 32, scrollMarginTop: 80 }}>
             <h3 style={{
               fontSize: 20,
               fontWeight: 600,
@@ -125,7 +528,7 @@ export default function Documentation() {
             </div>
           </div>
 
-          <div style={{ marginBottom: 32 }}>
+          <div id="autoresize" style={{ marginBottom: 32, scrollMarginTop: 80 }}>
             <h3 style={{
               fontSize: 20,
               fontWeight: 600,
@@ -144,7 +547,7 @@ export default function Documentation() {
             </p>
           </div>
 
-          <div>
+          <div id="visual-examples" style={{ scrollMarginTop: 80 }}>
             <h3 style={{
               fontSize: 20,
               fontWeight: 600,
@@ -188,7 +591,7 @@ export default function Documentation() {
           </div>
         </section>
 
-        <section style={{ marginBottom: 60 }}>
+        <section id="icon-system" style={{ marginBottom: 60, scrollMarginTop: 80 }}>
           <h2 style={{
             fontSize: 28,
             fontWeight: 600,
@@ -200,7 +603,7 @@ export default function Documentation() {
             Icon System
           </h2>
 
-          <div style={{ marginBottom: 32 }}>
+          <div id="sf-symbols" style={{ marginBottom: 32, scrollMarginTop: 80 }}>
             <h3 style={{
               fontSize: 20,
               fontWeight: 600,
@@ -279,7 +682,7 @@ export default function Documentation() {
             </div>
           </div>
 
-          <div>
+          <div id="lucide-icons" style={{ scrollMarginTop: 80 }}>
             <h3 style={{
               fontSize: 20,
               fontWeight: 600,
@@ -325,7 +728,7 @@ export default function Documentation() {
           </div>
         </section>
 
-        <section style={{ marginBottom: 60 }}>
+        <section id="component-types" style={{ marginBottom: 60, scrollMarginTop: 80 }}>
           <h2 style={{
             fontSize: 28,
             fontWeight: 600,
@@ -337,7 +740,7 @@ export default function Documentation() {
             Component Types
           </h2>
 
-          <div style={{ marginBottom: 32 }}>
+          <div id="container-components" style={{ marginBottom: 32, scrollMarginTop: 80 }}>
             <h3 style={{
               fontSize: 20,
               fontWeight: 600,
@@ -391,7 +794,7 @@ export default function Documentation() {
             </div>
           </div>
 
-          <div style={{ marginBottom: 32 }}>
+          <div id="fixed-size-components" style={{ marginBottom: 32, scrollMarginTop: 80 }}>
             <h3 style={{
               fontSize: 20,
               fontWeight: 600,
@@ -443,7 +846,7 @@ export default function Documentation() {
             </div>
           </div>
 
-          <div>
+          <div id="image-components" style={{ scrollMarginTop: 80 }}>
             <h3 style={{
               fontSize: 20,
               fontWeight: 600,

@@ -400,7 +400,17 @@ function App() {
       <header style={{ marginBottom: 12, flexShrink: 0, borderBottom: '1px solid #2c2c2e', paddingBottom: 12 }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
-            <h1 style={{ fontSize: 24, fontWeight: 600, margin: 0, color: '#f5f5f7', letterSpacing: '-0.3px' }}>
+            <h1
+              onClick={() => setActiveTab('presets')}
+              style={{
+                fontSize: 24,
+                fontWeight: 600,
+                margin: 0,
+                color: '#f5f5f7',
+                letterSpacing: '-0.3px',
+                cursor: 'pointer'
+              }}
+            >
               Widget Factory
             </h1>
             <div style={{ display: 'flex', gap: 0, alignItems: 'center' }}>
