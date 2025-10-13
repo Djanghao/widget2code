@@ -26,6 +26,7 @@ function ImageToWidget({ onWidgetGenerated }) {
   const [selectedPath, setSelectedPath] = useState(null);
   const widgetFrameRef = useRef(null);
   const treeContainerRef = useRef(null);
+  const [enableAutoResize, setEnableAutoResize] = useState(true);
 
   useEffect(() => {
     const onDocClick = (e) => {
@@ -51,7 +52,7 @@ function ImageToWidget({ onWidgetGenerated }) {
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
 
-  const { autoSizing, handleAutoResizeByRatio } = useAutoResize(widgetFrameRef, async (updatedSpec) => {
+  const { ratioInput, setRatioInput, autoSizing, handleAutoResizeByRatio } = useAutoResize(widgetFrameRef, async (updatedSpec) => {
     setPreviewSpec(updatedSpec);
     const jsx = compileWidgetSpecToJSX(updatedSpec);
     await fetch('/__write_widget_preview', {
@@ -125,7 +126,12 @@ function ImageToWidget({ onWidgetGenerated }) {
           headers: { 'Content-Type': 'text/plain' }
         });
 
-        await handleAutoResizeByRatio(data.widgetSpec, data.aspectRatio);
+        const hasWH =
+          data.widgetSpec?.widget?.width !== undefined &&
+          data.widgetSpec?.widget?.height !== undefined;
+        if (enableAutoResize && !hasWH) {
+          await handleAutoResizeByRatio(data.widgetSpec, data.aspectRatio);
+        }
       } catch (compileError) {
         setGeneratedCode(`// Compilation Error: ${compileError.message}`);
       }
@@ -154,6 +160,18 @@ function ImageToWidget({ onWidgetGenerated }) {
     const match = commonRatios.find(r => Math.abs(r.ratio - ratio) < 0.01);
     return match ? `${match.label} (${ratio.toFixed(3)})` : ratio.toFixed(3);
   };
+
+  // Auto-apply autoresize when enabled and previewSpec has aspectRatio but no width/height
+  useEffect(() => {
+    if (!enableAutoResize) return;
+    const w = previewSpec?.widget;
+    if (!w) return;
+    const hasWH = w.width !== undefined && w.height !== undefined;
+    const r = w.aspectRatio ?? aspectRatio;
+    if (!hasWH && typeof r === 'number' && isFinite(r) && r > 0) {
+      handleAutoResizeByRatio(previewSpec, r);
+    }
+  }, [enableAutoResize, previewSpec]);
 
   return (
     <div style={{
@@ -487,6 +505,82 @@ function ImageToWidget({ onWidgetGenerated }) {
               backgroundColor: '#BF5AF2'
             }} />
             Preview
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto' }}>
+              <input
+                value={ratioInput}
+                onChange={(e) => setRatioInput(e.target.value)}
+                placeholder="16:9 or 1.777"
+                style={{
+                  width: 120,
+                  height: 28,
+                  fontSize: 12,
+                  color: '#f5f5f7',
+                  backgroundColor: '#2c2c2e',
+                  border: '1px solid #3a3a3c',
+                  borderRadius: 6,
+                  padding: '0 8px',
+                  outline: 'none'
+                }}
+                onFocus={(e) => (e.currentTarget.style.borderColor = '#007AFF')}
+                onBlur={(e) => (e.currentTarget.style.borderColor = '#3a3a3c')}
+              />
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                <span style={{ fontSize: 12, color: '#d1d1d6' }}>AutoResize</span>
+                <button
+                  onClick={() => setEnableAutoResize((v) => !v)}
+                  aria-pressed={enableAutoResize}
+                  title="Toggle AutoResize"
+                  style={{
+                    width: 44,
+                    height: 24,
+                    borderRadius: 9999,
+                    border: '1px solid #3a3a3c',
+                    backgroundColor: enableAutoResize ? '#34C759' : '#2c2c2e',
+                    position: 'relative',
+                    cursor: 'pointer',
+                    outline: 'none',
+                    padding: 0
+                  }}
+                >
+                  <span
+                    style={{
+                      position: 'absolute',
+                      top: 2,
+                      left: enableAutoResize ? 22 : 2,
+                      width: 20,
+                      height: 20,
+                      borderRadius: '50%',
+                      backgroundColor: '#fff',
+                      transition: 'left 0.15s ease'
+                    }}
+                  />
+                </button>
+              </div>
+              <button
+                onClick={() => previewSpec && handleAutoResizeByRatio(previewSpec, ratioInput)}
+                disabled={autoSizing}
+                style={{
+                  padding: '6px 10px',
+                  fontSize: 12,
+                  fontWeight: 500,
+                  backgroundColor: autoSizing ? '#3a3a3c' : '#2c2c2e',
+                  color: '#f5f5f7',
+                  border: '1px solid #3a3a3c',
+                  borderRadius: 6,
+                  cursor: autoSizing ? 'default' : 'pointer',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseEnter={(e) => {
+                  if (!autoSizing) e.currentTarget.style.backgroundColor = '#3a3a3c';
+                }}
+                onMouseLeave={(e) => {
+                  if (!autoSizing) e.currentTarget.style.backgroundColor = '#2c2c2e';
+                }}
+                title="Auto-resize to aspect ratio"
+              >
+                {autoSizing ? 'Sizing…' : 'Auto-Resize'}
+              </button>
+            </div>
           </h2>
           <div style={{
             flex: 1,

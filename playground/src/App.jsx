@@ -55,6 +55,7 @@ function App() {
   const [autoSizing, setAutoSizing] = useState(false);
   const [iconColor, setIconColor] = useState('rgba(255, 255, 255, 0.85)');
   const [iconLibrary, setIconLibrary] = useState('sf');
+  const [enableAutoResize, setEnableAutoResize] = useState(true);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
 
@@ -168,6 +169,21 @@ function App() {
       window.removeEventListener('resize', update);
     };
   }, [frameEl]);
+
+  // Auto-apply autoresize when enabled and spec has aspectRatio but no width/height
+  useEffect(() => {
+    if (!enableAutoResize) return;
+    const obj = parseCurrentSpecObject();
+    if (!obj || !obj.widget) return;
+    const w = obj.widget;
+    const hasWH = w.width !== undefined && w.height !== undefined;
+    const r = w.aspectRatio;
+    if (!hasWH && typeof r === 'number' && isFinite(r) && r > 0) {
+      setRatioInput(r.toString());
+      // Fire and forget; internal loading state already handled
+      handleAutoResizeByRatio(r);
+    }
+  }, [enableAutoResize, editedSpec]);
 
   // Ensure `widget.root` is serialized as the last key in `widget`
   const formatSpecWithRootLast = (spec) => {
@@ -314,9 +330,9 @@ function App() {
     return m;
   };
 
-  const handleAutoResizeByRatio = async () => {
+  const handleAutoResizeByRatio = async (ratioOverride) => {
     if (autoSizing) return;
-    const r = parseAspectRatio(ratioInput);
+    const r = ratioOverride ?? parseAspectRatio(ratioInput);
     if (!r) return;
     setAutoSizing(true);
     try {
@@ -701,8 +717,40 @@ function App() {
                   onFocus={(e) => e.currentTarget.style.borderColor = '#007AFF'}
                   onBlur={(e) => e.currentTarget.style.borderColor = '#3a3a3c'}
                 />
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <span style={{ fontSize: 12, color: '#d1d1d6' }}>AutoResize</span>
+                  <button
+                    onClick={() => setEnableAutoResize((v) => !v)}
+                    aria-pressed={enableAutoResize}
+                    title="Toggle AutoResize"
+                    style={{
+                      width: 44,
+                      height: 24,
+                      borderRadius: 9999,
+                      border: '1px solid #3a3a3c',
+                      backgroundColor: enableAutoResize ? '#34C759' : '#2c2c2e',
+                      position: 'relative',
+                      cursor: 'pointer',
+                      outline: 'none',
+                      padding: 0
+                    }}
+                  >
+                    <span
+                      style={{
+                        position: 'absolute',
+                        top: 2,
+                        left: enableAutoResize ? 22 : 2,
+                        width: 20,
+                        height: 20,
+                        borderRadius: '50%',
+                        backgroundColor: '#fff',
+                        transition: 'left 0.15s ease'
+                      }}
+                    />
+                  </button>
+                </div>
                 <button
-                  onClick={handleAutoResizeByRatio}
+                  onClick={() => handleAutoResizeByRatio()}
                   disabled={autoSizing}
                   style={{
                     padding: '6px 10px',
@@ -912,15 +960,17 @@ function App() {
                     const startH = rect.height;
                     resizingRef.current = true;
                     let r = null;
-                    try {
-                      const obj = parseCurrentSpecObject();
-                      const v = obj?.widget?.aspectRatio;
-                      if (typeof v === 'number' && isFinite(v) && v > 0) r = v;
-                    } catch {}
+                    if (enableAutoResize) {
+                      try {
+                        const obj = parseCurrentSpecObject();
+                        const v = obj?.widget?.aspectRatio;
+                        if (typeof v === 'number' && isFinite(v) && v > 0) r = v;
+                      } catch {}
+                    }
 
                     const onMove = (ev) => {
                       const dx = ev.clientX - startX;
-                      if (r) {
+                      if (enableAutoResize && r) {
                         const nw = Math.max(40, Math.round(startW + dx));
                         const nh = Math.max(40, Math.round(nw / r));
                         applySizeToSpec(nw, nh);
