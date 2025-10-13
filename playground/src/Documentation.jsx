@@ -1,4 +1,10 @@
 import React from 'react';
+import { Icon } from '@widget-factory/primitives';
+import { Text } from '@widget-factory/primitives';
+import { Image } from '@widget-factory/primitives';
+import { Checkbox } from '@widget-factory/primitives';
+import { Sparkline } from '@widget-factory/primitives';
+import { WidgetShell } from '@widget-factory/primitives';
 
 export default function Documentation() {
   return (
@@ -119,7 +125,7 @@ export default function Documentation() {
             </div>
           </div>
 
-          <div>
+          <div style={{ marginBottom: 32 }}>
             <h3 style={{
               fontSize: 20,
               fontWeight: 600,
@@ -136,6 +142,336 @@ export default function Documentation() {
             }}>
               AutoResize sets explicit <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>width</code> and <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>height</code> values (useAutoResize.js:104-105), which means even if <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio</code> exists in the spec, it will be overridden by the calculated dimensions.
             </p>
+          </div>
+
+          <div>
+            <h3 style={{
+              fontSize: 20,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: '#f5f5f7'
+            }}>
+              Visual Examples
+            </h3>
+            <div style={{
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 8,
+              padding: 24,
+              marginBottom: 0
+            }}>
+              <div style={{ fontSize: 14, fontWeight: 600, color: '#a1a1a6', marginBottom: 16 }}>Live Widget Examples</div>
+              <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', alignItems: 'flex-start' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <WidgetShell width={200} height={100} backgroundColor="#1a1a1a" borderRadius={16} style={{ padding: 16 }}>
+                    <Text fontSize={14} color="#fff" fontWeight={600}>200×100</Text>
+                    <Text fontSize={12} color="#999">Fixed size</Text>
+                  </WidgetShell>
+                  <code style={{ fontSize: 11, color: '#a1a1a6', textAlign: 'center' }}>width: 200, height: 100</code>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <WidgetShell width={150} height={150} backgroundColor="#1a1a1a" borderRadius={16} style={{ padding: 16 }}>
+                    <Text fontSize={14} color="#fff" fontWeight={600}>150×150</Text>
+                    <Text fontSize={12} color="#999">Square</Text>
+                  </WidgetShell>
+                  <code style={{ fontSize: 11, color: '#a1a1a6', textAlign: 'center' }}>width: 150, height: 150</code>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <WidgetShell width={180} height={120} backgroundColor="#1a1a1a" borderRadius={20} style={{ padding: 16 }}>
+                    <Text fontSize={14} color="#fff" fontWeight={600}>180×120</Text>
+                    <Text fontSize={12} color="#999">borderRadius: 20</Text>
+                  </WidgetShell>
+                  <code style={{ fontSize: 11, color: '#a1a1a6', textAlign: 'center' }}>borderRadius: 20</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ marginBottom: 60 }}>
+          <h2 style={{
+            fontSize: 28,
+            fontWeight: 600,
+            marginBottom: 24,
+            color: '#f5f5f7',
+            borderBottom: '2px solid #3a3a3c',
+            paddingBottom: 12
+          }}>
+            Icon System
+          </h2>
+
+          <div style={{ marginBottom: 32 }}>
+            <h3 style={{
+              fontSize: 20,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: '#f5f5f7'
+            }}>
+              SF Symbols Icons
+            </h3>
+            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 16 }}>
+              SF Symbols icons use CSS variable <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>--icon-color</code> for dynamic coloring. The Icon component sets this variable and the SVG references it.
+            </p>
+            <div style={{
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 8,
+              padding: 20,
+              marginBottom: 16
+            }}>
+              <div style={{ marginBottom: 12 }}>
+                <div style={{ fontSize: 13, fontWeight: 600, color: '#a1a1a6', marginBottom: 8 }}>Icon Component (packages/primitives/src/Icon.jsx:20)</div>
+                <pre style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: '#e5e5e7' }}>{`const wrapperStyle = {
+  '--icon-color': color,
+  width: size,
+  height: size,
+  ...
+}`}</pre>
+              </div>
+              <div>
+                <div style={{ fontSize: 13, fontWeight: 600, color: '#a1a1a6', marginBottom: 8 }}>SVG Path (packages/icons/sf-symbols/src/components/Icon00Circle.jsx:8)</div>
+                <pre style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: '#e5e5e7' }}>{`<path fill="var(--icon-color, rgba(255, 255, 255, 0.85))" />`}</pre>
+              </div>
+            </div>
+            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 16 }}>
+              When you pass <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>color</code> prop to Icon, it sets <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>--icon-color</code> which the SVG uses via <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>var(--icon-color)</code>. This allows runtime color changes without modifying SVG source.
+            </p>
+            <div style={{
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 8,
+              padding: 24,
+              marginBottom: 0
+            }}>
+              <div style={{ fontSize: 14, fontWeight: 600, color: '#a1a1a6', marginBottom: 16 }}>Live Examples</div>
+              <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap', alignItems: 'flex-start' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                  <Icon name="heart.fill" size={40} color="#FF3B30" />
+                  <code style={{ fontSize: 12, color: '#a1a1a6' }}>heart.fill</code>
+                  <code style={{ fontSize: 11, color: '#666' }}>size: 40</code>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                  <Icon name="star.fill" size={40} color="#FFD60A" />
+                  <code style={{ fontSize: 12, color: '#a1a1a6' }}>star.fill</code>
+                  <code style={{ fontSize: 11, color: '#666' }}>size: 40</code>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                  <Icon name="checkmark.circle.fill" size={40} color="#34C759" />
+                  <code style={{ fontSize: 12, color: '#a1a1a6' }}>checkmark.circle.fill</code>
+                  <code style={{ fontSize: 11, color: '#666' }}>size: 40</code>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                  <Icon name="cloud.fill" size={40} color="#007AFF" />
+                  <code style={{ fontSize: 12, color: '#a1a1a6' }}>cloud.fill</code>
+                  <code style={{ fontSize: 11, color: '#666' }}>size: 40</code>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                  <Icon name="bolt.fill" size={40} color="#FF9500" />
+                  <code style={{ fontSize: 12, color: '#a1a1a6' }}>bolt.fill</code>
+                  <code style={{ fontSize: 11, color: '#666' }}>size: 40</code>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                  <Icon name="moon.fill" size={40} color="#BF5AF2" />
+                  <code style={{ fontSize: 12, color: '#a1a1a6' }}>moon.fill</code>
+                  <code style={{ fontSize: 11, color: '#666' }}>size: 40</code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 style={{
+              fontSize: 20,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: '#f5f5f7'
+            }}>
+              Lucide Icons
+            </h3>
+            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 16 }}>
+              Lucide icons use <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>lucide:</code> prefix (e.g., <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>lucide:home</code>). Color is passed directly as a prop to the Lucide component. SF Symbols icons work without prefix or with <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>sf:</code> prefix.
+            </p>
+            <div style={{
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 8,
+              padding: 24,
+              marginBottom: 0
+            }}>
+              <div style={{ fontSize: 14, fontWeight: 600, color: '#a1a1a6', marginBottom: 16 }}>Live Examples</div>
+              <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap', alignItems: 'flex-start' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                  <Icon name="lucide:home" size={40} color="#FF3B30" />
+                  <code style={{ fontSize: 12, color: '#a1a1a6' }}>lucide:home</code>
+                  <code style={{ fontSize: 11, color: '#666' }}>size: 40</code>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                  <Icon name="lucide:settings" size={40} color="#FFD60A" />
+                  <code style={{ fontSize: 12, color: '#a1a1a6' }}>lucide:settings</code>
+                  <code style={{ fontSize: 11, color: '#666' }}>size: 40</code>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                  <Icon name="lucide:user" size={40} color="#34C759" />
+                  <code style={{ fontSize: 12, color: '#a1a1a6' }}>lucide:user</code>
+                  <code style={{ fontSize: 11, color: '#666' }}>size: 40</code>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
+                  <Icon name="lucide:mail" size={40} color="#007AFF" />
+                  <code style={{ fontSize: 12, color: '#a1a1a6' }}>lucide:mail</code>
+                  <code style={{ fontSize: 11, color: '#666' }}>size: 40</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ marginBottom: 60 }}>
+          <h2 style={{
+            fontSize: 28,
+            fontWeight: 600,
+            marginBottom: 24,
+            color: '#f5f5f7',
+            borderBottom: '2px solid #3a3a3c',
+            paddingBottom: 12
+          }}>
+            Component Types
+          </h2>
+
+          <div style={{ marginBottom: 32 }}>
+            <h3 style={{
+              fontSize: 20,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: '#f5f5f7'
+            }}>
+              Container Components
+            </h3>
+            <div style={{
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 8,
+              padding: 20,
+              marginBottom: 0
+            }}>
+              <div style={{ marginBottom: 20 }}>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Image</div>
+                <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 12 }}>
+                  Container component using <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>backgroundImage</code>. Supports children elements overlaid on the image. Use <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>url</code>, <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>width</code>, <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>height</code>, <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>borderRadius</code> props.
+                </p>
+                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+                  <Image
+                    url="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=120&fit=crop"
+                    width={120}
+                    height={80}
+                    borderRadius={12}
+                    style={{ border: '1px solid #3a3a3c' }}
+                  />
+                  <Image
+                    url="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=200&h=120&fit=crop"
+                    width={120}
+                    height={80}
+                    borderRadius={12}
+                    style={{ border: '1px solid #3a3a3c', display: 'flex', alignItems: 'flex-end', padding: 8 }}
+                  >
+                    <Text fontSize={11} color="#fff" fontWeight={600} style={{ textShadow: '0 1px 3px rgba(0,0,0,0.8)' }}>With overlay</Text>
+                  </Image>
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Text</div>
+                <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 12 }}>
+                  Text container using <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>div</code> element. Supports <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>fontSize</code>, <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>color</code>, <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>align</code>, <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>fontWeight</code>, <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>lineHeight</code> props.
+                </p>
+                <div style={{ display: 'flex', gap: 16, flexDirection: 'column' }}>
+                  <Text fontSize={18} color="#fff" fontWeight={600}>Bold Large Text</Text>
+                  <Text fontSize={14} color="#999" fontWeight={400}>Regular Gray Text</Text>
+                  <Text fontSize={12} color="#007AFF" align="center">Centered Blue Text</Text>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ marginBottom: 32 }}>
+            <h3 style={{
+              fontSize: 20,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: '#f5f5f7'
+            }}>
+              Fixed-Size Components
+            </h3>
+            <div style={{
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 8,
+              padding: 20,
+              marginBottom: 0
+            }}>
+              <div style={{ marginBottom: 20 }}>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Icon</div>
+                <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 12 }}>
+                  Fixed-size wrapper with <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>width</code> and <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>height</code> set to <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>size</code> prop (default 20px). Uses <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>flex: '0 0 auto'</code> and <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>flexShrink: 0</code> to maintain size.
+                </p>
+                <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+                  <Icon name="heart.fill" size={20} color="#FF3B30" />
+                  <Icon name="heart.fill" size={30} color="#FF3B30" />
+                  <Icon name="heart.fill" size={40} color="#FF3B30" />
+                </div>
+              </div>
+              <div style={{ marginBottom: 20 }}>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Checkbox</div>
+                <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 12 }}>
+                  Fixed-size circular checkbox with <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>size</code> prop (default 20px). Shows checkmark when <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>checked</code> is true. Uses <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>color</code> prop for border/fill.
+                </p>
+                <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+                  <Checkbox size={24} checked={false} color="#34C759" />
+                  <Checkbox size={24} checked={true} color="#34C759" />
+                  <Checkbox size={24} checked={true} color="#FF3B30" />
+                </div>
+              </div>
+              <div>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Sparkline</div>
+                <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 12 }}>
+                  Canvas-based line chart with fixed <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>width</code> and <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>height</code> props. Accepts <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>data</code> array and <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>color</code> prop. Uses device pixel ratio for crisp rendering.
+                </p>
+                <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+                  <Sparkline width={100} height={40} color="#34C759" data={[10, 20, 15, 25, 30, 22, 35, 40]} />
+                  <Sparkline width={100} height={40} color="#FF3B30" data={[40, 35, 38, 30, 25, 28, 20, 15]} />
+                  <Sparkline width={100} height={40} color="#007AFF" data={[20, 22, 24, 23, 25, 30, 28, 32]} />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 style={{
+              fontSize: 20,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: '#f5f5f7'
+            }}>
+              Image Components
+            </h3>
+            <div style={{
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 8,
+              padding: 20,
+              marginBottom: 0
+            }}>
+              <div style={{ marginBottom: 20 }}>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>MapImage</div>
+                <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', margin: 0 }}>
+                  Uses native <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>img</code> element with <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>objectFit: 'cover'</code>. Does not support children. Use for map images where <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>img</code> element behavior is required.
+                </p>
+              </div>
+              <div>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>AppLogo</div>
+                <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', margin: 0 }}>
+                  Wrapper for app logo images with <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>borderRadius</code> support. Uses native <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>img</code> element with <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>objectFit: 'cover'</code>.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </div>
