@@ -40,22 +40,13 @@
           "flex": 0,
           "children": [
             {
-              "type": "container",
-              "direction": "col",
-              "gap": 0,
-              "flex": 0,
-              "children": [
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 4,
-                    "color": "#007AFF"
-                  },
-                  "content": "█"
-                }
-              ]
+              "type": "leaf",
+              "component": "Indicator",
+              "flex": "none",
+              "props": {
+                "color": "#007AFF",
+                "thickness": 4
+              }
             },
             {
               "type": "container",

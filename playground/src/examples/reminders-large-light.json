@@ -97,6 +97,15 @@
               ]
             },
             {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
+            },
+            {
               "type": "container",
               "direction": "row",
               "gap": 12,
@@ -124,6 +133,15 @@
                   "content": "Send cookie recipe to Rigo"
                 }
               ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
             },
             {
               "type": "container",
@@ -155,6 +173,15 @@
               ]
             },
             {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
+            },
+            {
               "type": "container",
               "direction": "row",
               "gap": 12,
@@ -182,6 +209,15 @@
                   "content": "Hike with Darla"
                 }
               ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
             },
             {
               "type": "container",
@@ -213,6 +249,15 @@
               ]
             },
             {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
+            },
+            {
               "type": "container",
               "direction": "row",
               "gap": 12,
@@ -240,6 +285,15 @@
                   "content": "Cancel membership"
                 }
               ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
             },
             {
               "type": "container",

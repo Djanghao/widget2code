@@ -49,13 +49,12 @@
               "children": [
                 {
                   "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
+                  "component": "Indicator",
+                  "flex": "none",
                   "props": {
-                    "fontSize": 3,
-                    "color": "#FFCC00"
-                  },
-                  "content": "█"
+                    "color": "#FFCC00",
+                    "thickness": 3
+                  }
                 },
                 {
                   "type": "container",
@@ -98,13 +97,12 @@
               "children": [
                 {
                   "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
+                  "component": "Indicator",
+                  "flex": "none",
                   "props": {
-                    "fontSize": 3,
-                    "color": "#34C759"
-                  },
-                  "content": "█"
+                    "color": "#34C759",
+                    "thickness": 3
+                  }
                 },
                 {
                   "type": "container",
