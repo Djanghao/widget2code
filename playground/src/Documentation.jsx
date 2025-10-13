@@ -455,24 +455,18 @@ export default function Documentation() {
             }}>
               CSS Priority Rules
             </h3>
-            <p style={{
-              fontSize: 15,
-              lineHeight: 1.6,
-              color: '#e5e5e7',
-              marginBottom: 16
-            }}>
-              When multiple sizing properties are present in widgetspec:
+            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 16 }}>
+              Container sizing precedence in widgetspec:
             </p>
-            <ul style={{
-              fontSize: 15,
-              lineHeight: 1.8,
-              color: '#e5e5e7',
-              marginLeft: 24,
-              marginBottom: 0
-            }}>
-              <li>If <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>width</code>, <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>height</code> and <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio</code> are all set, <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>width</code> and <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>height</code> take priority</li>
-              <li><code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio</code> only works when either <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>width</code> or <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>height</code> is not set</li>
+            <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
+              <li><strong>Explicit width/height</strong> always determine container size when present.</li>
+              <li><strong>aspectRatio</strong> never directly sets container size. It is only used by <strong>AutoResize</strong> to calculate and write explicit width/height.</li>
+              <li>When <strong>AutoResize</strong> is disabled, <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio</code> is ignored.</li>
+              <li>If no width/height are set (and AutoResize does not run), the container size is <strong>content-driven</strong>.</li>
             </ul>
+            <p style={{ fontSize: 13, lineHeight: 1.6, color: '#a1a1a6', marginTop: 8 }}>
+              Note: <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>WidgetShell</code> does not accept an <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio</code> prop.
+            </p>
           </div>
 
           <div id="examples" style={{ marginBottom: 32, scrollMarginTop: 80 }}>
@@ -512,7 +506,7 @@ export default function Documentation() {
                       <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>width: 200, aspectRatio: 1</code>
                     </td>
                     <td style={{ padding: '12px 8px', fontSize: 14, color: '#e5e5e7' }}>
-                      200×200 (square, height calculated from aspectRatio)
+                      Without AutoResize: width fixed at 200, height content-driven. With AutoResize: becomes 200×200 (height calculated and persisted).
                     </td>
                   </tr>
                   <tr>
@@ -520,7 +514,7 @@ export default function Documentation() {
                       <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio: 1</code>
                     </td>
                     <td style={{ padding: '12px 8px', fontSize: 14, color: '#e5e5e7' }}>
-                      Content-sized, maintaining 1:1 aspect ratio
+                      Without AutoResize: content-driven (aspectRatio ignored). With AutoResize: width/height computed and persisted to maintain 1:1.
                     </td>
                   </tr>
                 </tbody>
@@ -537,14 +531,17 @@ export default function Documentation() {
             }}>
               AutoResize Behavior
             </h3>
-            <p style={{
-              fontSize: 15,
-              lineHeight: 1.6,
-              color: '#e5e5e7',
-              marginBottom: 0
-            }}>
-              AutoResize sets explicit <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>width</code> and <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>height</code> values (useAutoResize.js:104-105), which means even if <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio</code> exists in the spec, it will be overridden by the calculated dimensions.
+            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 12 }}>
+              AutoResize computes and writes explicit <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>width</code> and <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>height</code>. The <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio</code> prop in widgetspec is treated as an input for this calculation, not a rendering constraint.
             </p>
+            <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
+              <li>Toggle: Editors expose a green <strong>AutoResize</strong> switch (on by default).</li>
+              <li>When enabled and the spec has <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio</code> but no <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>width/height</code>, AutoResize runs to compute and persist dimensions.</li>
+              <li>If <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>width/height</code> already exist, AutoResize skips; aspectRatio is ignored.</li>
+              <li>When disabled, aspectRatio is always ignored; the container uses explicit width/height if present, otherwise content-driven sizing.</li>
+              <li>Manual control: use the ratio input (e.g. “16:9” or “1.777”) + <em>Auto-Resize</em> button to run AutoResize with that ratio and write dimensions back to the spec (overriding any spec aspectRatio).</li>
+              <li>Drag-resize (Presets): the resizer locks proportion only when AutoResize is enabled and the spec has an aspectRatio; otherwise it resizes freely.</li>
+            </ul>
           </div>
 
           <div id="visual-examples" style={{ scrollMarginTop: 80 }}>
