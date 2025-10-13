@@ -180,10 +180,9 @@ function App() {
     const r = w.aspectRatio;
     if (!hasWH && typeof r === 'number' && isFinite(r) && r > 0) {
       setRatioInput(r.toString());
-      // Fire and forget; internal loading state already handled
       handleAutoResizeByRatio(r);
     }
-  }, [enableAutoResize, editedSpec]);
+  }, [enableAutoResize, selectedExample, editedSpec]);
 
   // Ensure `widget.root` is serialized as the last key in `widget`
   const formatSpecWithRootLast = (spec) => {
