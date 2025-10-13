@@ -10,7 +10,10 @@
       "gap": 12,
       "flex": 1,
       "children": [
-        { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 16, "color": "#000000", "fontWeight": 700 }, "content": "AAPL" },
+        { "type": "container", "direction": "row", "gap": 8, "flex": 0, "alignCross": "center", "children": [
+          { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 18, "color": "#5856D6", "name": "sf:chart.line.uptrend.xyaxis" } },
+          { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 16, "color": "#000000", "fontWeight": 700 }, "content": "AAPL" }
+        ] },
         { "type": "container", "direction": "row", "gap": 10, "flex": 0, "alignCross": "end", "children": [
           { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 28, "color": "#000000", "fontWeight": 700 }, "content": "182.45" },
           { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 14, "color": "#34C759", "fontWeight": 600 }, "content": "+1.3%" }

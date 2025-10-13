@@ -36,7 +36,7 @@
               "props": {
                 "size": 14,
                 "color": "#ffffff",
-                "name": "sf:bolt.fill"
+                "name": "sf:paperplane.fill"
               }
             }
           ]
@@ -71,8 +71,8 @@
                   "flex": "none",
                   "props": {
                     "size": 24,
-                    "color": "#FFD700",
-                    "name": "sf:star.fill"
+                    "color": "#FFD60A",
+                    "name": "sf:sun.max.fill"
                   }
                 },
                 {

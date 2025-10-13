@@ -31,40 +31,24 @@
           "backgroundColor": "rgba(0,0,0,0.6)",
           "children": [
             {
-              "type": "container",
-              "direction": "row",
-              "gap": 0,
-              "flex": 0,
-              "children": [
-                {
-                  "type": "leaf",
-                  "component": "Icon",
-                  "flex": "none",
-                  "props": {
-                    "size": 40,
-                    "color": "#8E8E93",
-                    "name": "sf:circle.fill"
-                  }
-                }
-              ]
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 44,
+                "color": "#8E8E93",
+                "name": "sf:magnifyingglass"
+              }
             },
             {
-              "type": "container",
-              "direction": "row",
-              "gap": 0,
-              "flex": 0,
-              "children": [
-                {
-                  "type": "leaf",
-                  "component": "Icon",
-                  "flex": "none",
-                  "props": {
-                    "size": 40,
-                    "color": "#FF9500",
-                    "name": "sf:circle.fill"
-                  }
-                }
-              ]
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 44,
+                "color": "#FF9500",
+                "name": "sf:fork.knife"
+              }
             }
           ]
         }
