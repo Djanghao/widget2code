@@ -45,15 +45,20 @@ files.forEach((fileName, index) => {
     replaceCount = matches ? matches.length : 0
     processed = processed.replace(/#4a0088/gi, 'var(--icon-color, rgba(255, 255, 255, 0.85))')
   } else {
-    const colorMatches = content.match(/fill="#([0-9a-fA-F]{6})"/gi)
-    const uniqueColors = colorMatches ? [...new Set(colorMatches.map(m => m.toLowerCase()))] : []
+    const colorMatches = content.match(/fill="([^"]+)"/gi)
+    const colors = colorMatches ? colorMatches.map(m => {
+      const match = m.match(/fill="([^"]+)"/i)
+      return match ? match[1].toLowerCase() : null
+    }).filter(c => c && c !== 'none' && c !== 'transparent') : []
+
+    const uniqueColors = [...new Set(colors)]
 
     if (uniqueColors.length === 1) {
-      const singleColor = uniqueColors[0].match(/#([0-9a-fA-F]{6})/i)[0]
-      const regex = new RegExp(singleColor, 'gi')
+      const singleColor = uniqueColors[0]
+      const regex = new RegExp(`fill="${singleColor}"`, 'gi')
       const matches = processed.match(regex)
       replaceCount = matches ? matches.length : 0
-      processed = processed.replace(regex, 'var(--icon-color, rgba(255, 255, 255, 0.85))')
+      processed = processed.replace(regex, 'fill="var(--icon-color, rgba(255, 255, 255, 0.85))"')
     }
   }
 
