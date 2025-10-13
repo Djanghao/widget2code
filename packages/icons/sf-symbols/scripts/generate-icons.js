@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const ICONS_SOURCE_ROOT = path.resolve(__dirname, '../../../assets/icons/sf-symbols-dynamic')
+const ICONS_SOURCE_ROOT = path.resolve(__dirname, '../../../../assets/icons/sf-symbols-dynamic')
 const ICONS_OUTPUT_DIR = path.resolve(__dirname, '../src/components')
 const ICONS_OLD_OUTPUT_DIR = path.resolve(__dirname, '../src/generated')
 const ICONS_PREV_OUTPUT_DIR = path.resolve(__dirname, '../src/icons')

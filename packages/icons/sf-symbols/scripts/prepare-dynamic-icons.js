@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const SOURCE_DIR = path.resolve(__dirname, '../../../assets/icons/sf-symbols-multicolor-4a0088')
-const OUTPUT_DIR = path.resolve(__dirname, '../../../assets/icons/sf-symbols-dynamic')
+const SOURCE_DIR = path.resolve(__dirname, '../../../../assets/icons/sf-symbols-multicolor-4a0088')
+const OUTPUT_DIR = path.resolve(__dirname, '../../../../assets/icons/sf-symbols-dynamic')
 
 console.log('🎨 Preparing dynamic icon library...')
 console.log(`📂 Source: ${SOURCE_DIR}`)
@@ -37,13 +37,25 @@ files.forEach((fileName, index) => {
 
   let content = fs.readFileSync(sourcePath, 'utf-8')
 
-  const matches = content.match(/#4a0088/gi)
-  const replaceCount = matches ? matches.length : 0
+  let replaceCount = 0
+  let processed = content
 
-  const processed = content.replace(
-    /#4a0088/gi,
-    'var(--icon-color, rgba(255, 255, 255, 0.85))'
-  )
+  if (content.match(/#4a0088/i)) {
+    const matches = processed.match(/#4a0088/gi)
+    replaceCount = matches ? matches.length : 0
+    processed = processed.replace(/#4a0088/gi, 'var(--icon-color, rgba(255, 255, 255, 0.85))')
+  } else {
+    const colorMatches = content.match(/fill="#([0-9a-fA-F]{6})"/gi)
+    const uniqueColors = colorMatches ? [...new Set(colorMatches.map(m => m.toLowerCase()))] : []
+
+    if (uniqueColors.length === 1) {
+      const singleColor = uniqueColors[0].match(/#([0-9a-fA-F]{6})/i)[0]
+      const regex = new RegExp(singleColor, 'gi')
+      const matches = processed.match(regex)
+      replaceCount = matches ? matches.length : 0
+      processed = processed.replace(regex, 'var(--icon-color, rgba(255, 255, 255, 0.85))')
+    }
+  }
 
   fs.writeFileSync(outputPath, processed, 'utf-8')
 
