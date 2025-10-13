@@ -161,17 +161,20 @@ function ImageToWidget({ onWidgetGenerated }) {
     return match ? `${match.label} (${ratio.toFixed(3)})` : ratio.toFixed(3);
   };
 
-  // Auto-apply autoresize when enabled and previewSpec has aspectRatio but no width/height
+  const previewWidth = previewSpec?.widget?.width;
+  const previewHeight = previewSpec?.widget?.height;
+  const previewAspectRatio = previewSpec?.widget?.aspectRatio;
+
   useEffect(() => {
     if (!enableAutoResize) return;
     const w = previewSpec?.widget;
     if (!w) return;
-    const hasWH = w.width !== undefined && w.height !== undefined;
-    const r = w.aspectRatio ?? aspectRatio;
+    const hasWH = previewWidth !== undefined && previewHeight !== undefined;
+    const r = previewAspectRatio ?? aspectRatio;
     if (!hasWH && typeof r === 'number' && isFinite(r) && r > 0) {
       handleAutoResizeByRatio(previewSpec, r);
     }
-  }, [enableAutoResize, previewSpec]);
+  }, [enableAutoResize, previewWidth, previewHeight, previewAspectRatio, aspectRatio]);
 
   return (
     <div style={{

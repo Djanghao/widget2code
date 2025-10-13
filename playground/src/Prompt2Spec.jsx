@@ -81,17 +81,20 @@ function Prompt2Spec() {
     return () => document.removeEventListener('click', onDocClick);
   }, []);
 
-  // Auto-apply autoresize when enabled and previewSpec has aspectRatio but no width/height
+  const previewWidth = previewSpec?.widget?.width;
+  const previewHeight = previewSpec?.widget?.height;
+  const previewAspectRatio = previewSpec?.widget?.aspectRatio;
+
   useEffect(() => {
     if (!enableAutoResize) return;
     const w = previewSpec?.widget;
     if (!w) return;
-    const hasWH = w.width !== undefined && w.height !== undefined;
-    const r = w.aspectRatio;
+    const hasWH = previewWidth !== undefined && previewHeight !== undefined;
+    const r = previewAspectRatio;
     if (!hasWH && typeof r === 'number' && isFinite(r) && r > 0) {
       handleAutoResizeByRatio(previewSpec, r);
     }
-  }, [enableAutoResize, previewSpec]);
+  }, [enableAutoResize, previewWidth, previewHeight, previewAspectRatio]);
 
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '420px 1fr', gap: 12, height: '100%', minHeight: 0 }}>
