@@ -6,6 +6,7 @@ import TreeView from './TreeView.jsx';
 import WidgetFrame from './WidgetFrame.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
 import Prompt2Spec from './Prompt2Spec.jsx';
+import Documentation from './Documentation.jsx';
 import { Icon } from '@widget-factory/primitives';
 import weatherSmallLight from './examples/weather-small-light.json';
 import weatherMediumDark from './examples/weather-medium-dark.json';
@@ -471,6 +472,29 @@ function App() {
                 }}
               >
                 Prompt2Spec
+              </button>
+              <button
+                onClick={() => setActiveTab('guides')}
+                style={{
+                  padding: '8px 16px',
+                  fontSize: 15,
+                  fontWeight: 500,
+                  backgroundColor: 'transparent',
+                  color: activeTab === 'guides' ? '#f5f5f7' : '#8e8e93',
+                  border: 'none',
+                  borderBottom: activeTab === 'guides' ? '2px solid #007AFF' : '2px solid transparent',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  if (activeTab !== 'guides') e.target.style.color = '#f5f5f7';
+                }}
+                onMouseLeave={(e) => {
+                  if (activeTab !== 'guides') e.target.style.color = '#8e8e93';
+                }}
+              >
+                Guides
               </button>
             </div>
           </div>
@@ -962,6 +986,12 @@ function App() {
       {activeTab === 'prompt2spec' && (
         <div key="prompt2spec" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
           <Prompt2Spec />
+        </div>
+      )}
+
+      {activeTab === 'guides' && (
+        <div key="guides" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
+          <Documentation />
         </div>
       )}
 
