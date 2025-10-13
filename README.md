@@ -10,29 +10,33 @@ Pipeline: WidgetSpec → JSX file → rendered result.
 # Install dependencies
 npm install
 
-# Start development server (frontend only)
-npm run dev
-
-# Or start with backend API
-npm run dev:full
+# Configure environment (first time only)
+cd playground
+cp .env.example .env
+# Edit .env to set your API key and ports
 ```
 
-This starts:
-- Frontend at http://localhost:5173
-- Backend at http://localhost:8000 (with `dev:full`)
-
-**Backend setup** (first time only, required for `dev:full`):
+**Backend setup** (first time only, required for full mode):
 ```bash
 cd playground/api
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+cd ..
 ```
 
-Create `playground/api/.env` with:
+**Run**:
+```bash
+# Start with backend API
+npm run dev:full
+
+# Or frontend only
+npm run dev
 ```
-DASHSCOPE_API_KEY=your-qwen-api-key
-```
+
+This starts:
+- Frontend at http://localhost:5173 (configurable via `FRONTEND_PORT`)
+- Backend at http://localhost:8000 (configurable via `BACKEND_PORT`)
 
 ### Regenerating Icons (Optional)
 Only needed when updating SF Symbols source files or modifying icon generation scripts:
