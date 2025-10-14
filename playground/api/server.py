@@ -69,7 +69,7 @@ async def generate_widget(
         vision_llm = LLM(
             model=model_to_use,
             temperature=0.5,
-            max_tokens=2000,
+            max_tokens=32768,
             timeout=60,
             system_prompt=prompt
         )

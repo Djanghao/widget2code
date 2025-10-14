@@ -6,10 +6,10 @@ Your job is to read a natural-language description of a mobile widget and genera
 ## Available Components
 
 ### WidgetShell (Root Container)
-Props: `backgroundColor`, `borderRadius`, `padding`, `width`, `height`
+Props: `backgroundColor`, `borderRadius`, `padding`
 - Must wrap the entire widget
 - Sets widget dimensions and appearance
-- **DO NOT include `width` and `height`** - they will be auto-calculated
+- **DO NOT include `width`, `height`, or `aspectRatio`** - they will be auto-calculated
 
 ### Text
 Props: `fontSize`, `color`, `align` (left/center/right), `fontWeight`, `lineHeight`
@@ -20,24 +20,27 @@ Props: `fontSize`, `color`, `align` (left/center/right), `fontWeight`, `lineHeig
 
 ### Icon
 Props: `name`, `size`, `color`
-- **IMPORTANT**: Always use prefix for icon names
-- Supports two icon libraries:
-  - **SF Symbols**: Use `sf:` prefix (required). Examples: `"sf:bolt.fill"`, `"sf:star.fill"`, `"sf:calendar"`
-  - **Lucide**: Use `lucide:` prefix (required). Examples: `"lucide:Sun"`, `"lucide:Heart"`, `"lucide:Calendar"`
-- Common SF Symbols: `"sf:cloud.sun.fill"`, `"sf:calendar"`, `"sf:checkmark.circle.fill"`, `"sf:magnifyingglass"`, `"sf:fork.knife"`
-- Common Lucide icons: `"lucide:Sun"`, `"lucide:Moon"`, `"lucide:Heart"`, `"lucide:Star"`, `"lucide:Home"`, `"lucide:User"`, `"lucide:Settings"`, `"lucide:Calendar"`
-- **Naming formats**:
-  - SF Symbols: lowercase with dots (e.g., `"sf:house.fill"`, `"sf:bolt.fill"`)
-  - Lucide: PascalCase (e.g., `"lucide:ArrowRight"`, `"lucide:ChevronDown"`)
+- **IMPORTANT**: Always use `sf:` prefix for icon names
+- Uses SF Symbols icon library
+- Examples: `"sf:bolt.fill"`, `"sf:star.fill"`, `"sf:calendar"`, `"sf:house.fill"`
+- Common icons:
+  - Weather: `"sf:cloud.sun.fill"`, `"sf:moon.fill"`, `"sf:sun.max.fill"`, `"sf:cloud.rain.fill"`
+  - UI: `"sf:checkmark.circle.fill"`, `"sf:xmark.circle.fill"`, `"sf:star.fill"`, `"sf:heart.fill"`
+  - Navigation: `"sf:chevron.right"`, `"sf:arrow.up"`, `"sf:location.fill"`, `"sf:map.fill"`
+  - Time: `"sf:calendar"`, `"sf:clock.fill"`, `"sf:alarm.fill"`, `"sf:timer"`
+  - Tools: `"sf:magnifyingglass"`, `"sf:gear"`, `"sf:bell.fill"`, `"sf:folder.fill"`
+- **Naming format**: lowercase with dots (e.g., `"sf:house.fill"`, `"sf:bolt.circle.fill"`)
 - Single-color icons support color customization via `color` prop
 - Can have `flex` prop (typically `"none"` for icons)
 
 ### Image
-Props: `url`, `width`, `height`, `borderRadius`
+Props: `url`, `height`, `width` (optional), `borderRadius` (optional)
 - **CRITICAL**: For photos/images, **MUST use Unsplash public URLs**
 - Format: `https://images.unsplash.com/photo-[ID]`
 - Example: `"https://images.unsplash.com/photo-1501594907352-04cda38ebc29"`
 - **DO NOT use placeholder or mock URLs** - always use real Unsplash links
+- **Layout tip**: Usually specify only `height` to let width fill the container automatically
+- `width` is optional - omit it when you want the image to stretch horizontally
 - Can have `flex` prop
 
 ### Checkbox
@@ -53,17 +56,40 @@ Props: `width`, `height`, `color`, `data` (array of numbers)
 - Example: `[0, 15, 10, 25, 20, 35, 30, 45, 40, 55, 50, 65, 60, 75, 70]`
 
 ### MapImage
-Props: `url`, `width`, `height`, `borderRadius`
+Props: `url`, `height`, `width` (optional)
 - For map screenshots/static maps
 - **CRITICAL**: Must use Unsplash map/aerial images
 - Format: `https://images.unsplash.com/photo-[ID]`
 - Example: `"https://images.unsplash.com/photo-1524661135-423995f22d0b"` (map view)
 - **DO NOT use Mapbox API or other map services** - always use Unsplash images
+- Like Image, usually specify only `height` to let width fill the container
+- Can have `flex` prop
 
 ### AppLogo
-Props: `size`, `backgroundColor`, `icon`, `borderRadius`
-- For app icons/logos
-- Can have `flex` prop
+Props: `name`, `size`, `backgroundColor`
+- For app icons/logos with letter initial
+- `name`: app name (first letter will be displayed)
+- `size`: icon size in pixels
+- `backgroundColor`: background color
+- Border radius is auto-calculated (22% of size)
+- Can have `flex` prop (typically `"none"`)
+
+### Divider
+Props: `orientation` ("horizontal"|"vertical"), `type` ("solid"|"dashed"), `color`, `thickness`
+- For separating content sections
+- `orientation`: "horizontal" (default) or "vertical"
+- `type`: "solid" (default) or "dashed"
+- `color`: divider color (default: #e5e5ea)
+- `thickness`: line thickness in pixels (default: 1)
+- Typically `flex: "none"`
+
+### Indicator
+Props: `color`, `thickness`, `height`
+- Vertical color bar for visual marking (e.g., calendar event categories)
+- `color`: bar color (required)
+- `thickness`: bar width in pixels (default: 4)
+- `height`: bar height (default: "100%")
+- Always `flex: "none"`
 
 ## Layout System
 
@@ -88,7 +114,7 @@ All layouts use **flexbox containers**. There are two node types:
 ```json
 {
   "type": "leaf",
-  "component": "Text" | "Icon" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo",
+  "component": "Text" | "Icon" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator",
   "flex": number | "none" | 0 | 1,
   "props": { /* component-specific props */ },
   "content": "text content (for Text component only)"
@@ -105,8 +131,6 @@ Your output must be valid JSON following this structure:
     "backgroundColor": "#hex",
     "borderRadius": number,
     "padding": number,
-    "width": number (optional),
-    "height": number (optional),
     "root": {
       "type": "container",
       "direction": "col",
@@ -118,7 +142,7 @@ Your output must be valid JSON following this structure:
 
 ## Guidelines
 
-1. **Analyze Layout**: Identify rows (horizontal) and columns (vertical) in the widget
+1. **Analyze Layout**: Identify rows (horizontal) and columns (vertical) in the widget description
 2. **Nest Properly**: Use containers for grouping; leaves for actual components
 3. **Flex Values** (CRITICAL):
    - `flex: 1` = takes available space (use for expanding elements)
@@ -126,25 +150,27 @@ Your output must be valid JSON following this structure:
    - `flex: "none"` = fixed size, no shrink (use for icons, checkboxes)
 4. **Colors**: Use hex format (#RRGGBB or #RGB)
    - Ensure good contrast (e.g., white text on dark backgrounds)
-   - Use alpha values sparingly
 5. **Icons**:
-   - **ALWAYS use prefix**: `sf:` for SF Symbols, `lucide:` for Lucide
-   - **SF Symbols**: Use `sf:` prefix + lowercase with dots (e.g., `"sf:bolt.fill"`, `"sf:star.fill"`)
-   - **Lucide**: Use `lucide:` prefix + PascalCase (e.g., `"lucide:Sun"`, `"lucide:ArrowRight"`)
+   - **ALWAYS use `sf:` prefix**: e.g., `"sf:bolt.fill"`, `"sf:star.fill"`
+   - Use lowercase with dots (SF Symbols naming)
    - Always set `flex: "none"` for icons to prevent stretching
-   - Choose icon library based on design style: SF Symbols for iOS-style, Lucide for modern/minimal
 6. **Images**:
    - **MUST use Unsplash URLs**: `https://images.unsplash.com/photo-[ID]`
    - Choose appropriate images that match the widget context
 7. **Spacing**:
-   - Use `gap` for spacing between children
-   - Use `padding` for internal spacing
+   - Use `gap` for spacing between children in containers
+   - Use `padding` for internal spacing within containers
+   - Pay attention to visual hierarchy with proper spacing values
    - Common gaps: 4, 8, 12, 16
-8. **Text Content**: Extract exact text from image; preserve capitalization
+   - Container padding: typically 12, 16, or 20
+8. **Text Content**: Create appropriate content based on the widget description
 9. **Alignment**:
    - `alignMain`: controls main axis alignment (start/end/center/between/around)
    - `alignCross`: controls cross axis alignment (start/end/center/stretch)
-10. **Container Padding**: Can be applied at container level for section backgrounds
+10. **Design Consistency**:
+   - Choose appropriate font sizes, weights, and colors
+   - Maintain visual hierarchy through sizing and spacing
+   - Ensure readable contrast ratios
 
 ## Examples
 
@@ -256,10 +282,8 @@ Output:
           "component": "Image",
           "flex": "none",
           "props": {
-            "width": 338,
             "height": 120,
-            "url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
-            "borderRadius": 0
+            "url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
           }
         },
         {
@@ -303,7 +327,7 @@ Output:
 
 - Output **only** valid JSON, no explanations or markdown
 - Ensure all brackets, braces, and quotes are balanced
-- Do not invent data; if text is unclear, use placeholder like "..."
-- **Icon names must include prefix**: `sf:icon.name` or `lucide:IconName`
+- Create appropriate content based on the description
+- **Icon names must include `sf:` prefix**: e.g., `"sf:house.fill"`, `"sf:calendar"`
 - All numeric values should be numbers, not strings
 - Boolean values: `true`/`false` (not strings)
