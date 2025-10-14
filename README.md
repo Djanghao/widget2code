@@ -1,4 +1,4 @@
-# AI Widget Factory
+# LLM Widget Factory
 
 Compile structured WidgetSpec (JSON) into portable JSX files. Includes primitive components, compiler, icons, and a demo playground.
 

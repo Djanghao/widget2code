@@ -7,7 +7,9 @@ import WidgetFrame from './WidgetFrame.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
 import Prompt2Spec from './Prompt2Spec.jsx';
 import Documentation from './Documentation.jsx';
+import DownloadButton from './DownloadButton.jsx';
 import { Icon } from '@widget-factory/primitives';
+import html2canvas from 'html2canvas';
 import weatherSmallLight from './examples/weather-small-light.json';
 import weatherMediumDark from './examples/weather-medium-dark.json';
 import calendarSmallLight from './examples/calendar-small-light.json';
@@ -349,6 +351,35 @@ function App() {
     delete next.widget.height;
     console.log('↩️  [Spec Update] Restoring (removing width/height), aspectRatio:', next.widget.aspectRatio);
     setEditedSpec(JSON.stringify(formatSpecWithRootLast(next), null, 2));
+  };
+
+  const handleDownloadWidget = async () => {
+    const widgetElement = widgetFrameRef.current?.firstElementChild;
+    if (!widgetElement) {
+      console.error('Widget element not found');
+      return;
+    }
+
+    try {
+      const canvas = await html2canvas(widgetElement, {
+        backgroundColor: null,
+        scale: 2,
+        logging: false,
+        useCORS: true
+      });
+
+      canvas.toBlob((blob) => {
+        if (!blob) return;
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `widget-${Date.now()}.png`;
+        link.click();
+        URL.revokeObjectURL(url);
+      }, 'image/png');
+    } catch (error) {
+      console.error('Failed to download widget:', error);
+    }
   };
 
   const parseAspectRatio = (str) => {
@@ -953,6 +984,10 @@ function App() {
                 >
                   Restore
                 </button>
+                <DownloadButton
+                  onClick={handleDownloadWidget}
+                  isDisabled={isLoading || autoSizing}
+                />
               </div>
             </h2>
           <div style={{
