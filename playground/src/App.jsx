@@ -56,6 +56,7 @@ function App() {
   const [iconColor, setIconColor] = useState('rgba(255, 255, 255, 0.85)');
   const [iconLibrary, setIconLibrary] = useState('sf');
   const [enableAutoResize, setEnableAutoResize] = useState(true);
+  const [presetResetKey, setPresetResetKey] = useState(0);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
 
@@ -151,9 +152,21 @@ function App() {
   useEffect(() => {
     if (!frameEl) return;
     const el = frameEl;
+    let frameCount = 0;
     const update = () => {
       const rect = el.getBoundingClientRect();
       const next = { width: Math.round(rect.width), height: Math.round(rect.height) };
+
+      console.log(`📏 [Widget Size Change #${++frameCount}]`, {
+        width: rect.width.toFixed(2),
+        height: rect.height.toFixed(2),
+        rounded: next,
+        timestamp: new Date().toISOString().split('T')[1],
+        autoResizeEnabled: enableAutoResize,
+        hasExpectedSize: !!expectedSizeRef.current,
+        expectedSize: expectedSizeRef.current
+      });
+
       setFrameSize(next);
       const expected = expectedSizeRef.current;
       if (expected && next.width === expected.width && next.height === expected.height) {
@@ -168,19 +181,103 @@ function App() {
       ro.disconnect();
       window.removeEventListener('resize', update);
     };
-  }, [frameEl]);
+  }, [frameEl, enableAutoResize]);
 
   // Auto-apply autoresize when enabled and spec has aspectRatio but no width/height
   useEffect(() => {
-    if (!enableAutoResize) return;
+    if (!enableAutoResize) {
+      console.log('⏸️  [AutoResize] Disabled, skipping');
+      return;
+    }
     const obj = parseCurrentSpecObject();
     if (!obj || !obj.widget) return;
     const w = obj.widget;
     const hasWH = w.width !== undefined && w.height !== undefined;
     const r = w.aspectRatio;
+    console.log('🔍 [AutoResize Check]', {
+      hasWidth: w.width !== undefined,
+      hasHeight: w.height !== undefined,
+      aspectRatio: r,
+      willTrigger: !hasWH && typeof r === 'number' && isFinite(r) && r > 0
+    });
     if (!hasWH && typeof r === 'number' && isFinite(r) && r > 0) {
-      setRatioInput(r.toString());
-      handleAutoResizeByRatio(r);
+      console.log('⏱️  [AutoResize] Waiting for new widget to mount and render naturally...');
+      let attempts = 0;
+      let frameMounted = false;
+      let sizeHistory = [];
+      let hasSeenChange = false;
+
+      const checkNaturalSize = () => {
+        attempts++;
+        const frame = widgetFrameRef.current;
+
+        if (!frame) {
+          if (attempts < 120) {
+            requestAnimationFrame(checkNaturalSize);
+          } else {
+            console.log('❌ [AutoResize] Timeout waiting for frame to mount');
+          }
+          return;
+        }
+
+        if (!frameMounted) {
+          frameMounted = true;
+          console.log(`✅ [AutoResize] Frame mounted, now monitoring size changes...`);
+        }
+
+        const rect = frame.getBoundingClientRect();
+        const currentSize = `${rect.width.toFixed(2)}x${rect.height.toFixed(2)}`;
+        sizeHistory.push(currentSize);
+
+        if (sizeHistory.length === 1) {
+          console.log(`🔎 [AutoResize] Initial size: ${currentSize} (likely old element, waiting for change...)`);
+          requestAnimationFrame(checkNaturalSize);
+          return;
+        }
+
+        const prevSize = sizeHistory[sizeHistory.length - 2];
+
+        if (currentSize !== prevSize && !hasSeenChange) {
+          hasSeenChange = true;
+          console.log(`🔄 [AutoResize] Size changed: ${prevSize} → ${currentSize} (new element detected!)`);
+          sizeHistory = [currentSize];
+          requestAnimationFrame(checkNaturalSize);
+          return;
+        }
+
+        if (hasSeenChange) {
+          if (currentSize === prevSize) {
+            const stableCount = sizeHistory.filter(s => s === currentSize).length;
+            if (stableCount >= 3) {
+              console.log(`📐 [AutoResize] Natural size stabilized at: ${currentSize} (stable for ${stableCount} frames after change, total ${attempts} checks)`);
+              console.log('⚡ [AutoResize] Triggering with ratio:', r);
+              setRatioInput(r.toString());
+              handleAutoResizeByRatio(r);
+            } else {
+              requestAnimationFrame(checkNaturalSize);
+            }
+          } else {
+            console.log(`🔄 [AutoResize] Size still changing: ${prevSize} → ${currentSize}`);
+            sizeHistory = [currentSize];
+            if (attempts < 120) {
+              requestAnimationFrame(checkNaturalSize);
+            } else {
+              console.log('⏰ [AutoResize] Max attempts reached, using current size:', currentSize);
+              setRatioInput(r.toString());
+              handleAutoResizeByRatio(r);
+            }
+          }
+        } else {
+          if (attempts < 120) {
+            requestAnimationFrame(checkNaturalSize);
+          } else {
+            console.log('⏰ [AutoResize] No size change detected within timeout, using current:', currentSize);
+            setRatioInput(r.toString());
+            handleAutoResizeByRatio(r);
+          }
+        }
+      };
+      requestAnimationFrame(checkNaturalSize);
     }
   }, [enableAutoResize, selectedExample, editedSpec]);
 
@@ -195,9 +292,27 @@ function App() {
   };
 
   const handleExampleChange = (key) => {
+    console.log(`🔄 [Preset Change] Switching to: ${key}`);
+    console.log('🧹 [Cleanup] Resetting all state and refs...');
+
     setSelectedExample(key);
     setEditedSpec('');
     setSelectedPath(null);
+    setFrameSize({ width: 0, height: 0 });
+    setIsLoading(false);
+    setRatioInput('');
+    setAutoSizing(false);
+
+    expectedSizeRef.current = null;
+    resizingRef.current = false;
+    latestWriteTokenRef.current = 0;
+
+    widgetFrameRef.current = null;
+    setFrameEl(null);
+
+    setPresetResetKey(prev => prev + 1);
+
+    console.log('✨ [Cleanup] Complete, widgetFrameRef cleared');
   };
 
   const parseCurrentSpecObject = () => {
@@ -214,6 +329,11 @@ function App() {
     const next = { ...obj, widget: { ...obj.widget } };
     next.widget.width = Math.max(1, Math.round(width));
     next.widget.height = Math.max(1, Math.round(height));
+    console.log('✏️  [Spec Update] Applying size:', {
+      width: next.widget.width,
+      height: next.widget.height,
+      aspectRatio: next.widget.aspectRatio
+    });
     setEditedSpec(JSON.stringify(formatSpecWithRootLast(next), null, 2));
   };
 
@@ -223,6 +343,7 @@ function App() {
     const next = { ...obj, widget: { ...obj.widget } };
     delete next.widget.width;
     delete next.widget.height;
+    console.log('↩️  [Spec Update] Restoring (removing width/height), aspectRatio:', next.widget.aspectRatio);
     setEditedSpec(JSON.stringify(formatSpecWithRootLast(next), null, 2));
   };
 
@@ -810,7 +931,7 @@ function App() {
                 }}
                 style={{ position: 'relative', display: 'inline-block' }}
               >
-                <WidgetFrame resetKey={currentSpec} />
+                <WidgetFrame resetKey={`${selectedExample}-${presetResetKey}`} />
                 {isLoading && (
                   <div
                     style={{
