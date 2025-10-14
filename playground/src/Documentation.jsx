@@ -41,7 +41,7 @@ export default function Documentation() {
 
     const handleScroll = () => {
       const sections = [
-        'architecture', 'system-overview', 'data-flow', 'component-architecture',
+        'architecture', 'system-overview', 'data-flow', 'autoresize-system', 'component-architecture',
         'widgetshell', 'css-priority', 'examples', 'autoresize', 'visual-examples',
         'icon-system', 'sf-symbols', 'lucide-icons',
         'component-types', 'container-components', 'fixed-size-components', 'image-components'
@@ -168,6 +168,34 @@ export default function Documentation() {
               }}
             >
               Data Flow
+            </button>
+            <button
+              onClick={() => scrollToSection('autoresize-system')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'autoresize-system' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'autoresize-system' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'autoresize-system') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'autoresize-system') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              AutoResize System
             </button>
             <button
               onClick={() => scrollToSection('component-architecture')}
@@ -673,6 +701,115 @@ export default function Documentation() {
     UI->>Compiler: Compile WidgetSpec
     Compiler->>Frame: Render JSX
     Frame->>User: Display Widget`} />
+          </div>
+
+          <div id="autoresize-system" style={{ marginBottom: 32, scrollMarginTop: 80 }}>
+            <h3 style={{
+              fontSize: 20,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: '#f5f5f7'
+            }}>
+              AutoResize System
+            </h3>
+            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 16 }}>
+              AutoResize automatically calculates optimal widget dimensions based on aspect ratio and content size using binary search algorithm.
+            </p>
+            <MermaidDiagram scale={1.0} chart={`graph LR
+    Start([Start])
+    Parse["Parse Ratio<br/>'16:9' → 1.778"]
+    CalcInit["Calculate Initial<br/>w=current/200<br/>h=w/ratio"]
+    ApplyInit["Apply size & Render<br/>Wait for frame"]
+    MeasureInit["Measure Overflow<br/>scrollW vs clientW"]
+    CheckFit{Content<br/>Fits?}
+
+    subgraph FitsPath["Path A: Content Fits"]
+        TestMin["Test min size<br/>w=40, h=40/ratio"]
+        CheckMin{Size 40<br/>Fits?}
+        UseMin["Use size 40"]
+        BinaryDown["Binary Search<br/>[40, startW]"]
+    end
+
+    subgraph OverflowPath["Path B: Content Overflows"]
+        Expand["Expand size<br/>w *= 2"]
+        TestExp["Apply & Measure"]
+        CheckExp{Fits or<br/>w≥4096?}
+        BinaryUp["Binary Search<br/>[lastOverflow, firstFit]"]
+    end
+
+    Final["Found optimal size"]
+    Write["Write w & h<br/>to WidgetSpec"]
+    Done([Done])
+
+    Start --> Parse
+    Parse --> CalcInit
+    CalcInit --> ApplyInit
+    ApplyInit --> MeasureInit
+    MeasureInit --> CheckFit
+
+    CheckFit -->|Yes| TestMin
+    TestMin --> CheckMin
+    CheckMin -->|Yes| UseMin
+    CheckMin -->|No| BinaryDown
+    UseMin --> Final
+    BinaryDown --> Final
+
+    CheckFit -->|No| Expand
+    Expand --> TestExp
+    TestExp --> CheckExp
+    CheckExp -->|No| Expand
+    CheckExp -->|Yes| BinaryUp
+    BinaryUp --> Final
+
+    Final --> Write
+    Write --> Done
+
+    style Start fill:#007AFF,color:#fff
+    style Parse fill:#FF9500,color:#fff
+    style MeasureInit fill:#34C759,color:#fff
+    style CheckFit fill:#BF5AF2,color:#fff
+    style BinaryDown fill:#BF5AF2,color:#fff
+    style BinaryUp fill:#BF5AF2,color:#fff
+    style Write fill:#FF375F,color:#fff
+    style Done fill:#007AFF,color:#fff`} />
+            <div style={{
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 8,
+              padding: 20,
+              marginTop: 16,
+              marginBottom: 0
+            }}>
+              <div style={{ marginBottom: 20 }}>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Core Algorithm Steps</div>
+                <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
+                  <li><strong>1. Parse Ratio</strong>: Convert "16:9" → 1.778 or use decimal directly</li>
+                  <li><strong>2. Calculate Initial Size</strong>: w = current width or 200, h = w / ratio</li>
+                  <li><strong>3. Apply & Measure</strong>: Render widget, wait for DOM, check scrollWidth vs clientWidth</li>
+                  <li><strong>4. Path A - Content Fits</strong>: Test w=40 first, if not fit then binary search [40, startW]</li>
+                  <li><strong>5. Path B - Content Overflows</strong>: Exponentially expand (w *= 2) until fits, then binary search [low, high]</li>
+                  <li><strong>6. Write Back</strong>: Persist optimal width & height to WidgetSpec JSON</li>
+                </ul>
+              </div>
+              <div style={{ marginBottom: 20 }}>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Overflow Detection</div>
+                <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
+                  <li>Compare <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>scrollWidth</code> vs <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>clientWidth</code></li>
+                  <li>Compare <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>scrollHeight</code> vs <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>clientHeight</code></li>
+                  <li>Check if child elements cross container padding boundaries</li>
+                  <li>Return <code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>fits: true/false</code></li>
+                </ul>
+              </div>
+              <div>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Binary Search Optimization</div>
+                <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
+                  <li><strong>Path A</strong>: If content fits, search downward from startW to 40 to find minimum size</li>
+                  <li><strong>Path B</strong>: If content overflows, exponentially expand (×2) until fits, then binary search</li>
+                  <li><strong>Efficiency</strong>: Typical convergence in 8-10 iterations (log₂ of range)</li>
+                  <li><strong>Bounds</strong>: Minimum 40px, maximum 4096px</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div id="component-architecture" style={{ scrollMarginTop: 80 }}>
