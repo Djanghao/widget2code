@@ -9,6 +9,7 @@ import MermaidDiagram from './MermaidDiagram.jsx';
 
 export default function Documentation() {
   const [activeSection, setActiveSection] = useState('architecture');
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [expandedSections, setExpandedSections] = useState({
     'architecture': true,
     'widgetshell': true,
@@ -71,18 +72,65 @@ export default function Documentation() {
       height: '100%',
       backgroundColor: '#1c1c1e',
       color: '#f5f5f7',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      position: 'relative'
     }}>
       <div style={{
-        width: 240,
+        width: sidebarCollapsed ? 0 : 240,
         flexShrink: 0,
         backgroundColor: '#202020',
-        borderRight: '1px solid #333',
+        borderRight: sidebarCollapsed ? 'none' : '1px solid #333',
         overflowY: 'auto',
         overflowX: 'hidden',
-        paddingTop: 16
+        transition: 'width 0.3s ease',
+        opacity: sidebarCollapsed ? 0 : 1,
+        position: 'relative'
       }}>
-        <nav>
+        {!sidebarCollapsed && (
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '12px 16px',
+            borderBottom: '1px solid #333',
+            marginBottom: 8
+          }}>
+            <span style={{ fontSize: 14, fontWeight: 600, color: '#f5f5f7' }}>Navigation</span>
+            <button
+              onClick={() => setSidebarCollapsed(true)}
+              style={{
+                width: 28,
+                height: 28,
+                backgroundColor: 'transparent',
+                border: 'none',
+                borderRadius: 4,
+                color: '#8e8e93',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'background-color 0.2s ease, color 0.2s ease',
+                outline: 'none'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#2c2c2e';
+                e.currentTarget.style.color = '#f5f5f7';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+                e.currentTarget.style.color = '#8e8e93';
+              }}
+              title="Hide sidebar"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+          </div>
+        )}
+        <nav style={{ paddingTop: sidebarCollapsed ? 0 : 8 }}>
           <div style={{ marginBottom: 20 }}>
             <button
               onClick={() => scrollToSection('architecture')}
@@ -570,12 +618,53 @@ export default function Documentation() {
         </nav>
       </div>
 
+      {sidebarCollapsed && (
+        <button
+          onClick={() => setSidebarCollapsed(false)}
+          style={{
+            position: 'fixed',
+            left: 0,
+            top: '50%',
+            transform: 'translateY(-50%)',
+            width: 32,
+            height: 48,
+            backgroundColor: '#2c2c2e',
+            border: '1px solid #3a3a3c',
+            borderLeft: 'none',
+            borderRadius: '0 8px 8px 0',
+            color: '#f5f5f7',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'background-color 0.2s ease, width 0.2s ease',
+            zIndex: 100,
+            outline: 'none',
+            boxShadow: '2px 0 8px rgba(0, 0, 0, 0.3)'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#3a3a3c';
+            e.currentTarget.style.width = '36px';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#2c2c2e';
+            e.currentTarget.style.width = '32px';
+          }}
+          title="Show sidebar"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      )}
+
       <div
         data-content-scroll
         style={{
           flex: 1,
           overflowY: 'auto',
-          padding: '40px 60px'
+          padding: '40px 60px',
+          transition: 'margin-left 0.3s ease'
         }}
       >
         <section id="architecture" style={{ marginBottom: 60, scrollMarginTop: 20 }}>
@@ -821,42 +910,6 @@ export default function Documentation() {
             }}>
               Component Architecture
             </h3>
-            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 16 }}>
-              The diagram below shows how WidgetSpec JSON is compiled into React components.
-            </p>
-            <MermaidDiagram scale={0.75} chart={`graph LR
-    subgraph WidgetSpecStructure["WidgetSpec Structure"]
-        WidgetSpec["WidgetSpec JSON"]
-        Widget["widget"]
-        Root["root"]
-        WidgetSpec --> Widget
-        Widget --> Root
-        Widget --> Width["width"]
-        Widget --> Height["height"]
-        Widget --> AR["aspectRatio"]
-        Root --> Container["container"]
-        Root --> Text["Text"]
-        Root --> Icon["Icon"]
-    end
-    subgraph CompilerPipeline["Compiler Pipeline"]
-        Parser["Parse WidgetSpec"]
-        Generator["Generate JSX"]
-        Output["JSX String"]
-        WidgetSpec --> Parser
-        Parser --> Generator
-        Generator --> Output
-    end
-    subgraph Primitives["Primitives Library"]
-        WidgetShell["WidgetShell"]
-        PrimitiveText["Text"]
-        PrimitiveIcon["Icon"]
-        Output -.->|Uses| WidgetShell
-        Output -.->|Uses| PrimitiveText
-        Output -.->|Uses| PrimitiveIcon
-    end
-    style WidgetSpec fill:#007AFF,color:#fff
-    style Output fill:#FF9500,color:#fff
-    style WidgetShell fill:#34C759,color:#fff`} />
             <div style={{
               backgroundColor: '#2c2c2e',
               border: '1px solid #3a3a3c',
