@@ -132,8 +132,11 @@ export function useAutoResize(widgetFrameRef, onSpecChange) {
     try {
       const frame = widgetFrameRef.current;
       const rect = frame ? frame.getBoundingClientRect() : null;
-      const startW = rect ? Math.max(40, Math.round(rect.width)) : 200;
+      const startW = rect ? Math.max(40, Math.round(rect.height * r)) : 200;
       const startH = Math.max(40, Math.round(startW / r));
+      if (rect) {
+        console.log(`🎯 [AutoResize Strategy] Natural size: ${rect.width.toFixed(0)}×${rect.height.toFixed(0)}, AspectRatio: ${r}, Starting from: ${startW}×${startH} (based on height)`);
+      }
       let result = await applySizeAndMeasure(currentSpec, startW, startH);
       currentSpec = result.spec;
       let m = result.measurement;
