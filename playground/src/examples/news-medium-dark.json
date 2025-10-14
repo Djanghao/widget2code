@@ -10,7 +10,7 @@
       "gap": 0,
       "flex": 1,
       "children": [
-        { "type": "leaf", "component": "Image", "flex": "none", "props": { "width": 338, "height": 150, "url": "https://images.unsplash.com/photo-1504711434969-e33886168f5c" } },
+        { "type": "leaf", "component": "Image", "flex": "none", "props": { "height": 150, "url": "https://images.unsplash.com/photo-1504711434969-e33886168f5c" } },
         {
           "type": "container",
           "direction": "col",
