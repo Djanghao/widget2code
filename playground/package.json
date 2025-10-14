@@ -9,9 +9,10 @@
     "dev:full": "concurrently \"npm run dev\" \"npm run api\""
   },
   "dependencies": {
-    "@widget-factory/primitives": "*",
     "@widget-factory/compiler": "*",
     "@widget-factory/icons": "*",
+    "@widget-factory/primitives": "*",
+    "mermaid": "^11.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",

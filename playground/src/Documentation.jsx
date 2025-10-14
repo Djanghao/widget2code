@@ -5,10 +5,12 @@ import { Image } from '@widget-factory/primitives';
 import { Checkbox } from '@widget-factory/primitives';
 import { Sparkline } from '@widget-factory/primitives';
 import { WidgetShell } from '@widget-factory/primitives';
+import MermaidDiagram from './MermaidDiagram.jsx';
 
 export default function Documentation() {
-  const [activeSection, setActiveSection] = useState('widgetshell');
+  const [activeSection, setActiveSection] = useState('architecture');
   const [expandedSections, setExpandedSections] = useState({
+    'architecture': true,
     'widgetshell': true,
     'icon-system': true,
     'component-types': true
@@ -39,6 +41,7 @@ export default function Documentation() {
 
     const handleScroll = () => {
       const sections = [
+        'architecture', 'system-overview', 'data-flow', 'component-architecture',
         'widgetshell', 'css-priority', 'examples', 'autoresize', 'visual-examples',
         'icon-system', 'sf-symbols', 'lucide-icons',
         'component-types', 'container-components', 'fixed-size-components', 'image-components'
@@ -82,6 +85,119 @@ export default function Documentation() {
         <nav>
           <div style={{ marginBottom: 20 }}>
             <button
+              onClick={() => scrollToSection('architecture')}
+              style={{
+                width: '100%',
+                padding: '8px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'architecture' ? '#3a3a3a' : 'transparent',
+                color: '#fff',
+                fontSize: 15,
+                fontWeight: 600,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6,
+                marginTop: 16
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'architecture') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'architecture') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Architecture
+            </button>
+            <button
+              onClick={() => scrollToSection('system-overview')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'system-overview' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'system-overview' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'system-overview') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'system-overview') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              System Overview
+            </button>
+            <button
+              onClick={() => scrollToSection('data-flow')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'data-flow' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'data-flow' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'data-flow') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'data-flow') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Data Flow
+            </button>
+            <button
+              onClick={() => scrollToSection('component-architecture')}
+              style={{
+                width: '100%',
+                padding: '6px 16px',
+                textAlign: 'left',
+                border: 'none',
+                backgroundColor: activeSection === 'component-architecture' ? '#3a3a3a' : 'transparent',
+                color: activeSection === 'component-architecture' ? '#fff' : '#b3b3b3',
+                fontSize: 15,
+                fontWeight: 400,
+                cursor: 'pointer',
+                transition: 'background-color 0.15s ease',
+                borderRadius: 6
+              }}
+              onMouseEnter={(e) => {
+                if (activeSection !== 'component-architecture') {
+                  e.currentTarget.style.backgroundColor = '#2a2a2a';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (activeSection !== 'component-architecture') {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
+            >
+              Component Architecture
+            </button>
+            <button
               onClick={() => scrollToSection('widgetshell')}
               style={{
                 width: '100%',
@@ -95,7 +211,7 @@ export default function Documentation() {
                 cursor: 'pointer',
                 transition: 'background-color 0.15s ease',
                 borderRadius: 6,
-                marginTop: 16
+                marginTop: 24
               }}
               onMouseEnter={(e) => {
                 if (activeSection !== 'widgetshell') {
@@ -434,6 +550,219 @@ export default function Documentation() {
           padding: '40px 60px'
         }}
       >
+        <section id="architecture" style={{ marginBottom: 60, scrollMarginTop: 20 }}>
+          <h2 style={{
+            fontSize: 28,
+            fontWeight: 600,
+            marginBottom: 24,
+            color: '#f5f5f7',
+            borderBottom: '2px solid #3a3a3c',
+            paddingBottom: 12
+          }}>
+            Playground Architecture
+          </h2>
+
+          <div id="system-overview" style={{ marginBottom: 32, scrollMarginTop: 80 }}>
+            <h3 style={{
+              fontSize: 20,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: '#f5f5f7'
+            }}>
+              System Overview
+            </h3>
+            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 16 }}>
+              The playground consists of three main parts: Frontend (React + Vite), Backend (FastAPI + AI Models), and Widget System (Compiler + Primitives).
+            </p>
+            <MermaidDiagram chart={`graph TD
+    Frontend["Frontend<br/>React + Vite"]
+    Backend["Backend<br/>FastAPI Server"]
+    AI["AI Models<br/>Qwen VL/LLM"]
+    System["Widget System<br/>Compiler + Primitives"]
+
+    Frontend -->|HTTP Request| Backend
+    Backend -->|AI Call| AI
+    AI -->|WidgetSpec JSON| Backend
+    Backend -->|WidgetSpec| Frontend
+    Frontend -->|Compile| System
+    System -->|JSX Components| Frontend
+
+    style Frontend fill:#007AFF,color:#fff
+    style Backend fill:#34C759,color:#fff
+    style AI fill:#BF5AF2,color:#fff
+    style System fill:#FF9500,color:#fff`} />
+            <div style={{
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 8,
+              padding: 20,
+              marginBottom: 16
+            }}>
+              <div style={{ marginBottom: 20 }}>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Frontend (React + Vite)</div>
+                <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
+                  <li><strong>Presets Tab</strong>: Browse and edit 20+ pre-built widget examples</li>
+                  <li><strong>Widget2Spec Tab</strong>: Upload widget screenshots, generate WidgetSpec via VLM</li>
+                  <li><strong>Prompt2Spec Tab</strong>: Describe widgets in natural language, generate WidgetSpec via LLM</li>
+                  <li><strong>Guides Tab</strong>: Documentation, component reference, and architecture diagrams</li>
+                </ul>
+              </div>
+              <div style={{ marginBottom: 20 }}>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Backend (FastAPI)</div>
+                <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
+                  <li><code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>/api/generate-widget</code> - Image → WidgetSpec (Qwen VL)</li>
+                  <li><code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>/api/generate-widget-text</code> - Prompt → WidgetSpec (Qwen)</li>
+                </ul>
+              </div>
+              <div>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Widget System</div>
+                <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
+                  <li><strong>@widget-factory/compiler</strong>: Converts WidgetSpec JSON to React JSX</li>
+                  <li><strong>@widget-factory/primitives</strong>: Base components (WidgetShell, Text, Icon, etc.)</li>
+                  <li><strong>@widget-factory/icons</strong>: 500+ SF Symbols + 300+ Lucide icons</li>
+                </ul>
+              </div>
+            </div>
+            <p style={{ fontSize: 13, lineHeight: 1.6, color: '#a1a1a6', marginTop: 8 }}>
+              Note: Full architecture diagrams with Mermaid charts are available in <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>playground/architecture.md</code>
+            </p>
+          </div>
+
+          <div id="data-flow" style={{ marginBottom: 32, scrollMarginTop: 80 }}>
+            <h3 style={{
+              fontSize: 20,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: '#f5f5f7'
+            }}>
+              Data Flow
+            </h3>
+            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 16 }}>
+              The sequence diagram below shows how data flows through the system for different tabs.
+            </p>
+            <MermaidDiagram scale={0.75} chart={`sequenceDiagram
+    participant User
+    participant UI as Frontend UI
+    participant API as FastAPI Server
+    participant AI as AI Model
+    participant Compiler
+    participant Frame as Widget Frame
+
+    Note over User,Frame: Presets Tab Flow
+    User->>UI: Select Example
+    UI->>Compiler: Compile WidgetSpec
+    Compiler->>Frame: Render JSX
+    Frame->>User: Display Widget
+
+    Note over User,Frame: Widget2Spec Flow
+    User->>UI: Upload Image
+    UI->>API: POST /api/generate-widget
+    API->>AI: VLM Analysis
+    AI->>API: WidgetSpec JSON
+    API->>UI: Return WidgetSpec
+    UI->>Compiler: Compile WidgetSpec
+    Compiler->>Frame: Render JSX
+    Frame->>User: Display Widget
+
+    Note over User,Frame: Prompt2Spec Flow
+    User->>UI: Enter Prompt
+    UI->>API: POST /api/generate-widget-text
+    API->>AI: LLM Generation
+    AI->>API: WidgetSpec JSON
+    API->>UI: Return WidgetSpec
+    UI->>Compiler: Compile WidgetSpec
+    Compiler->>Frame: Render JSX
+    Frame->>User: Display Widget`} />
+          </div>
+
+          <div id="component-architecture" style={{ scrollMarginTop: 80 }}>
+            <h3 style={{
+              fontSize: 20,
+              fontWeight: 600,
+              marginBottom: 12,
+              color: '#f5f5f7'
+            }}>
+              Component Architecture
+            </h3>
+            <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 16 }}>
+              The diagram below shows how WidgetSpec JSON is compiled into React components.
+            </p>
+            <MermaidDiagram scale={0.75} chart={`graph LR
+    subgraph WidgetSpecStructure["WidgetSpec Structure"]
+        WidgetSpec["WidgetSpec JSON"]
+        Widget["widget"]
+        Root["root"]
+        WidgetSpec --> Widget
+        Widget --> Root
+        Widget --> Width["width"]
+        Widget --> Height["height"]
+        Widget --> AR["aspectRatio"]
+        Root --> Container["container"]
+        Root --> Text["Text"]
+        Root --> Icon["Icon"]
+    end
+    subgraph CompilerPipeline["Compiler Pipeline"]
+        Parser["Parse WidgetSpec"]
+        Generator["Generate JSX"]
+        Output["JSX String"]
+        WidgetSpec --> Parser
+        Parser --> Generator
+        Generator --> Output
+    end
+    subgraph Primitives["Primitives Library"]
+        WidgetShell["WidgetShell"]
+        PrimitiveText["Text"]
+        PrimitiveIcon["Icon"]
+        Output -.->|Uses| WidgetShell
+        Output -.->|Uses| PrimitiveText
+        Output -.->|Uses| PrimitiveIcon
+    end
+    style WidgetSpec fill:#007AFF,color:#fff
+    style Output fill:#FF9500,color:#fff
+    style WidgetShell fill:#34C759,color:#fff`} />
+            <div style={{
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 8,
+              padding: 20,
+              marginTop: 16,
+              marginBottom: 0
+            }}>
+              <div style={{ marginBottom: 20 }}>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>WidgetSpec Structure</div>
+                <pre style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: '#e5e5e7', backgroundColor: '#1c1c1e', padding: 12, borderRadius: 6, overflowX: 'auto' }}>{`{
+  "widget": {
+    "width": 200,
+    "height": 150,
+    "aspectRatio": 1.333,
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 16,
+    "root": { ... }
+  }
+}`}</pre>
+              </div>
+              <div>
+                <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>File Structure</div>
+                <pre style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: '#e5e5e7', backgroundColor: '#1c1c1e', padding: 12, borderRadius: 6, overflowX: 'auto' }}>{`playground/
+├── src/
+│   ├── App.jsx
+│   ├── ImageToWidget.jsx
+│   ├── Prompt2Spec.jsx
+│   ├── Documentation.jsx
+│   ├── WidgetFrame.jsx
+│   ├── TreeView.jsx
+│   ├── generated/
+│   │   ├── Widget.jsx
+│   │   └── WidgetPreview.jsx
+│   └── examples/
+├── api/
+│   └── server.py
+└── vite.config.js`}</pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="widgetshell" style={{ marginBottom: 60, scrollMarginTop: 20 }}>
           <h2 style={{
             fontSize: 28,
