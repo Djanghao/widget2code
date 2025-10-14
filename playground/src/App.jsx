@@ -51,6 +51,7 @@ function App() {
   const latestWriteTokenRef = useRef(0);
   const expectedSizeRef = useRef(null);
   const resizingRef = useRef(false);
+  const autoResizeTokenRef = useRef(0);
   const [ratioInput, setRatioInput] = useState('');
   const [autoSizing, setAutoSizing] = useState(false);
   const [iconColor, setIconColor] = useState('rgba(255, 255, 255, 0.85)');
@@ -295,6 +296,9 @@ function App() {
     console.log(`🔄 [Preset Change] Switching to: ${key}`);
     console.log('🧹 [Cleanup] Resetting all state and refs...');
 
+    autoResizeTokenRef.current += 1;
+    console.log(`🎫 [Cleanup] AutoResize token invalidated: ${autoResizeTokenRef.current}`);
+
     setSelectedExample(key);
     setEditedSpec('');
     setSelectedPath(null);
@@ -454,13 +458,28 @@ function App() {
     if (autoSizing) return;
     const r = ratioOverride ?? parseAspectRatio(ratioInput);
     if (!r) return;
+
+    const currentToken = autoResizeTokenRef.current;
+    console.log(`🎫 [AutoResize] Starting with token: ${currentToken}`);
+
     setAutoSizing(true);
     try {
       const frame = widgetFrameRef.current;
       const rect = frame ? frame.getBoundingClientRect() : null;
       const startW = rect ? Math.max(40, Math.round(rect.width)) : 200;
       const startH = Math.max(40, Math.round(startW / r));
+
+      if (autoResizeTokenRef.current !== currentToken) {
+        console.log(`🚫 [AutoResize] Token mismatch (${autoResizeTokenRef.current} !== ${currentToken}), aborting`);
+        return;
+      }
+
       let m = await applySizeAndMeasure(startW, startH);
+
+      if (autoResizeTokenRef.current !== currentToken) {
+        console.log(`🚫 [AutoResize] Token mismatch after initial measure, aborting`);
+        return;
+      }
       if (m.fits) {
         let low = 40;
         let high = startW;
@@ -472,6 +491,10 @@ function App() {
           best = { w: low, h: Math.max(40, Math.round(low / r)) };
         } else {
           while (high - low > 1) {
+            if (autoResizeTokenRef.current !== currentToken) {
+              console.log(`🚫 [AutoResize] Token mismatch in binary search loop, aborting`);
+              return;
+            }
             const mid = Math.floor((low + high) / 2);
             const mh = Math.max(40, Math.round(mid / r));
             const mm = await applySizeAndMeasure(mid, mh);
@@ -483,6 +506,12 @@ function App() {
             }
           }
         }
+
+        if (autoResizeTokenRef.current !== currentToken) {
+          console.log(`🚫 [AutoResize] Token mismatch before final apply, aborting`);
+          return;
+        }
+
         await applySizeAndMeasure(best.w, best.h);
       } else {
         let low = startW;
@@ -490,6 +519,10 @@ function App() {
         let mm = m;
         const maxCap = 4096;
         while (!mm.fits && high < maxCap) {
+          if (autoResizeTokenRef.current !== currentToken) {
+            console.log(`🚫 [AutoResize] Token mismatch in expansion loop, aborting`);
+            return;
+          }
           low = high;
           high = Math.min(maxCap, high * 2);
           const hh = Math.max(40, Math.round(high / r));
@@ -498,6 +531,10 @@ function App() {
         let best = mm.fits ? { w: high, h: Math.max(40, Math.round(high / r)) } : { w: low, h: Math.max(40, Math.round(low / r)) };
         if (mm.fits) {
           while (high - low > 1) {
+            if (autoResizeTokenRef.current !== currentToken) {
+              console.log(`🚫 [AutoResize] Token mismatch in second binary search loop, aborting`);
+              return;
+            }
             const mid = Math.floor((low + high) / 2);
             const mh = Math.max(40, Math.round(mid / r));
             const m2 = await applySizeAndMeasure(mid, mh);
@@ -508,9 +545,17 @@ function App() {
               low = mid;
             }
           }
+
+          if (autoResizeTokenRef.current !== currentToken) {
+            console.log(`🚫 [AutoResize] Token mismatch before final apply (expansion path), aborting`);
+            return;
+          }
+
           await applySizeAndMeasure(best.w, best.h);
         }
       }
+
+      console.log(`✅ [AutoResize] Completed successfully with token: ${currentToken}`);
     } finally {
       resizingRef.current = false;
       setAutoSizing(false);
