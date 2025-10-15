@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
 import TreeView from './TreeView.jsx';
 import WidgetFrame from './WidgetFrame.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
@@ -14,6 +13,7 @@ import { examples } from './constants/examples.js';
 import { parseAspectRatio, parseCurrentSpecObject, applySizeToSpec, restoreSizeInSpec, formatSpecWithRootLast } from './utils/specUtils.js';
 import AppHeader from './components/Header/AppHeader.jsx';
 import MaterialsModal from './components/MaterialsModal/index.jsx';
+import useWidgetCompiler from './hooks/useWidgetCompiler.js';
 
 function App() {
   const [activeTab, setActiveTab] = useState('presets');
@@ -21,15 +21,12 @@ function App() {
   const [editedSpec, setEditedSpec] = useState('');
   const [showComponentsModal, setShowComponentsModal] = useState(false);
   const [selectedPath, setSelectedPath] = useState(null);
-  const [generatedCode, setGeneratedCode] = useState('');
-  const [treeRoot, setTreeRoot] = useState(null);
   const previewContainerRef = useRef(null);
   const widgetFrameRef = useRef(null);
   const [frameEl, setFrameEl] = useState(null);
   const treeContainerRef = useRef(null);
   const specTextareaRef = useRef(null);
   const [frameSize, setFrameSize] = useState({ width: 0, height: 0 });
-  const [isLoading, setIsLoading] = useState(false);
   const latestWriteTokenRef = useRef(0);
   const expectedSizeRef = useRef(null);
   const resizingRef = useRef(false);
@@ -55,50 +52,13 @@ function App() {
   const currentExample = examples[selectedExample];
   const currentSpec = editedSpec || JSON.stringify(currentExample.spec, null, 2);
 
-  useEffect(() => {
-    const compileAndWrite = async () => {
-      try {
-        const spec = editedSpec ? JSON.parse(editedSpec) : currentExample.spec;
-        const jsx = compileWidgetSpecToJSX(spec);
-        setGeneratedCode(jsx);
-        setTreeRoot(spec?.widget || null);
-
-        const isResizeWrite = !!resizingRef.current;
-        if (isResizeWrite) {
-          latestWriteTokenRef.current += 1;
-          const token = latestWriteTokenRef.current;
-          const w = spec?.widget?.width;
-          const h = spec?.widget?.height;
-          expectedSizeRef.current = typeof w === 'number' && typeof h === 'number' ? { width: Math.round(w), height: Math.round(h) } : null;
-          setIsLoading(true);
-
-          await fetch('/__write_widget', {
-            method: 'POST',
-            body: jsx,
-            headers: { 'Content-Type': 'text/plain' }
-          });
-
-          if (!expectedSizeRef.current && latestWriteTokenRef.current === token) {
-            setIsLoading(false);
-          }
-        } else {
-          expectedSizeRef.current = null;
-          setIsLoading(false);
-          await fetch('/__write_widget', {
-            method: 'POST',
-            body: jsx,
-            headers: { 'Content-Type': 'text/plain' }
-          });
-        }
-      } catch (err) {
-        setGeneratedCode(`// Error: ${err.message}`);
-        setTreeRoot(null);
-        setIsLoading(false);
-      }
-    };
-
-    compileAndWrite();
-  }, [selectedExample, editedSpec]);
+  const { generatedCode, treeRoot, isLoading, setIsLoading } = useWidgetCompiler(
+    editedSpec,
+    currentExample,
+    resizingRef,
+    latestWriteTokenRef,
+    expectedSizeRef
+  );
 
   const handleSpecChange = (value) => {
     setEditedSpec(value);
