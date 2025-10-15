@@ -19,8 +19,8 @@ cp .env.example .env
 **Backend setup** (first time only, required for full mode):
 ```bash
 cd playground/api
-python -m venv venv
-source venv/bin/activate
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 cd ..
 ```
