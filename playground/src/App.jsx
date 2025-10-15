@@ -115,21 +115,9 @@ function App() {
     }
   };
 
-  const waitForFrameToSize = async (targetW, targetH, timeoutMs = 3000) => {
-    const start = Date.now();
-    for (;;) {
-      const node = widgetFrameRef.current;
-      if (!node) break;
-      const rect = node.getBoundingClientRect();
-      if (Math.round(rect.width) === Math.round(targetW) && Math.round(rect.height) === Math.round(targetH)) {
-        await new Promise((r) => requestAnimationFrame(r));
-        await new Promise((r) => requestAnimationFrame(r));
-        return true;
-      }
-      if (Date.now() - start > timeoutMs) return false;
-      await new Promise((r) => setTimeout(r, 16));
-    }
-    return false;
+  const waitForLayoutStable = async () => {
+    await new Promise((r) => requestAnimationFrame(r));
+    await new Promise((r) => requestAnimationFrame(r));
   };
 
   const measureOverflow = () => {
@@ -194,10 +182,16 @@ function App() {
     }
   };
 
-  const applySizeAndMeasure = async (w, h) => {
-    resizingRef.current = true;
-    applySizeToSpec(editedSpec, currentExample.spec, w, h, setEditedSpec);
-    await waitForFrameToSize(w, h);
+  const applySizeToDOMAndMeasure = async (w, h) => {
+    const frame = widgetFrameRef.current;
+    if (!frame) return { fits: false };
+    const widgetElement = frame.firstElementChild;
+    if (!widgetElement) return { fits: false };
+
+    widgetElement.style.width = `${w}px`;
+    widgetElement.style.height = `${h}px`;
+
+    await waitForLayoutStable();
     const m = measureOverflow();
     return m;
   };
@@ -208,44 +202,55 @@ function App() {
     if (!r) return;
 
     const currentToken = autoResizeTokenRef.current;
-    console.log(`🎫 [AutoResize] Starting with token: ${currentToken}`);
+    console.log(`🎫 [AutoResize DOM] Starting with token: ${currentToken}`);
 
     setAutoSizing(true);
     try {
       const frame = widgetFrameRef.current;
-      const rect = frame ? frame.getBoundingClientRect() : null;
-      const startW = rect ? Math.max(40, Math.round(rect.width)) : 200;
+      if (!frame) {
+        console.log(`❌ [AutoResize DOM] No frame element`);
+        return;
+      }
+
+      const widgetElement = frame.firstElementChild;
+      if (!widgetElement) {
+        console.log(`❌ [AutoResize DOM] No widget element`);
+        return;
+      }
+
+      const rect = widgetElement.getBoundingClientRect();
+      const startW = Math.max(40, Math.round(rect.width));
       const startH = Math.max(40, Math.round(startW / r));
 
+      console.log(`📐 [AutoResize DOM] Natural size: ${rect.width.toFixed(0)}×${rect.height.toFixed(0)}, Starting: ${startW}×${startH}, Ratio: ${r}`);
+
       if (autoResizeTokenRef.current !== currentToken) {
-        console.log(`🚫 [AutoResize] Token mismatch (${autoResizeTokenRef.current} !== ${currentToken}), aborting`);
+        console.log(`🚫 [AutoResize DOM] Token mismatch, aborting`);
         return;
       }
 
-      let m = await applySizeAndMeasure(startW, startH);
+      let m = await applySizeToDOMAndMeasure(startW, startH);
+      let best = { w: startW, h: startH };
 
-      if (autoResizeTokenRef.current !== currentToken) {
-        console.log(`🚫 [AutoResize] Token mismatch after initial measure, aborting`);
-        return;
-      }
+      if (autoResizeTokenRef.current !== currentToken) return;
+
       if (m.fits) {
+        console.log(`✓ [AutoResize DOM] Initial size fits, searching for minimum size...`);
         let low = 40;
         let high = startW;
-        let best = { w: startW, h: startH };
-        let lfit = false;
-        const lm = await applySizeAndMeasure(low, Math.max(40, Math.round(low / r)));
-        lfit = lm.fits;
-        if (lfit) {
+
+        const lm = await applySizeToDOMAndMeasure(low, Math.max(40, Math.round(low / r)));
+        if (autoResizeTokenRef.current !== currentToken) return;
+
+        if (lm.fits) {
           best = { w: low, h: Math.max(40, Math.round(low / r)) };
+          console.log(`✓ [AutoResize DOM] Minimum size (${low}) already fits`);
         } else {
           while (high - low > 1) {
-            if (autoResizeTokenRef.current !== currentToken) {
-              console.log(`🚫 [AutoResize] Token mismatch in binary search loop, aborting`);
-              return;
-            }
+            if (autoResizeTokenRef.current !== currentToken) return;
             const mid = Math.floor((low + high) / 2);
             const mh = Math.max(40, Math.round(mid / r));
-            const mm = await applySizeAndMeasure(mid, mh);
+            const mm = await applySizeToDOMAndMeasure(mid, mh);
             if (mm.fits) {
               best = { w: mid, h: mh };
               high = mid;
@@ -253,39 +258,32 @@ function App() {
               low = mid;
             }
           }
+          console.log(`✓ [AutoResize DOM] Found minimum fitting size: ${best.w}×${best.h}`);
         }
-
-        if (autoResizeTokenRef.current !== currentToken) {
-          console.log(`🚫 [AutoResize] Token mismatch before final apply, aborting`);
-          return;
-        }
-
-        await applySizeAndMeasure(best.w, best.h);
       } else {
+        console.log(`✗ [AutoResize DOM] Initial size too small, expanding...`);
         let low = startW;
         let high = startW;
         let mm = m;
         const maxCap = 4096;
+
         while (!mm.fits && high < maxCap) {
-          if (autoResizeTokenRef.current !== currentToken) {
-            console.log(`🚫 [AutoResize] Token mismatch in expansion loop, aborting`);
-            return;
-          }
+          if (autoResizeTokenRef.current !== currentToken) return;
           low = high;
           high = Math.min(maxCap, high * 2);
           const hh = Math.max(40, Math.round(high / r));
-          mm = await applySizeAndMeasure(high, hh);
+          mm = await applySizeToDOMAndMeasure(high, hh);
         }
-        let best = mm.fits ? { w: high, h: Math.max(40, Math.round(high / r)) } : { w: low, h: Math.max(40, Math.round(low / r)) };
+
         if (mm.fits) {
+          best = { w: high, h: Math.max(40, Math.round(high / r)) };
+          console.log(`✓ [AutoResize DOM] Found fitting size at ${high}, now searching for minimum...`);
+
           while (high - low > 1) {
-            if (autoResizeTokenRef.current !== currentToken) {
-              console.log(`🚫 [AutoResize] Token mismatch in second binary search loop, aborting`);
-              return;
-            }
+            if (autoResizeTokenRef.current !== currentToken) return;
             const mid = Math.floor((low + high) / 2);
             const mh = Math.max(40, Math.round(mid / r));
-            const m2 = await applySizeAndMeasure(mid, mh);
+            const m2 = await applySizeToDOMAndMeasure(mid, mh);
             if (m2.fits) {
               best = { w: mid, h: mh };
               high = mid;
@@ -293,20 +291,25 @@ function App() {
               low = mid;
             }
           }
-
-          if (autoResizeTokenRef.current !== currentToken) {
-            console.log(`🚫 [AutoResize] Token mismatch before final apply (expansion path), aborting`);
-            return;
-          }
-
-          await applySizeAndMeasure(best.w, best.h);
+          console.log(`✓ [AutoResize DOM] Found minimum fitting size: ${best.w}×${best.h}`);
+        } else {
+          best = { w: low, h: Math.max(40, Math.round(low / r)) };
+          console.log(`⚠️ [AutoResize DOM] Could not fit within max cap, using: ${best.w}×${best.h}`);
         }
       }
 
-      console.log(`✅ [AutoResize] Completed successfully with token: ${currentToken}`);
+      if (autoResizeTokenRef.current !== currentToken) return;
+
+      console.log(`📝 [AutoResize DOM] Writing optimal size to spec: ${best.w}×${best.h}`);
+      resizingRef.current = true;
+      applySizeToSpec(editedSpec, currentExample.spec, best.w, best.h, setEditedSpec);
+
+      console.log(`✅ [AutoResize DOM] Completed successfully with token: ${currentToken}`);
     } finally {
-      resizingRef.current = false;
       setAutoSizing(false);
+      setTimeout(() => {
+        resizingRef.current = false;
+      }, 100);
     }
   };
 
