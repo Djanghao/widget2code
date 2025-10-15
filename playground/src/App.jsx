@@ -718,6 +718,106 @@ function App() {
               >
                 Guides
               </button>
+              <a
+                href="http://202.78.161.188:8080/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: '8px 16px',
+                  fontSize: 15,
+                  fontWeight: 500,
+                  backgroundColor: 'transparent',
+                  color: '#8e8e93',
+                  border: 'none',
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.color = '#f5f5f7';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = '#8e8e93';
+                }}
+              >
+                FastCVAT
+              </a>
+              <a
+                href="http://202.78.161.188:3000/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: '8px 16px',
+                  fontSize: 15,
+                  fontWeight: 500,
+                  backgroundColor: 'transparent',
+                  color: '#8e8e93',
+                  border: 'none',
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.color = '#f5f5f7';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = '#8e8e93';
+                }}
+              >
+                Qwen API OpenWebUI
+              </a>
+              <a
+                href="http://202.78.161.188:3010/viewer/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: '8px 16px',
+                  fontSize: 15,
+                  fontWeight: 500,
+                  backgroundColor: 'transparent',
+                  color: '#8e8e93',
+                  border: 'none',
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.color = '#f5f5f7';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = '#8e8e93';
+                }}
+              >
+                W2C Viewer
+              </a>
+              <a
+                href="http://202.78.161.188:3010/playground/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  padding: '8px 16px',
+                  fontSize: 15,
+                  fontWeight: 500,
+                  backgroundColor: 'transparent',
+                  color: '#8e8e93',
+                  border: 'none',
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  position: 'relative'
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.color = '#f5f5f7';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.color = '#8e8e93';
+                }}
+              >
+                W2C Playground
+              </a>
             </div>
           </div>
           <button
