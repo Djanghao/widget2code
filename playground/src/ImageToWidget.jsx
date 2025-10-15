@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
-import WidgetPreviewFrame from './WidgetPreviewFrame.jsx';
 import TreeView from './TreeView.jsx';
+import SpecEditor from './components/core/SpecEditor.jsx';
+import CodeViewer from './components/core/CodeViewer.jsx';
+import PreviewPanel from './components/core/PreviewPanel.jsx';
+import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import sfOnlyPrompt from '../api/sf-only-prompt.md?raw';
 import lucideOnlyPrompt from '../api/lucide-only-prompt.md?raw';
 import bothIconsPrompt from '../api/both-icons-prompt.md?raw';
@@ -176,6 +177,12 @@ function ImageToWidget({ onWidgetGenerated }) {
     }
   }, [enableAutoResize, previewWidth, previewHeight, previewAspectRatio, aspectRatio]);
 
+  const visionModelOptions = [
+    { value: 'qwen3-vl-plus', label: 'Qwen3 VL Plus' },
+    { value: 'qwen-vl-plus', label: 'Qwen VL Plus' },
+    { value: 'qwen-vl-max', label: 'Qwen VL Max' }
+  ];
+
   return (
     <div style={{
       display: 'grid',
@@ -319,121 +326,16 @@ function ImageToWidget({ onWidgetGenerated }) {
           </div>
         )}
 
-        <div style={{ flex: '1 1 auto', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            marginBottom: 8,
-            flexWrap: 'wrap',
-            rowGap: 8
-          }}>
-            <h2 style={{
-              fontSize: 15,
-              fontWeight: 600,
-              margin: 0,
-              color: '#f5f5f7',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 8
-            }}>
-              <span style={{
-                width: 6,
-                height: 6,
-                borderRadius: '50%',
-                backgroundColor: '#FF9500'
-              }} />
-              System Prompt
-            </h2>
-            <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexShrink: 0, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-              <select
-                value={promptType}
-                onChange={(e) => setPromptType(e.target.value)}
-                style={{
-                  padding: '6px 10px',
-                  fontSize: 12,
-                  fontWeight: 500,
-                  backgroundColor: '#2c2c2e',
-                  color: '#f5f5f7',
-                  border: '1px solid #3a3a3c',
-                  borderRadius: 6,
-                  cursor: 'pointer',
-                  outline: 'none',
-                  whiteSpace: 'nowrap',
-                  maxWidth: 180
-                }}
-              >
-                <option value="sf">SF Symbols Only</option>
-                <option value="lucide">Lucide Only</option>
-                <option value="both">Both Icons</option>
-              </select>
-              <select
-                value={model}
-                onChange={(e) => setModel(e.target.value)}
-                title="Qwen Vision Models"
-                style={{
-                  padding: '6px 10px',
-                  fontSize: 12,
-                  fontWeight: 500,
-                  backgroundColor: '#2c2c2e',
-                  color: '#f5f5f7',
-                  border: '1px solid #3a3a3c',
-                  borderRadius: 6,
-                  cursor: 'pointer',
-                  outline: 'none',
-                  whiteSpace: 'nowrap',
-                  maxWidth: 200
-                }}
-              >
-                <option value="qwen3-vl-plus">Qwen3 VL Plus</option>
-                <option value="qwen-vl-plus">Qwen VL Plus</option>
-                <option value="qwen-vl-max">Qwen VL Max</option>
-              </select>
-              <button
-                onClick={handleResetPrompt}
-              style={{
-                padding: '6px 12px',
-                fontSize: 12,
-                fontWeight: 500,
-                backgroundColor: '#2c2c2e',
-                color: '#f5f5f7',
-                border: '1px solid #3a3a3c',
-                borderRadius: 6,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                whiteSpace: 'nowrap'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3a3a3c'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2c2c2e'}
-            >
-              Reset to Default
-            </button>
-          </div>
-          </div>
-          <textarea
-            value={systemPrompt}
-            onChange={(e) => setSystemPrompt(e.target.value)}
-            spellCheck={false}
-            style={{
-              flex: 1,
-              minHeight: 0,
-              padding: 16,
-              fontSize: 13,
-              fontFamily: 'Monaco, Consolas, monospace',
-              backgroundColor: '#0d0d0d',
-              color: '#f5f5f7',
-              border: '1px solid #3a3a3c',
-              borderRadius: 10,
-              resize: 'none',
-              boxSizing: 'border-box',
-              overflowY: 'auto',
-              lineHeight: 1.6,
-              outline: 'none'
-            }}
-            onFocus={(e) => e.target.style.borderColor = '#007AFF'}
-            onBlur={(e) => e.target.style.borderColor = '#3a3a3c'}
-          />
-        </div>
+        <SystemPromptEditor
+          value={systemPrompt}
+          onChange={setSystemPrompt}
+          promptType={promptType}
+          setPromptType={setPromptType}
+          model={model}
+          setModel={setModel}
+          onReset={handleResetPrompt}
+          modelOptions={visionModelOptions}
+        />
       </div>
 
       <div style={{
@@ -446,250 +348,34 @@ function ImageToWidget({ onWidgetGenerated }) {
         minHeight: 0,
         gridAutoRows: 'minmax(0, 1fr)'
       }}>
-        <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'spec' }}>
-          <h2 style={{
-            fontSize: 15,
-            fontWeight: 600,
-            marginBottom: 8,
-            color: '#f5f5f7',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            flexShrink: 0
-          }}>
-            <span style={{
-              width: 6,
-              height: 6,
-              borderRadius: '50%',
-              backgroundColor: '#34C759'
-            }} />
-            WidgetSpec
-          </h2>
-          <div style={{ position: 'relative', flex: 1, minHeight: 0 }}>
-            <textarea
-              value={previewSpec ? JSON.stringify(previewSpec, null, 2) : ''}
-              readOnly
-              spellCheck={false}
-              style={{
-                width: '100%',
-                height: '100%',
-                padding: 16,
-                fontSize: 13,
-                fontFamily: 'Monaco, Consolas, monospace',
-                backgroundColor: '#0d0d0d',
-                color: '#f5f5f7',
-                border: '1px solid #3a3a3c',
-                borderRadius: 10,
-                resize: 'none',
-                boxSizing: 'border-box',
-                overflowY: 'auto',
-                lineHeight: 1.6,
-                outline: 'none'
-              }}
-            />
-          </div>
+        <div style={{ gridArea: 'spec', minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
+          <SpecEditor
+            value={previewSpec ? JSON.stringify(previewSpec, null, 2) : ''}
+            readOnly
+          />
         </div>
 
-        <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'preview' }}>
-          <h2 style={{
-            fontSize: 15,
-            fontWeight: 600,
-            marginBottom: 8,
-            color: '#f5f5f7',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            flexShrink: 0
-          }}>
-            <span style={{
-              width: 6,
-              height: 6,
-              borderRadius: '50%',
-              backgroundColor: '#BF5AF2'
-            }} />
-            Preview
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto' }}>
-              <input
-                value={ratioInput}
-                onChange={(e) => setRatioInput(e.target.value)}
-                placeholder="16:9 or 1.777"
-                style={{
-                  width: 120,
-                  height: 28,
-                  fontSize: 12,
-                  color: '#f5f5f7',
-                  backgroundColor: '#2c2c2e',
-                  border: '1px solid #3a3a3c',
-                  borderRadius: 6,
-                  padding: '0 8px',
-                  outline: 'none'
-                }}
-                onFocus={(e) => (e.currentTarget.style.borderColor = '#007AFF')}
-                onBlur={(e) => (e.currentTarget.style.borderColor = '#3a3a3c')}
-              />
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                <span style={{ fontSize: 12, color: '#d1d1d6' }}>AutoResize</span>
-                <button
-                  onClick={() => setEnableAutoResize((v) => !v)}
-                  aria-pressed={enableAutoResize}
-                  title="Toggle AutoResize"
-                  style={{
-                    width: 44,
-                    height: 24,
-                    borderRadius: 9999,
-                    border: '1px solid #3a3a3c',
-                    backgroundColor: enableAutoResize ? '#34C759' : '#2c2c2e',
-                    position: 'relative',
-                    cursor: 'pointer',
-                    outline: 'none',
-                    padding: 0
-                  }}
-                >
-                  <span
-                    style={{
-                      position: 'absolute',
-                      top: 2,
-                      left: enableAutoResize ? 22 : 2,
-                      width: 20,
-                      height: 20,
-                      borderRadius: '50%',
-                      backgroundColor: '#fff',
-                      transition: 'left 0.15s ease'
-                    }}
-                  />
-                </button>
-              </div>
-              <button
-                onClick={() => previewSpec && handleAutoResizeByRatio(previewSpec, ratioInput)}
-                disabled={autoSizing}
-                style={{
-                  padding: '6px 10px',
-                  fontSize: 12,
-                  fontWeight: 500,
-                  backgroundColor: autoSizing ? '#3a3a3c' : '#2c2c2e',
-                  color: '#f5f5f7',
-                  border: '1px solid #3a3a3c',
-                  borderRadius: 6,
-                  cursor: autoSizing ? 'default' : 'pointer',
-                  transition: 'all 0.2s ease'
-                }}
-                onMouseEnter={(e) => {
-                  if (!autoSizing) e.currentTarget.style.backgroundColor = '#3a3a3c';
-                }}
-                onMouseLeave={(e) => {
-                  if (!autoSizing) e.currentTarget.style.backgroundColor = '#2c2c2e';
-                }}
-                title="Auto-resize to aspect ratio"
-              >
-                {autoSizing ? 'Sizing…' : 'Auto-Resize'}
-              </button>
-            </div>
-          </h2>
-          <div style={{
-            flex: 1,
-            backgroundColor: '#0d0d0d',
-            padding: 24,
-            borderRadius: 10,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: 0,
-            boxSizing: 'border-box',
-            border: '1px solid #3a3a3c',
-            overflow: 'auto',
-            position: 'relative'
-          }}>
-            {previewSpec ? (
-              <div ref={widgetFrameRef} style={{ display: 'inline-block', position: 'relative' }}>
-                <WidgetPreviewFrame resetKey={previewSpec ? JSON.stringify(previewSpec) : ''} />
-                {autoSizing && (
-                  <div style={{
-                    position: 'absolute',
-                    left: 0,
-                    top: 0,
-                    right: 0,
-                    bottom: 0,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    background: 'rgba(0,0,0,0.12)',
-                    zIndex: 3,
-                    pointerEvents: 'none'
-                  }}>
-                    <svg width="32" height="32" viewBox="0 0 24 24" role="img">
-                      <circle cx="12" cy="12" r="10" stroke="#8e8e93" strokeWidth="3" fill="none" opacity="0.25" />
-                      <path d="M12 2 a10 10 0 0 1 0 20" stroke="#007AFF" strokeWidth="3" strokeLinecap="round" fill="none">
-                        <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.9s" repeatCount="indefinite" />
-                      </path>
-                    </svg>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <div style={{ textAlign: 'center', color: '#6e6e73', fontSize: 14 }}>
-                <div style={{ fontSize: 48, marginBottom: 12, opacity: 0.5 }}>
-                  <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.5" />
-                    <path d="M8 9h8M8 12h8M8 15h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                </div>
-                <div>Generate a widget to see preview</div>
-              </div>
-            )}
-          </div>
+        <div style={{ gridArea: 'preview', minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
+          <PreviewPanel
+            previewSpec={previewSpec}
+            widgetFrameRef={widgetFrameRef}
+            ratioInput={ratioInput}
+            setRatioInput={setRatioInput}
+            autoSizing={autoSizing}
+            handleAutoResizeByRatio={handleAutoResizeByRatio}
+            enableAutoResize={enableAutoResize}
+            setEnableAutoResize={setEnableAutoResize}
+          />
         </div>
 
-        <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'code' }}>
-          <h2 style={{
-            fontSize: 15,
-            fontWeight: 600,
-            marginBottom: 8,
-            color: '#f5f5f7',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            flexShrink: 0
-          }}>
-            <span style={{
-              width: 6,
-              height: 6,
-              borderRadius: '50%',
-              backgroundColor: '#FF9500'
-            }} />
-            Generated WidgetPreview.jsx
-          </h2>
-          <div style={{
-            flex: 1,
-            minHeight: 0,
-            borderRadius: 10,
-            border: '1px solid #3a3a3c',
-            backgroundColor: '#1e1e1e',
-            display: 'flex',
-            flexDirection: 'column',
-            overflow: 'hidden'
-          }}>
-            <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
-              <SyntaxHighlighter
-                language="jsx"
-                style={vscDarkPlus}
-                showLineNumbers
-                wrapLongLines={false}
-                customStyle={{
-                  margin: 0,
-                  fontSize: 13,
-                  borderRadius: 10,
-                  whiteSpace: 'pre',
-                  minHeight: 0,
-                  overflow: 'visible'
-                }}
-              >
-                {generatedCode || '// Generate a widget to see code'}
-              </SyntaxHighlighter>
-            </div>
-          </div>
+        <div style={{ gridArea: 'code', minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
+          <CodeViewer
+            code={generatedCode}
+            title="Generated WidgetPreview.jsx"
+          />
         </div>
 
-        <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', gridArea: 'tree' }}>
+        <div style={{ gridArea: 'tree', minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
           <h2 style={{
             fontSize: 15,
             fontWeight: 600,
