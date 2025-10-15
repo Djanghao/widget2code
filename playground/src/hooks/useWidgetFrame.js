@@ -70,8 +70,14 @@ export default function useWidgetFrame(
       let frameMounted = false;
       let sizeHistory = [];
       let hasSeenChange = false;
+      let cancelled = false;
 
       const checkNaturalSize = () => {
+        if (cancelled) {
+          console.log('🚫 [AutoResize] Cancelled, stopping natural size detection');
+          return;
+        }
+
         attempts++;
         const frame = widgetFrameRef.current;
 
@@ -100,6 +106,17 @@ export default function useWidgetFrame(
         }
 
         const prevSize = sizeHistory[sizeHistory.length - 2];
+
+        if (!hasSeenChange && currentSize === prevSize) {
+          const stableCount = sizeHistory.filter(s => s === currentSize).length;
+          if (stableCount >= 10) {
+            console.log(`📐 [AutoResize] Initial size stable at: ${currentSize} (stable for ${stableCount} frames, no change detected - assuming this is natural size)`);
+            console.log('⚡ [AutoResize] Triggering with ratio:', r);
+            setRatioInput(r.toString());
+            handleAutoResizeByRatio(r);
+            return;
+          }
+        }
 
         if (currentSize !== prevSize && !hasSeenChange) {
           hasSeenChange = true;
@@ -142,6 +159,10 @@ export default function useWidgetFrame(
         }
       };
       requestAnimationFrame(checkNaturalSize);
+
+      return () => {
+        cancelled = true;
+      };
     }
   }, [enableAutoResize, editedSpec, currentExample, widgetFrameRef, setRatioInput, handleAutoResizeByRatio]);
 

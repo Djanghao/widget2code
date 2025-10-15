@@ -26,6 +26,7 @@ function App() {
   const expectedSizeRef = useRef(null);
   const resizingRef = useRef(false);
   const autoResizeTokenRef = useRef(0);
+  const autoSizingRef = useRef(false);
   const [ratioInput, setRatioInput] = useState('');
   const [autoSizing, setAutoSizing] = useState(false);
   const [enableAutoResize, setEnableAutoResize] = useState(true);
@@ -77,6 +78,7 @@ function App() {
     expectedSizeRef.current = null;
     resizingRef.current = false;
     latestWriteTokenRef.current = 0;
+    autoSizingRef.current = false;
 
     widgetFrameRef.current = null;
     setFrameEl(null);
@@ -197,13 +199,17 @@ function App() {
   };
 
   const handleAutoResizeByRatio = async (ratioOverride) => {
-    if (autoSizing) return;
+    if (autoSizingRef.current) {
+      console.log(`⏭️  [AutoResize DOM] Already running, skipping`);
+      return;
+    }
     const r = ratioOverride ?? parseAspectRatio(ratioInput);
     if (!r) return;
 
     const currentToken = autoResizeTokenRef.current;
     console.log(`🎫 [AutoResize DOM] Starting with token: ${currentToken}`);
 
+    autoSizingRef.current = true;
     setAutoSizing(true);
     try {
       const frame = widgetFrameRef.current;
@@ -301,15 +307,13 @@ function App() {
       if (autoResizeTokenRef.current !== currentToken) return;
 
       console.log(`📝 [AutoResize DOM] Writing optimal size to spec: ${best.w}×${best.h}`);
-      resizingRef.current = true;
       applySizeToSpec(editedSpec, currentExample.spec, best.w, best.h, setEditedSpec);
+      setIsLoading(false);
 
       console.log(`✅ [AutoResize DOM] Completed successfully with token: ${currentToken}`);
     } finally {
+      autoSizingRef.current = false;
       setAutoSizing(false);
-      setTimeout(() => {
-        resizingRef.current = false;
-      }, 100);
     }
   };
 

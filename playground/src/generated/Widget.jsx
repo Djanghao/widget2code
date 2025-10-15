@@ -5,23 +5,19 @@ import { Icon } from '@widget-factory/primitives';
 
 export default function Widget() {
   return (
-    <WidgetShell backgroundColor="#f2f2f7" borderRadius={20} padding={16} width={284} height={133}>
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 12, flex: 1 }}>
-      <div style={{ display: 'flex', flexDirection: 'row', gap: 8, flex: 0, justifyContent: 'space-between', alignItems: 'center' }}>
-        <Text fontSize={18} color="#000000" fontWeight={700} flex={1}>Batteries</Text>
-        <Icon size={18} color="#8e8e93" name="sf:battery.100percent" flex="none" />
+    <WidgetShell backgroundColor="#4A90E2" borderRadius={20} padding={16} width={198} height={198}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8, flex: 1, justifyContent: 'space-between' }}>
+      <div style={{ display: 'flex', flexDirection: 'row', gap: 6, flex: 0, alignItems: 'center' }}>
+        <Text fontSize={16} color="#ffffff" fontWeight={600} flex={1}>Cupertino</Text>
+        <Icon size={14} color="#ffffff" name="sf:paperplane.fill" flex="none" />
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 10, flex: 1 }}>
-        <div style={{ display: 'flex', flexDirection: 'row', gap: 10, flex: 0, alignItems: 'center' }}>
-          <Icon size={28} color="#34C759" name="sf:iphone" flex="none" />
-          <Text fontSize={15} color="#000000" flex={1}>iPhone</Text>
-          <Text fontSize={15} color="#000000" fontWeight={600} flex={0}>85%</Text>
+      <Text fontSize={64} color="#ffffff" fontWeight={200} flex={0}>70°</Text>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 4, flex: 0 }}>
+        <div style={{ display: 'flex', flexDirection: 'row', gap: 8, flex: 0, alignItems: 'center' }}>
+          <Icon size={24} color="#FFD60A" name="sf:sun.max.fill" flex="none" />
+          <Text fontSize={16} color="#ffffff" flex={0}>Sunny</Text>
         </div>
-        <div style={{ display: 'flex', flexDirection: 'row', gap: 10, flex: 0, alignItems: 'center' }}>
-          <Icon size={28} color="#FF9500" name="sf:airpods.gen3" flex="none" />
-          <Text fontSize={15} color="#000000" flex={1}>AirPods</Text>
-          <Text fontSize={15} color="#000000" fontWeight={600} flex={0}>67%</Text>
-        </div>
+        <Text fontSize={14} color="#ffffff" flex={0}>H:75° L:59°</Text>
       </div>
     </div>
     </WidgetShell>
