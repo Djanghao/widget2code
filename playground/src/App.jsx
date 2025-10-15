@@ -10,29 +10,8 @@ import Documentation from './Documentation.jsx';
 import DownloadButton from './DownloadButton.jsx';
 import { Icon } from '@widget-factory/primitives';
 import html2canvas from 'html2canvas';
-import weatherSmallLight from './examples/weather-small-light.json';
-import weatherMediumDark from './examples/weather-medium-dark.json';
-import calendarSmallLight from './examples/calendar-small-light.json';
-import calendarSmallDark from './examples/calendar-small-dark.json';
-import notesSmallLight from './examples/notes-small-light.json';
-import notesSmallDark from './examples/notes-small-dark.json';
-import stockMediumDark from './examples/stock-medium-dark.json';
-import remindersLargeLight from './examples/reminders-large-light.json';
-import photoMediumLight from './examples/photo-medium-light.json';
-import mapMediumDark from './examples/map-medium-dark.json';
-import lucideWeatherSmall from './examples/lucide-weather-small.json';
-import lucideTasksMedium from './examples/lucide-tasks-medium.json';
-import lucideMusicSmall from './examples/lucide-music-small.json';
-import batterySmallDark from './examples/battery-small-dark.json';
-import fitnessSmallLight from './examples/fitness-small-light.json';
-import musicMediumLight from './examples/music-medium-light.json';
-import newsMediumDark from './examples/news-medium-dark.json';
-import calendarMediumLight from './examples/calendar-medium-light.json';
-import photosSmallLight from './examples/photos-small-light.json';
-import healthSmallDark from './examples/health-small-dark.json';
-import batteryMediumLight from './examples/battery-medium-light.json';
-import stocksMediumLight from './examples/stocks-medium-light.json';
-import weatherLargeLight from './examples/weather-large-light.json';
+import { examples } from './constants/examples.js';
+import { parseAspectRatio, parseCurrentSpecObject, applySizeToSpec, restoreSizeInSpec, formatSpecWithRootLast } from './utils/specUtils.js';
 
 function App() {
   const [activeTab, setActiveTab] = useState('presets');
@@ -73,32 +52,6 @@ function App() {
     document.addEventListener('click', onDocClick);
     return () => document.removeEventListener('click', onDocClick);
   }, []);
-
-  const examples = {
-    weatherSmallLight: { name: 'Weather S-Light', spec: weatherSmallLight },
-    weatherMediumDark: { name: 'Weather M-Dark', spec: weatherMediumDark },
-    calendarSmallLight: { name: 'Calendar S-Light', spec: calendarSmallLight },
-    calendarSmallDark: { name: 'Calendar S-Dark', spec: calendarSmallDark },
-    notesSmallLight: { name: 'Notes S-Light', spec: notesSmallLight },
-    notesSmallDark: { name: 'Notes S-Dark', spec: notesSmallDark },
-    stockMediumDark: { name: 'Stock M-Dark', spec: stockMediumDark },
-    remindersLargeLight: { name: 'Reminders L-Light', spec: remindersLargeLight },
-    photoMediumLight: { name: 'Photo M-Light', spec: photoMediumLight },
-    mapMediumDark: { name: 'Map M-Dark', spec: mapMediumDark },
-    lucideWeatherSmall: { name: 'Lucide Weather', spec: lucideWeatherSmall },
-    lucideTasksMedium: { name: 'Lucide Tasks', spec: lucideTasksMedium },
-    lucideMusicSmall: { name: 'Lucide Music', spec: lucideMusicSmall },
-    batterySmallDark: { name: 'Battery S-Dark', spec: batterySmallDark },
-    fitnessSmallLight: { name: 'Activity S-Light', spec: fitnessSmallLight },
-    musicMediumLight: { name: 'Music M-Light', spec: musicMediumLight },
-    newsMediumDark: { name: 'News M-Dark', spec: newsMediumDark },
-    calendarMediumLight: { name: 'Calendar M-Light', spec: calendarMediumLight },
-    photosSmallLight: { name: 'Photos S-Light', spec: photosSmallLight },
-    healthSmallDark: { name: 'Health S-Dark', spec: healthSmallDark },
-    batteryMediumLight: { name: 'Battery M-Light', spec: batteryMediumLight },
-    stocksMediumLight: { name: 'Stocks M-Light', spec: stocksMediumLight },
-    weatherLargeLight: { name: 'Weather L-Light', spec: weatherLargeLight }
-  };
 
   const currentExample = examples[selectedExample];
   const currentSpec = editedSpec || JSON.stringify(currentExample.spec, null, 2);
@@ -192,7 +145,7 @@ function App() {
       console.log('⏸️  [AutoResize] Disabled, skipping');
       return;
     }
-    const obj = parseCurrentSpecObject();
+    const obj = parseCurrentSpecObject(editedSpec, currentExample.spec);
     if (!obj || !obj.widget) return;
     const w = obj.widget;
     const hasWH = w.width !== undefined && w.height !== undefined;
@@ -321,38 +274,6 @@ function App() {
     console.log('✨ [Cleanup] Complete, widgetFrameRef cleared');
   };
 
-  const parseCurrentSpecObject = () => {
-    try {
-      return editedSpec ? JSON.parse(editedSpec) : JSON.parse(JSON.stringify(currentExample.spec));
-    } catch {
-      return null;
-    }
-  };
-
-  const applySizeToSpec = (width, height) => {
-    const obj = parseCurrentSpecObject();
-    if (!obj || !obj.widget) return;
-    const next = { ...obj, widget: { ...obj.widget } };
-    next.widget.width = Math.max(1, Math.round(width));
-    next.widget.height = Math.max(1, Math.round(height));
-    console.log('✏️  [Spec Update] Applying size:', {
-      width: next.widget.width,
-      height: next.widget.height,
-      aspectRatio: next.widget.aspectRatio
-    });
-    setEditedSpec(JSON.stringify(formatSpecWithRootLast(next), null, 2));
-  };
-
-  const restoreSizeInSpec = () => {
-    const obj = parseCurrentSpecObject();
-    if (!obj || !obj.widget) return;
-    const next = { ...obj, widget: { ...obj.widget } };
-    delete next.widget.width;
-    delete next.widget.height;
-    console.log('↩️  [Spec Update] Restoring (removing width/height), aspectRatio:', next.widget.aspectRatio);
-    setEditedSpec(JSON.stringify(formatSpecWithRootLast(next), null, 2));
-  };
-
   const handleDownloadWidget = async () => {
     const widgetElement = widgetFrameRef.current?.firstElementChild;
     if (!widgetElement) {
@@ -380,22 +301,6 @@ function App() {
     } catch (error) {
       console.error('Failed to download widget:', error);
     }
-  };
-
-  const parseAspectRatio = (str) => {
-    if (!str) return null;
-    const s = String(str).trim();
-    if (!s) return null;
-    if (s.includes(':')) {
-      const [a, b] = s.split(':');
-      const na = parseFloat(a);
-      const nb = parseFloat(b);
-      if (!isFinite(na) || !isFinite(nb) || nb <= 0) return null;
-      return na / nb;
-    }
-    const v = parseFloat(s);
-    if (!isFinite(v) || v <= 0) return null;
-    return v;
   };
 
   const waitForFrameToSize = async (targetW, targetH, timeoutMs = 3000) => {
@@ -479,7 +384,7 @@ function App() {
 
   const applySizeAndMeasure = async (w, h) => {
     resizingRef.current = true;
-    applySizeToSpec(w, h);
+    applySizeToSpec(editedSpec, currentExample.spec, w, h, setEditedSpec);
     await waitForFrameToSize(w, h);
     const m = measureOverflow();
     return m;
@@ -1066,7 +971,7 @@ function App() {
                   {autoSizing ? 'Sizing…' : 'Auto-Resize'}
                 </button>
                 <button
-                  onClick={restoreSizeInSpec}
+                  onClick={() => restoreSizeInSpec(editedSpec, currentExample.spec, setEditedSpec)}
                   style={{
                     padding: '6px 10px',
                     fontSize: 12,
@@ -1262,7 +1167,7 @@ function App() {
                     let r = null;
                     if (enableAutoResize) {
                       try {
-                        const obj = parseCurrentSpecObject();
+                        const obj = parseCurrentSpecObject(editedSpec, currentExample.spec);
                         const v = obj?.widget?.aspectRatio;
                         if (typeof v === 'number' && isFinite(v) && v > 0) r = v;
                       } catch {}
@@ -1273,12 +1178,12 @@ function App() {
                       if (enableAutoResize && r) {
                         const nw = Math.max(40, Math.round(startW + dx));
                         const nh = Math.max(40, Math.round(nw / r));
-                        applySizeToSpec(nw, nh);
+                        applySizeToSpec(editedSpec, currentExample.spec, nw, nh, setEditedSpec);
                       } else {
                         const dy = ev.clientY - startY;
                         const nw = Math.max(40, Math.round(startW + dx));
                         const nh = Math.max(40, Math.round(startH + dy));
-                        applySizeToSpec(nw, nh);
+                        applySizeToSpec(editedSpec, currentExample.spec, nw, nh, setEditedSpec);
                       }
                     };
                     const onUp = () => {
