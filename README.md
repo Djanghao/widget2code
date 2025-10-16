@@ -66,3 +66,15 @@ const jsx = compileWidgetSpecToJSX(spec);
 - [`playground`](./playground/README.md): Demo app with visual editing (Vite dev plugin writes generated JSX to `src/generated/Widget.jsx`)
 
 See individual package README for details.
+
+## Playground Architecture
+
+The playground implements a preview-driven auto-resize system with state flow management:
+
+![Playground State Flow](https://raw.githubusercontent.com/Djanghao/llm-widget-factory/refs/heads/houston/feat/preview-driven-autoresize/playground/docs/architecture/stateflow-playground-latest.png)
+
+
+Key components:
+- **State Management**: Tracks preset changes and rendering lifecycle
+- **Auto-resize Controller**: Dynamically adjusts widget dimensions based on rendered content
+- **Preview System**: Real-time widget rendering with natural size calculation
