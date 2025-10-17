@@ -1,3 +1,12 @@
+/**
+ * @file useWidgetCompiler.js
+ * @description React hook for legacy widget compilation (pre-store migration).
+ * Compiles widget specs to JSX and manages loading states.
+ * Note: New code should use renderingSlice.startCompiling() instead.
+ * @author Houston Zhang
+ * @date 2025-10-15
+ */
+
 import { useState, useEffect } from 'react';
 import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
 

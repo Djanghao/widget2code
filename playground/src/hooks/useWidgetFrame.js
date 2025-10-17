@@ -1,3 +1,11 @@
+/**
+ * @file useWidgetFrame.js
+ * @description React hook for monitoring widget frame size changes.
+ * Tracks widget dimensions via ResizeObserver and reports loading state.
+ * @author Houston Zhang
+ * @date 2025-10-15
+ */
+
 import { useState, useEffect } from 'react';
 import usePlaygroundStore from '../store/index.js';
 

@@ -1,3 +1,12 @@
+/**
+ * @file App.jsx
+ * @description Main application component for the widget playground.
+ * Provides tabbed interface for presets, widget-to-spec, prompt-to-spec, and guides.
+ * Manages widget compilation, preview, auto-resize, and download functionality.
+ * @author Houston Zhang
+ * @date 2025-10-03
+ */
+
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import html2canvas from 'html2canvas';
 import { examples } from './constants/examples.js';

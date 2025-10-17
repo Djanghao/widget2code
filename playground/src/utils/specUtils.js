@@ -1,3 +1,12 @@
+/**
+ * @file specUtils.js
+ * @description Utility functions for widget spec manipulation.
+ * Provides helpers for parsing aspect ratios, applying sizes to specs,
+ * formatting specs with root last, and restoring natural sizes.
+ * @author Houston Zhang
+ * @date 2025-10-15
+ */
+
 export const formatSpecWithRootLast = (spec) => {
   if (!spec || typeof spec !== 'object') return spec;
   const w = spec.widget;

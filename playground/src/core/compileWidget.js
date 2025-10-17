@@ -1,3 +1,12 @@
+/**
+ * @file compileWidget.js
+ * @description Core widget compilation utilities.
+ * Provides functions to compile widget specs to JSX, write widget files to disk,
+ * and manage widget file lifecycle (cleanup). Generates unique filenames for widgets.
+ * @author Houston Zhang
+ * @date 2025-10-17
+ */
+
 import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
 
 function generateWidgetFileName() {

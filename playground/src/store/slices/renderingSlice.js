@@ -1,3 +1,12 @@
+/**
+ * @file renderingSlice.js
+ * @description Zustand store slice for widget rendering pipeline management.
+ * Handles compilation, natural size detection, auto-resize, and widget lifecycle.
+ * Provides unified token-based cancellation for all async operations.
+ * @author Houston Zhang
+ * @date 2025-10-17
+ */
+
 import { compileWidgetSpec, writeWidgetFile, cleanupWidgetFiles } from '../../core/compileWidget.js';
 import { examples } from '../../constants/examples.js';
 
