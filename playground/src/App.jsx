@@ -10,10 +10,9 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import html2canvas from 'html2canvas';
 import { examples } from './constants/examples.js';
-import { parseAspectRatio, applySizeToSpec } from './utils/specUtils.js';
+import { parseAspectRatio } from './utils/specUtils.js';
 import AppHeader from './components/Header/AppHeader.jsx';
 import MaterialsModal from './components/MaterialsModal/index.jsx';
-import useWidgetCompiler from './hooks/useWidgetCompiler.js';
 import useWidgetFrame from './hooks/useWidgetFrame.js';
 import PresetsTab from './components/PresetsTab/index.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
@@ -33,8 +32,10 @@ function App() {
     enableAutoResize,
     setEnableAutoResize,
     autoSizing,
+    renderingPhase,
     switchPreset,
     executeAutoResize,
+    compileFromEdited,
     initializeApp
   } = usePlaygroundStore();
 
@@ -47,10 +48,7 @@ function App() {
   const [frameEl, setFrameEl] = useState(null);
   const treeContainerRef = useRef(null);
   const specTextareaRef = useRef(null);
-  const latestWriteTokenRef = useRef(0);
-  const expectedSizeRef = useRef(null);
-  const resizingRef = useRef(false);
-  const autoSizingRef = useRef(false);
+  const compileTimerRef = useRef(null);
   const [presetResetKey, setPresetResetKey] = useState(0);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
@@ -72,21 +70,19 @@ function App() {
 
   const currentExample = examples[selectedPreset];
   const currentSpec = editedSpec || (widgetSpec ? JSON.stringify(widgetSpec, null, 2) : JSON.stringify(currentExample.spec, null, 2));
+  const isLoading = renderingPhase !== 'idle';
 
-  const { generatedCode, treeRoot: legacyTreeRoot, isLoading, setIsLoading } = useWidgetCompiler(
-    editedSpec,
-    currentExample,
-    resizingRef,
-    latestWriteTokenRef,
-    expectedSizeRef
-  );
-
-  const displayTreeRoot = treeRoot || legacyTreeRoot;
-  const displayCode = generatedJSX || generatedCode;
-
-  const handleSpecChange = (value) => {
+  const handleSpecChange = useCallback((value) => {
     setEditedSpec(value);
-  };
+
+    if (compileTimerRef.current) {
+      clearTimeout(compileTimerRef.current);
+    }
+
+    compileTimerRef.current = setTimeout(() => {
+      compileFromEdited(value, widgetFrameRef);
+    }, 300);
+  }, [compileFromEdited]);
 
   const handleExampleChange = (key) => {
     setSelectedPath(null);
@@ -261,7 +257,7 @@ function App() {
           currentSpec={currentSpec}
           handleSpecChange={handleSpecChange}
           specTextareaRef={specTextareaRef}
-          generatedCode={displayCode}
+          generatedCode={generatedJSX}
           ratioInput={ratioInput}
           setRatioInput={setRatioInput}
           enableAutoResize={enableAutoResize}
@@ -279,8 +275,7 @@ function App() {
           presetResetKey={presetResetKey}
           widgetFileName={currentWidgetFileName}
           frameSize={frameSize}
-          resizingRef={resizingRef}
-          treeRoot={displayTreeRoot}
+          treeRoot={treeRoot}
           selectedPath={selectedPath}
           handleSelectNode={handleSelectNode}
           treeContainerRef={treeContainerRef}
