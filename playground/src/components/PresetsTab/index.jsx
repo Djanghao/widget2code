@@ -17,6 +17,7 @@ export default function PresetsTab({
   enableAutoResize,
   setEnableAutoResize,
   autoSizing,
+  operationMode,
   handleAutoResizeByRatio,
   editedSpec,
   currentExample,
@@ -174,6 +175,7 @@ export default function PresetsTab({
         enableAutoResize={enableAutoResize}
         setEnableAutoResize={setEnableAutoResize}
         autoSizing={autoSizing}
+        operationMode={operationMode}
         handleAutoResizeByRatio={handleAutoResizeByRatio}
         editedSpec={editedSpec}
         currentExample={currentExample}

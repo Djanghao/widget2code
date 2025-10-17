@@ -1,7 +1,7 @@
 import React from 'react';
 import { Download, RefreshCw } from 'lucide-react';
 
-export default function DownloadButton({ onClick, isDisabled }) {
+export default function DownloadButton({ onClick, isDisabled, statusText = '' }) {
   return (
     <button
       onClick={onClick}
@@ -26,7 +26,7 @@ export default function DownloadButton({ onClick, isDisabled }) {
       onMouseLeave={(e) => {
         if (!isDisabled) e.currentTarget.style.backgroundColor = '#2c2c2e';
       }}
-      title={isDisabled ? 'Widget is rendering...' : 'Download widget as PNG'}
+      title={isDisabled ? (statusText || 'Widget is rendering...') : 'Download widget as PNG'}
     >
       {isDisabled ? (
         <RefreshCw
