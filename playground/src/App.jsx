@@ -38,7 +38,8 @@ function App() {
     switchPreset,
     executeAutoResize,
     compileFromEdited,
-    initializeApp
+    initializeApp,
+    validateWidget
   } = usePlaygroundStore();
 
   const [activeTab, setActiveTab] = useState('presets');
@@ -106,8 +107,38 @@ function App() {
     const widgetElement = widgetFrameRef.current?.firstElementChild;
     if (!widgetElement) {
       console.error('Widget element not found');
+      alert('Widget element not found');
       return;
     }
+
+    if (operationMode !== 'idle') {
+      console.warn('Cannot download: operation in progress');
+      alert(`Cannot download: ${operationMode} in progress. Please wait.`);
+      return;
+    }
+
+    console.log('\n📥 [Download] Starting widget download...');
+
+    const validation = validateWidget(widgetElement, widgetSpec);
+
+    if (!validation.valid) {
+      console.error('❌ [Download] Validation failed:', validation.issues);
+      const issuesText = validation.issues.map(i => `• ${i}`).join('\n');
+      alert(`Cannot download widget due to quality issues:\n\n${issuesText}\n\nPlease fix these issues first.`);
+      return;
+    }
+
+    if (validation.warnings.length > 0) {
+      console.warn('⚠️ [Download] Validation warnings:', validation.warnings);
+      const warningsText = validation.warnings.map(w => `• ${w}`).join('\n');
+      const proceed = confirm(`Widget has minor quality warnings:\n\n${warningsText}\n\nDownload anyway?`);
+      if (!proceed) {
+        console.log('📥 [Download] Cancelled by user');
+        return;
+      }
+    }
+
+    console.log('✅ [Download] Validation passed, proceeding...');
 
     setOperationMode('downloading');
 
@@ -120,17 +151,28 @@ function App() {
       });
 
       canvas.toBlob((blob) => {
-        if (!blob) return;
+        if (!blob) {
+          setOperationMode('idle');
+          return;
+        }
+
+        const metadata = validation.metadata;
+        const presetCode = selectedPreset;
+        const filename = `${presetCode}_${metadata.width}x${metadata.height}_ar${metadata.aspectRatio.toFixed(4).replace('.', '-')}.png`;
+
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = `widget-${Date.now()}.png`;
+        link.download = filename;
         link.click();
         URL.revokeObjectURL(url);
+
+        console.log(`✅ [Download] Completed: ${filename}`);
         setOperationMode('idle');
       }, 'image/png');
     } catch (error) {
-      console.error('Failed to download widget:', error);
+      console.error('❌ [Download] Failed:', error);
+      alert(`Download failed: ${error.message}`);
       setOperationMode('idle');
     }
   };
