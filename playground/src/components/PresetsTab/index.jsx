@@ -29,7 +29,6 @@ export default function PresetsTab({
   presetResetKey,
   widgetFileName,
   frameSize,
-  resizingRef,
   treeRoot,
   selectedPath,
   handleSelectNode,
@@ -188,7 +187,6 @@ export default function PresetsTab({
         presetResetKey={presetResetKey}
         widgetFileName={widgetFileName}
         frameSize={frameSize}
-        resizingRef={resizingRef}
       />
 
       <TreePanel

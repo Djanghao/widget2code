@@ -22,8 +22,7 @@ export default function PreviewPanel({
   selectedExample,
   presetResetKey,
   widgetFileName,
-  frameSize,
-  resizingRef
+  frameSize
 }) {
   const { setFinalSize, writebackSpecSize } = usePlaygroundStore();
 
@@ -39,7 +38,6 @@ export default function PreviewPanel({
     const startY = e.clientY;
     const startW = rect.width;
     const startH = rect.height;
-    resizingRef.current = true;
 
     let r = null;
     if (enableAutoResize) {
@@ -74,7 +72,6 @@ export default function PreviewPanel({
     const onUp = () => {
       window.removeEventListener('mousemove', onMove);
       window.removeEventListener('mouseup', onUp);
-      resizingRef.current = false;
 
       const finalRect = widgetElement.getBoundingClientRect();
       const finalW = Math.round(finalRect.width);
