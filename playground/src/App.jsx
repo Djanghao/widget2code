@@ -8,9 +8,9 @@
  */
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import html2canvas from 'html2canvas';
 import { examples } from './constants/examples.js';
 import { parseAspectRatio } from './utils/specUtils.js';
+import { exportWidget } from './utils/widgetExport.js';
 import AppHeader from './components/Header/AppHeader.jsx';
 import MaterialsModal from './components/MaterialsModal/index.jsx';
 import useWidgetFrame from './hooks/useWidgetFrame.js';
@@ -143,33 +143,14 @@ function App() {
     setOperationMode('downloading');
 
     try {
-      const canvas = await html2canvas(widgetElement, {
-        backgroundColor: null,
-        scale: 2,
-        logging: false,
-        useCORS: true
-      });
+      const result = await exportWidget(
+        widgetElement,
+        selectedPreset,
+        validation.metadata
+      );
 
-      canvas.toBlob((blob) => {
-        if (!blob) {
-          setOperationMode('idle');
-          return;
-        }
-
-        const metadata = validation.metadata;
-        const presetCode = selectedPreset;
-        const filename = `${presetCode}_${metadata.width}x${metadata.height}_ar${metadata.aspectRatio.toFixed(4).replace('.', '-')}.png`;
-
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = filename;
-        link.click();
-        URL.revokeObjectURL(url);
-
-        console.log(`✅ [Download] Completed: ${filename}`);
-        setOperationMode('idle');
-      }, 'image/png');
+      console.log(`✅ [Download] Completed: ${result.filename}`);
+      setOperationMode('idle');
     } catch (error) {
       console.error('❌ [Download] Failed:', error);
       alert(`Download failed: ${error.message}`);
