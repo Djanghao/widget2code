@@ -8,10 +8,15 @@
 
 import html2canvas from 'html2canvas';
 
+function generateUniqueCode() {
+  return Math.random().toString(36).substring(2, 9);
+}
+
 export function generateFilename(presetCode, metadata) {
   const { width, height, aspectRatio } = metadata;
   const arFormatted = aspectRatio.toFixed(4).replace('.', '-');
-  return `${presetCode}_${width}x${height}_ar${arFormatted}.png`;
+  const uniqueCode = generateUniqueCode();
+  return `${presetCode}_${width}x${height}_ar${arFormatted}_${uniqueCode}.png`;
 }
 
 export async function captureWidgetAsPNG(widgetElement, options = {}) {
