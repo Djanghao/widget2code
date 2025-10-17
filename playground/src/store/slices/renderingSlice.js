@@ -594,6 +594,28 @@ const createRenderingSlice = (set, get) => ({
     }
   },
 
+  compileFromEdited: async (specString, widgetFrameRef) => {
+    if (!specString || !specString.trim()) {
+      console.log(`⏭️  [Compile From Edited] Empty spec, skipping`);
+      return;
+    }
+
+    let spec;
+    try {
+      spec = JSON.parse(specString);
+    } catch (err) {
+      console.error(`❌ [Compile From Edited] Invalid JSON:`, err.message);
+      set({
+        generatedJSX: `// Error: Invalid JSON\n// ${err.message}`,
+        treeRoot: null
+      });
+      return;
+    }
+
+    console.log(`📝 [Compile From Edited] Compiling edited spec...`);
+    await get().startCompiling(spec, widgetFrameRef);
+  },
+
   initializeApp: async (widgetFrameRef) => {
     console.log(`\n🚀 [Initialize] Starting app initialization...`);
 
