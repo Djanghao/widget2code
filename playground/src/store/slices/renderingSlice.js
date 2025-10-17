@@ -214,9 +214,10 @@ const createRenderingSlice = (set, get) => ({
     });
   },
 
-  startCompiling: async (spec, widgetFrameRef) => {
+  startCompiling: async (spec, widgetFrameRef, options = {}) => {
+    const { skipAutoResize = false } = options;
     const newToken = get().compileToken + 1;
-    console.log(`\n🎬 [Start Compiling] New operation with token: ${newToken}`);
+    console.log(`\n🎬 [Start Compiling] New operation with token: ${newToken}${skipAutoResize ? ' (skip auto-resize)' : ''}`);
 
     set({
       compileToken: newToken,
@@ -252,7 +253,8 @@ const createRenderingSlice = (set, get) => ({
     const hasWidth = spec.widget?.width !== undefined;
     const hasHeight = spec.widget?.height !== undefined;
     const aspectRatio = spec.widget?.aspectRatio;
-    const shouldAutoResize = !hasWidth && !hasHeight &&
+    const shouldAutoResize = !skipAutoResize &&
+                            !hasWidth && !hasHeight &&
                             typeof aspectRatio === 'number' &&
                             isFinite(aspectRatio) &&
                             aspectRatio > 0 &&
@@ -333,7 +335,7 @@ const createRenderingSlice = (set, get) => ({
     console.log(`✅ [Writeback] Spec updated`);
   },
 
-  removeSpecSize: () => {
+  removeSpecSize: async (widgetFrameRef) => {
     const { widgetSpec, naturalSize } = get();
     if (!widgetSpec || !widgetSpec.widget) {
       console.warn(`⚠️ [Writeback] No widget spec to update`);
@@ -366,7 +368,9 @@ const createRenderingSlice = (set, get) => ({
       finalSize: naturalSize
     });
 
-    console.log(`✅ [Writeback] Size removed from spec`);
+    console.log(`✅ [Writeback] Size removed, recompiling to restore natural rendering...`);
+
+    await get().startCompiling(formatted, widgetFrameRef, { skipAutoResize: true });
   },
 
   switchPreset: async (presetKey, widgetFrameRef) => {

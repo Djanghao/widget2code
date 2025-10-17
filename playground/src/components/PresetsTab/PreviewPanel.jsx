@@ -25,7 +25,7 @@ export default function PreviewPanel({
   widgetFileName,
   frameSize
 }) {
-  const { setFinalSize, writebackSpecSize, removeSpecSize } = usePlaygroundStore();
+  const { setFinalSize, writebackSpecSize, removeSpecSize, compileToken } = usePlaygroundStore();
 
   const isLocked = operationMode !== 'idle';
   const isCompiling = operationMode === 'compiling';
@@ -196,10 +196,10 @@ export default function PreviewPanel({
             {isAutoresizing ? 'Sizing…' : 'Auto-Resize'}
           </button>
           <button
-            onClick={() => {
+            onClick={async () => {
               if (!isLocked) {
-                removeSpecSize();
                 setEditedSpec('');
+                await removeSpecSize(widgetFrameRef);
               }
             }}
             disabled={isLocked}
