@@ -33,6 +33,8 @@ function App() {
     setEnableAutoResize,
     autoSizing,
     renderingPhase,
+    operationMode,
+    setOperationMode,
     switchPreset,
     executeAutoResize,
     compileFromEdited,
@@ -107,6 +109,8 @@ function App() {
       return;
     }
 
+    setOperationMode('downloading');
+
     try {
       const canvas = await html2canvas(widgetElement, {
         backgroundColor: null,
@@ -123,9 +127,11 @@ function App() {
         link.download = `widget-${Date.now()}.png`;
         link.click();
         URL.revokeObjectURL(url);
+        setOperationMode('idle');
       }, 'image/png');
     } catch (error) {
       console.error('Failed to download widget:', error);
+      setOperationMode('idle');
     }
   };
 
@@ -173,6 +179,7 @@ function App() {
           enableAutoResize={enableAutoResize}
           setEnableAutoResize={setEnableAutoResize}
           autoSizing={autoSizing}
+          operationMode={operationMode}
           handleAutoResizeByRatio={handleAutoResizeByRatio}
           editedSpec={editedSpec}
           currentExample={currentExample}
