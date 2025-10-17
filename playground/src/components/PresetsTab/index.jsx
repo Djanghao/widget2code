@@ -17,6 +17,7 @@ export default function PresetsTab({
   enableAutoResize,
   setEnableAutoResize,
   autoSizing,
+  operationMode,
   handleAutoResizeByRatio,
   editedSpec,
   currentExample,
@@ -34,6 +35,9 @@ export default function PresetsTab({
   handleSelectNode,
   treeContainerRef
 }) {
+  const isLocked = operationMode !== 'idle';
+  const isCompiling = operationMode === 'compiling';
+
   return (
     <div key="presets" style={{
       display: 'grid',
@@ -68,20 +72,23 @@ export default function PresetsTab({
           WidgetSpec
           <select
             value={selectedExample}
-            onChange={(e) => handleExampleChange(e.target.value)}
+            onChange={(e) => !isLocked && handleExampleChange(e.target.value)}
+            disabled={isLocked}
+            title={isLocked ? 'Locked during operation' : 'Select preset'}
             style={{
               padding: '6px 10px',
               fontSize: 13,
               fontWeight: 500,
-              backgroundColor: '#2c2c2e',
-              color: '#f5f5f7',
+              backgroundColor: isLocked ? '#1c1c1e' : '#2c2c2e',
+              color: isLocked ? '#8e8e93' : '#f5f5f7',
               border: '1px solid #3a3a3c',
               borderRadius: 6,
-              cursor: 'pointer',
+              cursor: isLocked ? 'not-allowed' : 'pointer',
               outline: 'none',
-              marginLeft: 'auto'
+              marginLeft: 'auto',
+              opacity: isLocked ? 0.6 : 1
             }}
-            onFocus={(e) => e.target.style.borderColor = '#007AFF'}
+            onFocus={(e) => !isLocked && (e.target.style.borderColor = '#007AFF')}
             onBlur={(e) => e.target.style.borderColor = '#3a3a3c'}
           >
             {Object.entries(examples).map(([key, { name }]) => (
@@ -95,14 +102,16 @@ export default function PresetsTab({
             onChange={(e) => handleSpecChange(e.target.value)}
             spellCheck={false}
             ref={specTextareaRef}
+            disabled={isCompiling}
+            title={isCompiling ? 'Locked during compilation' : ''}
             style={{
               width: '100%',
               height: '100%',
               padding: 16,
               fontSize: 13,
               fontFamily: 'Monaco, Consolas, monospace',
-              backgroundColor: '#0d0d0d',
-              color: '#f5f5f7',
+              backgroundColor: isCompiling ? '#0a0a0a' : '#0d0d0d',
+              color: isCompiling ? '#8e8e93' : '#f5f5f7',
               border: '1px solid #3a3a3c',
               borderRadius: 10,
               resize: 'none',
@@ -110,9 +119,11 @@ export default function PresetsTab({
               overflowY: 'auto',
               lineHeight: 1.6,
               outline: 'none',
-              transition: 'border-color 0.2s ease'
+              transition: 'border-color 0.2s ease',
+              cursor: isCompiling ? 'not-allowed' : 'text',
+              opacity: isCompiling ? 0.6 : 1
             }}
-            onFocus={(e) => e.target.style.borderColor = '#007AFF'}
+            onFocus={(e) => !isCompiling && (e.target.style.borderColor = '#007AFF')}
             onBlur={(e) => e.target.style.borderColor = '#3a3a3c'}
           />
         </div>
@@ -174,6 +185,7 @@ export default function PresetsTab({
         enableAutoResize={enableAutoResize}
         setEnableAutoResize={setEnableAutoResize}
         autoSizing={autoSizing}
+        operationMode={operationMode}
         handleAutoResizeByRatio={handleAutoResizeByRatio}
         editedSpec={editedSpec}
         currentExample={currentExample}

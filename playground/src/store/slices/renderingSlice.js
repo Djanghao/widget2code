@@ -12,6 +12,7 @@ import { examples } from '../../constants/examples.js';
 
 const createRenderingSlice = (set, get) => ({
   renderingPhase: 'idle',
+  operationMode: 'idle',
   compileToken: 0,
   widgetSpec: null,
   generatedJSX: '',
@@ -26,6 +27,11 @@ const createRenderingSlice = (set, get) => ({
   autoSizing: false,
 
   setRenderingPhase: (phase) => set({ renderingPhase: phase }),
+
+  setOperationMode: (mode) => {
+    console.log(`🔒 [Operation Mode] ${get().operationMode} → ${mode}`);
+    set({ operationMode: mode });
+  },
 
   incrementToken: () => set((state) => ({ compileToken: state.compileToken + 1 })),
 
@@ -208,13 +214,15 @@ const createRenderingSlice = (set, get) => ({
     });
   },
 
-  startCompiling: async (spec, widgetFrameRef) => {
+  startCompiling: async (spec, widgetFrameRef, options = {}) => {
+    const { skipAutoResize = false } = options;
     const newToken = get().compileToken + 1;
-    console.log(`\n🎬 [Start Compiling] New operation with token: ${newToken}`);
+    console.log(`\n🎬 [Start Compiling] New operation with token: ${newToken}${skipAutoResize ? ' (skip auto-resize)' : ''}`);
 
     set({
       compileToken: newToken,
       renderingPhase: 'compiling',
+      operationMode: 'compiling',
       widgetSpec: spec
     });
 
@@ -245,7 +253,8 @@ const createRenderingSlice = (set, get) => ({
     const hasWidth = spec.widget?.width !== undefined;
     const hasHeight = spec.widget?.height !== undefined;
     const aspectRatio = spec.widget?.aspectRatio;
-    const shouldAutoResize = !hasWidth && !hasHeight &&
+    const shouldAutoResize = !skipAutoResize &&
+                            !hasWidth && !hasHeight &&
                             typeof aspectRatio === 'number' &&
                             isFinite(aspectRatio) &&
                             aspectRatio > 0 &&
@@ -274,7 +283,10 @@ const createRenderingSlice = (set, get) => ({
     }
 
     if (get().compileToken === newToken) {
-      set({ renderingPhase: 'idle' });
+      set({
+        renderingPhase: 'idle',
+        operationMode: 'idle'
+      });
       console.log(`✨ [Start Compiling] Completed with token: ${newToken}\n`);
     }
 
@@ -323,7 +335,7 @@ const createRenderingSlice = (set, get) => ({
     console.log(`✅ [Writeback] Spec updated`);
   },
 
-  removeSpecSize: () => {
+  removeSpecSize: async (widgetFrameRef) => {
     const { widgetSpec, naturalSize } = get();
     if (!widgetSpec || !widgetSpec.widget) {
       console.warn(`⚠️ [Writeback] No widget spec to update`);
@@ -356,7 +368,9 @@ const createRenderingSlice = (set, get) => ({
       finalSize: naturalSize
     });
 
-    console.log(`✅ [Writeback] Size removed from spec`);
+    console.log(`✅ [Writeback] Size removed, recompiling to restore natural rendering...`);
+
+    await get().startCompiling(formatted, widgetFrameRef, { skipAutoResize: true });
   },
 
   switchPreset: async (presetKey, widgetFrameRef) => {
@@ -480,7 +494,10 @@ const createRenderingSlice = (set, get) => ({
     const currentToken = tokenRef ? tokenRef.current : get().compileToken;
     console.log(`\n🎫 [AutoResize] Starting with token: ${currentToken}, ratio: ${r}`);
 
-    set({ autoSizing: true });
+    set({
+      autoSizing: true,
+      operationMode: 'autoresizing'
+    });
 
     try {
       const frame = widgetFrameRef.current;
@@ -590,7 +607,10 @@ const createRenderingSlice = (set, get) => ({
 
       console.log(`✅ [AutoResize] Completed successfully\n`);
     } finally {
-      set({ autoSizing: false });
+      set({
+        autoSizing: false,
+        operationMode: 'idle'
+      });
     }
   },
 

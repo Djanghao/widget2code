@@ -1,7 +1,7 @@
 import React from 'react';
 import WidgetFrame from '../../WidgetFrame.jsx';
 import DownloadButton from '../../DownloadButton.jsx';
-import { applySizeToSpec, parseCurrentSpecObject, restoreSizeInSpec } from '../../utils/specUtils.js';
+import { parseCurrentSpecObject } from '../../utils/specUtils.js';
 import usePlaygroundStore from '../../store/index.js';
 
 export default function PreviewPanel({
@@ -10,6 +10,7 @@ export default function PreviewPanel({
   enableAutoResize,
   setEnableAutoResize,
   autoSizing,
+  operationMode,
   handleAutoResizeByRatio,
   editedSpec,
   currentExample,
@@ -24,7 +25,19 @@ export default function PreviewPanel({
   widgetFileName,
   frameSize
 }) {
-  const { setFinalSize, writebackSpecSize } = usePlaygroundStore();
+  const { setFinalSize, writebackSpecSize, removeSpecSize, compileToken } = usePlaygroundStore();
+
+  const isLocked = operationMode !== 'idle';
+  const isCompiling = operationMode === 'compiling';
+  const isAutoresizing = operationMode === 'autoresizing';
+  const isDownloading = operationMode === 'downloading';
+
+  const getStatusText = () => {
+    if (isCompiling) return 'Compiling...';
+    if (isAutoresizing) return 'Auto-sizing...';
+    if (isDownloading) return 'Downloading...';
+    return '';
+  };
 
   const handleDragResize = (e) => {
     e.preventDefault();
@@ -112,26 +125,29 @@ export default function PreviewPanel({
             value={ratioInput}
             onChange={(e) => setRatioInput(e.target.value)}
             placeholder="16:9 or 1.777"
+            disabled={isLocked}
             style={{
               width: 120,
               height: 28,
               fontSize: 12,
-              color: '#f5f5f7',
-              backgroundColor: '#2c2c2e',
+              color: isLocked ? '#8e8e93' : '#f5f5f7',
+              backgroundColor: isLocked ? '#1c1c1e' : '#2c2c2e',
               border: '1px solid #3a3a3c',
               borderRadius: 6,
               padding: '0 8px',
-              outline: 'none'
+              outline: 'none',
+              cursor: isLocked ? 'not-allowed' : 'text'
             }}
-            onFocus={(e) => e.currentTarget.style.borderColor = '#007AFF'}
+            onFocus={(e) => !isLocked && (e.currentTarget.style.borderColor = '#007AFF')}
             onBlur={(e) => e.currentTarget.style.borderColor = '#3a3a3c'}
           />
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ fontSize: 12, color: '#d1d1d6' }}>AutoResize</span>
+            <span style={{ fontSize: 12, color: isLocked ? '#8e8e93' : '#d1d1d6' }}>AutoResize</span>
             <button
-              onClick={() => setEnableAutoResize((v) => !v)}
+              onClick={() => !isLocked && setEnableAutoResize((v) => !v)}
               aria-pressed={enableAutoResize}
-              title="Toggle AutoResize"
+              disabled={isLocked}
+              title={isLocked ? 'Locked during operation' : 'Toggle AutoResize'}
               style={{
                 width: 44,
                 height: 24,
@@ -139,9 +155,10 @@ export default function PreviewPanel({
                 border: '1px solid #3a3a3c',
                 backgroundColor: enableAutoResize ? '#34C759' : '#2c2c2e',
                 position: 'relative',
-                cursor: 'pointer',
+                cursor: isLocked ? 'not-allowed' : 'pointer',
                 outline: 'none',
-                padding: 0
+                padding: 0,
+                opacity: isLocked ? 0.5 : 1
               }}
             >
               <span
@@ -160,46 +177,53 @@ export default function PreviewPanel({
           </div>
           <button
             onClick={() => handleAutoResizeByRatio()}
-            disabled={autoSizing}
+            disabled={isLocked}
             style={{
               padding: '6px 10px',
               fontSize: 12,
               fontWeight: 500,
-              backgroundColor: autoSizing ? '#3a3a3c' : '#2c2c2e',
-              color: '#f5f5f7',
+              backgroundColor: isLocked ? '#3a3a3c' : '#2c2c2e',
+              color: isLocked ? '#8e8e93' : '#f5f5f7',
               border: '1px solid #3a3a3c',
               borderRadius: 6,
-              cursor: autoSizing ? 'default' : 'pointer',
+              cursor: isLocked ? 'not-allowed' : 'pointer',
               transition: 'all 0.2s ease'
             }}
-            onMouseEnter={(e) => { if (!autoSizing) e.currentTarget.style.backgroundColor = '#3a3a3c'; }}
-            onMouseLeave={(e) => { if (!autoSizing) e.currentTarget.style.backgroundColor = '#2c2c2e'; }}
-            title="Auto-resize to aspect ratio"
+            onMouseEnter={(e) => { if (!isLocked) e.currentTarget.style.backgroundColor = '#3a3a3c'; }}
+            onMouseLeave={(e) => { if (!isLocked) e.currentTarget.style.backgroundColor = '#2c2c2e'; }}
+            title={isLocked ? getStatusText() : 'Auto-resize to aspect ratio'}
           >
-            {autoSizing ? 'Sizing…' : 'Auto-Resize'}
+            {isAutoresizing ? 'Sizing…' : 'Auto-Resize'}
           </button>
           <button
-            onClick={() => restoreSizeInSpec(editedSpec, currentExample.spec, setEditedSpec)}
+            onClick={async () => {
+              if (!isLocked) {
+                setEditedSpec('');
+                await removeSpecSize(widgetFrameRef);
+              }
+            }}
+            disabled={isLocked}
             style={{
               padding: '6px 10px',
               fontSize: 12,
               fontWeight: 500,
-              backgroundColor: '#2c2c2e',
-              color: '#f5f5f7',
+              backgroundColor: isLocked ? '#3a3a3c' : '#2c2c2e',
+              color: isLocked ? '#8e8e93' : '#f5f5f7',
               border: '1px solid #3a3a3c',
               borderRadius: 6,
-              cursor: 'pointer',
+              cursor: isLocked ? 'not-allowed' : 'pointer',
               transition: 'all 0.2s ease'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3a3a3c'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2c2c2e'}
-            title="Restore widget size"
+            onMouseEnter={(e) => !isLocked && (e.currentTarget.style.backgroundColor = '#3a3a3c')}
+            onMouseLeave={(e) => !isLocked && (e.currentTarget.style.backgroundColor = '#2c2c2e')}
+            title={isLocked ? getStatusText() : 'Restore widget size'}
           >
             Restore
           </button>
           <DownloadButton
             onClick={handleDownloadWidget}
-            isDisabled={isLoading || autoSizing}
+            isDisabled={isLocked}
+            statusText={getStatusText()}
           />
         </div>
       </h2>
@@ -353,21 +377,22 @@ export default function PreviewPanel({
             </div>
           </div>
           <div
-            onMouseDown={handleDragResize}
+            onMouseDown={(e) => !isLocked && handleDragResize(e)}
             style={{
               position: 'absolute',
               width: 14,
               height: 14,
               right: -7,
               bottom: -7,
-              background: '#007AFF',
+              background: isLocked ? '#8e8e93' : '#007AFF',
               borderRadius: 4,
               border: '2px solid #ffffff',
               boxShadow: '0 0 0 1px #3a3a3c',
-              cursor: 'se-resize',
-              zIndex: 5
+              cursor: isLocked ? 'not-allowed' : 'se-resize',
+              zIndex: 5,
+              opacity: isLocked ? 0.5 : 1
             }}
-            title="Drag to resize"
+            title={isLocked ? getStatusText() : 'Drag to resize'}
           />
         </div>
       </div>
