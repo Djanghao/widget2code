@@ -1,7 +1,7 @@
 import React from 'react';
 import WidgetFrame from '../../WidgetFrame.jsx';
 import DownloadButton from '../../DownloadButton.jsx';
-import { applySizeToSpec, parseCurrentSpecObject, restoreSizeInSpec } from '../../utils/specUtils.js';
+import { parseCurrentSpecObject } from '../../utils/specUtils.js';
 import usePlaygroundStore from '../../store/index.js';
 
 export default function PreviewPanel({
@@ -24,7 +24,7 @@ export default function PreviewPanel({
   widgetFileName,
   frameSize
 }) {
-  const { setFinalSize, writebackSpecSize } = usePlaygroundStore();
+  const { setFinalSize, writebackSpecSize, removeSpecSize } = usePlaygroundStore();
 
   const handleDragResize = (e) => {
     e.preventDefault();
@@ -179,7 +179,10 @@ export default function PreviewPanel({
             {autoSizing ? 'Sizing…' : 'Auto-Resize'}
           </button>
           <button
-            onClick={() => restoreSizeInSpec(editedSpec, currentExample.spec, setEditedSpec)}
+            onClick={() => {
+              removeSpecSize();
+              setEditedSpec('');
+            }}
             style={{
               padding: '6px 10px',
               fontSize: 12,
