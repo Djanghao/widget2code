@@ -87,16 +87,14 @@ function App() {
   const handleExampleChange = (key) => {
     setSelectedPath(null);
     setFrameSize({ width: 0, height: 0 });
-    setIsLoading(false);
+    setEditedSpec('');
 
-    expectedSizeRef.current = null;
-    resizingRef.current = false;
-    latestWriteTokenRef.current = 0;
-    autoSizingRef.current = false;
+    if (compileTimerRef.current) {
+      clearTimeout(compileTimerRef.current);
+    }
 
     widgetFrameRef.current = null;
     setFrameEl(null);
-
     setPresetResetKey(prev => prev + 1);
 
     switchPreset(key, widgetFrameRef);
@@ -135,10 +133,7 @@ function App() {
     const r = ratioOverride ?? parseAspectRatio(ratioInput);
     if (!r) return;
 
-    autoSizingRef.current = true;
     await executeAutoResize(r, widgetFrameRef);
-    autoSizingRef.current = false;
-    setIsLoading(false);
   }, [ratioInput, executeAutoResize]);
 
   const handleWidgetGenerated = async (widgetSpec, aspectRatio) => {
@@ -147,11 +142,7 @@ function App() {
     setRatioInput(aspectRatio.toString());
   };
 
-  const { frameSize, setFrameSize } = useWidgetFrame(
-    frameEl,
-    expectedSizeRef,
-    setIsLoading
-  );
+  const { frameSize, setFrameSize } = useWidgetFrame(frameEl);
 
   return (
     <div style={{
