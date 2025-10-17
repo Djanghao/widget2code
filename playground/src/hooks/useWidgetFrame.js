@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { parseCurrentSpecObject } from '../utils/specUtils.js';
+import usePlaygroundStore from '../store/index.js';
 
 export default function useWidgetFrame(
   frameEl,
@@ -7,12 +7,12 @@ export default function useWidgetFrame(
   expectedSizeRef,
   setIsLoading,
   widgetFrameRef,
-  editedSpec,
   currentExample,
   setRatioInput,
   handleAutoResizeByRatio
 ) {
   const [frameSize, setFrameSize] = useState({ width: 0, height: 0 });
+  const storeWidgetSpec = usePlaygroundStore((state) => state.widgetSpec);
 
   useEffect(() => {
     if (!frameEl) return;
@@ -53,7 +53,7 @@ export default function useWidgetFrame(
       console.log('⏸️  [AutoResize] Disabled, skipping');
       return;
     }
-    const obj = parseCurrentSpecObject(editedSpec, currentExample.spec);
+    const obj = storeWidgetSpec || currentExample.spec;
     if (!obj || !obj.widget) return;
     const w = obj.widget;
     const hasWH = w.width !== undefined && w.height !== undefined;
@@ -62,7 +62,8 @@ export default function useWidgetFrame(
       hasWidth: w.width !== undefined,
       hasHeight: w.height !== undefined,
       aspectRatio: r,
-      willTrigger: !hasWH && typeof r === 'number' && isFinite(r) && r > 0
+      willTrigger: !hasWH && typeof r === 'number' && isFinite(r) && r > 0,
+      source: storeWidgetSpec ? 'store' : 'example'
     });
     if (!hasWH && typeof r === 'number' && isFinite(r) && r > 0) {
       console.log('⏱️  [AutoResize] Waiting for new widget to mount and render naturally...');
@@ -164,7 +165,7 @@ export default function useWidgetFrame(
         cancelled = true;
       };
     }
-  }, [enableAutoResize, editedSpec, currentExample, widgetFrameRef, setRatioInput, handleAutoResizeByRatio]);
+  }, [enableAutoResize, storeWidgetSpec, currentExample, widgetFrameRef, setRatioInput, handleAutoResizeByRatio]);
 
   return { frameSize, setFrameSize };
 }
