@@ -10,10 +10,24 @@ import PresetsTab from './components/PresetsTab/index.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
 import Prompt2Spec from './Prompt2Spec.jsx';
 import Documentation from './Documentation.jsx';
+import usePlaygroundStore from './store/index.js';
 
 function App() {
+  const {
+    selectedPreset,
+    widgetSpec,
+    generatedJSX,
+    treeRoot,
+    ratioInput,
+    setRatioInput,
+    enableAutoResize,
+    setEnableAutoResize,
+    autoSizing,
+    switchPreset,
+    executeAutoResize
+  } = usePlaygroundStore();
+
   const [activeTab, setActiveTab] = useState('presets');
-  const [selectedExample, setSelectedExample] = useState('weatherSmallLight');
   const [editedSpec, setEditedSpec] = useState('');
   const [showComponentsModal, setShowComponentsModal] = useState(false);
   const [selectedPath, setSelectedPath] = useState(null);
@@ -27,9 +41,6 @@ function App() {
   const resizingRef = useRef(false);
   const autoResizeTokenRef = useRef(0);
   const autoSizingRef = useRef(false);
-  const [ratioInput, setRatioInput] = useState('');
-  const [autoSizing, setAutoSizing] = useState(false);
-  const [enableAutoResize, setEnableAutoResize] = useState(true);
   const [presetResetKey, setPresetResetKey] = useState(0);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
@@ -45,10 +56,10 @@ function App() {
     return () => document.removeEventListener('click', onDocClick);
   }, []);
 
-  const currentExample = examples[selectedExample];
-  const currentSpec = editedSpec || JSON.stringify(currentExample.spec, null, 2);
+  const currentExample = examples[selectedPreset];
+  const currentSpec = editedSpec || (widgetSpec ? JSON.stringify(widgetSpec, null, 2) : JSON.stringify(currentExample.spec, null, 2));
 
-  const { generatedCode, treeRoot, isLoading, setIsLoading } = useWidgetCompiler(
+  const { generatedCode, treeRoot: legacyTreeRoot, isLoading, setIsLoading } = useWidgetCompiler(
     editedSpec,
     currentExample,
     resizingRef,
@@ -56,24 +67,19 @@ function App() {
     expectedSizeRef
   );
 
+  const displayTreeRoot = treeRoot || legacyTreeRoot;
+  const displayCode = generatedJSX || generatedCode;
+
   const handleSpecChange = (value) => {
     setEditedSpec(value);
   };
 
   const handleExampleChange = (key) => {
-    console.log(`🔄 [Preset Change] Switching to: ${key}`);
-    console.log('🧹 [Cleanup] Resetting all state and refs...');
-
     autoResizeTokenRef.current += 1;
-    console.log(`🎫 [Cleanup] AutoResize token invalidated: ${autoResizeTokenRef.current}`);
 
-    setSelectedExample(key);
-    setEditedSpec('');
     setSelectedPath(null);
     setFrameSize({ width: 0, height: 0 });
     setIsLoading(false);
-    setRatioInput('');
-    setAutoSizing(false);
 
     expectedSizeRef.current = null;
     resizingRef.current = false;
@@ -85,7 +91,7 @@ function App() {
 
     setPresetResetKey(prev => prev + 1);
 
-    console.log('✨ [Cleanup] Complete, widgetFrameRef cleared');
+    switchPreset(key);
   };
 
   const handleDownloadWidget = async () => {
@@ -199,122 +205,13 @@ function App() {
   };
 
   const handleAutoResizeByRatio = async (ratioOverride) => {
-    if (autoSizingRef.current) {
-      console.log(`⏭️  [AutoResize DOM] Already running, skipping`);
-      return;
-    }
     const r = ratioOverride ?? parseAspectRatio(ratioInput);
     if (!r) return;
 
-    const currentToken = autoResizeTokenRef.current;
-    console.log(`🎫 [AutoResize DOM] Starting with token: ${currentToken}`);
-
     autoSizingRef.current = true;
-    setAutoSizing(true);
-    try {
-      const frame = widgetFrameRef.current;
-      if (!frame) {
-        console.log(`❌ [AutoResize DOM] No frame element`);
-        return;
-      }
-
-      const widgetElement = frame.firstElementChild;
-      if (!widgetElement) {
-        console.log(`❌ [AutoResize DOM] No widget element`);
-        return;
-      }
-
-      const rect = widgetElement.getBoundingClientRect();
-      const startW = Math.max(40, Math.round(rect.width));
-      const startH = Math.max(40, Math.round(startW / r));
-
-      console.log(`📐 [AutoResize DOM] Natural size: ${rect.width.toFixed(0)}×${rect.height.toFixed(0)}, Starting: ${startW}×${startH}, Ratio: ${r}`);
-
-      if (autoResizeTokenRef.current !== currentToken) {
-        console.log(`🚫 [AutoResize DOM] Token mismatch, aborting`);
-        return;
-      }
-
-      let m = await applySizeToDOMAndMeasure(startW, startH);
-      let best = { w: startW, h: startH };
-
-      if (autoResizeTokenRef.current !== currentToken) return;
-
-      if (m.fits) {
-        console.log(`✓ [AutoResize DOM] Initial size fits, searching for minimum size...`);
-        let low = 40;
-        let high = startW;
-
-        const lm = await applySizeToDOMAndMeasure(low, Math.max(40, Math.round(low / r)));
-        if (autoResizeTokenRef.current !== currentToken) return;
-
-        if (lm.fits) {
-          best = { w: low, h: Math.max(40, Math.round(low / r)) };
-          console.log(`✓ [AutoResize DOM] Minimum size (${low}) already fits`);
-        } else {
-          while (high - low > 1) {
-            if (autoResizeTokenRef.current !== currentToken) return;
-            const mid = Math.floor((low + high) / 2);
-            const mh = Math.max(40, Math.round(mid / r));
-            const mm = await applySizeToDOMAndMeasure(mid, mh);
-            if (mm.fits) {
-              best = { w: mid, h: mh };
-              high = mid;
-            } else {
-              low = mid;
-            }
-          }
-          console.log(`✓ [AutoResize DOM] Found minimum fitting size: ${best.w}×${best.h}`);
-        }
-      } else {
-        console.log(`✗ [AutoResize DOM] Initial size too small, expanding...`);
-        let low = startW;
-        let high = startW;
-        let mm = m;
-        const maxCap = 4096;
-
-        while (!mm.fits && high < maxCap) {
-          if (autoResizeTokenRef.current !== currentToken) return;
-          low = high;
-          high = Math.min(maxCap, high * 2);
-          const hh = Math.max(40, Math.round(high / r));
-          mm = await applySizeToDOMAndMeasure(high, hh);
-        }
-
-        if (mm.fits) {
-          best = { w: high, h: Math.max(40, Math.round(high / r)) };
-          console.log(`✓ [AutoResize DOM] Found fitting size at ${high}, now searching for minimum...`);
-
-          while (high - low > 1) {
-            if (autoResizeTokenRef.current !== currentToken) return;
-            const mid = Math.floor((low + high) / 2);
-            const mh = Math.max(40, Math.round(mid / r));
-            const m2 = await applySizeToDOMAndMeasure(mid, mh);
-            if (m2.fits) {
-              best = { w: mid, h: mh };
-              high = mid;
-            } else {
-              low = mid;
-            }
-          }
-          console.log(`✓ [AutoResize DOM] Found minimum fitting size: ${best.w}×${best.h}`);
-        } else {
-          best = { w: low, h: Math.max(40, Math.round(low / r)) };
-          console.log(`⚠️ [AutoResize DOM] Could not fit within max cap, using: ${best.w}×${best.h}`);
-        }
-      }
-
-      if (autoResizeTokenRef.current !== currentToken) return;
-
-      console.log(`📝 [AutoResize DOM] Writing optimal size to spec: ${best.w}×${best.h}`);
-      applySizeToSpec(editedSpec, currentExample.spec, best.w, best.h, setEditedSpec);
-      setIsLoading(false);
-
-      console.log(`✅ [AutoResize DOM] Completed successfully with token: ${currentToken}`);
-    } finally {
-      autoSizingRef.current = false;
-      setAutoSizing(false);
-    }
+    await executeAutoResize(r, widgetFrameRef, autoResizeTokenRef);
+    autoSizingRef.current = false;
+    setIsLoading(false);
   };
 
   const handleWidgetGenerated = async (widgetSpec, aspectRatio) => {
@@ -353,12 +250,12 @@ function App() {
 
       {activeTab === 'presets' && (
         <PresetsTab
-          selectedExample={selectedExample}
+          selectedExample={selectedPreset}
           handleExampleChange={handleExampleChange}
           currentSpec={currentSpec}
           handleSpecChange={handleSpecChange}
           specTextareaRef={specTextareaRef}
-          generatedCode={generatedCode}
+          generatedCode={displayCode}
           ratioInput={ratioInput}
           setRatioInput={setRatioInput}
           enableAutoResize={enableAutoResize}
@@ -376,7 +273,7 @@ function App() {
           presetResetKey={presetResetKey}
           frameSize={frameSize}
           resizingRef={resizingRef}
-          treeRoot={treeRoot}
+          treeRoot={displayTreeRoot}
           selectedPath={selectedPath}
           handleSelectNode={handleSelectNode}
           treeContainerRef={treeContainerRef}

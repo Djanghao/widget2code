@@ -2,6 +2,7 @@ import React from 'react';
 import WidgetFrame from '../../WidgetFrame.jsx';
 import DownloadButton from '../../DownloadButton.jsx';
 import { applySizeToSpec, parseCurrentSpecObject, restoreSizeInSpec } from '../../utils/specUtils.js';
+import usePlaygroundStore from '../../store/index.js';
 
 export default function PreviewPanel({
   ratioInput,
@@ -23,16 +24,22 @@ export default function PreviewPanel({
   frameSize,
   resizingRef
 }) {
+  const { setFinalSize, writebackSpecSize } = usePlaygroundStore();
+
   const handleDragResize = (e) => {
     e.preventDefault();
     const frame = widgetFrameRef.current;
     if (!frame) return;
-    const rect = frame.getBoundingClientRect();
+    const widgetElement = frame.firstElementChild;
+    if (!widgetElement) return;
+
+    const rect = widgetElement.getBoundingClientRect();
     const startX = e.clientX;
     const startY = e.clientY;
     const startW = rect.width;
     const startH = rect.height;
     resizingRef.current = true;
+
     let r = null;
     if (enableAutoResize) {
       try {
@@ -42,24 +49,43 @@ export default function PreviewPanel({
       } catch {}
     }
 
+    console.log(`🖱️ [Drag Start] Starting drag resize, ratio: ${r || 'free'}`);
+
     const onMove = (ev) => {
       const dx = ev.clientX - startX;
+      let nw, nh;
+
       if (enableAutoResize && r) {
-        const nw = Math.max(40, Math.round(startW + dx));
-        const nh = Math.max(40, Math.round(nw / r));
-        applySizeToSpec(editedSpec, currentExample.spec, nw, nh, setEditedSpec);
+        nw = Math.max(40, Math.round(startW + dx));
+        nh = Math.max(40, Math.round(nw / r));
       } else {
         const dy = ev.clientY - startY;
-        const nw = Math.max(40, Math.round(startW + dx));
-        const nh = Math.max(40, Math.round(startH + dy));
-        applySizeToSpec(editedSpec, currentExample.spec, nw, nh, setEditedSpec);
+        nw = Math.max(40, Math.round(startW + dx));
+        nh = Math.max(40, Math.round(startH + dy));
       }
+
+      widgetElement.style.width = `${nw}px`;
+      widgetElement.style.height = `${nh}px`;
+
+      setFinalSize({ width: Math.round(nw), height: Math.round(nh) });
     };
+
     const onUp = () => {
       window.removeEventListener('mousemove', onMove);
       window.removeEventListener('mouseup', onUp);
       resizingRef.current = false;
+
+      const finalRect = widgetElement.getBoundingClientRect();
+      const finalW = Math.round(finalRect.width);
+      const finalH = Math.round(finalRect.height);
+
+      console.log(`🖱️ [Drag End] Final size: ${finalW}×${finalH}, writing back to spec...`);
+
+      if (writebackSpecSize) {
+        writebackSpecSize(finalW, finalH);
+      }
     };
+
     window.addEventListener('mousemove', onMove);
     window.addEventListener('mouseup', onUp);
   };
