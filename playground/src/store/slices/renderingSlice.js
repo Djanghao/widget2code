@@ -103,7 +103,112 @@ const createRenderingSlice = (set, get) => ({
     return result;
   },
 
-  startCompiling: async (spec) => {
+  _waitForNaturalSize: async (widgetFrameRef, token) => {
+    if (get().compileToken !== token) {
+      console.log(`🚫 [Natural Size] Token mismatch, aborting`);
+      return null;
+    }
+
+    console.log(`⏱️  [Natural Size] Waiting for widget to mount and render naturally...`);
+
+    return new Promise((resolve) => {
+      let attempts = 0;
+      let frameMounted = false;
+      let sizeHistory = [];
+      let hasSeenChange = false;
+
+      const checkNaturalSize = () => {
+        if (get().compileToken !== token) {
+          console.log(`🚫 [Natural Size] Token changed, stopping detection`);
+          resolve(null);
+          return;
+        }
+
+        attempts++;
+        const frame = widgetFrameRef.current;
+
+        if (!frame) {
+          if (attempts < 120) {
+            requestAnimationFrame(checkNaturalSize);
+          } else {
+            console.log(`❌ [Natural Size] Timeout waiting for frame to mount`);
+            resolve(null);
+          }
+          return;
+        }
+
+        if (!frameMounted) {
+          frameMounted = true;
+          console.log(`✅ [Natural Size] Frame mounted, now monitoring size changes...`);
+        }
+
+        const rect = frame.getBoundingClientRect();
+        const currentSize = `${rect.width.toFixed(2)}x${rect.height.toFixed(2)}`;
+        sizeHistory.push(currentSize);
+
+        if (sizeHistory.length === 1) {
+          console.log(`🔎 [Natural Size] Initial size: ${currentSize} (likely old element, waiting for change...)`);
+          requestAnimationFrame(checkNaturalSize);
+          return;
+        }
+
+        const prevSize = sizeHistory[sizeHistory.length - 2];
+
+        if (!hasSeenChange && currentSize === prevSize) {
+          const stableCount = sizeHistory.filter(s => s === currentSize).length;
+          if (stableCount >= 10) {
+            console.log(`📐 [Natural Size] Initial size stable at: ${currentSize} (stable for ${stableCount} frames, no change detected - assuming this is natural size)`);
+            const [w, h] = currentSize.split('x').map(parseFloat);
+            resolve({ width: Math.round(w), height: Math.round(h) });
+            return;
+          }
+        }
+
+        if (currentSize !== prevSize && !hasSeenChange) {
+          hasSeenChange = true;
+          console.log(`🔄 [Natural Size] Size changed: ${prevSize} → ${currentSize} (new element detected!)`);
+          sizeHistory = [currentSize];
+          requestAnimationFrame(checkNaturalSize);
+          return;
+        }
+
+        if (hasSeenChange) {
+          if (currentSize === prevSize) {
+            const stableCount = sizeHistory.filter(s => s === currentSize).length;
+            if (stableCount >= 3) {
+              console.log(`📐 [Natural Size] Natural size stabilized at: ${currentSize} (stable for ${stableCount} frames after change, total ${attempts} checks)`);
+              const [w, h] = currentSize.split('x').map(parseFloat);
+              resolve({ width: Math.round(w), height: Math.round(h) });
+            } else {
+              requestAnimationFrame(checkNaturalSize);
+            }
+          } else {
+            console.log(`🔄 [Natural Size] Size still changing: ${prevSize} → ${currentSize}`);
+            sizeHistory = [currentSize];
+            if (attempts < 120) {
+              requestAnimationFrame(checkNaturalSize);
+            } else {
+              console.log(`⏰ [Natural Size] Max attempts reached, using current size: ${currentSize}`);
+              const [w, h] = currentSize.split('x').map(parseFloat);
+              resolve({ width: Math.round(w), height: Math.round(h) });
+            }
+          }
+        } else {
+          if (attempts < 120) {
+            requestAnimationFrame(checkNaturalSize);
+          } else {
+            console.log(`⏰ [Natural Size] No size change detected within timeout, using current: ${currentSize}`);
+            const [w, h] = currentSize.split('x').map(parseFloat);
+            resolve({ width: Math.round(w), height: Math.round(h) });
+          }
+        }
+      };
+
+      requestAnimationFrame(checkNaturalSize);
+    });
+  },
+
+  startCompiling: async (spec, widgetFrameRef) => {
     const newToken = get().compileToken + 1;
     console.log(`\n🎬 [Start Compiling] New operation with token: ${newToken}`);
 
@@ -130,6 +235,42 @@ const createRenderingSlice = (set, get) => ({
     if (writeResult.cancelled) {
       console.log(`⏭️  [Start Compiling] Cancelled during write`);
       return { success: false, cancelled: true };
+    }
+
+    if (get().compileToken !== newToken) {
+      console.log(`⏭️  [Start Compiling] Token changed, aborting`);
+      return { success: false, cancelled: true };
+    }
+
+    const hasWidth = spec.widget?.width !== undefined;
+    const hasHeight = spec.widget?.height !== undefined;
+    const aspectRatio = spec.widget?.aspectRatio;
+    const shouldAutoResize = !hasWidth && !hasHeight &&
+                            typeof aspectRatio === 'number' &&
+                            isFinite(aspectRatio) &&
+                            aspectRatio > 0 &&
+                            get().enableAutoResize &&
+                            widgetFrameRef;
+
+    if (shouldAutoResize) {
+      console.log(`🔍 [Start Compiling] Waiting for natural size with ratio: ${aspectRatio}`);
+
+      const naturalSize = await get()._waitForNaturalSize(widgetFrameRef, newToken);
+
+      if (get().compileToken !== newToken) {
+        console.log(`⏭️  [Start Compiling] Token changed during natural size detection`);
+        return { success: false, cancelled: true };
+      }
+
+      if (naturalSize) {
+        set({ naturalSize });
+        console.log(`✅ [Start Compiling] Natural size detected: ${naturalSize.width}×${naturalSize.height}`);
+        console.log(`⚡ [Start Compiling] Auto-triggering resize with ratio: ${aspectRatio}`);
+
+        await get().executeAutoResize(aspectRatio, widgetFrameRef);
+      } else {
+        console.log(`⚠️ [Start Compiling] Could not detect natural size, skipping auto-resize`);
+      }
     }
 
     if (get().compileToken === newToken) {
@@ -218,7 +359,7 @@ const createRenderingSlice = (set, get) => ({
     console.log(`✅ [Writeback] Size removed from spec`);
   },
 
-  switchPreset: async (presetKey) => {
+  switchPreset: async (presetKey, widgetFrameRef) => {
     console.log(`\n🔄 [Preset Change] Switching to: ${presetKey}`);
 
     console.log(`🧹 [Cleanup] Cleaning up old widget files...`);
@@ -254,7 +395,7 @@ const createRenderingSlice = (set, get) => ({
       return;
     }
 
-    await get().startCompiling(newSpec);
+    await get().startCompiling(newSpec, widgetFrameRef);
   },
 
   _waitForLayoutStable: async () => {
@@ -324,7 +465,7 @@ const createRenderingSlice = (set, get) => ({
     return m;
   },
 
-  executeAutoResize: async (aspectRatio, widgetFrameRef, autoResizeTokenRef) => {
+  executeAutoResize: async (aspectRatio, widgetFrameRef, tokenRef) => {
     if (get().autoSizing) {
       console.log(`⏭️  [AutoResize] Already running, skipping`);
       return;
@@ -336,7 +477,7 @@ const createRenderingSlice = (set, get) => ({
       return;
     }
 
-    const currentToken = autoResizeTokenRef.current;
+    const currentToken = tokenRef ? tokenRef.current : get().compileToken;
     console.log(`\n🎫 [AutoResize] Starting with token: ${currentToken}, ratio: ${r}`);
 
     set({ autoSizing: true });
@@ -360,7 +501,15 @@ const createRenderingSlice = (set, get) => ({
 
       console.log(`📐 [AutoResize] Natural size: ${rect.width.toFixed(0)}×${rect.height.toFixed(0)}, Starting: ${startW}×${startH}, Ratio: ${r}`);
 
-      if (autoResizeTokenRef.current !== currentToken) {
+      const checkToken = () => {
+        if (tokenRef) {
+          return tokenRef.current === currentToken;
+        } else {
+          return get().compileToken === currentToken;
+        }
+      };
+
+      if (!checkToken()) {
         console.log(`🚫 [AutoResize] Token mismatch, aborting`);
         return;
       }
@@ -368,7 +517,7 @@ const createRenderingSlice = (set, get) => ({
       let m = await get()._applySizeToDOMAndMeasure(widgetElement, startW, startH);
       let best = { w: startW, h: startH };
 
-      if (autoResizeTokenRef.current !== currentToken) return;
+      if (!checkToken()) return;
 
       if (m.fits) {
         console.log(`✓ [AutoResize] Initial size fits, searching for minimum...`);
@@ -376,14 +525,14 @@ const createRenderingSlice = (set, get) => ({
         let high = startW;
 
         const lm = await get()._applySizeToDOMAndMeasure(widgetElement, low, Math.max(40, Math.round(low / r)));
-        if (autoResizeTokenRef.current !== currentToken) return;
+        if (!checkToken()) return;
 
         if (lm.fits) {
           best = { w: low, h: Math.max(40, Math.round(low / r)) };
           console.log(`✓ [AutoResize] Minimum size (${low}) already fits`);
         } else {
           while (high - low > 1) {
-            if (autoResizeTokenRef.current !== currentToken) return;
+            if (!checkToken()) return;
             const mid = Math.floor((low + high) / 2);
             const mh = Math.max(40, Math.round(mid / r));
             const mm = await get()._applySizeToDOMAndMeasure(widgetElement, mid, mh);
@@ -404,7 +553,7 @@ const createRenderingSlice = (set, get) => ({
         const maxCap = 4096;
 
         while (!mm.fits && high < maxCap) {
-          if (autoResizeTokenRef.current !== currentToken) return;
+          if (!checkToken()) return;
           low = high;
           high = Math.min(maxCap, high * 2);
           const hh = Math.max(40, Math.round(high / r));
@@ -416,7 +565,7 @@ const createRenderingSlice = (set, get) => ({
           console.log(`✓ [AutoResize] Found fitting size at ${high}, searching for minimum...`);
 
           while (high - low > 1) {
-            if (autoResizeTokenRef.current !== currentToken) return;
+            if (!checkToken()) return;
             const mid = Math.floor((low + high) / 2);
             const mh = Math.max(40, Math.round(mid / r));
             const m2 = await get()._applySizeToDOMAndMeasure(widgetElement, mid, mh);
@@ -434,7 +583,7 @@ const createRenderingSlice = (set, get) => ({
         }
       }
 
-      if (autoResizeTokenRef.current !== currentToken) return;
+      if (!checkToken()) return;
 
       console.log(`📝 [AutoResize] Writing optimal size to spec: ${best.w}×${best.h}`);
       get().writebackSpecSize(best.w, best.h);
@@ -445,7 +594,7 @@ const createRenderingSlice = (set, get) => ({
     }
   },
 
-  initializeApp: async () => {
+  initializeApp: async (widgetFrameRef) => {
     console.log(`\n🚀 [Initialize] Starting app initialization...`);
 
     console.log(`🧹 [Initialize] Cleaning up old widget files...`);
@@ -477,7 +626,7 @@ const createRenderingSlice = (set, get) => ({
     const defaultPreset = get().selectedPreset;
     console.log(`📦 [Initialize] Loading default preset: ${defaultPreset}`);
 
-    await get().switchPreset(defaultPreset);
+    await get().switchPreset(defaultPreset, widgetFrameRef);
 
     console.log(`✅ [Initialize] App initialization complete\n`);
   }
