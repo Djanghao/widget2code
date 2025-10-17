@@ -674,8 +674,14 @@ const createRenderingSlice = (set, get) => ({
 
       if (!checkToken()) return;
 
-      console.log(`📝 [AutoResize] Writing optimal size to spec: ${best.w}×${best.h}`);
-      get().writebackSpecSize(best.w, best.h);
+      const safeW = best.w + 1;
+      const safeH = best.h + 1;
+      console.log(`📝 [AutoResize] Writing optimal size to spec: ${safeW}×${safeH} (${best.w}×${best.h} + 1px safety margin)`);
+      get().writebackSpecSize(safeW, safeH);
+
+      console.log(`🎨 [AutoResize] Applying final size to DOM: ${safeW}×${safeH}`);
+      widgetElement.style.width = `${safeW}px`;
+      widgetElement.style.height = `${safeH}px`;
 
       console.log(`✅ [AutoResize] Completed successfully\n`);
     } finally {
