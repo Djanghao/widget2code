@@ -12,6 +12,7 @@ import { examples } from '../../constants/examples.js';
 
 const createRenderingSlice = (set, get) => ({
   renderingPhase: 'idle',
+  operationMode: 'idle',
   compileToken: 0,
   widgetSpec: null,
   generatedJSX: '',
@@ -26,6 +27,11 @@ const createRenderingSlice = (set, get) => ({
   autoSizing: false,
 
   setRenderingPhase: (phase) => set({ renderingPhase: phase }),
+
+  setOperationMode: (mode) => {
+    console.log(`🔒 [Operation Mode] ${get().operationMode} → ${mode}`);
+    set({ operationMode: mode });
+  },
 
   incrementToken: () => set((state) => ({ compileToken: state.compileToken + 1 })),
 
@@ -215,6 +221,7 @@ const createRenderingSlice = (set, get) => ({
     set({
       compileToken: newToken,
       renderingPhase: 'compiling',
+      operationMode: 'compiling',
       widgetSpec: spec
     });
 
@@ -274,7 +281,10 @@ const createRenderingSlice = (set, get) => ({
     }
 
     if (get().compileToken === newToken) {
-      set({ renderingPhase: 'idle' });
+      set({
+        renderingPhase: 'idle',
+        operationMode: 'idle'
+      });
       console.log(`✨ [Start Compiling] Completed with token: ${newToken}\n`);
     }
 
@@ -480,7 +490,10 @@ const createRenderingSlice = (set, get) => ({
     const currentToken = tokenRef ? tokenRef.current : get().compileToken;
     console.log(`\n🎫 [AutoResize] Starting with token: ${currentToken}, ratio: ${r}`);
 
-    set({ autoSizing: true });
+    set({
+      autoSizing: true,
+      operationMode: 'autoresizing'
+    });
 
     try {
       const frame = widgetFrameRef.current;
@@ -590,7 +603,10 @@ const createRenderingSlice = (set, get) => ({
 
       console.log(`✅ [AutoResize] Completed successfully\n`);
     } finally {
-      set({ autoSizing: false });
+      set({
+        autoSizing: false,
+        operationMode: 'idle'
+      });
     }
   },
 
