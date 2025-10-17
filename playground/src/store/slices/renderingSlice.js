@@ -1,4 +1,4 @@
-import { compileWidgetSpec, writeWidgetFile } from '../../core/compileWidget.js';
+import { compileWidgetSpec, writeWidgetFile, cleanupWidgetFiles } from '../../core/compileWidget.js';
 import { examples } from '../../constants/examples.js';
 
 const createRenderingSlice = (set, get) => ({
@@ -9,6 +9,7 @@ const createRenderingSlice = (set, get) => ({
   treeRoot: null,
   naturalSize: null,
   finalSize: null,
+  currentWidgetFileName: null,
 
   selectedPreset: 'weatherSmallLight',
   ratioInput: '',
@@ -54,28 +55,30 @@ const createRenderingSlice = (set, get) => ({
     if (result.success) {
       set({
         generatedJSX: result.jsx,
-        treeRoot: result.treeRoot
+        treeRoot: result.treeRoot,
+        currentWidgetFileName: result.fileName
       });
-      console.log(`✅ [Compile] Success with token: ${token}`);
+      console.log(`✅ [Compile] Success with token: ${token}, fileName: ${result.fileName}`);
     } else {
       console.error(`❌ [Compile] Error:`, result.error);
       set({
         generatedJSX: result.jsx,
-        treeRoot: null
+        treeRoot: null,
+        currentWidgetFileName: null
       });
     }
 
     return result;
   },
 
-  _writeWidget: async (jsx, token) => {
+  _writeWidget: async (jsx, fileName, token) => {
     if (get().compileToken !== token) {
       console.log(`🚫 [Write] Token mismatch, aborting`);
       return { success: false, cancelled: true };
     }
 
-    console.log(`📝 [Write] Writing widget file with token: ${token}`);
-    const result = await writeWidgetFile(jsx);
+    console.log(`📝 [Write] Writing widget file: ${fileName} with token: ${token}`);
+    const result = await writeWidgetFile(jsx, fileName);
 
     if (get().compileToken !== token) {
       console.log(`🚫 [Write] Token changed during write, aborting`);
@@ -83,7 +86,7 @@ const createRenderingSlice = (set, get) => ({
     }
 
     if (result.success) {
-      console.log(`✅ [Write] Success with token: ${token}`);
+      console.log(`✅ [Write] Success with token: ${token}, file: ${fileName}`);
     } else {
       console.error(`❌ [Write] Error:`, result.error);
     }
@@ -113,7 +116,7 @@ const createRenderingSlice = (set, get) => ({
       return compileResult;
     }
 
-    const writeResult = await get()._writeWidget(compileResult.jsx, newToken);
+    const writeResult = await get()._writeWidget(compileResult.jsx, compileResult.fileName, newToken);
 
     if (writeResult.cancelled) {
       console.log(`⏭️  [Start Compiling] Cancelled during write`);
@@ -208,6 +211,15 @@ const createRenderingSlice = (set, get) => ({
 
   switchPreset: async (presetKey) => {
     console.log(`\n🔄 [Preset Change] Switching to: ${presetKey}`);
+
+    console.log(`🧹 [Cleanup] Cleaning up old widget files...`);
+    const cleanupResult = await cleanupWidgetFiles();
+    if (cleanupResult.success) {
+      console.log(`✅ [Cleanup] Old widget files deleted`);
+    } else {
+      console.warn(`⚠️ [Cleanup] Failed to delete old files:`, cleanupResult.error);
+    }
+
     console.log(`🧹 [Cleanup] Resetting all state and refs...`);
 
     get().incrementToken();
@@ -220,6 +232,7 @@ const createRenderingSlice = (set, get) => ({
       treeRoot: null,
       naturalSize: null,
       finalSize: null,
+      currentWidgetFileName: null,
       ratioInput: '',
       autoSizing: false
     });
@@ -421,6 +434,43 @@ const createRenderingSlice = (set, get) => ({
     } finally {
       set({ autoSizing: false });
     }
+  },
+
+  initializeApp: async () => {
+    console.log(`\n🚀 [Initialize] Starting app initialization...`);
+
+    console.log(`🧹 [Initialize] Cleaning up old widget files...`);
+    const cleanupResult = await cleanupWidgetFiles();
+
+    if (cleanupResult.success) {
+      console.log(`✅ [Initialize] Cleanup successful`);
+    } else {
+      console.warn(`⚠️ [Initialize] Cleanup failed:`, cleanupResult.error);
+    }
+
+    console.log(`🔄 [Initialize] Resetting all state...`);
+    get().incrementToken();
+
+    set({
+      renderingPhase: 'idle',
+      widgetSpec: null,
+      generatedJSX: '',
+      treeRoot: null,
+      naturalSize: null,
+      finalSize: null,
+      currentWidgetFileName: null,
+      ratioInput: '',
+      autoSizing: false
+    });
+
+    console.log(`✨ [Initialize] State reset complete`);
+
+    const defaultPreset = get().selectedPreset;
+    console.log(`📦 [Initialize] Loading default preset: ${defaultPreset}`);
+
+    await get().switchPreset(defaultPreset);
+
+    console.log(`✅ [Initialize] App initialization complete\n`);
   }
 });
 

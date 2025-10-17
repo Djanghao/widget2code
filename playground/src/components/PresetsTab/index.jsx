@@ -27,6 +27,7 @@ export default function PresetsTab({
   widgetFrameRef,
   setFrameEl,
   presetResetKey,
+  widgetFileName,
   frameSize,
   resizingRef,
   treeRoot,
@@ -185,6 +186,7 @@ export default function PresetsTab({
         setFrameEl={setFrameEl}
         selectedExample={selectedExample}
         presetResetKey={presetResetKey}
+        widgetFileName={widgetFileName}
         frameSize={frameSize}
         resizingRef={resizingRef}
       />

@@ -21,6 +21,7 @@ export default function PreviewPanel({
   setFrameEl,
   selectedExample,
   presetResetKey,
+  widgetFileName,
   frameSize,
   resizingRef
 }) {
@@ -226,7 +227,7 @@ export default function PreviewPanel({
           }}
           style={{ position: 'relative', display: 'inline-block' }}
         >
-          <WidgetFrame resetKey={`${selectedExample}-${presetResetKey}`} />
+          <WidgetFrame resetKey={`${selectedExample}-${presetResetKey}`} widgetFileName={widgetFileName} />
           {isLoading && (
             <div
               style={{

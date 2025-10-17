@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import html2canvas from 'html2canvas';
 import { examples } from './constants/examples.js';
 import { parseAspectRatio, applySizeToSpec } from './utils/specUtils.js';
@@ -18,13 +18,15 @@ function App() {
     widgetSpec,
     generatedJSX,
     treeRoot,
+    currentWidgetFileName,
     ratioInput,
     setRatioInput,
     enableAutoResize,
     setEnableAutoResize,
     autoSizing,
     switchPreset,
-    executeAutoResize
+    executeAutoResize,
+    initializeApp
   } = usePlaygroundStore();
 
   const [activeTab, setActiveTab] = useState('presets');
@@ -44,6 +46,10 @@ function App() {
   const [presetResetKey, setPresetResetKey] = useState(0);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
+
+  useEffect(() => {
+    initializeApp();
+  }, []);
 
   useEffect(() => {
     const onDocClick = (e) => {
@@ -204,7 +210,7 @@ function App() {
     return m;
   };
 
-  const handleAutoResizeByRatio = async (ratioOverride) => {
+  const handleAutoResizeByRatio = useCallback(async (ratioOverride) => {
     const r = ratioOverride ?? parseAspectRatio(ratioInput);
     if (!r) return;
 
@@ -212,7 +218,7 @@ function App() {
     await executeAutoResize(r, widgetFrameRef, autoResizeTokenRef);
     autoSizingRef.current = false;
     setIsLoading(false);
-  };
+  }, [ratioInput, executeAutoResize]);
 
   const handleWidgetGenerated = async (widgetSpec, aspectRatio) => {
     const specStr = JSON.stringify(widgetSpec, null, 2);
@@ -226,7 +232,6 @@ function App() {
     expectedSizeRef,
     setIsLoading,
     widgetFrameRef,
-    editedSpec,
     currentExample,
     setRatioInput,
     handleAutoResizeByRatio
@@ -271,6 +276,7 @@ function App() {
           widgetFrameRef={widgetFrameRef}
           setFrameEl={setFrameEl}
           presetResetKey={presetResetKey}
+          widgetFileName={currentWidgetFileName}
           frameSize={frameSize}
           resizingRef={resizingRef}
           treeRoot={displayTreeRoot}
