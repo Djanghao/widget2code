@@ -50,14 +50,13 @@ function App() {
   const latestWriteTokenRef = useRef(0);
   const expectedSizeRef = useRef(null);
   const resizingRef = useRef(false);
-  const autoResizeTokenRef = useRef(0);
   const autoSizingRef = useRef(false);
   const [presetResetKey, setPresetResetKey] = useState(0);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
 
   useEffect(() => {
-    initializeApp();
+    initializeApp(widgetFrameRef);
   }, []);
 
   useEffect(() => {
@@ -90,8 +89,6 @@ function App() {
   };
 
   const handleExampleChange = (key) => {
-    autoResizeTokenRef.current += 1;
-
     setSelectedPath(null);
     setFrameSize({ width: 0, height: 0 });
     setIsLoading(false);
@@ -106,7 +103,7 @@ function App() {
 
     setPresetResetKey(prev => prev + 1);
 
-    switchPreset(key);
+    switchPreset(key, widgetFrameRef);
   };
 
   const handleDownloadWidget = async () => {
@@ -224,7 +221,7 @@ function App() {
     if (!r) return;
 
     autoSizingRef.current = true;
-    await executeAutoResize(r, widgetFrameRef, autoResizeTokenRef);
+    await executeAutoResize(r, widgetFrameRef);
     autoSizingRef.current = false;
     setIsLoading(false);
   }, [ratioInput, executeAutoResize]);
@@ -237,13 +234,8 @@ function App() {
 
   const { frameSize, setFrameSize } = useWidgetFrame(
     frameEl,
-    enableAutoResize,
     expectedSizeRef,
-    setIsLoading,
-    widgetFrameRef,
-    currentExample,
-    setRatioInput,
-    handleAutoResizeByRatio
+    setIsLoading
   );
 
   return (
