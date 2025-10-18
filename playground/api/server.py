@@ -9,18 +9,10 @@ import json
 import os
 from pathlib import Path
 from dotenv import load_dotenv
-from contextlib import asynccontextmanager
 
 load_dotenv(Path(__file__).parent.parent / ".env")
 
-from render import router as batch_render_router, shutdown_renderer
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    yield
-    await shutdown_renderer()
-
-app = FastAPI(lifespan=lifespan)
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -29,8 +21,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-app.include_router(batch_render_router, prefix="/api", tags=["batch-render"])
 
 DEFAULT_PROMPT_PATH = Path(__file__).parent / "default-prompt.md"
 

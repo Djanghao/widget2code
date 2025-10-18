@@ -9,7 +9,6 @@ import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import sfOnlyPrompt from '../api/sf-only-prompt.md?raw';
 import lucideOnlyPrompt from '../api/lucide-only-prompt.md?raw';
 import bothIconsPrompt from '../api/both-icons-prompt.md?raw';
-import { useAutoResize } from './hooks/useAutoResize';
 
 function ImageToWidget({ onWidgetGenerated }) {
   const [image, setImage] = useState(null);
@@ -53,15 +52,9 @@ function ImageToWidget({ onWidgetGenerated }) {
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
 
-  const { ratioInput, setRatioInput, autoSizing, handleAutoResizeByRatio } = useAutoResize(widgetFrameRef, async (updatedSpec) => {
-    setPreviewSpec(updatedSpec);
-    const jsx = compileWidgetSpecToJSX(updatedSpec);
-    await fetch('/__write_widget_preview', {
-      method: 'POST',
-      body: jsx,
-      headers: { 'Content-Type': 'text/plain' }
-    });
-  });
+  const [ratioInput, setRatioInput] = useState('');
+  const [autoSizing, setAutoSizing] = useState(false);
+  const handleAutoResizeByRatio = async () => {};
 
   const onDrop = useCallback((acceptedFiles) => {
     const file = acceptedFiles[0];
@@ -126,13 +119,6 @@ function ImageToWidget({ onWidgetGenerated }) {
           body: jsx,
           headers: { 'Content-Type': 'text/plain' }
         });
-
-        const hasWH =
-          data.widgetSpec?.widget?.width !== undefined &&
-          data.widgetSpec?.widget?.height !== undefined;
-        if (enableAutoResize && !hasWH) {
-          await handleAutoResizeByRatio(data.widgetSpec, data.aspectRatio);
-        }
       } catch (compileError) {
         setGeneratedCode(`// Compilation Error: ${compileError.message}`);
       }
@@ -162,20 +148,6 @@ function ImageToWidget({ onWidgetGenerated }) {
     return match ? `${match.label} (${ratio.toFixed(3)})` : ratio.toFixed(3);
   };
 
-  const previewWidth = previewSpec?.widget?.width;
-  const previewHeight = previewSpec?.widget?.height;
-  const previewAspectRatio = previewSpec?.widget?.aspectRatio;
-
-  useEffect(() => {
-    if (!enableAutoResize) return;
-    const w = previewSpec?.widget;
-    if (!w) return;
-    const hasWH = previewWidth !== undefined && previewHeight !== undefined;
-    const r = previewAspectRatio ?? aspectRatio;
-    if (!hasWH && typeof r === 'number' && isFinite(r) && r > 0) {
-      handleAutoResizeByRatio(previewSpec, r);
-    }
-  }, [enableAutoResize, previewWidth, previewHeight, previewAspectRatio, aspectRatio]);
 
   const visionModelOptions = [
     { value: 'qwen3-vl-plus', label: 'Qwen3 VL Plus' },
