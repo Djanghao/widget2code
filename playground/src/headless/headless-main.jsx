@@ -10,8 +10,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import HeadlessRenderer from './HeadlessRenderer.jsx';
 
+window.__headlessMode = true;
+
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <HeadlessRenderer />
-  </React.StrictMode>
+  <HeadlessRenderer />
 );
