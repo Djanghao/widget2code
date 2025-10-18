@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconListBulletIndent() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.9102 21.832">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.9102 21.832">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M15.7852 21.0352L36.5039 21.0352C37.1016 21.0352 37.5586 20.5781 37.5586 19.9922C37.5586 19.4062 37.1016 18.9609 36.5039 18.9609L15.7852 18.9609C15.1875 18.9609 14.7422 19.4062 14.7422 19.9922C14.7422 20.5781 15.1875 21.0352 15.7852 21.0352Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))" fill-opacity="0.55"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSpeakerBadgeExclamationmarkFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.0547 26.332">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.0547 26.332">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M29.1211 20.7305C33.2344 20.7305 36.7031 17.3086 36.7031 13.1602C36.7031 9 33.2812 5.57812 29.1211 5.57812C24.9727 5.57812 21.5391 9 21.5391 13.1602C21.5391 17.332 24.9727 20.7305 29.1211 20.7305Z" fill="#ff4245"/>

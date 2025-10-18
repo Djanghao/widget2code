@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTramCardFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.6367 25.5117">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.6367 25.5117">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.55859 25.5117L30.7148 25.5117C33.75 25.5117 35.2852 23.9766 35.2852 20.9883L35.2852 4.55859C35.2852 1.57031 33.75 0.0351562 30.7148 0.0351562L4.55859 0.0351562C1.53516 0.0351562 0 1.55859 0 4.55859L0 20.9883C0 23.9883 1.53516 25.5117 4.55859 25.5117Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

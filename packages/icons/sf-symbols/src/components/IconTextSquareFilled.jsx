@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTextSquareFilled() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 29.6836">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 29.6836">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.04297 27.7383L29.0859 27.7383C29.6719 27.7383 30.1406 27.293 30.1406 26.707C30.1406 26.1094 29.6719 25.6641 29.0859 25.6641L1.04297 25.6641C0.445312 25.6641 0 26.1094 0 26.707C0 27.293 0.445312 27.7383 1.04297 27.7383Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

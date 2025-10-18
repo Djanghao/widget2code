@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTextAlignleft() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 25.8398">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 25.8398">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.04297 25.8164L18.2461 25.8164C18.8438 25.8164 19.3008 25.3711 19.3008 24.7852C19.3008 24.1875 18.8438 23.7422 18.2461 23.7422L1.04297 23.7422C0.445312 23.7422 0 24.1875 0 24.7852C0 25.3711 0.445312 25.8164 1.04297 25.8164Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

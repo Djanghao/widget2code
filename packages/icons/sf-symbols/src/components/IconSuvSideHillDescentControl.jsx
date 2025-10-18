@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSuvSideHillDescentControl() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.9388 39.983">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.9388 39.983">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.67448 39.2864C4.97917 39.8021 5.61198 39.9544 6.09245 39.6849L44.7995 17.3607C45.2682 17.1028 45.444 16.4583 45.1745 15.9661C44.8698 15.4505 44.2253 15.3099 43.7565 15.5677L5.04948 37.8919C4.58073 38.1614 4.40495 38.806 4.67448 39.2864Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

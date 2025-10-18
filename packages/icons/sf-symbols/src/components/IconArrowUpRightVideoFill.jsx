@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowUpRightVideoFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.8711 24.5039">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.8711 24.5039">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M6.77344 24.4922L23.168 24.4922C26.25 24.4922 28.043 22.7461 28.043 19.6758L28.043 4.80469C28.043 1.74609 26.3672 0 23.2852 0L6.77344 0C3.79688 0 1.89844 1.74609 1.89844 4.80469L1.89844 19.6758C1.89844 22.7461 3.69141 24.4922 6.77344 24.4922ZM29.9062 16.6992L35.3906 21.3633C35.918 21.8086 36.4805 22.0898 37.043 22.0898C38.1445 22.0898 38.8711 21.293 38.8711 20.0859L38.8711 4.39453C38.8711 3.19922 38.1445 2.40234 37.043 2.40234C36.4805 2.40234 35.918 2.68359 35.3906 3.12891L29.9062 7.76953Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPlatter2FilledIpadLandscape() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.8594 27.5742">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.8594 27.5742">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.55859 27.5742L30.9375 27.5742C33.9727 27.5742 35.5078 26.0508 35.5078 23.0625L35.5078 4.54688C35.5078 1.55859 33.9727 0.0351562 30.9375 0.0351562L4.55859 0.0351562C1.53516 0.0351562 0 1.54688 0 4.54688L0 23.0625C0 26.0625 1.53516 27.5742 4.55859 27.5742ZM4.60547 25.5C2.96484 25.5 2.07422 24.6328 2.07422 22.957L2.07422 4.65234C2.07422 2.97656 2.96484 2.10938 4.60547 2.10938L30.9023 2.10938C32.5078 2.10938 33.4219 2.97656 33.4219 4.65234L33.4219 22.957C33.4219 24.6328 32.5078 25.5 30.9023 25.5Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWindshieldFrontAndWiperExclamationmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 51.8237 30.4805">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 51.8237 30.4805">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M50.3103 23.3906C50.3103 24.3164 49.5017 25.1133 48.529 25.1133C47.5564 25.1133 46.7478 24.3164 46.7478 23.3906C46.7478 22.4297 47.5447 21.6562 48.529 21.6562C49.5134 21.6562 50.3103 22.4297 50.3103 23.3906ZM49.8884 6.69141L49.6306 17.4844C49.6072 18.1289 49.1501 18.5859 48.529 18.5859C47.8962 18.5859 47.4509 18.1289 47.4275 17.4844L47.1697 6.69141C47.1462 5.87109 47.6853 5.33203 48.529 5.33203C49.3728 5.33203 49.9118 5.87109 49.8884 6.69141Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

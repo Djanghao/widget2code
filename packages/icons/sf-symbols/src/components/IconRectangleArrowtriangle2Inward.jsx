@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRectangleArrowtriangle2Inward() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.6758 37.0898">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.6758 37.0898">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.55859 28.125L23.7539 28.125C26.7891 28.125 28.3242 26.5898 28.3242 23.6133L28.3242 13.4883C28.3242 10.5 26.7891 8.97656 23.7539 8.97656L4.55859 8.97656C1.52344 8.97656 0 10.4883 0 13.4883L0 23.6133C0 26.6133 1.52344 28.125 4.55859 28.125ZM4.60547 26.0508C2.96484 26.0508 2.07422 25.1836 2.07422 23.5078L2.07422 13.5938C2.07422 11.918 2.96484 11.0508 4.60547 11.0508L23.7188 11.0508C25.3242 11.0508 26.2383 11.918 26.2383 13.5938L26.2383 23.5078C26.2383 25.1836 25.3242 26.0508 23.7188 26.0508Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

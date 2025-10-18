@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChartDotsScatter() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.707 28.0898">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.707 28.0898">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M29.9062 6.375C29.9062 7.59375 28.875 8.64844 27.6328 8.64844C26.3789 8.64844 25.3359 7.59375 25.3359 6.375C25.3359 5.16797 26.3789 4.08984 27.6328 4.08984C28.875 4.08984 29.9062 5.16797 29.9062 6.375Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

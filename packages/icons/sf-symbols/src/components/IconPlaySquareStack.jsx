@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPlaySquareStack() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.5234 39.4102">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.5234 39.4102">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M22.3635 4.24219L8.80832 4.24219C8.88339 3.17917 9.57273 2.55469 10.6992 2.55469L20.4727 2.55469C21.5991 2.55469 22.2885 3.17917 22.3635 4.24219Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

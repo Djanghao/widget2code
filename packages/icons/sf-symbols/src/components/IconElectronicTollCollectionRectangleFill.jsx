@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconElectronicTollCollectionRectangleFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.8203 25.582">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.8203 25.582">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.55859 25.5469L40.9102 25.5469C43.9453 25.5469 45.4688 24.0117 45.4688 21.0352L45.4688 4.52344C45.4688 1.53516 43.9453 0 40.9102 0L4.55859 0C1.53516 0 0 1.52344 0 4.52344L0 21.0352C0 24.0352 1.53516 25.5469 4.55859 25.5469Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

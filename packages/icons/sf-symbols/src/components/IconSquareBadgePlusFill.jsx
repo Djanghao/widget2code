@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareBadgePlusFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.8047 37.0898">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.8047 37.0898">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M36.9961 9.29297L36.9961 27.8086C36.9961 30.7852 35.4609 32.3203 32.4258 32.3203L17.6191 32.3203C18.4288 30.9404 18.8906 29.3404 18.8906 27.6445C18.8906 22.4531 14.6367 18.1992 9.44531 18.1992L9.44531 9.29297C9.44531 6.29297 10.9805 4.76953 14.0039 4.76953L32.4258 4.76953C35.4609 4.76953 36.9961 6.30469 36.9961 9.29297Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

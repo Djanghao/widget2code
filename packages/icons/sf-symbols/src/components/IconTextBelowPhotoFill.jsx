@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTextBelowPhotoFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4062 38.3086">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4062 38.3086">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0.984375 38.3086L20.0156 38.3086C20.5664 38.3086 21 37.8867 21 37.3359C21 36.7852 20.5664 36.3516 20.0156 36.3516L0.984375 36.3516C0.421875 36.3516 0 36.7852 0 37.3359C0 37.8867 0.421875 38.3086 0.984375 38.3086Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

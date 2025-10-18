@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSwitch2() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.793 28.3477">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.793 28.3477">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M6.30469 28.2656L22.1367 28.2656C25.6641 28.2656 28.4414 25.8047 28.4414 22.207C28.4414 18.6211 25.6641 16.1602 22.1367 16.1602L6.30469 16.1602C2.77734 16.1602 0 18.6211 0 22.207C0 25.8047 2.77734 28.2656 6.30469 28.2656ZM19.4531 26.2617C17.168 26.2617 15.293 24.6211 15.293 22.1953C15.293 19.793 17.168 18.1523 19.4531 18.1523L22.3594 18.1523C24.6562 18.1523 26.5195 19.793 26.5195 22.207C26.5195 24.6211 24.6562 26.2617 22.3594 26.2617Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

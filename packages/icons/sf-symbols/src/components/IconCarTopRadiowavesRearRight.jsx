@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCarTopRadiowavesRearRight() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2969 38.6836">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2969 38.6836">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M25.2422 34.9688C27.5508 32.6719 28.7812 29.7188 28.9336 26.5195C28.9805 25.8164 28.5 25.4414 27.9844 25.4531C27.3633 25.4531 27 25.7812 26.9414 26.6016C26.8242 29.1797 25.793 31.6523 23.8711 33.5859C21.9258 35.5078 19.4531 36.5508 16.875 36.668C16.1367 36.7148 15.7031 37.0898 15.7031 37.6406C15.7031 38.2383 16.1484 38.6719 16.8164 38.6719C20.0039 38.6719 22.9453 37.2773 25.2422 34.9688Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRJoystickPressDownFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.7812 37.9805">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.7812 37.9805">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.2148 28.8047C19.309 28.8047 21.2479 28.6073 23.0039 28.2336L23.0039 29.0156C23.0039 31.8281 20.8477 33.4805 17.2148 33.4805C13.5703 33.4805 11.4141 31.8281 11.4141 29.0156L11.4141 28.2309C13.173 28.6064 15.1159 28.8047 17.2148 28.8047Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

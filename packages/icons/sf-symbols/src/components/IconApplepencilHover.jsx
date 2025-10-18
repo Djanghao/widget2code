@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconApplepencilHover() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.5312 28.3242">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.5312 28.3242">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.05469 28.3242C6.28125 28.3242 8.08594 27.6094 8.08594 26.7305C8.08594 25.875 6.28125 25.1602 4.05469 25.1602C1.80469 25.1602 0 25.875 0 26.7305C0 27.6094 1.80469 28.3242 4.05469 28.3242Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

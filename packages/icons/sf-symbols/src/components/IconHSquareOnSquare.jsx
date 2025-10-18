@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHSquareOnSquare() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9922 31.0898">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9922 31.0898">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M31.6406 11.2969L31.6406 26.5664C31.6406 29.5664 30.1172 31.0898 27.082 31.0898L11.8945 31.0898C8.87109 31.0898 7.33594 29.5547 7.33594 26.5664L7.33594 24.3516L9.41016 24.3516L9.41016 26.4609C9.41016 28.1484 10.3359 29.0156 11.9414 29.0156L27.0469 29.0156C28.6758 29.0156 29.5664 28.1484 29.5664 26.4609L29.5664 11.4023C29.5664 9.71484 28.6758 8.84766 27.0469 8.84766L24.3164 8.84766L24.3164 6.77344L27.082 6.77344C30.1172 6.77344 31.6406 8.29688 31.6406 11.2969Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWifiRouterFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.5156 28.0664">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.5156 28.0664">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M21.082 0C17.5898 0 14.2148 1.01953 11.4961 2.91797C11.0625 3.24609 10.957 3.78516 11.2383 4.18359C11.543 4.60547 12.082 4.67578 12.5156 4.37109C14.8477 2.69531 17.8945 1.75781 21.082 1.75781C24.293 1.75781 27.3164 2.68359 29.6367 4.37109C30.0703 4.67578 30.6094 4.60547 30.9258 4.18359C31.2188 3.77344 31.1016 3.23438 30.668 2.91797C27.9258 1.01953 24.5625 0 21.082 0Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

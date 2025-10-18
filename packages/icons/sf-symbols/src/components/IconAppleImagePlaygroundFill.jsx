@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAppleImagePlaygroundFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.7578 30.5273">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.7578 30.5273">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M14.6016 30.5039C23.707 30.5039 31.4062 23.2031 31.4062 13.5117C31.4062 5.90625 25.5352 0 17.7305 0C8.87109 0 0 7.46484 0 16.8516C0 24.8555 6.02344 30.5039 14.6016 30.5039Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

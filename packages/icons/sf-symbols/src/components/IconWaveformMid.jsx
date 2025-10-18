@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWaveformMid() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3633 23.8008">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3633 23.8008">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M25.9805 14.6602C26.5664 14.6602 27.0117 14.1914 27.0117 13.6172L27.0117 10.418C27.0117 9.84375 26.5664 9.36328 25.9805 9.36328C25.3828 9.36328 24.9375 9.84375 24.9375 10.418L24.9375 13.6172C24.9375 14.1914 25.3828 14.6602 25.9805 14.6602Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

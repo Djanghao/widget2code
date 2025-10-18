@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconThermometerAndEllipsis() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.9727 39.1758">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.9727 39.1758">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M22.1602 37.6406C23.5195 37.6406 24.6211 36.5508 24.6211 35.168C24.6211 33.8086 23.5195 32.707 22.1602 32.707C20.8008 32.707 19.6992 33.8086 19.6992 35.168C19.6992 36.5508 20.8008 37.6406 22.1602 37.6406Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconVideoDoorbell() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.6172 33.7852">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.6172 33.7852">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9.64453 33.7617C15.3047 33.7617 19.2656 29.9766 19.2656 24.5977L19.2656 9.17578C19.2656 3.78516 15.3047 0 9.64453 0C3.98438 0 0 3.78516 0 9.17578L0 24.5977C0 29.9766 3.98438 33.7617 9.64453 33.7617ZM9.63281 31.6875C5.17969 31.6875 2.0625 28.7578 2.0625 24.5977L2.0625 9.17578C2.0625 5.01562 5.17969 2.07422 9.63281 2.07422C14.0742 2.07422 17.2031 5.01562 17.2031 9.17578L17.2031 24.5977C17.2031 28.7578 14.0742 31.6875 9.63281 31.6875Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

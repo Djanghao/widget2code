@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconElectronicTollCollectionRectangleTrianglebadgeExclamationmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 63.3398 36.1992">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 63.3398 36.1992">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M54.2227 9.83203L54.2227 17.4429C53.8911 17.3462 53.5475 17.2969 53.2031 17.2969C52.8444 17.2969 52.489 17.3476 52.1484 17.4474L52.1484 9.9375C52.1484 8.26172 51.2344 7.39453 49.6289 7.39453L13.3594 7.39453C11.7188 7.39453 10.8281 8.26172 10.8281 9.9375L10.8281 26.2266C10.8281 27.9141 11.7188 28.7812 13.3594 28.7812L44.5506 28.7812L43.5586 30.5508C43.5033 30.6491 43.4519 30.7506 43.4064 30.8555L13.3125 30.8555C10.2891 30.8555 8.75391 29.3438 8.75391 26.3438L8.75391 9.83203C8.75391 6.83203 10.2891 5.30859 13.3125 5.30859L49.6641 5.30859C52.6992 5.30859 54.2227 6.84375 54.2227 9.83203Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

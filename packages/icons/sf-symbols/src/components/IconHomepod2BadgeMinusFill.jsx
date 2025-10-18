@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHomepod2BadgeMinusFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.9883 42.3633">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.9883 42.3633">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M11.9648 6.84375C13.2422 8.01562 16.4883 8.94141 19.9805 8.94141C20.7771 8.94141 21.5639 8.89144 22.3174 8.79942C21.8089 9.22542 21.3503 9.69963 20.9414 10.2188C19.4297 12.1172 18.668 14.5195 18.668 17.5781L18.668 29.0859C18.668 29.9215 18.7217 30.7089 18.8401 31.4388C12.1444 31.1795 9.09375 28.5221 9.09375 22.793L9.09375 12.3633C9.09375 9.72656 9.83203 8.00391 10.7695 6.90234C11.0977 6.52734 11.5898 6.49219 11.9648 6.84375Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

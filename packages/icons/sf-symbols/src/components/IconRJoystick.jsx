@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRJoystick() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.4883 28.9805">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.4883 28.9805">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.0742 24.4219C19.1576 24.4219 21.1 24.2236 22.8633 23.8402L22.8633 24.5156C22.8633 27.3281 20.707 28.9805 17.0742 28.9805C13.4297 28.9805 11.2734 27.3281 11.2734 24.5156L11.2734 23.8389C13.0397 24.2231 14.9861 24.4219 17.0742 24.4219Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

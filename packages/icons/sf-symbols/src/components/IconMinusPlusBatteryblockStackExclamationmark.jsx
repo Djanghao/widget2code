@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMinusPlusBatteryblockStackExclamationmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.2656 46.0664">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.2656 46.0664">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M42.9141 22.7461L42.9141 37.1953C42.9141 38.5078 42.0938 39.2578 40.6992 39.2578L10.6641 39.2578C9.44222 39.2578 8.72279 38.6353 8.67656 37.5469L40.3359 37.5469C40.8867 37.5469 41.2031 37.2539 41.2031 36.6797L41.2031 20.9305C42.2822 21.0224 42.9141 21.6837 42.9141 22.7461Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

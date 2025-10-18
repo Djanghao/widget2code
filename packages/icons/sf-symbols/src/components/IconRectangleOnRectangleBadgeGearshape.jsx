@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRectangleOnRectangleBadgeGearshape() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.7773 39.6914">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.7773 39.6914">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M38.0742 9.30469L38.0742 11.5313L36 11.5313L36 9.42188C36 7.73438 35.0742 6.86719 33.4688 6.86719L12.6797 6.86719C11.0391 6.86719 10.1484 7.73438 10.1484 9.42188L10.1484 23.5312C10.1484 25.2188 11.0391 26.0859 12.6797 26.0859L15.3516 26.0859L15.3516 28.1602L12.6328 28.1602C9.59766 28.1602 8.07422 26.6484 8.07422 23.6484L8.07422 9.30469C8.07422 6.31641 9.59766 4.79297 12.6328 4.79297L33.5156 4.79297C36.5273 4.79297 38.0742 6.32812 38.0742 9.30469Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconUnderlineDouble() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.6836 39.0586">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.6836 39.0586">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0.796875 39.0586L16.5352 39.0586C16.9922 39.0586 17.332 38.7305 17.332 38.2852C17.332 37.8281 16.9922 37.5 16.5352 37.5L0.796875 37.5C0.351562 37.5 0 37.8281 0 38.2852C0 38.7305 0.351562 39.0586 0.796875 39.0586Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

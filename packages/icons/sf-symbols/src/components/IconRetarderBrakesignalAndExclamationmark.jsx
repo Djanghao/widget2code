@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRetarderBrakesignalAndExclamationmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50.0391 29.1914">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 50.0391 29.1914">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M47.9062 24.4688C48.8789 24.4688 49.6875 23.6719 49.6875 22.7461C49.6875 21.7852 48.8906 21.0117 47.9062 21.0117C46.9219 21.0117 46.125 21.7852 46.125 22.7461C46.125 23.6719 46.9336 24.4688 47.9062 24.4688ZM47.9062 17.9414C48.5391 17.9414 48.9844 17.4844 49.0078 16.8398L49.2656 6.04688C49.2891 5.22656 48.75 4.6875 47.9062 4.6875C47.0625 4.6875 46.5234 5.22656 46.5469 6.04688L46.8047 16.8398C46.8281 17.4844 47.2734 17.9414 47.9062 17.9414Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

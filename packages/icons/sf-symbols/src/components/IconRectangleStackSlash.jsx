@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRectangleStackSlash() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.2715 42.3428">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.2715 42.3428">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M28.2435 6.38819L9.14539 6.38819C9.22169 5.32644 9.92143 4.71241 11.0479 4.71241L26.3526 4.71241C27.479 4.71241 28.1683 5.32644 28.2435 6.38819Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

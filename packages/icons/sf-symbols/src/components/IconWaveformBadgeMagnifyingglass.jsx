@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWaveformBadgeMagnifyingglass() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.8438 34.8633">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.8438 34.8633">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M36.2461 13.5L36.2461 16.0546C35.8022 15.9674 35.3432 15.9258 34.875 15.9258C34.6378 15.9258 34.4029 15.9365 34.1719 15.9618L34.1719 13.5C34.1719 12.9258 34.6172 12.4453 35.2148 12.4453C35.8008 12.4453 36.2461 12.9258 36.2461 13.5Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

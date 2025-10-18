@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconThermometerHigh() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.2891 33.5273">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.2891 33.5273">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M18.2695 18.2109L21.4922 18.2109C21.9609 18.2109 22.2891 17.8594 22.2891 17.4492C22.2891 17.0273 21.9609 16.6758 21.4922 16.6758L18.2695 16.6758C17.8008 16.6758 17.4727 17.0273 17.4727 17.4492C17.4727 17.8594 17.8008 18.2109 18.2695 18.2109Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

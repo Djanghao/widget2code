@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPointerArrowSlash() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.6826 30.0528">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.6826 30.0528">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M21.2352 26.2189L21.5991 27.0791C22.0327 28.1221 21.5405 29.3174 20.4858 29.7276C19.4312 30.1612 18.2476 29.6573 17.8023 28.626L13.837 18.8391ZM13.2424 18.246L9.54053 22.2744C8.94288 22.9776 7.88819 22.5791 7.88819 21.6533L7.93737 12.9542ZM9.55225 0.313501L24.0483 15.3838C24.6929 16.0518 24.2476 17.0362 23.3452 16.9776L19.2064 16.7587L7.9792 5.55383L8.00538 0.922876C8.00538 0.0556888 8.9546-0.295874 9.55225 0.313501Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

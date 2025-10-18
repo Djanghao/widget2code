@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPrinterInverse() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.0664 32.6133">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.0664 32.6133">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M27.7734 4.39453L27.7734 6.5625L25.7461 6.5625L25.7461 4.26562C25.7461 2.89453 25.1133 2.26172 23.7422 2.26172L9.97266 2.26172C8.60156 2.26172 7.96875 2.89453 7.96875 4.26562L7.96875 6.58594L5.94141 6.58594L5.94141 4.39453C5.94141 1.60547 7.42969 0.363281 9.99609 0.363281L23.7188 0.363281C26.4023 0.363281 27.7734 1.60547 27.7734 4.39453Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCarWindowLeftExclamationmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.8906 27.293">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.8906 27.293">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M37.7578 23.5195C38.7188 23.5195 39.5391 22.7227 39.5391 21.7969C39.5391 20.8359 38.7305 20.0625 37.7578 20.0625C36.7617 20.0625 35.9648 20.8359 35.9648 21.7969C35.9648 22.7227 36.7852 23.5195 37.7578 23.5195ZM37.7578 16.9922C38.3789 16.9922 38.8242 16.5352 38.8477 15.8906L39.1055 5.09766C39.1289 4.27734 38.5898 3.73828 37.7578 3.73828C36.9141 3.73828 36.375 4.27734 36.3984 5.09766L36.6562 15.8906C36.6797 16.5352 37.125 16.9922 37.7578 16.9922Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

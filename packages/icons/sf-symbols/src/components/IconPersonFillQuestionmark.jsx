@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPersonFillQuestionmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.7422 29.1914">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.7422 29.1914">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M2.47266 28.1016L22.8867 28.1016C24.4219 28.1016 25.3594 27.3633 25.3594 26.168C25.3594 22.2773 20.4961 16.9102 12.6797 16.9102C4.86328 16.9102 0 22.2773 0 26.168C0 27.3633 0.9375 28.1016 2.47266 28.1016ZM12.6914 14.2031C15.9609 14.2031 18.7031 11.2969 18.7031 7.54688C18.7031 3.87891 15.9375 1.07812 12.6914 1.07812C9.45703 1.07812 6.69141 3.92578 6.69141 7.57031C6.69141 11.2969 9.43359 14.2031 12.6914 14.2031Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

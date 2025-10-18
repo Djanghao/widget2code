@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHeatWavesCircleFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.8789 30.5742">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.8789 30.5742">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M15.2578 30.5742C23.6719 30.5742 30.5273 23.7305 30.5273 15.3164C30.5273 6.90234 23.6719 0.0585938 15.2578 0.0585938C6.85547 0.0585938 0 6.90234 0 15.3164C0 23.7305 6.85547 30.5742 15.2578 30.5742Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

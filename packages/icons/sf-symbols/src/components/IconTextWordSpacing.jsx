@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTextWordSpacing() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 25.8398">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 25.8398">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.04297 25.8164L16.7578 25.8164C17.3438 25.8164 17.8125 25.3711 17.8125 24.7852C17.8125 24.1875 17.3438 23.7422 16.7578 23.7422L1.04297 23.7422C0.445312 23.7422 0 24.1875 0 24.7852C0 25.3711 0.445312 25.8164 1.04297 25.8164Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

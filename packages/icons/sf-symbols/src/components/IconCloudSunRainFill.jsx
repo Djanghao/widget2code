@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCloudSunRainFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.3594 42.3867">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.3594 42.3867">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M27.2461 37.1133C27.6445 37.3477 27.7734 37.8047 27.5273 38.2148L25.4531 41.8125C25.2188 42.2109 24.75 42.3516 24.3516 42.1289C23.9414 41.8945 23.8359 41.4258 24.0703 41.0391L26.1445 37.4297C26.4023 37.0078 26.8477 36.8789 27.2461 37.1133Z" fill="#3cd3fe"/>

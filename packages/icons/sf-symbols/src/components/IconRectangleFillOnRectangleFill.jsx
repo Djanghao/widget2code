@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRectangleFillOnRectangleFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.6523 33.8555">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.6523 33.8555">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M31.5117 6.38672L31.5117 6.75L13.3477 6.75C9.29297 6.75 6.92578 9.09375 6.92578 13.125L6.92578 25.2422L6.08203 25.2422C3.04688 25.2422 1.51172 23.7305 1.51172 20.7305L1.51172 6.38672C1.51172 3.39844 3.04688 1.875 6.08203 1.875L26.9531 1.875C29.9766 1.875 31.5117 3.41016 31.5117 6.38672Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

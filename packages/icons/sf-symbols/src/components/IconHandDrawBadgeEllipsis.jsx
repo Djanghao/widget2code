@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHandDrawBadgeEllipsis() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50.8945 38.6367">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 50.8945 38.6367">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.5352 9.78516L16.6736 10.164C12.3766 13.1481 10.6438 17.4029 10.5586 22.1133C10.5469 22.582 10.207 22.9453 9.75 22.957C9.30469 22.9688 8.90625 22.5469 8.90625 22.0781C8.90625 16.6339 11.1957 11.585 16.2282 8.41426C16.2645 8.86207 16.3667 9.3219 16.5352 9.78516Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

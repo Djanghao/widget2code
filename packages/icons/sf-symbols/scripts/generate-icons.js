@@ -47,6 +47,7 @@ function normalizeSvg(svg) {
     .replace(/<!DOCTYPE[^>]*>/g, '')
     .replace(/\s+width=\"[^\"]*\"/g, '')
     .replace(/\s+height=\"[^\"]*\"/g, '')
+    .replace(/\s+xmlns:xlink=/g, ' xmlnsXlink=')
     .trim()
   if (!s.startsWith('<svg')) {
     const m = s.match(/<svg[\s\S]*?<\/svg>/)

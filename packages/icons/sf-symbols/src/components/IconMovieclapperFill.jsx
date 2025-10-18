@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMovieclapperFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.4823 37.7659">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.4823 37.7659">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0.221604 12.0451L1.32317 16.1115L1.32317 29.3185C1.32317 32.1779 2.81145 33.6427 5.70598 33.6427L30.7607 33.6427C33.6669 33.6427 35.1318 32.1662 35.1318 29.3185L35.1318 14.9982C35.1318 13.4396 34.1474 12.4669 32.5536 12.4552L14.6357 12.4552L31.4521 7.95521C32.9989 7.55678 33.6669 6.31459 33.2919 4.83803L32.8935 3.29115C32.1904 0.513809 30.3271-0.505723 27.5263 0.232559L3.32707 6.73646C0.561448 7.48646-0.504958 9.29115 0.221604 12.0451Z" fill="black"/>

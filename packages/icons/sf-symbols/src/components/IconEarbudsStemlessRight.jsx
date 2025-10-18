@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconEarbudsStemlessRight() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.375 19.5117">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.375 19.5117">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M22.6172 8.05078C22.6172 12.4219 18.7617 16.0078 14.0273 16.0078C13.9496 16.0078 13.8721 16.0069 13.797 15.997C14.5244 14.8538 14.9414 13.4977 14.9414 12.0469C14.9414 7.93359 11.5898 4.58203 7.46484 4.58203C7.04111 4.58203 6.62525 4.6178 6.22281 4.69472C7.58628 1.96241 10.5742 0.0703125 14.0273 0.0703125C18.7617 0.0703125 22.6172 3.64453 22.6172 8.05078Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

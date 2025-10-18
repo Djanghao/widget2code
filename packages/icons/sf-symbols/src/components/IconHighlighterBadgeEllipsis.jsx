@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHighlighterBadgeEllipsis() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.8008 39.668">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.8008 39.668">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30.6604 35.6719L9.09375 35.6719C8.51953 35.6719 8.05078 35.2031 8.05078 34.6289C8.05078 34.0664 8.51953 33.5977 9.09375 33.5977L29.5471 33.5977C29.8236 34.3428 30.2004 35.0389 30.6604 35.6719Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

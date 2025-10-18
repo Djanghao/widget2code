@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconBadgePlusRadiowavesRight() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.6562 29.1124">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.6562 29.1124">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30.1641 28.9058C30.6211 29.2339 31.2422 29.105 31.5938 28.5894C34.1836 24.7339 35.8594 20.023 35.8594 14.5503C35.8594 9.06594 34.1484 4.36672 31.5938 0.499536C31.2422-0.0278077 30.6211-0.144995 30.1641 0.18313C29.6836 0.511255 29.6133 1.13235 29.9648 1.65969C32.3086 5.19875 33.8789 9.48782 33.8789 14.5503C33.8789 19.6011 32.3086 23.9019 29.9648 27.4292C29.6133 27.9566 29.6836 28.5777 30.1641 28.9058Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

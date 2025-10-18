@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconDotRadiowavesForward() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.4805 29.0919">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.4805 29.0919">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.8867 28.7432C17.2852 29.1885 17.9766 29.2354 18.4688 28.7198C22.043 25.0167 24.1289 20.0479 24.1289 14.5987C24.1289 9.13775 22.0898 4.11041 18.4688 0.465874C17.9766-0.0497511 17.2852 0.00884262 16.8867 0.442436C16.4883 0.887749 16.5703 1.52056 17.0391 2.01275C20.2617 5.24712 22.0312 9.70025 22.0312 14.5987C22.0312 19.4854 20.2148 23.8799 17.0391 27.1729C16.5703 27.6651 16.4883 28.3096 16.8867 28.7432Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

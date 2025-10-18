@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquare3Layers3dBottomFilled() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7617 33.7148">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7617 33.7148">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M28.8984 22.4648C29.9648 23.0859 30.4102 23.5781 30.4102 24.3398C30.4102 25.0898 29.9648 25.582 28.8984 26.2148L16.9102 33.1523C16.2656 33.5391 15.75 33.7148 15.1992 33.7148C14.6602 33.7148 14.1445 33.5391 13.4883 33.1523L1.51172 26.2148C0.433594 25.582 0 25.0898 0 24.3398C0 23.5781 0.433594 23.0859 1.51172 22.4648L4.37963 20.8008L13.4883 26.0859C14.1445 26.4609 14.6602 26.6484 15.1992 26.6484C15.75 26.6484 16.2656 26.4609 16.9102 26.0859L26.0277 20.8008Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

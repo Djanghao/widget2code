@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconBatteryblockStackTrianglebadgeExclamationmarkFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.2383 41.1914">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.2383 41.1914">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M47.8945 20.3086L47.8945 34.7578C47.8945 36.0703 47.0742 36.8203 45.6797 36.8203L15.6445 36.8203C14.4227 36.8203 13.7033 36.1978 13.657 35.1094L45.3164 35.1094C45.8672 35.1094 46.1836 34.8164 46.1836 34.2422L46.1836 18.9023L47.2962 18.9023C47.6836 19.2148 47.8945 19.6947 47.8945 20.3086Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

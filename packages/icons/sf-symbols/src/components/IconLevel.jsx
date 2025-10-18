@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLevel() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.9023 15.9023">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.9023 15.9023">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M7.52344 13.8281L6.22266 13.8281L6.22266 2.07422L7.52344 2.07422ZM30.3281 13.8281L29.0156 13.8281L29.0156 2.07422L30.3281 2.07422ZM18.2812 8.50781C14.0079 8.50781 10.7969 5.99011 10.1917 2.07422L11.6204 2.07422C12.1581 5.23848 14.7934 7.26562 18.2812 7.26562C21.747 7.26562 24.3811 5.23848 24.9186 2.07422L26.3491 2.07422C25.755 5.99011 22.5546 8.50781 18.2812 8.50781Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareOnCircle() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.4375 34.5352">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.4375 34.5352">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M24.0549 8.80078L22.0009 8.80078C20.6114 4.77483 16.8316 1.96875 12.2812 1.96875C6.49219 1.96875 1.96875 6.49219 1.96875 12.2812C1.96875 17.1494 5.16747 21.1225 9.63281 22.2518L9.63281 24.2687C4.12025 23.0645 0 18.1561 0 12.2812C0 5.49609 5.49609 0 12.2812 0C17.8563 0 22.5611 3.71054 24.0549 8.80078Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconOpticidFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.0898 25.7695">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.0898 25.7695">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M18.3633 25.7578C28.2422 25.7578 36.7383 18.7617 36.7383 12.8789C36.7383 6.99609 28.2422 0 18.3633 0C8.49609 0 0 6.99609 0 12.8789C0 18.7617 8.49609 25.7578 18.3633 25.7578Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

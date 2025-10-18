@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconGaugeOpenWithLinesNeedle84percentExclamation() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.1133 26.3789">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.1133 26.3789">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M36.832 23.0625C37.793 23.0625 38.6133 22.2656 38.6133 21.3398C38.6133 20.3789 37.8047 19.6055 36.832 19.6055C35.8359 19.6055 35.0391 20.3789 35.0391 21.3398C35.0391 22.2656 35.8594 23.0625 36.832 23.0625ZM36.832 16.5352C37.4531 16.5352 37.8984 16.0781 37.9219 15.4336L38.1797 4.64062C38.2031 3.82031 37.6641 3.28125 36.832 3.28125C35.9883 3.28125 35.4492 3.82031 35.4727 4.64062L35.7305 15.4336C35.7539 16.0781 36.1992 16.5352 36.832 16.5352Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

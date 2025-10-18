@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHumidity() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.707 32.2383">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.707 32.2383">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M18.9833 23.66C15.3196 25.3359 12.1143 28.1133 7.51172 28.1133C5.56641 28.1133 3.84375 27.6562 2.12109 26.6602C1.42969 26.2617 1.39453 25.5586 1.69922 25.1016C1.96875 24.7031 2.48438 24.4922 3.04688 24.8086C4.58203 25.6875 5.94141 26.0391 7.51172 26.0391C12.0808 26.0391 15.2797 22.8914 19.4191 21.2745C19.1844 22.0358 19.0196 22.8381 18.9833 23.66Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

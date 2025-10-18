@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWaveformPathEcgText() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.6562 33.7852">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.6562 33.7852">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.04297 33.0469L18.5391 33.0469C19.1133 33.0469 19.582 32.5781 19.582 32.0039C19.582 31.4414 19.1133 30.9727 18.5391 30.9727L1.04297 30.9727C0.46875 30.9727 0 31.4414 0 32.0039C0 32.5781 0.46875 33.0469 1.04297 33.0469Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

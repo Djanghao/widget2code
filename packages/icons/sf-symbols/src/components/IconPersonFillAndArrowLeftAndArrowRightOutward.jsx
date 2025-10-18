@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPersonFillAndArrowLeftAndArrowRightOutward() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.8594 27.0352">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.8594 27.0352">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9.04688 27.0234L29.4727 27.0234C31.0078 27.0234 31.9453 26.2852 31.9453 25.0898C31.9453 21.1992 27.0703 15.832 19.2539 15.832C11.4492 15.832 6.57422 21.1992 6.57422 25.0898C6.57422 26.2852 7.51172 27.0234 9.04688 27.0234ZM19.2773 13.125C22.5352 13.125 25.2773 10.2188 25.2773 6.46875C25.2773 2.80078 22.5117 0 19.2773 0C16.0312 0 13.2773 2.84766 13.2773 6.49219C13.2773 10.2188 16.0195 13.125 19.2773 13.125Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

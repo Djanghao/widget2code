@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTableFurnitureFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.6367 22.8164">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.6367 22.8164">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0 1.35938L0 21.4805C0 22.2891 0.515625 22.8164 1.33594 22.8164L5.68359 22.8164C6.49219 22.8164 7.00781 22.2891 7.00781 21.4805L7.00781 7.03125L28.2773 7.03125L28.2773 21.4805C28.2773 22.2891 28.793 22.8164 29.6016 22.8164L33.9492 22.8164C34.7695 22.8164 35.2852 22.2891 35.2852 21.4805L35.2852 1.35938C35.2852 0.539062 34.7695 0.0234375 33.9609 0.0234375L1.32422 0.0234375C0.515625 0.0234375 0 0.539062 0 1.35938Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

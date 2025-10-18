@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconDecreaseIndent() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.9805 25.8398">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.9805 25.8398">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M12.5859 25.8164C13.1836 25.8164 13.6289 25.3711 13.6289 24.7852C13.6289 24.1875 13.1836 23.7422 12.5859 23.7422L1.05469 23.7422C0.457031 23.7422 0 24.1875 0 24.7852C0 25.3711 0.457031 25.8164 1.05469 25.8164Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

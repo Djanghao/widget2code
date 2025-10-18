@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconFaxmachineFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6523 32.6133">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6523 32.6133">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M29.4844 3.75L29.4844 4.06641L7.81641 4.06641L7.81641 3.75C7.81641 1.66406 9.08203 0.527344 11.3086 0.527344L25.9805 0.527344C28.2188 0.527344 29.4844 1.66406 29.4844 3.75Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

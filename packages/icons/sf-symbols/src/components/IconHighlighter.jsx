@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHighlighter() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.6875 31.6758">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.6875 31.6758">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.04297 31.6758L30.293 31.6758C30.8672 31.6758 31.3359 31.207 31.3359 30.6328C31.3359 30.0703 30.8672 29.6016 30.293 29.6016L1.04297 29.6016C0.46875 29.6016 0 30.0703 0 30.6328C0 31.207 0.46875 31.6758 1.04297 31.6758Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

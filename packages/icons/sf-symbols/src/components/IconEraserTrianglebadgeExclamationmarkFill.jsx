@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconEraserTrianglebadgeExclamationmarkFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.1133 34.8633">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.1133 34.8633">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M22.1133 28.9336L20.5195 30.5156C18.5156 32.5195 16.0547 32.4492 13.9336 30.3516L8.33203 24.7383C6.22266 22.6289 6.15234 20.1562 8.15625 18.1523L9.75 16.582ZM27.1289 3.60938L35.0625 11.5664C36.3633 12.8555 36.3867 14.6602 35.1094 15.9258L34.6673 16.3678C34.1432 16.1015 33.5634 15.9609 32.9766 15.9609C31.6523 15.9609 30.3633 16.6641 29.6836 17.9062L25.2876 25.7476L23.4258 27.6094L11.0742 15.2578L22.7578 3.57422C24.0234 2.29688 25.8281 2.30859 27.1289 3.60938Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

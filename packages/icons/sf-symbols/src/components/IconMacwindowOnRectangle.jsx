@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMacwindowOnRectangle() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6289 30.1055">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6289 30.1055">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30 5.15625L30 6.73828L27.9141 6.73828L27.9141 5.16797C27.9141 3.19922 26.8008 2.08594 24.832 2.08594L5.16797 2.08594C3.19922 2.08594 2.07422 3.19922 2.07422 5.16797L2.07422 18.1992C2.07422 20.1562 3.19922 21.293 5.16797 21.293L7.27734 21.293L7.27734 23.3672L5.15625 23.3672C1.88672 23.3672 0 21.4688 0 18.2109L0 5.15625C0 1.88672 1.88672 0 5.15625 0L25.0898 0C28.1953 0 30 1.88672 30 5.15625Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowUpBinFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.3164 27.5742">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.3164 27.5742">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M10.1133 27.5742L25.8516 27.5742C28.7227 27.5742 29.918 26.0391 30.3398 23.2031L32.5195 8.70703L3.43359 8.70703L5.625 23.2031C6.05859 26.0625 7.23047 27.5742 10.1133 27.5742ZM2.44922 6.84375L33.5039 6.84375C35.1211 6.84375 35.9648 5.85938 35.9648 4.26562L35.9648 2.61328C35.9648 1.00781 35.1211 0.0351562 33.5039 0.0351562L2.44922 0.0351562C0.914062 0.0351562 0 1.00781 0 2.61328L0 4.26562C0 5.85938 0.84375 6.84375 2.44922 6.84375Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowTriangleheadMerge() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.9883 29.0537">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.9883 29.0537">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9.58594 0.470225L12.9141 5.21632C13.4414 5.96632 13.1836 6.62257 12.2344 6.62257L9.91406 6.62257L9.91406 4.43116C9.91406 3.81007 9.42188 3.31788 8.82422 3.31788C8.22656 3.31788 7.73438 3.81007 7.73438 4.43116L7.73437 6.62257L5.40234 6.62257C4.45312 6.62257 4.18359 5.96632 4.72266 5.2046L8.05078 0.470225C8.50781-0.162587 9.15234-0.150869 9.58594 0.470225Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

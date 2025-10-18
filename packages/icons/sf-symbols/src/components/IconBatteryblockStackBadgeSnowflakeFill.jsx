@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconBatteryblockStackBadgeSnowflakeFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 51.8555 41.7305">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 51.8555 41.7305">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M47.2031 20.5781L47.2031 35.0273C47.2031 36.3398 46.3828 37.0898 44.9883 37.0898L14.9531 37.0898C13.7313 37.0898 13.0119 36.4673 12.9656 35.3789L44.625 35.3789C45.1758 35.3789 45.4922 35.0859 45.4922 34.5117L45.4922 18.7626C46.5713 18.8544 47.2031 19.5157 47.2031 20.5781Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareOnSquareBadgePersonCropFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50.1914 36.6914">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 50.1914 36.6914">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M33.4102 7.34766L33.4102 7.71094L21 7.71094C16.9336 7.71094 14.5664 10.0547 14.5664 14.0977L14.5664 27.1523L13.6641 27.1523C10.6289 27.1523 9.09375 25.6289 9.09375 22.6289L9.09375 7.34766C9.09375 4.35938 10.6289 2.83594 13.6641 2.83594L28.8516 2.83594C31.8633 2.83594 33.4102 4.37109 33.4102 7.34766Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

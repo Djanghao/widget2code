@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChartBarXaxisAscendingBadgeClock() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 51.5859 44.543">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 51.5859 44.543">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M32.6953 35.0977C32.6953 35.4464 32.7144 35.7908 32.7548 36.1289L9.91406 36.1289C9.35156 36.1289 8.87109 35.6836 8.87109 35.0977C8.87109 34.5117 9.35156 34.0664 9.91406 34.0664L32.7555 34.0664C32.7146 34.4047 32.6953 34.7491 32.6953 35.0977Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

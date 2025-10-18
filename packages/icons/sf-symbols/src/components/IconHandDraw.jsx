@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHandDraw() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.0936 32.8323">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.0936 32.8323">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9.13469 6.88295L9.27313 7.26174C4.97615 10.2459 3.24338 14.5007 3.15813 19.2111C3.14641 19.6798 2.80657 20.0431 2.34954 20.0548C1.90422 20.0665 1.50579 19.6447 1.50579 19.1759C1.50579 13.7317 3.7952 8.68284 8.82773 5.51205C8.86401 5.95986 8.96623 6.41969 9.13469 6.88295Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

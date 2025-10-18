@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHandPointUpLeftAndText() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.3506 32.8368">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.3506 32.8368">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M13.8153 2.50237L3.55811 2.50237C3.06592 2.50237 2.66749 2.11565 2.66749 1.62346C2.66749 1.13128 3.06592 0.732839 3.55811 0.732839L16.0349 0.732839C15.0875 1.11029 14.3279 1.72923 13.8153 2.50237Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

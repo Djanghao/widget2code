@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowTurnUpForwardIphoneFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.9492 31.4883">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.9492 31.4883">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M20.8125 27.5977C20.8125 29.9648 22.3594 31.4648 24.8086 31.4648L35.6016 31.4648C38.0508 31.4648 39.5977 29.9648 39.5977 27.5977L39.5977 3.86719C39.5977 1.5 38.0508 0 35.6016 0L24.8086 0C22.3594 0 20.8125 1.5 20.8125 3.86719Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

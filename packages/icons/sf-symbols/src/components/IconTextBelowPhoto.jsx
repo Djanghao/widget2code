@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTextBelowPhoto() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4062 38.2852">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.4062 38.2852">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0.984375 38.2852L20.0156 38.2852C20.5664 38.2852 21 37.8633 21 37.3125C21 36.7617 20.5664 36.3281 20.0156 36.3281L0.984375 36.3281C0.421875 36.3281 0 36.7617 0 37.3125C0 37.8633 0.421875 38.2852 0.984375 38.2852Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

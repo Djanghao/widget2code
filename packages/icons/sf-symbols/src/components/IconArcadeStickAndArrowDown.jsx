@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArcadeStickAndArrowDown() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.875 30.7617">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.875 30.7617">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.5117 23.8945C16.5117 27.7734 12.9375 30.7383 8.26172 30.7383C3.57422 30.7383 0 27.7734 0 23.8945C0 20.9464 2.07726 18.5158 5.14453 17.5318L5.14453 19.7445C3.28687 20.5478 2.08594 22.0757 2.08594 23.8945C2.08594 26.6016 4.74609 28.6641 8.26172 28.6641C11.7773 28.6641 14.4258 26.6016 14.4258 23.8945C14.4258 22.0571 13.2057 20.5167 11.3203 19.7188L11.3203 17.5164C14.4112 18.4887 16.5117 20.9299 16.5117 23.8945Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

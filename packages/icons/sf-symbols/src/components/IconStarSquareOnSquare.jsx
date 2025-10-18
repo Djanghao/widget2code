@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconStarSquareOnSquare() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9922 31.0898">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.9922 31.0898">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M24.3164 4.54688L24.3164 6.77344L22.2305 6.77344L22.2305 4.66406C22.2305 2.97656 21.3164 2.10938 19.7109 2.10938L4.60547 2.10938C2.96484 2.10938 2.07422 2.97656 2.07422 4.66406L2.07422 19.7227C2.07422 21.4102 2.96484 22.2773 4.60547 22.2773L7.33594 22.2773L7.33594 24.3516L4.55859 24.3516C1.52344 24.3516 0 22.8281 0 19.8281L0 4.54688C0 1.55859 1.52344 0.0351562 4.55859 0.0351562L19.7461 0.0351562C22.7695 0.0351562 24.3164 1.57031 24.3164 4.54688Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

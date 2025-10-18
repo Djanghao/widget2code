@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconIphoneGen2Motion() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.3789 32.0273">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.3789 32.0273">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.79297 3.92578L1.79297 28.0781C1.79297 29.8032 2.63831 31.1806 4.01352 31.7344L3.99609 31.7344C1.54688 31.7344 0 30.2344 0 27.8672L0 4.13672C0 1.76953 1.54688 0.269531 3.99609 0.269531L4.01352 0.269531C2.63831 0.823351 1.79297 2.20073 1.79297 3.92578Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLaserBurst() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7656 35.4258">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7656 35.4258">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M15.3051 17.6967L13.0688 18.6211L0.914062 18.6211C0.410156 18.6211 0 18.2109 0 17.707C0 17.1914 0.410156 16.7812 0.914062 16.7812L13.1013 16.7813ZM35.4141 17.707C35.4141 18.2109 35.0273 18.6211 34.5 18.6211L22.3128 18.6211L20.1042 17.7037L22.3344 16.7813L34.5 16.7812C35.0273 16.7812 35.4141 17.1914 35.4141 17.707Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

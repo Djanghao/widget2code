@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSwatchpaletteFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.6445 38.3086">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.6445 38.3086">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M25.0781 28.5L17.3817 32.9395L22.5048 24.0462ZM31.1953 14.6133L33.8086 19.1602C34.957 21.1289 34.4531 23.0977 32.5312 24.1992L26.6953 27.5742L23.5809 22.1782L28.8164 13.0898C28.8883 12.9645 28.9555 12.8392 29.0115 12.714C29.8634 12.9766 30.623 13.6175 31.1953 14.6133Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

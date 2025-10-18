@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTaillightFogFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.1289 26.3654">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.1289 26.3654">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M24.9141 13.1768C24.9375 10.1768 24.6914 7.42294 23.9062 4.64559C23.0156 1.64559 21.2227 0.53231 17.7188 0.53231L16.9336 0.53231C8.10938 0.53231 0 6.36825 0 13.1768C0 19.9854 8.10938 25.7979 16.9336 25.7979L17.7188 25.7979C21.2344 25.7979 23.0273 24.6964 23.9062 21.6964C24.6914 18.919 24.9375 16.1651 24.9141 13.1768Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

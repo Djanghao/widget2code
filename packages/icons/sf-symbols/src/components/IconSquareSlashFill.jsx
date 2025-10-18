@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareSlashFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.8115 33.4425">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.8115 33.4425">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M26.7439 30.4519C26.4904 30.4832 26.2193 30.4966 25.9351 30.4966L7.51319 30.4966C4.48975 30.4966 2.9546 28.9849 2.9546 25.9849L2.9546 7.4693C2.9546 7.20743 2.96629 6.95682 2.99395 6.72164ZM30.5054 7.4693L30.5054 25.9849C30.5054 26.2459 30.4936 26.4957 30.4657 26.7304L6.72393 2.98863C6.97159 2.95865 7.23614 2.94586 7.51319 2.94586L25.9351 2.94586C28.9702 2.94586 30.5054 4.48101 30.5054 7.4693Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

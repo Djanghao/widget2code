@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconEnvelopeStack() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.9492 37.8867">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.9492 37.8867">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M29.8287 4.21875L9.78054 4.21875C9.85109 3.14851 10.5413 2.51953 11.6719 2.51953L27.9258 2.51953C29.0563 2.51953 29.757 3.14851 29.8287 4.21875Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareOnSquareBadgePersonCrop() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.1289 36.6914">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.1289 36.6914">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M32.3789 7.34766L32.3789 9.57422L30.293 9.57422L30.293 7.46484C30.293 5.77734 29.3789 4.91016 27.7734 4.91016L12.668 4.91016C11.0273 4.91016 10.1367 5.77734 10.1367 7.46484L10.1367 22.5234C10.1367 24.2109 11.0273 25.0781 12.668 25.0781L15.3984 25.0781L15.3984 27.1523L12.6211 27.1523C9.58594 27.1523 8.0625 25.6289 8.0625 22.6289L8.0625 7.34766C8.0625 4.35938 9.58594 2.83594 12.6211 2.83594L27.8086 2.83594C30.832 2.83594 32.3789 4.37109 32.3789 7.34766Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconView3d() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.0703 22.3945">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.0703 22.3945">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M19.7227 22.0195L25.5703 22.0195C31.7461 22.0195 35.7188 17.6719 35.7188 11.1562C35.7188 4.66406 31.7461 0.351562 25.5703 0.351562L19.7227 0.351562C19.0195 0.351562 18.5625 0.820312 18.5625 1.54688L18.5625 20.8359C18.5625 21.5625 19.0195 22.0195 19.7227 22.0195ZM20.8828 19.9219L20.8828 2.42578L25.418 2.42578C30.2695 2.42578 33.3398 5.91797 33.3398 11.168C33.3398 16.418 30.2695 19.9219 25.418 19.9219Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconNewspaperFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.7031 32.3086">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.7031 32.3086">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0 14.7305L0 28.4062C0 29.543 0.84375 30.2344 1.89844 30.2227C2.94141 30.2109 3.77344 29.5312 3.77344 28.4062L3.77344 12.082L2.80078 12.082C1.06641 12.082 0 13.0664 0 14.7305ZM4.83984 32.3086L28.7812 32.3086C31.8164 32.3086 33.3516 30.7852 33.3516 27.7969L33.3516 4.52344C33.3516 1.52344 31.8164 0.0117188 28.7812 0.0117188L10.9805 0.0117188C7.94531 0.0117188 6.42188 1.52344 6.42188 4.52344L6.42188 29.3086C6.42188 30.8555 6.01172 31.7227 4.83984 32.3086Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCirclebadge2Fill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.1641 26.918">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.1641 26.918">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M33.9375 13.4531C33.9375 19.8398 28.7461 25.0312 22.3594 25.0312C21.7318 25.0312 21.1157 24.9811 20.5195 24.8708C24.3536 22.512 26.9062 18.2775 26.9062 13.4531C26.9062 8.62713 24.3518 4.38642 20.5156 2.02462C21.113 1.91374 21.7304 1.86328 22.3594 1.86328C28.7461 1.86328 33.9375 7.06641 33.9375 13.4531Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

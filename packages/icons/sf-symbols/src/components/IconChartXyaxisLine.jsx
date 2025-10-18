@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChartXyaxisLine() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.707 28.0898">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.707 28.0898">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9.14082 12.9758L2.07422 17.0784L2.07422 15.2532L8.47838 11.5481C8.53967 12.0984 8.7799 12.5939 9.14082 12.9758ZM27.9947 11.9492L20.6244 16.4719C20.5201 15.9291 20.2416 15.4496 19.8475 15.0947L27.0998 10.6373C27.2493 11.167 27.5679 11.6255 27.9947 11.9492ZM16.8669 14.7914C16.4216 15.0525 16.0663 15.4482 15.8551 15.9236L12.6677 13.1418C13.055 12.8003 13.3337 12.3397 13.4489 11.8163Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

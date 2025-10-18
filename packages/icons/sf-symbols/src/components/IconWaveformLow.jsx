@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWaveformLow() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3633 13.3242">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.3633 13.3242">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M25.9805 9.11719C26.5664 9.11719 27.0117 8.66016 27.0117 8.08594L27.0117 5.25C27.0117 4.67578 26.5664 4.21875 25.9805 4.21875C25.3828 4.21875 24.9375 4.67578 24.9375 5.25L24.9375 8.08594C24.9375 8.66016 25.3828 9.11719 25.9805 9.11719Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconListBullet() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 21.832">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 21.832">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M8.35547 21.0352L29.0859 21.0352C29.6719 21.0352 30.1406 20.5781 30.1406 19.9922C30.1406 19.4062 29.6719 18.9609 29.0859 18.9609L8.35547 18.9609C7.76953 18.9609 7.32422 19.4062 7.32422 19.9922C7.32422 20.5781 7.76953 21.0352 8.35547 21.0352Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))" fill-opacity="0.55"/>

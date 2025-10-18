@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconListNumber() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 25.6055">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 25.6055">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9.22266 22.9219L29.0859 22.9219C29.6719 22.9219 30.1406 22.4766 30.1406 21.8906C30.1406 21.3047 29.6719 20.8477 29.0859 20.8477L9.22266 20.8477C8.63672 20.8477 8.17969 21.3047 8.17969 21.8906C8.17969 22.4766 8.63672 22.9219 9.22266 22.9219Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))" fill-opacity="0.55"/>

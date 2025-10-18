@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRainbow() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.3672 22.8867">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.3672 22.8867">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M21.9961 0C9.79688 0 0 9.82031 0 22.0195C0 22.5 0.386719 22.875 0.84375 22.875C1.33594 22.875 1.72266 22.5 1.72266 22.0195C1.72266 10.8164 10.793 1.72266 21.9961 1.72266C33.2109 1.72266 42.293 10.8164 42.293 22.0195C42.293 22.5 42.668 22.875 43.1484 22.875C43.6289 22.875 44.0156 22.5 44.0156 22.0195C44.0156 9.82031 34.1953 0 21.9961 0Z" fill="#ff4245"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMinusPlusBatteryblockStackFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.2656 32.9414">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.2656 32.9414">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M42.9141 16.1836L42.9141 30.6328C42.9141 31.9453 42.0938 32.6953 40.6992 32.6953L10.6641 32.6953C9.44222 32.6953 8.72279 32.0728 8.67656 30.9844L40.3359 30.9844C40.8867 30.9844 41.2031 30.6914 41.2031 30.1172L41.2031 14.368C42.2822 14.4599 42.9141 15.1212 42.9141 16.1836Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

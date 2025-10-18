@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHouseLodgeFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64.3561 29.5664">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 64.3561 29.5664">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M13.7502 19.5484C13.8198 19.5523 13.8902 19.5521 13.9614 19.5479C13.9864 19.5486 14.0117 19.5472 14.0374 19.5436C14.0374 19.5436 14.0374 19.5436 14.0374 19.5436L14.0374 24.5391C14.0374 25.7954 14.3755 26.8679 14.9914 27.6914L7.7679 27.6914C5.71712 27.6914 4.54524 26.5664 4.54524 24.5391L4.54524 19.5352L13.5834 19.5352C13.6379 19.5442 13.6937 19.548 13.7502 19.5484Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

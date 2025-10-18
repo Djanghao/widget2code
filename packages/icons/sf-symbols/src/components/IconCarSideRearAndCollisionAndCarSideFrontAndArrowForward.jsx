@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCarSideRearAndCollisionAndCarSideFrontAndArrowForward() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.5039 44.016">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.5039 44.016">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M41.4609 38.7834L25.4297 38.7834C24.8438 38.7834 24.3984 39.2522 24.3984 39.8381C24.3984 40.4123 24.8438 40.8576 25.4531 40.8576L41.4375 40.8576C42.0586 40.8576 42.5039 40.4123 42.5039 39.8381C42.5039 39.2522 42.0586 38.7834 41.4609 38.7834ZM28.5234 43.1779L28.5234 36.4279C28.5234 35.6897 27.9023 35.3733 27.2812 35.76L21.8789 39.0647C21.2695 39.4397 21.2578 40.1779 21.8789 40.5647L27.2695 43.8459C27.9023 44.2326 28.5234 43.9279 28.5234 43.1779Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

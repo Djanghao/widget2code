@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconBellSlashCircle() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.8789 30.5508">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.8789 30.5508">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30.5273 15.2695C30.5273 23.6953 23.6836 30.5273 15.2578 30.5273C6.83203 30.5273 0 23.6953 0 15.2695C0 6.84375 6.83203 0 15.2578 0C23.6836 0 30.5273 6.84375 30.5273 15.2695ZM2.17969 15.2695C2.17969 22.5 8.02734 28.3477 15.2578 28.3477C22.4883 28.3477 28.3359 22.5 28.3359 15.2695C28.3359 8.03906 22.4883 2.19141 15.2578 2.19141C8.02734 2.19141 2.17969 8.03906 2.17969 15.2695Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

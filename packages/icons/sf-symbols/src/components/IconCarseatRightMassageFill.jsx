@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCarseatRightMassageFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.6369 36.0334">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.6369 36.0334">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M33.0489 27.5265C34.2208 23.1788 31.0684 21.3038 23.2872 21.3038C19.3614 21.3038 15.3536 21.6788 12.213 22.3351L12.6934 22.9796C13.4903 16.2648 11.3692 10.5695 6.95125 8.26086L7.32625 9.83118C8.87313 5.04993 5.93172 2.23743 3.20125 2.23743C1.13875 2.23743-0.642498 3.81946 0.224689 7.32336L5.89656 30.3859C6.43563 32.5773 7.91219 33.7843 10.0684 33.7843L27.3419 33.7843C30.3419 33.7843 31.7833 32.3195 33.0489 27.5265Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

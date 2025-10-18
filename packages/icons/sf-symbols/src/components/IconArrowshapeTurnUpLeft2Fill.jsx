@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowshapeTurnUpLeft2Fill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.8008 31.1602">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.8008 31.1602">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.6406 3.57422L16.6406 3.81529L7.24219 12.5859C6.28125 13.5 5.87109 14.5312 5.87109 15.5625C5.87109 16.5703 6.28125 17.625 7.25391 18.5156L16.6406 27.3393L16.6406 27.6445C16.6406 28.5703 15.9844 29.25 15.0469 29.25C14.3789 29.25 13.8281 28.9688 13.1953 28.3711L1.27734 17.168C0.714844 16.6523 0.480469 16.0898 0.480469 15.5742C0.480469 15.0352 0.714844 14.4961 1.27734 13.957L13.1953 2.83594C13.8867 2.19141 14.3555 1.88672 15.0234 1.88672C15.9844 1.88672 16.6406 2.64844 16.6406 3.57422Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

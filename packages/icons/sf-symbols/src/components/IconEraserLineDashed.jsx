@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconEraserLineDashed() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.0126 33.6858">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.0126 33.6858">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M26.438 29.7628C26.438 30.3253 25.9575 30.7941 25.395 30.7941L18.0117 30.7941L20.0842 28.7198L25.395 28.7198C25.9575 28.7198 26.438 29.1886 26.438 29.7628Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

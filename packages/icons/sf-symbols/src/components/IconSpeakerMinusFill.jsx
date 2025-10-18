@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSpeakerMinusFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.4883 26.332">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.4883 26.332">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M23.543 14.25L35.9297 14.25C36.6328 14.25 37.1367 13.8516 37.1367 13.1836C37.1367 12.4922 36.668 12.082 35.9297 12.082L23.543 12.082C22.793 12.082 22.3125 12.4922 22.3125 13.1836C22.3125 13.8516 22.8281 14.25 23.543 14.25Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

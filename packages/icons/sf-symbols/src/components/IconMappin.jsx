@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMappin() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.957 32.2148">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.957 32.2148">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0 5.32031C0 7.85156 1.74609 9.96094 4.11328 10.4883L4.11328 25.5117C4.11328 29.3086 4.78125 31.3711 5.29688 31.3711C5.82422 31.3711 6.46875 29.332 6.46875 25.5117L6.46875 10.4883C8.84766 9.97266 10.6055 7.85156 10.6055 5.32031C10.6055 2.39062 8.25 0 5.29688 0C2.35547 0 0 2.39062 0 5.32031Z" fill="#ff4245"/>

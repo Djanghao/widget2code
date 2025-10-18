@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconParkingsignRadiowavesRightAndSafetycone() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.6953 31.6682">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.6953 31.6682">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M31.6055 28.8829L43.2188 28.8829L39.9609 13.2267C39.7383 12.1251 39.1406 11.6212 38.0859 11.6212L36.7266 11.6212C35.6602 11.6212 35.0625 12.1251 34.8281 13.2267ZM31.4414 30.1954L43.3594 30.1954C43.9102 30.1954 44.3438 29.7618 44.3438 29.2111C44.3438 28.672 43.9102 28.2384 43.3594 28.2384L31.4414 28.2384C30.8906 28.2384 30.457 28.672 30.457 29.2111C30.457 29.7618 30.8906 30.1954 31.4414 30.1954Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

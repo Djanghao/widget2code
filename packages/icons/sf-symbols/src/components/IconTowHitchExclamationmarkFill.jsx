@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTowHitchExclamationmarkFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.2422 31.1367">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.2422 31.1367">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M47.0977 25.4414C48.0703 25.4414 48.8906 24.6445 48.8906 23.7188C48.8906 22.7578 48.082 21.9844 47.0977 21.9844C46.1133 21.9844 45.3164 22.7578 45.3164 23.7188C45.3164 24.6445 46.1367 25.4414 47.0977 25.4414ZM47.0977 18.9141C47.7305 18.9141 48.1758 18.457 48.1992 17.8125L48.457 7.01953C48.4805 6.19922 47.9414 5.66016 47.0977 5.66016C46.2656 5.66016 45.7266 6.19922 45.75 7.01953L46.0078 17.8125C46.0312 18.457 46.4766 18.9141 47.0977 18.9141Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

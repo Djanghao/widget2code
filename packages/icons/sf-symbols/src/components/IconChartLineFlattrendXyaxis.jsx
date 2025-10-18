@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChartLineFlattrendXyaxis() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.707 28.0898">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.707 28.0898">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M22.2891 14.2148L2.07422 14.2148L2.07422 12.0234L22.2891 12.0234Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

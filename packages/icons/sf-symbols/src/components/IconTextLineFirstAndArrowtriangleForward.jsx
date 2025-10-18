@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTextLineFirstAndArrowtriangleForward() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.3047 32.1669">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.3047 32.1669">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M10.3711 28.9799L38.4258 28.9799C39.0117 28.9799 39.4688 28.5346 39.4688 27.9487C39.4688 27.351 39.0117 26.9057 38.4258 26.9057L10.3711 26.9057C9.78516 26.9057 9.33984 27.351 9.33984 27.9487C9.33984 28.5346 9.78516 28.9799 10.3711 28.9799Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

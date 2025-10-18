@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRectangleConnectedToLineBelow() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.1055 32.332">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.1055 32.332">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M14.4141 25.8589C15.3985 26.1846 16.1827 26.9612 16.517 27.9375L25.7109 27.9375C26.2852 27.9375 26.7539 28.4062 26.7539 28.9688C26.7539 29.543 26.2852 30.0117 25.7109 30.0117L16.5407 30.0117C16.1112 31.3527 14.8483 32.332 13.3711 32.332C11.9034 32.332 10.6423 31.3527 10.2131 30.0117L1.04297 30.0117C0.46875 30.0117 0 29.543 0 28.9688C0 28.4062 0.46875 27.9375 1.04297 27.9375L10.2368 27.9375C10.5715 26.9591 11.3571 26.1814 12.3398 25.8566L12.3398 22.0781L14.4141 22.0781Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

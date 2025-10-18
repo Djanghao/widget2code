@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTractionControlTirepressureExclamationmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.1133 29.6836">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.1133 29.6836">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M36.8203 24.7148C37.793 24.7148 38.6016 23.918 38.6016 22.9922C38.6016 22.0312 37.8047 21.2578 36.8203 21.2578C35.8359 21.2578 35.0391 22.0312 35.0391 22.9922C35.0391 23.918 35.8477 24.7148 36.8203 24.7148ZM36.8203 18.1875C37.4531 18.1875 37.8984 17.7305 37.9219 17.0859L38.1797 6.29297C38.2031 5.47266 37.6641 4.93359 36.8203 4.93359C35.9766 4.93359 35.4375 5.47266 35.4609 6.29297L35.7188 17.0859C35.7422 17.7305 36.1992 18.1875 36.8203 18.1875Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLinesMeasurementHorizontal() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.125 26.6836">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.125 26.6836">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M32.3672 20.707C33.293 20.707 33.7734 20.2266 33.7734 19.3008L33.7734 7.38281C33.7734 6.45703 33.293 5.97656 32.3672 5.97656C31.4414 5.97656 30.9609 6.45703 30.9609 7.38281L30.9609 19.3008C30.9609 20.2266 31.4414 20.707 32.3672 20.707Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

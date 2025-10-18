@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAirplanePathDotted() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.5664 27.0117">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.5664 27.0117">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9 15.5273C10.1016 15.5273 11.0156 14.6133 11.0156 13.5117C11.0156 12.3984 10.1016 11.4844 9 11.4844C7.88672 11.4844 6.97266 12.3984 6.97266 13.5117C6.97266 14.6133 7.88672 15.5273 9 15.5273ZM2.01562 15.5273C3.12891 15.5273 4.03125 14.6133 4.03125 13.5117C4.03125 12.3984 3.12891 11.4844 2.01562 11.4844C0.914062 11.4844 0 12.3984 0 13.5117C0 14.6133 0.914062 15.5273 2.01562 15.5273Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

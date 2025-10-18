@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRectanglePortraitSplit2x1SlashFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.0693 33.7413">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.0693 33.7413">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.9077 21.6249L28.2412 31.9456C27.491 32.6645 26.387 33.025 24.939 33.025L17.9077 33.025ZM15.8335 19.5532L15.8335 33.025L8.80225 33.025C5.80225 33.025 4.29053 31.4898 4.29053 28.4664L4.29053 8.02451ZM29.4507 5.28668L29.4507 25.7242L17.9077 14.1812L17.9077 0.728084L24.939 0.728084C27.9273 0.728084 29.4507 2.26324 29.4507 5.28668ZM5.51578 1.78927C6.26364 1.08227 7.36126 0.728084 8.80225 0.728084L15.8335 0.728084L15.8335 12.107Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRotateRightFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6289 37.3313">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6289 37.3313">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M26.1797 32.441C28.6172 32.441 29.8477 31.2574 29.8477 28.7848L29.8477 13.7496C29.8477 11.2653 28.6172 10.0934 26.1797 10.0934L11.0977 10.0934C8.66016 10.0934 7.42969 11.2653 7.42969 13.7496L7.42969 28.7848C7.42969 31.2574 8.66016 32.441 11.0977 32.441Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

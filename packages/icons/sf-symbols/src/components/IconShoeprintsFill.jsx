@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconShoeprintsFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.1016 34.8867">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.1016 34.8867">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M24.375 9.83203C21.3047 8.71875 16.8867 12.3047 15.5625 15.9141C14.9414 17.6602 14.2734 21.3164 14.6719 24.5391L22.3477 27.3281C24.7148 25.1133 26.5664 21.9141 27.2109 20.1562C28.5117 16.5352 27.4453 10.9453 24.375 9.83203ZM15.5391 34.125C17.7305 34.9219 19.7109 33.1641 20.8359 30.082C20.9531 29.7656 21.0938 29.2617 21.1758 28.8867L14.5898 26.4844C14.4023 26.8242 14.2031 27.293 14.0859 27.6211C12.9609 30.7031 13.3477 33.3164 15.5391 34.125Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

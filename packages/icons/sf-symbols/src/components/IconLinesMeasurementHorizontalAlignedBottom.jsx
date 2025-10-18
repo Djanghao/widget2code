@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLinesMeasurementHorizontalAlignedBottom() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2461 24.0352">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.2461 24.0352">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M28.8164 24.0352C29.4258 24.0352 29.8945 23.5781 29.8945 22.9688L29.8945 9.70312C29.8945 9.10547 29.4258 8.625 28.8164 8.625C28.1836 8.625 27.7266 9.10547 27.7266 9.70312L27.7266 22.9688C27.7266 23.5781 28.1836 24.0352 28.8164 24.0352Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

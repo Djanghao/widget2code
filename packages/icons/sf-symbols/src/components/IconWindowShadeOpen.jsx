@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWindowShadeOpen() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.6992 31.7461">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.6992 31.7461">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0 28.9922C0 30.6211 1.125 31.7227 2.8125 31.7227L22.5469 31.7227C24.2344 31.7227 25.3477 30.6211 25.3477 28.9922L25.3477 2.74219C25.3477 1.10156 24.2344 0 22.5469 0L2.8125 0C1.125 0 0 1.10156 0 2.74219ZM2.08594 28.8398L2.08594 2.88281C2.08594 2.40234 2.39062 2.08594 2.84766 2.08594L22.5 2.08594C22.957 2.08594 23.2734 2.40234 23.2734 2.88281L23.2734 28.8398C23.2734 29.3203 22.957 29.6484 22.5 29.6484L2.84766 29.6484C2.39062 29.6484 2.08594 29.3203 2.08594 28.8398Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

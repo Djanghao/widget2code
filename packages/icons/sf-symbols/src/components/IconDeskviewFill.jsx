@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconDeskviewFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.5273 36.3633">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.5273 36.3633">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.10156 36.1641L29.0625 36.1641C29.6953 36.1641 30.1758 35.6719 30.1758 35.0508C30.1758 34.4297 29.6836 33.9375 29.0625 33.9375L1.10156 33.9375C0.480469 33.9375 0 34.4297 0 35.0508C0 35.6719 0.480469 36.1641 1.10156 36.1641Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

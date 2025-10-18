@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCloudBolt() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5547 38.2627">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5547 38.2627">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M21.5391 30.6099L18.2578 30.6099L18.2695 31.2192L20.2031 27.5278C20.3672 27.1997 20.2383 26.9419 19.8984 26.9419L17.1094 26.9419C16.6875 26.9419 16.5234 27.0942 16.3945 27.4107L14.3203 32.145C14.1562 32.52 14.332 32.7427 14.7305 32.7427L17.3789 32.7427L17.5664 31.8403L15.1172 37.7935C15.0352 38.0044 15.082 38.1802 15.2227 38.2388C15.3633 38.2974 15.5391 38.2505 15.6914 38.0747L21.7969 31.3482C22.1016 31.02 21.9727 30.6099 21.5391 30.6099Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

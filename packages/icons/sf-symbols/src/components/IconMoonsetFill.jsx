@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMoonsetFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.8438 35.6133">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.8438 35.6133">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.9922 10.3242C16.5 11.5195 16.1836 13.043 16.1836 14.543C16.1836 22.0312 20.4492 26.2852 27.9258 26.2852C29.4727 26.2852 31.0195 25.9453 31.9102 25.6289C32.6484 25.3945 33.1055 25.9102 32.7422 26.6602C32.2585 27.7189 31.6182 28.7154 30.8448 29.6133L11.323 29.6133C9.36856 27.3641 8.19141 24.4251 8.19141 21.2109C8.19141 15.5742 11.8242 11.1328 15.9961 9.375C16.7578 9.02344 17.3086 9.50391 16.9922 10.3242Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLine3HorizontalDecrease() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7266 17.4727">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7266 17.4727">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M7.62891 17.4492L22.8047 17.4492C23.3789 17.4492 23.8359 16.9922 23.8359 16.418C23.8359 15.832 23.3789 15.375 22.8047 15.375L7.62891 15.375C7.05469 15.375 6.59766 15.832 6.59766 16.418C6.59766 16.9922 7.05469 17.4492 7.62891 17.4492Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

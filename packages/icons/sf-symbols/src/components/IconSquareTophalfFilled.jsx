@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareTophalfFilled() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.9023 27.5742">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.9023 27.5742">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0 23.0156C0 26.0508 1.53516 27.5742 4.51172 27.5742L23.0273 27.5742C26.0156 27.5742 27.5508 26.0508 27.5508 23.0156L27.5508 4.59375C27.5508 1.57031 26.0273 0.0351562 23.0273 0.0351562L4.51172 0.0351562C1.51172 0.0351562 0 1.57031 0 4.59375ZM2.07422 22.9805L2.07422 13.8047L25.4766 13.8047L25.4766 22.9805C25.4766 24.5859 24.6094 25.5 22.9219 25.5L4.62891 25.5C2.94141 25.5 2.07422 24.5859 2.07422 22.9805Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

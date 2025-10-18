@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWifiExclamationmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.9556 32.8242">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.9556 32.8242">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M28.429 17.5781C28.6399 17.8359 28.6282 18.1641 28.3821 18.3867L26.1087 20.6484C25.804 20.9297 25.4524 20.9414 25.1829 20.6367C24.0229 19.3746 22.4269 18.3259 20.6548 17.7174L20.6826 13.1255C23.9332 13.8299 26.7339 15.4967 28.429 17.5781ZM13.9567 17.7064C12.1936 18.3046 10.606 19.3396 9.46803 20.6016C9.16334 20.918 8.78834 20.9531 8.48365 20.6602L6.21022 18.3867C5.9524 18.1406 5.9524 17.8359 6.16334 17.5781C7.86914 15.4942 10.6701 13.826 13.9228 13.1229Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

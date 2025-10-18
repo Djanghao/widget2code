@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCircleBadgeCheckmarkFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.2812 34.6289">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.2812 34.6289">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M37.664 15.9212C37.0725 15.8002 36.4609 15.7383 35.8359 15.7383C30.6562 15.7383 26.3789 20.0039 26.3789 25.1836C26.3789 27.4921 27.2224 29.6153 28.619 31.2585C26.7386 32.1021 24.6545 32.5664 22.4648 32.5664C14.0625 32.5664 7.20703 25.7109 7.20703 17.3086C7.20703 8.89453 14.0625 2.03906 22.4648 2.03906C30.4106 2.03906 36.9665 8.1527 37.664 15.9212Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

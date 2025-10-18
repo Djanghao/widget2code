@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconEarFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.6953 32.6367">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.6953 32.6367">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0.796875 25.2188C0.796875 29.2852 3.35156 31.8984 7.33594 31.8984C10.3359 31.8984 12.6094 30.5039 13.9922 27.9023L15.2227 25.6641C18.4336 19.582 23.6953 19.0664 23.6953 11.6484C23.6953 4.65234 19.1953 0 12.4102 0C5.48438 0 0.796875 4.72266 0.796875 11.7305Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

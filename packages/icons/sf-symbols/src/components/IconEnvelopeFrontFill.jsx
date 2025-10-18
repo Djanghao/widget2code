@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconEnvelopeFrontFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.5156 25.7461">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.5156 25.7461">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.55859 25.7461L31.957 25.7461C34.6172 25.7461 36.1641 24.2109 36.1641 21.2227L36.1641 4.52344C36.1641 1.53516 34.6055 0.0117188 31.5938 0.0117188L4.20703 0.0117188C1.54688 0.0117188 0 1.53516 0 4.52344L0 21.2227C0 24.2109 1.55859 25.7461 4.55859 25.7461Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

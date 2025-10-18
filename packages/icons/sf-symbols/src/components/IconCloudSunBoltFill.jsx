@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCloudSunBoltFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.3594 43.6768">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.3594 43.6768">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M19.8164 33.7974L18.3692 36.5278L21.2344 36.5278C21.6562 36.5278 21.7734 36.9263 21.4805 37.2427L15.668 43.4888C15.5156 43.6646 15.3516 43.7114 15.2109 43.6528C15.0703 43.5942 15.0234 43.4302 15.1055 43.231L17.0219 38.6021L14.625 38.6021C14.25 38.6021 14.0625 38.3794 14.2266 38.0161L16.125 33.6802C16.2656 33.3755 16.4062 33.2232 16.8281 33.2232L19.5234 33.2232C19.8516 33.2232 19.9922 33.4692 19.8164 33.7974Z" fill="white"/>

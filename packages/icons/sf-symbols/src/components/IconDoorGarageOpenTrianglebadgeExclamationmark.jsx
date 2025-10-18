@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconDoorGarageOpenTrianglebadgeExclamationmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.9531 36.4805">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 53.9531 36.4805">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M44.8945 5.10938L44.8945 17.742C44.545 17.6334 44.1812 17.5781 43.8164 17.5781C43.4742 17.5781 43.135 17.6243 42.8086 17.7145L42.8086 5.25C42.8086 4.76953 42.4922 4.45312 42.0469 4.45312L11.5547 4.45312C11.0977 4.45312 10.793 4.76953 10.793 5.25L10.793 33.0469C10.793 33.6211 10.3242 34.0898 9.75 34.0898C9.16406 34.0898 8.70703 33.6211 8.70703 33.0469L8.70703 5.10938C8.70703 3.46875 9.83203 2.36719 11.5195 2.36719L42.082 2.36719C43.7695 2.36719 44.8945 3.46875 44.8945 5.10938Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

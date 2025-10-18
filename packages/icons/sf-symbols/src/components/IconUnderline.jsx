@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconUnderline() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.6836 31.418">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 17.6836 31.418">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0.796875 31.418L16.5352 31.418C16.9922 31.418 17.332 31.0781 17.332 30.6328C17.332 30.1875 16.9922 29.8477 16.5352 29.8477L0.796875 29.8477C0.351562 29.8477 0 30.1875 0 30.6328C0 31.0781 0.351562 31.418 0.796875 31.418Z" fill="#ff4245"/>

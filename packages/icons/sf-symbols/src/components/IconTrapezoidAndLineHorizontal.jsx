@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTrapezoidAndLineHorizontal() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.4102 26.2855">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.4102 26.2855">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M5.41406 14.0392L1.03125 14.0392C0.386719 14.0392 0 13.6525 0 13.0666C0 12.4455 0.386719 12.0705 1.03125 12.0705L5.41406 12.0705ZM28.6875 14.0392L7.37109 14.0392L7.37109 12.0705L28.6875 12.0705ZM36.0586 13.0666C36.0586 13.6525 35.6719 14.0392 35.0273 14.0392L30.6445 14.0392L30.6445 12.0705L35.0273 12.0705C35.6719 12.0705 36.0586 12.4455 36.0586 13.0666Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

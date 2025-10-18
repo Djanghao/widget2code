@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWaveformBadgeMicrophone() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.5078 37.6055">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.5078 37.6055">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M29.0977 7.74609L29.0977 22.991C29.0146 22.9617 28.9241 22.9453 28.8281 22.9453C28.1306 22.9453 27.4907 23.2307 27.0234 23.692L27.0234 7.74609C27.0234 7.17188 27.457 6.69141 28.0547 6.69141C28.6406 6.69141 29.0977 7.17188 29.0977 7.74609Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChartBarXaxisAscending() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.832 27.7148">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.832 27.7148">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.04297 27.7148L32.4375 27.7148C33 27.7148 33.4805 27.2695 33.4805 26.6836C33.4805 26.0977 33 25.6523 32.4375 25.6523L1.04297 25.6523C0.480469 25.6523 0 26.0977 0 26.6836C0 27.2695 0.480469 27.7148 1.04297 27.7148Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

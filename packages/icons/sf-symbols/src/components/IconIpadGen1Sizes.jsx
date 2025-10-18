@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconIpadGen1Sizes() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.082 36.8555">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.082 36.8555">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M26.0596 4.69922L13.8984 4.69922C12.1248 4.69922 10.6555 5.38479 9.72721 6.55078L3.36328 6.55078L3.36328 30.3047L8.63672 30.3047L8.63672 31.6992C8.63672 33.1258 9.10474 34.3398 9.92076 35.2266L5.40234 35.2266C2.89453 35.2266 1.27734 33.668 1.27734 31.2422L1.27734 5.61328C1.27734 3.1875 2.89453 1.62891 5.40234 1.62891L22.0195 1.62891C24.1957 1.62891 25.7013 2.80255 26.0596 4.69922Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPlusSquareFillOnSquareFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.0273 34.8164">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.0273 34.8164">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M25.8281 6.41016L25.8281 6.77344L13.418 6.77344C9.35156 6.77344 6.98438 9.11719 6.98438 13.1602L6.98438 26.2148L6.08203 26.2148C3.04688 26.2148 1.51172 24.6914 1.51172 21.6914L1.51172 6.41016C1.51172 3.42188 3.04688 1.89844 6.08203 1.89844L21.2695 1.89844C24.2812 1.89844 25.8281 3.43359 25.8281 6.41016Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

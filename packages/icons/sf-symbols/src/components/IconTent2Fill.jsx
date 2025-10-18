@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTent2Fill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3986 30.8789">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.3986 30.8789">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M12.9512 4.14844L18.8168 15.9226L15.8289 21.917L12.0137 13.7578C11.8731 13.4766 11.6505 13.3359 11.3926 13.3359C11.1348 13.3359 10.9005 13.4766 10.7716 13.7578L6.03718 23.8828L9.63484 23.8828L11.3926 16.0898L13.1505 23.8828L14.8491 23.8828L13.862 25.8633L1.58406 25.8633C0.142649 25.8633-0.33782 24.5391 0.236399 23.3906L9.83406 4.14844C10.1505 3.51562 10.7364 3.10547 11.3926 3.10547C12.0372 3.10547 12.6231 3.51562 12.9512 4.14844Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

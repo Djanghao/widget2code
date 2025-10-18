@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconIndianrupeesignRing() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.8672 33.5273">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.8672 33.5273">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.7578 33.5156C25.9688 33.5156 33.5156 25.9805 33.5156 16.7578C33.5156 7.53516 25.9688 0 16.7578 0C7.54688 0 0 7.53516 0 16.7578C0 25.9805 7.54688 33.5156 16.7578 33.5156ZM16.7578 28.0078C10.5352 28.0078 5.49609 22.9805 5.49609 16.7578C5.49609 10.5352 10.5352 5.49609 16.7578 5.49609C22.9805 5.49609 28.0195 10.5352 28.0195 16.7578C28.0195 22.9805 22.9805 28.0078 16.7578 28.0078Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

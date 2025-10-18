@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCarTopRadiowavesRearRightBadgeExclamationmarkFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.1328 52.8164">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.1328 52.8164">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M36.3516 33.5859C36.1992 36.7852 34.9688 39.7383 32.6602 42.0352C30.3633 44.3438 27.4219 45.7383 24.2344 45.7383C23.5664 45.7383 23.1211 45.3047 23.1211 44.707C23.1211 44.1562 23.5547 43.7812 24.293 43.7344C26.8711 43.6172 29.3438 42.5742 31.2891 40.6523C33.2109 38.7188 34.2422 36.2461 34.3594 33.668C34.418 32.8477 34.7812 32.5195 35.4023 32.5195C35.918 32.5078 36.3984 32.8828 36.3516 33.5859Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

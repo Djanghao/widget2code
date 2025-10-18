@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconIncreaseQuotelevel() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.9961 28.2305">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.9961 28.2305">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.04297 28.1602C1.62891 28.1602 2.07422 27.6914 2.07422 27.1055L2.07422 1.04297C2.07422 0.457031 1.62891 0 1.04297 0C0.445312 0 0 0.457031 0 1.04297L0 27.1055C0 27.6914 0.445312 28.1602 1.04297 28.1602Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))" fill-opacity="0.55"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHandPinch() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.7349 27.042">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.7349 27.042">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M3.74832 0.366682C2.16629 2.17137 0.806912 4.53856 0.0451935 7.09324C-0.29465 8.24168 1.38113 8.80418 1.76785 7.52684C2.45926 5.24168 3.68972 3.15574 5.10769 1.55028C5.9866 0.554182 4.62722-0.605975 3.74832 0.366682ZM3.74832 21.5073C4.62722 22.4917 5.9866 21.3315 5.10769 20.3237C3.68972 18.73 2.45926 16.644 1.76785 14.3706C1.38113 13.0698-0.29465 13.6323 0.0451935 14.8042C0.806912 17.3472 2.16629 19.7143 3.74832 21.5073Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconIphoneAppSwitcher() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.3789 31.4883">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.3789 31.4883">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.79297 6.99609L1.79297 24.4688C1.79297 26.1938 2.63831 27.5712 4.01352 28.125L3.99609 28.125C1.54688 28.125 0 26.625 0 24.2578L0 7.20703C0 4.83984 1.54688 3.33984 3.99609 3.33984L4.01352 3.33984C2.63831 3.89366 1.79297 5.27104 1.79297 6.99609Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconIphonePatternDiagonalline() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.1484 31.4883">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.1484 31.4883">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.7109 19.5292L4.95646 29.3906L4.25391 29.3906C3.86027 29.3906 3.51815 29.3355 3.23101 29.2251L16.7109 17.9007ZM16.7109 25.4246L11.9981 29.3906L10.0423 29.3906L16.7109 23.7949ZM16.7109 13.639L2.07422 25.925L2.07422 24.2847L16.7109 12.0098ZM16.7109 7.74446L2.07422 20.0304L2.07422 18.3902L16.7109 6.11527ZM15.982 2.46341L2.07422 14.1378L2.07422 12.4968L14.4784 2.07422L14.543 2.07422C15.146 2.07422 15.6282 2.20563 15.982 2.46341ZM2.07422 8.2431L2.07422 6.603L7.4747 2.07422L9.42061 2.07422Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

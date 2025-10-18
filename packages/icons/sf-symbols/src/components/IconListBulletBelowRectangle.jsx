@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconListBulletBelowRectangle() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.9336 28.0898">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.9336 28.0898">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M28.125 26.5195C28.125 25.9453 27.6562 25.5117 27.0234 25.5117L6.55078 25.5117C5.90625 25.5117 5.4375 25.9453 5.4375 26.5195C5.4375 27.082 5.90625 27.5156 6.55078 27.5156L27.0234 27.5156C27.6562 27.5156 28.125 27.082 28.125 26.5195Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

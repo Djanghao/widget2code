@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSharedwithyouSlash() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.9023 34.8809">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.9023 34.8809">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M7.25391 20.2354L7.25391 23.3174C7.25391 24.7002 6.55078 25.4151 5.13281 25.4151L2.12109 25.4151C0.714844 25.4151 0 24.7119 0 23.3174L0 20.2354C0 18.8526 0.714844 18.1494 2.12109 18.1494L5.13281 18.1494C6.55078 18.1494 7.25391 18.8526 7.25391 20.2354Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

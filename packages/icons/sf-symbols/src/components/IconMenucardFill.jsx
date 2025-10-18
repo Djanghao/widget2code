@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMenucardFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3633 34.1394">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3633 34.1394">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M2.73047 31.1146L19.3008 34.0443C22.2188 34.5599 24.0117 32.9544 24.0117 29.8021L24.0117 11.4154C24.0117 8.6146 22.5703 7.51304 19.6992 7.00913L3.5625 4.16147C1.39453 3.78647 0 4.91147 0 7.00913L0 27.9505C0 29.7435 0.902344 30.7982 2.73047 31.1146ZM6.71484 2.82554L20.0273 5.16929C21.2227 5.38022 22.2188 5.70835 23.0391 6.15366L23.0391 4.74741C23.0391 1.73569 21.0234 0.294285 17.6133 0.90366Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRectangleStackBadgePersonCrop() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.8203 41.332">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.8203 41.332">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M33.7892 5.88281L14.6911 5.88281C14.7662 4.82106 15.4556 4.20703 16.582 4.20703L31.8867 4.20703C33.0132 4.20703 33.7129 4.82106 33.7892 5.88281Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

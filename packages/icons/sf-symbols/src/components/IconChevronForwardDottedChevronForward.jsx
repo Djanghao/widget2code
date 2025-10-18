@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChevronForwardDottedChevronForward() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.9766 25.7461">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.9766 25.7461">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M13.3594 25.5938C13.6875 25.5938 13.9688 25.4648 14.1914 25.2422L26.2266 13.6875C26.4844 13.4414 26.625 13.1484 26.625 12.8086C26.625 12.4688 26.4727 12.1406 26.2266 11.9062L14.1914 0.351562C13.957 0.128906 13.6875 0 13.3594 0C12.6914 0 12.1875 0.503906 12.1875 1.17188C12.1875 1.47656 12.3164 1.78125 12.5273 2.00391L24.5039 13.5117L24.5039 12.082L12.5273 23.6016C12.3164 23.8125 12.1875 24.1055 12.1875 24.4336C12.1875 25.0898 12.6914 25.5938 13.3594 25.5938Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

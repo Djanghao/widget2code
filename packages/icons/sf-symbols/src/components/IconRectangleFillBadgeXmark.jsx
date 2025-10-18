@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRectangleFillBadgeXmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 54.75 37.0898">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 54.75 37.0898">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M44.9531 9.29297L44.9531 27.8086C44.9531 30.7852 43.418 32.3203 40.3828 32.3203L17.6191 32.3203C18.4288 30.9404 18.8906 29.3404 18.8906 27.6445C18.8906 22.4531 14.6367 18.1992 9.44531 18.1992L9.44531 9.29297C9.44531 6.29297 10.9805 4.76953 14.0039 4.76953L40.3828 4.76953C43.418 4.76953 44.9531 6.30469 44.9531 9.29297Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

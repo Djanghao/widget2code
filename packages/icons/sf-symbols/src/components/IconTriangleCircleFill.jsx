@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTriangleCircleFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.8789 30.668">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.8789 30.668">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M15.2578 30.668C23.6719 30.668 30.5273 23.8125 30.5273 15.3984C30.5273 6.98438 23.6719 0.140625 15.2578 0.140625C6.85547 0.140625 0 6.98438 0 15.3984C0 23.8125 6.85547 30.668 15.2578 30.668Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

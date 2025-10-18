@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareStack3dUpTrianglebadgeExclamationmarkFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.5117 40.3242">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.5117 40.3242">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M23.8828 34.418C24.1172 34.5469 24.3633 34.6289 24.5742 34.6289C24.7969 34.6289 25.043 34.5469 25.2773 34.418L31.9714 30.5397L29.9169 34.2112L26.2852 36.3164C25.6406 36.6914 25.1367 36.8789 24.5742 36.8789C24.0234 36.8789 23.5195 36.6914 22.875 36.3164L10.8867 29.3672C9.82031 28.7461 9.375 28.2539 9.375 27.4922C9.375 27.0367 9.53925 26.6763 9.90843 26.3218Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>
