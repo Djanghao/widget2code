@@ -49,7 +49,13 @@ const createRenderingSlice = (set, get) => ({
 
   setRatioInput: (ratio) => set({ ratioInput: ratio }),
 
-  setEnableAutoResize: (enabled) => set({ enableAutoResize: enabled }),
+  setEnableAutoResize: (enabled) => {
+    if (typeof enabled === 'function') {
+      set((state) => ({ enableAutoResize: enabled(state.enableAutoResize) }));
+    } else {
+      set({ enableAutoResize: enabled });
+    }
+  },
 
   setAutoSizing: (sizing) => set({ autoSizing: sizing }),
 
