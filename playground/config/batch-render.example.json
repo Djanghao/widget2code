@@ -1,0 +1,44 @@
+{
+  "$schema": "./batch-render.schema.json",
+  "outputDir": "./output",
+  "concurrency": 3,
+  "timeout": 30000,
+  "widgets": [
+    {
+      "id": "weather-small-light",
+      "preset": "weatherSmallLight",
+      "enableAutoResize": true
+    },
+    {
+      "id": "weather-medium-dark",
+      "preset": "weatherMediumDark",
+      "enableAutoResize": true
+    },
+    {
+      "id": "custom-widget",
+      "spec": {
+        "widget": {
+          "family": "systemSmall",
+          "aspectRatio": 1.0,
+          "root": {
+            "type": "VStack",
+            "spacing": 8,
+            "padding": 16,
+            "backgroundColor": "#1c1c1e",
+            "cornerRadius": 20,
+            "children": [
+              {
+                "type": "Text",
+                "content": "Custom Widget",
+                "fontSize": 18,
+                "fontWeight": "bold",
+                "color": "#ffffff"
+              }
+            ]
+          }
+        }
+      },
+      "enableAutoResize": true
+    }
+  ]
+}
