@@ -7,8 +7,7 @@
     "build": "vite build",
     "api": "cd api && ./.venv/bin/python server.py",
     "dev:full": "concurrently \"npm run dev\" \"npm run api\"",
-    "render": "node scripts/render-widget.js",
-    "batch-render": "node scripts/batch-render.js"
+    "render": "node scripts/render.js"
   },
   "dependencies": {
     "@babel/standalone": "^7.28.4",
@@ -16,6 +15,7 @@
     "@widget-factory/icons": "*",
     "@widget-factory/primitives": "*",
     "html2canvas": "^1.4.1",
+    "lucide-react": "^0.263.1",
     "mermaid": "^11.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

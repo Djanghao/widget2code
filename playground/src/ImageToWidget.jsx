@@ -113,12 +113,6 @@ function ImageToWidget({ onWidgetGenerated }) {
       try {
         const jsx = compileWidgetSpecToJSX(data.widgetSpec);
         setGeneratedCode(jsx);
-
-        await fetch('/__write_widget_preview', {
-          method: 'POST',
-          body: jsx,
-          headers: { 'Content-Type': 'text/plain' }
-        });
       } catch (compileError) {
         setGeneratedCode(`// Compilation Error: ${compileError.message}`);
       }
@@ -330,6 +324,7 @@ function ImageToWidget({ onWidgetGenerated }) {
         <div style={{ gridArea: 'preview', minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
           <PreviewPanel
             previewSpec={previewSpec}
+            generatedCode={generatedCode}
             widgetFrameRef={widgetFrameRef}
             ratioInput={ratioInput}
             setRatioInput={setRatioInput}
