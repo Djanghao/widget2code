@@ -10,14 +10,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import usePlaygroundStore from '../store/index.js';
 import { captureWidgetAsPNG } from '../utils/widgetExport.js';
-import WidgetFrame from '../WidgetFrame.jsx';
+import DirectWidgetRenderer from '../components/DirectWidgetRenderer.jsx';
 
 function HeadlessRenderer() {
   const widgetFrameRef = useRef(null);
   const resolveRef = useRef(null);
   const rejectRef = useRef(null);
   const [frameEl, setFrameEl] = useState(null);
-  const [presetResetKey, setPresetResetKey] = useState(0);
 
   const {
     widgetSpec,
@@ -25,7 +24,7 @@ function HeadlessRenderer() {
     operationMode,
     naturalSize,
     finalSize,
-    currentWidgetFileName,
+    generatedJSX,
     initializeApp,
     startCompiling,
     validateWidget,
@@ -171,10 +170,9 @@ function HeadlessRenderer() {
           position: 'relative'
         }}
       >
-        {currentWidgetFileName && (
-          <WidgetFrame
-            resetKey={presetResetKey}
-            widgetFileName={currentWidgetFileName}
+        {generatedJSX && (
+          <DirectWidgetRenderer
+            jsxCode={generatedJSX}
           />
         )}
       </div>
