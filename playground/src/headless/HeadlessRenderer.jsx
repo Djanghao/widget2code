@@ -141,6 +141,7 @@ function HeadlessRenderer() {
         naturalSize: state.naturalSize,
         finalSize: state.finalSize,
         spec: state.widgetSpec,
+        jsx: state.generatedJSX,
         imageData: base64
       });
 

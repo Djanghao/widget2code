@@ -125,6 +125,7 @@ export class PlaywrightRenderer {
         naturalSize: result.naturalSize,
         finalSize: result.finalSize,
         spec: result.spec,
+        jsx: result.jsx,
         imageBuffer,
         presetId
       };

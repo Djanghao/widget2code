@@ -7,8 +7,7 @@
     "build": "vite build",
     "api": "cd api && ./.venv/bin/python server.py",
     "dev:full": "concurrently \"npm run dev\" \"npm run api\"",
-    "render": "node scripts/render-widget.js",
-    "batch-render": "node scripts/batch-render.js"
+    "render": "node scripts/render.js"
   },
   "dependencies": {
     "@babel/standalone": "^7.28.4",
