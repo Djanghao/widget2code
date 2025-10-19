@@ -13,7 +13,7 @@
     "batch"
   ],
   "dependencies": {
-    "@widget-factory/compiler": "workspace:*",
+    "@widget-factory/compiler": "*",
     "playwright": "^1.40.0"
   }
 }
