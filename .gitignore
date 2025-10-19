@@ -10,6 +10,7 @@ dist/
 demo/dist/
 packages/icons/src/generated/
 packages/icons/src/components/
+playground/src/generated/
 
 npm-debug.log*
 yarn-debug.log*
@@ -18,3 +19,6 @@ pnpm-debug.log*
 .vite/
 
 .env
+
+!playground/docs/
+!playground/docs/architecture/

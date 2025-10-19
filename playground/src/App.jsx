@@ -10,10 +10,24 @@ import PresetsTab from './components/PresetsTab/index.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
 import Prompt2Spec from './Prompt2Spec.jsx';
 import Documentation from './Documentation.jsx';
+import usePlaygroundStore from './store/index.js';
 
 function App() {
+  const {
+    selectedPreset,
+    widgetSpec,
+    generatedJSX,
+    treeRoot,
+    ratioInput,
+    setRatioInput,
+    enableAutoResize,
+    setEnableAutoResize,
+    autoSizing,
+    switchPreset,
+    executeAutoResize
+  } = usePlaygroundStore();
+
   const [activeTab, setActiveTab] = useState('presets');
-  const [selectedExample, setSelectedExample] = useState('weatherSmallLight');
   const [editedSpec, setEditedSpec] = useState('');
   const [showComponentsModal, setShowComponentsModal] = useState(false);
   const [selectedPath, setSelectedPath] = useState(null);
@@ -26,9 +40,7 @@ function App() {
   const expectedSizeRef = useRef(null);
   const resizingRef = useRef(false);
   const autoResizeTokenRef = useRef(0);
-  const [ratioInput, setRatioInput] = useState('');
-  const [autoSizing, setAutoSizing] = useState(false);
-  const [enableAutoResize, setEnableAutoResize] = useState(true);
+  const autoSizingRef = useRef(false);
   const [presetResetKey, setPresetResetKey] = useState(0);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
@@ -44,10 +56,10 @@ function App() {
     return () => document.removeEventListener('click', onDocClick);
   }, []);
 
-  const currentExample = examples[selectedExample];
-  const currentSpec = editedSpec || JSON.stringify(currentExample.spec, null, 2);
+  const currentExample = examples[selectedPreset];
+  const currentSpec = editedSpec || (widgetSpec ? JSON.stringify(widgetSpec, null, 2) : JSON.stringify(currentExample.spec, null, 2));
 
-  const { generatedCode, treeRoot, isLoading, setIsLoading } = useWidgetCompiler(
+  const { generatedCode, treeRoot: legacyTreeRoot, isLoading, setIsLoading } = useWidgetCompiler(
     editedSpec,
     currentExample,
     resizingRef,
@@ -55,35 +67,31 @@ function App() {
     expectedSizeRef
   );
 
+  const displayTreeRoot = treeRoot || legacyTreeRoot;
+  const displayCode = generatedJSX || generatedCode;
+
   const handleSpecChange = (value) => {
     setEditedSpec(value);
   };
 
   const handleExampleChange = (key) => {
-    console.log(`🔄 [Preset Change] Switching to: ${key}`);
-    console.log('🧹 [Cleanup] Resetting all state and refs...');
-
     autoResizeTokenRef.current += 1;
-    console.log(`🎫 [Cleanup] AutoResize token invalidated: ${autoResizeTokenRef.current}`);
 
-    setSelectedExample(key);
-    setEditedSpec('');
     setSelectedPath(null);
     setFrameSize({ width: 0, height: 0 });
     setIsLoading(false);
-    setRatioInput('');
-    setAutoSizing(false);
 
     expectedSizeRef.current = null;
     resizingRef.current = false;
     latestWriteTokenRef.current = 0;
+    autoSizingRef.current = false;
 
     widgetFrameRef.current = null;
     setFrameEl(null);
 
     setPresetResetKey(prev => prev + 1);
 
-    console.log('✨ [Cleanup] Complete, widgetFrameRef cleared');
+    switchPreset(key);
   };
 
   const handleDownloadWidget = async () => {
@@ -115,21 +123,9 @@ function App() {
     }
   };
 
-  const waitForFrameToSize = async (targetW, targetH, timeoutMs = 3000) => {
-    const start = Date.now();
-    for (;;) {
-      const node = widgetFrameRef.current;
-      if (!node) break;
-      const rect = node.getBoundingClientRect();
-      if (Math.round(rect.width) === Math.round(targetW) && Math.round(rect.height) === Math.round(targetH)) {
-        await new Promise((r) => requestAnimationFrame(r));
-        await new Promise((r) => requestAnimationFrame(r));
-        return true;
-      }
-      if (Date.now() - start > timeoutMs) return false;
-      await new Promise((r) => setTimeout(r, 16));
-    }
-    return false;
+  const waitForLayoutStable = async () => {
+    await new Promise((r) => requestAnimationFrame(r));
+    await new Promise((r) => requestAnimationFrame(r));
   };
 
   const measureOverflow = () => {
@@ -194,120 +190,28 @@ function App() {
     }
   };
 
-  const applySizeAndMeasure = async (w, h) => {
-    resizingRef.current = true;
-    applySizeToSpec(editedSpec, currentExample.spec, w, h, setEditedSpec);
-    await waitForFrameToSize(w, h);
+  const applySizeToDOMAndMeasure = async (w, h) => {
+    const frame = widgetFrameRef.current;
+    if (!frame) return { fits: false };
+    const widgetElement = frame.firstElementChild;
+    if (!widgetElement) return { fits: false };
+
+    widgetElement.style.width = `${w}px`;
+    widgetElement.style.height = `${h}px`;
+
+    await waitForLayoutStable();
     const m = measureOverflow();
     return m;
   };
 
   const handleAutoResizeByRatio = async (ratioOverride) => {
-    if (autoSizing) return;
     const r = ratioOverride ?? parseAspectRatio(ratioInput);
     if (!r) return;
 
-    const currentToken = autoResizeTokenRef.current;
-    console.log(`🎫 [AutoResize] Starting with token: ${currentToken}`);
-
-    setAutoSizing(true);
-    try {
-      const frame = widgetFrameRef.current;
-      const rect = frame ? frame.getBoundingClientRect() : null;
-      const startW = rect ? Math.max(40, Math.round(rect.width)) : 200;
-      const startH = Math.max(40, Math.round(startW / r));
-
-      if (autoResizeTokenRef.current !== currentToken) {
-        console.log(`🚫 [AutoResize] Token mismatch (${autoResizeTokenRef.current} !== ${currentToken}), aborting`);
-        return;
-      }
-
-      let m = await applySizeAndMeasure(startW, startH);
-
-      if (autoResizeTokenRef.current !== currentToken) {
-        console.log(`🚫 [AutoResize] Token mismatch after initial measure, aborting`);
-        return;
-      }
-      if (m.fits) {
-        let low = 40;
-        let high = startW;
-        let best = { w: startW, h: startH };
-        let lfit = false;
-        const lm = await applySizeAndMeasure(low, Math.max(40, Math.round(low / r)));
-        lfit = lm.fits;
-        if (lfit) {
-          best = { w: low, h: Math.max(40, Math.round(low / r)) };
-        } else {
-          while (high - low > 1) {
-            if (autoResizeTokenRef.current !== currentToken) {
-              console.log(`🚫 [AutoResize] Token mismatch in binary search loop, aborting`);
-              return;
-            }
-            const mid = Math.floor((low + high) / 2);
-            const mh = Math.max(40, Math.round(mid / r));
-            const mm = await applySizeAndMeasure(mid, mh);
-            if (mm.fits) {
-              best = { w: mid, h: mh };
-              high = mid;
-            } else {
-              low = mid;
-            }
-          }
-        }
-
-        if (autoResizeTokenRef.current !== currentToken) {
-          console.log(`🚫 [AutoResize] Token mismatch before final apply, aborting`);
-          return;
-        }
-
-        await applySizeAndMeasure(best.w, best.h);
-      } else {
-        let low = startW;
-        let high = startW;
-        let mm = m;
-        const maxCap = 4096;
-        while (!mm.fits && high < maxCap) {
-          if (autoResizeTokenRef.current !== currentToken) {
-            console.log(`🚫 [AutoResize] Token mismatch in expansion loop, aborting`);
-            return;
-          }
-          low = high;
-          high = Math.min(maxCap, high * 2);
-          const hh = Math.max(40, Math.round(high / r));
-          mm = await applySizeAndMeasure(high, hh);
-        }
-        let best = mm.fits ? { w: high, h: Math.max(40, Math.round(high / r)) } : { w: low, h: Math.max(40, Math.round(low / r)) };
-        if (mm.fits) {
-          while (high - low > 1) {
-            if (autoResizeTokenRef.current !== currentToken) {
-              console.log(`🚫 [AutoResize] Token mismatch in second binary search loop, aborting`);
-              return;
-            }
-            const mid = Math.floor((low + high) / 2);
-            const mh = Math.max(40, Math.round(mid / r));
-            const m2 = await applySizeAndMeasure(mid, mh);
-            if (m2.fits) {
-              best = { w: mid, h: mh };
-              high = mid;
-            } else {
-              low = mid;
-            }
-          }
-
-          if (autoResizeTokenRef.current !== currentToken) {
-            console.log(`🚫 [AutoResize] Token mismatch before final apply (expansion path), aborting`);
-            return;
-          }
-
-          await applySizeAndMeasure(best.w, best.h);
-        }
-      }
-
-      console.log(`✅ [AutoResize] Completed successfully with token: ${currentToken}`);
-    } finally {
-      resizingRef.current = false;
-      setAutoSizing(false);
-    }
+    autoSizingRef.current = true;
+    await executeAutoResize(r, widgetFrameRef, autoResizeTokenRef);
+    autoSizingRef.current = false;
+    setIsLoading(false);
   };
 
   const handleWidgetGenerated = async (widgetSpec, aspectRatio) => {
@@ -346,12 +250,12 @@ function App() {
 
       {activeTab === 'presets' && (
         <PresetsTab
-          selectedExample={selectedExample}
+          selectedExample={selectedPreset}
           handleExampleChange={handleExampleChange}
           currentSpec={currentSpec}
           handleSpecChange={handleSpecChange}
           specTextareaRef={specTextareaRef}
-          generatedCode={generatedCode}
+          generatedCode={displayCode}
           ratioInput={ratioInput}
           setRatioInput={setRatioInput}
           enableAutoResize={enableAutoResize}
@@ -369,7 +273,7 @@ function App() {
           presetResetKey={presetResetKey}
           frameSize={frameSize}
           resizingRef={resizingRef}
-          treeRoot={treeRoot}
+          treeRoot={displayTreeRoot}
           selectedPath={selectedPath}
           handleSelectNode={handleSelectNode}
           treeContainerRef={treeContainerRef}
