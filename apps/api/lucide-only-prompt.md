@@ -177,6 +177,13 @@ Your output must be valid JSON following this structure:
      - Container padding for content sections (typically 12, 16, or 20)
      - Gap between elements (common values: 4, 8, 12, 16)
    - **Match the visual spacing precisely** - tight spacing uses smaller gaps (4-8), loose spacing uses larger gaps (12-16)
+   - **iOS Widget Standards (Apple Official)**:
+     - **Widget-level padding**: **ALWAYS use 16** (iOS 17+ system default content margin)
+     - **Container padding**: Use 16 for standard sections, 11 for tight/dense groups
+     - **Gap values**: Use ONLY these: 4, 6, 8, 11, 16, 20
+       - Tight spacing: 4-8
+       - Standard spacing: 11-12
+       - Loose spacing: 16-20
 8. **Text Content**: Extract exact text from image; preserve capitalization
 9. **Alignment**:
    - `alignMain`: controls main axis alignment (start/end/center/between/around)

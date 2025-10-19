@@ -163,6 +163,13 @@ Your output must be valid JSON following this structure:
    - Pay attention to visual hierarchy with proper spacing values
    - Common gaps: 4, 8, 12, 16
    - Container padding: typically 12, 16, or 20
+   - **iOS Widget Standards (Apple Official)**:
+     - **Widget-level padding**: **ALWAYS use 16** (iOS 17+ system default content margin)
+     - **Container padding**: Use 16 for standard sections, 11 for tight/dense groups
+     - **Gap values**: Use ONLY these: 4, 6, 8, 11, 16, 20
+       - Tight spacing: 4-8
+       - Standard spacing: 11-12
+       - Loose spacing: 16-20
 8. **Text Content**: Create appropriate content based on the widget description
 9. **Alignment**:
    - `alignMain`: controls main axis alignment (start/end/center/between/around)
