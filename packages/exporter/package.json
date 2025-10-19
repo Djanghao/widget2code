@@ -1,0 +1,19 @@
+{
+  "name": "@widget-factory/exporter",
+  "version": "0.3.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "description": "Widget export utilities (PNG, etc.)",
+  "keywords": [
+    "widget",
+    "export",
+    "png",
+    "screenshot"
+  ],
+  "dependencies": {
+    "html2canvas": "^1.4.1"
+  }
+}

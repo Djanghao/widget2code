@@ -6,9 +6,9 @@ import SpecEditor from './components/core/SpecEditor.jsx';
 import CodeViewer from './components/core/CodeViewer.jsx';
 import PreviewPanel from './components/core/PreviewPanel.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
-import sfOnlyPrompt from '../api/sf-only-prompt.md?raw';
-import lucideOnlyPrompt from '../api/lucide-only-prompt.md?raw';
-import bothIconsPrompt from '../api/both-icons-prompt.md?raw';
+import sfOnlyPrompt from '../../api/sf-only-prompt.md?raw';
+import lucideOnlyPrompt from '../../api/lucide-only-prompt.md?raw';
+import bothIconsPrompt from '../../api/both-icons-prompt.md?raw';
 
 function ImageToWidget({ onWidgetGenerated }) {
   const [image, setImage] = useState(null);

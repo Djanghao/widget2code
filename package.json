@@ -5,15 +5,17 @@
   "type": "module",
   "workspaces": [
     "packages/*",
-    "playground"
+    "tools/*",
+    "apps/playground"
   ],
   "scripts": {
-    "dev": "npm run dev --workspace=playground",
-    "dev:full": "npm run dev:full --workspace=playground",
-    "api": "npm run api --workspace=playground",
+    "dev": "npm run dev --workspace=apps/playground",
+    "dev:full": "npm run dev:full --workspace=apps/playground",
+    "api": "cd apps/api && ./.venv/bin/python server.py",
     "build": "npm run build --workspaces --if-present",
     "prepare:dynamic": "node packages/icons/sf-symbols/scripts/prepare-dynamic-icons.js",
-    "build:icons": "node packages/icons/sf-symbols/scripts/generate-icons.js"
+    "build:icons": "node packages/icons/sf-symbols/scripts/generate-icons.js",
+    "render": "npm run render --workspace=apps/playground"
   },
   "devDependencies": {
     "vite": "^5.0.0"

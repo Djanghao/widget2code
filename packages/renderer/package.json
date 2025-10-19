@@ -1,0 +1,22 @@
+{
+  "name": "@widget-factory/renderer",
+  "version": "0.3.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "description": "Runtime JSX renderer and widget validation utilities",
+  "keywords": [
+    "widget",
+    "renderer",
+    "babel",
+    "jsx"
+  ],
+  "dependencies": {
+    "@babel/standalone": "^7.28.4"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0"
+  }
+}

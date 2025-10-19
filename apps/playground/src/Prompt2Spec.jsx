@@ -6,9 +6,9 @@ import CodeViewer from './components/core/CodeViewer.jsx';
 import PreviewPanel from './components/core/PreviewPanel.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import SectionHeader from './components/core/SectionHeader.jsx';
-import sfOnlyPrompt from '../api/prompt2spec-sf-only.md?raw';
-import lucideOnlyPrompt from '../api/prompt2spec-lucide-only.md?raw';
-import bothIconsPrompt from '../api/prompt2spec-both.md?raw';
+import sfOnlyPrompt from '../../api/prompt2spec-sf-only.md?raw';
+import lucideOnlyPrompt from '../../api/prompt2spec-lucide-only.md?raw';
+import bothIconsPrompt from '../../api/prompt2spec-both.md?raw';
 
 function Prompt2Spec() {
   const [promptType, setPromptType] = useState('both');

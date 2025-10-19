@@ -1,23 +1,4 @@
-/**
- * @file widgetExport.js
- * @description Utilities for widget validation and export.
- * Provides reusable functions for both interactive UI and headless batch rendering.
- * @author Houston Zhang
- * @date 2025-10-17
- */
-
 import html2canvas from 'html2canvas';
-
-function generateUniqueCode() {
-  return Math.random().toString(36).substring(2, 9);
-}
-
-export function generateFilename(presetCode, metadata) {
-  const { width, height, aspectRatio } = metadata;
-  const arFormatted = aspectRatio.toFixed(4).replace('.', '-');
-  const uniqueCode = generateUniqueCode();
-  return `${presetCode}_${width}x${height}_ar${arFormatted}_${uniqueCode}.png`;
-}
 
 export async function captureWidgetAsPNG(widgetElement, options = {}) {
   const { scale = 2, backgroundColor = null } = options;
@@ -59,4 +40,15 @@ export async function exportWidget(widgetElement, presetCode, metadata, options 
 
   await downloadBlob(blob, filename);
   return { filename, metadata };
+}
+
+function generateUniqueCode() {
+  return Math.random().toString(36).substring(2, 9);
+}
+
+export function generateFilename(presetCode, metadata) {
+  const { width, height, aspectRatio } = metadata;
+  const arFormatted = aspectRatio.toFixed(4).replace('.', '-');
+  const uniqueCode = generateUniqueCode();
+  return `${presetCode}_${width}x${height}_ar${arFormatted}_${uniqueCode}.png`;
 }

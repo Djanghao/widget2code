@@ -1,7 +1,7 @@
 import React from 'react';
 import WidgetRenderer from '../../components/WidgetRenderer.jsx';
 import DownloadButton from '../../DownloadButton.jsx';
-import { parseCurrentSpecObject } from '../../utils/specUtils.js';
+import { parseCurrentSpecObject } from '@widget-factory/spec';
 import usePlaygroundStore from '../../store/index.js';
 
 export default function PreviewPanel({

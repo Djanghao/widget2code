@@ -1,12 +1,3 @@
-/**
- * @file specUtils.js
- * @description Utility functions for widget spec manipulation.
- * Provides helpers for parsing aspect ratios, applying sizes to specs,
- * formatting specs with root last, and restoring natural sizes.
- * @author Houston Zhang
- * @date 2025-10-15
- */
-
 export const formatSpecWithRootLast = (spec) => {
   if (!spec || typeof spec !== 'object') return spec;
   const w = spec.widget;
@@ -39,20 +30,18 @@ export const parseCurrentSpecObject = (editedSpec, currentExampleSpec) => {
   }
 };
 
-export const applySizeToSpec = (editedSpec, currentExampleSpec, width, height, setEditedSpec) => {
-  const obj = parseCurrentSpecObject(editedSpec, currentExampleSpec);
-  if (!obj || !obj.widget) return;
-  const next = { ...obj, widget: { ...obj.widget } };
+export const applySizeToSpec = (spec, width, height) => {
+  if (!spec || !spec.widget) return spec;
+  const next = { ...spec, widget: { ...spec.widget } };
   next.widget.width = Math.max(1, Math.round(width));
   next.widget.height = Math.max(1, Math.round(height));
-  setEditedSpec(JSON.stringify(formatSpecWithRootLast(next), null, 2));
+  return formatSpecWithRootLast(next);
 };
 
-export const restoreSizeInSpec = (editedSpec, currentExampleSpec, setEditedSpec) => {
-  const obj = parseCurrentSpecObject(editedSpec, currentExampleSpec);
-  if (!obj || !obj.widget) return;
-  const next = { ...obj, widget: { ...obj.widget } };
+export const removeSizeFromSpec = (spec) => {
+  if (!spec || !spec.widget) return spec;
+  const next = { ...spec, widget: { ...spec.widget } };
   delete next.widget.width;
   delete next.widget.height;
-  setEditedSpec(JSON.stringify(formatSpecWithRootLast(next), null, 2));
+  return formatSpecWithRootLast(next);
 };
