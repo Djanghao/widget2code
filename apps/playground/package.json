@@ -12,8 +12,11 @@
   "dependencies": {
     "@babel/standalone": "^7.28.4",
     "@widget-factory/compiler": "*",
+    "@widget-factory/exporter": "*",
     "@widget-factory/icons": "*",
     "@widget-factory/primitives": "*",
+    "@widget-factory/renderer": "*",
+    "@widget-factory/spec": "*",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.263.1",
     "mermaid": "^11.12.0",

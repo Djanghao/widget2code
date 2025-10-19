@@ -9,8 +9,8 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { examples } from './constants/examples.js';
-import { parseAspectRatio } from './utils/specUtils.js';
-import { exportWidget } from './utils/widgetExport.js';
+import { parseAspectRatio } from '@widget-factory/spec';
+import { exportWidget } from '@widget-factory/exporter';
 import AppHeader from './components/Header/AppHeader.jsx';
 import MaterialsModal from './components/MaterialsModal/index.jsx';
 import useWidgetFrame from './hooks/useWidgetFrame.js';

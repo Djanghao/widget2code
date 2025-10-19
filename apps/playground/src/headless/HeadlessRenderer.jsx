@@ -9,7 +9,7 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import usePlaygroundStore from '../store/index.js';
-import { captureWidgetAsPNG } from '../utils/widgetExport.js';
+import { captureWidgetAsPNG } from '@widget-factory/exporter';
 import WidgetRenderer from '../components/WidgetRenderer.jsx';
 
 function HeadlessRenderer() {
