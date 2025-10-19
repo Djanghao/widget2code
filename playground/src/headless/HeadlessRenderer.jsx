@@ -10,7 +10,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import usePlaygroundStore from '../store/index.js';
 import { captureWidgetAsPNG } from '../utils/widgetExport.js';
-import DirectWidgetRenderer from '../components/DirectWidgetRenderer.jsx';
+import WidgetRenderer from '../components/WidgetRenderer.jsx';
 
 function HeadlessRenderer() {
   const widgetFrameRef = useRef(null);
@@ -172,7 +172,7 @@ function HeadlessRenderer() {
         }}
       >
         {generatedJSX && (
-          <DirectWidgetRenderer
+          <WidgetRenderer
             jsxCode={generatedJSX}
           />
         )}

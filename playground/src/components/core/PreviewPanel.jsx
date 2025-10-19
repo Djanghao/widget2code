@@ -1,8 +1,9 @@
 import React from 'react';
-import WidgetPreviewFrame from '../../WidgetPreviewFrame.jsx';
+import WidgetRenderer from '../WidgetRenderer.jsx';
 
 export default function PreviewPanel({
   previewSpec,
+  generatedCode,
   widgetFrameRef,
   ratioInput,
   setRatioInput,
@@ -123,9 +124,9 @@ export default function PreviewPanel({
         overflow: 'auto',
         position: 'relative'
       }}>
-        {previewSpec ? (
+        {previewSpec && generatedCode ? (
           <div ref={widgetFrameRef} style={{ display: 'inline-block', position: 'relative' }}>
-            <WidgetPreviewFrame resetKey={previewSpec ? JSON.stringify(previewSpec) : ''} />
+            <WidgetRenderer jsxCode={generatedCode} />
             {autoSizing && (
               <div style={{
                 position: 'absolute',

@@ -53,7 +53,6 @@ function Prompt2Spec() {
       try {
         const jsx = compileWidgetSpecToJSX(data.widgetSpec);
         setGeneratedCode(jsx);
-        await fetch('/__write_widget_preview', { method: 'POST', body: jsx, headers: { 'Content-Type': 'text/plain' } });
       } catch (e) {
         setGeneratedCode(`// Compilation Error: ${e.message}`);
       }
@@ -176,6 +175,7 @@ function Prompt2Spec() {
         <div style={{ gridArea: 'preview', minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
           <PreviewPanel
             previewSpec={previewSpec}
+            generatedCode={generatedCode}
             widgetFrameRef={widgetFrameRef}
             ratioInput={ratioInput}
             setRatioInput={setRatioInput}

@@ -1,5 +1,5 @@
 import React from 'react';
-import DirectWidgetRenderer from '../../components/DirectWidgetRenderer.jsx';
+import WidgetRenderer from '../../components/WidgetRenderer.jsx';
 import DownloadButton from '../../DownloadButton.jsx';
 import { parseCurrentSpecObject } from '../../utils/specUtils.js';
 import usePlaygroundStore from '../../store/index.js';
@@ -263,7 +263,7 @@ export default function PreviewPanel({
           }}
           style={{ position: 'relative', display: 'inline-block' }}
         >
-          <DirectWidgetRenderer jsxCode={generatedJSX} />
+          <WidgetRenderer jsxCode={generatedJSX} />
           {isLoading && (
             <div
               style={{

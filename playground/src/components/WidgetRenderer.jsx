@@ -1,9 +1,9 @@
 /**
- * @file DirectWidgetRenderer.jsx
- * @description Direct widget renderer using Babel standalone.
+ * @file WidgetRenderer.jsx
+ * @description Widget renderer using Babel standalone for runtime JSX compilation.
  * Transforms and executes JSX code without file system or lazy imports.
  * @author Houston Zhang
- * @date 2025-10-18
+ * @date 2025-10-19
  */
 
 import React, { useEffect, useState, useRef } from 'react';
@@ -17,7 +17,7 @@ if (typeof window !== 'undefined') {
   window.LucideReact = LucideReact;
 }
 
-function DirectWidgetRenderer({ jsxCode, onMount, onError }) {
+function WidgetRenderer({ jsxCode, onMount, onError }) {
   const [WidgetComponent, setWidgetComponent] = useState(null);
   const [error, setError] = useState(null);
   const mountedRef = useRef(false);
@@ -119,4 +119,4 @@ function DirectWidgetRenderer({ jsxCode, onMount, onError }) {
   return <WidgetComponent />;
 }
 
-export default DirectWidgetRenderer;
+export default WidgetRenderer;
