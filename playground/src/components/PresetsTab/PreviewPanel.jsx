@@ -1,5 +1,5 @@
 import React from 'react';
-import WidgetFrame from '../../WidgetFrame.jsx';
+import DirectWidgetRenderer from '../../components/DirectWidgetRenderer.jsx';
 import DownloadButton from '../../DownloadButton.jsx';
 import { parseCurrentSpecObject } from '../../utils/specUtils.js';
 import usePlaygroundStore from '../../store/index.js';
@@ -21,8 +21,7 @@ export default function PreviewPanel({
   widgetFrameRef,
   setFrameEl,
   selectedExample,
-  presetResetKey,
-  widgetFileName,
+  generatedJSX,
   frameSize
 }) {
   const { setFinalSize, writebackSpecSize, removeSpecSize, compileToken, widgetSpec } = usePlaygroundStore();
@@ -264,7 +263,7 @@ export default function PreviewPanel({
           }}
           style={{ position: 'relative', display: 'inline-block' }}
         >
-          <WidgetFrame resetKey={`${selectedExample}-${presetResetKey}`} widgetFileName={widgetFileName} />
+          <DirectWidgetRenderer jsxCode={generatedJSX} />
           {isLoading && (
             <div
               style={{

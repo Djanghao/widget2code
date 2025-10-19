@@ -27,8 +27,7 @@ export default function PresetsTab({
   previewContainerRef,
   widgetFrameRef,
   setFrameEl,
-  presetResetKey,
-  widgetFileName,
+  generatedJSX,
   frameSize,
   treeRoot,
   selectedPath,
@@ -196,8 +195,7 @@ export default function PresetsTab({
         widgetFrameRef={widgetFrameRef}
         setFrameEl={setFrameEl}
         selectedExample={selectedExample}
-        presetResetKey={presetResetKey}
-        widgetFileName={widgetFileName}
+        generatedJSX={generatedJSX}
         frameSize={frameSize}
       />
 

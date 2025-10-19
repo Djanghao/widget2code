@@ -26,7 +26,6 @@ function App() {
     widgetSpec,
     generatedJSX,
     treeRoot,
-    currentWidgetFileName,
     ratioInput,
     setRatioInput,
     enableAutoResize,
@@ -52,7 +51,6 @@ function App() {
   const treeContainerRef = useRef(null);
   const specTextareaRef = useRef(null);
   const compileTimerRef = useRef(null);
-  const [presetResetKey, setPresetResetKey] = useState(0);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
 
@@ -98,7 +96,6 @@ function App() {
 
     widgetFrameRef.current = null;
     setFrameEl(null);
-    setPresetResetKey(prev => prev + 1);
 
     switchPreset(key, widgetFrameRef);
   };
@@ -212,8 +209,7 @@ function App() {
           previewContainerRef={previewContainerRef}
           widgetFrameRef={widgetFrameRef}
           setFrameEl={setFrameEl}
-          presetResetKey={presetResetKey}
-          widgetFileName={currentWidgetFileName}
+          generatedJSX={generatedJSX}
           frameSize={frameSize}
           treeRoot={treeRoot}
           selectedPath={selectedPath}
