@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTimelapse() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1719 33.8555">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1719 33.8555">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M12.4922 0.46875C12.0352 0.5625 11.8125 0.960938 11.9297 1.45312L12.4336 3.39844C12.5508 3.82031 12.9609 4.03125 13.4531 3.90234C13.9336 3.76172 14.1094 3.38672 13.9805 2.94141L13.4531 1.07812C13.3242 0.585938 12.9258 0.386719 12.4922 0.46875Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

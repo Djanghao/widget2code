@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconListStar() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7839 24.4483">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7839 24.4483">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9.87826 22.3433L29.3783 22.3433C29.9759 22.3433 30.4329 21.898 30.4329 21.312C30.4329 20.7261 29.9759 20.2691 29.3783 20.2691L9.87826 20.2691C9.29232 20.2691 8.83529 20.7261 8.83529 21.312C8.83529 21.898 9.29232 22.3433 9.87826 22.3433Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))" fill-opacity="0.55"/>

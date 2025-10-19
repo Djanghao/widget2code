@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChevronUp2() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.9453 27.9727">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.9453 27.9727">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0.351562 25.9453C0.140625 26.1797 0 26.4609 0 26.7891C0 27.4453 0.503906 27.9492 1.17188 27.9492C1.48828 27.9492 1.78125 27.832 1.99219 27.6211L13.5234 15.6445L12.082 15.6445L23.5898 27.6211C23.8125 27.832 24.1172 27.9492 24.4219 27.9492C25.0898 27.9492 25.5938 27.4453 25.5938 26.7891C25.5938 26.4609 25.4648 26.1797 25.2422 25.957L13.6875 13.9219C13.4531 13.6641 13.1367 13.5117 12.7969 13.5117C12.457 13.5117 12.1641 13.6641 11.9062 13.9102Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

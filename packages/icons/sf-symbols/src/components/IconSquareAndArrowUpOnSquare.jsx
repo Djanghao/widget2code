@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareAndArrowUpOnSquare() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.2773 45.9023">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.2773 45.9023">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M33.9258 24.8906L33.9258 36.4453C33.9258 40.4648 31.6992 42.7031 27.6914 42.7031L13.6641 42.7031C9.65625 42.7031 7.41797 40.4648 7.41797 36.4453L7.41797 35.9297L9.50391 35.9297L9.50391 36.4453C9.50391 39.1172 11.0039 40.6172 13.6641 40.6172L27.6914 40.6172C30.3516 40.6172 31.8516 39.1172 31.8516 36.4453L31.8516 24.8906C31.8516 22.2305 30.3516 20.7305 27.6914 20.7305L26.5078 20.7305L26.5078 18.6445L27.6914 18.6445C31.6992 18.6445 33.9258 20.8711 33.9258 24.8906Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

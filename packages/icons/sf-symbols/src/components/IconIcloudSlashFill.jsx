@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconIcloudSlashFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.793 35.2148">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.793 35.2148">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M24.4612 29.3643L8.84766 29.3555C3.79688 29.3555 0 25.7578 0 21.3867C0 17.7422 2.14453 14.8008 5.50781 14.332C5.52057 13.1899 5.82866 12.1502 6.35154 11.2714ZM32.707 15.0938C35.6836 16.2656 37.4414 18.9844 37.4414 22.0898C37.4414 25.4654 35.0292 28.2643 31.6414 29.1L10.8125 8.2903C11.6082 8.17987 12.4344 8.24631 13.2422 8.50781C14.9766 5.82422 17.8477 3.59766 21.9609 3.59766C28.0312 3.59766 32.7891 8.4375 32.707 15.0938Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

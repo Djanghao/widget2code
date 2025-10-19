@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMinusPlusBatteryblockStackArrowtriangleRightAndArrowtriangleLeft() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.6993 32.9414">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 70.6993 32.9414">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M56.8829 16.1836L56.8829 30.6328C56.8829 31.9453 56.0625 32.6953 54.6563 32.6953L24.6211 32.6953C23.4106 32.6953 22.6806 32.0728 22.6337 30.9844L54.293 30.9844C54.8438 30.9844 55.1602 30.6914 55.1602 30.1172L55.1602 14.3668C56.2464 14.455 56.8829 15.1172 56.8829 16.1836Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

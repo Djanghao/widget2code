@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHandDrawFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.2208 31.589">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.2208 31.589">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M8.87406 5.28863L9.34989 6.59246C5.00345 9.57915 3.25273 13.8541 3.16703 18.5894C3.15531 19.0582 2.82718 19.4332 2.35843 19.4332C1.86625 19.4332 1.51468 19.023 1.51468 18.5543C1.51468 13.1355 3.78267 8.10855 8.76368 4.93353Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

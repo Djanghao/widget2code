@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPrinterFilledAndPaper() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6523 32.6133">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6523 32.6133">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M29.6263 4.06641L7.81596 4.06641C7.92737 1.50661 9.39721 0.363281 11.8594 0.363281L25.582 0.363281C28.1566 0.363281 29.5232 1.50661 29.6263 4.06641Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

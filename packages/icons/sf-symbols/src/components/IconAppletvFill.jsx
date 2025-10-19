@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAppletvFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.1641 29.7539">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.1641 29.7539">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M7.88672 29.7539L21.9258 29.7539C24.6094 29.7539 26.6484 29.4727 28.0898 28.0195C29.543 26.5664 29.8125 24.5625 29.8125 21.8672L29.8125 7.92188C29.8125 5.22656 29.543 3.21094 28.0898 1.76953C26.6367 0.316406 24.6094 0.0351562 21.9258 0.0351562L7.80469 0.0351562C5.21484 0.0351562 3.17578 0.328125 1.72266 1.78125C0.269531 3.23438 0 5.25 0 7.83984L0 21.8672C0 24.5625 0.257812 26.5781 1.71094 28.0195C3.17578 29.4727 5.20312 29.7539 7.88672 29.7539Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

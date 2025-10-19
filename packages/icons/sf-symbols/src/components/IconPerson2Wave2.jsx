@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPerson2Wave2() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 52.875 35.4911">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 52.875 35.4911">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M49.7695 0.466261C51.7148 3.05611 52.875 6.77095 52.875 10.5327C52.875 14.2827 51.7031 17.9741 49.7695 20.5991C49.418 21.0913 48.832 21.1967 48.3516 20.8686C47.8711 20.5522 47.8008 19.9428 48.1758 19.4155C49.875 17.0131 50.8711 13.8491 50.8711 10.5327C50.8711 7.21626 49.8984 4.04048 48.1758 1.64986C47.7891 1.11079 47.8711 0.513136 48.3516 0.185011C48.832-0.143114 49.418-0.0259261 49.7695 0.466261Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

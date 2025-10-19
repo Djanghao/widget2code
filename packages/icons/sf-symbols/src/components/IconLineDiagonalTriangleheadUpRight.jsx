@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLineDiagonalTriangleheadUpRight() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.9619 23.9922">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 23.9619 23.9922">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M12.3618 3.98632L19.604 11.2519C20.1079 11.7559 20.7642 11.4746 20.9634 10.748L23.5767 1.06835C23.7525 0.400382 23.1782-0.1504 22.5337 0.0371004L12.854 2.65038C12.1392 2.83788 11.8579 3.48241 12.3618 3.98632ZM1.76808 23.2871L20.3657 4.7246C20.7759 4.31444 20.7642 3.65819 20.3657 3.25976C19.9673 2.8496 19.3111 2.8496 18.9009 3.25976L0.303239 21.8223C-0.106918 22.2207-0.0951989 22.8887 0.303239 23.2871C0.701676 23.6855 1.35793 23.6855 1.76808 23.2871Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

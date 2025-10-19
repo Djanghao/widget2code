@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLightbulbLedWideFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.6562 33.9492">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.6562 33.9492">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M8.60156 29.707L15.7031 29.707C16.1602 29.707 16.5234 29.3555 16.5234 28.8984C16.5234 28.4414 16.1602 28.0781 15.7031 28.0781L8.60156 28.0781C8.14453 28.0781 7.79297 28.4414 7.79297 28.8984C7.79297 29.3555 8.14453 29.707 8.60156 29.707ZM12.1523 33.8555C14.1797 33.8555 15.5742 32.8125 15.8438 31.1836L8.46094 31.1836C8.70703 32.8125 10.1016 33.8555 12.1523 33.8555Z" fill="white" fill-opacity="0.55"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAppleClassicalPagesFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.832 37.1762">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.832 37.1762">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M28.6172 8.34007L28.6172 31.1565C28.6172 34.1916 27.0938 35.7268 24.0938 35.7268L13.0789 35.7268C15.9244 35.407 18.8565 34.9046 22.0195 34.0979C24.9141 33.3362 26.3789 31.4963 26.3789 28.2033L26.3789 5.51585C26.3789 5.02924 26.3391 4.57066 26.2604 4.14369C27.8272 4.75269 28.6172 6.15442 28.6172 8.34007Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

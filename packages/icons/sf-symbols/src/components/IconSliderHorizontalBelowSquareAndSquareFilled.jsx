@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSliderHorizontalBelowSquareAndSquareFilled() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.4648 33.0117">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.4648 33.0117">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M13.7227 20.3203C16.0898 20.3203 17.4023 19.0312 17.4023 16.7109L17.4023 6.70312C17.4023 4.37109 16.0898 3.08203 13.7227 3.08203L3.66797 3.08203C1.3125 3.08203 0 4.37109 0 6.70312L0 16.7109C0 19.0312 1.3125 20.3203 3.66797 20.3203ZM13.6992 18.293L3.69141 18.293C2.55469 18.293 2.03906 17.7656 2.03906 16.6172L2.03906 6.78516C2.03906 5.64844 2.55469 5.10938 3.69141 5.10938L13.6992 5.10938C14.8359 5.10938 15.3633 5.64844 15.3633 6.78516L15.3633 16.6172C15.3633 17.7656 14.8359 18.293 13.6992 18.293Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

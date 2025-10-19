@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAirpodsProLeft() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.4766 29.1692">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.4766 29.1692">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M10.9453 17.2186L10.9453 26.4147C10.9453 27.2584 10.3945 27.7155 9.50391 27.7155L8.32031 27.7155C7.44141 27.7155 6.89062 27.2584 6.89062 26.4147L6.89063 16.3968C7.95335 16.7961 9.22377 17.0864 10.9453 17.2186Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

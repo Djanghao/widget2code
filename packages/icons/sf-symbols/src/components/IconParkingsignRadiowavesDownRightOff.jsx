@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconParkingsignRadiowavesDownRightOff() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.9297 31.4414">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.9297 31.4414">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M10.8281 19.2539C13.2305 19.1836 15.5859 18.1758 17.3906 16.3711C19.1719 14.5781 20.1797 12.2461 20.2383 9.83203C20.2734 9.29297 19.8984 8.91797 19.4414 8.95312C18.9492 8.97656 18.7031 9.36328 18.6797 9.86719C18.5859 11.8711 17.7773 13.7344 16.2656 15.2578C14.7539 16.7695 12.8789 17.5664 10.875 17.6602C10.3711 17.6836 9.9375 17.9531 9.9375 18.457C9.9375 18.9492 10.2891 19.2773 10.8281 19.2539Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

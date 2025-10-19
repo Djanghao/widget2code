@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPersonBadgeShieldCheckmarkFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.0039 41.7079">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.0039 41.7079">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M26.8102 24.5762C25.2015 25.1944 24.5391 26.5045 24.5391 28.0317L24.5391 33.4809C24.5391 33.7906 24.5533 34.0845 24.5877 34.3598L10.1133 34.3598C8.57812 34.3598 7.64062 33.6215 7.64062 32.4262C7.64062 28.5356 12.5039 23.1684 20.3203 23.1684C22.803 23.1684 24.9877 23.7098 26.8102 24.5762ZM26.3438 13.8051C26.3438 17.5551 23.6016 20.4613 20.332 20.4613C17.0742 20.4613 14.332 17.5551 14.332 13.8285C14.332 10.184 17.0977 7.33635 20.332 7.33635C23.5781 7.33635 26.3438 10.1371 26.3438 13.8051Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

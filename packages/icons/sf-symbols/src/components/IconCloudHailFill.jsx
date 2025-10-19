@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCloudHailFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5547 35.543">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5547 35.543">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M25.875 28.957L27 26.9883C27.2461 26.5781 27.1289 26.1094 26.7305 25.875C26.332 25.6523 25.875 25.793 25.6289 26.1914L24.4922 28.1836C24.2812 28.5703 24.375 29.0391 24.7852 29.2734C25.1719 29.4961 25.6523 29.3555 25.875 28.957ZM23.4023 33.2812C24.2461 33.2812 24.9609 32.5664 24.9609 31.6992C24.9609 30.8555 24.2578 30.1406 23.4023 30.1406C22.5352 30.1406 21.832 30.8555 21.832 31.6992C21.832 32.5664 22.5352 33.2812 23.4023 33.2812Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

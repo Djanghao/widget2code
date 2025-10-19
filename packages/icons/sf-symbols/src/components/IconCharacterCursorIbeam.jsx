@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCharacterCursorIbeam() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.293 31.3242">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.293 31.3242">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M20.1914 31.125L29.0391 31.125C29.6367 31.125 29.9414 30.832 29.9414 30.3516C29.9414 29.8477 29.6367 29.5898 29.0391 29.5898L25.5 29.5898L25.5 1.52344L29.0391 1.52344C29.6367 1.52344 29.9414 1.25391 29.9414 0.75C29.9414 0.269531 29.6367 0 29.0391 0L20.1914 0C19.5938 0 19.2891 0.269531 19.2891 0.75C19.2891 1.25391 19.5938 1.52344 20.1914 1.52344L23.7305 1.52344L23.7305 29.5898L20.1914 29.5898C19.5938 29.5898 19.2891 29.8477 19.2891 30.3516C19.2891 30.832 19.5938 31.125 20.1914 31.125Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconApplepencilSqueeze() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.1552 23.9876">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 25.1552 23.9876">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0.436963 23.3786C0.226026 23.7653 0.647901 24.1169 0.976026 23.9411L3.16743 22.7575L1.65571 21.2458ZM2.30024 20.0973L4.33931 22.1364L5.17134 21.6794L23.9331 3.01138C24.601 2.34342 24.601 1.26529 23.9331 0.609041C23.2651-0.0589282 22.1752-0.0589282 21.5307 0.597322L2.76899 19.277Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

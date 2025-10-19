@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconListBulletBadgeEllipsis() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.5938 32.8477">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.5938 32.8477">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M28.2576 26.543L16.4062 26.543C15.8203 26.543 15.375 26.0859 15.375 25.5C15.375 24.9141 15.8203 24.4688 16.4062 24.4688L27.7698 24.4687C27.8474 25.1899 28.0116 25.8855 28.2576 26.543Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

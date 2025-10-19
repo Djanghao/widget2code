@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconListTriangle() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 22.7921">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 22.7921">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9.22266 21.5152L29.0859 21.5152C29.6719 21.5152 30.1406 21.0699 30.1406 20.4839C30.1406 19.898 29.6719 19.441 29.0859 19.441L9.22266 19.441C8.63672 19.441 8.17969 19.898 8.17969 20.4839C8.17969 21.0699 8.63672 21.5152 9.22266 21.5152Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))" fill-opacity="0.55"/>

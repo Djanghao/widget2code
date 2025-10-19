@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLine3Horizontal() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7266 15.5273">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.7266 15.5273">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0.984375 15.5273L29.3789 15.5273C29.9297 15.5273 30.375 15.0938 30.375 14.5312C30.375 13.9922 29.9297 13.5586 29.3789 13.5586L0.984375 13.5586C0.433594 13.5586 0 13.9922 0 14.5312C0 15.0938 0.433594 15.5273 0.984375 15.5273Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

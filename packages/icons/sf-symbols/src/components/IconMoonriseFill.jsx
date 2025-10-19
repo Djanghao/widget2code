@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMoonriseFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.8438 35.2148">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.8438 35.2148">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.9922 10.125C16.5 11.3203 16.1836 12.8438 16.1836 14.3438C16.1836 21.832 20.4492 26.0859 27.9258 26.0859C29.4727 26.0859 31.0195 25.7461 31.9102 25.4297C32.6484 25.1953 33.1055 25.7109 32.7422 26.4609C32.2585 27.5197 31.6182 28.5161 30.8448 29.4141L11.323 29.4141C9.36856 27.1648 8.19141 24.2259 8.19141 21.0117C8.19141 15.375 11.8242 10.9336 15.9961 9.17578C16.7578 8.82422 17.3086 9.30469 16.9922 10.125Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

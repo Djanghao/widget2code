@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAirplaneDeparture() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.7053 26.6602">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.7053 26.6602">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M2.63586 26.6602L35.132 26.6602C35.6945 26.6602 36.1749 26.1914 36.1749 25.6289C36.1749 25.0547 35.6945 24.5859 35.132 24.5859L2.63586 24.5859C2.07336 24.5859 1.5929 25.0547 1.5929 25.6289C1.5929 26.1914 2.07336 26.6602 2.63586 26.6602Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

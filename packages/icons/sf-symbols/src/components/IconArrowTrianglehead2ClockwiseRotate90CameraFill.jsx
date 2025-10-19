@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowTrianglehead2ClockwiseRotate90CameraFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.0898 29.4492">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.0898 29.4492">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.55859 28.5117L32.1797 28.5117C35.2031 28.5117 36.7383 26.9883 36.7383 24L36.7383 8.13281C36.7383 5.15625 35.2031 3.62109 32.1797 3.62109L27.7852 3.62109C26.5781 3.62109 26.2383 3.43359 25.5234 2.63672L24.2812 1.24219C23.5078 0.398438 22.7812 0 21.2578 0L15.3047 0C13.7812 0 13.0547 0.398438 12.2812 1.24219L11.0391 2.63672C10.3477 3.41016 9.97266 3.62109 8.77734 3.62109L4.55859 3.62109C1.53516 3.62109 0 5.15625 0 8.13281L0 24C0 26.9883 1.53516 28.5117 4.55859 28.5117Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

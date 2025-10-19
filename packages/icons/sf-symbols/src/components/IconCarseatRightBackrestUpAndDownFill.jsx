@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCarseatRightBackrestUpAndDownFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.3256 31.5586">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.3256 31.5586">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M41.7409 25.2891C42.9011 20.9414 39.7488 19.0664 31.9675 19.0664C28.0417 19.0664 24.0339 19.4414 20.8933 20.0977L21.3738 20.7422C22.1706 14.0273 20.0495 8.33203 15.6433 6.02344L16.0066 7.59375C17.5534 2.8125 14.612 0 11.8816 0C9.81907 0 8.04954 1.58203 8.90501 5.08594L14.5886 28.1484C15.1159 30.3398 16.5925 31.5469 18.7488 31.5469L36.0222 31.5469C39.0222 31.5469 40.4636 30.082 41.7409 25.2891Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

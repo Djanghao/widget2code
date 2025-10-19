@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPlusminus() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.668 25.0664">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 18.668 25.0664">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0 23.918C0 24.5391 0.527344 25.0664 1.14844 25.0664L17.168 25.0664C17.7891 25.0664 18.3164 24.5391 18.3164 23.918C18.3164 23.2852 17.7891 22.7695 17.168 22.7695L1.14844 22.7695C0.527344 22.7695 0 23.2852 0 23.918Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

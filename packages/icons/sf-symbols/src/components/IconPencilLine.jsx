@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPencilLine() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.4168 27.7168">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.4168 27.7168">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30.1713 24.8213C30.1713 25.3955 29.7026 25.8642 29.1401 25.8642L6.99239 25.8642L9.07645 23.79L29.1401 23.79C29.7026 23.79 30.1713 24.2588 30.1713 24.8213Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

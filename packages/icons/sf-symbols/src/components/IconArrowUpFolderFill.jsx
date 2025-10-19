@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowUpFolderFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.3945 27.5273">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.3945 27.5273">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.55859 27.3633L29.8359 27.3633C32.5195 27.3633 34.043 25.8281 34.043 22.8516L34.043 7.30078C34.043 4.3125 32.5078 2.78906 29.4844 2.78906L14.8945 2.78906C13.793 2.78906 13.1953 2.55469 12.4102 1.875L11.5195 1.125C10.5234 0.257812 9.80859 0 8.29688 0L3.99609 0C1.42969 0 0 1.41797 0 4.28906L0 22.8516C0 25.8398 1.53516 27.3633 4.55859 27.3633Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

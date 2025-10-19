@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTextAppend() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 25.8398">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 25.8398">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30.1406 24.7852C30.1406 25.3711 29.6719 25.8164 29.0859 25.8164L18.7617 25.8164C18.1758 25.8164 17.7305 25.3711 17.7305 24.7852C17.7305 24.1875 18.1758 23.7422 18.7617 23.7422L29.0859 23.7422C29.6719 23.7422 30.1406 24.1875 30.1406 24.7852Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

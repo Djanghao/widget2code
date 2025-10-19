@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconEraserSlashFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.3799 33.3311">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.3799 33.3311">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.7349 28.1675L16.1528 29.7495C14.1489 31.7534 11.688 31.6831 9.5669 29.5855L3.96534 23.9722C1.85596 21.8628 1.78565 19.3901 3.78956 17.3862L5.38331 15.8159ZM22.1235 23.7788L19.0591 26.8433L6.70753 14.4917L9.77044 11.4257ZM22.7505 2.84327L30.6958 10.8003C31.9966 12.0894 32.02 13.894 30.7427 15.1597L25.8459 20.0564L13.4936 7.69878L18.3794 2.80811C19.6567 1.53077 21.4614 1.54249 22.7505 2.84327Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

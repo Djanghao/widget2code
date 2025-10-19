@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconDistributeHorizontalLeftFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.1445 34.3711">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.1445 34.3711">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M7.61719 31.3711L13.1484 31.3711C15.1289 31.3711 16.2422 30.2461 16.2422 28.2305L16.2422 6.14062C16.2422 4.125 15.1289 3 13.1484 3L7.61719 3C5.63672 3 4.52344 4.125 4.52344 6.14062L4.52344 28.2305C4.52344 30.2461 5.63672 31.3711 7.61719 31.3711ZM29.1797 26.1328L34.6992 26.1328C36.6797 26.1328 37.793 25.0078 37.793 22.9805L37.793 11.3789C37.793 9.36328 36.6797 8.23828 34.6992 8.23828L29.1797 8.23828C27.1875 8.23828 26.0742 9.36328 26.0742 11.3789L26.0742 22.9805C26.0742 25.0078 27.1875 26.1328 29.1797 26.1328Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquare3Layers3dDownRight() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.8242 34.0713">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.8242 34.0713">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.9336 1.98291L16.9336 5.6446L14.8242 6.86443L14.8242 2.67432C14.8242 2.46338 14.6602 2.36963 14.4844 2.4751L2.71875 9.27197C2.27344 9.5415 2.09766 9.75244 2.09766 10.3384L2.09766 23.9087C2.09766 24.0962 2.21484 24.1782 2.40234 24.0728L6.07031 21.957L6.07031 24.4453L3.26953 26.0649C1.39453 27.1431 0 26.4282 0 24.1665L0 10.2681C0 8.87354 0.445312 8.11182 1.66406 7.39697L13.8633 0.354005C15.2578-0.44287 16.9336 0.107911 16.9336 1.98291Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

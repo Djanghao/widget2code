@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowUpLeftAndDownRightAndArrowUpRightAndDownLeft() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2266 28.9805">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.2266 28.9805">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M14.4199 16.0894L6.35197 24.1528L8.83594 26.6367C9.67969 27.4805 9.28125 28.875 7.99219 28.875L1.47656 28.875C0.621094 28.875 0 28.3125 0 27.4219L0 20.8945C0 19.6055 1.39453 19.1953 2.23828 20.0391L4.73982 22.5406L12.8027 14.4731ZM28.875 1.46484L28.875 7.99219C28.875 9.28125 27.4922 9.67969 26.6484 8.83594L24.1615 6.35338L16.0398 14.4704L14.4231 12.8518L22.5378 4.73256L20.0508 2.25C19.207 1.40625 19.6055 0 20.8945 0L27.3984 0C28.2539 0 28.875 0.5625 28.875 1.46484Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

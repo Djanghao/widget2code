@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWaveformSlash() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.1826 32.5283">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.1826 32.5283">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30.9273 12.3325L30.9273 20.1958C30.9273 20.77 30.4702 21.2388 29.8843 21.2388C29.2866 21.2388 28.853 20.77 28.853 20.1958L28.853 12.3325C28.853 11.7583 29.2866 11.2778 29.8843 11.2778C30.4702 11.2778 30.9273 11.7583 30.9273 12.3325Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

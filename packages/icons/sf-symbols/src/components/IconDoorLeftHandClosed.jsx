@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconDoorLeftHandClosed() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.6523 31.7461">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.6523 31.7461">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.04297 31.7227C1.61719 31.7227 2.08594 31.2539 2.08594 30.6797L2.08594 2.88281C2.08594 2.40234 2.39062 2.08594 2.84766 2.08594L19.4531 2.08594C19.9102 2.08594 20.2148 2.40234 20.2148 2.88281L20.2148 30.6797C20.2148 31.2539 20.6719 31.7227 21.2578 31.7227C21.832 31.7227 22.3008 31.2539 22.3008 30.6797L22.3008 2.74219C22.3008 1.10156 21.1758 0 19.4883 0L2.8125 0C1.125 0 0 1.10156 0 2.74219L0 30.6797C0 31.2539 0.457031 31.7227 1.04297 31.7227Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

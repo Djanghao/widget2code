@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAppBadgeCheckmarkFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.043 37.1133">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 46.043 37.1133">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M34.4883 6.91406C35.8711 8.29688 36.5977 10.3477 36.5977 12.9961L36.5977 18.2227C31.418 18.2227 27.1406 22.4883 27.1406 27.668C27.1406 29.3493 27.5861 30.9303 28.3694 32.2969L17.2734 32.2969C14.625 32.2969 12.5625 31.5586 11.2031 30.1992C9.80859 28.8164 9.09375 26.7656 9.09375 24.1172L9.09375 12.9961C9.09375 10.3477 9.82031 8.28516 11.2031 6.91406C12.5508 5.56641 14.625 4.81641 17.2734 4.81641L28.4062 4.81641C31.0664 4.81641 33.1172 5.54297 34.4883 6.91406Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

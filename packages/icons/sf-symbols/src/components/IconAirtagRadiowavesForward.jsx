@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAirtagRadiowavesForward() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.75 26.0039">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.75 26.0039">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M33.832 23.1562C34.2422 23.6367 34.9688 23.625 35.4609 23.0859C37.957 20.4258 39.3984 16.8633 39.3984 12.9961C39.3984 9.11719 37.957 5.56641 35.4609 2.89453C34.9688 2.35547 34.2422 2.35547 33.832 2.83594C33.4219 3.29297 33.5508 3.90234 34.0195 4.41797C36.1055 6.69141 37.2891 9.67969 37.2891 12.9961C37.2891 16.3008 36.1055 19.2891 34.0195 21.5625C33.5508 22.0781 33.4219 22.6875 33.832 23.1562Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSlowmo() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1719 33.8555">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1719 33.8555">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M8.46094 2.28516C7.98047 2.55469 7.85156 3.12891 8.10938 3.58594L10.875 8.35547C11.1445 8.8125 11.6836 8.97656 12.1406 8.69531C12.5977 8.42578 12.75 7.875 12.4805 7.41797L9.72656 2.64844C9.45703 2.20312 8.91797 2.03906 8.46094 2.28516Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

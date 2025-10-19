@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSpeakerTrianglebadgeExclamationmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.6953 26.332">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.6953 26.332">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M23.7188 20.7656L36.3984 20.7656C37.582 20.7656 38.3438 19.8984 38.3438 18.8086C38.3438 18.4922 38.2617 18.1758 38.0859 17.8594L31.7344 6.53906C31.3594 5.89453 30.7148 5.55469 30.0703 5.55469C29.4141 5.55469 28.7461 5.89453 28.3828 6.53906L22.043 17.8594C21.8672 18.1758 21.7852 18.4922 21.7852 18.8086C21.7852 19.8984 22.5352 20.7656 23.7188 20.7656Z" fill="#ffd600"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCloudRainbowCropFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1953 30.9258">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.1953 30.9258">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M33.8438 15.0352C30.8635 15.0352 28.3191 16.903 27.3064 19.5308C26.9246 19.0556 26.4719 18.635 25.9593 18.2795C27.3491 15.3275 30.3354 13.3125 33.8438 13.3125Z" fill="#db34f2"/>

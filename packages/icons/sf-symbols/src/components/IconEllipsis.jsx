@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconEllipsis() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.7148 5.49609">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.7148 5.49609">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M24.6211 5.47266C26.1328 5.47266 27.3633 4.25391 27.3633 2.74219C27.3633 1.21875 26.1328 0 24.6211 0C23.1094 0 21.8789 1.21875 21.8789 2.74219C21.8789 4.25391 23.1094 5.47266 24.6211 5.47266Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

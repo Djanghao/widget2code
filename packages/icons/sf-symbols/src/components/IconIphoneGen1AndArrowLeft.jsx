@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconIphoneGen1AndArrowLeft() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.668 31.4883">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.668 31.4883">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M15.5391 27.6094C15.5391 29.9766 17.0859 31.4766 19.5352 31.4766L30.3281 31.4766C32.7773 31.4766 34.3242 29.9766 34.3242 27.6094L34.3242 3.86719C34.3242 1.5 32.7773 0 30.3281 0L19.5352 0C17.0859 0 15.5391 1.5 15.5391 3.86719ZM17.6133 26.5547L17.6133 4.92188L32.25 4.92188L32.25 26.5547ZM24.9492 30.0352C24.2578 30.0352 23.6953 29.4609 23.6953 28.7695C23.6953 28.0781 24.2578 27.5273 24.9492 27.5273C25.6406 27.5273 26.1914 28.0781 26.1914 28.7695C26.1914 29.4609 25.6406 30.0352 24.9492 30.0352Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWaveformBadgeMinus() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.5625 33.9023">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.5625 33.9023">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M36.1055 13.0195L36.1055 15.0123C35.3928 15.0126 34.6976 15.0942 34.0313 15.2553L34.0312 13.0195C34.0312 12.4453 34.4766 11.9648 35.0742 11.9648C35.6602 11.9648 36.1055 12.4453 36.1055 13.0195Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChevronDownForward2() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.957 28.793">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.957 28.793">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M10.6875 26.4023C9.99609 26.4023 9.50391 26.9414 9.50391 27.5859C9.50391 28.2773 9.99609 28.7695 10.6875 28.7695L27.3047 28.7695C28.043 28.7695 28.6055 28.2188 28.6055 27.4805L28.6055 10.793C28.6055 10.1016 28.0781 9.60938 27.4336 9.60938C26.7422 9.60938 26.25 10.1016 26.25 10.793L26.25 27.4922L27.3281 26.4023Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

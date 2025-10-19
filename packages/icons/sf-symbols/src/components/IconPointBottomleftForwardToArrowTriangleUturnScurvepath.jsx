@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPointBottomleftForwardToArrowTriangleUturnScurvepath() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.7891 38.128">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.7891 38.128">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9.30702 29.9097L8.88281 29.9097C8.30859 29.9097 7.83984 30.3784 7.83984 30.9409C7.83984 31.5152 8.30859 31.9839 8.88281 31.9839L9.29903 31.9839C8.82319 34.0786 6.94773 35.6402 4.69922 35.6402C2.10938 35.6402 0 33.5308 0 30.9292C0 28.3394 2.10938 26.23 4.69922 26.23C6.95896 26.23 8.84191 27.8073 9.30702 29.9097ZM2.03906 30.9292C2.03906 32.4292 3.21094 33.6128 4.69922 33.6128C6.21094 33.6128 7.38281 32.4292 7.38281 30.9292C7.38281 29.4292 6.22266 28.2574 4.69922 28.2574C3.21094 28.2574 2.03906 29.4292 2.03906 30.9292Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

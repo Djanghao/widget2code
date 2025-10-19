@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAlignVerticalCenter() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.7227 28.4414">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.7227 28.4414">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M3.92578 15.1992L0.902344 15.1992C0.398438 15.1992 0 14.7539 0 14.2383C0 13.7344 0.398438 13.2891 0.902344 13.2891L3.92578 13.2891ZM34.3711 14.2383C34.3711 14.7539 33.9727 15.1992 33.4688 15.1992L30.4805 15.1992L30.4805 13.2891L33.4688 13.2891C33.9727 13.2891 34.3711 13.7344 34.3711 14.2383ZM18.7617 15.1992L15.6445 15.1992L15.6445 13.2891L18.7617 13.2891Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

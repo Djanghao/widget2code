@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCableConnector() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.0898 33.9961">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 10.0898 33.9961">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M3.76172 33.9961L5.98828 33.9961L5.98828 19.6523L3.76172 19.6523ZM1.76953 21.9258L7.96875 21.9258C9.21094 21.9258 9.73828 21.4102 9.73828 20.168L9.73828 8.4375C9.73828 7.19531 9.21094 6.66797 7.96875 6.66797L1.76953 6.66797C0.527344 6.66797 0 7.19531 0 8.4375L0 20.168C0 21.4102 0.527344 21.9258 1.76953 21.9258Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

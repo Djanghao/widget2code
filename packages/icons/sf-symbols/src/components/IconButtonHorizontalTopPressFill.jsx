@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconButtonHorizontalTopPressFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.9844 35.543">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.9844 35.543">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30.0938 33.6562L9.53906 33.6562C5.48078 33.6562 2.37714 31.2493 1.97117 27.3884C3.67755 29.451 6.37985 30.6562 9.53906 30.6562L30.0938 30.6562C33.2619 30.6562 35.9706 29.4441 37.6758 27.3706C37.2756 31.2417 34.1584 33.6562 30.0938 33.6562Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

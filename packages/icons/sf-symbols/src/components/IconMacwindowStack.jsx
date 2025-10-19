@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMacwindowStack() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.0547 37.9102">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.0547 37.9102">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M27.5596 3.98672C27.267 3.95244 26.9621 3.9375 26.6484 3.9375L10.0547 3.9375C9.7444 3.9375 9.44256 3.9522 9.15264 3.98586C9.65535 3.01604 10.6497 2.49609 12.0703 2.49609L24.6328 2.49609C26.0539 2.49609 27.0536 3.01635 27.5596 3.98672Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

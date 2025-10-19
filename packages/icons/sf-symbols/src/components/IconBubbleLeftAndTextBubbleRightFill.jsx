@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconBubbleLeftAndTextBubbleRightFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.6094 37.5352">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.6094 37.5352">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M34.4948 7.74609L23.2266 7.74609C18.1758 7.74609 15.2578 10.7461 15.2578 15.7031L15.2578 24.375C15.2578 25.9088 15.5372 27.253 16.0742 28.3769L12.2695 31.7344C11.5078 32.4023 11.0625 32.7422 10.418 32.7422C9.52734 32.7422 9 32.1094 9 31.1016L9 27.0703L8.12109 27.0703C3.87891 27.0703 1.51172 24.668 1.51172 20.4727L1.51172 8.51953C1.51172 4.32422 3.87891 1.91016 8.12109 1.91016L27.9141 1.91016C31.8985 1.91016 34.2174 4.03834 34.4948 7.74609Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

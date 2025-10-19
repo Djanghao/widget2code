@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMoonDustFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.6602 36.3164">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.6602 36.3164">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M14.7656 3.50391C14.3203 4.59375 14.0273 5.97656 14.0273 7.32422C14.0273 14.0859 17.8711 17.9414 24.6445 17.9414C26.0391 17.9414 27.4453 17.6133 28.2422 17.332C28.8984 17.1211 29.332 17.5781 28.9805 18.2578C28.5836 19.1353 28.0678 19.9649 27.4449 20.7188L9.45094 20.7188C7.79974 18.7117 6.80859 16.1407 6.80859 13.3359C6.80859 8.25 10.1016 4.24219 13.8633 2.64844C14.543 2.34375 15.0586 2.76562 14.7656 3.50391Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

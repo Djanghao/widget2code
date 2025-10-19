@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSharedwithyou() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.9023 28.207">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.9023 28.207">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M7.25391 16.8984L7.25391 19.9805C7.25391 21.3633 6.55078 22.0781 5.13281 22.0781L2.12109 22.0781C0.714844 22.0781 0 21.375 0 19.9805L0 16.8984C0 15.5156 0.714844 14.8125 2.12109 14.8125L5.13281 14.8125C6.55078 14.8125 7.25391 15.5156 7.25391 16.8984Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTengesignGaugeChartLeftthirdTopthirdRightthird() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.375 30.0352">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.375 30.0352">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M36.0234 18.0117C36.0234 13.5938 34.4297 9.55078 31.7812 6.41016C31.4766 6.04688 30.9609 6.05859 30.6211 6.39844L27.2344 9.78516C26.9414 10.0781 26.9297 10.4883 27.1875 10.8164C28.7461 12.8086 29.6719 15.293 29.6719 18.0117C29.6719 20.7305 28.7461 23.2266 27.1172 25.2891C26.8945 25.5703 26.9062 25.9219 27.1523 26.168L30.6211 29.6484C30.9609 30 31.4648 29.9883 31.7812 29.625C34.4297 26.4844 36.0234 22.418 36.0234 18.0117Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

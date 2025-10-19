@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPlaySlashFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.959 28.919">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.959 28.919">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.4956 21.2148L8.32324 26.606C7.91309 26.8403 7.47949 26.9692 7.06934 26.9692C6.12012 26.9692 5.31152 26.3247 5.31152 24.9419L5.31152 9.03716ZM8.32324 2.28956L25.9482 12.6489C27.0381 13.2817 27.4365 13.7271 27.4365 14.4536C27.4365 15.1685 27.0381 15.6138 25.9482 16.2466L22.1885 18.4564L5.99816 2.2832C6.29676 2.04963 6.67064 1.93799 7.06934 1.93799C7.47949 1.93799 7.91309 2.05518 8.32324 2.28956Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

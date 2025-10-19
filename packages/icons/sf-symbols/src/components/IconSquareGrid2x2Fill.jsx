@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareGrid2x2Fill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.9023 27.5742">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.9023 27.5742">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.7539 27.5742L24.8555 27.5742C26.6367 27.5742 27.5508 26.707 27.5508 24.8438L27.5508 17.8242C27.5508 15.9609 26.6367 15.082 24.8555 15.082L17.7539 15.082C15.9609 15.082 15.0586 15.9609 15.0586 17.8242L15.0586 24.8438C15.0586 26.707 15.9609 27.5742 17.7539 27.5742Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

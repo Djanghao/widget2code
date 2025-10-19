@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconXmarkTriangleCircleSquareFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.1836 27.4805">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.1836 27.4805">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.9531 27.2695L25.0547 27.2695C26.8477 27.2695 27.75 26.3906 27.75 24.5273L27.75 17.5195C27.75 15.6562 26.8477 14.7773 25.0547 14.7773L17.9531 14.7773C16.1719 14.7773 15.2578 15.6562 15.2578 17.5195L15.2578 24.5273C15.2578 26.3906 16.1719 27.2695 17.9531 27.2695Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

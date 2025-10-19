@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHazardsign() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.8984 28.8867">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.8984 28.8867">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M5.77734 24.4453L25.7578 24.4453C26.3906 24.4453 26.7539 23.8359 26.4258 23.2617L16.4531 5.75391C16.1133 5.17969 15.4102 5.17969 15.0938 5.75391L5.10938 23.2617C4.76953 23.8477 5.14453 24.4453 5.77734 24.4453ZM8.16797 22.4883C7.99219 22.4883 7.89844 22.3242 7.99219 22.1719L15.5977 8.82422C15.6797 8.67188 15.8672 8.67188 15.9492 8.82422L23.543 22.1719C23.6367 22.3242 23.543 22.4883 23.3672 22.4883Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

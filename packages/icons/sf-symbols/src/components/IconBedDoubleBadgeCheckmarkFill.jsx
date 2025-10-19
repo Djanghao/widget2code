@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconBedDoubleBadgeCheckmarkFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56.3789 30.4102">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 56.3789 30.4102">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M37.4883 20.9648C37.4883 22.0879 37.6874 23.1671 38.0622 24.1641L13.2305 24.1641C12.9141 24.1641 12.5039 24.1406 12.3398 24.0938L12.3398 26.4023C12.3398 27.1523 11.8828 27.6211 11.1445 27.6211L10.3008 27.6211C9.55078 27.6211 9.09375 27.1523 9.09375 26.4023L9.09375 17.1797C9.09375 14.543 10.582 13.0547 13.2188 13.0547L41.8124 13.0547C39.2166 14.7412 37.4883 17.6678 37.4883 20.9648Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

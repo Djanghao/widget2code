@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCarRearRoadLaneWaveUp() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.1538 36.3867">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.1538 36.3867">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M39.8874 29.3672L41.7507 29.3672C42.7585 29.3672 43.0163 28.5938 42.6531 27.9141L32.4226 7.62891C32.2117 7.24219 31.9304 7.04297 31.4968 7.04297L30.6179 7.04297C30.1726 7.04297 29.9617 7.39453 30.1492 7.82812L38.4812 28.4062C38.7038 28.9922 39.1023 29.3672 39.8874 29.3672Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

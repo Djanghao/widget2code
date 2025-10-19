@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPencilSlash() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.1065 25.5243">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.1065 25.5243">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M13.0824 15.0297L4.76221 23.3383L1.43409 24.7212C1.10596 24.8618 0.754401 24.4868 0.895026 24.1587L2.35987 20.9243L10.6742 12.6215ZM21.6607 6.46334L16.809 11.3083L14.4 8.90083L19.2583 4.04928ZM24.0278 1.28365L24.4497 1.70553C25.106 2.35006 25.0708 3.11178 24.3325 3.83834L22.9146 5.24459L20.4771 2.81881L21.9067 1.41256C22.6216 0.709436 23.395 0.650842 24.0278 1.28365Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

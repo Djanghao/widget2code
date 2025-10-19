@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconShareplay() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.7891 26.1445">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.7891 26.1445">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M44.4375 23.9062C44.4375 24.4922 43.957 24.9492 43.3828 24.9492C42.8086 24.9492 42.3516 24.4922 42.3516 23.9062C42.3516 11.8945 33.3047 2.09766 22.207 2.09766C11.1094 2.09766 2.07422 11.8945 2.07422 23.9062C2.07422 24.4922 1.61719 24.9492 1.04297 24.9492C0.46875 24.9492 0 24.4922 0 23.9062C0 10.7578 9.97266 0 22.207 0C34.4531 0 44.4375 10.7578 44.4375 23.9062Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

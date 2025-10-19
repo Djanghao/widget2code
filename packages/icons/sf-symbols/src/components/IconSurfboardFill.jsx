@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSurfboardFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.9679 38.3902">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.9679 38.3902">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M12.4898 12.9197C6.95857 18.4627 2.69295 24.3572 0.712478 29.5017C-0.389084 32.3845-0.213303 34.5642 1.23982 36.3103L34.4273 3.12283C30.1734-0.392795 22.4625 2.94705 12.4898 12.9197ZM35.2594 3.96658L2.07185 37.1541C3.81795 38.5955 6.00935 38.783 8.88045 37.6814C14.025 35.701 19.9312 31.4353 25.4625 25.9041C35.4469 15.9197 38.7867 8.22049 35.2594 3.96658Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

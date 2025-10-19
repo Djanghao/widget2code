@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCapsuleOnCapsule() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.1875 30.3164">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.1875 30.3164">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30.8171 7.30845C30.0381 7.07049 29.2051 6.90948 28.3243 6.82969C26.7273 3.8396 23.5588 2.07422 19.418 2.07422L12.1523 2.07422C6.04688 2.07422 2.07422 5.88281 2.07422 11.7773C2.07422 15.9788 4.07654 19.1053 7.42999 20.5565C7.53738 21.422 7.73465 22.2337 8.01509 22.9871C3.06761 21.5664 0 17.4778 0 11.7773C0 4.64062 4.83984 0 12.1523 0L19.418 0C25.0501 0 29.2176 2.76172 30.8171 7.30845Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

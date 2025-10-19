@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCloudFog() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5547 34.207">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5547 34.207">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M28.4766 31.4883L8.57812 31.4883C8.10938 31.4883 7.74609 31.8398 7.74609 32.3086C7.74609 32.7891 8.10938 33.1406 8.57812 33.1406L28.4766 33.1406C28.9453 33.1406 29.3203 32.7891 29.3203 32.3086C29.3203 31.8398 28.9453 31.4883 28.4766 31.4883Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

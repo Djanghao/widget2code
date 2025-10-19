@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconEnvironmentsSlashFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 52.9801 42.6007">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 52.9801 42.6007">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M23.2733 1.8648C23.8475 5.69683 24.2108 6.21246 28.1131 6.7398C28.4178 6.78668 28.6522 6.9859 28.6522 7.29058C28.6522 7.57183 28.4412 7.80621 28.1248 7.85308C24.7403 8.29894 24.0896 8.72728 23.5362 11.3448L18.7255 6.51402C21.2957 6.01017 21.5521 5.1789 22.1483 1.8648C22.2068 1.57183 22.4295 1.37261 22.7108 1.37261C22.992 1.37261 23.2264 1.58355 23.2733 1.8648Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

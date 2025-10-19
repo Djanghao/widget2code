@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCharacterTextJustify() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 32.918">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.4922 32.918">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.04297 29.3555L29.0859 29.3555C29.6719 29.3555 30.1406 28.9102 30.1406 28.3242C30.1406 27.7266 29.6719 27.2812 29.0859 27.2812L1.04297 27.2812C0.445312 27.2812 0 27.7266 0 28.3242C0 28.9102 0.445312 29.3555 1.04297 29.3555Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

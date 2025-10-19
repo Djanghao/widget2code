@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCarFrontWavesUpFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.4727 39.457">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.4727 39.457">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M14.4609 2.10938C17.7773 2.10938 20.7656 3.29297 23.0273 5.37891C23.5547 5.84766 24.1641 5.97656 24.6211 5.56641C25.1016 5.15625 25.1016 4.42969 24.5625 3.9375C21.9023 1.44141 18.3398 0 14.4609 0C10.5938 0 7.03125 1.44141 4.35938 3.9375C3.82031 4.42969 3.82031 5.15625 4.30078 5.56641C4.76953 5.97656 5.37891 5.84766 5.89453 5.37891C8.16797 3.29297 11.1562 2.10938 14.4609 2.10938Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

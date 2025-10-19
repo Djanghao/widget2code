@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChartBarYaxis() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.4844 29.0977">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.4844 29.0977">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.03125 29.0859C1.61719 29.0859 2.0625 28.6055 2.0625 28.043L2.0625 1.03125C2.0625 0.46875 1.61719 0 1.03125 0C0.445312 0 0 0.46875 0 1.03125L0 28.043C0 28.6055 0.445312 29.0859 1.03125 29.0859Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

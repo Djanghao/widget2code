@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCapsuleOnCapsuleFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.2227 34.0195">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.2227 34.0195">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M31.2994 6.99904C30.3188 6.81802 29.2849 6.72656 28.207 6.72656L20.9414 6.72656C12.6211 6.72656 6.92578 12.1758 6.92578 20.3672C6.92578 21.6417 7.06298 22.8497 7.34124 23.9719C3.69079 22.0928 1.51172 18.4333 1.51172 13.6289C1.51172 6.49219 6.35156 1.85156 13.6641 1.85156L20.9297 1.85156C25.6023 1.85156 29.2717 3.75248 31.2994 6.99904Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

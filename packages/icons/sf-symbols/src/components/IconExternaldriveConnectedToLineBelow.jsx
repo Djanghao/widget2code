@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconExternaldriveConnectedToLineBelow() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.5469 32.8242">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.5469 32.8242">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.4297 26.0949C17.4059 26.42 18.1893 27.1908 18.5271 28.1602L27.7266 28.1602C28.2891 28.1602 28.7578 28.6406 28.7578 29.2031C28.7578 29.7656 28.2891 30.2461 27.7266 30.2461L18.5536 30.2461C18.1204 31.5816 16.8528 32.5664 15.3867 32.5664C13.9206 32.5664 12.6531 31.5816 12.2198 30.2461L3.04688 30.2461C2.48438 30.2461 2.01562 29.7656 2.01562 29.2031C2.01562 28.6406 2.48438 28.1602 3.04688 28.1602L12.2464 28.1602C12.5855 27.1868 13.3739 26.4138 14.3555 26.0906L14.3555 22.5117L16.4297 22.5117Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRays() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.0117 32.6836">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.0117 32.6836">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M9.69141 9.69141C10.125 9.26953 10.125 8.51953 9.69141 8.09766L6.38672 4.79297C5.95312 4.35938 5.21484 4.35938 4.78125 4.79297C4.35938 5.22656 4.35938 5.95312 4.78125 6.38672L8.08594 9.69141C8.51953 10.125 9.25781 10.125 9.69141 9.69141Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

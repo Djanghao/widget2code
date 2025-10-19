@@ -6,7 +6,9 @@
     "dev": "vite",
     "build": "vite build",
     "api": "cd api && ./.venv/bin/python server.py",
-    "dev:full": "concurrently \"npm run dev\" \"npm run api\""
+    "dev:full": "concurrently \"npm run dev\" \"npm run api\"",
+    "render": "node scripts/render-widget.js",
+    "batch-render": "node scripts/batch-render.js"
   },
   "dependencies": {
     "@babel/standalone": "^7.28.4",
@@ -24,6 +26,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
     "concurrently": "^8.2.2",
+    "playwright": "^1.40.0",
     "vite": "^5.0.0"
   }
 }

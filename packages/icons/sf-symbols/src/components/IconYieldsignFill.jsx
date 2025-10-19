@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconYieldsignFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.8984 28.8867">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.8984 28.8867">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M3.91406 0C1.47656 0 0 1.71094 0 3.89062C0 4.58203 0.1875 5.29688 0.585938 5.98828L12.4336 26.707C13.1719 27.9961 14.4609 28.6406 15.7734 28.6406C17.0742 28.6406 18.375 27.9961 19.1133 26.707L30.9609 5.98828C31.3477 5.30859 31.5469 4.58203 31.5469 3.89062C31.5469 1.71094 30.0703 0 27.6211 0Z" fill="#ff4245"/>

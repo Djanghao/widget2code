@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRectanglePortraitBadgePlusFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.4141 41.8242">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.4141 41.8242">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M34.6055 9.32812L34.6055 32.5078C34.6055 35.5312 33.0938 37.0664 30.0938 37.0664L17.6087 37.0664C18.4249 35.6828 18.8906 34.0779 18.8906 32.3789C18.8906 27.1875 14.6367 22.9219 9.44531 22.9219L9.44531 9.32812C9.44531 6.30469 10.957 4.76953 13.957 4.76953L30.0938 4.76953C33.0938 4.76953 34.6055 6.30469 34.6055 9.32812Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

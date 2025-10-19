@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconVisionProSlashFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.6094 35.2705">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 42.6094 35.2705">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M27.277 27.5428C24.7656 26.1309 22.9358 24.2388 21.1289 24.2388C18.2461 24.2388 15.3047 29.0552 9.63281 29.0552C4.13672 29.0552 0 24.063 0 17.4888C0 11.7682 2.67669 8.75416 6.95925 7.20116ZM42.2578 17.4888C42.2578 22.7728 39.5854 27.0348 35.68 28.4981L13.0931 5.88466C15.5664 5.61838 18.2812 5.54737 21.1289 5.54737C32.8125 5.54737 42.2578 6.73096 42.2578 17.4888Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

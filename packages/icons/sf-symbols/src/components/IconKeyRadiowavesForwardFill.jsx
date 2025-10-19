@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconKeyRadiowavesForwardFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.5781 38.7566">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.5781 38.7566">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M27.7031 20.8724C28.1836 21.2006 28.7695 21.0834 29.1211 20.5912C31.0547 17.9779 32.2266 14.2865 32.2266 10.5248C32.2266 6.77479 31.0664 3.05995 29.1211 0.458385C28.7695-0.0338026 28.1836-0.139271 27.7031 0.188854C27.2227 0.50526 27.1523 1.11463 27.5273 1.64198C29.25 4.0326 30.2227 7.20838 30.2227 10.5248C30.2227 13.8412 29.2266 17.0053 27.5273 19.4076C27.1641 19.9467 27.2227 20.5443 27.7031 20.8724Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

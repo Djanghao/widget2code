@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconKeyboardOnehandedRight() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.0977 23.6602">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.0977 23.6602">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.55859 23.625L33.1875 23.625C36.2109 23.625 37.7461 22.0898 37.7461 19.1016L37.7461 4.52344C37.7461 1.53516 36.2109 0 33.1875 0L4.55859 0C1.52344 0 0 1.52344 0 4.52344L0 19.1016C0 22.1016 1.52344 23.625 4.55859 23.625ZM4.60547 21.5508C2.96484 21.5508 2.07422 20.6719 2.07422 18.9961L2.07422 4.62891C2.07422 2.95312 2.96484 2.08594 4.60547 2.08594L33.1406 2.08594C34.7461 2.08594 35.6719 2.95312 35.6719 4.62891L35.6719 18.9961C35.6719 20.6719 34.7461 21.5508 33.1406 21.5508Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

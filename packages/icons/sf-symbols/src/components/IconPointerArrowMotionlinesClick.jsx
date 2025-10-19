@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPointerArrowMotionlinesClick() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.4922 35.3195">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.4922 35.3195">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M28.4883 10.1187C29.3086 11.5367 27.4688 12.6148 26.6484 11.1851C24.3984 7.22421 20.1328 4.57577 15.2461 4.57577C8.00391 4.57577 2.19141 10.4 2.19141 17.6539C2.19141 22.6226 4.96875 26.9469 8.91797 29.0914C10.3945 29.9469 9.30469 31.7633 7.94531 30.9898C3.32812 28.5055 0 23.4195 0 17.6539C0 9.29843 6.90234 2.38436 15.2461 2.38436C20.8828 2.38436 25.8516 5.51327 28.4883 10.1187Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

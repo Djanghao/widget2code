@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconFigureSeatedSeatbeltLeftDriveSeats1Fill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.9874 29.7773">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.9874 29.7773">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M22.0113 13.1133L22.0113 16.7344C22.0113 17.7773 22.773 18.5508 23.816 18.5508L26.6753 18.5508C27.7066 18.5508 28.48 17.7773 28.48 16.7344L28.48 13.1133C28.48 12.0703 27.7066 11.2969 26.6753 11.2969L23.816 11.2969C22.773 11.2969 22.0113 12.0703 22.0113 13.1133ZM22.2222 9.05859L28.2574 9.05859C28.6675 9.05859 28.7613 8.61328 28.4332 8.39062L25.6793 6.51562C25.3863 6.31641 25.0933 6.31641 24.8003 6.51562L22.0464 8.39062C21.7183 8.61328 21.8121 9.05859 22.2222 9.05859Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

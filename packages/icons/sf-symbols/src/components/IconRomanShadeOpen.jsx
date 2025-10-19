@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRomanShadeOpen() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.7695 30.7852">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.7695 30.7852">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.83984 8.37891L29.4258 8.37891C30.0352 8.37891 30.457 7.95703 30.457 7.37109L30.457 4.80469C30.457 4.21875 30.0352 3.80859 29.4258 3.80859L4.83984 3.80859C4.24219 3.80859 3.80859 4.21875 3.80859 4.80469L3.80859 7.37109C3.80859 7.95703 4.24219 8.37891 4.83984 8.37891ZM6.23438 14.5781L28.0312 14.5781C28.6289 14.5781 29.0625 14.1562 29.0625 13.5703L29.0625 10.2422L5.20312 10.2422L5.20312 13.5703C5.20312 14.1562 5.63672 14.5781 6.23438 14.5781Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

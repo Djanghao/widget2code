@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTesttube2() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.9414 30.9961">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.9414 30.9961">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M26.25 25.4883C26.25 27.5273 24.8906 28.8867 22.8516 28.8867C20.8008 28.8867 19.4297 27.5273 19.4297 25.4883L19.4297 24.1406L26.25 24.1406Z" fill="#0091ff"/>

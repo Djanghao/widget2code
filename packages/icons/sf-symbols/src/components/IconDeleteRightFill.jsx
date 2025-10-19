@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconDeleteRightFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.7188 27.5742">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.7188 27.5742">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.98047 27.5742L17.9766 27.5625C19.7109 27.5625 21.1406 26.9883 22.3359 25.7461L31.3594 16.5469C32.3203 15.5742 32.7188 14.6953 32.7188 13.7695C32.7188 12.8438 32.3086 11.9766 31.3594 11.0039L22.3477 1.69922C21.1523 0.445312 19.7227 0.0351562 17.9883 0.0351562L4.98047 0.0351562C1.95703 0.0351562 0.410156 1.54688 0.410156 4.54688L0.410156 23.0625C0.410156 26.0625 1.95703 27.5742 4.98047 27.5742Z" fill="#ff4245"/>

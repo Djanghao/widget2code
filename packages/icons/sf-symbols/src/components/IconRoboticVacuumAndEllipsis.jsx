@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconRoboticVacuumAndEllipsis() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.9375 30.3867">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.9375 30.3867">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M26.6484 30.3867C27.9961 30.3867 29.1094 29.2969 29.1094 27.9141C29.1094 26.5664 27.9961 25.4531 26.6484 25.4531C25.2773 25.4531 24.1875 26.5664 24.1875 27.9141C24.1875 29.2969 25.2773 30.3867 26.6484 30.3867Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

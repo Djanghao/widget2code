@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCloudMoonFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.2383 27.9258">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.2383 27.9258">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M31.3477 1.74609C31.3477 2.46094 30.3398 3.90234 30.3398 5.87109C30.3398 9.48047 32.5664 11.6016 36.4102 11.6016C38.4375 11.6016 39.6445 10.7109 40.3008 10.7109C40.7461 10.7109 40.9922 11.0859 40.9922 11.6016C40.9922 13.7457 38.5406 17.9212 33.4741 18.5348C33.2952 13.9625 29.7275 10.5108 24.9727 10.0547C24.5663 9.39743 24.1133 8.79319 23.6183 8.24604C24.2863 4.24728 27.5438 1.23092 30.457 1.04297C31.043 1.00781 31.3477 1.28906 31.3477 1.74609Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

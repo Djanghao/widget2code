@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPersonBadgeKeyFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.2305 38.3526">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.2305 38.3526">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M26.9811 23.1873C27.124 25.3475 28.2623 27.2195 30.0234 28.3462L30.0234 32.6821L9.72656 32.6821C8.19141 32.6821 7.25391 31.9439 7.25391 30.7485C7.25391 26.8579 12.1172 21.4907 19.9336 21.4907C22.6776 21.4907 25.0576 22.1522 26.9811 23.1873ZM25.957 12.1274C25.957 15.8774 23.2148 18.7837 19.9453 18.7837C16.6875 18.7837 13.9453 15.8774 13.9453 12.1509C13.9453 8.50636 16.7109 5.6587 19.9453 5.6587C23.1914 5.6587 25.957 8.45948 25.957 12.1274Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

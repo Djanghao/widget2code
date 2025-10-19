@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconDpadDownFilled() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.7773 32.4258">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.7773 32.4258">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M22.0078 25.5234C22.0078 24.0469 21.8203 23.4609 20.8477 22.5L17.9062 19.5586C16.8867 18.5391 15.5273 18.5391 14.5078 19.5586L11.5664 22.5C10.6055 23.4609 10.4062 24.0469 10.4062 25.5234L10.4062 29.5078C10.4062 31.3008 11.4141 32.4023 13.0547 32.4023L19.3711 32.4023C21 32.4023 22.0078 31.3008 22.0078 29.5078Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

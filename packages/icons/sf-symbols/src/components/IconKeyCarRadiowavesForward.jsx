@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconKeyCarRadiowavesForward() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.0156 32.3086">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.0156 32.3086">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30.1406 26.4844C30.6211 26.8125 31.207 26.707 31.5586 26.2148C33.4922 23.5898 34.6641 19.8984 34.6641 16.1484C34.6641 12.3867 33.5039 8.67188 31.5586 6.08203C31.207 5.58984 30.6211 5.47266 30.1406 5.80078C29.6602 6.12891 29.5898 6.72656 29.9648 7.26562C31.6875 9.65625 32.6602 12.832 32.6602 16.1484C32.6602 19.4648 31.6641 22.6289 29.9648 25.0312C29.6016 25.5586 29.6602 26.168 30.1406 26.4844Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

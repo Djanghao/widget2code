@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareStack3dDownRight() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.3828 42.5683">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.3828 42.5683">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M20.6092 5.67851L6.31641 13.9189C6.01172 14.0947 5.87109 14.3408 5.87109 14.6689L5.87109 31.1484C4.82579 31.3386 3.77344 30.8915 3.77344 29.083L3.77344 14.6923C3.77344 13.1572 3.94922 12.8642 5.26172 12.1025L17.6367 4.96577C18.6244 4.39293 20.1531 4.24461 20.6092 5.67851Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

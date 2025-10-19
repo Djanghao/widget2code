@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCircleFilledIphoneFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.1484 31.4883">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 19.1484 31.4883">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0 27.5977C0 29.9648 1.54688 31.4648 3.99609 31.4648L14.7891 31.4648C17.2383 31.4648 18.7969 29.9648 18.7969 27.5977L18.7969 3.86719C18.7969 1.5 17.2383 0 14.7891 0L3.99609 0C1.54688 0 0 1.5 0 3.86719Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

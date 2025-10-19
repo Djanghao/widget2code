@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPersonCropSquareOnSquareAngled() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.5544 33.3164">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.5544 33.3164">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M24.5877 3.77344L25.4109 8.44922L23.4244 8.44922L22.6776 4.20703C22.4432 2.87109 21.4119 2.17969 20.1112 2.40234L3.83382 5.27344C2.5096 5.50781 1.80647 6.51562 2.05257 7.85156L4.92366 24.0938C5.15804 25.4297 6.15413 26.1211 7.47835 25.8984L8.34554 25.7454L8.34554 27.7308L7.77132 27.832C5.076 28.3008 3.48225 27.1992 3.0135 24.5273L0.107254 8.08594C-0.373215 5.41406 0.763504 3.82031 3.45882 3.33984L19.8065 0.457031C22.5135-0.0117188 24.119 1.11328 24.5877 3.77344Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

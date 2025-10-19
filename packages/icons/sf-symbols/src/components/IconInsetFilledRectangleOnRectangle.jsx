@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconInsetFilledRectangleOnRectangle() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6289 30.1055">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.6289 30.1055">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30 4.51172L30 6.73828L27.9258 6.73828L27.9258 4.62891C27.9258 2.94141 27 2.07422 25.3945 2.07422L4.60547 2.07422C2.96484 2.07422 2.07422 2.94141 2.07422 4.62891L2.07422 18.7383C2.07422 20.4258 2.96484 21.293 4.60547 21.293L7.27734 21.293L7.27734 23.3672L4.55859 23.3672C1.52344 23.3672 0 21.8555 0 18.8555L0 4.51172C0 1.52344 1.52344 0 4.55859 0L25.4414 0C28.4531 0 30 1.53516 30 4.51172Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

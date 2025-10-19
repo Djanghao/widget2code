@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconBeatsSolobudsRight() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3516 24.4336">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.3516 24.4336">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M20.4609 13.793C20.4609 18.1641 17.5078 21.6094 13.3945 22.957C14.5078 23.8711 15.9492 24.4336 17.5078 24.4336C21.1758 24.4336 24 21.457 24 17.9531C24 15.4102 22.5352 13.1719 20.3203 12.1055C20.4023 12.668 20.4609 13.2305 20.4609 13.793Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

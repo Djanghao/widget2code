@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHryvniasignGaugeChartLefthalfRighthalf() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.375 29.9029">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.375 29.9029">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M36.0234 17.9456C36.0234 8.512 28.7695 0.777628 19.5586 0.00419006C19.0781-0.0426849 18.7031 0.308878 18.7031 0.801065L18.7031 5.59403C18.7031 5.99247 18.9961 6.30888 19.4062 6.34403C25.1836 7.04716 29.6719 11.969 29.6719 17.9456C29.6719 20.6643 28.7461 23.1604 27.1055 25.2229C26.8828 25.5042 26.8945 25.8558 27.1406 26.1018L30.6211 29.5823C30.9727 29.9222 31.4766 29.9222 31.7812 29.5472C34.4297 26.4065 36.0234 22.3518 36.0234 17.9456Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

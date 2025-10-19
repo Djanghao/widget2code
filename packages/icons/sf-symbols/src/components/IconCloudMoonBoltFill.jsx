@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCloudMoonBoltFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.2734 39.0361">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.2734 39.0361">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M19.0078 29.1567L17.5606 31.8872L20.4258 31.8872C20.8477 31.8872 20.9648 32.2857 20.6719 32.6021L14.8594 38.8482C14.707 39.0239 14.543 39.0708 14.4023 39.0122C14.2617 38.9536 14.2148 38.7896 14.2969 38.5786L16.2125 33.9614L13.8164 33.9614C13.4414 33.9614 13.2539 33.7388 13.418 33.3755L15.3164 29.0396C15.457 28.7349 15.5977 28.5708 16.0195 28.5708L18.7148 28.5708C19.043 28.5708 19.1836 28.8286 19.0078 29.1567Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWandAndRays() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.5312 32.3086">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.5312 32.3086">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M28.6406 30.9258C29.2617 31.5469 30.2109 31.5352 30.7852 30.9258C31.3594 30.3164 31.3945 29.4141 30.7734 28.793L16.2891 14.3086C15.6914 13.6992 14.7188 13.6992 14.1445 14.3086C13.5703 14.918 13.5469 15.832 14.1562 16.4414ZM19.5352 20.3789L14.9883 15.8086C14.8008 15.6211 14.8008 15.3281 14.9883 15.1406C15.1758 14.9531 15.4922 14.9414 15.6797 15.1406L20.2383 19.6992Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

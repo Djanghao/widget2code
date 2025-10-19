@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPillsFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5645 30.7852">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5645 30.7852">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M35.2139 22.0078C34.7686 18.1523 31.4639 15.1523 27.4678 15.1523C23.4834 15.1523 20.1788 18.1523 19.7334 22.0078ZM35.2139 23.9062L19.7334 23.9062C20.1905 27.7734 23.4717 30.7852 27.4678 30.7852C31.4874 30.7852 34.7686 27.7852 35.2139 23.9062Z" fill="#00d2e0" fill-opacity="0.5"/>

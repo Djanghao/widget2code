@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCloudDrizzle() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5547 34.8686">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.5547 34.8686">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M25.1836 34.4323L27.2461 30.8464C27.5039 30.4245 27.375 29.9675 26.9766 29.7331C26.5781 29.5105 26.1328 29.6394 25.875 30.0495L23.7891 33.6589C23.5664 34.0573 23.6719 34.5144 24.082 34.7487C24.4805 34.9714 24.9492 34.8425 25.1836 34.4323Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHeadphonesDots() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.6523 30.8789">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.6523 30.8789">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M25.8984 30.8555C27.2344 30.8555 28.3008 29.7773 28.3008 28.4414C28.3008 27.1172 27.2344 26.0391 25.8984 26.0391C24.5742 26.0391 23.4961 27.1172 23.4961 28.4414C23.4961 29.7773 24.5742 30.8555 25.8984 30.8555Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

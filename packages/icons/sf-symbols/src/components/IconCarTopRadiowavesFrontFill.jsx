@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCarTopRadiowavesFrontFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.5664 40.7227">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 20.5664 40.7227">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M10.1133 1.94531C12.8438 1.94531 15.3281 2.97656 17.2266 4.71094C17.7891 5.20312 18.3633 5.22656 18.75 4.85156C19.1719 4.42969 19.1602 3.82031 18.7031 3.33984C16.4531 1.08984 13.3594 0 10.1133 0C6.85547 0 3.77344 1.08984 1.52344 3.33984C1.05469 3.82031 1.04297 4.42969 1.47656 4.85156C1.86328 5.22656 2.4375 5.20312 2.98828 4.71094C4.89844 2.97656 7.37109 1.94531 10.1133 1.94531Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

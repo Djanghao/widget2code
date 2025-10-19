@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCheckmarkMessageFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.7461 31.0195">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.7461 31.0195">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.1914 28.5703C27.1758 28.5703 34.3945 22.5469 34.3945 14.2852C34.3945 5.98828 27.1641 0 17.1914 0C7.21875 0 0 5.98828 0 14.2852C0 20.2617 3.30469 21.8555 3.30469 24.5742C3.30469 25.7695 2.89453 26.543 1.99219 27.3516C1.40625 27.8789 1.69922 28.5703 2.56641 28.5703C4.59375 28.5703 6.72656 27.8438 8.25 26.707C10.8281 27.9258 13.875 28.5703 17.1914 28.5703Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

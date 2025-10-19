@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowshapeTurnUpBackwardBadgeClockFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.9336 36.832">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.9336 36.832">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M18.7031 32.0859C18.0234 32.0859 17.4727 31.8047 16.8398 31.207L4.93359 20.0039C4.3125 19.418 4.13672 18.8789 4.13672 18.4102C4.13672 17.918 4.30078 17.3906 4.93359 16.793L16.8398 5.67188C17.5312 5.02734 18 4.72266 18.6797 4.72266C19.6406 4.72266 20.2852 5.48438 20.2852 6.41016L20.2852 12.3281L20.7773 12.3281C26.5733 12.3281 30.7089 14.3206 33.2425 18.0348C29.4556 18.5344 26.3499 21.3227 25.3781 24.9483C24.0139 24.661 22.4855 24.5391 20.7773 24.5391L20.2852 24.5391L20.2852 30.4805C20.2852 31.4062 19.6406 32.0859 18.7031 32.0859Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

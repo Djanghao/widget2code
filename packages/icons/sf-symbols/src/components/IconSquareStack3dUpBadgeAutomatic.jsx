@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquareStack3dUpBadgeAutomatic() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.043 40.3242">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.043 40.3242">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M23.6484 34.418C23.8828 34.5469 24.1289 34.6289 24.3398 34.6289C24.5625 34.6289 24.8086 34.5469 25.043 34.418L30.1772 31.4434C30.2267 32.2166 30.3792 32.962 30.6192 33.6682L26.0508 36.3164C25.4062 36.6914 24.9023 36.8789 24.3398 36.8789C23.7891 36.8789 23.2852 36.6914 22.6406 36.3164L10.6523 29.3672C9.58594 28.7461 9.14062 28.2539 9.14062 27.4922C9.14062 27.0367 9.30487 26.6763 9.67405 26.3218Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

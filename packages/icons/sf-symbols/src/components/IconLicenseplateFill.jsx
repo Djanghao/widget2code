@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLicenseplateFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5547 24.668">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 38.5547 24.668">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.55859 24.668L33.6445 24.668C36.6797 24.668 38.2031 23.1328 38.2031 20.1445L38.2031 4.52344C38.2031 1.54688 36.6797 0.0117188 33.6445 0.0117188L4.55859 0.0117188C1.53516 0.0117188 0 1.52344 0 4.52344L0 20.1445C0 23.1445 1.53516 24.668 4.55859 24.668Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

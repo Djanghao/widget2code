@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconEllipsisRectangleFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.1914 20.543">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.1914 20.543">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0 16.4062C0 19.0781 1.5 20.5312 4.17188 20.5312L27.6797 20.5312C30.3516 20.5312 31.8398 19.0781 31.8398 16.4062L31.8398 4.11328C31.8398 1.44141 30.3516 0 27.6797 0L4.17188 0C1.5 0 0 1.44141 0 4.11328Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconConvertibleSideHillDescentControlFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.3117 36.791">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.3117 36.791">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M5.0367 36.0967C5.34139 36.6123 5.9742 36.7764 6.45467 36.4951L45.1617 14.1709C45.6304 13.9014 45.8062 13.2686 45.5367 12.7764C45.232 12.2607 44.5875 12.1084 44.1187 12.3779L5.4117 34.7021C4.94295 34.9834 4.76717 35.6162 5.0367 36.0967Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

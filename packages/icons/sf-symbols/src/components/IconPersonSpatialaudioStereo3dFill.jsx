@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPersonSpatialaudioStereo3dFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.3214 36.3352">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.3214 36.3352">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M16.899 20.3063C19.8756 20.9508 22.7584 18.7711 23.0513 15.1852C23.3795 11.5993 20.9185 8.48208 17.9654 7.86098C15.0123 7.22817 12.1412 9.30239 11.8248 12.8063C11.5201 16.3805 13.9459 19.6852 16.899 20.3063ZM7.50055 32.1891L26.5201 36.2321C28.0435 36.5719 28.981 36.0563 29.0748 34.9196C29.4029 31.2165 25.2662 25.0993 17.9068 23.529C10.5591 21.9821 5.56696 26.1188 5.25055 29.7868C5.14508 30.9469 6.00055 31.8493 7.50055 32.1891Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

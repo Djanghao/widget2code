@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAirplaneCloud() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.1194 28.3711">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 39.1194 28.3711">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M24.3819 11.7188L34.0265 11.7188C36.5343 11.7188 38.4562 9.83203 38.4562 7.42969C38.4562 4.99219 36.4757 3.17578 33.839 3.16406C32.8429 1.20703 31.0499 0 28.7999 0C25.9405 0 23.5265 2.25 23.2569 5.16797C21.7804 5.58984 20.7491 6.83203 20.7491 8.42578C20.7491 10.3477 22.1788 11.7188 24.3819 11.7188Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

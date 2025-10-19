@@ -25,7 +25,7 @@ export default function PreviewPanel({
   widgetFileName,
   frameSize
 }) {
-  const { setFinalSize, writebackSpecSize, removeSpecSize, compileToken } = usePlaygroundStore();
+  const { setFinalSize, writebackSpecSize, removeSpecSize, compileToken, widgetSpec } = usePlaygroundStore();
 
   const isLocked = operationMode !== 'idle';
   const isCompiling = operationMode === 'compiling';
@@ -144,7 +144,23 @@ export default function PreviewPanel({
           <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <span style={{ fontSize: 12, color: isLocked ? '#8e8e93' : '#d1d1d6' }}>AutoResize</span>
             <button
-              onClick={() => !isLocked && setEnableAutoResize((v) => !v)}
+              onClick={() => {
+                if (isLocked) return;
+
+                const newValue = !enableAutoResize;
+                setEnableAutoResize(newValue);
+
+                if (newValue && widgetSpec) {
+                  const hasWidth = widgetSpec.widget?.width !== undefined;
+                  const hasHeight = widgetSpec.widget?.height !== undefined;
+                  const aspectRatio = widgetSpec.widget?.aspectRatio;
+
+                  if (!hasWidth && !hasHeight && typeof aspectRatio === 'number' && isFinite(aspectRatio) && aspectRatio > 0) {
+                    console.log(`⚡ [AutoResize Toggle] Executing auto-resize with ratio: ${aspectRatio}`);
+                    handleAutoResizeByRatio(aspectRatio);
+                  }
+                }
+              }}
               aria-pressed={enableAutoResize}
               disabled={isLocked}
               title={isLocked ? 'Locked during operation' : 'Toggle AutoResize'}

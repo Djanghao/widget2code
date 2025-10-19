@@ -49,7 +49,13 @@ const createRenderingSlice = (set, get) => ({
 
   setRatioInput: (ratio) => set({ ratioInput: ratio }),
 
-  setEnableAutoResize: (enabled) => set({ enableAutoResize: enabled }),
+  setEnableAutoResize: (enabled) => {
+    if (typeof enabled === 'function') {
+      set((state) => ({ enableAutoResize: enabled(state.enableAutoResize) }));
+    } else {
+      set({ enableAutoResize: enabled });
+    }
+  },
 
   setAutoSizing: (sizing) => set({ autoSizing: sizing }),
 
@@ -742,6 +748,14 @@ const createRenderingSlice = (set, get) => ({
     });
 
     console.log(`✨ [Initialize] State reset complete`);
+
+    const isHeadless = typeof window !== 'undefined' && window.__headlessMode === true;
+
+    if (isHeadless) {
+      console.log(`🤖 [Initialize] Headless mode detected - skipping preset load`);
+      console.log(`✅ [Initialize] App initialization complete\n`);
+      return;
+    }
 
     const defaultPreset = get().selectedPreset;
     console.log(`📦 [Initialize] Loading default preset: ${defaultPreset}`);

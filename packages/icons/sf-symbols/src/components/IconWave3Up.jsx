@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWave3Up() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.6919 21.8751">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.6919 21.8751">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.6702 0.607478C11.3889 0.607478 5.50611 2.56451 0.584233 6.06842C-0.751704 7.02935 0.443608 8.84576 1.76783 7.88482C6.34986 4.58013 11.8342 2.8106 17.6702 2.8106C23.5178 2.8106 29.0022 4.58013 33.5842 7.88482C34.9319 8.8692 36.0569 6.98248 34.7678 6.06842C29.846 2.55279 23.9631 0.607478 17.6702 0.607478Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCircleGridCrossDownFilled() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.4141 35.8242">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.4141 35.8242">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.5312 35.7891C21.1406 35.7891 24.1055 32.8125 24.1055 29.2031C24.1055 25.6055 21.1406 22.6289 17.5312 22.6289C13.8984 22.6289 10.9453 25.6055 10.9453 29.2031C10.9453 32.8125 13.8984 35.7891 17.5312 35.7891Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

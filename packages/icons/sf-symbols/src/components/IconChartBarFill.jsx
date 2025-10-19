@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChartBarFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.8867 28.3945">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 37.8867 28.3945">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30 28.207L34.5352 28.207C36.5156 28.207 37.5352 27.2461 37.5352 25.3242L37.5352 2.88281C37.5352 0.960938 36.5156 0 34.5352 0L30 0C28.0312 0 27.0117 0.960938 27.0117 2.88281L27.0117 25.3242C27.0117 27.2461 28.0312 28.207 30 28.207Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

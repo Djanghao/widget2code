@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLJoystickPressDown() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.4883 37.9805">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.4883 37.9805">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.0742 28.9219C19.1576 28.9219 21.1 28.7236 22.8633 28.3402L22.8633 29.0156C22.8633 31.8281 20.707 33.4805 17.0742 33.4805C13.4297 33.4805 11.2734 31.8281 11.2734 29.0156L11.2734 28.3389C13.0397 28.7231 14.9861 28.9219 17.0742 28.9219Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

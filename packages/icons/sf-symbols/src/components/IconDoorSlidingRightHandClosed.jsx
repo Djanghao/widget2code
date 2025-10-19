@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconDoorSlidingRightHandClosed() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.5391 31.7461">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.5391 31.7461">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M35.1445 31.7227C35.7188 31.7227 36.1875 31.2539 36.1875 30.6797L36.1875 2.74219C36.1875 1.10156 35.0625 0 33.375 0L2.8125 0C1.125 0 0 1.10156 0 2.74219L0 30.6797C0 31.2539 0.457031 31.7227 1.04297 31.7227C1.61719 31.7227 2.08594 31.2539 2.08594 30.6797L2.08594 2.88281C2.08594 2.40234 2.39062 2.08594 2.84766 2.08594L33.3398 2.08594C33.7852 2.08594 34.1016 2.40234 34.1016 2.88281L34.1016 30.6797C34.1016 31.2539 34.5586 31.7227 35.1445 31.7227Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

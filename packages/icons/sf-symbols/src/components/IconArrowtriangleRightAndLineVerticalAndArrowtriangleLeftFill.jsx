@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowtriangleRightAndLineVerticalAndArrowtriangleLeftFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.6172 31.3008">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.6172 31.3008">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M2.02734 24.2812L14.7188 16.8516C15.5625 16.3477 15.5508 15.0703 14.7188 14.5781L2.02734 7.05469C1.125 6.52734 0 7.07812 0 8.0625L0 23.3203C0 24.293 1.11328 24.8203 2.02734 24.2812ZM38.25 24.2812C39.1523 24.8203 40.2656 24.293 40.2656 23.3203L40.2656 8.0625C40.2656 7.07812 39.1406 6.52734 38.25 7.05469L25.5469 14.5781C24.7148 15.0703 24.6914 16.3477 25.5469 16.8516Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconProgressIndicator() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8242 32.6133">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.8242 32.6133">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M11.4023 11.4023C11.8359 10.957 11.8359 10.2188 11.4023 9.78516L6.35156 4.75781C5.92969 4.32422 5.19141 4.32422 4.75781 4.75781C4.32422 5.19141 4.32422 5.91797 4.75781 6.35156L9.78516 11.4023C10.2188 11.8242 10.9453 11.8477 11.4023 11.4023Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

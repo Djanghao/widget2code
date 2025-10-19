@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHandRaisedAppFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.8438 27.4805">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.8438 27.4805">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M8.17969 27.4805L19.3125 27.4805C21.9727 27.4805 24.0352 26.7305 25.3828 25.3828C26.7656 24.0117 27.4922 21.9492 27.4922 19.3008L27.4922 8.17969C27.4922 5.53125 26.7773 3.48047 25.3828 2.09766C24.0234 0.726562 21.9727 0 19.3125 0L8.17969 0C5.51953 0 3.45703 0.75 2.10938 2.09766C0.726562 3.46875 0 5.53125 0 8.17969L0 19.3008C0 21.9492 0.714844 24 2.10938 25.3828C3.46875 26.7422 5.51953 27.4805 8.17969 27.4805Z" fill="#0091ff"/>

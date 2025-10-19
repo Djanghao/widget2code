@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconChecklist() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.9375 30.5273">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.9375 30.5273">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M17.332 25.125L32.5312 25.125C33.1172 25.125 33.5859 24.6797 33.5859 24.0938C33.5859 23.5078 33.1172 23.0508 32.5312 23.0508L17.332 23.0508C16.7461 23.0508 16.2891 23.5078 16.2891 24.0938C16.2891 24.6797 16.7461 25.125 17.332 25.125Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

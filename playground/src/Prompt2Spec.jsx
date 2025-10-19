@@ -6,7 +6,6 @@ import CodeViewer from './components/core/CodeViewer.jsx';
 import PreviewPanel from './components/core/PreviewPanel.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import SectionHeader from './components/core/SectionHeader.jsx';
-import { useAutoResize } from './hooks/useAutoResize';
 import sfOnlyPrompt from '../api/prompt2spec-sf-only.md?raw';
 import lucideOnlyPrompt from '../api/prompt2spec-lucide-only.md?raw';
 import bothIconsPrompt from '../api/prompt2spec-both.md?raw';
@@ -34,11 +33,9 @@ function Prompt2Spec() {
     setDefaultPrompt(p);
   }, [promptType]);
 
-  const { ratioInput, setRatioInput, autoSizing, handleAutoResizeByRatio } = useAutoResize(widgetFrameRef, async (updatedSpec) => {
-    setPreviewSpec(updatedSpec);
-    const jsx = compileWidgetSpecToJSX(updatedSpec);
-    await fetch('/__write_widget_preview', { method: 'POST', body: jsx, headers: { 'Content-Type': 'text/plain' } });
-  });
+  const [ratioInput, setRatioInput] = useState('');
+  const [autoSizing, setAutoSizing] = useState(false);
+  const handleAutoResizeByRatio = async () => {};
 
   const handleGenerate = async () => {
     setIsGenerating(true);
@@ -57,13 +54,6 @@ function Prompt2Spec() {
         const jsx = compileWidgetSpecToJSX(data.widgetSpec);
         setGeneratedCode(jsx);
         await fetch('/__write_widget_preview', { method: 'POST', body: jsx, headers: { 'Content-Type': 'text/plain' } });
-        const r = data.widgetSpec?.widget?.aspectRatio;
-        const hasWH =
-          data.widgetSpec?.widget?.width !== undefined &&
-          data.widgetSpec?.widget?.height !== undefined;
-        if (enableAutoResize && !hasWH && typeof r === 'number' && isFinite(r) && r > 0) {
-          await handleAutoResizeByRatio(data.widgetSpec, r);
-        }
       } catch (e) {
         setGeneratedCode(`// Compilation Error: ${e.message}`);
       }
@@ -87,16 +77,6 @@ function Prompt2Spec() {
   const previewHeight = previewSpec?.widget?.height;
   const previewAspectRatio = previewSpec?.widget?.aspectRatio;
 
-  useEffect(() => {
-    if (!enableAutoResize) return;
-    const w = previewSpec?.widget;
-    if (!w) return;
-    const hasWH = previewWidth !== undefined && previewHeight !== undefined;
-    const r = previewAspectRatio;
-    if (!hasWH && typeof r === 'number' && isFinite(r) && r > 0) {
-      handleAutoResizeByRatio(previewSpec, r);
-    }
-  }, [enableAutoResize, previewWidth, previewHeight, previewAspectRatio]);
 
   const textModelOptions = [
     { value: 'qwen3-max-preview', label: 'Qwen3 Max Preview' },

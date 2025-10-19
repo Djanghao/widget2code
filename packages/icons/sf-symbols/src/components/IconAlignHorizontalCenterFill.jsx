@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconAlignHorizontalCenterFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.7227 34.3945">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.7227 34.3945">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M15.1406 33.4688C15.1406 33.9727 14.6953 34.3711 14.1797 34.3711C13.6758 34.3711 13.2305 33.9727 13.2305 33.4688L13.2305 30.457L15.1406 30.457ZM15.1406 18.7383L13.2305 18.7383L13.2305 15.6211L15.1406 15.6211ZM15.1406 0.902344L15.1406 3.90234L13.2305 3.90234L13.2305 0.902344C13.2305 0.398438 13.6758 0 14.1797 0C14.6953 0 15.1406 0.398438 15.1406 0.902344Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

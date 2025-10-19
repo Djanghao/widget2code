@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCircleGrid2x2() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.1094 28.7461">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.1094 28.7461">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M22.1719 28.7227C25.8047 28.7227 28.7578 25.7812 28.7578 22.1367C28.7578 18.5039 25.8047 15.5508 22.1719 15.5508C18.5273 15.5508 15.5859 18.5039 15.5859 22.1367C15.5859 25.7812 18.5273 28.7227 22.1719 28.7227ZM22.1719 26.707C19.6406 26.707 17.6016 24.668 17.6016 22.1367C17.6016 19.6055 19.6406 17.5664 22.1719 17.5664C24.6914 17.5664 26.7305 19.6055 26.7305 22.1367C26.7305 24.668 24.6914 26.707 22.1719 26.707Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

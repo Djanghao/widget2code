@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPc() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.332 29.9648">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 29.332 29.9648">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M2.07422 19.3711L2.07422 3.70312C2.07422 2.55469 2.58984 2.07422 3.70312 2.07422L25.2656 2.07422C26.3906 2.07422 26.9062 2.55469 26.9062 3.70312L26.9062 19.3711C26.9062 20.5195 26.3906 21 25.2656 21L3.70312 21C2.58984 21 2.07422 20.5195 2.07422 19.3711Z" fill="#0091ff"/>

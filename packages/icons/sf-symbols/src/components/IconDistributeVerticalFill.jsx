@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconDistributeVerticalFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.6133 27.6914">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.6133 27.6914">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M6.58594 19.2891L28.6758 19.2891C30.6914 19.2891 31.8164 18.1758 31.8164 16.1836L31.8164 11.4844C31.8164 9.50391 30.6914 8.39062 28.6758 8.39062L6.58594 8.39062C4.57031 8.39062 3.44531 9.50391 3.44531 11.4844L3.44531 16.1836C3.44531 18.1758 4.57031 19.2891 6.58594 19.2891Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

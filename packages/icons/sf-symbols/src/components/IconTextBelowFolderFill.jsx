@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTextBelowFolderFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.0234 36.9727">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.0234 36.9727">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M1.04297 36.8203L28.6406 36.8203C29.2031 36.8203 29.6719 36.3516 29.6719 35.7891C29.6719 35.2148 29.2031 34.7461 28.6406 34.7461L1.04297 34.7461C0.46875 34.7461 0 35.2148 0 35.7891C0 36.3516 0.46875 36.8203 1.04297 36.8203Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

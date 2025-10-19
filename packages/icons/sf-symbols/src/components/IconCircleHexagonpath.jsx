@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCircleHexagonpath() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.1914 29.5664">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.1914 29.5664">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M21.3984 29.5547C24.1523 29.5547 26.3672 27.3398 26.3672 24.5859C26.3672 21.8438 24.1523 19.6289 21.3984 19.6289C18.6562 19.6289 16.4414 21.8438 16.4414 24.5859C16.4414 27.3398 18.6562 29.5547 21.3984 29.5547ZM21.3984 27.4805C19.8164 27.4805 18.5156 26.1797 18.5156 24.5859C18.5156 23.0039 19.8164 21.7031 21.3984 21.7031C22.9922 21.7031 24.293 23.0039 24.293 24.5859C24.293 26.1797 22.9922 27.4805 21.3984 27.4805Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

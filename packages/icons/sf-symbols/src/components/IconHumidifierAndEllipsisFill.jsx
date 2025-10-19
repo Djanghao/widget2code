@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconHumidifierAndEllipsisFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.9727 34.207">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 24.9727 34.207">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M22.1602 34.207C23.5195 34.207 24.6211 33.1172 24.6211 31.7344C24.6211 30.375 23.5195 29.2734 22.1602 29.2734C20.8008 29.2734 19.6992 30.375 19.6992 31.7344C19.6992 33.1172 20.8008 34.207 22.1602 34.207Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

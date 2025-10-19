@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconCloudMoonRain() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.3344 37.6342">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.3344 37.6342">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M26.3508 32.4987C26.7492 32.7331 26.8781 33.1901 26.6203 33.612L24.5578 37.198C24.3234 37.6081 23.8547 37.737 23.4563 37.5144C23.0461 37.28 22.9406 36.823 23.175 36.4245L25.2492 32.8151C25.507 32.405 25.9524 32.2761 26.3508 32.4987Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

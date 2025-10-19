@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconBoldItalicUnderline() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 54.2109 31.418">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 54.2109 31.418">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M38.4727 31.418L53.0625 31.418C53.5078 31.418 53.8594 31.0781 53.8594 30.6328C53.8594 30.1875 53.5078 29.8477 53.0625 29.8477L38.4727 29.8477C38.0391 29.8477 37.6875 30.1875 37.6875 30.6328C37.6875 31.0781 38.0391 31.418 38.4727 31.418Z" fill="#ff4245"/>

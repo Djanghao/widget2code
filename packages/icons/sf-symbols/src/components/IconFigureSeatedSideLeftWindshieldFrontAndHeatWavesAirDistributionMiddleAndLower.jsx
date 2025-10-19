@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconFigureSeatedSideLeftWindshieldFrontAndHeatWavesAirDistributionMiddleAndLower() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.3655 30.1992">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 48.3655 30.1992">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M39.6749 8.08594C41.9015 8.08594 43.6827 6.23438 43.6827 4.07812C43.6827 1.82812 41.9015 0 39.6749 0C37.4249 0 35.6319 1.82812 35.6319 4.07812C35.6319 6.31641 37.4249 8.08594 39.6749 8.08594ZM15.6749 29.3672C16.4484 30.1758 17.7726 30.1055 18.7218 29.1328L25.1319 22.5117C25.3429 22.2891 25.4952 22.2305 25.8234 22.3594L30.9093 24.293C34.1085 25.5117 37.0968 24.3867 38.5499 21.75L41.6905 16.0312C42.9562 13.7344 42.546 11.3906 40.378 10.2422C38.2804 9.08203 36.089 9.94922 34.8234 12.2812L30.6515 19.8984L27.1007 18.6094C25.3312 17.9648 23.8663 18.1641 22.4718 19.6172L15.8155 26.5078C14.8898 27.457 14.9718 28.6523 15.6749 29.3672Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

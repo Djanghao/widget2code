@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLightspectrumHorizontal() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.8789 30.4805">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.8789 30.4805">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M30.5273 15.2344C30.5273 12.9492 29.9883 10.793 29.0391 8.85938L29.0391 21.6211C29.9883 19.6758 30.5273 17.5078 30.5273 15.2344Z" fill="#db34f2"/>

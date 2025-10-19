@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLightbulbSlashFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.8486 37.0111">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.8486 37.0111">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M15.7485 35.3864C13.4048 35.3864 11.5064 34.2614 11.4009 32.5622L20.0962 32.5622C19.9556 34.2614 18.0806 35.3864 15.7485 35.3864ZM21.2681 30.277C21.2681 30.734 20.9048 31.0973 20.4478 31.0973L11.0493 31.0973C10.5923 31.0973 10.229 30.734 10.229 30.277C10.229 29.82 10.5923 29.4567 11.0493 29.4567L20.4478 29.4567C20.9048 29.4567 21.2681 29.82 21.2681 30.277Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

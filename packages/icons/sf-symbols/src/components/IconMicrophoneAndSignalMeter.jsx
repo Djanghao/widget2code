@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconMicrophoneAndSignalMeter() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.5117 34.3945">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 31.5117 34.3945">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M2.40234 7.83984C3.73828 7.83984 4.80469 6.77344 4.80469 5.4375C4.80469 4.11328 3.73828 3.03516 2.40234 3.03516C1.07812 3.03516 0 4.11328 0 5.4375C0 6.77344 1.07812 7.83984 2.40234 7.83984Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

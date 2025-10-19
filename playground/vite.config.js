@@ -20,6 +20,14 @@ export default defineConfig(({ mode }) => {
         '@widget-factory/icons': path.resolve(__dirname, '../packages/icons/src'),
       }
     },
+    build: {
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          headless: path.resolve(__dirname, 'headless.html')
+        }
+      }
+    },
     server: {
       port: parseInt(frontendPort),
       proxy: {

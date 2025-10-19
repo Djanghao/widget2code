@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconWave3Backward() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.6211 35.3474">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.6211 35.3474">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M0 17.6796C0 23.9491 1.95703 29.8436 5.46094 34.7655C6.42188 36.1014 8.23828 34.8944 7.27734 33.5819C3.98438 28.9999 2.21484 23.5155 2.21484 17.6796C2.21484 11.8319 3.97266 6.34754 7.27734 1.76551C8.26172 0.417855 6.38672-0.707145 5.46094 0.570198C1.94531 5.50379 0 11.3866 0 17.6796Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

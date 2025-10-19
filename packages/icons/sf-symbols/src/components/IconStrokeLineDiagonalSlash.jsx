@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconStrokeLineDiagonalSlash() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.4717 27.1381">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.4717 27.1381">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M13.2873 16.4082L4.26124 25.4343C3.55811 26.1374 2.39796 26.1257 1.69483 25.4225C1.01514 24.7194 1.01514 23.5827 1.70655 22.8913L10.7366 13.8562ZM25.4253 1.73895C26.105 2.43036 26.105 3.59052 25.4136 4.28192L16.3869 13.3086L13.8354 10.7558L22.8589 1.72724C23.562 1.03583 24.7339 1.03583 25.4253 1.73895Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

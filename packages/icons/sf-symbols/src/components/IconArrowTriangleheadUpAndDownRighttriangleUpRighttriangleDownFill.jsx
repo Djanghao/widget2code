@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconArrowTriangleheadUpAndDownRighttriangleUpRighttriangleDownFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.6719 34.5352">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 32.6719 34.5352">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M32.3203 32.4844L32.3203 20.543C32.3203 18.832 31.5703 18.0703 29.8477 18.0703L11.7539 18.0703C10.6055 18.0703 9.97266 18.9141 9.97266 19.8633C9.97266 20.4961 10.2656 21.0938 10.8867 21.5273L29.1211 34.0898C29.5547 34.3828 30.0469 34.5117 30.5156 34.5117C31.4766 34.5117 32.3203 33.8672 32.3203 32.4844ZM32.3203 2.02734C32.3203 0.644531 31.4766 0 30.5156 0C30.0469 0 29.5547 0.128906 29.1211 0.421875L10.8867 12.9844C10.2656 13.418 9.97266 14.0156 9.97266 14.6602C9.97266 15.5977 10.6055 16.4414 11.7539 16.4414L29.8477 16.4414C31.5703 16.4414 32.3203 15.6914 32.3203 13.9688Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

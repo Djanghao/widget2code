@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconApplepencilDoubletap() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3765 23.9876">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 30.3765 23.9876">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M3.04764 23.3786C2.83671 23.7653 3.25858 24.1169 3.58671 23.9411L5.77811 22.7575L4.26639 21.2458ZM4.91093 20.0973L6.94999 22.1364L7.78202 21.6794L26.5437 3.01138C27.2117 2.34342 27.2117 1.26529 26.5437 0.609041C25.8758-0.0589282 24.7859-0.0589282 24.1414 0.597322L5.37968 19.277Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

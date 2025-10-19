@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconTruckSideHillDescentControlFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.9645 38.3469">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 49.9645 38.3469">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M4.66195 37.8121C4.96664 38.3277 5.61117 38.4918 6.09164 38.2106L48.0448 14.0231C48.5252 13.7418 48.7127 13.1324 48.4315 12.6402C48.1268 12.1129 47.4823 11.9488 47.0018 12.2301L5.04867 36.4176C4.5682 36.6988 4.39242 37.3316 4.66195 37.8121Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

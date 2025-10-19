@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSpeakerWave1() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.9062 26.332">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 26.9062 26.332">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M23.2734 19.5586C23.7188 19.8633 24.3281 19.7578 24.668 19.2656C25.8281 17.7422 26.5547 15.5273 26.5547 13.1719C26.5547 10.8047 25.8281 8.60156 24.668 7.06641C24.3281 6.57422 23.7188 6.48047 23.2734 6.78516C22.7578 7.14844 22.6758 7.78125 23.0742 8.32031C24.0352 9.63281 24.5508 11.3086 24.5508 13.1719C24.5508 15.0234 24.0234 16.6875 23.0742 18.0234C22.6875 18.5625 22.7578 19.1836 23.2734 19.5586Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

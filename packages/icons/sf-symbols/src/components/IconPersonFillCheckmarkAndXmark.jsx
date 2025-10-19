@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconPersonFillCheckmarkAndXmark() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.4961 28.1133">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.4961 28.1133">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M2.47266 27.5625L22.8867 27.5625C24.4219 27.5625 25.3594 26.8242 25.3594 25.6289C25.3594 21.7383 20.4961 16.3711 12.6797 16.3711C4.86328 16.3711 0 21.7383 0 25.6289C0 26.8242 0.9375 27.5625 2.47266 27.5625ZM12.6914 13.6641C15.9609 13.6641 18.7031 10.7578 18.7031 7.00781C18.7031 3.33984 15.9375 0.539062 12.6914 0.539062C9.45703 0.539062 6.69141 3.38672 6.69141 7.03125C6.69141 10.7578 9.43359 13.6641 12.6914 13.6641Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

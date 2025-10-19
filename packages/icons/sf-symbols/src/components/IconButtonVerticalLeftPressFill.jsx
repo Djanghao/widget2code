@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconButtonVerticalLeftPressFill() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.293 39.6445">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 36.293 39.6445">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M33.6562 9.53906L33.6562 30.1055C33.6562 34.1628 31.2402 37.266 27.3889 37.673C29.4511 35.9666 30.6562 33.2644 30.6562 30.1055L30.6562 9.53906C30.6562 6.36537 29.4399 3.65675 27.3596 1.95556C31.237 2.35262 33.6562 5.48139 33.6562 9.53906Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

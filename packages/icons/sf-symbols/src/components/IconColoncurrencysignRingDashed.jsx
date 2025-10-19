@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconColoncurrencysignRingDashed() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.7676 33.4395">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 33.7676 33.4395">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M12.2139 6.4014C13.2217 5.95609 14.2998 5.66312 15.4366 5.53422C15.7647 5.49906 15.9991 5.25297 15.9991 4.92484L15.9991 0.647498C15.9991 0.260779 15.7061-0.0321893 15.3194 0.0146857C13.2686 0.178748 11.335 0.729529 9.55375 1.57328C9.20218 1.73734 9.09671 2.13578 9.28421 2.4639L11.417 6.14359C11.5694 6.43656 11.8975 6.53031 12.2139 6.4014Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

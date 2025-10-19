@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconSquare3Layers3dDownLeftSlash() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7891 35.1387">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 35.7891 35.1387">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M18.5977 0.887721L30.7969 7.93069C32.0156 8.64553 32.461 9.40725 32.461 10.8018L32.461 24.7002C32.461 25.5742 32.2527 26.2172 31.8872 26.6121L29.6536 24.3794L30.0469 24.6065C30.2344 24.7119 30.3516 24.6299 30.3516 24.4424L30.3516 10.8721C30.3516 10.2862 30.1875 10.0752 29.7305 9.80569L17.9766 3.00881C17.7891 2.90335 17.625 2.9971 17.625 3.20803L17.625 7.39814L15.5274 6.18509L15.5274 2.51663C15.5274 0.641627 17.2031 0.0908456 18.5977 0.887721Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>

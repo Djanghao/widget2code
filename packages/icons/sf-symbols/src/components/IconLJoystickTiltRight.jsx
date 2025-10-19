@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function IconLJoystickTiltRight() {
   return (
-    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.6699 33.9023">
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.6699 33.9023">
  <g>
   <rect opacity="0" x="0" y="0"/>
   <path d="M37.6764 11.484C36.9405 11.3452 36.208 11.496 35.6181 11.8716C33.567 6.14232 28.1018 2.07422 21.6592 2.07422C13.4326 2.07422 6.7998 8.70703 6.7998 16.9453C6.7998 25.1602 13.4326 31.793 21.6592 31.793C28.0952 31.793 33.5557 27.7333 35.6116 22.0246C36.2024 22.4023 36.9358 22.5534 37.67 22.4158C35.4063 29.0778 29.0917 33.8672 21.6592 33.8672C12.3076 33.8672 4.72559 26.2852 4.72559 16.9453C4.72559 7.58203 12.3193 0 21.6592 0C29.0901 0 35.4158 4.79951 37.6764 11.484Z" fill="var(--icon-color, rgba(255, 255, 255, 0.85))"/>
