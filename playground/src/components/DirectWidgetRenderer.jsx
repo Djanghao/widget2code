@@ -35,6 +35,7 @@ function DirectWidgetRenderer({ jsxCode, onMount, onError }) {
       processedCode = processedCode.replace(/import\s+React\s+from\s+['"]react['"];?\n?/g, '');
       processedCode = processedCode.replace(/import\s+\{[^}]*\}\s+from\s+['"]@widget-factory\/primitives['"];?\n?/g, '');
       processedCode = processedCode.replace(/import\s+\*\s+as\s+\w+\s+from\s+['"]@widget-factory\/primitives['"];?\n?/g, '');
+      processedCode = processedCode.replace(/export\s+default\s+/g, '');
 
       const primitivesDestructure = `const { ${Object.keys(WidgetPrimitives).join(', ')} } = window.WidgetPrimitives;\n`;
       processedCode = primitivesDestructure + processedCode;
