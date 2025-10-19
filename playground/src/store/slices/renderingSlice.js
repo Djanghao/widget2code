@@ -468,6 +468,78 @@ const createRenderingSlice = (set, get) => ({
     }
   },
 
+  validateWidget: (widgetElement, spec) => {
+    const issues = [];
+    const warnings = [];
+
+    if (!widgetElement) {
+      return {
+        valid: false,
+        issues: ['Widget element not found'],
+        warnings: [],
+        metadata: null
+      };
+    }
+
+    const overflow = get()._measureOverflow(widgetElement);
+    const rect = widgetElement.getBoundingClientRect();
+    const actualWidth = Math.round(rect.width);
+    const actualHeight = Math.round(rect.height);
+    const actualRatio = actualWidth / actualHeight;
+
+    const expectedWidth = spec?.widget?.width;
+    const expectedHeight = spec?.widget?.height;
+    const expectedRatio = spec?.widget?.aspectRatio;
+
+    if (!overflow.fits) {
+      issues.push('Content overflows container or padding area');
+    }
+
+    if (expectedRatio && typeof expectedRatio === 'number' && isFinite(expectedRatio)) {
+      const deviation = Math.abs(actualRatio - expectedRatio) / expectedRatio;
+      if (deviation > 0.05) {
+        issues.push(
+          `Aspect ratio mismatch: expected ${expectedRatio.toFixed(3)}, got ${actualRatio.toFixed(3)} (${(deviation * 100).toFixed(1)}% off)`
+        );
+      } else if (deviation > 0.02) {
+        warnings.push(
+          `Aspect ratio slightly off: expected ${expectedRatio.toFixed(3)}, got ${actualRatio.toFixed(3)} (${(deviation * 100).toFixed(1)}% off)`
+        );
+      }
+    }
+
+    if (expectedWidth && Math.abs(actualWidth - expectedWidth) > 1) {
+      warnings.push(`Width mismatch: expected ${expectedWidth}px, got ${actualWidth}px`);
+    }
+
+    if (expectedHeight && Math.abs(actualHeight - expectedHeight) > 1) {
+      warnings.push(`Height mismatch: expected ${expectedHeight}px, got ${actualHeight}px`);
+    }
+
+    const metadata = {
+      width: actualWidth,
+      height: actualHeight,
+      aspectRatio: parseFloat(actualRatio.toFixed(4)),
+      hasOverflow: !overflow.fits,
+      scrollWidth: overflow.sw,
+      scrollHeight: overflow.sh
+    };
+
+    console.log(`🔍 [Validation]`, {
+      valid: issues.length === 0,
+      issues,
+      warnings,
+      metadata
+    });
+
+    return {
+      valid: issues.length === 0,
+      issues,
+      warnings,
+      metadata
+    };
+  },
+
   _applySizeToDOMAndMeasure: async (widgetElement, w, h) => {
     if (!widgetElement) return { fits: false };
 
@@ -602,8 +674,14 @@ const createRenderingSlice = (set, get) => ({
 
       if (!checkToken()) return;
 
-      console.log(`📝 [AutoResize] Writing optimal size to spec: ${best.w}×${best.h}`);
-      get().writebackSpecSize(best.w, best.h);
+      const safeW = best.w + 1;
+      const safeH = best.h + 1;
+      console.log(`📝 [AutoResize] Writing optimal size to spec: ${safeW}×${safeH} (${best.w}×${best.h} + 1px safety margin)`);
+      get().writebackSpecSize(safeW, safeH);
+
+      console.log(`🎨 [AutoResize] Applying final size to DOM: ${safeW}×${safeH}`);
+      widgetElement.style.width = `${safeW}px`;
+      widgetElement.style.height = `${safeH}px`;
 
       console.log(`✅ [AutoResize] Completed successfully\n`);
     } finally {

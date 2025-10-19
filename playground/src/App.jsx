@@ -8,9 +8,9 @@
  */
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import html2canvas from 'html2canvas';
 import { examples } from './constants/examples.js';
 import { parseAspectRatio } from './utils/specUtils.js';
+import { exportWidget } from './utils/widgetExport.js';
 import AppHeader from './components/Header/AppHeader.jsx';
 import MaterialsModal from './components/MaterialsModal/index.jsx';
 import useWidgetFrame from './hooks/useWidgetFrame.js';
@@ -38,7 +38,8 @@ function App() {
     switchPreset,
     executeAutoResize,
     compileFromEdited,
-    initializeApp
+    initializeApp,
+    validateWidget
   } = usePlaygroundStore();
 
   const [activeTab, setActiveTab] = useState('presets');
@@ -106,31 +107,53 @@ function App() {
     const widgetElement = widgetFrameRef.current?.firstElementChild;
     if (!widgetElement) {
       console.error('Widget element not found');
+      alert('Widget element not found');
       return;
     }
+
+    if (operationMode !== 'idle') {
+      console.warn('Cannot download: operation in progress');
+      alert(`Cannot download: ${operationMode} in progress. Please wait.`);
+      return;
+    }
+
+    console.log('\n📥 [Download] Starting widget download...');
+
+    const validation = validateWidget(widgetElement, widgetSpec);
+
+    if (!validation.valid) {
+      console.error('❌ [Download] Validation failed:', validation.issues);
+      const issuesText = validation.issues.map(i => `• ${i}`).join('\n');
+      alert(`Cannot download widget due to quality issues:\n\n${issuesText}\n\nPlease fix these issues first.`);
+      return;
+    }
+
+    if (validation.warnings.length > 0) {
+      console.warn('⚠️ [Download] Validation warnings:', validation.warnings);
+      const warningsText = validation.warnings.map(w => `• ${w}`).join('\n');
+      const proceed = confirm(`Widget has minor quality warnings:\n\n${warningsText}\n\nDownload anyway?`);
+      if (!proceed) {
+        console.log('📥 [Download] Cancelled by user');
+        return;
+      }
+    }
+
+    console.log('✅ [Download] Validation passed, proceeding...');
 
     setOperationMode('downloading');
 
     try {
-      const canvas = await html2canvas(widgetElement, {
-        backgroundColor: null,
-        scale: 2,
-        logging: false,
-        useCORS: true
-      });
+      const result = await exportWidget(
+        widgetElement,
+        selectedPreset,
+        validation.metadata
+      );
 
-      canvas.toBlob((blob) => {
-        if (!blob) return;
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `widget-${Date.now()}.png`;
-        link.click();
-        URL.revokeObjectURL(url);
-        setOperationMode('idle');
-      }, 'image/png');
+      console.log(`✅ [Download] Completed: ${result.filename}`);
+      setOperationMode('idle');
     } catch (error) {
-      console.error('Failed to download widget:', error);
+      console.error('❌ [Download] Failed:', error);
+      alert(`Download failed: ${error.message}`);
       setOperationMode('idle');
     }
   };
