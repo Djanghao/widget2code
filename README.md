@@ -11,18 +11,18 @@ Pipeline: WidgetSpec → JSX file → rendered result.
 npm install
 
 # Configure environment (first time only)
-cd playground
+cd apps/playground
 cp .env.example .env
 # Edit .env to set your API key and ports
 ```
 
 **Backend setup** (first time only, required for full mode):
 ```bash
-cd playground/api
+cd apps/api
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-cd ..
+cd ../..
 ```
 
 **Run**:
@@ -59,20 +59,32 @@ const jsx = compileWidgetSpecToJSX(spec);
   - `<Icon />` sets `--icon-color` from the `color` prop; default is `rgba(255, 255, 255, 0.85)`.
 - Flex properties should be passed as component `flex` prop (e.g., `<Text flex={1} />`), not in `style`; use `style` only for unmodeled styles.
 
-## Packages
-- `@widget-factory/primitives`: Base components (WidgetShell, Text, Icon, etc.)
-- `@widget-factory/compiler`: Outputs complete JSX files from a WidgetSpec
-- [`@widget-factory/icons`](./packages/icons/README.md): Auto-generated icon components and `iconsMap`
-- [`playground`](./playground/README.md): Demo app with visual editing (Vite dev plugin writes generated JSX to `src/generated/Widget.jsx`)
+## Project Structure
 
-See individual package README for details.
+### Packages
+Reusable npm packages that can be independently installed:
+
+- **[`@widget-factory/spec`](./packages/spec/)** - WidgetSpec protocol definition, validation, and utilities
+- **[`@widget-factory/compiler`](./packages/compiler/)** - Compiles WidgetSpec to JSX files
+- **[`@widget-factory/renderer`](./packages/renderer/)** - Runtime JSX renderer using Babel standalone
+- **[`@widget-factory/exporter`](./packages/exporter/)** - Widget export utilities (PNG, etc.)
+- **[`@widget-factory/primitives`](./packages/primitives/)** - Base UI components (WidgetShell, Text, Icon, etc.)
+- **[`@widget-factory/icons`](./packages/icons/README.md)** - Auto-generated icon components and iconsMap
+
+### Tools
+- **[`@widget-factory/cli`](./tools/cli/)** - CLI tool for batch widget rendering (headless mode)
+
+### Apps
+- **[`playground`](./apps/playground/README.md)** - Interactive web playground with visual editing
+- **`api`** - Python FastAPI backend for AI-powered widget generation
+
+See individual package/app README for details.
 
 ## Playground Architecture
 
-The playground implements a preview-driven auto-resize system with state flow management:
+The playground implements a preview-driven auto-resize system with state flow management.
 
-![Playground State Flow](https://raw.githubusercontent.com/Djanghao/llm-widget-factory/refs/heads/houston/feat/preview-driven-autoresize/playground/docs/architecture/stateflow-playground-latest.png)
-
+See [`apps/playground/architecture.md`](./apps/playground/architecture.md) for detailed documentation.
 
 Key components:
 - **State Management**: Tracks preset changes and rendering lifecycle

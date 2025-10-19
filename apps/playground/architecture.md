@@ -178,7 +178,7 @@ graph LR
 ## File Structure
 
 ```
-playground/
+apps/playground/
 ├── src/
 │   ├── App.jsx                    # Main application with tabs
 │   ├── main.jsx                   # Entry point
@@ -187,18 +187,27 @@ playground/
 │   ├── Documentation.jsx          # Guides tab
 │   ├── TreeView.jsx               # Spec tree viewer
 │   ├── components/
-│   │   └── WidgetRenderer.jsx     # Babel standalone renderer
+│   │   ├── core/                  # Core UI components
+│   │   └── Documentation/         # Documentation components
 │   ├── examples/
 │   │   └── *.json                 # Preset widget specs
-│   ├── hooks/
-│   │   └── useAutoResize.js       # Auto-resize logic
-│   └── utils/
-├── api/
-│   ├── server.py                  # FastAPI server
-│   ├── *.md                       # System prompts
-│   └── venv/                      # Python dependencies
+│   └── hooks/
+│       └── useAutoResize.js       # Auto-resize logic
 ├── vite.config.js                 # Vite configuration
 └── package.json                   # Dependencies
+
+apps/api/
+├── server.py                      # FastAPI server
+├── *.md                           # System prompts
+└── .venv/                         # Python dependencies
+
+packages/
+├── compiler/                      # WidgetSpec to JSX compiler
+├── primitives/                    # Widget UI components
+├── icons/                         # SF Symbols + Lucide icons
+├── spec/                          # WidgetSpec protocol & validation
+├── renderer/                      # Runtime JSX renderer
+└── exporter/                      # Widget export utilities
 ```
 
 ## Key Technologies
