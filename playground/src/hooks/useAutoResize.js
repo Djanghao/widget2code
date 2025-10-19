@@ -1,3 +1,12 @@
+/**
+ * @file useAutoResize.js
+ * @description React hook for widget auto-resize functionality (legacy).
+ * Provides aspect ratio parsing, binary search for optimal widget size,
+ * and overflow detection. Note: Core logic moved to renderingSlice.
+ * @author Houston Zhang
+ * @date 2025-10-10
+ */
+
 import { useState, useRef, useCallback } from 'react';
 
 export function useAutoResize(widgetFrameRef, onSpecChange) {

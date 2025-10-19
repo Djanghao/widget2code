@@ -9,6 +9,7 @@
     "dev:full": "concurrently \"npm run dev\" \"npm run api\""
   },
   "dependencies": {
+    "@babel/standalone": "^7.28.4",
     "@widget-factory/compiler": "*",
     "@widget-factory/icons": "*",
     "@widget-factory/primitives": "*",

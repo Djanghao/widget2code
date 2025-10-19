@@ -1,10 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
+/**
+ * @file App.jsx
+ * @description Main application component for the widget playground.
+ * Provides tabbed interface for presets, widget-to-spec, prompt-to-spec, and guides.
+ * Manages widget compilation, preview, auto-resize, and download functionality.
+ * @author Houston Zhang
+ * @date 2025-10-03
+ */
+
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import html2canvas from 'html2canvas';
 import { examples } from './constants/examples.js';
-import { parseAspectRatio, applySizeToSpec } from './utils/specUtils.js';
+import { parseAspectRatio } from './utils/specUtils.js';
 import AppHeader from './components/Header/AppHeader.jsx';
 import MaterialsModal from './components/MaterialsModal/index.jsx';
-import useWidgetCompiler from './hooks/useWidgetCompiler.js';
 import useWidgetFrame from './hooks/useWidgetFrame.js';
 import PresetsTab from './components/PresetsTab/index.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
@@ -18,13 +26,19 @@ function App() {
     widgetSpec,
     generatedJSX,
     treeRoot,
+    currentWidgetFileName,
     ratioInput,
     setRatioInput,
     enableAutoResize,
     setEnableAutoResize,
     autoSizing,
+    renderingPhase,
+    operationMode,
+    setOperationMode,
     switchPreset,
-    executeAutoResize
+    executeAutoResize,
+    compileFromEdited,
+    initializeApp
   } = usePlaygroundStore();
 
   const [activeTab, setActiveTab] = useState('presets');
@@ -36,14 +50,14 @@ function App() {
   const [frameEl, setFrameEl] = useState(null);
   const treeContainerRef = useRef(null);
   const specTextareaRef = useRef(null);
-  const latestWriteTokenRef = useRef(0);
-  const expectedSizeRef = useRef(null);
-  const resizingRef = useRef(false);
-  const autoResizeTokenRef = useRef(0);
-  const autoSizingRef = useRef(false);
+  const compileTimerRef = useRef(null);
   const [presetResetKey, setPresetResetKey] = useState(0);
 
   const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
+
+  useEffect(() => {
+    initializeApp(widgetFrameRef);
+  }, []);
 
   useEffect(() => {
     const onDocClick = (e) => {
@@ -58,40 +72,34 @@ function App() {
 
   const currentExample = examples[selectedPreset];
   const currentSpec = editedSpec || (widgetSpec ? JSON.stringify(widgetSpec, null, 2) : JSON.stringify(currentExample.spec, null, 2));
+  const isLoading = renderingPhase !== 'idle';
 
-  const { generatedCode, treeRoot: legacyTreeRoot, isLoading, setIsLoading } = useWidgetCompiler(
-    editedSpec,
-    currentExample,
-    resizingRef,
-    latestWriteTokenRef,
-    expectedSizeRef
-  );
-
-  const displayTreeRoot = treeRoot || legacyTreeRoot;
-  const displayCode = generatedJSX || generatedCode;
-
-  const handleSpecChange = (value) => {
+  const handleSpecChange = useCallback((value) => {
     setEditedSpec(value);
-  };
+
+    if (compileTimerRef.current) {
+      clearTimeout(compileTimerRef.current);
+    }
+
+    compileTimerRef.current = setTimeout(() => {
+      compileFromEdited(value, widgetFrameRef);
+    }, 300);
+  }, [compileFromEdited]);
 
   const handleExampleChange = (key) => {
-    autoResizeTokenRef.current += 1;
-
     setSelectedPath(null);
     setFrameSize({ width: 0, height: 0 });
-    setIsLoading(false);
+    setEditedSpec('');
 
-    expectedSizeRef.current = null;
-    resizingRef.current = false;
-    latestWriteTokenRef.current = 0;
-    autoSizingRef.current = false;
+    if (compileTimerRef.current) {
+      clearTimeout(compileTimerRef.current);
+    }
 
     widgetFrameRef.current = null;
     setFrameEl(null);
-
     setPresetResetKey(prev => prev + 1);
 
-    switchPreset(key);
+    switchPreset(key, widgetFrameRef);
   };
 
   const handleDownloadWidget = async () => {
@@ -100,6 +108,8 @@ function App() {
       console.error('Widget element not found');
       return;
     }
+
+    setOperationMode('downloading');
 
     try {
       const canvas = await html2canvas(widgetElement, {
@@ -117,102 +127,20 @@ function App() {
         link.download = `widget-${Date.now()}.png`;
         link.click();
         URL.revokeObjectURL(url);
+        setOperationMode('idle');
       }, 'image/png');
     } catch (error) {
       console.error('Failed to download widget:', error);
+      setOperationMode('idle');
     }
   };
 
-  const waitForLayoutStable = async () => {
-    await new Promise((r) => requestAnimationFrame(r));
-    await new Promise((r) => requestAnimationFrame(r));
-  };
-
-  const measureOverflow = () => {
-    const frame = widgetFrameRef.current;
-    if (!frame) return { fits: false };
-    const root = frame.firstElementChild;
-    if (!root) return { fits: false };
-    const cw = root.clientWidth;
-    const ch = root.clientHeight;
-    const sw = root.scrollWidth;
-    const sh = root.scrollHeight;
-
-    // Base fit by scroll overflows
-    let fits = sw <= cw && sh <= ch;
-
-    // Treat root padding as a “protected zone”: descendants must not intersect it,
-    // and nothing may extend outside the root bounds either.
-    try {
-      const rootRect = root.getBoundingClientRect();
-      const cs = window.getComputedStyle(root);
-      const padL = parseFloat(cs.paddingLeft) || 0;
-      const padR = parseFloat(cs.paddingRight) || 0;
-      const padT = parseFloat(cs.paddingTop) || 0;
-      const padB = parseFloat(cs.paddingBottom) || 0;
-      const innerLeft = rootRect.left + padL;
-      const innerRight = rootRect.right - padR;
-      const innerTop = rootRect.top + padT;
-      const innerBottom = rootRect.bottom - padB;
-
-      // Allow tiny sub-pixel tolerance to avoid flapping due to rounding
-      const tol = 0.5;
-
-      let crossesPaddingOrOutside = false;
-      // Check all descendant boxes (skip the root itself)
-      const all = root.querySelectorAll('*');
-      for (let i = 0; i < all.length; i++) {
-        const el = all[i];
-        if (el === root) continue;
-        const r = el.getBoundingClientRect();
-        // Ignore zero-size boxes
-        if ((r.width || 0) <= 0 && (r.height || 0) <= 0) continue;
-
-        // Outside root bounds at all (shouldn’t happen with overflow hidden, but guard anyway)
-        if (r.left < rootRect.left - tol || r.right > rootRect.right + tol || r.top < rootRect.top - tol || r.bottom > rootRect.bottom + tol) {
-          crossesPaddingOrOutside = true;
-          break;
-        }
-        // Intersects root padding ring (i.e., breaches into padding area)
-        if (r.left < innerLeft - tol || r.right > innerRight + tol || r.top < innerTop - tol || r.bottom > innerBottom + tol) {
-          crossesPaddingOrOutside = true;
-          break;
-        }
-      }
-
-      if (crossesPaddingOrOutside) {
-        fits = false;
-      }
-      return { fits, cw, ch, sw, sh };
-    } catch (e) {
-      // If any unexpected error occurs, fall back to the basic overflow check
-      return { fits, cw, ch, sw, sh };
-    }
-  };
-
-  const applySizeToDOMAndMeasure = async (w, h) => {
-    const frame = widgetFrameRef.current;
-    if (!frame) return { fits: false };
-    const widgetElement = frame.firstElementChild;
-    if (!widgetElement) return { fits: false };
-
-    widgetElement.style.width = `${w}px`;
-    widgetElement.style.height = `${h}px`;
-
-    await waitForLayoutStable();
-    const m = measureOverflow();
-    return m;
-  };
-
-  const handleAutoResizeByRatio = async (ratioOverride) => {
+  const handleAutoResizeByRatio = useCallback(async (ratioOverride) => {
     const r = ratioOverride ?? parseAspectRatio(ratioInput);
     if (!r) return;
 
-    autoSizingRef.current = true;
-    await executeAutoResize(r, widgetFrameRef, autoResizeTokenRef);
-    autoSizingRef.current = false;
-    setIsLoading(false);
-  };
+    await executeAutoResize(r, widgetFrameRef);
+  }, [ratioInput, executeAutoResize]);
 
   const handleWidgetGenerated = async (widgetSpec, aspectRatio) => {
     const specStr = JSON.stringify(widgetSpec, null, 2);
@@ -220,17 +148,7 @@ function App() {
     setRatioInput(aspectRatio.toString());
   };
 
-  const { frameSize, setFrameSize } = useWidgetFrame(
-    frameEl,
-    enableAutoResize,
-    expectedSizeRef,
-    setIsLoading,
-    widgetFrameRef,
-    editedSpec,
-    currentExample,
-    setRatioInput,
-    handleAutoResizeByRatio
-  );
+  const { frameSize, setFrameSize } = useWidgetFrame(frameEl);
 
   return (
     <div style={{
@@ -255,12 +173,13 @@ function App() {
           currentSpec={currentSpec}
           handleSpecChange={handleSpecChange}
           specTextareaRef={specTextareaRef}
-          generatedCode={displayCode}
+          generatedCode={generatedJSX}
           ratioInput={ratioInput}
           setRatioInput={setRatioInput}
           enableAutoResize={enableAutoResize}
           setEnableAutoResize={setEnableAutoResize}
           autoSizing={autoSizing}
+          operationMode={operationMode}
           handleAutoResizeByRatio={handleAutoResizeByRatio}
           editedSpec={editedSpec}
           currentExample={currentExample}
@@ -271,9 +190,9 @@ function App() {
           widgetFrameRef={widgetFrameRef}
           setFrameEl={setFrameEl}
           presetResetKey={presetResetKey}
+          widgetFileName={currentWidgetFileName}
           frameSize={frameSize}
-          resizingRef={resizingRef}
-          treeRoot={displayTreeRoot}
+          treeRoot={treeRoot}
           selectedPath={selectedPath}
           handleSelectNode={handleSelectNode}
           treeContainerRef={treeContainerRef}

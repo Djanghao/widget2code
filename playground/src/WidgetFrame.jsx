@@ -1,9 +1,28 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useMemo } from 'react';
 import { PreviewErrorBoundary } from './PreviewErrorBoundary.jsx';
 
-const LazyWidget = React.lazy(() => import('./generated/Widget.jsx'));
+export default function WidgetFrame({ resetKey, widgetFileName }) {
+  const LazyWidget = useMemo(() => {
+    if (!widgetFileName) {
+      return null;
+    }
+    return React.lazy(() => import(`./generated/${widgetFileName}`));
+  }, [widgetFileName]);
 
-export default function WidgetFrame({ resetKey }) {
+  if (!LazyWidget) {
+    return (
+      <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: '#8e8e93' }}>
+        <svg width="18" height="18" viewBox="0 0 24 24" role="img" aria-label="loading">
+          <circle cx="12" cy="12" r="10" stroke="#8e8e93" strokeWidth="3" fill="none" opacity="0.25" />
+          <path d="M12 2 a10 10 0 0 1 0 20" stroke="#f5f5f7" strokeWidth="3" strokeLinecap="round" fill="none">
+            <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.9s" repeatCount="indefinite" />
+          </path>
+        </svg>
+        Initializing...
+      </div>
+    );
+  }
+
   return (
     <PreviewErrorBoundary
       resetKey={resetKey}
