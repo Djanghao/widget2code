@@ -8,7 +8,6 @@
     "playground"
   ],
   "scripts": {
-    "prepare": "node playground/scripts/init-generated.js",
     "dev": "npm run dev --workspace=playground",
     "dev:full": "npm run dev:full --workspace=playground",
     "api": "npm run api --workspace=playground",
