@@ -84,7 +84,7 @@ See individual package/app README for details.
 
 The playground implements a preview-driven auto-resize system with state flow management.
 
-See [`apps/playground/architecture.md`](./apps/playground/architecture.md) for detailed documentation.
+![Playground State Flow](https://raw.githubusercontent.com/Djanghao/llm-widget-factory/refs/heads/houston/feat/preview-driven-autoresize/playground/docs/architecture/stateflow-playground-latest.png)
 
 Key components:
 - **State Management**: Tracks preset changes and rendering lifecycle
