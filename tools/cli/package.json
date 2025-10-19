@@ -1,0 +1,19 @@
+{
+  "name": "@widget-factory/cli",
+  "version": "0.3.0",
+  "type": "module",
+  "description": "CLI tool for batch widget rendering",
+  "bin": {
+    "widget-factory": "./bin/widget-factory"
+  },
+  "keywords": [
+    "widget",
+    "cli",
+    "render",
+    "batch"
+  ],
+  "dependencies": {
+    "@widget-factory/compiler": "workspace:*",
+    "playwright": "^1.40.0"
+  }
+}
