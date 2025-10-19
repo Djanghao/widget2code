@@ -9,10 +9,12 @@
 import React, { useEffect, useState, useRef } from 'react';
 import * as Babel from '@babel/standalone';
 import * as WidgetPrimitives from '@widget-factory/primitives';
+import * as LucideReact from 'lucide-react';
 
 if (typeof window !== 'undefined') {
   window.React = React;
   window.WidgetPrimitives = WidgetPrimitives;
+  window.LucideReact = LucideReact;
 }
 
 function DirectWidgetRenderer({ jsxCode, onMount, onError }) {
@@ -35,10 +37,19 @@ function DirectWidgetRenderer({ jsxCode, onMount, onError }) {
       processedCode = processedCode.replace(/import\s+React\s+from\s+['"]react['"];?\n?/g, '');
       processedCode = processedCode.replace(/import\s+\{[^}]*\}\s+from\s+['"]@widget-factory\/primitives['"];?\n?/g, '');
       processedCode = processedCode.replace(/import\s+\*\s+as\s+\w+\s+from\s+['"]@widget-factory\/primitives['"];?\n?/g, '');
+
+      const lucideImportMatch = processedCode.match(/import\s+\{([^}]+)\}\s+from\s+['"]lucide-react['"];?\n?/);
+      const lucideIcons = lucideImportMatch ? lucideImportMatch[1].split(',').map(s => s.trim()) : [];
+      processedCode = processedCode.replace(/import\s+\{[^}]*\}\s+from\s+['"]lucide-react['"];?\n?/g, '');
+
       processedCode = processedCode.replace(/export\s+default\s+/g, '');
 
       const primitivesDestructure = `const { ${Object.keys(WidgetPrimitives).join(', ')} } = window.WidgetPrimitives;\n`;
-      processedCode = primitivesDestructure + processedCode;
+      const lucideDestructure = lucideIcons.length > 0
+        ? `const { ${lucideIcons.join(', ')} } = window.LucideReact;\n`
+        : '';
+
+      processedCode = primitivesDestructure + lucideDestructure + processedCode;
 
       const transformed = Babel.transform(processedCode, {
         presets: ['react'],
