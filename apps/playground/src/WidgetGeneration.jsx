@@ -15,6 +15,7 @@ import CodeViewer from './components/core/CodeViewer.jsx';
 import PreviewPanel from './components/core/PreviewPanel.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import SectionHeader from './components/core/SectionHeader.jsx';
+import { useApiKey } from './components/ApiKeyManager.jsx';
 import sfOnlyPrompt from '../../api/prompt2spec-sf-only.md?raw';
 import lucideOnlyPrompt from '../../api/prompt2spec-lucide-only.md?raw';
 import bothIconsPrompt from '../../api/prompt2spec-both.md?raw';
@@ -36,6 +37,7 @@ const VISION_MODELS = [
 ];
 
 function WidgetGeneration() {
+  const { apiKey, hasApiKey } = useApiKey();
   const [mode, setMode] = useState('text');
   const [prompt, setPrompt] = useState('');
   const [image, setImage] = useState(null);
@@ -127,6 +129,11 @@ function WidgetGeneration() {
   }, [mode, handleImageFile]);
 
   const handleGenerate = async () => {
+    if (!hasApiKey) {
+      setError('API key required');
+      return;
+    }
+
     if (mode === 'text' && !prompt.trim()) {
       setError('Please enter a widget description');
       return;
@@ -143,6 +150,7 @@ function WidgetGeneration() {
       const formData = new FormData();
       formData.append('system_prompt', systemPrompt);
       if (model) formData.append('model', model);
+      if (apiKey) formData.append('api_key', apiKey);
 
       let response;
       if (mode === 'text') {

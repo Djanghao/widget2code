@@ -1,14 +1,21 @@
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import fs from 'fs'
+import yaml from 'yaml'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+const configFile = process.env.CONFIG_FILE || 'config.yaml'
+const configPath = path.resolve(__dirname, '..', configFile)
+const configContent = fs.readFileSync(configPath, 'utf8')
+const config = yaml.parse(configContent)
+
+const backendPort = config.server.backend_port
+const frontendPort = config.server.frontend_port
+
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '')
-  const backendPort = env.BACKEND_PORT || '8000'
-  const frontendPort = env.FRONTEND_PORT || '5173'
 
   return {
     plugins: [react()],

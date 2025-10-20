@@ -1,4 +1,4 @@
-export async function generateComponent(prompt, suggestedWidth, suggestedHeight, model = null, systemPrompt = null) {
+export async function generateComponent(prompt, suggestedWidth, suggestedHeight, model = null, systemPrompt = null, apiKey = null) {
   try {
     const formData = new FormData();
     formData.append('prompt', prompt);
@@ -9,6 +9,9 @@ export async function generateComponent(prompt, suggestedWidth, suggestedHeight,
     }
     if (systemPrompt) {
       formData.append('system_prompt', systemPrompt);
+    }
+    if (apiKey) {
+      formData.append('api_key', apiKey);
     }
 
     const response = await fetch('/api/generate-component', {
@@ -42,7 +45,7 @@ export async function generateComponent(prompt, suggestedWidth, suggestedHeight,
   }
 }
 
-export async function generateComponentFromImage(imageFile, suggestedWidth, suggestedHeight, model = null, systemPrompt = null) {
+export async function generateComponentFromImage(imageFile, suggestedWidth, suggestedHeight, model = null, systemPrompt = null, apiKey = null) {
   try {
     const formData = new FormData();
     formData.append('image', imageFile);
@@ -53,6 +56,9 @@ export async function generateComponentFromImage(imageFile, suggestedWidth, sugg
     }
     if (systemPrompt) {
       formData.append('system_prompt', systemPrompt);
+    }
+    if (apiKey) {
+      formData.append('api_key', apiKey);
     }
 
     const response = await fetch('/api/generate-component-from-image', {

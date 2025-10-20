@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useApiKey } from '../ApiKeyManager.jsx';
 
 const TabButton = ({ active, onClick, children }) => (
   <button
@@ -107,7 +108,8 @@ const MobileMenuItem = ({ active, onClick, children, isExternal, href }) => {
   );
 };
 
-export default function AppHeader({ activeTab, onTabChange, onMaterialsClick }) {
+export default function AppHeader({ activeTab, onTabChange, onMaterialsClick, onApiKeyClick }) {
+  const { hasApiKey } = useApiKey();
   const [vw, setVw] = useState(typeof window !== 'undefined' ? window.innerWidth : 1920);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -171,25 +173,57 @@ export default function AppHeader({ activeTab, onTabChange, onMaterialsClick }) 
               Widget Factory
             </h1>
 
-            <button
-              onClick={onMaterialsClick}
-              style={{
-                padding: '8px 16px',
-                fontSize: 13,
-                fontWeight: 500,
-                backgroundColor: '#2c2c2e',
-                color: '#f5f5f7',
-                border: '1px solid #3a3a3c',
-                borderRadius: 6,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                whiteSpace: 'nowrap'
-              }}
-              onMouseEnter={(e) => e.target.style.backgroundColor = '#3a3a3c'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = '#2c2c2e'}
-            >
-              Materials
-            </button>
+            <div style={{ display: 'flex', gap: 8 }}>
+              <button
+                onClick={onApiKeyClick}
+                style={{
+                  padding: '8px 12px',
+                  fontSize: 13,
+                  fontWeight: 500,
+                  backgroundColor: hasApiKey ? 'rgba(52, 199, 89, 0.15)' : 'rgba(255, 149, 0, 0.15)',
+                  color: hasApiKey ? '#34C759' : '#FF9500',
+                  border: `1px solid ${hasApiKey ? 'rgba(52, 199, 89, 0.3)' : 'rgba(255, 149, 0, 0.3)'}`,
+                  borderRadius: 6,
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  whiteSpace: 'nowrap',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 6
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = hasApiKey ? 'rgba(52, 199, 89, 0.25)' : 'rgba(255, 149, 0, 0.25)';
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = hasApiKey ? 'rgba(52, 199, 89, 0.15)' : 'rgba(255, 149, 0, 0.15)';
+                }}
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                API
+              </button>
+              <button
+                onClick={onMaterialsClick}
+                style={{
+                  padding: '8px 16px',
+                  fontSize: 13,
+                  fontWeight: 500,
+                  backgroundColor: '#2c2c2e',
+                  color: '#f5f5f7',
+                  border: '1px solid #3a3a3c',
+                  borderRadius: 6,
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  whiteSpace: 'nowrap'
+                }}
+                onMouseEnter={(e) => e.target.style.backgroundColor = '#3a3a3c'}
+                onMouseLeave={(e) => e.target.style.backgroundColor = '#2c2c2e'}
+              >
+                Materials
+              </button>
+            </div>
           </div>
 
           {isMobileMenuOpen && (
@@ -309,24 +343,55 @@ export default function AppHeader({ activeTab, onTabChange, onMaterialsClick }) 
               </ExternalLink>
             </div>
           </div>
-          <button
-            onClick={onMaterialsClick}
-            style={{
-              padding: '8px 16px',
-              fontSize: 13,
-              fontWeight: 500,
-              backgroundColor: '#2c2c2e',
-              color: '#f5f5f7',
-              border: '1px solid #3a3a3c',
-              borderRadius: 6,
-              cursor: 'pointer',
-              transition: 'all 0.2s ease'
-            }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#3a3a3c'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = '#2c2c2e'}
-          >
-            Materials
-          </button>
+          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+            <button
+              onClick={onApiKeyClick}
+              style={{
+                padding: '8px 16px',
+                fontSize: 13,
+                fontWeight: 500,
+                backgroundColor: hasApiKey ? 'rgba(52, 199, 89, 0.15)' : 'rgba(255, 149, 0, 0.15)',
+                color: hasApiKey ? '#34C759' : '#FF9500',
+                border: `1px solid ${hasApiKey ? 'rgba(52, 199, 89, 0.3)' : 'rgba(255, 149, 0, 0.3)'}`,
+                borderRadius: 6,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 8
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = hasApiKey ? 'rgba(52, 199, 89, 0.25)' : 'rgba(255, 149, 0, 0.25)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = hasApiKey ? 'rgba(52, 199, 89, 0.15)' : 'rgba(255, 149, 0, 0.15)';
+              }}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+              {hasApiKey ? 'API Key' : 'Configure API'}
+            </button>
+            <button
+              onClick={onMaterialsClick}
+              style={{
+                padding: '8px 16px',
+                fontSize: 13,
+                fontWeight: 500,
+                backgroundColor: '#2c2c2e',
+                color: '#f5f5f7',
+                border: '1px solid #3a3a3c',
+                borderRadius: 6,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = '#3a3a3c'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = '#2c2c2e'}
+            >
+              Materials
+            </button>
+          </div>
         </div>
       )}
     </header>

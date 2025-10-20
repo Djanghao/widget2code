@@ -1,4 +1,4 @@
-from fastapi import FastAPI, File, UploadFile, Form
+from fastapi import FastAPI, File, UploadFile, Form, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from provider_hub import LLM, ChatMessage, prepare_image_content
@@ -7,16 +7,42 @@ from PIL import Image
 import io
 import json
 import os
+import time
+import yaml
 from pathlib import Path
-from dotenv import load_dotenv
+from collections import defaultdict
+from datetime import datetime
 
-load_dotenv(Path(__file__).parent.parent / ".env")
+config_file = os.getenv("CONFIG_FILE", "config.yaml")
+config_path = Path(__file__).parent.parent / config_file
+
+with open(config_path, 'r') as f:
+    config = yaml.safe_load(f)
 
 app = FastAPI()
 
+rate_limit_storage = defaultdict(list)
+MAX_REQUESTS_PER_MINUTE = config['security']['max_requests_per_minute']
+MAX_FILE_SIZE_MB = config['security']['max_file_size_mb']
+
+def check_rate_limit(client_ip: str) -> bool:
+    now = time.time()
+    rate_limit_storage[client_ip] = [
+        timestamp for timestamp in rate_limit_storage[client_ip]
+        if now - timestamp < 60
+    ]
+
+    if len(rate_limit_storage[client_ip]) >= MAX_REQUESTS_PER_MINUTE:
+        return False
+
+    rate_limit_storage[client_ip].append(now)
+    return True
+
+allowed_origins = config['cors']['origins']
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -47,14 +73,38 @@ async def get_default_prompt():
 
 @app.post("/api/generate-widget")
 async def generate_widget(
+    request: Request,
     image: UploadFile = File(...),
     system_prompt: str = Form(None),
     model: str = Form(None),
+    api_key: str = Form(None),
 ):
+    client_ip = request.client.host
+
+    if not check_rate_limit(client_ip):
+        return JSONResponse(
+            status_code=429,
+            content={
+                "success": False,
+                "error": "Rate limit exceeded. Please try again later."
+            }
+        )
+
+    print(f"[{datetime.now()}] generate-widget request from {client_ip}")
+
     import tempfile
     temp_file = None
     try:
         image_bytes = await image.read()
+
+        if len(image_bytes) > MAX_FILE_SIZE_MB * 1024 * 1024:
+            return JSONResponse(
+                status_code=413,
+                content={
+                    "success": False,
+                    "error": f"File size exceeds {MAX_FILE_SIZE_MB}MB limit"
+                }
+            )
 
         img = Image.open(io.BytesIO(image_bytes))
         width, height = img.size
@@ -66,7 +116,6 @@ async def generate_widget(
 
         prompt = system_prompt if system_prompt else load_default_prompt()
 
-        # Determine model (vision-only for widget2spec)
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
         model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
         if model and model_to_use not in vision_models:
@@ -78,12 +127,22 @@ async def generate_widget(
                 }
             )
 
+        if not api_key:
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "success": False,
+                    "error": "API key is required. Please provide your DashScope API key."
+                }
+            )
+
         vision_llm = LLM(
             model=model_to_use,
             temperature=0.5,
             max_tokens=32768,
             timeout=60,
-            system_prompt=prompt
+            system_prompt=prompt,
+            api_key=api_key
         )
 
         image_content = prepare_image_content(temp_file_path)
@@ -146,12 +205,26 @@ async def generate_widget(
 
 @app.post("/api/generate-widget-text")
 async def generate_widget_text(
+    request: Request,
     system_prompt: str = Form(...),
     user_prompt: str = Form(...),
     model: str = Form(None),
+    api_key: str = Form(None),
 ):
+    client_ip = request.client.host
+
+    if not check_rate_limit(client_ip):
+        return JSONResponse(
+            status_code=429,
+            content={
+                "success": False,
+                "error": "Rate limit exceeded. Please try again later."
+            }
+        )
+
+    print(f"[{datetime.now()}] generate-widget-text request from {client_ip}")
+
     try:
-        # Allow both text and multimodal Qwen models
         text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
         qwen_supported = text_models | vision_models
@@ -165,12 +238,22 @@ async def generate_widget_text(
                 }
             )
 
+        if not api_key:
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "success": False,
+                    "error": "API key is required. Please provide your DashScope API key."
+                }
+            )
+
         text_llm = LLM(
             model=model_to_use,
             temperature=0.5,
             max_tokens=2000,
             timeout=60,
-            system_prompt=system_prompt
+            system_prompt=system_prompt,
+            api_key=api_key
         )
 
         messages = [ChatMessage(
@@ -217,12 +300,27 @@ async def generate_widget_text(
 
 @app.post("/api/generate-component")
 async def generate_component(
+    request: Request,
     prompt: str = Form(...),
     suggested_width: int = Form(...),
     suggested_height: int = Form(...),
     model: str = Form(None),
     system_prompt: str = Form(None),
+    api_key: str = Form(None),
 ):
+    client_ip = request.client.host
+
+    if not check_rate_limit(client_ip):
+        return JSONResponse(
+            status_code=429,
+            content={
+                "success": False,
+                "error": "Rate limit exceeded. Please try again later."
+            }
+        )
+
+    print(f"[{datetime.now()}] generate-component request from {client_ip}")
+
     try:
         text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
         qwen_supported = text_models
@@ -244,12 +342,22 @@ async def generate_component(
         system_prompt_final = system_prompt_final.replace("{suggested_width}", str(suggested_width))
         system_prompt_final = system_prompt_final.replace("{suggested_height}", str(suggested_height))
 
+        if not api_key:
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "success": False,
+                    "error": "API key is required. Please provide your DashScope API key."
+                }
+            )
+
         component_llm = LLM(
             model=model_to_use,
             temperature=0.7,
             max_tokens=2000,
             timeout=60,
-            system_prompt=system_prompt_final
+            system_prompt=system_prompt_final,
+            api_key=api_key
         )
 
         messages = [ChatMessage(
@@ -287,16 +395,40 @@ async def generate_component(
 
 @app.post("/api/generate-component-from-image")
 async def generate_component_from_image(
+    request: Request,
     image: UploadFile = File(...),
     suggested_width: int = Form(...),
     suggested_height: int = Form(...),
     model: str = Form(None),
     system_prompt: str = Form(None),
+    api_key: str = Form(None),
 ):
+    client_ip = request.client.host
+
+    if not check_rate_limit(client_ip):
+        return JSONResponse(
+            status_code=429,
+            content={
+                "success": False,
+                "error": "Rate limit exceeded. Please try again later."
+            }
+        )
+
+    print(f"[{datetime.now()}] generate-component-from-image request from {client_ip}")
+
     import tempfile
     temp_file = None
     try:
         image_bytes = await image.read()
+
+        if len(image_bytes) > MAX_FILE_SIZE_MB * 1024 * 1024:
+            return JSONResponse(
+                status_code=413,
+                content={
+                    "success": False,
+                    "error": f"File size exceeds {MAX_FILE_SIZE_MB}MB limit"
+                }
+            )
 
         img = Image.open(io.BytesIO(image_bytes))
         width, height = img.size
@@ -324,12 +456,22 @@ async def generate_component_from_image(
         system_prompt_final = system_prompt_final.replace("{suggested_width}", str(suggested_width))
         system_prompt_final = system_prompt_final.replace("{suggested_height}", str(suggested_height))
 
+        if not api_key:
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "success": False,
+                    "error": "API key is required. Please provide your DashScope API key."
+                }
+            )
+
         vision_llm = LLM(
             model=model_to_use,
             temperature=0.5,
             max_tokens=2000,
             timeout=60,
-            system_prompt=system_prompt_final
+            system_prompt=system_prompt_final,
+            api_key=api_key
         )
 
         image_content = prepare_image_content(temp_file_path)
@@ -377,5 +519,6 @@ async def generate_component_from_image(
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.getenv("BACKEND_PORT", "8000"))
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    port = config['server']['backend_port']
+    host = config['server']['host']
+    uvicorn.run(app, host=host, port=port)

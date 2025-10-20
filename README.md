@@ -11,9 +11,11 @@ Pipeline: WidgetSpec → JSX file → rendered result.
 npm install
 
 # Configure environment (first time only)
-cd apps/playground
-cp .env.example .env
-# Edit .env to set your API key and ports
+cd apps
+cp config.yaml.example config.yaml
+# Edit config.yaml with your settings (ports, etc.)
+# IMPORTANT: Never commit config.yaml with sensitive data - it's in .gitignore
+cd ..
 ```
 
 **Backend setup** (first time only, required for full mode):
@@ -37,6 +39,39 @@ npm run dev
 This starts:
 - Frontend at http://localhost:5173 (configurable via `FRONTEND_PORT`)
 - Backend at http://localhost:8000 (configurable via `BACKEND_PORT`)
+
+## Configuration
+
+### Configuration File
+
+The project uses `config.yaml` for server settings. **Never commit `config.yaml` with sensitive data** to version control.
+
+**Setup**:
+```bash
+cd apps
+cp config.yaml.example config.yaml
+# Edit config.yaml with your preferred settings
+```
+
+**Configuration options** (edit `apps/config.yaml`):
+```yaml
+server:
+  backend_port: 8000      # Backend API port
+  frontend_port: 3060     # Frontend dev server port
+  host: 127.0.0.1        # Server host
+
+cors:
+  origins:
+    - "*"                 # Allowed CORS origins
+
+security:
+  max_requests_per_minute: 10
+  max_file_size_mb: 100
+```
+
+**Security notes**:
+- `config.yaml` is already in `.gitignore` - don't remove it
+- Use `config.yaml.example` as a template (this file IS committed)
 
 ### Regenerating Icons (Optional)
 Only needed when updating SF Symbols source files or modifying icon generation scripts:

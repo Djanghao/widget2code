@@ -7,23 +7,25 @@ import CodeViewer from './components/core/CodeViewer.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import DownloadButton from './DownloadButton.jsx';
 import DimensionLines from './components/DimensionLines.jsx';
+import { useApiKey } from './components/ApiKeyManager.jsx';
 import textPrompt from '../../api/dynamic-component-prompt.md?raw';
 import imagePrompt from '../../api/dynamic-component-image-prompt.md?raw';
 
 const TEXT_MODELS = [
-  { value: 'qwen3-max', label: 'Qwen3 Max' },
-  { value: 'qwen3-coder-480b-a35b-instruct', label: 'Qwen3 Coder 480B' },
-  { value: 'qwen3-coder-plus', label: 'Qwen3 Coder Plus' },
+  { value: 'qwen3-max', label: 'qwen3-max' },
+  { value: 'qwen3-coder-480b-a35b-instruct', label: 'qwen3-coder-480b-a35b-instruct' },
+  { value: 'qwen3-coder-plus', label: 'qwen3-coder-plus' },
 ];
 
 const VISION_MODELS = [
-  { value: 'qwen3-vl-235b-a22b-instruct', label: 'Qwen3 VL 235B Instruct' },
-  { value: 'qwen3-vl-235b-a22b-thinking', label: 'Qwen3 VL 235B Thinking' },
-  { value: 'qwen3-vl-plus', label: 'Qwen3 VL Plus' },
-  { value: 'qwen3-vl-flash', label: 'Qwen3 VL Flash' },
+  { value: 'qwen3-vl-235b-a22b-instruct', label: 'qwen3-vl-235b-a22b-instruct' },
+  { value: 'qwen3-vl-235b-a22b-thinking', label: 'qwen3-vl-235b-a22b-thinking' },
+  { value: 'qwen3-vl-plus', label: 'qwen3-vl-plus' },
+  { value: 'qwen3-vl-flash', label: 'qwen3-vl-flash' },
 ];
 
-export default function DynamicComponentTest() {
+export default function DynamicComponentGenerator() {
+  const { apiKey, hasApiKey } = useApiKey();
   const [mode, setMode] = useState('text');
   const [prompt, setPrompt] = useState('');
   const [image, setImage] = useState(null);
@@ -98,6 +100,11 @@ export default function DynamicComponentTest() {
   }, [mode, handleImageFile]);
 
   const handleGenerate = async () => {
+    if (!hasApiKey) {
+      setError('API key required');
+      return;
+    }
+
     if (mode === 'text' && !prompt.trim()) {
       alert('Please enter a component description');
       return;
@@ -114,9 +121,9 @@ export default function DynamicComponentTest() {
 
     let result;
     if (mode === 'text') {
-      result = await generateComponent(prompt, width, height, model, systemPrompt);
+      result = await generateComponent(prompt, width, height, model, systemPrompt, apiKey);
     } else {
-      result = await generateComponentFromImage(image, width, height, model, systemPrompt);
+      result = await generateComponentFromImage(image, width, height, model, systemPrompt, apiKey);
     }
 
     if (result.error) {

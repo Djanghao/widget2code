@@ -1,0 +1,12 @@
+server:
+  backend_port: 8000
+  frontend_port: 3060
+  host: 127.0.0.1
+
+cors:
+  origins:
+    - "*"
+
+security:
+  max_requests_per_minute: 10
+  max_file_size_mb: 100

@@ -13,14 +13,16 @@ import { parseAspectRatio } from '@widget-factory/spec';
 import { exportWidget } from '@widget-factory/exporter';
 import AppHeader from './components/Header/AppHeader.jsx';
 import MaterialsModal from './components/MaterialsModal/index.jsx';
+import ApiKeyManager, { useApiKey } from './components/ApiKeyManager.jsx';
 import useWidgetFrame from './hooks/useWidgetFrame.js';
 import PresetsTab from './components/PresetsTab/index.jsx';
 import WidgetGeneration from './WidgetGeneration.jsx';
 import Documentation from './Documentation.jsx';
-import DynamicComponentTest from './DynamicComponentTest.jsx';
+import DynamicComponentGenerator from './DynamicComponentGenerator.jsx';
 import usePlaygroundStore from './store/index.js';
 
 function App() {
+  const { apiKey, setApiKey } = useApiKey();
   const {
     selectedPreset,
     widgetSpec,
@@ -44,6 +46,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('presets');
   const [editedSpec, setEditedSpec] = useState('');
   const [showComponentsModal, setShowComponentsModal] = useState(false);
+  const [showApiKeyManager, setShowApiKeyManager] = useState(false);
   const [selectedPath, setSelectedPath] = useState(null);
   const previewContainerRef = useRef(null);
   const widgetFrameRef = useRef(null);
@@ -180,6 +183,7 @@ function App() {
         activeTab={activeTab}
         onTabChange={setActiveTab}
         onMaterialsClick={() => setShowComponentsModal(true)}
+        onApiKeyClick={() => setShowApiKeyManager(true)}
       />
 
       {activeTab === 'presets' && (
@@ -224,7 +228,7 @@ function App() {
 
       {activeTab === 'dynamic' && (
         <div key="dynamic" style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', animation: 'fadeIn 0.2s ease-in-out' }}>
-          <DynamicComponentTest />
+          <DynamicComponentGenerator />
         </div>
       )}
 
@@ -238,6 +242,14 @@ function App() {
         isOpen={showComponentsModal}
         onClose={() => setShowComponentsModal(false)}
       />
+
+      {showApiKeyManager && (
+        <ApiKeyManager
+          apiKey={apiKey}
+          onSave={setApiKey}
+          onClose={() => setShowApiKeyManager(false)}
+        />
+      )}
     </div>
   );
 }
