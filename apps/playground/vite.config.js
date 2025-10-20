@@ -38,6 +38,7 @@ export default defineConfig(({ mode }) => {
       }
     },
     server: {
+      host: config.server.host,
       port: parseInt(frontendPort),
       proxy: {
         '^/api/(?!.*\\.md).*': {

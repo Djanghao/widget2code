@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "start": "concurrently \"vite preview --host 0.0.0.0\" \"npm run api\"",
     "api": "cd ../api && ./.venv/bin/python server.py",
     "dev:full": "concurrently \"npm run dev\" \"npm run api\"",
     "render": "node scripts/render.js"

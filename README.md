@@ -27,7 +27,7 @@ pip install -r requirements.txt
 cd ../..
 ```
 
-**Run**:
+**Development mode**:
 ```bash
 # Start with backend API
 npm run dev:full
@@ -36,8 +36,17 @@ npm run dev:full
 npm run dev
 ```
 
+**Production mode**:
+```bash
+# Build for production
+npm run build
+
+# Start production server
+npm start
+```
+
 This starts:
-- Frontend at http://localhost:5173 (configurable via `FRONTEND_PORT`)
+- Frontend at http://localhost:3060 (configurable via `FRONTEND_PORT`)
 - Backend at http://localhost:8000 (configurable via `BACKEND_PORT`)
 
 ## Configuration
@@ -58,7 +67,7 @@ cp config.yaml.example config.yaml
 server:
   backend_port: 8000      # Backend API port
   frontend_port: 3060     # Frontend dev server port
-  host: 127.0.0.1        # Server host
+  host: 0.0.0.0          # Server host (0.0.0.0 for remote access, 127.0.0.1 for local only)
 
 cors:
   origins:

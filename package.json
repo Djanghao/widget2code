@@ -9,6 +9,7 @@
     "apps/playground"
   ],
   "scripts": {
+    "start": "npm run dev --workspace=apps/playground",
     "dev": "npm run dev --workspace=apps/playground",
     "dev:full": "npm run dev:full --workspace=apps/playground",
     "api": "cd apps/api && ./.venv/bin/python server.py",
