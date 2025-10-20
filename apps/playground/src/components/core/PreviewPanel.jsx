@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import WidgetRenderer from '../WidgetRenderer.jsx';
+import DownloadButton from '../../DownloadButton.jsx';
+import DimensionLines from '../DimensionLines.jsx';
 
 export default function PreviewPanel({
   previewSpec,
@@ -11,105 +13,153 @@ export default function PreviewPanel({
   handleAutoResizeByRatio,
   enableAutoResize,
   setEnableAutoResize,
+  handleDownloadWidget,
+  isDownloading = false,
   title = 'Preview',
   dotColor = '#BF5AF2'
 }) {
+  const [frameSize, setFrameSize] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    const el = widgetFrameRef.current;
+    if (!el) return;
+
+    const updateSize = () => {
+      const child = el.firstElementChild;
+      if (child) {
+        const rect = child.getBoundingClientRect();
+        setFrameSize({ width: Math.round(rect.width), height: Math.round(rect.height) });
+      }
+    };
+
+    updateSize();
+
+    const observer = new ResizeObserver(updateSize);
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, [widgetFrameRef, previewSpec, generatedCode]);
+
   return (
     <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', height: '100%' }}>
-      <h2 style={{
-        fontSize: 15,
-        fontWeight: 600,
-        marginBottom: 8,
-        color: '#f5f5f7',
+      <div style={{
         display: 'flex',
         alignItems: 'center',
         gap: 8,
-        flexShrink: 0
+        marginBottom: 8,
+        flexShrink: 0,
+        minWidth: 0,
+        flexWrap: 'wrap',
+        rowGap: 8
       }}>
-        <span style={{
-          width: 6,
-          height: 6,
-          borderRadius: '50%',
-          backgroundColor: dotColor
-        }} />
-        {title}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginLeft: 'auto' }}>
-          <input
-            value={ratioInput}
-            onChange={(e) => setRatioInput(e.target.value)}
-            placeholder="16:9 or 1.777"
-            style={{
-              width: 120,
-              height: 28,
-              fontSize: 12,
-              color: '#f5f5f7',
-              backgroundColor: '#2c2c2e',
-              border: '1px solid #3a3a3c',
-              borderRadius: 6,
-              padding: '0 8px',
-              outline: 'none'
-            }}
-            onFocus={(e) => (e.currentTarget.style.borderColor = '#007AFF')}
-            onBlur={(e) => (e.currentTarget.style.borderColor = '#3a3a3c')}
-          />
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-            <span style={{ fontSize: 12, color: '#d1d1d6' }}>AutoResize</span>
-            <button
-              onClick={() => setEnableAutoResize((v) => !v)}
-              aria-pressed={enableAutoResize}
-              title="Toggle AutoResize"
-              style={{
-                width: 44,
-                height: 24,
-                borderRadius: 9999,
-                border: '1px solid #3a3a3c',
-                backgroundColor: enableAutoResize ? '#34C759' : '#2c2c2e',
-                position: 'relative',
-                cursor: 'pointer',
-                outline: 'none',
-                padding: 0
-              }}
-            >
-              <span
-                style={{
-                  position: 'absolute',
-                  top: 2,
-                  left: enableAutoResize ? 22 : 2,
-                  width: 20,
-                  height: 20,
-                  borderRadius: '50%',
-                  backgroundColor: '#fff',
-                  transition: 'left 0.15s ease'
-                }}
-              />
-            </button>
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flex: '0 0 auto' }}>
+          <span style={{
+            width: 6,
+            height: 6,
+            borderRadius: '50%',
+            backgroundColor: dotColor
+          }} />
+          <h2 style={{
+            fontSize: 15,
+            fontWeight: 600,
+            margin: 0,
+            color: '#f5f5f7',
+            whiteSpace: 'nowrap'
+          }}>
+            {title}
+          </h2>
+        </div>
+        <div style={{ flex: 1, minWidth: 0 }} />
+        <input
+          value={ratioInput}
+          onChange={(e) => setRatioInput(e.target.value)}
+          placeholder="16:9 or 1.777"
+          style={{
+            flex: '0 1 120px',
+            minWidth: 80,
+            maxWidth: 120,
+            height: 28,
+            fontSize: 12,
+            color: '#f5f5f7',
+            backgroundColor: '#2c2c2e',
+            border: '1px solid #3a3a3c',
+            borderRadius: 6,
+            padding: '0 8px',
+            outline: 'none',
+            boxSizing: 'border-box'
+          }}
+          onFocus={(e) => (e.currentTarget.style.borderColor = '#007AFF')}
+          onBlur={(e) => (e.currentTarget.style.borderColor = '#3a3a3c')}
+        />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6, flex: '0 0 auto' }}>
+          <span style={{ fontSize: 12, color: '#d1d1d6', whiteSpace: 'nowrap' }}>AutoResize</span>
           <button
-            onClick={() => previewSpec && handleAutoResizeByRatio(previewSpec, ratioInput)}
-            disabled={autoSizing}
+            onClick={() => setEnableAutoResize((v) => !v)}
+            aria-pressed={enableAutoResize}
+            title="Toggle AutoResize"
             style={{
-              padding: '6px 10px',
-              fontSize: 12,
-              fontWeight: 500,
-              backgroundColor: autoSizing ? '#3a3a3c' : '#2c2c2e',
-              color: '#f5f5f7',
+              width: 44,
+              height: 24,
+              borderRadius: 9999,
               border: '1px solid #3a3a3c',
-              borderRadius: 6,
-              cursor: autoSizing ? 'default' : 'pointer',
-              transition: 'all 0.2s ease'
+              backgroundColor: enableAutoResize ? '#34C759' : '#2c2c2e',
+              position: 'relative',
+              cursor: 'pointer',
+              outline: 'none',
+              padding: 0,
+              flexShrink: 0
             }}
-            onMouseEnter={(e) => {
-              if (!autoSizing) e.currentTarget.style.backgroundColor = '#3a3a3c';
-            }}
-            onMouseLeave={(e) => {
-              if (!autoSizing) e.currentTarget.style.backgroundColor = '#2c2c2e';
-            }}
-            title="Auto-resize to aspect ratio"
           >
-            {autoSizing ? 'Sizing…' : 'Auto-Resize'}
+            <span
+              style={{
+                position: 'absolute',
+                top: 2,
+                left: enableAutoResize ? 22 : 2,
+                width: 20,
+                height: 20,
+                borderRadius: '50%',
+                backgroundColor: '#fff',
+                transition: 'left 0.15s ease'
+              }}
+            />
           </button>
         </div>
-      </h2>
+        <button
+          onClick={() => previewSpec && handleAutoResizeByRatio(previewSpec, ratioInput)}
+          disabled={autoSizing}
+          style={{
+            flex: '0 0 auto',
+            padding: '6px 10px',
+            fontSize: 12,
+            fontWeight: 500,
+            backgroundColor: autoSizing ? '#3a3a3c' : '#2c2c2e',
+            color: '#f5f5f7',
+            border: '1px solid #3a3a3c',
+            borderRadius: 6,
+            cursor: autoSizing ? 'default' : 'pointer',
+            transition: 'all 0.2s ease',
+            whiteSpace: 'nowrap',
+            boxSizing: 'border-box'
+          }}
+          onMouseEnter={(e) => {
+            if (!autoSizing) e.currentTarget.style.backgroundColor = '#3a3a3c';
+          }}
+          onMouseLeave={(e) => {
+            if (!autoSizing) e.currentTarget.style.backgroundColor = '#2c2c2e';
+          }}
+          title="Auto-resize to aspect ratio"
+        >
+          {autoSizing ? 'Sizing…' : 'Auto-Resize'}
+        </button>
+        {handleDownloadWidget && (
+          <DownloadButton
+            onClick={handleDownloadWidget}
+            isDisabled={!previewSpec}
+            isLoading={isDownloading || autoSizing}
+            statusText={isDownloading ? 'Downloading...' : (autoSizing ? 'Sizing...' : '')}
+          />
+        )}
+      </div>
       <div style={{
         flex: 1,
         backgroundColor: '#0d0d0d',
@@ -148,6 +198,9 @@ export default function PreviewPanel({
                   </path>
                 </svg>
               </div>
+            )}
+            {frameSize.width > 0 && frameSize.height > 0 && (
+              <DimensionLines width={frameSize.width} height={frameSize.height} />
             )}
           </div>
         ) : (

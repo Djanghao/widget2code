@@ -33,7 +33,7 @@ export default function CodeViewer({ code, language = 'jsx', title = 'Generated 
         flexDirection: 'column',
         overflow: 'hidden'
       }}>
-        <div style={{ flex: 1, minHeight: 0, overflow: 'auto' }}>
+        <div style={{ flex: 1, minHeight: 0, overflow: 'auto', minWidth: 0 }}>
           <SyntaxHighlighter
             language={language}
             style={vscDarkPlus}
@@ -44,8 +44,9 @@ export default function CodeViewer({ code, language = 'jsx', title = 'Generated 
               fontSize: 13,
               borderRadius: 10,
               whiteSpace: 'pre',
-              minHeight: 0,
-              overflow: 'visible'
+              minHeight: '100%',
+              width: 'max-content',
+              minWidth: '100%'
             }}
           >
             {code || placeholder}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { examples } from '../../constants/examples.js';
@@ -37,12 +37,21 @@ export default function PresetsTab({
   const isLocked = operationMode !== 'idle';
   const isCompiling = operationMode === 'compiling';
 
+  // Responsive: stack panels when viewport < 1300px
+  const [viewportWidth, setViewportWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1920);
+  useEffect(() => {
+    const onResize = () => setViewportWidth(window.innerWidth);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+  const isNarrow = viewportWidth < 1300;
+
   return (
     <div key="presets" style={{
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gridTemplateRows: '1fr 1fr',
-      gridTemplateAreas: '"spec preview" "code tree"',
+      gridTemplateColumns: isNarrow ? '1fr' : '1fr 1fr',
+      gridTemplateRows: isNarrow ? '2fr 2fr 1fr 1fr' : '1fr 1fr',
+      gridTemplateAreas: isNarrow ? '"spec" "preview" "code" "tree"' : '"spec preview" "code tree"',
       gap: 12,
       minWidth: 0,
       flex: 1,

@@ -20,85 +20,91 @@ export default function SystemPromptEditor({
 }) {
   return (
     <div style={{ flex: '1 1 auto', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+      <SectionHeader title={title} dotColor={dotColor} />
       <div style={{
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+        gap: 8,
         marginBottom: 8,
-        flexWrap: 'wrap',
-        rowGap: 8
+        marginTop: 8,
+        width: '100%',
+        backgroundColor: '#1a1a1c',
+        border: '1px solid #2a2a2c',
+        borderRadius: 10,
+        padding: 12,
+        boxSizing: 'border-box'
       }}>
-        <SectionHeader title={title} dotColor={dotColor} />
-        <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexShrink: 0, flexWrap: 'wrap', justifyContent: 'flex-end' }}>
-          {promptType !== undefined && setPromptType && (
-            <select
-              value={promptType}
-              onChange={(e) => setPromptType(e.target.value)}
-              style={{
-                padding: '6px 10px',
-                fontSize: 12,
-                fontWeight: 500,
-                backgroundColor: '#2c2c2e',
-                color: '#f5f5f7',
-                border: '1px solid #3a3a3c',
-                borderRadius: 6,
-                cursor: 'pointer',
-                outline: 'none',
-                whiteSpace: 'nowrap',
-                maxWidth: 180
-              }}
-            >
-              {promptTypeOptions.map(opt => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
-              ))}
-            </select>
-          )}
-          {model !== undefined && setModel && modelOptions.length > 0 && (
-            <select
-              value={model}
-              onChange={(e) => setModel(e.target.value)}
-              title="Model"
-              style={{
-                padding: '6px 10px',
-                fontSize: 12,
-                fontWeight: 500,
-                backgroundColor: '#2c2c2e',
-                color: '#f5f5f7',
-                border: '1px solid #3a3a3c',
-                borderRadius: 6,
-                cursor: 'pointer',
-                outline: 'none',
-                whiteSpace: 'nowrap',
-                maxWidth: 200
-              }}
-            >
-              {modelOptions.map(opt => (
-                <option key={opt.value} value={opt.value}>{opt.label}</option>
-              ))}
-            </select>
-          )}
-          {onReset && (
-            <button
-              onClick={onReset}
-              style={{
-                padding: '6px 12px',
-                fontSize: 12,
-                fontWeight: 500,
-                backgroundColor: '#2c2c2e',
-                color: '#f5f5f7',
-                border: '1px solid #3a3a3c',
-                borderRadius: 6,
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-                whiteSpace: 'nowrap'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3a3a3c'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2c2c2e'}
-            >
-              Reset to Default
-            </button>
-          )}
-        </div>
+        {promptType !== undefined && setPromptType && (
+          <select
+            value={promptType}
+            onChange={(e) => setPromptType(e.target.value)}
+            style={{
+              flex: 1,
+              minWidth: 0,
+              padding: '6px 10px',
+              fontSize: 12,
+              fontWeight: 500,
+              backgroundColor: '#2c2c2e',
+              color: '#f5f5f7',
+              border: '1px solid #3a3a3c',
+              borderRadius: 6,
+              cursor: 'pointer',
+              outline: 'none',
+              boxSizing: 'border-box'
+            }}
+          >
+            {promptTypeOptions.map(opt => (
+              <option key={opt.value} value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
+        )}
+        {model !== undefined && setModel && modelOptions.length > 0 && (
+          <select
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+            title="Model"
+            style={{
+              flex: 1,
+              minWidth: 0,
+              padding: '6px 10px',
+              fontSize: 12,
+              fontWeight: 500,
+              backgroundColor: '#2c2c2e',
+              color: '#f5f5f7',
+              border: '1px solid #3a3a3c',
+              borderRadius: 6,
+              cursor: 'pointer',
+              outline: 'none',
+              boxSizing: 'border-box'
+            }}
+          >
+            {modelOptions.map(opt => (
+              <option key={opt.value} value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
+        )}
+        {onReset && (
+          <button
+            onClick={onReset}
+            style={{
+              flex: '0 0 auto',
+              padding: '6px 12px',
+              fontSize: 12,
+              fontWeight: 500,
+              backgroundColor: '#2c2c2e',
+              color: '#f5f5f7',
+              border: '1px solid #3a3a3c',
+              borderRadius: 6,
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              whiteSpace: 'nowrap',
+              boxSizing: 'border-box'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#3a3a3c'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#2c2c2e'}
+          >
+            Reset
+          </button>
+        )}
       </div>
       <textarea
         value={value}

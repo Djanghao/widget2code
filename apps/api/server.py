@@ -221,6 +221,7 @@ async def generate_component(
     suggested_width: int = Form(...),
     suggested_height: int = Form(...),
     model: str = Form(None),
+    system_prompt: str = Form(None),
 ):
     try:
         text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
@@ -235,16 +236,20 @@ async def generate_component(
                 }
             )
 
-        system_prompt_template = load_dynamic_component_prompt()
-        system_prompt = system_prompt_template.replace("{suggested_width}", str(suggested_width))
-        system_prompt = system_prompt.replace("{suggested_height}", str(suggested_height))
+        if system_prompt:
+            system_prompt_final = system_prompt
+        else:
+            system_prompt_final = load_dynamic_component_prompt()
+
+        system_prompt_final = system_prompt_final.replace("{suggested_width}", str(suggested_width))
+        system_prompt_final = system_prompt_final.replace("{suggested_height}", str(suggested_height))
 
         component_llm = LLM(
             model=model_to_use,
             temperature=0.7,
             max_tokens=2000,
             timeout=60,
-            system_prompt=system_prompt
+            system_prompt=system_prompt_final
         )
 
         messages = [ChatMessage(
@@ -286,6 +291,7 @@ async def generate_component_from_image(
     suggested_width: int = Form(...),
     suggested_height: int = Form(...),
     model: str = Form(None),
+    system_prompt: str = Form(None),
 ):
     import tempfile
     temp_file = None
@@ -310,16 +316,20 @@ async def generate_component_from_image(
                 }
             )
 
-        system_prompt_template = load_dynamic_component_image_prompt()
-        system_prompt = system_prompt_template.replace("{suggested_width}", str(suggested_width))
-        system_prompt = system_prompt.replace("{suggested_height}", str(suggested_height))
+        if system_prompt:
+            system_prompt_final = system_prompt
+        else:
+            system_prompt_final = load_dynamic_component_image_prompt()
+
+        system_prompt_final = system_prompt_final.replace("{suggested_width}", str(suggested_width))
+        system_prompt_final = system_prompt_final.replace("{suggested_height}", str(suggested_height))
 
         vision_llm = LLM(
             model=model_to_use,
             temperature=0.5,
             max_tokens=2000,
             timeout=60,
-            system_prompt=system_prompt
+            system_prompt=system_prompt_final
         )
 
         image_content = prepare_image_content(temp_file_path)

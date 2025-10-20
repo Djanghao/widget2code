@@ -15,8 +15,7 @@ import AppHeader from './components/Header/AppHeader.jsx';
 import MaterialsModal from './components/MaterialsModal/index.jsx';
 import useWidgetFrame from './hooks/useWidgetFrame.js';
 import PresetsTab from './components/PresetsTab/index.jsx';
-import ImageToWidget from './ImageToWidget.jsx';
-import Prompt2Spec from './Prompt2Spec.jsx';
+import WidgetGeneration from './WidgetGeneration.jsx';
 import Documentation from './Documentation.jsx';
 import DynamicComponentTest from './DynamicComponentTest.jsx';
 import usePlaygroundStore from './store/index.js';
@@ -163,11 +162,7 @@ function App() {
     await executeAutoResize(r, widgetFrameRef);
   }, [ratioInput, executeAutoResize]);
 
-  const handleWidgetGenerated = async (widgetSpec, aspectRatio) => {
-    const specStr = JSON.stringify(widgetSpec, null, 2);
-    setEditedSpec(specStr);
-    setRatioInput(aspectRatio.toString());
-  };
+  
 
   const { frameSize, setFrameSize } = useWidgetFrame(frameEl);
 
@@ -219,17 +214,7 @@ function App() {
         />
       )}
 
-      {activeTab === 'widget2spec' && (
-        <div key="widget2spec" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
-          <ImageToWidget onWidgetGenerated={handleWidgetGenerated} />
-        </div>
-      )}
-
-      {activeTab === 'prompt2spec' && (
-        <div key="prompt2spec" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
-          <Prompt2Spec />
-        </div>
-      )}
+      
 
       {activeTab === 'guides' && (
         <div key="guides" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
@@ -240,6 +225,12 @@ function App() {
       {activeTab === 'dynamic' && (
         <div key="dynamic" style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', animation: 'fadeIn 0.2s ease-in-out' }}>
           <DynamicComponentTest />
+        </div>
+      )}
+
+      {activeTab === 'widgetgen' && (
+        <div key="widgetgen" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
+          <WidgetGeneration />
         </div>
       )}
 

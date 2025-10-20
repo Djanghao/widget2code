@@ -1,11 +1,13 @@
 import React from 'react';
 import { Download, RefreshCw } from 'lucide-react';
 
-export default function DownloadButton({ onClick, isDisabled, statusText = '' }) {
+export default function DownloadButton({ onClick, isDisabled, isLoading = false, statusText = '' }) {
+  const disabled = isDisabled || isLoading;
+
   return (
     <button
       onClick={onClick}
-      disabled={isDisabled}
+      disabled={disabled}
       style={{
         padding: '6px 10px',
         fontSize: 12,
@@ -14,21 +16,21 @@ export default function DownloadButton({ onClick, isDisabled, statusText = '' })
         color: isDisabled ? '#8e8e93' : '#f5f5f7',
         border: '1px solid #3a3a3c',
         borderRadius: 6,
-        cursor: isDisabled ? 'not-allowed' : 'pointer',
+        cursor: disabled ? 'not-allowed' : 'pointer',
         transition: 'all 0.2s ease',
         display: 'flex',
         alignItems: 'center',
         gap: 6
       }}
       onMouseEnter={(e) => {
-        if (!isDisabled) e.currentTarget.style.backgroundColor = '#3a3a3c';
+        if (!isDisabled && !isLoading) e.currentTarget.style.backgroundColor = '#3a3a3c';
       }}
       onMouseLeave={(e) => {
-        if (!isDisabled) e.currentTarget.style.backgroundColor = '#2c2c2e';
+        if (!isDisabled && !isLoading) e.currentTarget.style.backgroundColor = '#2c2c2e';
       }}
-      title={isDisabled ? (statusText || 'Widget is rendering...') : 'Download widget as PNG'}
+      title={disabled ? (statusText || (isLoading ? 'Processing...' : 'No content to download')) : 'Download widget as PNG'}
     >
-      {isDisabled ? (
+      {isLoading ? (
         <RefreshCw
           size={18}
           style={{

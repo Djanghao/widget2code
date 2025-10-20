@@ -1,11 +1,14 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { DynamicComponent, generateComponent, generateComponentFromImage } from '@widget-factory/dynamic';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import javascript from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
-SyntaxHighlighter.registerLanguage('javascript', javascript);
+import { exportWidget } from '@widget-factory/exporter';
+import SectionHeader from './components/core/SectionHeader.jsx';
+import CodeViewer from './components/core/CodeViewer.jsx';
+import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
+import DownloadButton from './DownloadButton.jsx';
+import DimensionLines from './components/DimensionLines.jsx';
+import textPrompt from '../../api/dynamic-component-prompt.md?raw';
+import imagePrompt from '../../api/dynamic-component-image-prompt.md?raw';
 
 const TEXT_MODELS = [
   { value: 'qwen3-max', label: 'Qwen3 Max' },
@@ -28,11 +31,16 @@ export default function DynamicComponentTest() {
   const [width, setWidth] = useState(300);
   const [height, setHeight] = useState(200);
   const [model, setModel] = useState('qwen3-max');
+  const [systemPrompt, setSystemPrompt] = useState(textPrompt);
+  const [defaultPrompt, setDefaultPrompt] = useState(textPrompt);
   const [generatedCode, setGeneratedCode] = useState('');
   const [finalSize, setFinalSize] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [copied, setCopied] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const componentRef = useRef(null);
+  const [componentSize, setComponentSize] = useState({ width: 0, height: 0 });
+  // Unified styling with WidgetGeneration; copy UI removed
 
   const handleImageFile = useCallback((file) => {
     if (!file || !file.type.startsWith('image/')) return;
@@ -106,9 +114,9 @@ export default function DynamicComponentTest() {
 
     let result;
     if (mode === 'text') {
-      result = await generateComponent(prompt, width, height, model);
+      result = await generateComponent(prompt, width, height, model, systemPrompt);
     } else {
-      result = await generateComponentFromImage(image, width, height, model);
+      result = await generateComponentFromImage(image, width, height, model, systemPrompt);
     }
 
     if (result.error) {
@@ -120,15 +128,29 @@ export default function DynamicComponentTest() {
     setLoading(false);
   };
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedCode);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+  // Copy handled externally if needed
 
   const handleSizeChange = (size) => {
     setFinalSize(size);
+    setComponentSize(size);
   };
+
+  useEffect(() => {
+    const el = componentRef.current;
+    if (!el) return;
+
+    const updateSize = () => {
+      const rect = el.getBoundingClientRect();
+      setComponentSize({ width: Math.round(rect.width), height: Math.round(rect.height) });
+    };
+
+    updateSize();
+
+    const observer = new ResizeObserver(updateSize);
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, [generatedCode]);
 
   const handleRenderError = (err) => {
     setError(`Render error: ${err.message}`);
@@ -138,72 +160,59 @@ export default function DynamicComponentTest() {
     setMode(newMode);
     if (newMode === 'text') {
       setModel('qwen3-max');
+      setSystemPrompt(textPrompt);
+      setDefaultPrompt(textPrompt);
     } else {
       setModel('qwen3-vl-235b-a22b-instruct');
+      setSystemPrompt(imagePrompt);
+      setDefaultPrompt(imagePrompt);
     }
     setGeneratedCode('');
     setFinalSize(null);
     setError(null);
   };
 
-  const examplePrompts = [
-    'Create a simple profile card with an avatar circle and user name',
-    'Create a progress dashboard with 3 colored progress bars',
-    'Create a weather card showing temperature and conditions',
-    'Create a task list with checkboxes and task names',
-  ];
+  const handleDownloadComponent = async () => {
+    const componentElement = componentRef.current;
+    if (!componentElement || !generatedCode) {
+      alert('No component to download');
+      return;
+    }
+
+    setIsDownloading(true);
+    try {
+      const metadata = {
+        width: componentElement.getBoundingClientRect().width,
+        height: componentElement.getBoundingClientRect().height
+      };
+      await exportWidget(componentElement, 'generated-component', metadata);
+    } catch (error) {
+      console.error('Download failed:', error);
+      alert(`Download failed: ${error.message}`);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
 
   const currentModels = mode === 'text' ? TEXT_MODELS : VISION_MODELS;
 
   return (
     <div style={{
-      flex: 1,
-      display: 'flex',
-      gap: 24,
-      minHeight: 0,
+      display: 'grid',
+      gridTemplateColumns: '420px 1fr',
+      gap: 12,
       height: '100%',
-      overflow: 'hidden'
+      minHeight: 0
     }}>
       <div style={{
-        width: 420,
         display: 'flex',
         flexDirection: 'column',
-        gap: 18,
+        gap: 10,
         minHeight: 0,
         maxHeight: '100%',
         overflow: 'auto',
-        padding: '12px 12px 12px 4px'
+        padding: '0 12px 0 0'
       }}>
-        <div style={{
-          padding: '16px 20px',
-          backgroundColor: '#1a1a1c',
-          borderRadius: 12,
-          border: '1px solid #2a2a2c'
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
-            <div style={{
-              width: 32,
-              height: 32,
-              borderRadius: 8,
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                <polyline points="2 17 12 22 22 17" />
-                <polyline points="2 12 12 17 22 12" />
-              </svg>
-            </div>
-            <h3 style={{ margin: 0, color: '#fff', fontSize: 18, fontWeight: 600 }}>
-              Dynamic Generator
-            </h3>
-          </div>
-          <p style={{ margin: 0, fontSize: 13, color: '#999', lineHeight: 1.5 }}>
-            Generate React components from text or images
-          </p>
-        </div>
 
         <div style={{
           display: 'flex',
@@ -273,10 +282,14 @@ export default function DynamicComponentTest() {
           <div style={{
             backgroundColor: '#1a1a1c',
             borderRadius: 10,
-            padding: 16,
-            border: '1px solid #2a2a2c'
+            padding: 14,
+            border: '1px solid #2a2a2c',
+            height: 240,
+            boxSizing: 'border-box',
+            display: 'flex',
+            flexDirection: 'column'
           }}>
-            <label style={{ display: 'block', marginBottom: 10, fontSize: 12, color: '#999', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+            <label style={{ display: 'block', marginBottom: 8, fontSize: 12, color: '#999', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               Description
             </label>
             <textarea
@@ -285,15 +298,15 @@ export default function DynamicComponentTest() {
               placeholder="Describe the component you want to create..."
               style={{
                 width: '100%',
-                minHeight: 140,
+                flex: 1,
                 padding: 14,
                 backgroundColor: '#2a2a2c',
                 color: '#fff',
                 border: '1px solid #3a3a3c',
-                borderRadius: 8,
+                borderRadius: 10,
                 fontSize: 14,
                 fontFamily: 'inherit',
-                resize: 'vertical',
+                resize: 'none',
                 boxSizing: 'border-box',
                 lineHeight: 1.5
               }}
@@ -303,35 +316,56 @@ export default function DynamicComponentTest() {
           <div style={{
             backgroundColor: '#1a1a1c',
             borderRadius: 10,
-            padding: 16,
-            border: '1px solid #2a2a2c'
+            padding: 14,
+            border: '1px solid #2a2a2c',
+            height: 240,
+            boxSizing: 'border-box',
+            display: 'flex',
+            flexDirection: 'column'
           }}>
-            <label style={{ display: 'block', marginBottom: 10, fontSize: 12, color: '#999', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+            <label style={{ display: 'block', marginBottom: 8, fontSize: 12, color: '#999', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               UI Image
             </label>
             <div
               {...getRootProps()}
               style={{
-                border: `2px dashed ${isDragActive ? '#007AFF' : '#3a3a3c'}`,
+                border: `1px solid #3a3a3c`,
                 borderRadius: 10,
-                padding: imagePreview ? 16 : 40,
+                padding: 14,
                 textAlign: 'center',
-                backgroundColor: isDragActive ? 'rgba(0, 122, 255, 0.05)' : '#2a2a2c',
+                backgroundColor: isDragActive ? 'rgba(0, 122, 255, 0.1)' : '#2a2a2c',
                 cursor: 'pointer',
-                transition: 'all 0.3s'
+                transition: 'all 0.3s',
+                flex: 1,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxSizing: 'border-box',
+                position: 'relative'
               }}
             >
               <input {...getInputProps()} />
+              <div
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  border: `2px dashed ${isDragActive ? '#007AFF' : 'transparent'}`,
+                  borderRadius: 10,
+                  pointerEvents: 'none',
+                  transition: 'border-color 0.2s'
+                }}
+              />
               {imagePreview ? (
-                <div>
+                <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                   <img
                     src={imagePreview}
                     alt="Preview"
                     style={{
                       maxWidth: '100%',
-                      maxHeight: 220,
+                      maxHeight: '130px',
                       borderRadius: 8,
-                      marginBottom: 12
+                      marginBottom: 8,
+                      objectFit: 'contain'
                     }}
                   />
                   <div style={{ fontSize: 12, color: '#999' }}>
@@ -342,19 +376,19 @@ export default function DynamicComponentTest() {
                       fontSize: 11,
                       fontFamily: 'monospace',
                       border: '1px solid #4a4a4c'
-                    }}>Cmd+V</kbd> to replace
+                    }}>Copy</kbd> to replace
                   </div>
                 </div>
               ) : (
-                <div style={{ color: '#999' }}>
-                  <div style={{ marginBottom: 16 }}>
-                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.5">
+                <div style={{ color: '#999', width: '100%' }}>
+                  <div style={{ marginBottom: 12 }}>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.5">
                       <rect x="3" y="3" width="18" height="18" rx="2" />
                       <circle cx="8.5" cy="8.5" r="1.5" />
                       <polyline points="21 15 16 10 5 21" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
-                  <div style={{ fontSize: 14, fontWeight: 500, marginBottom: 8 }}>
+                  <div style={{ fontSize: 14, fontWeight: 500, marginBottom: 6 }}>
                     {isDragActive ? 'Drop image here' : 'Upload or paste image'}
                   </div>
                   <div style={{ fontSize: 12, color: '#666' }}>
@@ -365,7 +399,7 @@ export default function DynamicComponentTest() {
                       fontSize: 11,
                       fontFamily: 'monospace',
                       border: '1px solid #4a4a4c'
-                    }}>Cmd+V</kbd>
+                    }}>Copy</kbd>
                   </div>
                 </div>
               )}
@@ -376,130 +410,136 @@ export default function DynamicComponentTest() {
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
-          gap: 12,
+          gap: 10,
           backgroundColor: '#1a1a1c',
           borderRadius: 10,
-          padding: 16,
+          padding: 14,
           border: '1px solid #2a2a2c'
         }}>
           <div>
-            <label style={{ display: 'block', marginBottom: 8, fontSize: 12, color: '#999', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+            <label style={{ display: 'block', marginBottom: 6, fontSize: 12, color: '#999', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               Width
             </label>
             <input
               type="number"
               value={width}
-              onChange={(e) => setWidth(Math.max(100, parseInt(e.target.value) || 100))}
+              onChange={(e) => {
+                const val = parseInt(e.target.value);
+                if (!isNaN(val)) {
+                  setWidth(val);
+                }
+              }}
               style={{
                 width: '100%',
-                padding: '10px 12px',
-                backgroundColor: '#2a2a2c',
-                color: '#fff',
+                padding: '6px 10px',
+                backgroundColor: '#2c2c2e',
+                color: '#f5f5f7',
                 border: '1px solid #3a3a3c',
-                borderRadius: 8,
-                fontSize: 14,
+                borderRadius: 6,
+                fontSize: 12,
                 boxSizing: 'border-box',
-                fontWeight: 500
+                fontWeight: 500,
+                outline: 'none'
+              }}
+              onFocus={(e) => e.target.style.borderColor = '#007AFF'}
+              onBlur={(e) => {
+                const val = parseInt(e.target.value);
+                if (isNaN(val) || val < 1) {
+                  setWidth(100);
+                }
+                e.target.style.borderColor = '#3a3a3c';
               }}
             />
           </div>
           <div>
-            <label style={{ display: 'block', marginBottom: 8, fontSize: 12, color: '#999', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+            <label style={{ display: 'block', marginBottom: 6, fontSize: 12, color: '#999', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               Height
             </label>
             <input
               type="number"
               value={height}
-              onChange={(e) => setHeight(Math.max(100, parseInt(e.target.value) || 100))}
+              onChange={(e) => {
+                const val = parseInt(e.target.value);
+                if (!isNaN(val)) {
+                  setHeight(val);
+                }
+              }}
               style={{
                 width: '100%',
-                padding: '10px 12px',
-                backgroundColor: '#2a2a2c',
-                color: '#fff',
+                padding: '6px 10px',
+                backgroundColor: '#2c2c2e',
+                color: '#f5f5f7',
                 border: '1px solid #3a3a3c',
-                borderRadius: 8,
-                fontSize: 14,
+                borderRadius: 6,
+                fontSize: 12,
                 boxSizing: 'border-box',
-                fontWeight: 500
+                fontWeight: 500,
+                outline: 'none'
+              }}
+              onFocus={(e) => e.target.style.borderColor = '#007AFF'}
+              onBlur={(e) => {
+                const val = parseInt(e.target.value);
+                if (isNaN(val) || val < 1) {
+                  setHeight(100);
+                }
+                e.target.style.borderColor = '#3a3a3c';
               }}
             />
           </div>
         </div>
 
-        <div style={{
-          backgroundColor: '#1a1a1c',
-          borderRadius: 10,
-          padding: 16,
-          border: '1px solid #2a2a2c'
-        }}>
-          <label style={{ display: 'block', marginBottom: 10, fontSize: 12, color: '#999', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-            Model
-          </label>
-          <select
-            value={model}
-            onChange={(e) => setModel(e.target.value)}
-            style={{
-              width: '100%',
-              padding: '10px 12px',
-              backgroundColor: '#2a2a2c',
-              color: '#fff',
-              border: '1px solid #3a3a3c',
-              borderRadius: 8,
-              fontSize: 14,
-              boxSizing: 'border-box',
-              cursor: 'pointer',
-              fontWeight: 500
-            }}
-          >
-            {currentModels.map(m => (
-              <option key={m.value} value={m.value}>
-                {m.label}
-              </option>
-            ))}
-          </select>
-        </div>
+        <SystemPromptEditor
+          value={systemPrompt}
+          onChange={setSystemPrompt}
+          model={model}
+          setModel={setModel}
+          onReset={() => setSystemPrompt(defaultPrompt)}
+          modelOptions={currentModels}
+          dotColor="#007AFF"
+        />
 
         <button
           onClick={handleGenerate}
           disabled={loading || (mode === 'text' && !prompt.trim()) || (mode === 'image' && !image)}
           style={{
-            padding: '14px 24px',
-            background: loading || (mode === 'text' && !prompt.trim()) || (mode === 'image' && !image)
-              ? '#444'
-              : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-            color: '#fff',
-            border: 'none',
-            borderRadius: 10,
+            width: '100%',
+            padding: '14px 20px',
             fontSize: 15,
             fontWeight: 600,
-            cursor: loading || (mode === 'text' && !prompt.trim()) || (mode === 'image' && !image) ? 'not-allowed' : 'pointer',
-            opacity: loading || (mode === 'text' && !prompt.trim()) || (mode === 'image' && !image) ? 0.5 : 1,
-            transition: 'all 0.2s',
+            backgroundColor: ((mode === 'text' && !prompt.trim()) || (mode === 'image' && !image)) ? '#3a3a3c' : '#007AFF',
+            color: '#f5f5f7',
+            border: 'none',
+            borderRadius: 10,
+            cursor: (loading || (mode === 'text' && !prompt.trim()) || (mode === 'image' && !image)) ? 'not-allowed' : 'pointer',
+            transition: 'all 0.2s ease',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: 8
           }}
+          onMouseEnter={(e) => {
+            if (!loading && ((mode === 'text' && prompt.trim()) || (mode === 'image' && image))) {
+              e.currentTarget.style.backgroundColor = '#0051D5';
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (!loading && ((mode === 'text' && prompt.trim()) || (mode === 'image' && image))) {
+              e.currentTarget.style.backgroundColor = '#007AFF';
+            }
+          }}
         >
           {loading ? (
             <>
-              <div style={{
-                width: 16,
-                height: 16,
-                border: '2px solid #ffffff40',
-                borderTopColor: '#fff',
-                borderRadius: '50%',
-                animation: 'spin 0.6s linear infinite'
-              }} />
+              <svg width="20" height="20" viewBox="0 0 24 24" role="img">
+                <circle cx="12" cy="12" r="10" stroke="#8e8e93" strokeWidth="3" fill="none" opacity="0.25" />
+                <path d="M12 2 a10 10 0 0 1 0 20" stroke="#f5f5f7" strokeWidth="3" strokeLinecap="round" fill="none">
+                  <animateTransform attributeName="transform" type="rotate" from="0 12 12" to="360 12 12" dur="0.9s" repeatCount="indefinite" />
+                </path>
+              </svg>
               Generating...
             </>
           ) : (
-            <>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-              </svg>
-              Generate Component
-            </>
+            'Generate Component'
           )}
         </button>
 
@@ -526,256 +566,130 @@ export default function DynamicComponentTest() {
             </div>
           </div>
         )}
-
-        {mode === 'text' && !generatedCode && !loading && (
-          <div style={{
-            marginTop: 'auto',
-            paddingTop: 20,
-            borderTop: '1px solid #2a2a2c'
-          }}>
-            <div style={{
-              fontSize: 12,
-              color: '#999',
-              marginBottom: 12,
-              fontWeight: 600,
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px'
-            }}>
-              Quick Examples
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-              {examplePrompts.map((example, i) => (
-                <button
-                  key={i}
-                  onClick={() => setPrompt(example)}
-                  style={{
-                    padding: '12px 14px',
-                    backgroundColor: '#1a1a1c',
-                    color: '#d1d1d6',
-                    border: '1px solid #2a2a2c',
-                    borderRadius: 8,
-                    fontSize: 13,
-                    textAlign: 'left',
-                    cursor: 'pointer',
-                    transition: 'all 0.2s',
-                    lineHeight: 1.5
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = '#2a2a2c';
-                    e.currentTarget.style.borderColor = '#007AFF';
-                    e.currentTarget.style.transform = 'translateX(4px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = '#1a1a1c';
-                    e.currentTarget.style.borderColor = '#2a2a2c';
-                    e.currentTarget.style.transform = 'translateX(0)';
-                  }}
-                >
-                  {example}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
 
       <div style={{
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 18,
+        minWidth: 0,
         minHeight: 0,
-        padding: '12px 4px 12px 0'
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: 12
       }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          paddingLeft: 4
-        }}>
-          <h3 style={{ margin: 0, color: '#fff', fontSize: 18, fontWeight: 600 }}>
-            Live Preview
-          </h3>
-          {finalSize && (
-            <div style={{
-              padding: '6px 12px',
-              backgroundColor: '#1a1a1c',
-              borderRadius: 8,
-              fontSize: 12,
-              color: '#999',
-              border: '1px solid #2a2a2c',
-              fontWeight: 500
-            }}>
-              {width}×{height} → {finalSize.width}×{finalSize.height}
-              {(finalSize.width !== width || finalSize.height !== height) && (
-                <span style={{
-                  marginLeft: 8,
-                  padding: '2px 6px',
-                  backgroundColor: 'rgba(255, 149, 0, 0.15)',
-                  color: '#FF9500',
-                  borderRadius: 4,
-                  fontSize: 11
-                }}>
-                  Auto-resized
-                </span>
-              )}
-            </div>
-          )}
+        <div style={{ minWidth: 0, minHeight: 0 }}>
+          <CodeViewer
+            code={generatedCode}
+            language="jsx"
+            title="Generated Component.jsx"
+            placeholder="// Generate a component to see code"
+          />
         </div>
 
-        <div style={{
-          flex: generatedCode ? 0.6 : 1,
-          backgroundColor: '#0d0d0d',
-          padding: 32,
-          borderRadius: 12,
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          minHeight: 0,
-          boxSizing: 'border-box',
-          border: '1px solid #2a2a2c',
-          overflow: 'auto',
-          position: 'relative'
-        }}>
-          {generatedCode ? (
-            <div style={{ position: 'relative' }}>
-              <div
-                style={{
-                  position: 'absolute',
-                  top: -24,
-                  left: 0,
-                  fontSize: 11,
-                  color: 'rgba(255, 165, 0, 0.6)',
-                  fontWeight: 600,
-                  letterSpacing: '0.5px'
-                }}
-              >
-                SUGGESTED: {width}×{height}px
-              </div>
-              <div
-                style={{
-                  border: '2px solid rgba(52, 199, 89, 0.5)',
-                  display: 'inline-block',
-                  position: 'relative',
-                  borderRadius: 8,
-                  overflow: 'hidden'
-                }}
-              >
-                <DynamicComponent
-                  code={generatedCode}
-                  suggestedWidth={width}
-                  suggestedHeight={height}
-                  onSizeChange={handleSizeChange}
-                  onError={handleRenderError}
-                />
-              </div>
-            </div>
-          ) : (
-            <div style={{
-              textAlign: 'center',
-              color: '#6e6e73',
-              fontSize: 14
-            }}>
-              <div style={{ marginBottom: 16, opacity: 0.5 }}>
-                <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <path d="M8 9h8M8 12h8M8 15h4" strokeLinecap="round" />
-                </svg>
-              </div>
-              <div style={{ fontSize: 15, fontWeight: 500 }}>No component generated yet</div>
-              <div style={{ fontSize: 13, marginTop: 6, color: '#5a5a5e' }}>
-                Create a component to see the preview
-              </div>
-            </div>
-          )}
-        </div>
-
-        {generatedCode && (
-          <div style={{
-            flex: 0.4,
-            display: 'flex',
-            flexDirection: 'column',
-            minHeight: 0,
-            backgroundColor: '#1a1a1c',
-            borderRadius: 12,
-            border: '1px solid #2a2a2c',
-            overflow: 'hidden'
-          }}>
-            <div style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              padding: '12px 16px',
-              borderBottom: '1px solid #2a2a2c',
-              backgroundColor: '#151516'
-            }}>
+        <div style={{ minHeight: 0, display: 'flex', flexDirection: 'column' }}>
+          <SectionHeader title="Live Preview" dotColor="#007AFF">
+            {finalSize && (
               <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 8
+                padding: '4px 10px',
+                backgroundColor: '#1a1a1c',
+                borderRadius: 9999,
+                fontSize: 12,
+                color: '#999',
+                border: '1px solid #2a2a2c',
+                fontWeight: 500
               }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" strokeWidth="2">
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
-                </svg>
-                <span style={{ fontSize: 13, fontWeight: 600, color: '#999' }}>Generated Code</span>
-              </div>
-              <button
-                onClick={handleCopy}
-                style={{
-                  padding: '6px 12px',
-                  backgroundColor: copied ? 'rgba(52, 199, 89, 0.15)' : '#2a2a2c',
-                  color: copied ? '#34c759' : '#aaa',
-                  border: `1px solid ${copied ? 'rgba(52, 199, 89, 0.3)' : '#3a3a3c'}`,
-                  borderRadius: 6,
-                  fontSize: 12,
-                  cursor: 'pointer',
-                  fontWeight: 600,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 6,
-                  transition: 'all 0.2s'
-                }}
-              >
-                {copied ? (
-                  <>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    Copied!
-                  </>
-                ) : (
-                  <>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                    </svg>
-                    Copy
-                  </>
+                {width}×{height} → {finalSize.width}×{finalSize.height}
+                {(finalSize.width !== width || finalSize.height !== height) && (
+                  <span style={{
+                    marginLeft: 8,
+                    padding: '2px 6px',
+                    backgroundColor: 'rgba(255, 149, 0, 0.15)',
+                    color: '#FF9500',
+                    borderRadius: 4,
+                    fontSize: 11
+                  }}>
+                    Auto-resized
+                  </span>
                 )}
-              </button>
-            </div>
-            <div style={{
-              flex: 1,
-              overflow: 'auto',
-              fontSize: 12
-            }}>
-              <SyntaxHighlighter
-                language="javascript"
-                style={atomOneDark}
-                customStyle={{
-                  margin: 0,
-                  padding: 16,
-                  backgroundColor: 'transparent',
-                  height: '100%'
-                }}
-                showLineNumbers={true}
-              >
-                {generatedCode}
-              </SyntaxHighlighter>
-            </div>
+              </div>
+            )}
+            <DownloadButton
+              onClick={handleDownloadComponent}
+              isDisabled={!generatedCode}
+              isLoading={isDownloading || loading}
+              statusText={isDownloading ? 'Downloading...' : (loading ? 'Generating...' : '')}
+            />
+          </SectionHeader>
+
+          <div style={{
+            flex: 1,
+            backgroundColor: '#0d0d0d',
+            padding: 24,
+            borderRadius: 10,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: 0,
+            boxSizing: 'border-box',
+            border: '1px solid #3a3a3c',
+            overflow: 'auto',
+            position: 'relative'
+          }}>
+            {generatedCode ? (
+              <div style={{ position: 'relative' }}>
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: -24,
+                    left: 0,
+                    fontSize: 11,
+                    color: 'rgba(255, 165, 0, 0.6)',
+                    fontWeight: 600,
+                    letterSpacing: '0.5px'
+                  }}
+                >
+                  SUGGESTED: {width}×{height}px
+                </div>
+                <div
+                  ref={componentRef}
+                  style={{
+                    border: '2px solid rgba(52, 199, 89, 0.5)',
+                    display: 'inline-block',
+                    position: 'relative',
+                    borderRadius: 8,
+                    overflow: 'hidden'
+                  }}
+                >
+                  <DynamicComponent
+                    code={generatedCode}
+                    suggestedWidth={width}
+                    suggestedHeight={height}
+                    onSizeChange={handleSizeChange}
+                    onError={handleRenderError}
+                  />
+                </div>
+                {componentSize.width > 0 && componentSize.height > 0 && (
+                  <DimensionLines width={componentSize.width} height={componentSize.height} />
+                )}
+              </div>
+            ) : (
+              <div style={{
+                textAlign: 'center',
+                color: '#6e6e73',
+                fontSize: 14
+              }}>
+                <div style={{ marginBottom: 16, opacity: 0.5 }}>
+                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M8 9h8M8 12h8M8 15h4" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <div style={{ fontSize: 15, fontWeight: 500 }}>No component generated yet</div>
+                <div style={{ fontSize: 13, marginTop: 6, color: '#5a5a5e' }}>
+                  Create a component to see the preview
+                </div>
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
 
       <style>{`
