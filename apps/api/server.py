@@ -23,10 +23,22 @@ app.add_middleware(
 )
 
 DEFAULT_PROMPT_PATH = Path(__file__).parent / "default-prompt.md"
+DYNAMIC_COMPONENT_PROMPT_PATH = Path(__file__).parent / "dynamic-component-prompt.md"
+DYNAMIC_COMPONENT_IMAGE_PROMPT_PATH = Path(__file__).parent / "dynamic-component-image-prompt.md"
 
 def load_default_prompt():
     if DEFAULT_PROMPT_PATH.exists():
         return DEFAULT_PROMPT_PATH.read_text(encoding="utf-8")
+    return ""
+
+def load_dynamic_component_prompt():
+    if DYNAMIC_COMPONENT_PROMPT_PATH.exists():
+        return DYNAMIC_COMPONENT_PROMPT_PATH.read_text(encoding="utf-8")
+    return ""
+
+def load_dynamic_component_image_prompt():
+    if DYNAMIC_COMPONENT_IMAGE_PROMPT_PATH.exists():
+        return DYNAMIC_COMPONENT_IMAGE_PROMPT_PATH.read_text(encoding="utf-8")
     return ""
 
 @app.get("/api/default-prompt")
@@ -55,8 +67,8 @@ async def generate_widget(
         prompt = system_prompt if system_prompt else load_default_prompt()
 
         # Determine model (vision-only for widget2spec)
-        vision_models = {"qwen-vl-plus", "qwen-vl-max", "qwen3-vl-plus"}
-        model_to_use = (model or "qwen3-vl-plus").strip()
+        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
+        model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
         if model and model_to_use not in vision_models:
             return JSONResponse(
                 status_code=400,
@@ -140,8 +152,10 @@ async def generate_widget_text(
 ):
     try:
         # Allow both text and multimodal Qwen models
-        qwen_supported = set(QwenProvider.SUPPORTED_MODELS) | {"qwen3-vl-plus"}
-        model_to_use = (model or "qwen3-vl-plus").strip()
+        text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
+        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
+        qwen_supported = text_models | vision_models
+        model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
         if model and model_to_use not in qwen_supported:
             return JSONResponse(
                 status_code=400,
@@ -200,6 +214,156 @@ async def generate_widget_text(
                 "error": str(e)
             }
         )
+
+@app.post("/api/generate-component")
+async def generate_component(
+    prompt: str = Form(...),
+    suggested_width: int = Form(...),
+    suggested_height: int = Form(...),
+    model: str = Form(None),
+):
+    try:
+        text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
+        qwen_supported = text_models
+        model_to_use = (model or "qwen3-max").strip()
+        if model and model_to_use not in qwen_supported:
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "success": False,
+                    "error": f"Model '{model_to_use}' is not supported. Use one of: {sorted(qwen_supported)}"
+                }
+            )
+
+        system_prompt_template = load_dynamic_component_prompt()
+        system_prompt = system_prompt_template.replace("{suggested_width}", str(suggested_width))
+        system_prompt = system_prompt.replace("{suggested_height}", str(suggested_height))
+
+        component_llm = LLM(
+            model=model_to_use,
+            temperature=0.7,
+            max_tokens=2000,
+            timeout=60,
+            system_prompt=system_prompt
+        )
+
+        messages = [ChatMessage(
+            role="user",
+            content=[
+                {"type": "text", "text": prompt}
+            ]
+        )]
+
+        response = component_llm.chat(messages)
+        code = response.content.strip()
+
+        if code.startswith("```jsx") or code.startswith("```javascript"):
+            code = code.split('\n', 1)[1] if '\n' in code else code
+        if code.startswith("```"):
+            code = code.split('\n', 1)[1] if '\n' in code else code
+        if code.endswith("```"):
+            code = code.rsplit('\n', 1)[0] if '\n' in code else code
+        code = code.strip()
+
+        return {
+            "success": True,
+            "code": code,
+            "raw_response": response.content
+        }
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={
+                "success": False,
+                "error": str(e),
+                "raw_response": response.content if 'response' in locals() else ""
+            }
+        )
+
+@app.post("/api/generate-component-from-image")
+async def generate_component_from_image(
+    image: UploadFile = File(...),
+    suggested_width: int = Form(...),
+    suggested_height: int = Form(...),
+    model: str = Form(None),
+):
+    import tempfile
+    temp_file = None
+    try:
+        image_bytes = await image.read()
+
+        img = Image.open(io.BytesIO(image_bytes))
+        width, height = img.size
+
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
+            temp_file.write(image_bytes)
+            temp_file_path = temp_file.name
+
+        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
+        model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
+        if model and model_to_use not in vision_models:
+            return JSONResponse(
+                status_code=400,
+                content={
+                    "success": False,
+                    "error": f"Model '{model_to_use}' is not a supported vision model. Use one of: {sorted(vision_models)}"
+                }
+            )
+
+        system_prompt_template = load_dynamic_component_image_prompt()
+        system_prompt = system_prompt_template.replace("{suggested_width}", str(suggested_width))
+        system_prompt = system_prompt.replace("{suggested_height}", str(suggested_height))
+
+        vision_llm = LLM(
+            model=model_to_use,
+            temperature=0.5,
+            max_tokens=2000,
+            timeout=60,
+            system_prompt=system_prompt
+        )
+
+        image_content = prepare_image_content(temp_file_path)
+
+        messages = [ChatMessage(
+            role="user",
+            content=[
+                {"type": "text", "text": "Please analyze this UI image and generate the React component code according to the instructions."},
+                image_content
+            ]
+        )]
+
+        response = vision_llm.chat(messages)
+        code = response.content.strip()
+
+        if code.startswith("```jsx") or code.startswith("```javascript"):
+            code = code.split('\n', 1)[1] if '\n' in code else code
+        if code.startswith("```"):
+            code = code.split('\n', 1)[1] if '\n' in code else code
+        if code.endswith("```"):
+            code = code.rsplit('\n', 1)[0] if '\n' in code else code
+        code = code.strip()
+
+        return {
+            "success": True,
+            "code": code,
+            "raw_response": response.content,
+            "image_size": {"width": width, "height": height}
+        }
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={
+                "success": False,
+                "error": str(e),
+                "raw_response": response.content if 'response' in locals() else ""
+            }
+        )
+    finally:
+        if 'temp_file_path' in locals():
+            try:
+                os.unlink(temp_file_path)
+            except:
+                pass
 
 if __name__ == "__main__":
     import uvicorn

@@ -18,6 +18,7 @@ import PresetsTab from './components/PresetsTab/index.jsx';
 import ImageToWidget from './ImageToWidget.jsx';
 import Prompt2Spec from './Prompt2Spec.jsx';
 import Documentation from './Documentation.jsx';
+import DynamicComponentTest from './DynamicComponentTest.jsx';
 import usePlaygroundStore from './store/index.js';
 
 function App() {
@@ -233,6 +234,12 @@ function App() {
       {activeTab === 'guides' && (
         <div key="guides" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
           <Documentation />
+        </div>
+      )}
+
+      {activeTab === 'dynamic' && (
+        <div key="dynamic" style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', animation: 'fadeIn 0.2s ease-in-out' }}>
+          <DynamicComponentTest />
         </div>
       )}
 

@@ -82,6 +82,9 @@ export default function AppHeader({ activeTab, onTabChange, onMaterialsClick }) 
             <TabButton active={activeTab === 'prompt2spec'} onClick={() => onTabChange('prompt2spec')}>
               Prompt2Spec
             </TabButton>
+            <TabButton active={activeTab === 'dynamic'} onClick={() => onTabChange('dynamic')}>
+              Dynamic
+            </TabButton>
             <TabButton active={activeTab === 'guides'} onClick={() => onTabChange('guides')}>
               Guides
             </TabButton>
