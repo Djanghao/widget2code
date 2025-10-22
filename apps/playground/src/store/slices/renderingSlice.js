@@ -9,6 +9,11 @@
 
 import { compileWidgetSpec } from '../../core/compileWidget.js';
 import { examples } from '../../constants/examples.js';
+import { extractResources } from '../../../../../packages/primitives/src/utils/extractResources.js';
+import { preloadIcons } from '../../../../../packages/primitives/src/utils/preloadIcons.js';
+import { preloadImages } from '../../../../../packages/primitives/src/utils/preloadImages.js';
+import { iconCache } from '../../../../../packages/primitives/src/utils/iconCache.js';
+import { sfDynamicIconImports } from '../../../../../packages/icons/sf-symbols/src/index.jsx';
 
 const createRenderingSlice = (set, get) => ({
   renderingPhase: 'idle',
@@ -206,6 +211,34 @@ const createRenderingSlice = (set, get) => ({
       operationMode: 'compiling',
       widgetSpec: spec
     });
+
+    console.log(`📦 [Resource Preload] Extracting resources from widgetSpec...`);
+    const { icons, images } = extractResources(spec);
+    console.log(`📦 [Resource Preload] Found ${icons.length} icons and ${images.length} images`);
+
+    if (icons.length > 0 || images.length > 0) {
+      console.log(`⏳ [Resource Preload] Starting resource preloading...`);
+      const preloadStartTime = performance.now();
+
+      try {
+        await Promise.all([
+          icons.length > 0 ? preloadIcons(icons, sfDynamicIconImports, iconCache) : Promise.resolve(),
+          images.length > 0 ? preloadImages(images) : Promise.resolve()
+        ]);
+
+        const preloadTime = performance.now() - preloadStartTime;
+        console.log(`✅ [Resource Preload] All resources preloaded in ${preloadTime.toFixed(2)}ms`);
+      } catch (error) {
+        console.error(`❌ [Resource Preload] Error during preloading:`, error);
+      }
+    } else {
+      console.log(`ℹ️  [Resource Preload] No resources to preload`);
+    }
+
+    if (get().compileToken !== newToken) {
+      console.log(`⏭️  [Start Compiling] Token changed during resource preloading, aborting`);
+      return { success: false, cancelled: true };
+    }
 
     const compileResult = get()._compile(spec, newToken);
 

@@ -192,7 +192,7 @@ async function main() {
     const renderers = [];
     for (let i = 0; i < concurrency; i++) {
       const renderer = new PlaywrightRenderer({
-        devServerUrl: 'http://localhost:5173',
+        devServerUrl: 'http://localhost:3060',
         timeout: 30000,
         verbose: false
       });

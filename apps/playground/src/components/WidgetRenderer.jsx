@@ -31,6 +31,7 @@ function WidgetRenderer({ jsxCode, onMount, onError }) {
 
     try {
       console.log('[DirectRenderer] Transforming JSX code...');
+      console.log('[DirectRenderer] 📄 Raw JSX code (first 500 chars):', jsxCode.substring(0, 500));
 
       let processedCode = jsxCode;
 
@@ -116,6 +117,7 @@ function WidgetRenderer({ jsxCode, onMount, onError }) {
     return null;
   }
 
+  console.log('[WidgetRenderer] 🎬 Rendering widget component now...')
   return <WidgetComponent />;
 }
 

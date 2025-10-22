@@ -32,42 +32,63 @@ function HeadlessRenderer() {
   } = usePlaygroundStore();
 
   useEffect(() => {
+    console.log('[Headless] 🎬 Initializing headless renderer...');
     initializeApp(widgetFrameRef);
 
     window.renderWidget = async (spec, options = {}) => {
       const { enableAutoResize = true, captureOptions = {} } = options;
+      const renderStartTime = performance.now();
 
       return new Promise(async (resolve, reject) => {
         resolveRef.current = resolve;
         rejectRef.current = reject;
 
         try {
-          console.log('[Headless] Starting widget rendering...');
-          console.log('[Headless] Spec:', JSON.stringify(spec, null, 2));
-          console.log('[Headless] Options:', options);
+          console.log('\n[Headless] 🚀 ========== Starting widget rendering ==========');
+          console.log('[Headless] 📋 Spec:', JSON.stringify(spec, null, 2));
+          console.log('[Headless] ⚙️  Options:', options);
+          console.log('[Headless] 🎚️  AutoResize enabled:', enableAutoResize);
 
           setEnableAutoResize(enableAutoResize);
 
+          console.log('[Headless] 🔨 Calling startCompiling...');
+          const compileStartTime = performance.now();
           const result = await startCompiling(spec, widgetFrameRef);
+          const compileTime = performance.now() - compileStartTime;
 
           if (!result.success) {
+            console.error('[Headless] ❌ Compilation failed');
             throw new Error('Compilation failed');
           }
 
+          console.log(`[Headless] ✅ Compilation completed in ${compileTime.toFixed(2)}ms`);
+          console.log('[Headless] ⏳ Waiting for rendering pipeline to complete...');
+
           const maxWaitTime = 30000;
           const startTime = Date.now();
+          let lastPhase = '';
+          let lastMode = '';
 
           const waitForIdle = () => {
-            if (Date.now() - startTime > maxWaitTime) {
+            const elapsed = Date.now() - startTime;
+            if (elapsed > maxWaitTime) {
+              console.error('[Headless] ⏰ Timeout waiting for rendering to complete');
               reject(new Error('Timeout waiting for rendering to complete'));
               return;
             }
 
             const state = usePlaygroundStore.getState();
 
+            if (state.renderingPhase !== lastPhase || state.operationMode !== lastMode) {
+              console.log(`[Headless] 📊 State: phase=${state.renderingPhase}, mode=${state.operationMode}, elapsed=${elapsed}ms`);
+              lastPhase = state.renderingPhase;
+              lastMode = state.operationMode;
+            }
+
             if (state.renderingPhase === 'idle' && state.operationMode === 'idle') {
+              console.log('[Headless] ✨ Pipeline complete, waiting 500ms for stabilization...');
               setTimeout(() => {
-                completeRendering(resolve, reject, captureOptions);
+                completeRendering(resolve, reject, captureOptions, renderStartTime);
               }, 500);
             } else {
               requestAnimationFrame(waitForIdle);
@@ -77,7 +98,7 @@ function HeadlessRenderer() {
           requestAnimationFrame(waitForIdle);
 
         } catch (error) {
-          console.error('[Headless] Rendering error:', error);
+          console.error('[Headless] ❌ Rendering error:', error);
           reject(error);
         }
       });
@@ -103,36 +124,52 @@ function HeadlessRenderer() {
 
   }, []);
 
-  const completeRendering = async (resolve, reject, captureOptions) => {
+  const completeRendering = async (resolve, reject, captureOptions, renderStartTime) => {
     try {
+      console.log('[Headless] 🎯 Starting final capture phase...');
       const widgetElement = widgetFrameRef.current?.firstElementChild;
 
       if (!widgetElement) {
+        console.error('[Headless] ❌ Widget element not found');
         reject(new Error('Widget element not found'));
         return;
       }
 
+      console.log('[Headless] ✅ Widget element found');
+
       const state = usePlaygroundStore.getState();
+      console.log('[Headless] 🔍 Validating widget...');
       const validation = validateWidget(widgetElement, state.widgetSpec);
 
       if (!validation.valid) {
-        console.warn('[Headless] Validation failed:', validation.issues);
+        console.warn('[Headless] ⚠️  Validation failed:', validation.issues);
+      } else {
+        console.log('[Headless] ✅ Validation passed');
       }
 
-      console.log('[Headless] Capturing PNG...');
+      console.log('[Headless] 📐 Widget dimensions:', validation.metadata);
+      console.log('[Headless] 📏 Natural size:', state.naturalSize);
+      console.log('[Headless] 📏 Final size:', state.finalSize);
+
+      console.log('[Headless] 📸 Capturing PNG with options:', captureOptions);
+      const captureStartTime = performance.now();
       const blob = await captureWidgetAsPNG(widgetElement, {
         scale: 2,
         backgroundColor: null,
         ...captureOptions
       });
+      const captureTime = performance.now() - captureStartTime;
+      console.log(`[Headless] ✅ PNG captured in ${captureTime.toFixed(2)}ms (size: ${(blob.size / 1024).toFixed(2)}KB)`);
 
+      console.log('[Headless] 🔄 Converting to base64...');
       const base64 = await new Promise((res) => {
         const reader = new FileReader();
         reader.onloadend = () => res(reader.result);
         reader.readAsDataURL(blob);
       });
 
-      console.log('[Headless] Rendering complete');
+      const totalTime = performance.now() - renderStartTime;
+      console.log(`[Headless] 🎉 ========== Rendering complete in ${totalTime.toFixed(2)}ms ==========\n`);
 
       resolve({
         success: true,
@@ -146,7 +183,7 @@ function HeadlessRenderer() {
       });
 
     } catch (error) {
-      console.error('[Headless] Capture error:', error);
+      console.error('[Headless] ❌ Capture error:', error);
       reject(error);
     }
   };
