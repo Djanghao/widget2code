@@ -53,12 +53,28 @@ export class PlaywrightRenderer {
 
     page.on('console', msg => {
       const type = msg.type();
+      const text = msg.text();
+
       if (type === 'error') {
-        console.error('[Browser Error]', msg.text());
+        console.error('[Browser Error]', text);
       } else if (type === 'warning') {
-        console.warn('[Browser Warning]', msg.text());
+        console.warn('[Browser Warning]', text);
       } else if (this.options.verbose) {
-        console.log('[Browser]', msg.text());
+        console.log('[Browser]', text);
+      } else {
+        // Always show important logs even in non-verbose mode
+        const importantPrefixes = [
+          '[Headless]',
+          '[Resource Preload]',
+          '[Resource Extract]',
+          '[Icon Preload]',
+          '[Image Preload]',
+          '[Start Compiling]'
+        ];
+
+        if (importantPrefixes.some(prefix => text.includes(prefix))) {
+          console.log('[Browser]', text);
+        }
       }
     });
 
