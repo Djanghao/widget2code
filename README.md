@@ -29,25 +29,21 @@ cd ../..
 
 **Development mode**:
 ```bash
-# Start with backend API
+# Frontend + backend API
 npm run dev:full
 
-# Or frontend only
+# Frontend only (faster, no LLM generation)
 npm run dev
 ```
+Opens at http://localhost:3060
 
 **Production mode**:
 ```bash
-# Build for production
+# Build and preview production bundle
 npm run build
-
-# Start production server
 npm start
 ```
-
-This starts:
-- Frontend at http://localhost:3060 (configurable via `FRONTEND_PORT`)
-- Backend at http://localhost:8000 (configurable via `BACKEND_PORT`)
+Runs optimized build with backend at http://localhost:4173
 
 ## Configuration
 
@@ -83,11 +79,11 @@ security:
 - Use `config.yaml.example` as a template (this file IS committed)
 
 ### Regenerating Icons (Optional)
-Only needed when updating SF Symbols source files or modifying icon generation scripts:
+Only needed when updating SF Symbols source files:
 ```bash
-npm run prepare:dynamic
 npm run build:icons
 ```
+Generates 6950+ React components with dynamic imports for lazy loading.
 
 ## Minimal Usage
 ```js
@@ -96,12 +92,39 @@ import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
 const jsx = compileWidgetSpecToJSX(spec);
 ```
 
+## Headless Rendering
+
+Batch render widgets to PNG with validation:
+
+```bash
+npm run render <input> <output> [concurrency]
+
+# Examples
+npm run render ./my-widget.json ./output
+npm run render ./widgets-folder ./output 5
+```
+
+Output includes: PNG image, JSX code, spec JSON, and metadata.
+
 ## Implementation
-- Spec uses `component` + `props` explicitly; `kind` presets are deprecated.
-- Layout uses flex containers: container nodes generate clean flex structure.
-- Icons: SF Symbols SVGs → (optional) prepare dynamic colors → generate React components → `iconsMap` & `metadata` (for `<Icon />`). All icons support dynamic coloring via CSS variable `--icon-color`.
-  - `<Icon />` sets `--icon-color` from the `color` prop; default is `rgba(255, 255, 255, 0.85)`.
-- Flex properties should be passed as component `flex` prop (e.g., `<Text flex={1} />`), not in `style`; use `style` only for unmodeled styles.
+
+**Layout**: Flex-based containers with explicit `component` + `props`
+
+**Icons**: 6950+ SF Symbols with lazy loading
+- Icons load on-demand via dynamic imports
+- Resources preload before rendering (icons + images)
+- Ensures accurate natural layout measurement
+- `<Icon name="sf:circle.fill" />` or `<Icon name="lucide:Sun" />`
+
+**Rendering Pipeline**:
+1. Extract resources from WidgetSpec
+2. Preload icons and images in parallel
+3. Compile to JSX after resources loaded
+4. Measure natural size accurately
+5. Auto-resize to target aspect ratio
+6. Export to PNG
+
+**Styling**: Use `flex` prop for flex properties, `style` for others
 
 ## Project Structure
 
