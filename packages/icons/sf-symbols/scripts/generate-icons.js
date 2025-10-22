@@ -11,6 +11,7 @@ const ICONS_OLD_OUTPUT_DIR = path.resolve(__dirname, '../src/generated')
 const ICONS_PREV_OUTPUT_DIR = path.resolve(__dirname, '../src/icons')
 const ICONS_INDEX_FILE = path.resolve(__dirname, '../src/index.jsx')
 const ICONS_MAP_FILE = path.resolve(__dirname, '../src/map.js')
+const ICONS_DYNAMIC_FILE = path.resolve(__dirname, '../src/dynamicIconImports.js')
 const ICONS_META_FILE = path.resolve(__dirname, '../src/metadata.json')
 
 function toComponentName(str) {
@@ -146,22 +147,19 @@ for (const file of svgFiles) {
   process.stdout.write(`Generated ${compName}\n`)
 }
 
-const mapLines = []
+const dynamicLines = []
+dynamicLines.push('export const sfDynamicIconImports = {')
 for (const { name, compName } of entries) {
-  mapLines.push(`import ${compName} from './components/${compName}.jsx';`)
+  dynamicLines.push(`  '${name}': () => import('./components/${compName}.jsx'),`)
 }
-mapLines.push('')
-mapLines.push('export const iconsMap = {')
-for (const { name, compName } of entries) {
-  mapLines.push(`  '${name}': ${compName},`)
-}
-mapLines.push('};')
-fs.writeFileSync(ICONS_MAP_FILE, mapLines.join('\n'))
+dynamicLines.push('};')
+dynamicLines.push('')
+fs.writeFileSync(ICONS_DYNAMIC_FILE, dynamicLines.join('\n'))
 
 fs.writeFileSync(ICONS_META_FILE, JSON.stringify(meta, null, 2))
 
 const indexCode = [
-  "export { iconsMap } from './map.js';",
+  "export { sfDynamicIconImports } from './dynamicIconImports.js';",
   "export { default as metadata } from './metadata.json'",
   ''
 ].join('\n')
