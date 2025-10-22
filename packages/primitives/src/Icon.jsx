@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { sfDynamicIconImports } from '../../icons/sf-symbols/src/index.jsx'
 import { lucideIconsMap } from '../../icons/lucide/src/index.jsx'
-
-const iconCache = new Map()
+import { iconCache } from './utils/iconCache.js'
 
 export function Icon({ name, size = 20, color = 'rgba(255, 255, 255, 0.85)', flex, flexGrow, flexShrink, flexBasis, style = {}, ...rest }) {
   const [IconComp, setIconComp] = useState(null)
