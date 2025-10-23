@@ -14,6 +14,7 @@ import { preloadIcons } from '../../../../../packages/primitives/src/utils/prelo
 import { preloadImages } from '../../../../../packages/primitives/src/utils/preloadImages.js';
 import { iconCache } from '../../../../../packages/primitives/src/utils/iconCache.js';
 import { sfDynamicIconImports } from '../../../../../packages/icons/sf-symbols/src/index.jsx';
+import { findOptimalSize, measureOverflow } from '../../../../../packages/resizer/src/index.js';
 
 const createRenderingSlice = (set, get) => ({
   renderingPhase: 'idle',
@@ -405,61 +406,6 @@ const createRenderingSlice = (set, get) => ({
     await get().startCompiling(newSpec, widgetFrameRef);
   },
 
-  _waitForLayoutStable: async () => {
-    await new Promise((r) => requestAnimationFrame(r));
-    await new Promise((r) => requestAnimationFrame(r));
-  },
-
-  _measureOverflow: (widgetElement) => {
-    if (!widgetElement) return { fits: false };
-
-    const cw = widgetElement.clientWidth;
-    const ch = widgetElement.clientHeight;
-    const sw = widgetElement.scrollWidth;
-    const sh = widgetElement.scrollHeight;
-
-    let fits = sw <= cw && sh <= ch;
-
-    try {
-      const rootRect = widgetElement.getBoundingClientRect();
-      const cs = window.getComputedStyle(widgetElement);
-      const padL = parseFloat(cs.paddingLeft) || 0;
-      const padR = parseFloat(cs.paddingRight) || 0;
-      const padT = parseFloat(cs.paddingTop) || 0;
-      const padB = parseFloat(cs.paddingBottom) || 0;
-      const innerLeft = rootRect.left + padL;
-      const innerRight = rootRect.right - padR;
-      const innerTop = rootRect.top + padT;
-      const innerBottom = rootRect.bottom - padB;
-
-      const tol = 0.5;
-
-      let crossesPaddingOrOutside = false;
-      const all = widgetElement.querySelectorAll('*');
-      for (let i = 0; i < all.length; i++) {
-        const el = all[i];
-        if (el === widgetElement) continue;
-        const r = el.getBoundingClientRect();
-        if ((r.width || 0) <= 0 && (r.height || 0) <= 0) continue;
-
-        if (r.left < rootRect.left - tol || r.right > rootRect.right + tol || r.top < rootRect.top - tol || r.bottom > rootRect.bottom + tol) {
-          crossesPaddingOrOutside = true;
-          break;
-        }
-        if (r.left < innerLeft - tol || r.right > innerRight + tol || r.top < innerTop - tol || r.bottom > innerBottom + tol) {
-          crossesPaddingOrOutside = true;
-          break;
-        }
-      }
-
-      if (crossesPaddingOrOutside) {
-        fits = false;
-      }
-      return { fits, cw, ch, sw, sh };
-    } catch (e) {
-      return { fits, cw, ch, sw, sh };
-    }
-  },
 
   validateWidget: (widgetElement, spec) => {
     const issues = [];
@@ -474,7 +420,7 @@ const createRenderingSlice = (set, get) => ({
       };
     }
 
-    const overflow = get()._measureOverflow(widgetElement);
+    const overflow = measureOverflow(widgetElement);
     const rect = widgetElement.getBoundingClientRect();
     const actualWidth = Math.round(rect.width);
     const actualHeight = Math.round(rect.height);
@@ -514,8 +460,8 @@ const createRenderingSlice = (set, get) => ({
       height: actualHeight,
       aspectRatio: parseFloat(actualRatio.toFixed(4)),
       hasOverflow: !overflow.fits,
-      scrollWidth: overflow.sw,
-      scrollHeight: overflow.sh
+      scrollWidth: overflow.scrollWidth,
+      scrollHeight: overflow.scrollHeight
     };
 
     console.log(`🔍 [Validation]`, {
@@ -533,31 +479,14 @@ const createRenderingSlice = (set, get) => ({
     };
   },
 
-  _applySizeToDOMAndMeasure: async (widgetElement, w, h) => {
-    if (!widgetElement) return { fits: false };
-
-    widgetElement.style.width = `${w}px`;
-    widgetElement.style.height = `${h}px`;
-
-    await get()._waitForLayoutStable();
-    const m = get()._measureOverflow(widgetElement);
-    return m;
-  },
-
   executeAutoResize: async (aspectRatio, widgetFrameRef, tokenRef) => {
     if (get().autoSizing) {
       console.log(`⏭️  [AutoResize] Already running, skipping`);
       return;
     }
 
-    const r = aspectRatio;
-    if (!r) {
-      console.warn(`⚠️ [AutoResize] No aspect ratio provided`);
-      return;
-    }
-
     const currentToken = tokenRef ? tokenRef.current : get().compileToken;
-    console.log(`\n🎫 [AutoResize] Starting with token: ${currentToken}, ratio: ${r}`);
+    console.log(`\n🎫 [AutoResize] Starting with token: ${currentToken}, ratio: ${aspectRatio}`);
 
     set({
       autoSizing: true,
@@ -577,12 +506,6 @@ const createRenderingSlice = (set, get) => ({
         return;
       }
 
-      const rect = widgetElement.getBoundingClientRect();
-      const startW = Math.max(40, Math.round(rect.width));
-      const startH = Math.max(40, Math.round(startW / r));
-
-      console.log(`📐 [AutoResize] Natural size: ${rect.width.toFixed(0)}×${rect.height.toFixed(0)}, Starting: ${startW}×${startH}, Ratio: ${r}`);
-
       const checkToken = () => {
         if (tokenRef) {
           return tokenRef.current === currentToken;
@@ -591,90 +514,26 @@ const createRenderingSlice = (set, get) => ({
         }
       };
 
-      if (!checkToken()) {
-        console.log(`🚫 [AutoResize] Token mismatch, aborting`);
+      const result = await findOptimalSize(widgetElement, aspectRatio, {
+        minSize: 40,
+        maxSize: 4096,
+        safetyMargin: 1,
+        shouldContinue: checkToken,
+        logger: console
+      });
+
+      if (!result) {
         return;
       }
 
-      let m = await get()._applySizeToDOMAndMeasure(widgetElement, startW, startH);
-      let best = { w: startW, h: startH };
+      const { width, height } = result;
 
-      if (!checkToken()) return;
+      console.log(`📝 [AutoResize] Writing optimal size to spec: ${width}×${height}`);
+      get().writebackSpecSize(width, height);
 
-      if (m.fits) {
-        console.log(`✓ [AutoResize] Initial size fits, searching for minimum...`);
-        let low = 40;
-        let high = startW;
-
-        const lm = await get()._applySizeToDOMAndMeasure(widgetElement, low, Math.max(40, Math.round(low / r)));
-        if (!checkToken()) return;
-
-        if (lm.fits) {
-          best = { w: low, h: Math.max(40, Math.round(low / r)) };
-          console.log(`✓ [AutoResize] Minimum size (${low}) already fits`);
-        } else {
-          while (high - low > 1) {
-            if (!checkToken()) return;
-            const mid = Math.floor((low + high) / 2);
-            const mh = Math.max(40, Math.round(mid / r));
-            const mm = await get()._applySizeToDOMAndMeasure(widgetElement, mid, mh);
-            if (mm.fits) {
-              best = { w: mid, h: mh };
-              high = mid;
-            } else {
-              low = mid;
-            }
-          }
-          console.log(`✓ [AutoResize] Found minimum fitting size: ${best.w}×${best.h}`);
-        }
-      } else {
-        console.log(`✗ [AutoResize] Initial size too small, expanding...`);
-        let low = startW;
-        let high = startW;
-        let mm = m;
-        const maxCap = 4096;
-
-        while (!mm.fits && high < maxCap) {
-          if (!checkToken()) return;
-          low = high;
-          high = Math.min(maxCap, high * 2);
-          const hh = Math.max(40, Math.round(high / r));
-          mm = await get()._applySizeToDOMAndMeasure(widgetElement, high, hh);
-        }
-
-        if (mm.fits) {
-          best = { w: high, h: Math.max(40, Math.round(high / r)) };
-          console.log(`✓ [AutoResize] Found fitting size at ${high}, searching for minimum...`);
-
-          while (high - low > 1) {
-            if (!checkToken()) return;
-            const mid = Math.floor((low + high) / 2);
-            const mh = Math.max(40, Math.round(mid / r));
-            const m2 = await get()._applySizeToDOMAndMeasure(widgetElement, mid, mh);
-            if (m2.fits) {
-              best = { w: mid, h: mh };
-              high = mid;
-            } else {
-              low = mid;
-            }
-          }
-          console.log(`✓ [AutoResize] Found minimum fitting size: ${best.w}×${best.h}`);
-        } else {
-          best = { w: low, h: Math.max(40, Math.round(low / r)) };
-          console.log(`⚠️ [AutoResize] Could not fit within max cap, using: ${best.w}×${best.h}`);
-        }
-      }
-
-      if (!checkToken()) return;
-
-      const safeW = best.w + 1;
-      const safeH = best.h + 1;
-      console.log(`📝 [AutoResize] Writing optimal size to spec: ${safeW}×${safeH} (${best.w}×${best.h} + 1px safety margin)`);
-      get().writebackSpecSize(safeW, safeH);
-
-      console.log(`🎨 [AutoResize] Applying final size to DOM: ${safeW}×${safeH}`);
-      widgetElement.style.width = `${safeW}px`;
-      widgetElement.style.height = `${safeH}px`;
+      console.log(`🎨 [AutoResize] Applying final size to DOM: ${width}×${height}`);
+      widgetElement.style.width = `${width}px`;
+      widgetElement.style.height = `${height}px`;
 
       console.log(`✅ [AutoResize] Completed successfully\n`);
     } finally {
