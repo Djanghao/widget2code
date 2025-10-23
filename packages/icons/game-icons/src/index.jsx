@@ -1,0 +1,1 @@
+export { gameIconsIconsMap } from './map.js';

@@ -1,0 +1,1 @@
+export { themifyIconsMap } from './map.js';

@@ -1,0 +1,1 @@
+export { tablerIconsMap } from './map.js';

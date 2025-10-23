@@ -1,0 +1,1 @@
+export { materialDesignIconsMap } from './map.js';

@@ -1,0 +1,1 @@
+export { icomoonFreeIconsMap } from './map.js';

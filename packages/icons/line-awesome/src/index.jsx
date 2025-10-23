@@ -1,0 +1,1 @@
+export { lineAwesomeIconsMap } from './map.js';

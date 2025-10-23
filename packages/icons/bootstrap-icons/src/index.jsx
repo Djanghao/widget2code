@@ -1,0 +1,1 @@
+export { bootstrapIconsMap } from './map.js';

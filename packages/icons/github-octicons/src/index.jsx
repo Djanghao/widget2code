@@ -1,0 +1,1 @@
+export { githubOcticonsIconsMap } from './map.js';

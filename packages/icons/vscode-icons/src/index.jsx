@@ -1,0 +1,1 @@
+export { vscodeIconsMap } from './map.js';

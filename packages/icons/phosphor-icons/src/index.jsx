@@ -1,0 +1,1 @@
+export { phosphorIconsMap } from './map.js';

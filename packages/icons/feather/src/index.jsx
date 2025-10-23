@@ -1,0 +1,1 @@
+export { featherIconsMap } from './map.js';

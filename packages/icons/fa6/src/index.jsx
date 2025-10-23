@@ -1,0 +1,1 @@
+export { fa6IconsMap } from './map.js';

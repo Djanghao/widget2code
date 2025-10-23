@@ -1,0 +1,1 @@
+export { heroicons2IconsMap } from './map.js';
