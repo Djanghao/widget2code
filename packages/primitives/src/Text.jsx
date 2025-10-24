@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Text({
   fontSize = 14,
-  color = '#000000',
+  color = 'rgba(255, 255, 255, 0.85)',
   align = 'left',
   fontWeight = 400,
   lineHeight = 1.3,
