@@ -7,7 +7,8 @@
     ".": "./src/index.js"
   },
   "dependencies": {
-    "react": "^18.0.0"
+    "react": "^18.0.0",
+    "@widget-factory/resizer": "file:../resizer"
   },
   "peerDependencies": {
     "react": "^18.0.0"

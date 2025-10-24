@@ -661,8 +661,7 @@ export default function DynamicComponentGenerator() {
                     border: '2px solid rgba(52, 199, 89, 0.5)',
                     display: 'inline-block',
                     position: 'relative',
-                    borderRadius: 8,
-                    overflow: 'hidden'
+                    borderRadius: 8
                   }}
                 >
                   <DynamicComponent
