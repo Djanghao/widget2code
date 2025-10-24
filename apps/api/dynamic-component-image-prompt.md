@@ -43,6 +43,10 @@ Carefully observe:
   - `justifyContent`, `alignItems` for alignment
 - Avoid fixed pixel sizes for internal elements when possible
 - Use percentages, `auto`, or flex values
+- **For elements that need specific aspect ratios** (circles, squares, etc.):
+  - Use `aspectRatio: 1` for squares/circles
+  - Use `aspectRatio: '16/9'` for other ratios
+  - Example: A circle should use `aspectRatio: 1` to prevent distortion
 
 ### 4. Styling
 - **Inline styles only** - no CSS classes or external stylesheets
