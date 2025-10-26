@@ -564,7 +564,7 @@ async def generate_widget_full(
         base_prompt = system_prompt if system_prompt else load_default_prompt()
 
         try:
-            iconprep_dir = Path(__file__).parent / "icon-preprocess"
+            iconprep_dir = Path(__file__).parent / "services" / "icon"
             if str(iconprep_dir) not in sys.path:
                 sys.path.insert(0, str(iconprep_dir))
 
@@ -582,7 +582,7 @@ async def generate_widget_full(
             icon_dets = [d for d in dets if str(d.get("label", "")).lower() == "icon"]
             icon_count = len(icon_dets)
 
-            default_lib = Path(__file__).parent.parent.parent / "data" / "icons-lib"
+            default_lib = Path(__file__).parent.parent.parent / "data" / "icons"
             cfg_lib = None
             try:
                 cfg_lib = (config.get("icons", {}) or {}).get("lib_root")
