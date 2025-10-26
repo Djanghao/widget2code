@@ -11,7 +11,7 @@ Outputs:
 """
 
 from __future__ import annotations
-from typing import List, Optional, Tuple
+from typing import List, Optional, Tuple, Dict, Any
 from pathlib import Path
 import io
 import numpy as np
@@ -20,7 +20,7 @@ from PIL import Image
 import open_clip
 from transformers import Blip2Processor, Blip2ForConditionalGeneration
 
-from search_fused import retrieve_svg_filenames
+from search_fused import retrieve_svg_filenames, retrieve_svg_filenames_with_details
 
 BLIP2_MODEL_ID = "Salesforce/blip2-opt-6.7b-coco"
 BLIP2_MAX_NEW_TOKENS = 32
@@ -135,3 +135,37 @@ def caption_embed_and_retrieve_svgs(
         alpha=alpha,
     )
     return svg_names
+
+
+def caption_embed_and_retrieve_svgs_with_details(
+    *,
+    lib_root: Path,
+    q_img_all: np.ndarray,
+    crops_bytes: List[bytes],
+    topk: int = 50,
+    topm: int = 10,
+    alpha: float = 0.8,
+) -> Tuple[List[str], List[str], List[List[Dict[str, Any]]]]:
+    if q_img_all is None or not isinstance(q_img_all, np.ndarray):
+        raise ValueError("q_img_all must be a numpy array of precomputed image embeddings.")
+    if len(crops_bytes) != len(q_img_all):
+        raise ValueError(f"Length mismatch: len(crops_bytes)={len(crops_bytes)} vs len(q_img_all)={len(q_img_all)}")
+
+    blip2_pipe = build_blip2(BLIP2_MODEL_ID)
+    captions = caption_from_bytes_list(crops_bytes, blip2_pipe)
+
+    tmodel, tokenizer, tdevice = load_siglip_text()
+    q_txt_all = encode_texts_siglip(tmodel, tokenizer, tdevice, captions)
+
+    q_ids = [f"q{i:04d}" for i in range(len(crops_bytes))]
+
+    svg_names, all_hits = retrieve_svg_filenames_with_details(
+        lib_root=lib_root,
+        q_ids=q_ids,
+        q_img_all=q_img_all.astype("float32"),
+        q_txt_all=q_txt_all.astype("float32"),
+        topk=topk,
+        topm=topm,
+        alpha=alpha,
+    )
+    return svg_names, captions, all_hits

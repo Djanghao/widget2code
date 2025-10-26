@@ -563,15 +563,22 @@ async def generate_widget_full(
 
         base_prompt = system_prompt if system_prompt else load_default_prompt()
 
+        grounding_raw = []
+        grounding_pixel = []
+        post_processed = []
+        per_icon_details = []
+        img_width = width
+        img_height = height
+
         try:
             iconprep_dir = Path(__file__).parent / "services" / "icon"
             if str(iconprep_dir) not in sys.path:
                 sys.path.insert(0, str(iconprep_dir))
 
-            from grounding import ground_single_image_to_pixel_detections
-            from query_embedding import query_from_detections_in_memory
+            from grounding import ground_single_image_with_stages
+            from query_embedding import query_from_detections_with_details
 
-            dets = ground_single_image_to_pixel_detections(
+            raw_dets, pixel_dets_pre, pixel_dets_post, img_width, img_height = ground_single_image_with_stages(
                 image_bytes=image_bytes,
                 filename=getattr(image, 'filename', None),
                 model=(model or "qwen3-vl-plus"),
@@ -579,7 +586,11 @@ async def generate_widget_full(
                 timeout=300,
             )
 
-            icon_dets = [d for d in dets if str(d.get("label", "")).lower() == "icon"]
+            grounding_raw = raw_dets
+            grounding_pixel = pixel_dets_pre
+            post_processed = pixel_dets_post
+
+            icon_dets = [d for d in pixel_dets_post if str(d.get("label", "")).lower() == "icon"]
             icon_count = len(icon_dets)
 
             default_lib = Path(__file__).parent.parent.parent / "data" / "icons"
@@ -592,8 +603,8 @@ async def generate_widget_full(
             lib_root_path = Path(env_lib or cfg_lib or default_lib)
 
             if lib_root_path.exists():
-                svg_names = query_from_detections_in_memory(
-                    detections=icon_dets,
+                svg_names, per_icon_details = query_from_detections_with_details(
+                    detections=pixel_dets_post,
                     image_bytes=image_bytes,
                     lib_root=lib_root_path,
                     filter_icon_only=True,
@@ -680,12 +691,72 @@ async def generate_widget_full(
         except Exception:
             pass
 
+        for icon_detail in per_icon_details:
+            for candidate in icon_detail.get("topCandidates", []):
+                if "score_img" in candidate:
+                    candidate["score_img"] = round(candidate["score_img"], 4)
+                if "score_txt" in candidate:
+                    candidate["score_txt"] = round(candidate["score_txt"], 4)
+                if "score_final" in candidate:
+                    candidate["score_final"] = round(candidate["score_final"], 4)
+
+                name = candidate.get("name", "")
+                if name:
+                    stem = str(Path(name).stem)
+                    if stem.startswith("sf:") or stem.startswith("lucide:"):
+                        candidate["name"] = stem
+                    elif stem and (stem.lower() == stem) and ("." in stem):
+                        candidate["name"] = f"sf:{stem}"
+                    else:
+                        candidate["name"] = f"lucide:{stem}"
+
+        global_candidates = {}
+        for icon_detail in per_icon_details:
+            for candidate in icon_detail.get("topCandidates", []):
+                prefixed_name = candidate.get("name", "")
+                if not prefixed_name:
+                    continue
+
+                if prefixed_name not in global_candidates:
+                    global_candidates[prefixed_name] = {
+                        "name": prefixed_name,
+                        "appearances": 0,
+                        "totalScore": 0.0,
+                        "scores": []
+                    }
+                global_candidates[prefixed_name]["appearances"] += 1
+                global_candidates[prefixed_name]["totalScore"] += candidate.get("score_final", 0.0)
+                global_candidates[prefixed_name]["scores"].append(candidate.get("score_final", 0.0))
+
+        global_merged = []
+        for name, data in global_candidates.items():
+            avg_score = data["totalScore"] / max(1, data["appearances"])
+            global_merged.append({
+                "name": name,
+                "appearances": data["appearances"],
+                "avgScore": round(avg_score, 4),
+                "maxScore": round(max(data["scores"]), 4) if data["scores"] else 0.0,
+            })
+        global_merged.sort(key=lambda x: (-x["avgScore"], -x["appearances"]))
+
         return {
             "success": True,
             "widgetDSL": widget_spec,
             "aspectRatio": round(aspect_ratio, 3),
             "iconCandidates": icon_candidates,
             "iconCount": icon_count,
+            "iconDebugInfo": {
+                "imageSize": {"width": img_width, "height": img_height},
+                "grounding": {
+                    "raw": grounding_raw,
+                    "pixel": grounding_pixel
+                },
+                "postProcessed": post_processed,
+                "retrievals": {
+                    "perIcon": per_icon_details,
+                    "globalMerged": global_merged
+                }
+            }
         }
     except json.JSONDecodeError as e:
         return JSONResponse(

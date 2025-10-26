@@ -136,3 +136,53 @@ def retrieve_svg_filenames(
             out.append(name)
 
     return out
+
+
+def retrieve_svg_filenames_with_details(
+    *,
+    lib_root: Path,
+    q_ids: List[str],
+    q_img_all: np.ndarray,  # (Q, D)
+    q_txt_all: np.ndarray,  # (Q, D)
+    topk: int = TOPK,
+    topm: int = TOPM,
+    alpha: float = ALPHA,
+) -> Tuple[List[str], List[List[Dict[str, Any]]]]:
+    if q_img_all is None or q_txt_all is None:
+        raise ValueError("q_img_all and q_txt_all must be provided.")
+    if len(q_img_all) != len(q_txt_all) or len(q_img_all) != len(q_ids):
+        raise ValueError("Length mismatch: q_ids, q_img_all, q_txt_all must align.")
+
+    index, items, lib_img, lib_txt = load_lib(Path(lib_root))
+    svg_names: List[str] = []
+    all_hits: List[List[Dict[str, Any]]] = []
+    Q = len(q_ids)
+    for i in range(Q):
+        q_img = q_img_all[i].reshape(1, -1).astype("float32")
+        q_txt = q_txt_all[i].reshape(1, -1).astype("float32")
+
+        hits = _process_one_query(
+            q_img_vec=q_img,
+            q_txt_vec=q_txt,
+            index=index,
+            lib_img=lib_img,
+            lib_txt=lib_txt,
+            items=items,
+            topk=int(topk),
+            topm=int(topm),
+            alpha=float(alpha),
+        )
+
+        hits_with_names = []
+        for h in hits:
+            src = h.get("src_svg")
+            if not src:
+                continue
+            name = Path(src).name
+            svg_names.append(name)
+            h["name"] = name
+            hits_with_names.append(h)
+
+        all_hits.append(hits_with_names)
+
+    return svg_names, all_hits

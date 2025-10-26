@@ -271,3 +271,99 @@ def ground_single_image_to_pixel_detections(
     )
 
     return pixel_dets_post
+
+
+def ground_single_image_with_stages(
+    *,
+    image_bytes: bytes,
+    filename: Optional[str] = None,
+    prompt: str = DEFAULT_PROMPT,
+    provider: Optional[str] = None,
+    api_key: Optional[str] = None,
+    base_url: Optional[str] = None,
+    model: str = "qwen3-vl-plus",
+    temperature: float = 0.7,
+    top_p: Optional[float] = None,
+    max_tokens: int = 2000,
+    timeout: int = 60,
+    thinking: bool = False,
+    stream: bool = False,
+    stream_options: Optional[Dict[str, Any]] = None,
+    clamp_to_image: bool = True,
+    max_retries: int = 3,
+    pp_margin_pct: float = 0.2,
+    pp_min_area_ratio: float = 0.0005,
+    pp_fallback_expand_pct: float = 0.15,
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]], int, int]:
+    if not isinstance(image_bytes, (bytes, bytearray)):
+        raise TypeError("image_bytes must be raw bytes")
+
+    img_w, img_h = get_image_size_from_bytes(image_bytes)
+    image_content = prepare_image_content_from_bytes(image_bytes, filename)
+    messages = [ChatMessage(role="user",
+                            content=[{"type": "text", "text": prompt}, image_content])]
+
+    llm_kwargs: Dict[str, Any] = dict(
+        model=model,
+        temperature=temperature,
+        max_tokens=max_tokens,
+        timeout=timeout,
+        system_prompt="You are a screen-to-code expert. Detect bounding boxes for input widget image.",
+    )
+    if top_p is not None:
+        llm_kwargs["top_p"] = top_p
+    if thinking:
+        llm_kwargs["thinking"] = True
+    if provider:
+        llm_kwargs["provider"] = provider
+    if api_key:
+        llm_kwargs["api_key"] = api_key
+    if base_url:
+        llm_kwargs["base_url"] = base_url
+    if stream:
+        llm_kwargs["stream"] = True
+        if stream_options:
+            llm_kwargs["stream_options"] = stream_options
+
+    vision_llm = LLM(**llm_kwargs)
+    last_err = None
+    parsed_items: List[Dict[str, Any]] = []
+    for attempt in range(max_retries + 1):
+        try:
+            if stream:
+                joined: List[str] = []
+                for chunk in vision_llm.chat(messages):
+                    piece = getattr(chunk, "content", None)
+                    if piece is None and isinstance(chunk, dict):
+                        piece = chunk.get("content")
+                    if piece:
+                        joined.append(piece)
+                content_text = "".join(joined) if joined else ""
+            else:
+                resp = vision_llm.chat(messages)
+                content_text = getattr(resp, "content", None) if not isinstance(resp, dict) else resp.get("content", "")
+
+            parsed_items = parse_grounding_response(content_text) if content_text else []
+            break
+        except Exception as e:
+            last_err = e
+            if attempt >= max_retries:
+                parsed_items = []
+
+    pixel_dets_pre = _scale_qwen_to_pixels(
+        items=parsed_items,
+        img_w=img_w,
+        img_h=img_h,
+        clamp_to_image=clamp_to_image,
+    )
+
+    pixel_dets_post = post_process_pixel_detections(
+        detections=pixel_dets_pre,
+        image_bytes=image_bytes,
+        margin_pct=pp_margin_pct,
+        min_area_ratio=pp_min_area_ratio,
+        fallback_expand_pct=pp_fallback_expand_pct,
+        clamp_to_image=True,
+    )
+
+    return parsed_items, pixel_dets_pre, pixel_dets_post, img_w, img_h

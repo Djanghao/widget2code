@@ -19,7 +19,7 @@ import cv2
 from PIL import Image, ImageOps
 import open_clip
 
-from query_caption import caption_embed_and_retrieve_svgs
+from query_caption import caption_embed_and_retrieve_svgs, caption_embed_and_retrieve_svgs_with_details
 
 MODEL_NAME = "ViT-SO400M-16-SigLIP2-384"
 PRETRAINED = "webli"
@@ -235,3 +235,76 @@ def query_from_detections_in_memory(
         alpha=alpha,
     )
     return svg_names
+
+
+def query_from_detections_with_details(
+    *,
+    detections: List[Dict[str, Any]],
+    image_bytes: bytes,
+    lib_root: Path,
+    filter_icon_only: bool = True,
+    topk: int = 50,
+    topm: int = 10,
+    alpha: float = 0.8,
+) -> Tuple[List[str], List[Dict[str, Any]]]:
+    if not detections:
+        return [], []
+
+    base_img = Image.open(io.BytesIO(image_bytes)).convert("RGBA")
+    color_pils: List[Image.Image] = []
+    outline_pils: List[Image.Image] = []
+    icon_detections: List[Dict[str, Any]] = []
+
+    for det in detections:
+        if filter_icon_only and str(det.get("label", "")).lower() != "icon":
+            continue
+        bbox = det.get("bbox")
+        if not bbox or len(bbox) != 4:
+            continue
+        x1, y1, x2, y2 = map(float, bbox)
+        if x2 < x1:
+            x1, x2 = x2, x1
+        if y2 < y1:
+            y1, y2 = y2, y1
+        w = max(1.0, x2 - x1)
+        h = max(1.0, y2 - y1)
+        crop = crop_with_bbox(base_img, (x1, y1, w, h))
+        if crop is None:
+            continue
+        color_pils.append(crop.convert("RGB"))
+        outline_pils.append(to_outline_bw(crop))
+        icon_detections.append(det)
+
+    if not color_pils:
+        return [], []
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model, preprocess = _load_image_model(device)
+    q_img_all = _batch_encode_pils(model, preprocess, outline_pils, device=device, batch=64)
+
+    crops_bytes: List[bytes] = []
+    for im in color_pils:
+        buf = io.BytesIO()
+        im.save(buf, format="PNG")
+        crops_bytes.append(buf.getvalue())
+
+    svg_names, captions, all_hits = caption_embed_and_retrieve_svgs_with_details(
+        lib_root=lib_root,
+        q_img_all=q_img_all,
+        crops_bytes=crops_bytes,
+        topk=topk,
+        topm=topm,
+        alpha=alpha,
+    )
+
+    per_icon_details: List[Dict[str, Any]] = []
+    for i, det in enumerate(icon_detections):
+        per_icon_details.append({
+            "index": i,
+            "bbox": det.get("bbox"),
+            "label": det.get("label"),
+            "caption": captions[i] if i < len(captions) else "",
+            "topCandidates": all_hits[i] if i < len(all_hits) else []
+        })
+
+    return svg_names, per_icon_details
