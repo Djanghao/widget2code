@@ -99,7 +99,7 @@ def adjust_box_with_image(img_bgr: np.ndarray,
                           require_iou_increase: bool = True) -> Tuple[int,int,int,int]:
     H, W = img_bgr.shape[:2]
     x1,y1,x2,y2 = pred_box
-    x1,x2 = int(round(x1)); y1,y2 = int(round(y1)), int(round(y2))
+    x1, y1, x2, y2 = int(round(x1)), int(round(y1)), int(round(x2)), int(round(y2))
     bw = max(1, x2 - x1 + 1); bh = max(1, y2 - y1 + 1)
 
     mx = int(round(bw * margin_pct)); my = int(round(bh * margin_pct))
