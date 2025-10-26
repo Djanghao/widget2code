@@ -138,9 +138,6 @@ Reusable npm packages that can be independently installed:
 - **[`@widget-factory/primitives`](./packages/primitives/)** - Base UI components (WidgetShell, Text, Icon, etc.)
 - **[`@widget-factory/icons`](./packages/icons/README.md)** - Auto-generated icon components and iconsMap
 
-### Tools
-- **[`@widget-factory/cli`](./tools/cli/)** - CLI tool for batch widget rendering (headless mode)
-
 ### Apps
 - **[`playground`](./apps/playground/README.md)** - Interactive web playground with visual editing
 - **`api`** - Python FastAPI backend for AI-powered widget generation
