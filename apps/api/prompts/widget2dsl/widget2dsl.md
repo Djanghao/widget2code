@@ -18,7 +18,7 @@ You are a VLM specialized in analyzing UI widget images and generating structure
 Props: `backgroundColor`, `borderRadius`, `padding`, `aspectRatio`
 - Must wrap the entire widget
 - Sets widget dimensions and appearance
-- **IMPORTANT**: Always include `aspectRatio` (width/height ratio) based on the widget's visual proportions:
+- Always include `aspectRatio` (width/height ratio) based on the widget's visual proportions:
   - **Small (Square)**: `1.0` - equal width and height
   - **Medium (Landscape)**: `2.14` - roughly 2x wider than tall
   - **Large (Portrait)**: `0.95` - slightly taller than wide

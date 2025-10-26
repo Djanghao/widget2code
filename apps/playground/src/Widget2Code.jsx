@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
-import { compileWidgetDSLToJSX } from '@widget-factory/compiler';
 import { exportWidget } from '@widget-factory/exporter';
 import TreeView from './TreeView.jsx';
 import DSLEditor from './components/core/DSLEditor.jsx';
@@ -9,7 +8,8 @@ import PreviewPanel from './components/core/PreviewPanel.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import SectionHeader from './components/core/SectionHeader.jsx';
 import { useApiKey } from './components/ApiKeyManager.jsx';
-import imagePrompt from '../../api/prompts/widget2dsl/widget2dsl-sf-lucide.md?raw';
+import usePlaygroundStore from './store/index.js';
+import imagePrompt from '../../api/prompts/widget2dsl/widget2dsl.md?raw';
 
 const VISION_MODELS = [
   { value: 'qwen3-vl-235b-a22b-instruct', label: 'qwen3-vl-235b-a22b-instruct' },
@@ -20,6 +20,7 @@ const VISION_MODELS = [
 
 function Widget2Code() {
   const { apiKey, hasApiKey } = useApiKey();
+  const { executeAutoResize, autoSizing, startCompiling, generatedJSX: storeGeneratedCode, treeRoot: storeTreeRoot } = usePlaygroundStore();
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [systemPrompt, setSystemPrompt] = useState(imagePrompt);
@@ -34,7 +35,6 @@ function Widget2Code() {
   const treeContainerRef = useRef(null);
   const [enableAutoResize, setEnableAutoResize] = useState(true);
   const [ratioInput, setRatioInput] = useState('');
-  const [autoSizing, setAutoSizing] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
 
   useEffect(() => {
@@ -97,6 +97,18 @@ function Widget2Code() {
     return () => document.removeEventListener('paste', handlePaste);
   }, [handleImageFile]);
 
+  useEffect(() => {
+    if (storeGeneratedCode) {
+      setGeneratedCode(storeGeneratedCode);
+    }
+  }, [storeGeneratedCode]);
+
+  useEffect(() => {
+    if (storeTreeRoot) {
+      setTreeRoot(storeTreeRoot);
+    }
+  }, [storeTreeRoot]);
+
   const handleGenerate = async () => {
     if (!hasApiKey) {
       setError('API key required');
@@ -126,14 +138,8 @@ function Widget2Code() {
       }
 
       setPreviewSpec(data.widgetDSL);
-      setTreeRoot(data.widgetDSL?.widget || null);
 
-      try {
-        const jsx = compileWidgetDSLToJSX(data.widgetDSL);
-        setGeneratedCode(jsx);
-      } catch (compileError) {
-        setGeneratedCode(`// Compilation Error: ${compileError.message}`);
-      }
+      await startCompiling(data.widgetDSL, widgetFrameRef);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -141,7 +147,11 @@ function Widget2Code() {
     }
   };
 
-  const handleAutoResizeByRatio = async () => {};
+  const handleAutoResizeByRatio = useCallback(async (ratioOverride) => {
+    const r = ratioOverride ?? parseAspectRatio(ratioInput);
+    if (!r) return;
+    await executeAutoResize(r, widgetFrameRef);
+  }, [ratioInput, executeAutoResize]);
 
   const handleDownloadWidget = async () => {
     const widgetElement = widgetFrameRef.current?.firstElementChild;
@@ -152,9 +162,15 @@ function Widget2Code() {
 
     setIsDownloading(true);
     try {
+      const rect = widgetElement.getBoundingClientRect();
+      const width = rect.width;
+      const height = rect.height;
+      const aspectRatio = previewSpec.widget?.aspectRatio || (width / height);
+
       const metadata = {
-        width: widgetElement.getBoundingClientRect().width,
-        height: widgetElement.getBoundingClientRect().height
+        width,
+        height,
+        aspectRatio
       };
       await exportWidget(widgetElement, 'generated-widget', metadata);
     } catch (error) {
