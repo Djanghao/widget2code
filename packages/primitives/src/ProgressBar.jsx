@@ -87,7 +87,8 @@ export const ProgressBar = ({
   const containerStyle = {
     position: "relative",
     width: isVertical ? currentSize.height || adjustedHeight : width,
-    height: isVertical ? width : currentSize.height || adjustedHeight,
+    height: isVertical ? width : "100%",
+    maxHeight: isVertical ? width : adjustedHeight,
     backgroundColor,
     borderRadius: currentSize.borderRadius || borderRadius,
     overflow: "hidden",
