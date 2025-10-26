@@ -1,15 +1,15 @@
 {
-  "name": "@widget-factory/spec",
+  "name": "@widget-factory/dsl",
   "version": "0.3.0",
   "type": "module",
   "main": "./src/index.js",
   "exports": {
     ".": "./src/index.js"
   },
-  "description": "WidgetSpec protocol definition, validation, and utilities",
+  "description": "WidgetDSL protocol definition, validation, and utilities",
   "keywords": [
     "widget",
-    "spec",
+    "dsl",
     "validation"
   ]
 }

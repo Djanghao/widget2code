@@ -1,6 +1,6 @@
 # Playground
 
-Interactive demo/editor: load WidgetSpecs, preview rendering, and view generated JSX (WidgetSpec → JSX → Preview).
+Interactive demo/editor: load WidgetDSLs, preview rendering, and view generated JSX (WidgetDSL → JSX → Preview).
 
 ## Setup
 

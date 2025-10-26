@@ -7,7 +7,7 @@
  * @date 2025-10-17
  */
 
-import { compileWidgetSpec } from '../../core/compileWidget.js';
+import { compileWidgetDSL } from '../../core/compileWidget.js';
 import { examples } from '../../constants/examples.js';
 import { extractResources } from '../../../../../packages/primitives/src/utils/extractResources.js';
 import { preloadIcons } from '../../../../../packages/primitives/src/utils/preloadIcons.js';
@@ -20,7 +20,7 @@ const createRenderingSlice = (set, get) => ({
   renderingPhase: 'idle',
   operationMode: 'idle',
   compileToken: 0,
-  widgetSpec: null,
+  widgetDSL: null,
   generatedJSX: '',
   treeRoot: null,
   naturalSize: null,
@@ -40,7 +40,7 @@ const createRenderingSlice = (set, get) => ({
 
   incrementToken: () => set((state) => ({ compileToken: state.compileToken + 1 })),
 
-  setWidgetSpec: (spec) => set({ widgetSpec: spec }),
+  setWidgetDSL: (spec) => set({ widgetDSL: spec }),
 
   setGeneratedJSX: (jsx) => set({ generatedJSX: jsx }),
 
@@ -71,7 +71,7 @@ const createRenderingSlice = (set, get) => ({
     }
 
     console.log(`🔨 [Compile] Starting with token: ${token}`);
-    const result = compileWidgetSpec(spec);
+    const result = compileWidgetDSL(spec);
 
     if (get().compileToken !== token) {
       console.log(`🚫 [Compile] Token changed during compilation, aborting`);
@@ -210,10 +210,10 @@ const createRenderingSlice = (set, get) => ({
       compileToken: newToken,
       renderingPhase: 'compiling',
       operationMode: 'compiling',
-      widgetSpec: spec
+      widgetDSL: spec
     });
 
-    console.log(`📦 [Resource Preload] Extracting resources from widgetSpec...`);
+    console.log(`📦 [Resource Preload] Extracting resources from widgetDSL...`);
     const { icons, images } = extractResources(spec);
     console.log(`📦 [Resource Preload] Found ${icons.length} icons and ${images.length} images`);
 
@@ -303,8 +303,8 @@ const createRenderingSlice = (set, get) => ({
   },
 
   writebackSpecSize: (width, height) => {
-    const { widgetSpec } = get();
-    if (!widgetSpec || !widgetSpec.widget) {
+    const { widgetDSL } = get();
+    if (!widgetDSL || !widgetDSL.widget) {
       console.warn(`⚠️ [Writeback] No widget spec to update`);
       return;
     }
@@ -320,9 +320,9 @@ const createRenderingSlice = (set, get) => ({
     };
 
     const updatedSpec = {
-      ...widgetSpec,
+      ...widgetDSL,
       widget: {
-        ...widgetSpec.widget,
+        ...widgetDSL.widget,
         width: Math.max(1, Math.round(width)),
         height: Math.max(1, Math.round(height))
       }
@@ -331,7 +331,7 @@ const createRenderingSlice = (set, get) => ({
     const formatted = formatSpecWithRootLast(updatedSpec);
 
     set({
-      widgetSpec: formatted,
+      widgetDSL: formatted,
       finalSize: { width: Math.round(width), height: Math.round(height) }
     });
 
@@ -339,8 +339,8 @@ const createRenderingSlice = (set, get) => ({
   },
 
   removeSpecSize: async (widgetFrameRef) => {
-    const { widgetSpec, naturalSize } = get();
-    if (!widgetSpec || !widgetSpec.widget) {
+    const { widgetDSL, naturalSize } = get();
+    if (!widgetDSL || !widgetDSL.widget) {
       console.warn(`⚠️ [Writeback] No widget spec to update`);
       return;
     }
@@ -355,19 +355,19 @@ const createRenderingSlice = (set, get) => ({
       return { ...spec, widget: { ...rest, root } };
     };
 
-    const updatedWidget = { ...widgetSpec.widget };
+    const updatedWidget = { ...widgetDSL.widget };
     delete updatedWidget.width;
     delete updatedWidget.height;
 
     const updatedSpec = {
-      ...widgetSpec,
+      ...widgetDSL,
       widget: updatedWidget
     };
 
     const formatted = formatSpecWithRootLast(updatedSpec);
 
     set({
-      widgetSpec: formatted,
+      widgetDSL: formatted,
       finalSize: naturalSize
     });
 
@@ -386,7 +386,7 @@ const createRenderingSlice = (set, get) => ({
 
     set({
       selectedPreset: presetKey,
-      widgetSpec: null,
+      widgetDSL: null,
       generatedJSX: '',
       treeRoot: null,
       naturalSize: null,
@@ -574,7 +574,7 @@ const createRenderingSlice = (set, get) => ({
 
     set({
       renderingPhase: 'idle',
-      widgetSpec: null,
+      widgetDSL: null,
       generatedJSX: '',
       treeRoot: null,
       naturalSize: null,

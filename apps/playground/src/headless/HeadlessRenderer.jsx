@@ -19,7 +19,7 @@ function HeadlessRenderer() {
   const [frameEl, setFrameEl] = useState(null);
 
   const {
-    widgetSpec,
+    widgetDSL,
     renderingPhase,
     operationMode,
     naturalSize,
@@ -139,7 +139,7 @@ function HeadlessRenderer() {
 
       const state = usePlaygroundStore.getState();
       console.log('[Headless] 🔍 Validating widget...');
-      const validation = validateWidget(widgetElement, state.widgetSpec);
+      const validation = validateWidget(widgetElement, state.widgetDSL);
 
       if (!validation.valid) {
         console.warn('[Headless] ⚠️  Validation failed:', validation.issues);
@@ -177,7 +177,7 @@ function HeadlessRenderer() {
         metadata: validation.metadata,
         naturalSize: state.naturalSize,
         finalSize: state.finalSize,
-        spec: state.widgetSpec,
+        spec: state.widgetDSL,
         jsx: state.generatedJSX,
         imageData: base64
       });

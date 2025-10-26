@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function SpecEditor({ value, onChange, readOnly = false, title = 'WidgetSpec' }) {
+export default function DSLEditor({ value, onChange, readOnly = false, title = 'WidgetDSL' }) {
   return (
     <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', height: '100%' }}>
       <h2 style={{

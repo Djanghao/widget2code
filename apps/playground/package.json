@@ -17,7 +17,7 @@
     "@widget-factory/icons": "*",
     "@widget-factory/primitives": "*",
     "@widget-factory/renderer": "*",
-    "@widget-factory/spec": "*",
+    "@widget-factory/dsl": "*",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.263.1",
     "mermaid": "^11.12.0",

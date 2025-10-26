@@ -7,10 +7,10 @@
 
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
-import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
+import { compileWidgetDSLToJSX } from '@widget-factory/compiler';
 import { exportWidget } from '@widget-factory/exporter';
 import TreeView from './TreeView.jsx';
-import SpecEditor from './components/core/SpecEditor.jsx';
+import DSLEditor from './components/core/DSLEditor.jsx';
 import CodeViewer from './components/core/CodeViewer.jsx';
 import PreviewPanel from './components/core/PreviewPanel.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
@@ -166,11 +166,11 @@ function WidgetGeneration() {
         throw new Error(data.error || 'Failed to generate widget');
       }
 
-      setPreviewSpec(data.widgetSpec);
-      setTreeRoot(data.widgetSpec?.widget || null);
+      setPreviewSpec(data.widgetDSL);
+      setTreeRoot(data.widgetDSL?.widget || null);
 
       try {
-        const jsx = compileWidgetSpecToJSX(data.widgetSpec);
+        const jsx = compileWidgetDSLToJSX(data.widgetDSL);
         setGeneratedCode(jsx);
       } catch (compileError) {
         setGeneratedCode(`// Compilation Error: ${compileError.message}`);
@@ -509,7 +509,7 @@ function WidgetGeneration() {
         gridAutoRows: isNarrow ? 'minmax(0, auto)' : 'minmax(0, 1fr)'
       }}>
         <div style={{ gridArea: 'spec', minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
-          <SpecEditor
+          <DSLEditor
             value={previewSpec ? JSON.stringify(previewSpec, null, 2) : ''}
             readOnly
           />

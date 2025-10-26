@@ -1,5 +1,5 @@
-export function compileWidgetSpecToJSX(widgetSpec) {
-  if (!widgetSpec.widget?.root) {
+export function compileWidgetDSLToJSX(widgetDSL) {
+  if (!widgetDSL.widget?.root) {
     throw new Error('Invalid widget spec: missing widget.root');
   }
 
@@ -101,7 +101,7 @@ export function compileWidgetSpecToJSX(widgetSpec) {
     }
   }
 
-  renderNode(widgetSpec.widget.root, 2);
+  renderNode(widgetDSL.widget.root, 2);
 
   let importsCode = Array.from(imports).join('\n');
   if (lucideIcons.size > 0) {
@@ -109,7 +109,7 @@ export function compileWidgetSpecToJSX(widgetSpec) {
     importsCode += '\n' + lucideImport;
   }
 
-  const { backgroundColor, borderRadius, padding, width, height } = widgetSpec.widget;
+  const { backgroundColor, borderRadius, padding, width, height } = widgetDSL.widget;
   const shellProps = [];
   if (backgroundColor) shellProps.push(`backgroundColor="${backgroundColor}"`);
   if (borderRadius !== undefined) shellProps.push(`borderRadius={${borderRadius}}`);

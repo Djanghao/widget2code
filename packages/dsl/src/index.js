@@ -6,4 +6,4 @@ export {
   removeSizeFromSpec
 } from './utils.js';
 
-export { validateWidgetSpec } from './validator.js';
+export { validateWidgetDSL } from './validator.js';

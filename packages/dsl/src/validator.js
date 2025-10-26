@@ -1,4 +1,4 @@
-export function validateWidgetSpec(spec) {
+export function validateWidgetDSL(spec) {
   const errors = [];
   const warnings = [];
 

@@ -35,8 +35,8 @@ export default function ArchitectureSection() {
 
     Frontend -->|HTTP Request| Backend
     Backend -->|AI Call| AI
-    AI -->|WidgetSpec JSON| Backend
-    Backend -->|WidgetSpec| Frontend
+    AI -->|WidgetDSL JSON| Backend
+    Backend -->|WidgetDSL| Frontend
     Frontend -->|Compile| System
     System -->|JSX Components| Frontend
 
@@ -55,22 +55,22 @@ export default function ArchitectureSection() {
             <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Frontend (React + Vite)</div>
             <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
               <li><strong>Presets Tab</strong>: Browse and edit 20+ pre-built widget examples</li>
-              <li><strong>Widget2Spec Tab</strong>: Upload widget screenshots, generate WidgetSpec via VLM</li>
-              <li><strong>Prompt2Spec Tab</strong>: Describe widgets in natural language, generate WidgetSpec via LLM</li>
+              <li><strong>Widget2DSL Tab</strong>: Upload widget screenshots, generate WidgetDSL via VLM</li>
+              <li><strong>Prompt2DSL Tab</strong>: Describe widgets in natural language, generate WidgetDSL via LLM</li>
               <li><strong>Guides Tab</strong>: Documentation, component reference, and architecture diagrams</li>
             </ul>
           </div>
           <div style={{ marginBottom: 20 }}>
             <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Backend (FastAPI)</div>
             <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
-              <li><code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>/api/generate-widget</code> - Image → WidgetSpec (Qwen VL)</li>
-              <li><code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>/api/generate-widget-text</code> - Prompt → WidgetSpec (Qwen)</li>
+              <li><code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>/api/generate-widget</code> - Image → WidgetDSL (Qwen VL)</li>
+              <li><code style={{ backgroundColor: '#1c1c1e', padding: '2px 6px', borderRadius: 4 }}>/api/generate-widget-text</code> - Prompt → WidgetDSL (Qwen)</li>
             </ul>
           </div>
           <div>
             <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>Widget System</div>
             <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
-              <li><strong>@widget-factory/compiler</strong>: Converts WidgetSpec JSON to React JSX</li>
+              <li><strong>@widget-factory/compiler</strong>: Converts WidgetDSL JSON to React JSX</li>
               <li><strong>@widget-factory/primitives</strong>: Base components (WidgetShell, Text, Icon, etc.)</li>
               <li><strong>@widget-factory/icons</strong>: 500+ SF Symbols + 300+ Lucide icons</li>
             </ul>
@@ -103,27 +103,27 @@ export default function ArchitectureSection() {
 
     Note over User,Frame: Presets Tab Flow
     User->>UI: Select Example
-    UI->>Compiler: Compile WidgetSpec
+    UI->>Compiler: Compile WidgetDSL
     Compiler->>Frame: Render JSX
     Frame->>User: Display Widget
 
-    Note over User,Frame: Widget2Spec Flow
+    Note over User,Frame: Widget2DSL Flow
     User->>UI: Upload Image
     UI->>API: POST /api/generate-widget
     API->>AI: VLM Analysis
-    AI->>API: WidgetSpec JSON
-    API->>UI: Return WidgetSpec
-    UI->>Compiler: Compile WidgetSpec
+    AI->>API: WidgetDSL JSON
+    API->>UI: Return WidgetDSL
+    UI->>Compiler: Compile WidgetDSL
     Compiler->>Frame: Render JSX
     Frame->>User: Display Widget
 
-    Note over User,Frame: Prompt2Spec Flow
+    Note over User,Frame: Prompt2DSL Flow
     User->>UI: Enter Prompt
     UI->>API: POST /api/generate-widget-text
     API->>AI: LLM Generation
-    AI->>API: WidgetSpec JSON
-    API->>UI: Return WidgetSpec
-    UI->>Compiler: Compile WidgetSpec
+    AI->>API: WidgetDSL JSON
+    API->>UI: Return WidgetDSL
+    UI->>Compiler: Compile WidgetDSL
     Compiler->>Frame: Render JSX
     Frame->>User: Display Widget`} />
       </div>
@@ -163,7 +163,7 @@ export default function ArchitectureSection() {
     end
 
     Final["Found optimal size"]
-    Write["Write w & h<br/>to WidgetSpec"]
+    Write["Write w & h<br/>to WidgetDSL"]
     Done([Done])
 
     Start --> Parse
@@ -213,7 +213,7 @@ export default function ArchitectureSection() {
               <li><strong>3. Apply & Measure</strong>: Render widget, wait for DOM, check scrollWidth vs clientWidth</li>
               <li><strong>4. Path A - Content Fits</strong>: Test w=40 first, if not fit then binary search [40, startW]</li>
               <li><strong>5. Path B - Content Overflows</strong>: Exponentially expand (w *= 2) until fits, then binary search [low, high]</li>
-              <li><strong>6. Write Back</strong>: Persist optimal width & height to WidgetSpec JSON</li>
+              <li><strong>6. Write Back</strong>: Persist optimal width & height to WidgetDSL JSON</li>
             </ul>
           </div>
           <div style={{ marginBottom: 20 }}>
@@ -255,7 +255,7 @@ export default function ArchitectureSection() {
           marginBottom: 0
         }}>
           <div style={{ marginBottom: 20 }}>
-            <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>WidgetSpec Structure</div>
+            <div style={{ fontSize: 16, fontWeight: 600, color: '#f5f5f7', marginBottom: 8 }}>WidgetDSL Structure</div>
             <pre style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: '#e5e5e7', backgroundColor: '#1c1c1e', padding: 12, borderRadius: 6, overflowX: 'auto' }}>{`{
   "widget": {
     "width": 200,
@@ -273,7 +273,7 @@ export default function ArchitectureSection() {
 ├── src/
 │   ├── App.jsx
 │   ├── ImageToWidget.jsx
-│   ├── Prompt2Spec.jsx
+│   ├── Prompt2DSL.jsx
 │   ├── Documentation.jsx
 │   ├── WidgetFrame.jsx
 │   ├── TreeView.jsx

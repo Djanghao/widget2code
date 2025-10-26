@@ -1,8 +1,8 @@
-export function extractResources(widgetSpec) {
+export function extractResources(widgetDSL) {
   const icons = new Set();
   const images = new Set();
 
-  console.log('[Resource Extract] 🔍 Starting resource extraction from widgetSpec...');
+  console.log('[Resource Extract] 🔍 Starting resource extraction from widgetDSL...');
 
   function traverse(node) {
     if (!node) return;
@@ -27,8 +27,8 @@ export function extractResources(widgetSpec) {
     }
   }
 
-  if (widgetSpec?.widget?.root) {
-    traverse(widgetSpec.widget.root);
+  if (widgetDSL?.widget?.root) {
+    traverse(widgetDSL.widget.root);
   }
 
   const result = {

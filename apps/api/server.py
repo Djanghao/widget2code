@@ -150,7 +150,7 @@ async def generate_widget(
         messages = [ChatMessage(
             role="user",
             content=[
-                {"type": "text", "text": "Please analyze this widget image and generate the WidgetSpec JSON according to the instructions."},
+                {"type": "text", "text": "Please analyze this widget image and generate the WidgetDSL JSON according to the instructions."},
                 image_content
             ]
         )]
@@ -176,7 +176,7 @@ async def generate_widget(
 
         return {
             "success": True,
-            "widgetSpec": widget_spec,
+            "widgetDSL": widget_spec,
             "aspectRatio": round(aspect_ratio, 3)
         }
     except json.JSONDecodeError as e:
@@ -278,7 +278,7 @@ async def generate_widget_text(
 
         return {
             "success": True,
-            "widgetSpec": widget_spec
+            "widgetDSL": widget_spec
         }
     except json.JSONDecodeError as e:
         return JSONResponse(
