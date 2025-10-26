@@ -16,7 +16,8 @@ import MaterialsModal from './components/MaterialsModal/index.jsx';
 import ApiKeyManager, { useApiKey } from './components/ApiKeyManager.jsx';
 import useWidgetFrame from './hooks/useWidgetFrame.js';
 import PresetsTab from './components/PresetsTab/index.jsx';
-import WidgetGeneration from './WidgetGeneration.jsx';
+import Widget2Code from './Widget2Code.jsx';
+import Prompt2Code from './Prompt2Code.jsx';
 import Documentation from './Documentation.jsx';
 import DynamicComponentGenerator from './DynamicComponentGenerator.jsx';
 import usePlaygroundStore from './store/index.js';
@@ -218,7 +219,7 @@ function App() {
         />
       )}
 
-      
+
 
       {activeTab === 'guides' && (
         <div key="guides" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
@@ -232,9 +233,15 @@ function App() {
         </div>
       )}
 
-      {activeTab === 'widgetgen' && (
-        <div key="widgetgen" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
-          <WidgetGeneration />
+      {activeTab === 'widget2code' && (
+        <div key="widget2code" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
+          <Widget2Code />
+        </div>
+      )}
+
+      {activeTab === 'prompt2code' && (
+        <div key="prompt2code" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
+          <Prompt2Code />
         </div>
       )}
 
