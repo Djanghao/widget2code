@@ -8,8 +8,8 @@ import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import DownloadButton from './DownloadButton.jsx';
 import DimensionLines from './components/DimensionLines.jsx';
 import { useApiKey } from './components/ApiKeyManager.jsx';
-import textPrompt from '../../api/dynamic-component-prompt.md?raw';
-import imagePrompt from '../../api/dynamic-component-image-prompt.md?raw';
+import textPrompt from '../../api/prompts/dynamic/prompt2react/dynamic-component-prompt.md?raw';
+import imagePrompt from '../../api/prompts/dynamic/image2react/dynamic-component-image-prompt.md?raw';
 
 const TEXT_MODELS = [
   { value: 'qwen3-max', label: 'qwen3-max' },

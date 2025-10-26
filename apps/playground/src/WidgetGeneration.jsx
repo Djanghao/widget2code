@@ -16,9 +16,8 @@ import PreviewPanel from './components/core/PreviewPanel.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import SectionHeader from './components/core/SectionHeader.jsx';
 import { useApiKey } from './components/ApiKeyManager.jsx';
-import sfOnlyPrompt from '../../api/prompt2spec-sf-only.md?raw';
-import lucideOnlyPrompt from '../../api/prompt2spec-lucide-only.md?raw';
-import bothIconsPrompt from '../../api/prompt2spec-both.md?raw';
+import textPrompt from '../../api/prompts/prompt2dsl/prompt2dsl-sf-lucide.md?raw';
+import imagePrompt from '../../api/prompts/widget2dsl/widget2dsl-sf-lucide.md?raw';
 
 const TEXT_MODELS = [
   { value: 'qwen3-coder-plus', label: 'qwen3-coder-plus' },
@@ -42,9 +41,8 @@ function WidgetGeneration() {
   const [prompt, setPrompt] = useState('');
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
-  const [promptType, setPromptType] = useState('both');
-  const [systemPrompt, setSystemPrompt] = useState(bothIconsPrompt);
-  const [defaultPrompt, setDefaultPrompt] = useState(bothIconsPrompt);
+  const [systemPrompt, setSystemPrompt] = useState(textPrompt);
+  const [defaultPrompt, setDefaultPrompt] = useState(textPrompt);
   const [model, setModel] = useState('qwen3-coder-plus');
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState(null);
@@ -60,11 +58,13 @@ function WidgetGeneration() {
   const [isDownloading, setIsDownloading] = useState(false);
 
   useEffect(() => {
-    const map = { sf: sfOnlyPrompt, lucide: lucideOnlyPrompt, both: bothIconsPrompt };
-    const p = map[promptType];
+    const p = mode === 'text' ? textPrompt : imagePrompt;
     setSystemPrompt(p);
     setDefaultPrompt(p);
-  }, [promptType]);
+
+    const defaultModel = mode === 'text' ? 'qwen3-coder-plus' : 'qwen3-vl-235b-a22b-instruct';
+    setModel(defaultModel);
+  }, [mode]);
 
   useEffect(() => {
     const onDocClick = (e) => {
@@ -428,8 +428,6 @@ function WidgetGeneration() {
         <SystemPromptEditor
           value={systemPrompt}
           onChange={setSystemPrompt}
-          promptType={promptType}
-          setPromptType={setPromptType}
           model={model}
           setModel={setModel}
           onReset={() => setSystemPrompt(defaultPrompt)}

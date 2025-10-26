@@ -29,17 +29,8 @@ Props: `fontSize`, `color`, `align` (left/center/right), `fontWeight`, `lineHeig
 
 ### Icon
 Props: `name`, `size`, `color`
-- **IMPORTANT**: Always use `sf:` prefix for icon names
-- Uses SF Symbols icon library
-- Examples: `"sf:bolt.fill"`, `"sf:star.fill"`, `"sf:calendar"`, `"sf:house.fill"`
-- Common icons:
-  - Weather: `"sf:cloud.sun.fill"`, `"sf:moon.fill"`, `"sf:sun.max.fill"`, `"sf:cloud.rain.fill"`
-  - UI: `"sf:checkmark.circle.fill"`, `"sf:xmark.circle.fill"`, `"sf:star.fill"`, `"sf:heart.fill"`
-  - Navigation: `"sf:chevron.right"`, `"sf:arrow.up"`, `"sf:location.fill"`, `"sf:map.fill"`
-  - Time: `"sf:calendar"`, `"sf:clock.fill"`, `"sf:alarm.fill"`, `"sf:timer"`
-  - Tools: `"sf:magnifyingglass"`, `"sf:gear"`, `"sf:bell.fill"`, `"sf:folder.fill"`
-- **Naming format**: lowercase with dots (e.g., `"sf:house.fill"`, `"sf:bolt.circle.fill"`)
-- Single-color icons support color customization via `color` prop
+- Available icons:
+  [AVAILABLE_ICON_NAMES]
 - Can have `flex` prop (typically `"none"` for icons)
 
 ### Image
@@ -140,6 +131,8 @@ Your output must be valid JSON following this structure:
     "backgroundColor": "#hex",
     "borderRadius": number,
     "padding": number,
+    "width": number (optional),
+    "height": number (optional),
     "root": {
       "type": "container",
       "direction": "col",
@@ -160,8 +153,7 @@ Your output must be valid JSON following this structure:
 4. **Colors**: Use hex format (#RRGGBB or #RGB)
    - Ensure good contrast (e.g., white text on dark backgrounds)
 5. **Icons**:
-   - **ALWAYS use `sf:` prefix**: e.g., `"sf:bolt.fill"`, `"sf:star.fill"`
-   - Use lowercase with dots (SF Symbols naming)
+   - Use exact icon names from the available icons list
    - Always set `flex: "none"` for icons to prevent stretching
 6. **Images**:
    - **MUST use Unsplash URLs**: `https://images.unsplash.com/photo-[ID]`
@@ -191,11 +183,164 @@ Your output must be valid JSON following this structure:
    - Match icon sizes to their appearance in the original image
    - Preserve the visual hierarchy and spacing relationships
 
+## Examples
+
+### Example 1: Notes Widget
+
+Input: Notes widget with yellow header showing calendar icon and "Notes" title, main content "Steve's Surprise Birthday Party Checklist", and "Yesterday" timestamp
+
+Output:
+```json
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 0,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 0,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "padding": 16,
+          "alignCross": "center",
+          "backgroundColor": "#FFCC00",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 20,
+                "color": "#ffffff",
+                "name": "sf:calendar"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "Notes"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "padding": 16,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 16,
+                "color": "#000000",
+                "fontWeight": 400,
+                "lineHeight": 1.3
+              },
+              "content": "Steve's Surprise Birthday Party Checklist"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 14,
+                "color": "#999999"
+              },
+              "content": "Yesterday"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+### Example 2: Photo Widget
+
+Input: Photo memories widget showing landscape image at top with "ON THIS DAY" title and date "June 7, 2020"
+
+Output:
+```json
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 0,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 0,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Image",
+          "flex": "none",
+          "props": {
+            "width": 338,
+            "height": 120,
+            "url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+            "borderRadius": 0
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "padding": 12,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000",
+                "fontWeight": 700
+              },
+              "content": "ON THIS DAY"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 15,
+                "color": "#666666"
+              },
+              "content": "June 7, 2020"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
 ## Important Notes
 
 - Output **only** valid JSON, no explanations or markdown
 - Ensure all brackets, braces, and quotes are balanced
 - Do not invent data; if text is unclear, use placeholder like "..."
-- **Icon names must include `sf:` prefix**: e.g., `"sf:house.fill"`, `"sf:calendar"`
+- Use exact icon names from the available icons list
 - All numeric values should be numbers, not strings
 - Boolean values: `true`/`false` (not strings)

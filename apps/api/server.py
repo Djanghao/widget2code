@@ -48,13 +48,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DEFAULT_PROMPT_PATH = Path(__file__).parent / "default-prompt.md"
-DYNAMIC_COMPONENT_PROMPT_PATH = Path(__file__).parent / "dynamic-component-prompt.md"
-DYNAMIC_COMPONENT_IMAGE_PROMPT_PATH = Path(__file__).parent / "dynamic-component-image-prompt.md"
+WIDGET2DSL_PROMPT_PATH = Path(__file__).parent / "prompts" / "widget2dsl" / "widget2dsl-sf-lucide.md"
+PROMPT2DSL_PROMPT_PATH = Path(__file__).parent / "prompts" / "prompt2dsl" / "prompt2dsl-sf-lucide.md"
+DYNAMIC_COMPONENT_PROMPT_PATH = Path(__file__).parent / "prompts" / "dynamic" / "prompt2react" / "dynamic-component-prompt.md"
+DYNAMIC_COMPONENT_IMAGE_PROMPT_PATH = Path(__file__).parent / "prompts" / "dynamic" / "image2react" / "dynamic-component-image-prompt.md"
 
-def load_default_prompt():
-    if DEFAULT_PROMPT_PATH.exists():
-        return DEFAULT_PROMPT_PATH.read_text(encoding="utf-8")
+def load_widget2dsl_prompt():
+    if WIDGET2DSL_PROMPT_PATH.exists():
+        return WIDGET2DSL_PROMPT_PATH.read_text(encoding="utf-8")
+    return ""
+
+def load_prompt2dsl_prompt():
+    if PROMPT2DSL_PROMPT_PATH.exists():
+        return PROMPT2DSL_PROMPT_PATH.read_text(encoding="utf-8")
     return ""
 
 def load_dynamic_component_prompt():
@@ -69,7 +75,7 @@ def load_dynamic_component_image_prompt():
 
 @app.get("/api/default-prompt")
 async def get_default_prompt():
-    return {"prompt": load_default_prompt()}
+    return {"prompt": load_widget2dsl_prompt()}
 
 @app.post("/api/generate-widget")
 async def generate_widget(
@@ -114,7 +120,7 @@ async def generate_widget(
             temp_file.write(image_bytes)
             temp_file_path = temp_file.name
 
-        prompt = system_prompt if system_prompt else load_default_prompt()
+        prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
 
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
         model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
