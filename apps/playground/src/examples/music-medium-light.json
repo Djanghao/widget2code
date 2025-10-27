@@ -17,7 +17,7 @@
           "flex": 0,
           "alignCross": "center",
           "children": [
-            { "type": "leaf", "component": "Image", "flex": "none", "props": { "width": 72, "height": 72, "borderRadius": 12, "url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d" } },
+            { "type": "leaf", "component": "Image", "width": 72, "height": 72, "flex": "none", "props": { "borderRadius": 12, "url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d" } },
             {
               "type": "container",
               "direction": "col",

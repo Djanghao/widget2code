@@ -7,7 +7,7 @@
     "root": {
       "type": "container",
       "direction": "col",
-      "gap": 16,
+      "gap": 12,
       "flex": 1,
       "children": [
         {
@@ -16,96 +16,42 @@
           "gap": 12,
           "flex": 0,
           "alignCross": "center",
-          "alignMain": "between",
           "children": [
-            {
-              "type": "leaf",
-              "component": "Text",
-              "flex": 0,
-              "props": {
-                "fontSize": 17,
-                "color": "#ffffff",
-                "fontWeight": 600
-              },
-              "content": "STOCKS"
-            },
-            {
-              "type": "leaf",
-              "component": "Icon",
-              "flex": "none",
-              "props": {
-                "size": 32,
-                "color": "#666666",
-                "name": "sf:chart.line.uptrend.xyaxis"
-              }
-            }
-          ]
-        },
-        {
-          "type": "container",
-          "direction": "row",
-          "gap": 16,
-          "flex": 0,
-          "alignCross": "center",
-          "alignMain": "between",
-          "children": [
-            {
-              "type": "container",
-              "direction": "col",
-              "gap": 4,
-              "flex": 0,
-              "children": [
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 17,
-                    "color": "#ffffff",
-                    "fontWeight": 600
-                  },
-                  "content": "Dow Jones"
-                },
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 13,
-                    "color": "#666666"
-                  },
-                  "content": "Dow Jones"
-                }
-              ]
-            },
-            {
-              "type": "leaf",
-              "component": "Sparkline",
-              "flex": "none",
-              "props": {
-                "width": 100,
-                "height": 50,
-                "color": "#34C759",
-                "data": [100, 105, 103, 108, 106, 110, 115, 112, 118, 120]
-              }
-            },
             {
               "type": "container",
               "direction": "col",
               "gap": 2,
-              "flex": 0,
-              "alignCross": "end",
+              "flex": 1,
               "children": [
                 {
-                  "type": "leaf",
-                  "component": "Text",
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 4,
                   "flex": 0,
-                  "props": {
-                    "fontSize": 17,
-                    "color": "#ffffff",
-                    "fontWeight": 600
-                  },
-                  "content": "34,575.31"
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "size": 10,
+                        "color": "#34C759",
+                        "name": "lucide:TriangleIcon"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 15,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "AAPL"
+                    }
+                  ]
                 },
                 {
                   "type": "leaf",
@@ -113,233 +59,7 @@
                   "flex": 0,
                   "props": {
                     "fontSize": 13,
-                    "color": "#34C759"
-                  },
-                  "content": "+151.27"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "leaf",
-          "component": "Divider",
-          "flex": "none",
-          "props": {
-            "type": "solid",
-            "color": "#1c1c1e"
-          }
-        },
-        {
-          "type": "container",
-          "direction": "row",
-          "gap": 16,
-          "flex": 0,
-          "alignCross": "center",
-          "alignMain": "between",
-          "children": [
-            {
-              "type": "container",
-              "direction": "col",
-              "gap": 4,
-              "flex": 0,
-              "children": [
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 17,
-                    "color": "#ffffff",
-                    "fontWeight": 600
-                  },
-                  "content": "S&P 500"
-                },
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 13,
-                    "color": "#666666"
-                  },
-                  "content": "S&P 500"
-                }
-              ]
-            },
-            {
-              "type": "leaf",
-              "component": "Sparkline",
-              "flex": "none",
-              "props": {
-                "width": 100,
-                "height": 50,
-                "color": "#34C759",
-                "data": [95, 98, 96, 100, 102, 105, 103, 107, 108, 110]
-              }
-            },
-            {
-              "type": "container",
-              "direction": "col",
-              "gap": 2,
-              "flex": 0,
-              "alignCross": "end",
-              "children": [
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 17,
-                    "color": "#ffffff",
-                    "fontWeight": 600
-                  },
-                  "content": "4,202.08"
-                },
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 13,
-                    "color": "#34C759"
-                  },
-                  "content": "+9.66"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "leaf",
-          "component": "Divider",
-          "flex": "none",
-          "props": {
-            "type": "solid",
-            "color": "#1c1c1e"
-          }
-        },
-        {
-          "type": "container",
-          "direction": "row",
-          "gap": 16,
-          "flex": 0,
-          "alignCross": "center",
-          "alignMain": "between",
-          "children": [
-            {
-              "type": "container",
-              "direction": "col",
-              "gap": 4,
-              "flex": 0,
-              "children": [
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 17,
-                    "color": "#ffffff",
-                    "fontWeight": 600
-                  },
-                  "content": "NASDAQ"
-                },
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 13,
-                    "color": "#666666"
-                  },
-                  "content": "NASDAQ"
-                }
-              ]
-            },
-            {
-              "type": "leaf",
-              "component": "Sparkline",
-              "flex": "none",
-              "props": {
-                "width": 100,
-                "height": 50,
-                "color": "#FF3B30",
-                "data": [140, 138, 135, 133, 131, 128, 125, 127, 124, 122]
-              }
-            },
-            {
-              "type": "container",
-              "direction": "col",
-              "gap": 2,
-              "flex": 0,
-              "alignCross": "end",
-              "children": [
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 17,
-                    "color": "#ffffff",
-                    "fontWeight": 600
-                  },
-                  "content": "12,969.44"
-                },
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 13,
-                    "color": "#FF3B30"
-                  },
-                  "content": "-72.33"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "leaf",
-          "component": "Divider",
-          "flex": "none",
-          "props": {
-            "type": "solid",
-            "color": "#1c1c1e"
-          }
-        },
-        {
-          "type": "container",
-          "direction": "row",
-          "gap": 16,
-          "flex": 0,
-          "alignCross": "center",
-          "alignMain": "between",
-          "children": [
-            {
-              "type": "container",
-              "direction": "col",
-              "gap": 4,
-              "flex": 0,
-              "children": [
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 17,
-                    "color": "#ffffff",
-                    "fontWeight": 600
-                  },
-                  "content": "AAPL"
-                },
-                {
-                  "type": "leaf",
-                  "component": "Text",
-                  "flex": 0,
-                  "props": {
-                    "fontSize": 13,
-                    "color": "#666666"
+                    "color": "#8E8E93"
                   },
                   "content": "Apple Inc."
                 }
@@ -348,19 +68,19 @@
             {
               "type": "leaf",
               "component": "Sparkline",
+              "width": 80,
+              "height": 40,
               "flex": "none",
               "props": {
-                "width": 100,
-                "height": 50,
                 "color": "#34C759",
-                "data": [125, 128, 126, 130, 132, 135, 133, 136, 138, 140]
+                "data": [220, 222, 225, 223, 227, 229]
               }
             },
             {
               "type": "container",
               "direction": "col",
               "gap": 2,
-              "flex": 0,
+              "flex": 1,
               "alignCross": "end",
               "children": [
                 {
@@ -368,11 +88,11 @@
                   "component": "Text",
                   "flex": 0,
                   "props": {
-                    "fontSize": 17,
+                    "fontSize": 15,
                     "color": "#ffffff",
                     "fontWeight": 600
                   },
-                  "content": "132.94"
+                  "content": "229.00"
                 },
                 {
                   "type": "leaf",
@@ -382,7 +102,542 @@
                     "fontSize": 13,
                     "color": "#34C759"
                   },
-                  "content": "+5.50"
+                  "content": "+2.82"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#1c1c1e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 4,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "size": 10,
+                        "color": "#34C759",
+                        "name": "lucide:TriangleIcon"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 15,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "MSFT"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Microsoft Corporation"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 80,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#34C759",
+                "data": [415, 416, 417, 415, 417, 418]
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "417.14"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#34C759"
+                  },
+                  "content": "+0.86"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#1c1c1e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 4,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "size": 10,
+                        "color": "#34C759",
+                        "name": "lucide:TriangleIcon"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 15,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "TSLA"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Tesla, Inc."
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 80,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#34C759",
+                "data": [207, 209, 211, 210, 212, 214]
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "213.97"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#34C759"
+                  },
+                  "content": "+6.45"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#1c1c1e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 4,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "size": 10,
+                        "color": "#FF453A",
+                        "name": "lucide:TriangleIcon"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 15,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "NVDA"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "NVIDIA Corporation"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 80,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#FF453A",
+                "data": [124, 122, 121, 120, 119, 119]
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "119.37"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#FF453A"
+                  },
+                  "content": "-4.43"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#1c1c1e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 4,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "size": 10,
+                        "color": "#FF453A",
+                        "name": "lucide:TriangleIcon"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 15,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "QCOM"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "QUALCOMM Incorporated"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 80,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#FF453A",
+                "data": [176, 175.5, 175.8, 175.5, 175.2, 175.3]
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "175.30"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#FF453A"
+                  },
+                  "content": "-0.21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#1c1c1e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 4,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "size": 10,
+                        "color": "#FF453A",
+                        "name": "lucide:TriangleIcon"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 15,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "T"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "AT&T Inc."
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 80,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#FF453A",
+                "data": [20.5, 20.3, 20.1, 20, 19.95, 19.9]
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "19.90"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#FF453A"
+                  },
+                  "content": "-0.60"
                 }
               ]
             }

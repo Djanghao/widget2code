@@ -33,12 +33,13 @@ Props: `name`, `size`, `color`
 - Can have `flex` prop (typically `"none"` for icons)
 
 ### Image
-Props: `url`, `height`, `width` (optional), `borderRadius` (optional)
+Props: `url`, `borderRadius` (optional)
+Node properties: `width` (optional), `height`
 - **CRITICAL**: For photos/images, **MUST use Unsplash public URLs**
 - Format: `https://images.unsplash.com/photo-[ID]`
 - Example: `"https://images.unsplash.com/photo-1501594907352-04cda38ebc29"`
 - **DO NOT use placeholder or mock URLs** - always use real Unsplash links
-- **Layout tip**: Usually specify only `height` to let width fill the container automatically
+- **Layout dimensions**: Specify `width` and `height` at the node level (NOT in props)
 - `width` is optional - omit it when you want the image to stretch horizontally
 - Can have `flex` prop
 
@@ -49,18 +50,22 @@ Props: `size`, `checked` (boolean), `color`
 - Typically `flex: "none"`
 
 ### Sparkline
-Props: `width`, `height`, `color`, `data` (array of numbers)
+Props: `color`, `data` (array of numbers)
+Node properties: `width`, `height`
 - For simple line charts and trend visualization
+- **Layout dimensions**: Specify `width` and `height` at the node level (NOT in props)
 - `data`: array of 10-15 numbers representing the trend
 - Example: `[0, 15, 10, 25, 20, 35, 30, 45, 40, 55, 50, 65, 60, 75, 70]`
 
 ### MapImage
-Props: `url`, `height`, `width` (optional)
+Props: `url`
+Node properties: `width` (optional), `height`
 - For map screenshots/static maps
 - **CRITICAL**: Must use Unsplash map/aerial images
 - Format: `https://images.unsplash.com/photo-[ID]`
 - Example: `"https://images.unsplash.com/photo-1524661135-423995f22d0b"` (map view)
 - **DO NOT use Mapbox API or other map services** - always use Unsplash images
+- **Layout dimensions**: Specify `width` and `height` at the node level (NOT in props)
 - Like Image, usually specify only `height` to let width fill the container
 - Can have `flex` prop
 
@@ -101,6 +106,8 @@ All layouts use **flexbox containers**. There are two node types:
   "direction": "row" | "col",
   "gap": number,
   "flex": number | "none" | 0 | 1,
+  "width": number | string (optional, for layout control),
+  "height": number | string (optional, for layout control),
   "alignMain": "start" | "end" | "center" | "between" | "around",
   "alignCross": "start" | "end" | "center" | "stretch",
   "padding": number,
@@ -109,16 +116,28 @@ All layouts use **flexbox containers**. There are two node types:
 }
 ```
 
+**Layout Control**: Containers can have explicit `width` and `height` for precise sizing:
+- Use numbers for fixed pixel values: `"width": 120`
+- Use strings for percentages: `"width": "50%"`
+- Combine with `flex` for responsive layouts
+
 ### Leaf Node (Component)
 ```json
 {
   "type": "leaf",
   "component": "Text" | "Icon" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator",
   "flex": number | "none" | 0 | 1,
+  "width": number | string (optional, for layout control),
+  "height": number | string (optional, for layout control),
   "props": { /* component-specific props */ },
   "content": "text content (for Text component only)"
 }
 ```
+
+**IMPORTANT**: For components like Image, Sparkline, and MapImage:
+- Specify `width` and `height` at the **node level** (outside props)
+- Do NOT put width/height inside `props`
+- Example: `{ "type": "leaf", "component": "Image", "width": 100, "height": 100, "props": { "url": "..." } }`
 
 ## Output Format
 
@@ -155,10 +174,15 @@ Your output must be valid JSON following this structure:
    - **Lucide**: Use `lucide:` prefix + PascalCase (e.g., `"lucide:Sun"`, `"lucide:ArrowRight"`)
    - Always set `flex: "none"` for icons to prevent stretching
    - Choose icon library based on design style: SF Symbols for iOS-style, Lucide for modern/minimal
-6. **Images**:
+6. **Dimensions (width/height)**:
+   - **CRITICAL**: Always specify `width` and `height` at the **node level**, NOT in `props`
+   - For Image/Sparkline/MapImage components: `{ "type": "leaf", "component": "Image", "width": 100, "height": 100, "props": {...} }`
+   - For containers needing fixed size: `{ "type": "container", "width": 120, ... }`
+   - Use numbers for pixels, strings for percentages: `"width": "50%"`
+7. **Images**:
    - **MUST use Unsplash URLs**: `https://images.unsplash.com/photo-[ID]`
    - Choose appropriate images that match the widget context
-7. **Spacing**:
+8. **Spacing**:
    - Use `gap` for spacing between children in containers
    - Use `padding` for internal spacing within containers
    - Pay attention to visual hierarchy with proper spacing values
@@ -171,11 +195,11 @@ Your output must be valid JSON following this structure:
        - Tight spacing: 4-8
        - Standard spacing: 11-12
        - Loose spacing: 16-20
-8. **Text Content**: Create appropriate content based on the widget description
-9. **Alignment**:
+9. **Text Content**: Create appropriate content based on the widget description
+10. **Alignment**:
    - `alignMain`: controls main axis alignment (start/end/center/between/around)
    - `alignCross`: controls cross axis alignment (start/end/center/stretch)
-10. **Design Consistency**:
+11. **Design Consistency**:
    - Choose appropriate font sizes, weights, and colors
    - Maintain visual hierarchy through sizing and spacing
    - Ensure readable contrast ratios
@@ -288,9 +312,9 @@ Output:
         {
           "type": "leaf",
           "component": "Image",
+          "height": 120,
           "flex": "none",
           "props": {
-            "height": 120,
             "url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
           }
         },
