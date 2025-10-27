@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 export function Sparkline({
   width = 80,
   height = 40,
-  color = '#34C759',
+  color = "#34C759",
   data = [],
   fill = false,
   baseline = null,
@@ -20,7 +20,7 @@ export function Sparkline({
     if (!data || data.length < 2 || !canvasRef.current) return;
 
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     const dpr = window.devicePixelRatio || 1;
 
     canvas.width = width * dpr;
@@ -37,7 +37,7 @@ export function Sparkline({
       const baselineY = height - ((baseline - min) / range) * height;
       ctx.beginPath();
       ctx.setLineDash([4, 4]);
-      ctx.strokeStyle = color + '66';
+      ctx.strokeStyle = color + "66";
       ctx.lineWidth = 1;
       ctx.moveTo(0, baselineY);
       ctx.lineTo(width, baselineY);
@@ -47,8 +47,8 @@ export function Sparkline({
 
     if (fill) {
       const gradient = ctx.createLinearGradient(0, 0, 0, height);
-      gradient.addColorStop(0, color + '66');
-      gradient.addColorStop(1, color + '00');
+      gradient.addColorStop(0, color + "66");
+      gradient.addColorStop(1, color + "00");
 
       ctx.beginPath();
       data.forEach((value, index) => {
@@ -72,8 +72,8 @@ export function Sparkline({
     ctx.beginPath();
     ctx.strokeStyle = color;
     ctx.lineWidth = 2;
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
 
     data.forEach((value, index) => {
       const x = (index / (data.length - 1)) * width;
@@ -96,13 +96,13 @@ export function Sparkline({
       style={{
         width: `${width}px`,
         height: `${height}px`,
-        display: 'block',
+        display: "block",
         flexShrink: 0,
         ...style,
         ...(flex !== undefined ? { flex } : {}),
         ...(flexGrow !== undefined ? { flexGrow } : {}),
         ...(flexShrink !== undefined ? { flexShrink } : {}),
-        ...(flexBasis !== undefined ? { flexBasis } : {})
+        ...(flexBasis !== undefined ? { flexBasis } : {}),
       }}
     />
   );
