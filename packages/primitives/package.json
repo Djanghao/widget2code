@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "echarts": "^5.6.0",
-    "echarts-for-react": "^3.0.2"
+    "echarts-for-react": "^3.0.2",
+    "zrender": "^6.0.0"
   }
 }
