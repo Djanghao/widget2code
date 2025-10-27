@@ -88,8 +88,8 @@ export const ProgressRing = ({
   } else {
     // For full circles, use the original circle-based approach
     const circumference = 2 * Math.PI * radius;
-    var strokeDasharray = circumference;
-    var strokeDashoffset = circumference - (percentage / 100) * circumference;
+    const strokeDasharray = circumference;
+    const strokeDashoffset = circumference - (percentage / 100) * circumference;
   }
 
   const formatValue = (val) => {
