@@ -28,6 +28,7 @@ import noteSmallFigma from '../examples/note-small-figma.json';
 import ringtoneSmallFigma from '../examples/ringtone-small-figma.json';
 import weatherSmallFigma from '../examples/weather-small-figma.json';
 import weatherMediumFigma from '../examples/weather-medium-figma.json';
+import batteriesLightMedium from '../examples/batteries-light-medium.json';
 
 export const examples = {
   weatherSmallLight: { name: 'Weather S-Light', spec: weatherSmallLight },
@@ -59,5 +60,6 @@ export const examples = {
   noteSmallFigma: { name: 'Note S (Figma)', spec: noteSmallFigma },
   ringtoneSmallFigma: { name: 'Ringtone S (Figma)', spec: ringtoneSmallFigma },
   weatherSmallFigma: { name: 'Weather S (Figma)', spec: weatherSmallFigma },
-  weatherMediumFigma: { name: 'Weather M (Figma)', spec: weatherMediumFigma }
+  weatherMediumFigma: { name: 'Weather M (Figma)', spec: weatherMediumFigma },
+  batteriesLightMedium: { name: 'Batteries - Light - Medium', spec: batteriesLightMedium }
 };
