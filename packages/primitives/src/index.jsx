@@ -8,7 +8,6 @@ export { Image } from "./Image.jsx";
 export { Checkbox } from "./Checkbox.jsx";
 export { Indicator } from "./Indicator.jsx";
 export { Divider } from "./Divider.jsx";
-export { Sparkline } from "./Sparkline.jsx";
 
 export { LineChart } from "./LineChart.jsx";
 export { BarChart } from "./BarChart.jsx";
