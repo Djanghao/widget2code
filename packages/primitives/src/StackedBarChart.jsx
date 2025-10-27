@@ -1,13 +1,13 @@
 import React from "react";
 import ReactECharts from "echarts-for-react";
 
-export const BarChart = ({
-  title = "Bar Chart",
+export const StackedBarChart = ({
+  title = "Stacked Bar Chart",
   showTitle = false,
   data = [],
   labels = [],
-  color = "#6DD400", // Default color for all bars (single-series)
-  colors = [], // Array of colors for: 1) multi-series (one per series), or 2) per-bar highlighting (one per bar)
+  color = "#6DD400",
+  colors = [],
   seriesNames = [],
   backgroundColor = "transparent",
   min,
@@ -38,6 +38,9 @@ export const BarChart = ({
   barBorderRadius = 0, // Border radius for all bars (number or array)
   barBorderRadiusTop = null, // Top border radius override
   barBorderRadiusBottom = null, // Bottom border radius override
+  // Stacked bar specific options
+  stackName = "stack", // All series will use this stack name
+  showTotal = false, // Show total value on top of stacked bars
   ...props
 }) => {
   // Theme configurations
@@ -72,8 +75,7 @@ export const BarChart = ({
 
   // Calculate min/max if not provided
   const hasData = allDataPoints.length > 0;
-  const calculatedMin =
-    min !== undefined ? min : hasData ? Math.min(...allDataPoints) * 0.9 : 0;
+  const calculatedMin = min !== undefined ? min : hasData ? 0 : 0; // Stacked charts typically start at 0
   const calculatedMax =
     max !== undefined ? max : hasData ? Math.max(...allDataPoints) * 1.1 : 100;
 
@@ -128,6 +130,29 @@ export const BarChart = ({
     if (!isMultiSeries) return color || "#6DD400";
     return defaultColors[index % defaultColors.length];
   };
+
+  // Calculate totals for each category (for showTotal feature)
+  const calculateTotals = () => {
+    if (!isMultiSeries || !Array.isArray(data)) return [];
+
+    const totals = [];
+    const maxLength = Math.max(
+      ...data.map((series) => (Array.isArray(series) ? series.length : 0))
+    );
+
+    for (let i = 0; i < maxLength; i++) {
+      let total = 0;
+      data.forEach((series) => {
+        if (Array.isArray(series) && series[i] !== undefined) {
+          total += series[i] || 0;
+        }
+      });
+      totals.push(total);
+    }
+    return totals;
+  };
+
+  const totals = showTotal ? calculateTotals() : [];
 
   // Helper function to get border radius for bars
   const getBarBorderRadius = (isHorizontal) => {
@@ -260,71 +285,93 @@ export const BarChart = ({
         },
       },
     },
-    series: isMultiSeries
-      ? (Array.isArray(data) ? data : []).map((seriesData, index) => {
-          const seriesColor = getSeriesColor(index);
-          const seriesName =
-            (Array.isArray(seriesNames) && seriesNames[index]) ||
-            `Series ${index + 1}`;
-          const validSeriesData = Array.isArray(seriesData) ? seriesData : [];
+    series: [
+      // Data series
+      ...(isMultiSeries
+        ? (Array.isArray(data) ? data : []).map((seriesData, index) => {
+            const seriesColor = getSeriesColor(index);
+            const seriesName =
+              (Array.isArray(seriesNames) && seriesNames[index]) ||
+              `Series ${index + 1}`;
+            const validSeriesData = Array.isArray(seriesData) ? seriesData : [];
 
-          return {
-            name: seriesName,
-            type: "bar",
-            data: validSeriesData,
-            itemStyle: {
-              color: seriesColor,
-              borderRadius: getBarBorderRadius(isHorizontal),
-            },
-            label: showValues
-              ? {
-                  show: true,
-                  position: isHorizontal ? "right" : "top",
-                  color: currentTheme.textColor,
-                  fontSize: 10,
-                }
-              : undefined,
-            emphasis: {
-              disabled: true, // Disable hover effects
-            },
-          };
-        })
-      : [
-          {
-            name: "Value",
-            type: "bar",
-            data: Array.isArray(data)
-              ? data.map((value, index) => {
-                  // Support per-bar colors for highlighting specific bars (e.g., current day)
-                  if (Array.isArray(colors) && colors.length > 0) {
-                    return {
-                      value: value,
-                      itemStyle: {
-                        color: colors[index] || color || "#6DD400",
-                      },
-                    };
+            return {
+              name: seriesName,
+              type: "bar",
+              stack: stackName, // This makes it stacked
+              data: validSeriesData,
+              itemStyle: {
+                color: seriesColor,
+                borderRadius: getBarBorderRadius(isHorizontal),
+              },
+              label: showValues
+                ? {
+                    show: true,
+                    position: "inside", // Inside position works better for stacked bars
+                    color: "#ffffff",
+                    fontSize: 10,
+                    formatter: function (params) {
+                      return params.value > 0 ? params.value : "";
+                    },
                   }
-                  return value;
-                })
-              : [],
-            itemStyle: {
-              // This is used as fallback when colors array is not provided
-              color: color || "#6DD400",
-              borderRadius: getBarBorderRadius(isHorizontal),
+                : undefined,
+              emphasis: {
+                disabled: true, // Disable hover effects
+              },
+            };
+          })
+        : [
+            {
+              name: "Value",
+              type: "bar",
+              stack: stackName,
+              data: Array.isArray(data) ? data : [],
+              itemStyle: {
+                color: color || "#6DD400",
+                borderRadius: getBarBorderRadius(isHorizontal),
+              },
+              label: showValues
+                ? {
+                    show: true,
+                    position: "inside",
+                    color: "#ffffff",
+                    fontSize: 10,
+                  }
+                : undefined,
+              emphasis: {
+                disabled: true, // Disable hover effects
+              },
             },
-            label: showValues
-              ? {
-                  show: true,
-                  position: isHorizontal ? "right" : "top",
-                  color: currentTheme.textColor,
-                  fontSize: 10,
-                }
-              : undefined,
-            emphasis: {
-              disabled: true, // Disable hover effects
+          ]),
+      // Total series (if showTotal is enabled)
+      ...(showTotal && totals.length > 0
+        ? [
+            {
+              name: "Total",
+              type: "bar",
+              stack: stackName + "_total", // Different stack to show on top
+              data: totals,
+              itemStyle: {
+                color: "transparent", // Invisible bars
+              },
+              label: {
+                show: true,
+                position: isHorizontal ? "right" : "top",
+                color: currentTheme.textColor,
+                fontSize: 11,
+                fontWeight: "bold",
+                formatter: function (params) {
+                  return params.value;
+                },
+              },
+              emphasis: {
+                disabled: true,
+              },
+              silent: true, // Non-interactive
             },
-          },
-        ],
+          ]
+        : []),
+    ],
     animation: false, // Disable all animations for static mode
   };
 

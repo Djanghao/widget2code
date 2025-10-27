@@ -3,7 +3,7 @@ import ReactECharts from "echarts-for-react";
 
 export const RadarChart = ({
   title = "Radar Chart",
-  showTitle = true,
+  showTitle = false,
   data = [],
   labels = [],
   indicators = [],
@@ -27,7 +27,7 @@ export const RadarChart = ({
   areaOpacity = 0.3,
   lineWidth = 2,
   pointSize = 4,
-  showPoints = true,
+  showPoints = false,
   splitLineStyle = "solid",
   axisLineStyle = "solid",
   gridColor,
@@ -42,7 +42,7 @@ export const RadarChart = ({
   min,
   max,
   // Marker customization
-  showMarkers = true,
+  showMarkers = false,
   markerStyle = "circle",
   markerSize = 4,
   markerColor,
