@@ -1,0 +1,108 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 0,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 0,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "padding": 16,
+          "alignCross": "center",
+          "backgroundColor": "#FFCC00",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 20,
+                "color": "#ffffff",
+                "name": "sf:folder.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 17,
+                "color": "#ffffff",
+                "fontWeight": 700
+              },
+              "content": "Notes"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "dashed",
+            "color": "#d1d1d6",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "padding": 16,
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000",
+                "fontWeight": 600,
+                "lineHeight": 1.3
+              },
+              "content": "Voting Information"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 15,
+                "color": "#8e8e93"
+              },
+              "content": "No additional text"
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": 0,
+              "children": []
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 32,
+                "color": "#8e8e93",
+                "fontWeight": 300
+              },
+              "content": "2:50 PM"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

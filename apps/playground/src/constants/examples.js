@@ -21,6 +21,13 @@ import healthSmallDark from '../examples/health-small-dark.json';
 import batteryMediumLight from '../examples/battery-medium-light.json';
 import stocksMediumLight from '../examples/stocks-medium-light.json';
 import weatherLargeLight from '../examples/weather-large-light.json';
+import stockLargeDark from '../examples/stock-large-dark.json';
+import batteriesFigma from '../examples/batteries-figma.json';
+import notesLargeFigma from '../examples/notes-large-figma.json';
+import noteSmallFigma from '../examples/note-small-figma.json';
+import ringtoneSmallFigma from '../examples/ringtone-small-figma.json';
+import weatherSmallFigma from '../examples/weather-small-figma.json';
+import weatherMediumFigma from '../examples/weather-medium-figma.json';
 
 export const examples = {
   weatherSmallLight: { name: 'Weather S-Light', spec: weatherSmallLight },
@@ -45,5 +52,12 @@ export const examples = {
   healthSmallDark: { name: 'Health S-Dark', spec: healthSmallDark },
   batteryMediumLight: { name: 'Battery M-Light', spec: batteryMediumLight },
   stocksMediumLight: { name: 'Stocks M-Light', spec: stocksMediumLight },
-  weatherLargeLight: { name: 'Weather L-Light', spec: weatherLargeLight }
+  weatherLargeLight: { name: 'Weather L-Light', spec: weatherLargeLight },
+  stockLargeDark: { name: 'Stock L-Dark', spec: stockLargeDark },
+  batteriesFigma: { name: 'Batteries (Figma)', spec: batteriesFigma },
+  notesLargeFigma: { name: 'Notes L (Figma)', spec: notesLargeFigma },
+  noteSmallFigma: { name: 'Note S (Figma)', spec: noteSmallFigma },
+  ringtoneSmallFigma: { name: 'Ringtone S (Figma)', spec: ringtoneSmallFigma },
+  weatherSmallFigma: { name: 'Weather S (Figma)', spec: weatherSmallFigma },
+  weatherMediumFigma: { name: 'Weather M (Figma)', spec: weatherMediumFigma }
 };

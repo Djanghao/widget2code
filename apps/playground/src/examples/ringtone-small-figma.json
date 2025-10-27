@@ -1,0 +1,78 @@
+{
+  "widget": {
+    "backgroundColor": "#f2f2f7",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 0,
+      "flex": 1,
+      "alignMain": "between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 0,
+          "flex": 0,
+          "alignMain": "end",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 0,
+              "flex": 0,
+              "alignCross": "center",
+              "alignMain": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 32,
+                    "color": "#FF9500",
+                    "name": "sf:bell.fill",
+                    "backgroundColor": "#FFE5CC",
+                    "borderRadius": 40
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 4,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 28,
+                "color": "#000000",
+                "fontWeight": 700
+              },
+              "content": "New"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 28,
+                "color": "#000000",
+                "fontWeight": 700
+              },
+              "content": "Ringtone"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
