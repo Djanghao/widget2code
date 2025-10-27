@@ -116,7 +116,7 @@ Props: `color`, `thickness`, `height`
 - Always `flex: "none"`
 
 ### LineChart
-Props: `title`, `showTitle`, `data`, `labels`, `seriesNames`, `color`, `colors`, `smooth`, `showArea`, `gradientIntensity`, `gradientStartColor`, `gradientEndColor`, `showMarkers`, `markerStyle`, `markerSize`, `markerColor`, `markerBorderColor`, `markerBorderWidth`, `min`, `max`, `interval`, `showXAxisLabels`, `showYAxisLabels`, `showXAxisTicks`, `showYAxisTicks`, `xAxisTickInterval`, `xAxisTickCount`, `yAxisTickInterval`, `yAxisTickCount`, `xAxisLabelPosition`, `yAxisLabelPosition`, `tickLineColor`, `tickLineStyle`, `tickLineWidth`, `showXTrendline`, `xTrendlineValue`, `xTrendlineColor`, `xTrendlineStyle`, `xTrendlineWidth`, `xTrendlineLabel`, `showYTrendline`, `yTrendlinePosition`, `yTrendlineColor`, `yTrendlineStyle`, `yTrendlineWidth`, `yTrendlineLabel`, `backgroundColor`, `theme`
+Props: `title`, `showTitle`, `data`, `labels`, `seriesNames`, `color`, `colors`, `smooth`, `showArea`, `gradientIntensity`, `gradientStartColor`, `gradientEndColor`, `showMarkers`, `markerStyle`, `markerSize`, `markerColor`, `markerBorderColor`, `markerBorderWidth`, `min`, `max`, `interval`, `showXAxisLabels`, `showYAxisLabels`, `showXAxisTicks`, `showYAxisTicks`, `xAxisTickInterval`, `xAxisTickCount`, `yAxisTickInterval`, `yAxisTickCount`, `xAxisLabelPosition`, `yAxisLabelPosition`, `tickLineColor`, `tickLineStyle`, `tickLineWidth`, `showXTrendline`, `xTrendlineValue`, `xTrendlineColor`, `xTrendlineStyle`, `xTrendlineWidth`, `xTrendlineLabel`, `showYTrendline`, `yTrendlinePosition`, `yTrendlineColor`, `yTrendlineStyle`, `yTrendlineWidth`, `yTrendlineLabel`, `backgroundColor`, `theme`, `width` (default: `"100%"`), `height` (default: `"100%"`), `minWidth` (default: `200`), `minHeight` (default: `120`)
 - For detailed, highly-styled line charts with axes and labels.
 - CRITICAL: The primary goal is to replicate the exact visual style (colors, markers, line smoothing, area fill) of the original chart.
 - `data`: For a single line, use an array of numbers [10, 20, 35]. For multiple lines, use an array of arrays [[10, 20, 35], [5, 15, 25]].
@@ -134,7 +134,7 @@ Props: `title`, `showTitle`, `data`, `labels`, `seriesNames`, `color`, `colors`,
 - If there are trendlines in the horizontal or vertical direction, set the corresponding `showXTrendline` or `showYTrendline` to true and configure the properties accordingly.
 
 ### BarChart
-Props: `title`, `showTitle`, `data`, `labels`, `color`, `colors`, `seriesNames`, `backgroundColor`, `orientation`, `theme`, `min`, `max`, `interval`, `showXAxisTicks`, `showYAxisTicks`, `tickLineColor`, `tickLineStyle`, `tickLineWidth`, `showXAxisLabels`, `showYAxisLabels`, `xAxisLabelPosition`, `yAxisLabelPosition`, `barBorderRadius`, `barBorderRadiusTop`, `barBorderRadiusBottom`, `showValues`
+Props: `title`, `showTitle`, `data`, `labels`, `color`, `colors`, `seriesNames`, `backgroundColor`, `orientation`, `theme`, `min`, `max`, `interval`, `showXAxisTicks`, `showYAxisTicks`, `tickLineColor`, `tickLineStyle`, `tickLineWidth`, `showXAxisLabels`, `showYAxisLabels`, `xAxisLabelPosition`, `yAxisLabelPosition`, `barBorderRadius`, `barBorderRadiusTop`, `barBorderRadiusBottom`, `showValues`, `width` (default: `"100%"`), `height` (default: `"100%"`), `minWidth` (default: `200`), `minHeight` (default: `120`)
 - For creating vertical or horizontal bar charts.
 - **CRITICAL**: Replicate the exact visual style, including bar colors, rounding, and gridlines.
 - `data`: For a single series, use an array of numbers `[10, 20, 15]`. For multiple series (grouped bars), use an array of arrays `[[10, 20, 15], [8, 18, 12]]`.
@@ -148,7 +148,7 @@ Props: `title`, `showTitle`, `data`, `labels`, `color`, `colors`, `seriesNames`,
 - `barBorderRadius`: Use a number for uniform rounding or an array `[top-left, top-right, bottom-right, bottom-left]` for specific corners. `barBorderRadiusTop` and `barBorderRadiusBottom` can be used as overrides.
 
 ### RadarChart
-Props: `title`, `showTitle`, `data`, `indicators`, `seriesNames`, `colors`, `backgroundColor`, `theme`, `showLegend`, `radarShape`, `splitNumber`, `smooth`, `axisName`, `startAngle`, `areaOpacity`, `lineWidth`, `showPoints`, `gridColor`, `textColor`
+Props: `title`, `showTitle`, `data`, `indicators`, `seriesNames`, `colors`, `backgroundColor`, `theme`, `showLegend`, `radarShape`, `splitNumber`, `smooth`, `axisName`, `startAngle`, `areaOpacity`, `lineWidth`, `showPoints`, `gridColor`, `textColor`, `width` (default: `"100%"`), `height` (default: `"100%"`), `minWidth` (default: `200`), `minHeight` (default: `200`)
 - For creating radar (spider) charts to display multivariate data.
 - **CRITICAL**: The main goal is to replicate the chart's shape, data representation, and visual styling.
 - `indicators`: Array of objects defining the axes, e.g., `[{"name": "Indicator 1", "max": 100}, {"name": "Indicator 2", "max": 100}]`. The order is critical.
@@ -165,7 +165,7 @@ Props: `title`, `showTitle`, `data`, `indicators`, `seriesNames`, `colors`, `bac
 - `areaOpacity`: Fill transparency from 0.0 to 1.0.
 
 ### ProgressBar
-Props: `value`, `max`, `min`, `label`, `showValue`, `color`, `backgroundColor`, `height`, `width`, `weight`, `borderRadius`, `animated`, `striped`, `variant`, `size`, `orientation`
+Props: `value`, `max`, `min`, `label`, `showValue`, `color`, `backgroundColor`, `height`, `width`, `minWidth` (default: `100`), `minHeight` (default: `20`), `weight`, `borderRadius`, `animated`, `striped`, `variant`, `size`, `orientation`
 - For displaying progress, such as loading or task completion.
 - `value`: The current progress value.
 - `orientation`: `"horizontal"` or `"vertical"`.
@@ -177,7 +177,7 @@ Props: `value`, `max`, `min`, `label`, `showValue`, `color`, `backgroundColor`, 
 - `label` / `showValue`: Set a custom text `label` or set `showValue: true` to display the percentage.
 
 ### ProgressRing
-Props: `value`, `max`, `min`, `size`, `strokeWidth`, `label`, `showValue`, `color`, `backgroundColor`, `animated`, `gradient`, `gradientColors`, `lineCap`, `direction`, `startAngle`, `arcAngle`
+Props: `value`, `max`, `min`, `size`, `strokeWidth`, `label`, `showValue`, `color`, `backgroundColor`, `minWidth` (default: `80`), `minHeight` (default: `80`), `animated`, `gradient`, `gradientColors`, `lineCap`, `direction`, `startAngle`, `arcAngle`
 - For displaying circular progress indicators.
 - `value`: Current progress value, `max`: maximum value (typically 100).
 - `size`: Outer diameter of the ring in pixels, `strokeWidth`: Thickness of the ring.
@@ -207,7 +207,7 @@ Props: `title`, `showTitle`, `data`, `labels`, `colors`, `backgroundColor`, `the
 - `showLegend`: Set to `false` when labels are shown externally (e.g., in a separate list beside the chart).
 
 ### StackedBarChart
-Props: `title`, `showTitle`, `data`, `labels`, `seriesNames`, `colors`, `backgroundColor`, `orientation`, `theme`, `min`, `max`, `interval`, `showXAxisTicks`, `showYAxisTicks`, `tickLineColor`, `tickLineStyle`, `showXAxisLabels`, `showYAxisLabels`, `xAxisLabelPosition`, `yAxisLabelPosition`, `stackName`, `showTotal`, `barBorderRadiusTop`
+Props: `title`, `showTitle`, `data`, `labels`, `seriesNames`, `colors`, `backgroundColor`, `orientation`, `theme`, `min`, `max`, `interval`, `showXAxisTicks`, `showYAxisTicks`, `tickLineColor`, `tickLineStyle`, `showXAxisLabels`, `showYAxisLabels`, `xAxisLabelPosition`, `yAxisLabelPosition`, `stackName`, `showTotal`, `barBorderRadiusTop`, `width` (default: `"100%"`), `height` (default: `"100%"`), `minWidth` (default: `200`), `minHeight` (default: `120`)
 - For creating stacked bar charts with multiple data series stacked on top of each other.
 - `data`: 2D array where each sub-array represents a series' values: `[[series1 values], [series2 values], ...]`.
 - **CRITICAL**: Segment values must be individual (not cumulative). Use `0` for segments not visible.

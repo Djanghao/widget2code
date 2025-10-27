@@ -8,6 +8,8 @@ export const ProgressBar = ({
   backgroundColor = "#e9ecef",
   height = "20px",
   width = "100%",
+  minWidth = 100,
+  minHeight = 20,
   weight = "normal", // 'normal', 'bold', 'light' - affects visual thickness/weight
   borderRadius = "10px",
   animated = false, // Default to false for static mode
@@ -169,6 +171,8 @@ export const ProgressBar = ({
         height: "100%",
         maxWidth: "100%",
         maxHeight: "100%",
+        minWidth: minWidth,
+        minHeight: minHeight,
         boxSizing: "border-box",
         display: "flex",
         flexDirection: "column",

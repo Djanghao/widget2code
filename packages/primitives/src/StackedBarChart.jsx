@@ -15,6 +15,8 @@ export const StackedBarChart = ({
   interval,
   height = "100%",
   width = "100%",
+  minHeight = 120,
+  minWidth = 200,
   theme = "dark",
   orientation = "vertical", // 'vertical' or 'horizontal'
   showValues = false,
@@ -382,6 +384,8 @@ export const StackedBarChart = ({
         height: "100%",
         maxWidth: width,
         maxHeight: height,
+        minWidth: minWidth,
+        minHeight: minHeight,
         overflow: "hidden",
         boxSizing: "border-box",
         display: "flex",

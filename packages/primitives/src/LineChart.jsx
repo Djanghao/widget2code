@@ -16,6 +16,8 @@ export const LineChart = ({
   interval,
   height = "100%",
   width = "100%",
+  minHeight = 120,
+  minWidth = 200,
   theme = "dark",
   // Gradient customization
   gradientIntensity = 0.3,
@@ -465,6 +467,8 @@ export const LineChart = ({
         height: "100%",
         maxWidth: width,
         maxHeight: height,
+        minWidth: minWidth,
+        minHeight: minHeight,
         overflow: "hidden",
         boxSizing: "border-box",
         display: "flex",

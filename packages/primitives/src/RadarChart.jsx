@@ -48,6 +48,11 @@ export const RadarChart = ({
   markerColor,
   markerBorderColor,
   markerBorderWidth = 2,
+  // Sizing
+  width = "100%",
+  height = "100%",
+  minWidth = 200,
+  minHeight = 200,
   ...props
 }) => {
   // Theme configurations
@@ -333,6 +338,10 @@ export const RadarChart = ({
       style={{
         width: "100%",
         height: "100%",
+        maxWidth: width,
+        maxHeight: height,
+        minWidth: minWidth,
+        minHeight: minHeight,
         overflow: "hidden",
         boxSizing: "border-box",
         display: "flex",

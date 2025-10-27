@@ -11,6 +11,8 @@ export const ProgressRing = ({
   showValue = false,
   showLabel = false,
   label,
+  minWidth = 80,
+  minHeight = 80,
   variant, // Keep for backward compatibility but deprecated
   animated = false, // Default to false for static mode
   lineCap = "round", // 'round', 'square', 'butt'
@@ -130,6 +132,8 @@ export const ProgressRing = ({
         height: "100%",
         maxWidth: size,
         maxHeight: size,
+        minWidth: minWidth,
+        minHeight: minHeight,
         boxSizing: "border-box",
         ...props.style,
       }}

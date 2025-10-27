@@ -10,6 +10,8 @@ export const PieChart = ({
   backgroundColor = "transparent",
   height = "100%",
   width = "100%",
+  minHeight = 200,
+  minWidth = 200,
   theme = "dark",
   // Pie chart specific options
   variant = "pie", // 'pie', 'donut', 'ring'
@@ -292,6 +294,8 @@ export const PieChart = ({
         height: "100%",
         maxWidth: width,
         maxHeight: height,
+        minWidth: minWidth,
+        minHeight: minHeight,
         overflow: "hidden",
         boxSizing: "border-box",
         display: "flex",
