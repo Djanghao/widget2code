@@ -5,6 +5,7 @@ import calendarSmallDark from '../examples/calendar-small-dark.json';
 import notesSmallLight from '../examples/notes-small-light.json';
 import notesSmallDark from '../examples/notes-small-dark.json';
 import stockMediumDark from '../examples/stock-medium-dark.json';
+import stockMediumDarkRed from '../examples/stock-medium-dark-red.json';
 import remindersLargeLight from '../examples/reminders-large-light.json';
 import photoMediumLight from '../examples/photo-medium-light.json';
 import mapMediumDark from '../examples/map-medium-dark.json';
@@ -38,6 +39,7 @@ export const examples = {
   notesSmallLight: { name: 'Notes S-Light', spec: notesSmallLight },
   notesSmallDark: { name: 'Notes S-Dark', spec: notesSmallDark },
   stockMediumDark: { name: 'Stock M-Dark', spec: stockMediumDark },
+  stockMediumDarkRed: { name: 'Stock M-Dark-Red', spec: stockMediumDarkRed },
   remindersLargeLight: { name: 'Reminders L-Light', spec: remindersLargeLight },
   photoMediumLight: { name: 'Photo M-Light', spec: photoMediumLight },
   mapMediumDark: { name: 'Map M-Dark', spec: mapMediumDark },

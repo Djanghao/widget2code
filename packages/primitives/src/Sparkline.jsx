@@ -5,6 +5,8 @@ export function Sparkline({
   height = 40,
   color = '#34C759',
   data = [],
+  fill = false,
+  baseline = null,
   flex,
   flexGrow,
   flexShrink,
@@ -31,6 +33,42 @@ export function Sparkline({
     const min = Math.min(...data);
     const range = max - min || 1;
 
+    if (baseline !== null && baseline >= min && baseline <= max) {
+      const baselineY = height - ((baseline - min) / range) * height;
+      ctx.beginPath();
+      ctx.setLineDash([4, 4]);
+      ctx.strokeStyle = color + '66';
+      ctx.lineWidth = 1;
+      ctx.moveTo(0, baselineY);
+      ctx.lineTo(width, baselineY);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    if (fill) {
+      const gradient = ctx.createLinearGradient(0, 0, 0, height);
+      gradient.addColorStop(0, color + '66');
+      gradient.addColorStop(1, color + '00');
+
+      ctx.beginPath();
+      data.forEach((value, index) => {
+        const x = (index / (data.length - 1)) * width;
+        const y = height - ((value - min) / range) * height;
+
+        if (index === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      });
+
+      ctx.lineTo(width, height);
+      ctx.lineTo(0, height);
+      ctx.closePath();
+      ctx.fillStyle = gradient;
+      ctx.fill();
+    }
+
     ctx.beginPath();
     ctx.strokeStyle = color;
     ctx.lineWidth = 2;
@@ -49,7 +87,7 @@ export function Sparkline({
     });
 
     ctx.stroke();
-  }, [width, height, color, data]);
+  }, [width, height, color, data, fill, baseline]);
 
   return (
     <canvas

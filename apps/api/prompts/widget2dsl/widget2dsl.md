@@ -55,12 +55,15 @@ Props: `size`, `checked` (boolean), `color`
 - Typically `flex: "none"`
 
 ### Sparkline
-Props: `color`, `data` (array of numbers)
+Props: `color`, `data` (array of numbers), `fill` (boolean, optional), `baseline` (number, optional)
 Node properties: `width`, `height`
 - For simple line charts and trend visualization
 - **Layout dimensions**: Specify `width` and `height` at the node level (NOT in props)
-- `data`: array of 10-15 numbers representing the trend
+- `data`: array of 10-100 numbers representing the trend
+- `fill`: set to `true` to enable gradient fill under the line (default: `false`)
+- `baseline`: optional reference line value (e.g., `50`) to draw a dashed horizontal line at that data value
 - Example: `[0, 15, 10, 25, 20, 35, 30, 45, 40, 55, 50, 65, 60, 75, 70]`
+- Typically use `flex: "none"` to maintain fixed dimensions
 
 ### MapImage
 Props: `url`
