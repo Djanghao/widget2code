@@ -115,24 +115,6 @@ Props: `color`, `thickness`, `height`
 - `height`: bar height (default: "100%")
 - Always `flex: "none"`
 
-### LineChart
-Props: `title`, `showTitle`, `data`, `labels`, `seriesNames`, `color`, `colors`, `smooth`, `showArea`, `gradientIntensity`, `gradientStartColor`, `gradientEndColor`, `showMarkers`, `markerStyle`, `markerSize`, `markerColor`, `markerBorderColor`, `markerBorderWidth`, `min`, `max`, `interval`, `showXAxisLabels`, `showYAxisLabels`, `showXAxisTicks`, `showYAxisTicks`, `xAxisTickInterval`, `xAxisTickCount`, `yAxisTickInterval`, `yAxisTickCount`, `xAxisLabelPosition`, `yAxisLabelPosition`, `tickLineColor`, `tickLineStyle`, `tickLineWidth`, `showXTrendline`, `xTrendlineValue`, `xTrendlineColor`, `xTrendlineStyle`, `xTrendlineWidth`, `xTrendlineLabel`, `showYTrendline`, `yTrendlinePosition`, `yTrendlineColor`, `yTrendlineStyle`, `yTrendlineWidth`, `yTrendlineLabel`, `backgroundColor`, `theme`, `width` (default: `"100%"`), `height` (default: `"100%"`), `minWidth` (default: `200`), `minHeight` (default: `120`)
-- For detailed, highly-styled line charts with axes and labels.
-- CRITICAL: The primary goal is to replicate the exact visual style (colors, markers, line smoothing, area fill) of the original chart.
-- `data`: For a single line, use an array of numbers [10, 20, 35]. For multiple lines, use an array of arrays [[10, 20, 35], [5, 15, 25]].
-- `labels`: Array of strings for the X-axis labels. Typically should match the length of each data series for 1:1 correspondence.
-  - For sparse labels (e.g., time charts showing "10 AM", "12 PM", "2 PM" instead of every minute), use `xAxisTickInterval` or `xAxisTickCount` to control which labels display.
-  - `xAxisTickInterval`: Show every Nth label (e.g., 10 shows every 10th label)
-  - `xAxisTickCount`: Show approximately N labels total, evenly spaced
-  - Alternative: Provide all data points but use empty strings ('') for labels you want to skip
-- Use `color` for a single-series chart and `colors` (array of hex strings) for a multi-series chart.
-- `min`, `max`, and `interval` (or `yAxisTickInterval`/`yAxisTickCount`) define the Y-axis scale.
-- `xAxisLabelPosition`: 'top' or 'bottom' (default: 'bottom')
-- `yAxisLabelPosition`: 'left' or 'right' (default: 'left')
-- Set boolean flags like `showArea`, `showMarkers`, `smooth` to true or false based on the visual appearance.
-- `showXAxisTicks`/`showYAxisTicks`: Show grid lines at tick positions if they are on the screen
-- If there are trendlines in the horizontal or vertical direction, set the corresponding `showXTrendline` or `showYTrendline` to true and configure the properties accordingly.
-
 ### BarChart
 Props: `title`, `showTitle`, `data`, `labels`, `color`, `colors`, `seriesNames`, `backgroundColor`, `orientation`, `theme`, `min`, `max`, `interval`, `showXAxisTicks`, `showYAxisTicks`, `tickLineColor`, `tickLineStyle`, `tickLineWidth`, `showXAxisLabels`, `showYAxisLabels`, `xAxisLabelPosition`, `yAxisLabelPosition`, `barBorderRadius`, `barBorderRadiusTop`, `barBorderRadiusBottom`, `showValues`, `width` (default: `"100%"`), `height` (default: `"100%"`), `minWidth` (default: `200`), `minHeight` (default: `120`)
 - For creating vertical or horizontal bar charts.
@@ -175,17 +157,6 @@ Props: `value`, `max`, `min`, `label`, `showValue`, `color`, `backgroundColor`, 
 - `striped`: `true` if the bar has diagonal stripes.
 - `animated`: `true` if the stripes should be animated.
 - `label` / `showValue`: Set a custom text `label` or set `showValue: true` to display the percentage.
-
-### ProgressRing
-Props: `value`, `max`, `min`, `size`, `strokeWidth`, `label`, `showValue`, `color`, `backgroundColor`, `minWidth` (default: `80`), `minHeight` (default: `80`), `animated`, `gradient`, `gradientColors`, `lineCap`, `direction`, `startAngle`, `arcAngle`
-- For displaying circular progress indicators.
-- `value`: Current progress value, `max`: maximum value (typically 100).
-- `size`: Outer diameter of the ring in pixels, `strokeWidth`: Thickness of the ring.
-- `color`: Progress arc color (vibrant/filled part), `backgroundColor`: Background track color (faint/unfilled part).
-- `lineCap`: `"round"`, `"square"`, or `"butt"` for the arc ends.
-- `direction`: `"clockwise"` or `"counterclockwise"`.
-- `startAngle`: Starting position in degrees (-90 = top), `arcAngle`: Total span in degrees (360 = full circle).
-- `gradient`: `true` if the progress arc has a gradient, with `gradientColors` array.
 
 ### PieChart
 Props: `title`, `showTitle`, `data`, `labels`, `colors`, `backgroundColor`, `theme`, `variant`, `innerRadius`, `outerRadius`, `centerText`, `centerValue`, `showLabels`, `showValues`, `showPercentages`, `labelPosition`, `animated`, `animationDuration`, `emphasisScale`, `startAngle`, `clockwise`, `borderWidth`, `borderColor`, `roundedSegments`, `segmentBorderRadius`, `showLegend`, `legendPosition`, `legendOrientation`, `width`, `height`
