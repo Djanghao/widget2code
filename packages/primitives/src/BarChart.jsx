@@ -218,7 +218,7 @@ export const BarChart = ({
       axisLine: { show: false },
       axisTick: { show: false },
       splitLine: {
-        show: isHorizontal ? showXAxisTicks : showXAxisTicks,
+        show: showXAxisTicks,
         lineStyle: {
           color: finalTickLineColor,
           type: tickLineStyle,
@@ -254,7 +254,7 @@ export const BarChart = ({
       axisLine: { show: false },
       axisTick: { show: false },
       splitLine: {
-        show: isHorizontal ? showYAxisTicks : showYAxisTicks,
+        show: showYAxisTicks,
         lineStyle: {
           color: finalTickLineColor,
           type: tickLineStyle,
