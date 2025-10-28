@@ -748,11 +748,6 @@ async def generate_widget_full(
         else:
             prompt_final = base_prompt + extra_str
 
-        try:
-            print("[icon-pipeline] " + prompt_final)
-        except Exception:
-            pass
-
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
         model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
         if model and model_to_use not in vision_models:
