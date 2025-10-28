@@ -20,7 +20,20 @@ export function Icon({ name, size = 20, color = 'rgba(255, 255, 255, 0.85)', fle
     if (name.startsWith('lucide:')) {
       const lucideName = name.replace('lucide:', '')
       console.log(`[Icon Lazy Load] 📦 Loading Lucide icon (sync): ${lucideName}`)
-      const comp = lucideIconsMap?.[lucideName]
+      let comp = lucideIconsMap?.[lucideName]
+      if (!comp) {
+        // Fallback: many sources provide kebab-case like 'moon-star'. Map to PascalCase 'MoonStar'.
+        const toPascal = (s) => (s || '')
+          .split(/[^a-zA-Z0-9]+/)
+          .filter(Boolean)
+          .map(t => t.charAt(0).toUpperCase() + t.slice(1))
+          .join('')
+        const pascal = toPascal(lucideName)
+        if (pascal && pascal !== lucideName) {
+          console.log(`[Icon Lazy Load] ↻ Retry Lucide with PascalCase: ${pascal}`)
+          comp = lucideIconsMap?.[pascal]
+        }
+      }
       if (comp) {
         console.log(`[Icon Lazy Load] ✓ Found Lucide icon: ${lucideName}`)
       } else {
