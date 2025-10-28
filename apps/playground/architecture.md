@@ -9,14 +9,14 @@ graph TB
 
         subgraph Tabs
             Presets["Presets Tab - Example Widgets"]
-            Widget2Spec["Widget2Spec Tab - ImageToWidget.jsx"]
-            Prompt2Spec["Prompt2Spec Tab - Prompt2Spec.jsx"]
+            Widget2DSL["Widget2DSL Tab - ImageToWidget.jsx"]
+            Prompt2DSL["Prompt2DSL Tab - Prompt2DSL.jsx"]
             Guides["Guides Tab - Documentation.jsx"]
         end
 
         App --> Presets
-        App --> Widget2Spec
-        App --> Prompt2Spec
+        App --> Widget2DSL
+        App --> Prompt2DSL
         App --> Guides
 
         subgraph Components
@@ -26,10 +26,10 @@ graph TB
 
         Presets --> Renderer
         Presets --> TreeView
-        Widget2Spec --> Renderer
-        Widget2Spec --> TreeView
-        Prompt2Spec --> Renderer
-        Prompt2Spec --> TreeView
+        Widget2DSL --> Renderer
+        Widget2DSL --> TreeView
+        Prompt2DSL --> Renderer
+        Prompt2DSL --> TreeView
     end
 
     subgraph Backend["Backend (FastAPI)"]
@@ -47,21 +47,21 @@ graph TB
     end
 
     subgraph Packages
-        Compiler["compiler - WidgetSpec to JSX"]
+        Compiler["compiler - WidgetDSL to JSX"]
         Primitives["primitives - Widget Components"]
         Icons["icons - SF Symbols + Lucide"]
     end
 
-    Widget2Spec -->|Upload Image| GenWidget
-    Prompt2Spec -->|Text Prompt| GenText
+    Widget2DSL -->|Upload Image| GenWidget
+    Prompt2DSL -->|Text Prompt| GenText
     GenWidget -->|API Call| VLM
     GenText -->|API Call| LLM
-    VLM -->|WidgetSpec JSON| Widget2Spec
-    LLM -->|WidgetSpec JSON| Prompt2Spec
+    VLM -->|WidgetDSL JSON| Widget2DSL
+    LLM -->|WidgetDSL JSON| Prompt2DSL
 
-    Presets -->|WidgetSpec| Compiler
-    Widget2Spec -->|WidgetSpec| Compiler
-    Prompt2Spec -->|WidgetSpec| Compiler
+    Presets -->|WidgetDSL| Compiler
+    Widget2DSL -->|WidgetDSL| Compiler
+    Prompt2DSL -->|WidgetDSL| Compiler
 
     Compiler -->|JSX Code| Renderer
     Renderer -->|Babel Transform & Render| Primitives
@@ -92,29 +92,29 @@ sequenceDiagram
 
     Note over User,Frame: Presets Tab Flow
     User->>UI: Select Example
-    UI->>Compiler: Compile WidgetSpec
+    UI->>Compiler: Compile WidgetDSL
     Compiler->>Vite: Write JSX to file
     Vite->>Frame: Hot reload
     Frame->>User: Display Widget
 
-    Note over User,Frame: Widget2Spec Flow
+    Note over User,Frame: Widget2DSL Flow
     User->>UI: Upload Image
     UI->>API: POST /api/generate-widget
     API->>AI: VLM Analysis
-    AI->>API: WidgetSpec JSON
-    API->>UI: Return WidgetSpec
-    UI->>Compiler: Compile WidgetSpec
+    AI->>API: WidgetDSL JSON
+    API->>UI: Return WidgetDSL
+    UI->>Compiler: Compile WidgetDSL
     Compiler->>Vite: Write JSX to file
     Vite->>Frame: Hot reload
     Frame->>User: Display Widget
 
-    Note over User,Frame: Prompt2Spec Flow
+    Note over User,Frame: Prompt2DSL Flow
     User->>UI: Enter Prompt
     UI->>API: POST /api/generate-widget-text
     API->>AI: LLM Generation
-    AI->>API: WidgetSpec JSON
-    API->>UI: Return WidgetSpec
-    UI->>Compiler: Compile WidgetSpec
+    AI->>API: WidgetDSL JSON
+    API->>UI: Return WidgetDSL
+    UI->>Compiler: Compile WidgetDSL
     Compiler->>Vite: Write JSX to file
     Vite->>Frame: Hot reload
     Frame->>User: Display Widget
@@ -125,11 +125,11 @@ sequenceDiagram
 ```mermaid
 graph LR
     subgraph "Widget Spec Structure"
-        WidgetSpec[WidgetSpec JSON]
+        WidgetDSL[WidgetDSL JSON]
         Widget[widget<br/>Container Config]
         Root[root<br/>Component Tree]
 
-        WidgetSpec --> Widget
+        WidgetDSL --> Widget
         Widget --> Root
 
         Widget --> Width[width]
@@ -145,11 +145,11 @@ graph LR
     end
 
     subgraph "Compiler Pipeline"
-        Parser[Parse WidgetSpec]
+        Parser[Parse WidgetDSL]
         Generator[Generate JSX]
         Output[JSX String]
 
-        WidgetSpec --> Parser
+        WidgetDSL --> Parser
         Parser --> Generator
         Generator --> Output
     end
@@ -170,7 +170,7 @@ graph LR
         Output -.->|Uses| Sparkline
     end
 
-    style WidgetSpec fill:#007AFF,color:#fff
+    style WidgetDSL fill:#007AFF,color:#fff
     style Output fill:#FF9500,color:#fff
     style WidgetShell fill:#34C759,color:#fff
 ```
@@ -182,8 +182,8 @@ apps/playground/
 ├── src/
 │   ├── App.jsx                    # Main application with tabs
 │   ├── main.jsx                   # Entry point
-│   ├── ImageToWidget.jsx          # Widget2Spec tab
-│   ├── Prompt2Spec.jsx            # Prompt2Spec tab
+│   ├── ImageToWidget.jsx          # Widget2DSL tab
+│   ├── Prompt2DSL.jsx            # Prompt2DSL tab
 │   ├── Documentation.jsx          # Guides tab
 │   ├── TreeView.jsx               # Spec tree viewer
 │   ├── components/
@@ -202,10 +202,10 @@ apps/api/
 └── .venv/                         # Python dependencies
 
 packages/
-├── compiler/                      # WidgetSpec to JSX compiler
+├── compiler/                      # WidgetDSL to JSX compiler
 ├── primitives/                    # Widget UI components
 ├── icons/                         # SF Symbols + Lucide icons
-├── spec/                          # WidgetSpec protocol & validation
+├── spec/                          # WidgetDSL protocol & validation
 ├── renderer/                      # Runtime JSX renderer
 └── exporter/                      # Widget export utilities
 ```
@@ -225,7 +225,7 @@ packages/
 - **PIL** - Image processing
 
 ### Widget System
-- **@widget-factory/compiler** - WidgetSpec to JSX compiler
+- **@widget-factory/compiler** - WidgetDSL to JSX compiler
 - **@widget-factory/primitives** - Widget components
 - **@widget-factory/icons** - SF Symbols + Lucide icons
 
@@ -259,7 +259,7 @@ graph TD
     CheckFit -->|Yes| UseShrunk[Use Smaller Size]
     CheckFit -->|No| UseExpanded[Use Expanded Size]
 
-    UseShrunk --> Write[Write width & height<br/>to WidgetSpec]
+    UseShrunk --> Write[Write width & height<br/>to WidgetDSL]
     UseExpanded --> Write
 
     Write --> Render[Render Widget]
@@ -276,26 +276,26 @@ graph TD
 
 ### Presets Tab
 - Browse and select pre-built widget examples
-- Edit WidgetSpec JSON in real-time
+- Edit WidgetDSL JSON in real-time
 - View generated JSX code
 - Visualize component tree
 - Resize widget with aspect ratio lock
 - Auto-resize to fit content
 
-### Widget2Spec Tab
+### Widget2DSL Tab
 - Upload widget screenshots
 - Select icon library (SF Symbols, Lucide, or both)
 - Choose Qwen vision model
 - Customize system prompt
-- Generate WidgetSpec from image
+- Generate WidgetDSL from image
 - Preview and iterate
 
-### Prompt2Spec Tab
+### Prompt2DSL Tab
 - Describe widget in natural language
 - Select icon library preference
 - Choose Qwen model (text or vision)
 - Customize system prompt
-- Generate WidgetSpec from description
+- Generate WidgetDSL from description
 - Preview and refine
 
 ### Guides Tab

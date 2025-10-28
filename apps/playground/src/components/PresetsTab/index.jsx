@@ -77,7 +77,7 @@ export default function PresetsTab({
             borderRadius: '50%',
             backgroundColor: '#34C759'
           }} />
-          WidgetSpec
+          WidgetDSL
           <select
             value={selectedExample}
             onChange={(e) => !isLocked && handleExampleChange(e.target.value)}

@@ -1,0 +1,2 @@
+data/**/*.npy filter=lfs diff=lfs merge=lfs -text
+data/**/*.faiss filter=lfs diff=lfs merge=lfs -text

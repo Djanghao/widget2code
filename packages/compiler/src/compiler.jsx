@@ -1,5 +1,5 @@
-export function compileWidgetSpecToJSX(widgetSpec) {
-  if (!widgetSpec.widget?.root) {
+export function compileWidgetDSLToJSX(widgetDSL) {
+  if (!widgetDSL.widget?.root) {
     throw new Error('Invalid widget spec: missing widget.root');
   }
 
@@ -17,7 +17,7 @@ export function compileWidgetSpecToJSX(widgetSpec) {
     const indent = '  '.repeat(depth);
 
     if (node.type === 'container') {
-      const { direction = 'row', gap = 8, padding, alignMain, alignCross, flex, backgroundColor, children = [] } = node;
+      const { direction = 'row', gap = 8, padding, alignMain, alignCross, flex, width, height, backgroundColor, children = [] } = node;
 
       const styles = [];
       styles.push(`display: 'flex'`);
@@ -25,6 +25,14 @@ export function compileWidgetSpecToJSX(widgetSpec) {
       if (gap) styles.push(`gap: ${gap}`);
       if (padding) styles.push(`padding: ${padding}`);
       if (flex !== undefined) styles.push(`flex: ${flex}`);
+      if (width !== undefined) {
+        if (typeof width === 'string') styles.push(`width: '${width}'`);
+        else styles.push(`width: ${width}`);
+      }
+      if (height !== undefined) {
+        if (typeof height === 'string') styles.push(`height: '${height}'`);
+        else styles.push(`height: ${height}`);
+      }
       if (backgroundColor) styles.push(`backgroundColor: '${backgroundColor}'`);
       if (alignMain) {
         const alignMap = { start: 'flex-start', end: 'flex-end', center: 'center', between: 'space-between' };
@@ -42,7 +50,7 @@ export function compileWidgetSpecToJSX(widgetSpec) {
     }
 
     if (node.type === 'leaf') {
-      const { component, props = {}, flex, content } = node;
+      const { component, props = {}, flex, width, height, content } = node;
 
       const componentName = component;
       if (!componentName) {
@@ -69,6 +77,8 @@ export function compileWidgetSpecToJSX(widgetSpec) {
           if (typeof flex === 'string') propsCode.push(`flex="${flex}"`);
           else propsCode.push(`flex={${JSON.stringify(flex)}}`);
         }
+        if (width !== undefined) propsCode.push(`width={${JSON.stringify(width)}}`);
+        if (height !== undefined) propsCode.push(`height={${JSON.stringify(height)}}`);
 
         const propsStr = propsCode.length > 0 ? ' ' + propsCode.join(' ') : '';
         write(`${indent}<${lucideName}${propsStr} />`);
@@ -88,6 +98,8 @@ export function compileWidgetSpecToJSX(widgetSpec) {
         if (typeof flex === 'string') propsCode.push(`flex="${flex}"`);
         else propsCode.push(`flex={${JSON.stringify(flex)}}`);
       }
+      if (width !== undefined) propsCode.push(`width={${JSON.stringify(width)}}`);
+      if (height !== undefined) propsCode.push(`height={${JSON.stringify(height)}}`);
 
       let childrenStr = '';
       if (content) {
@@ -101,7 +113,7 @@ export function compileWidgetSpecToJSX(widgetSpec) {
     }
   }
 
-  renderNode(widgetSpec.widget.root, 2);
+  renderNode(widgetDSL.widget.root, 2);
 
   let importsCode = Array.from(imports).join('\n');
   if (lucideIcons.size > 0) {
@@ -109,7 +121,7 @@ export function compileWidgetSpecToJSX(widgetSpec) {
     importsCode += '\n' + lucideImport;
   }
 
-  const { backgroundColor, borderRadius, padding, width, height } = widgetSpec.widget;
+  const { backgroundColor, borderRadius, padding, width, height } = widgetDSL.widget;
   const shellProps = [];
   if (backgroundColor) shellProps.push(`backgroundColor="${backgroundColor}"`);
   if (borderRadius !== undefined) shellProps.push(`borderRadius={${borderRadius}}`);

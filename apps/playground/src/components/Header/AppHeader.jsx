@@ -264,8 +264,11 @@ export default function AppHeader({ activeTab, onTabChange, onMaterialsClick, on
                   <MobileMenuItem active={activeTab === 'presets'} onClick={() => handleTabChange('presets')}>
                     Presets
                   </MobileMenuItem>
-                  <MobileMenuItem active={activeTab === 'widgetgen'} onClick={() => handleTabChange('widgetgen')}>
-                    Widget Generation
+                  <MobileMenuItem active={activeTab === 'widget2code'} onClick={() => handleTabChange('widget2code')}>
+                    Widget2Code
+                  </MobileMenuItem>
+                  <MobileMenuItem active={activeTab === 'prompt2code'} onClick={() => handleTabChange('prompt2code')}>
+                    Prompt2Code
                   </MobileMenuItem>
                   <MobileMenuItem active={activeTab === 'dynamic'} onClick={() => handleTabChange('dynamic')}>
                     Dynamic
@@ -319,9 +322,11 @@ export default function AppHeader({ activeTab, onTabChange, onMaterialsClick, on
               <TabButton active={activeTab === 'presets'} onClick={() => onTabChange('presets')}>
                 Presets
               </TabButton>
-
-              <TabButton active={activeTab === 'widgetgen'} onClick={() => onTabChange('widgetgen')}>
-                WidgetGeneration
+              <TabButton active={activeTab === 'widget2code'} onClick={() => onTabChange('widget2code')}>
+                Widget2Code
+              </TabButton>
+              <TabButton active={activeTab === 'prompt2code'} onClick={() => onTabChange('prompt2code')}>
+                Prompt2Code
               </TabButton>
               <TabButton active={activeTab === 'dynamic'} onClick={() => onTabChange('dynamic')}>
                 Dynamic

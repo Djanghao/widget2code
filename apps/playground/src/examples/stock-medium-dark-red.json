@@ -1,0 +1,277 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 2,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "Dow Jones"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Dow Jones"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 80,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#FF453A",
+                "fill": true,
+                "baseline": 50,
+                "data": [104.8, 96.5, 75.5, 58.7, 41.9, 29.4, 25.2, 16.8, 8.4, 16.8, 12.6, 4.2, 0.0, 4.2, 8.4, 12.6, 16.8, 25.2, 29.4, 33.5, 41.9, 54.5, 67.1, 79.7, 83.9, 92.3, 104.8, 104.8, 104.8, 100.6, 92.3, 88.1, 79.7, 83.9, 92.3, 96.5, 96.5, 104.8, 113.2, 113.2, 113.2, 109.0, 109.0, 104.8, 100.6, 104.8, 109.0, 117.4, 121.6, 125.8, 125.8, 130.0, 130.0, 130.0, 121.6, 117.4, 109.0, 104.8, 100.6, 96.5, 92.3, 88.1, 88.1, 88.1, 83.9, 83.9, 75.5, 67.1, 67.1, 71.3, 75.5, 79.7, 83.9, 88.1, 79.7, 67.1, 58.7, 50.3, 41.9, 33.5, 37.7, 41.9, 50.3, 54.5, 58.7, 67.1, 71.3, 75.5, 83.9, 92.3, 100.6]
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "33,424.04"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#FF453A"
+                  },
+                  "content": "-151.27"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#1c1c1e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 2,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "S&P 500"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "S&P 500"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 80,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#FF453A",
+                "fill": true,
+                "baseline": 30,
+                "data": [72.2, 72.2, 62.6, 53.0, 43.3, 38.5, 33.7, 28.9, 33.7, 28.9, 43.3, 48.1, 57.8, 72.2, 86.7, 101.1, 115.6, 125.2, 91.5, 125.2, 115.6, 105.9, 101.1, 91.5, 81.9, 77.0, 67.4, 57.8, 53.0, 48.1, 43.3, 48.1, 57.8, 62.6, 72.2, 77.0, 86.7, 91.5, 96.3, 101.1, 101.1, 101.1, 96.3, 91.5, 96.3, 101.1, 105.9, 115.6, 120.4, 125.2, 130.0, 130.0, 130.0, 125.2, 115.6, 110.7, 101.1, 96.3, 86.7, 81.9, 72.2, 67.4, 62.6, 53.0, 43.3, 33.7, 24.1, 19.3, 24.1, 28.9, 33.7, 38.5, 43.3, 48.1, 53.0, 57.8, 62.6, 67.4, 72.2, 77.0, 77.0, 77.0, 67.4, 57.8, 43.3, 28.9, 19.3, 14.4, 9.6, 4.8, 0.0, 0.0]
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "4,192.42"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#FF453A"
+                  },
+                  "content": "-9.66"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#1c1c1e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 2,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "AAPL"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Apple Inc."
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 80,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#FF453A",
+                "fill": true,
+                "baseline": 25,
+                "data": [130.0, 130.0, 130.0, 116.3, 102.6, 92.4, 78.7, 65.0, 51.3, 37.6, 20.5, 0.0, 23.9, 34.2, 37.6, 44.5, 44.5, 47.9, 37.6, 30.8, 20.5, 34.2, 34.2, 34.2, 37.6, 44.5, 47.9, 54.7, 58.2, 37.6, 61.6, 51.3, 37.6, 6.8, 34.2, 41.1, 51.3, 61.6, 61.6, 65.0, 65.0, 65.0, 65.0, 65.0, 58.2, 44.5, 54.7, 68.4, 37.6, 68.4, 61.6, 54.7, 68.4, 88.9, 92.4, 95.8, 99.2, 102.6, 102.6, 102.6, 95.8, 88.9, 88.9, 95.8, 99.2, 99.2, 95.8, 92.4, 95.8, 102.6, 106.1, 109.5, 109.5, 112.9, 119.7, 123.2, 126.6, 130.0, 130.0, 130.0, 130.0, 130.0, 130.0, 130.0, 123.2, 112.9, 102.6, 92.4, 82.1, 71.8, 65.0, 58.2, 51.3, 47.9, 44.5, 44.5, 41.1, 37.6]
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "127.44"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#FF453A"
+                  },
+                  "content": "-5.50"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

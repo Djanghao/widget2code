@@ -2,7 +2,7 @@ import React from 'react';
 import WidgetRenderer from '../../components/WidgetRenderer.jsx';
 import DownloadButton from '../../DownloadButton.jsx';
 import DimensionLines from '../../components/DimensionLines.jsx';
-import { parseCurrentSpecObject } from '@widget-factory/spec';
+import { parseCurrentSpecObject } from '@widget-factory/dsl';
 import usePlaygroundStore from '../../store/index.js';
 
 export default function PreviewPanel({
@@ -25,7 +25,7 @@ export default function PreviewPanel({
   generatedJSX,
   frameSize
 }) {
-  const { setFinalSize, writebackSpecSize, removeSpecSize, compileToken, widgetSpec } = usePlaygroundStore();
+  const { setFinalSize, writebackSpecSize, removeSpecSize, compileToken, widgetDSL } = usePlaygroundStore();
 
   const isLocked = operationMode !== 'idle';
   const isCompiling = operationMode === 'compiling';
@@ -155,10 +155,10 @@ export default function PreviewPanel({
                 const newValue = !enableAutoResize;
                 setEnableAutoResize(newValue);
 
-                if (newValue && widgetSpec) {
-                  const hasWidth = widgetSpec.widget?.width !== undefined;
-                  const hasHeight = widgetSpec.widget?.height !== undefined;
-                  const aspectRatio = widgetSpec.widget?.aspectRatio;
+                if (newValue && widgetDSL) {
+                  const hasWidth = widgetDSL.widget?.width !== undefined;
+                  const hasHeight = widgetDSL.widget?.height !== undefined;
+                  const aspectRatio = widgetDSL.widget?.aspectRatio;
 
                   if (!hasWidth && !hasHeight && typeof aspectRatio === 'number' && isFinite(aspectRatio) && aspectRatio > 0) {
                     console.log(`⚡ [AutoResize Toggle] Executing auto-resize with ratio: ${aspectRatio}`);

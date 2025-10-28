@@ -1,8 +1,8 @@
 # LLM Widget Factory
 
-Compile structured WidgetSpec (JSON) into portable JSX files. Includes primitive components, compiler, icons, and a demo playground.
+Compile structured WidgetDSL (JSON) into portable JSX files. Includes primitive components, compiler, icons, and a demo playground.
 
-Pipeline: WidgetSpec → JSX file → rendered result.
+Pipeline: WidgetDSL → JSX file → rendered result.
 
 ## Quick Start
 
@@ -87,9 +87,9 @@ Generates 6950+ React components with dynamic imports for lazy loading.
 
 ## Minimal Usage
 ```js
-import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
+import { compileWidgetDSLToJSX } from '@widget-factory/compiler';
 
-const jsx = compileWidgetSpecToJSX(spec);
+const jsx = compileWidgetDSLToJSX(spec);
 ```
 
 ## Headless Rendering
@@ -117,7 +117,7 @@ Output includes: PNG image, JSX code, spec JSON, and metadata.
 - `<Icon name="sf:circle.fill" />` or `<Icon name="lucide:Sun" />`
 
 **Rendering Pipeline**:
-1. Extract resources from WidgetSpec
+1. Extract resources from WidgetDSL
 2. Preload icons and images in parallel
 3. Compile to JSX after resources loaded
 4. Measure natural size accurately
@@ -131,15 +131,12 @@ Output includes: PNG image, JSX code, spec JSON, and metadata.
 ### Packages
 Reusable npm packages that can be independently installed:
 
-- **[`@widget-factory/spec`](./packages/spec/)** - WidgetSpec protocol definition, validation, and utilities
-- **[`@widget-factory/compiler`](./packages/compiler/)** - Compiles WidgetSpec to JSX files
+- **[`@widget-factory/dsl`](./packages/spec/)** - WidgetDSL protocol definition, validation, and utilities
+- **[`@widget-factory/compiler`](./packages/compiler/)** - Compiles WidgetDSL to JSX files
 - **[`@widget-factory/renderer`](./packages/renderer/)** - Runtime JSX renderer using Babel standalone
 - **[`@widget-factory/exporter`](./packages/exporter/)** - Widget export utilities (PNG, etc.)
 - **[`@widget-factory/primitives`](./packages/primitives/)** - Base UI components (WidgetShell, Text, Icon, etc.)
 - **[`@widget-factory/icons`](./packages/icons/README.md)** - Auto-generated icon components and iconsMap
-
-### Tools
-- **[`@widget-factory/cli`](./tools/cli/)** - CLI tool for batch widget rendering (headless mode)
 
 ### Apps
 - **[`playground`](./apps/playground/README.md)** - Interactive web playground with visual editing

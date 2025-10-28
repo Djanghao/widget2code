@@ -3,6 +3,8 @@ docs/
 
 node_modules/
 .venv/
+__pycache__/
+*.pyc
 
 .DS_Store
 
@@ -24,4 +26,4 @@ config.yaml
 !playground/docs/
 !playground/docs/architecture/
 
-presets/
+tests/

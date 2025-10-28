@@ -6,11 +6,11 @@
  * @date 2025-10-19
  */
 
-import { compileWidgetSpecToJSX } from '@widget-factory/compiler';
+import { compileWidgetDSLToJSX } from '@widget-factory/compiler';
 
-export function compileWidgetSpec(spec) {
+export function compileWidgetDSL(spec) {
   try {
-    const jsx = compileWidgetSpecToJSX(spec);
+    const jsx = compileWidgetDSLToJSX(spec);
     const treeRoot = spec?.widget || null;
 
     return {

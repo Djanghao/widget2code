@@ -26,7 +26,7 @@ export default function WidgetShellSection() {
           CSS Priority Rules
         </h3>
         <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 16 }}>
-          Container sizing precedence in widgetspec:
+          Container sizing precedence in widgetDSL:
         </p>
         <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
           <li><strong>Explicit width/height</strong> always determine container size when present.</li>
@@ -102,7 +102,7 @@ export default function WidgetShellSection() {
           AutoResize Behavior
         </h3>
         <p style={{ fontSize: 15, lineHeight: 1.6, color: '#e5e5e7', marginBottom: 12 }}>
-          AutoResize computes and writes explicit <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>width</code> and <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>height</code>. The <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio</code> prop in widgetspec is treated as an input for this calculation, not a rendering constraint.
+          AutoResize computes and writes explicit <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>width</code> and <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>height</code>. The <code style={{ backgroundColor: '#2c2c2e', padding: '2px 6px', borderRadius: 4 }}>aspectRatio</code> prop in widgetDSL is treated as an input for this calculation, not a rendering constraint.
         </p>
         <ul style={{ fontSize: 15, lineHeight: 1.8, color: '#e5e5e7', marginLeft: 24, marginBottom: 0 }}>
           <li>Toggle: Editors expose a green <strong>AutoResize</strong> switch (on by default).</li>

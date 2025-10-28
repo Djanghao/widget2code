@@ -8,8 +8,8 @@ import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import DownloadButton from './DownloadButton.jsx';
 import DimensionLines from './components/DimensionLines.jsx';
 import { useApiKey } from './components/ApiKeyManager.jsx';
-import textPrompt from '../../api/dynamic-component-prompt.md?raw';
-import imagePrompt from '../../api/dynamic-component-image-prompt.md?raw';
+import textPrompt from '../../api/prompts/dynamic/prompt2react/dynamic-component-prompt.md?raw';
+import imagePrompt from '../../api/prompts/dynamic/image2react/dynamic-component-image-prompt.md?raw';
 
 const TEXT_MODELS = [
   { value: 'qwen3-max', label: 'qwen3-max' },
@@ -591,110 +591,201 @@ export default function DynamicComponentGenerator() {
           />
         </div>
 
-        <div style={{ minHeight: 0, display: 'flex', flexDirection: 'column' }}>
-          <SectionHeader title="Live Preview" dotColor="#007AFF">
-            {finalSize && (
-              <div style={{
-                padding: '4px 10px',
-                backgroundColor: '#1a1a1c',
-                borderRadius: 9999,
-                fontSize: 12,
-                color: '#999',
-                border: '1px solid #2a2a2c',
-                fontWeight: 500
-              }}>
-                {width}×{height} → {finalSize.width}×{finalSize.height}
-                {(finalSize.width !== width || finalSize.height !== height) && (
-                  <span style={{
-                    marginLeft: 8,
-                    padding: '2px 6px',
-                    backgroundColor: 'rgba(255, 149, 0, 0.15)',
-                    color: '#FF9500',
-                    borderRadius: 4,
-                    fontSize: 11
-                  }}>
-                    Auto-resized
-                  </span>
-                )}
-              </div>
-            )}
-            <DownloadButton
-              onClick={handleDownloadComponent}
-              isDisabled={!generatedCode}
-              isLoading={isDownloading || loading}
-              statusText={isDownloading ? 'Downloading...' : (loading ? 'Generating...' : '')}
-            />
-          </SectionHeader>
+        <div style={{ minHeight: 0, display: 'flex', flexDirection: 'column', gap: 16 }}>
+          {/* Auto-sized Preview */}
+          <div style={{ minHeight: 0, display: 'flex', flexDirection: 'column', flex: 1 }}>
+            <SectionHeader title="Live Preview (Auto-sized)" dotColor="#34C759">
+              {finalSize && (
+                <div style={{
+                  padding: '4px 10px',
+                  backgroundColor: '#1a1a1c',
+                  borderRadius: 9999,
+                  fontSize: 12,
+                  color: '#999',
+                  border: '1px solid #2a2a2c',
+                  fontWeight: 500
+                }}>
+                  {width}×{height} → {finalSize.width}×{finalSize.height}
+                  {(finalSize.width !== width || finalSize.height !== height) && (
+                    <span style={{
+                      marginLeft: 8,
+                      padding: '2px 6px',
+                      backgroundColor: 'rgba(255, 149, 0, 0.15)',
+                      color: '#FF9500',
+                      borderRadius: 4,
+                      fontSize: 11
+                    }}>
+                      Auto-resized
+                    </span>
+                  )}
+                </div>
+              )}
+            </SectionHeader>
 
-          <div style={{
-            flex: 1,
-            backgroundColor: '#0d0d0d',
-            padding: 24,
-            borderRadius: 10,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            minHeight: 0,
-            boxSizing: 'border-box',
-            border: '1px solid #3a3a3c',
-            overflow: 'auto',
-            position: 'relative'
-          }}>
-            {generatedCode ? (
-              <div style={{ position: 'relative' }}>
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: -24,
-                    left: 0,
-                    fontSize: 11,
-                    color: 'rgba(255, 165, 0, 0.6)',
-                    fontWeight: 600,
-                    letterSpacing: '0.5px'
-                  }}
-                >
-                  SUGGESTED: {width}×{height}px
+            <div style={{
+              flex: 1,
+              backgroundColor: '#0d0d0d',
+              padding: 24,
+              borderRadius: 10,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              minHeight: 0,
+              boxSizing: 'border-box',
+              border: '1px solid #3a3a3c',
+              overflow: 'auto',
+              position: 'relative'
+            }}>
+              {generatedCode ? (
+                <div style={{ position: 'relative' }}>
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: -24,
+                      left: 0,
+                      fontSize: 11,
+                      color: 'rgba(52, 199, 89, 0.6)',
+                      fontWeight: 600,
+                      letterSpacing: '0.5px'
+                    }}
+                  >
+                    OPTIMAL SIZE
+                  </div>
+                  <div
+                    ref={componentRef}
+                    style={{
+                      border: '2px solid rgba(52, 199, 89, 0.5)',
+                      display: 'inline-block',
+                      position: 'relative',
+                      borderRadius: 8
+                    }}
+                  >
+                    <DynamicComponent
+                      code={generatedCode}
+                      suggestedWidth={width}
+                      suggestedHeight={height}
+                      onSizeChange={handleSizeChange}
+                      onError={handleRenderError}
+                    />
+                  </div>
+                  {componentSize.width > 0 && componentSize.height > 0 && (
+                    <DimensionLines width={componentSize.width} height={componentSize.height} />
+                  )}
                 </div>
-                <div
-                  ref={componentRef}
-                  style={{
-                    border: '2px solid rgba(52, 199, 89, 0.5)',
-                    display: 'inline-block',
-                    position: 'relative',
-                    borderRadius: 8,
-                    overflow: 'hidden'
-                  }}
-                >
-                  <DynamicComponent
-                    code={generatedCode}
-                    suggestedWidth={width}
-                    suggestedHeight={height}
-                    onSizeChange={handleSizeChange}
-                    onError={handleRenderError}
-                  />
+              ) : (
+                <div style={{
+                  textAlign: 'center',
+                  color: '#6e6e73',
+                  fontSize: 14
+                }}>
+                  <div style={{ marginBottom: 16, opacity: 0.5 }}>
+                    <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <path d="M8 9h8M8 12h8M8 15h4" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                  <div style={{ fontSize: 15, fontWeight: 500 }}>No component generated yet</div>
+                  <div style={{ fontSize: 13, marginTop: 6, color: '#5a5a5e' }}>
+                    Create a component to see the preview
+                  </div>
                 </div>
-                {componentSize.width > 0 && componentSize.height > 0 && (
-                  <DimensionLines width={componentSize.width} height={componentSize.height} />
-                )}
-              </div>
-            ) : (
-              <div style={{
-                textAlign: 'center',
-                color: '#6e6e73',
-                fontSize: 14
-              }}>
-                <div style={{ marginBottom: 16, opacity: 0.5 }}>
-                  <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <path d="M8 9h8M8 12h8M8 15h4" strokeLinecap="round" />
-                  </svg>
+              )}
+            </div>
+          </div>
+
+          {/* Scaled Preview */}
+          <div style={{ minHeight: 0, display: 'flex', flexDirection: 'column', flex: 1 }}>
+            <SectionHeader title="Scaled Preview" dotColor="#007AFF">
+              <DownloadButton
+                onClick={handleDownloadComponent}
+                isDisabled={!generatedCode}
+                isLoading={isDownloading || loading}
+                statusText={isDownloading ? 'Downloading...' : (loading ? 'Generating...' : '')}
+              />
+            </SectionHeader>
+
+            <div style={{
+              flex: 1,
+              backgroundColor: '#0d0d0d',
+              padding: 24,
+              borderRadius: 10,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              minHeight: 0,
+              boxSizing: 'border-box',
+              border: '1px solid #3a3a3c',
+              overflow: 'auto',
+              position: 'relative'
+            }}>
+              {generatedCode && finalSize ? (
+                <div style={{ position: 'relative' }}>
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: -24,
+                      left: 0,
+                      fontSize: 11,
+                      color: 'rgba(0, 122, 255, 0.6)',
+                      fontWeight: 600,
+                      letterSpacing: '0.5px'
+                    }}
+                  >
+                    TARGET: {width}×{height}px
+                  </div>
+                  <div
+                    style={{
+                      border: '2px solid rgba(0, 122, 255, 0.5)',
+                      display: 'inline-block',
+                      position: 'relative',
+                      borderRadius: 8,
+                      width: width,
+                      height: height,
+                      overflow: 'hidden'
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: finalSize.width,
+                        height: finalSize.height,
+                        transform: `scale(${Math.min(width / finalSize.width, height / finalSize.height)})`,
+                        transformOrigin: 'top left',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0
+                      }}
+                    >
+                      <DynamicComponent
+                        code={generatedCode}
+                        suggestedWidth={width}
+                        suggestedHeight={height}
+                        onSizeChange={() => {}}
+                        onError={handleRenderError}
+                        enableDragResize={false}
+                      />
+                    </div>
+                  </div>
+                  <DimensionLines width={width} height={height} />
                 </div>
-                <div style={{ fontSize: 15, fontWeight: 500 }}>No component generated yet</div>
-                <div style={{ fontSize: 13, marginTop: 6, color: '#5a5a5e' }}>
-                  Create a component to see the preview
+              ) : (
+                <div style={{
+                  textAlign: 'center',
+                  color: '#6e6e73',
+                  fontSize: 14
+                }}>
+                  <div style={{ marginBottom: 16, opacity: 0.5 }}>
+                    <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <path d="M8 9h8M8 12h8M8 15h4" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                  <div style={{ fontSize: 15, fontWeight: 500 }}>No component generated yet</div>
+                  <div style={{ fontSize: 13, marginTop: 6, color: '#5a5a5e' }}>
+                    Create a component to see the scaled preview
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </div>

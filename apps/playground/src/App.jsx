@@ -1,7 +1,7 @@
 /**
  * @file App.jsx
  * @description Main application component for the widget playground.
- * Provides tabbed interface for presets, widget-to-spec, prompt-to-spec, and guides.
+ * Provides tabbed interface for presets, widget-to-dsl, prompt-to-dsl, and guides.
  * Manages widget compilation, preview, auto-resize, and download functionality.
  * @author Houston Zhang
  * @date 2025-10-03
@@ -9,14 +9,15 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { examples } from './constants/examples.js';
-import { parseAspectRatio } from '@widget-factory/spec';
+import { parseAspectRatio } from '@widget-factory/dsl';
 import { exportWidget } from '@widget-factory/exporter';
 import AppHeader from './components/Header/AppHeader.jsx';
 import MaterialsModal from './components/MaterialsModal/index.jsx';
 import ApiKeyManager, { useApiKey } from './components/ApiKeyManager.jsx';
 import useWidgetFrame from './hooks/useWidgetFrame.js';
 import PresetsTab from './components/PresetsTab/index.jsx';
-import WidgetGeneration from './WidgetGeneration.jsx';
+import Widget2Code from './Widget2Code.jsx';
+import Prompt2Code from './Prompt2Code.jsx';
 import Documentation from './Documentation.jsx';
 import DynamicComponentGenerator from './DynamicComponentGenerator.jsx';
 import usePlaygroundStore from './store/index.js';
@@ -25,7 +26,7 @@ function App() {
   const { apiKey, setApiKey } = useApiKey();
   const {
     selectedPreset,
-    widgetSpec,
+    widgetDSL,
     generatedJSX,
     treeRoot,
     ratioInput,
@@ -73,7 +74,7 @@ function App() {
   }, []);
 
   const currentExample = examples[selectedPreset];
-  const currentSpec = editedSpec || (widgetSpec ? JSON.stringify(widgetSpec, null, 2) : JSON.stringify(currentExample.spec, null, 2));
+  const currentSpec = editedSpec || (widgetDSL ? JSON.stringify(widgetDSL, null, 2) : JSON.stringify(currentExample.spec, null, 2));
   const isLoading = renderingPhase !== 'idle';
 
   const handleSpecChange = useCallback((value) => {
@@ -119,7 +120,7 @@ function App() {
 
     console.log('\n📥 [Download] Starting widget download...');
 
-    const validation = validateWidget(widgetElement, widgetSpec);
+    const validation = validateWidget(widgetElement, widgetDSL);
 
     if (!validation.valid) {
       console.error('❌ [Download] Validation failed:', validation.issues);
@@ -218,7 +219,7 @@ function App() {
         />
       )}
 
-      
+
 
       {activeTab === 'guides' && (
         <div key="guides" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
@@ -232,9 +233,15 @@ function App() {
         </div>
       )}
 
-      {activeTab === 'widgetgen' && (
-        <div key="widgetgen" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
-          <WidgetGeneration />
+      {activeTab === 'widget2code' && (
+        <div key="widget2code" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
+          <Widget2Code />
+        </div>
+      )}
+
+      {activeTab === 'prompt2code' && (
+        <div key="prompt2code" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
+          <Prompt2Code />
         </div>
       )}
 

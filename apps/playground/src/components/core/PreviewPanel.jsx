@@ -125,7 +125,7 @@ export default function PreviewPanel({
           </button>
         </div>
         <button
-          onClick={() => previewSpec && handleAutoResizeByRatio(previewSpec, ratioInput)}
+          onClick={() => handleAutoResizeByRatio(previewSpec?.widget?.aspectRatio)}
           disabled={autoSizing}
           style={{
             flex: '0 0 auto',

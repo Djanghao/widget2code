@@ -1,27 +1,30 @@
 import React, { useRef, useState, useLayoutEffect, useMemo } from 'react';
 import { renderDynamicComponent } from './DynamicRenderer.js';
-import { detectOverflow } from './utils.js';
+import { findOptimalSize } from '@widget-factory/resizer';
 
 export function DynamicComponent({
   code,
   suggestedWidth,
   suggestedHeight,
-  maxIterations = 5,
   onSizeChange,
-  onError
+  onError,
+  enableDragResize = true,
+  maintainAspectRatio = true
 }) {
-  const [size, setSize] = useState({
-    width: suggestedWidth,
-    height: suggestedHeight
-  });
-  const [iteration, setIteration] = useState(0);
   const [isResizing, setIsResizing] = useState(true);
   const [renderError, setRenderError] = useState(null);
-  const containerRef = useRef(null);
+  const frameRef = useRef(null);
+  const componentRef = useRef(null);
+  const hasResizedRef = useRef(false);
+
+  const aspectRatio = useMemo(() => {
+    return suggestedWidth / suggestedHeight;
+  }, [suggestedWidth, suggestedHeight]);
 
   const Component = useMemo(() => {
     try {
       setRenderError(null);
+      hasResizedRef.current = false;
       return renderDynamicComponent(code);
     } catch (error) {
       console.error('[DynamicComponent] Render error:', error);
@@ -32,46 +35,169 @@ export function DynamicComponent({
   }, [code, onError]);
 
   useLayoutEffect(() => {
-    if (!containerRef.current || iteration >= maxIterations || renderError) {
+    if (!componentRef.current || renderError || hasResizedRef.current) {
       setIsResizing(false);
-      if (onSizeChange && !renderError) {
-        onSizeChange(size);
-      }
       return;
     }
 
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        const el = containerRef.current;
-        if (!el) return;
+    hasResizedRef.current = true;
 
-        const overflow = detectOverflow(el);
+    const performResize = async () => {
+      const element = componentRef.current;
 
-        if (overflow.hasOverflow) {
-          const newWidth = Math.ceil(
-            Math.max(size.width, overflow.scrollWidth + 2)
-          );
-          const newHeight = Math.ceil(
-            Math.max(size.height, overflow.scrollHeight + 2)
-          );
+      console.log('[DynamicComponent] Waiting for layout to stabilize...');
 
-          console.log(
-            `[AutoResize] Iteration ${iteration + 1}: ${size.width}×${size.height} → ${newWidth}×${newHeight}`,
-            `(scrollSize: ${overflow.scrollWidth}×${overflow.scrollHeight})`
-          );
+      await new Promise((resolve) => {
+        let attempts = 0;
+        let sizeHistory = [];
+        let hasSeenChange = false;
 
-          setSize({ width: newWidth, height: newHeight });
-          setIteration(prev => prev + 1);
-        } else {
-          console.log(`[AutoResize] Completed: ${size.width}×${size.height} (${iteration} iterations)`);
-          setIsResizing(false);
-          if (onSizeChange) {
-            onSizeChange(size);
+        const checkSize = () => {
+          attempts++;
+          const rect = element.getBoundingClientRect();
+          const currentSize = `${rect.width.toFixed(1)}x${rect.height.toFixed(1)}`;
+
+          sizeHistory.push(currentSize);
+
+          if (sizeHistory.length === 1) {
+            requestAnimationFrame(checkSize);
+            return;
           }
+
+          const prevSize = sizeHistory[sizeHistory.length - 2];
+
+          if (!hasSeenChange && currentSize === prevSize) {
+            const stableCount = sizeHistory.filter(s => s === currentSize).length;
+            if (stableCount >= 10) {
+              console.log(`[DynamicComponent] Layout stable at: ${currentSize} (${stableCount} frames)`);
+              resolve();
+              return;
+            }
+          }
+
+          if (currentSize !== prevSize && !hasSeenChange) {
+            hasSeenChange = true;
+            console.log(`[DynamicComponent] Size changed: ${prevSize} → ${currentSize}`);
+            sizeHistory = [currentSize];
+            requestAnimationFrame(checkSize);
+            return;
+          }
+
+          if (hasSeenChange) {
+            if (currentSize === prevSize) {
+              const stableCount = sizeHistory.filter(s => s === currentSize).length;
+              if (stableCount >= 3) {
+                console.log(`[DynamicComponent] Layout stabilized at: ${currentSize} (${stableCount} frames, ${attempts} checks)`);
+                resolve();
+              } else {
+                requestAnimationFrame(checkSize);
+              }
+            } else {
+              console.log(`[DynamicComponent] Size still changing: ${prevSize} → ${currentSize}`);
+              sizeHistory = [currentSize];
+              if (attempts < 120) {
+                requestAnimationFrame(checkSize);
+              } else {
+                console.log(`[DynamicComponent] Max attempts reached, using current size`);
+                resolve();
+              }
+            }
+          } else {
+            if (attempts < 120) {
+              requestAnimationFrame(checkSize);
+            } else {
+              console.log(`[DynamicComponent] Timeout, using current size: ${currentSize}`);
+              resolve();
+            }
+          }
+        };
+
+        requestAnimationFrame(checkSize);
+      });
+
+      console.log('[DynamicComponent] Starting binary search resize...');
+
+      const result = await findOptimalSize(element, aspectRatio, {
+        minSize: 40,
+        maxSize: 4096,
+        safetyMargin: 1,
+        logger: {
+          log: (msg) => console.log(`[DynamicComponent] ${msg}`),
+          warn: (msg) => console.warn(`[DynamicComponent] ${msg}`)
         }
       });
-    });
-  }, [size, iteration, maxIterations, onSizeChange, renderError]);
+
+      setIsResizing(false);
+
+      if (result) {
+        console.log(`[DynamicComponent] Final size: ${result.width}×${result.height}`);
+        if (onSizeChange) {
+          onSizeChange({
+            width: result.width,
+            height: result.height,
+            naturalSize: result.naturalSize
+          });
+        }
+      }
+    };
+
+    performResize();
+  }, [aspectRatio, renderError]);
+
+  const handleDragResize = (e) => {
+    e.preventDefault();
+    const element = componentRef.current;
+    if (!element) return;
+
+    const rect = element.getBoundingClientRect();
+    const startX = e.clientX;
+    const startY = e.clientY;
+    const startW = rect.width;
+    const startH = rect.height;
+
+    const r = maintainAspectRatio ? aspectRatio : null;
+
+    console.log(`[DynamicComponent] 🖱️ Drag Start: ${startW}×${startH}, ratio: ${r || 'free'}`);
+
+    const onMove = (ev) => {
+      const dx = ev.clientX - startX;
+      let nw, nh;
+
+      if (maintainAspectRatio && r) {
+        nw = Math.max(40, Math.round(startW + dx));
+        nh = Math.max(40, Math.round(nw / r));
+      } else {
+        const dy = ev.clientY - startY;
+        nw = Math.max(40, Math.round(startW + dx));
+        nh = Math.max(40, Math.round(startH + dy));
+      }
+
+      element.style.width = `${nw}px`;
+      element.style.height = `${nh}px`;
+    };
+
+    const onUp = () => {
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onUp);
+
+      const finalRect = element.getBoundingClientRect();
+      const finalW = Math.round(finalRect.width);
+      const finalH = Math.round(finalRect.height);
+
+      console.log(`[DynamicComponent] 🖱️ Drag End: ${finalW}×${finalH}`);
+
+      if (onSizeChange) {
+        onSizeChange({
+          width: finalW,
+          height: finalH,
+          naturalSize: null
+        });
+      }
+    };
+
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+  };
 
   if (renderError) {
     return (
@@ -106,17 +232,24 @@ export function DynamicComponent({
 
   return (
     <div
-      ref={containerRef}
+      ref={frameRef}
       style={{
-        width: size.width,
-        height: size.height,
-        overflow: 'hidden',
         position: 'relative',
-        boxSizing: 'border-box'
+        display: 'inline-block'
       }}
     >
-      <Component />
-      {isResizing && iteration > 0 && (
+      <div
+        ref={componentRef}
+        style={{
+          width: suggestedWidth,
+          height: suggestedHeight,
+          overflow: 'hidden',
+          boxSizing: 'border-box'
+        }}
+      >
+        <Component />
+      </div>
+      {isResizing && (
         <div style={{
           position: 'absolute',
           top: 4,
@@ -130,8 +263,27 @@ export function DynamicComponent({
           boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
           zIndex: 1000
         }}>
-          Resizing {iteration}/{maxIterations}
+          Resizing...
         </div>
+      )}
+      {enableDragResize && !renderError && (
+        <div
+          onMouseDown={handleDragResize}
+          style={{
+            position: 'absolute',
+            width: 14,
+            height: 14,
+            right: -7,
+            bottom: -7,
+            background: '#007AFF',
+            borderRadius: 4,
+            border: '2px solid #ffffff',
+            boxShadow: '0 0 0 1px #3a3a3c',
+            cursor: 'se-resize',
+            zIndex: 5
+          }}
+          title="Drag to resize"
+        />
       )}
     </div>
   );

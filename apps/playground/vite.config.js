@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => {
         '@widget-factory/primitives': path.resolve(__dirname, '../../packages/primitives/src'),
         '@widget-factory/compiler': path.resolve(__dirname, '../../packages/compiler/src'),
         '@widget-factory/icons': path.resolve(__dirname, '../../packages/icons/src'),
-        '@widget-factory/spec': path.resolve(__dirname, '../../packages/spec/src'),
+        '@widget-factory/dsl': path.resolve(__dirname, '../../packages/dsl/src'),
         '@widget-factory/renderer': path.resolve(__dirname, '../../packages/renderer/src'),
         '@widget-factory/exporter': path.resolve(__dirname, '../../packages/exporter/src'),
       }

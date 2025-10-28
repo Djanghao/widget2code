@@ -1,1 +1,1 @@
-export { compileWidgetSpecToJSX } from './compiler.jsx';
+export { compileWidgetDSLToJSX } from './compiler.jsx';
