@@ -231,8 +231,15 @@ function RetrievalRow({ item, baseImageUrl, processedSize, mode = 'fused' }) {
   const top = mode === 'image' ? imgOnly : fused;
   return (
     <div style={{ display:'grid', gridTemplateColumns:'80px 1fr', gap:12, alignItems:'center', background:'#1a1a1c', borderRadius:8, padding:10, border:'1px solid #2a2a2c' }}>
-      <div style={{ width:80, height:80, background:'#0d0d0d', border:'1px solid #3a3a3c', borderRadius:8, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
-        {thumb ? <img src={thumb} alt="icon-crop" style={{ maxWidth:'100%', maxHeight:'100%', objectFit:'contain' }} /> : <div style={{ color:'#8e8e93', fontSize:10 }}>crop</div>}
+      <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:6 }}>
+        <div style={{ width:80, height:80, background:'#0d0d0d', border:'1px solid #3a3a3c', borderRadius:8, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+          {thumb ? <img src={thumb} alt="icon-crop" style={{ maxWidth:'100%', maxHeight:'100%', objectFit:'contain' }} /> : <div style={{ color:'#8e8e93', fontSize:10 }}>crop</div>}
+        </div>
+        {typeof item?.caption === 'string' && item.caption.trim() !== '' && (
+          <div style={{ fontSize:11, color:'#c6c6c8', textAlign:'center', wordBreak:'break-word', lineHeight:1.2 }}>
+            <span style={{ color:'#9a9aa0' }}>Caption: </span>{item.caption}
+          </div>
+        )}
       </div>
       <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(96px, 1fr))', gap:8 }}>
         {top.map((c, i) => {
