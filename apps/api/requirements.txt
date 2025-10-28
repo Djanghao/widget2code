@@ -7,6 +7,7 @@ pyyaml
 playwright
 aiofiles
 requests
+accelerate
 numpy
 opencv-python
 torch
