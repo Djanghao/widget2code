@@ -687,28 +687,66 @@ async def generate_widget_full(
                     topm=int(retrieval_topm),
                     alpha=float(retrieval_alpha),
                 )
-                prefixed: list[str] = []
-                for name in svg_names:
-                    stem = str(Path(name).stem)
-                    if stem and (stem.lower() == stem) and ("." in stem):
-                        prefixed.append(f"sf:{stem}")
-                    else:
-                        prefixed.append(f"lucide:{stem}")
-                icon_candidates = sorted(set(prefixed), key=prefixed.index)
+                ordered_unique = []
+                seen = set()
+                for n in svg_names:
+                    s = str(n).strip()
+                    if not s:
+                        continue
+                    if s not in seen:
+                        seen.add(s)
+                        ordered_unique.append(s)
+                icon_candidates = ordered_unique
         except Exception as e:
             print(f"[icon-pipeline] skipped due to: {e}")
 
         extra_parts = []
-        extra_parts.append("\n\n[Icon Candidates Context]\n")
         extra_parts.append(f"- Detected icons (via grounding): {icon_count}\n")
-        if icon_candidates:
-            joined = ", ".join(icon_candidates)
-            extra_parts.append("- Candidate icon names (use if applicable):\n")
-            extra_parts.append(joined)
+        if per_icon_details:
+            extra_parts.append("- Per-Icon Candidate Constraints (STRICT):\n")
+            extra_parts.append(
+                "   1. For each detected icon, use ONLY candidates from its own list.\n"
+                "   2. Each item is keyed by bbox [x1,y1,x2,y2] in pixels.\n"
+                "   3. Do NOT propose any icon that is not in the list.\n"
+                "   4. Prefer the closest match by SHAPE (outline/strokes), then by semantics.\n"
+                "   5. If the image is low-quality or partially occluded, still choose the best candidate based on visible strokes.\n"
+            )
+            extra_parts.append("   6. ICON_CANDIDATES_BY_BBOX = [\n")
+            for det in per_icon_details:
+                bbox = det.get("bbox") or []
+                names = []
+                for c in det.get("topCandidates", [])[: max(1, int(retrieval_topm)) ]:
+                    raw_name = str(c.get("name") or "").strip()
+                    if not raw_name:
+                        continue
+                    if raw_name.startswith("sf:") or raw_name.startswith("lucide:"):
+                        fixed = raw_name
+                    elif (raw_name.lower() == raw_name) and ("." in raw_name):
+                        fixed = f"sf:{raw_name}"
+                    else:
+                        fixed = f"lucide:{raw_name}"
+                    names.append(fixed)
+                if not names or not bbox or len(bbox) != 4:
+                    continue
+                extra_parts.append(
+                    "  { \"bbox\": [" + ", ".join(str(int(round(v))) for v in bbox) + "], \"candidates\": [" + ", ".join(f'\"{n}\"' for n in names) + "] },\n"
+                )
+            extra_parts.append(
+                "]\n"
+                "   ** Matching rule: When assigning an icon name for a visual region, choose the list whose bbox most overlaps that region; pick the best match ONLY from that list.\n"
+                "   ** Per-icon fallback: If ALL candidates tied to a bbox are poor matches to the crop, you may propose a better SVG outside the list for that bbox only."
+            )
         else:
-            extra_parts.append("- No candidate list available; infer names conservatively.\n")
+            extra_parts.append(
+                "### SELECTION RULES (NO LIST AVAILABLE)\n"
+                "No candidate list is available. Infer the most likely icon name conservatively.\n"
+            )
 
-        prompt_final = base_prompt + "".join(extra_parts)
+        extra_str = "".join(extra_parts)
+        if "[AVAILABLE_ICON_NAMES]" in base_prompt:
+            prompt_final = base_prompt.replace("[AVAILABLE_ICON_NAMES]", extra_str)
+        else:
+            prompt_final = base_prompt + extra_str
 
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
         model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
@@ -775,15 +813,14 @@ async def generate_widget_full(
                 if "score_final" in candidate:
                     candidate["score_final"] = round(candidate["score_final"], 4)
 
-                name = candidate.get("name", "")
-                if name:
-                    stem = str(Path(name).stem)
-                    if stem.startswith("sf:") or stem.startswith("lucide:"):
-                        candidate["name"] = stem
-                    elif stem and (stem.lower() == stem) and ("." in stem):
-                        candidate["name"] = f"sf:{stem}"
+                raw_name = str(candidate.get("name", ""))
+                if raw_name:
+                    if raw_name.startswith("sf:") or raw_name.startswith("lucide:"):
+                        candidate["name"] = raw_name
+                    elif (raw_name.lower() == raw_name) and ("." in raw_name):
+                        candidate["name"] = f"sf:{raw_name}"
                     else:
-                        candidate["name"] = f"lucide:{stem}"
+                        candidate["name"] = f"lucide:{raw_name}"
 
             # Also normalize image-only list if present
             for candidate in icon_detail.get("imageOnlyTop10", []):

@@ -33,8 +33,7 @@ Props: `fontSize`, `color`, `align` (left/center/right), `fontWeight`, `lineHeig
 
 ### Icon
 Props: `name`, `size`, `color`
-- Available icons:
-  [AVAILABLE_ICON_NAMES]
+[AVAILABLE_ICON_NAMES]
 - Can have `flex` prop (typically `"none"` for icons)
 
 ### Image
