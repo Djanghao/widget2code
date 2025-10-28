@@ -42,7 +42,7 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 EDGE_THRESH = 40        # Canny low threshold; high = max(low+10, low*3)
 BORDER_ERODE = 3        # 1/3/5 (odd). Alpha-border thickness (used by morph gradient)
 EDGE_DILATE = 3         # 1/3/5 (odd). Canny edges dilation
-CAPTION_MODEL_ID = "Salesforce/blip2-opt-6.7b-coco"
+CAPTION_MODEL_ID = "Salesforce/blip2-opt-6.7b"
 MAX_NEW_TOKENS = 64
 NUM_BEAMS = 4
 STOPWORDS = {"icon", "icons", "ic"}
