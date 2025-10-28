@@ -12,6 +12,10 @@ from collections import defaultdict
 from datetime import datetime
 import sys
 
+# Import graph processing services
+from services.graph.detection import detect_charts_in_image, should_use_graph_pipeline
+from services.graph.pipeline import process_graphs_in_image, format_graph_specs_for_injection
+
 config_file = os.getenv("CONFIG_FILE", "config.yaml")
 config_path = Path(__file__).parent.parent / config_file
 
@@ -36,6 +40,7 @@ def check_rate_limit(client_ip: str) -> bool:
     return True
 
 WIDGET2DSL_PROMPT_PATH = Path(__file__).parent / "prompts" / "widget2dsl" / "widget2dsl-sf-lucide.md"
+WIDGET2DSL_GRAPH_PROMPT_PATH = Path(__file__).parent / "prompts" / "widget2dsl" / "widget2dsl-graph-modified.md"
 PROMPT2DSL_PROMPT_PATH = Path(__file__).parent / "prompts" / "prompt2dsl" / "prompt2dsl-sf-lucide.md"
 DYNAMIC_COMPONENT_PROMPT_PATH = Path(__file__).parent / "prompts" / "dynamic" / "prompt2react" / "dynamic-component-prompt.md"
 DYNAMIC_COMPONENT_IMAGE_PROMPT_PATH = Path(__file__).parent / "prompts" / "dynamic" / "image2react" / "dynamic-component-image-prompt.md"
@@ -46,6 +51,11 @@ def load_default_prompt():
 def load_widget2dsl_prompt():
     if WIDGET2DSL_PROMPT_PATH.exists():
         return WIDGET2DSL_PROMPT_PATH.read_text(encoding="utf-8")
+    return ""
+
+def load_widget2dsl_graph_prompt():
+    if WIDGET2DSL_GRAPH_PROMPT_PATH.exists():
+        return WIDGET2DSL_GRAPH_PROMPT_PATH.read_text(encoding="utf-8")
     return ""
 
 def load_prompt2dsl_prompt():
@@ -115,8 +125,7 @@ async def generate_widget(
             temp_file.write(image_bytes)
             temp_file_path = temp_file.name
 
-        prompt = system_prompt if system_prompt else load_default_prompt()
-
+        # Two-step graph processing pipeline starts here
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
         model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
         if model and model_to_use not in vision_models:
@@ -124,7 +133,7 @@ async def generate_widget(
                 status_code=400,
                 content={
                     "success": False,
-                    "error": f"Model '{model_to_use}' is not a supported vision model for image �+' spec. Use one of: {sorted(vision_models)}"
+                    "error": f"Model '{model_to_use}' is not a supported vision model for image spec. Use one of: {sorted(vision_models)}"
                 }
             )
 
@@ -137,12 +146,67 @@ async def generate_widget(
                 }
             )
 
+        # Step 1: Detect chart types in the image
+        print(f"[{datetime.now()}] Step 1: Detecting charts in image...")
+        chart_counts = detect_charts_in_image(
+            image_bytes=image_bytes,
+            filename=image.filename,
+            provider=None,
+            api_key=api_key,
+            model=model_to_use,
+            temperature=0.1,
+            max_tokens=500,
+            timeout=30,
+            max_retries=2
+        )
+
+        print(f"[{datetime.now()}] Detected charts: {chart_counts}")
+
+        # Step 2: Process graphs if detected and get their specifications
+        graph_specs = []
+        if should_use_graph_pipeline(chart_counts):
+            print(f"[{datetime.now()}] Step 2: Processing graphs...")
+            graph_specs = process_graphs_in_image(
+                image_bytes=image_bytes,
+                filename=image.filename,
+                chart_counts=chart_counts,
+                provider=None,
+                api_key=api_key,
+                model=model_to_use,
+                temperature=0.3,
+                max_tokens=3000,
+                timeout=60,
+                max_retries=2
+            )
+            print(f"[{datetime.now()}] Generated {len(graph_specs)} graph specifications")
+
+        # Step 3: Prepare the main prompt with graph specs if available
+        if system_prompt:
+            base_prompt = system_prompt
+        else:
+            base_prompt = load_widget2dsl_graph_prompt()
+
+        # Inject graph specifications into the prompt if available
+        if graph_specs:
+            graph_specs_text = format_graph_specs_for_injection(graph_specs)
+            enhanced_prompt = f"""{base_prompt}
+
+PRE-GENERATED GRAPH SPECIFICATIONS:
+Use the following graph specifications for accurate chart rendering. These specs replace manual visual analysis of charts.
+
+{graph_specs_text}
+
+When generating the WidgetDSL, incorporate these exact graph specifications to ensure pixel-perfect chart replication."""
+        else:
+            enhanced_prompt = base_prompt
+
+        # Step 4: Generate the final WidgetDSL with enhanced prompt
         vision_llm = LLM(
             model=model_to_use,
             temperature=0.5,
             max_tokens=32768,
             timeout=60,
-            system_prompt=prompt,
+            system_prompt=enhanced_prompt,
             api_key=api_key
         )
 
