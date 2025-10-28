@@ -7,6 +7,7 @@ Return: List[str] of svg filenames (deduped across queries, order-preserving).
 
 from __future__ import annotations
 from pathlib import Path
+import re
 from typing import List, Dict, Any, Tuple
 import json
 import faiss
@@ -17,6 +18,36 @@ TOPK = 50
 TOPM = 1
 ALPHA = 0.8  # fused = ALPHA * sim_img + (1-ALPHA) * sim_txt
 
+
+def _to_pascal(s: str) -> str:
+    parts = [p for p in re.split(r"[^a-zA-Z0-9]+", s or "") if p]
+    return "".join(p[:1].upper() + p[1:] for p in parts)
+
+
+def _normalize_name_from_src(src: str) -> str:
+    """Normalize a display name from src_svg path.
+    Rules:
+    - strip extension
+    - ensure prefix sf: or lucide:
+      - if lucide → PascalCase token (matches lucide-react keys)
+      - if sf → keep dot-separated token
+    - if no prefix present: dot → sf:, else lucide: with PascalCase
+    """
+    name = Path(src).name
+    stem = Path(name).stem  # may include prefix like 'sf:moon.stars.fill'
+    if ":" in stem:
+        prefix, token = stem.split(":", 1)
+        prefix = prefix.strip().lower()
+        if prefix == "lucide":
+            return f"lucide:{_to_pascal(token)}"
+        if prefix == "sf":
+            return f"sf:{token}"
+        # unknown prefix → fall back
+        stem = token
+    # No explicit prefix
+    if "." in stem:
+        return f"sf:{stem}"
+    return f"lucide:{_to_pascal(stem)}"
 
 def load_lib(lib_root: Path) -> Tuple[Any, List[Dict[str, Any]], np.ndarray, np.ndarray]:
     lib_root = Path(lib_root)
@@ -77,13 +108,14 @@ def _process_one_query(
         return []
 
     order, sim_img, sim_txt, fused = _rerank_in_K(idxs, q_img_vec, q_txt_vec, lib_img, lib_txt, alpha)
+    # Fused (topm)
     m = max(1, min(topm, len(order)))
-    hits = []
+    hits_fused = []
     for rank in range(m):
         j = int(order[rank])
         idx = idxs[j]
         info = items[idx] if 0 <= idx < len(items) else {}
-        hits.append({
+        hits_fused.append({
             "rank": rank + 1,
             "src_svg": info.get("src_svg"),
             "component_id": info.get("component_id"),
@@ -92,9 +124,30 @@ def _process_one_query(
             "score_txt": float(sim_txt[j]),
             "score_final": float(fused[j]),
         })
-    return hits
 
-def retrieve_svg_filenames(
+    # Image-only top 10 within the same topK pool
+    order_img = np.argsort(-sim_img)
+    m_img = min(10, len(order_img))
+    hits_img_only = []
+    for rank in range(m_img):
+        j = int(order_img[rank])
+        idx = idxs[j]
+        info = items[idx] if 0 <= idx < len(items) else {}
+        hits_img_only.append({
+            "rank": rank + 1,
+            "src_svg": info.get("src_svg"),
+            "component_id": info.get("component_id"),
+            "aliases": info.get("aliases"),
+            "score_img": float(sim_img[j]),
+        })
+    return hits_fused, hits_img_only
+
+__all__ = [
+    "retrieve_svg_filenames_with_dual_details",
+]
+
+
+def retrieve_svg_filenames_with_dual_details(
     *,
     lib_root: Path,
     q_ids: List[str],
@@ -103,51 +156,7 @@ def retrieve_svg_filenames(
     topk: int = TOPK,
     topm: int = TOPM,
     alpha: float = ALPHA,
-) -> List[str]:
-    if q_img_all is None or q_txt_all is None:
-        raise ValueError("q_img_all and q_txt_all must be provided.")
-    if len(q_img_all) != len(q_txt_all) or len(q_img_all) != len(q_ids):
-        raise ValueError("Length mismatch: q_ids, q_img_all, q_txt_all must align.")
-
-    index, items, lib_img, lib_txt = load_lib(Path(lib_root))
-    out: List[str] = []
-    Q = len(q_ids)
-    for i in range(Q):
-        q_img = q_img_all[i].reshape(1, -1).astype("float32")
-        q_txt = q_txt_all[i].reshape(1, -1).astype("float32")
-
-        hits = _process_one_query(
-            q_img_vec=q_img,
-            q_txt_vec=q_txt,
-            index=index,
-            lib_img=lib_img,
-            lib_txt=lib_txt,
-            items=items,
-            topk=int(topk),
-            topm=int(topm),
-            alpha=float(alpha),
-        )
-
-        for h in hits:
-            src = h.get("src_svg")
-            if not src:
-                continue
-            name = Path(src).name
-            out.append(name)
-
-    return out
-
-
-def retrieve_svg_filenames_with_details(
-    *,
-    lib_root: Path,
-    q_ids: List[str],
-    q_img_all: np.ndarray,  # (Q, D)
-    q_txt_all: np.ndarray,  # (Q, D)
-    topk: int = TOPK,
-    topm: int = TOPM,
-    alpha: float = ALPHA,
-) -> Tuple[List[str], List[List[Dict[str, Any]]]]:
+) -> Tuple[List[str], List[List[Dict[str, Any]]], List[List[Dict[str, Any]]]]:
     if q_img_all is None or q_txt_all is None:
         raise ValueError("q_img_all and q_txt_all must be provided.")
     if len(q_img_all) != len(q_txt_all) or len(q_img_all) != len(q_ids):
@@ -155,13 +164,14 @@ def retrieve_svg_filenames_with_details(
 
     index, items, lib_img, lib_txt = load_lib(Path(lib_root))
     svg_names: List[str] = []
-    all_hits: List[List[Dict[str, Any]]] = []
+    fused_hits_all: List[List[Dict[str, Any]]] = []
+    img_only_hits_all: List[List[Dict[str, Any]]] = []
     Q = len(q_ids)
     for i in range(Q):
         q_img = q_img_all[i].reshape(1, -1).astype("float32")
         q_txt = q_txt_all[i].reshape(1, -1).astype("float32")
 
-        hits = _process_one_query(
+        hits_fused, hits_img_only = _process_one_query(
             q_img_vec=q_img,
             q_txt_vec=q_txt,
             index=index,
@@ -174,15 +184,25 @@ def retrieve_svg_filenames_with_details(
         )
 
         hits_with_names = []
-        for h in hits:
+        for h in hits_fused:
             src = h.get("src_svg")
             if not src:
                 continue
-            name = Path(src).name
+            name = _normalize_name_from_src(src)
             svg_names.append(name)
             h["name"] = name
             hits_with_names.append(h)
 
-        all_hits.append(hits_with_names)
+        hits_img_only_named = []
+        for h in hits_img_only:
+            src = h.get("src_svg")
+            if not src:
+                continue
+            name = _normalize_name_from_src(src)
+            h["name"] = name
+            hits_img_only_named.append(h)
 
-    return svg_names, all_hits
+        fused_hits_all.append(hits_with_names)
+        img_only_hits_all.append(hits_img_only_named)
+
+    return svg_names, fused_hits_all, img_only_hits_all

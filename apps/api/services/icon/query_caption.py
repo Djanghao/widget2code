@@ -20,9 +20,9 @@ from PIL import Image
 import open_clip
 from transformers import Blip2Processor, Blip2ForConditionalGeneration
 
-from search_fused import retrieve_svg_filenames, retrieve_svg_filenames_with_details
+from search_fused import retrieve_svg_filenames_with_dual_details
 
-BLIP2_MODEL_ID = "Salesforce/blip2-opt-6.7b-coco"
+BLIP2_MODEL_ID = "Salesforce/blip2-opt-6.7b"
 BLIP2_MAX_NEW_TOKENS = 32
 BLIP2_NUM_BEAMS = 4
 SIGLIP_MODEL_NAME = "ViT-SO400M-16-SigLIP2-384"
@@ -103,41 +103,12 @@ def encode_texts_siglip(model, tokenizer, device: str, texts: List[str]) -> np.n
     return np.concatenate(embs, axis=0).astype("float32")
 
 # Public API
-def caption_embed_and_retrieve_svgs(
-    *,
-    lib_root: Path,
-    q_img_all: np.ndarray,           # (Q, D_img)
-    crops_bytes: List[bytes],
-    topk: int = 50,
-    topm: int = 10,
-    alpha: float = 0.8,
-) -> List[str]:
-    if q_img_all is None or not isinstance(q_img_all, np.ndarray):
-        raise ValueError("q_img_all must be a numpy array of precomputed image embeddings.")
-    if len(crops_bytes) != len(q_img_all):
-        raise ValueError(f"Length mismatch: len(crops_bytes)={len(crops_bytes)} vs len(q_img_all)={len(q_img_all)}")
-
-    blip2_pipe = build_blip2(BLIP2_MODEL_ID)
-    captions = caption_from_bytes_list(crops_bytes, blip2_pipe)
-
-    tmodel, tokenizer, tdevice = load_siglip_text()
-    q_txt_all = encode_texts_siglip(tmodel, tokenizer, tdevice, captions)
-
-    q_ids = [f"q{i:04d}" for i in range(len(crops_bytes))]
-
-    svg_names = retrieve_svg_filenames(
-        lib_root=lib_root,
-        q_ids=q_ids,
-        q_img_all=q_img_all.astype("float32"),
-        q_txt_all=q_txt_all.astype("float32"),
-        topk=topk,
-        topm=topm,
-        alpha=alpha,
-    )
-    return svg_names
+__all__ = [
+    "caption_embed_and_retrieve_svgs_with_dual_details",
+]
 
 
-def caption_embed_and_retrieve_svgs_with_details(
+def caption_embed_and_retrieve_svgs_with_dual_details(
     *,
     lib_root: Path,
     q_img_all: np.ndarray,
@@ -145,7 +116,7 @@ def caption_embed_and_retrieve_svgs_with_details(
     topk: int = 50,
     topm: int = 10,
     alpha: float = 0.8,
-) -> Tuple[List[str], List[str], List[List[Dict[str, Any]]]]:
+) -> Tuple[List[str], List[str], List[List[Dict[str, Any]]], List[List[Dict[str, Any]]]]:
     if q_img_all is None or not isinstance(q_img_all, np.ndarray):
         raise ValueError("q_img_all must be a numpy array of precomputed image embeddings.")
     if len(crops_bytes) != len(q_img_all):
@@ -159,7 +130,7 @@ def caption_embed_and_retrieve_svgs_with_details(
 
     q_ids = [f"q{i:04d}" for i in range(len(crops_bytes))]
 
-    svg_names, all_hits = retrieve_svg_filenames_with_details(
+    svg_names, hits_fused_all, hits_img_only_all = retrieve_svg_filenames_with_dual_details(
         lib_root=lib_root,
         q_ids=q_ids,
         q_img_all=q_img_all.astype("float32"),
@@ -168,4 +139,4 @@ def caption_embed_and_retrieve_svgs_with_details(
         topm=topm,
         alpha=alpha,
     )
-    return svg_names, captions, all_hits
+    return svg_names, captions, hits_fused_all, hits_img_only_all
