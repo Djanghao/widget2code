@@ -102,8 +102,13 @@ async def generate_widget(
                 }
             )
 
-        img = Image.open(io.BytesIO(image_bytes))
-        width, height = img.size
+        try:
+            sys.path.insert(0, str(Path(__file__).parent / "services" / "icon"))
+            from image_utils import preprocess_image_bytes_if_small
+            image_bytes, (width, height), _ = preprocess_image_bytes_if_small(image_bytes, min_target_edge=1000)
+        except Exception:
+            img = Image.open(io.BytesIO(image_bytes))
+            width, height = img.size
         aspect_ratio = width / height
 
         with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
@@ -554,8 +559,13 @@ async def generate_widget_full(
                 }
             )
 
-        img = Image.open(io.BytesIO(image_bytes))
-        width, height = img.size
+        try:
+            sys.path.insert(0, str(Path(__file__).parent / "services" / "icon"))
+            from image_utils import preprocess_image_bytes_if_small
+            image_bytes, (width, height), _ = preprocess_image_bytes_if_small(image_bytes, min_target_edge=1000)
+        except Exception:
+            img = Image.open(io.BytesIO(image_bytes))
+            width, height = img.size
         aspect_ratio = width / height
 
         with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
@@ -710,6 +720,11 @@ async def generate_widget_full(
                         candidate["name"] = f"sf:{stem}"
                     else:
                         candidate["name"] = f"lucide:{stem}"
+
+            # Also normalize image-only list if present
+            for candidate in icon_detail.get("imageOnlyTop10", []):
+                if "score_img" in candidate:
+                    candidate["score_img"] = round(candidate["score_img"], 4)
 
         global_candidates = {}
         for icon_detail in per_icon_details:

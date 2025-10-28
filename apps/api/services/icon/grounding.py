@@ -131,10 +131,29 @@ def _guess_mime_from_filename(filename: Optional[str]) -> str:
     return "image/png"
 
 def prepare_image_content_from_bytes(image_bytes: bytes, filename: Optional[str]) -> Dict[str, Any]:
-    mime = _guess_mime_from_filename(filename)
+    mime = None
+    try:
+        with Image.open(io.BytesIO(image_bytes)) as im:
+            fmt = (im.format or "").upper()
+            if fmt == "JPEG":
+                mime = "image/jpeg"
+            elif fmt == "PNG":
+                mime = "image/png"
+            elif fmt == "WEBP":
+                mime = "image/webp"
+            elif fmt == "GIF":
+                mime = "image/gif"
+            elif fmt == "BMP":
+                mime = "image/bmp"
+            elif fmt in ("TIFF", "TIF"):
+                mime = "image/tiff"
+    except Exception:
+        mime = None
+    if not mime:
+        mime = _guess_mime_from_filename(filename)
+
     b64 = base64.b64encode(image_bytes).decode("ascii")
     data_url = f"data:{mime};base64,{b64}"
-    # OpenAI-style image content
     return {"type": "image_url", "image_url": {"url": data_url}}
 
 # Qwen [0,1000] → pixel detections
@@ -173,104 +192,9 @@ def _scale_qwen_to_pixels(
     return dets
 
 # public API
-def ground_single_image_to_pixel_detections(
-    *,
-    image_bytes: bytes,
-    filename: Optional[str] = None,
-    prompt: str = DEFAULT_PROMPT,
-    # LLM config
-    provider: Optional[str] = None,
-    api_key: Optional[str] = None,
-    base_url: Optional[str] = None,
-    model: str = "qwen3-vl-plus",
-    temperature: float = 0.7,
-    top_p: Optional[float] = None,
-    max_tokens: int = 2000,
-    timeout: int = 60,
-    thinking: bool = False,
-    stream: bool = False,
-    stream_options: Optional[Dict[str, Any]] = None,
-    # Behavior
-    clamp_to_image: bool = True,
-    # Retry
-    max_retries: int = 3,
-    # Post-process params
-    pp_margin_pct: float = 0.2,
-    pp_min_area_ratio: float = 0.0005,
-    pp_fallback_expand_pct: float = 0.15,
-) -> List[Dict[str, Any]]:
-    if not isinstance(image_bytes, (bytes, bytearray)):
-        raise TypeError("image_bytes must be raw bytes")
-
-    img_w, img_h = get_image_size_from_bytes(image_bytes)
-    image_content = prepare_image_content_from_bytes(image_bytes, filename)
-    messages = [ChatMessage(role="user",
-                            content=[{"type": "text", "text": prompt}, image_content])]
-
-    llm_kwargs: Dict[str, Any] = dict(
-        model=model,
-        temperature=temperature,
-        max_tokens=max_tokens,
-        timeout=timeout,
-        system_prompt="You are a screen-to-code expert. Detect bounding boxes for input widget image.",
-    )
-    if top_p is not None:
-        llm_kwargs["top_p"] = top_p
-    if thinking:
-        llm_kwargs["thinking"] = True
-    if provider:
-        llm_kwargs["provider"] = provider
-    if api_key:
-        llm_kwargs["api_key"] = api_key
-    if base_url:
-        llm_kwargs["base_url"] = base_url
-    if stream:
-        llm_kwargs["stream"] = True
-        if stream_options:
-            llm_kwargs["stream_options"] = stream_options
-
-    vision_llm = LLM(**llm_kwargs)
-    last_err = None
-    parsed_items: List[Dict[str, Any]] = []
-    for attempt in range(max_retries + 1):
-        try:
-            if stream:
-                joined: List[str] = []
-                for chunk in vision_llm.chat(messages):
-                    piece = getattr(chunk, "content", None)
-                    if piece is None and isinstance(chunk, dict):
-                        piece = chunk.get("content")
-                    if piece:
-                        joined.append(piece)
-                content_text = "".join(joined) if joined else ""
-            else:
-                resp = vision_llm.chat(messages)
-                content_text = getattr(resp, "content", None) if not isinstance(resp, dict) else resp.get("content", "")
-
-            parsed_items = parse_grounding_response(content_text) if content_text else []
-            break
-        except Exception as e:
-            last_err = e
-            if attempt >= max_retries:
-                parsed_items = []
-
-    pixel_dets_pre = _scale_qwen_to_pixels(
-        items=parsed_items,
-        img_w=img_w,
-        img_h=img_h,
-        clamp_to_image=clamp_to_image,
-    )
-
-    pixel_dets_post = post_process_pixel_detections(
-        detections=pixel_dets_pre,
-        image_bytes=image_bytes,
-        margin_pct=pp_margin_pct,
-        min_area_ratio=pp_min_area_ratio,
-        fallback_expand_pct=pp_fallback_expand_pct,
-        clamp_to_image=True,
-    )
-
-    return pixel_dets_post
+__all__ = [
+    "ground_single_image_with_stages",
+]
 
 
 def ground_single_image_with_stages(
@@ -298,7 +222,23 @@ def ground_single_image_with_stages(
     if not isinstance(image_bytes, (bytes, bytearray)):
         raise TypeError("image_bytes must be raw bytes")
 
-    img_w, img_h = get_image_size_from_bytes(image_bytes)
+    try:
+        import sys, pathlib
+        here = pathlib.Path(__file__).resolve()
+        icon_dir = here.parent
+        if str(icon_dir) not in sys.path:
+            sys.path.insert(0, str(icon_dir))
+        from image_utils import preprocess_image_bytes_if_small  # type: ignore
+    except Exception:
+        preprocess_image_bytes_if_small = None  # type: ignore
+    if preprocess_image_bytes_if_small is not None:
+        try:
+            image_bytes, (img_w, img_h), _ = preprocess_image_bytes_if_small(image_bytes, min_target_edge=1000)
+        except Exception:
+            img_w, img_h = get_image_size_from_bytes(image_bytes)
+    else:
+        img_w, img_h = get_image_size_from_bytes(image_bytes)
+
     image_content = prepare_image_content_from_bytes(image_bytes, filename)
     messages = [ChatMessage(role="user",
                             content=[{"type": "text", "text": prompt}, image_content])]

@@ -9,6 +9,7 @@ export default function SystemPromptEditor({
   model,
   setModel,
   onReset,
+  extraActionsRight,
   modelOptions = [],
   promptTypeOptions = [
     { value: 'sf', label: 'SF Symbols Only' },
@@ -105,6 +106,7 @@ export default function SystemPromptEditor({
             Reset
           </button>
         )}
+        {extraActionsRight}
       </div>
       <textarea
         value={value}
