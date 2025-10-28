@@ -173,7 +173,8 @@ async def generate_widget(
         return {
             "success": True,
             "widgetDSL": widget_spec,
-            "aspectRatio": round(aspect_ratio, 3)
+            "aspectRatio": round(aspect_ratio, 3),
+            "usage": response.usage
         }
     except json.JSONDecodeError as e:
         return JSONResponse(
