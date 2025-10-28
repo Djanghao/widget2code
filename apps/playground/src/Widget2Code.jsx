@@ -10,6 +10,7 @@ import SectionHeader from './components/core/SectionHeader.jsx';
 import { useApiKey } from './components/ApiKeyManager.jsx';
 import usePlaygroundStore from './store/index.js';
 import imagePrompt from '../../api/prompts/widget2dsl/widget2dsl.md?raw';
+import IconPipelineModal from './components/IconPipelineModal.jsx';
 
 const VISION_MODELS = [
   { value: 'qwen3-vl-235b-a22b-instruct', label: 'qwen3-vl-235b-a22b-instruct' },
@@ -36,6 +37,8 @@ function Widget2Code() {
   const [enableAutoResize, setEnableAutoResize] = useState(true);
   const [ratioInput, setRatioInput] = useState('');
   const [isDownloading, setIsDownloading] = useState(false);
+  const [pipelineOpen, setPipelineOpen] = useState(false);
+  const [pipelineData, setPipelineData] = useState(null);
 
   useEffect(() => {
     const onDocClick = (e) => {
@@ -126,11 +129,14 @@ function Widget2Code() {
     try {
       const formData = new FormData();
       formData.append('system_prompt', systemPrompt);
-      formData.append('image', image);
       if (model) formData.append('model', model);
       if (apiKey) formData.append('api_key', apiKey);
+      formData.append('retrieval_topk', '50');
+      formData.append('retrieval_topm', '10');
+      formData.append('retrieval_alpha', '0.8');
+      formData.append('image', image);
 
-      const response = await fetch('/api/generate-widget', { method: 'POST', body: formData });
+      const response = await fetch('/api/generate-widget-full', { method: 'POST', body: formData });
       const data = await response.json();
 
       if (!response.ok || !data.success) {
@@ -138,7 +144,7 @@ function Widget2Code() {
       }
 
       setPreviewSpec(data.widgetDSL);
-
+      setPipelineData(data);
       await startCompiling(data.widgetDSL, widgetFrameRef);
     } catch (err) {
       setError(err.message);
@@ -190,7 +196,16 @@ function Widget2Code() {
 
   const isNarrow = viewportWidth < 1300;
 
+  const handleOpenPipeline = async () => {
+    if (!pipelineData) {
+      setError('Please generate the widget first');
+      return;
+    }
+    setPipelineOpen(true);
+  };
+
   return (
+    <>
     <div style={{ display: 'grid', gridTemplateColumns: '420px 1fr', gap: 12, height: '100%', minHeight: 0 }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12, minHeight: 0, maxHeight: '100%', overflow: 'auto', padding: '0 12px 0 0' }}>
         <div style={{
@@ -292,6 +307,31 @@ function Widget2Code() {
           model={model}
           setModel={setModel}
           onReset={() => setSystemPrompt(imagePrompt)}
+          extraActionsRight={(
+            <button
+              onClick={handleOpenPipeline}
+              disabled={!pipelineData}
+              title={pipelineData ? 'Show icon pipeline' : 'Generate widget first'}
+              style={{
+                flex: '0 0 auto',
+                padding: '6px 12px',
+                fontSize: 12,
+                fontWeight: 500,
+                backgroundColor: '#2c2c2e',
+                color: '#f5f5f7',
+                border: '1px solid #3a3a3c',
+                borderRadius: 6,
+                cursor: (!pipelineData) ? 'not-allowed' : 'pointer',
+                transition: 'all 0.2s ease',
+                whiteSpace: 'nowrap',
+                boxSizing: 'border-box'
+              }}
+              onMouseEnter={(e) => { if (pipelineData) e.currentTarget.style.backgroundColor = '#3a3a3c'; }}
+              onMouseLeave={(e) => { if (pipelineData) e.currentTarget.style.backgroundColor = '#2c2c2e'; }}
+            >
+              Icon Pipeline
+            </button>
+          )}
           modelOptions={VISION_MODELS}
           dotColor="#34C759"
         />
@@ -406,6 +446,13 @@ function Widget2Code() {
         </div>
       </div>
     </div>
+    <IconPipelineModal
+      isOpen={pipelineOpen}
+      onClose={() => setPipelineOpen(false)}
+      data={pipelineData}
+      baseImageUrl={pipelineData?.iconDebugInfo?.processedImageUrl || imagePreview}
+    />
+    </>
   );
 }
 
