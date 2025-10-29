@@ -2,9 +2,9 @@
   "name": "@widget-factory/compiler",
   "version": "0.3.0",
   "type": "module",
-  "main": "./src/index.jsx",
+  "main": "./src/index.js",
   "exports": {
-    ".": "./src/index.jsx"
+    ".": "./src/index.js"
   },
   "dependencies": {
     "@widget-factory/primitives": "*"
