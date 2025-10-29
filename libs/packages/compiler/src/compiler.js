@@ -1,10 +1,12 @@
+import { parseIconName, generateIconImports, renderIconNode } from './iconLibraryUtils.js';
+
 export function compileWidgetDSLToJSX(widgetDSL) {
   if (!widgetDSL.widget?.root) {
     throw new Error('Invalid widget spec: missing widget.root');
   }
 
   const imports = new Set();
-  const lucideIcons = new Set();
+  const usedIcons = new Set();
   imports.add("import React from 'react';");
   imports.add("import { WidgetShell } from '@widget-factory/primitives';");
 
@@ -59,29 +61,16 @@ export function compileWidgetDSLToJSX(widgetDSL) {
 
       const isIcon = componentName === 'Icon';
       const iconName = isIcon ? props?.name : null;
-      const isLucideIcon = iconName && typeof iconName === 'string' && iconName.startsWith('lucide:');
+      const iconData = iconName ? parseIconName(iconName) : { isIcon: false };
 
-      if (isLucideIcon) {
-        const lucideName = iconName.replace('lucide:', '');
-        lucideIcons.add(lucideName);
+      if (iconData.isIcon) {
+        const { library, name } = iconData;
+        usedIcons.add({ library, name });
 
         const mergedProps = { ...props };
         delete mergedProps.name;
 
-        const propsCode = [];
-        for (const [key, value] of Object.entries(mergedProps)) {
-          if (typeof value === 'string') propsCode.push(`${key}="${value}"`);
-          else propsCode.push(`${key}={${JSON.stringify(value)}}`);
-        }
-        if (flex !== undefined) {
-          if (typeof flex === 'string') propsCode.push(`flex="${flex}"`);
-          else propsCode.push(`flex={${JSON.stringify(flex)}}`);
-        }
-        if (width !== undefined) propsCode.push(`width={${JSON.stringify(width)}}`);
-        if (height !== undefined) propsCode.push(`height={${JSON.stringify(height)}}`);
-
-        const propsStr = propsCode.length > 0 ? ' ' + propsCode.join(' ') : '';
-        write(`${indent}<${lucideName}${propsStr} />`);
+        write(renderIconNode(library, name, mergedProps, indent, { flex, width, height }));
         return;
       }
 
@@ -116,9 +105,11 @@ export function compileWidgetDSLToJSX(widgetDSL) {
   renderNode(widgetDSL.widget.root, 2);
 
   let importsCode = Array.from(imports).join('\n');
-  if (lucideIcons.size > 0) {
-    const lucideImport = `import { ${Array.from(lucideIcons).join(', ')} } from 'lucide-react';`;
-    importsCode += '\n' + lucideImport;
+  if (usedIcons.size > 0) {
+    const iconImports = generateIconImports(usedIcons);
+    if (iconImports) {
+      importsCode += '\n' + iconImports;
+    }
   }
 
   const { backgroundColor, borderRadius, padding, width, height } = widgetDSL.widget;
