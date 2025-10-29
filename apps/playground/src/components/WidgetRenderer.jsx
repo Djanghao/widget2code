@@ -6,7 +6,7 @@
  * @date 2025-10-19
  */
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, Component } from 'react';
 import * as Babel from '@babel/standalone';
 import * as WidgetPrimitives from '@widget-factory/primitives';
 import * as LucideReact from 'lucide-react';
@@ -15,6 +15,48 @@ if (typeof window !== 'undefined') {
   window.React = React;
   window.WidgetPrimitives = WidgetPrimitives;
   window.LucideReact = LucideReact;
+}
+
+class WidgetErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('[WidgetErrorBoundary] Caught rendering error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{
+          display: 'inline-flex',
+          maxWidth: 640,
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          justifyContent: 'flex-start',
+          color: '#ff6b6b',
+          backgroundColor: '#3a0a0a',
+          border: '1px solid #6e1a1a',
+          borderRadius: 10,
+          padding: 12,
+          boxSizing: 'border-box'
+        }}>
+          <div style={{ fontWeight: 700, marginBottom: 8 }}>Widget Rendering Error:</div>
+          <div style={{ whiteSpace: 'pre-wrap', fontSize: 12, color: '#ff9999' }}>
+            {String(this.state.error?.message || this.state.error)}
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
 }
 
 function WidgetRenderer({ jsxCode, onMount, onError }) {
@@ -118,7 +160,11 @@ function WidgetRenderer({ jsxCode, onMount, onError }) {
   }
 
   console.log('[WidgetRenderer] 🎬 Rendering widget component now...')
-  return <WidgetComponent />;
+  return (
+    <WidgetErrorBoundary>
+      <WidgetComponent />
+    </WidgetErrorBoundary>
+  );
 }
 
 export default WidgetRenderer;
