@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     resolve: {
       alias: {
+        '@widget-factory/primitives/components': path.resolve(__dirname, '../../libs/packages/primitives/src/component-registry.js'),
         '@widget-factory/primitives': path.resolve(__dirname, '../../libs/packages/primitives/src'),
         '@widget-factory/compiler': path.resolve(__dirname, '../../libs/packages/compiler/src'),
         '@widget-factory/icons': path.resolve(__dirname, '../../libs/packages/icons'),
