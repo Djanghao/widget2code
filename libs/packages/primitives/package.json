@@ -2,9 +2,10 @@
   "name": "@widget-factory/primitives",
   "version": "0.3.0",
   "type": "module",
-  "main": "./src/index.jsx",
+  "main": "./src/index.js",
   "exports": {
-    ".": "./src/index.jsx"
+    ".": "./src/index.js",
+    "./components": "./src/component-registry.js"
   },
   "peerDependencies": {
     "react": "^18.0.0"
