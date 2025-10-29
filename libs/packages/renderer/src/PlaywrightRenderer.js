@@ -34,6 +34,132 @@ export class PlaywrightRenderer {
     console.log('[PlaywrightRenderer] Browser launched');
   }
 
+  async renderWidgetFromJSX(jsxCode, options = {}) {
+    if (!this.browser) {
+      throw new Error('Browser not initialized. Call initialize() first.');
+    }
+
+    const {
+      enableAutoResize = true,
+      captureOptions = {},
+      spec = null,
+      presetId = 'custom'
+    } = options;
+
+    const context = await this.browser.newContext({
+      viewport: this.options.viewportSize
+    });
+
+    const page = await context.newPage();
+
+    page.on('console', msg => {
+      const type = msg.type();
+      const text = msg.text();
+
+      if (type === 'error') {
+        console.error('[Browser Error]', text);
+      } else if (type === 'warning') {
+        console.warn('[Browser Warning]', text);
+      } else if (this.options.verbose) {
+        console.log('[Browser]', text);
+      } else {
+        const importantPrefixes = [
+          '[Headless]',
+          '[Resource Preload]',
+          '[Resource Extract]',
+          '[Icon Preload]',
+          '[Image Preload]',
+          '[Start Compiling]'
+        ];
+
+        if (importantPrefixes.some(prefix => text.includes(prefix))) {
+          console.log('[Browser]', text);
+        }
+      }
+    });
+
+    page.on('pageerror', error => {
+      console.error('[Browser Page Error]', error.message);
+    });
+
+    try {
+      const headlessUrl = `${this.options.devServerUrl}/headless.html`;
+      console.log(`[PlaywrightRenderer] Navigating to ${headlessUrl}...`);
+
+      await page.goto(headlessUrl, {
+        waitUntil: 'networkidle',
+        timeout: this.options.timeout
+      });
+
+      console.log('[PlaywrightRenderer] Waiting for headless API to be ready...');
+      await page.waitForFunction(() => window.__headlessReady === true, {
+        timeout: this.options.timeout
+      });
+
+      console.log('[PlaywrightRenderer] Rendering widget from JSX...');
+      const result = await page.evaluate(async ({ jsxCode, enableAutoResize, captureOptions, spec }) => {
+        try {
+          return await window.renderWidgetFromJSX(jsxCode, {
+            enableAutoResize,
+            captureOptions,
+            spec
+          });
+        } catch (error) {
+          return {
+            success: false,
+            error: error.message,
+            stack: error.stack
+          };
+        }
+      }, { jsxCode, enableAutoResize, captureOptions, spec });
+
+      if (!result.success) {
+        throw new Error(`Rendering failed: ${result.error}`);
+      }
+
+      console.log('[PlaywrightRenderer] Widget rendered successfully');
+      console.log('[PlaywrightRenderer] Validation:', result.validation.valid ? '✓ PASSED' : '✗ FAILED');
+
+      if (!result.validation.valid) {
+        console.warn('[PlaywrightRenderer] Validation issues:', result.validation.issues);
+      }
+
+      if (result.validation.warnings.length > 0) {
+        console.warn('[PlaywrightRenderer] Validation warnings:', result.validation.warnings);
+      }
+
+      console.log('[PlaywrightRenderer] Metadata:', result.metadata);
+
+      const base64Data = result.imageData.split(',')[1];
+      const imageBuffer = Buffer.from(base64Data, 'base64');
+
+      await context.close();
+
+      return {
+        success: true,
+        validation: result.validation,
+        metadata: result.metadata,
+        naturalSize: result.naturalSize,
+        finalSize: result.finalSize,
+        spec: result.spec,
+        jsx: jsxCode,
+        imageBuffer,
+        presetId
+      };
+
+    } catch (error) {
+      console.error('[PlaywrightRenderer] Error:', error.message);
+      await context.close();
+
+      return {
+        success: false,
+        error: error.message,
+        stack: error.stack,
+        presetId
+      };
+    }
+  }
+
   async renderWidget(spec, options = {}) {
     if (!this.browser) {
       throw new Error('Browser not initialized. Call initialize() first.');

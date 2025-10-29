@@ -1,1 +1,1 @@
-export { validateWidget } from './WidgetValidator.js';
+export { PlaywrightRenderer } from './PlaywrightRenderer.js';

@@ -8,16 +8,18 @@
     "start": "concurrently \"vite preview --host 0.0.0.0\" \"npm run api\"",
     "api": "cd ../api && ./.venv/bin/python server.py",
     "dev:full": "concurrently \"npm run dev\" \"npm run api\"",
-    "render": "node scripts/render.js"
+    "render": "widget-factory batch-render"
   },
   "dependencies": {
     "@babel/standalone": "^7.28.4",
+    "@widget-factory/cli": "*",
     "@widget-factory/compiler": "*",
     "@widget-factory/dsl": "*",
     "@widget-factory/exporter": "*",
     "@widget-factory/icons": "*",
     "@widget-factory/primitives": "*",
     "@widget-factory/renderer": "*",
+    "@widget-factory/validator": "*",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.434.0",
     "mermaid": "^11.12.0",

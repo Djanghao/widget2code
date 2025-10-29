@@ -1,0 +1,27 @@
+{
+  "name": "@widget-factory/cli",
+  "version": "0.3.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "bin": {
+    "widget-factory": "./src/index.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./commands/compile": "./src/commands/compile.js",
+    "./commands/render": "./src/commands/render.js",
+    "./commands/batch-render": "./src/commands/batch-render.js"
+  },
+  "description": "CLI tools for Widget Factory",
+  "keywords": [
+    "widget-factory",
+    "cli",
+    "compiler",
+    "renderer"
+  ],
+  "dependencies": {
+    "@widget-factory/compiler": "*",
+    "@widget-factory/renderer": "*",
+    "playwright": "^1.40.0"
+  }
+}

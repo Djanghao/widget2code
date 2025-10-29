@@ -1,0 +1,110 @@
+#!/usr/bin/env node
+
+/**
+ * @file render.js
+ * @description Render JSX to PNG using @widget-factory/renderer
+ */
+
+import { PlaywrightRenderer } from '@widget-factory/renderer';
+import fs from 'fs/promises';
+import path from 'path';
+
+export async function render(jsxPath, outputPath, options = {}) {
+  const { devServerUrl = 'http://localhost:3060' } = options;
+
+  try {
+    const jsxCode = await fs.readFile(jsxPath, 'utf-8');
+
+    console.log(`[Render] Input: ${jsxPath}`);
+    console.log(`[Render] Output: ${outputPath}`);
+    console.log(`[Render] Dev Server: ${devServerUrl}`);
+
+    const renderer = new PlaywrightRenderer({
+      devServerUrl,
+      timeout: 30000,
+      verbose: false
+    });
+
+    await renderer.initialize();
+
+    const context = await renderer.browser.newContext({
+      viewport: renderer.options.viewportSize
+    });
+    const page = await context.newPage();
+
+    page.on('console', msg => {
+      const type = msg.type();
+      const text = msg.text();
+      if (type === 'error') {
+        console.error('[Browser Error]', text);
+      } else if (text.includes('[Headless]')) {
+        console.log('[Browser]', text);
+      }
+    });
+
+    const headlessUrl = `${devServerUrl}/headless.html`;
+    await page.goto(headlessUrl, {
+      waitUntil: 'networkidle',
+      timeout: renderer.options.timeout
+    });
+
+    await page.waitForFunction(() => window.__headlessReady === true, {
+      timeout: renderer.options.timeout
+    });
+
+    console.log('[Render] Rendering widget from JSX...');
+    const result = await page.evaluate(async ({ jsxCode }) => {
+      try {
+        return await window.renderWidgetFromJSX(jsxCode, {
+          enableAutoResize: true,
+          captureOptions: {}
+        });
+      } catch (error) {
+        return {
+          success: false,
+          error: error.message,
+          stack: error.stack
+        };
+      }
+    }, { jsxCode });
+
+    await context.close();
+    await renderer.close();
+
+    if (!result.success) {
+      throw new Error(result.error);
+    }
+
+    const base64Data = result.imageData.split(',')[1];
+    const imageBuffer = Buffer.from(base64Data, 'base64');
+
+    await PlaywrightRenderer.saveImage(imageBuffer, outputPath);
+
+    console.log(`[Render] ✓ Success`);
+    console.log(`[Render]   Size: ${result.finalSize.width}×${result.finalSize.height}`);
+    console.log(`[Render]   PNG: ${outputPath}`);
+
+    return { success: true, imageBuffer, result };
+  } catch (error) {
+    console.error(`[Render] ✗ Error: ${error.message}`);
+    throw error;
+  }
+}
+
+// CLI entry point
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const args = process.argv.slice(2);
+
+  if (args.length < 2) {
+    console.error('Usage: widget-factory render <jsx-file-path> <output-png-path> [dev-server-url]');
+    process.exit(1);
+  }
+
+  const jsxPath = path.resolve(args[0]);
+  const outputPath = path.resolve(args[1]);
+  const devServerUrl = args[2] || 'http://localhost:3060';
+
+  render(jsxPath, outputPath, { devServerUrl })
+    .then(() => process.exit(0))
+    .catch(() => process.exit(1));
+}

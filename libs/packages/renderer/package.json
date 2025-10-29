@@ -6,16 +6,14 @@
   "exports": {
     ".": "./src/index.js"
   },
-  "description": "Widget validation utilities",
+  "description": "Headless widget renderer using Playwright",
   "keywords": [
     "widget",
     "renderer",
-    "validation"
+    "playwright",
+    "headless"
   ],
   "dependencies": {
-    "@widget-factory/resizer": "*"
-  },
-  "peerDependencies": {
-    "react": "^18.0.0"
+    "playwright": "^1.40.0"
   }
 }
