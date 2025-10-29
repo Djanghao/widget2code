@@ -1,4 +1,4 @@
-from fastapi import FastAPI, File, UploadFile, Form, Request
+from fastapi import FastAPI, File, UploadFile, Form, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pathlib import Path
@@ -7,6 +7,8 @@ import traceback
 from dotenv import load_dotenv
 import widgetdsl_generator as generator
 from widgetdsl_generator import GeneratorConfig
+from widgetdsl_generator.exceptions import ValidationError, FileSizeError, GenerationError, RateLimitError
+from widgetdsl_generator.utils.validation import check_rate_limit
 
 # Load environment variables from root .env file
 root_dir = Path(__file__).parent.parent.parent
@@ -29,6 +31,34 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.exception_handler(ValidationError)
+async def validation_error_handler(request: Request, exc: ValidationError):
+    return JSONResponse(
+        status_code=400,
+        content={"success": False, "error": str(exc)}
+    )
+
+@app.exception_handler(FileSizeError)
+async def file_size_error_handler(request: Request, exc: FileSizeError):
+    return JSONResponse(
+        status_code=413,
+        content={"success": False, "error": str(exc)}
+    )
+
+@app.exception_handler(RateLimitError)
+async def rate_limit_error_handler(request: Request, exc: RateLimitError):
+    return JSONResponse(
+        status_code=429,
+        content={"success": False, "error": str(exc)}
+    )
+
+@app.exception_handler(GenerationError)
+async def generation_error_handler(request: Request, exc: GenerationError):
+    return JSONResponse(
+        status_code=500,
+        content={"success": False, "error": str(exc)}
+    )
+
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
     error_traceback = traceback.format_exc()
@@ -39,7 +69,7 @@ async def global_exception_handler(request: Request, exc: Exception):
     print(f"{'='*80}\n")
     return JSONResponse(
         status_code=500,
-        content={"detail": str(exc), "traceback": error_traceback}
+        content={"success": False, "error": str(exc), "traceback": error_traceback}
     )
 
 @app.post("/api/generate-widget")
@@ -50,8 +80,13 @@ async def generate_widget(
     model: str = Form(None),
     api_key: str = Form(None),
 ):
+    client_ip = request.client.host
+    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+
+    image_data = await image.read()
     return await generator.generate_widget(
-        request, image, system_prompt, model, api_key, gen_config
+        image_data, image.filename, system_prompt, model, api_key, gen_config
     )
 
 @app.post("/api/generate-widget-text")
@@ -62,8 +97,12 @@ async def generate_widget_text(
     model: str = Form(None),
     api_key: str = Form(None),
 ):
+    client_ip = request.client.host
+    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+
     return await generator.generate_widget_text(
-        request, system_prompt, user_prompt, model, api_key, gen_config
+        system_prompt, user_prompt, model, api_key, gen_config
     )
 
 @app.post("/api/generate-component")
@@ -76,8 +115,12 @@ async def generate_component(
     system_prompt: str = Form(None),
     api_key: str = Form(None),
 ):
+    client_ip = request.client.host
+    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+
     return await generator.generate_component(
-        request, prompt, suggested_width, suggested_height,
+        prompt, suggested_width, suggested_height,
         model, system_prompt, api_key, gen_config
     )
 
@@ -91,8 +134,13 @@ async def generate_component_from_image(
     system_prompt: str = Form(None),
     api_key: str = Form(None),
 ):
+    client_ip = request.client.host
+    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+
+    image_data = await image.read()
     return await generator.generate_component_from_image(
-        request, image, suggested_width, suggested_height,
+        image_data, image.filename, suggested_width, suggested_height,
         model, system_prompt, api_key, gen_config
     )
 
@@ -107,8 +155,13 @@ async def generate_widget_icons(
     retrieval_topm: int = Form(10),
     retrieval_alpha: float = Form(0.8),
 ):
+    client_ip = request.client.host
+    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+
+    image_data = await image.read()
     return await generator.generate_widget_with_icons(
-        request, image, system_prompt, model, api_key,
+        image_data, image.filename, system_prompt, model, api_key,
         retrieval_topk, retrieval_topm, retrieval_alpha, gen_config
     )
 
@@ -120,8 +173,13 @@ async def generate_widget_graph(
     model: str = Form(None),
     api_key: str = Form(None),
 ):
+    client_ip = request.client.host
+    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+
+    image_data = await image.read()
     return await generator.generate_widget_with_graph(
-        request, image, system_prompt, model, api_key, gen_config
+        image_data, image.filename, system_prompt, model, api_key, gen_config
     )
 
 @app.post("/api/generate-widget-full")
@@ -135,8 +193,13 @@ async def generate_widget_full(
     retrieval_topm: int = Form(10),
     retrieval_alpha: float = Form(0.8),
 ):
+    client_ip = request.client.host
+    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+
+    image_data = await image.read()
     return await generator.generate_widget_full(
-        request, image, system_prompt, model, api_key,
+        image_data, image.filename, system_prompt, model, api_key,
         retrieval_topk, retrieval_topm, retrieval_alpha, gen_config
     )
 

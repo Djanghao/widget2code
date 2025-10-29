@@ -1,13 +1,13 @@
-from fastapi import File, UploadFile, Form, Request
-from fastapi.responses import JSONResponse
 from provider_hub import LLM, ChatMessage, prepare_image_content
 from PIL import Image
 import io
 import json
+import os
 from datetime import datetime
 import sys
 
 from .config import GeneratorConfig
+from .exceptions import ValidationError, FileSizeError, GenerationError
 from .utils import (
     check_rate_limit,
     validate_model,
@@ -36,36 +36,21 @@ async def get_default_prompt():
     return {"prompt": load_default_prompt()}
 
 async def generate_widget(
-    request: Request,
-    image: UploadFile,
+    image_data: bytes,
+    image_filename: str | None,
     system_prompt: str,
     model: str,
     api_key: str,
     config: GeneratorConfig,
 ):
-    client_ip = request.client.host
-
-    if not check_rate_limit(client_ip, config.max_requests_per_minute):
-        return JSONResponse(
-            status_code=429,
-            content={
-                "success": False,
-                "error": "Rate limit exceeded. Please try again later."
-            }
-        )
-
-    print(f"[{datetime.now()}] generate-widget request from {client_ip}")
+    print(f"[{datetime.now()}] generate-widget request")
 
     import tempfile
     temp_file = None
     try:
-        image_bytes = await image.read()
+        validate_file_size(len(image_data), config.max_file_size_mb)
 
-        file_size_error = validate_file_size(len(image_bytes), config.max_file_size_mb)
-        if file_size_error:
-            return file_size_error
-
-        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_bytes, min_target_edge=1000)
+        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
 
         with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
             temp_file.write(image_bytes)
@@ -74,15 +59,10 @@ async def generate_widget(
         prompt = system_prompt if system_prompt else load_default_prompt()
 
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
+        model_to_use = (model or "qwen3-vl-flash").strip()
 
-        model_error = validate_model(model, model_to_use, vision_models)
-        if model_error:
-            return model_error
-
-        api_key_error = validate_api_key(api_key)
-        if api_key_error:
-            return api_key_error
+        validate_model(model, model_to_use, vision_models)
+        validate_api_key(api_key)
 
         vision_llm = LLM(
             model=model_to_use,
@@ -121,22 +101,7 @@ async def generate_widget(
             "usage": response.usage
         }
     except json.JSONDecodeError as e:
-        return JSONResponse(
-            status_code=400,
-            content={
-                "success": False,
-                "error": f"Invalid JSON from VLM: {str(e)}",
-                "raw_response": result_text if 'result_text' in locals() else ""
-            }
-        )
-    except Exception as e:
-        return JSONResponse(
-            status_code=500,
-            content={
-                "success": False,
-                "error": str(e)
-            }
-        )
+        raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
     finally:
         if 'temp_file_path' in locals():
             try:
@@ -147,39 +112,22 @@ async def generate_widget(
 
 
 async def generate_widget_text(
-    request: Request,
     system_prompt: str,
     user_prompt: str,
     model: str,
     api_key: str,
     config: GeneratorConfig,
 ):
-    client_ip = request.client.host
-
-    if not check_rate_limit(client_ip, config.max_requests_per_minute):
-        return JSONResponse(
-            status_code=429,
-            content={
-                "success": False,
-                "error": "Rate limit exceeded. Please try again later."
-            }
-        )
-
-    print(f"[{datetime.now()}] generate-widget-text request from {client_ip}")
+    print(f"[{datetime.now()}] generate-widget-text request")
 
     try:
         text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
         qwen_supported = text_models | vision_models
-        model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
+        model_to_use = (model or "qwen3-vl-flash").strip()
 
-        model_error = validate_model(model, model_to_use, qwen_supported)
-        if model_error:
-            return model_error
-
-        api_key_error = validate_api_key(api_key)
-        if api_key_error:
-            return api_key_error
+        validate_model(model, model_to_use, qwen_supported)
+        validate_api_key(api_key)
 
         text_llm = LLM(
             model=model_to_use,
@@ -207,26 +155,10 @@ async def generate_widget_text(
             "widgetDSL": widget_spec
         }
     except json.JSONDecodeError as e:
-        return JSONResponse(
-            status_code=400,
-            content={
-                "success": False,
-                "error": f"Invalid JSON from LLM: {str(e)}",
-                "raw_response": result_text if 'result_text' in locals() else ""
-            }
-        )
-    except Exception as e:
-        return JSONResponse(
-            status_code=500,
-            content={
-                "success": False,
-                "error": str(e)
-            }
-        )
+        raise GenerationError(f"Invalid JSON from LLM: {str(e)}")
 
 
 async def generate_component(
-    request: Request,
     prompt: str,
     suggested_width: int,
     suggested_height: int,
@@ -235,78 +167,53 @@ async def generate_component(
     api_key: str,
     config: GeneratorConfig,
 ):
-    client_ip = request.client.host
+    print(f"[{datetime.now()}] generate-component request")
 
-    if not check_rate_limit(client_ip, config.max_requests_per_minute):
-        return JSONResponse(
-            status_code=429,
-            content={
-                "success": False,
-                "error": "Rate limit exceeded. Please try again later."
-            }
-        )
+    text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
+    qwen_supported = text_models
+    model_to_use = (model or "qwen3-max").strip()
 
-    print(f"[{datetime.now()}] generate-component request from {client_ip}")
+    validate_model(model, model_to_use, qwen_supported)
 
-    try:
-        text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
-        qwen_supported = text_models
-        model_to_use = (model or "qwen3-max").strip()
+    if system_prompt:
+        system_prompt_final = system_prompt
+    else:
+        system_prompt_final = load_dynamic_component_prompt()
 
-        model_error = validate_model(model, model_to_use, qwen_supported)
-        if model_error:
-            return model_error
+    system_prompt_final = system_prompt_final.replace("{suggested_width}", str(suggested_width))
+    system_prompt_final = system_prompt_final.replace("{suggested_height}", str(suggested_height))
 
-        if system_prompt:
-            system_prompt_final = system_prompt
-        else:
-            system_prompt_final = load_dynamic_component_prompt()
+    validate_api_key(api_key)
 
-        system_prompt_final = system_prompt_final.replace("{suggested_width}", str(suggested_width))
-        system_prompt_final = system_prompt_final.replace("{suggested_height}", str(suggested_height))
+    component_llm = LLM(
+        model=model_to_use,
+        temperature=0.7,
+        max_tokens=2000,
+        timeout=60,
+        system_prompt=system_prompt_final,
+        api_key=api_key
+    )
 
-        api_key_error = validate_api_key(api_key)
-        if api_key_error:
-            return api_key_error
+    messages = [ChatMessage(
+        role="user",
+        content=[
+            {"type": "text", "text": prompt}
+        ]
+    )]
 
-        component_llm = LLM(
-            model=model_to_use,
-            temperature=0.7,
-            max_tokens=2000,
-            timeout=60,
-            system_prompt=system_prompt_final,
-            api_key=api_key
-        )
+    response = component_llm.chat(messages)
+    code = clean_code_response(response.content)
 
-        messages = [ChatMessage(
-            role="user",
-            content=[
-                {"type": "text", "text": prompt}
-            ]
-        )]
-
-        response = component_llm.chat(messages)
-        code = clean_code_response(response.content)
-
-        return {
-            "success": True,
-            "code": code,
-            "raw_response": response.content
-        }
-    except Exception as e:
-        return JSONResponse(
-            status_code=500,
-            content={
-                "success": False,
-                "error": str(e),
-                "raw_response": response.content if 'response' in locals() else ""
-            }
-        )
+    return {
+        "success": True,
+        "code": code,
+        "raw_response": response.content
+    }
 
 
 async def generate_component_from_image(
-    request: Request,
-    image: UploadFile,
+    image_data: bytes,
+    image_filename: str | None,
     suggested_width: int,
     suggested_height: int,
     model: str,
@@ -314,41 +221,24 @@ async def generate_component_from_image(
     api_key: str,
     config: GeneratorConfig,
 ):
-    client_ip = request.client.host
-
-    if not check_rate_limit(client_ip, config.max_requests_per_minute):
-        return JSONResponse(
-            status_code=429,
-            content={
-                "success": False,
-                "error": "Rate limit exceeded. Please try again later."
-            }
-        )
-
-    print(f"[{datetime.now()}] generate-component-from-image request from {client_ip}")
+    print(f"[{datetime.now()}] generate-component-from-image request")
 
     import tempfile
     temp_file = None
     try:
-        image_bytes = await image.read()
+        validate_file_size(len(image_data), config.max_file_size_mb)
 
-        file_size_error = validate_file_size(len(image_bytes), config.max_file_size_mb)
-        if file_size_error:
-            return file_size_error
-
-        img = Image.open(io.BytesIO(image_bytes))
+        img = Image.open(io.BytesIO(image_data))
         width, height = img.size
 
         with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
-            temp_file.write(image_bytes)
+            temp_file.write(image_data)
             temp_file_path = temp_file.name
 
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
+        model_to_use = (model or "qwen3-vl-flash").strip()
 
-        model_error = validate_model(model, model_to_use, vision_models)
-        if model_error:
-            return model_error
+        validate_model(model, model_to_use, vision_models)
 
         if system_prompt:
             system_prompt_final = system_prompt
@@ -358,9 +248,7 @@ async def generate_component_from_image(
         system_prompt_final = system_prompt_final.replace("{suggested_width}", str(suggested_width))
         system_prompt_final = system_prompt_final.replace("{suggested_height}", str(suggested_height))
 
-        api_key_error = validate_api_key(api_key)
-        if api_key_error:
-            return api_key_error
+        validate_api_key(api_key)
 
         vision_llm = LLM(
             model=model_to_use,
@@ -398,15 +286,6 @@ async def generate_component_from_image(
             "raw_response": response.content,
             "image_size": {"width": width, "height": height}
         }
-    except Exception as e:
-        return JSONResponse(
-            status_code=500,
-            content={
-                "success": False,
-                "error": str(e),
-                "raw_response": response.content if 'response' in locals() else ""
-            }
-        )
     finally:
         if 'temp_file_path' in locals():
             try:
@@ -416,8 +295,8 @@ async def generate_component_from_image(
 
 
 async def generate_widget_with_icons(
-    request: Request,
-    image: UploadFile,
+    image_data: bytes,
+    image_filename: str | None,
     system_prompt: str,
     model: str,
     api_key: str,
@@ -426,29 +305,14 @@ async def generate_widget_with_icons(
     retrieval_alpha: float,
     config: GeneratorConfig,
 ):
-    client_ip = request.client.host
-
-    if not check_rate_limit(client_ip, config.max_requests_per_minute):
-        return JSONResponse(
-            status_code=429,
-            content={
-                "success": False,
-                "error": "Rate limit exceeded. Please try again later."
-            }
-        )
-
-    print(f"[{datetime.now()}] generate-widget-full request from {client_ip}")
+    print(f"[{datetime.now()}] generate-widget-full request")
 
     import tempfile
     temp_file = None
     try:
-        image_bytes = await image.read()
+        validate_file_size(len(image_data), config.max_file_size_mb)
 
-        file_size_error = validate_file_size(len(image_bytes), config.max_file_size_mb)
-        if file_size_error:
-            return file_size_error
-
-        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_bytes, min_target_edge=1000)
+        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
 
         with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
             temp_file.write(image_bytes)
@@ -458,8 +322,8 @@ async def generate_widget_with_icons(
 
         icon_result = run_icon_detection_pipeline(
             image_bytes=image_bytes,
-            filename=getattr(image, 'filename', None),
-            model=(model or "qwen3-vl-plus"),
+            filename=image_filename,
+            model=(model or "qwen3-vl-flash"),
             api_key=api_key,
             retrieval_topk=retrieval_topk,
             retrieval_topm=retrieval_topm,
@@ -488,15 +352,10 @@ async def generate_widget_with_icons(
             prompt_final = base_prompt + extra_str
 
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
+        model_to_use = (model or "qwen3-vl-flash").strip()
 
-        model_error = validate_model(model, model_to_use, vision_models)
-        if model_error:
-            return model_error
-
-        api_key_error = validate_api_key(api_key)
-        if api_key_error:
-            return api_key_error
+        validate_model(model, model_to_use, vision_models)
+        validate_api_key(api_key)
 
         vision_llm = LLM(
             model=model_to_use,
@@ -548,22 +407,7 @@ async def generate_widget_with_icons(
             }
         }
     except json.JSONDecodeError as e:
-        return JSONResponse(
-            status_code=400,
-            content={
-                "success": False,
-                "error": f"Invalid JSON from VLM: {str(e)}",
-                "raw_response": result_text if 'result_text' in locals() else ""
-            }
-        )
-    except Exception as e:
-        return JSONResponse(
-            status_code=500,
-            content={
-                "success": False,
-                "error": str(e)
-            }
-        )
+        raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
     finally:
         if 'temp_file_path' in locals():
             try:
@@ -573,56 +417,36 @@ async def generate_widget_with_icons(
 
 
 async def generate_widget_with_graph(
-    request: Request,
-    image: UploadFile,
+    image_data: bytes,
+    image_filename: str | None,
     system_prompt: str,
     model: str,
     api_key: str,
     config: GeneratorConfig,
 ):
-    client_ip = request.client.host
-
-    if not check_rate_limit(client_ip, config.max_requests_per_minute):
-        return JSONResponse(
-            status_code=429,
-            content={
-                "success": False,
-                "error": "Rate limit exceeded. Please try again later."
-            }
-        )
-
-    print(f"[{datetime.now()}] generate-widget request from {client_ip}")
+    print(f"[{datetime.now()}] generate-widget request")
 
     import tempfile
     temp_file = None
     try:
-        image_bytes = await image.read()
+        validate_file_size(len(image_data), config.max_file_size_mb)
 
-        file_size_error = validate_file_size(len(image_bytes), config.max_file_size_mb)
-        if file_size_error:
-            return file_size_error
-
-        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_bytes, min_target_edge=1000)
+        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
 
         with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
             temp_file.write(image_bytes)
             temp_file_path = temp_file.name
 
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
+        model_to_use = (model or "qwen3-vl-flash").strip()
 
-        model_error = validate_model(model, model_to_use, vision_models)
-        if model_error:
-            return model_error
-
-        api_key_error = validate_api_key(api_key)
-        if api_key_error:
-            return api_key_error
+        validate_model(model, model_to_use, vision_models)
+        validate_api_key(api_key)
 
         print(f"[{datetime.now()}] Step 1: Detecting charts in image...")
         chart_counts, graph_specs = detect_and_process_graphs(
             image_bytes=image_bytes,
-            filename=image.filename,
+            filename=image_filename,
             provider=None,
             api_key=api_key,
             model=model_to_use,
@@ -639,7 +463,6 @@ async def generate_widget_with_graph(
         base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
         enhanced_prompt = inject_graph_specs_to_prompt(base_prompt, graph_specs)
 
-        # Step 4: Generate the final WidgetDSL with enhanced prompt
         vision_llm = LLM(
             model=model_to_use,
             temperature=0.5,
@@ -677,22 +500,7 @@ async def generate_widget_with_graph(
             "usage": response.usage
         }
     except json.JSONDecodeError as e:
-        return JSONResponse(
-            status_code=400,
-            content={
-                "success": False,
-                "error": f"Invalid JSON from VLM: {str(e)}",
-                "raw_response": result_text if 'result_text' in locals() else ""
-            }
-        )
-    except Exception as e:
-        return JSONResponse(
-            status_code=500,
-            content={
-                "success": False,
-                "error": str(e)
-            }
-        )
+        raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
     finally:
         if 'temp_file_path' in locals():
             try:
@@ -701,8 +509,8 @@ async def generate_widget_with_graph(
                 pass
 
 async def generate_widget_full(
-    request: Request,
-    image: UploadFile,
+    image_data: bytes,
+    image_filename: str | None,
     system_prompt: str,
     model: str,
     api_key: str,
@@ -711,53 +519,33 @@ async def generate_widget_full(
     retrieval_alpha: float,
     config: GeneratorConfig,
 ):
-    client_ip = request.client.host
-
-    if not check_rate_limit(client_ip, config.max_requests_per_minute):
-        return JSONResponse(
-            status_code=429,
-            content={
-                "success": False,
-                "error": "Rate limit exceeded. Please try again later."
-            }
-        )
-
-    print(f"[{datetime.now()}] generate-widget-full request from {client_ip}")
+    print(f"[{datetime.now()}] generate-widget-full request")
 
     import tempfile
     import asyncio
     temp_file = None
     try:
-        image_bytes = await image.read()
+        validate_file_size(len(image_data), config.max_file_size_mb)
 
-        file_size_error = validate_file_size(len(image_bytes), config.max_file_size_mb)
-        if file_size_error:
-            return file_size_error
-
-        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_bytes, min_target_edge=1000)
+        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
 
         with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
             temp_file.write(image_bytes)
             temp_file_path = temp_file.name
 
         vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        model_to_use = (model or "qwen3-vl-235b-a22b-instruct").strip()
+        model_to_use = (model or "qwen3-vl-flash").strip()
 
-        model_error = validate_model(model, model_to_use, vision_models)
-        if model_error:
-            return model_error
-
-        api_key_error = validate_api_key(api_key)
-        if api_key_error:
-            return api_key_error
+        validate_model(model, model_to_use, vision_models)
+        validate_api_key(api_key)
 
         print(f"[{datetime.now()}] Starting parallel extraction: icons and graphs...")
 
         async def run_icon_extraction():
             return run_icon_detection_pipeline(
                 image_bytes=image_bytes,
-                filename=getattr(image, 'filename', None),
-                model=(model or "qwen3-vl-plus"),
+                filename=image_filename,
+                model=(model or "qwen3-vl-flash"),
                 api_key=api_key,
                 retrieval_topk=retrieval_topk,
                 retrieval_topm=retrieval_topm,
@@ -768,7 +556,7 @@ async def generate_widget_full(
         async def run_graph_extraction():
             return detect_and_process_graphs(
                 image_bytes=image_bytes,
-                filename=getattr(image, 'filename', None),
+                filename=image_filename,
                 provider=None,
                 api_key=api_key,
                 model=model_to_use,
@@ -919,22 +707,7 @@ async def generate_widget_full(
             }
         }
     except json.JSONDecodeError as e:
-        return JSONResponse(
-            status_code=400,
-            content={
-                "success": False,
-                "error": f"Invalid JSON from VLM: {str(e)}",
-                "raw_response": result_text if 'result_text' in locals() else ""
-            }
-        )
-    except Exception as e:
-        return JSONResponse(
-            status_code=500,
-            content={
-                "success": False,
-                "error": str(e)
-            }
-        )
+        raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
     finally:
         if 'temp_file_path' in locals():
             try:
