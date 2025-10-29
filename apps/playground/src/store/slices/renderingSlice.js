@@ -96,19 +96,57 @@ const createRenderingSlice = (set, get) => ({
   },
 
 
-  _waitForNaturalSize: async (widgetFrameRef, token) => {
+  _waitForNaturalSize: async (widgetFrameRef, token, options = {}) => {
+    const { hasGraphs = false } = options;
+
     if (get().compileToken !== token) {
       console.log(`🚫 [Natural Size] Token mismatch, aborting`);
       return null;
     }
 
-    console.log(`⏱️  [Natural Size] Waiting for widget to mount and render naturally...`);
+    console.log(`⏱️  [Natural Size] Waiting for widget to mount and render naturally...${hasGraphs ? ' (with graphs)' : ''}`);
 
     return new Promise((resolve) => {
       let attempts = 0;
       let frameMounted = false;
       let sizeHistory = [];
       let hasSeenChange = false;
+      let graphsFullyLoaded = !hasGraphs;
+
+      const checkGraphsLoaded = (frame) => {
+        if (!hasGraphs || graphsFullyLoaded) return true;
+
+        const canvases = frame.querySelectorAll('canvas');
+        if (canvases.length === 0) {
+          return false;
+        }
+
+        let allLoaded = true;
+        canvases.forEach((canvas) => {
+          const ctx = canvas.getContext('2d');
+          if (!ctx) {
+            allLoaded = false;
+            return;
+          }
+
+          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          const hasContent = imageData.data.some((value, index) => {
+            if (index % 4 === 3) return false;
+            return value !== 0;
+          });
+
+          if (!hasContent) {
+            allLoaded = false;
+          }
+        });
+
+        if (allLoaded && !graphsFullyLoaded) {
+          graphsFullyLoaded = true;
+          console.log(`📊 [Natural Size] All ${canvases.length} graph(s) have rendered content`);
+        }
+
+        return allLoaded;
+      };
 
       const checkNaturalSize = () => {
         if (get().compileToken !== token) {
@@ -133,6 +171,16 @@ const createRenderingSlice = (set, get) => ({
         if (!frameMounted) {
           frameMounted = true;
           console.log(`✅ [Natural Size] Frame mounted, now monitoring size changes...`);
+        }
+
+        if (hasGraphs && !checkGraphsLoaded(frame)) {
+          if (attempts < 150) {
+            requestAnimationFrame(checkNaturalSize);
+          } else {
+            console.log(`⏰ [Natural Size] Timeout waiting for graphs to load, proceeding anyway...`);
+            graphsFullyLoaded = true;
+          }
+          return;
         }
 
         const rect = frame.getBoundingClientRect();
@@ -214,8 +262,8 @@ const createRenderingSlice = (set, get) => ({
     });
 
     console.log(`📦 [Resource Preload] Extracting resources from widgetDSL...`);
-    const { icons, images } = extractResources(spec);
-    console.log(`📦 [Resource Preload] Found ${icons.length} icons and ${images.length} images`);
+    const { icons, images, graphs } = extractResources(spec);
+    console.log(`📦 [Resource Preload] Found ${icons.length} icons, ${images.length} images, and ${graphs.length} graphs`);
 
     if (icons.length > 0 || images.length > 0) {
       console.log(`⏳ [Resource Preload] Starting resource preloading...`);
@@ -267,7 +315,7 @@ const createRenderingSlice = (set, get) => ({
     if (shouldAutoResize) {
       console.log(`🔍 [Start Compiling] Waiting for natural size with ratio: ${aspectRatio}`);
 
-      const naturalSize = await get()._waitForNaturalSize(widgetFrameRef, newToken);
+      const naturalSize = await get()._waitForNaturalSize(widgetFrameRef, newToken, { hasGraphs: graphs.length > 0 });
 
       if (get().compileToken !== newToken) {
         console.log(`⏭️  [Start Compiling] Token changed during natural size detection`);

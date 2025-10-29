@@ -1,8 +1,14 @@
 export function extractResources(widgetDSL) {
   const icons = new Set();
   const images = new Set();
+  const graphs = new Set();
 
   console.log('[Resource Extract] 🔍 Starting resource extraction from widgetDSL...');
+
+  const GRAPH_COMPONENTS = [
+    'BarChart', 'LineChart', 'PieChart', 'RadarChart',
+    'StackedBarChart', 'ProgressBar', 'ProgressRing'
+  ];
 
   function traverse(node) {
     if (!node) return;
@@ -20,6 +26,11 @@ export function extractResources(widgetDSL) {
         images.add(node.props.src);
         console.log(`[Resource Extract] 🖼️  Found image: ${node.props.src}`);
       }
+
+      if (GRAPH_COMPONENTS.includes(node.component)) {
+        graphs.add(node.component);
+        console.log(`[Resource Extract] 📊 Found graph component: ${node.component}`);
+      }
     }
 
     if (node.type === 'container' && node.children) {
@@ -33,10 +44,11 @@ export function extractResources(widgetDSL) {
 
   const result = {
     icons: Array.from(icons),
-    images: Array.from(images)
+    images: Array.from(images),
+    graphs: Array.from(graphs)
   };
 
-  console.log(`[Resource Extract] ✅ Extraction complete: ${result.icons.length} icons, ${result.images.length} images`);
+  console.log(`[Resource Extract] ✅ Extraction complete: ${result.icons.length} icons, ${result.images.length} images, ${result.graphs.length} graphs`);
 
   return result;
 }
