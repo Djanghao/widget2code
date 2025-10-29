@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import DSLEditor from './core/DSLEditor.jsx';
 import { Icon } from '@widget-factory/primitives';
 
-export default function IconPipelineModal({ isOpen, onClose, data, baseImageUrl }) {
+export default function IconExtractionModal({ isOpen, onClose, data, baseImageUrl }) {
   if (!isOpen) return null;
 
   const groundingBoxes = useMemo(() => {
@@ -11,14 +11,14 @@ export default function IconPipelineModal({ isOpen, onClose, data, baseImageUrl 
   }, [data]);
 
   const postProcessedBoxes = useMemo(() => {
-    const arr = Array.isArray(data?.iconDebugInfo?.postProcessed) ? data.iconDebugInfo.postProcessed : [];
+    const arr = Array.isArray(data?.iconDebugInfo?.grounding?.postProcessed) ? data.iconDebugInfo.grounding.postProcessed : [];
     return arr.filter((d) => String(d?.label || '').toLowerCase() === 'icon' && Array.isArray(d?.bbox) && d.bbox.length === 4);
   }, [data]);
 
-  const candidates = Array.isArray(data?.iconCandidates) ? data.iconCandidates : [];
-  const processedSize = data?.iconDebugInfo?.imageSize || null;
-  const perIcon = Array.isArray(data?.iconDebugInfo?.retrievals?.perIcon)
-    ? data.iconDebugInfo.retrievals.perIcon
+  const candidates = Array.isArray(data?.iconDebugInfo?.retrieval?.candidates) ? data.iconDebugInfo.retrieval.candidates : [];
+  const processedSize = data?.iconDebugInfo?.detection?.imageSize || null;
+  const perIcon = Array.isArray(data?.iconDebugInfo?.retrieval?.perIcon)
+    ? data.iconDebugInfo.retrieval.perIcon
     : [];
   const [retrievalMode, setRetrievalMode] = React.useState('fused'); // 'fused' | 'image'
 
@@ -32,7 +32,7 @@ export default function IconPipelineModal({ isOpen, onClose, data, baseImageUrl 
         onClick={(e) => e.stopPropagation()}
       >
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:12 }}>
-          <h2 style={{ margin:0, color:'#f5f5f7', fontSize:20, fontWeight:700 }}>Icon Pipeline</h2>
+          <h2 style={{ margin:0, color:'#f5f5f7', fontSize:20, fontWeight:700 }}>Icon Extraction</h2>
           <button onClick={onClose} style={{ background:'#2c2c2e', border:'1px solid #3a3a3c', color:'#f5f5f7', width:32, height:32, borderRadius:8, cursor:'pointer' }}>✕</button>
         </div>
 

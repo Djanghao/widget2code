@@ -10,7 +10,7 @@ import SectionHeader from './components/core/SectionHeader.jsx';
 import { useApiKey } from './components/ApiKeyManager.jsx';
 import usePlaygroundStore from './store/index.js';
 import imagePrompt from '../../api/prompts/widget2dsl/widget2dsl.md?raw';
-import IconPipelineModal from './components/IconPipelineModal.jsx';
+import ExtractionDebugModal from './components/ExtractionDebugModal.jsx';
 
 const VISION_MODELS = [
   { value: 'qwen3-vl-235b-a22b-instruct', label: 'qwen3-vl-235b-a22b-instruct' },
@@ -37,7 +37,7 @@ function Widget2Code() {
   const [enableAutoResize, setEnableAutoResize] = useState(true);
   const [ratioInput, setRatioInput] = useState('');
   const [isDownloading, setIsDownloading] = useState(false);
-  const [pipelineOpen, setPipelineOpen] = useState(false);
+  const [debugModalOpen, setDebugModalOpen] = useState(false);
   const [pipelineData, setPipelineData] = useState(null);
 
   useEffect(() => {
@@ -196,12 +196,12 @@ function Widget2Code() {
 
   const isNarrow = viewportWidth < 1300;
 
-  const handleOpenPipeline = async () => {
+  const handleOpenDebugModal = async () => {
     if (!pipelineData) {
       setError('Please generate the widget first');
       return;
     }
-    setPipelineOpen(true);
+    setDebugModalOpen(true);
   };
 
   return (
@@ -309,9 +309,9 @@ function Widget2Code() {
           onReset={() => setSystemPrompt(imagePrompt)}
           extraActionsRight={(
             <button
-              onClick={handleOpenPipeline}
+              onClick={handleOpenDebugModal}
               disabled={!pipelineData}
-              title={pipelineData ? 'Show icon pipeline' : 'Generate widget first'}
+              title={pipelineData ? 'Show extraction debug' : 'Generate widget first'}
               style={{
                 flex: '0 0 auto',
                 padding: '6px 12px',
@@ -329,7 +329,7 @@ function Widget2Code() {
               onMouseEnter={(e) => { if (pipelineData) e.currentTarget.style.backgroundColor = '#3a3a3c'; }}
               onMouseLeave={(e) => { if (pipelineData) e.currentTarget.style.backgroundColor = '#2c2c2e'; }}
             >
-              Icon Pipeline
+              Extraction Debug
             </button>
           )}
           modelOptions={VISION_MODELS}
@@ -446,9 +446,9 @@ function Widget2Code() {
         </div>
       </div>
     </div>
-    <IconPipelineModal
-      isOpen={pipelineOpen}
-      onClose={() => setPipelineOpen(false)}
+    <ExtractionDebugModal
+      isOpen={debugModalOpen}
+      onClose={() => setDebugModalOpen(false)}
       data={pipelineData}
       baseImageUrl={pipelineData?.iconDebugInfo?.processedImageUrl || imagePreview}
     />

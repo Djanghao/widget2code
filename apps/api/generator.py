@@ -799,23 +799,29 @@ async def generate_widget_full(
         img_width = icon_result["img_width"]
         img_height = icon_result["img_height"]
 
+        # Step 1: Base prompt
         base_prompt = system_prompt if system_prompt else load_widget2dsl_graph_prompt()
 
-        enhanced_prompt = base_prompt
+        # Step 2: Add graph specs
+        prompt_with_graphs = base_prompt
+        graph_injection_text = ""
         if graph_specs:
-            enhanced_prompt = inject_graph_specs_to_prompt(enhanced_prompt, graph_specs)
+            from services.graph.pipeline import format_graph_specs_for_injection
+            graph_injection_text = format_graph_specs_for_injection(graph_specs)
+            prompt_with_graphs = inject_graph_specs_to_prompt(base_prompt, graph_specs)
             print(f"[{datetime.now()}] Injected {len(graph_specs)} graph specifications into prompt")
 
-        extra_str = format_icon_prompt_injection(
+        # Step 3: Add icon specs
+        icon_injection_text = format_icon_prompt_injection(
             icon_count=icon_count,
             per_icon_details=per_icon_details,
             retrieval_topm=retrieval_topm,
         )
 
-        if "[AVAILABLE_ICON_NAMES]" in enhanced_prompt:
-            prompt_final = enhanced_prompt.replace("[AVAILABLE_ICON_NAMES]", extra_str)
+        if "[AVAILABLE_ICON_NAMES]" in prompt_with_graphs:
+            prompt_final = prompt_with_graphs.replace("[AVAILABLE_ICON_NAMES]", icon_injection_text)
         else:
-            prompt_final = enhanced_prompt + "\n\n" + extra_str
+            prompt_final = prompt_with_graphs + "\n\n" + icon_injection_text
 
         print(f"[{datetime.now()}] Generating WidgetDSL with icons and graph constraints...")
 
@@ -853,20 +859,49 @@ async def generate_widget_full(
             "success": True,
             "widgetDSL": widget_spec,
             "aspectRatio": round(aspect_ratio, 3),
-            "iconCandidates": icon_candidates,
-            "iconCount": icon_count,
-            "chartCounts": chart_counts,
-            "graphSpecs": graph_specs,
             "iconDebugInfo": {
-                "imageSize": {"width": img_width, "height": img_height},
+                "detection": {
+                    "iconCount": icon_count,
+                    "imageSize": {"width": img_width, "height": img_height},
+                },
                 "grounding": {
                     "raw": grounding_raw,
-                    "pixel": grounding_pixel
+                    "pixel": grounding_pixel,
+                    "postProcessed": post_processed,
                 },
-                "postProcessed": post_processed,
-                "retrievals": {
+                "retrieval": {
+                    "candidates": icon_candidates,
                     "perIcon": per_icon_details,
-                    "globalMerged": global_merged
+                    "globalMerged": global_merged,
+                    "parameters": {
+                        "topk": retrieval_topk,
+                        "topm": retrieval_topm,
+                        "alpha": retrieval_alpha,
+                    }
+                },
+                "promptInjection": {
+                    "injectedText": icon_injection_text,
+                }
+            },
+            "graphDebugInfo": {
+                "detection": {
+                    "chartCounts": chart_counts,
+                    "hasGraphs": len(graph_specs) > 0,
+                    "graphCount": len(graph_specs),
+                },
+                "specs": graph_specs,
+                "promptInjection": {
+                    "injectedText": graph_injection_text,
+                    "fullGraphPrompt": inject_graph_specs_to_prompt("", graph_specs) if graph_specs else "",
+                }
+            },
+            "promptDebugInfo": {
+                "stage1_base": base_prompt,
+                "stage2_withGraphs": prompt_with_graphs,
+                "stage3_final": prompt_final,
+                "injections": {
+                    "graph": graph_injection_text,
+                    "icon": icon_injection_text,
                 }
             }
         }
