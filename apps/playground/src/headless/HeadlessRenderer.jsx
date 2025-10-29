@@ -26,17 +26,18 @@ function HeadlessRenderer() {
     finalSize,
     generatedJSX,
     initializeApp,
-    startCompiling,
     validateWidget,
-    setEnableAutoResize
+    setEnableAutoResize,
+    setWidgetDSL,
+    compileToken
   } = usePlaygroundStore();
 
   useEffect(() => {
     console.log('[Headless] 🎬 Initializing headless renderer...');
     initializeApp(widgetFrameRef);
 
-    window.renderWidget = async (spec, options = {}) => {
-      const { enableAutoResize = true, captureOptions = {} } = options;
+    window.renderWidgetFromJSX = async (jsxCode, options = {}) => {
+      const { enableAutoResize = true, captureOptions = {}, spec = null } = options;
       const renderStartTime = performance.now();
 
       return new Promise(async (resolve, reject) => {
@@ -44,24 +45,25 @@ function HeadlessRenderer() {
         rejectRef.current = reject;
 
         try {
-          console.log('\n[Headless] 🚀 ========== Starting widget rendering ==========');
-          console.log('[Headless] 📋 Spec:', JSON.stringify(spec, null, 2));
+          console.log('\n[Headless] 🚀 ========== Starting widget rendering from JSX ==========');
+          console.log('[Headless] 📝 JSX code length:', jsxCode.length);
           console.log('[Headless] ⚙️  Options:', options);
           console.log('[Headless] 🎚️  AutoResize enabled:', enableAutoResize);
+          console.log('[Headless] 📐 Spec provided:', !!spec);
 
           setEnableAutoResize(enableAutoResize);
 
-          console.log('[Headless] 🔨 Calling startCompiling...');
-          const compileStartTime = performance.now();
-          const result = await startCompiling(spec, widgetFrameRef);
-          const compileTime = performance.now() - compileStartTime;
+          const state = usePlaygroundStore.getState();
 
-          if (!result.success) {
-            console.error('[Headless] ❌ Compilation failed');
-            throw new Error('Compilation failed');
+          // Set widgetDSL if spec is provided (needed for writebackSpecSize)
+          if (spec) {
+            state.setWidgetDSL(spec);
+            console.log('[Headless] ✅ widgetDSL set from spec');
           }
 
-          console.log(`[Headless] ✅ Compilation completed in ${compileTime.toFixed(2)}ms`);
+          state.setGeneratedJSX(jsxCode);
+          state.setRenderingPhase('compiling');
+
           console.log('[Headless] ⏳ Waiting for rendering pipeline to complete...');
 
           const maxWaitTime = 30000;
@@ -69,7 +71,7 @@ function HeadlessRenderer() {
           let lastPhase = '';
           let lastMode = '';
 
-          const waitForIdle = () => {
+          const waitForIdle = async () => {
             const elapsed = Date.now() - startTime;
             if (elapsed > maxWaitTime) {
               console.error('[Headless] ⏰ Timeout waiting for rendering to complete');
@@ -77,16 +79,51 @@ function HeadlessRenderer() {
               return;
             }
 
-            const state = usePlaygroundStore.getState();
+            const currentState = usePlaygroundStore.getState();
 
-            if (state.renderingPhase !== lastPhase || state.operationMode !== lastMode) {
-              console.log(`[Headless] 📊 State: phase=${state.renderingPhase}, mode=${state.operationMode}, elapsed=${elapsed}ms`);
-              lastPhase = state.renderingPhase;
-              lastMode = state.operationMode;
+            if (currentState.renderingPhase !== lastPhase || currentState.operationMode !== lastMode) {
+              console.log(`[Headless] 📊 State: phase=${currentState.renderingPhase}, mode=${currentState.operationMode}, elapsed=${elapsed}ms`);
+              lastPhase = currentState.renderingPhase;
+              lastMode = currentState.operationMode;
             }
 
-            if (state.renderingPhase === 'idle' && state.operationMode === 'idle') {
-              console.log('[Headless] ✨ Pipeline complete, waiting 500ms for stabilization...');
+            if (currentState.renderingPhase === 'idle' && currentState.operationMode === 'idle') {
+              console.log('[Headless] ✨ Pipeline complete');
+
+              // Check if we need to autoresize (same logic as startCompiling)
+              const currentSpec = spec || currentState.widgetDSL;
+              const hasWidth = currentSpec?.widget?.width !== undefined;
+              const hasHeight = currentSpec?.widget?.height !== undefined;
+              const aspectRatio = currentSpec?.widget?.aspectRatio;
+              const shouldAutoResize = enableAutoResize &&
+                                      !hasWidth && !hasHeight &&
+                                      typeof aspectRatio === 'number' &&
+                                      isFinite(aspectRatio) &&
+                                      aspectRatio > 0;
+
+              if (shouldAutoResize) {
+                console.log('[Headless] 🔍 Measuring natural size...');
+
+                // Step 1: Measure natural size (same as startCompiling)
+                const measuredNaturalSize = await currentState._waitForNaturalSize(widgetFrameRef, currentState.compileToken);
+
+                if (measuredNaturalSize) {
+                  console.log(`[Headless] ✅ Natural size: ${measuredNaturalSize.width}×${measuredNaturalSize.height}`);
+                  currentState.setNaturalSize(measuredNaturalSize);
+                } else {
+                  console.log('[Headless] ⚠️  Could not measure natural size');
+                }
+
+                // Step 2: Execute auto-resize (same as startCompiling)
+                console.log('[Headless] 🔄 Triggering auto-resize with ratio:', aspectRatio);
+                await currentState.executeAutoResize(aspectRatio, widgetFrameRef);
+                // Note: executeAutoResize will call writebackSpecSize, which now works because widgetDSL is set
+
+                console.log('[Headless] ✅ Auto-resize complete, waiting 500ms for stabilization...');
+              } else {
+                console.log('[Headless] ⏭️  Skipping auto-resize');
+              }
+
               setTimeout(() => {
                 completeRendering(resolve, reject, captureOptions, renderStartTime);
               }, 500);
@@ -95,7 +132,10 @@ function HeadlessRenderer() {
             }
           };
 
-          requestAnimationFrame(waitForIdle);
+          setTimeout(() => {
+            state.setRenderingPhase('idle');
+            requestAnimationFrame(waitForIdle);
+          }, 100);
 
         } catch (error) {
           console.error('[Headless] ❌ Rendering error:', error);
