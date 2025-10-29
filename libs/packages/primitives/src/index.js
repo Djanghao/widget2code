@@ -16,3 +16,22 @@ export { RadarChart } from "./RadarChart.jsx";
 export { PieChart } from "./PieChart.jsx";
 export { ProgressBar } from "./ProgressBar.jsx";
 export { ProgressRing } from "./ProgressRing.jsx";
+
+export const AVAILABLE_COMPONENTS = [
+  'Text',
+  'Icon',
+  'Image',
+  'Sparkline',
+  'AppLogo',
+  'MapImage',
+  'Checkbox',
+  'Indicator',
+  'Divider',
+  'LineChart',
+  'BarChart',
+  'StackedBarChart',
+  'RadarChart',
+  'PieChart',
+  'ProgressBar',
+  'ProgressRing'
+];
