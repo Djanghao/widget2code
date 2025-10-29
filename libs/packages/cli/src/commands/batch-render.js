@@ -8,6 +8,7 @@
 
 import { PlaywrightRenderer } from '@widget-factory/renderer';
 import { compileWidgetDSLToJSX } from '@widget-factory/compiler';
+import { validateAndFix } from '@widget-factory/validator';
 import fs from 'fs/promises';
 import path from 'path';
 
@@ -52,16 +53,32 @@ async function renderWidget(renderer, specPath, outputDir) {
   try {
     console.log(`\n[${widgetId}] Starting render...`);
 
+    // Step 0: Validate and fix DSL
+    const validation = validateAndFix(spec);
+    if (validation.changes && validation.changes.length > 0) {
+      console.log(`[${widgetId}] ⚠️  Auto-fixed ${validation.changes.length} issue(s):`);
+      validation.changes.forEach(change => console.log(`  - ${change}`));
+    }
+    if (validation.warnings && validation.warnings.length > 0) {
+      console.log(`[${widgetId}] ⚠️  Warnings:`);
+      validation.warnings.forEach(warning => console.log(`  - ${warning}`));
+    }
+    if (!validation.canCompile) {
+      throw new Error(`DSL validation failed: ${validation.errors.join(', ')}`);
+    }
+
+    const finalSpec = validation.fixed || spec;
+
     // Step 1: Compile DSL to JSX
     console.log(`[${widgetId}] Compiling DSL to JSX...`);
-    const jsx = compileWidgetDSLToJSX(spec);
+    const jsx = compileWidgetDSLToJSX(finalSpec);
 
     // Step 2: Render JSX to PNG
     console.log(`[${widgetId}] Rendering JSX to PNG...`);
     const result = await renderer.renderWidgetFromJSX(jsx, {
       enableAutoResize: true,
       presetId: widgetId,
-      spec: spec  // Pass full spec for writebackSpecSize
+      spec: finalSpec  // Pass fixed spec for writebackSpecSize
     });
 
     if (!result.success) {
