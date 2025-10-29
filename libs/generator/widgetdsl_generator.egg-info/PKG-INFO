@@ -21,6 +21,7 @@ Provides-Extra: api
 Requires-Dist: fastapi; extra == "api"
 Requires-Dist: uvicorn; extra == "api"
 Requires-Dist: python-multipart; extra == "api"
+Requires-Dist: python-dotenv; extra == "api"
 Requires-Dist: provider-hub; extra == "api"
 Provides-Extra: dev
 Requires-Dist: pytest; extra == "dev"

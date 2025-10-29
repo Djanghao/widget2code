@@ -21,7 +21,6 @@ pnpm-debug.log*
 .vite/
 
 .env
-config.yaml
 
 !playground/docs/
 !playground/docs/architecture/

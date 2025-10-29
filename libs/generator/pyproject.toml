@@ -29,6 +29,7 @@ api = [
     "fastapi",
     "uvicorn",
     "python-multipart",
+    "python-dotenv",
     "provider-hub",
 ]
 dev = [

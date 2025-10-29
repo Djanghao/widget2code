@@ -11,11 +11,8 @@ Pipeline: WidgetDSL → JSX file → rendered result.
 npm install
 
 # Configure environment (first time only)
-cd apps
-cp config.yaml.example config.yaml
-# Edit config.yaml with your settings (ports, etc.)
-# IMPORTANT: Never commit config.yaml with sensitive data - it's in .gitignore
-cd ..
+cp .env.example .env
+# Edit .env with your API keys and settings
 ```
 
 **Backend setup** (first time only, required for full mode):
@@ -47,36 +44,41 @@ Runs optimized build with backend at http://localhost:4173
 
 ## Configuration
 
-### Configuration File
+### Environment Variables
 
-The project uses `config.yaml` for server settings. **Never commit `config.yaml` with sensitive data** to version control.
+The project uses a `.env` file for configuration. **Never commit `.env` with API keys** to version control.
 
 **Setup**:
 ```bash
-cd apps
-cp config.yaml.example config.yaml
-# Edit config.yaml with your preferred settings
+cp .env.example .env
+# Edit .env with your API keys and settings
 ```
 
-**Configuration options** (edit `apps/config.yaml`):
-```yaml
-server:
-  backend_port: 8000      # Backend API port
-  frontend_port: 3060     # Frontend dev server port
-  host: 0.0.0.0          # Server host (0.0.0.0 for remote access, 127.0.0.1 for local only)
+**Configuration options** (edit `.env`):
+```bash
+# API Keys
+DASHSCOPE_API_KEY=your-dashscope-api-key-here
 
-cors:
-  origins:
-    - "*"                 # Allowed CORS origins
+# Server
+BACKEND_PORT=8010
+FRONTEND_PORT=3060
+HOST=0.0.0.0
 
-security:
-  max_requests_per_minute: 10
-  max_file_size_mb: 100
+# Generation Settings
+DEFAULT_MODEL=qwen3-vl-flash
+RETRIEVAL_TOPK=50
+RETRIEVAL_TOPM=10
+RETRIEVAL_ALPHA=0.8
+TIMEOUT=300
+
+# Security
+MAX_FILE_SIZE_MB=100
+MAX_REQUESTS_PER_MINUTE=10
 ```
 
 **Security notes**:
-- `config.yaml` is already in `.gitignore` - don't remove it
-- Use `config.yaml.example` as a template (this file IS committed)
+- `.env` is already in `.gitignore` - don't remove it
+- Use `.env.example` as a template (this file IS committed)
 
 ### Regenerating Icons (Optional)
 Only needed when updating SF Symbols source files:

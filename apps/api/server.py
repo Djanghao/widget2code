@@ -3,21 +3,23 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pathlib import Path
 import os
-import yaml
 import traceback
+from dotenv import load_dotenv
 import widgetdsl_generator as generator
 from widgetdsl_generator import GeneratorConfig
 
-config_file = os.getenv("CONFIG_FILE", "config.yaml")
-config_path = Path(__file__).parent.parent / config_file
+# Load environment variables from root .env file
+root_dir = Path(__file__).parent.parent.parent
+load_dotenv(root_dir / ".env")
 
-with open(config_path, 'r') as f:
-    config_dict = yaml.safe_load(f)
+# Load generator config from environment variables
+gen_config = GeneratorConfig.from_env()
+
+# Load CORS config from environment
+frontend_port = int(os.getenv("FRONTEND_PORT", "3060"))
+allowed_origins = [f"http://localhost:{frontend_port}"]
 
 app = FastAPI()
-
-allowed_origins = config_dict['cors']['origins']
-gen_config = GeneratorConfig.from_dict(config_dict)
 
 app.add_middleware(
     CORSMiddleware,
@@ -140,6 +142,6 @@ async def generate_widget_full(
 
 if __name__ == "__main__":
     import uvicorn
-    port = config_dict['server']['backend_port']
-    host = config_dict['server']['host']
+    port = int(os.getenv("BACKEND_PORT", "8010"))
+    host = os.getenv("HOST", "0.0.0.0")
     uvicorn.run(app, host=host, port=port)

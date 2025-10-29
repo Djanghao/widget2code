@@ -40,9 +40,9 @@ def run_icon_detection_pipeline(
         icon_dets = [d for d in pixel_dets_post if str(d.get("label", "")).lower() == "icon"]
         icon_count = len(icon_dets)
 
-        default_lib = Path(__file__).parent.parent.parent.parent / "libs" / "packages" / "icons" / "assets"
-        env_lib = os.getenv("ICON_LIB_ROOT")
-        lib_root_path = Path(env_lib or default_lib)
+        # Current file: libs/generator/widgetdsl_generator/perception/icon_extraction.py
+        # Target path: libs/packages/icons/assets
+        lib_root_path = Path(__file__).parent.parent.parent / "packages" / "icons" / "assets"
 
         if lib_root_path.exists():
             svg_names, per_icon_details = query_from_detections_with_details(

@@ -30,8 +30,8 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
     "concurrently": "^8.2.2",
+    "dotenv": "^16.4.7",
     "playwright": "^1.40.0",
-    "vite": "^5.0.0",
-    "yaml": "^2.8.1"
+    "vite": "^5.0.0"
   }
 }

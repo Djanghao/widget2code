@@ -2,18 +2,15 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import fs from 'fs'
-import yaml from 'yaml'
+import dotenv from 'dotenv'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const configFile = process.env.CONFIG_FILE || 'config.yaml'
-const configPath = path.resolve(__dirname, '..', configFile)
-const configContent = fs.readFileSync(configPath, 'utf8')
-const config = yaml.parse(configContent)
+dotenv.config({ path: path.resolve(__dirname, '../../.env') })
 
-const backendPort = config.server.backend_port
-const frontendPort = config.server.frontend_port
+const backendPort = process.env.BACKEND_PORT || '8010'
+const frontendPort = process.env.FRONTEND_PORT || '3060'
+const host = process.env.HOST || '0.0.0.0'
 
 export default defineConfig(({ mode }) => {
 
@@ -40,7 +37,7 @@ export default defineConfig(({ mode }) => {
       }
     },
     server: {
-      host: config.server.host,
+      host: host,
       port: parseInt(frontendPort),
       proxy: {
         '^/api/(?!.*\\.md).*': {
