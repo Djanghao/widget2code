@@ -6,15 +6,14 @@
   "exports": {
     ".": "./src/index.js"
   },
-  "description": "Runtime JSX renderer and widget validation utilities",
+  "description": "Widget validation utilities",
   "keywords": [
     "widget",
     "renderer",
-    "babel",
-    "jsx"
+    "validation"
   ],
   "dependencies": {
-    "@babel/standalone": "^7.28.4"
+    "@widget-factory/resizer": "*"
   },
   "peerDependencies": {
     "react": "^18.0.0"

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useLayoutEffect, useMemo } from 'react';
 import { renderDynamicComponent } from './DynamicRenderer.js';
-import { findOptimalSize } from '@widget-factory/resizer';
+import { findOptimalSize, waitForStable } from '@widget-factory/resizer';
 
 export function DynamicComponent({
   code,
@@ -47,72 +47,20 @@ export function DynamicComponent({
 
       console.log('[DynamicComponent] Waiting for layout to stabilize...');
 
-      await new Promise((resolve) => {
-        let attempts = 0;
-        let sizeHistory = [];
-        let hasSeenChange = false;
-
-        const checkSize = () => {
-          attempts++;
-          const rect = element.getBoundingClientRect();
-          const currentSize = `${rect.width.toFixed(1)}x${rect.height.toFixed(1)}`;
-
-          sizeHistory.push(currentSize);
-
-          if (sizeHistory.length === 1) {
-            requestAnimationFrame(checkSize);
-            return;
-          }
-
-          const prevSize = sizeHistory[sizeHistory.length - 2];
-
-          if (!hasSeenChange && currentSize === prevSize) {
-            const stableCount = sizeHistory.filter(s => s === currentSize).length;
-            if (stableCount >= 10) {
-              console.log(`[DynamicComponent] Layout stable at: ${currentSize} (${stableCount} frames)`);
-              resolve();
-              return;
-            }
-          }
-
-          if (currentSize !== prevSize && !hasSeenChange) {
-            hasSeenChange = true;
-            console.log(`[DynamicComponent] Size changed: ${prevSize} → ${currentSize}`);
-            sizeHistory = [currentSize];
-            requestAnimationFrame(checkSize);
-            return;
-          }
-
-          if (hasSeenChange) {
-            if (currentSize === prevSize) {
-              const stableCount = sizeHistory.filter(s => s === currentSize).length;
-              if (stableCount >= 3) {
-                console.log(`[DynamicComponent] Layout stabilized at: ${currentSize} (${stableCount} frames, ${attempts} checks)`);
-                resolve();
-              } else {
-                requestAnimationFrame(checkSize);
-              }
-            } else {
-              console.log(`[DynamicComponent] Size still changing: ${prevSize} → ${currentSize}`);
-              sizeHistory = [currentSize];
-              if (attempts < 120) {
-                requestAnimationFrame(checkSize);
-              } else {
-                console.log(`[DynamicComponent] Max attempts reached, using current size`);
-                resolve();
-              }
-            }
-          } else {
-            if (attempts < 120) {
-              requestAnimationFrame(checkSize);
-            } else {
-              console.log(`[DynamicComponent] Timeout, using current size: ${currentSize}`);
-              resolve();
-            }
-          }
-        };
-
-        requestAnimationFrame(checkSize);
+      await waitForStable({
+        getElement: () => element,
+        onLog: (type, message) => {
+          const logMap = {
+            initial: `[DynamicComponent] Initial size: ${message}`,
+            stableInitial: `[DynamicComponent] Layout ${message}`,
+            change: `[DynamicComponent] Size changed: ${message}`,
+            stableAfterChange: `[DynamicComponent] Layout ${message}`,
+            changing: `[DynamicComponent] Size still ${message}`,
+            maxAttempts: `[DynamicComponent] ${message}`,
+            noChange: `[DynamicComponent] ${message}`
+          };
+          console.log(logMap[type] || `[DynamicComponent] ${message}`);
+        }
       });
 
       console.log('[DynamicComponent] Starting binary search resize...');

@@ -14,7 +14,8 @@ import { preloadIcons } from '../../../../../packages/primitives/src/utils/prelo
 import { preloadImages } from '../../../../../packages/primitives/src/utils/preloadImages.js';
 import { iconCache } from '../../../../../packages/primitives/src/utils/iconCache.js';
 import { sfDynamicIconImports } from '../../../../../packages/icons/sf-symbols/src/index.jsx';
-import { findOptimalSize, measureOverflow } from '../../../../../packages/resizer/src/index.js';
+import { findOptimalSize, waitForStable } from '../../../../../packages/resizer/src/index.js';
+import { validateWidget as validateWidgetFn } from '../../../../../packages/renderer/src/index.js';
 
 const createRenderingSlice = (set, get) => ({
   renderingPhase: 'idle',
@@ -106,146 +107,64 @@ const createRenderingSlice = (set, get) => ({
 
     console.log(`⏱️  [Natural Size] Waiting for widget to mount and render naturally...${hasGraphs ? ' (with graphs)' : ''}`);
 
-    return new Promise((resolve) => {
-      let attempts = 0;
-      let frameMounted = false;
-      let sizeHistory = [];
-      let hasSeenChange = false;
-      let graphsFullyLoaded = !hasGraphs;
+    let graphsFullyLoaded = !hasGraphs;
 
-      const checkGraphsLoaded = (frame) => {
-        if (!hasGraphs || graphsFullyLoaded) return true;
+    const checkGraphsLoaded = (frame) => {
+      if (!hasGraphs || graphsFullyLoaded) return true;
 
-        const canvases = frame.querySelectorAll('canvas');
-        if (canvases.length === 0) {
-          return false;
+      const canvases = frame.querySelectorAll('canvas');
+      if (canvases.length === 0) {
+        return false;
+      }
+
+      let allLoaded = true;
+      canvases.forEach((canvas) => {
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          allLoaded = false;
+          return;
         }
 
-        let allLoaded = true;
-        canvases.forEach((canvas) => {
-          const ctx = canvas.getContext('2d');
-          if (!ctx) {
-            allLoaded = false;
-            return;
-          }
-
-          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          const hasContent = imageData.data.some((value, index) => {
-            if (index % 4 === 3) return false;
-            return value !== 0;
-          });
-
-          if (!hasContent) {
-            allLoaded = false;
-          }
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const hasContent = imageData.data.some((value, index) => {
+          if (index % 4 === 3) return false;
+          return value !== 0;
         });
 
-        if (allLoaded && !graphsFullyLoaded) {
-          graphsFullyLoaded = true;
-          console.log(`📊 [Natural Size] All ${canvases.length} graph(s) have rendered content`);
+        if (!hasContent) {
+          allLoaded = false;
         }
+      });
 
-        return allLoaded;
-      };
+      if (allLoaded && !graphsFullyLoaded) {
+        graphsFullyLoaded = true;
+        console.log(`📊 [Natural Size] All ${canvases.length} graph(s) have rendered content`);
+      }
 
-      const checkNaturalSize = () => {
-        if (get().compileToken !== token) {
-          console.log(`🚫 [Natural Size] Token changed, stopping detection`);
-          resolve(null);
-          return;
-        }
+      return allLoaded;
+    };
 
-        attempts++;
-        const frame = widgetFrameRef.current;
-
-        if (!frame) {
-          if (attempts < 120) {
-            requestAnimationFrame(checkNaturalSize);
-          } else {
-            console.log(`❌ [Natural Size] Timeout waiting for frame to mount`);
-            resolve(null);
-          }
-          return;
-        }
-
-        if (!frameMounted) {
-          frameMounted = true;
-          console.log(`✅ [Natural Size] Frame mounted, now monitoring size changes...`);
-        }
-
-        if (hasGraphs && !checkGraphsLoaded(frame)) {
-          if (attempts < 150) {
-            requestAnimationFrame(checkNaturalSize);
-          } else {
-            console.log(`⏰ [Natural Size] Timeout waiting for graphs to load, proceeding anyway...`);
-            graphsFullyLoaded = true;
-          }
-          return;
-        }
-
-        const rect = frame.getBoundingClientRect();
-        const currentSize = `${rect.width.toFixed(2)}x${rect.height.toFixed(2)}`;
-        sizeHistory.push(currentSize);
-
-        if (sizeHistory.length === 1) {
-          console.log(`🔎 [Natural Size] Initial size: ${currentSize} (likely old element, waiting for change...)`);
-          requestAnimationFrame(checkNaturalSize);
-          return;
-        }
-
-        const prevSize = sizeHistory[sizeHistory.length - 2];
-
-        if (!hasSeenChange && currentSize === prevSize) {
-          const stableCount = sizeHistory.filter(s => s === currentSize).length;
-          if (stableCount >= 10) {
-            console.log(`📐 [Natural Size] Initial size stable at: ${currentSize} (stable for ${stableCount} frames, no change detected - assuming this is natural size)`);
-            const [w, h] = currentSize.split('x').map(parseFloat);
-            resolve({ width: Math.round(w), height: Math.round(h) });
-            return;
-          }
-        }
-
-        if (currentSize !== prevSize && !hasSeenChange) {
-          hasSeenChange = true;
-          console.log(`🔄 [Natural Size] Size changed: ${prevSize} → ${currentSize} (new element detected!)`);
-          sizeHistory = [currentSize];
-          requestAnimationFrame(checkNaturalSize);
-          return;
-        }
-
-        if (hasSeenChange) {
-          if (currentSize === prevSize) {
-            const stableCount = sizeHistory.filter(s => s === currentSize).length;
-            if (stableCount >= 3) {
-              console.log(`📐 [Natural Size] Natural size stabilized at: ${currentSize} (stable for ${stableCount} frames after change, total ${attempts} checks)`);
-              const [w, h] = currentSize.split('x').map(parseFloat);
-              resolve({ width: Math.round(w), height: Math.round(h) });
-            } else {
-              requestAnimationFrame(checkNaturalSize);
-            }
-          } else {
-            console.log(`🔄 [Natural Size] Size still changing: ${prevSize} → ${currentSize}`);
-            sizeHistory = [currentSize];
-            if (attempts < 120) {
-              requestAnimationFrame(checkNaturalSize);
-            } else {
-              console.log(`⏰ [Natural Size] Max attempts reached, using current size: ${currentSize}`);
-              const [w, h] = currentSize.split('x').map(parseFloat);
-              resolve({ width: Math.round(w), height: Math.round(h) });
-            }
-          }
-        } else {
-          if (attempts < 120) {
-            requestAnimationFrame(checkNaturalSize);
-          } else {
-            console.log(`⏰ [Natural Size] No size change detected within timeout, using current: ${currentSize}`);
-            const [w, h] = currentSize.split('x').map(parseFloat);
-            resolve({ width: Math.round(w), height: Math.round(h) });
-          }
-        }
-      };
-
-      requestAnimationFrame(checkNaturalSize);
+    return waitForStable({
+      getElement: () => widgetFrameRef.current,
+      shouldAbort: () => get().compileToken !== token,
+      onLog: (type, message) => {
+        const logMap = {
+          abort: `🚫 [Natural Size] ${message}`,
+          timeout: `❌ [Natural Size] ${message}`,
+          mounted: `✅ [Natural Size] ${message}`,
+          customCheckPassed: `📊 [Natural Size] ${message}`,
+          customCheckTimeout: `⏰ [Natural Size] ${message}`,
+          initial: `🔎 [Natural Size] ${message} (likely old element, waiting for change...)`,
+          stableInitial: `📐 [Natural Size] ${message} - assuming this is natural size`,
+          change: `🔄 [Natural Size] ${message} (new element detected!)`,
+          stableAfterChange: `📐 [Natural Size] Natural size ${message}`,
+          changing: `🔄 [Natural Size] ${message}`,
+          maxAttempts: `⏰ [Natural Size] ${message}`,
+          noChange: `⏰ [Natural Size] ${message}`
+        };
+        console.log(logMap[type] || `[Natural Size] ${message}`);
+      },
+      customCheck: hasGraphs ? checkGraphsLoaded : null
     });
   },
 
@@ -456,75 +375,9 @@ const createRenderingSlice = (set, get) => ({
 
 
   validateWidget: (widgetElement, spec) => {
-    const issues = [];
-    const warnings = [];
-
-    if (!widgetElement) {
-      return {
-        valid: false,
-        issues: ['Widget element not found'],
-        warnings: [],
-        metadata: null
-      };
-    }
-
-    const overflow = measureOverflow(widgetElement);
-    const rect = widgetElement.getBoundingClientRect();
-    const actualWidth = Math.round(rect.width);
-    const actualHeight = Math.round(rect.height);
-    const actualRatio = actualWidth / actualHeight;
-
-    const expectedWidth = spec?.widget?.width;
-    const expectedHeight = spec?.widget?.height;
-    const expectedRatio = spec?.widget?.aspectRatio;
-
-    if (!overflow.fits) {
-      issues.push('Content overflows container or padding area');
-    }
-
-    if (expectedRatio && typeof expectedRatio === 'number' && isFinite(expectedRatio)) {
-      const deviation = Math.abs(actualRatio - expectedRatio) / expectedRatio;
-      if (deviation > 0.05) {
-        issues.push(
-          `Aspect ratio mismatch: expected ${expectedRatio.toFixed(3)}, got ${actualRatio.toFixed(3)} (${(deviation * 100).toFixed(1)}% off)`
-        );
-      } else if (deviation > 0.02) {
-        warnings.push(
-          `Aspect ratio slightly off: expected ${expectedRatio.toFixed(3)}, got ${actualRatio.toFixed(3)} (${(deviation * 100).toFixed(1)}% off)`
-        );
-      }
-    }
-
-    if (expectedWidth && Math.abs(actualWidth - expectedWidth) > 1) {
-      warnings.push(`Width mismatch: expected ${expectedWidth}px, got ${actualWidth}px`);
-    }
-
-    if (expectedHeight && Math.abs(actualHeight - expectedHeight) > 1) {
-      warnings.push(`Height mismatch: expected ${expectedHeight}px, got ${actualHeight}px`);
-    }
-
-    const metadata = {
-      width: actualWidth,
-      height: actualHeight,
-      aspectRatio: parseFloat(actualRatio.toFixed(4)),
-      hasOverflow: !overflow.fits,
-      scrollWidth: overflow.scrollWidth,
-      scrollHeight: overflow.scrollHeight
-    };
-
-    console.log(`🔍 [Validation]`, {
-      valid: issues.length === 0,
-      issues,
-      warnings,
-      metadata
-    });
-
-    return {
-      valid: issues.length === 0,
-      issues,
-      warnings,
-      metadata
-    };
+    const result = validateWidgetFn(widgetElement, spec);
+    console.log(`🔍 [Validation]`, result);
+    return result;
   },
 
   executeAutoResize: async (aspectRatio, widgetFrameRef, tokenRef) => {

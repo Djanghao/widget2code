@@ -9,3 +9,4 @@
 export { findOptimalSize } from './binarySearch.js';
 export { measureOverflow } from './measureOverflow.js';
 export { waitForLayoutStable, applySizeAndMeasure } from './utils.js';
+export { waitForStable } from './waitForStable.js';

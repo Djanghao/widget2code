@@ -9,10 +9,10 @@
  * @param {HTMLElement} element - The widget container element to measure
  * @returns {Object} Measurement result
  * @returns {boolean} returns.fits - Whether content fits without overflow
- * @returns {number} returns.clientWidth - Container's client width
- * @returns {number} returns.clientHeight - Container's client height
- * @returns {number} returns.scrollWidth - Content's scroll width
- * @returns {number} returns.scrollHeight - Content's scroll height
+ * @returns {number} returns.cw - Container's client width
+ * @returns {number} returns.ch - Container's client height
+ * @returns {number} returns.sw - Content's scroll width
+ * @returns {number} returns.sh - Content's scroll height
  */
 export function measureOverflow(element) {
   if (!element) return { fits: false };
@@ -59,8 +59,8 @@ export function measureOverflow(element) {
     if (crossesPaddingOrOutside) {
       fits = false;
     }
-    return { fits, clientWidth: cw, clientHeight: ch, scrollWidth: sw, scrollHeight: sh };
+    return { fits, cw, ch, sw, sh };
   } catch (e) {
-    return { fits, clientWidth: cw, clientHeight: ch, scrollWidth: sw, scrollHeight: sh };
+    return { fits, cw, ch, sw, sh };
   }
 }
