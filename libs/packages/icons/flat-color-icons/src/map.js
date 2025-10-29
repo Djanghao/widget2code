@@ -1,3 +1,3 @@
-import * as FlatColorIcons from 'react-icons/fc';
+import * as FlatColorIcons from 'flat-color-icons';
 
 export const flatColorIconsMap = FlatColorIcons;

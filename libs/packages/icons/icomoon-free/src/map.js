@@ -1,3 +1,3 @@
-import * as IcomoonFreeIcons from 'react-icons/im';
+import * as IcomoonFreeIcons from 'react-icomoon';
 
 export const icomoonFreeIconsMap = IcomoonFreeIcons;

@@ -1,3 +1,3 @@
-import * as RemixIcons from 'react-icons/ri';
+import * as RemixIcons from '@remixicon/react';
 
 export const remixIconsMap = RemixIcons;

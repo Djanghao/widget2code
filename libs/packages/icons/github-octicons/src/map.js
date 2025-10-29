@@ -1,3 +1,3 @@
-import * as GithubOcticonsIcons from 'react-icons/go';
+import * as GithubOcticonsIcons from '@primer/octicons-react';
 
 export const githubOcticonsIconsMap = GithubOcticonsIcons;

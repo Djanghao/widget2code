@@ -1,3 +1,3 @@
-import * as FeatherIcons from 'react-icons/fi';
+import * as FeatherIcons from 'feather-icons';
 
 export const featherIconsMap = FeatherIcons;

@@ -1,3 +1,3 @@
-import * as BoxiconsIcons from 'react-icons/bi';
+import * as BoxiconsIcons from 'boxicons';
 
 export const boxiconsIconsMap = BoxiconsIcons;

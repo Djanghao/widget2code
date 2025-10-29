@@ -1,3 +1,3 @@
-import * as CssGgIcons from 'react-icons/cg';
+import * as CssGgIcons from 'css.gg';
 
 export const cssGgIconsMap = CssGgIcons;
