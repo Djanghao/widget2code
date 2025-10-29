@@ -1,3 +1,3 @@
-import * as PhosphorIcons from 'react-icons/pi';
+import * as PhosphorIcons from '@phosphor-icons/react';
 
 export const phosphorIconsMap = PhosphorIcons;

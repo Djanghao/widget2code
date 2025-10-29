@@ -1,3 +1,3 @@
-import * as Ionicons5Icons from 'react-icons/io5';
+import * as Ionicons5Icons from 'ionicons';
 
 export const ionicons5IconsMap = Ionicons5Icons;

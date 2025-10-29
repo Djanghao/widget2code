@@ -1,3 +1,3 @@
-import * as MaterialDesignIcons from 'react-icons/md';
+import * as MaterialDesignIcons from '@mui/icons-material';
 
 export const materialDesignIconsMap = MaterialDesignIcons;

@@ -1,3 +1,3 @@
-import * as RadixIcons from 'react-icons/rx';
+import * as RadixIcons from '@radix-ui/react-icons';
 
 export const radixIconsMap = RadixIcons;

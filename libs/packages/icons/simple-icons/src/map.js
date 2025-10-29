@@ -1,3 +1,3 @@
-import * as SimpleIcons from 'react-icons/si';
+import * as SimpleIcons from 'simple-icons';
 
 export const simpleIconsMap = SimpleIcons;

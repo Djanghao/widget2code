@@ -1,3 +1,3 @@
-import * as LineAwesomeIcons from 'react-icons/la';
+import * as LineAwesomeIcons from 'line-awesome';
 
 export const lineAwesomeIconsMap = LineAwesomeIcons;

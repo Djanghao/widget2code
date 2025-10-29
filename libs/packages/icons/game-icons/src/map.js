@@ -1,3 +1,3 @@
-import * as GameIconsIcons from 'react-icons/gi';
+import * as GameIconsIcons from 'react-icons';
 
 export const gameIconsIconsMap = GameIconsIcons;

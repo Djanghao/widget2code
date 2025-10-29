@@ -1,3 +1,3 @@
-import * as AntDesignIcons from 'react-icons/ai';
+import * as AntDesignIcons from '@ant-design/icons';
 
 export const antDesignIconsMap = AntDesignIcons;

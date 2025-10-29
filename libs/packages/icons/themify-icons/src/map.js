@@ -1,3 +1,3 @@
-import * as ThemifyIcons from 'react-icons/tfi';
+import * as ThemifyIcons from 'themify-icons';
 
 export const themifyIconsMap = ThemifyIcons;

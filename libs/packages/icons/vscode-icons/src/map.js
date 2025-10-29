@@ -1,3 +1,3 @@
-import * as VscodeIcons from 'react-icons/vsc';
+import * as VscodeIcons from '@vscode/codicons';
 
 export const vscodeIconsMap = VscodeIcons;

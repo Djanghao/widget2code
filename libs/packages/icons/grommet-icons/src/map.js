@@ -1,3 +1,3 @@
-import * as GrommetIcons from 'react-icons/gr';
+import * as GrommetIcons from 'grommet-icons';
 
 export const grommetIconsMap = GrommetIcons;
