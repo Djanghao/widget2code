@@ -52,7 +52,7 @@ def run_icon_detection_pipeline(
         icon_dets = [d for d in pixel_dets_post if str(d.get("label", "")).lower() == "icon"]
         icon_count = len(icon_dets)
 
-        default_lib = Path(__file__).parent.parent.parent.parent / "data" / "icons"
+        default_lib = Path(__file__).parent.parent.parent.parent / "packages" / "icons" / "assets"
         cfg_lib = None
         try:
             cfg_lib = (config.get("icons", {}) or {}).get("lib_root")
