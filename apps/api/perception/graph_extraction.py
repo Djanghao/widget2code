@@ -47,16 +47,13 @@ def inject_graph_specs_to_prompt(
     graph_specs: list,
 ) -> str:
     if not graph_specs:
+        if "[GRAPH_SPECS]" in base_prompt:
+            return base_prompt.replace("[GRAPH_SPECS]", "")
         return base_prompt
 
     graph_specs_text = format_graph_specs_for_injection(graph_specs)
-    enhanced_prompt = f"""{base_prompt}
 
-PRE-GENERATED GRAPH SPECIFICATIONS:
-Use the following graph specifications for accurate chart rendering. These specs replace manual visual analysis of charts.
-
-{graph_specs_text}
-
-When generating the WidgetDSL, incorporate these exact graph specifications to ensure pixel-perfect chart replication."""
-
-    return enhanced_prompt
+    if "[GRAPH_SPECS]" in base_prompt:
+        return base_prompt.replace("[GRAPH_SPECS]", graph_specs_text)
+    else:
+        return f"{base_prompt}\n\n{graph_specs_text}"

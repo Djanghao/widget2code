@@ -36,6 +36,9 @@ Props: `name`, `size`, `color`
 [AVAILABLE_ICON_NAMES]
 - Can have `flex` prop (typically `"none"` for icons)
 
+### Graph
+[GRAPH_SPECS]
+
 ### Image
 Props: `url`, `borderRadius` (optional)
 Node properties: `width` (optional), `height`

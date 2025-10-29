@@ -207,12 +207,19 @@ def process_graphs_in_image(
 def format_graph_specs_for_injection(graph_specs: List[Dict[str, Any]]) -> str:
     """Format graph specifications for injection into the main WidgetDSL prompt."""
     if not graph_specs:
-        return "No graph specifications available."
+        return ""
 
-    formatted_specs = []
+    formatted_parts = []
+
     for i, graph in enumerate(graph_specs):
-        formatted_specs.append(f"Graph {i+1} ({graph['type']}):")
-        formatted_specs.append(json.dumps(graph['spec'], indent=2))
-        formatted_specs.append("")
+        graph_type = graph.get('type', 'Unknown')
+        spec = graph.get('spec', {})
 
-    return "\n".join(formatted_specs)
+        formatted_parts.append(f"#### {graph_type} (Detected)")
+        formatted_parts.append(f"**PRE-GENERATED SPECIFICATION** - Use the following exact specification in your WidgetDSL:")
+        formatted_parts.append("```json")
+        formatted_parts.append(json.dumps(spec, indent=2))
+        formatted_parts.append("```")
+        formatted_parts.append("")
+
+    return "\n".join(formatted_parts)

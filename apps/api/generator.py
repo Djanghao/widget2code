@@ -17,7 +17,6 @@ from utils import (
     validate_file_size,
     load_default_prompt,
     load_widget2dsl_prompt,
-    load_widget2dsl_graph_prompt,
     load_prompt2dsl_prompt,
     load_dynamic_component_prompt,
     load_dynamic_component_image_prompt,
@@ -640,7 +639,7 @@ async def generate_widget_with_graph(
         if graph_specs:
             print(f"[{datetime.now()}] Step 2: Processing graphs... Generated {len(graph_specs)} graph specifications")
 
-        base_prompt = system_prompt if system_prompt else load_widget2dsl_graph_prompt()
+        base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
         enhanced_prompt = inject_graph_specs_to_prompt(base_prompt, graph_specs)
 
         # Step 4: Generate the final WidgetDSL with enhanced prompt
@@ -800,7 +799,7 @@ async def generate_widget_full(
         img_height = icon_result["img_height"]
 
         # Step 1: Base prompt
-        base_prompt = system_prompt if system_prompt else load_widget2dsl_graph_prompt()
+        base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
 
         # Step 2: Add graph specs
         prompt_with_graphs = base_prompt
@@ -808,8 +807,14 @@ async def generate_widget_full(
         if graph_specs:
             from services.graph.pipeline import format_graph_specs_for_injection
             graph_injection_text = format_graph_specs_for_injection(graph_specs)
+
+            has_placeholder = "[GRAPH_SPECS]" in base_prompt
+            print(f"[{datetime.now()}] Graph specs placeholder found: {has_placeholder}")
+
             prompt_with_graphs = inject_graph_specs_to_prompt(base_prompt, graph_specs)
-            print(f"[{datetime.now()}] Injected {len(graph_specs)} graph specifications into prompt")
+
+            placeholder_replaced = "[GRAPH_SPECS]" not in prompt_with_graphs
+            print(f"[{datetime.now()}] Injected {len(graph_specs)} graph specifications, placeholder replaced: {placeholder_replaced}")
 
         # Step 3: Add icon specs
         icon_injection_text = format_icon_prompt_injection(
