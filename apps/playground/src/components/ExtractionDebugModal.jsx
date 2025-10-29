@@ -122,8 +122,8 @@ function RetrievalRow({ item, baseImageUrl, processedSize, mode }) {
                   gap: 4
                 }}>
                   <Icon name={name} size={24} />
-                  <div style={{ fontSize: 10, color: '#f5f5f7', textAlign: 'center', wordBreak: 'break-all' }}>
-                    {name.split(':')[1] || name}
+                  <div style={{ fontSize: 10, color: '#f5f5f7', textAlign: 'center', wordBreak: 'break-all', lineHeight: 1.2 }}>
+                    {name}
                   </div>
                   {score !== undefined && (
                     <div style={{ fontSize: 9, color: '#8e8e93' }}>
@@ -169,19 +169,23 @@ export default function ExtractionDebugModal({ isOpen, onClose, data, baseImageU
   const promptDebug = data?.promptDebugInfo || {};
   const stage1_base = promptDebug?.stage1_base || '';
   const stage2_withGraphs = promptDebug?.stage2_withGraphs || '';
-  const stage3_final = promptDebug?.stage3_final || '';
+  const stage3_withIcons = promptDebug?.stage3_withIcons || '';
+  const stage4_final = promptDebug?.stage4_final || '';
   const graphInjection = promptDebug?.injections?.graph || '';
   const iconInjection = promptDebug?.injections?.icon || '';
+  const componentsInjection = promptDebug?.injections?.components || '';
 
   const promptStages = [
     { id: 'base', label: 'Stage 1: Base', value: stage1_base },
     { id: 'graphs', label: 'Stage 2: + Graphs', value: stage2_withGraphs },
-    { id: 'final', label: 'Stage 3: + Icons (Final)', value: stage3_final },
+    { id: 'icons', label: 'Stage 3: + Icons', value: stage3_withIcons },
+    { id: 'final', label: 'Stage 4: + Components (Final)', value: stage4_final },
     { id: 'graph-inject', label: 'Graph Injection Only', value: graphInjection },
     { id: 'icon-inject', label: 'Icon Injection Only', value: iconInjection },
+    { id: 'components-inject', label: 'Components List Only', value: componentsInjection },
   ];
 
-  const currentPrompt = promptStages.find(s => s.id === selectedPromptStage) || promptStages[2];
+  const currentPrompt = promptStages.find(s => s.id === selectedPromptStage) || promptStages[3];
 
   return (
     <div

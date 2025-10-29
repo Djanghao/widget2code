@@ -48,7 +48,7 @@ def inject_graph_specs_to_prompt(
 ) -> str:
     if not graph_specs:
         if "[GRAPH_SPECS]" in base_prompt:
-            return base_prompt.replace("[GRAPH_SPECS]", "")
+            return base_prompt.replace("[GRAPH_SPECS]", "**No graph components detected in the image.**")
         return base_prompt
 
     graph_specs_text = format_graph_specs_for_injection(graph_specs)
@@ -57,3 +57,18 @@ def inject_graph_specs_to_prompt(
         return base_prompt.replace("[GRAPH_SPECS]", graph_specs_text)
     else:
         return f"{base_prompt}\n\n{graph_specs_text}"
+
+def get_available_components_list(graph_specs: list = None) -> str:
+    """Generate a list of available component names, including detected graphs."""
+    base_components = [
+        "Text", "Icon", "Image", "Checkbox", "Sparkline",
+        "MapImage", "AppLogo", "Divider", "Indicator"
+    ]
+
+    if graph_specs:
+        graph_types = [spec.get("type") for spec in graph_specs if spec.get("type")]
+        all_components = base_components + graph_types
+    else:
+        all_components = base_components
+
+    return ", ".join(all_components)

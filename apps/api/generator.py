@@ -29,6 +29,7 @@ from perception import (
     format_icon_prompt_injection,
     detect_and_process_graphs,
     inject_graph_specs_to_prompt,
+    get_available_components_list,
 )
 from perception.icon_extraction import normalize_icon_details
 
@@ -802,19 +803,19 @@ async def generate_widget_full(
         base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
 
         # Step 2: Add graph specs
-        prompt_with_graphs = base_prompt
-        graph_injection_text = ""
+        from services.graph.pipeline import format_graph_specs_for_injection
+        graph_injection_text = format_graph_specs_for_injection(graph_specs) if graph_specs else ""
+
+        has_placeholder = "[GRAPH_SPECS]" in base_prompt
+        print(f"[{datetime.now()}] Graph specs placeholder found: {has_placeholder}")
+
+        prompt_with_graphs = inject_graph_specs_to_prompt(base_prompt, graph_specs)
+
+        placeholder_replaced = "[GRAPH_SPECS]" not in prompt_with_graphs
         if graph_specs:
-            from services.graph.pipeline import format_graph_specs_for_injection
-            graph_injection_text = format_graph_specs_for_injection(graph_specs)
-
-            has_placeholder = "[GRAPH_SPECS]" in base_prompt
-            print(f"[{datetime.now()}] Graph specs placeholder found: {has_placeholder}")
-
-            prompt_with_graphs = inject_graph_specs_to_prompt(base_prompt, graph_specs)
-
-            placeholder_replaced = "[GRAPH_SPECS]" not in prompt_with_graphs
             print(f"[{datetime.now()}] Injected {len(graph_specs)} graph specifications, placeholder replaced: {placeholder_replaced}")
+        else:
+            print(f"[{datetime.now()}] No graphs detected, placeholder replaced with notice: {placeholder_replaced}")
 
         # Step 3: Add icon specs
         icon_injection_text = format_icon_prompt_injection(
@@ -823,10 +824,18 @@ async def generate_widget_full(
             retrieval_topm=retrieval_topm,
         )
 
-        if "[AVAILABLE_ICON_NAMES]" in prompt_with_graphs:
-            prompt_final = prompt_with_graphs.replace("[AVAILABLE_ICON_NAMES]", icon_injection_text)
+        prompt_with_icons = prompt_with_graphs
+        if "[AVAILABLE_ICON_NAMES]" in prompt_with_icons:
+            prompt_with_icons = prompt_with_icons.replace("[AVAILABLE_ICON_NAMES]", icon_injection_text)
         else:
-            prompt_final = prompt_with_graphs + "\n\n" + icon_injection_text
+            prompt_with_icons = prompt_with_icons + "\n\n" + icon_injection_text
+
+        # Step 4: Add available components list
+        components_list = get_available_components_list(graph_specs)
+        prompt_final = prompt_with_icons
+        if "[AVAILABLE_COMPONENTS]" in prompt_final:
+            prompt_final = prompt_final.replace("[AVAILABLE_COMPONENTS]", components_list)
+            print(f"[{datetime.now()}] Injected available components list: {components_list}")
 
         print(f"[{datetime.now()}] Generating WidgetDSL with icons and graph constraints...")
 
@@ -903,10 +912,12 @@ async def generate_widget_full(
             "promptDebugInfo": {
                 "stage1_base": base_prompt,
                 "stage2_withGraphs": prompt_with_graphs,
-                "stage3_final": prompt_final,
+                "stage3_withIcons": prompt_with_icons,
+                "stage4_final": prompt_final,
                 "injections": {
                     "graph": graph_injection_text,
                     "icon": icon_injection_text,
+                    "components": components_list,
                 }
             }
         }

@@ -378,3 +378,4 @@ Output:
 - Use exact icon names from the available icons list
 - All numeric values should be numbers, not strings
 - Boolean values: `true`/`false` (not strings)
+- **CRITICAL - Available Components**: You may ONLY use these components: [AVAILABLE_COMPONENTS]. Any component NOT in this list is STRICTLY FORBIDDEN and will cause errors.
