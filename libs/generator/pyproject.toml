@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "widgetdsl-generator"
+version = "0.3.0"
+description = "WidgetDSL Generator - AI-powered widget generation from images"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pillow",
+    "pyyaml",
+    "playwright",
+    "aiofiles",
+    "requests",
+    "accelerate",
+    "numpy",
+    "opencv-python",
+    "torch",
+    "open-clip-torch",
+    "transformers",
+    "faiss-cpu",
+    "cairosvg",
+]
+
+[project.optional-dependencies]
+api = [
+    "fastapi",
+    "uvicorn",
+    "python-multipart",
+    "provider-hub",
+]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["widgetdsl_generator*"]
+
+[tool.setuptools.package-data]
+widgetdsl_generator = ["**/*.yaml", "**/*.json"]

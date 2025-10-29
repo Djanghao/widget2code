@@ -1,14 +1,6 @@
-import sys
 import os
-import yaml
 from pathlib import Path
 from typing import Optional
-
-config_file = os.getenv("CONFIG_FILE", "config.yaml")
-config_path = Path(__file__).parent.parent.parent / config_file
-
-with open(config_path, 'r') as f:
-    config = yaml.safe_load(f)
 
 def run_icon_detection_pipeline(
     image_bytes: bytes,
@@ -30,12 +22,8 @@ def run_icon_detection_pipeline(
     img_height = 0
 
     try:
-        iconprep_dir = Path(__file__).parent.parent / "services" / "icon"
-        if str(iconprep_dir) not in sys.path:
-            sys.path.insert(0, str(iconprep_dir))
-
-        from grounding import ground_single_image_with_stages
-        from query_embedding import query_from_detections_with_details
+        from ..services.icon.grounding import ground_single_image_with_stages
+        from ..services.icon.query_embedding import query_from_detections_with_details
 
         raw_dets, pixel_dets_pre, pixel_dets_post, img_width, img_height = ground_single_image_with_stages(
             image_bytes=image_bytes,
@@ -52,14 +40,9 @@ def run_icon_detection_pipeline(
         icon_dets = [d for d in pixel_dets_post if str(d.get("label", "")).lower() == "icon"]
         icon_count = len(icon_dets)
 
-        default_lib = Path(__file__).parent.parent.parent.parent / "packages" / "icons" / "assets"
-        cfg_lib = None
-        try:
-            cfg_lib = (config.get("icons", {}) or {}).get("lib_root")
-        except Exception:
-            cfg_lib = None
+        default_lib = Path(__file__).parent.parent.parent.parent / "libs" / "packages" / "icons" / "assets"
         env_lib = os.getenv("ICON_LIB_ROOT")
-        lib_root_path = Path(env_lib or cfg_lib or default_lib)
+        lib_root_path = Path(env_lib or default_lib)
 
         if lib_root_path.exists():
             svg_names, per_icon_details = query_from_detections_with_details(

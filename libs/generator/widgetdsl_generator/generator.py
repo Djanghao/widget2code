@@ -4,13 +4,11 @@ from provider_hub import LLM, ChatMessage, prepare_image_content
 from PIL import Image
 import io
 import json
-import os
-import yaml
-from pathlib import Path
 from datetime import datetime
 import sys
 
-from utils import (
+from .config import GeneratorConfig
+from .utils import (
     check_rate_limit,
     validate_model,
     validate_api_key,
@@ -23,7 +21,7 @@ from utils import (
     clean_json_response,
     clean_code_response,
 )
-from perception import (
+from .perception import (
     preprocess_image_for_widget,
     run_icon_detection_pipeline,
     format_icon_prompt_injection,
@@ -31,15 +29,7 @@ from perception import (
     inject_graph_specs_to_prompt,
     get_available_components_list,
 )
-from perception.icon_extraction import normalize_icon_details
-
-config_file = os.getenv("CONFIG_FILE", "config.yaml")
-config_path = Path(__file__).parent.parent / config_file
-
-with open(config_path, 'r') as f:
-    config = yaml.safe_load(f)
-
-MAX_FILE_SIZE_MB = config['security']['max_file_size_mb']
+from .perception.icon_extraction import normalize_icon_details
 
 
 async def get_default_prompt():
@@ -47,14 +37,15 @@ async def get_default_prompt():
 
 async def generate_widget(
     request: Request,
-    image: UploadFile = File(...),
-    system_prompt: str = Form(None),
-    model: str = Form(None),
-    api_key: str = Form(None),
+    image: UploadFile,
+    system_prompt: str,
+    model: str,
+    api_key: str,
+    config: GeneratorConfig,
 ):
     client_ip = request.client.host
 
-    if not check_rate_limit(client_ip):
+    if not check_rate_limit(client_ip, config.max_requests_per_minute):
         return JSONResponse(
             status_code=429,
             content={
@@ -70,7 +61,7 @@ async def generate_widget(
     try:
         image_bytes = await image.read()
 
-        file_size_error = validate_file_size(len(image_bytes))
+        file_size_error = validate_file_size(len(image_bytes), config.max_file_size_mb)
         if file_size_error:
             return file_size_error
 
@@ -157,14 +148,15 @@ async def generate_widget(
 
 async def generate_widget_text(
     request: Request,
-    system_prompt: str = Form(...),
-    user_prompt: str = Form(...),
-    model: str = Form(None),
-    api_key: str = Form(None),
+    system_prompt: str,
+    user_prompt: str,
+    model: str,
+    api_key: str,
+    config: GeneratorConfig,
 ):
     client_ip = request.client.host
 
-    if not check_rate_limit(client_ip):
+    if not check_rate_limit(client_ip, config.max_requests_per_minute):
         return JSONResponse(
             status_code=429,
             content={
@@ -235,16 +227,17 @@ async def generate_widget_text(
 
 async def generate_component(
     request: Request,
-    prompt: str = Form(...),
-    suggested_width: int = Form(...),
-    suggested_height: int = Form(...),
-    model: str = Form(None),
-    system_prompt: str = Form(None),
-    api_key: str = Form(None),
+    prompt: str,
+    suggested_width: int,
+    suggested_height: int,
+    model: str,
+    system_prompt: str,
+    api_key: str,
+    config: GeneratorConfig,
 ):
     client_ip = request.client.host
 
-    if not check_rate_limit(client_ip):
+    if not check_rate_limit(client_ip, config.max_requests_per_minute):
         return JSONResponse(
             status_code=429,
             content={
@@ -313,16 +306,17 @@ async def generate_component(
 
 async def generate_component_from_image(
     request: Request,
-    image: UploadFile = File(...),
-    suggested_width: int = Form(...),
-    suggested_height: int = Form(...),
-    model: str = Form(None),
-    system_prompt: str = Form(None),
-    api_key: str = Form(None),
+    image: UploadFile,
+    suggested_width: int,
+    suggested_height: int,
+    model: str,
+    system_prompt: str,
+    api_key: str,
+    config: GeneratorConfig,
 ):
     client_ip = request.client.host
 
-    if not check_rate_limit(client_ip):
+    if not check_rate_limit(client_ip, config.max_requests_per_minute):
         return JSONResponse(
             status_code=429,
             content={
@@ -338,7 +332,7 @@ async def generate_component_from_image(
     try:
         image_bytes = await image.read()
 
-        file_size_error = validate_file_size(len(image_bytes))
+        file_size_error = validate_file_size(len(image_bytes), config.max_file_size_mb)
         if file_size_error:
             return file_size_error
 
@@ -423,17 +417,18 @@ async def generate_component_from_image(
 
 async def generate_widget_with_icons(
     request: Request,
-    image: UploadFile = File(...),
-    system_prompt: str = Form(None),
-    model: str = Form(None),
-    api_key: str = Form(None),
-    retrieval_topk: int = Form(50),
-    retrieval_topm: int = Form(10),
-    retrieval_alpha: float = Form(0.8),
+    image: UploadFile,
+    system_prompt: str,
+    model: str,
+    api_key: str,
+    retrieval_topk: int,
+    retrieval_topm: int,
+    retrieval_alpha: float,
+    config: GeneratorConfig,
 ):
     client_ip = request.client.host
 
-    if not check_rate_limit(client_ip):
+    if not check_rate_limit(client_ip, config.max_requests_per_minute):
         return JSONResponse(
             status_code=429,
             content={
@@ -449,7 +444,7 @@ async def generate_widget_with_icons(
     try:
         image_bytes = await image.read()
 
-        file_size_error = validate_file_size(len(image_bytes))
+        file_size_error = validate_file_size(len(image_bytes), config.max_file_size_mb)
         if file_size_error:
             return file_size_error
 
@@ -579,14 +574,15 @@ async def generate_widget_with_icons(
 
 async def generate_widget_with_graph(
     request: Request,
-    image: UploadFile = File(...),
-    system_prompt: str = Form(None),
-    model: str = Form(None),
-    api_key: str = Form(None),
+    image: UploadFile,
+    system_prompt: str,
+    model: str,
+    api_key: str,
+    config: GeneratorConfig,
 ):
     client_ip = request.client.host
 
-    if not check_rate_limit(client_ip):
+    if not check_rate_limit(client_ip, config.max_requests_per_minute):
         return JSONResponse(
             status_code=429,
             content={
@@ -602,7 +598,7 @@ async def generate_widget_with_graph(
     try:
         image_bytes = await image.read()
 
-        file_size_error = validate_file_size(len(image_bytes))
+        file_size_error = validate_file_size(len(image_bytes), config.max_file_size_mb)
         if file_size_error:
             return file_size_error
 
@@ -706,17 +702,18 @@ async def generate_widget_with_graph(
 
 async def generate_widget_full(
     request: Request,
-    image: UploadFile = File(...),
-    system_prompt: str = Form(None),
-    model: str = Form(None),
-    api_key: str = Form(None),
-    retrieval_topk: int = Form(50),
-    retrieval_topm: int = Form(10),
-    retrieval_alpha: float = Form(0.8),
+    image: UploadFile,
+    system_prompt: str,
+    model: str,
+    api_key: str,
+    retrieval_topk: int,
+    retrieval_topm: int,
+    retrieval_alpha: float,
+    config: GeneratorConfig,
 ):
     client_ip = request.client.host
 
-    if not check_rate_limit(client_ip):
+    if not check_rate_limit(client_ip, config.max_requests_per_minute):
         return JSONResponse(
             status_code=429,
             content={
@@ -733,7 +730,7 @@ async def generate_widget_full(
     try:
         image_bytes = await image.read()
 
-        file_size_error = validate_file_size(len(image_bytes))
+        file_size_error = validate_file_size(len(image_bytes), config.max_file_size_mb)
         if file_size_error:
             return file_size_error
 
@@ -803,7 +800,7 @@ async def generate_widget_full(
         base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
 
         # Step 2: Add graph specs
-        from services.graph.pipeline import format_graph_specs_for_injection
+        from .services.graph.pipeline import format_graph_specs_for_injection
         graph_injection_text = format_graph_specs_for_injection(graph_specs) if graph_specs else ""
 
         has_placeholder = "[GRAPH_SPECS]" in base_prompt

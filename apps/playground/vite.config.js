@@ -21,12 +21,14 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     resolve: {
       alias: {
-        '@widget-factory/primitives': path.resolve(__dirname, '../../packages/primitives/src'),
-        '@widget-factory/compiler': path.resolve(__dirname, '../../packages/compiler/src'),
-        '@widget-factory/icons': path.resolve(__dirname, '../../packages/icons/src'),
-        '@widget-factory/dsl': path.resolve(__dirname, '../../packages/dsl/src'),
-        '@widget-factory/renderer': path.resolve(__dirname, '../../packages/renderer/src'),
-        '@widget-factory/exporter': path.resolve(__dirname, '../../packages/exporter/src'),
+        '@widget-factory/primitives': path.resolve(__dirname, '../../libs/packages/primitives/src'),
+        '@widget-factory/compiler': path.resolve(__dirname, '../../libs/packages/compiler/src'),
+        '@widget-factory/icons': path.resolve(__dirname, '../../libs/packages/icons'),
+        '@widget-factory/dsl': path.resolve(__dirname, '../../libs/packages/dsl/src'),
+        '@widget-factory/renderer': path.resolve(__dirname, '../../libs/packages/renderer/src'),
+        '@widget-factory/exporter': path.resolve(__dirname, '../../libs/packages/exporter/src'),
+        '@widget-factory/resizer': path.resolve(__dirname, '../../libs/packages/resizer/src'),
+        '@widget-factory/dynamic': path.resolve(__dirname, '../../libs/packages/dynamic/src'),
       }
     },
     build: {

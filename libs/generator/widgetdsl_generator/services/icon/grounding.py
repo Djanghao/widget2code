@@ -19,7 +19,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from PIL import Image
 
 from provider_hub import LLM, ChatMessage
-from post_process import post_process_pixel_detections
+from .post_process import post_process_pixel_detections
 
 DEFAULT_PROMPT = """
 You are an expert mobile-UI understanding assistant. OUTPUT JSON ONLY. Return a single JSON array. No extra text.
@@ -223,12 +223,7 @@ def ground_single_image_with_stages(
         raise TypeError("image_bytes must be raw bytes")
 
     try:
-        import sys, pathlib
-        here = pathlib.Path(__file__).resolve()
-        icon_dir = here.parent
-        if str(icon_dir) not in sys.path:
-            sys.path.insert(0, str(icon_dir))
-        from image_utils import preprocess_image_bytes_if_small  # type: ignore
+        from .image_utils import preprocess_image_bytes_if_small
     except Exception:
         preprocess_image_bytes_if_small = None  # type: ignore
     if preprocess_image_bytes_if_small is not None:

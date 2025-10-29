@@ -19,7 +19,7 @@ import cv2
 from PIL import Image, ImageOps
 import open_clip
 
-from query_caption import caption_embed_and_retrieve_svgs_with_dual_details
+from .query_caption import caption_embed_and_retrieve_svgs_with_dual_details
 
 MODEL_NAME = "ViT-SO400M-16-SigLIP2-384"
 PRETRAINED = "webli"

@@ -1,28 +1,17 @@
 import time
-import yaml
-import os
-from pathlib import Path
 from collections import defaultdict
 from fastapi.responses import JSONResponse
 
-config_file = os.getenv("CONFIG_FILE", "config.yaml")
-config_path = Path(__file__).parent.parent.parent / config_file
-
-with open(config_path, 'r') as f:
-    config = yaml.safe_load(f)
-
 rate_limit_storage = defaultdict(list)
-MAX_REQUESTS_PER_MINUTE = config['security']['max_requests_per_minute']
-MAX_FILE_SIZE_MB = config['security']['max_file_size_mb']
 
-def check_rate_limit(client_ip: str) -> bool:
+def check_rate_limit(client_ip: str, max_requests_per_minute: int) -> bool:
     now = time.time()
     rate_limit_storage[client_ip] = [
         timestamp for timestamp in rate_limit_storage[client_ip]
         if now - timestamp < 60
     ]
 
-    if len(rate_limit_storage[client_ip]) >= MAX_REQUESTS_PER_MINUTE:
+    if len(rate_limit_storage[client_ip]) >= max_requests_per_minute:
         return False
 
     rate_limit_storage[client_ip].append(now)
@@ -50,14 +39,13 @@ def validate_api_key(api_key: str) -> JSONResponse | None:
         )
     return None
 
-def validate_file_size(file_size: int, max_size_mb: int = None) -> JSONResponse | None:
-    max_mb = max_size_mb or MAX_FILE_SIZE_MB
-    if file_size > max_mb * 1024 * 1024:
+def validate_file_size(file_size: int, max_size_mb: int) -> JSONResponse | None:
+    if file_size > max_size_mb * 1024 * 1024:
         return JSONResponse(
             status_code=413,
             content={
                 "success": False,
-                "error": f"File size exceeds {max_mb}MB limit"
+                "error": f"File size exceeds {max_size_mb}MB limit"
             }
         )
     return None

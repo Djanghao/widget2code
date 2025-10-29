@@ -20,7 +20,7 @@ from PIL import Image
 import open_clip
 from transformers import Blip2Processor, Blip2ForConditionalGeneration
 
-from search_fused import retrieve_svg_filenames_with_dual_details
+from .search_fused import retrieve_svg_filenames_with_dual_details
 
 BLIP2_MODEL_ID = "Salesforce/blip2-opt-6.7b"
 BLIP2_MAX_NEW_TOKENS = 32

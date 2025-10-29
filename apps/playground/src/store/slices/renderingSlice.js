@@ -9,13 +9,13 @@
 
 import { compileWidgetDSL } from '../../core/compileWidget.js';
 import { examples } from '../../constants/examples.js';
-import { extractResources } from '../../../../../packages/primitives/src/utils/extractResources.js';
-import { preloadIcons } from '../../../../../packages/primitives/src/utils/preloadIcons.js';
-import { preloadImages } from '../../../../../packages/primitives/src/utils/preloadImages.js';
-import { iconCache } from '../../../../../packages/primitives/src/utils/iconCache.js';
-import { sfDynamicIconImports } from '../../../../../packages/icons/sf-symbols/src/index.jsx';
-import { findOptimalSize, waitForStable } from '../../../../../packages/resizer/src/index.js';
-import { validateWidget as validateWidgetFn } from '../../../../../packages/renderer/src/index.js';
+import { extractResources } from '@widget-factory/primitives/utils/extractResources.js';
+import { preloadIcons } from '@widget-factory/primitives/utils/preloadIcons.js';
+import { preloadImages } from '@widget-factory/primitives/utils/preloadImages.js';
+import { iconCache } from '@widget-factory/primitives/utils/iconCache.js';
+import { sfDynamicIconImports } from '@widget-factory/icons/sf-symbols/src/index.jsx';
+import { findOptimalSize, waitForStable } from '@widget-factory/resizer/index.js';
+import { validateWidget as validateWidgetFn } from '@widget-factory/renderer/index.js';
 
 const createRenderingSlice = (set, get) => ({
   renderingPhase: 'idle',
