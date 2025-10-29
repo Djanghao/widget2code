@@ -27,6 +27,8 @@ app.post("/api/generate-widget")(generator.generate_widget)
 app.post("/api/generate-widget-text")(generator.generate_widget_text)
 app.post("/api/generate-component")(generator.generate_component)
 app.post("/api/generate-component-from-image")(generator.generate_component_from_image)
+app.post("/api/generate-widget-icons")(generator.generate_widget_with_icons)
+app.post("/api/generate-widget-graph")(generator.generate_widget_with_graph)
 app.post("/api/generate-widget-full")(generator.generate_widget_full)
 
 if __name__ == "__main__":
