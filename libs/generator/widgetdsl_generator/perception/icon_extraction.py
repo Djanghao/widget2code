@@ -44,11 +44,11 @@ def run_icon_detection_pipeline(
         # Resolve library roots from repo paths. If none provided, default to SF library.
         here = Path(__file__).resolve()
         repo_root = here.parents[4]  # .../llm-widget-factory
-        base_assets_dir = repo_root / "libs" / "packages" / "icons" / "assets"
-        default_sf_dir = base_assets_dir / "sf"
+        base_embeddings_dir = repo_root / "libs" / "packages" / "icons" / "embeddings"
+        default_sf_dir = base_embeddings_dir / "sf"
 
         if lib_names and len(lib_names) > 0:
-            candidate_roots = [base_assets_dir / str(name) for name in lib_names]
+            candidate_roots = [base_embeddings_dir / str(name) for name in lib_names]
         else:
             candidate_roots = [default_sf_dir]
 
