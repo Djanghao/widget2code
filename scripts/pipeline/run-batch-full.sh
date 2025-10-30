@@ -30,7 +30,7 @@ echo "Concurrency: $CONCURRENCY"
 echo ""
 
 echo "Step 1/2: Generate WidgetDSL from images..."
-./scripts/generation/generate-batch.sh "$INPUT_DIR" "$DSL_DIR"
+./scripts/generation/generate-batch.sh "$INPUT_DIR" "$DSL_DIR" "$CONCURRENCY"
 
 echo ""
 echo "Step 2/2: Batch render DSL to PNG..."

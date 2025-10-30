@@ -13,7 +13,6 @@ OUTPUT_PATH=$2
 echo "Generating widget from image: $IMAGE_PATH"
 echo "Output will be saved to: $OUTPUT_PATH"
 
-cd libs/generator
-source ../../apps/api/.venv/bin/activate
+source apps/api/.venv/bin/activate
 
-generate-widget "../../$IMAGE_PATH" "../../$OUTPUT_PATH"
+generate-widget "$IMAGE_PATH" "$OUTPUT_PATH"
