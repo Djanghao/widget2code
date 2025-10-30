@@ -39,7 +39,6 @@ BATCH = 64
 MODEL_NAME = "ViT-SO400M-16-SigLIP2-384"
 PRETRAINED = "webli"
 GLOB = "**/*.svg"
-# Note: device selection is determined at runtime (after optional --gpus handling)
 EDGE_THRESH = 40        # Canny low threshold; high = max(low+10, low*3)
 BORDER_ERODE = 3        # 1/3/5 (odd). Alpha-border thickness (used by morph gradient)
 EDGE_DILATE = 3         # 1/3/5 (odd). Canny edges dilation
@@ -55,8 +54,13 @@ def ensure_dir(p: Path):
 def list_svgs(svg_dir: Path, pattern: str = GLOB) -> List[Path]:
     return sorted([p for p in svg_dir.glob(pattern) if p.suffix.lower()==".svg"])
 
+def _extract_after_answer(text: str) -> str:
+    if not text:
+        return text
+    idx = text.lower().find("answer:")
+    return text[idx + len("answer:"):].strip() if idx != -1 else text.strip()
+
 def svg_to_png_bytes_padded(svg_path: Path, raster_width_px: int, pad_frac: float = SVG_PAD_FRAC) -> bytes:
-    """Render SVG to PNG with expanded viewBox to avoid clipping strokes."""
     text = svg_path.read_text(encoding="utf-8", errors="ignore")
     root = ET.fromstring(text)
 
@@ -84,16 +88,22 @@ def svg_to_png_bytes_padded(svg_path: Path, raster_width_px: int, pad_frac: floa
     new_x, new_y = x - pad, y - pad
 
     ns = root.tag.split("}")[0].strip("{") if "}" in root.tag else "http://www.w3.org/2000/svg"
-    new_root = ET.Element(f"{{{ns}}}svg", {
-        "xmlns": ns,
-        "viewBox": f"{new_x} {new_y} {new_w} {new_h}",
-        "width": str(new_w),
-        "height": str(new_h),
-    })
+    new_attrib = dict(root.attrib)
+    new_attrib["viewBox"] = f"{new_x} {new_y} {new_w} {new_h}"
+    new_attrib["width"] = str(new_w)
+    new_attrib["height"] = str(new_h)
+    if "xmlns" not in new_attrib:
+        new_attrib["xmlns"] = ns
+
+    new_root = ET.Element(f"{{{ns}}}svg", new_attrib)
     g = ET.Element(f"{{{ns}}}g", {"transform": f"translate({pad},{pad})"})
     for child in list(root):
         root.remove(child)
-        g.append(child)
+        tag_local = child.tag.split("}")[-1] if "}" in child.tag else child.tag
+        if tag_local in ("defs", "style", "title", "desc"):
+            new_root.append(child)
+        else:
+            g.append(child)
     new_root.append(g)
 
     padded_svg = ET.tostring(new_root, encoding="utf-8", method="xml")
@@ -139,11 +149,8 @@ def to_outline_bw(png_rgba: bytes, target_size: int = TARGET, padding_ratio: flo
     k3 = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
     silhouette_boundary = cv2.morphologyEx(sil, cv2.MORPH_GRADIENT, k3)
 
-    # FIX: Merge silhouette boundary with Canny internal edges
-    # This preserves internal details in outline-style icons (e.g., Heroicons outline)
     merged = cv2.bitwise_or(silhouette_boundary, edge_full)
 
-    # center by merged bbox (legacy)
     ys, xs = np.where(merged > 0)
     if xs.size and ys.size:
         cx = 0.5 * (xs.min() + xs.max())
@@ -311,6 +318,7 @@ class BLIP2Captioner:
                 do_sample=False,
             )
             text = self.processor.batch_decode(gen_ids, skip_special_tokens=True)[0].strip()
+            text = _extract_after_answer(text)
             return text if text else None
         except Exception as e:
             warnings.warn(f"BLIP2 caption failed: {e}")
@@ -424,7 +432,7 @@ def _blip2_worker_run(img_bytes_list: List[bytes], model_id: str, gpu_id: Option
                     do_sample=False,
                 )
                 texts = proc.batch_decode(gen, skip_special_tokens=True)
-                outs.extend([t.strip() for t in texts])
+                outs.extend([_extract_after_answer(t.strip()) for t in texts])
         return outs[:len(img_bytes_list)]
     except Exception as e:
         warnings.warn(f"BLIP2 worker on GPU {gpu_id} failed: {e}")
@@ -435,7 +443,6 @@ def _caption_images_multiproc(color_pngs: List[bytes], gpu_ids: List[int], model
     if not color_pngs:
         return []
     n_workers = max(1, min(len(gpu_ids), len(color_pngs)))
-    # shard roughly evenly
     shards: List[List[bytes]] = [[] for _ in range(n_workers)]
     for i, b in enumerate(color_pngs):
         shards[i % n_workers].append(b)
@@ -444,7 +451,6 @@ def _caption_images_multiproc(color_pngs: List[bytes], gpu_ids: List[int], model
         results = pool.starmap(_blip2_worker_run, [
             (shards[i], model_id, gpu_ids[i]) for i in range(n_workers)
         ])
-    # stitch back preserving round-robin order
     outs = [None] * len(color_pngs)
     positions = [0] * n_workers
     for idx in range(len(color_pngs)):
@@ -527,7 +533,7 @@ def build_library_inplace(
             canvas.paste(fit_rgb, off)
             return canvas
 
-        color_img = raster_svg_to_centered_rgb(png_bytes, target=TARGET, pad_ratio=PAD_RATIO, bg_rgb=(0,0,0))
+        color_img = raster_svg_to_centered_rgb(png_bytes, target=TARGET, pad_ratio=PAD_RATIO, bg_rgb=(255, 255, 255))
         if use_multi_proc_caption:
             buf = io.BytesIO(); color_img.save(buf, format="PNG"); color_pngs.append(buf.getvalue())
             cap = ""
@@ -555,7 +561,6 @@ def build_library_inplace(
         if i % 500 == 0:
             print(f"[render+caption] {i}/{len(svgs)}")
 
-    # If using multiprocess captioning, run it now and fill captions
     if use_multi_proc_caption and color_pngs:
         assert gpu_ids is not None
         print(f"[BLIP2] Multiprocess captioning on GPUs: {','.join(map(str,gpu_ids))}")
@@ -565,8 +570,8 @@ def build_library_inplace(
                 cap = build_caption_from_keywords(items[idx]["aliases"]) if idx < len(items) else ""
             items[idx]["caption"] = cap
             if keep_metadata:
-                sp = Path(items[idx]["src_svg"])  # type: ignore
-                metadata_full[str(sp.as_posix())]["caption"] = cap  # type: ignore
+                sp = Path(items[idx]["src_svg"])
+                metadata_full[str(sp.as_posix())]["caption"] = cap
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model, preprocess = load_openclip(device=device, multi_gpu=multi_gpu)
@@ -643,12 +648,10 @@ def main(argv: Optional[List[str]] = None) -> int:
     args = parser.parse_args(argv)
 
     try:
-        # Configure visible GPUs before any CUDA device queries
         multi_gpu = False
         gpu_ids: Optional[List[int]] = None
         if args.gpus:
             parts = [s.strip() for s in str(args.gpus).split(",") if s.strip()]
-            # record absolute ids for workers; also restrict parent visibility to just these
             try:
                 gpu_ids = [int(x) for x in parts]
             except Exception:
@@ -656,7 +659,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             gspec = ",".join(parts)
             os.environ["CUDA_VISIBLE_DEVICES"] = gspec
             print(f"[GPU] Restricted visible GPUs to: {gspec}")
-            # multi-GPU enabled if more than one specified
             try:
                 import torch as _t
                 multi_gpu = _t.cuda.is_available() and (len(parts) > 1)
