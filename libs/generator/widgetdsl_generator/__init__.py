@@ -12,6 +12,8 @@ from .generation import (
     generate_widget_with_icons,
     generate_widget_with_graph,
     generate_widget_full,
+    BatchGenerator,
+    batch_generate,
 )
 
 from . import perception
@@ -27,6 +29,8 @@ __all__ = [
     "generate_widget_with_icons",
     "generate_widget_with_graph",
     "generate_widget_full",
+    "BatchGenerator",
+    "batch_generate",
     "perception",
     "utils",
 ]

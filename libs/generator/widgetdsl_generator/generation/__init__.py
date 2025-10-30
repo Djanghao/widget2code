@@ -12,6 +12,8 @@ from .widget import (
     generate_widget_with_icons,
     generate_widget_with_graph,
     generate_widget_full,
+    BatchGenerator,
+    batch_generate,
 )
 
 __all__ = [
@@ -23,4 +25,6 @@ __all__ = [
     "generate_widget_with_icons",
     "generate_widget_with_graph",
     "generate_widget_full",
+    "BatchGenerator",
+    "batch_generate",
 ]
