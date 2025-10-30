@@ -1,9 +1,6 @@
-"""WidgetDSL Generator - AI-powered widget generation from images"""
+"""Generation module for widget DSL."""
 
-__version__ = "0.3.0"
-
-from .config import GeneratorConfig
-from .generation.generator import (
+from .generator import (
     get_default_prompt,
     generate_widget,
     generate_widget_text,
@@ -14,12 +11,7 @@ from .generation.generator import (
     generate_widget_full,
 )
 
-from . import perception
-from . import services
-from . import utils
-
 __all__ = [
-    "GeneratorConfig",
     "get_default_prompt",
     "generate_widget",
     "generate_widget_text",
@@ -28,7 +20,4 @@ __all__ = [
     "generate_widget_with_icons",
     "generate_widget_with_graph",
     "generate_widget_full",
-    "perception",
-    "services",
-    "utils",
 ]

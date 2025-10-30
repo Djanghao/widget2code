@@ -6,9 +6,9 @@ import os
 from datetime import datetime
 import sys
 
-from .config import GeneratorConfig
-from .exceptions import ValidationError, FileSizeError, GenerationError
-from .utils import (
+from ..config import GeneratorConfig
+from ..exceptions import ValidationError, FileSizeError, GenerationError
+from ..utils import (
     check_rate_limit,
     validate_model,
     validate_api_key,
@@ -21,7 +21,7 @@ from .utils import (
     clean_json_response,
     clean_code_response,
 )
-from .perception import (
+from ..perception import (
     preprocess_image_for_widget,
     run_icon_detection_pipeline,
     format_icon_prompt_injection,
@@ -29,7 +29,7 @@ from .perception import (
     inject_graph_specs_to_prompt,
     get_available_components_list,
 )
-from .perception.icon_extraction import normalize_icon_details
+from ..perception.icon_extraction import normalize_icon_details
 
 
 async def get_default_prompt():
