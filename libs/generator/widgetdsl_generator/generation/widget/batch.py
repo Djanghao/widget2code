@@ -45,16 +45,40 @@ class BatchGenerator:
         self.failed = 0
         self.results = []
 
-    def find_images(self) -> List[Path]:
-        """Find all image files in input directory."""
+    def find_images_to_process(self) -> List[Path]:
+        """Find image files that need processing (skip already completed)."""
         extensions = {'.png', '.jpg', '.jpeg', '.webp', '.bmp'}
-        images = []
+        all_images = []
 
         for ext in extensions:
-            images.extend(self.input_dir.glob(f'*{ext}'))
-            images.extend(self.input_dir.glob(f'*{ext.upper()}'))
+            all_images.extend(self.input_dir.glob(f'*{ext}'))
+            all_images.extend(self.input_dir.glob(f'*{ext.upper()}'))
 
-        return sorted(images)
+        images_to_process = []
+
+        for image_path in sorted(all_images):
+            widget_id = image_path.stem
+            widget_dir = self.output_dir / widget_id
+            log_file = widget_dir / "log.json"
+
+            should_process = True
+
+            if log_file.exists():
+                try:
+                    with open(log_file, 'r') as f:
+                        log_data = json.load(f)
+                        generation_step = log_data.get('steps', {}).get('generation', {})
+
+                        if generation_step.get('status') == 'success':
+                            should_process = False
+                            print(f"[Skip] {image_path.name} - already generated")
+                except Exception as e:
+                    print(f"[Warning] Failed to read log for {image_path.name}, will process")
+
+            if should_process:
+                images_to_process.append(image_path)
+
+        return images_to_process
 
     async def generate_single(self, image_path: Path) -> Tuple[Path, bool, str]:
         """Generate widget DSL for a single image with nested directory structure and log.json."""
@@ -241,11 +265,11 @@ class BatchGenerator:
             print("Error: DASHSCOPE_API_KEY not found in environment")
             raise ValueError("API key not found")
 
-        images = self.find_images()
+        images = self.find_images_to_process()
         self.total = len(images)
 
         if self.total == 0:
-            print(f"No images found in {self.input_dir}")
+            print(f"No images to process (all already completed or no images found)")
             return
 
         print(f"Found {self.total} images to process\n")
