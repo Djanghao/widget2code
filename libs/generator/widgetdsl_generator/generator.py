@@ -518,6 +518,7 @@ async def generate_widget_full(
     retrieval_topm: int,
     retrieval_alpha: float,
     config: GeneratorConfig,
+    icon_lib_names: str,
 ):
     print(f"[{datetime.now()}] generate-widget-full request")
 
@@ -542,6 +543,17 @@ async def generate_widget_full(
         print(f"[{datetime.now()}] Starting parallel extraction: icons and graphs...")
 
         async def run_icon_extraction():
+            # Parse optional icon library names (JSON array or comma-separated)
+            lib_names = None
+            if icon_lib_names:
+                try:
+                    parsed = json.loads(icon_lib_names)
+                    if isinstance(parsed, list):
+                        lib_names = [str(p).strip() for p in parsed if str(p).strip()]
+                except Exception:
+                    parts = [s.strip() for s in str(icon_lib_names).split(",") if s.strip()]
+                    if parts:
+                        lib_names = parts
             return run_icon_detection_pipeline(
                 image_bytes=image_bytes,
                 filename=image_filename,
@@ -550,6 +562,7 @@ async def generate_widget_full(
                 retrieval_topk=retrieval_topk,
                 retrieval_topm=retrieval_topm,
                 retrieval_alpha=retrieval_alpha,
+                lib_names=lib_names,
                 timeout=300,
             )
 

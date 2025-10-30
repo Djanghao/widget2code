@@ -135,6 +135,7 @@ function Widget2Code() {
       formData.append('retrieval_topm', '10');
       formData.append('retrieval_alpha', '0.8');
       formData.append('image', image);
+      formData.append('icon_lib_names', 'sf');
 
       const response = await fetch('/api/generate-widget-full', { method: 'POST', body: formData });
       const data = await response.json();

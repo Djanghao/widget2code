@@ -10,6 +10,7 @@ def run_icon_detection_pipeline(
     retrieval_topk: int = 50,
     retrieval_topm: int = 10,
     retrieval_alpha: float = 0.8,
+    lib_names: Optional[list[str]] = None,
     timeout: int = 300,
 ) -> dict:
     grounding_raw = []
@@ -40,15 +41,24 @@ def run_icon_detection_pipeline(
         icon_dets = [d for d in pixel_dets_post if str(d.get("label", "")).lower() == "icon"]
         icon_count = len(icon_dets)
 
-        # Current file: libs/generator/widgetdsl_generator/perception/icon_extraction.py
-        # Target path: libs/packages/icons/assets
-        lib_root_path = Path(__file__).parent.parent.parent / "packages" / "icons" / "assets"
+        # Resolve library roots from repo paths. If none provided, default to SF library.
+        here = Path(__file__).resolve()
+        repo_root = here.parents[4]  # .../llm-widget-factory
+        base_assets_dir = repo_root / "libs" / "packages" / "icons" / "assets"
+        default_sf_dir = base_assets_dir / "sf"
 
-        if lib_root_path.exists():
+        if lib_names and len(lib_names) > 0:
+            candidate_roots = [base_assets_dir / str(name) for name in lib_names]
+        else:
+            candidate_roots = [default_sf_dir]
+
+        existing_roots = [p for p in candidate_roots if p.exists()]
+        if existing_roots:
             svg_names, per_icon_details = query_from_detections_with_details(
                 detections=pixel_dets_post,
                 image_bytes=image_bytes,
-                lib_root=lib_root_path,
+                lib_root=existing_roots[0] if len(existing_roots) == 1 else None,
+                lib_roots=existing_roots if len(existing_roots) > 1 else None,
                 filter_icon_only=True,
                 topk=int(retrieval_topk),
                 topm=int(retrieval_topm),
@@ -103,13 +113,9 @@ def format_icon_prompt_injection(
                 raw_name = str(c.get("name") or "").strip()
                 if not raw_name:
                     continue
-                if raw_name.startswith("sf:") or raw_name.startswith("lucide:"):
-                    fixed = raw_name
-                elif (raw_name.lower() == raw_name) and ("." in raw_name):
-                    fixed = f"sf:{raw_name}"
-                else:
-                    fixed = f"lucide:{raw_name}"
-                names.append(fixed)
+                # Use the name exactly as it appears from retrieval.
+                # Assumes filenames already carry the correct pack prefix (e.g., "lucide:Eye").
+                names.append(raw_name)
             if not names or not bbox or len(bbox) != 4:
                 continue
             extra_parts.append(
@@ -140,12 +146,8 @@ def normalize_icon_details(per_icon_details: list) -> tuple[list, list]:
 
             raw_name = str(candidate.get("name", ""))
             if raw_name:
-                if raw_name.startswith("sf:") or raw_name.startswith("lucide:"):
-                    candidate["name"] = raw_name
-                elif (raw_name.lower() == raw_name) and ("." in raw_name):
-                    candidate["name"] = f"sf:{raw_name}"
-                else:
-                    candidate["name"] = f"lucide:{raw_name}"
+                # Preserve the retrieved name verbatim; do not force-add prefixes.
+                candidate["name"] = raw_name
 
         for candidate in icon_detail.get("imageOnlyTop10", []):
             if "score_img" in candidate:

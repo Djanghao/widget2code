@@ -23,9 +23,10 @@ import io, json, re, math, warnings
 import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import List, Tuple, Optional, Dict, Any
+import multiprocessing as mp
 import numpy as np
 from PIL import Image, ImageOps, ImageFilter, ImageColor
-import cairosvg, faiss, torch, open_clip, cv2
+import cairosvg, faiss, torch, open_clip, cv2, os
 
 from transformers import Blip2Processor, Blip2ForConditionalGeneration
 
@@ -38,11 +39,12 @@ BATCH = 64
 MODEL_NAME = "ViT-SO400M-16-SigLIP2-384"
 PRETRAINED = "webli"
 GLOB = "**/*.svg"
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+# Note: device selection is determined at runtime (after optional --gpus handling)
 EDGE_THRESH = 40        # Canny low threshold; high = max(low+10, low*3)
 BORDER_ERODE = 3        # 1/3/5 (odd). Alpha-border thickness (used by morph gradient)
 EDGE_DILATE = 3         # 1/3/5 (odd). Canny edges dilation
 CAPTION_MODEL_ID = "Salesforce/blip2-opt-6.7b"
+CAPTION_BATCH = 4
 MAX_NEW_TOKENS = 64
 NUM_BEAMS = 4
 STOPWORDS = {"icon", "icons", "ic"}
@@ -262,15 +264,20 @@ def build_caption_from_keywords(keywords: List[str]) -> str:
     return " ".join(keywords + ["icon"])
 
 class BLIP2Captioner:
-    def __init__(self, model_id: str = CAPTION_MODEL_ID):
+    def __init__(self, model_id: str = CAPTION_MODEL_ID, multi_gpu: bool = False):
         self.enabled = True
         self.model = None
         self.processor = None
         try:
             if torch.cuda.is_available():
-                device_map = {"": 0}
-                dtype = torch.float16
-                print(f"[BLIP2] Using GPU 0: {torch.cuda.get_device_name(0)}")
+                if multi_gpu and torch.cuda.device_count() > 1:
+                    device_map = "auto"
+                    dtype = torch.float16
+                    print(f"[BLIP2] Using multi-GPU across {torch.cuda.device_count()} visible GPUs")
+                else:
+                    device_map = {"": 0}
+                    dtype = torch.float16
+                    print(f"[BLIP2] Using GPU 0: {torch.cuda.get_device_name(0)}")
             else:
                 device_map = {"": "cpu"}
                 dtype = torch.float32
@@ -305,9 +312,17 @@ class BLIP2Captioner:
             warnings.warn(f"BLIP2 caption failed: {e}")
             return None
 
-def load_openclip():
-    model, _, preprocess = open_clip.create_model_and_transforms(MODEL_NAME, pretrained=PRETRAINED, device=DEVICE)
+def load_openclip(device: Optional[str] = None, multi_gpu: bool = False):
+    if device is None:
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+    model, _, preprocess = open_clip.create_model_and_transforms(MODEL_NAME, pretrained=PRETRAINED, device=device)
     model.eval()
+    if device == "cuda" and multi_gpu and torch.cuda.device_count() > 1:
+        try:
+            model = torch.nn.DataParallel(model)
+            print(f"[OpenCLIP] DataParallel over {torch.cuda.device_count()} visible GPUs")
+        except Exception:
+            pass
     return model, preprocess
 
 def load_openclip_text_tokenizer(model_name: str = MODEL_NAME):
@@ -319,13 +334,17 @@ def embed_images_from_pils(model, preprocess, pil_images: List[Image.Image]) -> 
         for im in pil_images:
             batch.append(preprocess(im.convert("RGB")))
             if len(batch) == BATCH:
-                tens = torch.stack(batch).to(DEVICE)
-                feat = model.encode_image(tens)
+                dev = next(model.parameters()).device if hasattr(model, "parameters") else torch.device("cuda" if torch.cuda.is_available() else "cpu")
+                tens = torch.stack(batch).to(dev)
+                encode_image = getattr(model, 'module', model).encode_image
+                feat = encode_image(tens)
                 feat = feat / feat.norm(dim=-1, keepdim=True)
                 embs.append(feat.cpu().numpy()); batch = []
         if batch:
-            tens = torch.stack(batch).to(DEVICE)
-            feat = model.encode_image(tens)
+            dev = next(model.parameters()).device if hasattr(model, "parameters") else torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            tens = torch.stack(batch).to(dev)
+            encode_image = getattr(model, 'module', model).encode_image
+            feat = encode_image(tens)
             feat = feat / feat.norm(dim=-1, keepdim=True)
             embs.append(feat.cpu().numpy())
     return np.concatenate(embs, axis=0).astype("float32")
@@ -336,13 +355,17 @@ def embed_texts(model, tokenizer, texts: List[str]) -> np.ndarray:
         for t in texts:
             batch_txt.append(t)
             if len(batch_txt) == BATCH:
-                toks = tokenizer(batch_txt).to(DEVICE)
-                feat = model.encode_text(toks)
+                dev = next(model.parameters()).device if hasattr(model, "parameters") else torch.device("cuda" if torch.cuda.is_available() else "cpu")
+                toks = tokenizer(batch_txt).to(dev)
+                encode_text = getattr(model, 'module', model).encode_text
+                feat = encode_text(toks)
                 feat = feat / feat.norm(dim=-1, keepdim=True)
                 embs.append(feat.cpu().numpy()); batch_txt = []
         if batch_txt:
-            toks = tokenizer(batch_txt).to(DEVICE)
-            feat = model.encode_text(toks)
+            dev = next(model.parameters()).device if hasattr(model, "parameters") else torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            toks = tokenizer(batch_txt).to(dev)
+            encode_text = getattr(model, 'module', model).encode_text
+            feat = encode_text(toks)
             feat = feat / feat.norm(dim=-1, keepdim=True)
             embs.append(feat.cpu().numpy())
     return np.concatenate(embs, axis=0).astype("float32")
@@ -354,12 +377,91 @@ def build_faiss_cosine(vecs: np.ndarray) -> faiss.Index:
     index.add(v)
     return index
 
+def _blip2_worker_run(img_bytes_list: List[bytes], model_id: str, gpu_id: Optional[int], batch: int = CAPTION_BATCH) -> List[str]:
+    # Pin this worker to a single GPU BEFORE importing/using torch.cuda
+    if gpu_id is not None:
+        os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu_id)
+    try:
+        from transformers import Blip2Processor, Blip2ForConditionalGeneration
+        import torch as _t
+        device = "cuda" if _t.cuda.is_available() else "cpu"
+        dtype = _t.float16 if device == "cuda" else _t.float32
+        proc = Blip2Processor.from_pretrained(model_id, use_fast=False)
+        # Single-device placement to avoid accelerate warnings
+        device_map = {"": 0} if device == "cuda" else {"": "cpu"}
+        model = Blip2ForConditionalGeneration.from_pretrained(
+            model_id, torch_dtype=dtype, device_map=device_map
+        ).eval()
+        # pad/eos safety
+        tok = proc.tokenizer
+        if getattr(tok, "pad_token_id", None) is None and getattr(tok, "eos_token_id", None) is not None:
+            tok.pad_token_id = tok.eos_token_id
+        if getattr(model, "config", None) is not None:
+            model.config.pad_token_id = tok.pad_token_id
+            model.config.eos_token_id = tok.eos_token_id
+        if getattr(model, "generation_config", None) is not None:
+            model.generation_config.pad_token_id = tok.pad_token_id
+            model.generation_config.eos_token_id = tok.eos_token_id
+
+        outs: List[str] = []
+        with torch.no_grad():
+            for i in range(0, len(img_bytes_list), batch):
+                chunk = img_bytes_list[i:i+batch]
+                if not chunk:
+                    continue
+                imgs = [Image.open(io.BytesIO(b)).convert("RGB") for b in chunk]
+                inputs = proc(images=imgs, return_tensors="pt")
+                if device == "cuda":
+                    inputs = {k: v.to("cuda") if hasattr(v, "to") else v for k, v in inputs.items()}
+                gen = model.generate(
+                    **inputs,
+                    max_new_tokens=MAX_NEW_TOKENS,
+                    num_beams=NUM_BEAMS,
+                    do_sample=False,
+                )
+                texts = proc.batch_decode(gen, skip_special_tokens=True)
+                outs.extend([t.strip() for t in texts])
+        return outs[:len(img_bytes_list)]
+    except Exception as e:
+        warnings.warn(f"BLIP2 worker on GPU {gpu_id} failed: {e}")
+        return [""] * len(img_bytes_list)
+
+
+def _caption_images_multiproc(color_pngs: List[bytes], gpu_ids: List[int], model_id: str = CAPTION_MODEL_ID) -> List[str]:
+    if not color_pngs:
+        return []
+    n_workers = max(1, min(len(gpu_ids), len(color_pngs)))
+    # shard roughly evenly
+    shards: List[List[bytes]] = [[] for _ in range(n_workers)]
+    for i, b in enumerate(color_pngs):
+        shards[i % n_workers].append(b)
+    ctx = mp.get_context("spawn")
+    with ctx.Pool(processes=n_workers) as pool:
+        results = pool.starmap(_blip2_worker_run, [
+            (shards[i], model_id, gpu_ids[i]) for i in range(n_workers)
+        ])
+    # stitch back preserving round-robin order
+    outs = [None] * len(color_pngs)
+    positions = [0] * n_workers
+    for idx in range(len(color_pngs)):
+        w = idx % n_workers
+        pos = positions[w]
+        positions[w] += 1
+        try:
+            outs[idx] = results[w][pos]
+        except Exception:
+            outs[idx] = ""
+    return [o or "" for o in outs]
+
+
 def build_library_inplace(
     svg_dir: Path,
     lib_root: Path,
     *,
     keep_metadata: bool = True,
     pattern: str = GLOB,
+    multi_gpu: bool = False,
+    gpu_ids: Optional[List[int]] = None,
 ) -> Dict[str, Any]:
     svg_dir = Path(svg_dir)
     lib_root = Path(lib_root)
@@ -371,11 +473,13 @@ def build_library_inplace(
     if not svgs:
         raise SystemExit(f"No SVGs found in {svg_dir} with pattern {GLOB}")
 
-    capper = BLIP2Captioner(CAPTION_MODEL_ID)
+    use_multi_proc_caption = bool(multi_gpu and gpu_ids and len(gpu_ids) > 1)
+    capper = None if use_multi_proc_caption else BLIP2Captioner(CAPTION_MODEL_ID, multi_gpu=False)
     bw_pils: List[Image.Image] = []
     captions: List[str] = []
     items: List[Dict[str, Any]] = []
     metadata_full: Dict[str, Any] = {}
+    color_pngs: List[bytes] = []
 
     for i, sp in enumerate(svgs, 1):
         rel = sp.relative_to(svg_dir)
@@ -420,9 +524,13 @@ def build_library_inplace(
             return canvas
 
         color_img = raster_svg_to_centered_rgb(png_bytes, target=TARGET, pad_ratio=PAD_RATIO, bg_rgb=(0,0,0))
-        cap = capper.caption_image(color_img) if capper.enabled else None
-        if not cap or not cap.strip():
-            cap = build_caption_from_keywords(aliases)
+        if use_multi_proc_caption:
+            buf = io.BytesIO(); color_img.save(buf, format="PNG"); color_pngs.append(buf.getvalue())
+            cap = ""
+        else:
+            cap = capper.caption_image(color_img) if (capper and capper.enabled) else None
+            if not cap or not cap.strip():
+                cap = build_caption_from_keywords(aliases)
 
         items.append({
             "src_svg": str(sp.as_posix()),
@@ -443,7 +551,21 @@ def build_library_inplace(
         if i % 500 == 0:
             print(f"[render+caption] {i}/{len(svgs)}")
 
-    model, preprocess = load_openclip()
+    # If using multiprocess captioning, run it now and fill captions
+    if use_multi_proc_caption and color_pngs:
+        assert gpu_ids is not None
+        print(f"[BLIP2] Multiprocess captioning on GPUs: {','.join(map(str,gpu_ids))}")
+        caps = _caption_images_multiproc(color_pngs, gpu_ids, CAPTION_MODEL_ID)
+        for idx, cap in enumerate(caps):
+            if not cap or not cap.strip():
+                cap = build_caption_from_keywords(items[idx]["aliases"]) if idx < len(items) else ""
+            items[idx]["caption"] = cap
+            if keep_metadata:
+                sp = Path(items[idx]["src_svg"])  # type: ignore
+                metadata_full[str(sp.as_posix())]["caption"] = cap  # type: ignore
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model, preprocess = load_openclip(device=device, multi_gpu=multi_gpu)
 
     embs_img = embed_images_from_pils(model, preprocess, bw_pils)
     np.save(feat_dir / "features_SigLIP2.npy", embs_img)
@@ -507,15 +629,45 @@ def main(argv: Optional[List[str]] = None) -> int:
         action="store_true",
         help="Skip writing metadata.json at the lib root.",
     )
+    parser.add_argument(
+        "--gpus",
+        type=str,
+        default=None,
+        help="Comma-separated GPU indices to make visible (e.g., '0,1,2,3'). If provided and multiple GPUs are visible, BLIP2 will use device_map=auto and OpenCLIP image encoding will use DataParallel.",
+    )
 
     args = parser.parse_args(argv)
 
     try:
+        # Configure visible GPUs before any CUDA device queries
+        multi_gpu = False
+        gpu_ids: Optional[List[int]] = None
+        if args.gpus:
+            parts = [s.strip() for s in str(args.gpus).split(",") if s.strip()]
+            # record absolute ids for workers; also restrict parent visibility to just these
+            try:
+                gpu_ids = [int(x) for x in parts]
+            except Exception:
+                gpu_ids = None
+            gspec = ",".join(parts)
+            os.environ["CUDA_VISIBLE_DEVICES"] = gspec
+            print(f"[GPU] Restricted visible GPUs to: {gspec}")
+            # multi-GPU enabled if more than one specified
+            try:
+                import torch as _t
+                multi_gpu = _t.cuda.is_available() and (len(parts) > 1)
+                if multi_gpu:
+                    print(f"[GPU] Multi-GPU configured over {len(parts)} devices")
+            except Exception:
+                multi_gpu = False
+
         build_library_inplace(
             Path(args.svg_dir),
             Path(args.lib_root),
             keep_metadata=(not args.no_metadata),
             pattern=args.pattern,
+            multi_gpu=multi_gpu,
+            gpu_ids=gpu_ids,
         )
         return 0
     except SystemExit as e:

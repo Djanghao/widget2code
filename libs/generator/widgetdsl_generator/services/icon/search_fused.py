@@ -25,48 +25,32 @@ def _to_pascal(s: str) -> str:
 
 
 def _normalize_name_from_src(src: str) -> str:
-    """Normalize a display name from src_svg path.
-    Rules:
-    - strip extension
-    - ensure prefix sf: or lucide:
-      - if lucide → PascalCase token (matches lucide-react keys)
-      - if sf → keep dot-separated token
-    - if no prefix present: dot → sf:, else lucide: with PascalCase
-    """
-    name = Path(src).name
-    stem = Path(name).stem  # may include prefix like 'sf:moon.stars.fill'
-    if ":" in stem:
-        prefix, token = stem.split(":", 1)
-        prefix = prefix.strip().lower()
-        if prefix == "lucide":
-            return f"lucide:{_to_pascal(token)}"
-        if prefix == "sf":
-            return f"sf:{token}"
-        # unknown prefix → fall back
-        stem = token
-    # No explicit prefix
-    if "." in stem:
-        return f"sf:{stem}"
-    return f"lucide:{_to_pascal(stem)}"
+    return Path(Path(src).name).stem
 
 def load_lib(lib_root: Path) -> Tuple[Any, List[Dict[str, Any]], np.ndarray, np.ndarray]:
-    lib_root = Path(lib_root)
-    index = faiss.read_index(str((lib_root / "indices" / INDEX_NAME).as_posix()))
-    lib_img = np.load(lib_root / "features" / "features_SigLIP2.npy").astype("float32")
-    lib_txt_path = lib_root / "features" / "features_text_SigLIP2.npy"
-    if not lib_txt_path.exists():
-        raise SystemExit("Missing features_text_SigLIP2.npy")
-    
-    lib_txt = np.load(lib_txt_path).astype("float32")
-    items_path = lib_root / "features" / "items.json"
-    if not items_path.exists():
-        raise SystemExit("Missing features/items.json (aligned with features rows)")
-
-    items = json.loads(items_path.read_text(encoding="utf-8"))
-    if len(items) != len(lib_img) or len(items) != len(lib_txt):
-        raise SystemExit("Length mismatch among items.json, features_SigLIP2.npy, features_text_SigLIP2.npy")
-
-    return index, items, lib_img, lib_txt
+    try:
+        import sys, pathlib
+        here = pathlib.Path(__file__).resolve()
+        common_dir = here.parent.parent / "common"
+        if str(common_dir) not in sys.path:
+            sys.path.insert(0, str(common_dir))
+        from model_cache import get_icon_lib
+        return get_icon_lib(Path(lib_root))
+    except Exception:
+        lib_root = Path(lib_root)
+        index = faiss.read_index(str((lib_root / "indices" / INDEX_NAME).as_posix()))
+        lib_img = np.load(lib_root / "features" / "features_SigLIP2.npy").astype("float32")
+        lib_txt_path = lib_root / "features" / "features_text_SigLIP2.npy"
+        if not lib_txt_path.exists():
+            raise SystemExit("Missing features_text_SigLIP2.npy")
+        lib_txt = np.load(lib_txt_path).astype("float32")
+        items_path = lib_root / "features" / "items.json"
+        if not items_path.exists():
+            raise SystemExit("Missing features/items.json (aligned with features rows)")
+        items = json.loads(items_path.read_text(encoding="utf-8"))
+        if len(items) != len(lib_img) or len(items) != len(lib_txt):
+            raise SystemExit("Length mismatch among items.json, features_SigLIP2.npy, features_text_SigLIP2.npy")
+        return index, items, lib_img, lib_txt
 
 
 def _rerank_in_K(
@@ -144,6 +128,7 @@ def _process_one_query(
 
 __all__ = [
     "retrieve_svg_filenames_with_dual_details",
+    "retrieve_svg_filenames_from_libs_with_dual_details",
 ]
 
 
@@ -204,5 +189,145 @@ def retrieve_svg_filenames_with_dual_details(
 
         fused_hits_all.append(hits_with_names)
         img_only_hits_all.append(hits_img_only_named)
+
+    return svg_names, fused_hits_all, img_only_hits_all
+
+
+def retrieve_svg_filenames_from_libs_with_dual_details(
+    *,
+    lib_roots: List[Path],
+    q_ids: List[str],
+    q_img_all: np.ndarray,  # (Q, D)
+    q_txt_all: np.ndarray,  # (Q, D)
+    topk: int = TOPK,
+    topm: int = TOPM,
+    alpha: float = ALPHA,
+) -> Tuple[List[str], List[List[Dict[str, Any]]], List[List[Dict[str, Any]]]]:
+    if q_img_all is None or q_txt_all is None:
+        raise ValueError("q_img_all and q_txt_all must be provided.")
+    if len(q_img_all) != len(q_txt_all) or len(q_img_all) != len(q_ids):
+        raise ValueError("Length mismatch: q_ids, q_img_all, q_txt_all must align.")
+    roots = [Path(r) for r in lib_roots if r]
+    if not roots:
+        raise ValueError("lib_roots must be a non-empty list of paths")
+
+    libs = []
+    for r in roots:
+        index, items, lib_img, lib_txt = load_lib(r)
+        libs.append((r, index, items, lib_img, lib_txt))
+
+    svg_names: List[str] = []
+    fused_hits_all: List[List[Dict[str, Any]]] = []
+    img_only_hits_all: List[List[Dict[str, Any]]] = []
+
+    Q = len(q_ids)
+    for i in range(Q):
+        q_img = q_img_all[i].reshape(1, -1).astype("float32")
+        q_txt = q_txt_all[i].reshape(1, -1).astype("float32")
+        faiss.normalize_L2(q_img)
+        faiss.normalize_L2(q_txt)
+
+        # Collect per-lib topK
+        merged_pairs: List[Tuple[int, int]] = []  # (lib_idx, local_pos)
+        per_lib_idxs: List[List[int]] = []
+        per_lib_sim_img: List[np.ndarray] = []
+        per_lib_sim_txt: List[np.ndarray] = []
+
+        for lib_idx, (_root, index, items, lib_img, lib_txt) in enumerate(libs):
+            K = min(int(topk), index.ntotal)
+            if K <= 0:
+                per_lib_idxs.append([])
+                per_lib_sim_img.append(np.zeros((0,), dtype=np.float32))
+                per_lib_sim_txt.append(np.zeros((0,), dtype=np.float32))
+                continue
+            _, I = index.search(q_img, K)
+            idxs = [ii for ii in I[0].tolist() if ii != -1]
+            if not idxs:
+                per_lib_idxs.append([])
+                per_lib_sim_img.append(np.zeros((0,), dtype=np.float32))
+                per_lib_sim_txt.append(np.zeros((0,), dtype=np.float32))
+                continue
+            q_img_1d = q_img.reshape(-1)
+            q_txt_1d = q_txt.reshape(-1)
+            sim_img = lib_img[idxs] @ q_img_1d
+            sim_txt = lib_txt[idxs] @ q_txt_1d
+            per_lib_idxs.append(idxs)
+            per_lib_sim_img.append(sim_img)
+            per_lib_sim_txt.append(sim_txt)
+            for j in range(len(idxs)):
+                merged_pairs.append((lib_idx, j))
+
+        if not merged_pairs:
+            fused_hits_all.append([])
+            img_only_hits_all.append([])
+            continue
+
+        # Build fused scores, then select global topK pool efficiently
+        fused_scores: List[float] = []
+        img_scores: List[float] = []
+        for (lib_idx, j) in merged_pairs:
+            s_img = float(per_lib_sim_img[lib_idx][j])
+            s_txt = float(per_lib_sim_txt[lib_idx][j])
+            img_scores.append(s_img)
+            fused_scores.append(alpha * s_img + (1.0 - alpha) * s_txt)
+
+        fused_arr = np.array(fused_scores)
+        global_k = max(1, min(int(topk), len(fused_arr)))
+        if len(fused_arr) > global_k:
+            idx_pool = np.argpartition(-fused_arr, global_k - 1)[:global_k]
+            pool_indices = idx_pool[np.argsort(-fused_arr[idx_pool])]
+        else:
+            pool_indices = np.argsort(-fused_arr)
+
+        # Take fused topM from the global topK pool
+        m = max(1, min(int(topm), len(pool_indices)))
+        hits_fused: List[Dict[str, Any]] = []
+        for rank in range(m):
+            ridx = int(pool_indices[rank])
+            lib_idx, local_j = merged_pairs[ridx]
+            idx = per_lib_idxs[lib_idx][local_j]
+            _root, _index, items, _lib_img, _lib_txt = libs[lib_idx]
+            info = items[idx] if 0 <= idx < len(items) else {}
+            h = {
+                "rank": rank + 1,
+                "src_svg": info.get("src_svg"),
+                "component_id": info.get("component_id"),
+                "aliases": info.get("aliases"),
+                "score_img": float(per_lib_sim_img[lib_idx][local_j]),
+                "score_txt": float(per_lib_sim_txt[lib_idx][local_j]),
+                "score_final": float(fused_arr[ridx]),
+            }
+            src = h.get("src_svg")
+            if src:
+                h["name"] = _normalize_name_from_src(src)
+                svg_names.append(h["name"])
+            hits_fused.append(h)
+
+        # Image-only Top10 from the same pool
+        img_scores_arr = np.array(img_scores)
+        order_img_pool = np.argsort(-img_scores_arr[pool_indices])
+        m_img = min(10, len(order_img_pool))
+        hits_img_only: List[Dict[str, Any]] = []
+        for rank in range(m_img):
+            ridx_pool = int(order_img_pool[rank])
+            ridx = int(pool_indices[ridx_pool])
+            lib_idx, local_j = merged_pairs[ridx]
+            idx = per_lib_idxs[lib_idx][local_j]
+            _root, _index, items, _lib_img, _lib_txt = libs[lib_idx]
+            info = items[idx] if 0 <= idx < len(items) else {}
+            h = {
+                "rank": rank + 1,
+                "src_svg": info.get("src_svg"),
+                "component_id": info.get("component_id"),
+                "aliases": info.get("aliases"),
+                "score_img": float(per_lib_sim_img[lib_idx][local_j]),
+            }
+            src = h.get("src_svg")
+            if src:
+                h["name"] = _normalize_name_from_src(src)
+            hits_img_only.append(h)
+
+        fused_hits_all.append(hits_fused)
+        img_only_hits_all.append(hits_img_only)
 
     return svg_names, fused_hits_all, img_only_hits_all

@@ -1,0 +1,4156 @@
+[
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:Italic.svg",
+    "component_id": "Icon.Themify:Italic",
+    "aliases": [
+      "themify:italic"
+    ],
+    "caption": "a black and white image of the letter n",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:agenda.svg",
+    "component_id": "Icon.Themify:Agenda",
+    "aliases": [
+      "themify:agenda"
+    ],
+    "caption": "a black and white icon of a book on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:alarm-clock.svg",
+    "component_id": "Icon.Themify:AlarmClock",
+    "aliases": [
+      "themify:alarm",
+      "clock"
+    ],
+    "caption": "an alarm clock icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:alert.svg",
+    "component_id": "Icon.Themify:Alert",
+    "aliases": [
+      "themify:alert"
+    ],
+    "caption": "an image of a warning sign on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:align-center.svg",
+    "component_id": "Icon.Themify:AlignCenter",
+    "aliases": [
+      "themify:align",
+      "center"
+    ],
+    "caption": "a black and white image of three lines on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:align-justify.svg",
+    "component_id": "Icon.Themify:AlignJustify",
+    "aliases": [
+      "themify:align",
+      "justify"
+    ],
+    "caption": "a black and white image of four lines on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:align-left.svg",
+    "component_id": "Icon.Themify:AlignLeft",
+    "aliases": [
+      "themify:align",
+      "left"
+    ],
+    "caption": "a black and white image of three lines on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:align-right.svg",
+    "component_id": "Icon.Themify:AlignRight",
+    "aliases": [
+      "themify:align",
+      "right"
+    ],
+    "caption": "an image of a black background with white lines",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:anchor.svg",
+    "component_id": "Icon.Themify:Anchor",
+    "aliases": [
+      "themify:anchor"
+    ],
+    "caption": "an anchor icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:android.svg",
+    "component_id": "Icon.Themify:Android",
+    "aliases": [
+      "themify:android"
+    ],
+    "caption": "the android logo is shown on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:angle-double-down.svg",
+    "component_id": "Icon.Themify:AngleDoubleDown",
+    "aliases": [
+      "themify:angle",
+      "double",
+      "down"
+    ],
+    "caption": "a black and white arrow icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:angle-double-left.svg",
+    "component_id": "Icon.Themify:AngleDoubleLeft",
+    "aliases": [
+      "themify:angle",
+      "double",
+      "left"
+    ],
+    "caption": "a white arrow on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:angle-double-right.svg",
+    "component_id": "Icon.Themify:AngleDoubleRight",
+    "aliases": [
+      "themify:angle",
+      "double",
+      "right"
+    ],
+    "caption": "an arrow pointing to the right on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:angle-double-up.svg",
+    "component_id": "Icon.Themify:AngleDoubleUp",
+    "aliases": [
+      "themify:angle",
+      "double",
+      "up"
+    ],
+    "caption": "a black and white arrow icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:angle-down.svg",
+    "component_id": "Icon.Themify:AngleDown",
+    "aliases": [
+      "themify:angle",
+      "down"
+    ],
+    "caption": "a white arrow on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:angle-left.svg",
+    "component_id": "Icon.Themify:AngleLeft",
+    "aliases": [
+      "themify:angle",
+      "left"
+    ],
+    "caption": "a white arrow on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:angle-right.svg",
+    "component_id": "Icon.Themify:AngleRight",
+    "aliases": [
+      "themify:angle",
+      "right"
+    ],
+    "caption": "a white arrow pointing down on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:angle-up.svg",
+    "component_id": "Icon.Themify:AngleUp",
+    "aliases": [
+      "themify:angle",
+      "up"
+    ],
+    "caption": "a white triangle on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:announcement.svg",
+    "component_id": "Icon.Themify:Announcement",
+    "aliases": [
+      "themify:announcement"
+    ],
+    "caption": "a megaphone icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:apple.svg",
+    "component_id": "Icon.Themify:Apple",
+    "aliases": [
+      "themify:apple"
+    ],
+    "caption": "an apple logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:archive.svg",
+    "component_id": "Icon.Themify:Archive",
+    "aliases": [
+      "themify:archive"
+    ],
+    "caption": "a black and white icon of a box on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow-circle-down.svg",
+    "component_id": "Icon.Themify:ArrowCircleDown",
+    "aliases": [
+      "themify:arrow",
+      "circle",
+      "down"
+    ],
+    "caption": "an image of a black and white clock with a white circle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow-circle-left.svg",
+    "component_id": "Icon.Themify:ArrowCircleLeft",
+    "aliases": [
+      "themify:arrow",
+      "circle",
+      "left"
+    ],
+    "caption": "a black and white button with a white arrow on it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow-circle-right.svg",
+    "component_id": "Icon.Themify:ArrowCircleRight",
+    "aliases": [
+      "themify:arrow",
+      "circle",
+      "right"
+    ],
+    "caption": "a white arrow icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow-circle-up.svg",
+    "component_id": "Icon.Themify:ArrowCircleUp",
+    "aliases": [
+      "themify:arrow",
+      "circle",
+      "up"
+    ],
+    "caption": "a white arrow icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow-down.svg",
+    "component_id": "Icon.Themify:ArrowDown",
+    "aliases": [
+      "themify:arrow",
+      "down"
+    ],
+    "caption": "an arrow pointing down on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow-left.svg",
+    "component_id": "Icon.Themify:ArrowLeft",
+    "aliases": [
+      "themify:arrow",
+      "left"
+    ],
+    "caption": "an arrow pointing to the right on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow-right.svg",
+    "component_id": "Icon.Themify:ArrowRight",
+    "aliases": [
+      "themify:arrow",
+      "right"
+    ],
+    "caption": "a white arrow pointing to the right on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow-top-left.svg",
+    "component_id": "Icon.Themify:ArrowTopLeft",
+    "aliases": [
+      "themify:arrow",
+      "top",
+      "left"
+    ],
+    "caption": "a white arrow pointing down on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow-top-right.svg",
+    "component_id": "Icon.Themify:ArrowTopRight",
+    "aliases": [
+      "themify:arrow",
+      "top",
+      "right"
+    ],
+    "caption": "a white arrow pointing up on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow-up.svg",
+    "component_id": "Icon.Themify:ArrowUp",
+    "aliases": [
+      "themify:arrow",
+      "up"
+    ],
+    "caption": "an arrow pointing up on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrow.svg",
+    "component_id": "Icon.Themify:Arrow",
+    "aliases": [
+      "themify:arrow"
+    ],
+    "caption": "a black and white arrow symbol with three arrows pointing in different directions",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrows-corner.svg",
+    "component_id": "Icon.Themify:ArrowsCorner",
+    "aliases": [
+      "themify:arrows",
+      "corner"
+    ],
+    "caption": "an arrow pointing to the right on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrows-horizontal.svg",
+    "component_id": "Icon.Themify:ArrowsHorizontal",
+    "aliases": [
+      "themify:arrows",
+      "horizontal"
+    ],
+    "caption": "two arrows pointing in opposite directions on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:arrows-vertical.svg",
+    "component_id": "Icon.Themify:ArrowsVertical",
+    "aliases": [
+      "themify:arrows",
+      "vertical"
+    ],
+    "caption": "an arrow pointing up on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:back-left.svg",
+    "component_id": "Icon.Themify:BackLeft",
+    "aliases": [
+      "themify:back",
+      "left"
+    ],
+    "caption": "a black and white logo with the letter r",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:back-right.svg",
+    "component_id": "Icon.Themify:BackRight",
+    "aliases": [
+      "themify:back",
+      "right"
+    ],
+    "caption": "a white arrow pointing to the right on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:bag.svg",
+    "component_id": "Icon.Themify:Bag",
+    "aliases": [
+      "themify:bag"
+    ],
+    "caption": "a black and white icon of a shopping bag",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:bar-chart-alt.svg",
+    "component_id": "Icon.Themify:BarChartAlt",
+    "aliases": [
+      "themify:bar",
+      "chart",
+      "alt"
+    ],
+    "caption": "a bar graph icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:bar-chart.svg",
+    "component_id": "Icon.Themify:BarChart",
+    "aliases": [
+      "themify:bar",
+      "chart"
+    ],
+    "caption": "a bar graph icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:basketball.svg",
+    "component_id": "Icon.Themify:Basketball",
+    "aliases": [
+      "themify:basketball"
+    ],
+    "caption": "a basketball ball icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:bell.svg",
+    "component_id": "Icon.Themify:Bell",
+    "aliases": [
+      "themify:bell"
+    ],
+    "caption": "a bell icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:blackboard.svg",
+    "component_id": "Icon.Themify:Blackboard",
+    "aliases": [
+      "themify:blackboard"
+    ],
+    "caption": "a black and white image of a television on a tripod",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:bolt-alt.svg",
+    "component_id": "Icon.Themify:BoltAlt",
+    "aliases": [
+      "themify:bolt",
+      "alt"
+    ],
+    "caption": "a white lightning symbol on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:bolt.svg",
+    "component_id": "Icon.Themify:Bolt",
+    "aliases": [
+      "themify:bolt"
+    ],
+    "caption": "a lightning bolt icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:book.svg",
+    "component_id": "Icon.Themify:Book",
+    "aliases": [
+      "themify:book"
+    ],
+    "caption": "an open book icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:bookmark-alt.svg",
+    "component_id": "Icon.Themify:BookmarkAlt",
+    "aliases": [
+      "themify:bookmark",
+      "alt"
+    ],
+    "caption": "a black and white icon of a book on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:bookmark.svg",
+    "component_id": "Icon.Themify:Bookmark",
+    "aliases": [
+      "themify:bookmark"
+    ],
+    "caption": "a black and white banner with a white arrow",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:briefcase.svg",
+    "component_id": "Icon.Themify:Briefcase",
+    "aliases": [
+      "themify:briefcase"
+    ],
+    "caption": "a black and white icon of a briefcase on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:brush-alt.svg",
+    "component_id": "Icon.Themify:BrushAlt",
+    "aliases": [
+      "themify:brush",
+      "alt"
+    ],
+    "caption": "a broom icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:brush.svg",
+    "component_id": "Icon.Themify:Brush",
+    "aliases": [
+      "themify:brush"
+    ],
+    "caption": "a black and white icon of a shovel",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:calendar.svg",
+    "component_id": "Icon.Themify:Calendar",
+    "aliases": [
+      "themify:calendar"
+    ],
+    "caption": "a calendar icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:camera.svg",
+    "component_id": "Icon.Themify:Camera",
+    "aliases": [
+      "themify:camera"
+    ],
+    "caption": "a camera icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:car.svg",
+    "component_id": "Icon.Themify:Car",
+    "aliases": [
+      "themify:car"
+    ],
+    "caption": "a car icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:check-box.svg",
+    "component_id": "Icon.Themify:CheckBox",
+    "aliases": [
+      "themify:check",
+      "box"
+    ],
+    "caption": "a check mark icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:check.svg",
+    "component_id": "Icon.Themify:Check",
+    "aliases": [
+      "themify:check"
+    ],
+    "caption": "a check mark icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:clip.svg",
+    "component_id": "Icon.Themify:Clip",
+    "aliases": [
+      "themify:clip"
+    ],
+    "caption": "a black and white image of a paper clip on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:clipboard.svg",
+    "component_id": "Icon.Themify:Clipboard",
+    "aliases": [
+      "themify:clipboard"
+    ],
+    "caption": "a black and white icon of a clipboard on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:close.svg",
+    "component_id": "Icon.Themify:Close",
+    "aliases": [
+      "themify:close"
+    ],
+    "caption": "a white cross on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:cloud-down.svg",
+    "component_id": "Icon.Themify:CloudDown",
+    "aliases": [
+      "themify:cloud",
+      "down"
+    ],
+    "caption": "a cloud with an arrow pointing down on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:cloud-up.svg",
+    "component_id": "Icon.Themify:CloudUp",
+    "aliases": [
+      "themify:cloud",
+      "up"
+    ],
+    "caption": "a cloud icon with an arrow pointing up",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:cloud.svg",
+    "component_id": "Icon.Themify:Cloud",
+    "aliases": [
+      "themify:cloud"
+    ],
+    "caption": "a white cloud icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:comment-alt.svg",
+    "component_id": "Icon.Themify:CommentAlt",
+    "aliases": [
+      "themify:comment",
+      "alt"
+    ],
+    "caption": "a black and white icon of a speech bubble",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:comment.svg",
+    "component_id": "Icon.Themify:Comment",
+    "aliases": [
+      "themify:comment"
+    ],
+    "caption": "a speech bubble icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:comments-smiley.svg",
+    "component_id": "Icon.Themify:CommentsSmiley",
+    "aliases": [
+      "themify:comments",
+      "smiley"
+    ],
+    "caption": "a smiley face icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:comments.svg",
+    "component_id": "Icon.Themify:Comments",
+    "aliases": [
+      "themify:comments"
+    ],
+    "caption": "a black and white icon of two speech bubbles",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:control-backward.svg",
+    "component_id": "Icon.Themify:ControlBackward",
+    "aliases": [
+      "themify:control",
+      "backward"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:control-eject.svg",
+    "component_id": "Icon.Themify:ControlEject",
+    "aliases": [
+      "themify:control",
+      "eject"
+    ],
+    "caption": "a white triangle on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:control-forward.svg",
+    "component_id": "Icon.Themify:ControlForward",
+    "aliases": [
+      "themify:control",
+      "forward"
+    ],
+    "caption": "a white arrow icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:control-pause.svg",
+    "component_id": "Icon.Themify:ControlPause",
+    "aliases": [
+      "themify:control",
+      "pause"
+    ],
+    "caption": "two white squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:control-play.svg",
+    "component_id": "Icon.Themify:ControlPlay",
+    "aliases": [
+      "themify:control",
+      "play"
+    ],
+    "caption": "a black and white triangle with a white arrow",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:control-record.svg",
+    "component_id": "Icon.Themify:ControlRecord",
+    "aliases": [
+      "themify:control",
+      "record"
+    ],
+    "caption": "a white circle on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:control-shuffle.svg",
+    "component_id": "Icon.Themify:ControlShuffle",
+    "aliases": [
+      "themify:control",
+      "shuffle"
+    ],
+    "caption": "two arrows pointing in opposite directions on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:control-skip-backward.svg",
+    "component_id": "Icon.Themify:ControlSkipBackward",
+    "aliases": [
+      "themify:control",
+      "skip",
+      "backward"
+    ],
+    "caption": "a black and white image of the letter k",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:control-skip-forward.svg",
+    "component_id": "Icon.Themify:ControlSkipForward",
+    "aliases": [
+      "themify:control",
+      "skip",
+      "forward"
+    ],
+    "caption": "a black and white image of the letter i",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:control-stop.svg",
+    "component_id": "Icon.Themify:ControlStop",
+    "aliases": [
+      "themify:control",
+      "stop"
+    ],
+    "caption": "a white square on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:credit-card.svg",
+    "component_id": "Icon.Themify:CreditCard",
+    "aliases": [
+      "themify:credit",
+      "card"
+    ],
+    "caption": "a credit card icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:crown.svg",
+    "component_id": "Icon.Themify:Crown",
+    "aliases": [
+      "themify:crown"
+    ],
+    "caption": "a crown icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:css3.svg",
+    "component_id": "Icon.Themify:Css3",
+    "aliases": [
+      "themify:css",
+      "3"
+    ],
+    "caption": "a black and white logo with the letter e",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:cup.svg",
+    "component_id": "Icon.Themify:Cup",
+    "aliases": [
+      "themify:cup"
+    ],
+    "caption": "a trophy icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:cut.svg",
+    "component_id": "Icon.Themify:Cut",
+    "aliases": [
+      "themify:cut"
+    ],
+    "caption": "a pair of scissors on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:dashboard.svg",
+    "component_id": "Icon.Themify:Dashboard",
+    "aliases": [
+      "themify:dashboard"
+    ],
+    "caption": "a speedometer icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:desktop.svg",
+    "component_id": "Icon.Themify:Desktop",
+    "aliases": [
+      "themify:desktop"
+    ],
+    "caption": "a computer monitor icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:direction-alt.svg",
+    "component_id": "Icon.Themify:DirectionAlt",
+    "aliases": [
+      "themify:direction",
+      "alt"
+    ],
+    "caption": "two arrows pointing in different directions on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:direction.svg",
+    "component_id": "Icon.Themify:Direction",
+    "aliases": [
+      "themify:direction"
+    ],
+    "caption": "a white arrow pointing to the right on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:download.svg",
+    "component_id": "Icon.Themify:Download",
+    "aliases": [
+      "themify:download"
+    ],
+    "caption": "an arrow pointing down on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:dribbble.svg",
+    "component_id": "Icon.Themify:Dribbble",
+    "aliases": [
+      "themify:dribbble"
+    ],
+    "caption": "a black and white basketball icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:dropbox-alt.svg",
+    "component_id": "Icon.Themify:DropboxAlt",
+    "aliases": [
+      "themify:dropbox",
+      "alt"
+    ],
+    "caption": "the dropbox logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:dropbox.svg",
+    "component_id": "Icon.Themify:Dropbox",
+    "aliases": [
+      "themify:dropbox"
+    ],
+    "caption": "the dropbox logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:drupal.svg",
+    "component_id": "Icon.Themify:Drupal",
+    "aliases": [
+      "themify:drupal"
+    ],
+    "caption": "a black and white logo with a white face",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:email.svg",
+    "component_id": "Icon.Themify:Email",
+    "aliases": [
+      "themify:email"
+    ],
+    "caption": "an envelope icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:envelope.svg",
+    "component_id": "Icon.Themify:Envelope",
+    "aliases": [
+      "themify:envelope"
+    ],
+    "caption": "a black and white logo with the letter t in it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:eraser.svg",
+    "component_id": "Icon.Themify:Eraser",
+    "aliases": [
+      "themify:eraser"
+    ],
+    "caption": "a black and white icon of a broken phone",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:exchange-vertical.svg",
+    "component_id": "Icon.Themify:ExchangeVertical",
+    "aliases": [
+      "themify:exchange",
+      "vertical"
+    ],
+    "caption": "two arrows pointing in opposite directions on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:export.svg",
+    "component_id": "Icon.Themify:Export",
+    "aliases": [
+      "themify:export"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:eye.svg",
+    "component_id": "Icon.Themify:Eye",
+    "aliases": [
+      "themify:eye"
+    ],
+    "caption": "an eye icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:face-sad.svg",
+    "component_id": "Icon.Themify:FaceSad",
+    "aliases": [
+      "themify:face",
+      "sad"
+    ],
+    "caption": "a sad face icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:face-smile.svg",
+    "component_id": "Icon.Themify:FaceSmile",
+    "aliases": [
+      "themify:face",
+      "smile"
+    ],
+    "caption": "a smiley face icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:facebook.svg",
+    "component_id": "Icon.Themify:Facebook",
+    "aliases": [
+      "themify:facebook"
+    ],
+    "caption": "the facebook logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:file.svg",
+    "component_id": "Icon.Themify:File",
+    "aliases": [
+      "themify:file"
+    ],
+    "caption": "a black and white document icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:files.svg",
+    "component_id": "Icon.Themify:Files",
+    "aliases": [
+      "themify:files"
+    ],
+    "caption": "a black and white icon of two documents",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:filter.svg",
+    "component_id": "Icon.Themify:Filter",
+    "aliases": [
+      "themify:filter"
+    ],
+    "caption": "a black and white image of a martini glass on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:flag-alt-2.svg",
+    "component_id": "Icon.Themify:FlagAlt2",
+    "aliases": [
+      "themify:flag",
+      "alt",
+      "2"
+    ],
+    "caption": "a black and white image of a square and a rectangle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:flag-alt.svg",
+    "component_id": "Icon.Themify:FlagAlt",
+    "aliases": [
+      "themify:flag",
+      "alt"
+    ],
+    "caption": "a white flag icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:flag.svg",
+    "component_id": "Icon.Themify:Flag",
+    "aliases": [
+      "themify:flag"
+    ],
+    "caption": "a black and white image of a white flag",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:flickr-alt.svg",
+    "component_id": "Icon.Themify:FlickrAlt",
+    "aliases": [
+      "themify:flickr",
+      "alt"
+    ],
+    "caption": "a black and white icon of two eyes",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:flickr.svg",
+    "component_id": "Icon.Themify:Flickr",
+    "aliases": [
+      "themify:flickr"
+    ],
+    "caption": "two circles on a black background with a white circle in the middle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:folder.svg",
+    "component_id": "Icon.Themify:Folder",
+    "aliases": [
+      "themify:folder"
+    ],
+    "caption": "a folder icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:fullscreen.svg",
+    "component_id": "Icon.Themify:Fullscreen",
+    "aliases": [
+      "themify:fullscreen"
+    ],
+    "caption": "two arrows pointing in different directions on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:gallery.svg",
+    "component_id": "Icon.Themify:Gallery",
+    "aliases": [
+      "themify:gallery"
+    ],
+    "caption": "an image of a mountain on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:game.svg",
+    "component_id": "Icon.Themify:Game",
+    "aliases": [
+      "themify:game"
+    ],
+    "caption": "an icon of a game controller on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:gift.svg",
+    "component_id": "Icon.Themify:Gift",
+    "aliases": [
+      "themify:gift"
+    ],
+    "caption": "a black and white icon of a gift box with a ribbon",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:github.svg",
+    "component_id": "Icon.Themify:Github",
+    "aliases": [
+      "themify:github"
+    ],
+    "caption": "a black and white image of a cat's head",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:google.svg",
+    "component_id": "Icon.Themify:Google",
+    "aliases": [
+      "themify:google"
+    ],
+    "caption": "the google plus logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:hand-drag.svg",
+    "component_id": "Icon.Themify:HandDrag",
+    "aliases": [
+      "themify:hand",
+      "drag"
+    ],
+    "caption": "a hand icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:hand-open.svg",
+    "component_id": "Icon.Themify:HandOpen",
+    "aliases": [
+      "themify:hand",
+      "open"
+    ],
+    "caption": "a black and white hand icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:hand-point-down.svg",
+    "component_id": "Icon.Themify:HandPointDown",
+    "aliases": [
+      "themify:hand",
+      "point",
+      "down"
+    ],
+    "caption": "a hand pointing to a button on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:hand-point-left.svg",
+    "component_id": "Icon.Themify:HandPointLeft",
+    "aliases": [
+      "themify:hand",
+      "point",
+      "left"
+    ],
+    "caption": "a hand pointing to a button on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:hand-point-right.svg",
+    "component_id": "Icon.Themify:HandPointRight",
+    "aliases": [
+      "themify:hand",
+      "point",
+      "right"
+    ],
+    "caption": "a hand pointing to the right on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:hand-point-up.svg",
+    "component_id": "Icon.Themify:HandPointUp",
+    "aliases": [
+      "themify:hand",
+      "point",
+      "up"
+    ],
+    "caption": "a hand pointing to a button on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:hand-stop.svg",
+    "component_id": "Icon.Themify:HandStop",
+    "aliases": [
+      "themify:hand",
+      "stop"
+    ],
+    "caption": "a hand icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:harddrive.svg",
+    "component_id": "Icon.Themify:Harddrive",
+    "aliases": [
+      "themify:harddrive"
+    ],
+    "caption": "a black and white icon of a computer on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:harddrives.svg",
+    "component_id": "Icon.Themify:Harddrives",
+    "aliases": [
+      "themify:harddrives"
+    ],
+    "caption": "a black and white icon of two servers",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:headphone-alt.svg",
+    "component_id": "Icon.Themify:HeadphoneAlt",
+    "aliases": [
+      "themify:headphone",
+      "alt"
+    ],
+    "caption": "a headset icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:headphone.svg",
+    "component_id": "Icon.Themify:Headphone",
+    "aliases": [
+      "themify:headphone"
+    ],
+    "caption": "headphones icon on black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:heart-broken.svg",
+    "component_id": "Icon.Themify:HeartBroken",
+    "aliases": [
+      "themify:heart",
+      "broken"
+    ],
+    "caption": "a heart shaped icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:heart.svg",
+    "component_id": "Icon.Themify:Heart",
+    "aliases": [
+      "themify:heart"
+    ],
+    "caption": "a heart icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:help-alt.svg",
+    "component_id": "Icon.Themify:HelpAlt",
+    "aliases": [
+      "themify:help",
+      "alt"
+    ],
+    "caption": "a question mark icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:help.svg",
+    "component_id": "Icon.Themify:Help",
+    "aliases": [
+      "themify:help"
+    ],
+    "caption": "a question mark icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:home.svg",
+    "component_id": "Icon.Themify:Home",
+    "aliases": [
+      "themify:home"
+    ],
+    "caption": "a house icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:html5.svg",
+    "component_id": "Icon.Themify:Html5",
+    "aliases": [
+      "themify:html",
+      "5"
+    ],
+    "caption": "a black and white logo with the letter h in it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:hummer.svg",
+    "component_id": "Icon.Themify:Hummer",
+    "aliases": [
+      "themify:hummer"
+    ],
+    "caption": "a hammer icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:id-badge.svg",
+    "component_id": "Icon.Themify:IdBadge",
+    "aliases": [
+      "themify:id",
+      "badge"
+    ],
+    "caption": "a black and white icon with a person's face on it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:image.svg",
+    "component_id": "Icon.Themify:Image",
+    "aliases": [
+      "themify:image"
+    ],
+    "caption": "a black and white image of a mountain",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:import.svg",
+    "component_id": "Icon.Themify:Import",
+    "aliases": [
+      "themify:import"
+    ],
+    "caption": "an arrow pointing down on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:infinite.svg",
+    "component_id": "Icon.Themify:Infinite",
+    "aliases": [
+      "themify:infinite"
+    ],
+    "caption": "the infinity symbol on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:info-alt.svg",
+    "component_id": "Icon.Themify:InfoAlt",
+    "aliases": [
+      "themify:info",
+      "alt"
+    ],
+    "caption": "a black and white icon with the word i in it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:info.svg",
+    "component_id": "Icon.Themify:Info",
+    "aliases": [
+      "themify:info"
+    ],
+    "caption": "a black and white icon with the number one",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:ink-pen.svg",
+    "component_id": "Icon.Themify:InkPen",
+    "aliases": [
+      "themify:ink",
+      "pen"
+    ],
+    "caption": "a black and white image of a map pin",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:instagram.svg",
+    "component_id": "Icon.Themify:Instagram",
+    "aliases": [
+      "themify:instagram"
+    ],
+    "caption": "an instagram logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:joomla.svg",
+    "component_id": "Icon.Themify:Joomla",
+    "aliases": [
+      "themify:joomla"
+    ],
+    "caption": "a black and white image of a white and grey symbol",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:jsfiddle.svg",
+    "component_id": "Icon.Themify:Jsfiddle",
+    "aliases": [
+      "themify:jsfiddle"
+    ],
+    "caption": "a cloud with an infinity symbol on it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:key.svg",
+    "component_id": "Icon.Themify:Key",
+    "aliases": [
+      "themify:key"
+    ],
+    "caption": "a white key icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layers-alt.svg",
+    "component_id": "Icon.Themify:LayersAlt",
+    "aliases": [
+      "themify:layers",
+      "alt"
+    ],
+    "caption": "a black and white image of two squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layers.svg",
+    "component_id": "Icon.Themify:Layers",
+    "aliases": [
+      "themify:layers"
+    ],
+    "caption": "a black and white image of two squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-accordion-list.svg",
+    "component_id": "Icon.Themify:LayoutAccordionList",
+    "aliases": [
+      "themify:layout",
+      "accordion",
+      "list"
+    ],
+    "caption": "a black and white image of a computer screen",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-accordion-merged.svg",
+    "component_id": "Icon.Themify:LayoutAccordionMerged",
+    "aliases": [
+      "themify:layout",
+      "accordion",
+      "merged"
+    ],
+    "caption": "a black and white image of a television screen",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-accordion-separated.svg",
+    "component_id": "Icon.Themify:LayoutAccordionSeparated",
+    "aliases": [
+      "themify:layout",
+      "accordion",
+      "separated"
+    ],
+    "caption": "a black and white image of a rectangle with two lines",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-column2-alt.svg",
+    "component_id": "Icon.Themify:LayoutColumn2Alt",
+    "aliases": [
+      "themify:layout",
+      "column",
+      "2",
+      "alt"
+    ],
+    "caption": "a black and white image of two doors",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-column2.svg",
+    "component_id": "Icon.Themify:LayoutColumn2",
+    "aliases": [
+      "themify:layout",
+      "column",
+      "2"
+    ],
+    "caption": "a black and white photo of two white doors",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-column3-alt.svg",
+    "component_id": "Icon.Themify:LayoutColumn3Alt",
+    "aliases": [
+      "themify:layout",
+      "column",
+      "3",
+      "alt"
+    ],
+    "caption": "a black and white image of three white bars",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-column3.svg",
+    "component_id": "Icon.Themify:LayoutColumn3",
+    "aliases": [
+      "themify:layout",
+      "column",
+      "3"
+    ],
+    "caption": "a black and white image of three white squares",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-column4-alt.svg",
+    "component_id": "Icon.Themify:LayoutColumn4Alt",
+    "aliases": [
+      "themify:layout",
+      "column",
+      "4",
+      "alt"
+    ],
+    "caption": "a black and white image of four bars",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-column4.svg",
+    "component_id": "Icon.Themify:LayoutColumn4",
+    "aliases": [
+      "themify:layout",
+      "column",
+      "4"
+    ],
+    "caption": "a black and white logo with four white lines",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-cta-btn-left.svg",
+    "component_id": "Icon.Themify:LayoutCtaBtnLeft",
+    "aliases": [
+      "themify:layout",
+      "cta",
+      "btn",
+      "left"
+    ],
+    "caption": "a black and white image of a black and white icon",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-cta-btn-right.svg",
+    "component_id": "Icon.Themify:LayoutCtaBtnRight",
+    "aliases": [
+      "themify:layout",
+      "cta",
+      "btn",
+      "right"
+    ],
+    "caption": "a black and white image of an envelope",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-cta-center.svg",
+    "component_id": "Icon.Themify:LayoutCtaCenter",
+    "aliases": [
+      "themify:layout",
+      "cta",
+      "center"
+    ],
+    "caption": "a black and white image of an empty box",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-cta-left.svg",
+    "component_id": "Icon.Themify:LayoutCtaLeft",
+    "aliases": [
+      "themify:layout",
+      "cta",
+      "left"
+    ],
+    "caption": "a black and white image of a black and white square",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-cta-right.svg",
+    "component_id": "Icon.Themify:LayoutCtaRight",
+    "aliases": [
+      "themify:layout",
+      "cta",
+      "right"
+    ],
+    "caption": "a black and white image of a black and white square",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-grid2-alt.svg",
+    "component_id": "Icon.Themify:LayoutGrid2Alt",
+    "aliases": [
+      "themify:layout",
+      "grid",
+      "2",
+      "alt"
+    ],
+    "caption": "four squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-grid2-thumb.svg",
+    "component_id": "Icon.Themify:LayoutGrid2Thumb",
+    "aliases": [
+      "themify:layout",
+      "grid",
+      "2",
+      "thumb"
+    ],
+    "caption": "a black and white image of four squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-grid2.svg",
+    "component_id": "Icon.Themify:LayoutGrid2",
+    "aliases": [
+      "themify:layout",
+      "grid",
+      "2"
+    ],
+    "caption": "four squares on a black background with a white square in the middle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-grid3-alt.svg",
+    "component_id": "Icon.Themify:LayoutGrid3Alt",
+    "aliases": [
+      "themify:layout",
+      "grid",
+      "3",
+      "alt"
+    ],
+    "caption": "an image of squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-grid3.svg",
+    "component_id": "Icon.Themify:LayoutGrid3",
+    "aliases": [
+      "themify:layout",
+      "grid",
+      "3"
+    ],
+    "caption": "a black and white image of squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-grid4-alt.svg",
+    "component_id": "Icon.Themify:LayoutGrid4Alt",
+    "aliases": [
+      "themify:layout",
+      "grid",
+      "4",
+      "alt"
+    ],
+    "caption": "a black and white image of squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-grid4.svg",
+    "component_id": "Icon.Themify:LayoutGrid4",
+    "aliases": [
+      "themify:layout",
+      "grid",
+      "4"
+    ],
+    "caption": "a black and white image of squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-line-solid.svg",
+    "component_id": "Icon.Themify:LayoutLineSolid",
+    "aliases": [
+      "themify:layout",
+      "line",
+      "solid"
+    ],
+    "caption": "a white line on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-list-large-image.svg",
+    "component_id": "Icon.Themify:LayoutListLargeImage",
+    "aliases": [
+      "themify:layout",
+      "list",
+      "large",
+      "image"
+    ],
+    "caption": "a black and white image of a television screen",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-list-post.svg",
+    "component_id": "Icon.Themify:LayoutListPost",
+    "aliases": [
+      "themify:layout",
+      "list",
+      "post"
+    ],
+    "caption": "a black and white image of two lines of text",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-list-thumb-alt.svg",
+    "component_id": "Icon.Themify:LayoutListThumbAlt",
+    "aliases": [
+      "themify:layout",
+      "list",
+      "thumb",
+      "alt"
+    ],
+    "caption": "a black and white image of two squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-list-thumb.svg",
+    "component_id": "Icon.Themify:LayoutListThumb",
+    "aliases": [
+      "themify:layout",
+      "list",
+      "thumb"
+    ],
+    "caption": "a check mark icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-media-center-alt.svg",
+    "component_id": "Icon.Themify:LayoutMediaCenterAlt",
+    "aliases": [
+      "themify:layout",
+      "media",
+      "center",
+      "alt"
+    ],
+    "caption": "a computer monitor icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-media-center.svg",
+    "component_id": "Icon.Themify:LayoutMediaCenter",
+    "aliases": [
+      "themify:layout",
+      "media",
+      "center"
+    ],
+    "caption": "a black and white image of a computer screen",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-media-left-alt.svg",
+    "component_id": "Icon.Themify:LayoutMediaLeftAlt",
+    "aliases": [
+      "themify:layout",
+      "media",
+      "left",
+      "alt"
+    ],
+    "caption": "a black and white image of a computer screen",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-media-left.svg",
+    "component_id": "Icon.Themify:LayoutMediaLeft",
+    "aliases": [
+      "themify:layout",
+      "media",
+      "left"
+    ],
+    "caption": "a black and white icon with a square shape",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-media-overlay-alt-2.svg",
+    "component_id": "Icon.Themify:LayoutMediaOverlayAlt2",
+    "aliases": [
+      "themify:layout",
+      "media",
+      "overlay",
+      "alt",
+      "2"
+    ],
+    "caption": "a black and white image of a square with two lines",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-media-overlay-alt.svg",
+    "component_id": "Icon.Themify:LayoutMediaOverlayAlt",
+    "aliases": [
+      "themify:layout",
+      "media",
+      "overlay",
+      "alt"
+    ],
+    "caption": "a black and white photo of an empty room",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-media-overlay.svg",
+    "component_id": "Icon.Themify:LayoutMediaOverlay",
+    "aliases": [
+      "themify:layout",
+      "media",
+      "overlay"
+    ],
+    "caption": "a black and white image of a computer screen",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-media-right-alt.svg",
+    "component_id": "Icon.Themify:LayoutMediaRightAlt",
+    "aliases": [
+      "themify:layout",
+      "media",
+      "right",
+      "alt"
+    ],
+    "caption": "a black and white image of a computer screen",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-media-right.svg",
+    "component_id": "Icon.Themify:LayoutMediaRight",
+    "aliases": [
+      "themify:layout",
+      "media",
+      "right"
+    ],
+    "caption": "a square icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-menu-full.svg",
+    "component_id": "Icon.Themify:LayoutMenuFull",
+    "aliases": [
+      "themify:layout",
+      "menu",
+      "full"
+    ],
+    "caption": "a white line on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-menu-separated.svg",
+    "component_id": "Icon.Themify:LayoutMenuSeparated",
+    "aliases": [
+      "themify:layout",
+      "menu",
+      "separated"
+    ],
+    "caption": "a black and white logo with three white squares",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-menu-v.svg",
+    "component_id": "Icon.Themify:LayoutMenuV",
+    "aliases": [
+      "themify:layout",
+      "menu",
+      "v"
+    ],
+    "caption": "a black and white icon with four lines",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-menu.svg",
+    "component_id": "Icon.Themify:LayoutMenu",
+    "aliases": [
+      "themify:layout",
+      "menu"
+    ],
+    "caption": "a black and white image of three lines on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-placeholder.svg",
+    "component_id": "Icon.Themify:LayoutPlaceholder",
+    "aliases": [
+      "themify:layout",
+      "placeholder"
+    ],
+    "caption": "a square icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-sidebar-2.svg",
+    "component_id": "Icon.Themify:LayoutSidebar2",
+    "aliases": [
+      "themify:layout",
+      "sidebar",
+      "2"
+    ],
+    "caption": "a film strip icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-sidebar-left.svg",
+    "component_id": "Icon.Themify:LayoutSidebarLeft",
+    "aliases": [
+      "themify:layout",
+      "sidebar",
+      "left"
+    ],
+    "caption": "an image of a black and white rectangle with a white square in the middle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-sidebar-none.svg",
+    "component_id": "Icon.Themify:LayoutSidebarNone",
+    "aliases": [
+      "themify:layout",
+      "sidebar",
+      "none"
+    ],
+    "caption": "a black square with white squares on it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-sidebar-right.svg",
+    "component_id": "Icon.Themify:LayoutSidebarRight",
+    "aliases": [
+      "themify:layout",
+      "sidebar",
+      "right"
+    ],
+    "caption": "an image of a black and white rectangle with a white square in the middle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-slider-alt.svg",
+    "component_id": "Icon.Themify:LayoutSliderAlt",
+    "aliases": [
+      "themify:layout",
+      "slider",
+      "alt"
+    ],
+    "caption": "a black and white image of an empty square",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-slider.svg",
+    "component_id": "Icon.Themify:LayoutSlider",
+    "aliases": [
+      "themify:layout",
+      "slider"
+    ],
+    "caption": "a black and white image of a square with two arrows",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-tab-min.svg",
+    "component_id": "Icon.Themify:LayoutTabMin",
+    "aliases": [
+      "themify:layout",
+      "tab",
+      "min"
+    ],
+    "caption": "a black and white logo with the word dm on it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-tab-v.svg",
+    "component_id": "Icon.Themify:LayoutTabV",
+    "aliases": [
+      "themify:layout",
+      "tab",
+      "v"
+    ],
+    "caption": "a black and white image of a white rectangle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-tab-window.svg",
+    "component_id": "Icon.Themify:LayoutTabWindow",
+    "aliases": [
+      "themify:layout",
+      "tab",
+      "window"
+    ],
+    "caption": "a black and white image of a computer screen",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-tab.svg",
+    "component_id": "Icon.Themify:LayoutTab",
+    "aliases": [
+      "themify:layout",
+      "tab"
+    ],
+    "caption": "a black and white image of a white rectangle on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-width-default-alt.svg",
+    "component_id": "Icon.Themify:LayoutWidthDefaultAlt",
+    "aliases": [
+      "themify:layout",
+      "width",
+      "default",
+      "alt"
+    ],
+    "caption": "an image of a square frame on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-width-default.svg",
+    "component_id": "Icon.Themify:LayoutWidthDefault",
+    "aliases": [
+      "themify:layout",
+      "width",
+      "default"
+    ],
+    "caption": "an image of a film strip on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout-width-full.svg",
+    "component_id": "Icon.Themify:LayoutWidthFull",
+    "aliases": [
+      "themify:layout",
+      "width",
+      "full"
+    ],
+    "caption": "an empty square on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:layout.svg",
+    "component_id": "Icon.Themify:Layout",
+    "aliases": [
+      "themify:layout"
+    ],
+    "caption": "a black and white image of a square",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:light-bulb.svg",
+    "component_id": "Icon.Themify:LightBulb",
+    "aliases": [
+      "themify:light",
+      "bulb"
+    ],
+    "caption": "a light bulb icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:line-dashed.svg",
+    "component_id": "Icon.Themify:LineDashed",
+    "aliases": [
+      "themify:line",
+      "dashed"
+    ],
+    "caption": "three lines on a black background with a white line in the middle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:line-dotted.svg",
+    "component_id": "Icon.Themify:LineDotted",
+    "aliases": [
+      "themify:line",
+      "dotted"
+    ],
+    "caption": "a black background with white squares on it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:line-double.svg",
+    "component_id": "Icon.Themify:LineDouble",
+    "aliases": [
+      "themify:line",
+      "double"
+    ],
+    "caption": "a black and white image of two lines",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:link.svg",
+    "component_id": "Icon.Themify:Link",
+    "aliases": [
+      "themify:link"
+    ],
+    "caption": "a link icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:linkedin.svg",
+    "component_id": "Icon.Themify:Linkedin",
+    "aliases": [
+      "themify:linkedin"
+    ],
+    "caption": "the linked logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:linux.svg",
+    "component_id": "Icon.Themify:Linux",
+    "aliases": [
+      "themify:linux"
+    ],
+    "caption": "a penguin sticker on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:list-ol.svg",
+    "component_id": "Icon.Themify:ListOl",
+    "aliases": [
+      "themify:list",
+      "ol"
+    ],
+    "caption": "a black and white image of three numbers on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:list.svg",
+    "component_id": "Icon.Themify:List",
+    "aliases": [
+      "themify:list"
+    ],
+    "caption": "a black and white icon with three circles",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:location-arrow.svg",
+    "component_id": "Icon.Themify:LocationArrow",
+    "aliases": [
+      "themify:location",
+      "arrow"
+    ],
+    "caption": "a white arrow pointing down on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:location-pin.svg",
+    "component_id": "Icon.Themify:LocationPin",
+    "aliases": [
+      "themify:location",
+      "pin"
+    ],
+    "caption": "a location pin icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:lock.svg",
+    "component_id": "Icon.Themify:Lock",
+    "aliases": [
+      "themify:lock"
+    ],
+    "caption": "a padlock icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:loop.svg",
+    "component_id": "Icon.Themify:Loop",
+    "aliases": [
+      "themify:loop"
+    ],
+    "caption": "two arrows pointing in opposite directions on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:magnet.svg",
+    "component_id": "Icon.Themify:Magnet",
+    "aliases": [
+      "themify:magnet"
+    ],
+    "caption": "a black and white icon with the letter u",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:map-alt.svg",
+    "component_id": "Icon.Themify:MapAlt",
+    "aliases": [
+      "themify:map",
+      "alt"
+    ],
+    "caption": "a map icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:map.svg",
+    "component_id": "Icon.Themify:Map",
+    "aliases": [
+      "themify:map"
+    ],
+    "caption": "a black and white image of an open book",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:marker-alt.svg",
+    "component_id": "Icon.Themify:MarkerAlt",
+    "aliases": [
+      "themify:marker",
+      "alt"
+    ],
+    "caption": "a white pen icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:marker.svg",
+    "component_id": "Icon.Themify:Marker",
+    "aliases": [
+      "themify:marker"
+    ],
+    "caption": "a white pen icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:medall-alt.svg",
+    "component_id": "Icon.Themify:MedallAlt",
+    "aliases": [
+      "themify:medall",
+      "alt"
+    ],
+    "caption": "award icon on black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:medall.svg",
+    "component_id": "Icon.Themify:Medall",
+    "aliases": [
+      "themify:medall"
+    ],
+    "caption": "a black and white badge with a star in the middle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:menu-alt.svg",
+    "component_id": "Icon.Themify:MenuAlt",
+    "aliases": [
+      "themify:menu",
+      "alt"
+    ],
+    "caption": "a black and white icon with three dots",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:menu.svg",
+    "component_id": "Icon.Themify:Menu",
+    "aliases": [
+      "themify:menu"
+    ],
+    "caption": "a black and white image of the equality symbol",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:microphone-alt.svg",
+    "component_id": "Icon.Themify:MicrophoneAlt",
+    "aliases": [
+      "themify:microphone",
+      "alt"
+    ],
+    "caption": "a microphone icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:microphone.svg",
+    "component_id": "Icon.Themify:Microphone",
+    "aliases": [
+      "themify:microphone"
+    ],
+    "caption": "a microphone icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:microsoft-alt.svg",
+    "component_id": "Icon.Themify:MicrosoftAlt",
+    "aliases": [
+      "themify:microsoft",
+      "alt"
+    ],
+    "caption": "the windows logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:microsoft.svg",
+    "component_id": "Icon.Themify:Microsoft",
+    "aliases": [
+      "themify:microsoft"
+    ],
+    "caption": "the windows 10 logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:minus.svg",
+    "component_id": "Icon.Themify:Minus",
+    "aliases": [
+      "themify:minus"
+    ],
+    "caption": "a white line on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:mobile.svg",
+    "component_id": "Icon.Themify:Mobile",
+    "aliases": [
+      "themify:mobile"
+    ],
+    "caption": "an icon of a phone on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:money.svg",
+    "component_id": "Icon.Themify:Money",
+    "aliases": [
+      "themify:money"
+    ],
+    "caption": "a dollar sign icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:more-alt.svg",
+    "component_id": "Icon.Themify:MoreAlt",
+    "aliases": [
+      "themify:more",
+      "alt"
+    ],
+    "caption": "four white circles on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:more.svg",
+    "component_id": "Icon.Themify:More",
+    "aliases": [
+      "themify:more"
+    ],
+    "caption": "four white circles on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:mouse-alt.svg",
+    "component_id": "Icon.Themify:MouseAlt",
+    "aliases": [
+      "themify:mouse",
+      "alt"
+    ],
+    "caption": "a computer mouse icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:mouse.svg",
+    "component_id": "Icon.Themify:Mouse",
+    "aliases": [
+      "themify:mouse"
+    ],
+    "caption": "a white computer mouse icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:music-alt.svg",
+    "component_id": "Icon.Themify:MusicAlt",
+    "aliases": [
+      "themify:music",
+      "alt"
+    ],
+    "caption": "a music note icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:music.svg",
+    "component_id": "Icon.Themify:Music",
+    "aliases": [
+      "themify:music"
+    ],
+    "caption": "an image of a music note on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:na.svg",
+    "component_id": "Icon.Themify:Na",
+    "aliases": [
+      "themify:na"
+    ],
+    "caption": "a no entry sign on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:new-window.svg",
+    "component_id": "Icon.Themify:NewWindow",
+    "aliases": [
+      "themify:new",
+      "window"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:notepad.svg",
+    "component_id": "Icon.Themify:Notepad",
+    "aliases": [
+      "themify:notepad"
+    ],
+    "caption": "a black and white icon with four circles",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:package.svg",
+    "component_id": "Icon.Themify:Package",
+    "aliases": [
+      "themify:package"
+    ],
+    "caption": "a black and white icon of a box on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:paint-bucket.svg",
+    "component_id": "Icon.Themify:PaintBucket",
+    "aliases": [
+      "themify:paint",
+      "bucket"
+    ],
+    "caption": "a black and white icon with a drop of water",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:paint-roller.svg",
+    "component_id": "Icon.Themify:PaintRoller",
+    "aliases": [
+      "themify:paint",
+      "roller"
+    ],
+    "caption": "a paint roller icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:palette.svg",
+    "component_id": "Icon.Themify:Palette",
+    "aliases": [
+      "themify:palette"
+    ],
+    "caption": "a black and white icon with circles on it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:panel.svg",
+    "component_id": "Icon.Themify:Panel",
+    "aliases": [
+      "themify:panel"
+    ],
+    "caption": "a black and white icon with three circles",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:paragraph.svg",
+    "component_id": "Icon.Themify:Paragraph",
+    "aliases": [
+      "themify:paragraph"
+    ],
+    "caption": "the tp logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:pencil-alt.svg",
+    "component_id": "Icon.Themify:PencilAlt",
+    "aliases": [
+      "themify:pencil",
+      "alt"
+    ],
+    "caption": "a pencil icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:pencil-alt2.svg",
+    "component_id": "Icon.Themify:PencilAlt2",
+    "aliases": [
+      "themify:pencil",
+      "alt",
+      "2"
+    ],
+    "caption": "a white pencil icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:pencil.svg",
+    "component_id": "Icon.Themify:Pencil",
+    "aliases": [
+      "themify:pencil"
+    ],
+    "caption": "a white pencil icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:pie-chart.svg",
+    "component_id": "Icon.Themify:PieChart",
+    "aliases": [
+      "themify:pie",
+      "chart"
+    ],
+    "caption": "a black and white image of a pie chart",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:pin-alt.svg",
+    "component_id": "Icon.Themify:PinAlt",
+    "aliases": [
+      "themify:pin",
+      "alt"
+    ],
+    "caption": "a black and white image of a hammer on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:pin.svg",
+    "component_id": "Icon.Themify:Pin",
+    "aliases": [
+      "themify:pin"
+    ],
+    "caption": "a black and white image of a clock on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:pin2.svg",
+    "component_id": "Icon.Themify:Pin2",
+    "aliases": [
+      "themify:pin",
+      "2"
+    ],
+    "caption": "a lamp icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:pinterest-alt.svg",
+    "component_id": "Icon.Themify:PinterestAlt",
+    "aliases": [
+      "themify:pinterest",
+      "alt"
+    ],
+    "caption": "the pinterest logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:pinterest.svg",
+    "component_id": "Icon.Themify:Pinterest",
+    "aliases": [
+      "themify:pinterest"
+    ],
+    "caption": "the pinterest logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:plug.svg",
+    "component_id": "Icon.Themify:Plug",
+    "aliases": [
+      "themify:plug"
+    ],
+    "caption": "a black and white icon of a power plug",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:plus.svg",
+    "component_id": "Icon.Themify:Plus",
+    "aliases": [
+      "themify:plus"
+    ],
+    "caption": "an image of a cross on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:power-off.svg",
+    "component_id": "Icon.Themify:PowerOff",
+    "aliases": [
+      "themify:power",
+      "off"
+    ],
+    "caption": "a power button icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:printer.svg",
+    "component_id": "Icon.Themify:Printer",
+    "aliases": [
+      "themify:printer"
+    ],
+    "caption": "a printer icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:pulse.svg",
+    "component_id": "Icon.Themify:Pulse",
+    "aliases": [
+      "themify:pulse"
+    ],
+    "caption": "an image of a heartbeat symbol on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:quote-left.svg",
+    "component_id": "Icon.Themify:QuoteLeft",
+    "aliases": [
+      "themify:quote",
+      "left"
+    ],
+    "caption": "the number 66 is displayed on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:quote-right.svg",
+    "component_id": "Icon.Themify:QuoteRight",
+    "aliases": [
+      "themify:quote",
+      "right"
+    ],
+    "caption": "the number nine is displayed on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:receipt.svg",
+    "component_id": "Icon.Themify:Receipt",
+    "aliases": [
+      "themify:receipt"
+    ],
+    "caption": "a document icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:reddit.svg",
+    "component_id": "Icon.Themify:Reddit",
+    "aliases": [
+      "themify:reddit"
+    ],
+    "caption": "a black and white image of a smiling face",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:reload.svg",
+    "component_id": "Icon.Themify:Reload",
+    "aliases": [
+      "themify:reload"
+    ],
+    "caption": "the letter g in a circle on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:rocket.svg",
+    "component_id": "Icon.Themify:Rocket",
+    "aliases": [
+      "themify:rocket"
+    ],
+    "caption": "a rocket icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:rss-alt.svg",
+    "component_id": "Icon.Themify:RssAlt",
+    "aliases": [
+      "themify:rss",
+      "alt"
+    ],
+    "caption": "a white rss icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:rss.svg",
+    "component_id": "Icon.Themify:Rss",
+    "aliases": [
+      "themify:rss"
+    ],
+    "caption": "the rss icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:ruler-alt-2.svg",
+    "component_id": "Icon.Themify:RulerAlt2",
+    "aliases": [
+      "themify:ruler",
+      "alt",
+      "2"
+    ],
+    "caption": "a triangle icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:ruler-alt.svg",
+    "component_id": "Icon.Themify:RulerAlt",
+    "aliases": [
+      "themify:ruler",
+      "alt"
+    ],
+    "caption": "a ruler icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:ruler-pencil.svg",
+    "component_id": "Icon.Themify:RulerPencil",
+    "aliases": [
+      "themify:ruler",
+      "pencil"
+    ],
+    "caption": "a pencil and ruler icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:ruler.svg",
+    "component_id": "Icon.Themify:Ruler",
+    "aliases": [
+      "themify:ruler"
+    ],
+    "caption": "a ruler icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:save-alt.svg",
+    "component_id": "Icon.Themify:SaveAlt",
+    "aliases": [
+      "themify:save",
+      "alt"
+    ],
+    "caption": "a black and white icon of a floppy disk on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:save.svg",
+    "component_id": "Icon.Themify:Save",
+    "aliases": [
+      "themify:save"
+    ],
+    "caption": "a floppy disk icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:search.svg",
+    "component_id": "Icon.Themify:Search",
+    "aliases": [
+      "themify:search"
+    ],
+    "caption": "a magnifying glass icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:server.svg",
+    "component_id": "Icon.Themify:Server",
+    "aliases": [
+      "themify:server"
+    ],
+    "caption": "a black and white icon of a stack of data",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:settings.svg",
+    "component_id": "Icon.Themify:Settings",
+    "aliases": [
+      "themify:settings"
+    ],
+    "caption": "a gear wheel icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:share-alt.svg",
+    "component_id": "Icon.Themify:ShareAlt",
+    "aliases": [
+      "themify:share",
+      "alt"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:share.svg",
+    "component_id": "Icon.Themify:Share",
+    "aliases": [
+      "themify:share"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:sharethis-alt.svg",
+    "component_id": "Icon.Themify:SharethisAlt",
+    "aliases": [
+      "themify:sharethis",
+      "alt"
+    ],
+    "caption": "a black and white icon with two circles",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:sharethis.svg",
+    "component_id": "Icon.Themify:Sharethis",
+    "aliases": [
+      "themify:sharethis"
+    ],
+    "caption": "a black and white icon of two circles",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:shield.svg",
+    "component_id": "Icon.Themify:Shield",
+    "aliases": [
+      "themify:shield"
+    ],
+    "caption": "the shield logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:shift-left-alt.svg",
+    "component_id": "Icon.Themify:ShiftLeftAlt",
+    "aliases": [
+      "themify:shift",
+      "left",
+      "alt"
+    ],
+    "caption": "a black background with a white arrow pointing to the right",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:shift-left.svg",
+    "component_id": "Icon.Themify:ShiftLeft",
+    "aliases": [
+      "themify:shift",
+      "left"
+    ],
+    "caption": "an arrow pointing to the right on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:shift-right-alt.svg",
+    "component_id": "Icon.Themify:ShiftRightAlt",
+    "aliases": [
+      "themify:shift",
+      "right",
+      "alt"
+    ],
+    "caption": "a black background with a white arrow pointing to the right",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:shift-right.svg",
+    "component_id": "Icon.Themify:ShiftRight",
+    "aliases": [
+      "themify:shift",
+      "right"
+    ],
+    "caption": "a white arrow pointing to the right on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:shine.svg",
+    "component_id": "Icon.Themify:Shine",
+    "aliases": [
+      "themify:shine"
+    ],
+    "caption": "the sun icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:shopping-cart-full.svg",
+    "component_id": "Icon.Themify:ShoppingCartFull",
+    "aliases": [
+      "themify:shopping",
+      "cart",
+      "full"
+    ],
+    "caption": "a shopping cart icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:shopping-cart.svg",
+    "component_id": "Icon.Themify:ShoppingCart",
+    "aliases": [
+      "themify:shopping",
+      "cart"
+    ],
+    "caption": "a shopping cart icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:shortcode.svg",
+    "component_id": "Icon.Themify:Shortcode",
+    "aliases": [
+      "themify:shortcode"
+    ],
+    "caption": "a black and white logo with the letter s in it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:signal.svg",
+    "component_id": "Icon.Themify:Signal",
+    "aliases": [
+      "themify:signal"
+    ],
+    "caption": "a black and white image of a wifi symbol",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:skype.svg",
+    "component_id": "Icon.Themify:Skype",
+    "aliases": [
+      "themify:skype"
+    ],
+    "caption": "the skype logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:slice.svg",
+    "component_id": "Icon.Themify:Slice",
+    "aliases": [
+      "themify:slice"
+    ],
+    "caption": "a knife icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:smallcap.svg",
+    "component_id": "Icon.Themify:Smallcap",
+    "aliases": [
+      "themify:smallcap"
+    ],
+    "caption": "the t logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:soundcloud.svg",
+    "component_id": "Icon.Themify:Soundcloud",
+    "aliases": [
+      "themify:soundcloud"
+    ],
+    "caption": "the soundcloud logo is shown on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:split-h.svg",
+    "component_id": "Icon.Themify:SplitH",
+    "aliases": [
+      "themify:split",
+      "h"
+    ],
+    "caption": "two arrows pointing in opposite directions on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:split-v-alt.svg",
+    "component_id": "Icon.Themify:SplitVAlt",
+    "aliases": [
+      "themify:split",
+      "v",
+      "alt"
+    ],
+    "caption": "a black and white image of a computer symbol",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:split-v.svg",
+    "component_id": "Icon.Themify:SplitV",
+    "aliases": [
+      "themify:split",
+      "v"
+    ],
+    "caption": "two arrows pointing in opposite directions on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:spray.svg",
+    "component_id": "Icon.Themify:Spray",
+    "aliases": [
+      "themify:spray"
+    ],
+    "caption": "a spray can icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:stack-overflow.svg",
+    "component_id": "Icon.Themify:StackOverflow",
+    "aliases": [
+      "themify:stack",
+      "overflow"
+    ],
+    "caption": "a black and white icon of a staircase",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:stamp.svg",
+    "component_id": "Icon.Themify:Stamp",
+    "aliases": [
+      "themify:stamp"
+    ],
+    "caption": "a stamp icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:star.svg",
+    "component_id": "Icon.Themify:Star",
+    "aliases": [
+      "themify:star"
+    ],
+    "caption": "a black and white star on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:stats-down.svg",
+    "component_id": "Icon.Themify:StatsDown",
+    "aliases": [
+      "themify:stats",
+      "down"
+    ],
+    "caption": "a downward arrow icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:stats-up.svg",
+    "component_id": "Icon.Themify:StatsUp",
+    "aliases": [
+      "themify:stats",
+      "up"
+    ],
+    "caption": "a graph icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:support.svg",
+    "component_id": "Icon.Themify:Support",
+    "aliases": [
+      "themify:support"
+    ],
+    "caption": "a medical bag icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:tablet.svg",
+    "component_id": "Icon.Themify:Tablet",
+    "aliases": [
+      "themify:tablet"
+    ],
+    "caption": "a black and white image of an ipad",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:tag.svg",
+    "component_id": "Icon.Themify:Tag",
+    "aliases": [
+      "themify:tag"
+    ],
+    "caption": "a black and white icon with a white arrow on it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:target.svg",
+    "component_id": "Icon.Themify:Target",
+    "aliases": [
+      "themify:target"
+    ],
+    "caption": "a crosshairs icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:text.svg",
+    "component_id": "Icon.Themify:Text",
+    "aliases": [
+      "themify:text"
+    ],
+    "caption": "the letter t on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:themify-favicon-alt.svg",
+    "component_id": "Icon.Themify:ThemifyFaviconAlt",
+    "aliases": [
+      "themify:themify",
+      "favicon",
+      "alt"
+    ],
+    "caption": "a smiley face in a speech bubble on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:themify-favicon.svg",
+    "component_id": "Icon.Themify:ThemifyFavicon",
+    "aliases": [
+      "themify:themify",
+      "favicon"
+    ],
+    "caption": "a black and white image of a smiley face in a speech bubble",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:themify-logo.svg",
+    "component_id": "Icon.Themify:ThemifyLogo",
+    "aliases": [
+      "themify:themify",
+      "logo"
+    ],
+    "caption": "a black background with the word themify written on it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:thought.svg",
+    "component_id": "Icon.Themify:Thought",
+    "aliases": [
+      "themify:thought"
+    ],
+    "caption": "a white thought bubble icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:thumb-down.svg",
+    "component_id": "Icon.Themify:ThumbDown",
+    "aliases": [
+      "themify:thumb",
+      "down"
+    ],
+    "caption": "a thumb down icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:thumb-up.svg",
+    "component_id": "Icon.Themify:ThumbUp",
+    "aliases": [
+      "themify:thumb",
+      "up"
+    ],
+    "caption": "thumbs up icon on black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:ticket.svg",
+    "component_id": "Icon.Themify:Ticket",
+    "aliases": [
+      "themify:ticket"
+    ],
+    "caption": "a black and white image of the letter h",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:time.svg",
+    "component_id": "Icon.Themify:Time",
+    "aliases": [
+      "themify:time"
+    ],
+    "caption": "a black and white clock icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:timer.svg",
+    "component_id": "Icon.Themify:Timer",
+    "aliases": [
+      "themify:timer"
+    ],
+    "caption": "a stopwatch icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:trash.svg",
+    "component_id": "Icon.Themify:Trash",
+    "aliases": [
+      "themify:trash"
+    ],
+    "caption": "a trash can icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:trello.svg",
+    "component_id": "Icon.Themify:Trello",
+    "aliases": [
+      "themify:trello"
+    ],
+    "caption": "a black and white icon with two squares",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:truck.svg",
+    "component_id": "Icon.Themify:Truck",
+    "aliases": [
+      "themify:truck"
+    ],
+    "caption": "a truck icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:tumblr-alt.svg",
+    "component_id": "Icon.Themify:TumblrAlt",
+    "aliases": [
+      "themify:tumblr",
+      "alt"
+    ],
+    "caption": "the t logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:tumblr.svg",
+    "component_id": "Icon.Themify:Tumblr",
+    "aliases": [
+      "themify:tumblr"
+    ],
+    "caption": "a white letter t on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:twitter-alt.svg",
+    "component_id": "Icon.Themify:TwitterAlt",
+    "aliases": [
+      "themify:twitter",
+      "alt"
+    ],
+    "caption": "a white twitter logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:twitter.svg",
+    "component_id": "Icon.Themify:Twitter",
+    "aliases": [
+      "themify:twitter"
+    ],
+    "caption": "a white twitter logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:underline.svg",
+    "component_id": "Icon.Themify:Underline",
+    "aliases": [
+      "themify:underline"
+    ],
+    "caption": "a black and white image of the letter u",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:unlink.svg",
+    "component_id": "Icon.Themify:Unlink",
+    "aliases": [
+      "themify:unlink"
+    ],
+    "caption": "a black and white icon with the letter s",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:unlock.svg",
+    "component_id": "Icon.Themify:Unlock",
+    "aliases": [
+      "themify:unlock"
+    ],
+    "caption": "a padlock icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:upload.svg",
+    "component_id": "Icon.Themify:Upload",
+    "aliases": [
+      "themify:upload"
+    ],
+    "caption": "an arrow pointing up on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:uppercase.svg",
+    "component_id": "Icon.Themify:Uppercase",
+    "aliases": [
+      "themify:uppercase"
+    ],
+    "caption": "the t logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:user.svg",
+    "component_id": "Icon.Themify:User",
+    "aliases": [
+      "themify:user"
+    ],
+    "caption": "a silhouette of a man's head on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:vector.svg",
+    "component_id": "Icon.Themify:Vector",
+    "aliases": [
+      "themify:vector"
+    ],
+    "caption": "a black and white icon with two arrows",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:video-camera.svg",
+    "component_id": "Icon.Themify:VideoCamera",
+    "aliases": [
+      "themify:video",
+      "camera"
+    ],
+    "caption": "a camera icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:video-clapper.svg",
+    "component_id": "Icon.Themify:VideoClapper",
+    "aliases": [
+      "themify:video",
+      "clapper"
+    ],
+    "caption": "a movie clap icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:view-grid.svg",
+    "component_id": "Icon.Themify:ViewGrid",
+    "aliases": [
+      "themify:view",
+      "grid"
+    ],
+    "caption": "four squares on a black background with a white square in the middle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:view-list-alt.svg",
+    "component_id": "Icon.Themify:ViewListAlt",
+    "aliases": [
+      "themify:view",
+      "list",
+      "alt"
+    ],
+    "caption": "a black and white check mark icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:view-list.svg",
+    "component_id": "Icon.Themify:ViewList",
+    "aliases": [
+      "themify:view",
+      "list"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:vimeo-alt.svg",
+    "component_id": "Icon.Themify:VimeoAlt",
+    "aliases": [
+      "themify:vimeo",
+      "alt"
+    ],
+    "caption": "the v logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:vimeo.svg",
+    "component_id": "Icon.Themify:Vimeo",
+    "aliases": [
+      "themify:vimeo"
+    ],
+    "caption": "a white and black logo with the word v on it",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:volume.svg",
+    "component_id": "Icon.Themify:Volume",
+    "aliases": [
+      "themify:volume"
+    ],
+    "caption": "a black and white icon of a speaker",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:wallet.svg",
+    "component_id": "Icon.Themify:Wallet",
+    "aliases": [
+      "themify:wallet"
+    ],
+    "caption": "a black and white icon of a wallet on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:wand.svg",
+    "component_id": "Icon.Themify:Wand",
+    "aliases": [
+      "themify:wand"
+    ],
+    "caption": "a magic wand icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:wheelchair.svg",
+    "component_id": "Icon.Themify:Wheelchair",
+    "aliases": [
+      "themify:wheelchair"
+    ],
+    "caption": "a wheelchair icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:widget-alt.svg",
+    "component_id": "Icon.Themify:WidgetAlt",
+    "aliases": [
+      "themify:widget",
+      "alt"
+    ],
+    "caption": "a black square with a white square in the middle",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:widget.svg",
+    "component_id": "Icon.Themify:Widget",
+    "aliases": [
+      "themify:widget"
+    ],
+    "caption": "a gear icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:widgetized.svg",
+    "component_id": "Icon.Themify:Widgetized",
+    "aliases": [
+      "themify:widgetized"
+    ],
+    "caption": "an image of squares on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:window.svg",
+    "component_id": "Icon.Themify:Window",
+    "aliases": [
+      "themify:window"
+    ],
+    "caption": "a black and white image of a web page",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:wordpress.svg",
+    "component_id": "Icon.Themify:Wordpress",
+    "aliases": [
+      "themify:wordpress"
+    ],
+    "caption": "the wordpress logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:world.svg",
+    "component_id": "Icon.Themify:World",
+    "aliases": [
+      "themify:world"
+    ],
+    "caption": "a globe icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:write.svg",
+    "component_id": "Icon.Themify:Write",
+    "aliases": [
+      "themify:write"
+    ],
+    "caption": "a black and white icon of a pen and paper",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:yahoo.svg",
+    "component_id": "Icon.Themify:Yahoo",
+    "aliases": [
+      "themify:yahoo"
+    ],
+    "caption": "a white letter y on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:youtube.svg",
+    "component_id": "Icon.Themify:Youtube",
+    "aliases": [
+      "themify:youtube"
+    ],
+    "caption": "the youtube logo on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:zip.svg",
+    "component_id": "Icon.Themify:Zip",
+    "aliases": [
+      "themify:zip"
+    ],
+    "caption": "a file icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:zoom-in.svg",
+    "component_id": "Icon.Themify:ZoomIn",
+    "aliases": [
+      "themify:zoom",
+      "in"
+    ],
+    "caption": "a magnifying glass icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "/home/darren/icon-retrieval/icons-dynamic/themify/themify:zoom-out.svg",
+    "component_id": "Icon.Themify:ZoomOut",
+    "aliases": [
+      "themify:zoom",
+      "out"
+    ],
+    "caption": "a magnifying glass icon on a black background",
+    "colors": [
+      "#ffffff"
+    ]
+  }
+]

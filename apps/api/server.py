@@ -2,17 +2,23 @@ from fastapi import FastAPI, File, UploadFile, Form, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pathlib import Path
+import sys
 import os
 import traceback
 from dotenv import load_dotenv
+
+repo_root = Path(__file__).resolve().parents[2]
+generator_lib = repo_root / "libs" / "generator"
+if str(generator_lib) not in sys.path:
+    sys.path.insert(0, str(generator_lib))
+
 import widgetdsl_generator as generator
 from widgetdsl_generator import GeneratorConfig
 from widgetdsl_generator.exceptions import ValidationError, FileSizeError, GenerationError, RateLimitError
 from widgetdsl_generator.utils.validation import check_rate_limit
 
 # Load environment variables from root .env file
-root_dir = Path(__file__).parent.parent.parent
-load_dotenv(root_dir / ".env")
+load_dotenv(repo_root / ".env")
 
 # Load generator config from environment variables
 gen_config = GeneratorConfig.from_env()
@@ -192,6 +198,7 @@ async def generate_widget_full(
     retrieval_topk: int = Form(50),
     retrieval_topm: int = Form(10),
     retrieval_alpha: float = Form(0.8),
+    icon_lib_names: str = Form(None),
 ):
     client_ip = request.client.host
     if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
@@ -200,7 +207,7 @@ async def generate_widget_full(
     image_data = await image.read()
     return await generator.generate_widget_full(
         image_data, image.filename, system_prompt, model, api_key,
-        retrieval_topk, retrieval_topm, retrieval_alpha, gen_config
+        retrieval_topk, retrieval_topm, retrieval_alpha, gen_config, icon_lib_names
     )
 
 if __name__ == "__main__":
