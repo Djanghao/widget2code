@@ -24,9 +24,10 @@ Commands:
     Render JSX widget to PNG image
     Output defaults to same directory with .png extension
 
-  batch-render <input> <output> [concurrency]
+  batch-render <input> [output] [concurrency]
     Batch render widgets from DSL specs
     Input can be a single JSON file or directory
+    Output is optional (in-place if omitted)
 
 Examples:
   widget-factory compile widget.json
@@ -78,13 +79,28 @@ async function main() {
         break;
 
       case 'batch-render':
-        if (commandArgs.length < 2) {
-          console.error('Error: batch-render requires <input> and <output>');
+        if (commandArgs.length < 1) {
+          console.error('Error: batch-render requires <input> [output] [concurrency]');
           process.exit(1);
         }
-        const { failedCount } = await batchRender(commandArgs[0], commandArgs[1], {
-          concurrency: parseInt(commandArgs[2]) || 3
-        });
+        let outputDir = null;
+        let concurrency = 3;
+
+        if (commandArgs.length >= 2) {
+          const secondArg = commandArgs[1];
+          const isNumber = /^\d+$/.test(secondArg);
+
+          if (isNumber) {
+            concurrency = parseInt(secondArg);
+          } else {
+            outputDir = secondArg;
+            if (commandArgs.length >= 3) {
+              concurrency = parseInt(commandArgs[2]) || 3;
+            }
+          }
+        }
+
+        const { failedCount } = await batchRender(commandArgs[0], outputDir, { concurrency });
         process.exit(failedCount > 0 ? 1 : 0);
         break;
 

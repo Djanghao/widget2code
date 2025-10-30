@@ -32,7 +32,7 @@ echo "Step 1/2: Generate WidgetDSL from images..."
 
 echo ""
 echo "Step 2/2: Batch render DSL to PNG..."
-./scripts/rendering/render-batch.sh "$OUTPUT_DIR" "$OUTPUT_DIR" "$CONCURRENCY" "$DEV_SERVER"
+./scripts/rendering/render-batch.sh "$OUTPUT_DIR" "$CONCURRENCY"
 
 echo ""
 echo "===== Complete ====="
