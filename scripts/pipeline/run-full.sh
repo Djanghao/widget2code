@@ -8,14 +8,14 @@ fi
 
 FRONTEND_PORT=${FRONTEND_PORT:-3060}
 
-if [ $# -lt 2 ]; then
-    echo "Usage: $0 <image> <output-dir> [dev-server-url]"
-    echo "Example: $0 input.png ./output"
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <image> [output-dir] [dev-server-url]"
+    echo "Example: $0 input.png [./output]"
     exit 1
 fi
 
 IMAGE_PATH=$1
-OUTPUT_DIR=$2
+OUTPUT_DIR=${2:-.}
 DEV_SERVER=${3:-"http://localhost:$FRONTEND_PORT"}
 
 mkdir -p "$OUTPUT_DIR"

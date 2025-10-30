@@ -16,19 +16,23 @@ Widget Factory CLI - Unified tools for widget compilation and rendering
 Usage: widget-factory <command> [options]
 
 Commands:
-  compile <dsl.json> <output.jsx>
+  compile <dsl.json> [output.jsx]
     Compile WidgetDSL to React JSX code
+    Output defaults to same directory with .jsx extension
 
-  render <input.jsx> <output.png> [dev-server-url]
+  render <input.jsx> [output.png] [dev-server-url]
     Render JSX widget to PNG image
+    Output defaults to same directory with .png extension
 
   batch-render <input> <output> [concurrency]
     Batch render widgets from DSL specs
     Input can be a single JSON file or directory
 
 Examples:
-  widget-factory compile widget.json widget.jsx
-  widget-factory render widget.jsx widget.png
+  widget-factory compile widget.json
+  widget-factory compile widget.json custom.jsx
+  widget-factory render widget.jsx
+  widget-factory render widget.jsx custom.png
   widget-factory batch-render ./widgets ./output 5
 
 Options:
@@ -56,16 +60,16 @@ async function main() {
   try {
     switch (command) {
       case 'compile':
-        if (commandArgs.length < 2) {
-          console.error('Error: compile requires <dsl-json-path> and <output-jsx-path>');
+        if (commandArgs.length < 1) {
+          console.error('Error: compile requires <dsl-json-path> [output-jsx-path]');
           process.exit(1);
         }
         await compile(commandArgs[0], commandArgs[1]);
         break;
 
       case 'render':
-        if (commandArgs.length < 2) {
-          console.error('Error: render requires <jsx-file-path> and <output-png-path>');
+        if (commandArgs.length < 1) {
+          console.error('Error: render requires <jsx-file-path> [output-png-path] [dev-server-url]');
           process.exit(1);
         }
         await render(commandArgs[0], commandArgs[1], {

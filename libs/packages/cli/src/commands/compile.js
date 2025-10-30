@@ -11,6 +11,12 @@ import path from 'path';
 
 export async function compile(dslPath, outputPath) {
   try {
+    // Optional output path - defaults to same directory, same name with .jsx extension
+    if (!outputPath) {
+      const parsed = path.parse(dslPath);
+      outputPath = path.join(parsed.dir, `${parsed.name}.jsx`);
+    }
+
     const dslData = await fs.readFile(dslPath, 'utf-8');
     const spec = JSON.parse(dslData);
 
@@ -36,12 +42,13 @@ export async function compile(dslPath, outputPath) {
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
 
-  if (args.length < 2) {
-    console.error('Usage: widget-factory compile <dsl-json-path> <output-jsx-path>');
+  if (args.length < 1) {
+    console.error('Usage: widget-factory compile <dsl-json-path> [output-jsx-path]');
     process.exit(1);
   }
 
-  const [dslPath, outputPath] = args.map(p => path.resolve(p));
+  const dslPath = path.resolve(args[0]);
+  const outputPath = args[1] ? path.resolve(args[1]) : undefined;
 
   compile(dslPath, outputPath)
     .then(() => process.exit(0))
