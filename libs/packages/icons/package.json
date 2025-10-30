@@ -5,8 +5,7 @@
   "main": "./src/index.jsx",
   "exports": {
     ".": "./src/index.jsx",
-    "./sf-symbols": "./sf-symbols/src/index.jsx",
-    "./lucide": "./lucide/src/index.jsx"
+    "./sf-symbols": "./custom/sf-symbols/src/index.jsx"
   },
   "dependencies": {
     "react-icons": "^5.0.1"

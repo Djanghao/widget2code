@@ -44,7 +44,7 @@ export default function IconSystemSection() {
 }`}</pre>
           </div>
           <div>
-            <div style={{ fontSize: 13, fontWeight: 600, color: '#a1a1a6', marginBottom: 8 }}>SVG Path (packages/icons/sf-symbols/src/components/Icon00Circle.jsx:8)</div>
+            <div style={{ fontSize: 13, fontWeight: 600, color: '#a1a1a6', marginBottom: 8 }}>SVG Path (packages/icons/custom/sf-symbols/src/components/Icon00Circle.jsx:8)</div>
             <pre style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: '#e5e5e7' }}>{`<path fill="var(--icon-color, rgba(255, 255, 255, 0.85))" />`}</pre>
           </div>
         </div>

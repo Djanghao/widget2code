@@ -2,7 +2,7 @@
 export {
   iconsMap as sfSymbolsMap,
   metadata as sfMetadata,
-} from "../sf-symbols/src/index.jsx";
+} from "../custom/sf-symbols/src/index.jsx";
 
 // All react-icons libraries consolidated in one place
 export {
