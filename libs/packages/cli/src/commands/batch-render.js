@@ -12,27 +12,60 @@ import { validateAndFix } from '@widget-factory/validator';
 import fs from 'fs/promises';
 import path from 'path';
 
-async function findJsonFiles(inputPath) {
+async function findWidgetsToProcess(inputPath) {
   const stats = await fs.stat(inputPath);
 
   if (stats.isFile()) {
     if (!inputPath.endsWith('.json')) {
       throw new Error('Input file must be a JSON file');
     }
-    return [inputPath];
+    const widgetDir = path.dirname(inputPath);
+    const widgetId = path.basename(inputPath, '.json');
+    return [{ widgetId, widgetDir, dslFile: inputPath }];
   }
 
   if (stats.isDirectory()) {
     const entries = await fs.readdir(inputPath, { withFileTypes: true });
-    const jsonFiles = entries
-      .filter(entry => entry.isFile() && entry.name.endsWith('.json'))
-      .map(entry => path.join(inputPath, entry.name));
+    const widgets = [];
 
-    if (jsonFiles.length === 0) {
-      throw new Error('No JSON files found in directory');
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+
+      const widgetDir = path.join(inputPath, entry.name);
+      const widgetId = entry.name;
+      const logPath = path.join(widgetDir, 'log.json');
+      const dslFile = path.join(widgetDir, `${widgetId}.json`);
+
+      const dslExists = await fs.access(dslFile).then(() => true).catch(() => false);
+      if (!dslExists) continue;
+
+      let shouldProcess = true;
+
+      const logExists = await fs.access(logPath).then(() => true).catch(() => false);
+      if (logExists) {
+        try {
+          const logData = JSON.parse(await fs.readFile(logPath, 'utf-8'));
+          const renderingStep = logData.steps?.rendering;
+
+          if (renderingStep && renderingStep.status === 'success') {
+            shouldProcess = false;
+          }
+        } catch (error) {
+          console.warn(`[${widgetId}] Warning: Failed to read log.json, will process`);
+        }
+      }
+
+      if (shouldProcess) {
+        widgets.push({ widgetId, widgetDir, dslFile });
+      }
     }
 
-    return jsonFiles;
+    if (widgets.length === 0) {
+      console.log('All widgets already processed. Use --force to reprocess.');
+      return [];
+    }
+
+    return widgets;
   }
 
   throw new Error('Input must be a file or directory');
@@ -43,17 +76,39 @@ async function loadSpec(specPath) {
   return JSON.parse(specData);
 }
 
-async function renderWidget(renderer, specPath, outputDir) {
-  const spec = await loadSpec(specPath);
-  const widgetId = path.basename(specPath, '.json');
-  const widgetOutputDir = path.resolve(outputDir, widgetId);
+async function renderWidget(renderer, widgetInfo) {
+  const { widgetId, widgetDir, dslFile } = widgetInfo;
+  const logPath = path.join(widgetDir, 'log.json');
+  const jsxPath = path.join(widgetDir, `${widgetId}.jsx`);
+  const pngPath = path.join(widgetDir, `${widgetId}.png`);
 
-  await fs.mkdir(widgetOutputDir, { recursive: true });
+  let logData = {
+    widgetId,
+    steps: {},
+    files: {},
+    metadata: {
+      version: '0.3.0',
+      pipeline: 'full'
+    }
+  };
+
+  const logExists = await fs.access(logPath).then(() => true).catch(() => false);
+  if (logExists) {
+    try {
+      logData = JSON.parse(await fs.readFile(logPath, 'utf-8'));
+      logData.metadata.pipeline = 'full';
+    } catch (error) {
+      console.warn(`[${widgetId}] Warning: Failed to read existing log.json`);
+    }
+  }
+
+  const compilationStartTime = new Date();
 
   try {
-    console.log(`\n[${widgetId}] Starting render...`);
+    console.log(`\n[${widgetId}] Starting compilation and rendering...`);
 
-    // Step 0: Validate and fix DSL
+    const spec = await loadSpec(dslFile);
+
     const validation = validateAndFix(spec);
     if (validation.changes && validation.changes.length > 0) {
       console.log(`[${widgetId}] ⚠️  Auto-fixed ${validation.changes.length} issue(s):`);
@@ -69,30 +124,46 @@ async function renderWidget(renderer, specPath, outputDir) {
 
     const finalSpec = validation.fixed || spec;
 
-    // Step 1: Compile DSL to JSX
     console.log(`[${widgetId}] Compiling DSL to JSX...`);
     const jsx = compileWidgetDSLToJSX(finalSpec);
+    await fs.writeFile(jsxPath, jsx, 'utf-8');
 
-    // Step 2: Render JSX to PNG
+    const compilationEndTime = new Date();
+    const compilationDuration = (compilationEndTime - compilationStartTime) / 1000;
+
+    logData.steps.compilation = {
+      status: 'success',
+      startTime: compilationStartTime.toISOString(),
+      endTime: compilationEndTime.toISOString(),
+      duration: compilationDuration,
+      output: {
+        jsxFile: `${widgetId}.jsx`,
+        validation: {
+          changes: validation.changes || [],
+          warnings: validation.warnings || []
+        }
+      },
+      error: null
+    };
+
     console.log(`[${widgetId}] Rendering JSX to PNG...`);
+    const renderingStartTime = new Date();
+
     const result = await renderer.renderWidgetFromJSX(jsx, {
       enableAutoResize: true,
       presetId: widgetId,
-      spec: finalSpec  // Pass fixed spec for writebackSpecSize
+      spec: finalSpec
     });
 
     if (!result.success) {
       throw new Error(result.error);
     }
 
-    const pngPath = path.join(widgetOutputDir, `${widgetId}.png`);
-    const jsonPath = path.join(widgetOutputDir, `${widgetId}.json`);
-    const jsxPath = path.join(widgetOutputDir, `${widgetId}.jsx`);
-    const metaPath = path.join(widgetOutputDir, 'meta.json');
-
     await PlaywrightRenderer.saveImage(result.imageBuffer, pngPath);
-    await fs.writeFile(jsonPath, JSON.stringify(result.spec, null, 2), 'utf-8');
-    await fs.writeFile(jsxPath, jsx, 'utf-8');
+    await fs.writeFile(dslFile, JSON.stringify(result.spec, null, 2), 'utf-8');
+
+    const renderingEndTime = new Date();
+    const renderingDuration = (renderingEndTime - renderingStartTime) / 1000;
 
     const expectedAspectRatio = spec.widget?.aspectRatio;
     const actualAspectRatio = result.metadata.aspectRatio;
@@ -108,28 +179,30 @@ async function renderWidget(renderer, specPath, outputDir) {
       }
     }
 
-    const metadata = {
-      id: widgetId,
-      timestamp: new Date().toISOString(),
-      status: (result.validation.valid && aspectRatioValid) ? 'success' : 'failed',
-      naturalSize: result.naturalSize,
-      finalSize: result.finalSize,
-      aspectRatio: {
-        expected: expectedAspectRatio || null,
-        actual: actualAspectRatio,
-        valid: aspectRatioValid,
-        error: aspectRatioError
+    logData.steps.rendering = {
+      status: aspectRatioValid ? 'success' : 'failed',
+      startTime: renderingStartTime.toISOString(),
+      endTime: renderingEndTime.toISOString(),
+      duration: renderingDuration,
+      output: {
+        pngFile: `${widgetId}.png`,
+        naturalSize: result.naturalSize,
+        finalSize: result.finalSize,
+        aspectRatio: {
+          expected: expectedAspectRatio || null,
+          actual: actualAspectRatio,
+          valid: aspectRatioValid,
+          error: aspectRatioError
+        },
+        validation: result.validation
       },
-      autoResize: true,
-      validation: result.validation,
-      files: {
-        spec: `${widgetId}.json`,
-        jsx: `${widgetId}.jsx`,
-        image: `${widgetId}.png`
-      }
+      error: aspectRatioError ? { message: aspectRatioError, type: 'AspectRatioError' } : null
     };
 
-    await fs.writeFile(metaPath, JSON.stringify(metadata, null, 2), 'utf-8');
+    logData.files.jsx = `${widgetId}.jsx`;
+    logData.files.png = `${widgetId}.png`;
+
+    await fs.writeFile(logPath, JSON.stringify(logData, null, 2), 'utf-8');
 
     if (!aspectRatioValid) {
       throw new Error(aspectRatioError);
@@ -143,34 +216,43 @@ async function renderWidget(renderer, specPath, outputDir) {
       console.log(`  Final: ${result.finalSize.width}×${result.finalSize.height}`);
     }
     console.log(`  Rendered: ${result.metadata.width}×${result.metadata.height}`);
-    console.log(`  Ratio: ${actualAspectRatio}`);
+    console.log(`  Ratio: ${actualAspectRatio.toFixed(4)}`);
 
-    return { success: true, widgetId, outputDir: widgetOutputDir };
+    return { success: true, widgetId, widgetDir };
 
   } catch (error) {
     console.error(`[${widgetId}] ✗ Failed: ${error.message}`);
 
-    const jsonPath = path.join(widgetOutputDir, `${widgetId}.json`);
-    const metaPath = path.join(widgetOutputDir, 'meta.json');
-    const errorPath = path.join(widgetOutputDir, 'error.txt');
+    const errorEndTime = new Date();
+    const errorPath = path.join(widgetDir, 'error.txt');
 
-    await fs.writeFile(jsonPath, JSON.stringify(spec, null, 2), 'utf-8');
+    if (!logData.steps.compilation) {
+      const compilationDuration = (errorEndTime - compilationStartTime) / 1000;
+      logData.steps.compilation = {
+        status: 'failed',
+        startTime: compilationStartTime.toISOString(),
+        endTime: errorEndTime.toISOString(),
+        duration: compilationDuration,
+        error: {
+          message: error.message,
+          type: error.constructor.name
+        }
+      };
+    } else if (!logData.steps.rendering) {
+      const renderingDuration = (errorEndTime - new Date(logData.steps.compilation.endTime)) / 1000;
+      logData.steps.rendering = {
+        status: 'failed',
+        startTime: logData.steps.compilation.endTime,
+        endTime: errorEndTime.toISOString(),
+        duration: renderingDuration,
+        error: {
+          message: error.message,
+          type: error.constructor.name
+        }
+      };
+    }
 
-    const errorMetadata = {
-      id: widgetId,
-      timestamp: new Date().toISOString(),
-      status: 'failed',
-      error: {
-        message: error.message,
-        stack: null
-      },
-      files: {
-        spec: `${widgetId}.json`,
-        error: 'error.txt'
-      }
-    };
-
-    await fs.writeFile(metaPath, JSON.stringify(errorMetadata, null, 2), 'utf-8');
+    await fs.writeFile(logPath, JSON.stringify(logData, null, 2), 'utf-8');
     await fs.writeFile(errorPath, `Error: ${error.message}\n\n${error.stack || ''}`, 'utf-8');
 
     return { success: false, widgetId, error: error.message };
@@ -182,11 +264,16 @@ export async function batchRender(inputPath, outputDir, options = {}) {
 
   console.log('🚀 Widget Factory - Batch Renderer\n');
   console.log(`Input: ${inputPath}`);
-  console.log(`Output: ${outputDir}`);
+  console.log(`Output: ${outputDir || 'in-place'}`);
   console.log(`Concurrency: ${concurrency}\n`);
 
-  const jsonFiles = await findJsonFiles(inputPath);
-  console.log(`Found ${jsonFiles.length} widget spec(s)\n`);
+  const widgets = await findWidgetsToProcess(inputPath);
+
+  if (widgets.length === 0) {
+    return { results: [], successCount: 0, failedCount: 0 };
+  }
+
+  console.log(`Found ${widgets.length} widget(s) to process\n`);
 
   const renderers = [];
   for (let i = 0; i < concurrency; i++) {
@@ -200,22 +287,22 @@ export async function batchRender(inputPath, outputDir, options = {}) {
   }
 
   console.log('========================================');
-  console.log('Starting rendering...');
+  console.log('Starting compilation and rendering...');
   console.log('========================================');
 
   const startTime = Date.now();
   const results = [];
-  const queue = [...jsonFiles];
+  const queue = [...widgets];
   let completed = 0;
 
   const processWidget = async (renderer) => {
     while (queue.length > 0) {
-      const specPath = queue.shift();
-      if (specPath) {
-        const result = await renderWidget(renderer, specPath, outputDir);
+      const widgetInfo = queue.shift();
+      if (widgetInfo) {
+        const result = await renderWidget(renderer, widgetInfo);
         results.push(result);
         completed++;
-        console.log(`\nProgress: ${completed}/${jsonFiles.length} (${Math.round(completed/jsonFiles.length*100)}%)`);
+        console.log(`\nProgress: ${completed}/${widgets.length} (${Math.round(completed/widgets.length*100)}%)`);
       }
     }
   };
@@ -236,11 +323,11 @@ export async function batchRender(inputPath, outputDir, options = {}) {
   console.log('\n========================================');
   console.log('📊 Rendering Summary');
   console.log('========================================\n');
-  console.log(`Total:    ${jsonFiles.length}`);
+  console.log(`Total:    ${widgets.length}`);
   console.log(`Success:  ${successCount} ✓`);
   console.log(`Failed:   ${failedCount} ✗`);
   console.log(`Duration: ${duration}s`);
-  console.log(`Average:  ${(parseFloat(duration) / jsonFiles.length).toFixed(2)}s per widget`);
+  console.log(`Average:  ${(parseFloat(duration) / widgets.length).toFixed(2)}s per widget`);
 
   if (failedCount > 0) {
     console.log('\nFailed widgets:');
@@ -249,7 +336,7 @@ export async function batchRender(inputPath, outputDir, options = {}) {
     });
   }
 
-  console.log(`\nOutput directory: ${outputDir}\n`);
+  console.log();
 
   return { results, successCount, failedCount };
 }
