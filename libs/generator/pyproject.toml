@@ -39,6 +39,7 @@ dev = [
 
 [project.scripts]
 generate-widget = "widgetdsl_generator.cli:main"
+generate-widget-batch = "widgetdsl_generator.cli:batch_main"
 
 [tool.setuptools.packages.find]
 where = ["."]
