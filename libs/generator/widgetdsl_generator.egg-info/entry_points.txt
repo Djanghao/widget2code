@@ -1,0 +1,2 @@
+[console_scripts]
+generate-widget = widgetdsl_generator.cli:main

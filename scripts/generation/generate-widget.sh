@@ -16,13 +16,4 @@ echo "Output will be saved to: $OUTPUT_PATH"
 cd libs/generator
 source ../../apps/api/.venv/bin/activate
 
-python -c "
-from widgetdsl_generator import generate_widget_full
-import json
-import asyncio
-
-result = asyncio.run(generate_widget_full('$IMAGE_PATH'))
-with open('$OUTPUT_PATH', 'w') as f:
-    json.dump(result, f, indent=2)
-print('Widget generated successfully!')
-"
+generate-widget "../../$IMAGE_PATH" "../../$OUTPUT_PATH"

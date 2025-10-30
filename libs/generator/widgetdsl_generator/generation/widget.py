@@ -16,8 +16,6 @@ from ..utils import (
     load_default_prompt,
     load_widget2dsl_prompt,
     load_prompt2dsl_prompt,
-    load_dynamic_component_prompt,
-    load_dynamic_component_image_prompt,
     clean_json_response,
     clean_code_response,
 )
@@ -34,6 +32,7 @@ from ..perception.icon_extraction import normalize_icon_details
 
 async def get_default_prompt():
     return {"prompt": load_default_prompt()}
+
 
 async def generate_widget(
     image_data: bytes,
@@ -110,7 +109,6 @@ async def generate_widget(
                 pass
 
 
-
 async def generate_widget_text(
     system_prompt: str,
     user_prompt: str,
@@ -156,142 +154,6 @@ async def generate_widget_text(
         }
     except json.JSONDecodeError as e:
         raise GenerationError(f"Invalid JSON from LLM: {str(e)}")
-
-
-async def generate_component(
-    prompt: str,
-    suggested_width: int,
-    suggested_height: int,
-    model: str,
-    system_prompt: str,
-    api_key: str,
-    config: GeneratorConfig,
-):
-    print(f"[{datetime.now()}] generate-component request")
-
-    text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
-    qwen_supported = text_models
-    model_to_use = (model or "qwen3-max").strip()
-
-    validate_model(model, model_to_use, qwen_supported)
-
-    if system_prompt:
-        system_prompt_final = system_prompt
-    else:
-        system_prompt_final = load_dynamic_component_prompt()
-
-    system_prompt_final = system_prompt_final.replace("{suggested_width}", str(suggested_width))
-    system_prompt_final = system_prompt_final.replace("{suggested_height}", str(suggested_height))
-
-    validate_api_key(api_key)
-
-    component_llm = LLM(
-        model=model_to_use,
-        temperature=0.7,
-        max_tokens=2000,
-        timeout=60,
-        system_prompt=system_prompt_final,
-        api_key=api_key
-    )
-
-    messages = [ChatMessage(
-        role="user",
-        content=[
-            {"type": "text", "text": prompt}
-        ]
-    )]
-
-    response = component_llm.chat(messages)
-    code = clean_code_response(response.content)
-
-    return {
-        "success": True,
-        "code": code,
-        "raw_response": response.content
-    }
-
-
-async def generate_component_from_image(
-    image_data: bytes,
-    image_filename: str | None,
-    suggested_width: int,
-    suggested_height: int,
-    model: str,
-    system_prompt: str,
-    api_key: str,
-    config: GeneratorConfig,
-):
-    print(f"[{datetime.now()}] generate-component-from-image request")
-
-    import tempfile
-    temp_file = None
-    try:
-        validate_file_size(len(image_data), config.max_file_size_mb)
-
-        img = Image.open(io.BytesIO(image_data))
-        width, height = img.size
-
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
-            temp_file.write(image_data)
-            temp_file_path = temp_file.name
-
-        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        model_to_use = (model or "qwen3-vl-flash").strip()
-
-        validate_model(model, model_to_use, vision_models)
-
-        if system_prompt:
-            system_prompt_final = system_prompt
-        else:
-            system_prompt_final = load_dynamic_component_image_prompt()
-
-        system_prompt_final = system_prompt_final.replace("{suggested_width}", str(suggested_width))
-        system_prompt_final = system_prompt_final.replace("{suggested_height}", str(suggested_height))
-
-        validate_api_key(api_key)
-
-        vision_llm = LLM(
-            model=model_to_use,
-            temperature=0.5,
-            max_tokens=2000,
-            timeout=60,
-            system_prompt=system_prompt_final,
-            api_key=api_key
-        )
-
-        image_content = prepare_image_content(temp_file_path)
-
-        messages = [ChatMessage(
-            role="user",
-            content=[
-                {"type": "text", "text": "Please analyze this UI image and generate the React component code according to the instructions."},
-                image_content
-            ]
-        )]
-
-        response = vision_llm.chat(messages)
-        code = response.content.strip()
-
-        if code.startswith("```jsx") or code.startswith("```javascript"):
-            code = code.split('\n', 1)[1] if '\n' in code else code
-        if code.startswith("```"):
-            code = code.split('\n', 1)[1] if '\n' in code else code
-        if code.endswith("```"):
-            code = code.rsplit('\n', 1)[0] if '\n' in code else code
-        code = code.strip()
-
-        return {
-            "success": True,
-            "code": code,
-            "raw_response": response.content,
-            "image_size": {"width": width, "height": height}
-        }
-    finally:
-        if 'temp_file_path' in locals():
-            try:
-                os.unlink(temp_file_path)
-            except:
-                pass
 
 
 async def generate_widget_with_icons(
@@ -508,6 +370,7 @@ async def generate_widget_with_graph(
             except:
                 pass
 
+
 async def generate_widget_full(
     image_data: bytes,
     image_filename: str | None,
@@ -596,7 +459,7 @@ async def generate_widget_full(
         base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
 
         # Step 2: Add graph specs
-        from .services.graph.pipeline import format_graph_specs_for_injection
+        from ..perception.graph.pipeline import format_graph_specs_for_injection
         graph_injection_text = format_graph_specs_for_injection(graph_specs) if graph_specs else ""
 
         has_placeholder = "[GRAPH_SPECS]" in base_prompt

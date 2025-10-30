@@ -3,7 +3,7 @@
 __version__ = "0.3.0"
 
 from .config import GeneratorConfig
-from .generation.generator import (
+from .generation import (
     get_default_prompt,
     generate_widget,
     generate_widget_text,
@@ -15,7 +15,6 @@ from .generation.generator import (
 )
 
 from . import perception
-from . import services
 from . import utils
 
 __all__ = [
@@ -29,6 +28,5 @@ __all__ = [
     "generate_widget_with_graph",
     "generate_widget_full",
     "perception",
-    "services",
     "utils",
 ]

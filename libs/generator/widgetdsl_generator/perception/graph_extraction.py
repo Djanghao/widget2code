@@ -1,6 +1,6 @@
 from typing import Optional
-from ..services.graph.detection import detect_charts_in_image, should_use_graph_pipeline
-from ..services.graph.pipeline import process_graphs_in_image, format_graph_specs_for_injection
+from .graph.detection import detect_charts_in_image, should_use_graph_pipeline
+from .graph.pipeline import process_graphs_in_image, format_graph_specs_for_injection
 
 def detect_and_process_graphs(
     image_bytes: bytes,

@@ -37,6 +37,9 @@ dev = [
     "pytest-asyncio",
 ]
 
+[project.scripts]
+generate-widget = "widgetdsl_generator.cli:main"
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["widgetdsl_generator*"]

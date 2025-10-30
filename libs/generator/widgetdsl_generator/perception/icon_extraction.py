@@ -23,8 +23,8 @@ def run_icon_detection_pipeline(
     img_height = 0
 
     try:
-        from ..services.icon.grounding import ground_single_image_with_stages
-        from ..services.icon.query_embedding import query_from_detections_with_details
+        from .icon.grounding import ground_single_image_with_stages
+        from .icon.query_embedding import query_from_detections_with_details
 
         raw_dets, pixel_dets_pre, pixel_dets_post, img_width, img_height = ground_single_image_with_stages(
             image_bytes=image_bytes,
