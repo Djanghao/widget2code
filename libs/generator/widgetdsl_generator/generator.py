@@ -542,19 +542,19 @@ async def generate_widget_full(
 
         print(f"[{datetime.now()}] Starting parallel extraction: icons and graphs...")
 
-        async def run_icon_extraction():
-            # Parse optional icon library names (JSON array or comma-separated)
-            lib_names = None
-            if icon_lib_names:
-                try:
-                    parsed = json.loads(icon_lib_names)
-                    if isinstance(parsed, list):
-                        lib_names = [str(p).strip() for p in parsed if str(p).strip()]
-                except Exception:
-                    parts = [s.strip() for s in str(icon_lib_names).split(",") if s.strip()]
-                    if parts:
-                        lib_names = parts
-            return run_icon_detection_pipeline(
+        # Parse icon library names from JSON array, e.g., '["sf", "lucide"]'
+        lib_names = None
+        if icon_lib_names:
+            try:
+                parsed = json.loads(icon_lib_names)
+                if isinstance(parsed, list):
+                    lib_names = [str(name).strip() for name in parsed if str(name).strip()]
+            except json.JSONDecodeError:
+                pass
+
+        icon_result, (chart_counts, graph_specs) = await asyncio.gather(
+            asyncio.to_thread(
+                run_icon_detection_pipeline,
                 image_bytes=image_bytes,
                 filename=image_filename,
                 model=(model or "qwen3-vl-flash"),
@@ -564,10 +564,9 @@ async def generate_widget_full(
                 retrieval_alpha=retrieval_alpha,
                 lib_names=lib_names,
                 timeout=300,
-            )
-
-        async def run_graph_extraction():
-            return detect_and_process_graphs(
+            ),
+            asyncio.to_thread(
+                detect_and_process_graphs,
                 image_bytes=image_bytes,
                 filename=image_filename,
                 provider=None,
@@ -578,10 +577,6 @@ async def generate_widget_full(
                 timeout=30,
                 max_retries=2
             )
-
-        icon_result, (chart_counts, graph_specs) = await asyncio.gather(
-            run_icon_extraction(),
-            run_graph_extraction()
         )
 
         print(f"[{datetime.now()}] Parallel extraction completed")

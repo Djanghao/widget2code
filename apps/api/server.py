@@ -2,23 +2,17 @@ from fastapi import FastAPI, File, UploadFile, Form, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pathlib import Path
-import sys
 import os
 import traceback
 from dotenv import load_dotenv
-
-repo_root = Path(__file__).resolve().parents[2]
-generator_lib = repo_root / "libs" / "generator"
-if str(generator_lib) not in sys.path:
-    sys.path.insert(0, str(generator_lib))
-
 import widgetdsl_generator as generator
 from widgetdsl_generator import GeneratorConfig
 from widgetdsl_generator.exceptions import ValidationError, FileSizeError, GenerationError, RateLimitError
 from widgetdsl_generator.utils.validation import check_rate_limit
 
 # Load environment variables from root .env file
-load_dotenv(repo_root / ".env")
+root_dir = Path(__file__).parent.parent.parent
+load_dotenv(root_dir / ".env")
 
 # Load generator config from environment variables
 gen_config = GeneratorConfig.from_env()

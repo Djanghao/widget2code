@@ -155,21 +155,11 @@ def to_outline_bw(
     return Image.fromarray(out_valid, mode="L").convert("RGB")
 
 def _load_image_model(device: str):
-    try:
-        import sys, pathlib
-        here = pathlib.Path(__file__).resolve()
-        common_dir = here.parent.parent / "common"
-        if str(common_dir) not in sys.path:
-            sys.path.insert(0, str(common_dir))
-        from model_cache import get_openclip_image  # type: ignore
-        model, preprocess, _ = get_openclip_image(MODEL_NAME, PRETRAINED)
-        return model, preprocess
-    except Exception:
-        model, _, preprocess = open_clip.create_model_and_transforms(
-            MODEL_NAME, pretrained=PRETRAINED, device=device
-        )
-        model.eval()
-        return model, preprocess
+    model, _, preprocess = open_clip.create_model_and_transforms(
+        MODEL_NAME, pretrained=PRETRAINED, device=device
+    )
+    model.eval()
+    return model, preprocess
 
 def _batch_encode_pils(model, preprocess, pil_images: List[Image.Image], device: str, batch: int = 64) -> np.ndarray:
     zs: List[np.ndarray] = []
@@ -196,8 +186,7 @@ def query_from_detections_with_details(
     *,
     detections: List[Dict[str, Any]],
     image_bytes: bytes,
-    lib_root: Path | None = None,
-    lib_roots: List[Path] | None = None,
+    lib_roots: List[Path],
     filter_icon_only: bool = True,
     topk: int = 50,
     topm: int = 10,
@@ -245,7 +234,6 @@ def query_from_detections_with_details(
         crops_bytes.append(buf.getvalue())
 
     svg_names, captions, fused_hits_all, img_only_hits_all = caption_embed_and_retrieve_svgs_with_dual_details(
-        lib_root=lib_root,
         lib_roots=lib_roots,
         q_img_all=q_img_all,
         crops_bytes=crops_bytes,

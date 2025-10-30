@@ -28,29 +28,20 @@ def _normalize_name_from_src(src: str) -> str:
     return Path(Path(src).name).stem
 
 def load_lib(lib_root: Path) -> Tuple[Any, List[Dict[str, Any]], np.ndarray, np.ndarray]:
-    try:
-        import sys, pathlib
-        here = pathlib.Path(__file__).resolve()
-        common_dir = here.parent.parent / "common"
-        if str(common_dir) not in sys.path:
-            sys.path.insert(0, str(common_dir))
-        from model_cache import get_icon_lib
-        return get_icon_lib(Path(lib_root))
-    except Exception:
-        lib_root = Path(lib_root)
-        index = faiss.read_index(str((lib_root / "indices" / INDEX_NAME).as_posix()))
-        lib_img = np.load(lib_root / "features" / "features_SigLIP2.npy").astype("float32")
-        lib_txt_path = lib_root / "features" / "features_text_SigLIP2.npy"
-        if not lib_txt_path.exists():
-            raise SystemExit("Missing features_text_SigLIP2.npy")
-        lib_txt = np.load(lib_txt_path).astype("float32")
-        items_path = lib_root / "features" / "items.json"
-        if not items_path.exists():
-            raise SystemExit("Missing features/items.json (aligned with features rows)")
-        items = json.loads(items_path.read_text(encoding="utf-8"))
-        if len(items) != len(lib_img) or len(items) != len(lib_txt):
-            raise SystemExit("Length mismatch among items.json, features_SigLIP2.npy, features_text_SigLIP2.npy")
-        return index, items, lib_img, lib_txt
+    lib_root = Path(lib_root)
+    index = faiss.read_index(str((lib_root / "indices" / INDEX_NAME).as_posix()))
+    lib_img = np.load(lib_root / "features" / "features_SigLIP2.npy").astype("float32")
+    lib_txt_path = lib_root / "features" / "features_text_SigLIP2.npy"
+    if not lib_txt_path.exists():
+        raise SystemExit("Missing features_text_SigLIP2.npy")
+    lib_txt = np.load(lib_txt_path).astype("float32")
+    items_path = lib_root / "features" / "items.json"
+    if not items_path.exists():
+        raise SystemExit("Missing features/items.json (aligned with features rows)")
+    items = json.loads(items_path.read_text(encoding="utf-8"))
+    if len(items) != len(lib_img) or len(items) != len(lib_txt):
+        raise SystemExit("Length mismatch among items.json, features_SigLIP2.npy, features_text_SigLIP2.npy")
+    return index, items, lib_img, lib_txt
 
 
 def _rerank_in_K(

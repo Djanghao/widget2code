@@ -34,36 +34,26 @@ SIGLIP_PRETRAINED = "webli"
 EMB_BATCH = 64
 
 def build_blip2(model_id: str = BLIP2_MODEL_ID):
-    """Delegate to process-wide cache to avoid reloading."""
-    try:
-        import sys, pathlib
-        here = pathlib.Path(__file__).resolve()
-        common_dir = here.parent.parent / "common"
-        if str(common_dir) not in sys.path:
-            sys.path.insert(0, str(common_dir))
-        from model_cache import get_blip2
-        return get_blip2(model_id)
-    except Exception:
-        device = "cuda" if torch.cuda.is_available() else "cpu"
-        torch_dtype = torch.float16 if device == "cuda" else torch.float32
-        processor = Blip2Processor.from_pretrained(model_id, use_fast=True)
-        device_map = {"": 0} if device == "cuda" else {"": "cpu"}
-        model = Blip2ForConditionalGeneration.from_pretrained(
-            model_id,
-            torch_dtype=torch_dtype,
-            device_map=device_map,
-            low_cpu_mem_usage=True,
-        ).eval()
-        tok = processor.tokenizer
-        if getattr(tok, "pad_token_id", None) is None and getattr(tok, "eos_token_id", None) is not None:
-            tok.pad_token_id = tok.eos_token_id
-        if getattr(model, "config", None) is not None:
-            model.config.pad_token_id = tok.pad_token_id
-            model.config.eos_token_id = tok.eos_token_id
-        if getattr(model, "generation_config", None) is not None:
-            model.generation_config.pad_token_id = tok.pad_token_id
-            model.generation_config.eos_token_id = tok.eos_token_id
-        return model, processor, device
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    torch_dtype = torch.float16 if device == "cuda" else torch.float32
+    processor = Blip2Processor.from_pretrained(model_id, use_fast=True)
+    device_map = {"": 0} if device == "cuda" else {"": "cpu"}
+    model = Blip2ForConditionalGeneration.from_pretrained(
+        model_id,
+        torch_dtype=torch_dtype,
+        device_map=device_map,
+        low_cpu_mem_usage=True,
+    ).eval()
+    tok = processor.tokenizer
+    if getattr(tok, "pad_token_id", None) is None and getattr(tok, "eos_token_id", None) is not None:
+        tok.pad_token_id = tok.eos_token_id
+    if getattr(model, "config", None) is not None:
+        model.config.pad_token_id = tok.pad_token_id
+        model.config.eos_token_id = tok.eos_token_id
+    if getattr(model, "generation_config", None) is not None:
+        model.generation_config.pad_token_id = tok.pad_token_id
+        model.generation_config.eos_token_id = tok.eos_token_id
+    return model, processor, device
 
 def caption_from_bytes_list(crops_bytes: List[bytes],
                             pipe: Tuple[Blip2ForConditionalGeneration, Blip2Processor, str]) -> List[str]:
@@ -85,23 +75,13 @@ def caption_from_bytes_list(crops_bytes: List[bytes],
     return caps
 
 def load_siglip_text():
-    """Delegate to process-wide cache for OpenCLIP text encoder."""
-    try:
-        import sys, pathlib
-        here = pathlib.Path(__file__).resolve()
-        common_dir = here.parent.parent / "common"
-        if str(common_dir) not in sys.path:
-            sys.path.insert(0, str(common_dir))
-        from model_cache import get_siglip_text  # type: ignore
-        return get_siglip_text(SIGLIP_MODEL_NAME, SIGLIP_PRETRAINED)
-    except Exception:
-        device = "cuda" if torch.cuda.is_available() else "cpu"
-        model, _, _ = open_clip.create_model_and_transforms(
-            SIGLIP_MODEL_NAME, pretrained=SIGLIP_PRETRAINED, device=device
-        )
-        model.eval()
-        tokenizer = open_clip.get_tokenizer(SIGLIP_MODEL_NAME)
-        return model, tokenizer, device
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model, _, _ = open_clip.create_model_and_transforms(
+        SIGLIP_MODEL_NAME, pretrained=SIGLIP_PRETRAINED, device=device
+    )
+    model.eval()
+    tokenizer = open_clip.get_tokenizer(SIGLIP_MODEL_NAME)
+    return model, tokenizer, device
 
 def encode_texts_siglip(model, tokenizer, device: str, texts: List[str]) -> np.ndarray:
     embs: List[np.ndarray] = []
@@ -130,8 +110,7 @@ __all__ = [
 
 def caption_embed_and_retrieve_svgs_with_dual_details(
     *,
-    lib_root: Path | None = None,
-    lib_roots: List[Path] | None = None,
+    lib_roots: List[Path],
     q_img_all: np.ndarray,
     crops_bytes: List[bytes],
     topk: int = 50,
@@ -151,9 +130,9 @@ def caption_embed_and_retrieve_svgs_with_dual_details(
 
     q_ids = [f"q{i:04d}" for i in range(len(crops_bytes))]
 
-    if lib_roots and len(lib_roots) > 0:
-        svg_names, hits_fused_all, hits_img_only_all = retrieve_svg_filenames_from_libs_with_dual_details(
-            lib_roots=[Path(p) for p in lib_roots],
+    if len(lib_roots) == 1:
+        svg_names, hits_fused_all, hits_img_only_all = retrieve_svg_filenames_with_dual_details(
+            lib_root=lib_roots[0],
             q_ids=q_ids,
             q_img_all=q_img_all.astype("float32"),
             q_txt_all=q_txt_all.astype("float32"),
@@ -162,10 +141,8 @@ def caption_embed_and_retrieve_svgs_with_dual_details(
             alpha=alpha,
         )
     else:
-        if lib_root is None:
-            raise ValueError("lib_root or lib_roots must be provided")
-        svg_names, hits_fused_all, hits_img_only_all = retrieve_svg_filenames_with_dual_details(
-            lib_root=Path(lib_root),
+        svg_names, hits_fused_all, hits_img_only_all = retrieve_svg_filenames_from_libs_with_dual_details(
+            lib_roots=lib_roots,
             q_ids=q_ids,
             q_img_all=q_img_all.astype("float32"),
             q_txt_all=q_txt_all.astype("float32"),

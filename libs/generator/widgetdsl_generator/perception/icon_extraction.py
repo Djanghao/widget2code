@@ -57,8 +57,7 @@ def run_icon_detection_pipeline(
             svg_names, per_icon_details = query_from_detections_with_details(
                 detections=pixel_dets_post,
                 image_bytes=image_bytes,
-                lib_root=existing_roots[0] if len(existing_roots) == 1 else None,
-                lib_roots=existing_roots if len(existing_roots) > 1 else None,
+                lib_roots=existing_roots,
                 filter_icon_only=True,
                 topk=int(retrieval_topk),
                 topm=int(retrieval_topm),
