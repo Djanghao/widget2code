@@ -1,1 +1,0 @@
-export { flatColorIconsMap } from './map.js';

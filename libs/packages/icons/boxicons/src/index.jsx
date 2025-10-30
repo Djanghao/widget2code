@@ -1,1 +1,0 @@
-export { boxiconsIconsMap } from './map.js';

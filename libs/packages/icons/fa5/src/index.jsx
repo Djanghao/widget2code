@@ -1,1 +1,0 @@
-export { fa5IconsMap } from './map.js';

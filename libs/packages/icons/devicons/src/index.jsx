@@ -1,1 +1,0 @@
-export { deviconsIconsMap } from './map.js';

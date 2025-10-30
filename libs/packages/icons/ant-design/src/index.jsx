@@ -1,1 +1,0 @@
-export { antDesignIconsMap } from './map.js';

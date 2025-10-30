@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { sfDynamicIconImports } from "../../icons/sf-symbols/src/index.jsx";
-import { lucideIconsMap } from "../../icons/lucide/src/index.jsx";
+import { lucideIconsMap } from "../../icons/src/index.jsx";
 import { iconCache } from "./utils/iconCache.js";
 
 export function ProgressRing({

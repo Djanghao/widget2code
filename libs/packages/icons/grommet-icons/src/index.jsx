@@ -1,1 +1,0 @@
-export { grommetIconsMap } from './map.js';

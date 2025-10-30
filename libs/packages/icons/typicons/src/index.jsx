@@ -1,1 +1,0 @@
-export { typiconsIconsMap } from './map.js';

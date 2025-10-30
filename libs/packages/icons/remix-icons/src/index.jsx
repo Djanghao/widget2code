@@ -1,1 +1,0 @@
-export { remixIconsMap } from './map.js';

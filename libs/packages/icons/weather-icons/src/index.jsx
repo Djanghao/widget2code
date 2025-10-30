@@ -1,1 +1,0 @@
-export { weatherIconsIconsMap } from './map.js';

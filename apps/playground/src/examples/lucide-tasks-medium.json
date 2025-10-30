@@ -23,8 +23,8 @@
               "flex": "none",
               "props": {
                 "size": 24,
-                "color": "#8B5CF6",
-                "name": "lucide:CheckCircle2"
+                "color": "#34C759",
+                "name": "lu:LuCheckCircle2"
               }
             },
             {
@@ -71,7 +71,7 @@
                   "props": {
                     "size": 18,
                     "color": "#10B981",
-                    "name": "lucide:Check"
+                    "name": "lu:LuCheck"
                   }
                 },
                 {
@@ -101,7 +101,7 @@
                   "props": {
                     "size": 18,
                     "color": "#10B981",
-                    "name": "lucide:Check"
+                    "name": "lu:LuCheck"
                   }
                 },
                 {
@@ -131,7 +131,7 @@
                   "props": {
                     "size": 18,
                     "color": "#10B981",
-                    "name": "lucide:Check"
+                    "name": "lu:LuCheck"
                   }
                 },
                 {
@@ -161,7 +161,7 @@
                   "props": {
                     "size": 18,
                     "color": "#D1D5DB",
-                    "name": "lucide:Circle"
+                    "name": "lu:LuCircle"
                   }
                 },
                 {
@@ -191,7 +191,7 @@
                   "props": {
                     "size": 18,
                     "color": "#D1D5DB",
-                    "name": "lucide:Circle"
+                    "name": "lu:LuCircle"
                   }
                 },
                 {

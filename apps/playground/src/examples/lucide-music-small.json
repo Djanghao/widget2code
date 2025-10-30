@@ -25,7 +25,7 @@
               "props": {
                 "size": 40,
                 "color": "#FFFFFF",
-                "name": "lucide:Music"
+                "name": "lu:LuMusic"
               }
             },
             {
@@ -105,7 +105,7 @@
               "props": {
                 "size": 20,
                 "color": "#FFFFFF",
-                "name": "lucide:SkipBack"
+                "name": "lu:LuSkipBack"
               }
             },
             {
@@ -115,7 +115,7 @@
               "props": {
                 "size": 32,
                 "color": "#FFFFFF",
-                "name": "lucide:Play"
+                "name": "lu:LuPlay"
               }
             },
             {
@@ -125,7 +125,7 @@
               "props": {
                 "size": 20,
                 "color": "#FFFFFF",
-                "name": "lucide:SkipForward"
+                "name": "lu:LuSkipForward"
               }
             }
           ]

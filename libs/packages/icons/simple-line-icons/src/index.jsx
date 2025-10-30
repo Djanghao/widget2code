@@ -1,1 +1,0 @@
-export { simpleLineIconsMap } from './map.js';

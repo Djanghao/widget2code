@@ -1,1 +1,0 @@
-export { cssGgIconsMap } from './map.js';

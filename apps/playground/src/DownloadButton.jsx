@@ -1,7 +1,15 @@
-import React from 'react';
-import { Download, RefreshCw } from 'lucide-react';
+import React from "react";
+import {
+  LuDownload as Download,
+  LuRefreshCw as RefreshCw,
+} from "react-icons/lu";
 
-export default function DownloadButton({ onClick, isDisabled, isLoading = false, statusText = '' }) {
+export default function DownloadButton({
+  onClick,
+  isDisabled,
+  isLoading = false,
+  statusText = "",
+}) {
   const disabled = isDisabled || isLoading;
 
   return (
@@ -9,32 +17,39 @@ export default function DownloadButton({ onClick, isDisabled, isLoading = false,
       onClick={onClick}
       disabled={disabled}
       style={{
-        padding: '6px 10px',
+        padding: "6px 10px",
         fontSize: 12,
         fontWeight: 500,
-        backgroundColor: isDisabled ? '#3a3a3c' : '#2c2c2e',
-        color: isDisabled ? '#8e8e93' : '#f5f5f7',
-        border: '1px solid #3a3a3c',
+        backgroundColor: isDisabled ? "#3a3a3c" : "#2c2c2e",
+        color: isDisabled ? "#8e8e93" : "#f5f5f7",
+        border: "1px solid #3a3a3c",
         borderRadius: 6,
-        cursor: disabled ? 'not-allowed' : 'pointer',
-        transition: 'all 0.2s ease',
-        display: 'flex',
-        alignItems: 'center',
-        gap: 6
+        cursor: disabled ? "not-allowed" : "pointer",
+        transition: "all 0.2s ease",
+        display: "flex",
+        alignItems: "center",
+        gap: 6,
       }}
       onMouseEnter={(e) => {
-        if (!isDisabled && !isLoading) e.currentTarget.style.backgroundColor = '#3a3a3c';
+        if (!isDisabled && !isLoading)
+          e.currentTarget.style.backgroundColor = "#3a3a3c";
       }}
       onMouseLeave={(e) => {
-        if (!isDisabled && !isLoading) e.currentTarget.style.backgroundColor = '#2c2c2e';
+        if (!isDisabled && !isLoading)
+          e.currentTarget.style.backgroundColor = "#2c2c2e";
       }}
-      title={disabled ? (statusText || (isLoading ? 'Processing...' : 'No content to download')) : 'Download widget as PNG'}
+      title={
+        disabled
+          ? statusText ||
+            (isLoading ? "Processing..." : "No content to download")
+          : "Download widget as PNG"
+      }
     >
       {isLoading ? (
         <RefreshCw
           size={18}
           style={{
-            animation: 'spin 0.9s linear infinite'
+            animation: "spin 0.9s linear infinite",
           }}
         />
       ) : (

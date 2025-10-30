@@ -23,9 +23,9 @@
               "component": "Icon",
               "flex": "none",
               "props": {
-                "size": 20,
-                "color": "#94A3B8",
-                "name": "lucide:MapPin"
+                "size": 14,
+                "color": "#FFFFFF",
+                "name": "lu:LuMapPin"
               }
             },
             {
@@ -53,9 +53,9 @@
               "component": "Icon",
               "flex": "none",
               "props": {
-                "size": 64,
-                "color": "#FCD34D",
-                "name": "lucide:Sun"
+                "size": 32,
+                "color": "#FFFFFF",
+                "name": "lu:LuSun"
               }
             },
             {
@@ -107,9 +107,9 @@
                   "component": "Icon",
                   "flex": "none",
                   "props": {
-                    "size": 16,
-                    "color": "#60A5FA",
-                    "name": "lucide:Wind"
+                    "size": 14,
+                    "color": "#FFFFFF",
+                    "name": "lu:LuWind"
                   }
                 },
                 {
@@ -136,9 +136,9 @@
                   "component": "Icon",
                   "flex": "none",
                   "props": {
-                    "size": 16,
-                    "color": "#60A5FA",
-                    "name": "lucide:Droplet"
+                    "size": 14,
+                    "color": "#FFFFFF",
+                    "name": "lu:LuDroplet"
                   }
                 },
                 {

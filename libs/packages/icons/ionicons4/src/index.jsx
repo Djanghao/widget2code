@@ -1,1 +1,0 @@
-export { ionicons4IconsMap } from './map.js';
