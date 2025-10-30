@@ -8,9 +8,10 @@
 import asyncio
 import json
 import os
+import shutil
 from pathlib import Path
 from datetime import datetime
-from typing import List, Tuple
+from typing import List, Tuple, Dict, Any
 
 from .single import generate_widget_full
 from ...config import GeneratorConfig
@@ -56,15 +57,40 @@ class BatchGenerator:
         return sorted(images)
 
     async def generate_single(self, image_path: Path) -> Tuple[Path, bool, str]:
-        """Generate widget DSL for a single image."""
-        output_file = self.output_dir / f"{image_path.stem}.json"
+        """Generate widget DSL for a single image with nested directory structure and log.json."""
+        widget_id = image_path.stem
+        widget_dir = self.output_dir / widget_id
+        widget_dir.mkdir(parents=True, exist_ok=True)
+
+        # Prepare file paths
+        original_copy = widget_dir / f"{widget_id}_original{image_path.suffix}"
+        dsl_file = widget_dir / f"{widget_id}.json"
+        log_file = widget_dir / "log.json"
+
+        start_time = datetime.now()
 
         try:
-            print(f"[{datetime.now().strftime('%H:%M:%S')}] Processing: {image_path.name}")
+            print(f"[{start_time.strftime('%H:%M:%S')}] Processing: {image_path.name}")
 
+            # Copy original image
+            shutil.copy2(image_path, original_copy)
+
+            # Get image size
+            image_size = image_path.stat().st_size
+
+            # Read image data
             with open(image_path, 'rb') as f:
                 image_data = f.read()
 
+            # Try to get image dimensions
+            try:
+                from PIL import Image
+                with Image.open(image_path) as img:
+                    image_dims = {"width": img.width, "height": img.height}
+            except:
+                image_dims = None
+
+            # Generate widget DSL
             result = await generate_widget_full(
                 image_data=image_data,
                 image_filename=image_path.name,
@@ -78,17 +104,114 @@ class BatchGenerator:
                 icon_lib_names=self.icon_lib_names,
             )
 
-            with open(output_file, 'w') as f:
+            # Save DSL
+            with open(dsl_file, 'w') as f:
                 json.dump(result, f, indent=2)
 
+            end_time = datetime.now()
+            duration = (end_time - start_time).total_seconds()
+
+            # Count icons and graphs in result
+            icons_detected = len(result.get('icons', [])) if isinstance(result, dict) else 0
+            graphs_detected = len(result.get('graphs', [])) if isinstance(result, dict) else 0
+
+            # Create comprehensive log.json
+            log_data = {
+                "widgetId": widget_id,
+                "steps": {
+                    "generation": {
+                        "status": "success",
+                        "startTime": start_time.isoformat(),
+                        "endTime": end_time.isoformat(),
+                        "duration": duration,
+                        "input": {
+                            "filename": image_path.name,
+                            "originalPath": str(image_path.absolute()),
+                            "size": image_size,
+                            "dimensions": image_dims
+                        },
+                        "config": {
+                            "model": self.model,
+                            "iconLibs": json.loads(self.icon_lib_names),
+                            "apiKey": "***masked***",
+                            "retrievalTopk": 50,
+                            "retrievalTopm": 10,
+                            "retrievalAlpha": 0.8
+                        },
+                        "output": {
+                            "dslFile": f"{widget_id}.json",
+                            "iconsDetected": icons_detected,
+                            "graphsDetected": graphs_detected
+                        },
+                        "error": None
+                    }
+                },
+                "files": {
+                    "original": f"{widget_id}_original{image_path.suffix}",
+                    "dsl": f"{widget_id}.json"
+                },
+                "metadata": {
+                    "version": "0.3.0",
+                    "pipeline": "generation"
+                }
+            }
+
+            with open(log_file, 'w') as f:
+                json.dump(log_data, f, indent=2)
+
             self.completed += 1
-            print(f"[{datetime.now().strftime('%H:%M:%S')}] ✓ Success: {image_path.name} -> {output_file.name}")
-            return (image_path, True, str(output_file))
+            print(f"[{end_time.strftime('%H:%M:%S')}] ✓ Success: {image_path.name} -> {widget_dir.name}/")
+            return (image_path, True, str(widget_dir))
 
         except Exception as e:
             self.failed += 1
+            end_time = datetime.now()
+            duration = (end_time - start_time).total_seconds()
             error_msg = f"{type(e).__name__}: {str(e)}"
-            print(f"[{datetime.now().strftime('%H:%M:%S')}] ✗ Failed: {image_path.name} - {error_msg}")
+
+            # Create error log.json
+            log_data = {
+                "widgetId": widget_id,
+                "steps": {
+                    "generation": {
+                        "status": "failed",
+                        "startTime": start_time.isoformat(),
+                        "endTime": end_time.isoformat(),
+                        "duration": duration,
+                        "input": {
+                            "filename": image_path.name,
+                            "originalPath": str(image_path.absolute()),
+                            "size": image_path.stat().st_size if image_path.exists() else None
+                        },
+                        "config": {
+                            "model": self.model,
+                            "iconLibs": json.loads(self.icon_lib_names),
+                            "apiKey": "***masked***"
+                        },
+                        "error": {
+                            "message": str(e),
+                            "type": type(e).__name__
+                        }
+                    }
+                },
+                "files": {
+                    "original": f"{widget_id}_original{image_path.suffix}" if original_copy.exists() else None
+                },
+                "metadata": {
+                    "version": "0.3.0",
+                    "pipeline": "generation"
+                }
+            }
+
+            with open(log_file, 'w') as f:
+                json.dump(log_data, f, indent=2)
+
+            # Save error.txt
+            error_file = widget_dir / "error.txt"
+            with open(error_file, 'w') as f:
+                f.write(f"Error: {error_msg}\n")
+
+            print(f"[{end_time.strftime('%H:%M:%S')}] ✗ Failed: {image_path.name} - {error_msg}")
             return (image_path, False, error_msg)
 
     async def process_batch(self, images: List[Path]):
