@@ -137,7 +137,11 @@ def to_outline_bw(png_rgba: bytes, target_size: int = TARGET, padding_ratio: flo
     edge_full[y0:y1, x0:x1] = edges
 
     k3 = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
-    merged = cv2.morphologyEx(sil, cv2.MORPH_GRADIENT, k3)
+    silhouette_boundary = cv2.morphologyEx(sil, cv2.MORPH_GRADIENT, k3)
+
+    # FIX: Merge silhouette boundary with Canny internal edges
+    # This preserves internal details in outline-style icons (e.g., Heroicons outline)
+    merged = cv2.bitwise_or(silhouette_boundary, edge_full)
 
     # center by merged bbox (legacy)
     ys, xs = np.where(merged > 0)
