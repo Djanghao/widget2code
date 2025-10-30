@@ -16,7 +16,6 @@ INPUT_DIR=$1
 OUTPUT_DIR=$2
 CONCURRENCY=${3:-3}
 
-cd libs/generator
-source ../../apps/api/.venv/bin/activate
+source apps/api/.venv/bin/activate
 
-python batch_generate.py "$INPUT_DIR" "$OUTPUT_DIR" "$CONCURRENCY"
+generate-widget-batch "$INPUT_DIR" "$OUTPUT_DIR" --concurrency "$CONCURRENCY"

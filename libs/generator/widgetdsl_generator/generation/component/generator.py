@@ -1,12 +1,19 @@
+# -----------------------------------------------------------------------------
+# File: generator.py
+# Description: Dynamic component generation from prompts and images
+# Author: Houston Zhang
+# Date: 2025-10-30
+# -----------------------------------------------------------------------------
+
 from provider_hub import LLM, ChatMessage, prepare_image_content
 from PIL import Image
 import io
 import os
 from datetime import datetime
 
-from ..config import GeneratorConfig
-from ..exceptions import ValidationError, FileSizeError, GenerationError
-from ..utils import (
+from ...config import GeneratorConfig
+from ...exceptions import ValidationError, FileSizeError, GenerationError
+from ...utils import (
     validate_model,
     validate_api_key,
     validate_file_size,

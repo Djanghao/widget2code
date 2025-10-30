@@ -11,8 +11,11 @@ widgetdsl_generator.egg-info/entry_points.txt
 widgetdsl_generator.egg-info/requires.txt
 widgetdsl_generator.egg-info/top_level.txt
 widgetdsl_generator/generation/__init__.py
-widgetdsl_generator/generation/component.py
-widgetdsl_generator/generation/widget.py
+widgetdsl_generator/generation/component/__init__.py
+widgetdsl_generator/generation/component/generator.py
+widgetdsl_generator/generation/widget/__init__.py
+widgetdsl_generator/generation/widget/batch.py
+widgetdsl_generator/generation/widget/single.py
 widgetdsl_generator/perception/__init__.py
 widgetdsl_generator/perception/graph_extraction.py
 widgetdsl_generator/perception/icon_extraction.py
