@@ -1,2 +1,3 @@
 [console_scripts]
 generate-widget = widgetdsl_generator.cli:main
+generate-widget-batch = widgetdsl_generator.cli:batch_main
