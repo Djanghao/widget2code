@@ -7,13 +7,19 @@ from pathlib import Path
 
 def main():
     """CLI entry point for widget generation."""
-    if len(sys.argv) < 3:
-        print("Usage: generate-widget <image-path> <output-path>")
-        print("Example: generate-widget input.png output.json")
+    if len(sys.argv) < 2:
+        print("Usage: generate-widget <image-path> [output-path]")
+        print("Example: generate-widget input.png [output.json]")
         sys.exit(1)
 
     image_path = sys.argv[1]
-    output_path = sys.argv[2]
+
+    # Optional output path - defaults to same directory, same name with .json extension
+    if len(sys.argv) >= 3:
+        output_path = sys.argv[2]
+    else:
+        input_file = Path(image_path)
+        output_path = str(input_file.with_suffix('.json'))
 
     if not Path(image_path).exists():
         print(f"Error: Image file not found: {image_path}")

@@ -13,6 +13,12 @@ export async function render(jsxPath, outputPath, options = {}) {
   const { devServerUrl = 'http://localhost:3060' } = options;
 
   try {
+    // Optional output path - defaults to same directory, same name with .png extension
+    if (!outputPath) {
+      const parsed = path.parse(jsxPath);
+      outputPath = path.join(parsed.dir, `${parsed.name}.png`);
+    }
+
     const jsxCode = await fs.readFile(jsxPath, 'utf-8');
 
     console.log(`[Render] Input: ${jsxPath}`);
@@ -95,13 +101,13 @@ export async function render(jsxPath, outputPath, options = {}) {
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
 
-  if (args.length < 2) {
-    console.error('Usage: widget-factory render <jsx-file-path> <output-png-path> [dev-server-url]');
+  if (args.length < 1) {
+    console.error('Usage: widget-factory render <jsx-file-path> [output-png-path] [dev-server-url]');
     process.exit(1);
   }
 
   const jsxPath = path.resolve(args[0]);
-  const outputPath = path.resolve(args[1]);
+  const outputPath = args[1] ? path.resolve(args[1]) : undefined;
   const devServerUrl = args[2] || 'http://localhost:3060';
 
   render(jsxPath, outputPath, { devServerUrl })
