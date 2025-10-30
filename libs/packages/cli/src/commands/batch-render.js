@@ -259,57 +259,14 @@ async function renderWidget(renderer, widgetInfo) {
   }
 }
 
-export async function batchRender(inputPath, outputDir, options = {}) {
+export async function batchRender(inputPath, options = {}) {
   const { concurrency = 3, devServerUrl = 'http://localhost:3060' } = options;
 
-  const isInPlace = !outputDir || inputPath === outputDir;
-
   console.log('🚀 Widget Factory - Batch Renderer\n');
-  console.log(`Mode: ${isInPlace ? 'In-place processing' : 'Copy to new directory'}`);
-  console.log(`Input: ${inputPath}`);
-  if (!isInPlace) {
-    console.log(`Output: ${outputDir}`);
-  }
+  console.log(`Directory: ${inputPath}`);
   console.log(`Concurrency: ${concurrency}\n`);
 
-  if (!isInPlace) {
-    await fs.mkdir(outputDir, { recursive: true });
-
-    const sourceWidgets = await findWidgetsToProcess(inputPath);
-    if (sourceWidgets.length === 0) {
-      return { results: [], successCount: 0, failedCount: 0 };
-    }
-
-    console.log(`Copying ${sourceWidgets.length} widget(s) to new directory...\n`);
-
-    for (const sourceWidget of sourceWidgets) {
-      const targetWidgetDir = path.join(outputDir, sourceWidget.widgetId);
-      await fs.mkdir(targetWidgetDir, { recursive: true });
-
-      const targetDslFile = path.join(targetWidgetDir, `${sourceWidget.widgetId}.json`);
-      await fs.copyFile(sourceWidget.dslFile, targetDslFile);
-
-      const sourceLogPath = path.join(sourceWidget.widgetDir, 'log.json');
-      const targetLogPath = path.join(targetWidgetDir, 'log.json');
-      const logExists = await fs.access(sourceLogPath).then(() => true).catch(() => false);
-      if (logExists) {
-        await fs.copyFile(sourceLogPath, targetLogPath);
-      }
-
-      const originalFiles = await fs.readdir(sourceWidget.widgetDir);
-      for (const file of originalFiles) {
-        if (file.startsWith(`${sourceWidget.widgetId}_original`)) {
-          await fs.copyFile(
-            path.join(sourceWidget.widgetDir, file),
-            path.join(targetWidgetDir, file)
-          );
-        }
-      }
-    }
-  }
-
-  const processPath = isInPlace ? inputPath : outputDir;
-  const widgets = await findWidgetsToProcess(processPath);
+  const widgets = await findWidgetsToProcess(inputPath);
 
   if (widgets.length === 0) {
     return { results: [], successCount: 0, failedCount: 0 };
@@ -389,49 +346,28 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 
   if (args.length < 1) {
     console.log(`
-Usage: widget-factory batch-render <input> [output] [concurrency]
+Usage: widget-factory batch-render <directory> [concurrency]
 
 Arguments:
-  input         Path to widget directory or single widget spec JSON file
-  output        Optional output directory (omit for in-place processing)
+  directory     Path to directory containing widget subdirectories with DSL files
   concurrency   Number of concurrent renderers (default: 3)
 
-Modes:
-  In-place:     widget-factory batch-render ./widgets [concurrency]
-                Process widgets in their own directories
-
-  Copy mode:    widget-factory batch-render ./source ./target [concurrency]
-                Copy widgets to new directory before processing
+Description:
+  Process widgets in-place within their own subdirectories.
+  Each widget subdirectory must contain a {widgetId}.json DSL file.
+  Renders will be saved in the same subdirectory.
 
 Examples:
   widget-factory batch-render ./widgets
   widget-factory batch-render ./widgets 5
-  widget-factory batch-render ./source ./target
-  widget-factory batch-render ./source ./target 5
 `);
     process.exit(1);
   }
 
   const inputPath = path.resolve(args[0]);
+  const concurrency = parseInt(args[1]) || 3;
 
-  let outputDir = null;
-  let concurrency = 3;
-
-  if (args.length >= 2) {
-    const secondArg = args[1];
-    const isNumber = /^\d+$/.test(secondArg);
-
-    if (isNumber) {
-      concurrency = parseInt(secondArg);
-    } else {
-      outputDir = path.resolve(secondArg);
-      if (args.length >= 3) {
-        concurrency = parseInt(args[2]) || 3;
-      }
-    }
-  }
-
-  batchRender(inputPath, outputDir, { concurrency })
+  batchRender(inputPath, { concurrency })
     .then(({ failedCount }) => process.exit(failedCount > 0 ? 1 : 0))
     .catch((error) => {
       console.error('\n❌ Error:', error.message);
