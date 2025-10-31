@@ -39,6 +39,7 @@ export function compileWidgetDSLToJSX(widgetDSL) {
         width,
         height,
         backgroundColor,
+        borderRadius,
         children = [],
       } = node;
 
@@ -47,7 +48,10 @@ export function compileWidgetDSLToJSX(widgetDSL) {
       styles.push(`flexDirection: '${direction === "col" ? "column" : "row"}'`);
       if (gap) styles.push(`gap: ${gap}`);
       if (padding) styles.push(`padding: ${padding}`);
-      if (flex !== undefined) styles.push(`flex: ${flex}`);
+      if (flex !== undefined) {
+        if (typeof flex === "string") styles.push(`flex: '${flex}'`);
+        else styles.push(`flex: ${flex}`);
+      }
       if (width !== undefined) {
         if (typeof width === "string") styles.push(`width: '${width}'`);
         else styles.push(`width: ${width}`);
@@ -57,6 +61,7 @@ export function compileWidgetDSLToJSX(widgetDSL) {
         else styles.push(`height: ${height}`);
       }
       if (backgroundColor) styles.push(`backgroundColor: '${backgroundColor}'`);
+      if (borderRadius !== undefined) styles.push(`borderRadius: ${borderRadius}`);
       if (alignMain) {
         const alignMap = {
           start: "flex-start",
