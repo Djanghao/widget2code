@@ -30,8 +30,9 @@ def main():
     try:
         result = asyncio.run(generate_widget_full(image_path))
 
+        dsl_to_save = result.get('widgetDSL', result) if isinstance(result, dict) else result
         with open(output_path, 'w') as f:
-            json.dump(result, f, indent=2)
+            json.dump(dsl_to_save, f, indent=2)
 
         print(f"Widget generated successfully: {output_path}")
     except Exception as e:
