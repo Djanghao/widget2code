@@ -26,9 +26,26 @@ def main():
         sys.exit(1)
 
     from widgetdsl_generator import generate_widget_full
+    from widgetdsl_generator.config import GeneratorConfig
+    import os
 
     try:
-        result = asyncio.run(generate_widget_full(image_path))
+        with open(image_path, 'rb') as f:
+            image_data = f.read()
+
+        config = GeneratorConfig.from_env()
+        result = asyncio.run(generate_widget_full(
+            image_data=image_data,
+            image_filename=Path(image_path).name,
+            system_prompt=None,
+            model=os.getenv('DEFAULT_MODEL', 'qwen3-vl-flash'),
+            api_key=os.getenv('DASHSCOPE_API_KEY'),
+            retrieval_topk=50,
+            retrieval_topm=10,
+            retrieval_alpha=0.8,
+            config=config,
+            icon_lib_names='["sf", "lucide"]',
+        ))
 
         dsl_to_save = result.get('widgetDSL', result) if isinstance(result, dict) else result
         with open(output_path, 'w') as f:
