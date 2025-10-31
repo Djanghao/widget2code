@@ -181,18 +181,22 @@ const createRenderingSlice = (set, get) => ({
     });
 
     console.log(`📦 [Resource Preload] Extracting resources from widgetDSL...`);
-    const { icons, images, graphs } = extractResources(spec);
-    console.log(`📦 [Resource Preload] Found ${icons.length} icons, ${images.length} images, and ${graphs.length} graphs`);
+    const { sfIcons, reactIcons, images, graphs } = extractResources(spec);
+    console.log(`📦 [Resource Preload] Found ${sfIcons.length} SF icons, ${reactIcons.length} react-icons, ${images.length} images, and ${graphs.length} graphs`);
 
-    if (icons.length > 0 || images.length > 0) {
+    if (sfIcons.length > 0 || reactIcons.length > 0 || images.length > 0) {
       console.log(`⏳ [Resource Preload] Starting resource preloading...`);
       const preloadStartTime = performance.now();
 
       try {
         await Promise.all([
-          icons.length > 0 ? preloadIcons(icons, sfDynamicIconImports, iconCache) : Promise.resolve(),
+          sfIcons.length > 0 ? preloadIcons(sfIcons, sfDynamicIconImports, iconCache) : Promise.resolve(),
           images.length > 0 ? preloadImages(images) : Promise.resolve()
         ]);
+
+        if (reactIcons.length > 0) {
+          console.log(`ℹ️  [Resource Preload] ${reactIcons.length} react-icons are statically imported (no preload needed)`);
+        }
 
         const preloadTime = performance.now() - preloadStartTime;
         console.log(`✅ [Resource Preload] All resources preloaded in ${preloadTime.toFixed(2)}ms`);
