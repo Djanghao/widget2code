@@ -22,6 +22,7 @@
   "dependencies": {
     "@widget-factory/compiler": "*",
     "@widget-factory/renderer": "*",
-    "playwright": "^1.40.0"
+    "playwright": "^1.40.0",
+    "sharp": "^0.33.5"
   }
 }

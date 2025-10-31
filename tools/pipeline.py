@@ -17,6 +17,7 @@ from pathlib import Path
 from typing import Optional
 import argparse
 from datetime import datetime
+from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "libs" / "generator"))
 from widgetdsl_generator import generate_widget, GeneratorConfig
@@ -122,6 +123,17 @@ class WidgetPipeline:
             # Step 3: Render JSX to PNG
             await self.render_to_png(jsx_path, output_path)
             print(f"✓ PNG saved to {output_path}")
+
+            # Step 4: Resize rendered PNG to match original image size
+            with Image.open(input_path) as original_img:
+                original_size = original_img.size  # (width, height)
+
+            with Image.open(output_path) as rendered_img:
+                rescaled_img = rendered_img.resize(original_size, Image.LANCZOS)
+                rescaled_path = output_path.with_name(output_path.stem + "_rescaled.png")
+                rescaled_img.save(rescaled_path)
+
+            print(f"✓ Rescaled PNG saved to {rescaled_path}")
 
             print(f"\n✓ Pipeline completed successfully")
             return True

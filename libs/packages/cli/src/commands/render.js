@@ -8,6 +8,7 @@
 import { PlaywrightRenderer } from '@widget-factory/renderer';
 import fs from 'fs/promises';
 import path from 'path';
+import sharp from 'sharp';
 
 export async function render(jsxPath, outputPath, options = {}) {
   const { devServerUrl = 'http://localhost:3060' } = options;
@@ -58,7 +59,39 @@ export async function render(jsxPath, outputPath, options = {}) {
       timeout: renderer.options.timeout
     });
 
-    console.log('[Render] Rendering widget from JSX...');
+    // Render RAW version (no autoresize)
+    console.log('[Render] Rendering RAW (natural layout)...');
+    const rawResult = await page.evaluate(async ({ jsxCode }) => {
+      try {
+        return await window.renderWidgetFromJSX(jsxCode, {
+          enableAutoResize: false,
+          captureOptions: {}
+        });
+      } catch (error) {
+        return {
+          success: false,
+          error: error.message,
+          stack: error.stack
+        };
+      }
+    }, { jsxCode });
+
+    if (!rawResult.success) {
+      await context.close();
+      await renderer.close();
+      throw new Error(`RAW render failed: ${rawResult.error}`);
+    }
+
+    const rawBase64 = rawResult.imageData.split(',')[1];
+    const rawImageBuffer = Buffer.from(rawBase64, 'base64');
+
+    const parsed = path.parse(outputPath);
+    const rawPath = path.join(parsed.dir, `${parsed.name}_raw${parsed.ext}`);
+    await PlaywrightRenderer.saveImage(rawImageBuffer, rawPath);
+    console.log(`[Render] ✓ RAW: ${rawResult.metadata.width}×${rawResult.metadata.height} -> ${rawPath}`);
+
+    // Render AUTORESIZE version
+    console.log('[Render] Rendering AUTORESIZE...');
     const result = await page.evaluate(async ({ jsxCode }) => {
       try {
         return await window.renderWidgetFromJSX(jsxCode, {
@@ -78,12 +111,18 @@ export async function render(jsxPath, outputPath, options = {}) {
     await renderer.close();
 
     if (!result.success) {
-      throw new Error(result.error);
+      throw new Error(`AUTORESIZE render failed: ${result.error}`);
     }
 
     const base64Data = result.imageData.split(',')[1];
     const imageBuffer = Buffer.from(base64Data, 'base64');
 
+    // Save autoresize version
+    const autoresizePath = path.join(parsed.dir, `${parsed.name}_autoresize${parsed.ext}`);
+    await PlaywrightRenderer.saveImage(imageBuffer, autoresizePath);
+    console.log(`[Render] ✓ AUTORESIZE: ${result.metadata.width}×${result.metadata.height} -> ${autoresizePath}`);
+
+    // Save default output (same as autoresize for backwards compatibility)
     await PlaywrightRenderer.saveImage(imageBuffer, outputPath);
 
     console.log(`[Render] ✓ Success`);
@@ -92,7 +131,7 @@ export async function render(jsxPath, outputPath, options = {}) {
     } else if (result.metadata) {
       console.log(`[Render]   Size: ${result.metadata.width}×${result.metadata.height}`);
     }
-    console.log(`[Render]   PNG: ${outputPath}`);
+    console.log(`[Render]   Default PNG: ${outputPath}`);
 
     return { success: true, imageBuffer, result };
   } catch (error) {

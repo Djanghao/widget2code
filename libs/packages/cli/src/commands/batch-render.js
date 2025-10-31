@@ -12,6 +12,7 @@ import { compileWidgetDSLToJSX } from '@widget-factory/compiler';
 import { validateAndFix } from '@widget-factory/validator';
 import fs from 'fs/promises';
 import path from 'path';
+import sharp from 'sharp';
 
 async function findWidgetsToProcess(inputPath) {
   const stats = await fs.stat(inputPath);
@@ -147,9 +148,27 @@ async function renderWidget(renderer, widgetInfo) {
       error: null
     };
 
-    console.log(`[${widgetId}] Rendering JSX to PNG...`);
+    console.log(`[${widgetId}] Rendering JSX to PNG (multiple versions)...`);
     const renderingStartTime = new Date();
 
+    // Step 1: Render RAW version (natural layout, no autoresize)
+    console.log(`[${widgetId}] - Rendering RAW (natural layout)...`);
+    const rawResult = await renderer.renderWidgetFromJSX(jsx, {
+      enableAutoResize: false,
+      presetId: widgetId,
+      spec: finalSpec
+    });
+
+    if (!rawResult.success) {
+      throw new Error(`RAW render failed: ${rawResult.error}`);
+    }
+
+    const rawPath = path.join(widgetDir, `${widgetId}_raw.png`);
+    await PlaywrightRenderer.saveImage(rawResult.imageBuffer, rawPath);
+    console.log(`[${widgetId}] ✓ RAW: ${rawResult.metadata.width}×${rawResult.metadata.height}`);
+
+    // Step 2: Render AUTORESIZE version (with autoresize enabled)
+    console.log(`[${widgetId}] - Rendering AUTORESIZE...`);
     const result = await renderer.renderWidgetFromJSX(jsx, {
       enableAutoResize: true,
       presetId: widgetId,
@@ -157,11 +176,42 @@ async function renderWidget(renderer, widgetInfo) {
     });
 
     if (!result.success) {
-      throw new Error(result.error);
+      throw new Error(`AUTORESIZE render failed: ${result.error}`);
     }
 
+    const autoresizePath = path.join(widgetDir, `${widgetId}_autoresize.png`);
+    await PlaywrightRenderer.saveImage(result.imageBuffer, autoresizePath);
+    console.log(`[${widgetId}] ✓ AUTORESIZE: ${result.metadata.width}×${result.metadata.height}`);
+
+    // Save the default PNG (same as autoresize for backwards compatibility)
     await PlaywrightRenderer.saveImage(result.imageBuffer, pngPath);
     await fs.writeFile(dslFile, JSON.stringify(result.spec, null, 2), 'utf-8');
+
+    // Step 3: Create RESCALED version (resize to match original image size)
+    const rescaledPath = path.join(widgetDir, `${widgetId}_rescaled.png`);
+    try {
+      // Find original image file
+      const files = await fs.readdir(widgetDir);
+      const originalFile = files.find(f => f.startsWith(`${widgetId}_original`));
+
+      if (originalFile) {
+        const originalPath = path.join(widgetDir, originalFile);
+        const originalMeta = await sharp(originalPath).metadata();
+
+        // Resize autoresize PNG to match original dimensions
+        await sharp(autoresizePath)
+          .resize(originalMeta.width, originalMeta.height, {
+            fit: 'fill',
+            kernel: sharp.kernel.lanczos3
+          })
+          .png()
+          .toFile(rescaledPath);
+
+        console.log(`[${widgetId}] ✓ RESCALED: ${originalMeta.width}×${originalMeta.height}`);
+      }
+    } catch (rescaleError) {
+      console.warn(`[${widgetId}] ⚠️  Failed to create rescaled image: ${rescaleError.message}`);
+    }
 
     const renderingEndTime = new Date();
     const renderingDuration = (renderingEndTime - renderingStartTime) / 1000;
@@ -202,6 +252,9 @@ async function renderWidget(renderer, widgetInfo) {
 
     logData.files.jsx = `${widgetId}.jsx`;
     logData.files.png = `${widgetId}.png`;
+    logData.files.rawPng = `${widgetId}_raw.png`;
+    logData.files.autoresizePng = `${widgetId}_autoresize.png`;
+    logData.files.rescaledPng = `${widgetId}_rescaled.png`;
 
     await fs.writeFile(logPath, JSON.stringify(logData, null, 2), 'utf-8');
 
