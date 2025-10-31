@@ -87,7 +87,11 @@ export async function render(jsxPath, outputPath, options = {}) {
     await PlaywrightRenderer.saveImage(imageBuffer, outputPath);
 
     console.log(`[Render] ✓ Success`);
-    console.log(`[Render]   Size: ${result.finalSize.width}×${result.finalSize.height}`);
+    if (result.finalSize) {
+      console.log(`[Render]   Size: ${result.finalSize.width}×${result.finalSize.height}`);
+    } else if (result.metadata) {
+      console.log(`[Render]   Size: ${result.metadata.width}×${result.metadata.height}`);
+    }
     console.log(`[Render]   PNG: ${outputPath}`);
 
     return { success: true, imageBuffer, result };
