@@ -39,6 +39,7 @@ import iconsUltimateTest from "../examples/icons-ultimate-test.json";
 import buttonShowcase from "../examples/button-showcase.json";
 import progressringShowcase from "../examples/progressring-showcase.json";
 import fitnessActivityRings from "../examples/fitness-activity-rings.json";
+import circularContainersShowcase from "../examples/circular-containers-showcase.json";
 
 export const examples = {
   weatherSmallLight: { name: "Weather S-Light", spec: weatherSmallLight },
@@ -99,5 +100,9 @@ export const examples = {
   fitnessActivityRings: {
     name: "💪 Fitness Activity Rings",
     spec: fitnessActivityRings,
+  },
+  circularContainersShowcase: {
+    name: "⭕ Circular Containers",
+    spec: circularContainersShowcase,
   },
 };

@@ -48,6 +48,7 @@ Node properties: `width` (optional), `height` (optional), `content` (for text bu
 - Can contain either an icon OR text (not both)
 - **Icon button**: Set `icon` prop using the icon examples above (e.g., `"sf:bolt.fill"`, `"lucide:ArrowRight"`) - do not invent new names
 - **Text button**: Set `content` with button text
+- **Circular buttons**: Set `borderRadius` to half of the size for circular icon buttons (e.g., `width: 40, height: 40, borderRadius: 20`)
 
 ### Image
 Props: `url`, `borderRadius` (optional)
@@ -146,6 +147,7 @@ All layouts use **flexbox containers**. There are two node types:
   "alignCross": "start" | "end" | "center" | "stretch",
   "padding": number,
   "backgroundColor": "#hex",
+  "borderRadius": number (optional),
   "children": [...]
 }
 ```
@@ -154,6 +156,10 @@ All layouts use **flexbox containers**. There are two node types:
 - Use numbers for fixed pixel values: `"width": 120`
 - Use strings for percentages: `"width": "50%"`
 - Combine with `flex` for responsive layouts
+
+**Creating Circular Containers**: Use `borderRadius` with equal `width` and `height`:
+- For circles, set `borderRadius` to half of the size (e.g., `width: 60, height: 60, borderRadius: 30`)
+- Or use a large value like `borderRadius: 999` to ensure perfect circles regardless of size
 
 ### Leaf Node (Component)
 ```json
