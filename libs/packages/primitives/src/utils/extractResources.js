@@ -6,9 +6,11 @@ export function extractResources(widgetDSL) {
 
   console.log('[Resource Extract] 🔍 Starting resource extraction from widgetDSL...');
 
+  // Only true chart components that require Recharts library
+  // ProgressBar and ProgressRing are primitive components (pure CSS/SVG), not graphs
   const GRAPH_COMPONENTS = [
     'BarChart', 'LineChart', 'PieChart', 'RadarChart',
-    'StackedBarChart', 'ProgressBar', 'ProgressRing'
+    'StackedBarChart'
   ];
 
   function traverse(node) {

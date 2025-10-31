@@ -10,6 +10,10 @@ export function ProgressRing({
   iconName,
   iconSize = 32,
   iconColor = "#000000",
+  content,
+  textColor = "#000000",
+  fontSize = 14,
+  fontWeight = 500,
   flex,
   flexGrow,
   flexShrink,
@@ -65,7 +69,7 @@ export function ProgressRing({
         />
       </svg>
 
-      {iconName && (
+      {(iconName || content) && (
         <div
           style={{
             position: "absolute",
@@ -74,7 +78,20 @@ export function ProgressRing({
             transform: "translate(-50%, -50%)",
           }}
         >
-          <Icon name={iconName} size={iconSize} color={iconColor} />
+          {iconName ? (
+            <Icon name={iconName} size={iconSize} color={iconColor} />
+          ) : (
+            <span
+              style={{
+                color: textColor,
+                fontSize: `${fontSize}px`,
+                fontWeight,
+                whiteSpace: "nowrap",
+              }}
+            >
+              {content}
+            </span>
+          )}
         </div>
       )}
     </div>

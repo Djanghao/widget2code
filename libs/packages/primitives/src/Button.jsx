@@ -3,6 +3,7 @@ import { Icon } from './Icon.jsx';
 
 export function Button({
   icon,
+  content,
   backgroundColor = 'rgba(59, 130, 246, 1)',
   color = 'rgba(255, 255, 255, 1)',
   borderRadius = 8,
@@ -16,7 +17,6 @@ export function Button({
   flexShrink,
   flexBasis,
   style = {},
-  children,
   ...rest
 }) {
   const buttonStyle = {
@@ -43,7 +43,7 @@ export function Button({
 
   return (
     <div {...rest} style={buttonStyle}>
-      {icon ? <Icon name={icon} size={fontSize * 1.2} color={color} /> : children}
+      {icon ? <Icon name={icon} size={fontSize * 1.2} color={color} /> : content}
     </div>
   );
 }

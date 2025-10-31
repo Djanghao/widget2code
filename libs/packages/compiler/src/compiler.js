@@ -108,6 +108,14 @@ export function compileWidgetDSLToJSX(widgetDSL) {
 
       const mergedProps = { ...props };
 
+      // Components that use 'content' as a prop instead of JSX children
+      const usesContentProp = ["Button", "ProgressRing"];
+
+      // Add content to props for Button and ProgressRing
+      if (content && usesContentProp.includes(componentName)) {
+        mergedProps.content = content;
+      }
+
       const propsCode = [];
       for (const [key, value] of Object.entries(mergedProps)) {
         if (typeof value === "string") propsCode.push(`${key}="${value}"`);
@@ -122,8 +130,9 @@ export function compileWidgetDSLToJSX(widgetDSL) {
       if (height !== undefined)
         propsCode.push(`height={${JSON.stringify(height)}}`);
 
+      // For Text and other components, use content as JSX children
       let childrenStr = "";
-      if (content) {
+      if (content && !usesContentProp.includes(componentName)) {
         childrenStr = content;
       }
 

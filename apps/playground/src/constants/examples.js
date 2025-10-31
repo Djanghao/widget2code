@@ -35,6 +35,11 @@ import batteriesLightMedium from "../examples/batteries-light-medium.json";
 import iconsVariantsShowcase from "../examples/icons-variants-showcase.json";
 import iconsUltimateTest from "../examples/icons-ultimate-test.json";
 
+// Component Showcases
+import buttonShowcase from "../examples/button-showcase.json";
+import progressringShowcase from "../examples/progressring-showcase.json";
+import fitnessActivityRings from "../examples/fitness-activity-rings.json";
+
 export const examples = {
   weatherSmallLight: { name: "Weather S-Light", spec: weatherSmallLight },
   weatherMediumDark: { name: "Weather M-Dark", spec: weatherMediumDark },
@@ -80,5 +85,19 @@ export const examples = {
   iconsUltimateTest: {
     name: "✨ Ultimate Icon Test",
     spec: iconsUltimateTest,
+  },
+
+  // Component Showcases
+  buttonShowcase: {
+    name: "🔘 Button Showcase",
+    spec: buttonShowcase,
+  },
+  progressringShowcase: {
+    name: "🔄 ProgressRing Showcase",
+    spec: progressringShowcase,
+  },
+  fitnessActivityRings: {
+    name: "💪 Fitness Activity Rings",
+    spec: fitnessActivityRings,
   },
 };

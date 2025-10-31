@@ -13,7 +13,7 @@ Focus on extracting these elements:
 - **Inner radius**: Size of the center hole (calculated from thickness)
 - **Track**: Background ring color and style
 - **Fill**: Progress color, gradient effects
-- **Center content**: Text or icons displayed in the center
+- **Center content**: Either icon OR text displayed in the center (not both)
 
 ## Position & Direction
 - **Center position**: X,Y coordinates of ring center
@@ -25,74 +25,62 @@ Focus on extracting these elements:
 {
   "type": "ProgressRing",
   "spec": {
-    "progress": 75,  // Current progress percentage (0-100)
-    "radius": 60,   // Outer radius of the ring
-    "thickness": 12,  // Ring thickness
-    "trackColor": "#E5E7EB",  // Background track color
-    "fillColor": "#3B82F6",   // Progress fill color
-    "centerPosition": {
-      "x": 100,
-      "y": 100
-    },
-    "centerText": "75%",  // Text in center
-    "labelStyle": {
-      "fontSize": 24,
-      "fontWeight": "bold",
-      "color": "#333333"
-    },
-    "startAngle": -90,  // Start from top
-    "direction": "clockwise",  // Or "counter-clockwise"
-    "animated": false,
-    "gradient": null  // Optional gradient effects
+    "percentage": 75,  // Current progress percentage (0-100)
+    "size": 120,   // Overall diameter of the ring
+    "strokeWidth": 12,  // Ring thickness
+    "backgroundColor": "#E5E7EB",  // Background track color
+    "color": "#3B82F6",   // Progress fill color
+    "content": "75%",  // Text in center (use either content OR iconName, not both)
+    "textColor": "#333333",  // Text color
+    "fontSize": 24,  // Text font size
+    "fontWeight": 600,  // Text font weight
+    "iconName": null,  // Icon name (use either iconName OR content, not both)
+    "iconSize": 32,  // Icon size when using iconName
+    "iconColor": "#000000"  // Icon color when using iconName
   }
 }
 ```
 
 ## Default Behavior (when not visible in image):
-- **progress**: 0 (no progress)
-- **radius**: 60 (default ring size)
-- **thickness**: 8 (default ring thickness)
-- **trackColor**: "#E5E7EB" (light gray background)
-- **fillColor**: "#3B82F6" (blue primary color)
-- **centerPosition**: { "x": 50, "y": 50 } (center of 100x100 container)
-- **centerText**: null (no text by default)
-- **labelStyle**:
-  - **fontSize**: 16 (default font size)
-  - **fontWeight**: "normal" (normal weight)
-  - **color**: "#333333" (dark gray text)
-- **startAngle**: -90 (start from top)
-- **direction**: "clockwise" (progress clockwise)
-- **animated**: false (no animation)
-- **gradient**: null (no gradient by default)
+- **percentage**: 0 (no progress)
+- **size**: 80 (default ring diameter)
+- **strokeWidth**: 6 (default ring thickness)
+- **backgroundColor**: "#d1d1d6" (light gray background)
+- **color**: "#34C759" (green primary color)
+- **content**: null (no text by default)
+- **textColor**: "#000000" (black text)
+- **fontSize**: 14 (default font size)
+- **fontWeight**: 500 (medium weight)
+- **iconName**: null (no icon by default)
+- **iconSize**: 32 (default icon size)
+- **iconColor**: "#000000" (black icon)
 
 For different sizes:
 ```json
 {
-  "radius": 40,   // Small ring
-  "thickness": 8
+  "size": 60,   // Small ring
+  "strokeWidth": 4
 }
 ```
 
 For with center icon instead of text:
 ```json
 {
-  "centerText": null,
-  "centerIcon": {
-    "name": "check",
-    "size": 24,
-    "color": "#10B981"
-  }
+  "content": null,
+  "iconName": "checkmark",
+  "iconSize": 24,
+  "iconColor": "#10B981"
 }
 ```
 
-For gradient fill:
+For with center text:
 ```json
 {
-  "gradient": {
-    "type": "linear",
-    "colors": ["#3B82F6", "#10B981"],
-    "direction": "clockwise"
-  }
+  "iconName": null,
+  "content": "75%",
+  "textColor": "#333333",
+  "fontSize": 20,
+  "fontWeight": 600
 }
 ```
 

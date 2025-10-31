@@ -113,6 +113,20 @@ Props: `color`, `thickness`, `height`
 - `height`: bar height (default: "100%")
 - Always `flex: "none"`
 
+### ProgressRing
+Props: `percentage`, `color`, `backgroundColor`, `size`, `strokeWidth`, `iconName` (optional), `iconSize`, `iconColor`, `textColor`, `fontSize`, `fontWeight`
+Node properties: `content` (for text display)
+- For displaying circular/radial progress indicators with a single continuous progress value (0-100)
+- Can contain either an icon OR text in the center (not both)
+- **Icon display**: Set `iconName` prop with icon name from [AVAILABLE_ICON_NAMES] - do not guess icon names
+- **Text display**: Set `content` with text to show in center (e.g., "75%", "8/10")
+- `percentage`: Progress value from 0-100
+- `size`: Overall diameter of the ring in pixels
+- `strokeWidth`: Thickness of the progress ring
+- `color`: Color of the progress fill
+- `backgroundColor`: Color of the background track
+- Typically `flex: "none"`
+
 ## Layout System
 
 All layouts use **flexbox containers**. There are two node types:

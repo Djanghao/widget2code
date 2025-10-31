@@ -165,6 +165,19 @@ Props: `value`, `max`, `min`, `label`, `showValue`, `color`, `backgroundColor`, 
 - `animated`: `true` if the stripes should be animated.
 - `label` / `showValue`: Set a custom text `label` or set `showValue: true` to display the percentage.
 
+### ProgressRing
+Props: `percentage`, `color`, `backgroundColor`, `size`, `strokeWidth`, `iconName` (optional), `iconSize`, `iconColor`, `textColor`, `fontSize`, `fontWeight`
+Node properties: `content` (for text display)
+- For displaying circular/radial progress indicators with a single continuous progress value (0-100)
+- Can contain either an icon OR text in the center (not both)
+- **Icon display**: Set `iconName` prop with icon name from [AVAILABLE_ICON_NAMES] - do not guess icon names
+- **Text display**: Set `content` with text to show in center (e.g., "75%", "8/10")
+- `percentage`: Progress value from 0-100
+- `size`: Overall diameter of the ring in pixels
+- `strokeWidth`: Thickness of the progress ring
+- `color`: Color of the progress fill
+- `backgroundColor`: Color of the background track
+
 ### PieChart
 Props: `title`, `showTitle`, `data`, `labels`, `colors`, `backgroundColor`, `theme`, `variant`, `innerRadius`, `outerRadius`, `centerText`, `centerValue`, `showLabels`, `showValues`, `showPercentages`, `labelPosition`, `animated`, `animationDuration`, `emphasisScale`, `startAngle`, `clockwise`, `borderWidth`, `borderColor`, `roundedSegments`, `segmentBorderRadius`, `showLegend`, `legendPosition`, `legendOrientation`, `width`, `height`
 - For creating pie and donut charts to display proportional data.
