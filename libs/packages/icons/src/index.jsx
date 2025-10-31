@@ -1,6 +1,5 @@
 // SF Symbols (custom implementation)
 export {
-  iconsMap as sfSymbolsMap,
   metadata as sfMetadata,
 } from "../custom/sf-symbols/src/index.jsx";
 

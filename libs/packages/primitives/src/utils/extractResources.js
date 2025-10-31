@@ -1,5 +1,6 @@
 export function extractResources(widgetDSL) {
-  const icons = new Set();
+  const sfIcons = new Set();
+  const reactIcons = new Set();
   const images = new Set();
   const graphs = new Set();
 
@@ -17,8 +18,14 @@ export function extractResources(widgetDSL) {
       if (node.component === 'Icon' && node.props?.name) {
         const iconName = node.props.name;
         if (iconName.startsWith('sf:')) {
-          icons.add(iconName.replace('sf:', ''));
+          sfIcons.add(iconName.replace('sf:', ''));
           console.log(`[Resource Extract] 📦 Found SF icon: ${iconName}`);
+        } else if (iconName.includes(':')) {
+          reactIcons.add(iconName);
+          console.log(`[Resource Extract] 🎨 Found react-icon: ${iconName}`);
+        } else {
+          sfIcons.add(iconName);
+          console.log(`[Resource Extract] 📦 Found SF icon (no prefix): ${iconName}`);
         }
       }
 
@@ -43,12 +50,13 @@ export function extractResources(widgetDSL) {
   }
 
   const result = {
-    icons: Array.from(icons),
+    sfIcons: Array.from(sfIcons),
+    reactIcons: Array.from(reactIcons),
     images: Array.from(images),
     graphs: Array.from(graphs)
   };
 
-  console.log(`[Resource Extract] ✅ Extraction complete: ${result.icons.length} icons, ${result.images.length} images, ${result.graphs.length} graphs`);
+  console.log(`[Resource Extract] ✅ Extraction complete: ${result.sfIcons.length} SF icons, ${result.reactIcons.length} react-icons, ${result.images.length} images, ${result.graphs.length} graphs`);
 
   return result;
 }
