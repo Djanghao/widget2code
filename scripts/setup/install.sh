@@ -1,9 +1,24 @@
 #!/bin/bash
 set -e
 
+echo "Cleaning up existing environment..."
+
+echo "Removing node_modules directories..."
+rm -rf node_modules
+rm -rf apps/node_modules
+rm -rf apps/playground/node_modules
+rm -rf libs/packages/icons/node_modules
+
+echo "Removing build artifacts..."
+rm -rf apps/playground/dist
+
+echo "Removing Python virtual environment..."
+rm -rf apps/api/.venv
+
+echo "Environment cleaned successfully!"
+echo ""
 echo "Installing Widget Factory dependencies..."
 
-# Install Node.js dependencies
 echo "Installing Node.js packages..."
 npm install
 
