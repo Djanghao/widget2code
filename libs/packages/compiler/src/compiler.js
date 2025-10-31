@@ -1,3 +1,10 @@
+/**
+ * @file compiler.js
+ * @description Compiles WidgetDSL specifications to React JSX code
+ * @author Houston Zhang
+ * @date 2025-10-29
+ */
+
 import { parseIconName } from "./iconLibraryUtils.js";
 
 export function compileWidgetDSLToJSX(widgetDSL) {

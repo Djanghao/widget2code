@@ -1,3 +1,10 @@
+# -----------------------------------------------------------------------------
+# File: cli.py
+# Description: CLI entry points for widget generation (single and batch)
+# Author: Houston Zhang
+# Date: 2025-10-30
+# -----------------------------------------------------------------------------
+
 import sys
 import json
 import asyncio

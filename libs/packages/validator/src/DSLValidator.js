@@ -1,3 +1,10 @@
+/**
+ * @file DSLValidator.js
+ * @description WidgetDSL specification validator with auto-fix capabilities
+ * @author Houston Zhang
+ * @date 2025-10-29
+ */
+
 import { AVAILABLE_COMPONENTS } from '@widget-factory/primitives/components';
 
 const VALID_COMPONENTS = new Set(AVAILABLE_COMPONENTS);

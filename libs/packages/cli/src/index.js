@@ -3,6 +3,8 @@
 /**
  * @file index.js
  * @description Widget Factory CLI - Unified command-line interface
+ * @author Houston Zhang
+ * @date 2025-10-29
  */
 
 import { compile } from './commands/compile.js';

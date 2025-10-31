@@ -1,4 +1,9 @@
-"""Configuration classes for widgetdsl_generator"""
+# -----------------------------------------------------------------------------
+# File: config.py
+# Description: Configuration classes for widgetdsl_generator
+# Author: Houston Zhang
+# Date: 2025-10-29
+# -----------------------------------------------------------------------------
 
 import os
 from dataclasses import dataclass

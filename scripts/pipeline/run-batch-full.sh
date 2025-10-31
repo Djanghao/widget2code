@@ -22,8 +22,8 @@ DEV_SERVER=${4:-"http://localhost:$FRONTEND_PORT"}
 
 mkdir -p "$OUTPUT_DIR"
 
-LOG_FILE="$OUTPUT_DIR/batch_run.log"
-METADATA_FILE="$OUTPUT_DIR/batch_metadata.json"
+LOG_FILE="$OUTPUT_DIR/run.log"
+METADATA_FILE="$OUTPUT_DIR/run_info.json"
 START_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 START_TIMESTAMP=$(date +%s)
 

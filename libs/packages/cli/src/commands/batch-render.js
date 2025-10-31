@@ -2,8 +2,9 @@
 
 /**
  * @file batch-render.js
- * @description Batch render widgets from DSL specs
- * Workflow: DSL → Compiler → JSX → Renderer → PNG
+ * @description Batch render widgets from DSL specs (DSL → Compiler → JSX → Renderer → PNG)
+ * @author Houston Zhang
+ * @date 2025-10-29
  */
 
 import { PlaywrightRenderer } from '@widget-factory/renderer';

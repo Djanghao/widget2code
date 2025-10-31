@@ -1,3 +1,10 @@
+/**
+ * @file WidgetValidator.js
+ * @description Runtime widget validation for rendered components
+ * @author Houston Zhang
+ * @date 2025-10-29
+ */
+
 import { measureOverflow } from '@widget-factory/resizer';
 
 export function validateWidget(widgetElement, spec) {
