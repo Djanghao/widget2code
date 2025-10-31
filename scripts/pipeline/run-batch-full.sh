@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-# Load .env
 if [ -f .env ]; then
     set -a
     source .env
@@ -23,11 +22,23 @@ DEV_SERVER=${4:-"http://localhost:$FRONTEND_PORT"}
 
 mkdir -p "$OUTPUT_DIR"
 
+LOG_FILE="$OUTPUT_DIR/batch_run.log"
+METADATA_FILE="$OUTPUT_DIR/batch_metadata.json"
+START_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+START_TIMESTAMP=$(date +%s)
+
+exec > >(tee -a "$LOG_FILE") 2>&1
+
 echo "===== Full Batch Pipeline ====="
+echo "Start Time: $START_TIME"
 echo "Input: $INPUT_DIR"
 echo "Output: $OUTPUT_DIR"
 echo "Concurrency: $CONCURRENCY"
+echo "Dev Server: $DEV_SERVER"
+echo "Log File: $LOG_FILE"
 echo ""
+
+RUN_ID=$(uuidgen 2>/dev/null || date +%s%N)
 
 echo "Step 1/2: Generate WidgetDSL from images..."
 ./scripts/generation/generate-batch.sh "$INPUT_DIR" "$OUTPUT_DIR" "$CONCURRENCY"
@@ -36,9 +47,39 @@ echo ""
 echo "Step 2/2: Batch render DSL to PNG..."
 ./scripts/rendering/render-batch.sh "$OUTPUT_DIR" "$CONCURRENCY"
 
+END_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+END_TIMESTAMP=$(date +%s)
+DURATION=$((END_TIMESTAMP - START_TIMESTAMP))
+
+cat > "$METADATA_FILE" <<EOF
+{
+  "run_id": "$RUN_ID",
+  "start_time": "$START_TIME",
+  "end_time": "$END_TIME",
+  "duration_seconds": $DURATION,
+  "status": "completed",
+  "input_dir": "$INPUT_DIR",
+  "output_dir": "$OUTPUT_DIR",
+  "concurrency": $CONCURRENCY,
+  "dev_server": "$DEV_SERVER",
+  "environment": {
+    "backend_port": "${BACKEND_PORT:-8010}",
+    "frontend_port": "${FRONTEND_PORT:-3060}",
+    "enable_model_cache": "${ENABLE_MODEL_CACHE:-false}",
+    "use_cuda_for_retrieval": "${USE_CUDA_FOR_RETRIEVAL:-true}",
+    "default_model": "${DEFAULT_MODEL:-qwen3-vl-flash}"
+  }
+}
+EOF
+
 echo ""
 echo "===== Complete ====="
+echo "End Time: $END_TIME"
+echo "Duration: ${DURATION}s"
 echo "Output: $OUTPUT_DIR"
+echo "Log: $LOG_FILE"
+echo "Metadata: $METADATA_FILE"
+echo ""
 echo "Each widget has its own subdirectory with:"
 echo "  - widget_id_original.{ext}: Original image"
 echo "  - widget_id.json: Generated DSL"
