@@ -24,7 +24,6 @@ widgetdsl_generator/perception/graph/__init__.py
 widgetdsl_generator/perception/graph/detection.py
 widgetdsl_generator/perception/graph/pipeline.py
 widgetdsl_generator/perception/icon/__init__.py
-widgetdsl_generator/perception/icon/build_library.py
 widgetdsl_generator/perception/icon/grounding.py
 widgetdsl_generator/perception/icon/image_utils.py
 widgetdsl_generator/perception/icon/post_process.py
