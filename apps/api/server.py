@@ -1,8 +1,9 @@
-from fastapi import FastAPI, File, UploadFile, Form, Request, HTTPException
+from fastapi import FastAPI, File, UploadFile, Form, Request, HTTPException, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pathlib import Path
 from typing import List, Optional
+from pydantic import BaseModel
 import os
 import traceback
 from dotenv import load_dotenv
@@ -24,6 +25,9 @@ use_cuda_for_retrieval = os.getenv("USE_CUDA_FOR_RETRIEVAL", "true").lower() == 
 
 cached_blip2_pipe = None
 cached_siglip_pipe = None
+
+class EncodeTextsRequest(BaseModel):
+    texts: List[str]
 
 app = FastAPI()
 
@@ -271,7 +275,7 @@ async def extract_icon_captions(
 @app.post("/api/encode-texts")
 async def encode_texts(
     request: Request,
-    texts: List[str],
+    body: EncodeTextsRequest,
 ):
     if not model_cache_enabled or cached_siglip_pipe is None:
         raise HTTPException(
@@ -283,7 +287,7 @@ async def encode_texts(
     import numpy as np
 
     model, tokenizer, device = cached_siglip_pipe
-    embeddings = encode_texts_siglip(model, tokenizer, device, texts)
+    embeddings = encode_texts_siglip(model, tokenizer, device, body.texts)
 
     return {"success": True, "embeddings": embeddings.tolist()}
 

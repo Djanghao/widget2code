@@ -33,6 +33,41 @@ SIGLIP_MODEL_NAME = "ViT-SO400M-16-SigLIP2-384"
 SIGLIP_PRETRAINED = "webli"
 EMB_BATCH = 64
 
+def _caption_via_http(crops_bytes: List[bytes]) -> List[str]:
+    import os
+    import requests
+    backend_port = os.getenv("BACKEND_PORT", "8010")
+    backend_host = os.getenv("HOST", "0.0.0.0")
+    if backend_host == "0.0.0.0":
+        backend_host = "localhost"
+    url = f"http://{backend_host}:{backend_port}/api/extract-icon-captions"
+
+    files = [("crops", (f"crop_{i}.png", crop_bytes, "image/png"))
+             for i, crop_bytes in enumerate(crops_bytes)]
+
+    response = requests.post(url, files=files, timeout=300)
+    response.raise_for_status()
+    result = response.json()
+    if not result.get("success"):
+        raise RuntimeError(f"Caption extraction failed: {result.get('error')}")
+    return result["captions"]
+
+def _encode_texts_via_http(texts: List[str]) -> np.ndarray:
+    import os
+    import requests
+    backend_port = os.getenv("BACKEND_PORT", "8010")
+    backend_host = os.getenv("HOST", "0.0.0.0")
+    if backend_host == "0.0.0.0":
+        backend_host = "localhost"
+    url = f"http://{backend_host}:{backend_port}/api/encode-texts"
+
+    response = requests.post(url, json={"texts": texts}, timeout=300)
+    response.raise_for_status()
+    result = response.json()
+    if not result.get("success"):
+        raise RuntimeError(f"Text encoding failed: {result.get('error')}")
+    return np.array(result["embeddings"], dtype="float32")
+
 def build_blip2(model_id: str = BLIP2_MODEL_ID):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     torch_dtype = torch.float16 if device == "cuda" else torch.float32
@@ -122,11 +157,18 @@ def caption_embed_and_retrieve_svgs_with_dual_details(
     if len(crops_bytes) != len(q_img_all):
         raise ValueError(f"Length mismatch: len(crops_bytes)={len(crops_bytes)} vs len(q_img_all)={len(q_img_all)}")
 
-    blip2_pipe = build_blip2(BLIP2_MODEL_ID)
-    captions = caption_from_bytes_list(crops_bytes, blip2_pipe)
+    import os
+    model_cache_enabled = os.getenv("ENABLE_MODEL_CACHE", "false").lower() == "true"
 
-    tmodel, tokenizer, tdevice = load_siglip_text()
-    q_txt_all = encode_texts_siglip(tmodel, tokenizer, tdevice, captions)
+    if model_cache_enabled:
+        captions = _caption_via_http(crops_bytes)
+        q_txt_all = _encode_texts_via_http(captions)
+    else:
+        blip2_pipe = build_blip2(BLIP2_MODEL_ID)
+        captions = caption_from_bytes_list(crops_bytes, blip2_pipe)
+
+        tmodel, tokenizer, tdevice = load_siglip_text()
+        q_txt_all = encode_texts_siglip(tmodel, tokenizer, tdevice, captions)
 
     q_ids = [f"q{i:04d}" for i in range(len(crops_bytes))]
 
