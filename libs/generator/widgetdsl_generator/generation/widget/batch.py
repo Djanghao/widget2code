@@ -36,7 +36,7 @@ class BatchGenerator:
         self.api_key = api_key or os.getenv("DASHSCOPE_API_KEY")
         self.model = model or "qwen3-vl-flash"
         self.icon_lib_names = icon_lib_names
-        self.config = GeneratorConfig()
+        self.config = GeneratorConfig.from_env()
 
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -128,9 +128,10 @@ class BatchGenerator:
                 icon_lib_names=self.icon_lib_names,
             )
 
-            # Save DSL
+            # Save DSL (extract widgetDSL from response)
+            dsl_to_save = result.get('widgetDSL', result) if isinstance(result, dict) else result
             with open(dsl_file, 'w') as f:
-                json.dump(result, f, indent=2)
+                json.dump(dsl_to_save, f, indent=2)
 
             end_time = datetime.now()
             duration = (end_time - start_time).total_seconds()
