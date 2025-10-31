@@ -56,6 +56,14 @@ Props: `name`, `size`, `color`
 [AVAILABLE_ICON_NAMES]
 - Can have `flex` prop (typically `"none"` for icons)
 
+### Button
+Props: `icon` (optional), `backgroundColor`, `color`, `borderRadius`, `fontSize`, `fontWeight`, `padding`
+Node properties: `width` (optional), `height` (optional), `content` (for text buttons)
+- **IMPORTANT**: Buttons are RARE in widgets - most clickable elements are just icons. Only use Button when there's a clear button with background color and padding
+- Can contain either an icon OR text (not both)
+- **Icon button**: Set `icon` prop with icon name from [AVAILABLE_ICON_NAMES] - do not guess icon names
+- **Text button**: Set `content` with button text
+
 ### Image
 Props: `url`, `height`, `width` (optional), `borderRadius` (optional)
 - **CRITICAL**: For photos/images, **MUST use Unsplash public URLs**
@@ -213,7 +221,7 @@ All layouts use **flexbox containers**. There are two node types:
 ```json
 {
   "type": "leaf",
-  "component": "Text" | "Icon" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator",
+  "component": "Text" | "Icon" | "Button" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator",
   "flex": number | "none" | 0 | 1,
   "props": { /* component-specific props */ },
   "content": "text content (for Text component only)"

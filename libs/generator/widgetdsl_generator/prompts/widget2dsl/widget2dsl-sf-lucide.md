@@ -46,7 +46,7 @@ Props: `icon` (optional), `backgroundColor`, `color`, `borderRadius`, `fontSize`
 Node properties: `width` (optional), `height` (optional), `content` (for text buttons)
 - **IMPORTANT**: Buttons are RARE in widgets - most clickable elements are just icons. Only use Button when there's a clear button with background color and padding
 - Can contain either an icon OR text (not both)
-- **Icon button**: Set `icon` prop with icon name (e.g., `"sf:plus"`, `"lucide:Check"`)
+- **Icon button**: Set `icon` prop using the icon examples above (e.g., `"sf:bolt.fill"`, `"lucide:ArrowRight"`) - do not invent new names
 - **Text button**: Set `content` with button text
 
 ### Image
