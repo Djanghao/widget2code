@@ -94,7 +94,7 @@ class BatchGenerator:
         start_time = datetime.now()
 
         try:
-            print(f"[{start_time.strftime('%H:%M:%S')}] Processing: {image_path.name}")
+            print(f"[{start_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🚀 START")
 
             # Copy original image
             shutil.copy2(image_path, original_copy)
@@ -113,6 +113,8 @@ class BatchGenerator:
                     image_dims = {"width": img.width, "height": img.height}
             except:
                 image_dims = None
+
+            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🔄 DSL generation started")
 
             # Generate widget DSL
             result = await generate_widget_full(
@@ -139,6 +141,8 @@ class BatchGenerator:
             # Count icons and graphs in result
             icons_detected = len(result.get('icons', [])) if isinstance(result, dict) else 0
             graphs_detected = len(result.get('graphs', [])) if isinstance(result, dict) else 0
+
+            print(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ DSL generation finished")
 
             # Create comprehensive log.json
             log_data = {
@@ -185,7 +189,7 @@ class BatchGenerator:
                 json.dump(log_data, f, indent=2)
 
             self.completed += 1
-            print(f"[{end_time.strftime('%H:%M:%S')}] ✓ Success: {image_path.name} -> {widget_dir.name}/")
+            print(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ COMPLETED ({duration:.1f}s)")
             return (image_path, True, str(widget_dir))
 
         except Exception as e:
@@ -236,7 +240,7 @@ class BatchGenerator:
             with open(error_file, 'w') as f:
                 f.write(f"Error: {error_msg}\n")
 
-            print(f"[{end_time.strftime('%H:%M:%S')}] ✗ Failed: {image_path.name} - {error_msg}")
+            print(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ❌ FAILED - {error_msg}")
             return (image_path, False, error_msg)
 
     async def process_batch(self, images: List[Path]):
@@ -252,15 +256,10 @@ class BatchGenerator:
 
     async def run(self):
         """Main execution flow."""
-        print(f"\n{'='*60}")
         print(f"Batch Widget Generation")
-        print(f"{'='*60}")
-        print(f"Input:       {self.input_dir}")
-        print(f"Output:      {self.output_dir}")
-        print(f"Concurrency: {self.concurrency}")
-        print(f"Model:       {self.model}")
-        print(f"Icon libs:   {self.icon_lib_names}")
-        print(f"{'='*60}\n")
+        print(f"Input: {self.input_dir}")
+        print(f"Output: {self.output_dir}")
+        print(f"Concurrency: {self.concurrency}, Model: {self.model}, Libs: {self.icon_lib_names}")
 
         if not self.api_key:
             print("Error: DASHSCOPE_API_KEY not found in environment")
@@ -270,10 +269,10 @@ class BatchGenerator:
         self.total = len(images)
 
         if self.total == 0:
-            print(f"No images to process (all already completed or no images found)")
+            print(f"No images to process")
             return
 
-        print(f"Found {self.total} images to process\n")
+        print(f"Processing {self.total} images")
 
         start_time = datetime.now()
 
@@ -282,21 +281,12 @@ class BatchGenerator:
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()
 
-        print(f"\n{'='*60}")
-        print(f"Batch Complete")
-        print(f"{'='*60}")
-        print(f"Total:     {self.total}")
-        print(f"Success:   {self.completed} ({self.completed/self.total*100:.1f}%)")
-        print(f"Failed:    {self.failed} ({self.failed/self.total*100:.1f}%)")
-        print(f"Duration:  {duration:.1f}s ({duration/self.total:.1f}s per image)")
-        print(f"{'='*60}\n")
+        print(f"Batch Complete: {self.completed}/{self.total} succeeded, {self.failed} failed ({duration:.1f}s, {duration/self.total:.1f}s/image)")
 
         if self.failed > 0:
-            print("Failed images:")
             for image_path, success, msg in self.results:
                 if not success:
-                    print(f"  - {image_path.name}: {msg}")
-            print()
+                    print(f"  Failed: {image_path.name} - {msg}")
 
 
 async def batch_generate(

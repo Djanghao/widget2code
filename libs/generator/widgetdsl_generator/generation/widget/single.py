@@ -390,7 +390,8 @@ async def generate_widget_full(
     config: GeneratorConfig,
     icon_lib_names: str,
 ):
-    print(f"[{datetime.now()}] generate-widget-full request")
+    from pathlib import Path
+    image_id = Path(image_filename).stem if image_filename else "unknown"
 
     import tempfile
     import asyncio
@@ -410,7 +411,7 @@ async def generate_widget_full(
         validate_model(model, model_to_use, vision_models)
         validate_api_key(api_key)
 
-        print(f"[{datetime.now()}] Starting parallel extraction: icons and graphs...")
+        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 Parallel extraction started")
 
         # Parse icon library names from JSON array, e.g., '["sf", "lucide"]'
         lib_names = None
@@ -449,9 +450,7 @@ async def generate_widget_full(
             )
         )
 
-        print(f"[{datetime.now()}] Parallel extraction completed")
-        print(f"  - Icons detected: {icon_result['icon_count']}")
-        print(f"  - Charts detected: {chart_counts}")
+        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Parallel extraction: Icons:{icon_result['icon_count']}, Charts:{sum(chart_counts.values()) if chart_counts else 0}")
 
         grounding_raw = icon_result["grounding_raw"]
         grounding_pixel = icon_result["grounding_pixel"]
@@ -469,16 +468,7 @@ async def generate_widget_full(
         from ...perception.graph.pipeline import format_graph_specs_for_injection
         graph_injection_text = format_graph_specs_for_injection(graph_specs) if graph_specs else ""
 
-        has_placeholder = "[GRAPH_SPECS]" in base_prompt
-        print(f"[{datetime.now()}] Graph specs placeholder found: {has_placeholder}")
-
         prompt_with_graphs = inject_graph_specs_to_prompt(base_prompt, graph_specs)
-
-        placeholder_replaced = "[GRAPH_SPECS]" not in prompt_with_graphs
-        if graph_specs:
-            print(f"[{datetime.now()}] Injected {len(graph_specs)} graph specifications, placeholder replaced: {placeholder_replaced}")
-        else:
-            print(f"[{datetime.now()}] No graphs detected, placeholder replaced with notice: {placeholder_replaced}")
 
         # Step 3: Add icon specs
         icon_injection_text = format_icon_prompt_injection(
@@ -498,9 +488,8 @@ async def generate_widget_full(
         prompt_final = prompt_with_icons
         if "[AVAILABLE_COMPONENTS]" in prompt_final:
             prompt_final = prompt_final.replace("[AVAILABLE_COMPONENTS]", components_list)
-            print(f"[{datetime.now()}] Injected available components list: {components_list}")
 
-        print(f"[{datetime.now()}] Generating WidgetDSL with icons and graph constraints...")
+        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 VLM generation started")
 
         vision_llm = LLM(
             model=model_to_use,

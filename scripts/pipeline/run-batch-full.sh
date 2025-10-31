@@ -27,7 +27,8 @@ METADATA_FILE="$OUTPUT_DIR/run_info.json"
 START_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 START_TIMESTAMP=$(date +%s)
 
-exec > >(tee -a "$LOG_FILE") 2>&1
+exec 1> >(tee -a "$LOG_FILE")
+exec 2>&1
 
 echo "===== Full Batch Pipeline ====="
 echo "Start Time: $START_TIME"
