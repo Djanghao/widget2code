@@ -8,6 +8,9 @@ if [ -f .env ]; then
     set +a
 fi
 
+# Unset deprecated TRANSFORMERS_CACHE to avoid warnings
+unset TRANSFORMERS_CACHE
+
 if [ $# -lt 2 ]; then
     echo "Usage: $0 <input-dir> <output-dir> [concurrency]"
     echo "Example: $0 ./images ./generated 5"

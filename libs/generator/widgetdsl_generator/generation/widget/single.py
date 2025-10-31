@@ -411,7 +411,8 @@ async def generate_widget_full(
         validate_model(model, model_to_use, vision_models)
         validate_api_key(api_key)
 
-        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 Parallel extraction started")
+        if config.verbose:
+            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 Parallel extraction started")
 
         # Parse icon library names from JSON array, e.g., '["sf", "lucide"]'
         lib_names = None
@@ -435,6 +436,7 @@ async def generate_widget_full(
                 retrieval_alpha=retrieval_alpha,
                 lib_names=lib_names,
                 timeout=300,
+                verbose=config.verbose,
             ),
             asyncio.to_thread(
                 detect_and_process_graphs,
@@ -446,11 +448,13 @@ async def generate_widget_full(
                 temperature=0.1,
                 max_tokens=500,
                 timeout=30,
-                max_retries=2
+                max_retries=2,
+                verbose=config.verbose,
             )
         )
 
-        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Parallel extraction: Icons:{icon_result['icon_count']}, Charts:{sum(chart_counts.values()) if chart_counts else 0}")
+        if config.verbose:
+            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Parallel extraction: Icons:{icon_result['icon_count']}, Charts:{sum(chart_counts.values()) if chart_counts else 0}")
 
         grounding_raw = icon_result["grounding_raw"]
         grounding_pixel = icon_result["grounding_pixel"]
@@ -489,7 +493,8 @@ async def generate_widget_full(
         if "[AVAILABLE_COMPONENTS]" in prompt_final:
             prompt_final = prompt_final.replace("[AVAILABLE_COMPONENTS]", components_list)
 
-        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 VLM generation started")
+        if config.verbose:
+            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 VLM generation started")
 
         vision_llm = LLM(
             model=model_to_use,

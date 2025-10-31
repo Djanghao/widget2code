@@ -13,7 +13,8 @@ def detect_and_process_graphs(
     temperature: float,
     max_tokens: int,
     timeout: int,
-    max_retries: int
+    max_retries: int,
+    verbose: bool = False,
 ) -> tuple[dict, list]:
     image_id = Path(filename).stem if filename else "unknown"
 
@@ -30,7 +31,8 @@ def detect_and_process_graphs(
     )
 
     total_charts = sum(chart_counts.values()) if chart_counts else 0
-    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Graph detection: {total_charts} charts")
+    if verbose:
+        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Graph detection: {total_charts} charts")
 
     graph_specs = []
     if should_use_graph_pipeline(chart_counts):
@@ -46,7 +48,8 @@ def detect_and_process_graphs(
             timeout=60,
             max_retries=2
         )
-        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Graph processing: {len(graph_specs)} specs")
+        if verbose:
+            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Graph processing: {len(graph_specs)} specs")
 
     return chart_counts, graph_specs
 

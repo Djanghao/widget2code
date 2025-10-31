@@ -17,6 +17,7 @@ Requires-Dist: open-clip-torch
 Requires-Dist: transformers
 Requires-Dist: faiss-cpu
 Requires-Dist: cairosvg
+Requires-Dist: tqdm
 Provides-Extra: api
 Requires-Dist: fastapi; extra == "api"
 Requires-Dist: uvicorn; extra == "api"

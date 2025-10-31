@@ -24,6 +24,9 @@ class GeneratorConfig:
     retrieval_alpha: float = 0.8
     timeout: int = 300
 
+    # Logging
+    verbose: bool = False
+
     @classmethod
     def from_dict(cls, config_dict: dict) -> 'GeneratorConfig':
         """Create config from dictionary (for backward compatibility)"""
@@ -43,4 +46,5 @@ class GeneratorConfig:
             retrieval_topm=int(os.getenv('RETRIEVAL_TOPM', '10')),
             retrieval_alpha=float(os.getenv('RETRIEVAL_ALPHA', '0.8')),
             timeout=int(os.getenv('TIMEOUT', '300')),
+            verbose=os.getenv('VERBOSE', 'false').lower() in ('true', '1', 'yes'),
         )
