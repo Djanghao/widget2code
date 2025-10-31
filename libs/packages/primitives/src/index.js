@@ -1,6 +1,7 @@
 export { WidgetShell } from "./WidgetShell.jsx";
 export { Text } from "./Text.jsx";
 export { Icon } from "./Icon.jsx";
+export { Button } from "./Button.jsx";
 export { Sparkline } from "./Sparkline.jsx";
 export { AppLogo } from "./AppLogo.jsx";
 export { MapImage } from "./MapImage.jsx";
@@ -20,6 +21,7 @@ export { ProgressRing } from "./ProgressRing.jsx";
 export const AVAILABLE_COMPONENTS = [
   'Text',
   'Icon',
+  'Button',
   'Image',
   'Sparkline',
   'AppLogo',
