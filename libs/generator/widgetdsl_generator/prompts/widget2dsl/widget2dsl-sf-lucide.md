@@ -41,6 +41,14 @@ Props: `name`, `size`, `color`
 - Single-color icons support color customization via `color` prop
 - Can have `flex` prop (typically `"none"` for icons)
 
+### Button
+Props: `icon` (optional), `backgroundColor`, `color`, `borderRadius`, `fontSize`, `fontWeight`, `padding`
+Node properties: `width` (optional), `height` (optional), `content` (for text buttons)
+- **IMPORTANT**: Buttons are RARE in widgets - most clickable elements are just icons. Only use Button when there's a clear button with background color and padding
+- Can contain either an icon OR text (not both)
+- **Icon button**: Set `icon` prop with icon name (e.g., `"sf:plus"`, `"lucide:Check"`)
+- **Text button**: Set `content` with button text
+
 ### Image
 Props: `url`, `borderRadius` (optional)
 Node properties: `width` (optional), `height`
@@ -137,7 +145,7 @@ All layouts use **flexbox containers**. There are two node types:
 ```json
 {
   "type": "leaf",
-  "component": "Text" | "Icon" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator",
+  "component": "Text" | "Icon" | "Button" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator",
   "flex": number | "none" | 0 | 1,
   "width": number | string (optional, for layout control),
   "height": number | string (optional, for layout control),
