@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import List, Optional
 from pydantic import BaseModel
 import os
+import asyncio
 import traceback
 from dotenv import load_dotenv
 import widgetdsl_generator as generator
@@ -25,6 +26,8 @@ use_cuda_for_retrieval = os.getenv("USE_CUDA_FOR_RETRIEVAL", "true").lower() == 
 
 cached_blip2_pipe = None
 cached_siglip_pipe = None
+blip2_lock = None
+siglip_lock = None
 
 class EncodeTextsRequest(BaseModel):
     texts: List[str]
@@ -41,7 +44,11 @@ app.add_middleware(
 
 @app.on_event("startup")
 async def load_models():
-    global cached_blip2_pipe, cached_siglip_pipe
+    global cached_blip2_pipe, cached_siglip_pipe, blip2_lock, siglip_lock
+
+    blip2_lock = asyncio.Lock()
+    siglip_lock = asyncio.Lock()
+
     if model_cache_enabled:
         print("=" * 80)
         print("MODEL CACHING ENABLED - Loading retrieval models at startup...")
@@ -268,7 +275,11 @@ async def extract_icon_captions(
     from widgetdsl_generator.perception.icon.query_caption import caption_from_bytes_list
 
     crops_bytes = [await crop.read() for crop in crops]
-    captions = caption_from_bytes_list(crops_bytes, cached_blip2_pipe)
+
+    async with blip2_lock:
+        captions = await asyncio.to_thread(
+            caption_from_bytes_list, crops_bytes, cached_blip2_pipe
+        )
 
     return {"success": True, "captions": captions}
 
@@ -287,7 +298,11 @@ async def encode_texts(
     import numpy as np
 
     model, tokenizer, device = cached_siglip_pipe
-    embeddings = encode_texts_siglip(model, tokenizer, device, body.texts)
+
+    async with siglip_lock:
+        embeddings = await asyncio.to_thread(
+            encode_texts_siglip, model, tokenizer, device, body.texts
+        )
 
     return {"success": True, "embeddings": embeddings.tolist()}
 

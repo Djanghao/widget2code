@@ -80,6 +80,18 @@ MAX_REQUESTS_PER_MINUTE=10
 - `.env` is already in `.gitignore` - don't remove it
 - Use `.env.example` as a template (this file IS committed)
 
+### Model Caching for High Concurrency
+
+Icon retrieval in batch mode supports high concurrency (200+ concurrent requests) with model caching enabled.
+
+**Configuration** (in `.env`):
+```bash
+ENABLE_MODEL_CACHE=true
+USE_CUDA_FOR_RETRIEVAL=true
+```
+
+When enabled, BLIP2 and SigLIP models load once at server startup and are shared across all concurrent requests with thread-safe access.
+
 ### Regenerating Icons (Optional)
 Only needed when updating SF Symbols source files:
 ```bash
