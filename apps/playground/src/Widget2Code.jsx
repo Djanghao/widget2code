@@ -9,7 +9,7 @@ import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import SectionHeader from './components/core/SectionHeader.jsx';
 import { useApiKey } from './components/ApiKeyManager.jsx';
 import usePlaygroundStore from './store/index.js';
-import imagePrompt from '../../api/prompts/widget2dsl/widget2dsl.md?raw';
+import imagePrompt from '../../../libs/generator/widgetdsl_generator/prompts/widget2dsl/widget2dsl.md?raw';
 import ExtractionDebugModal from './components/ExtractionDebugModal.jsx';
 
 const VISION_MODELS = [

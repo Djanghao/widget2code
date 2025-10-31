@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { sfDynamicIconImports } from "../../icons/sf-symbols/src/index.jsx";
+import { sfDynamicIconImports } from "@widget-factory/icons/sf-symbols";
 import {
   lucideIconsMap,
   antDesignIconsMap,

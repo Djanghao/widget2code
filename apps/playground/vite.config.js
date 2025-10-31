@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => {
         '@widget-factory/primitives/components': path.resolve(__dirname, '../../libs/packages/primitives/src/component-registry.js'),
         '@widget-factory/primitives': path.resolve(__dirname, '../../libs/packages/primitives/src'),
         '@widget-factory/compiler': path.resolve(__dirname, '../../libs/packages/compiler/src'),
+        '@widget-factory/icons/sf-symbols': path.resolve(__dirname, '../../libs/packages/icons/custom/sf-symbols/src'),
         '@widget-factory/icons': path.resolve(__dirname, '../../libs/packages/icons'),
         '@widget-factory/dsl': path.resolve(__dirname, '../../libs/packages/dsl/src'),
         '@widget-factory/renderer': path.resolve(__dirname, '../../libs/packages/renderer/src'),

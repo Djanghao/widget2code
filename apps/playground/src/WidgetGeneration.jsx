@@ -16,8 +16,8 @@ import PreviewPanel from './components/core/PreviewPanel.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import SectionHeader from './components/core/SectionHeader.jsx';
 import { useApiKey } from './components/ApiKeyManager.jsx';
-import textPrompt from '../../api/prompts/prompt2dsl/prompt2dsl-sf-lucide.md?raw';
-import imagePrompt from '../../api/prompts/widget2dsl/widget2dsl-graph-modified.md?raw';
+import textPrompt from '../../../libs/generator/widgetdsl_generator/prompts/prompt2dsl/prompt2dsl-sf-lucide.md?raw';
+import imagePrompt from '../../../libs/generator/widgetdsl_generator/prompts/widget2dsl/widget2dsl-graph-modified.md?raw';
 
 const TEXT_MODELS = [
   { value: 'qwen3-coder-plus', label: 'qwen3-coder-plus' },
