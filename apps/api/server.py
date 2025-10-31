@@ -2,6 +2,7 @@ from fastapi import FastAPI, File, UploadFile, Form, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pathlib import Path
+from typing import List, Optional
 import os
 import traceback
 from dotenv import load_dotenv
@@ -10,16 +11,19 @@ from widgetdsl_generator import GeneratorConfig
 from widgetdsl_generator.exceptions import ValidationError, FileSizeError, GenerationError, RateLimitError
 from widgetdsl_generator.utils.validation import check_rate_limit
 
-# Load environment variables from root .env file
 root_dir = Path(__file__).parent.parent.parent
 load_dotenv(root_dir / ".env")
 
-# Load generator config from environment variables
 gen_config = GeneratorConfig.from_env()
 
-# Load CORS config from environment
 frontend_port = int(os.getenv("FRONTEND_PORT", "3060"))
 allowed_origins = [f"http://localhost:{frontend_port}"]
+
+model_cache_enabled = os.getenv("ENABLE_MODEL_CACHE", "false").lower() == "true"
+use_cuda_for_retrieval = os.getenv("USE_CUDA_FOR_RETRIEVAL", "true").lower() == "true"
+
+cached_blip2_pipe = None
+cached_siglip_pipe = None
 
 app = FastAPI()
 
@@ -30,6 +34,48 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.on_event("startup")
+async def load_models():
+    global cached_blip2_pipe, cached_siglip_pipe
+    if model_cache_enabled:
+        print("=" * 80)
+        print("MODEL CACHING ENABLED - Loading retrieval models at startup...")
+        print("=" * 80)
+
+        from widgetdsl_generator.perception.icon.query_caption import (
+            build_blip2, load_siglip_text, BLIP2_MODEL_ID
+        )
+        import torch
+
+        if use_cuda_for_retrieval and not torch.cuda.is_available():
+            print("WARNING: USE_CUDA_FOR_RETRIEVAL=true but CUDA not available, falling back to CPU")
+
+        device_name = "CUDA" if (use_cuda_for_retrieval and torch.cuda.is_available()) else "CPU"
+
+        print(f"\nLoading BLIP2 model ({BLIP2_MODEL_ID}) on {device_name}...")
+        if not use_cuda_for_retrieval:
+            original_cuda = torch.cuda.is_available
+            torch.cuda.is_available = lambda: False
+        cached_blip2_pipe = build_blip2(BLIP2_MODEL_ID)
+        if not use_cuda_for_retrieval:
+            torch.cuda.is_available = original_cuda
+        print(f"✓ BLIP2 model loaded on {cached_blip2_pipe[2]}")
+
+        print(f"\nLoading SigLIP model on {device_name}...")
+        if not use_cuda_for_retrieval:
+            original_cuda = torch.cuda.is_available
+            torch.cuda.is_available = lambda: False
+        cached_siglip_pipe = load_siglip_text()
+        if not use_cuda_for_retrieval:
+            torch.cuda.is_available = original_cuda
+        print(f"✓ SigLIP model loaded on {cached_siglip_pipe[2]}")
+
+        print("\n" + "=" * 80)
+        print("All retrieval models loaded successfully!")
+        print("=" * 80 + "\n")
+    else:
+        print("Model caching disabled (ENABLE_MODEL_CACHE=false)")
 
 @app.exception_handler(ValidationError)
 async def validation_error_handler(request: Request, exc: ValidationError):
@@ -203,6 +249,43 @@ async def generate_widget_full(
         image_data, image.filename, system_prompt, model, api_key,
         retrieval_topk, retrieval_topm, retrieval_alpha, gen_config, icon_lib_names
     )
+
+@app.post("/api/extract-icon-captions")
+async def extract_icon_captions(
+    request: Request,
+    crops: List[UploadFile] = File(...),
+):
+    if not model_cache_enabled or cached_blip2_pipe is None:
+        raise HTTPException(
+            status_code=503,
+            detail="Model caching not enabled. Set ENABLE_MODEL_CACHE=true"
+        )
+
+    from widgetdsl_generator.perception.icon.query_caption import caption_from_bytes_list
+
+    crops_bytes = [await crop.read() for crop in crops]
+    captions = caption_from_bytes_list(crops_bytes, cached_blip2_pipe)
+
+    return {"success": True, "captions": captions}
+
+@app.post("/api/encode-texts")
+async def encode_texts(
+    request: Request,
+    texts: List[str],
+):
+    if not model_cache_enabled or cached_siglip_pipe is None:
+        raise HTTPException(
+            status_code=503,
+            detail="Model caching not enabled. Set ENABLE_MODEL_CACHE=true"
+        )
+
+    from widgetdsl_generator.perception.icon.query_caption import encode_texts_siglip
+    import numpy as np
+
+    model, tokenizer, device = cached_siglip_pipe
+    embeddings = encode_texts_siglip(model, tokenizer, device, texts)
+
+    return {"success": True, "embeddings": embeddings.tolist()}
 
 if __name__ == "__main__":
     import uvicorn
