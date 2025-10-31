@@ -1,0 +1,4571 @@
+{
+  "/home/darren/llm-widget-factory/assets/vsc/VscAccount.svg": {
+    "component_id": "Icon.VscAccount",
+    "aliases": [
+      "vsc",
+      "account"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a person in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscActivateBreakpoints.svg": {
+    "component_id": "Icon.VscActivateBreakpoints",
+    "aliases": [
+      "vsc",
+      "activate",
+      "breakpoints"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscAdd.svg": {
+    "component_id": "Icon.VscAdd",
+    "aliases": [
+      "vsc",
+      "add"
+    ],
+    "colors": [],
+    "caption": "a black cross is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArchive.svg": {
+    "component_id": "Icon.VscArchive",
+    "aliases": [
+      "vsc",
+      "archive"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowBoth.svg": {
+    "component_id": "Icon.VscArrowBoth",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "both"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowCircleDown.svg": {
+    "component_id": "Icon.VscArrowCircleDown",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "circle",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a down arrow in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowCircleLeft.svg": {
+    "component_id": "Icon.VscArrowCircleLeft",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "circle",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowCircleRight.svg": {
+    "component_id": "Icon.VscArrowCircleRight",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "circle",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowCircleUp.svg": {
+    "component_id": "Icon.VscArrowCircleUp",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "circle",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing up in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowDown.svg": {
+    "component_id": "Icon.VscArrowDown",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "down"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowLeft.svg": {
+    "component_id": "Icon.VscArrowLeft",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "left"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowRight.svg": {
+    "component_id": "Icon.VscArrowRight",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "right"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowSmallDown.svg": {
+    "component_id": "Icon.VscArrowSmallDown",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "small",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowSmallLeft.svg": {
+    "component_id": "Icon.VscArrowSmallLeft",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "small",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowSmallRight.svg": {
+    "component_id": "Icon.VscArrowSmallRight",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "small",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowSmallUp.svg": {
+    "component_id": "Icon.VscArrowSmallUp",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "small",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing up on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowSwap.svg": {
+    "component_id": "Icon.VscArrowSwap",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "swap"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscArrowUp.svg": {
+    "component_id": "Icon.VscArrowUp",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscAttach.svg": {
+    "component_id": "Icon.VscAttach",
+    "aliases": [
+      "vsc",
+      "attach"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a paper clip"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscAzure.svg": {
+    "component_id": "Icon.VscAzure",
+    "aliases": [
+      "vsc",
+      "azure"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter a"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscAzureDevops.svg": {
+    "component_id": "Icon.VscAzureDevops",
+    "aliases": [
+      "vsc",
+      "azure",
+      "devops"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBeaker.svg": {
+    "component_id": "Icon.VscBeaker",
+    "aliases": [
+      "vsc",
+      "beaker"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a test tube"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBeakerStop.svg": {
+    "component_id": "Icon.VscBeakerStop",
+    "aliases": [
+      "vsc",
+      "beaker",
+      "stop"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a test tube with a sign saying no"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBell.svg": {
+    "component_id": "Icon.VscBell",
+    "aliases": [
+      "vsc",
+      "bell"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBellDot.svg": {
+    "component_id": "Icon.VscBellDot",
+    "aliases": [
+      "vsc",
+      "bell",
+      "dot"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBellSlash.svg": {
+    "component_id": "Icon.VscBellSlash",
+    "aliases": [
+      "vsc",
+      "bell",
+      "slash"
+    ],
+    "colors": [],
+    "caption": "a no bell icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBellSlashDot.svg": {
+    "component_id": "Icon.VscBellSlashDot",
+    "aliases": [
+      "vsc",
+      "bell",
+      "slash",
+      "dot"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a bell and a spoon"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBlank.svg": {
+    "component_id": "Icon.VscBlank",
+    "aliases": [
+      "vsc",
+      "blank"
+    ],
+    "colors": [],
+    "caption": "read the full script on line"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBold.svg": {
+    "component_id": "Icon.VscBold",
+    "aliases": [
+      "vsc",
+      "bold"
+    ],
+    "colors": [],
+    "caption": "a black letter b on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBook.svg": {
+    "component_id": "Icon.VscBook",
+    "aliases": [
+      "vsc",
+      "book"
+    ],
+    "colors": [],
+    "caption": "an open book icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBookmark.svg": {
+    "component_id": "Icon.VscBookmark",
+    "aliases": [
+      "vsc",
+      "bookmark"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBracketDot.svg": {
+    "component_id": "Icon.VscBracketDot",
+    "aliases": [
+      "vsc",
+      "bracket",
+      "dot"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a ball and a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBracketError.svg": {
+    "component_id": "Icon.VscBracketError",
+    "aliases": [
+      "vsc",
+      "bracket",
+      "error"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white icon with an x in it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBriefcase.svg": {
+    "component_id": "Icon.VscBriefcase",
+    "aliases": [
+      "vsc",
+      "briefcase"
+    ],
+    "colors": [],
+    "caption": "a briefcase icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBroadcast.svg": {
+    "component_id": "Icon.VscBroadcast",
+    "aliases": [
+      "vsc",
+      "broadcast"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with a microphone"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBrowser.svg": {
+    "component_id": "Icon.VscBrowser",
+    "aliases": [
+      "vsc",
+      "browser"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a web browser"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscBug.svg": {
+    "component_id": "Icon.VscBug",
+    "aliases": [
+      "vsc",
+      "bug"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a bug with a lock"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCalendar.svg": {
+    "component_id": "Icon.VscCalendar",
+    "aliases": [
+      "vsc",
+      "calendar"
+    ],
+    "colors": [],
+    "caption": "a calendar icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCallIncoming.svg": {
+    "component_id": "Icon.VscCallIncoming",
+    "aliases": [
+      "vsc",
+      "call",
+      "incoming"
+    ],
+    "colors": [],
+    "caption": "a phone icon with an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCallOutgoing.svg": {
+    "component_id": "Icon.VscCallOutgoing",
+    "aliases": [
+      "vsc",
+      "call",
+      "outgoing"
+    ],
+    "colors": [],
+    "caption": "a phone icon with an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCaseSensitive.svg": {
+    "component_id": "Icon.VscCaseSensitive",
+    "aliases": [
+      "vsc",
+      "case",
+      "sensitive"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter a"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCheck.svg": {
+    "component_id": "Icon.VscCheck",
+    "aliases": [
+      "vsc",
+      "check"
+    ],
+    "colors": [],
+    "caption": "a black check mark on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCheckAll.svg": {
+    "component_id": "Icon.VscCheckAll",
+    "aliases": [
+      "vsc",
+      "check",
+      "all"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscChecklist.svg": {
+    "component_id": "Icon.VscChecklist",
+    "aliases": [
+      "vsc",
+      "checklist"
+    ],
+    "colors": [],
+    "caption": "checklist icon vector illustration ilustração"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscChevronDown.svg": {
+    "component_id": "Icon.VscChevronDown",
+    "aliases": [
+      "vsc",
+      "chevron",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter v"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscChevronLeft.svg": {
+    "component_id": "Icon.VscChevronLeft",
+    "aliases": [
+      "vsc",
+      "chevron",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter k"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscChevronRight.svg": {
+    "component_id": "Icon.VscChevronRight",
+    "aliases": [
+      "vsc",
+      "chevron",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscChevronUp.svg": {
+    "component_id": "Icon.VscChevronUp",
+    "aliases": [
+      "vsc",
+      "chevron",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a triangle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscChip.svg": {
+    "component_id": "Icon.VscChip",
+    "aliases": [
+      "vsc",
+      "chip"
+    ],
+    "colors": [],
+    "caption": "an image of a computer chip on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscChromeClose.svg": {
+    "component_id": "Icon.VscChromeClose",
+    "aliases": [
+      "vsc",
+      "chrome",
+      "close"
+    ],
+    "colors": [],
+    "caption": "a black and white cross on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscChromeMaximize.svg": {
+    "component_id": "Icon.VscChromeMaximize",
+    "aliases": [
+      "vsc",
+      "chrome",
+      "maximize"
+    ],
+    "colors": [],
+    "caption": "a black square on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscChromeMinimize.svg": {
+    "component_id": "Icon.VscChromeMinimize",
+    "aliases": [
+      "vsc",
+      "chrome",
+      "minimize"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscChromeRestore.svg": {
+    "component_id": "Icon.VscChromeRestore",
+    "aliases": [
+      "vsc",
+      "chrome",
+      "restore"
+    ],
+    "colors": [],
+    "caption": "two square black rectangles on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCircle.svg": {
+    "component_id": "Icon.VscCircle",
+    "aliases": [
+      "vsc",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCircleFilled.svg": {
+    "component_id": "Icon.VscCircleFilled",
+    "aliases": [
+      "vsc",
+      "circle",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCircleLarge.svg": {
+    "component_id": "Icon.VscCircleLarge",
+    "aliases": [
+      "vsc",
+      "circle",
+      "large"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCircleLargeFilled.svg": {
+    "component_id": "Icon.VscCircleLargeFilled",
+    "aliases": [
+      "vsc",
+      "circle",
+      "large",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCircleSlash.svg": {
+    "component_id": "Icon.VscCircleSlash",
+    "aliases": [
+      "vsc",
+      "circle",
+      "slash"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no entry sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCircleSmall.svg": {
+    "component_id": "Icon.VscCircleSmall",
+    "aliases": [
+      "vsc",
+      "circle",
+      "small"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCircleSmallFilled.svg": {
+    "component_id": "Icon.VscCircleSmallFilled",
+    "aliases": [
+      "vsc",
+      "circle",
+      "small",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black circle on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCircuitBoard.svg": {
+    "component_id": "Icon.VscCircuitBoard",
+    "aliases": [
+      "vsc",
+      "circuit",
+      "board"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with two circles in it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscClearAll.svg": {
+    "component_id": "Icon.VscClearAll",
+    "aliases": [
+      "vsc",
+      "clear",
+      "all"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x and a cross"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscClippy.svg": {
+    "component_id": "Icon.VscClippy",
+    "aliases": [
+      "vsc",
+      "clippy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscClose.svg": {
+    "component_id": "Icon.VscClose",
+    "aliases": [
+      "vsc",
+      "close"
+    ],
+    "colors": [],
+    "caption": "a black and white cross on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCloseAll.svg": {
+    "component_id": "Icon.VscCloseAll",
+    "aliases": [
+      "vsc",
+      "close",
+      "all"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an x and a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCloud.svg": {
+    "component_id": "Icon.VscCloud",
+    "aliases": [
+      "vsc",
+      "cloud"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCloudDownload.svg": {
+    "component_id": "Icon.VscCloudDownload",
+    "aliases": [
+      "vsc",
+      "cloud",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black cloud with an arrow pointing down"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCloudUpload.svg": {
+    "component_id": "Icon.VscCloudUpload",
+    "aliases": [
+      "vsc",
+      "cloud",
+      "upload"
+    ],
+    "colors": [],
+    "caption": "a black cloud with an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCode.svg": {
+    "component_id": "Icon.VscCode",
+    "aliases": [
+      "vsc",
+      "code"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a code symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCodeOss.svg": {
+    "component_id": "Icon.VscCodeOss",
+    "aliases": [
+      "vsc",
+      "code",
+      "oss"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCodeReview.svg": {
+    "component_id": "Icon.VscCodeReview",
+    "aliases": [
+      "vsc",
+      "code",
+      "review"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speech bubble"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCoffee.svg": {
+    "component_id": "Icon.VscCoffee",
+    "aliases": [
+      "vsc",
+      "coffee"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cup of coffee"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCollapseAll.svg": {
+    "component_id": "Icon.VscCollapseAll",
+    "aliases": [
+      "vsc",
+      "collapse",
+      "all"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two squares"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscColorMode.svg": {
+    "component_id": "Icon.VscColorMode",
+    "aliases": [
+      "vsc",
+      "color",
+      "mode"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with a half moon in it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCombine.svg": {
+    "component_id": "Icon.VscCombine",
+    "aliases": [
+      "vsc",
+      "combine"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to two numbers"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscComment.svg": {
+    "component_id": "Icon.VscComment",
+    "aliases": [
+      "vsc",
+      "comment"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCommentDiscussion.svg": {
+    "component_id": "Icon.VscCommentDiscussion",
+    "aliases": [
+      "vsc",
+      "comment",
+      "discussion"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two speech bubbles"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCommentDraft.svg": {
+    "component_id": "Icon.VscCommentDraft",
+    "aliases": [
+      "vsc",
+      "comment",
+      "draft"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCommentUnresolved.svg": {
+    "component_id": "Icon.VscCommentUnresolved",
+    "aliases": [
+      "vsc",
+      "comment",
+      "unresolved"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speech bubble"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCompass.svg": {
+    "component_id": "Icon.VscCompass",
+    "aliases": [
+      "vsc",
+      "compass"
+    ],
+    "colors": [],
+    "caption": "a compass icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCompassActive.svg": {
+    "component_id": "Icon.VscCompassActive",
+    "aliases": [
+      "vsc",
+      "compass",
+      "active"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a compass with a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCompassDot.svg": {
+    "component_id": "Icon.VscCompassDot",
+    "aliases": [
+      "vsc",
+      "compass",
+      "dot"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a compass and ball"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCopilot.svg": {
+    "component_id": "Icon.VscCopilot",
+    "aliases": [
+      "vsc",
+      "copilot"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pig wearing goggles"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCopilotWarning.svg": {
+    "component_id": "Icon.VscCopilotWarning",
+    "aliases": [
+      "vsc",
+      "copilot",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a person with an exclamation sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCopy.svg": {
+    "component_id": "Icon.VscCopy",
+    "aliases": [
+      "vsc",
+      "copy"
+    ],
+    "colors": [],
+    "caption": "a file icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCoverage.svg": {
+    "component_id": "Icon.VscCoverage",
+    "aliases": [
+      "vsc",
+      "coverage"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscCreditCard.svg": {
+    "component_id": "Icon.VscCreditCard",
+    "aliases": [
+      "vsc",
+      "credit",
+      "card"
+    ],
+    "colors": [],
+    "caption": "a credit card icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDash.svg": {
+    "component_id": "Icon.VscDash",
+    "aliases": [
+      "vsc",
+      "dash"
+    ],
+    "colors": [],
+    "caption": "a black and white photo of a person standing in front of a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDashboard.svg": {
+    "component_id": "Icon.VscDashboard",
+    "aliases": [
+      "vsc",
+      "dashboard"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speedometer"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDatabase.svg": {
+    "component_id": "Icon.VscDatabase",
+    "aliases": [
+      "vsc",
+      "database"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a can"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebug.svg": {
+    "component_id": "Icon.VscDebug",
+    "aliases": [
+      "vsc",
+      "debug"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a padlock with a cross"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugAll.svg": {
+    "component_id": "Icon.VscDebugAll",
+    "aliases": [
+      "vsc",
+      "debug",
+      "all"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a spider and arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugAlt.svg": {
+    "component_id": "Icon.VscDebugAlt",
+    "aliases": [
+      "vsc",
+      "debug",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a spider and a arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugAltSmall.svg": {
+    "component_id": "Icon.VscDebugAltSmall",
+    "aliases": [
+      "vsc",
+      "debug",
+      "alt",
+      "small"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a spider and an arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugBreakpointConditional.svg": {
+    "component_id": "Icon.VscDebugBreakpointConditional",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "conditional"
+    ],
+    "colors": [],
+    "caption": "a black and white equal sign in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugBreakpointConditionalUnverified.svg": {
+    "component_id": "Icon.VscDebugBreakpointConditionalUnverified",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "conditional",
+      "unverified"
+    ],
+    "colors": [],
+    "caption": "a black and white equal sign in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugBreakpointData.svg": {
+    "component_id": "Icon.VscDebugBreakpointData",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "data"
+    ],
+    "colors": [],
+    "caption": "a black hexagon is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugBreakpointDataUnverified.svg": {
+    "component_id": "Icon.VscDebugBreakpointDataUnverified",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "data",
+      "unverified"
+    ],
+    "colors": [],
+    "caption": "a black hexagon is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugBreakpointFunction.svg": {
+    "component_id": "Icon.VscDebugBreakpointFunction",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "function"
+    ],
+    "colors": [],
+    "caption": "a black triangle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugBreakpointFunctionUnverified.svg": {
+    "component_id": "Icon.VscDebugBreakpointFunctionUnverified",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "function",
+      "unverified"
+    ],
+    "colors": [],
+    "caption": "a triangle is shown in black on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugBreakpointLog.svg": {
+    "component_id": "Icon.VscDebugBreakpointLog",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "log"
+    ],
+    "colors": [],
+    "caption": "a black square is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugBreakpointLogUnverified.svg": {
+    "component_id": "Icon.VscDebugBreakpointLogUnverified",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "log",
+      "unverified"
+    ],
+    "colors": [],
+    "caption": "a black and white square with a diamond in the middle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugBreakpointUnsupported.svg": {
+    "component_id": "Icon.VscDebugBreakpointUnsupported",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "unsupported"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an exclamation sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugConsole.svg": {
+    "component_id": "Icon.VscDebugConsole",
+    "aliases": [
+      "vsc",
+      "debug",
+      "console"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer and a spider"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugContinue.svg": {
+    "component_id": "Icon.VscDebugContinue",
+    "aliases": [
+      "vsc",
+      "debug",
+      "continue"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter d"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugContinueSmall.svg": {
+    "component_id": "Icon.VscDebugContinueSmall",
+    "aliases": [
+      "vsc",
+      "debug",
+      "continue",
+      "small"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugCoverage.svg": {
+    "component_id": "Icon.VscDebugCoverage",
+    "aliases": [
+      "vsc",
+      "debug",
+      "coverage"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to a light bulb icon"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugDisconnect.svg": {
+    "component_id": "Icon.VscDebugDisconnect",
+    "aliases": [
+      "vsc",
+      "debug",
+      "disconnect"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pair of scissors"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugLineByLine.svg": {
+    "component_id": "Icon.VscDebugLineBy",
+    "aliases": [
+      "vsc",
+      "debug",
+      "line",
+      "by"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a video player"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugPause.svg": {
+    "component_id": "Icon.VscDebugPause",
+    "aliases": [
+      "vsc",
+      "debug",
+      "pause"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter h"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugRerun.svg": {
+    "component_id": "Icon.VscDebugRerun",
+    "aliases": [
+      "vsc",
+      "debug",
+      "rerun"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing in the direction of the arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugRestart.svg": {
+    "component_id": "Icon.VscDebugRestart",
+    "aliases": [
+      "vsc",
+      "debug",
+      "restart"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugRestartFrame.svg": {
+    "component_id": "Icon.VscDebugRestartFrame",
+    "aliases": [
+      "vsc",
+      "debug",
+      "restart",
+      "frame"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with an arrow in the middle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugReverseContinue.svg": {
+    "component_id": "Icon.VscDebugReverseContinue",
+    "aliases": [
+      "vsc",
+      "debug",
+      "reverse",
+      "continue"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugStackframe.svg": {
+    "component_id": "Icon.VscDebugStackframe",
+    "aliases": [
+      "vsc",
+      "debug",
+      "stackframe"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of an arrow pointing down"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugStackframeActive.svg": {
+    "component_id": "Icon.VscDebugStackframeActive",
+    "aliases": [
+      "vsc",
+      "debug",
+      "stackframe",
+      "active"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with a dot in the middle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugStart.svg": {
+    "component_id": "Icon.VscDebugStart",
+    "aliases": [
+      "vsc",
+      "debug",
+      "start"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a play button"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugStepBack.svg": {
+    "component_id": "Icon.VscDebugStepBack",
+    "aliases": [
+      "vsc",
+      "debug",
+      "step",
+      "back"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugStepInto.svg": {
+    "component_id": "Icon.VscDebugStepInto",
+    "aliases": [
+      "vsc",
+      "debug",
+      "step",
+      "into"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down with a black dot in the middle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugStepOut.svg": {
+    "component_id": "Icon.VscDebugStepOut",
+    "aliases": [
+      "vsc",
+      "debug",
+      "step",
+      "out"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up with a black dot in the middle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugStepOver.svg": {
+    "component_id": "Icon.VscDebugStepOver",
+    "aliases": [
+      "vsc",
+      "debug",
+      "step",
+      "over"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a question mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDebugStop.svg": {
+    "component_id": "Icon.VscDebugStop",
+    "aliases": [
+      "vsc",
+      "debug",
+      "stop"
+    ],
+    "colors": [],
+    "caption": "a black square with a white border on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDesktopDownload.svg": {
+    "component_id": "Icon.VscDesktopDownload",
+    "aliases": [
+      "vsc",
+      "desktop",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer with a down arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDeviceCamera.svg": {
+    "component_id": "Icon.VscDeviceCamera",
+    "aliases": [
+      "vsc",
+      "device",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "a camera icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDeviceCameraVideo.svg": {
+    "component_id": "Icon.VscDeviceCameraVideo",
+    "aliases": [
+      "vsc",
+      "device",
+      "camera",
+      "video"
+    ],
+    "colors": [],
+    "caption": "a video camera icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDeviceMobile.svg": {
+    "component_id": "Icon.VscDeviceMobile",
+    "aliases": [
+      "vsc",
+      "device",
+      "mobile"
+    ],
+    "colors": [],
+    "caption": "a cell phone icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDiff.svg": {
+    "component_id": "Icon.VscDiff",
+    "aliases": [
+      "vsc",
+      "diff"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two cell phones"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDiffAdded.svg": {
+    "component_id": "Icon.VscDiffAdded",
+    "aliases": [
+      "vsc",
+      "diff",
+      "added"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a plus sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDiffIgnored.svg": {
+    "component_id": "Icon.VscDiffIgnored",
+    "aliases": [
+      "vsc",
+      "diff",
+      "ignored"
+    ],
+    "colors": [],
+    "caption": "a black and white square with an arrow in it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDiffModified.svg": {
+    "component_id": "Icon.VscDiffModified",
+    "aliases": [
+      "vsc",
+      "diff",
+      "modified"
+    ],
+    "colors": [],
+    "caption": "a black and white square with a circle in the middle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDiffMultiple.svg": {
+    "component_id": "Icon.VscDiffMultiple",
+    "aliases": [
+      "vsc",
+      "diff",
+      "multiple"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book with a cross"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDiffRemoved.svg": {
+    "component_id": "Icon.VscDiffRemoved",
+    "aliases": [
+      "vsc",
+      "diff",
+      "removed"
+    ],
+    "colors": [],
+    "caption": "a square icon with a black line through it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDiffRenamed.svg": {
+    "component_id": "Icon.VscDiffRenamed",
+    "aliases": [
+      "vsc",
+      "diff",
+      "renamed"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDiffSingle.svg": {
+    "component_id": "Icon.VscDiffSingle",
+    "aliases": [
+      "vsc",
+      "diff",
+      "single"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document with a cross"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscDiscard.svg": {
+    "component_id": "Icon.VscDiscard",
+    "aliases": [
+      "vsc",
+      "discard"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right in a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscEdit.svg": {
+    "component_id": "Icon.VscEdit",
+    "aliases": [
+      "vsc",
+      "edit"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a pencil"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscEditSession.svg": {
+    "component_id": "Icon.VscEditSession",
+    "aliases": [
+      "vsc",
+      "edit",
+      "session"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a calculator with an arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscEditorLayout.svg": {
+    "component_id": "Icon.VscEditorLayout",
+    "aliases": [
+      "vsc",
+      "editor",
+      "layout"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a phone and tablet"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscEllipsis.svg": {
+    "component_id": "Icon.VscEllipsis",
+    "aliases": [
+      "vsc",
+      "ellipsis"
+    ],
+    "colors": [],
+    "caption": "four black dots on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscEmptyWindow.svg": {
+    "component_id": "Icon.VscEmptyWindow",
+    "aliases": [
+      "vsc",
+      "empty",
+      "window"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a plus sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscError.svg": {
+    "component_id": "Icon.VscError",
+    "aliases": [
+      "vsc",
+      "error"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscErrorSmall.svg": {
+    "component_id": "Icon.VscErrorSmall",
+    "aliases": [
+      "vsc",
+      "error",
+      "small"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscExclude.svg": {
+    "component_id": "Icon.VscExclude",
+    "aliases": [
+      "vsc",
+      "exclude"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a gear wheel with a no symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscExpandAll.svg": {
+    "component_id": "Icon.VscExpandAll",
+    "aliases": [
+      "vsc",
+      "expand",
+      "all"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a plus sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscExport.svg": {
+    "component_id": "Icon.VscExport",
+    "aliases": [
+      "vsc",
+      "export"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing in the direction of the arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscExtensions.svg": {
+    "component_id": "Icon.VscExtensions",
+    "aliases": [
+      "vsc",
+      "extensions"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three squares"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscEye.svg": {
+    "component_id": "Icon.VscEye",
+    "aliases": [
+      "vsc",
+      "eye"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an eye"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscEyeClosed.svg": {
+    "component_id": "Icon.VscEyeClosed",
+    "aliases": [
+      "vsc",
+      "eye",
+      "closed"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFeedback.svg": {
+    "component_id": "Icon.VscFeedback",
+    "aliases": [
+      "vsc",
+      "feedback"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with a speech bubble"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFile.svg": {
+    "component_id": "Icon.VscFile",
+    "aliases": [
+      "vsc",
+      "file"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a document"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFileBinary.svg": {
+    "component_id": "Icon.VscFileBinary",
+    "aliases": [
+      "vsc",
+      "file",
+      "binary"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a file with the number 10"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFileCode.svg": {
+    "component_id": "Icon.VscFileCode",
+    "aliases": [
+      "vsc",
+      "file",
+      "code"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a file with a line through it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFileMedia.svg": {
+    "component_id": "Icon.VscFileMedia",
+    "aliases": [
+      "vsc",
+      "file",
+      "media"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a picture of a document"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFilePdf.svg": {
+    "component_id": "Icon.VscFilePdf",
+    "aliases": [
+      "vsc",
+      "file",
+      "pdf"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a pdf file"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFileSubmodule.svg": {
+    "component_id": "Icon.VscFileSubmodule",
+    "aliases": [
+      "vsc",
+      "file",
+      "submodule"
+    ],
+    "colors": [],
+    "caption": "a folder icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFileSymlinkDirectory.svg": {
+    "component_id": "Icon.VscFileSymlinkDirectory",
+    "aliases": [
+      "vsc",
+      "file",
+      "symlink",
+      "directory"
+    ],
+    "colors": [],
+    "caption": "a folder icon with an arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFileSymlinkFile.svg": {
+    "component_id": "Icon.VscFileSymlink",
+    "aliases": [
+      "vsc",
+      "file",
+      "symlink"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a folder with an arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFileZip.svg": {
+    "component_id": "Icon.VscFileZip",
+    "aliases": [
+      "vsc",
+      "file",
+      "zip"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a zipper"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFiles.svg": {
+    "component_id": "Icon.VscFiles",
+    "aliases": [
+      "vsc",
+      "files"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two documents"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFilter.svg": {
+    "component_id": "Icon.VscFilter",
+    "aliases": [
+      "vsc",
+      "filter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a funnel"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFilterFilled.svg": {
+    "component_id": "Icon.VscFilterFilled",
+    "aliases": [
+      "vsc",
+      "filter",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter y"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFlame.svg": {
+    "component_id": "Icon.VscFlame",
+    "aliases": [
+      "vsc",
+      "flame"
+    ],
+    "colors": [],
+    "caption": "a black and white fire icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFold.svg": {
+    "component_id": "Icon.VscFold",
+    "aliases": [
+      "vsc",
+      "fold"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter x"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFoldDown.svg": {
+    "component_id": "Icon.VscFoldDown",
+    "aliases": [
+      "vsc",
+      "fold",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFoldUp.svg": {
+    "component_id": "Icon.VscFoldUp",
+    "aliases": [
+      "vsc",
+      "fold",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFolder.svg": {
+    "component_id": "Icon.VscFolder",
+    "aliases": [
+      "vsc",
+      "folder"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a folder"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFolderActive.svg": {
+    "component_id": "Icon.VscFolderActive",
+    "aliases": [
+      "vsc",
+      "folder",
+      "active"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a folder with a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFolderLibrary.svg": {
+    "component_id": "Icon.VscFolderLibrary",
+    "aliases": [
+      "vsc",
+      "folder",
+      "library"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a wine bottle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscFolderOpened.svg": {
+    "component_id": "Icon.VscFolderOpened",
+    "aliases": [
+      "vsc",
+      "folder",
+      "opened"
+    ],
+    "colors": [],
+    "caption": "a folder icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGame.svg": {
+    "component_id": "Icon.VscGame",
+    "aliases": [
+      "vsc",
+      "game"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a game controller"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGear.svg": {
+    "component_id": "Icon.VscGear",
+    "aliases": [
+      "vsc",
+      "gear"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a gear wheel"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGift.svg": {
+    "component_id": "Icon.VscGift",
+    "aliases": [
+      "vsc",
+      "gift"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a gift box"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGist.svg": {
+    "component_id": "Icon.VscGist",
+    "aliases": [
+      "vsc",
+      "gist"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a file with a line through it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGistSecret.svg": {
+    "component_id": "Icon.VscGistSecret",
+    "aliases": [
+      "vsc",
+      "gist",
+      "secret"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a padlock"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitCommit.svg": {
+    "component_id": "Icon.VscGitCommit",
+    "aliases": [
+      "vsc",
+      "git",
+      "commit"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitCompare.svg": {
+    "component_id": "Icon.VscGitCompare",
+    "aliases": [
+      "vsc",
+      "git",
+      "compare"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitFetch.svg": {
+    "component_id": "Icon.VscGitFetch",
+    "aliases": [
+      "vsc",
+      "git",
+      "fetch"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down with two arrows pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitMerge.svg": {
+    "component_id": "Icon.VscGitMerge",
+    "aliases": [
+      "vsc",
+      "git",
+      "merge"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three circles"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitPullRequest.svg": {
+    "component_id": "Icon.VscGitPullRequest",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in different directions on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitPullRequestClosed.svg": {
+    "component_id": "Icon.VscGitPullRequestClosed",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request",
+      "closed"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two cross symbols"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitPullRequestCreate.svg": {
+    "component_id": "Icon.VscGitPullRequestCreate",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request",
+      "create"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a male and female symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitPullRequestDraft.svg": {
+    "component_id": "Icon.VscGitPullRequestDraft",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request",
+      "draft"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two circles"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitPullRequestGoToChanges.svg": {
+    "component_id": "Icon.VscGitPullRequestGoToChanges",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request",
+      "go",
+      "to",
+      "changes"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a file with an arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitPullRequestNewChanges.svg": {
+    "component_id": "Icon.VscGitPullRequestNewChanges",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request",
+      "new",
+      "changes"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a medical document"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitStash.svg": {
+    "component_id": "Icon.VscGitStash",
+    "aliases": [
+      "vsc",
+      "git",
+      "stash"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a downward arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitStashApply.svg": {
+    "component_id": "Icon.VscGitStashApply",
+    "aliases": [
+      "vsc",
+      "git",
+      "stash",
+      "apply"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGitStashPop.svg": {
+    "component_id": "Icon.VscGitStashPop",
+    "aliases": [
+      "vsc",
+      "git",
+      "stash",
+      "pop"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGithub.svg": {
+    "component_id": "Icon.VscGithub",
+    "aliases": [
+      "vsc",
+      "github"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a cat in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGithubAction.svg": {
+    "component_id": "Icon.VscGithubAction",
+    "aliases": [
+      "vsc",
+      "github",
+      "action"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGithubAlt.svg": {
+    "component_id": "Icon.VscGithubAlt",
+    "aliases": [
+      "vsc",
+      "github",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a cat"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGithubInverted.svg": {
+    "component_id": "Icon.VscGithubInverted",
+    "aliases": [
+      "vsc",
+      "github",
+      "inverted"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cat in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGithubProject.svg": {
+    "component_id": "Icon.VscGithubProject",
+    "aliases": [
+      "vsc",
+      "github",
+      "project"
+    ],
+    "colors": [],
+    "caption": "a black and white square with a cross in it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGlobe.svg": {
+    "component_id": "Icon.VscGlobe",
+    "aliases": [
+      "vsc",
+      "globe"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a globe"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGoToEditingSession.svg": {
+    "component_id": "Icon.VscGoToEditingSession",
+    "aliases": [
+      "vsc",
+      "go",
+      "to",
+      "editing",
+      "session"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a calculator with an arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGoToFile.svg": {
+    "component_id": "Icon.VscGoToFile",
+    "aliases": [
+      "vsc",
+      "go",
+      "to",
+      "file"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a document with an arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGoToSearch.svg": {
+    "component_id": "Icon.VscGoToSearch",
+    "aliases": [
+      "vsc",
+      "go",
+      "to",
+      "search"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a magnifying glass with an arrow pointing to it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGrabber.svg": {
+    "component_id": "Icon.VscGrabber",
+    "aliases": [
+      "vsc",
+      "grabber"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGraph.svg": {
+    "component_id": "Icon.VscGraph",
+    "aliases": [
+      "vsc",
+      "graph"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a bar graph"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGraphLeft.svg": {
+    "component_id": "Icon.VscGraphLeft",
+    "aliases": [
+      "vsc",
+      "graph",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGraphLine.svg": {
+    "component_id": "Icon.VscGraphLine",
+    "aliases": [
+      "vsc",
+      "graph",
+      "line"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a graph"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGraphScatter.svg": {
+    "component_id": "Icon.VscGraphScatter",
+    "aliases": [
+      "vsc",
+      "graph",
+      "scatter"
+    ],
+    "colors": [],
+    "caption": "a black and white square with squares on it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGripper.svg": {
+    "component_id": "Icon.VscGripper",
+    "aliases": [
+      "vsc",
+      "gripper"
+    ],
+    "colors": [],
+    "caption": "four black squares on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscGroupByRefType.svg": {
+    "component_id": "Icon.VscGroupByRefType",
+    "aliases": [
+      "vsc",
+      "group",
+      "by",
+      "ref",
+      "type"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with two lines"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscHeart.svg": {
+    "component_id": "Icon.VscHeart",
+    "aliases": [
+      "vsc",
+      "heart"
+    ],
+    "colors": [],
+    "caption": "a black and white heart icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscHeartFilled.svg": {
+    "component_id": "Icon.VscHeartFilled",
+    "aliases": [
+      "vsc",
+      "heart",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black heart icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscHistory.svg": {
+    "component_id": "Icon.VscHistory",
+    "aliases": [
+      "vsc",
+      "history"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a clock with an arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscHome.svg": {
+    "component_id": "Icon.VscHome",
+    "aliases": [
+      "vsc",
+      "home"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a house"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscHorizontalRule.svg": {
+    "component_id": "Icon.VscHorizontalRule",
+    "aliases": [
+      "vsc",
+      "horizontal",
+      "rule"
+    ],
+    "colors": [],
+    "caption": "a black and white logo that says hr"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscHubot.svg": {
+    "component_id": "Icon.VscHubot",
+    "aliases": [
+      "vsc",
+      "hubot"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a robot with a smiley face"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscInbox.svg": {
+    "component_id": "Icon.VscInbox",
+    "aliases": [
+      "vsc",
+      "inbox"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscIndent.svg": {
+    "component_id": "Icon.VscIndent",
+    "aliases": [
+      "vsc",
+      "indent"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscInfo.svg": {
+    "component_id": "Icon.VscInfo",
+    "aliases": [
+      "vsc",
+      "info"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an i in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscInsert.svg": {
+    "component_id": "Icon.VscInsert",
+    "aliases": [
+      "vsc",
+      "insert"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a number sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscInspect.svg": {
+    "component_id": "Icon.VscInspect",
+    "aliases": [
+      "vsc",
+      "inspect"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscIssueDraft.svg": {
+    "component_id": "Icon.VscIssueDraft",
+    "aliases": [
+      "vsc",
+      "issue",
+      "draft"
+    ],
+    "colors": [],
+    "caption": "a black and white circular icon with a circle in the middle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscIssueReopened.svg": {
+    "component_id": "Icon.VscIssueReopened",
+    "aliases": [
+      "vsc",
+      "issue",
+      "reopened"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscIssues.svg": {
+    "component_id": "Icon.VscIssues",
+    "aliases": [
+      "vsc",
+      "issues"
+    ],
+    "colors": [],
+    "caption": "a circle with a black dot in the center"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscItalic.svg": {
+    "component_id": "Icon.VscItalic",
+    "aliases": [
+      "vsc",
+      "italic"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter i"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscJersey.svg": {
+    "component_id": "Icon.VscJersey",
+    "aliases": [
+      "vsc",
+      "jersey"
+    ],
+    "colors": [],
+    "caption": "a t - shirt icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscJson.svg": {
+    "component_id": "Icon.VscJson",
+    "aliases": [
+      "vsc",
+      "json"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two curved lines"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscKebabVertical.svg": {
+    "component_id": "Icon.VscKebabVertical",
+    "aliases": [
+      "vsc",
+      "kebab",
+      "vertical"
+    ],
+    "colors": [],
+    "caption": "four black dots on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscKey.svg": {
+    "component_id": "Icon.VscKey",
+    "aliases": [
+      "vsc",
+      "key"
+    ],
+    "colors": [],
+    "caption": "a key icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLaw.svg": {
+    "component_id": "Icon.VscLaw",
+    "aliases": [
+      "vsc",
+      "law"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a scale of justice"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayers.svg": {
+    "component_id": "Icon.VscLayers",
+    "aliases": [
+      "vsc",
+      "layers"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with three arrows"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayersActive.svg": {
+    "component_id": "Icon.VscLayersActive",
+    "aliases": [
+      "vsc",
+      "layers",
+      "active"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayersDot.svg": {
+    "component_id": "Icon.VscLayersDot",
+    "aliases": [
+      "vsc",
+      "layers",
+      "dot"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a ball in the middle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayout.svg": {
+    "component_id": "Icon.VscLayout",
+    "aliases": [
+      "vsc",
+      "layout"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a clock with three numbers"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutActivitybarLeft.svg": {
+    "component_id": "Icon.VscLayoutActivitybarLeft",
+    "aliases": [
+      "vsc",
+      "layout",
+      "activitybar",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black square icon with a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutActivitybarRight.svg": {
+    "component_id": "Icon.VscLayoutActivitybarRight",
+    "aliases": [
+      "vsc",
+      "layout",
+      "activitybar",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a square black and white icon with a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutCentered.svg": {
+    "component_id": "Icon.VscLayoutCentered",
+    "aliases": [
+      "vsc",
+      "layout",
+      "centered"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a square"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutMenubar.svg": {
+    "component_id": "Icon.VscLayoutMenubar",
+    "aliases": [
+      "vsc",
+      "layout",
+      "menubar"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer screen"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutPanel.svg": {
+    "component_id": "Icon.VscLayoutPanel",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel"
+    ],
+    "colors": [],
+    "caption": "a black and white photo frame icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutPanelCenter.svg": {
+    "component_id": "Icon.VscLayoutPanelCenter",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel",
+      "center"
+    ],
+    "colors": [],
+    "caption": "an icon of a floppy disk on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutPanelJustify.svg": {
+    "component_id": "Icon.VscLayoutPanelJustify",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel",
+      "justify"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a floppy disk"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutPanelLeft.svg": {
+    "component_id": "Icon.VscLayoutPanelLeft",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel",
+      "left"
+    ],
+    "colors": [],
+    "caption": "an icon of a floppy disk on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutPanelOff.svg": {
+    "component_id": "Icon.VscLayoutPanelOff",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a square shape"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutPanelRight.svg": {
+    "component_id": "Icon.VscLayoutPanelRight",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a square shape"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutSidebarLeft.svg": {
+    "component_id": "Icon.VscLayoutSidebarLeft",
+    "aliases": [
+      "vsc",
+      "layout",
+      "sidebar",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white square icon with a white square"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutSidebarLeftOff.svg": {
+    "component_id": "Icon.VscLayoutSidebarLeftOff",
+    "aliases": [
+      "vsc",
+      "layout",
+      "sidebar",
+      "left",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutSidebarRight.svg": {
+    "component_id": "Icon.VscLayoutSidebarRight",
+    "aliases": [
+      "vsc",
+      "layout",
+      "sidebar",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white square icon with a white square"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutSidebarRightOff.svg": {
+    "component_id": "Icon.VscLayoutSidebarRightOff",
+    "aliases": [
+      "vsc",
+      "layout",
+      "sidebar",
+      "right",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLayoutStatusbar.svg": {
+    "component_id": "Icon.VscLayoutStatusbar",
+    "aliases": [
+      "vsc",
+      "layout",
+      "statusbar"
+    ],
+    "colors": [],
+    "caption": "a black square on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLibrary.svg": {
+    "component_id": "Icon.VscLibrary",
+    "aliases": [
+      "vsc",
+      "library"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of three books"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLightbulb.svg": {
+    "component_id": "Icon.VscLightbulb",
+    "aliases": [
+      "vsc",
+      "lightbulb"
+    ],
+    "colors": [],
+    "caption": "a black light bulb icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLightbulbAutofix.svg": {
+    "component_id": "Icon.VscLightbulbAutofix",
+    "aliases": [
+      "vsc",
+      "lightbulb",
+      "autofix"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a light bulb with a star"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLightbulbSparkle.svg": {
+    "component_id": "Icon.VscLightbulbSparkle",
+    "aliases": [
+      "vsc",
+      "lightbulb",
+      "sparkle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a light bulb with stars"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLink.svg": {
+    "component_id": "Icon.VscLink",
+    "aliases": [
+      "vsc",
+      "link"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two circles"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLinkExternal.svg": {
+    "component_id": "Icon.VscLinkExternal",
+    "aliases": [
+      "vsc",
+      "link",
+      "external"
+    ],
+    "colors": [],
+    "caption": "a black and white square with an arrow in it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscListFilter.svg": {
+    "component_id": "Icon.VscListFilter",
+    "aliases": [
+      "vsc",
+      "list",
+      "filter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter f"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscListFlat.svg": {
+    "component_id": "Icon.VscListFlat",
+    "aliases": [
+      "vsc",
+      "list",
+      "flat"
+    ],
+    "colors": [],
+    "caption": "a black and white image of four lines"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscListOrdered.svg": {
+    "component_id": "Icon.VscListOrdered",
+    "aliases": [
+      "vsc",
+      "list",
+      "ordered"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three numbers on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscListSelection.svg": {
+    "component_id": "Icon.VscListSelection",
+    "aliases": [
+      "vsc",
+      "list",
+      "selection"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter e"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscListTree.svg": {
+    "component_id": "Icon.VscListTree",
+    "aliases": [
+      "vsc",
+      "list",
+      "tree"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter e"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscListUnordered.svg": {
+    "component_id": "Icon.VscListUnordered",
+    "aliases": [
+      "vsc",
+      "list",
+      "unordered"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with four lines"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLiveShare.svg": {
+    "component_id": "Icon.VscLiveShare",
+    "aliases": [
+      "vsc",
+      "live",
+      "share"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLoading.svg": {
+    "component_id": "Icon.VscLoading",
+    "aliases": [
+      "vsc",
+      "loading"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a curved line"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLocation.svg": {
+    "component_id": "Icon.VscLocation",
+    "aliases": [
+      "vsc",
+      "location"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a location pin"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLock.svg": {
+    "component_id": "Icon.VscLock",
+    "aliases": [
+      "vsc",
+      "lock"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a padlock"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscLockSmall.svg": {
+    "component_id": "Icon.VscLockSmall",
+    "aliases": [
+      "vsc",
+      "lock",
+      "small"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMagnet.svg": {
+    "component_id": "Icon.VscMagnet",
+    "aliases": [
+      "vsc",
+      "magnet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a magnet"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMail.svg": {
+    "component_id": "Icon.VscMail",
+    "aliases": [
+      "vsc",
+      "mail"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMailRead.svg": {
+    "component_id": "Icon.VscMailRead",
+    "aliases": [
+      "vsc",
+      "mail",
+      "read"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMap.svg": {
+    "component_id": "Icon.VscMap",
+    "aliases": [
+      "vsc",
+      "map"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter m in it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMapFilled.svg": {
+    "component_id": "Icon.VscMapFilled",
+    "aliases": [
+      "vsc",
+      "map",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter m"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMapVertical.svg": {
+    "component_id": "Icon.VscMapVertical",
+    "aliases": [
+      "vsc",
+      "map",
+      "vertical"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter s"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMapVerticalFilled.svg": {
+    "component_id": "Icon.VscMapVerticalFilled",
+    "aliases": [
+      "vsc",
+      "map",
+      "vertical",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter s"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMarkdown.svg": {
+    "component_id": "Icon.VscMarkdown",
+    "aliases": [
+      "vsc",
+      "markdown"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter m"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMegaphone.svg": {
+    "component_id": "Icon.VscMegaphone",
+    "aliases": [
+      "vsc",
+      "megaphone"
+    ],
+    "colors": [],
+    "caption": "a megaphone icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMention.svg": {
+    "component_id": "Icon.VscMention",
+    "aliases": [
+      "vsc",
+      "mention"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an email symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMenu.svg": {
+    "component_id": "Icon.VscMenu",
+    "aliases": [
+      "vsc",
+      "menu"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two lines"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMerge.svg": {
+    "component_id": "Icon.VscMerge",
+    "aliases": [
+      "vsc",
+      "merge"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing up in the middle of a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMic.svg": {
+    "component_id": "Icon.VscMic",
+    "aliases": [
+      "vsc",
+      "mic"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMicFilled.svg": {
+    "component_id": "Icon.VscMicFilled",
+    "aliases": [
+      "vsc",
+      "mic",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMilestone.svg": {
+    "component_id": "Icon.VscMilestone",
+    "aliases": [
+      "vsc",
+      "milestone"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMirror.svg": {
+    "component_id": "Icon.VscMirror",
+    "aliases": [
+      "vsc",
+      "mirror"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with an arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMortarBoard.svg": {
+    "component_id": "Icon.VscMortarBoard",
+    "aliases": [
+      "vsc",
+      "mortar",
+      "board"
+    ],
+    "colors": [],
+    "caption": "a graduation cap icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMove.svg": {
+    "component_id": "Icon.VscMove",
+    "aliases": [
+      "vsc",
+      "move"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing in different directions"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMultipleWindows.svg": {
+    "component_id": "Icon.VscMultipleWindows",
+    "aliases": [
+      "vsc",
+      "multiple",
+      "windows"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two black rectangles"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMusic.svg": {
+    "component_id": "Icon.VscMusic",
+    "aliases": [
+      "vsc",
+      "music"
+    ],
+    "colors": [],
+    "caption": "a music note icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscMute.svg": {
+    "component_id": "Icon.VscMute",
+    "aliases": [
+      "vsc",
+      "mute"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker with an x"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscNewFile.svg": {
+    "component_id": "Icon.VscNewFile",
+    "aliases": [
+      "vsc",
+      "new",
+      "file"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a file and a plus sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscNewFolder.svg": {
+    "component_id": "Icon.VscNewFolder",
+    "aliases": [
+      "vsc",
+      "new",
+      "folder"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a plus sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscNewline.svg": {
+    "component_id": "Icon.VscNewline",
+    "aliases": [
+      "vsc",
+      "newline"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscNoNewline.svg": {
+    "component_id": "Icon.VscNoNewline",
+    "aliases": [
+      "vsc",
+      "no",
+      "newline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscNote.svg": {
+    "component_id": "Icon.VscNote",
+    "aliases": [
+      "vsc",
+      "note"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscNotebook.svg": {
+    "component_id": "Icon.VscNotebook",
+    "aliases": [
+      "vsc",
+      "notebook"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscNotebookTemplate.svg": {
+    "component_id": "Icon.VscNotebookTemplate",
+    "aliases": [
+      "vsc",
+      "notebook",
+      "template"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscOctoface.svg": {
+    "component_id": "Icon.VscOctoface",
+    "aliases": [
+      "vsc",
+      "octoface"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cat's face"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscOpenPreview.svg": {
+    "component_id": "Icon.VscOpenPreview",
+    "aliases": [
+      "vsc",
+      "open",
+      "preview"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscOrganization.svg": {
+    "component_id": "Icon.VscOrganization",
+    "aliases": [
+      "vsc",
+      "organization"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a group of people"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscOutput.svg": {
+    "component_id": "Icon.VscOutput",
+    "aliases": [
+      "vsc",
+      "output"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a notepad"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPackage.svg": {
+    "component_id": "Icon.VscPackage",
+    "aliases": [
+      "vsc",
+      "package"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPaintcan.svg": {
+    "component_id": "Icon.VscPaintcan",
+    "aliases": [
+      "vsc",
+      "paintcan"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a bucket with a drop of water"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPass.svg": {
+    "component_id": "Icon.VscPass",
+    "aliases": [
+      "vsc",
+      "pass"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a check mark in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPassFilled.svg": {
+    "component_id": "Icon.VscPassFilled",
+    "aliases": [
+      "vsc",
+      "pass",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPercentage.svg": {
+    "component_id": "Icon.VscPercentage",
+    "aliases": [
+      "vsc",
+      "percentage"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a percentage sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPerson.svg": {
+    "component_id": "Icon.VscPerson",
+    "aliases": [
+      "vsc",
+      "person"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPersonAdd.svg": {
+    "component_id": "Icon.VscPersonAdd",
+    "aliases": [
+      "vsc",
+      "person",
+      "add"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a man holding a plus sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPiano.svg": {
+    "component_id": "Icon.VscPiano",
+    "aliases": [
+      "vsc",
+      "piano"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a piano keyboard"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPieChart.svg": {
+    "component_id": "Icon.VscPieChart",
+    "aliases": [
+      "vsc",
+      "pie",
+      "chart"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter g in it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPin.svg": {
+    "component_id": "Icon.VscPin",
+    "aliases": [
+      "vsc",
+      "pin"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a knife"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPinned.svg": {
+    "component_id": "Icon.VscPinned",
+    "aliases": [
+      "vsc",
+      "pinned"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a pin on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPinnedDirty.svg": {
+    "component_id": "Icon.VscPinnedDirty",
+    "aliases": [
+      "vsc",
+      "pinned",
+      "dirty"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a pin and a ball"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPlay.svg": {
+    "component_id": "Icon.VscPlay",
+    "aliases": [
+      "vsc",
+      "play"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a triangle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPlayCircle.svg": {
+    "component_id": "Icon.VscPlayCircle",
+    "aliases": [
+      "vsc",
+      "play",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a play button"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPlug.svg": {
+    "component_id": "Icon.VscPlug",
+    "aliases": [
+      "vsc",
+      "plug"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a plug"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPreserveCase.svg": {
+    "component_id": "Icon.VscPreserveCase",
+    "aliases": [
+      "vsc",
+      "preserve",
+      "case"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letters ab"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPreview.svg": {
+    "component_id": "Icon.VscPreview",
+    "aliases": [
+      "vsc",
+      "preview"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a black and white square"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPrimitiveSquare.svg": {
+    "component_id": "Icon.VscPrimitiveSquare",
+    "aliases": [
+      "vsc",
+      "primitive",
+      "square"
+    ],
+    "colors": [],
+    "caption": "a square black and white icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscProject.svg": {
+    "component_id": "Icon.VscProject",
+    "aliases": [
+      "vsc",
+      "project"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a piano"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscPulse.svg": {
+    "component_id": "Icon.VscPulse",
+    "aliases": [
+      "vsc",
+      "pulse"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an ekg symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscQuestion.svg": {
+    "component_id": "Icon.VscQuestion",
+    "aliases": [
+      "vsc",
+      "question"
+    ],
+    "colors": [],
+    "caption": "a question mark in a circle on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscQuote.svg": {
+    "component_id": "Icon.VscQuote",
+    "aliases": [
+      "vsc",
+      "quote"
+    ],
+    "colors": [],
+    "caption": "two black quotes on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRadioTower.svg": {
+    "component_id": "Icon.VscRadioTower",
+    "aliases": [
+      "vsc",
+      "radio",
+      "tower"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a radio antenna"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscReactions.svg": {
+    "component_id": "Icon.VscReactions",
+    "aliases": [
+      "vsc",
+      "reactions"
+    ],
+    "colors": [],
+    "caption": "a black and white smiley face with a plus sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRecord.svg": {
+    "component_id": "Icon.VscRecord",
+    "aliases": [
+      "vsc",
+      "record"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an eye in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRecordKeys.svg": {
+    "component_id": "Icon.VscRecordKeys",
+    "aliases": [
+      "vsc",
+      "record",
+      "keys"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a keyboard"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRecordSmall.svg": {
+    "component_id": "Icon.VscRecordSmall",
+    "aliases": [
+      "vsc",
+      "record",
+      "small"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an eye in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRedo.svg": {
+    "component_id": "Icon.VscRedo",
+    "aliases": [
+      "vsc",
+      "redo"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscReferences.svg": {
+    "component_id": "Icon.VscReferences",
+    "aliases": [
+      "vsc",
+      "references"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRefresh.svg": {
+    "component_id": "Icon.VscRefresh",
+    "aliases": [
+      "vsc",
+      "refresh"
+    ],
+    "colors": [],
+    "caption": "an image of a black arrow in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRegex.svg": {
+    "component_id": "Icon.VscRegex",
+    "aliases": [
+      "vsc",
+      "regex"
+    ],
+    "colors": [],
+    "caption": "a black square with a star in the middle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRemote.svg": {
+    "component_id": "Icon.VscRemote",
+    "aliases": [
+      "vsc",
+      "remote"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing in the same direction"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRemoteExplorer.svg": {
+    "component_id": "Icon.VscRemoteExplorer",
+    "aliases": [
+      "vsc",
+      "remote",
+      "explorer"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer with an error symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRemove.svg": {
+    "component_id": "Icon.VscRemove",
+    "aliases": [
+      "vsc",
+      "remove"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscReplace.svg": {
+    "component_id": "Icon.VscReplace",
+    "aliases": [
+      "vsc",
+      "replace"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letters b and c"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscReplaceAll.svg": {
+    "component_id": "Icon.VscReplaceAll",
+    "aliases": [
+      "vsc",
+      "replace",
+      "all"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the word abc"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscReply.svg": {
+    "component_id": "Icon.VscReply",
+    "aliases": [
+      "vsc",
+      "reply"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRepo.svg": {
+    "component_id": "Icon.VscRepo",
+    "aliases": [
+      "vsc",
+      "repo"
+    ],
+    "colors": [],
+    "caption": "a book icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRepoClone.svg": {
+    "component_id": "Icon.VscRepoClone",
+    "aliases": [
+      "vsc",
+      "repo",
+      "clone"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRepoFetch.svg": {
+    "component_id": "Icon.VscRepoFetch",
+    "aliases": [
+      "vsc",
+      "repo",
+      "fetch"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRepoForcePush.svg": {
+    "component_id": "Icon.VscRepoForcePush",
+    "aliases": [
+      "vsc",
+      "repo",
+      "force",
+      "push"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRepoForked.svg": {
+    "component_id": "Icon.VscRepoForked",
+    "aliases": [
+      "vsc",
+      "repo",
+      "forked"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three circles"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRepoPull.svg": {
+    "component_id": "Icon.VscRepoPull",
+    "aliases": [
+      "vsc",
+      "repo",
+      "pull"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRepoPush.svg": {
+    "component_id": "Icon.VscRepoPush",
+    "aliases": [
+      "vsc",
+      "repo",
+      "push"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscReport.svg": {
+    "component_id": "Icon.VscReport",
+    "aliases": [
+      "vsc",
+      "report"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble with an exclamation mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRequestChanges.svg": {
+    "component_id": "Icon.VscRequestChanges",
+    "aliases": [
+      "vsc",
+      "request",
+      "changes"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document with a cross"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRobot.svg": {
+    "component_id": "Icon.VscRobot",
+    "aliases": [
+      "vsc",
+      "robot"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a smiling robot"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRocket.svg": {
+    "component_id": "Icon.VscRocket",
+    "aliases": [
+      "vsc",
+      "rocket"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a rocket"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRootFolder.svg": {
+    "component_id": "Icon.VscRootFolder",
+    "aliases": [
+      "vsc",
+      "root",
+      "folder"
+    ],
+    "colors": [],
+    "caption": "a camera icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRootFolderOpened.svg": {
+    "component_id": "Icon.VscRootFolderOpened",
+    "aliases": [
+      "vsc",
+      "root",
+      "folder",
+      "opened"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a camera"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRss.svg": {
+    "component_id": "Icon.VscRss",
+    "aliases": [
+      "vsc",
+      "rss"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a rss symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRuby.svg": {
+    "component_id": "Icon.VscRuby",
+    "aliases": [
+      "vsc",
+      "ruby"
+    ],
+    "colors": [],
+    "caption": "a black and white diamond icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRunAbove.svg": {
+    "component_id": "Icon.VscRunAbove",
+    "aliases": [
+      "vsc",
+      "run",
+      "above"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up in a black and white icon"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRunAll.svg": {
+    "component_id": "Icon.VscRunAll",
+    "aliases": [
+      "vsc",
+      "run",
+      "all"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRunAllCoverage.svg": {
+    "component_id": "Icon.VscRunAllCoverage",
+    "aliases": [
+      "vsc",
+      "run",
+      "all",
+      "coverage"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRunBelow.svg": {
+    "component_id": "Icon.VscRunBelow",
+    "aliases": [
+      "vsc",
+      "run",
+      "below"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a play button"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRunCoverage.svg": {
+    "component_id": "Icon.VscRunCoverage",
+    "aliases": [
+      "vsc",
+      "run",
+      "coverage"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscRunErrors.svg": {
+    "component_id": "Icon.VscRunErrors",
+    "aliases": [
+      "vsc",
+      "run",
+      "errors"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSave.svg": {
+    "component_id": "Icon.VscSave",
+    "aliases": [
+      "vsc",
+      "save"
+    ],
+    "colors": [],
+    "caption": "an icon of a floppy disk on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSaveAll.svg": {
+    "component_id": "Icon.VscSaveAll",
+    "aliases": [
+      "vsc",
+      "save",
+      "all"
+    ],
+    "colors": [],
+    "caption": "an icon of a floppy disk on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSaveAs.svg": {
+    "component_id": "Icon.VscSaveAs",
+    "aliases": [
+      "vsc",
+      "save",
+      "as"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pen and a floppy disk"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscScreenFull.svg": {
+    "component_id": "Icon.VscScreenFull",
+    "aliases": [
+      "vsc",
+      "screen",
+      "full"
+    ],
+    "colors": [],
+    "caption": "an image of a black square on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscScreenNormal.svg": {
+    "component_id": "Icon.VscScreenNormal",
+    "aliases": [
+      "vsc",
+      "screen",
+      "normal"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSearch.svg": {
+    "component_id": "Icon.VscSearch",
+    "aliases": [
+      "vsc",
+      "search"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSearchFuzzy.svg": {
+    "component_id": "Icon.VscSearchFuzzy",
+    "aliases": [
+      "vsc",
+      "search",
+      "fuzzy"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSearchStop.svg": {
+    "component_id": "Icon.VscSearchStop",
+    "aliases": [
+      "vsc",
+      "search",
+      "stop"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a magnifying glass"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSend.svg": {
+    "component_id": "Icon.VscSend",
+    "aliases": [
+      "vsc",
+      "send"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscServer.svg": {
+    "component_id": "Icon.VscServer",
+    "aliases": [
+      "vsc",
+      "server"
+    ],
+    "colors": [],
+    "caption": "a black and white image of four keys on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscServerEnvironment.svg": {
+    "component_id": "Icon.VscServerEnvironment",
+    "aliases": [
+      "vsc",
+      "server",
+      "environment"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a phone on top of a pedestal"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscServerProcess.svg": {
+    "component_id": "Icon.VscServerProcess",
+    "aliases": [
+      "vsc",
+      "server",
+      "process"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer with gears"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSettings.svg": {
+    "component_id": "Icon.VscSettings",
+    "aliases": [
+      "vsc",
+      "settings"
+    ],
+    "colors": [],
+    "caption": "two black and white icons that show two circles"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSettingsGear.svg": {
+    "component_id": "Icon.VscSettingsGear",
+    "aliases": [
+      "vsc",
+      "settings",
+      "gear"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a gear wheel"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscShare.svg": {
+    "component_id": "Icon.VscShare",
+    "aliases": [
+      "vsc",
+      "share"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscShield.svg": {
+    "component_id": "Icon.VscShield",
+    "aliases": [
+      "vsc",
+      "shield"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a shield with a keyhole"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSignIn.svg": {
+    "component_id": "Icon.VscSignIn",
+    "aliases": [
+      "vsc",
+      "sign",
+      "in"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an open door"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSignOut.svg": {
+    "component_id": "Icon.VscSignOut",
+    "aliases": [
+      "vsc",
+      "sign",
+      "out"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an open door"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSmiley.svg": {
+    "component_id": "Icon.VscSmiley",
+    "aliases": [
+      "vsc",
+      "smiley"
+    ],
+    "colors": [],
+    "caption": "a smiley face icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSnake.svg": {
+    "component_id": "Icon.VscSnake",
+    "aliases": [
+      "vsc",
+      "snake"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a snake"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSortPrecedence.svg": {
+    "component_id": "Icon.VscSortPrecedence",
+    "aliases": [
+      "vsc",
+      "sort",
+      "precedence"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a black arrow pointing down"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSourceControl.svg": {
+    "component_id": "Icon.VscSourceControl",
+    "aliases": [
+      "vsc",
+      "source",
+      "control"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three circles"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSparkle.svg": {
+    "component_id": "Icon.VscSparkle",
+    "aliases": [
+      "vsc",
+      "sparkle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two stars"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSparkleFilled.svg": {
+    "component_id": "Icon.VscSparkleFilled",
+    "aliases": [
+      "vsc",
+      "sparkle",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two stars"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSplitHorizontal.svg": {
+    "component_id": "Icon.VscSplitHorizontal",
+    "aliases": [
+      "vsc",
+      "split",
+      "horizontal"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a door"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSplitVertical.svg": {
+    "component_id": "Icon.VscSplitVertical",
+    "aliases": [
+      "vsc",
+      "split",
+      "vertical"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square with two lines"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSquirrel.svg": {
+    "component_id": "Icon.VscSquirrel",
+    "aliases": [
+      "vsc",
+      "squirrel"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a squirrel"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscStarEmpty.svg": {
+    "component_id": "Icon.VscStarEmpty",
+    "aliases": [
+      "vsc",
+      "star",
+      "empty"
+    ],
+    "colors": [],
+    "caption": "a black star on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscStarFull.svg": {
+    "component_id": "Icon.VscStarFull",
+    "aliases": [
+      "vsc",
+      "star",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a black star on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscStarHalf.svg": {
+    "component_id": "Icon.VscStarHalf",
+    "aliases": [
+      "vsc",
+      "star",
+      "half"
+    ],
+    "colors": [],
+    "caption": "a black star icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscStopCircle.svg": {
+    "component_id": "Icon.VscStopCircle",
+    "aliases": [
+      "vsc",
+      "stop",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black square in a circle on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSurroundWith.svg": {
+    "component_id": "Icon.VscSurroundWith",
+    "aliases": [
+      "vsc",
+      "surround",
+      "with"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three dots"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolArray.svg": {
+    "component_id": "Icon.VscSymbolArray",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "array"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square with two lines"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolBoolean.svg": {
+    "component_id": "Icon.VscSymbolBoolean",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "boolean"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a black and white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolClass.svg": {
+    "component_id": "Icon.VscSymbolClass",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "class"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolColor.svg": {
+    "component_id": "Icon.VscSymbolColor",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "color"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a paint palette"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolConstant.svg": {
+    "component_id": "Icon.VscSymbolConstant",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "constant"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an equal sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolEnum.svg": {
+    "component_id": "Icon.VscSymbolEnum",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "enum"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two squares"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolEnumMember.svg": {
+    "component_id": "Icon.VscSymbolEnumMember",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "enum",
+      "member"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two squares"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolEvent.svg": {
+    "component_id": "Icon.VscSymbolEvent",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "event"
+    ],
+    "colors": [],
+    "caption": "a lightning bolt icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolField.svg": {
+    "component_id": "Icon.VscSymbolField",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "field"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cube"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolFile.svg": {
+    "component_id": "Icon.VscSymbolFile",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "file"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolInterface.svg": {
+    "component_id": "Icon.VscSymbolInterface",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "interface"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white icon with a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolKey.svg": {
+    "component_id": "Icon.VscSymbolKey",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "key"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word abc"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolKeyword.svg": {
+    "component_id": "Icon.VscSymbolKeyword",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "keyword"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolMethod.svg": {
+    "component_id": "Icon.VscSymbolMethod",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "method"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cube"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolMisc.svg": {
+    "component_id": "Icon.VscSymbolMisc",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "misc"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a triangle and a square"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolNamespace.svg": {
+    "component_id": "Icon.VscSymbolNamespace",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "namespace"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two curved lines"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolNumeric.svg": {
+    "component_id": "Icon.VscSymbolNumeric",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "numeric"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a tic - tac - toe board"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolOperator.svg": {
+    "component_id": "Icon.VscSymbolOperator",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "operator"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a percentage sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolParameter.svg": {
+    "component_id": "Icon.VscSymbolParameter",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "parameter"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter t"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolProperty.svg": {
+    "component_id": "Icon.VscSymbolProperty",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "property"
+    ],
+    "colors": [],
+    "caption": "a wrench icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolRuler.svg": {
+    "component_id": "Icon.VscSymbolRuler",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "ruler"
+    ],
+    "colors": [],
+    "caption": "a ruler icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolSnippet.svg": {
+    "component_id": "Icon.VscSymbolSnippet",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "snippet"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a film strip"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolString.svg": {
+    "component_id": "Icon.VscSymbolString",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "string"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the word abc"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolStructure.svg": {
+    "component_id": "Icon.VscSymbolStructure",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "structure"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a calculator"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSymbolVariable.svg": {
+    "component_id": "Icon.VscSymbolVariable",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "variable"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSync.svg": {
+    "component_id": "Icon.VscSync",
+    "aliases": [
+      "vsc",
+      "sync"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscSyncIgnored.svg": {
+    "component_id": "Icon.VscSyncIgnored",
+    "aliases": [
+      "vsc",
+      "sync",
+      "ignored"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing in opposite directions"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTable.svg": {
+    "component_id": "Icon.VscTable",
+    "aliases": [
+      "vsc",
+      "table"
+    ],
+    "colors": [],
+    "caption": "a black and white calendar icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTag.svg": {
+    "component_id": "Icon.VscTag",
+    "aliases": [
+      "vsc",
+      "tag"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a price tag"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTarget.svg": {
+    "component_id": "Icon.VscTarget",
+    "aliases": [
+      "vsc",
+      "target"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a target"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTasklist.svg": {
+    "component_id": "Icon.VscTasklist",
+    "aliases": [
+      "vsc",
+      "tasklist"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTelescope.svg": {
+    "component_id": "Icon.VscTelescope",
+    "aliases": [
+      "vsc",
+      "telescope"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a telescope on a tripod"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTerminal.svg": {
+    "component_id": "Icon.VscTerminal",
+    "aliases": [
+      "vsc",
+      "terminal"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer icon"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTerminalBash.svg": {
+    "component_id": "Icon.VscTerminalBash",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "bash"
+    ],
+    "colors": [],
+    "caption": "a dollar sign icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTerminalCmd.svg": {
+    "component_id": "Icon.VscTerminalCmd",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "cmd"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the word c"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTerminalDebian.svg": {
+    "component_id": "Icon.VscTerminalDebian",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "debian"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a spiral"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTerminalLinux.svg": {
+    "component_id": "Icon.VscTerminalLinux",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "linux"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a penguin"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTerminalPowershell.svg": {
+    "component_id": "Icon.VscTerminalPowershell",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "powershell"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer icon"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTerminalTmux.svg": {
+    "component_id": "Icon.VscTerminalTmux",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "tmux"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a window"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTerminalUbuntu.svg": {
+    "component_id": "Icon.VscTerminalUbuntu",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "ubuntu"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with three people in it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTextSize.svg": {
+    "component_id": "Icon.VscTextSize",
+    "aliases": [
+      "vsc",
+      "text",
+      "size"
+    ],
+    "colors": [],
+    "caption": "a black and white letter a on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscThreeBars.svg": {
+    "component_id": "Icon.VscThreeBars",
+    "aliases": [
+      "vsc",
+      "three",
+      "bars"
+    ],
+    "colors": [],
+    "caption": "a black and white striped symbol on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscThumbsdown.svg": {
+    "component_id": "Icon.VscThumbsdown",
+    "aliases": [
+      "vsc",
+      "thumbsdown"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscThumbsdownFilled.svg": {
+    "component_id": "Icon.VscThumbsdownFilled",
+    "aliases": [
+      "vsc",
+      "thumbsdown",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscThumbsup.svg": {
+    "component_id": "Icon.VscThumbsup",
+    "aliases": [
+      "vsc",
+      "thumbsup"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a thumb up"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscThumbsupFilled.svg": {
+    "component_id": "Icon.VscThumbsupFilled",
+    "aliases": [
+      "vsc",
+      "thumbsup",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black thumb up icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTools.svg": {
+    "component_id": "Icon.VscTools",
+    "aliases": [
+      "vsc",
+      "tools"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a wrench and a screwdriver"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTrash.svg": {
+    "component_id": "Icon.VscTrash",
+    "aliases": [
+      "vsc",
+      "trash"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a trash can"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTriangleDown.svg": {
+    "component_id": "Icon.VscTriangleDown",
+    "aliases": [
+      "vsc",
+      "triangle",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black triangle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTriangleLeft.svg": {
+    "component_id": "Icon.VscTriangleLeft",
+    "aliases": [
+      "vsc",
+      "triangle",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTriangleRight.svg": {
+    "component_id": "Icon.VscTriangleRight",
+    "aliases": [
+      "vsc",
+      "triangle",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTriangleUp.svg": {
+    "component_id": "Icon.VscTriangleUp",
+    "aliases": [
+      "vsc",
+      "triangle",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black triangle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTwitter.svg": {
+    "component_id": "Icon.VscTwitter",
+    "aliases": [
+      "vsc",
+      "twitter"
+    ],
+    "colors": [],
+    "caption": "a black twitter logo on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTypeHierarchy.svg": {
+    "component_id": "Icon.VscTypeHierarchy",
+    "aliases": [
+      "vsc",
+      "type",
+      "hierarchy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a molecule"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTypeHierarchySub.svg": {
+    "component_id": "Icon.VscTypeHierarchySub",
+    "aliases": [
+      "vsc",
+      "type",
+      "hierarchy",
+      "sub"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a diagram with three squares"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscTypeHierarchySuper.svg": {
+    "component_id": "Icon.VscTypeHierarchySuper",
+    "aliases": [
+      "vsc",
+      "type",
+      "hierarchy",
+      "super"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a network symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscUnfold.svg": {
+    "component_id": "Icon.VscUnfold",
+    "aliases": [
+      "vsc",
+      "unfold"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a symbol with arrows"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscUngroupByRefType.svg": {
+    "component_id": "Icon.VscUngroupByRefType",
+    "aliases": [
+      "vsc",
+      "ungroup",
+      "by",
+      "ref",
+      "type"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in different directions on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscUnlock.svg": {
+    "component_id": "Icon.VscUnlock",
+    "aliases": [
+      "vsc",
+      "unlock"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscUnmute.svg": {
+    "component_id": "Icon.VscUnmute",
+    "aliases": [
+      "vsc",
+      "unmute"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscUnverified.svg": {
+    "component_id": "Icon.VscUnverified",
+    "aliases": [
+      "vsc",
+      "unverified"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a question mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVariableGroup.svg": {
+    "component_id": "Icon.VscVariableGroup",
+    "aliases": [
+      "vsc",
+      "variable",
+      "group"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer screen"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVerified.svg": {
+    "component_id": "Icon.VscVerified",
+    "aliases": [
+      "vsc",
+      "verified"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVerifiedFilled.svg": {
+    "component_id": "Icon.VscVerifiedFilled",
+    "aliases": [
+      "vsc",
+      "verified",
+      "filled"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVersions.svg": {
+    "component_id": "Icon.VscVersions",
+    "aliases": [
+      "vsc",
+      "versions"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cell phone"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVm.svg": {
+    "component_id": "Icon.VscVm",
+    "aliases": [
+      "vsc",
+      "vm"
+    ],
+    "colors": [],
+    "caption": "a computer monitor icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVmActive.svg": {
+    "component_id": "Icon.VscVmActive",
+    "aliases": [
+      "vsc",
+      "vm",
+      "active"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer with a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVmConnect.svg": {
+    "component_id": "Icon.VscVmConnect",
+    "aliases": [
+      "vsc",
+      "vm",
+      "connect"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer with an error symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVmOutline.svg": {
+    "component_id": "Icon.VscVmOutline",
+    "aliases": [
+      "vsc",
+      "vm",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer monitor"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVmRunning.svg": {
+    "component_id": "Icon.VscVmRunning",
+    "aliases": [
+      "vsc",
+      "vm",
+      "running"
+    ],
+    "colors": [],
+    "caption": "a black and white video icon with a play button"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVr.svg": {
+    "component_id": "Icon.VscVr",
+    "aliases": [
+      "vsc",
+      "vr"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a virtual mask"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVscode.svg": {
+    "component_id": "Icon.VscVscode",
+    "aliases": [
+      "vsc",
+      "vscode"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x symbol"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscVscodeInsiders.svg": {
+    "component_id": "Icon.VscVscodeInsiders",
+    "aliases": [
+      "vsc",
+      "vscode",
+      "insiders"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter x"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscWand.svg": {
+    "component_id": "Icon.VscWand",
+    "aliases": [
+      "vsc",
+      "wand"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a thermometer with two plus signs"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscWarning.svg": {
+    "component_id": "Icon.VscWarning",
+    "aliases": [
+      "vsc",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black and white warning sign with an exclamation mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscWatch.svg": {
+    "component_id": "Icon.VscWatch",
+    "aliases": [
+      "vsc",
+      "watch"
+    ],
+    "colors": [],
+    "caption": "an icon of a watch with a clock on it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscWhitespace.svg": {
+    "component_id": "Icon.VscWhitespace",
+    "aliases": [
+      "vsc",
+      "whitespace"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter p"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscWholeWord.svg": {
+    "component_id": "Icon.VscWholeWord",
+    "aliases": [
+      "vsc",
+      "whole",
+      "word"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter ab"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscWindow.svg": {
+    "component_id": "Icon.VscWindow",
+    "aliases": [
+      "vsc",
+      "window"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a web browser"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscWordWrap.svg": {
+    "component_id": "Icon.VscWordWrap",
+    "aliases": [
+      "vsc",
+      "word",
+      "wrap"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the word abc"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscWorkspaceTrusted.svg": {
+    "component_id": "Icon.VscWorkspaceTrusted",
+    "aliases": [
+      "vsc",
+      "workspace",
+      "trusted"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shield with a check mark"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscWorkspaceUnknown.svg": {
+    "component_id": "Icon.VscWorkspaceUnknown",
+    "aliases": [
+      "vsc",
+      "workspace",
+      "unknown"
+    ],
+    "colors": [],
+    "caption": "a shield with a question mark on it"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscWorkspaceUntrusted.svg": {
+    "component_id": "Icon.VscWorkspaceUntrusted",
+    "aliases": [
+      "vsc",
+      "workspace",
+      "untrusted"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shield with an x"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscZoomIn.svg": {
+    "component_id": "Icon.VscZoomIn",
+    "aliases": [
+      "vsc",
+      "zoom",
+      "in"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon with a plus sign"
+  },
+  "/home/darren/llm-widget-factory/assets/vsc/VscZoomOut.svg": {
+    "component_id": "Icon.VscZoomOut",
+    "aliases": [
+      "vsc",
+      "zoom",
+      "out"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  }
+}

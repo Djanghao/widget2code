@@ -1,0 +1,2343 @@
+{
+  "/home/darren/llm-widget-factory/assets/wi/WiAlien.svg": {
+    "component_id": "Icon.WiAlien",
+    "aliases": [
+      "wi",
+      "alien"
+    ],
+    "colors": [],
+    "caption": "an alien head icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiBarometer.svg": {
+    "component_id": "Icon.WiBarometer",
+    "aliases": [
+      "wi",
+      "barometer"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a pressure gauge"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiCelsius.svg": {
+    "component_id": "Icon.WiCelsius",
+    "aliases": [
+      "wi",
+      "celsius"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter c"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiCloud.svg": {
+    "component_id": "Icon.WiCloud",
+    "aliases": [
+      "wi",
+      "cloud"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiCloudDown.svg": {
+    "component_id": "Icon.WiCloudDown",
+    "aliases": [
+      "wi",
+      "cloud",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a cloud icon with an arrow pointing down"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiCloudRefresh.svg": {
+    "component_id": "Icon.WiCloudRefresh",
+    "aliases": [
+      "wi",
+      "cloud",
+      "refresh"
+    ],
+    "colors": [],
+    "caption": "a black and white cloud with an arrow in the middle"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiCloudUp.svg": {
+    "component_id": "Icon.WiCloudUp",
+    "aliases": [
+      "wi",
+      "cloud",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black cloud with an arrow pointing up"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiCloudy.svg": {
+    "component_id": "Icon.WiCloudy",
+    "aliases": [
+      "wi",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiCloudyGusts.svg": {
+    "component_id": "Icon.WiCloudyGusts",
+    "aliases": [
+      "wi",
+      "cloudy",
+      "gusts"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiCloudyWindy.svg": {
+    "component_id": "Icon.WiCloudyWindy",
+    "aliases": [
+      "wi",
+      "cloudy",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayCloudy.svg": {
+    "component_id": "Icon.WiDayCloudy",
+    "aliases": [
+      "wi",
+      "day",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayCloudyGusts.svg": {
+    "component_id": "Icon.WiDayCloudyGusts",
+    "aliases": [
+      "wi",
+      "day",
+      "cloudy",
+      "gusts"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayCloudyHigh.svg": {
+    "component_id": "Icon.WiDayCloudyHigh",
+    "aliases": [
+      "wi",
+      "day",
+      "cloudy",
+      "high"
+    ],
+    "colors": [],
+    "caption": "a cloud and sun icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayCloudyWindy.svg": {
+    "component_id": "Icon.WiDayCloudyWindy",
+    "aliases": [
+      "wi",
+      "day",
+      "cloudy",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayFog.svg": {
+    "component_id": "Icon.WiDayFog",
+    "aliases": [
+      "wi",
+      "day",
+      "fog"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the sun and clouds"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayHail.svg": {
+    "component_id": "Icon.WiDayHail",
+    "aliases": [
+      "wi",
+      "day",
+      "hail"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with sun and rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayHaze.svg": {
+    "component_id": "Icon.WiDayHaze",
+    "aliases": [
+      "wi",
+      "day",
+      "haze"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the sun rising"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayLightWind.svg": {
+    "component_id": "Icon.WiDayLightWind",
+    "aliases": [
+      "wi",
+      "day",
+      "light",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the sun"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayLightning.svg": {
+    "component_id": "Icon.WiDayLightning",
+    "aliases": [
+      "wi",
+      "day",
+      "lightning"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayRain.svg": {
+    "component_id": "Icon.WiDayRain",
+    "aliases": [
+      "wi",
+      "day",
+      "rain"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayRainMix.svg": {
+    "component_id": "Icon.WiDayRainMix",
+    "aliases": [
+      "wi",
+      "day",
+      "rain",
+      "mix"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with sun and rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayRainWind.svg": {
+    "component_id": "Icon.WiDayRainWind",
+    "aliases": [
+      "wi",
+      "day",
+      "rain",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayShowers.svg": {
+    "component_id": "Icon.WiDayShowers",
+    "aliases": [
+      "wi",
+      "day",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with sun and rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDaySleet.svg": {
+    "component_id": "Icon.WiDaySleet",
+    "aliases": [
+      "wi",
+      "day",
+      "sleet"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with sun and rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDaySleetStorm.svg": {
+    "component_id": "Icon.WiDaySleetStorm",
+    "aliases": [
+      "wi",
+      "day",
+      "sleet",
+      "storm"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDaySnow.svg": {
+    "component_id": "Icon.WiDaySnow",
+    "aliases": [
+      "wi",
+      "day",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and sun"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDaySnowThunderstorm.svg": {
+    "component_id": "Icon.WiDaySnowThunderstorm",
+    "aliases": [
+      "wi",
+      "day",
+      "snow",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDaySnowWind.svg": {
+    "component_id": "Icon.WiDaySnowWind",
+    "aliases": [
+      "wi",
+      "day",
+      "snow",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and sun"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDaySprinkle.svg": {
+    "component_id": "Icon.WiDaySprinkle",
+    "aliases": [
+      "wi",
+      "day",
+      "sprinkle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayStormShowers.svg": {
+    "component_id": "Icon.WiDayStormShowers",
+    "aliases": [
+      "wi",
+      "day",
+      "storm",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDaySunny.svg": {
+    "component_id": "Icon.WiDaySunny",
+    "aliases": [
+      "wi",
+      "day",
+      "sunny"
+    ],
+    "colors": [],
+    "caption": "a sun icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDaySunnyOvercast.svg": {
+    "component_id": "Icon.WiDaySunnyOvercast",
+    "aliases": [
+      "wi",
+      "day",
+      "sunny",
+      "overcast"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun and cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayThunderstorm.svg": {
+    "component_id": "Icon.WiDayThunderstorm",
+    "aliases": [
+      "wi",
+      "day",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDayWindy.svg": {
+    "component_id": "Icon.WiDayWindy",
+    "aliases": [
+      "wi",
+      "day",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun and wind"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDegrees.svg": {
+    "component_id": "Icon.WiDegrees",
+    "aliases": [
+      "wi",
+      "degrees"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDirectionDown.svg": {
+    "component_id": "Icon.WiDirectionDown",
+    "aliases": [
+      "wi",
+      "direction",
+      "down"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDirectionDownLeft.svg": {
+    "component_id": "Icon.WiDirectionDownLeft",
+    "aliases": [
+      "wi",
+      "direction",
+      "down",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDirectionDownRight.svg": {
+    "component_id": "Icon.WiDirectionDownRight",
+    "aliases": [
+      "wi",
+      "direction",
+      "down",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDirectionLeft.svg": {
+    "component_id": "Icon.WiDirectionLeft",
+    "aliases": [
+      "wi",
+      "direction",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDirectionRight.svg": {
+    "component_id": "Icon.WiDirectionRight",
+    "aliases": [
+      "wi",
+      "direction",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDirectionUp.svg": {
+    "component_id": "Icon.WiDirectionUp",
+    "aliases": [
+      "wi",
+      "direction",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDirectionUpLeft.svg": {
+    "component_id": "Icon.WiDirectionUpLeft",
+    "aliases": [
+      "wi",
+      "direction",
+      "up",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDirectionUpRight.svg": {
+    "component_id": "Icon.WiDirectionUpRight",
+    "aliases": [
+      "wi",
+      "direction",
+      "up",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiDust.svg": {
+    "component_id": "Icon.WiDust",
+    "aliases": [
+      "wi",
+      "dust"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiEarthquake.svg": {
+    "component_id": "Icon.WiEarthquake",
+    "aliases": [
+      "wi",
+      "earthquake"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a heartbeat"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiFahrenheit.svg": {
+    "component_id": "Icon.WiFahrenheit",
+    "aliases": [
+      "wi",
+      "fahrenheit"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter f"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiFire.svg": {
+    "component_id": "Icon.WiFire",
+    "aliases": [
+      "wi",
+      "fire"
+    ],
+    "colors": [],
+    "caption": "a fire icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiFlood.svg": {
+    "component_id": "Icon.WiFlood",
+    "aliases": [
+      "wi",
+      "flood"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of an upward arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiFog.svg": {
+    "component_id": "Icon.WiFog",
+    "aliases": [
+      "wi",
+      "fog"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiGaleWarning.svg": {
+    "component_id": "Icon.WiGaleWarning",
+    "aliases": [
+      "wi",
+      "gale",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a flag"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiHail.svg": {
+    "component_id": "Icon.WiHail",
+    "aliases": [
+      "wi",
+      "hail"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiHorizon.svg": {
+    "component_id": "Icon.WiHorizon",
+    "aliases": [
+      "wi",
+      "horizon"
+    ],
+    "colors": [],
+    "caption": "a sun icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiHorizonAlt.svg": {
+    "component_id": "Icon.WiHorizonAlt",
+    "aliases": [
+      "wi",
+      "horizon",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a sun icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiHot.svg": {
+    "component_id": "Icon.WiHot",
+    "aliases": [
+      "wi",
+      "hot"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiHumidity.svg": {
+    "component_id": "Icon.WiHumidity",
+    "aliases": [
+      "wi",
+      "humidity"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a drop with a percentage sign"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiHurricane.svg": {
+    "component_id": "Icon.WiHurricane",
+    "aliases": [
+      "wi",
+      "hurricane"
+    ],
+    "colors": [],
+    "caption": "the number six is shown in black on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiHurricaneWarning.svg": {
+    "component_id": "Icon.WiHurricaneWarning",
+    "aliases": [
+      "wi",
+      "hurricane",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter b"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiLightning.svg": {
+    "component_id": "Icon.WiLightning",
+    "aliases": [
+      "wi",
+      "lightning"
+    ],
+    "colors": [],
+    "caption": "two lightning bolts are shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiLunarEclipse.svg": {
+    "component_id": "Icon.WiLunarEclipse",
+    "aliases": [
+      "wi",
+      "lunar",
+      "eclipse"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMeteor.svg": {
+    "component_id": "Icon.WiMeteor",
+    "aliases": [
+      "wi",
+      "meteor"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a rocket"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltFirstQuarter.svg": {
+    "component_id": "Icon.WiMoonAltFirstQuarter",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "first",
+      "quarter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltFull.svg": {
+    "component_id": "Icon.WiMoonAltFull",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltNew.svg": {
+    "component_id": "Icon.WiMoonAltNew",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "new"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltThirdQuarter.svg": {
+    "component_id": "Icon.WiMoonAltThirdQuarter",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "third",
+      "quarter"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with a half moon in it"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent1.svg": {
+    "component_id": "Icon.WiMoonAltWaningCrescent1",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent2.svg": {
+    "component_id": "Icon.WiMoonAltWaningCrescent2",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent3.svg": {
+    "component_id": "Icon.WiMoonAltWaningCrescent3",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent4.svg": {
+    "component_id": "Icon.WiMoonAltWaningCrescent4",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent5.svg": {
+    "component_id": "Icon.WiMoonAltWaningCrescent5",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent6.svg": {
+    "component_id": "Icon.WiMoonAltWaningCrescent6",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "6"
+    ],
+    "colors": [],
+    "caption": "the moon is shown in black and white on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous1.svg": {
+    "component_id": "Icon.WiMoonAltWaningGibbous1",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous2.svg": {
+    "component_id": "Icon.WiMoonAltWaningGibbous2",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous3.svg": {
+    "component_id": "Icon.WiMoonAltWaningGibbous3",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous4.svg": {
+    "component_id": "Icon.WiMoonAltWaningGibbous4",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous5.svg": {
+    "component_id": "Icon.WiMoonAltWaningGibbous5",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous6.svg": {
+    "component_id": "Icon.WiMoonAltWaningGibbous6",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent1.svg": {
+    "component_id": "Icon.WiMoonAltWaxingCrescent1",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent2.svg": {
+    "component_id": "Icon.WiMoonAltWaxingCrescent2",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent3.svg": {
+    "component_id": "Icon.WiMoonAltWaxingCrescent3",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent4.svg": {
+    "component_id": "Icon.WiMoonAltWaxingCrescent4",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent5.svg": {
+    "component_id": "Icon.WiMoonAltWaxingCrescent5",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent6.svg": {
+    "component_id": "Icon.WiMoonAltWaxingCrescent6",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous1.svg": {
+    "component_id": "Icon.WiMoonAltWaxingGibbous1",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous2.svg": {
+    "component_id": "Icon.WiMoonAltWaxingGibbous2",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous3.svg": {
+    "component_id": "Icon.WiMoonAltWaxingGibbous3",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous4.svg": {
+    "component_id": "Icon.WiMoonAltWaxingGibbous4",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous5.svg": {
+    "component_id": "Icon.WiMoonAltWaxingGibbous5",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with the letter o in it"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous6.svg": {
+    "component_id": "Icon.WiMoonAltWaxingGibbous6",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonFirstQuarter.svg": {
+    "component_id": "Icon.WiMoonFirstQuarter",
+    "aliases": [
+      "wi",
+      "moon",
+      "first",
+      "quarter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter d"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonFull.svg": {
+    "component_id": "Icon.WiMoonFull",
+    "aliases": [
+      "wi",
+      "moon",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonNew.svg": {
+    "component_id": "Icon.WiMoonNew",
+    "aliases": [
+      "wi",
+      "moon",
+      "new"
+    ],
+    "colors": [],
+    "caption": "a circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonThirdQuarter.svg": {
+    "component_id": "Icon.WiMoonThirdQuarter",
+    "aliases": [
+      "wi",
+      "moon",
+      "third",
+      "quarter"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent1.svg": {
+    "component_id": "Icon.WiMoonWaningCrescent1",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent2.svg": {
+    "component_id": "Icon.WiMoonWaningCrescent2",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent3.svg": {
+    "component_id": "Icon.WiMoonWaningCrescent3",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent4.svg": {
+    "component_id": "Icon.WiMoonWaningCrescent4",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black crescent on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent5.svg": {
+    "component_id": "Icon.WiMoonWaningCrescent5",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black crescent on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent6.svg": {
+    "component_id": "Icon.WiMoonWaningCrescent6",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous1.svg": {
+    "component_id": "Icon.WiMoonWaningGibbous1",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous2.svg": {
+    "component_id": "Icon.WiMoonWaningGibbous2",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous3.svg": {
+    "component_id": "Icon.WiMoonWaningGibbous3",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous4.svg": {
+    "component_id": "Icon.WiMoonWaningGibbous4",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of an egg"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous5.svg": {
+    "component_id": "Icon.WiMoonWaningGibbous5",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous6.svg": {
+    "component_id": "Icon.WiMoonWaningGibbous6",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxing6.svg": {
+    "component_id": "Icon.WiMoonWaxing6",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingCrescent1.svg": {
+    "component_id": "Icon.WiMoonWaxingCrescent1",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "crescent",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black crescent on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingCrescent2.svg": {
+    "component_id": "Icon.WiMoonWaxingCrescent2",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "crescent",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black crescent on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingCrescent3.svg": {
+    "component_id": "Icon.WiMoonWaxingCrescent3",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "crescent",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingCrescent4.svg": {
+    "component_id": "Icon.WiMoonWaxingCrescent4",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "crescent",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingCrescent5.svg": {
+    "component_id": "Icon.WiMoonWaxingCrescent5",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "crescent",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous1.svg": {
+    "component_id": "Icon.WiMoonWaxingGibbous1",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous2.svg": {
+    "component_id": "Icon.WiMoonWaxingGibbous2",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous3.svg": {
+    "component_id": "Icon.WiMoonWaxingGibbous3",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter d"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous4.svg": {
+    "component_id": "Icon.WiMoonWaxingGibbous4",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous5.svg": {
+    "component_id": "Icon.WiMoonWaxingGibbous5",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of an egg"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous6.svg": {
+    "component_id": "Icon.WiMoonWaxingGibbous6",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black circle on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonrise.svg": {
+    "component_id": "Icon.WiMoonrise",
+    "aliases": [
+      "wi",
+      "moonrise"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with a curved arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiMoonset.svg": {
+    "component_id": "Icon.WiMoonset",
+    "aliases": [
+      "wi",
+      "moonset"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a curved arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNa.svg": {
+    "component_id": "Icon.WiNa",
+    "aliases": [
+      "wi",
+      "na"
+    ],
+    "colors": [],
+    "caption": "a black and white logo that says n a"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltCloudy.svg": {
+    "component_id": "Icon.WiNightAltCloudy",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and sun"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltCloudyGusts.svg": {
+    "component_id": "Icon.WiNightAltCloudyGusts",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "cloudy",
+      "gusts"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and sun"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltCloudyHigh.svg": {
+    "component_id": "Icon.WiNightAltCloudyHigh",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "cloudy",
+      "high"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltCloudyWindy.svg": {
+    "component_id": "Icon.WiNightAltCloudyWindy",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "cloudy",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltHail.svg": {
+    "component_id": "Icon.WiNightAltHail",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "hail"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltLightning.svg": {
+    "component_id": "Icon.WiNightAltLightning",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "lightning"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltPartlyCloudy.svg": {
+    "component_id": "Icon.WiNightAltPartlyCloudy",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "partly",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltRain.svg": {
+    "component_id": "Icon.WiNightAltRain",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "rain"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and sun"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltRainMix.svg": {
+    "component_id": "Icon.WiNightAltRainMix",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "rain",
+      "mix"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltRainWind.svg": {
+    "component_id": "Icon.WiNightAltRainWind",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "rain",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltShowers.svg": {
+    "component_id": "Icon.WiNightAltShowers",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltSleet.svg": {
+    "component_id": "Icon.WiNightAltSleet",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "sleet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltSleetStorm.svg": {
+    "component_id": "Icon.WiNightAltSleetStorm",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "sleet",
+      "storm"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltSnow.svg": {
+    "component_id": "Icon.WiNightAltSnow",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltSnowThunderstorm.svg": {
+    "component_id": "Icon.WiNightAltSnowThunderstorm",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "snow",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltSnowWind.svg": {
+    "component_id": "Icon.WiNightAltSnowWind",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "snow",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with snow"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltSprinkle.svg": {
+    "component_id": "Icon.WiNightAltSprinkle",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "sprinkle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltStormShowers.svg": {
+    "component_id": "Icon.WiNightAltStormShowers",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "storm",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightAltThunderstorm.svg": {
+    "component_id": "Icon.WiNightAltThunderstorm",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightClear.svg": {
+    "component_id": "Icon.WiNightClear",
+    "aliases": [
+      "wi",
+      "night",
+      "clear"
+    ],
+    "colors": [],
+    "caption": "a black and white logo of a crescent moon"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightCloudy.svg": {
+    "component_id": "Icon.WiNightCloudy",
+    "aliases": [
+      "wi",
+      "night",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a black and white cloud icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightCloudyGusts.svg": {
+    "component_id": "Icon.WiNightCloudyGusts",
+    "aliases": [
+      "wi",
+      "night",
+      "cloudy",
+      "gusts"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightCloudyHigh.svg": {
+    "component_id": "Icon.WiNightCloudyHigh",
+    "aliases": [
+      "wi",
+      "night",
+      "cloudy",
+      "high"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightCloudyWindy.svg": {
+    "component_id": "Icon.WiNightCloudyWindy",
+    "aliases": [
+      "wi",
+      "night",
+      "cloudy",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightFog.svg": {
+    "component_id": "Icon.WiNightFog",
+    "aliases": [
+      "wi",
+      "night",
+      "fog"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the sun and clouds"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightHail.svg": {
+    "component_id": "Icon.WiNightHail",
+    "aliases": [
+      "wi",
+      "night",
+      "hail"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightLightning.svg": {
+    "component_id": "Icon.WiNightLightning",
+    "aliases": [
+      "wi",
+      "night",
+      "lightning"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightPartlyCloudy.svg": {
+    "component_id": "Icon.WiNightPartlyCloudy",
+    "aliases": [
+      "wi",
+      "night",
+      "partly",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a cloud and sun icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightRain.svg": {
+    "component_id": "Icon.WiNightRain",
+    "aliases": [
+      "wi",
+      "night",
+      "rain"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightRainMix.svg": {
+    "component_id": "Icon.WiNightRainMix",
+    "aliases": [
+      "wi",
+      "night",
+      "rain",
+      "mix"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightRainWind.svg": {
+    "component_id": "Icon.WiNightRainWind",
+    "aliases": [
+      "wi",
+      "night",
+      "rain",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightShowers.svg": {
+    "component_id": "Icon.WiNightShowers",
+    "aliases": [
+      "wi",
+      "night",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightSleet.svg": {
+    "component_id": "Icon.WiNightSleet",
+    "aliases": [
+      "wi",
+      "night",
+      "sleet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightSleetStorm.svg": {
+    "component_id": "Icon.WiNightSleetStorm",
+    "aliases": [
+      "wi",
+      "night",
+      "sleet",
+      "storm"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with lightning"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightSnow.svg": {
+    "component_id": "Icon.WiNightSnow",
+    "aliases": [
+      "wi",
+      "night",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightSnowThunderstorm.svg": {
+    "component_id": "Icon.WiNightSnowThunderstorm",
+    "aliases": [
+      "wi",
+      "night",
+      "snow",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with a lightning bolt"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightSnowWind.svg": {
+    "component_id": "Icon.WiNightSnowWind",
+    "aliases": [
+      "wi",
+      "night",
+      "snow",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with snow"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightSprinkle.svg": {
+    "component_id": "Icon.WiNightSprinkle",
+    "aliases": [
+      "wi",
+      "night",
+      "sprinkle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightStormShowers.svg": {
+    "component_id": "Icon.WiNightStormShowers",
+    "aliases": [
+      "wi",
+      "night",
+      "storm",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with lightning"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiNightThunderstorm.svg": {
+    "component_id": "Icon.WiNightThunderstorm",
+    "aliases": [
+      "wi",
+      "night",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with lightning"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiRain.svg": {
+    "component_id": "Icon.WiRain",
+    "aliases": [
+      "wi",
+      "rain"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a rain cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiRainMix.svg": {
+    "component_id": "Icon.WiRainMix",
+    "aliases": [
+      "wi",
+      "rain",
+      "mix"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiRainWind.svg": {
+    "component_id": "Icon.WiRainWind",
+    "aliases": [
+      "wi",
+      "rain",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a rain cloud"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiRaindrop.svg": {
+    "component_id": "Icon.WiRaindrop",
+    "aliases": [
+      "wi",
+      "raindrop"
+    ],
+    "colors": [],
+    "caption": "a black drop icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiRaindrops.svg": {
+    "component_id": "Icon.WiRaindrops",
+    "aliases": [
+      "wi",
+      "raindrops"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a drop of water"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiRefresh.svg": {
+    "component_id": "Icon.WiRefresh",
+    "aliases": [
+      "wi",
+      "refresh"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiRefreshAlt.svg": {
+    "component_id": "Icon.WiRefreshAlt",
+    "aliases": [
+      "wi",
+      "refresh",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSandstorm.svg": {
+    "component_id": "Icon.WiSandstorm",
+    "aliases": [
+      "wi",
+      "sandstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with dots on it"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiShowers.svg": {
+    "component_id": "Icon.WiShowers",
+    "aliases": [
+      "wi",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSleet.svg": {
+    "component_id": "Icon.WiSleet",
+    "aliases": [
+      "wi",
+      "sleet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSmallCraftAdvisory.svg": {
+    "component_id": "Icon.WiSmallCraftAdvisory",
+    "aliases": [
+      "wi",
+      "small",
+      "craft",
+      "advisory"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a golf flag"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSmog.svg": {
+    "component_id": "Icon.WiSmog",
+    "aliases": [
+      "wi",
+      "smog"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a cloud on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSmoke.svg": {
+    "component_id": "Icon.WiSmoke",
+    "aliases": [
+      "wi",
+      "smoke"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with smoke coming out of it"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSnow.svg": {
+    "component_id": "Icon.WiSnow",
+    "aliases": [
+      "wi",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSnowWind.svg": {
+    "component_id": "Icon.WiSnowWind",
+    "aliases": [
+      "wi",
+      "snow",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with snow"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSnowflakeCold.svg": {
+    "component_id": "Icon.WiSnowflakeCold",
+    "aliases": [
+      "wi",
+      "snowflake",
+      "cold"
+    ],
+    "colors": [],
+    "caption": "a snowflake icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSolarEclipse.svg": {
+    "component_id": "Icon.WiSolarEclipse",
+    "aliases": [
+      "wi",
+      "solar",
+      "eclipse"
+    ],
+    "colors": [],
+    "caption": "a sun and moon icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSprinkle.svg": {
+    "component_id": "Icon.WiSprinkle",
+    "aliases": [
+      "wi",
+      "sprinkle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiStars.svg": {
+    "component_id": "Icon.WiStars",
+    "aliases": [
+      "wi",
+      "stars"
+    ],
+    "colors": [],
+    "caption": "four black stars are shown on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiStormShowers.svg": {
+    "component_id": "Icon.WiStormShowers",
+    "aliases": [
+      "wi",
+      "storm",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with lightning"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiStormWarning.svg": {
+    "component_id": "Icon.WiStormWarning",
+    "aliases": [
+      "wi",
+      "storm",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white flag"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiStrongWind.svg": {
+    "component_id": "Icon.WiStrongWind",
+    "aliases": [
+      "wi",
+      "strong",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two curved lines"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSunrise.svg": {
+    "component_id": "Icon.WiSunrise",
+    "aliases": [
+      "wi",
+      "sunrise"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a sun with a line through it"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiSunset.svg": {
+    "component_id": "Icon.WiSunset",
+    "aliases": [
+      "wi",
+      "sunset"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a arrow pointing down"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiThermometer.svg": {
+    "component_id": "Icon.WiThermometer",
+    "aliases": [
+      "wi",
+      "thermometer"
+    ],
+    "colors": [],
+    "caption": "thermometer thermometer icon thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiThermometerExterior.svg": {
+    "component_id": "Icon.WiThermometerExterior",
+    "aliases": [
+      "wi",
+      "thermometer",
+      "exterior"
+    ],
+    "colors": [],
+    "caption": "a thermometer icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiThermometerInternal.svg": {
+    "component_id": "Icon.WiThermometerInternal",
+    "aliases": [
+      "wi",
+      "thermometer",
+      "internal"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a thermometer"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiThunderstorm.svg": {
+    "component_id": "Icon.WiThunderstorm",
+    "aliases": [
+      "wi",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with lightning"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime1.svg": {
+    "component_id": "Icon.WiTime1",
+    "aliases": [
+      "wi",
+      "time",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime10.svg": {
+    "component_id": "Icon.WiTime10",
+    "aliases": [
+      "wi",
+      "time",
+      "10"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime11.svg": {
+    "component_id": "Icon.WiTime11",
+    "aliases": [
+      "wi",
+      "time",
+      "11"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime12.svg": {
+    "component_id": "Icon.WiTime12",
+    "aliases": [
+      "wi",
+      "time",
+      "12"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a clock"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime2.svg": {
+    "component_id": "Icon.WiTime2",
+    "aliases": [
+      "wi",
+      "time",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime3.svg": {
+    "component_id": "Icon.WiTime3",
+    "aliases": [
+      "wi",
+      "time",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime4.svg": {
+    "component_id": "Icon.WiTime4",
+    "aliases": [
+      "wi",
+      "time",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime5.svg": {
+    "component_id": "Icon.WiTime5",
+    "aliases": [
+      "wi",
+      "time",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime6.svg": {
+    "component_id": "Icon.WiTime6",
+    "aliases": [
+      "wi",
+      "time",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an up button"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime7.svg": {
+    "component_id": "Icon.WiTime7",
+    "aliases": [
+      "wi",
+      "time",
+      "7"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime8.svg": {
+    "component_id": "Icon.WiTime8",
+    "aliases": [
+      "wi",
+      "time",
+      "8"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTime9.svg": {
+    "component_id": "Icon.WiTime9",
+    "aliases": [
+      "wi",
+      "time",
+      "9"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTornado.svg": {
+    "component_id": "Icon.WiTornado",
+    "aliases": [
+      "wi",
+      "tornado"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a tornado"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTrain.svg": {
+    "component_id": "Icon.WiTrain",
+    "aliases": [
+      "wi",
+      "train"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a train on a white background"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiTsunami.svg": {
+    "component_id": "Icon.WiTsunami",
+    "aliases": [
+      "wi",
+      "tsunami"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a house and a wave"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiUmbrella.svg": {
+    "component_id": "Icon.WiUmbrella",
+    "aliases": [
+      "wi",
+      "umbrella"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an umbrella"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiVolcano.svg": {
+    "component_id": "Icon.WiVolcano",
+    "aliases": [
+      "wi",
+      "volcano"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a volcano with smoke coming out of it"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort0.svg": {
+    "component_id": "Icon.WiWindBeaufort0",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "0"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter o"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort1.svg": {
+    "component_id": "Icon.WiWindBeaufort1",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter i"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort10.svg": {
+    "component_id": "Icon.WiWindBeaufort10",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "10"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the number 10"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort11.svg": {
+    "component_id": "Icon.WiWindBeaufort11",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "11"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter w"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort12.svg": {
+    "component_id": "Icon.WiWindBeaufort12",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "12"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the number 12"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort2.svg": {
+    "component_id": "Icon.WiWindBeaufort2",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number 2"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort3.svg": {
+    "component_id": "Icon.WiWindBeaufort3",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number three"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort4.svg": {
+    "component_id": "Icon.WiWindBeaufort4",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number four"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort5.svg": {
+    "component_id": "Icon.WiWindBeaufort5",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "5"
+    ],
+    "colors": [],
+    "caption": "the number five is shown in black and white"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort6.svg": {
+    "component_id": "Icon.WiWindBeaufort6",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number six"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort7.svg": {
+    "component_id": "Icon.WiWindBeaufort7",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "7"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number seven"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort8.svg": {
+    "component_id": "Icon.WiWindBeaufort8",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "8"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number eight"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort9.svg": {
+    "component_id": "Icon.WiWindBeaufort9",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "9"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the number 9"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindDeg.svg": {
+    "component_id": "Icon.WiWindDeg",
+    "aliases": [
+      "wi",
+      "wind",
+      "deg"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing in a circle"
+  },
+  "/home/darren/llm-widget-factory/assets/wi/WiWindy.svg": {
+    "component_id": "Icon.WiWindy",
+    "aliases": [
+      "wi",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  }
+}

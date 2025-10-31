@@ -1,0 +1,3101 @@
+[
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAirportSign1.svg",
+    "component_id": "Icon.CiAirportSign1",
+    "aliases": [
+      "ci",
+      "airport",
+      "sign",
+      "1"
+    ],
+    "caption": "an airplane icon in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAlarmOff.svg",
+    "component_id": "Icon.CiAlarmOff",
+    "aliases": [
+      "ci",
+      "alarm",
+      "off"
+    ],
+    "caption": "a black and white line drawing of a no sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAlarmOn.svg",
+    "component_id": "Icon.CiAlarmOn",
+    "aliases": [
+      "ci",
+      "alarm",
+      "on"
+    ],
+    "caption": "an alarm clock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAlignBottom.svg",
+    "component_id": "Icon.CiAlignBottom",
+    "aliases": [
+      "ci",
+      "align",
+      "bottom"
+    ],
+    "caption": "a bar graph icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAlignCenterH.svg",
+    "component_id": "Icon.CiAlignCenterH",
+    "aliases": [
+      "ci",
+      "align",
+      "center",
+      "h"
+    ],
+    "caption": "a black and white image of a symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAlignCenterV.svg",
+    "component_id": "Icon.CiAlignCenterV",
+    "aliases": [
+      "ci",
+      "align",
+      "center",
+      "v"
+    ],
+    "caption": "a black and white icon of two pills",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAlignLeft.svg",
+    "component_id": "Icon.CiAlignLeft",
+    "aliases": [
+      "ci",
+      "align",
+      "left"
+    ],
+    "caption": "a black and white image of a black and white sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAlignRight.svg",
+    "component_id": "Icon.CiAlignRight",
+    "aliases": [
+      "ci",
+      "align",
+      "right"
+    ],
+    "caption": "a black and white line drawing of a door",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAlignTop.svg",
+    "component_id": "Icon.CiAlignTop",
+    "aliases": [
+      "ci",
+      "align",
+      "top"
+    ],
+    "caption": "a black and white icon of a door with two windows",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiApple.svg",
+    "component_id": "Icon.CiApple",
+    "aliases": [
+      "ci",
+      "apple"
+    ],
+    "caption": "an apple icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAt.svg",
+    "component_id": "Icon.CiAt",
+    "aliases": [
+      "ci",
+      "at"
+    ],
+    "caption": "a black and white image of an email symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiAvocado.svg",
+    "component_id": "Icon.CiAvocado",
+    "aliases": [
+      "ci",
+      "avocado"
+    ],
+    "caption": "an avocado icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBacon.svg",
+    "component_id": "Icon.CiBacon",
+    "aliases": [
+      "ci",
+      "bacon"
+    ],
+    "caption": "a black and white icon of bacon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBadgeDollar.svg",
+    "component_id": "Icon.CiBadgeDollar",
+    "aliases": [
+      "ci",
+      "badge",
+      "dollar"
+    ],
+    "caption": "a dollar sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBag1.svg",
+    "component_id": "Icon.CiBag1",
+    "aliases": [
+      "ci",
+      "bag",
+      "1"
+    ],
+    "caption": "a bag of money icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBandage.svg",
+    "component_id": "Icon.CiBandage",
+    "aliases": [
+      "ci",
+      "bandage"
+    ],
+    "caption": "a black and white illustration of a pill with dots",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBank.svg",
+    "component_id": "Icon.CiBank",
+    "aliases": [
+      "ci",
+      "bank"
+    ],
+    "caption": "a black and white icon of a bank building",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBarcode.svg",
+    "component_id": "Icon.CiBarcode",
+    "aliases": [
+      "ci",
+      "barcode"
+    ],
+    "caption": "a black and white image of a camera",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBaseball.svg",
+    "component_id": "Icon.CiBaseball",
+    "aliases": [
+      "ci",
+      "baseball"
+    ],
+    "caption": "a black and white illustration of a baseball ball",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBasketball.svg",
+    "component_id": "Icon.CiBasketball",
+    "aliases": [
+      "ci",
+      "basketball"
+    ],
+    "caption": "a black and white line drawing of a tennis ball",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBatteryCharging.svg",
+    "component_id": "Icon.CiBatteryCharging",
+    "aliases": [
+      "ci",
+      "battery",
+      "charging"
+    ],
+    "caption": "an icon of a battery with a lightning bolt",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBatteryEmpty.svg",
+    "component_id": "Icon.CiBatteryEmpty",
+    "aliases": [
+      "ci",
+      "battery",
+      "empty"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBatteryFull.svg",
+    "component_id": "Icon.CiBatteryFull",
+    "aliases": [
+      "ci",
+      "battery",
+      "full"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBeaker1.svg",
+    "component_id": "Icon.CiBeaker1",
+    "aliases": [
+      "ci",
+      "beaker",
+      "1"
+    ],
+    "caption": "a black and white illustration of a test tube",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBeerMugFull.svg",
+    "component_id": "Icon.CiBeerMugFull",
+    "aliases": [
+      "ci",
+      "beer",
+      "mug",
+      "full"
+    ],
+    "caption": "a beer mug icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBellOff.svg",
+    "component_id": "Icon.CiBellOff",
+    "aliases": [
+      "ci",
+      "bell",
+      "off"
+    ],
+    "caption": "a no bell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBellOn.svg",
+    "component_id": "Icon.CiBellOn",
+    "aliases": [
+      "ci",
+      "bell",
+      "on"
+    ],
+    "caption": "a bell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBezier.svg",
+    "component_id": "Icon.CiBezier",
+    "aliases": [
+      "ci",
+      "bezier"
+    ],
+    "caption": "a black and white icon of a bridge",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBitcoin.svg",
+    "component_id": "Icon.CiBitcoin",
+    "aliases": [
+      "ci",
+      "bitcoin"
+    ],
+    "caption": "a black and white image of a bitcoin symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBluetooth.svg",
+    "component_id": "Icon.CiBluetooth",
+    "aliases": [
+      "ci",
+      "bluetooth"
+    ],
+    "caption": "a black and white symbol of an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBookmark.svg",
+    "component_id": "Icon.CiBookmark",
+    "aliases": [
+      "ci",
+      "bookmark"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBookmarkCheck.svg",
+    "component_id": "Icon.CiBookmarkCheck",
+    "aliases": [
+      "ci",
+      "bookmark",
+      "check"
+    ],
+    "caption": "a black and white icon of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBookmarkMinus.svg",
+    "component_id": "Icon.CiBookmarkMinus",
+    "aliases": [
+      "ci",
+      "bookmark",
+      "minus"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBookmarkPlus.svg",
+    "component_id": "Icon.CiBookmarkPlus",
+    "aliases": [
+      "ci",
+      "bookmark",
+      "plus"
+    ],
+    "caption": "a black and white icon of a book with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBookmarkRemove.svg",
+    "component_id": "Icon.CiBookmarkRemove",
+    "aliases": [
+      "ci",
+      "bookmark",
+      "remove"
+    ],
+    "caption": "a black and white icon of a bookmark with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBowlNoodles.svg",
+    "component_id": "Icon.CiBowlNoodles",
+    "aliases": [
+      "ci",
+      "bowl",
+      "noodles"
+    ],
+    "caption": "a black and white icon of chopsticks in a bowl",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBoxList.svg",
+    "component_id": "Icon.CiBoxList",
+    "aliases": [
+      "ci",
+      "box",
+      "list"
+    ],
+    "caption": "a check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBoxes.svg",
+    "component_id": "Icon.CiBoxes",
+    "aliases": [
+      "ci",
+      "boxes"
+    ],
+    "caption": "a black and white icon of a stack of boxes",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBrightnessDown.svg",
+    "component_id": "Icon.CiBrightnessDown",
+    "aliases": [
+      "ci",
+      "brightness",
+      "down"
+    ],
+    "caption": "a black and white image of a circle with dots",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBrightnessUp.svg",
+    "component_id": "Icon.CiBrightnessUp",
+    "aliases": [
+      "ci",
+      "brightness",
+      "up"
+    ],
+    "caption": "a black and white icon of a circle with dots",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBullhorn.svg",
+    "component_id": "Icon.CiBullhorn",
+    "aliases": [
+      "ci",
+      "bullhorn"
+    ],
+    "caption": "a megaphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiBurger.svg",
+    "component_id": "Icon.CiBurger",
+    "aliases": [
+      "ci",
+      "burger"
+    ],
+    "caption": "a hamburger icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCalculator1.svg",
+    "component_id": "Icon.CiCalculator1",
+    "aliases": [
+      "ci",
+      "calculator",
+      "1"
+    ],
+    "caption": "a calculator icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCalculator2.svg",
+    "component_id": "Icon.CiCalculator2",
+    "aliases": [
+      "ci",
+      "calculator",
+      "2"
+    ],
+    "caption": "an image of a black and white math symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCalendar.svg",
+    "component_id": "Icon.CiCalendar",
+    "aliases": [
+      "ci",
+      "calendar"
+    ],
+    "caption": "a calendar icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCalendarDate.svg",
+    "component_id": "Icon.CiCalendarDate",
+    "aliases": [
+      "ci",
+      "calendar",
+      "date"
+    ],
+    "caption": "a calendar icon with the number one on it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCamera.svg",
+    "component_id": "Icon.CiCamera",
+    "aliases": [
+      "ci",
+      "camera"
+    ],
+    "caption": "a camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiChat1.svg",
+    "component_id": "Icon.CiChat1",
+    "aliases": [
+      "ci",
+      "chat",
+      "1"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiChat2.svg",
+    "component_id": "Icon.CiChat2",
+    "aliases": [
+      "ci",
+      "chat",
+      "2"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleAlert.svg",
+    "component_id": "Icon.CiCircleAlert",
+    "aliases": [
+      "ci",
+      "circle",
+      "alert"
+    ],
+    "caption": "a black and white image of an exclamation sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleCheck.svg",
+    "component_id": "Icon.CiCircleCheck",
+    "aliases": [
+      "ci",
+      "circle",
+      "check"
+    ],
+    "caption": "a black and white image of a check mark in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleChevDown.svg",
+    "component_id": "Icon.CiCircleChevDown",
+    "aliases": [
+      "ci",
+      "circle",
+      "chev",
+      "down"
+    ],
+    "caption": "a black and white image of a clock",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleChevLeft.svg",
+    "component_id": "Icon.CiCircleChevLeft",
+    "aliases": [
+      "ci",
+      "circle",
+      "chev",
+      "left"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleChevRight.svg",
+    "component_id": "Icon.CiCircleChevRight",
+    "aliases": [
+      "ci",
+      "circle",
+      "chev",
+      "right"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleChevUp.svg",
+    "component_id": "Icon.CiCircleChevUp",
+    "aliases": [
+      "ci",
+      "circle",
+      "chev",
+      "up"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleInfo.svg",
+    "component_id": "Icon.CiCircleInfo",
+    "aliases": [
+      "ci",
+      "circle",
+      "info"
+    ],
+    "caption": "a black and white image of an i in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleList.svg",
+    "component_id": "Icon.CiCircleList",
+    "aliases": [
+      "ci",
+      "circle",
+      "list"
+    ],
+    "caption": "a check list with three circles on it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleMinus.svg",
+    "component_id": "Icon.CiCircleMinus",
+    "aliases": [
+      "ci",
+      "circle",
+      "minus"
+    ],
+    "caption": "a black and white image of an empty circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleMore.svg",
+    "component_id": "Icon.CiCircleMore",
+    "aliases": [
+      "ci",
+      "circle",
+      "more"
+    ],
+    "caption": "a black and white icon with three dots in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCirclePlus.svg",
+    "component_id": "Icon.CiCirclePlus",
+    "aliases": [
+      "ci",
+      "circle",
+      "plus"
+    ],
+    "caption": "a plus sign in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleQuestion.svg",
+    "component_id": "Icon.CiCircleQuestion",
+    "aliases": [
+      "ci",
+      "circle",
+      "question"
+    ],
+    "caption": "a question mark in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCircleRemove.svg",
+    "component_id": "Icon.CiCircleRemove",
+    "aliases": [
+      "ci",
+      "circle",
+      "remove"
+    ],
+    "caption": "a black and white image of an x in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiClock1.svg",
+    "component_id": "Icon.CiClock1",
+    "aliases": [
+      "ci",
+      "clock",
+      "1"
+    ],
+    "caption": "a black and white clock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiClock2.svg",
+    "component_id": "Icon.CiClock2",
+    "aliases": [
+      "ci",
+      "clock",
+      "2"
+    ],
+    "caption": "a black and white clock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCloud.svg",
+    "component_id": "Icon.CiCloud",
+    "aliases": [
+      "ci",
+      "cloud"
+    ],
+    "caption": "a cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCloudDrizzle.svg",
+    "component_id": "Icon.CiCloudDrizzle",
+    "aliases": [
+      "ci",
+      "cloud",
+      "drizzle"
+    ],
+    "caption": "a black and white icon of a cloud with rain drops",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCloudMoon.svg",
+    "component_id": "Icon.CiCloudMoon",
+    "aliases": [
+      "ci",
+      "cloud",
+      "moon"
+    ],
+    "caption": "a black and white line drawing of a cloud and moon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCloudOff.svg",
+    "component_id": "Icon.CiCloudOff",
+    "aliases": [
+      "ci",
+      "cloud",
+      "off"
+    ],
+    "caption": "a black and white icon with a cloud in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCloudOn.svg",
+    "component_id": "Icon.CiCloudOn",
+    "aliases": [
+      "ci",
+      "cloud",
+      "on"
+    ],
+    "caption": "a cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCloudRainbow.svg",
+    "component_id": "Icon.CiCloudRainbow",
+    "aliases": [
+      "ci",
+      "cloud",
+      "rainbow"
+    ],
+    "caption": "a cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCloudSun.svg",
+    "component_id": "Icon.CiCloudSun",
+    "aliases": [
+      "ci",
+      "cloud",
+      "sun"
+    ],
+    "caption": "a sun and cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCoffeeBean.svg",
+    "component_id": "Icon.CiCoffeeBean",
+    "aliases": [
+      "ci",
+      "coffee",
+      "bean"
+    ],
+    "caption": "a black and white line drawing of a coffee bean",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCoffeeCup.svg",
+    "component_id": "Icon.CiCoffeeCup",
+    "aliases": [
+      "ci",
+      "coffee",
+      "cup"
+    ],
+    "caption": "a coffee cup icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCoinInsert.svg",
+    "component_id": "Icon.CiCoinInsert",
+    "aliases": [
+      "ci",
+      "coin",
+      "insert"
+    ],
+    "caption": "a dollar sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCoins1.svg",
+    "component_id": "Icon.CiCoins1",
+    "aliases": [
+      "ci",
+      "coins",
+      "1"
+    ],
+    "caption": "a black and white icon of a stack of books",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCompass1.svg",
+    "component_id": "Icon.CiCompass1",
+    "aliases": [
+      "ci",
+      "compass",
+      "1"
+    ],
+    "caption": "a black and white icon with a dot in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCreditCard1.svg",
+    "component_id": "Icon.CiCreditCard1",
+    "aliases": [
+      "ci",
+      "credit",
+      "card",
+      "1"
+    ],
+    "caption": "a credit card icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCreditCard2.svg",
+    "component_id": "Icon.CiCreditCard2",
+    "aliases": [
+      "ci",
+      "credit",
+      "card",
+      "2"
+    ],
+    "caption": "a credit card icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCreditCardOff.svg",
+    "component_id": "Icon.CiCreditCardOff",
+    "aliases": [
+      "ci",
+      "credit",
+      "card",
+      "off"
+    ],
+    "caption": "a no credit card icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiCrop.svg",
+    "component_id": "Icon.CiCrop",
+    "aliases": [
+      "ci",
+      "crop"
+    ],
+    "caption": "a black square with two lines in it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiDark.svg",
+    "component_id": "Icon.CiDark",
+    "aliases": [
+      "ci",
+      "dark"
+    ],
+    "caption": "a black and white line drawing of a crescent",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiDatabase.svg",
+    "component_id": "Icon.CiDatabase",
+    "aliases": [
+      "ci",
+      "database"
+    ],
+    "caption": "a black and white illustration of a stack of data",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiDeliveryTruck.svg",
+    "component_id": "Icon.CiDeliveryTruck",
+    "aliases": [
+      "ci",
+      "delivery",
+      "truck"
+    ],
+    "caption": "a truck icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiDesktop.svg",
+    "component_id": "Icon.CiDesktop",
+    "aliases": [
+      "ci",
+      "desktop"
+    ],
+    "caption": "a computer monitor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiDesktopMouse1.svg",
+    "component_id": "Icon.CiDesktopMouse1",
+    "aliases": [
+      "ci",
+      "desktop",
+      "mouse",
+      "1"
+    ],
+    "caption": "a computer mouse icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiDesktopMouse2.svg",
+    "component_id": "Icon.CiDesktopMouse2",
+    "aliases": [
+      "ci",
+      "desktop",
+      "mouse",
+      "2"
+    ],
+    "caption": "a black and white image of a computer mouse",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiDiscount1.svg",
+    "component_id": "Icon.CiDiscount1",
+    "aliases": [
+      "ci",
+      "discount",
+      "1"
+    ],
+    "caption": "a black and white icon of a percentage sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiDollar.svg",
+    "component_id": "Icon.CiDollar",
+    "aliases": [
+      "ci",
+      "dollar"
+    ],
+    "caption": "a dollar sign in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiDroplet.svg",
+    "component_id": "Icon.CiDroplet",
+    "aliases": [
+      "ci",
+      "droplet"
+    ],
+    "caption": "a black and white drawing of a water drop",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiDumbbell.svg",
+    "component_id": "Icon.CiDumbbell",
+    "aliases": [
+      "ci",
+      "dumbbell"
+    ],
+    "caption": "a black barbell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiEdit.svg",
+    "component_id": "Icon.CiEdit",
+    "aliases": [
+      "ci",
+      "edit"
+    ],
+    "caption": "a black and white drawing of a pen on a paper",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiEraser.svg",
+    "component_id": "Icon.CiEraser",
+    "aliases": [
+      "ci",
+      "eraser"
+    ],
+    "caption": "a pill icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiExport.svg",
+    "component_id": "Icon.CiExport",
+    "aliases": [
+      "ci",
+      "export"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFaceFrown.svg",
+    "component_id": "Icon.CiFaceFrown",
+    "aliases": [
+      "ci",
+      "face",
+      "frown"
+    ],
+    "caption": "a black and white image of a sad face",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFaceMeh.svg",
+    "component_id": "Icon.CiFaceMeh",
+    "aliases": [
+      "ci",
+      "face",
+      "meh"
+    ],
+    "caption": "a black and white image of a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFaceSmile.svg",
+    "component_id": "Icon.CiFaceSmile",
+    "aliases": [
+      "ci",
+      "face",
+      "smile"
+    ],
+    "caption": "a smiley face icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFacebook.svg",
+    "component_id": "Icon.CiFacebook",
+    "aliases": [
+      "ci",
+      "facebook"
+    ],
+    "caption": "a black and white image of the letter f in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFileOff.svg",
+    "component_id": "Icon.CiFileOff",
+    "aliases": [
+      "ci",
+      "file",
+      "off"
+    ],
+    "caption": "a black and white image of a document with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFileOn.svg",
+    "component_id": "Icon.CiFileOn",
+    "aliases": [
+      "ci",
+      "file",
+      "on"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFilter.svg",
+    "component_id": "Icon.CiFilter",
+    "aliases": [
+      "ci",
+      "filter"
+    ],
+    "caption": "a black and white icon of a funnel",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFlag1.svg",
+    "component_id": "Icon.CiFlag1",
+    "aliases": [
+      "ci",
+      "flag",
+      "1"
+    ],
+    "caption": "a black and white flag icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFloppyDisk.svg",
+    "component_id": "Icon.CiFloppyDisk",
+    "aliases": [
+      "ci",
+      "floppy",
+      "disk"
+    ],
+    "caption": "a black and white icon of a folder",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFolderOff.svg",
+    "component_id": "Icon.CiFolderOff",
+    "aliases": [
+      "ci",
+      "folder",
+      "off"
+    ],
+    "caption": "a black and white icon of a folder with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFolderOn.svg",
+    "component_id": "Icon.CiFolderOn",
+    "aliases": [
+      "ci",
+      "folder",
+      "on"
+    ],
+    "caption": "a black folder icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFootball.svg",
+    "component_id": "Icon.CiFootball",
+    "aliases": [
+      "ci",
+      "football"
+    ],
+    "caption": "an american football ball icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiForkAndKnife.svg",
+    "component_id": "Icon.CiForkAndKnife",
+    "aliases": [
+      "ci",
+      "fork",
+      "and",
+      "knife"
+    ],
+    "caption": "a fork and knife icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiFries.svg",
+    "component_id": "Icon.CiFries",
+    "aliases": [
+      "ci",
+      "fries"
+    ],
+    "caption": "french fries icon vector illustration ilustrace",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiGift.svg",
+    "component_id": "Icon.CiGift",
+    "aliases": [
+      "ci",
+      "gift"
+    ],
+    "caption": "a black and white icon of a present with a bow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiGlass.svg",
+    "component_id": "Icon.CiGlass",
+    "aliases": [
+      "ci",
+      "glass"
+    ],
+    "caption": "a glass of water on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiGlobe.svg",
+    "component_id": "Icon.CiGlobe",
+    "aliases": [
+      "ci",
+      "globe"
+    ],
+    "caption": "a black and white icon of a globe",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiGps.svg",
+    "component_id": "Icon.CiGps",
+    "aliases": [
+      "ci",
+      "gps"
+    ],
+    "caption": "a crosshairs icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiGrid2H.svg",
+    "component_id": "Icon.CiGrid2H",
+    "aliases": [
+      "ci",
+      "grid",
+      "2",
+      "h"
+    ],
+    "caption": "a black and white image of two black rectangles",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiGrid2V.svg",
+    "component_id": "Icon.CiGrid2V",
+    "aliases": [
+      "ci",
+      "grid",
+      "2",
+      "v"
+    ],
+    "caption": "a black and white image of two black rectangles",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiGrid31.svg",
+    "component_id": "Icon.CiGrid31",
+    "aliases": [
+      "ci",
+      "grid",
+      "31"
+    ],
+    "caption": "a black and white image of a calculator",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiGrid32.svg",
+    "component_id": "Icon.CiGrid32",
+    "aliases": [
+      "ci",
+      "grid",
+      "32"
+    ],
+    "caption": "a black and white line drawing of three different shapes",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiGrid41.svg",
+    "component_id": "Icon.CiGrid41",
+    "aliases": [
+      "ci",
+      "grid",
+      "41"
+    ],
+    "caption": "four square icons on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiGrid42.svg",
+    "component_id": "Icon.CiGrid42",
+    "aliases": [
+      "ci",
+      "grid",
+      "42"
+    ],
+    "caption": "a black and white image of three black rectangles",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiHardDrive.svg",
+    "component_id": "Icon.CiHardDrive",
+    "aliases": [
+      "ci",
+      "hard",
+      "drive"
+    ],
+    "caption": "an icon of a hard drive on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiHashtag.svg",
+    "component_id": "Icon.CiHashtag",
+    "aliases": [
+      "ci",
+      "hashtag"
+    ],
+    "caption": "a hash symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiHeadphones.svg",
+    "component_id": "Icon.CiHeadphones",
+    "aliases": [
+      "ci",
+      "headphones"
+    ],
+    "caption": "a black and white line drawing of headphones",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiHeart.svg",
+    "component_id": "Icon.CiHeart",
+    "aliases": [
+      "ci",
+      "heart"
+    ],
+    "caption": "a black and white line drawing of a heart",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiHome.svg",
+    "component_id": "Icon.CiHome",
+    "aliases": [
+      "ci",
+      "home"
+    ],
+    "caption": "a house icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiHospital1.svg",
+    "component_id": "Icon.CiHospital1",
+    "aliases": [
+      "ci",
+      "hospital",
+      "1"
+    ],
+    "caption": "a church icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiHotdog.svg",
+    "component_id": "Icon.CiHotdog",
+    "aliases": [
+      "ci",
+      "hotdog"
+    ],
+    "caption": "a black and white line drawing of a hot dog",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiIceCream.svg",
+    "component_id": "Icon.CiIceCream",
+    "aliases": [
+      "ci",
+      "ice",
+      "cream"
+    ],
+    "caption": "an ice cream cone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiImageOff.svg",
+    "component_id": "Icon.CiImageOff",
+    "aliases": [
+      "ci",
+      "image",
+      "off"
+    ],
+    "caption": "a black and white image of a square with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiImageOn.svg",
+    "component_id": "Icon.CiImageOn",
+    "aliases": [
+      "ci",
+      "image",
+      "on"
+    ],
+    "caption": "a black and white photo icon with the sun and mountains",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiImport.svg",
+    "component_id": "Icon.CiImport",
+    "aliases": [
+      "ci",
+      "import"
+    ],
+    "caption": "a black and white icon of a down arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiInboxIn.svg",
+    "component_id": "Icon.CiInboxIn",
+    "aliases": [
+      "ci",
+      "inbox",
+      "in"
+    ],
+    "caption": "a black and white icon of a folder with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiInboxOut.svg",
+    "component_id": "Icon.CiInboxOut",
+    "aliases": [
+      "ci",
+      "inbox",
+      "out"
+    ],
+    "caption": "a black and white icon of a folder with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiIndent.svg",
+    "component_id": "Icon.CiIndent",
+    "aliases": [
+      "ci",
+      "indent"
+    ],
+    "caption": "a black and white image of an arrow pointing in one direction",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiInstagram.svg",
+    "component_id": "Icon.CiInstagram",
+    "aliases": [
+      "ci",
+      "instagram"
+    ],
+    "caption": "a black and white image of an instagram",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiKeyboard.svg",
+    "component_id": "Icon.CiKeyboard",
+    "aliases": [
+      "ci",
+      "keyboard"
+    ],
+    "caption": "a black and white icon with dots on it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLaptop.svg",
+    "component_id": "Icon.CiLaptop",
+    "aliases": [
+      "ci",
+      "laptop"
+    ],
+    "caption": "a laptop computer icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLemon.svg",
+    "component_id": "Icon.CiLemon",
+    "aliases": [
+      "ci",
+      "lemon"
+    ],
+    "caption": "a black and white line drawing of a lemon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLight.svg",
+    "component_id": "Icon.CiLight",
+    "aliases": [
+      "ci",
+      "light"
+    ],
+    "caption": "a sun icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLineHeight.svg",
+    "component_id": "Icon.CiLineHeight",
+    "aliases": [
+      "ci",
+      "line",
+      "height"
+    ],
+    "caption": "an arrow pointing up and down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLink.svg",
+    "component_id": "Icon.CiLink",
+    "aliases": [
+      "ci",
+      "link"
+    ],
+    "caption": "a black and white image of a link",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLinkedin.svg",
+    "component_id": "Icon.CiLinkedin",
+    "aliases": [
+      "ci",
+      "linkedin"
+    ],
+    "caption": "a black and white image of the linked logo",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLocationArrow1.svg",
+    "component_id": "Icon.CiLocationArrow1",
+    "aliases": [
+      "ci",
+      "location",
+      "arrow",
+      "1"
+    ],
+    "caption": "a black and white line drawing of a triangle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLocationOff.svg",
+    "component_id": "Icon.CiLocationOff",
+    "aliases": [
+      "ci",
+      "location",
+      "off"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLocationOn.svg",
+    "component_id": "Icon.CiLocationOn",
+    "aliases": [
+      "ci",
+      "location",
+      "on"
+    ],
+    "caption": "a black and white map pin icon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLock.svg",
+    "component_id": "Icon.CiLock",
+    "aliases": [
+      "ci",
+      "lock"
+    ],
+    "caption": "a padlock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLogin.svg",
+    "component_id": "Icon.CiLogin",
+    "aliases": [
+      "ci",
+      "login"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLogout.svg",
+    "component_id": "Icon.CiLogout",
+    "aliases": [
+      "ci",
+      "logout"
+    ],
+    "caption": "a black arrow pointing in the direction of an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiLollipop.svg",
+    "component_id": "Icon.CiLollipop",
+    "aliases": [
+      "ci",
+      "lollipop"
+    ],
+    "caption": "a black and white icon of a lollipop on a stick",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMail.svg",
+    "component_id": "Icon.CiMail",
+    "aliases": [
+      "ci",
+      "mail"
+    ],
+    "caption": "an envelope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMap.svg",
+    "component_id": "Icon.CiMap",
+    "aliases": [
+      "ci",
+      "map"
+    ],
+    "caption": "a black and white image of an open book",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMapPin.svg",
+    "component_id": "Icon.CiMapPin",
+    "aliases": [
+      "ci",
+      "map",
+      "pin"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMaximize1.svg",
+    "component_id": "Icon.CiMaximize1",
+    "aliases": [
+      "ci",
+      "maximize",
+      "1"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMaximize2.svg",
+    "component_id": "Icon.CiMaximize2",
+    "aliases": [
+      "ci",
+      "maximize",
+      "2"
+    ],
+    "caption": "an image of a square with two black lines",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMedal.svg",
+    "component_id": "Icon.CiMedal",
+    "aliases": [
+      "ci",
+      "medal"
+    ],
+    "caption": "a medal icon with a star in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMedicalCase.svg",
+    "component_id": "Icon.CiMedicalCase",
+    "aliases": [
+      "ci",
+      "medical",
+      "case"
+    ],
+    "caption": "a black and white icon of a first aid kit",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMedicalClipboard.svg",
+    "component_id": "Icon.CiMedicalClipboard",
+    "aliases": [
+      "ci",
+      "medical",
+      "clipboard"
+    ],
+    "caption": "a clipboard with a plus sign on it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMedicalCross.svg",
+    "component_id": "Icon.CiMedicalCross",
+    "aliases": [
+      "ci",
+      "medical",
+      "cross"
+    ],
+    "caption": "a black plus sign on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMedicalMask.svg",
+    "component_id": "Icon.CiMedicalMask",
+    "aliases": [
+      "ci",
+      "medical",
+      "mask"
+    ],
+    "caption": "a medical mask icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMemoPad.svg",
+    "component_id": "Icon.CiMemoPad",
+    "aliases": [
+      "ci",
+      "memo",
+      "pad"
+    ],
+    "caption": "a black and white icon of a document on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMenuBurger.svg",
+    "component_id": "Icon.CiMenuBurger",
+    "aliases": [
+      "ci",
+      "menu",
+      "burger"
+    ],
+    "caption": "two black lines on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMenuFries.svg",
+    "component_id": "Icon.CiMenuFries",
+    "aliases": [
+      "ci",
+      "menu",
+      "fries"
+    ],
+    "caption": "a black and white image of the letter e",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMenuKebab.svg",
+    "component_id": "Icon.CiMenuKebab",
+    "aliases": [
+      "ci",
+      "menu",
+      "kebab"
+    ],
+    "caption": "four black circles on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMicrochip.svg",
+    "component_id": "Icon.CiMicrochip",
+    "aliases": [
+      "ci",
+      "microchip"
+    ],
+    "caption": "an image of a computer chip on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMicrophoneOff.svg",
+    "component_id": "Icon.CiMicrophoneOff",
+    "aliases": [
+      "ci",
+      "microphone",
+      "off"
+    ],
+    "caption": "a microphone icon with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMicrophoneOn.svg",
+    "component_id": "Icon.CiMicrophoneOn",
+    "aliases": [
+      "ci",
+      "microphone",
+      "on"
+    ],
+    "caption": "a microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMinimize1.svg",
+    "component_id": "Icon.CiMinimize1",
+    "aliases": [
+      "ci",
+      "minimize",
+      "1"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMinimize2.svg",
+    "component_id": "Icon.CiMinimize2",
+    "aliases": [
+      "ci",
+      "minimize",
+      "2"
+    ],
+    "caption": "a black and white image of a cross",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMobile1.svg",
+    "component_id": "Icon.CiMobile1",
+    "aliases": [
+      "ci",
+      "mobile",
+      "1"
+    ],
+    "caption": "a cell phone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMobile2.svg",
+    "component_id": "Icon.CiMobile2",
+    "aliases": [
+      "ci",
+      "mobile",
+      "2"
+    ],
+    "caption": "a black and white image of a cell phone",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMobile3.svg",
+    "component_id": "Icon.CiMobile3",
+    "aliases": [
+      "ci",
+      "mobile",
+      "3"
+    ],
+    "caption": "an icon of a smartphone on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMobile4.svg",
+    "component_id": "Icon.CiMobile4",
+    "aliases": [
+      "ci",
+      "mobile",
+      "4"
+    ],
+    "caption": "a black and white image of a cell phone",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMoneyBill.svg",
+    "component_id": "Icon.CiMoneyBill",
+    "aliases": [
+      "ci",
+      "money",
+      "bill"
+    ],
+    "caption": "a black and white icon of a dollar bill",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMoneyCheck1.svg",
+    "component_id": "Icon.CiMoneyCheck1",
+    "aliases": [
+      "ci",
+      "money",
+      "check",
+      "1"
+    ],
+    "caption": "an envelope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMonitor.svg",
+    "component_id": "Icon.CiMonitor",
+    "aliases": [
+      "ci",
+      "monitor"
+    ],
+    "caption": "a computer monitor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMountain1.svg",
+    "component_id": "Icon.CiMountain1",
+    "aliases": [
+      "ci",
+      "mountain",
+      "1"
+    ],
+    "caption": "a black and white line drawing of a mountain",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMug1.svg",
+    "component_id": "Icon.CiMug1",
+    "aliases": [
+      "ci",
+      "mug",
+      "1"
+    ],
+    "caption": "coffee cup icon isolated on white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiMusicNote1.svg",
+    "component_id": "Icon.CiMusicNote1",
+    "aliases": [
+      "ci",
+      "music",
+      "note",
+      "1"
+    ],
+    "caption": "a music note icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiNoWaitingSign.svg",
+    "component_id": "Icon.CiNoWaitingSign",
+    "aliases": [
+      "ci",
+      "no",
+      "waiting",
+      "sign"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPalette.svg",
+    "component_id": "Icon.CiPalette",
+    "aliases": [
+      "ci",
+      "palette"
+    ],
+    "caption": "a black and white icon of the letter k",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPaperplane.svg",
+    "component_id": "Icon.CiPaperplane",
+    "aliases": [
+      "ci",
+      "paperplane"
+    ],
+    "caption": "a black and white icon of a paper airplane",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiParking1.svg",
+    "component_id": "Icon.CiParking1",
+    "aliases": [
+      "ci",
+      "parking",
+      "1"
+    ],
+    "caption": "a black and white circle with the letter p in it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPassport1.svg",
+    "component_id": "Icon.CiPassport1",
+    "aliases": [
+      "ci",
+      "passport",
+      "1"
+    ],
+    "caption": "a black and white icon of a doorbell",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPause1.svg",
+    "component_id": "Icon.CiPause1",
+    "aliases": [
+      "ci",
+      "pause",
+      "1"
+    ],
+    "caption": "a black and white line drawing of two numbers",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPen.svg",
+    "component_id": "Icon.CiPen",
+    "aliases": [
+      "ci",
+      "pen"
+    ],
+    "caption": "a black and white icon of a pen",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPenpot.svg",
+    "component_id": "Icon.CiPenpot",
+    "aliases": [
+      "ci",
+      "penpot"
+    ],
+    "caption": "a black and white icon of pencils in a box",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPercent.svg",
+    "component_id": "Icon.CiPercent",
+    "aliases": [
+      "ci",
+      "percent"
+    ],
+    "caption": "a black and white image of a percentage sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPhone.svg",
+    "component_id": "Icon.CiPhone",
+    "aliases": [
+      "ci",
+      "phone"
+    ],
+    "caption": "a black and white telephone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPickerEmpty.svg",
+    "component_id": "Icon.CiPickerEmpty",
+    "aliases": [
+      "ci",
+      "picker",
+      "empty"
+    ],
+    "caption": "a knife icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPickerHalf.svg",
+    "component_id": "Icon.CiPickerHalf",
+    "aliases": [
+      "ci",
+      "picker",
+      "half"
+    ],
+    "caption": "a black and white illustration of a syringe",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPill.svg",
+    "component_id": "Icon.CiPill",
+    "aliases": [
+      "ci",
+      "pill"
+    ],
+    "caption": "a pill icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPillsBottle1.svg",
+    "component_id": "Icon.CiPillsBottle1",
+    "aliases": [
+      "ci",
+      "pills",
+      "bottle",
+      "1"
+    ],
+    "caption": "a black and white illustration of a medicine bottle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPizza.svg",
+    "component_id": "Icon.CiPizza",
+    "aliases": [
+      "ci",
+      "pizza"
+    ],
+    "caption": "a black and white icon of a slice of pizza",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPlane.svg",
+    "component_id": "Icon.CiPlane",
+    "aliases": [
+      "ci",
+      "plane"
+    ],
+    "caption": "an airplane icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPlay1.svg",
+    "component_id": "Icon.CiPlay1",
+    "aliases": [
+      "ci",
+      "play",
+      "1"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPlug1.svg",
+    "component_id": "Icon.CiPlug1",
+    "aliases": [
+      "ci",
+      "plug",
+      "1"
+    ],
+    "caption": "a black and white icon of a plug",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiPower.svg",
+    "component_id": "Icon.CiPower",
+    "aliases": [
+      "ci",
+      "power"
+    ],
+    "caption": "a black and white image of a power button",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiRainbow.svg",
+    "component_id": "Icon.CiRainbow",
+    "aliases": [
+      "ci",
+      "rainbow"
+    ],
+    "caption": "a black and white icon of a rainbow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiRead.svg",
+    "component_id": "Icon.CiRead",
+    "aliases": [
+      "ci",
+      "read"
+    ],
+    "caption": "a black and white icon of an eye",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiReceipt.svg",
+    "component_id": "Icon.CiReceipt",
+    "aliases": [
+      "ci",
+      "receipt"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiRedo.svg",
+    "component_id": "Icon.CiRedo",
+    "aliases": [
+      "ci",
+      "redo"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiRepeat.svg",
+    "component_id": "Icon.CiRepeat",
+    "aliases": [
+      "ci",
+      "repeat"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiRollingSuitcase.svg",
+    "component_id": "Icon.CiRollingSuitcase",
+    "aliases": [
+      "ci",
+      "rolling",
+      "suitcase"
+    ],
+    "caption": "suitcase icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiRoute.svg",
+    "component_id": "Icon.CiRoute",
+    "aliases": [
+      "ci",
+      "route"
+    ],
+    "caption": "a black and white arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiRouter.svg",
+    "component_id": "Icon.CiRouter",
+    "aliases": [
+      "ci",
+      "router"
+    ],
+    "caption": "a black and white icon of a router",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiRuler.svg",
+    "component_id": "Icon.CiRuler",
+    "aliases": [
+      "ci",
+      "ruler"
+    ],
+    "caption": "a ruler icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSatellite1.svg",
+    "component_id": "Icon.CiSatellite1",
+    "aliases": [
+      "ci",
+      "satellite",
+      "1"
+    ],
+    "caption": "a black and white icon of a rocket",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSaveDown1.svg",
+    "component_id": "Icon.CiSaveDown1",
+    "aliases": [
+      "ci",
+      "save",
+      "down",
+      "1"
+    ],
+    "caption": "a black and white image of a power button",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSaveDown2.svg",
+    "component_id": "Icon.CiSaveDown2",
+    "aliases": [
+      "ci",
+      "save",
+      "down",
+      "2"
+    ],
+    "caption": "a black and white icon of a down arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSaveUp1.svg",
+    "component_id": "Icon.CiSaveUp1",
+    "aliases": [
+      "ci",
+      "save",
+      "up",
+      "1"
+    ],
+    "caption": "a black and white image of a power button with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSaveUp2.svg",
+    "component_id": "Icon.CiSaveUp2",
+    "aliases": [
+      "ci",
+      "save",
+      "up",
+      "2"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSearch.svg",
+    "component_id": "Icon.CiSearch",
+    "aliases": [
+      "ci",
+      "search"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiServer.svg",
+    "component_id": "Icon.CiServer",
+    "aliases": [
+      "ci",
+      "server"
+    ],
+    "caption": "two server icons on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSettings.svg",
+    "component_id": "Icon.CiSettings",
+    "aliases": [
+      "ci",
+      "settings"
+    ],
+    "caption": "a gear wheel icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiShare1.svg",
+    "component_id": "Icon.CiShare1",
+    "aliases": [
+      "ci",
+      "share",
+      "1"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiShare2.svg",
+    "component_id": "Icon.CiShare2",
+    "aliases": [
+      "ci",
+      "share",
+      "2"
+    ],
+    "caption": "a black and white icon of two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiShirt.svg",
+    "component_id": "Icon.CiShirt",
+    "aliases": [
+      "ci",
+      "shirt"
+    ],
+    "caption": "a plastic bag with the number one on it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiShop.svg",
+    "component_id": "Icon.CiShop",
+    "aliases": [
+      "ci",
+      "shop"
+    ],
+    "caption": "a black and white icon of a store",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiShoppingBasket.svg",
+    "component_id": "Icon.CiShoppingBasket",
+    "aliases": [
+      "ci",
+      "shopping",
+      "basket"
+    ],
+    "caption": "a black and white icon of a shopping basket",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiShoppingCart.svg",
+    "component_id": "Icon.CiShoppingCart",
+    "aliases": [
+      "ci",
+      "shopping",
+      "cart"
+    ],
+    "caption": "a shopping cart icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiShoppingTag.svg",
+    "component_id": "Icon.CiShoppingTag",
+    "aliases": [
+      "ci",
+      "shopping",
+      "tag"
+    ],
+    "caption": "a black and white icon of a tag on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiShuffle.svg",
+    "component_id": "Icon.CiShuffle",
+    "aliases": [
+      "ci",
+      "shuffle"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSignpostDuo1.svg",
+    "component_id": "Icon.CiSignpostDuo1",
+    "aliases": [
+      "ci",
+      "signpost",
+      "duo",
+      "1"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSignpostL1.svg",
+    "component_id": "Icon.CiSignpostL1",
+    "aliases": [
+      "ci",
+      "signpost",
+      "l",
+      "1"
+    ],
+    "caption": "a black and white line drawing of an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSignpostR1.svg",
+    "component_id": "Icon.CiSignpostR1",
+    "aliases": [
+      "ci",
+      "signpost",
+      "r",
+      "1"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSliderHorizontal.svg",
+    "component_id": "Icon.CiSliderHorizontal",
+    "aliases": [
+      "ci",
+      "slider",
+      "horizontal"
+    ],
+    "caption": "two black and white lines that are connected to each other",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSliderVertical.svg",
+    "component_id": "Icon.CiSliderVertical",
+    "aliases": [
+      "ci",
+      "slider",
+      "vertical"
+    ],
+    "caption": "two black and white electrical symbols on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSpeaker.svg",
+    "component_id": "Icon.CiSpeaker",
+    "aliases": [
+      "ci",
+      "speaker"
+    ],
+    "caption": "a speaker icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareAlert.svg",
+    "component_id": "Icon.CiSquareAlert",
+    "aliases": [
+      "ci",
+      "square",
+      "alert"
+    ],
+    "caption": "a black and white square button with the letter i",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareCheck.svg",
+    "component_id": "Icon.CiSquareCheck",
+    "aliases": [
+      "ci",
+      "square",
+      "check"
+    ],
+    "caption": "a check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareChevDown.svg",
+    "component_id": "Icon.CiSquareChevDown",
+    "aliases": [
+      "ci",
+      "square",
+      "chev",
+      "down"
+    ],
+    "caption": "a black and white square icon with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareChevLeft.svg",
+    "component_id": "Icon.CiSquareChevLeft",
+    "aliases": [
+      "ci",
+      "square",
+      "chev",
+      "left"
+    ],
+    "caption": "a black and white square button with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareChevRight.svg",
+    "component_id": "Icon.CiSquareChevRight",
+    "aliases": [
+      "ci",
+      "square",
+      "chev",
+      "right"
+    ],
+    "caption": "a black and white square button with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareChevUp.svg",
+    "component_id": "Icon.CiSquareChevUp",
+    "aliases": [
+      "ci",
+      "square",
+      "chev",
+      "up"
+    ],
+    "caption": "a black square button with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareInfo.svg",
+    "component_id": "Icon.CiSquareInfo",
+    "aliases": [
+      "ci",
+      "square",
+      "info"
+    ],
+    "caption": "a black and white image of an exclamation sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareMinus.svg",
+    "component_id": "Icon.CiSquareMinus",
+    "aliases": [
+      "ci",
+      "square",
+      "minus"
+    ],
+    "caption": "a square icon with a black line on it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareMore.svg",
+    "component_id": "Icon.CiSquareMore",
+    "aliases": [
+      "ci",
+      "square",
+      "more"
+    ],
+    "caption": "a square button with three dots on it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquarePlus.svg",
+    "component_id": "Icon.CiSquarePlus",
+    "aliases": [
+      "ci",
+      "square",
+      "plus"
+    ],
+    "caption": "a plus sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareQuestion.svg",
+    "component_id": "Icon.CiSquareQuestion",
+    "aliases": [
+      "ci",
+      "square",
+      "question"
+    ],
+    "caption": "a question mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSquareRemove.svg",
+    "component_id": "Icon.CiSquareRemove",
+    "aliases": [
+      "ci",
+      "square",
+      "remove"
+    ],
+    "caption": "a black and white square button with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiStar.svg",
+    "component_id": "Icon.CiStar",
+    "aliases": [
+      "ci",
+      "star"
+    ],
+    "caption": "a star icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiStethoscope.svg",
+    "component_id": "Icon.CiStethoscope",
+    "aliases": [
+      "ci",
+      "stethoscope"
+    ],
+    "caption": "a stethoscope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiStickyNote.svg",
+    "component_id": "Icon.CiStickyNote",
+    "aliases": [
+      "ci",
+      "sticky",
+      "note"
+    ],
+    "caption": "a black and white image of a square piece of paper",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiStop1.svg",
+    "component_id": "Icon.CiStop1",
+    "aliases": [
+      "ci",
+      "stop",
+      "1"
+    ],
+    "caption": "a square black and white icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiStopSign1.svg",
+    "component_id": "Icon.CiStopSign1",
+    "aliases": [
+      "ci",
+      "stop",
+      "sign",
+      "1"
+    ],
+    "caption": "a black and white image of a stop sign with the letter s",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiStopwatch.svg",
+    "component_id": "Icon.CiStopwatch",
+    "aliases": [
+      "ci",
+      "stopwatch"
+    ],
+    "caption": "a stopwatch icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiStreamOff.svg",
+    "component_id": "Icon.CiStreamOff",
+    "aliases": [
+      "ci",
+      "stream",
+      "off"
+    ],
+    "caption": "a black and white image of a no signal icon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiStreamOn.svg",
+    "component_id": "Icon.CiStreamOn",
+    "aliases": [
+      "ci",
+      "stream",
+      "on"
+    ],
+    "caption": "a black and white image of a wireless symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiSun.svg",
+    "component_id": "Icon.CiSun",
+    "aliases": [
+      "ci",
+      "sun"
+    ],
+    "caption": "a black and white icon of a sun",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTablets1.svg",
+    "component_id": "Icon.CiTablets1",
+    "aliases": [
+      "ci",
+      "tablets",
+      "1"
+    ],
+    "caption": "a black and white image of a no symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTempHigh.svg",
+    "component_id": "Icon.CiTempHigh",
+    "aliases": [
+      "ci",
+      "temp",
+      "high"
+    ],
+    "caption": "thermometer thermometer icon thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiText.svg",
+    "component_id": "Icon.CiText",
+    "aliases": [
+      "ci",
+      "text"
+    ],
+    "caption": "a black and white image of the letter t",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTextAlignCenter.svg",
+    "component_id": "Icon.CiTextAlignCenter",
+    "aliases": [
+      "ci",
+      "text",
+      "align",
+      "center"
+    ],
+    "caption": "a black and white line drawing of four lines",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTextAlignJustify.svg",
+    "component_id": "Icon.CiTextAlignJustify",
+    "aliases": [
+      "ci",
+      "text",
+      "align",
+      "justify"
+    ],
+    "caption": "a black and white image of a line of black and white lines",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTextAlignLeft.svg",
+    "component_id": "Icon.CiTextAlignLeft",
+    "aliases": [
+      "ci",
+      "text",
+      "align",
+      "left"
+    ],
+    "caption": "a black and white image of a line of text",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTextAlignRight.svg",
+    "component_id": "Icon.CiTextAlignRight",
+    "aliases": [
+      "ci",
+      "text",
+      "align",
+      "right"
+    ],
+    "caption": "a black and white image of a line of text",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTimer.svg",
+    "component_id": "Icon.CiTimer",
+    "aliases": [
+      "ci",
+      "timer"
+    ],
+    "caption": "a black and white icon of a clock",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTrash.svg",
+    "component_id": "Icon.CiTrash",
+    "aliases": [
+      "ci",
+      "trash"
+    ],
+    "caption": "trash bin icon vector illustration",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTrophy.svg",
+    "component_id": "Icon.CiTrophy",
+    "aliases": [
+      "ci",
+      "trophy"
+    ],
+    "caption": "a trophy icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTurnL1.svg",
+    "component_id": "Icon.CiTurnL1",
+    "aliases": [
+      "ci",
+      "turn",
+      "l",
+      "1"
+    ],
+    "caption": "a black and white arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTurnR1.svg",
+    "component_id": "Icon.CiTurnR1",
+    "aliases": [
+      "ci",
+      "turn",
+      "r",
+      "1"
+    ],
+    "caption": "a black arrow pointing to the right side of the road",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiTwitter.svg",
+    "component_id": "Icon.CiTwitter",
+    "aliases": [
+      "ci",
+      "twitter"
+    ],
+    "caption": "a black and white image of a twitter bird",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiUmbrella.svg",
+    "component_id": "Icon.CiUmbrella",
+    "aliases": [
+      "ci",
+      "umbrella"
+    ],
+    "caption": "a black and white icon of an umbrella",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiUndo.svg",
+    "component_id": "Icon.CiUndo",
+    "aliases": [
+      "ci",
+      "undo"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiUnlock.svg",
+    "component_id": "Icon.CiUnlock",
+    "aliases": [
+      "ci",
+      "unlock"
+    ],
+    "caption": "a padlock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiUnread.svg",
+    "component_id": "Icon.CiUnread",
+    "aliases": [
+      "ci",
+      "unread"
+    ],
+    "caption": "a black and white icon of an eye with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiUsb.svg",
+    "component_id": "Icon.CiUsb",
+    "aliases": [
+      "ci",
+      "usb"
+    ],
+    "caption": "a black and white icon of a usb drive",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiUser.svg",
+    "component_id": "Icon.CiUser",
+    "aliases": [
+      "ci",
+      "user"
+    ],
+    "caption": "a person icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiVault.svg",
+    "component_id": "Icon.CiVault",
+    "aliases": [
+      "ci",
+      "vault"
+    ],
+    "caption": "a black and white icon of a safe box",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiVial.svg",
+    "component_id": "Icon.CiVial",
+    "aliases": [
+      "ci",
+      "vial"
+    ],
+    "caption": "a black and white illustration of a test tube",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiVideoOff.svg",
+    "component_id": "Icon.CiVideoOff",
+    "aliases": [
+      "ci",
+      "video",
+      "off"
+    ],
+    "caption": "a black and white image of a no sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiVideoOn.svg",
+    "component_id": "Icon.CiVideoOn",
+    "aliases": [
+      "ci",
+      "video",
+      "on"
+    ],
+    "caption": "a video camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiViewBoard.svg",
+    "component_id": "Icon.CiViewBoard",
+    "aliases": [
+      "ci",
+      "view",
+      "board"
+    ],
+    "caption": "a black and white icon of a square",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiViewColumn.svg",
+    "component_id": "Icon.CiViewColumn",
+    "aliases": [
+      "ci",
+      "view",
+      "column"
+    ],
+    "caption": "a black and white image of a credit card",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiViewList.svg",
+    "component_id": "Icon.CiViewList",
+    "aliases": [
+      "ci",
+      "view",
+      "list"
+    ],
+    "caption": "a black and white icon of a checklist",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiViewTable.svg",
+    "component_id": "Icon.CiViewTable",
+    "aliases": [
+      "ci",
+      "view",
+      "table"
+    ],
+    "caption": "a black and white icon of a calendar",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiViewTimeline.svg",
+    "component_id": "Icon.CiViewTimeline",
+    "aliases": [
+      "ci",
+      "view",
+      "timeline"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiVirus.svg",
+    "component_id": "Icon.CiVirus",
+    "aliases": [
+      "ci",
+      "virus"
+    ],
+    "caption": "a black and white illustration of a coronavirus",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiVoicemail.svg",
+    "component_id": "Icon.CiVoicemail",
+    "aliases": [
+      "ci",
+      "voicemail"
+    ],
+    "caption": "a black and white image of two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiVolume.svg",
+    "component_id": "Icon.CiVolume",
+    "aliases": [
+      "ci",
+      "volume"
+    ],
+    "caption": "a black and white line drawing of a speaker",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiVolumeHigh.svg",
+    "component_id": "Icon.CiVolumeHigh",
+    "aliases": [
+      "ci",
+      "volume",
+      "high"
+    ],
+    "caption": "a speaker icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiVolumeMute.svg",
+    "component_id": "Icon.CiVolumeMute",
+    "aliases": [
+      "ci",
+      "volume",
+      "mute"
+    ],
+    "caption": "a black and white image of a speaker icon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiWallet.svg",
+    "component_id": "Icon.CiWallet",
+    "aliases": [
+      "ci",
+      "wallet"
+    ],
+    "caption": "a black and white icon of a wallet",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiWarning.svg",
+    "component_id": "Icon.CiWarning",
+    "aliases": [
+      "ci",
+      "warning"
+    ],
+    "caption": "a black and white image of a warning sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiWavePulse1.svg",
+    "component_id": "Icon.CiWavePulse1",
+    "aliases": [
+      "ci",
+      "wave",
+      "pulse",
+      "1"
+    ],
+    "caption": "an image of an electrical wave on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiWheat.svg",
+    "component_id": "Icon.CiWheat",
+    "aliases": [
+      "ci",
+      "wheat"
+    ],
+    "caption": "wheat icon isolated on white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiWifiOff.svg",
+    "component_id": "Icon.CiWifiOff",
+    "aliases": [
+      "ci",
+      "wifi",
+      "off"
+    ],
+    "caption": "a black and white image of a wifi symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiWifiOn.svg",
+    "component_id": "Icon.CiWifiOn",
+    "aliases": [
+      "ci",
+      "wifi",
+      "on"
+    ],
+    "caption": "an icon of a wifi symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiYoutube.svg",
+    "component_id": "Icon.CiYoutube",
+    "aliases": [
+      "ci",
+      "youtube"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiZoomIn.svg",
+    "component_id": "Icon.CiZoomIn",
+    "aliases": [
+      "ci",
+      "zoom",
+      "in"
+    ],
+    "caption": "a magnifying icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/ci/CiZoomOut.svg",
+    "component_id": "Icon.CiZoomOut",
+    "aliases": [
+      "ci",
+      "zoom",
+      "out"
+    ],
+    "caption": "a magnifying icon on a white background",
+    "colors": []
+  }
+]

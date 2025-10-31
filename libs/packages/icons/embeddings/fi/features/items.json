@@ -1,0 +1,3019 @@
+[
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiActivity.svg",
+    "component_id": "Icon.FiActivity",
+    "aliases": [
+      "fi",
+      "activity"
+    ],
+    "caption": "an image of a black and white wave symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAirplay.svg",
+    "component_id": "Icon.FiAirplay",
+    "aliases": [
+      "fi",
+      "airplay"
+    ],
+    "caption": "a black and white icon with a triangle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlertCircle.svg",
+    "component_id": "Icon.FiAlertCircle",
+    "aliases": [
+      "fi",
+      "alert",
+      "circle"
+    ],
+    "caption": "a black and white image of an exclamation sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlertOctagon.svg",
+    "component_id": "Icon.FiAlertOctagon",
+    "aliases": [
+      "fi",
+      "alert",
+      "octagon"
+    ],
+    "caption": "a black and white image of a stop sign with an exclamation mark",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlertTriangle.svg",
+    "component_id": "Icon.FiAlertTriangle",
+    "aliases": [
+      "fi",
+      "alert",
+      "triangle"
+    ],
+    "caption": "a black and white image of a warning sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlignCenter.svg",
+    "component_id": "Icon.FiAlignCenter",
+    "aliases": [
+      "fi",
+      "align",
+      "center"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlignJustify.svg",
+    "component_id": "Icon.FiAlignJustify",
+    "aliases": [
+      "fi",
+      "align",
+      "justify"
+    ],
+    "caption": "a black and white icon with four lines",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlignLeft.svg",
+    "component_id": "Icon.FiAlignLeft",
+    "aliases": [
+      "fi",
+      "align",
+      "left"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlignRight.svg",
+    "component_id": "Icon.FiAlignRight",
+    "aliases": [
+      "fi",
+      "align",
+      "right"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAnchor.svg",
+    "component_id": "Icon.FiAnchor",
+    "aliases": [
+      "fi",
+      "anchor"
+    ],
+    "caption": "an anchor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAperture.svg",
+    "component_id": "Icon.FiAperture",
+    "aliases": [
+      "fi",
+      "aperture"
+    ],
+    "caption": "a black and white circular logo with an image of a camera lens",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArchive.svg",
+    "component_id": "Icon.FiArchive",
+    "aliases": [
+      "fi",
+      "archive"
+    ],
+    "caption": "a black and white icon of a box on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowDown.svg",
+    "component_id": "Icon.FiArrowDown",
+    "aliases": [
+      "fi",
+      "arrow",
+      "down"
+    ],
+    "caption": "an arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowDownCircle.svg",
+    "component_id": "Icon.FiArrowDownCircle",
+    "aliases": [
+      "fi",
+      "arrow",
+      "down",
+      "circle"
+    ],
+    "caption": "a black and white image of a down arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowDownLeft.svg",
+    "component_id": "Icon.FiArrowDownLeft",
+    "aliases": [
+      "fi",
+      "arrow",
+      "down",
+      "left"
+    ],
+    "caption": "a black and white image of the letter k",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowDownRight.svg",
+    "component_id": "Icon.FiArrowDownRight",
+    "aliases": [
+      "fi",
+      "arrow",
+      "down",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowLeft.svg",
+    "component_id": "Icon.FiArrowLeft",
+    "aliases": [
+      "fi",
+      "arrow",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowLeftCircle.svg",
+    "component_id": "Icon.FiArrowLeftCircle",
+    "aliases": [
+      "fi",
+      "arrow",
+      "left",
+      "circle"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowRight.svg",
+    "component_id": "Icon.FiArrowRight",
+    "aliases": [
+      "fi",
+      "arrow",
+      "right"
+    ],
+    "caption": "an arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowRightCircle.svg",
+    "component_id": "Icon.FiArrowRightCircle",
+    "aliases": [
+      "fi",
+      "arrow",
+      "right",
+      "circle"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowUp.svg",
+    "component_id": "Icon.FiArrowUp",
+    "aliases": [
+      "fi",
+      "arrow",
+      "up"
+    ],
+    "caption": "an arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowUpCircle.svg",
+    "component_id": "Icon.FiArrowUpCircle",
+    "aliases": [
+      "fi",
+      "arrow",
+      "up",
+      "circle"
+    ],
+    "caption": "an up arrow icon in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowUpLeft.svg",
+    "component_id": "Icon.FiArrowUpLeft",
+    "aliases": [
+      "fi",
+      "arrow",
+      "up",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowUpRight.svg",
+    "component_id": "Icon.FiArrowUpRight",
+    "aliases": [
+      "fi",
+      "arrow",
+      "up",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAtSign.svg",
+    "component_id": "Icon.FiAtSign",
+    "aliases": [
+      "fi",
+      "at",
+      "sign"
+    ],
+    "caption": "a black and white image of an email symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAward.svg",
+    "component_id": "Icon.FiAward",
+    "aliases": [
+      "fi",
+      "award"
+    ],
+    "caption": "a black and white award icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBarChart.svg",
+    "component_id": "Icon.FiBarChart",
+    "aliases": [
+      "fi",
+      "bar",
+      "chart"
+    ],
+    "caption": "a bar graph is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBarChart2.svg",
+    "component_id": "Icon.FiBarChart2",
+    "aliases": [
+      "fi",
+      "bar",
+      "chart",
+      "2"
+    ],
+    "caption": "a black and white image of a bar graph",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBattery.svg",
+    "component_id": "Icon.FiBattery",
+    "aliases": [
+      "fi",
+      "battery"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBatteryCharging.svg",
+    "component_id": "Icon.FiBatteryCharging",
+    "aliases": [
+      "fi",
+      "battery",
+      "charging"
+    ],
+    "caption": "a black and white image of a battery symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBell.svg",
+    "component_id": "Icon.FiBell",
+    "aliases": [
+      "fi",
+      "bell"
+    ],
+    "caption": "a bell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBellOff.svg",
+    "component_id": "Icon.FiBellOff",
+    "aliases": [
+      "fi",
+      "bell",
+      "off"
+    ],
+    "caption": "a black and white image of a no bell icon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBluetooth.svg",
+    "component_id": "Icon.FiBluetooth",
+    "aliases": [
+      "fi",
+      "bluetooth"
+    ],
+    "caption": "a black and white image of a bluetooth symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBold.svg",
+    "component_id": "Icon.FiBold",
+    "aliases": [
+      "fi",
+      "bold"
+    ],
+    "caption": "a black and white letter b on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBook.svg",
+    "component_id": "Icon.FiBook",
+    "aliases": [
+      "fi",
+      "book"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBookOpen.svg",
+    "component_id": "Icon.FiBookOpen",
+    "aliases": [
+      "fi",
+      "book",
+      "open"
+    ],
+    "caption": "an open book icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBookmark.svg",
+    "component_id": "Icon.FiBookmark",
+    "aliases": [
+      "fi",
+      "bookmark"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBox.svg",
+    "component_id": "Icon.FiBox",
+    "aliases": [
+      "fi",
+      "box"
+    ],
+    "caption": "a black cube icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBriefcase.svg",
+    "component_id": "Icon.FiBriefcase",
+    "aliases": [
+      "fi",
+      "briefcase"
+    ],
+    "caption": "a black and white icon of a suitcase",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCalendar.svg",
+    "component_id": "Icon.FiCalendar",
+    "aliases": [
+      "fi",
+      "calendar"
+    ],
+    "caption": "a calendar icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCamera.svg",
+    "component_id": "Icon.FiCamera",
+    "aliases": [
+      "fi",
+      "camera"
+    ],
+    "caption": "a camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCameraOff.svg",
+    "component_id": "Icon.FiCameraOff",
+    "aliases": [
+      "fi",
+      "camera",
+      "off"
+    ],
+    "caption": "a no camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCast.svg",
+    "component_id": "Icon.FiCast",
+    "aliases": [
+      "fi",
+      "cast"
+    ],
+    "caption": "a black and white icon of a wifi symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCheck.svg",
+    "component_id": "Icon.FiCheck",
+    "aliases": [
+      "fi",
+      "check"
+    ],
+    "caption": "a black check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCheckCircle.svg",
+    "component_id": "Icon.FiCheckCircle",
+    "aliases": [
+      "fi",
+      "check",
+      "circle"
+    ],
+    "caption": "a black and white icon of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCheckSquare.svg",
+    "component_id": "Icon.FiCheckSquare",
+    "aliases": [
+      "fi",
+      "check",
+      "square"
+    ],
+    "caption": "a check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronDown.svg",
+    "component_id": "Icon.FiChevronDown",
+    "aliases": [
+      "fi",
+      "chevron",
+      "down"
+    ],
+    "caption": "a black and white image of the letter v",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronLeft.svg",
+    "component_id": "Icon.FiChevronLeft",
+    "aliases": [
+      "fi",
+      "chevron",
+      "left"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronRight.svg",
+    "component_id": "Icon.FiChevronRight",
+    "aliases": [
+      "fi",
+      "chevron",
+      "right"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronUp.svg",
+    "component_id": "Icon.FiChevronUp",
+    "aliases": [
+      "fi",
+      "chevron",
+      "up"
+    ],
+    "caption": "a black and white icon of a triangle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronsDown.svg",
+    "component_id": "Icon.FiChevronsDown",
+    "aliases": [
+      "fi",
+      "chevrons",
+      "down"
+    ],
+    "caption": "a black and white image of two arrows pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronsLeft.svg",
+    "component_id": "Icon.FiChevronsLeft",
+    "aliases": [
+      "fi",
+      "chevrons",
+      "left"
+    ],
+    "caption": "two arrows pointing in the same direction on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronsRight.svg",
+    "component_id": "Icon.FiChevronsRight",
+    "aliases": [
+      "fi",
+      "chevrons",
+      "right"
+    ],
+    "caption": "two arrows pointing in the same direction on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronsUp.svg",
+    "component_id": "Icon.FiChevronsUp",
+    "aliases": [
+      "fi",
+      "chevrons",
+      "up"
+    ],
+    "caption": "a black and white arrow icon with two arrows pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChrome.svg",
+    "component_id": "Icon.FiChrome",
+    "aliases": [
+      "fi",
+      "chrome"
+    ],
+    "caption": "a black and white image of a circular logo",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCircle.svg",
+    "component_id": "Icon.FiCircle",
+    "aliases": [
+      "fi",
+      "circle"
+    ],
+    "caption": "a black circle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiClipboard.svg",
+    "component_id": "Icon.FiClipboard",
+    "aliases": [
+      "fi",
+      "clipboard"
+    ],
+    "caption": "a black and white image of a clipboard on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiClock.svg",
+    "component_id": "Icon.FiClock",
+    "aliases": [
+      "fi",
+      "clock"
+    ],
+    "caption": "a black and white clock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloud.svg",
+    "component_id": "Icon.FiCloud",
+    "aliases": [
+      "fi",
+      "cloud"
+    ],
+    "caption": "a black cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloudDrizzle.svg",
+    "component_id": "Icon.FiCloudDrizzle",
+    "aliases": [
+      "fi",
+      "cloud",
+      "drizzle"
+    ],
+    "caption": "a black and white icon of a rain cloud",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloudLightning.svg",
+    "component_id": "Icon.FiCloudLightning",
+    "aliases": [
+      "fi",
+      "cloud",
+      "lightning"
+    ],
+    "caption": "a black and white icon of a lightning bolt",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloudOff.svg",
+    "component_id": "Icon.FiCloudOff",
+    "aliases": [
+      "fi",
+      "cloud",
+      "off"
+    ],
+    "caption": "a no cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloudRain.svg",
+    "component_id": "Icon.FiCloudRain",
+    "aliases": [
+      "fi",
+      "cloud",
+      "rain"
+    ],
+    "caption": "a black and white icon of a cloud",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloudSnow.svg",
+    "component_id": "Icon.FiCloudSnow",
+    "aliases": [
+      "fi",
+      "cloud",
+      "snow"
+    ],
+    "caption": "a black and white icon of a cloud with rain drops",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCode.svg",
+    "component_id": "Icon.FiCode",
+    "aliases": [
+      "fi",
+      "code"
+    ],
+    "caption": "a black and white image of two arrows pointing in the same direction",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCodepen.svg",
+    "component_id": "Icon.FiCodepen",
+    "aliases": [
+      "fi",
+      "codepen"
+    ],
+    "caption": "a black and white image of a cube",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCodesandbox.svg",
+    "component_id": "Icon.FiCodesandbox",
+    "aliases": [
+      "fi",
+      "codesandbox"
+    ],
+    "caption": "a black and white logo of a cube",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCoffee.svg",
+    "component_id": "Icon.FiCoffee",
+    "aliases": [
+      "fi",
+      "coffee"
+    ],
+    "caption": "a black and white icon of a cup of coffee",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiColumns.svg",
+    "component_id": "Icon.FiColumns",
+    "aliases": [
+      "fi",
+      "columns"
+    ],
+    "caption": "a black and white icon of a door",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCommand.svg",
+    "component_id": "Icon.FiCommand",
+    "aliases": [
+      "fi",
+      "command"
+    ],
+    "caption": "a black and white image of a black and white symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCompass.svg",
+    "component_id": "Icon.FiCompass",
+    "aliases": [
+      "fi",
+      "compass"
+    ],
+    "caption": "a black and white image of a circle with a square in it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCopy.svg",
+    "component_id": "Icon.FiCopy",
+    "aliases": [
+      "fi",
+      "copy"
+    ],
+    "caption": "a black and white icon of two squares",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerDownLeft.svg",
+    "component_id": "Icon.FiCornerDownLeft",
+    "aliases": [
+      "fi",
+      "corner",
+      "down",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerDownRight.svg",
+    "component_id": "Icon.FiCornerDownRight",
+    "aliases": [
+      "fi",
+      "corner",
+      "down",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerLeftDown.svg",
+    "component_id": "Icon.FiCornerLeftDown",
+    "aliases": [
+      "fi",
+      "corner",
+      "left",
+      "down"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerLeftUp.svg",
+    "component_id": "Icon.FiCornerLeftUp",
+    "aliases": [
+      "fi",
+      "corner",
+      "left",
+      "up"
+    ],
+    "caption": "an arrow pointing up is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerRightDown.svg",
+    "component_id": "Icon.FiCornerRightDown",
+    "aliases": [
+      "fi",
+      "corner",
+      "right",
+      "down"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerRightUp.svg",
+    "component_id": "Icon.FiCornerRightUp",
+    "aliases": [
+      "fi",
+      "corner",
+      "right",
+      "up"
+    ],
+    "caption": "a black arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerUpLeft.svg",
+    "component_id": "Icon.FiCornerUpLeft",
+    "aliases": [
+      "fi",
+      "corner",
+      "up",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerUpRight.svg",
+    "component_id": "Icon.FiCornerUpRight",
+    "aliases": [
+      "fi",
+      "corner",
+      "up",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCpu.svg",
+    "component_id": "Icon.FiCpu",
+    "aliases": [
+      "fi",
+      "cpu"
+    ],
+    "caption": "a black and white image of a computer chip",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCreditCard.svg",
+    "component_id": "Icon.FiCreditCard",
+    "aliases": [
+      "fi",
+      "credit",
+      "card"
+    ],
+    "caption": "a black credit card icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCrop.svg",
+    "component_id": "Icon.FiCrop",
+    "aliases": [
+      "fi",
+      "crop"
+    ],
+    "caption": "a black and white image of a square symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCrosshair.svg",
+    "component_id": "Icon.FiCrosshair",
+    "aliases": [
+      "fi",
+      "crosshair"
+    ],
+    "caption": "a black and white image of a crosshairs symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDatabase.svg",
+    "component_id": "Icon.FiDatabase",
+    "aliases": [
+      "fi",
+      "database"
+    ],
+    "caption": "a black and white icon of a database",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDelete.svg",
+    "component_id": "Icon.FiDelete",
+    "aliases": [
+      "fi",
+      "delete"
+    ],
+    "caption": "an image of a black and white icon with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDisc.svg",
+    "component_id": "Icon.FiDisc",
+    "aliases": [
+      "fi",
+      "disc"
+    ],
+    "caption": "a black and white image of a circular object",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDivide.svg",
+    "component_id": "Icon.FiDivide",
+    "aliases": [
+      "fi",
+      "divide"
+    ],
+    "caption": "an image of a black and white symbol with two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDivideCircle.svg",
+    "component_id": "Icon.FiDivideCircle",
+    "aliases": [
+      "fi",
+      "divide",
+      "circle"
+    ],
+    "caption": "a black and white image of a circle with two dots",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDivideSquare.svg",
+    "component_id": "Icon.FiDivideSquare",
+    "aliases": [
+      "fi",
+      "divide",
+      "square"
+    ],
+    "caption": "a black and white icon of a calculator",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDollarSign.svg",
+    "component_id": "Icon.FiDollarSign",
+    "aliases": [
+      "fi",
+      "dollar",
+      "sign"
+    ],
+    "caption": "a dollar sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDownload.svg",
+    "component_id": "Icon.FiDownload",
+    "aliases": [
+      "fi",
+      "download"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDownloadCloud.svg",
+    "component_id": "Icon.FiDownloadCloud",
+    "aliases": [
+      "fi",
+      "download",
+      "cloud"
+    ],
+    "caption": "a cloud icon with an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDribbble.svg",
+    "component_id": "Icon.FiDribbble",
+    "aliases": [
+      "fi",
+      "dribbble"
+    ],
+    "caption": "a black and white icon of a basketball ball",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDroplet.svg",
+    "component_id": "Icon.FiDroplet",
+    "aliases": [
+      "fi",
+      "droplet"
+    ],
+    "caption": "a black and white image of a water drop",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiEdit.svg",
+    "component_id": "Icon.FiEdit",
+    "aliases": [
+      "fi",
+      "edit"
+    ],
+    "caption": "a black and white icon of a pen with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiEdit2.svg",
+    "component_id": "Icon.FiEdit2",
+    "aliases": [
+      "fi",
+      "edit",
+      "2"
+    ],
+    "caption": "a black and white drawing of a pencil",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiEdit3.svg",
+    "component_id": "Icon.FiEdit3",
+    "aliases": [
+      "fi",
+      "edit",
+      "3"
+    ],
+    "caption": "a black and white image of a pen and paper",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiExternalLink.svg",
+    "component_id": "Icon.FiExternalLink",
+    "aliases": [
+      "fi",
+      "external",
+      "link"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiEye.svg",
+    "component_id": "Icon.FiEye",
+    "aliases": [
+      "fi",
+      "eye"
+    ],
+    "caption": "a black and white icon of an eye",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiEyeOff.svg",
+    "component_id": "Icon.FiEyeOff",
+    "aliases": [
+      "fi",
+      "eye",
+      "off"
+    ],
+    "caption": "a black and white image of a no eye symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFacebook.svg",
+    "component_id": "Icon.FiFacebook",
+    "aliases": [
+      "fi",
+      "facebook"
+    ],
+    "caption": "a black and white image of a facebook logo",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFastForward.svg",
+    "component_id": "Icon.FiFastForward",
+    "aliases": [
+      "fi",
+      "fast",
+      "forward"
+    ],
+    "caption": "a black and white image of two arrows pointing in different directions",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFeather.svg",
+    "component_id": "Icon.FiFeather",
+    "aliases": [
+      "fi",
+      "feather"
+    ],
+    "caption": "a black and white icon of a feather",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFigma.svg",
+    "component_id": "Icon.FiFigma",
+    "aliases": [
+      "fi",
+      "figma"
+    ],
+    "caption": "a black and white logo with the letter b",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFile.svg",
+    "component_id": "Icon.FiFile",
+    "aliases": [
+      "fi",
+      "file"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFileMinus.svg",
+    "component_id": "Icon.FiFileMinus",
+    "aliases": [
+      "fi",
+      "file",
+      "minus"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFilePlus.svg",
+    "component_id": "Icon.FiFilePlus",
+    "aliases": [
+      "fi",
+      "file",
+      "plus"
+    ],
+    "caption": "a black and white icon of a document with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFileText.svg",
+    "component_id": "Icon.FiFileText",
+    "aliases": [
+      "fi",
+      "file",
+      "text"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFilm.svg",
+    "component_id": "Icon.FiFilm",
+    "aliases": [
+      "fi",
+      "film"
+    ],
+    "caption": "a black and white film strip icon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFilter.svg",
+    "component_id": "Icon.FiFilter",
+    "aliases": [
+      "fi",
+      "filter"
+    ],
+    "caption": "a black and white icon of a funnel",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFlag.svg",
+    "component_id": "Icon.FiFlag",
+    "aliases": [
+      "fi",
+      "flag"
+    ],
+    "caption": "a black and white icon of a flag",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFolder.svg",
+    "component_id": "Icon.FiFolder",
+    "aliases": [
+      "fi",
+      "folder"
+    ],
+    "caption": "a black folder icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFolderMinus.svg",
+    "component_id": "Icon.FiFolderMinus",
+    "aliases": [
+      "fi",
+      "folder",
+      "minus"
+    ],
+    "caption": "a black folder icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFolderPlus.svg",
+    "component_id": "Icon.FiFolderPlus",
+    "aliases": [
+      "fi",
+      "folder",
+      "plus"
+    ],
+    "caption": "an icon of a folder with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFramer.svg",
+    "component_id": "Icon.FiFramer",
+    "aliases": [
+      "fi",
+      "framer"
+    ],
+    "caption": "a black and white logo with the letter z",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFrown.svg",
+    "component_id": "Icon.FiFrown",
+    "aliases": [
+      "fi",
+      "frown"
+    ],
+    "caption": "a black and white image of a sad face",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGift.svg",
+    "component_id": "Icon.FiGift",
+    "aliases": [
+      "fi",
+      "gift"
+    ],
+    "caption": "a black and white icon of a gift with a bow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGitBranch.svg",
+    "component_id": "Icon.FiGitBranch",
+    "aliases": [
+      "fi",
+      "git",
+      "branch"
+    ],
+    "caption": "a black and white icon with two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGitCommit.svg",
+    "component_id": "Icon.FiGitCommit",
+    "aliases": [
+      "fi",
+      "git",
+      "commit"
+    ],
+    "caption": "a black and white icon with a circle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGitMerge.svg",
+    "component_id": "Icon.FiGitMerge",
+    "aliases": [
+      "fi",
+      "git",
+      "merge"
+    ],
+    "caption": "a black and white image of a black and white symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGitPullRequest.svg",
+    "component_id": "Icon.FiGitPullRequest",
+    "aliases": [
+      "fi",
+      "git",
+      "pull",
+      "request"
+    ],
+    "caption": "a black and white image of two black and white symbols",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGithub.svg",
+    "component_id": "Icon.FiGithub",
+    "aliases": [
+      "fi",
+      "github"
+    ],
+    "caption": "a black and white drawing of a cat",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGitlab.svg",
+    "component_id": "Icon.FiGitlab",
+    "aliases": [
+      "fi",
+      "gitlab"
+    ],
+    "caption": "a black and white icon of a wolf's head",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGlobe.svg",
+    "component_id": "Icon.FiGlobe",
+    "aliases": [
+      "fi",
+      "globe"
+    ],
+    "caption": "a black and white icon of a globe",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGrid.svg",
+    "component_id": "Icon.FiGrid",
+    "aliases": [
+      "fi",
+      "grid"
+    ],
+    "caption": "four squares are shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHardDrive.svg",
+    "component_id": "Icon.FiHardDrive",
+    "aliases": [
+      "fi",
+      "hard",
+      "drive"
+    ],
+    "caption": "an icon of a computer on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHash.svg",
+    "component_id": "Icon.FiHash",
+    "aliases": [
+      "fi",
+      "hash"
+    ],
+    "caption": "hashtag symbol in black and white on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHeadphones.svg",
+    "component_id": "Icon.FiHeadphones",
+    "aliases": [
+      "fi",
+      "headphones"
+    ],
+    "caption": "a black and white icon of a pair of headphones",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHeart.svg",
+    "component_id": "Icon.FiHeart",
+    "aliases": [
+      "fi",
+      "heart"
+    ],
+    "caption": "a black and white heart icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHelpCircle.svg",
+    "component_id": "Icon.FiHelpCircle",
+    "aliases": [
+      "fi",
+      "help",
+      "circle"
+    ],
+    "caption": "a question mark in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHexagon.svg",
+    "component_id": "Icon.FiHexagon",
+    "aliases": [
+      "fi",
+      "hexagon"
+    ],
+    "caption": "a black and white image of a hexagon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHome.svg",
+    "component_id": "Icon.FiHome",
+    "aliases": [
+      "fi",
+      "home"
+    ],
+    "caption": "a black and white icon of a house",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiImage.svg",
+    "component_id": "Icon.FiImage",
+    "aliases": [
+      "fi",
+      "image"
+    ],
+    "caption": "a black and white photo icon with a mountain in the center",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiInbox.svg",
+    "component_id": "Icon.FiInbox",
+    "aliases": [
+      "fi",
+      "inbox"
+    ],
+    "caption": "an envelope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiInfo.svg",
+    "component_id": "Icon.FiInfo",
+    "aliases": [
+      "fi",
+      "info"
+    ],
+    "caption": "a black and white icon with the word i in it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiInstagram.svg",
+    "component_id": "Icon.FiInstagram",
+    "aliases": [
+      "fi",
+      "instagram"
+    ],
+    "caption": "a black and white image of an instagram icon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiItalic.svg",
+    "component_id": "Icon.FiItalic",
+    "aliases": [
+      "fi",
+      "italic"
+    ],
+    "caption": "a black and white image of the letter t",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiKey.svg",
+    "component_id": "Icon.FiKey",
+    "aliases": [
+      "fi",
+      "key"
+    ],
+    "caption": "a black and white icon of a key",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLayers.svg",
+    "component_id": "Icon.FiLayers",
+    "aliases": [
+      "fi",
+      "layers"
+    ],
+    "caption": "a black and white icon of a stack of books",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLayout.svg",
+    "component_id": "Icon.FiLayout",
+    "aliases": [
+      "fi",
+      "layout"
+    ],
+    "caption": "a black and white icon of a rectangle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLifeBuoy.svg",
+    "component_id": "Icon.FiLifeBuoy",
+    "aliases": [
+      "fi",
+      "life",
+      "buoy"
+    ],
+    "caption": "a black and white icon of a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLink.svg",
+    "component_id": "Icon.FiLink",
+    "aliases": [
+      "fi",
+      "link"
+    ],
+    "caption": "a black and white image of a link",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLink2.svg",
+    "component_id": "Icon.FiLink2",
+    "aliases": [
+      "fi",
+      "link",
+      "2"
+    ],
+    "caption": "a black and white image of the letter c",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLinkedin.svg",
+    "component_id": "Icon.FiLinkedin",
+    "aliases": [
+      "fi",
+      "linkedin"
+    ],
+    "caption": "a black and white image of the linked logo",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiList.svg",
+    "component_id": "Icon.FiList",
+    "aliases": [
+      "fi",
+      "list"
+    ],
+    "caption": "three black dots on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLoader.svg",
+    "component_id": "Icon.FiLoader",
+    "aliases": [
+      "fi",
+      "loader"
+    ],
+    "caption": "a black and white icon of a starburst",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLock.svg",
+    "component_id": "Icon.FiLock",
+    "aliases": [
+      "fi",
+      "lock"
+    ],
+    "caption": "a black and white icon of a padlock",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLogIn.svg",
+    "component_id": "Icon.FiLogIn",
+    "aliases": [
+      "fi",
+      "log",
+      "in"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLogOut.svg",
+    "component_id": "Icon.FiLogOut",
+    "aliases": [
+      "fi",
+      "log",
+      "out"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMail.svg",
+    "component_id": "Icon.FiMail",
+    "aliases": [
+      "fi",
+      "mail"
+    ],
+    "caption": "an email icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMap.svg",
+    "component_id": "Icon.FiMap",
+    "aliases": [
+      "fi",
+      "map"
+    ],
+    "caption": "a black and white icon of a map",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMapPin.svg",
+    "component_id": "Icon.FiMapPin",
+    "aliases": [
+      "fi",
+      "map",
+      "pin"
+    ],
+    "caption": "a black and white image of a location pin",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMaximize.svg",
+    "component_id": "Icon.FiMaximize",
+    "aliases": [
+      "fi",
+      "maximize"
+    ],
+    "caption": "a black square with two black lines on it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMaximize2.svg",
+    "component_id": "Icon.FiMaximize2",
+    "aliases": [
+      "fi",
+      "maximize",
+      "2"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMeh.svg",
+    "component_id": "Icon.FiMeh",
+    "aliases": [
+      "fi",
+      "meh"
+    ],
+    "caption": "a black and white image of a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMenu.svg",
+    "component_id": "Icon.FiMenu",
+    "aliases": [
+      "fi",
+      "menu"
+    ],
+    "caption": "three black lines on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMessageCircle.svg",
+    "component_id": "Icon.FiMessageCircle",
+    "aliases": [
+      "fi",
+      "message",
+      "circle"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMessageSquare.svg",
+    "component_id": "Icon.FiMessageSquare",
+    "aliases": [
+      "fi",
+      "message",
+      "square"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMic.svg",
+    "component_id": "Icon.FiMic",
+    "aliases": [
+      "fi",
+      "mic"
+    ],
+    "caption": "a microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMicOff.svg",
+    "component_id": "Icon.FiMicOff",
+    "aliases": [
+      "fi",
+      "mic",
+      "off"
+    ],
+    "caption": "a no microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMinimize.svg",
+    "component_id": "Icon.FiMinimize",
+    "aliases": [
+      "fi",
+      "minimize"
+    ],
+    "caption": "a black and white image of four arrows",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMinimize2.svg",
+    "component_id": "Icon.FiMinimize2",
+    "aliases": [
+      "fi",
+      "minimize",
+      "2"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMinus.svg",
+    "component_id": "Icon.FiMinus",
+    "aliases": [
+      "fi",
+      "minus"
+    ],
+    "caption": "an image of a black and white line on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMinusCircle.svg",
+    "component_id": "Icon.FiMinusCircle",
+    "aliases": [
+      "fi",
+      "minus",
+      "circle"
+    ],
+    "caption": "a black and white image of an empty circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMinusSquare.svg",
+    "component_id": "Icon.FiMinusSquare",
+    "aliases": [
+      "fi",
+      "minus",
+      "square"
+    ],
+    "caption": "a black and white square icon with an empty sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMonitor.svg",
+    "component_id": "Icon.FiMonitor",
+    "aliases": [
+      "fi",
+      "monitor"
+    ],
+    "caption": "a computer monitor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMoon.svg",
+    "component_id": "Icon.FiMoon",
+    "aliases": [
+      "fi",
+      "moon"
+    ],
+    "caption": "a black and white line drawing of a crescent",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMoreHorizontal.svg",
+    "component_id": "Icon.FiMoreHorizontal",
+    "aliases": [
+      "fi",
+      "more",
+      "horizontal"
+    ],
+    "caption": "four black dots are shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMoreVertical.svg",
+    "component_id": "Icon.FiMoreVertical",
+    "aliases": [
+      "fi",
+      "more",
+      "vertical"
+    ],
+    "caption": "four black dots on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMousePointer.svg",
+    "component_id": "Icon.FiMousePointer",
+    "aliases": [
+      "fi",
+      "mouse",
+      "pointer"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMove.svg",
+    "component_id": "Icon.FiMove",
+    "aliases": [
+      "fi",
+      "move"
+    ],
+    "caption": "three arrows pointing in different directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMusic.svg",
+    "component_id": "Icon.FiMusic",
+    "aliases": [
+      "fi",
+      "music"
+    ],
+    "caption": "a music note icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiNavigation.svg",
+    "component_id": "Icon.FiNavigation",
+    "aliases": [
+      "fi",
+      "navigation"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiNavigation2.svg",
+    "component_id": "Icon.FiNavigation2",
+    "aliases": [
+      "fi",
+      "navigation",
+      "2"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiOctagon.svg",
+    "component_id": "Icon.FiOctagon",
+    "aliases": [
+      "fi",
+      "octagon"
+    ],
+    "caption": "a black and white image of a hexagon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPackage.svg",
+    "component_id": "Icon.FiPackage",
+    "aliases": [
+      "fi",
+      "package"
+    ],
+    "caption": "a black and white icon of a box",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPaperclip.svg",
+    "component_id": "Icon.FiPaperclip",
+    "aliases": [
+      "fi",
+      "paperclip"
+    ],
+    "caption": "a black and white image of a paper clip",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPause.svg",
+    "component_id": "Icon.FiPause",
+    "aliases": [
+      "fi",
+      "pause"
+    ],
+    "caption": "a black and white image of two numbers on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPauseCircle.svg",
+    "component_id": "Icon.FiPauseCircle",
+    "aliases": [
+      "fi",
+      "pause",
+      "circle"
+    ],
+    "caption": "a black and white icon with two black lines",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPenTool.svg",
+    "component_id": "Icon.FiPenTool",
+    "aliases": [
+      "fi",
+      "pen",
+      "tool"
+    ],
+    "caption": "a black and white illustration of a pen and ink",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPercent.svg",
+    "component_id": "Icon.FiPercent",
+    "aliases": [
+      "fi",
+      "percent"
+    ],
+    "caption": "a black and white image of a percentage sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhone.svg",
+    "component_id": "Icon.FiPhone",
+    "aliases": [
+      "fi",
+      "phone"
+    ],
+    "caption": "a black and white phone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneCall.svg",
+    "component_id": "Icon.FiPhoneCall",
+    "aliases": [
+      "fi",
+      "phone",
+      "call"
+    ],
+    "caption": "a phone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneForwarded.svg",
+    "component_id": "Icon.FiPhoneForwarded",
+    "aliases": [
+      "fi",
+      "phone",
+      "forwarded"
+    ],
+    "caption": "a phone icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneIncoming.svg",
+    "component_id": "Icon.FiPhoneIncoming",
+    "aliases": [
+      "fi",
+      "phone",
+      "incoming"
+    ],
+    "caption": "a phone icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneMissed.svg",
+    "component_id": "Icon.FiPhoneMissed",
+    "aliases": [
+      "fi",
+      "phone",
+      "missed"
+    ],
+    "caption": "an icon of a phone with an x in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneOff.svg",
+    "component_id": "Icon.FiPhoneOff",
+    "aliases": [
+      "fi",
+      "phone",
+      "off"
+    ],
+    "caption": "a black and white image of a telephone icon",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneOutgoing.svg",
+    "component_id": "Icon.FiPhoneOutgoing",
+    "aliases": [
+      "fi",
+      "phone",
+      "outgoing"
+    ],
+    "caption": "a phone icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPieChart.svg",
+    "component_id": "Icon.FiPieChart",
+    "aliases": [
+      "fi",
+      "pie",
+      "chart"
+    ],
+    "caption": "a black and white icon of a clock",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPlay.svg",
+    "component_id": "Icon.FiPlay",
+    "aliases": [
+      "fi",
+      "play"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPlayCircle.svg",
+    "component_id": "Icon.FiPlayCircle",
+    "aliases": [
+      "fi",
+      "play",
+      "circle"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPlus.svg",
+    "component_id": "Icon.FiPlus",
+    "aliases": [
+      "fi",
+      "plus"
+    ],
+    "caption": "a black plus symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPlusCircle.svg",
+    "component_id": "Icon.FiPlusCircle",
+    "aliases": [
+      "fi",
+      "plus",
+      "circle"
+    ],
+    "caption": "a plus sign in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPlusSquare.svg",
+    "component_id": "Icon.FiPlusSquare",
+    "aliases": [
+      "fi",
+      "plus",
+      "square"
+    ],
+    "caption": "a black plus sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPocket.svg",
+    "component_id": "Icon.FiPocket",
+    "aliases": [
+      "fi",
+      "pocket"
+    ],
+    "caption": "a black and white icon of a shield with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPower.svg",
+    "component_id": "Icon.FiPower",
+    "aliases": [
+      "fi",
+      "power"
+    ],
+    "caption": "a black power symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPrinter.svg",
+    "component_id": "Icon.FiPrinter",
+    "aliases": [
+      "fi",
+      "printer"
+    ],
+    "caption": "a black and white icon of a printer",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRadio.svg",
+    "component_id": "Icon.FiRadio",
+    "aliases": [
+      "fi",
+      "radio"
+    ],
+    "caption": "a black and white icon of a wireless device",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRefreshCcw.svg",
+    "component_id": "Icon.FiRefreshCcw",
+    "aliases": [
+      "fi",
+      "refresh",
+      "ccw"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRefreshCw.svg",
+    "component_id": "Icon.FiRefreshCw",
+    "aliases": [
+      "fi",
+      "refresh",
+      "cw"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRepeat.svg",
+    "component_id": "Icon.FiRepeat",
+    "aliases": [
+      "fi",
+      "repeat"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRewind.svg",
+    "component_id": "Icon.FiRewind",
+    "aliases": [
+      "fi",
+      "rewind"
+    ],
+    "caption": "a black and white image of two arrows pointing to each other",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRotateCcw.svg",
+    "component_id": "Icon.FiRotateCcw",
+    "aliases": [
+      "fi",
+      "rotate",
+      "ccw"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRotateCw.svg",
+    "component_id": "Icon.FiRotateCw",
+    "aliases": [
+      "fi",
+      "rotate",
+      "cw"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRss.svg",
+    "component_id": "Icon.FiRss",
+    "aliases": [
+      "fi",
+      "rss"
+    ],
+    "caption": "a black and white image of a rss symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSave.svg",
+    "component_id": "Icon.FiSave",
+    "aliases": [
+      "fi",
+      "save"
+    ],
+    "caption": "a black and white icon with the letter h",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiScissors.svg",
+    "component_id": "Icon.FiScissors",
+    "aliases": [
+      "fi",
+      "scissors"
+    ],
+    "caption": "a black and white icon of a pair of scissors",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSearch.svg",
+    "component_id": "Icon.FiSearch",
+    "aliases": [
+      "fi",
+      "search"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSend.svg",
+    "component_id": "Icon.FiSend",
+    "aliases": [
+      "fi",
+      "send"
+    ],
+    "caption": "a black and white icon of a paper airplane",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiServer.svg",
+    "component_id": "Icon.FiServer",
+    "aliases": [
+      "fi",
+      "server"
+    ],
+    "caption": "a black and white icon of two disk drives",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSettings.svg",
+    "component_id": "Icon.FiSettings",
+    "aliases": [
+      "fi",
+      "settings"
+    ],
+    "caption": "a gear wheel icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShare.svg",
+    "component_id": "Icon.FiShare",
+    "aliases": [
+      "fi",
+      "share"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShare2.svg",
+    "component_id": "Icon.FiShare2",
+    "aliases": [
+      "fi",
+      "share",
+      "2"
+    ],
+    "caption": "a black and white icon of two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShield.svg",
+    "component_id": "Icon.FiShield",
+    "aliases": [
+      "fi",
+      "shield"
+    ],
+    "caption": "a shield icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShieldOff.svg",
+    "component_id": "Icon.FiShieldOff",
+    "aliases": [
+      "fi",
+      "shield",
+      "off"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShoppingBag.svg",
+    "component_id": "Icon.FiShoppingBag",
+    "aliases": [
+      "fi",
+      "shopping",
+      "bag"
+    ],
+    "caption": "a black and white icon of a shopping bag",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShoppingCart.svg",
+    "component_id": "Icon.FiShoppingCart",
+    "aliases": [
+      "fi",
+      "shopping",
+      "cart"
+    ],
+    "caption": "a shopping cart icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShuffle.svg",
+    "component_id": "Icon.FiShuffle",
+    "aliases": [
+      "fi",
+      "shuffle"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSidebar.svg",
+    "component_id": "Icon.FiSidebar",
+    "aliases": [
+      "fi",
+      "sidebar"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSkipBack.svg",
+    "component_id": "Icon.FiSkipBack",
+    "aliases": [
+      "fi",
+      "skip",
+      "back"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSkipForward.svg",
+    "component_id": "Icon.FiSkipForward",
+    "aliases": [
+      "fi",
+      "skip",
+      "forward"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSlack.svg",
+    "component_id": "Icon.FiSlack",
+    "aliases": [
+      "fi",
+      "slack"
+    ],
+    "caption": "a black and white logo with four circles",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSlash.svg",
+    "component_id": "Icon.FiSlash",
+    "aliases": [
+      "fi",
+      "slash"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSliders.svg",
+    "component_id": "Icon.FiSliders",
+    "aliases": [
+      "fi",
+      "sliders"
+    ],
+    "caption": "a black and white image of three cross symbols",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSmartphone.svg",
+    "component_id": "Icon.FiSmartphone",
+    "aliases": [
+      "fi",
+      "smartphone"
+    ],
+    "caption": "a black and white icon of a cell phone",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSmile.svg",
+    "component_id": "Icon.FiSmile",
+    "aliases": [
+      "fi",
+      "smile"
+    ],
+    "caption": "a smiley face icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSpeaker.svg",
+    "component_id": "Icon.FiSpeaker",
+    "aliases": [
+      "fi",
+      "speaker"
+    ],
+    "caption": "a speaker icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSquare.svg",
+    "component_id": "Icon.FiSquare",
+    "aliases": [
+      "fi",
+      "square"
+    ],
+    "caption": "a square black and white icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiStar.svg",
+    "component_id": "Icon.FiStar",
+    "aliases": [
+      "fi",
+      "star"
+    ],
+    "caption": "a star icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiStopCircle.svg",
+    "component_id": "Icon.FiStopCircle",
+    "aliases": [
+      "fi",
+      "stop",
+      "circle"
+    ],
+    "caption": "a black square in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSun.svg",
+    "component_id": "Icon.FiSun",
+    "aliases": [
+      "fi",
+      "sun"
+    ],
+    "caption": "a sun icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSunrise.svg",
+    "component_id": "Icon.FiSunrise",
+    "aliases": [
+      "fi",
+      "sunrise"
+    ],
+    "caption": "a black and white icon of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSunset.svg",
+    "component_id": "Icon.FiSunset",
+    "aliases": [
+      "fi",
+      "sunset"
+    ],
+    "caption": "a black and white icon of a sun rising",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTable.svg",
+    "component_id": "Icon.FiTable",
+    "aliases": [
+      "fi",
+      "table"
+    ],
+    "caption": "a black and white icon of a square",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTablet.svg",
+    "component_id": "Icon.FiTablet",
+    "aliases": [
+      "fi",
+      "tablet"
+    ],
+    "caption": "a black and white image of an ipad",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTag.svg",
+    "component_id": "Icon.FiTag",
+    "aliases": [
+      "fi",
+      "tag"
+    ],
+    "caption": "a black and white icon of a price tag",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTarget.svg",
+    "component_id": "Icon.FiTarget",
+    "aliases": [
+      "fi",
+      "target"
+    ],
+    "caption": "a black and white image of a target",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTerminal.svg",
+    "component_id": "Icon.FiTerminal",
+    "aliases": [
+      "fi",
+      "terminal"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiThermometer.svg",
+    "component_id": "Icon.FiThermometer",
+    "aliases": [
+      "fi",
+      "thermometer"
+    ],
+    "caption": "a thermometer icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiThumbsDown.svg",
+    "component_id": "Icon.FiThumbsDown",
+    "aliases": [
+      "fi",
+      "thumbs",
+      "down"
+    ],
+    "caption": "a black and white image of a thumbs down",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiThumbsUp.svg",
+    "component_id": "Icon.FiThumbsUp",
+    "aliases": [
+      "fi",
+      "thumbs",
+      "up"
+    ],
+    "caption": "a black and white icon of a thumb up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiToggleLeft.svg",
+    "component_id": "Icon.FiToggleLeft",
+    "aliases": [
+      "fi",
+      "toggle",
+      "left"
+    ],
+    "caption": "a black and white image of a circular object",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiToggleRight.svg",
+    "component_id": "Icon.FiToggleRight",
+    "aliases": [
+      "fi",
+      "toggle",
+      "right"
+    ],
+    "caption": "a black and white image of a circular object",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTool.svg",
+    "component_id": "Icon.FiTool",
+    "aliases": [
+      "fi",
+      "tool"
+    ],
+    "caption": "a wrench icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTrash.svg",
+    "component_id": "Icon.FiTrash",
+    "aliases": [
+      "fi",
+      "trash"
+    ],
+    "caption": "a black and white icon of a cooking pot",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTrash2.svg",
+    "component_id": "Icon.FiTrash2",
+    "aliases": [
+      "fi",
+      "trash",
+      "2"
+    ],
+    "caption": "a trash can icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTrello.svg",
+    "component_id": "Icon.FiTrello",
+    "aliases": [
+      "fi",
+      "trello"
+    ],
+    "caption": "a black and white icon of a power switch",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTrendingDown.svg",
+    "component_id": "Icon.FiTrendingDown",
+    "aliases": [
+      "fi",
+      "trending",
+      "down"
+    ],
+    "caption": "a downward arrow icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTrendingUp.svg",
+    "component_id": "Icon.FiTrendingUp",
+    "aliases": [
+      "fi",
+      "trending",
+      "up"
+    ],
+    "caption": "a black arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTriangle.svg",
+    "component_id": "Icon.FiTriangle",
+    "aliases": [
+      "fi",
+      "triangle"
+    ],
+    "caption": "a triangle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTruck.svg",
+    "component_id": "Icon.FiTruck",
+    "aliases": [
+      "fi",
+      "truck"
+    ],
+    "caption": "a truck icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTv.svg",
+    "component_id": "Icon.FiTv",
+    "aliases": [
+      "fi",
+      "tv"
+    ],
+    "caption": "an icon of a television on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTwitch.svg",
+    "component_id": "Icon.FiTwitch",
+    "aliases": [
+      "fi",
+      "twitch"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTwitter.svg",
+    "component_id": "Icon.FiTwitter",
+    "aliases": [
+      "fi",
+      "twitter"
+    ],
+    "caption": "a black and white icon of a twitter bird",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiType.svg",
+    "component_id": "Icon.FiType",
+    "aliases": [
+      "fi",
+      "type"
+    ],
+    "caption": "a black and white image of the letter t",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUmbrella.svg",
+    "component_id": "Icon.FiUmbrella",
+    "aliases": [
+      "fi",
+      "umbrella"
+    ],
+    "caption": "a black and white icon of an umbrella",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUnderline.svg",
+    "component_id": "Icon.FiUnderline",
+    "aliases": [
+      "fi",
+      "underline"
+    ],
+    "caption": "a black and white icon of the letter u",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUnlock.svg",
+    "component_id": "Icon.FiUnlock",
+    "aliases": [
+      "fi",
+      "unlock"
+    ],
+    "caption": "a black and white icon of a padlock",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUpload.svg",
+    "component_id": "Icon.FiUpload",
+    "aliases": [
+      "fi",
+      "upload"
+    ],
+    "caption": "a black and white image of an upward arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUploadCloud.svg",
+    "component_id": "Icon.FiUploadCloud",
+    "aliases": [
+      "fi",
+      "upload",
+      "cloud"
+    ],
+    "caption": "a cloud with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUser.svg",
+    "component_id": "Icon.FiUser",
+    "aliases": [
+      "fi",
+      "user"
+    ],
+    "caption": "an icon of a person in black and white",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUserCheck.svg",
+    "component_id": "Icon.FiUserCheck",
+    "aliases": [
+      "fi",
+      "user",
+      "check"
+    ],
+    "caption": "a black and white icon of a person with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUserMinus.svg",
+    "component_id": "Icon.FiUserMinus",
+    "aliases": [
+      "fi",
+      "user",
+      "minus"
+    ],
+    "caption": "a black and white icon of a person with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUserPlus.svg",
+    "component_id": "Icon.FiUserPlus",
+    "aliases": [
+      "fi",
+      "user",
+      "plus"
+    ],
+    "caption": "a black and white icon of a person with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUserX.svg",
+    "component_id": "Icon.FiUserX",
+    "aliases": [
+      "fi",
+      "user",
+      "x"
+    ],
+    "caption": "a black and white icon of a person with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUsers.svg",
+    "component_id": "Icon.FiUsers",
+    "aliases": [
+      "fi",
+      "users"
+    ],
+    "caption": "a black and white icon of a person with a head",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVideo.svg",
+    "component_id": "Icon.FiVideo",
+    "aliases": [
+      "fi",
+      "video"
+    ],
+    "caption": "a video camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVideoOff.svg",
+    "component_id": "Icon.FiVideoOff",
+    "aliases": [
+      "fi",
+      "video",
+      "off"
+    ],
+    "caption": "a black and white image of a no sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVoicemail.svg",
+    "component_id": "Icon.FiVoicemail",
+    "aliases": [
+      "fi",
+      "voicemail"
+    ],
+    "caption": "a black and white logo with two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVolume.svg",
+    "component_id": "Icon.FiVolume",
+    "aliases": [
+      "fi",
+      "volume"
+    ],
+    "caption": "a black and white icon of a speaker",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVolume1.svg",
+    "component_id": "Icon.FiVolume1",
+    "aliases": [
+      "fi",
+      "volume",
+      "1"
+    ],
+    "caption": "a black and white icon of a speaker",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVolume2.svg",
+    "component_id": "Icon.FiVolume2",
+    "aliases": [
+      "fi",
+      "volume",
+      "2"
+    ],
+    "caption": "a speaker icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVolumeX.svg",
+    "component_id": "Icon.FiVolumeX",
+    "aliases": [
+      "fi",
+      "volume",
+      "x"
+    ],
+    "caption": "a black and white image of a speaker with an x and a minus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiWatch.svg",
+    "component_id": "Icon.FiWatch",
+    "aliases": [
+      "fi",
+      "watch"
+    ],
+    "caption": "an icon of a watch on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiWifi.svg",
+    "component_id": "Icon.FiWifi",
+    "aliases": [
+      "fi",
+      "wifi"
+    ],
+    "caption": "a black wifi symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiWifiOff.svg",
+    "component_id": "Icon.FiWifiOff",
+    "aliases": [
+      "fi",
+      "wifi",
+      "off"
+    ],
+    "caption": "a black and white image of a wifi symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiWind.svg",
+    "component_id": "Icon.FiWind",
+    "aliases": [
+      "fi",
+      "wind"
+    ],
+    "caption": "a black and white icon of a wind blowing",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiX.svg",
+    "component_id": "Icon.FiX",
+    "aliases": [
+      "fi",
+      "x"
+    ],
+    "caption": "a black and white icon of a crossed x",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiXCircle.svg",
+    "component_id": "Icon.FiXcircle",
+    "aliases": [
+      "fi",
+      "xcircle"
+    ],
+    "caption": "a black and white image of an x in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiXOctagon.svg",
+    "component_id": "Icon.FiXoctagon",
+    "aliases": [
+      "fi",
+      "xoctagon"
+    ],
+    "caption": "a black and white image of a stop sign with an x in it",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiXSquare.svg",
+    "component_id": "Icon.FiXsquare",
+    "aliases": [
+      "fi",
+      "xsquare"
+    ],
+    "caption": "a black and white image of an x sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiYoutube.svg",
+    "component_id": "Icon.FiYoutube",
+    "aliases": [
+      "fi",
+      "youtube"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiZap.svg",
+    "component_id": "Icon.FiZap",
+    "aliases": [
+      "fi",
+      "zap"
+    ],
+    "caption": "a black and white icon of a lightning bolt",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiZapOff.svg",
+    "component_id": "Icon.FiZapOff",
+    "aliases": [
+      "fi",
+      "zap",
+      "off"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiZoomIn.svg",
+    "component_id": "Icon.FiZoomIn",
+    "aliases": [
+      "fi",
+      "zoom",
+      "in"
+    ],
+    "caption": "a magnifying icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiZoomOut.svg",
+    "component_id": "Icon.FiZoomOut",
+    "aliases": [
+      "fi",
+      "zoom",
+      "out"
+    ],
+    "caption": "a magnifying icon on a white background",
+    "colors": []
+  }
+]
