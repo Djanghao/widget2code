@@ -3,7 +3,9 @@ set -e
 
 # Load .env
 if [ -f .env ]; then
-    export $(grep -v '^#' .env | xargs)
+    set -a
+    source .env
+    set +a
 fi
 
 if [ $# -lt 2 ]; then

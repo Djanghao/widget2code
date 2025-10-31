@@ -3,7 +3,9 @@ set -e
 
 # Load .env
 if [ -f .env ]; then
-    export $(grep -v '^#' .env | xargs)
+    set -a
+    source .env
+    set +a
 fi
 
 FRONTEND_PORT=${FRONTEND_PORT:-3060}
