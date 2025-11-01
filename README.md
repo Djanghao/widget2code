@@ -1,170 +1,375 @@
 # LLM Widget Factory
 
-Compile structured WidgetDSL (JSON) into portable JSX files. Includes primitive components, compiler, icons, and a demo playground.
+AI-powered widget generation system that transforms design mockups into production-ready React components.
 
-Pipeline: WidgetDSL → JSX file → rendered result.
+**Pipeline**: Image → WidgetDSL (JSON) → JSX → PNG
 
 ## Quick Start
 
+### One-Command Setup
 ```bash
-# Install dependencies
-npm install
+./scripts/setup/install.sh
+```
+Installs all dependencies (Node.js packages + Python environment).
 
-# Configure environment (first time only)
+### Configuration
+```bash
 cp .env.example .env
-# Edit .env with your API keys and settings
+# Add your DASHSCOPE_API_KEY
 ```
 
-**Backend setup** (first time only, required for full mode):
+### Generate Widgets from Images
+
+**Single image**:
 ```bash
-cd apps/api
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cd ../..
+./scripts/generation/generate-widget.sh input.png output.json
 ```
 
-**Development mode**:
+**Batch processing**:
 ```bash
-# Frontend + backend API
+./scripts/generation/generate-batch.sh ./images ./output 5
+```
+Processes multiple images with 5 concurrent workers.
+
+### Compile DSL to JSX
+```bash
+./scripts/rendering/compile-widget.sh widget.json widget.jsx
+```
+
+### Development Playground
+```bash
+# Start frontend server (port 3060)
+./scripts/dev/start-dev.sh
+
+# Or start both frontend + API
 npm run dev:full
-
-# Frontend only (faster, no LLM generation)
-npm run dev
 ```
-Opens at http://localhost:3060
 
-**Production mode**:
+### Full Pipeline (Image → PNG)
 ```bash
-# Build and preview production bundle
-npm run build
-npm start
+# Terminal 1: Start server
+./scripts/dev/start-dev.sh
+
+# Terminal 2: Run pipeline
+./scripts/pipeline/run-full.sh design.png ./output
 ```
-Runs optimized build with backend at http://localhost:4173
+
+## Project Structure
+
+```
+llm-widget-factory/
+├── apps/
+│   ├── api/              # Python FastAPI backend for AI generation
+│   └── playground/       # React web playground for visual editing
+├── libs/
+│   ├── js/               # JavaScript/TypeScript packages
+│   │   ├── cli/          # Command-line tools
+│   │   ├── compiler/     # DSL → JSX compiler
+│   │   ├── dsl/          # WidgetDSL spec & validation
+│   │   ├── exporter/     # PNG export utilities
+│   │   ├── icons/        # 6950+ icon components & source files
+│   │   ├── primitives/   # Base UI components
+│   │   ├── renderer/     # Runtime JSX renderer
+│   │   ├── validator/    # DSL validation
+│   │   ├── resizer/      # Auto-resize utilities
+│   │   └── dynamic/      # Dynamic imports
+│   └── python/           # Python package
+│       └── generator/    # AI-powered widget generation
+└── scripts/              # Shell scripts for workflows
+    ├── generation/       # Widget generation scripts
+    ├── rendering/        # Compilation & rendering
+    ├── pipeline/         # End-to-end workflows
+    ├── dev/              # Development servers
+    └── setup/            # Installation
+```
+
+## Core Workflows
+
+### 1. AI Generation (No Server)
+Transform design mockups into WidgetDSL using Vision-Language Models.
+
+```bash
+# Single image
+./scripts/generation/generate-widget.sh mockup.png widget.json
+
+# Batch processing (10 concurrent)
+./scripts/generation/generate-batch.sh ./mockups ./output 10
+```
+
+**Output per image**:
+- `widget.json` - Generated WidgetDSL
+- `images/` - Debug visualizations (grounding, crops, retrieval)
+- `prompts/` - Generation prompts at each stage
+- `debug.json` - Detailed generation metadata
+
+**Features**:
+- Icon detection & retrieval (6950+ icons)
+- Graph/chart recognition
+- Layout analysis
+- Parallel processing with configurable concurrency
+
+### 2. Compilation (No Server)
+Compile WidgetDSL to portable React JSX files.
+
+```bash
+./scripts/rendering/compile-widget.sh widget.json widget.jsx
+```
+
+**Programmatic Usage**:
+```js
+import { compileWidgetDSLToJSX } from '@widget-factory/compiler';
+
+const jsx = compileWidgetDSLToJSX(widgetSpec);
+```
+
+### 3. Rendering (Requires Server)
+Render JSX to PNG using Playwright headless browser.
+
+```bash
+# Start dev server first
+./scripts/dev/start-dev.sh
+
+# Then render
+./scripts/rendering/render-widget.sh widget.jsx output.png
+```
+
+**Output**:
+- `output.png` - Auto-resized widget
+- `output_raw.png` - Natural layout size
+- `output_autoresize.png` - Same as default
+
+### 4. Full Pipeline
+Complete workflow from image to PNG.
+
+```bash
+# Single image
+./scripts/pipeline/run-full.sh design.png ./result
+
+# Batch processing
+./scripts/pipeline/run-batch-full.sh ./designs ./results 5
+```
+
+## NPM Packages
+
+Published packages under `@widget-factory/*`:
+
+- **[@widget-factory/dsl](./libs/js/packages/dsl/)** - WidgetDSL specification & validation
+- **[@widget-factory/compiler](./libs/js/packages/compiler/)** - DSL → JSX compiler
+- **[@widget-factory/renderer](./libs/js/packages/renderer/)** - Runtime JSX renderer
+- **[@widget-factory/exporter](./libs/js/packages/exporter/)** - PNG export utilities
+- **[@widget-factory/primitives](./libs/js/packages/primitives/)** - UI components (Text, Icon, Button, etc.)
+- **[@widget-factory/icons](./libs/js/packages/icons/)** - 6950+ icon components
+- **[@widget-factory/cli](./libs/js/packages/cli/)** - Command-line tools
+
+## Python Package
+
+**[generator](./libs/python/)** - AI-powered widget generation from images
+
+**Installation**:
+```bash
+cd libs/python
+pip install -e .
+```
+
+**CLI**:
+```bash
+generate-widget input.png output.json
+generate-widget-batch ./images ./output --concurrency 5
+```
+
+**Features**:
+- Vision-Language Model integration (Qwen-VL)
+- Icon grounding & retrieval (BLIP2 + SigLIP)
+- Graph detection
+- Batch processing with progress tracking
+- Debug visualizations
 
 ## Configuration
 
 ### Environment Variables
 
-The project uses a `.env` file for configuration. **Never commit `.env` with API keys** to version control.
+Configure via `.env` file:
 
-**Setup**:
-```bash
-cp .env.example .env
-# Edit .env with your API keys and settings
-```
-
-**Configuration options** (edit `.env`):
 ```bash
 # API Keys
-DASHSCOPE_API_KEY=your-dashscope-api-key-here
+DASHSCOPE_API_KEY=your-key-here
 
-# Server
+# Server Ports
 BACKEND_PORT=8010
 FRONTEND_PORT=3060
 HOST=0.0.0.0
 
-# Generation Settings
+# AI Model Settings
 DEFAULT_MODEL=qwen3-vl-flash
+TIMEOUT=800
+
+# Icon Retrieval
 RETRIEVAL_TOPK=50
 RETRIEVAL_TOPM=10
 RETRIEVAL_ALPHA=0.8
-TIMEOUT=300
+
+# Performance
+ENABLE_MODEL_CACHE=true
+USE_CUDA_FOR_RETRIEVAL=true
 
 # Security
 MAX_FILE_SIZE_MB=100
-MAX_REQUESTS_PER_MINUTE=10
+MAX_REQUESTS_PER_MINUTE=1000
+
+# Debug
+SAVE_DEBUG_VISUALIZATIONS=true
+SAVE_PROMPTS=true
 ```
 
-**Security notes**:
-- `.env` is already in `.gitignore` - don't remove it
-- Use `.env.example` as a template (this file IS committed)
+### Model Caching
 
-### Model Caching for High Concurrency
-
-Icon retrieval in batch mode supports high concurrency (200+ concurrent requests) with model caching enabled.
-
-**Configuration** (in `.env`):
+Enable for high-concurrency batch processing:
 ```bash
 ENABLE_MODEL_CACHE=true
 USE_CUDA_FOR_RETRIEVAL=true
 ```
 
-When enabled, BLIP2 and SigLIP models load once at server startup and are shared across all concurrent requests with thread-safe access.
+Models (BLIP2, SigLIP) load once at startup and are shared across all requests with thread-safe access. Supports 200+ concurrent requests.
 
-### Regenerating Icons (Optional)
-Only needed when updating SF Symbols source files:
+## Development
+
+### Start Dev Server
+```bash
+# Frontend only (port 3060)
+npm run dev
+
+# Frontend + API
+npm run dev:full
+```
+
+### Build for Production
+```bash
+npm run build
+npm start  # Serves at http://localhost:4173
+```
+
+### Regenerate Icons
+Only needed when updating SF Symbols source:
 ```bash
 npm run build:icons
 ```
-Generates 6950+ React components with dynamic imports for lazy loading.
+Generates 6950+ React components with lazy loading.
 
-## Minimal Usage
-```js
-import { compileWidgetDSLToJSX } from '@widget-factory/compiler';
+## Testing
 
-const jsx = compileWidgetDSLToJSX(spec);
-```
-
-## Headless Rendering
-
-Batch render widgets to PNG with validation:
+All scripts have been tested and verified:
 
 ```bash
-npm run render <input> <output> [concurrency]
+# Run test suite
+./scripts/generation/generate-batch.sh assets/images-10 results/test 1
 
-# Examples
-npm run render ./my-widget.json ./output
-npm run render ./widgets-folder ./output 5
+# Test compilation
+./scripts/rendering/compile-widget.sh results/test/*/output/widget.json test.jsx
+
+# Test full pipeline (requires server)
+./scripts/pipeline/run-full.sh assets/images-10/image_0001.png results/pipeline-test
 ```
 
-Output includes: PNG image, JSX code, spec JSON, and metadata.
+See [Test Report](results/script-tests/TEST_REPORT.md) for details.
 
-## Implementation
+## Implementation Details
 
-**Layout**: Flex-based containers with explicit `component` + `props`
+### WidgetDSL Format
+Hierarchical JSON structure with containers and leaf components:
 
-**Icons**: 6950+ SF Symbols with lazy loading
-- Icons load on-demand via dynamic imports
-- Resources preload before rendering (icons + images)
-- Ensures accurate natural layout measurement
-- `<Icon name="sf:circle.fill" />` or `<Icon name="lucide:Sun" />`
+```json
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 16,
+    "padding": 12,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 8,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 16, "color": "#000000" },
+          "content": "Hello World"
+        }
+      ]
+    }
+  }
+}
+```
 
-**Rendering Pipeline**:
+### Icon System
+6950+ SF Symbols with lazy loading:
+```jsx
+<Icon name="sf:circle.fill" size={24} color="#000000" />
+<Icon name="lucide:Sun" />
+```
+
+Icons load on-demand via dynamic imports. Resources preload before rendering for accurate layout measurement.
+
+### Layout System
+Flex-based containers with explicit component properties:
+- Use `flex` prop for flex properties
+- Use `style` for other CSS
+- Automatic aspect ratio preservation
+- Natural size measurement before resize
+
+### Rendering Pipeline
 1. Extract resources from WidgetDSL
 2. Preload icons and images in parallel
 3. Compile to JSX after resources loaded
 4. Measure natural size accurately
-5. Auto-resize to target aspect ratio
+5. Auto-resize to target dimensions
 6. Export to PNG
 
-**Styling**: Use `flex` prop for flex properties, `style` for others
+## Scripts Reference
 
-## Project Structure
+See [scripts/README.md](./scripts/README.md) for complete documentation.
 
-### Packages
-Reusable npm packages that can be independently installed:
+**Quick Reference**:
+```bash
+# Generation
+./scripts/generation/generate-widget.sh <image> <output.json>
+./scripts/generation/generate-batch.sh <input-dir> <output-dir> [concurrency]
 
-- **[`@widget-factory/dsl`](./packages/spec/)** - WidgetDSL protocol definition, validation, and utilities
-- **[`@widget-factory/compiler`](./packages/compiler/)** - Compiles WidgetDSL to JSX files
-- **[`@widget-factory/renderer`](./packages/renderer/)** - Runtime JSX renderer using Babel standalone
-- **[`@widget-factory/exporter`](./packages/exporter/)** - Widget export utilities (PNG, etc.)
-- **[`@widget-factory/primitives`](./packages/primitives/)** - Base UI components (WidgetShell, Text, Icon, etc.)
-- **[`@widget-factory/icons`](./packages/icons/README.md)** - Auto-generated icon components and iconsMap
+# Rendering
+./scripts/rendering/compile-widget.sh <dsl.json> <output.jsx>
+./scripts/rendering/render-widget.sh <widget.jsx> <output.png>
 
-### Apps
-- **[`playground`](./apps/playground/README.md)** - Interactive web playground with visual editing
-- **`api`** - Python FastAPI backend for AI-powered widget generation
+# Pipeline
+./scripts/pipeline/run-full.sh <image> <output-dir>
+./scripts/pipeline/run-batch-full.sh <input-dir> <output-dir> [concurrency]
 
-See individual package/app README for details.
+# Development
+./scripts/dev/start-dev.sh      # Frontend server
+./scripts/dev/start-api.sh      # API server
+./scripts/dev/start-full.sh     # Both servers
 
-## Playground Architecture
+# Setup
+./scripts/setup/install.sh      # Install all dependencies
+```
 
-The playground implements a preview-driven auto-resize system with state flow management.
+## Architecture
 
-![Playground State Flow](https://raw.githubusercontent.com/Djanghao/llm-widget-factory/refs/heads/houston/feat/preview-driven-autoresize/playground/docs/architecture/stateflow-playground-latest.png)
+### Monorepo Organization
 
-Key components:
-- **State Management**: Tracks preset changes and rendering lifecycle
-- **Auto-resize Controller**: Dynamically adjusts widget dimensions based on rendered content
-- **Preview System**: Real-time widget rendering with natural size calculation
+- `apps/` - Deployable applications (api, playground)
+- `libs/js/` - JavaScript/TypeScript packages
+- `libs/python/` - Python packages
+- `scripts/` - Automation shell scripts
+
+### Package Dependencies
+
+```
+@widget-factory/primitives
+  ↓
+@widget-factory/dsl → @widget-factory/compiler → @widget-factory/renderer
+  ↓                      ↓
+@widget-factory/icons  @widget-factory/exporter
+```
+
+## License
+
+MIT

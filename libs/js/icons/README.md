@@ -24,14 +24,15 @@ Icon library supporting both SF Symbols and Lucide icons. Exports `sfIconsMap` a
 
 ## Structure
 ```
-packages/icons/
-├── sf-symbols/          # SF Symbols icons
-│   ├── scripts/         # Generation scripts
-│   └── src/            # Generated React components
-├── lucide/             # Lucide icons
-│   └── src/            # Thin wrapper around lucide-react
-└── src/                # Main exports
-    └── index.jsx       # Exports both icon libraries
+libs/js/icons/
+├── custom/
+│   └── sf-symbols/      # SF Symbols icons
+│       ├── scripts/     # Generation scripts
+│       └── src/         # Generated React components
+├── lucide/              # Lucide icons
+│   └── src/             # Thin wrapper around lucide-react
+└── src/                 # Main exports
+    └── index.jsx        # Exports both icon libraries
 ```
 
 ## SF Symbols - Dynamic Colors

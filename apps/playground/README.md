@@ -11,8 +11,8 @@ cp .env.example .env
 
 2. Configure your environment variables in `.env`:
 ```
-BACKEND_PORT=8000
-FRONTEND_PORT=5173
+BACKEND_PORT=8010
+FRONTEND_PORT=3060
 DASHSCOPE_API_KEY=your-qwen-api-key
 ```
 
