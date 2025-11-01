@@ -47,11 +47,11 @@ def main():
             system_prompt=None,
             model=os.getenv('DEFAULT_MODEL', 'qwen3-vl-flash'),
             api_key=os.getenv('DASHSCOPE_API_KEY'),
-            retrieval_topk=50,
-            retrieval_topm=10,
-            retrieval_alpha=0.8,
+            retrieval_topk=config.retrieval_topk,
+            retrieval_topm=config.retrieval_topm,
+            retrieval_alpha=config.retrieval_alpha,
             config=config,
-            icon_lib_names='["sf", "lucide"]',
+            icon_lib_names=os.getenv('ICON_LIB_NAMES', '["sf", "lucide"]'),
         ))
 
         dsl_to_save = result.get('widgetDSL', result) if isinstance(result, dict) else result
@@ -66,6 +66,8 @@ def main():
 
 def batch_main():
     """CLI entry point for batch widget generation."""
+    import os
+
     parser = argparse.ArgumentParser(
         description='Batch generate WidgetDSL from multiple images',
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -89,14 +91,14 @@ Examples:
     parser.add_argument(
         '-m', '--model',
         type=str,
-        default='qwen3-vl-flash',
-        help='Model to use (default: qwen3-vl-flash)'
+        default=os.getenv('DEFAULT_MODEL', 'qwen3-vl-flash'),
+        help='Model to use (default: from DEFAULT_MODEL env or qwen3-vl-flash)'
     )
     parser.add_argument(
         '--icon-libs',
         type=str,
-        default='["sf", "lucide"]',
-        help='Icon libraries as JSON array (default: ["sf", "lucide"])'
+        default=os.getenv('ICON_LIB_NAMES', '["sf", "lucide"]'),
+        help='Icon libraries as JSON array (default: from ICON_LIB_NAMES env or ["sf", "lucide"])'
     )
     parser.add_argument(
         '--api-key',

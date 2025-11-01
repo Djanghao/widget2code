@@ -215,9 +215,9 @@ async def generate_widget_icons(
     system_prompt: str = Form(None),
     model: str = Form(None),
     api_key: str = Form(None),
-    retrieval_topk: int = Form(50),
-    retrieval_topm: int = Form(10),
-    retrieval_alpha: float = Form(0.8),
+    retrieval_topk: int = Form(gen_config.retrieval_topk),
+    retrieval_topm: int = Form(gen_config.retrieval_topm),
+    retrieval_alpha: float = Form(gen_config.retrieval_alpha),
 ):
     client_ip = request.client.host
     if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
@@ -253,9 +253,9 @@ async def generate_widget_full(
     system_prompt: str = Form(None),
     model: str = Form(None),
     api_key: str = Form(None),
-    retrieval_topk: int = Form(50),
-    retrieval_topm: int = Form(10),
-    retrieval_alpha: float = Form(0.8),
+    retrieval_topk: int = Form(gen_config.retrieval_topk),
+    retrieval_topm: int = Form(gen_config.retrieval_topm),
+    retrieval_alpha: float = Form(gen_config.retrieval_alpha),
     icon_lib_names: str = Form(None),
 ):
     client_ip = request.client.host
