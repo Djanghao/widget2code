@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "workspaces": [
-    "libs/packages/*",
+    "libs/js/*",
     "apps/playground"
   ],
   "scripts": {
@@ -13,8 +13,8 @@
     "dev:full": "npm run dev:full --workspace=apps/playground",
     "api": "cd apps/api && ./.venv/bin/python server.py",
     "build": "npm run build --workspaces --if-present",
-    "prepare:dynamic": "node libs/packages/icons/custom/sf-symbols/scripts/prepare-dynamic-icons.js",
-    "build:icons": "node libs/packages/icons/custom/sf-symbols/scripts/generate-icons.js",
+    "prepare:dynamic": "node libs/js/icons/custom/sf-symbols/scripts/prepare-dynamic-icons.js",
+    "build:icons": "node libs/js/icons/custom/sf-symbols/scripts/generate-icons.js",
     "render": "npm run render --workspace=apps/playground"
   },
   "devDependencies": {
