@@ -43,6 +43,7 @@ Configure `.env` with your `DASHSCOPE_API_KEY`
 
 # Batch generation (parallel processing)
 ./scripts/generation/generate-batch.sh ./images ./output [concurrency]
+
 # Example: Process 5 images at a time
 ./scripts/generation/generate-batch.sh ./images ./output 5
 ```

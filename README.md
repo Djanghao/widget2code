@@ -1,6 +1,6 @@
-# LLM Widget Factory
+# Widget Factory
 
-AI-powered widget generation system that transforms design mockups into production-ready React components.
+Transform phone widget screenshots into React widgets using LLM and AI-native WidgetDSL.
 
 **Pipeline**: Image → WidgetDSL (JSON) → JSX → PNG
 
