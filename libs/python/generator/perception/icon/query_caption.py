@@ -70,12 +70,12 @@ def _encode_texts_via_http(texts: List[str]) -> np.ndarray:
 
 def build_blip2(model_id: str = BLIP2_MODEL_ID):
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    torch_dtype = torch.float16 if device == "cuda" else torch.float32
+    dtype = torch.float16 if device == "cuda" else torch.float32
     processor = Blip2Processor.from_pretrained(model_id, use_fast=True)
     device_map = {"": 0} if device == "cuda" else {"": "cpu"}
     model = Blip2ForConditionalGeneration.from_pretrained(
         model_id,
-        torch_dtype=torch_dtype,
+        dtype=dtype,
         device_map=device_map,
         low_cpu_mem_usage=True,
     ).eval()

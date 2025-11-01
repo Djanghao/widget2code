@@ -1,6 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, Form, Request, HTTPException, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import List, Optional
 from pydantic import BaseModel
@@ -32,18 +33,9 @@ siglip_lock = None
 class EncodeTextsRequest(BaseModel):
     texts: List[str]
 
-app = FastAPI()
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=allowed_origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-@app.on_event("startup")
-async def load_models():
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
     global cached_blip2_pipe, cached_siglip_pipe, blip2_lock, siglip_lock
 
     blip2_lock = asyncio.Lock()
@@ -87,6 +79,21 @@ async def load_models():
         print("=" * 80 + "\n")
     else:
         print("Model caching disabled (ENABLE_MODEL_CACHE=false)")
+
+    yield
+
+    # Shutdown (cleanup if needed)
+    pass
+
+app = FastAPI(lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=allowed_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.exception_handler(ValidationError)
 async def validation_error_handler(request: Request, exc: ValidationError):
