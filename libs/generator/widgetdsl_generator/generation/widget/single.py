@@ -26,6 +26,7 @@ from ...utils import (
     clean_json_response,
     clean_code_response,
 )
+from ...utils.logger import log_to_file
 from ...perception import (
     preprocess_image_for_widget,
     run_icon_detection_pipeline,
@@ -197,7 +198,7 @@ async def generate_widget_with_icons(
             retrieval_topk=retrieval_topk,
             retrieval_topm=retrieval_topm,
             retrieval_alpha=retrieval_alpha,
-            timeout=300,
+            timeout=config.timeout,
         )
 
         grounding_raw = icon_result["grounding_raw"]
@@ -230,7 +231,7 @@ async def generate_widget_with_icons(
             model=model_to_use,
             temperature=0.5,
             max_tokens=32768,
-            timeout=300,
+            timeout=config.timeout,
             system_prompt=prompt_final,
             api_key=api_key
         )
@@ -411,8 +412,7 @@ async def generate_widget_full(
         validate_model(model, model_to_use, vision_models)
         validate_api_key(api_key)
 
-        if config.verbose:
-            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 Parallel extraction started")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 Parallel extraction started")
 
         # Parse icon library names from JSON array, e.g., '["sf", "lucide"]'
         lib_names = None
@@ -435,8 +435,7 @@ async def generate_widget_full(
                 retrieval_topm=retrieval_topm,
                 retrieval_alpha=retrieval_alpha,
                 lib_names=lib_names,
-                timeout=300,
-                verbose=config.verbose,
+                timeout=config.timeout,
             ),
             asyncio.to_thread(
                 detect_and_process_graphs,
@@ -447,14 +446,12 @@ async def generate_widget_full(
                 model=model_to_use,
                 temperature=0.1,
                 max_tokens=500,
-                timeout=30,
+                timeout=config.timeout,
                 max_retries=2,
-                verbose=config.verbose,
             )
         )
 
-        if config.verbose:
-            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Parallel extraction: Icons:{icon_result['icon_count']}, Charts:{sum(chart_counts.values()) if chart_counts else 0}")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Parallel extraction: Icons:{icon_result['icon_count']}, Charts:{sum(chart_counts.values()) if chart_counts else 0}")
 
         grounding_raw = icon_result["grounding_raw"]
         grounding_pixel = icon_result["grounding_pixel"]
@@ -493,14 +490,13 @@ async def generate_widget_full(
         if "[AVAILABLE_COMPONENTS]" in prompt_final:
             prompt_final = prompt_final.replace("[AVAILABLE_COMPONENTS]", components_list)
 
-        if config.verbose:
-            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 VLM generation started")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 VLM generation started")
 
         vision_llm = LLM(
             model=model_to_use,
             temperature=0.5,
             max_tokens=32768,
-            timeout=300,
+            timeout=config.timeout,
             system_prompt=prompt_final,
             api_key=api_key
         )

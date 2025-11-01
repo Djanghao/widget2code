@@ -13,10 +13,18 @@ from pathlib import Path
 from datetime import datetime
 from typing import List, Tuple, Dict, Any
 from tqdm import tqdm
+from importlib.metadata import version
 
 from .single import generate_widget_full
 from ...config import GeneratorConfig
 from ...exceptions import ValidationError, FileSizeError, GenerationError
+from ...utils.logger import setup_logger, log_to_file, log_to_console, separator, Colors
+
+# Get package version
+try:
+    PACKAGE_VERSION = version("widgetdsl-generator")
+except Exception:
+    PACKAGE_VERSION = "unknown"
 
 
 class BatchGenerator:
@@ -73,11 +81,9 @@ class BatchGenerator:
 
                         if generation_step.get('status') == 'success':
                             should_process = False
-                            if self.config.verbose:
-                                print(f"[Skip] {image_path.name} - already generated")
+                            log_to_file(f"[Skip] {image_path.name} - already generated")
                 except Exception as e:
-                    if self.config.verbose:
-                        print(f"[Warning] Failed to read log for {image_path.name}, will process")
+                    log_to_file(f"[Warning] Failed to read log for {image_path.name}, will process")
 
             if should_process:
                 images_to_process.append(image_path)
@@ -98,8 +104,7 @@ class BatchGenerator:
         start_time = datetime.now()
 
         try:
-            if self.config.verbose:
-                print(f"[{start_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🚀 START")
+            log_to_file(f"[{start_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🚀 START")
 
             # Copy original image
             shutil.copy2(image_path, original_copy)
@@ -119,8 +124,7 @@ class BatchGenerator:
             except:
                 image_dims = None
 
-            if self.config.verbose:
-                print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🔄 DSL generation started")
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🔄 DSL generation started")
 
             # Generate widget DSL
             result = await generate_widget_full(
@@ -148,8 +152,7 @@ class BatchGenerator:
             icons_detected = len(result.get('icons', [])) if isinstance(result, dict) else 0
             graphs_detected = len(result.get('graphs', [])) if isinstance(result, dict) else 0
 
-            if self.config.verbose:
-                print(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ DSL generation finished")
+            log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ DSL generation finished")
 
             # Create comprehensive log.json
             log_data = {
@@ -187,7 +190,7 @@ class BatchGenerator:
                     "dsl": f"{widget_id}.json"
                 },
                 "metadata": {
-                    "version": "0.3.0",
+                    "generatorVersion": PACKAGE_VERSION,
                     "pipeline": "generation"
                 }
             }
@@ -196,8 +199,7 @@ class BatchGenerator:
                 json.dump(log_data, f, indent=2)
 
             self.completed += 1
-            if self.config.verbose:
-                print(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ COMPLETED ({duration:.1f}s)")
+            log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ COMPLETED ({duration:.1f}s)")
 
             # Update progress bar
             if self.pbar:
@@ -242,7 +244,7 @@ class BatchGenerator:
                     "original": f"{widget_id}_original{image_path.suffix}" if original_copy.exists() else None
                 },
                 "metadata": {
-                    "version": "0.3.0",
+                    "generatorVersion": PACKAGE_VERSION,
                     "pipeline": "generation"
                 }
             }
@@ -255,8 +257,7 @@ class BatchGenerator:
             with open(error_file, 'w') as f:
                 f.write(f"Error: {error_msg}\n")
 
-            if self.config.verbose:
-                print(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ❌ FAILED - {error_msg}")
+            log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ❌ FAILED - {error_msg}")
 
             # Update progress bar
             if self.pbar:
@@ -279,34 +280,57 @@ class BatchGenerator:
 
     async def run(self):
         """Main execution flow."""
-        if self.config.verbose:
-            print(f"Batch Widget Generation")
-            print(f"Input: {self.input_dir}")
-            print(f"Output: {self.output_dir}")
-            print(f"Concurrency: {self.concurrency}, Model: {self.model}, Libs: {self.icon_lib_names}")
+        # Setup logging
+        setup_logger(self.output_dir / "run.log")
+
+        # Log initial config (show in console)
+        log_to_console(separator(), Colors.CYAN)
+        log_to_console("Widget Factory - Batch Generation", Colors.BOLD + Colors.BRIGHT_CYAN)
+        log_to_console(separator(), Colors.CYAN)
+        log_to_console(f"Generator Version: {PACKAGE_VERSION}", Colors.BRIGHT_WHITE)
+        log_to_console(f"Start Time: {datetime.now().isoformat()}", Colors.BRIGHT_WHITE)
+        log_to_console("")
+        log_to_console("Configuration:", Colors.BRIGHT_YELLOW)
+        log_to_console(f"  Input Directory: {self.input_dir}")
+        log_to_console(f"  Output Directory: {self.output_dir}")
+        log_to_console(f"  Run Log: {self.output_dir / 'run.log'}", Colors.DIM)
+        log_to_console("")
+        log_to_console("Model Settings:", Colors.BRIGHT_YELLOW)
+        log_to_console(f"  Model: {self.model}", Colors.BRIGHT_MAGENTA)
+        log_to_console(f"  Timeout: {self.config.timeout}s")
+        log_to_console("")
+        log_to_console("Retrieval Settings:", Colors.BRIGHT_YELLOW)
+        log_to_console(f"  Top-K: 50")
+        log_to_console(f"  Top-M: 10")
+        log_to_console(f"  Alpha: 0.8")
+        log_to_console(f"  Icon Libraries: {self.icon_lib_names}")
+        log_to_console("")
+        log_to_console("Processing Settings:", Colors.BRIGHT_YELLOW)
+        log_to_console(f"  Concurrency: {self.concurrency}", Colors.BRIGHT_GREEN)
+        log_to_console(f"  Max File Size: {self.config.max_file_size_mb}MB")
+        log_to_console(f"  Max Requests/Min: {self.config.max_requests_per_minute}")
+        log_to_console(separator(), Colors.CYAN)
 
         if not self.api_key:
-            print("Error: DASHSCOPE_API_KEY not found in environment")
+            log_to_console("Error: DASHSCOPE_API_KEY not found in environment", Colors.BRIGHT_RED)
             raise ValueError("API key not found")
 
         images = self.find_images_to_process()
         self.total = len(images)
 
         if self.total == 0:
-            print(f"No images to process")
+            log_to_console("No images to process", Colors.YELLOW)
             return
 
-        if self.config.verbose:
-            print(f"Processing {self.total} images")
+        log_to_console(f"Processing {self.total} images", Colors.BRIGHT_GREEN)
 
         start_time = datetime.now()
 
-        # Initialize progress bar
+        # Initialize progress bar (always show)
         self.pbar = tqdm(
             total=self.total,
             desc="Generating widgets",
-            unit="img",
-            disable=self.config.verbose  # Disable tqdm when verbose (use print logs instead)
+            unit="img"
         )
 
         try:
@@ -318,14 +342,23 @@ class BatchGenerator:
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()
 
-        # Always print final summary
-        print(f"\nBatch Complete: {self.completed}/{self.total} succeeded, {self.failed} failed ({duration:.1f}s, {duration/self.total:.1f}s/image)")
+        # Log final summary (show in console)
+        log_to_console("")
+        log_to_console(separator(), Colors.CYAN)
+        log_to_console(f"End Time: {end_time.isoformat()}", Colors.BRIGHT_WHITE)
+        log_to_console(f"Total Duration: {duration:.1f}s", Colors.BRIGHT_WHITE)
+        log_to_console(f"Average Time: {duration/self.total:.1f}s/image" if self.total > 0 else "", Colors.BRIGHT_WHITE)
+
+        success_color = Colors.BRIGHT_GREEN if self.failed == 0 else Colors.BRIGHT_YELLOW if self.completed > 0 else Colors.BRIGHT_RED
+        log_to_console(f"Results: {self.completed}/{self.total} succeeded, {self.failed} failed", success_color)
+        log_to_console(separator(), Colors.CYAN)
 
         if self.failed > 0:
-            print(f"\nFailed images:")
+            log_to_console("")
+            log_to_console("Failed images:", Colors.BRIGHT_RED)
             for image_path, success, msg in self.results:
                 if not success:
-                    print(f"  • {image_path.name} - {msg}")
+                    log_to_console(f"  • {image_path.name} - {msg}", Colors.RED)
 
 
 async def batch_generate(

@@ -33,6 +33,7 @@ widgetdsl_generator/perception/icon/search_fused.py
 widgetdsl_generator/perception/layout/__init__.py
 widgetdsl_generator/perception/layout/perception.py
 widgetdsl_generator/utils/__init__.py
+widgetdsl_generator/utils/logger.py
 widgetdsl_generator/utils/prompt_loader.py
 widgetdsl_generator/utils/text_processing.py
 widgetdsl_generator/utils/validation.py

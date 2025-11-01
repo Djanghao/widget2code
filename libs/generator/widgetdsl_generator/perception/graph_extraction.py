@@ -3,6 +3,7 @@ from pathlib import Path
 from datetime import datetime
 from .graph.detection import detect_charts_in_image, should_use_graph_pipeline
 from .graph.pipeline import process_graphs_in_image, format_graph_specs_for_injection
+from ..utils.logger import log_to_file
 
 def detect_and_process_graphs(
     image_bytes: bytes,
@@ -14,7 +15,6 @@ def detect_and_process_graphs(
     max_tokens: int,
     timeout: int,
     max_retries: int,
-    verbose: bool = False,
 ) -> tuple[dict, list]:
     image_id = Path(filename).stem if filename else "unknown"
 
@@ -31,8 +31,7 @@ def detect_and_process_graphs(
     )
 
     total_charts = sum(chart_counts.values()) if chart_counts else 0
-    if verbose:
-        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Graph detection: {total_charts} charts")
+    log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Graph detection: {total_charts} charts")
 
     graph_specs = []
     if should_use_graph_pipeline(chart_counts):
@@ -48,8 +47,7 @@ def detect_and_process_graphs(
             timeout=60,
             max_retries=2
         )
-        if verbose:
-            print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Graph processing: {len(graph_specs)} specs")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Graph processing: {len(graph_specs)} specs")
 
     return chart_counts, graph_specs
 

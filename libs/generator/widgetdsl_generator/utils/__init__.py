@@ -8,6 +8,7 @@ from .prompt_loader import (
     load_dynamic_component_image_prompt,
 )
 from .text_processing import clean_json_response, clean_code_response
+from .logger import setup_logger, get_logger, log_to_file, log_to_console, separator, Colors
 
 __all__ = [
     "check_rate_limit",
@@ -22,4 +23,10 @@ __all__ = [
     "load_dynamic_component_image_prompt",
     "clean_json_response",
     "clean_code_response",
+    "setup_logger",
+    "get_logger",
+    "log_to_file",
+    "log_to_console",
+    "separator",
+    "Colors",
 ]
