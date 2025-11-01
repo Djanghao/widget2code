@@ -19,6 +19,7 @@ from .single import generate_widget_full
 from ...config import GeneratorConfig
 from ...exceptions import ValidationError, FileSizeError, GenerationError
 from ...utils.logger import setup_logger, log_to_file, log_to_console, separator, Colors
+from ...utils.visualization import draw_grounding_visualization, crop_icon_region, save_retrieval_svgs
 
 # Get package version
 try:
@@ -42,10 +43,10 @@ class BatchGenerator:
         self.input_dir = input_dir
         self.output_dir = output_dir
         self.concurrency = concurrency
-        self.api_key = api_key or os.getenv("DASHSCOPE_API_KEY")
-        self.model = model or "qwen3-vl-flash"
-        self.icon_lib_names = icon_lib_names
         self.config = GeneratorConfig.from_env()
+        self.api_key = api_key or os.getenv("DASHSCOPE_API_KEY")
+        self.model = model or self.config.default_model
+        self.icon_lib_names = icon_lib_names
 
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -69,54 +70,83 @@ class BatchGenerator:
         for image_path in sorted(all_images):
             widget_id = image_path.stem
             widget_dir = self.output_dir / widget_id
-            log_file = widget_dir / "log.json"
+            debug_file = widget_dir / "output" / "debug.json"
 
             should_process = True
 
-            if log_file.exists():
+            if debug_file.exists():
                 try:
-                    with open(log_file, 'r') as f:
-                        log_data = json.load(f)
-                        generation_step = log_data.get('steps', {}).get('generation', {})
+                    with open(debug_file, 'r') as f:
+                        debug_data = json.load(f)
+                        execution_status = debug_data.get('execution', {}).get('status', '')
 
-                        if generation_step.get('status') == 'success':
+                        if execution_status == 'success':
                             should_process = False
                             log_to_file(f"[Skip] {image_path.name} - already generated")
                 except Exception as e:
-                    log_to_file(f"[Warning] Failed to read log for {image_path.name}, will process")
+                    log_to_file(f"[Warning] Failed to read debug.json for {image_path.name}, will process")
 
             if should_process:
                 images_to_process.append(image_path)
 
         return images_to_process
 
+    def _save_widget_log(self, widget_id: str, log_file: Path):
+        """Extract logs for this widget from run.log and save to widget's log file"""
+        try:
+            run_log_file = self.output_dir / "run.log"
+            if not run_log_file.exists():
+                return
+
+            # Read run.log and extract lines for this widget
+            with open(run_log_file, 'r') as f:
+                lines = f.readlines()
+
+            # Filter lines that contain this widget_id
+            widget_logs = [line for line in lines if f"[{widget_id}]" in line]
+
+            if widget_logs:
+                with open(log_file, 'w') as f:
+                    f.writelines(widget_logs)
+        except Exception:
+            # If log extraction fails, just skip it
+            pass
+
     async def generate_single(self, image_path: Path) -> Tuple[Path, bool, str]:
-        """Generate widget DSL for a single image with nested directory structure and log.json."""
+        """Generate widget DSL for a single image with complete debug data and visualizations."""
         widget_id = image_path.stem
         widget_dir = self.output_dir / widget_id
         widget_dir.mkdir(parents=True, exist_ok=True)
 
+        # Create directory structure
+        output_dir = widget_dir / "output"
+        images_dir = widget_dir / "images"
+        prompts_dir = widget_dir / "prompts"
+        icon_crops_dir = images_dir / "4_icon_crops"
+        retrieval_dir = images_dir / "5_retrieval"
+
+        output_dir.mkdir(parents=True, exist_ok=True)
+        images_dir.mkdir(parents=True, exist_ok=True)
+        prompts_dir.mkdir(parents=True, exist_ok=True)
+        icon_crops_dir.mkdir(parents=True, exist_ok=True)
+        retrieval_dir.mkdir(parents=True, exist_ok=True)
+
         # Prepare file paths
-        original_copy = widget_dir / f"{widget_id}_original{image_path.suffix}"
-        dsl_file = widget_dir / f"{widget_id}.json"
-        log_file = widget_dir / "log.json"
+        widget_file = output_dir / "widget.json"
+        debug_file = output_dir / "debug.json"
+        log_file = output_dir / "log"
 
         start_time = datetime.now()
 
         try:
             log_to_file(f"[{start_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🚀 START")
 
-            # Copy original image
-            shutil.copy2(image_path, original_copy)
-
-            # Get image size
-            image_size = image_path.stat().st_size
-
             # Read image data
             with open(image_path, 'rb') as f:
                 image_data = f.read()
 
-            # Try to get image dimensions
+            # Get image size and dimensions
+            image_size = image_path.stat().st_size
             try:
                 from PIL import Image
                 with Image.open(image_path) as img:
@@ -124,79 +154,195 @@ class BatchGenerator:
             except:
                 image_dims = None
 
+            # 1. Save original image
+            original_file = images_dir / "1_original.png"
+            shutil.copy2(image_path, original_file)
+
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🔄 DSL generation started")
 
-            # Generate widget DSL
+            # 2. Generate widget DSL with full debug info
             result = await generate_widget_full(
                 image_data=image_data,
                 image_filename=image_path.name,
                 system_prompt=None,
                 model=self.model,
                 api_key=self.api_key,
-                retrieval_topk=50,
-                retrieval_topm=10,
-                retrieval_alpha=0.8,
+                retrieval_topk=self.config.retrieval_topk,
+                retrieval_topm=self.config.retrieval_topm,
+                retrieval_alpha=self.config.retrieval_alpha,
                 config=self.config,
                 icon_lib_names=self.icon_lib_names,
             )
 
-            # Save DSL (extract widgetDSL from response)
-            dsl_to_save = result.get('widgetDSL', result) if isinstance(result, dict) else result
-            with open(dsl_file, 'w') as f:
-                json.dump(dsl_to_save, f, indent=2)
+            # Extract data from result
+            widget_dsl = result.get('widgetDSL', result) if isinstance(result, dict) else result
+            icon_debug = result.get('iconDebugInfo', {}) if isinstance(result, dict) else {}
+            graph_debug = result.get('graphDebugInfo', {}) if isinstance(result, dict) else {}
+            prompt_debug = result.get('promptDebugInfo', {}) if isinstance(result, dict) else {}
+            preprocessed_info = result.get('preprocessedImage', {}) if isinstance(result, dict) else {}
+
+            # Save widget DSL
+            with open(widget_file, 'w') as f:
+                json.dump(widget_dsl, f, indent=2)
+
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ DSL generation finished")
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 💾 Generating visualizations...")
+
+            # 2. Save preprocessed image
+            preprocessed_bytes = preprocessed_info.get('bytes')
+            if preprocessed_bytes:
+                with open(images_dir / "2_preprocessed.png", 'wb') as f:
+                    f.write(preprocessed_bytes)
+
+            # 3. Generate grounding visualization
+            grounding_detections = icon_debug.get('grounding', {}).get('postProcessed', [])
+            if grounding_detections:
+                grounding_viz = draw_grounding_visualization(image_data, grounding_detections)
+                with open(images_dir / "3_grounding.png", 'wb') as f:
+                    f.write(grounding_viz)
+
+            # 4. Crop icon regions
+            icon_detections = [d for d in grounding_detections if d.get('label') == 'icon']
+            for idx, det in enumerate(icon_detections):
+                crop_bytes = crop_icon_region(image_data, det['bbox'])
+                with open(icon_crops_dir / f"icon_{idx}.png", 'wb') as f:
+                    f.write(crop_bytes)
+
+            # 5. Save retrieval SVGs
+            svg_source_dirs = [
+                Path(__file__).parents[4] / "libs" / "packages" / "icons" / "svg"
+            ]
+
+            per_icon = icon_debug.get('retrieval', {}).get('perIcon', [])
+            for icon_data in per_icon:
+                icon_idx = icon_data.get('index', 0)
+                top_candidates = icon_data.get('topCandidates', [])
+                if top_candidates:
+                    save_retrieval_svgs(
+                        retrieval_results=top_candidates,
+                        icon_index=icon_idx,
+                        output_dir=retrieval_dir,
+                        svg_source_dirs=svg_source_dirs,
+                        top_n=10
+                    )
+
+            # 5. Save prompts
+            if prompt_debug:
+                for stage_name, prompt_text in prompt_debug.items():
+                    if isinstance(prompt_text, str) and stage_name.startswith('stage'):
+                        # Map stage names to numbered files
+                        stage_map = {
+                            'stage1_base': '1_base.md',
+                            'stage2_withGraphs': '2_withGraphs.md',
+                            'stage3_withIcons': '3_withIcons.md',
+                            'stage4_final': '4_final.md'
+                        }
+                        filename = stage_map.get(stage_name)
+                        if filename:
+                            with open(prompts_dir / filename, 'w') as f:
+                                f.write(prompt_text)
 
             end_time = datetime.now()
             duration = (end_time - start_time).total_seconds()
 
-            # Count icons and graphs in result
-            icons_detected = len(result.get('icons', [])) if isinstance(result, dict) else 0
-            graphs_detected = len(result.get('graphs', [])) if isinstance(result, dict) else 0
+            log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ Visualizations saved")
 
-            log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ DSL generation finished")
+            # Count icons and graphs
+            icon_count = icon_debug.get('detection', {}).get('iconCount', 0)
+            graph_count = graph_debug.get('detection', {}).get('graphCount', 0)
 
-            # Create comprehensive log.json
-            log_data = {
+            # Build file lists
+            icon_crop_files = [f"images/4_icon_crops/icon_{i}.png" for i in range(len(icon_detections))]
+
+            retrieval_files = {}
+            for icon_data in per_icon:
+                icon_idx = icon_data.get('index', 0)
+                icon_dir = retrieval_dir / f"icon_{icon_idx}"
+                if icon_dir.exists():
+                    svg_files = sorted(icon_dir.glob("*.svg"))
+                    retrieval_files[f"icon_{icon_idx}"] = [
+                        f"images/5_retrieval/icon_{icon_idx}/{f.name}" for f in svg_files
+                    ]
+
+            # Create comprehensive debug.json
+            debug_data = {
                 "widgetId": widget_id,
+                "generatorVersion": PACKAGE_VERSION,
+                "execution": {
+                    "startTime": start_time.isoformat(),
+                    "endTime": end_time.isoformat(),
+                    "duration": duration,
+                    "status": "success"
+                },
+                "input": {
+                    "filename": image_path.name,
+                    "originalPath": str(image_path.absolute()),
+                    "fileSizeBytes": image_size,
+                    "dimensions": image_dims,
+                    "preprocessed": {
+                        "width": preprocessed_info.get('width'),
+                        "height": preprocessed_info.get('height'),
+                        "aspectRatio": preprocessed_info.get('aspectRatio')
+                    }
+                },
+                "config": {
+                    "model": self.model,
+                    "timeout": self.config.timeout,
+                    "iconLibraries": json.loads(self.icon_lib_names),
+                    "retrieval": {
+                        "topK": self.config.retrieval_topk,
+                        "topM": self.config.retrieval_topm,
+                        "alpha": self.config.retrieval_alpha
+                    }
+                },
                 "steps": {
-                    "generation": {
-                        "status": "success",
-                        "startTime": start_time.isoformat(),
-                        "endTime": end_time.isoformat(),
-                        "duration": duration,
-                        "input": {
-                            "filename": image_path.name,
-                            "originalPath": str(image_path.absolute()),
-                            "size": image_size,
-                            "dimensions": image_dims
-                        },
-                        "config": {
-                            "model": self.model,
-                            "iconLibs": json.loads(self.icon_lib_names),
-                            "apiKey": "***masked***",
-                            "retrievalTopk": 50,
-                            "retrievalTopm": 10,
-                            "retrievalAlpha": 0.8
-                        },
-                        "output": {
-                            "dslFile": f"{widget_id}.json",
-                            "iconsDetected": icons_detected,
-                            "graphsDetected": graphs_detected
-                        },
-                        "error": None
+                    "iconGrounding": icon_debug.get('grounding', {}),
+                    "iconRetrieval": icon_debug.get('retrieval', {}),
+                    "iconDetection": icon_debug.get('detection', {}),
+                    "graphDetection": graph_debug.get('detection', {}),
+                    "graphSpecs": graph_debug.get('specs', []),
+                    "promptConstruction": prompt_debug
+                },
+                "output": {
+                    "widgetDSL": {
+                        "saved": "output/widget.json"
+                    },
+                    "statistics": {
+                        "iconsDetected": icon_count,
+                        "graphsDetected": graph_count
                     }
                 },
                 "files": {
-                    "original": f"{widget_id}_original{image_path.suffix}",
-                    "dsl": f"{widget_id}.json"
+                    "output": {
+                        "widget": "output/widget.json",
+                        "log": "output/log",
+                        "debug": "output/debug.json"
+                    },
+                    "images": {
+                        "1_original": "images/1_original.png",
+                        "2_preprocessed": "images/1_preprocessed.png",
+                        "3_grounding": "images/3_grounding.png" if grounding_detections else None,
+                        "4_icon_crops": icon_crop_files,
+                        "5_retrieval": retrieval_files
+                    },
+                    "prompts": {
+                        "1_base": "prompts/1_base.md" if (prompts_dir / "1_base.md").exists() else None,
+                        "2_withGraphs": "prompts/2_withGraphs.md" if (prompts_dir / "2_withGraphs.md").exists() else None,
+                        "3_withIcons": "prompts/3_withIcons.md" if (prompts_dir / "3_withIcons.md").exists() else None,
+                        "4_final": "prompts/4_final.md" if (prompts_dir / "4_final.md").exists() else None
+                    }
                 },
                 "metadata": {
-                    "generatorVersion": PACKAGE_VERSION,
                     "pipeline": "generation"
                 }
             }
 
-            with open(log_file, 'w') as f:
-                json.dump(log_data, f, indent=2)
+            # Save debug.json
+            with open(debug_file, 'w') as f:
+                json.dump(debug_data, f, indent=2)
+
+            # Extract and save widget-specific log
+            self._save_widget_log(widget_id, log_file)
 
             self.completed += 1
             log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ COMPLETED ({duration:.1f}s)")
@@ -215,47 +361,51 @@ class BatchGenerator:
             duration = (end_time - start_time).total_seconds()
             error_msg = f"{type(e).__name__}: {str(e)}"
 
-            # Create error log.json
-            log_data = {
+            # Create error debug.json
+            debug_data = {
                 "widgetId": widget_id,
-                "steps": {
-                    "generation": {
-                        "status": "failed",
-                        "startTime": start_time.isoformat(),
-                        "endTime": end_time.isoformat(),
-                        "duration": duration,
-                        "input": {
-                            "filename": image_path.name,
-                            "originalPath": str(image_path.absolute()),
-                            "size": image_path.stat().st_size if image_path.exists() else None
-                        },
-                        "config": {
-                            "model": self.model,
-                            "iconLibs": json.loads(self.icon_lib_names),
-                            "apiKey": "***masked***"
-                        },
-                        "error": {
-                            "message": str(e),
-                            "type": type(e).__name__
-                        }
+                "generatorVersion": PACKAGE_VERSION,
+                "execution": {
+                    "startTime": start_time.isoformat(),
+                    "endTime": end_time.isoformat(),
+                    "duration": duration,
+                    "status": "failed"
+                },
+                "input": {
+                    "filename": image_path.name,
+                    "originalPath": str(image_path.absolute()),
+                    "fileSizeBytes": image_path.stat().st_size if image_path.exists() else None
+                },
+                "config": {
+                    "model": self.model,
+                    "timeout": self.config.timeout,
+                    "iconLibraries": json.loads(self.icon_lib_names),
+                    "retrieval": {
+                        "topK": self.config.retrieval_topk,
+                        "topM": self.config.retrieval_topm,
+                        "alpha": self.config.retrieval_alpha
                     }
                 },
+                "error": {
+                    "message": str(e),
+                    "type": type(e).__name__
+                },
                 "files": {
-                    "original": f"{widget_id}_original{image_path.suffix}" if original_copy.exists() else None
+                    "output": {
+                        "debug": "output/debug.json"
+                    },
+                    "images": {
+                        "1_original": "images/1_original.png" if (images_dir / "1_original.png").exists() else None
+                    }
                 },
                 "metadata": {
-                    "generatorVersion": PACKAGE_VERSION,
                     "pipeline": "generation"
                 }
             }
 
-            with open(log_file, 'w') as f:
-                json.dump(log_data, f, indent=2)
-
-            # Save error.txt
-            error_file = widget_dir / "error.txt"
-            with open(error_file, 'w') as f:
-                f.write(f"Error: {error_msg}\n")
+            # Save debug.json
+            with open(debug_file, 'w') as f:
+                json.dump(debug_data, f, indent=2)
 
             log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ❌ FAILED - {error_msg}")
 
@@ -283,6 +433,35 @@ class BatchGenerator:
         # Setup logging
         setup_logger(self.output_dir / "run.log")
 
+        # Save config.json
+        config_data = {
+            "generatorVersion": PACKAGE_VERSION,
+            "startTime": datetime.now().isoformat(),
+            "configuration": {
+                "inputDir": str(self.input_dir),
+                "outputDir": str(self.output_dir),
+                "runLog": str(self.output_dir / "run.log")
+            },
+            "modelSettings": {
+                "model": self.model,
+                "timeout": self.config.timeout
+            },
+            "retrievalSettings": {
+                "topK": self.config.retrieval_topk,
+                "topM": self.config.retrieval_topm,
+                "alpha": self.config.retrieval_alpha,
+                "iconLibraries": json.loads(self.icon_lib_names)
+            },
+            "processingSettings": {
+                "concurrency": self.concurrency,
+                "maxFileSizeMB": self.config.max_file_size_mb,
+                "maxRequestsPerMinute": self.config.max_requests_per_minute
+            }
+        }
+
+        with open(self.output_dir / "config.json", 'w') as f:
+            json.dump(config_data, f, indent=2)
+
         # Log initial config (show in console)
         log_to_console(separator(), Colors.CYAN)
         log_to_console("Widget Factory - Batch Generation", Colors.BOLD + Colors.BRIGHT_CYAN)
@@ -300,9 +479,9 @@ class BatchGenerator:
         log_to_console(f"  Timeout: {self.config.timeout}s")
         log_to_console("")
         log_to_console("Retrieval Settings:", Colors.BRIGHT_YELLOW)
-        log_to_console(f"  Top-K: 50")
-        log_to_console(f"  Top-M: 10")
-        log_to_console(f"  Alpha: 0.8")
+        log_to_console(f"  Top-K: {self.config.retrieval_topk}")
+        log_to_console(f"  Top-M: {self.config.retrieval_topm}")
+        log_to_console(f"  Alpha: {self.config.retrieval_alpha}")
         log_to_console(f"  Icon Libraries: {self.icon_lib_names}")
         log_to_console("")
         log_to_console("Processing Settings:", Colors.BRIGHT_YELLOW)
@@ -377,7 +556,7 @@ async def batch_generate(
         output_dir: Output directory for generated DSL files
         concurrency: Number of images to process in parallel (default: 3)
         api_key: API key (defaults to DASHSCOPE_API_KEY env var)
-        model: Model to use (default: qwen3-vl-flash)
+        model: Model to use (defaults to DEFAULT_MODEL from config)
         icon_lib_names: Icon libraries as JSON array string (default: '["sf", "lucide"]')
     """
     generator = BatchGenerator(

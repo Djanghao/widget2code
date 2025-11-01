@@ -526,6 +526,12 @@ async def generate_widget_full(
             "success": True,
             "widgetDSL": widget_spec,
             "aspectRatio": round(aspect_ratio, 3),
+            "preprocessedImage": {
+                "bytes": image_bytes,
+                "width": width,
+                "height": height,
+                "aspectRatio": aspect_ratio,
+            },
             "iconDebugInfo": {
                 "detection": {
                     "iconCount": icon_count,

@@ -9,6 +9,7 @@ from .prompt_loader import (
 )
 from .text_processing import clean_json_response, clean_code_response
 from .logger import setup_logger, get_logger, log_to_file, log_to_console, separator, Colors
+from .visualization import draw_grounding_visualization, crop_icon_region, save_retrieval_svgs
 
 __all__ = [
     "check_rate_limit",
@@ -29,4 +30,7 @@ __all__ = [
     "log_to_console",
     "separator",
     "Colors",
+    "draw_grounding_visualization",
+    "crop_icon_region",
+    "save_retrieval_svgs",
 ]

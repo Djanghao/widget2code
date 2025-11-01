@@ -186,7 +186,7 @@ def extract_keywords_from_filename(p: Path) -> List[str]:
 
 def filename_to_component_and_aliases(p: Path) -> Tuple[str, List[str]]:
     tokens = extract_keywords_from_filename(p)
-    comp = f"Icon.{''.join(t.title() for t in tokens)}" if tokens else f"Icon.{p.stem.title()}"
+    comp = f"Icon.{''.join(word.capitalize() for word in p.stem.split('.'))}"
     return comp, tokens
 
 _COLOR_RE_HEX = re.compile(r'#([0-9a-fA-F]{3,8})')
