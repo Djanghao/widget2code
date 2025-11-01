@@ -18,16 +18,17 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     resolve: {
       alias: {
-        '@widget-factory/primitives/components': path.resolve(__dirname, '../../libs/packages/primitives/src/component-registry.js'),
-        '@widget-factory/primitives': path.resolve(__dirname, '../../libs/packages/primitives/src'),
-        '@widget-factory/compiler': path.resolve(__dirname, '../../libs/packages/compiler/src'),
-        '@widget-factory/icons/sf-symbols': path.resolve(__dirname, '../../libs/packages/icons/custom/sf-symbols/src'),
-        '@widget-factory/icons': path.resolve(__dirname, '../../libs/packages/icons'),
-        '@widget-factory/dsl': path.resolve(__dirname, '../../libs/packages/dsl/src'),
-        '@widget-factory/renderer': path.resolve(__dirname, '../../libs/packages/renderer/src'),
-        '@widget-factory/exporter': path.resolve(__dirname, '../../libs/packages/exporter/src'),
-        '@widget-factory/resizer': path.resolve(__dirname, '../../libs/packages/resizer/src'),
-        '@widget-factory/dynamic': path.resolve(__dirname, '../../libs/packages/dynamic/src'),
+        '@widget-factory/primitives/components': path.resolve(__dirname, '../../libs/js/primitives/src/component-registry.js'),
+        '@widget-factory/primitives': path.resolve(__dirname, '../../libs/js/primitives/src'),
+        '@widget-factory/compiler': path.resolve(__dirname, '../../libs/js/compiler/src'),
+        '@widget-factory/icons/sf-symbols': path.resolve(__dirname, '../../libs/js/icons/custom/sf-symbols/src'),
+        '@widget-factory/icons': path.resolve(__dirname, '../../libs/js/icons'),
+        '@widget-factory/dsl': path.resolve(__dirname, '../../libs/js/dsl/src'),
+        '@widget-factory/renderer': path.resolve(__dirname, '../../libs/js/renderer/src'),
+        '@widget-factory/exporter': path.resolve(__dirname, '../../libs/js/exporter/src'),
+        '@widget-factory/resizer': path.resolve(__dirname, '../../libs/js/resizer/src'),
+        '@widget-factory/validator': path.resolve(__dirname, '../../libs/js/validator/src'),
+        '@widget-factory/dynamic': path.resolve(__dirname, '../../libs/js/dynamic/src'),
       }
     },
     build: {

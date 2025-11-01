@@ -8,10 +8,10 @@ import os
 import asyncio
 import traceback
 from dotenv import load_dotenv
-import widgetdsl_generator as generator
-from widgetdsl_generator import GeneratorConfig
-from widgetdsl_generator.exceptions import ValidationError, FileSizeError, GenerationError, RateLimitError
-from widgetdsl_generator.utils.validation import check_rate_limit
+import generator
+from generator import GeneratorConfig
+from generator.exceptions import ValidationError, FileSizeError, GenerationError, RateLimitError
+from generator.utils.validation import check_rate_limit
 
 root_dir = Path(__file__).parent.parent.parent
 load_dotenv(root_dir / ".env")
@@ -54,7 +54,7 @@ async def load_models():
         print("MODEL CACHING ENABLED - Loading retrieval models at startup...")
         print("=" * 80)
 
-        from widgetdsl_generator.perception.icon.query_caption import (
+        from generator.perception.icon.query_caption import (
             build_blip2, load_siglip_text, BLIP2_MODEL_ID
         )
         import torch
@@ -272,7 +272,7 @@ async def extract_icon_captions(
             detail="Model caching not enabled. Set ENABLE_MODEL_CACHE=true"
         )
 
-    from widgetdsl_generator.perception.icon.query_caption import caption_from_bytes_list
+    from generator.perception.icon.query_caption import caption_from_bytes_list
 
     crops_bytes = [await crop.read() for crop in crops]
 
@@ -294,7 +294,7 @@ async def encode_texts(
             detail="Model caching not enabled. Set ENABLE_MODEL_CACHE=true"
         )
 
-    from widgetdsl_generator.perception.icon.query_caption import encode_texts_siglip
+    from generator.perception.icon.query_caption import encode_texts_siglip
     import numpy as np
 
     model, tokenizer, device = cached_siglip_pipe

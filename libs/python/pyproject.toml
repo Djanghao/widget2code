@@ -39,12 +39,12 @@ dev = [
 ]
 
 [project.scripts]
-generate-widget = "widgetdsl_generator.cli:main"
-generate-widget-batch = "widgetdsl_generator.cli:batch_main"
+generate-widget = "generator.cli:main"
+generate-widget-batch = "generator.cli:batch_main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["widgetdsl_generator*"]
+include = ["generator*"]
 
 [tool.setuptools.package-data]
-widgetdsl_generator = ["**/*.yaml", "**/*.json"]
+generator = ["**/*.yaml", "**/*.json"]
