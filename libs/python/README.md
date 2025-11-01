@@ -26,7 +26,7 @@ pip install -e ".[api]"
 ## Usage
 
 ```python
-from widgetdsl_generator import WidgetGenerator
+from generator import WidgetGenerator
 
 # Initialize generator
 generator = WidgetGenerator()
@@ -38,7 +38,7 @@ widget_dsl = generator.generate(image_path="input.png")
 ## Package Structure
 
 ```
-widgetdsl_generator/
+generator/
 ├── generator.py          # Core generator
 ├── perception/           # Image preprocessing and analysis
 ├── services/             # Specialized services

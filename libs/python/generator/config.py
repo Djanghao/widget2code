@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # File: config.py
-# Description: Configuration classes for widgetdsl_generator
+# Description: Configuration classes for generator
 # Author: Houston Zhang
 # Date: 2025-10-29
 # -----------------------------------------------------------------------------

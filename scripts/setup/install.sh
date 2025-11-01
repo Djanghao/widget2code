@@ -32,9 +32,9 @@ source .venv/bin/activate
 pip install -r requirements.txt
 cd ../..
 
-# Install widgetdsl-generator Python package
-echo "Installing widgetdsl-generator..."
-cd libs/generator
+# Install generator Python package
+echo "Installing generator package..."
+cd libs/python
 pip install -e .
 cd ../..
 

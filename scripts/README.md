@@ -110,4 +110,4 @@ All scripts read settings from `.env` file:
 ## Tools Used
 
 - **CLI** (`@widget-factory/cli`) - Compile, render, batch-render
-- **Generator** (`widgetdsl-generator`) - AI-powered widget generation
+- **Generator** (`generator`) - AI-powered widget generation

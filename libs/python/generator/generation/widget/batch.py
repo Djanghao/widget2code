@@ -23,7 +23,7 @@ from ...utils.visualization import draw_grounding_visualization, crop_icon_regio
 
 # Get package version
 try:
-    PACKAGE_VERSION = version("widgetdsl-generator")
+    PACKAGE_VERSION = version("generator")
 except Exception:
     PACKAGE_VERSION = "unknown"
 

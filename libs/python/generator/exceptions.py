@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # File: exceptions.py
-# Description: Custom exception classes for widgetdsl_generator
+# Description: Custom exception classes for generator
 # Author: Houston Zhang
 # Date: 2025-10-29
 # -----------------------------------------------------------------------------

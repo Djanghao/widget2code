@@ -50,7 +50,7 @@ def setup_logger(log_file: Path):
     _log_file = log_file
 
     # Create logger
-    _logger = logging.getLogger("widgetdsl_batch")
+    _logger = logging.getLogger("generator_batch")
     _logger.setLevel(logging.INFO)
     _logger.handlers.clear()
 

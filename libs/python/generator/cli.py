@@ -32,8 +32,8 @@ def main():
         print(f"Error: Image file not found: {image_path}")
         sys.exit(1)
 
-    from widgetdsl_generator import generate_widget_full
-    from widgetdsl_generator.config import GeneratorConfig
+    from generator import generate_widget_full
+    from generator.config import GeneratorConfig
     import os
 
     try:
@@ -117,7 +117,7 @@ Examples:
         print(f"Error: Input path is not a directory: {input_dir}")
         sys.exit(1)
 
-    from widgetdsl_generator.generation.widget import batch_generate
+    from generator.generation.widget import batch_generate
 
     try:
         asyncio.run(batch_generate(
