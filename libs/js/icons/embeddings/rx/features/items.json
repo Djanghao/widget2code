@@ -1,7 +1,7 @@
 [
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAccessibility.svg",
-    "component_id": "Icon.RxAccessibility",
+    "src_svg": "rx/RxAccessibility.svg",
+    "component_id": "rx:RxAccessibility",
     "aliases": [
       "rx",
       "accessibility"
@@ -10,8 +10,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxActivityLog.svg",
-    "component_id": "Icon.RxActivityLog",
+    "src_svg": "rx/RxActivityLog.svg",
+    "component_id": "rx:RxActivityLog",
     "aliases": [
       "rx",
       "activity",
@@ -21,8 +21,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAlignBaseline.svg",
-    "component_id": "Icon.RxAlignBaseline",
+    "src_svg": "rx/RxAlignBaseline.svg",
+    "component_id": "rx:RxAlignBaseline",
     "aliases": [
       "rx",
       "align",
@@ -32,8 +32,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAlignBottom.svg",
-    "component_id": "Icon.RxAlignBottom",
+    "src_svg": "rx/RxAlignBottom.svg",
+    "component_id": "rx:RxAlignBottom",
     "aliases": [
       "rx",
       "align",
@@ -43,8 +43,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAlignCenterHorizontally.svg",
-    "component_id": "Icon.RxAlignCenterHorizontally",
+    "src_svg": "rx/RxAlignCenterHorizontally.svg",
+    "component_id": "rx:RxAlignCenterHorizontally",
     "aliases": [
       "rx",
       "align",
@@ -55,8 +55,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAlignCenterVertically.svg",
-    "component_id": "Icon.RxAlignCenterVertically",
+    "src_svg": "rx/RxAlignCenterVertically.svg",
+    "component_id": "rx:RxAlignCenterVertically",
     "aliases": [
       "rx",
       "align",
@@ -67,8 +67,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAlignLeft.svg",
-    "component_id": "Icon.RxAlignLeft",
+    "src_svg": "rx/RxAlignLeft.svg",
+    "component_id": "rx:RxAlignLeft",
     "aliases": [
       "rx",
       "align",
@@ -78,8 +78,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAlignRight.svg",
-    "component_id": "Icon.RxAlignRight",
+    "src_svg": "rx/RxAlignRight.svg",
+    "component_id": "rx:RxAlignRight",
     "aliases": [
       "rx",
       "align",
@@ -89,8 +89,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAlignTop.svg",
-    "component_id": "Icon.RxAlignTop",
+    "src_svg": "rx/RxAlignTop.svg",
+    "component_id": "rx:RxAlignTop",
     "aliases": [
       "rx",
       "align",
@@ -100,8 +100,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAllSides.svg",
-    "component_id": "Icon.RxAllSides",
+    "src_svg": "rx/RxAllSides.svg",
+    "component_id": "rx:RxAllSides",
     "aliases": [
       "rx",
       "all",
@@ -111,8 +111,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAngle.svg",
-    "component_id": "Icon.RxAngle",
+    "src_svg": "rx/RxAngle.svg",
+    "component_id": "rx:RxAngle",
     "aliases": [
       "rx",
       "angle"
@@ -121,8 +121,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxArchive.svg",
-    "component_id": "Icon.RxArchive",
+    "src_svg": "rx/RxArchive.svg",
+    "component_id": "rx:RxArchive",
     "aliases": [
       "rx",
       "archive"
@@ -131,8 +131,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxArrowBottomLeft.svg",
-    "component_id": "Icon.RxArrowBottomLeft",
+    "src_svg": "rx/RxArrowBottomLeft.svg",
+    "component_id": "rx:RxArrowBottomLeft",
     "aliases": [
       "rx",
       "arrow",
@@ -143,8 +143,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxArrowBottomRight.svg",
-    "component_id": "Icon.RxArrowBottomRight",
+    "src_svg": "rx/RxArrowBottomRight.svg",
+    "component_id": "rx:RxArrowBottomRight",
     "aliases": [
       "rx",
       "arrow",
@@ -155,8 +155,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxArrowDown.svg",
-    "component_id": "Icon.RxArrowDown",
+    "src_svg": "rx/RxArrowDown.svg",
+    "component_id": "rx:RxArrowDown",
     "aliases": [
       "rx",
       "arrow",
@@ -166,8 +166,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxArrowLeft.svg",
-    "component_id": "Icon.RxArrowLeft",
+    "src_svg": "rx/RxArrowLeft.svg",
+    "component_id": "rx:RxArrowLeft",
     "aliases": [
       "rx",
       "arrow",
@@ -177,8 +177,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxArrowRight.svg",
-    "component_id": "Icon.RxArrowRight",
+    "src_svg": "rx/RxArrowRight.svg",
+    "component_id": "rx:RxArrowRight",
     "aliases": [
       "rx",
       "arrow",
@@ -188,8 +188,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxArrowTopLeft.svg",
-    "component_id": "Icon.RxArrowTopLeft",
+    "src_svg": "rx/RxArrowTopLeft.svg",
+    "component_id": "rx:RxArrowTopLeft",
     "aliases": [
       "rx",
       "arrow",
@@ -200,8 +200,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxArrowTopRight.svg",
-    "component_id": "Icon.RxArrowTopRight",
+    "src_svg": "rx/RxArrowTopRight.svg",
+    "component_id": "rx:RxArrowTopRight",
     "aliases": [
       "rx",
       "arrow",
@@ -212,8 +212,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxArrowUp.svg",
-    "component_id": "Icon.RxArrowUp",
+    "src_svg": "rx/RxArrowUp.svg",
+    "component_id": "rx:RxArrowUp",
     "aliases": [
       "rx",
       "arrow",
@@ -223,8 +223,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAspectRatio.svg",
-    "component_id": "Icon.RxAspectRatio",
+    "src_svg": "rx/RxAspectRatio.svg",
+    "component_id": "rx:RxAspectRatio",
     "aliases": [
       "rx",
       "aspect",
@@ -234,8 +234,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxAvatar.svg",
-    "component_id": "Icon.RxAvatar",
+    "src_svg": "rx/RxAvatar.svg",
+    "component_id": "rx:RxAvatar",
     "aliases": [
       "rx",
       "avatar"
@@ -244,8 +244,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBackpack.svg",
-    "component_id": "Icon.RxBackpack",
+    "src_svg": "rx/RxBackpack.svg",
+    "component_id": "rx:RxBackpack",
     "aliases": [
       "rx",
       "backpack"
@@ -254,8 +254,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBadge.svg",
-    "component_id": "Icon.RxBadge",
+    "src_svg": "rx/RxBadge.svg",
+    "component_id": "rx:RxBadge",
     "aliases": [
       "rx",
       "badge"
@@ -264,8 +264,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBarChart.svg",
-    "component_id": "Icon.RxBarChart",
+    "src_svg": "rx/RxBarChart.svg",
+    "component_id": "rx:RxBarChart",
     "aliases": [
       "rx",
       "bar",
@@ -275,8 +275,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBell.svg",
-    "component_id": "Icon.RxBell",
+    "src_svg": "rx/RxBell.svg",
+    "component_id": "rx:RxBell",
     "aliases": [
       "rx",
       "bell"
@@ -285,8 +285,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBlendingMode.svg",
-    "component_id": "Icon.RxBlendingMode",
+    "src_svg": "rx/RxBlendingMode.svg",
+    "component_id": "rx:RxBlendingMode",
     "aliases": [
       "rx",
       "blending",
@@ -296,8 +296,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBookmark.svg",
-    "component_id": "Icon.RxBookmark",
+    "src_svg": "rx/RxBookmark.svg",
+    "component_id": "rx:RxBookmark",
     "aliases": [
       "rx",
       "bookmark"
@@ -306,8 +306,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBookmarkFilled.svg",
-    "component_id": "Icon.RxBookmarkFilled",
+    "src_svg": "rx/RxBookmarkFilled.svg",
+    "component_id": "rx:RxBookmarkFilled",
     "aliases": [
       "rx",
       "bookmark",
@@ -317,8 +317,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderAll.svg",
-    "component_id": "Icon.RxBorderAll",
+    "src_svg": "rx/RxBorderAll.svg",
+    "component_id": "rx:RxBorderAll",
     "aliases": [
       "rx",
       "border",
@@ -328,8 +328,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderBottom.svg",
-    "component_id": "Icon.RxBorderBottom",
+    "src_svg": "rx/RxBorderBottom.svg",
+    "component_id": "rx:RxBorderBottom",
     "aliases": [
       "rx",
       "border",
@@ -339,8 +339,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderDashed.svg",
-    "component_id": "Icon.RxBorderDashed",
+    "src_svg": "rx/RxBorderDashed.svg",
+    "component_id": "rx:RxBorderDashed",
     "aliases": [
       "rx",
       "border",
@@ -350,8 +350,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderDotted.svg",
-    "component_id": "Icon.RxBorderDotted",
+    "src_svg": "rx/RxBorderDotted.svg",
+    "component_id": "rx:RxBorderDotted",
     "aliases": [
       "rx",
       "border",
@@ -361,8 +361,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderLeft.svg",
-    "component_id": "Icon.RxBorderLeft",
+    "src_svg": "rx/RxBorderLeft.svg",
+    "component_id": "rx:RxBorderLeft",
     "aliases": [
       "rx",
       "border",
@@ -372,8 +372,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderNone.svg",
-    "component_id": "Icon.RxBorderNone",
+    "src_svg": "rx/RxBorderNone.svg",
+    "component_id": "rx:RxBorderNone",
     "aliases": [
       "rx",
       "border",
@@ -383,8 +383,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderRight.svg",
-    "component_id": "Icon.RxBorderRight",
+    "src_svg": "rx/RxBorderRight.svg",
+    "component_id": "rx:RxBorderRight",
     "aliases": [
       "rx",
       "border",
@@ -394,8 +394,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderSolid.svg",
-    "component_id": "Icon.RxBorderSolid",
+    "src_svg": "rx/RxBorderSolid.svg",
+    "component_id": "rx:RxBorderSolid",
     "aliases": [
       "rx",
       "border",
@@ -405,8 +405,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderSplit.svg",
-    "component_id": "Icon.RxBorderSplit",
+    "src_svg": "rx/RxBorderSplit.svg",
+    "component_id": "rx:RxBorderSplit",
     "aliases": [
       "rx",
       "border",
@@ -416,8 +416,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderStyle.svg",
-    "component_id": "Icon.RxBorderStyle",
+    "src_svg": "rx/RxBorderStyle.svg",
+    "component_id": "rx:RxBorderStyle",
     "aliases": [
       "rx",
       "border",
@@ -427,8 +427,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderTop.svg",
-    "component_id": "Icon.RxBorderTop",
+    "src_svg": "rx/RxBorderTop.svg",
+    "component_id": "rx:RxBorderTop",
     "aliases": [
       "rx",
       "border",
@@ -438,8 +438,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBorderWidth.svg",
-    "component_id": "Icon.RxBorderWidth",
+    "src_svg": "rx/RxBorderWidth.svg",
+    "component_id": "rx:RxBorderWidth",
     "aliases": [
       "rx",
       "border",
@@ -449,8 +449,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBox.svg",
-    "component_id": "Icon.RxBox",
+    "src_svg": "rx/RxBox.svg",
+    "component_id": "rx:RxBox",
     "aliases": [
       "rx",
       "box"
@@ -459,8 +459,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxBoxModel.svg",
-    "component_id": "Icon.RxBoxModel",
+    "src_svg": "rx/RxBoxModel.svg",
+    "component_id": "rx:RxBoxModel",
     "aliases": [
       "rx",
       "box",
@@ -470,8 +470,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxButton.svg",
-    "component_id": "Icon.RxButton",
+    "src_svg": "rx/RxButton.svg",
+    "component_id": "rx:RxButton",
     "aliases": [
       "rx",
       "button"
@@ -480,8 +480,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCalendar.svg",
-    "component_id": "Icon.RxCalendar",
+    "src_svg": "rx/RxCalendar.svg",
+    "component_id": "rx:RxCalendar",
     "aliases": [
       "rx",
       "calendar"
@@ -490,8 +490,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCamera.svg",
-    "component_id": "Icon.RxCamera",
+    "src_svg": "rx/RxCamera.svg",
+    "component_id": "rx:RxCamera",
     "aliases": [
       "rx",
       "camera"
@@ -500,8 +500,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCardStack.svg",
-    "component_id": "Icon.RxCardStack",
+    "src_svg": "rx/RxCardStack.svg",
+    "component_id": "rx:RxCardStack",
     "aliases": [
       "rx",
       "card",
@@ -511,8 +511,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCardStackMinus.svg",
-    "component_id": "Icon.RxCardStackMinus",
+    "src_svg": "rx/RxCardStackMinus.svg",
+    "component_id": "rx:RxCardStackMinus",
     "aliases": [
       "rx",
       "card",
@@ -523,8 +523,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCardStackPlus.svg",
-    "component_id": "Icon.RxCardStackPlus",
+    "src_svg": "rx/RxCardStackPlus.svg",
+    "component_id": "rx:RxCardStackPlus",
     "aliases": [
       "rx",
       "card",
@@ -535,8 +535,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCaretDown.svg",
-    "component_id": "Icon.RxCaretDown",
+    "src_svg": "rx/RxCaretDown.svg",
+    "component_id": "rx:RxCaretDown",
     "aliases": [
       "rx",
       "caret",
@@ -546,8 +546,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCaretLeft.svg",
-    "component_id": "Icon.RxCaretLeft",
+    "src_svg": "rx/RxCaretLeft.svg",
+    "component_id": "rx:RxCaretLeft",
     "aliases": [
       "rx",
       "caret",
@@ -557,8 +557,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCaretRight.svg",
-    "component_id": "Icon.RxCaretRight",
+    "src_svg": "rx/RxCaretRight.svg",
+    "component_id": "rx:RxCaretRight",
     "aliases": [
       "rx",
       "caret",
@@ -568,8 +568,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCaretSort.svg",
-    "component_id": "Icon.RxCaretSort",
+    "src_svg": "rx/RxCaretSort.svg",
+    "component_id": "rx:RxCaretSort",
     "aliases": [
       "rx",
       "caret",
@@ -579,8 +579,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCaretUp.svg",
-    "component_id": "Icon.RxCaretUp",
+    "src_svg": "rx/RxCaretUp.svg",
+    "component_id": "rx:RxCaretUp",
     "aliases": [
       "rx",
       "caret",
@@ -590,8 +590,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxChatBubble.svg",
-    "component_id": "Icon.RxChatBubble",
+    "src_svg": "rx/RxChatBubble.svg",
+    "component_id": "rx:RxChatBubble",
     "aliases": [
       "rx",
       "chat",
@@ -601,8 +601,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCheck.svg",
-    "component_id": "Icon.RxCheck",
+    "src_svg": "rx/RxCheck.svg",
+    "component_id": "rx:RxCheck",
     "aliases": [
       "rx",
       "check"
@@ -611,8 +611,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCheckCircled.svg",
-    "component_id": "Icon.RxCheckCircled",
+    "src_svg": "rx/RxCheckCircled.svg",
+    "component_id": "rx:RxCheckCircled",
     "aliases": [
       "rx",
       "check",
@@ -622,8 +622,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCheckbox.svg",
-    "component_id": "Icon.RxCheckbox",
+    "src_svg": "rx/RxCheckbox.svg",
+    "component_id": "rx:RxCheckbox",
     "aliases": [
       "rx",
       "checkbox"
@@ -632,8 +632,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxChevronDown.svg",
-    "component_id": "Icon.RxChevronDown",
+    "src_svg": "rx/RxChevronDown.svg",
+    "component_id": "rx:RxChevronDown",
     "aliases": [
       "rx",
       "chevron",
@@ -643,8 +643,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxChevronLeft.svg",
-    "component_id": "Icon.RxChevronLeft",
+    "src_svg": "rx/RxChevronLeft.svg",
+    "component_id": "rx:RxChevronLeft",
     "aliases": [
       "rx",
       "chevron",
@@ -654,8 +654,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxChevronRight.svg",
-    "component_id": "Icon.RxChevronRight",
+    "src_svg": "rx/RxChevronRight.svg",
+    "component_id": "rx:RxChevronRight",
     "aliases": [
       "rx",
       "chevron",
@@ -665,8 +665,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxChevronUp.svg",
-    "component_id": "Icon.RxChevronUp",
+    "src_svg": "rx/RxChevronUp.svg",
+    "component_id": "rx:RxChevronUp",
     "aliases": [
       "rx",
       "chevron",
@@ -676,8 +676,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCircle.svg",
-    "component_id": "Icon.RxCircle",
+    "src_svg": "rx/RxCircle.svg",
+    "component_id": "rx:RxCircle",
     "aliases": [
       "rx",
       "circle"
@@ -686,8 +686,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCircleBackslash.svg",
-    "component_id": "Icon.RxCircleBackslash",
+    "src_svg": "rx/RxCircleBackslash.svg",
+    "component_id": "rx:RxCircleBackslash",
     "aliases": [
       "rx",
       "circle",
@@ -697,8 +697,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxClipboard.svg",
-    "component_id": "Icon.RxClipboard",
+    "src_svg": "rx/RxClipboard.svg",
+    "component_id": "rx:RxClipboard",
     "aliases": [
       "rx",
       "clipboard"
@@ -707,8 +707,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxClipboardCopy.svg",
-    "component_id": "Icon.RxClipboardCopy",
+    "src_svg": "rx/RxClipboardCopy.svg",
+    "component_id": "rx:RxClipboardCopy",
     "aliases": [
       "rx",
       "clipboard",
@@ -718,8 +718,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxClock.svg",
-    "component_id": "Icon.RxClock",
+    "src_svg": "rx/RxClock.svg",
+    "component_id": "rx:RxClock",
     "aliases": [
       "rx",
       "clock"
@@ -728,8 +728,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCode.svg",
-    "component_id": "Icon.RxCode",
+    "src_svg": "rx/RxCode.svg",
+    "component_id": "rx:RxCode",
     "aliases": [
       "rx",
       "code"
@@ -738,8 +738,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCodesandboxLogo.svg",
-    "component_id": "Icon.RxCodesandboxLogo",
+    "src_svg": "rx/RxCodesandboxLogo.svg",
+    "component_id": "rx:RxCodesandboxLogo",
     "aliases": [
       "rx",
       "codesandbox",
@@ -749,8 +749,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxColorWheel.svg",
-    "component_id": "Icon.RxColorWheel",
+    "src_svg": "rx/RxColorWheel.svg",
+    "component_id": "rx:RxColorWheel",
     "aliases": [
       "rx",
       "color",
@@ -760,8 +760,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxColumnSpacing.svg",
-    "component_id": "Icon.RxColumnSpacing",
+    "src_svg": "rx/RxColumnSpacing.svg",
+    "component_id": "rx:RxColumnSpacing",
     "aliases": [
       "rx",
       "column",
@@ -771,8 +771,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxColumns.svg",
-    "component_id": "Icon.RxColumns",
+    "src_svg": "rx/RxColumns.svg",
+    "component_id": "rx:RxColumns",
     "aliases": [
       "rx",
       "columns"
@@ -781,8 +781,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCommit.svg",
-    "component_id": "Icon.RxCommit",
+    "src_svg": "rx/RxCommit.svg",
+    "component_id": "rx:RxCommit",
     "aliases": [
       "rx",
       "commit"
@@ -791,8 +791,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxComponent1.svg",
-    "component_id": "Icon.RxComponent1",
+    "src_svg": "rx/RxComponent1.svg",
+    "component_id": "rx:RxComponent1",
     "aliases": [
       "rx",
       "component",
@@ -802,8 +802,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxComponent2.svg",
-    "component_id": "Icon.RxComponent2",
+    "src_svg": "rx/RxComponent2.svg",
+    "component_id": "rx:RxComponent2",
     "aliases": [
       "rx",
       "component",
@@ -813,8 +813,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxComponentBoolean.svg",
-    "component_id": "Icon.RxComponentBoolean",
+    "src_svg": "rx/RxComponentBoolean.svg",
+    "component_id": "rx:RxComponentBoolean",
     "aliases": [
       "rx",
       "component",
@@ -824,8 +824,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxComponentInstance.svg",
-    "component_id": "Icon.RxComponentInstance",
+    "src_svg": "rx/RxComponentInstance.svg",
+    "component_id": "rx:RxComponentInstance",
     "aliases": [
       "rx",
       "component",
@@ -835,8 +835,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxComponentNone.svg",
-    "component_id": "Icon.RxComponentNone",
+    "src_svg": "rx/RxComponentNone.svg",
+    "component_id": "rx:RxComponentNone",
     "aliases": [
       "rx",
       "component",
@@ -846,8 +846,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxComponentPlaceholder.svg",
-    "component_id": "Icon.RxComponentPlaceholder",
+    "src_svg": "rx/RxComponentPlaceholder.svg",
+    "component_id": "rx:RxComponentPlaceholder",
     "aliases": [
       "rx",
       "component",
@@ -857,8 +857,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxContainer.svg",
-    "component_id": "Icon.RxContainer",
+    "src_svg": "rx/RxContainer.svg",
+    "component_id": "rx:RxContainer",
     "aliases": [
       "rx",
       "container"
@@ -867,8 +867,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCookie.svg",
-    "component_id": "Icon.RxCookie",
+    "src_svg": "rx/RxCookie.svg",
+    "component_id": "rx:RxCookie",
     "aliases": [
       "rx",
       "cookie"
@@ -877,8 +877,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCopy.svg",
-    "component_id": "Icon.RxCopy",
+    "src_svg": "rx/RxCopy.svg",
+    "component_id": "rx:RxCopy",
     "aliases": [
       "rx",
       "copy"
@@ -887,8 +887,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCornerBottomLeft.svg",
-    "component_id": "Icon.RxCornerBottomLeft",
+    "src_svg": "rx/RxCornerBottomLeft.svg",
+    "component_id": "rx:RxCornerBottomLeft",
     "aliases": [
       "rx",
       "corner",
@@ -899,8 +899,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCornerBottomRight.svg",
-    "component_id": "Icon.RxCornerBottomRight",
+    "src_svg": "rx/RxCornerBottomRight.svg",
+    "component_id": "rx:RxCornerBottomRight",
     "aliases": [
       "rx",
       "corner",
@@ -911,8 +911,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCornerTopLeft.svg",
-    "component_id": "Icon.RxCornerTopLeft",
+    "src_svg": "rx/RxCornerTopLeft.svg",
+    "component_id": "rx:RxCornerTopLeft",
     "aliases": [
       "rx",
       "corner",
@@ -923,8 +923,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCornerTopRight.svg",
-    "component_id": "Icon.RxCornerTopRight",
+    "src_svg": "rx/RxCornerTopRight.svg",
+    "component_id": "rx:RxCornerTopRight",
     "aliases": [
       "rx",
       "corner",
@@ -935,8 +935,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCorners.svg",
-    "component_id": "Icon.RxCorners",
+    "src_svg": "rx/RxCorners.svg",
+    "component_id": "rx:RxCorners",
     "aliases": [
       "rx",
       "corners"
@@ -945,8 +945,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCountdownTimer.svg",
-    "component_id": "Icon.RxCountdownTimer",
+    "src_svg": "rx/RxCountdownTimer.svg",
+    "component_id": "rx:RxCountdownTimer",
     "aliases": [
       "rx",
       "countdown",
@@ -956,8 +956,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCounterClockwiseClock.svg",
-    "component_id": "Icon.RxCounterClockwiseClock",
+    "src_svg": "rx/RxCounterClockwiseClock.svg",
+    "component_id": "rx:RxCounterClockwiseClock",
     "aliases": [
       "rx",
       "counter",
@@ -968,8 +968,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCrop.svg",
-    "component_id": "Icon.RxCrop",
+    "src_svg": "rx/RxCrop.svg",
+    "component_id": "rx:RxCrop",
     "aliases": [
       "rx",
       "crop"
@@ -978,8 +978,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCross1.svg",
-    "component_id": "Icon.RxCross1",
+    "src_svg": "rx/RxCross1.svg",
+    "component_id": "rx:RxCross1",
     "aliases": [
       "rx",
       "cross",
@@ -989,8 +989,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCross2.svg",
-    "component_id": "Icon.RxCross2",
+    "src_svg": "rx/RxCross2.svg",
+    "component_id": "rx:RxCross2",
     "aliases": [
       "rx",
       "cross",
@@ -1000,8 +1000,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCrossCircled.svg",
-    "component_id": "Icon.RxCrossCircled",
+    "src_svg": "rx/RxCrossCircled.svg",
+    "component_id": "rx:RxCrossCircled",
     "aliases": [
       "rx",
       "cross",
@@ -1011,8 +1011,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCrosshair1.svg",
-    "component_id": "Icon.RxCrosshair1",
+    "src_svg": "rx/RxCrosshair1.svg",
+    "component_id": "rx:RxCrosshair1",
     "aliases": [
       "rx",
       "crosshair",
@@ -1022,8 +1022,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCrosshair2.svg",
-    "component_id": "Icon.RxCrosshair2",
+    "src_svg": "rx/RxCrosshair2.svg",
+    "component_id": "rx:RxCrosshair2",
     "aliases": [
       "rx",
       "crosshair",
@@ -1033,8 +1033,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCrumpledPaper.svg",
-    "component_id": "Icon.RxCrumpledPaper",
+    "src_svg": "rx/RxCrumpledPaper.svg",
+    "component_id": "rx:RxCrumpledPaper",
     "aliases": [
       "rx",
       "crumpled",
@@ -1044,8 +1044,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCube.svg",
-    "component_id": "Icon.RxCube",
+    "src_svg": "rx/RxCube.svg",
+    "component_id": "rx:RxCube",
     "aliases": [
       "rx",
       "cube"
@@ -1054,8 +1054,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCursorArrow.svg",
-    "component_id": "Icon.RxCursorArrow",
+    "src_svg": "rx/RxCursorArrow.svg",
+    "component_id": "rx:RxCursorArrow",
     "aliases": [
       "rx",
       "cursor",
@@ -1065,8 +1065,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxCursorText.svg",
-    "component_id": "Icon.RxCursorText",
+    "src_svg": "rx/RxCursorText.svg",
+    "component_id": "rx:RxCursorText",
     "aliases": [
       "rx",
       "cursor",
@@ -1076,8 +1076,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDash.svg",
-    "component_id": "Icon.RxDash",
+    "src_svg": "rx/RxDash.svg",
+    "component_id": "rx:RxDash",
     "aliases": [
       "rx",
       "dash"
@@ -1086,8 +1086,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDashboard.svg",
-    "component_id": "Icon.RxDashboard",
+    "src_svg": "rx/RxDashboard.svg",
+    "component_id": "rx:RxDashboard",
     "aliases": [
       "rx",
       "dashboard"
@@ -1096,8 +1096,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDesktop.svg",
-    "component_id": "Icon.RxDesktop",
+    "src_svg": "rx/RxDesktop.svg",
+    "component_id": "rx:RxDesktop",
     "aliases": [
       "rx",
       "desktop"
@@ -1106,8 +1106,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDimensions.svg",
-    "component_id": "Icon.RxDimensions",
+    "src_svg": "rx/RxDimensions.svg",
+    "component_id": "rx:RxDimensions",
     "aliases": [
       "rx",
       "dimensions"
@@ -1116,8 +1116,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDisc.svg",
-    "component_id": "Icon.RxDisc",
+    "src_svg": "rx/RxDisc.svg",
+    "component_id": "rx:RxDisc",
     "aliases": [
       "rx",
       "disc"
@@ -1126,8 +1126,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDiscordLogo.svg",
-    "component_id": "Icon.RxDiscordLogo",
+    "src_svg": "rx/RxDiscordLogo.svg",
+    "component_id": "rx:RxDiscordLogo",
     "aliases": [
       "rx",
       "discord",
@@ -1137,8 +1137,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDividerHorizontal.svg",
-    "component_id": "Icon.RxDividerHorizontal",
+    "src_svg": "rx/RxDividerHorizontal.svg",
+    "component_id": "rx:RxDividerHorizontal",
     "aliases": [
       "rx",
       "divider",
@@ -1148,8 +1148,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDividerVertical.svg",
-    "component_id": "Icon.RxDividerVertical",
+    "src_svg": "rx/RxDividerVertical.svg",
+    "component_id": "rx:RxDividerVertical",
     "aliases": [
       "rx",
       "divider",
@@ -1159,8 +1159,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDot.svg",
-    "component_id": "Icon.RxDot",
+    "src_svg": "rx/RxDot.svg",
+    "component_id": "rx:RxDot",
     "aliases": [
       "rx",
       "dot"
@@ -1169,8 +1169,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDotFilled.svg",
-    "component_id": "Icon.RxDotFilled",
+    "src_svg": "rx/RxDotFilled.svg",
+    "component_id": "rx:RxDotFilled",
     "aliases": [
       "rx",
       "dot",
@@ -1180,8 +1180,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDotsHorizontal.svg",
-    "component_id": "Icon.RxDotsHorizontal",
+    "src_svg": "rx/RxDotsHorizontal.svg",
+    "component_id": "rx:RxDotsHorizontal",
     "aliases": [
       "rx",
       "dots",
@@ -1191,8 +1191,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDotsVertical.svg",
-    "component_id": "Icon.RxDotsVertical",
+    "src_svg": "rx/RxDotsVertical.svg",
+    "component_id": "rx:RxDotsVertical",
     "aliases": [
       "rx",
       "dots",
@@ -1202,8 +1202,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDoubleArrowDown.svg",
-    "component_id": "Icon.RxDoubleArrowDown",
+    "src_svg": "rx/RxDoubleArrowDown.svg",
+    "component_id": "rx:RxDoubleArrowDown",
     "aliases": [
       "rx",
       "double",
@@ -1214,8 +1214,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDoubleArrowLeft.svg",
-    "component_id": "Icon.RxDoubleArrowLeft",
+    "src_svg": "rx/RxDoubleArrowLeft.svg",
+    "component_id": "rx:RxDoubleArrowLeft",
     "aliases": [
       "rx",
       "double",
@@ -1226,8 +1226,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDoubleArrowRight.svg",
-    "component_id": "Icon.RxDoubleArrowRight",
+    "src_svg": "rx/RxDoubleArrowRight.svg",
+    "component_id": "rx:RxDoubleArrowRight",
     "aliases": [
       "rx",
       "double",
@@ -1238,8 +1238,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDoubleArrowUp.svg",
-    "component_id": "Icon.RxDoubleArrowUp",
+    "src_svg": "rx/RxDoubleArrowUp.svg",
+    "component_id": "rx:RxDoubleArrowUp",
     "aliases": [
       "rx",
       "double",
@@ -1250,8 +1250,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDownload.svg",
-    "component_id": "Icon.RxDownload",
+    "src_svg": "rx/RxDownload.svg",
+    "component_id": "rx:RxDownload",
     "aliases": [
       "rx",
       "download"
@@ -1260,8 +1260,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDragHandleDots1.svg",
-    "component_id": "Icon.RxDragHandleDots1",
+    "src_svg": "rx/RxDragHandleDots1.svg",
+    "component_id": "rx:RxDragHandleDots1",
     "aliases": [
       "rx",
       "drag",
@@ -1273,8 +1273,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDragHandleDots2.svg",
-    "component_id": "Icon.RxDragHandleDots2",
+    "src_svg": "rx/RxDragHandleDots2.svg",
+    "component_id": "rx:RxDragHandleDots2",
     "aliases": [
       "rx",
       "drag",
@@ -1286,8 +1286,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDragHandleHorizontal.svg",
-    "component_id": "Icon.RxDragHandleHorizontal",
+    "src_svg": "rx/RxDragHandleHorizontal.svg",
+    "component_id": "rx:RxDragHandleHorizontal",
     "aliases": [
       "rx",
       "drag",
@@ -1298,8 +1298,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDragHandleVertical.svg",
-    "component_id": "Icon.RxDragHandleVertical",
+    "src_svg": "rx/RxDragHandleVertical.svg",
+    "component_id": "rx:RxDragHandleVertical",
     "aliases": [
       "rx",
       "drag",
@@ -1310,8 +1310,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDrawingPin.svg",
-    "component_id": "Icon.RxDrawingPin",
+    "src_svg": "rx/RxDrawingPin.svg",
+    "component_id": "rx:RxDrawingPin",
     "aliases": [
       "rx",
       "drawing",
@@ -1321,8 +1321,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDrawingPinFilled.svg",
-    "component_id": "Icon.RxDrawingPinFilled",
+    "src_svg": "rx/RxDrawingPinFilled.svg",
+    "component_id": "rx:RxDrawingPinFilled",
     "aliases": [
       "rx",
       "drawing",
@@ -1333,8 +1333,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxDropdownMenu.svg",
-    "component_id": "Icon.RxDropdownMenu",
+    "src_svg": "rx/RxDropdownMenu.svg",
+    "component_id": "rx:RxDropdownMenu",
     "aliases": [
       "rx",
       "dropdown",
@@ -1344,8 +1344,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxEnter.svg",
-    "component_id": "Icon.RxEnter",
+    "src_svg": "rx/RxEnter.svg",
+    "component_id": "rx:RxEnter",
     "aliases": [
       "rx",
       "enter"
@@ -1354,8 +1354,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxEnterFullScreen.svg",
-    "component_id": "Icon.RxEnterFullScreen",
+    "src_svg": "rx/RxEnterFullScreen.svg",
+    "component_id": "rx:RxEnterFullScreen",
     "aliases": [
       "rx",
       "enter",
@@ -1366,8 +1366,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxEnvelopeClosed.svg",
-    "component_id": "Icon.RxEnvelopeClosed",
+    "src_svg": "rx/RxEnvelopeClosed.svg",
+    "component_id": "rx:RxEnvelopeClosed",
     "aliases": [
       "rx",
       "envelope",
@@ -1377,8 +1377,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxEnvelopeOpen.svg",
-    "component_id": "Icon.RxEnvelopeOpen",
+    "src_svg": "rx/RxEnvelopeOpen.svg",
+    "component_id": "rx:RxEnvelopeOpen",
     "aliases": [
       "rx",
       "envelope",
@@ -1388,8 +1388,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxEraser.svg",
-    "component_id": "Icon.RxEraser",
+    "src_svg": "rx/RxEraser.svg",
+    "component_id": "rx:RxEraser",
     "aliases": [
       "rx",
       "eraser"
@@ -1398,8 +1398,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxExclamationTriangle.svg",
-    "component_id": "Icon.RxExclamationTriangle",
+    "src_svg": "rx/RxExclamationTriangle.svg",
+    "component_id": "rx:RxExclamationTriangle",
     "aliases": [
       "rx",
       "exclamation",
@@ -1409,8 +1409,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxExit.svg",
-    "component_id": "Icon.RxExit",
+    "src_svg": "rx/RxExit.svg",
+    "component_id": "rx:RxExit",
     "aliases": [
       "rx",
       "exit"
@@ -1419,8 +1419,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxExitFullScreen.svg",
-    "component_id": "Icon.RxExitFullScreen",
+    "src_svg": "rx/RxExitFullScreen.svg",
+    "component_id": "rx:RxExitFullScreen",
     "aliases": [
       "rx",
       "exit",
@@ -1431,8 +1431,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxExternalLink.svg",
-    "component_id": "Icon.RxExternalLink",
+    "src_svg": "rx/RxExternalLink.svg",
+    "component_id": "rx:RxExternalLink",
     "aliases": [
       "rx",
       "external",
@@ -1442,8 +1442,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxEyeClosed.svg",
-    "component_id": "Icon.RxEyeClosed",
+    "src_svg": "rx/RxEyeClosed.svg",
+    "component_id": "rx:RxEyeClosed",
     "aliases": [
       "rx",
       "eye",
@@ -1453,8 +1453,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxEyeNone.svg",
-    "component_id": "Icon.RxEyeNone",
+    "src_svg": "rx/RxEyeNone.svg",
+    "component_id": "rx:RxEyeNone",
     "aliases": [
       "rx",
       "eye",
@@ -1464,8 +1464,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxEyeOpen.svg",
-    "component_id": "Icon.RxEyeOpen",
+    "src_svg": "rx/RxEyeOpen.svg",
+    "component_id": "rx:RxEyeOpen",
     "aliases": [
       "rx",
       "eye",
@@ -1475,8 +1475,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFace.svg",
-    "component_id": "Icon.RxFace",
+    "src_svg": "rx/RxFace.svg",
+    "component_id": "rx:RxFace",
     "aliases": [
       "rx",
       "face"
@@ -1485,8 +1485,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFigmaLogo.svg",
-    "component_id": "Icon.RxFigmaLogo",
+    "src_svg": "rx/RxFigmaLogo.svg",
+    "component_id": "rx:RxFigmaLogo",
     "aliases": [
       "rx",
       "figma",
@@ -1496,8 +1496,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFile.svg",
-    "component_id": "Icon.RxFile",
+    "src_svg": "rx/RxFile.svg",
+    "component_id": "rx:RxFile",
     "aliases": [
       "rx",
       "file"
@@ -1506,8 +1506,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFileMinus.svg",
-    "component_id": "Icon.RxFileMinus",
+    "src_svg": "rx/RxFileMinus.svg",
+    "component_id": "rx:RxFileMinus",
     "aliases": [
       "rx",
       "file",
@@ -1517,8 +1517,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFilePlus.svg",
-    "component_id": "Icon.RxFilePlus",
+    "src_svg": "rx/RxFilePlus.svg",
+    "component_id": "rx:RxFilePlus",
     "aliases": [
       "rx",
       "file",
@@ -1528,8 +1528,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFileText.svg",
-    "component_id": "Icon.RxFileText",
+    "src_svg": "rx/RxFileText.svg",
+    "component_id": "rx:RxFileText",
     "aliases": [
       "rx",
       "file",
@@ -1539,8 +1539,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFontBold.svg",
-    "component_id": "Icon.RxFontBold",
+    "src_svg": "rx/RxFontBold.svg",
+    "component_id": "rx:RxFontBold",
     "aliases": [
       "rx",
       "font",
@@ -1550,8 +1550,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFontFamily.svg",
-    "component_id": "Icon.RxFontFamily",
+    "src_svg": "rx/RxFontFamily.svg",
+    "component_id": "rx:RxFontFamily",
     "aliases": [
       "rx",
       "font",
@@ -1561,8 +1561,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFontItalic.svg",
-    "component_id": "Icon.RxFontItalic",
+    "src_svg": "rx/RxFontItalic.svg",
+    "component_id": "rx:RxFontItalic",
     "aliases": [
       "rx",
       "font",
@@ -1572,8 +1572,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFontRoman.svg",
-    "component_id": "Icon.RxFontRoman",
+    "src_svg": "rx/RxFontRoman.svg",
+    "component_id": "rx:RxFontRoman",
     "aliases": [
       "rx",
       "font",
@@ -1583,8 +1583,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFontSize.svg",
-    "component_id": "Icon.RxFontSize",
+    "src_svg": "rx/RxFontSize.svg",
+    "component_id": "rx:RxFontSize",
     "aliases": [
       "rx",
       "font",
@@ -1594,8 +1594,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFontStyle.svg",
-    "component_id": "Icon.RxFontStyle",
+    "src_svg": "rx/RxFontStyle.svg",
+    "component_id": "rx:RxFontStyle",
     "aliases": [
       "rx",
       "font",
@@ -1605,8 +1605,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFrame.svg",
-    "component_id": "Icon.RxFrame",
+    "src_svg": "rx/RxFrame.svg",
+    "component_id": "rx:RxFrame",
     "aliases": [
       "rx",
       "frame"
@@ -1615,8 +1615,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxFramerLogo.svg",
-    "component_id": "Icon.RxFramerLogo",
+    "src_svg": "rx/RxFramerLogo.svg",
+    "component_id": "rx:RxFramerLogo",
     "aliases": [
       "rx",
       "framer",
@@ -1626,8 +1626,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxGear.svg",
-    "component_id": "Icon.RxGear",
+    "src_svg": "rx/RxGear.svg",
+    "component_id": "rx:RxGear",
     "aliases": [
       "rx",
       "gear"
@@ -1636,8 +1636,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxGithubLogo.svg",
-    "component_id": "Icon.RxGithubLogo",
+    "src_svg": "rx/RxGithubLogo.svg",
+    "component_id": "rx:RxGithubLogo",
     "aliases": [
       "rx",
       "github",
@@ -1647,8 +1647,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxGlobe.svg",
-    "component_id": "Icon.RxGlobe",
+    "src_svg": "rx/RxGlobe.svg",
+    "component_id": "rx:RxGlobe",
     "aliases": [
       "rx",
       "globe"
@@ -1657,8 +1657,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxGrid.svg",
-    "component_id": "Icon.RxGrid",
+    "src_svg": "rx/RxGrid.svg",
+    "component_id": "rx:RxGrid",
     "aliases": [
       "rx",
       "grid"
@@ -1667,8 +1667,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxGroup.svg",
-    "component_id": "Icon.RxGroup",
+    "src_svg": "rx/RxGroup.svg",
+    "component_id": "rx:RxGroup",
     "aliases": [
       "rx",
       "group"
@@ -1677,8 +1677,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxHalf1.svg",
-    "component_id": "Icon.RxHalf1",
+    "src_svg": "rx/RxHalf1.svg",
+    "component_id": "rx:RxHalf1",
     "aliases": [
       "rx",
       "half",
@@ -1688,8 +1688,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxHalf2.svg",
-    "component_id": "Icon.RxHalf2",
+    "src_svg": "rx/RxHalf2.svg",
+    "component_id": "rx:RxHalf2",
     "aliases": [
       "rx",
       "half",
@@ -1699,8 +1699,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxHamburgerMenu.svg",
-    "component_id": "Icon.RxHamburgerMenu",
+    "src_svg": "rx/RxHamburgerMenu.svg",
+    "component_id": "rx:RxHamburgerMenu",
     "aliases": [
       "rx",
       "hamburger",
@@ -1710,8 +1710,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxHand.svg",
-    "component_id": "Icon.RxHand",
+    "src_svg": "rx/RxHand.svg",
+    "component_id": "rx:RxHand",
     "aliases": [
       "rx",
       "hand"
@@ -1720,8 +1720,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxHeading.svg",
-    "component_id": "Icon.RxHeading",
+    "src_svg": "rx/RxHeading.svg",
+    "component_id": "rx:RxHeading",
     "aliases": [
       "rx",
       "heading"
@@ -1730,8 +1730,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxHeart.svg",
-    "component_id": "Icon.RxHeart",
+    "src_svg": "rx/RxHeart.svg",
+    "component_id": "rx:RxHeart",
     "aliases": [
       "rx",
       "heart"
@@ -1740,8 +1740,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxHeartFilled.svg",
-    "component_id": "Icon.RxHeartFilled",
+    "src_svg": "rx/RxHeartFilled.svg",
+    "component_id": "rx:RxHeartFilled",
     "aliases": [
       "rx",
       "heart",
@@ -1751,8 +1751,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxHeight.svg",
-    "component_id": "Icon.RxHeight",
+    "src_svg": "rx/RxHeight.svg",
+    "component_id": "rx:RxHeight",
     "aliases": [
       "rx",
       "height"
@@ -1761,8 +1761,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxHobbyKnife.svg",
-    "component_id": "Icon.RxHobbyKnife",
+    "src_svg": "rx/RxHobbyKnife.svg",
+    "component_id": "rx:RxHobbyKnife",
     "aliases": [
       "rx",
       "hobby",
@@ -1772,8 +1772,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxHome.svg",
-    "component_id": "Icon.RxHome",
+    "src_svg": "rx/RxHome.svg",
+    "component_id": "rx:RxHome",
     "aliases": [
       "rx",
       "home"
@@ -1782,8 +1782,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxIconjarLogo.svg",
-    "component_id": "Icon.RxIconjarLogo",
+    "src_svg": "rx/RxIconjarLogo.svg",
+    "component_id": "rx:RxIconjarLogo",
     "aliases": [
       "rx",
       "iconjar",
@@ -1793,8 +1793,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxIdCard.svg",
-    "component_id": "Icon.RxIdCard",
+    "src_svg": "rx/RxIdCard.svg",
+    "component_id": "rx:RxIdCard",
     "aliases": [
       "rx",
       "id",
@@ -1804,8 +1804,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxImage.svg",
-    "component_id": "Icon.RxImage",
+    "src_svg": "rx/RxImage.svg",
+    "component_id": "rx:RxImage",
     "aliases": [
       "rx",
       "image"
@@ -1814,8 +1814,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxInfoCircled.svg",
-    "component_id": "Icon.RxInfoCircled",
+    "src_svg": "rx/RxInfoCircled.svg",
+    "component_id": "rx:RxInfoCircled",
     "aliases": [
       "rx",
       "info",
@@ -1825,8 +1825,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxInput.svg",
-    "component_id": "Icon.RxInput",
+    "src_svg": "rx/RxInput.svg",
+    "component_id": "rx:RxInput",
     "aliases": [
       "rx",
       "input"
@@ -1835,8 +1835,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxInstagramLogo.svg",
-    "component_id": "Icon.RxInstagramLogo",
+    "src_svg": "rx/RxInstagramLogo.svg",
+    "component_id": "rx:RxInstagramLogo",
     "aliases": [
       "rx",
       "instagram",
@@ -1846,8 +1846,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxKeyboard.svg",
-    "component_id": "Icon.RxKeyboard",
+    "src_svg": "rx/RxKeyboard.svg",
+    "component_id": "rx:RxKeyboard",
     "aliases": [
       "rx",
       "keyboard"
@@ -1856,8 +1856,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLapTimer.svg",
-    "component_id": "Icon.RxLapTimer",
+    "src_svg": "rx/RxLapTimer.svg",
+    "component_id": "rx:RxLapTimer",
     "aliases": [
       "rx",
       "lap",
@@ -1867,8 +1867,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLaptop.svg",
-    "component_id": "Icon.RxLaptop",
+    "src_svg": "rx/RxLaptop.svg",
+    "component_id": "rx:RxLaptop",
     "aliases": [
       "rx",
       "laptop"
@@ -1877,8 +1877,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLayers.svg",
-    "component_id": "Icon.RxLayers",
+    "src_svg": "rx/RxLayers.svg",
+    "component_id": "rx:RxLayers",
     "aliases": [
       "rx",
       "layers"
@@ -1887,8 +1887,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLayout.svg",
-    "component_id": "Icon.RxLayout",
+    "src_svg": "rx/RxLayout.svg",
+    "component_id": "rx:RxLayout",
     "aliases": [
       "rx",
       "layout"
@@ -1897,8 +1897,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLetterCaseCapitalize.svg",
-    "component_id": "Icon.RxLetterCaseCapitalize",
+    "src_svg": "rx/RxLetterCaseCapitalize.svg",
+    "component_id": "rx:RxLetterCaseCapitalize",
     "aliases": [
       "rx",
       "letter",
@@ -1909,8 +1909,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLetterCaseLowercase.svg",
-    "component_id": "Icon.RxLetterCaseLowercase",
+    "src_svg": "rx/RxLetterCaseLowercase.svg",
+    "component_id": "rx:RxLetterCaseLowercase",
     "aliases": [
       "rx",
       "letter",
@@ -1921,8 +1921,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLetterCaseToggle.svg",
-    "component_id": "Icon.RxLetterCaseToggle",
+    "src_svg": "rx/RxLetterCaseToggle.svg",
+    "component_id": "rx:RxLetterCaseToggle",
     "aliases": [
       "rx",
       "letter",
@@ -1933,8 +1933,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLetterCaseUppercase.svg",
-    "component_id": "Icon.RxLetterCaseUppercase",
+    "src_svg": "rx/RxLetterCaseUppercase.svg",
+    "component_id": "rx:RxLetterCaseUppercase",
     "aliases": [
       "rx",
       "letter",
@@ -1945,8 +1945,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLetterSpacing.svg",
-    "component_id": "Icon.RxLetterSpacing",
+    "src_svg": "rx/RxLetterSpacing.svg",
+    "component_id": "rx:RxLetterSpacing",
     "aliases": [
       "rx",
       "letter",
@@ -1956,8 +1956,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLightningBolt.svg",
-    "component_id": "Icon.RxLightningBolt",
+    "src_svg": "rx/RxLightningBolt.svg",
+    "component_id": "rx:RxLightningBolt",
     "aliases": [
       "rx",
       "lightning",
@@ -1967,8 +1967,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLineHeight.svg",
-    "component_id": "Icon.RxLineHeight",
+    "src_svg": "rx/RxLineHeight.svg",
+    "component_id": "rx:RxLineHeight",
     "aliases": [
       "rx",
       "line",
@@ -1978,8 +1978,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLink1.svg",
-    "component_id": "Icon.RxLink1",
+    "src_svg": "rx/RxLink1.svg",
+    "component_id": "rx:RxLink1",
     "aliases": [
       "rx",
       "link",
@@ -1989,8 +1989,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLink2.svg",
-    "component_id": "Icon.RxLink2",
+    "src_svg": "rx/RxLink2.svg",
+    "component_id": "rx:RxLink2",
     "aliases": [
       "rx",
       "link",
@@ -2000,8 +2000,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLinkBreak1.svg",
-    "component_id": "Icon.RxLinkBreak1",
+    "src_svg": "rx/RxLinkBreak1.svg",
+    "component_id": "rx:RxLinkBreak1",
     "aliases": [
       "rx",
       "link",
@@ -2012,8 +2012,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLinkBreak2.svg",
-    "component_id": "Icon.RxLinkBreak2",
+    "src_svg": "rx/RxLinkBreak2.svg",
+    "component_id": "rx:RxLinkBreak2",
     "aliases": [
       "rx",
       "link",
@@ -2024,8 +2024,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLinkNone1.svg",
-    "component_id": "Icon.RxLinkNone1",
+    "src_svg": "rx/RxLinkNone1.svg",
+    "component_id": "rx:RxLinkNone1",
     "aliases": [
       "rx",
       "link",
@@ -2036,8 +2036,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLinkNone2.svg",
-    "component_id": "Icon.RxLinkNone2",
+    "src_svg": "rx/RxLinkNone2.svg",
+    "component_id": "rx:RxLinkNone2",
     "aliases": [
       "rx",
       "link",
@@ -2048,8 +2048,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLinkedinLogo.svg",
-    "component_id": "Icon.RxLinkedinLogo",
+    "src_svg": "rx/RxLinkedinLogo.svg",
+    "component_id": "rx:RxLinkedinLogo",
     "aliases": [
       "rx",
       "linkedin",
@@ -2059,8 +2059,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxListBullet.svg",
-    "component_id": "Icon.RxListBullet",
+    "src_svg": "rx/RxListBullet.svg",
+    "component_id": "rx:RxListBullet",
     "aliases": [
       "rx",
       "list",
@@ -2070,8 +2070,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLockClosed.svg",
-    "component_id": "Icon.RxLockClosed",
+    "src_svg": "rx/RxLockClosed.svg",
+    "component_id": "rx:RxLockClosed",
     "aliases": [
       "rx",
       "lock",
@@ -2081,8 +2081,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLockOpen1.svg",
-    "component_id": "Icon.RxLockOpen1",
+    "src_svg": "rx/RxLockOpen1.svg",
+    "component_id": "rx:RxLockOpen1",
     "aliases": [
       "rx",
       "lock",
@@ -2093,8 +2093,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLockOpen2.svg",
-    "component_id": "Icon.RxLockOpen2",
+    "src_svg": "rx/RxLockOpen2.svg",
+    "component_id": "rx:RxLockOpen2",
     "aliases": [
       "rx",
       "lock",
@@ -2105,8 +2105,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxLoop.svg",
-    "component_id": "Icon.RxLoop",
+    "src_svg": "rx/RxLoop.svg",
+    "component_id": "rx:RxLoop",
     "aliases": [
       "rx",
       "loop"
@@ -2115,8 +2115,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMagicWand.svg",
-    "component_id": "Icon.RxMagicWand",
+    "src_svg": "rx/RxMagicWand.svg",
+    "component_id": "rx:RxMagicWand",
     "aliases": [
       "rx",
       "magic",
@@ -2126,8 +2126,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMagnifyingGlass.svg",
-    "component_id": "Icon.RxMagnifyingGlass",
+    "src_svg": "rx/RxMagnifyingGlass.svg",
+    "component_id": "rx:RxMagnifyingGlass",
     "aliases": [
       "rx",
       "magnifying",
@@ -2137,8 +2137,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMargin.svg",
-    "component_id": "Icon.RxMargin",
+    "src_svg": "rx/RxMargin.svg",
+    "component_id": "rx:RxMargin",
     "aliases": [
       "rx",
       "margin"
@@ -2147,8 +2147,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMaskOff.svg",
-    "component_id": "Icon.RxMaskOff",
+    "src_svg": "rx/RxMaskOff.svg",
+    "component_id": "rx:RxMaskOff",
     "aliases": [
       "rx",
       "mask",
@@ -2158,8 +2158,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMaskOn.svg",
-    "component_id": "Icon.RxMaskOn",
+    "src_svg": "rx/RxMaskOn.svg",
+    "component_id": "rx:RxMaskOn",
     "aliases": [
       "rx",
       "mask",
@@ -2169,8 +2169,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMinus.svg",
-    "component_id": "Icon.RxMinus",
+    "src_svg": "rx/RxMinus.svg",
+    "component_id": "rx:RxMinus",
     "aliases": [
       "rx",
       "minus"
@@ -2179,8 +2179,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMinusCircled.svg",
-    "component_id": "Icon.RxMinusCircled",
+    "src_svg": "rx/RxMinusCircled.svg",
+    "component_id": "rx:RxMinusCircled",
     "aliases": [
       "rx",
       "minus",
@@ -2190,8 +2190,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMix.svg",
-    "component_id": "Icon.RxMix",
+    "src_svg": "rx/RxMix.svg",
+    "component_id": "rx:RxMix",
     "aliases": [
       "rx",
       "mix"
@@ -2200,8 +2200,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMixerHorizontal.svg",
-    "component_id": "Icon.RxMixerHorizontal",
+    "src_svg": "rx/RxMixerHorizontal.svg",
+    "component_id": "rx:RxMixerHorizontal",
     "aliases": [
       "rx",
       "mixer",
@@ -2211,8 +2211,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMixerVertical.svg",
-    "component_id": "Icon.RxMixerVertical",
+    "src_svg": "rx/RxMixerVertical.svg",
+    "component_id": "rx:RxMixerVertical",
     "aliases": [
       "rx",
       "mixer",
@@ -2222,8 +2222,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMobile.svg",
-    "component_id": "Icon.RxMobile",
+    "src_svg": "rx/RxMobile.svg",
+    "component_id": "rx:RxMobile",
     "aliases": [
       "rx",
       "mobile"
@@ -2232,8 +2232,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxModulzLogo.svg",
-    "component_id": "Icon.RxModulzLogo",
+    "src_svg": "rx/RxModulzLogo.svg",
+    "component_id": "rx:RxModulzLogo",
     "aliases": [
       "rx",
       "modulz",
@@ -2243,8 +2243,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMoon.svg",
-    "component_id": "Icon.RxMoon",
+    "src_svg": "rx/RxMoon.svg",
+    "component_id": "rx:RxMoon",
     "aliases": [
       "rx",
       "moon"
@@ -2253,8 +2253,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxMove.svg",
-    "component_id": "Icon.RxMove",
+    "src_svg": "rx/RxMove.svg",
+    "component_id": "rx:RxMove",
     "aliases": [
       "rx",
       "move"
@@ -2263,8 +2263,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxNotionLogo.svg",
-    "component_id": "Icon.RxNotionLogo",
+    "src_svg": "rx/RxNotionLogo.svg",
+    "component_id": "rx:RxNotionLogo",
     "aliases": [
       "rx",
       "notion",
@@ -2274,8 +2274,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxOpacity.svg",
-    "component_id": "Icon.RxOpacity",
+    "src_svg": "rx/RxOpacity.svg",
+    "component_id": "rx:RxOpacity",
     "aliases": [
       "rx",
       "opacity"
@@ -2284,8 +2284,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxOpenInNewWindow.svg",
-    "component_id": "Icon.RxOpenInNewWindow",
+    "src_svg": "rx/RxOpenInNewWindow.svg",
+    "component_id": "rx:RxOpenInNewWindow",
     "aliases": [
       "rx",
       "open",
@@ -2297,8 +2297,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxOverline.svg",
-    "component_id": "Icon.RxOverline",
+    "src_svg": "rx/RxOverline.svg",
+    "component_id": "rx:RxOverline",
     "aliases": [
       "rx",
       "overline"
@@ -2307,8 +2307,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPadding.svg",
-    "component_id": "Icon.RxPadding",
+    "src_svg": "rx/RxPadding.svg",
+    "component_id": "rx:RxPadding",
     "aliases": [
       "rx",
       "padding"
@@ -2317,8 +2317,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPaperPlane.svg",
-    "component_id": "Icon.RxPaperPlane",
+    "src_svg": "rx/RxPaperPlane.svg",
+    "component_id": "rx:RxPaperPlane",
     "aliases": [
       "rx",
       "paper",
@@ -2328,8 +2328,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPause.svg",
-    "component_id": "Icon.RxPause",
+    "src_svg": "rx/RxPause.svg",
+    "component_id": "rx:RxPause",
     "aliases": [
       "rx",
       "pause"
@@ -2338,8 +2338,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPencil1.svg",
-    "component_id": "Icon.RxPencil1",
+    "src_svg": "rx/RxPencil1.svg",
+    "component_id": "rx:RxPencil1",
     "aliases": [
       "rx",
       "pencil",
@@ -2349,8 +2349,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPencil2.svg",
-    "component_id": "Icon.RxPencil2",
+    "src_svg": "rx/RxPencil2.svg",
+    "component_id": "rx:RxPencil2",
     "aliases": [
       "rx",
       "pencil",
@@ -2360,8 +2360,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPerson.svg",
-    "component_id": "Icon.RxPerson",
+    "src_svg": "rx/RxPerson.svg",
+    "component_id": "rx:RxPerson",
     "aliases": [
       "rx",
       "person"
@@ -2370,8 +2370,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPieChart.svg",
-    "component_id": "Icon.RxPieChart",
+    "src_svg": "rx/RxPieChart.svg",
+    "component_id": "rx:RxPieChart",
     "aliases": [
       "rx",
       "pie",
@@ -2381,8 +2381,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPilcrow.svg",
-    "component_id": "Icon.RxPilcrow",
+    "src_svg": "rx/RxPilcrow.svg",
+    "component_id": "rx:RxPilcrow",
     "aliases": [
       "rx",
       "pilcrow"
@@ -2391,8 +2391,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPinBottom.svg",
-    "component_id": "Icon.RxPinBottom",
+    "src_svg": "rx/RxPinBottom.svg",
+    "component_id": "rx:RxPinBottom",
     "aliases": [
       "rx",
       "pin",
@@ -2402,8 +2402,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPinLeft.svg",
-    "component_id": "Icon.RxPinLeft",
+    "src_svg": "rx/RxPinLeft.svg",
+    "component_id": "rx:RxPinLeft",
     "aliases": [
       "rx",
       "pin",
@@ -2413,8 +2413,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPinRight.svg",
-    "component_id": "Icon.RxPinRight",
+    "src_svg": "rx/RxPinRight.svg",
+    "component_id": "rx:RxPinRight",
     "aliases": [
       "rx",
       "pin",
@@ -2424,8 +2424,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPinTop.svg",
-    "component_id": "Icon.RxPinTop",
+    "src_svg": "rx/RxPinTop.svg",
+    "component_id": "rx:RxPinTop",
     "aliases": [
       "rx",
       "pin",
@@ -2435,8 +2435,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPlay.svg",
-    "component_id": "Icon.RxPlay",
+    "src_svg": "rx/RxPlay.svg",
+    "component_id": "rx:RxPlay",
     "aliases": [
       "rx",
       "play"
@@ -2445,8 +2445,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPlus.svg",
-    "component_id": "Icon.RxPlus",
+    "src_svg": "rx/RxPlus.svg",
+    "component_id": "rx:RxPlus",
     "aliases": [
       "rx",
       "plus"
@@ -2455,8 +2455,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxPlusCircled.svg",
-    "component_id": "Icon.RxPlusCircled",
+    "src_svg": "rx/RxPlusCircled.svg",
+    "component_id": "rx:RxPlusCircled",
     "aliases": [
       "rx",
       "plus",
@@ -2466,8 +2466,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxQuestionMark.svg",
-    "component_id": "Icon.RxQuestionMark",
+    "src_svg": "rx/RxQuestionMark.svg",
+    "component_id": "rx:RxQuestionMark",
     "aliases": [
       "rx",
       "question",
@@ -2477,8 +2477,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxQuestionMarkCircled.svg",
-    "component_id": "Icon.RxQuestionMarkCircled",
+    "src_svg": "rx/RxQuestionMarkCircled.svg",
+    "component_id": "rx:RxQuestionMarkCircled",
     "aliases": [
       "rx",
       "question",
@@ -2489,8 +2489,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxQuote.svg",
-    "component_id": "Icon.RxQuote",
+    "src_svg": "rx/RxQuote.svg",
+    "component_id": "rx:RxQuote",
     "aliases": [
       "rx",
       "quote"
@@ -2499,8 +2499,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxRadiobutton.svg",
-    "component_id": "Icon.RxRadiobutton",
+    "src_svg": "rx/RxRadiobutton.svg",
+    "component_id": "rx:RxRadiobutton",
     "aliases": [
       "rx",
       "radiobutton"
@@ -2509,8 +2509,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxReader.svg",
-    "component_id": "Icon.RxReader",
+    "src_svg": "rx/RxReader.svg",
+    "component_id": "rx:RxReader",
     "aliases": [
       "rx",
       "reader"
@@ -2519,8 +2519,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxReload.svg",
-    "component_id": "Icon.RxReload",
+    "src_svg": "rx/RxReload.svg",
+    "component_id": "rx:RxReload",
     "aliases": [
       "rx",
       "reload"
@@ -2529,8 +2529,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxReset.svg",
-    "component_id": "Icon.RxReset",
+    "src_svg": "rx/RxReset.svg",
+    "component_id": "rx:RxReset",
     "aliases": [
       "rx",
       "reset"
@@ -2539,8 +2539,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxResume.svg",
-    "component_id": "Icon.RxResume",
+    "src_svg": "rx/RxResume.svg",
+    "component_id": "rx:RxResume",
     "aliases": [
       "rx",
       "resume"
@@ -2549,8 +2549,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxRocket.svg",
-    "component_id": "Icon.RxRocket",
+    "src_svg": "rx/RxRocket.svg",
+    "component_id": "rx:RxRocket",
     "aliases": [
       "rx",
       "rocket"
@@ -2559,8 +2559,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxRotateCounterClockwise.svg",
-    "component_id": "Icon.RxRotateCounterClockwise",
+    "src_svg": "rx/RxRotateCounterClockwise.svg",
+    "component_id": "rx:RxRotateCounterClockwise",
     "aliases": [
       "rx",
       "rotate",
@@ -2571,8 +2571,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxRowSpacing.svg",
-    "component_id": "Icon.RxRowSpacing",
+    "src_svg": "rx/RxRowSpacing.svg",
+    "component_id": "rx:RxRowSpacing",
     "aliases": [
       "rx",
       "row",
@@ -2582,8 +2582,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxRows.svg",
-    "component_id": "Icon.RxRows",
+    "src_svg": "rx/RxRows.svg",
+    "component_id": "rx:RxRows",
     "aliases": [
       "rx",
       "rows"
@@ -2592,8 +2592,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxRulerHorizontal.svg",
-    "component_id": "Icon.RxRulerHorizontal",
+    "src_svg": "rx/RxRulerHorizontal.svg",
+    "component_id": "rx:RxRulerHorizontal",
     "aliases": [
       "rx",
       "ruler",
@@ -2603,8 +2603,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxRulerSquare.svg",
-    "component_id": "Icon.RxRulerSquare",
+    "src_svg": "rx/RxRulerSquare.svg",
+    "component_id": "rx:RxRulerSquare",
     "aliases": [
       "rx",
       "ruler",
@@ -2614,8 +2614,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxScissors.svg",
-    "component_id": "Icon.RxScissors",
+    "src_svg": "rx/RxScissors.svg",
+    "component_id": "rx:RxScissors",
     "aliases": [
       "rx",
       "scissors"
@@ -2624,8 +2624,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSection.svg",
-    "component_id": "Icon.RxSection",
+    "src_svg": "rx/RxSection.svg",
+    "component_id": "rx:RxSection",
     "aliases": [
       "rx",
       "section"
@@ -2634,8 +2634,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSewingPin.svg",
-    "component_id": "Icon.RxSewingPin",
+    "src_svg": "rx/RxSewingPin.svg",
+    "component_id": "rx:RxSewingPin",
     "aliases": [
       "rx",
       "sewing",
@@ -2645,8 +2645,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSewingPinFilled.svg",
-    "component_id": "Icon.RxSewingPinFilled",
+    "src_svg": "rx/RxSewingPinFilled.svg",
+    "component_id": "rx:RxSewingPinFilled",
     "aliases": [
       "rx",
       "sewing",
@@ -2657,8 +2657,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxShadow.svg",
-    "component_id": "Icon.RxShadow",
+    "src_svg": "rx/RxShadow.svg",
+    "component_id": "rx:RxShadow",
     "aliases": [
       "rx",
       "shadow"
@@ -2667,8 +2667,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxShadowInner.svg",
-    "component_id": "Icon.RxShadowInner",
+    "src_svg": "rx/RxShadowInner.svg",
+    "component_id": "rx:RxShadowInner",
     "aliases": [
       "rx",
       "shadow",
@@ -2678,8 +2678,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxShadowNone.svg",
-    "component_id": "Icon.RxShadowNone",
+    "src_svg": "rx/RxShadowNone.svg",
+    "component_id": "rx:RxShadowNone",
     "aliases": [
       "rx",
       "shadow",
@@ -2689,8 +2689,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxShadowOuter.svg",
-    "component_id": "Icon.RxShadowOuter",
+    "src_svg": "rx/RxShadowOuter.svg",
+    "component_id": "rx:RxShadowOuter",
     "aliases": [
       "rx",
       "shadow",
@@ -2700,8 +2700,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxShare1.svg",
-    "component_id": "Icon.RxShare1",
+    "src_svg": "rx/RxShare1.svg",
+    "component_id": "rx:RxShare1",
     "aliases": [
       "rx",
       "share",
@@ -2711,8 +2711,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxShare2.svg",
-    "component_id": "Icon.RxShare2",
+    "src_svg": "rx/RxShare2.svg",
+    "component_id": "rx:RxShare2",
     "aliases": [
       "rx",
       "share",
@@ -2722,8 +2722,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxShuffle.svg",
-    "component_id": "Icon.RxShuffle",
+    "src_svg": "rx/RxShuffle.svg",
+    "component_id": "rx:RxShuffle",
     "aliases": [
       "rx",
       "shuffle"
@@ -2732,8 +2732,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSize.svg",
-    "component_id": "Icon.RxSize",
+    "src_svg": "rx/RxSize.svg",
+    "component_id": "rx:RxSize",
     "aliases": [
       "rx",
       "size"
@@ -2742,8 +2742,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSketchLogo.svg",
-    "component_id": "Icon.RxSketchLogo",
+    "src_svg": "rx/RxSketchLogo.svg",
+    "component_id": "rx:RxSketchLogo",
     "aliases": [
       "rx",
       "sketch",
@@ -2753,8 +2753,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSlash.svg",
-    "component_id": "Icon.RxSlash",
+    "src_svg": "rx/RxSlash.svg",
+    "component_id": "rx:RxSlash",
     "aliases": [
       "rx",
       "slash"
@@ -2763,8 +2763,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSlider.svg",
-    "component_id": "Icon.RxSlider",
+    "src_svg": "rx/RxSlider.svg",
+    "component_id": "rx:RxSlider",
     "aliases": [
       "rx",
       "slider"
@@ -2773,8 +2773,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSpaceBetweenHorizontally.svg",
-    "component_id": "Icon.RxSpaceBetweenHorizontally",
+    "src_svg": "rx/RxSpaceBetweenHorizontally.svg",
+    "component_id": "rx:RxSpaceBetweenHorizontally",
     "aliases": [
       "rx",
       "space",
@@ -2785,8 +2785,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSpaceBetweenVertically.svg",
-    "component_id": "Icon.RxSpaceBetweenVertically",
+    "src_svg": "rx/RxSpaceBetweenVertically.svg",
+    "component_id": "rx:RxSpaceBetweenVertically",
     "aliases": [
       "rx",
       "space",
@@ -2797,8 +2797,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSpaceEvenlyHorizontally.svg",
-    "component_id": "Icon.RxSpaceEvenlyHorizontally",
+    "src_svg": "rx/RxSpaceEvenlyHorizontally.svg",
+    "component_id": "rx:RxSpaceEvenlyHorizontally",
     "aliases": [
       "rx",
       "space",
@@ -2809,8 +2809,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSpaceEvenlyVertically.svg",
-    "component_id": "Icon.RxSpaceEvenlyVertically",
+    "src_svg": "rx/RxSpaceEvenlyVertically.svg",
+    "component_id": "rx:RxSpaceEvenlyVertically",
     "aliases": [
       "rx",
       "space",
@@ -2821,8 +2821,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSpeakerLoud.svg",
-    "component_id": "Icon.RxSpeakerLoud",
+    "src_svg": "rx/RxSpeakerLoud.svg",
+    "component_id": "rx:RxSpeakerLoud",
     "aliases": [
       "rx",
       "speaker",
@@ -2832,8 +2832,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSpeakerModerate.svg",
-    "component_id": "Icon.RxSpeakerModerate",
+    "src_svg": "rx/RxSpeakerModerate.svg",
+    "component_id": "rx:RxSpeakerModerate",
     "aliases": [
       "rx",
       "speaker",
@@ -2843,8 +2843,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSpeakerOff.svg",
-    "component_id": "Icon.RxSpeakerOff",
+    "src_svg": "rx/RxSpeakerOff.svg",
+    "component_id": "rx:RxSpeakerOff",
     "aliases": [
       "rx",
       "speaker",
@@ -2854,8 +2854,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSpeakerQuiet.svg",
-    "component_id": "Icon.RxSpeakerQuiet",
+    "src_svg": "rx/RxSpeakerQuiet.svg",
+    "component_id": "rx:RxSpeakerQuiet",
     "aliases": [
       "rx",
       "speaker",
@@ -2865,8 +2865,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSquare.svg",
-    "component_id": "Icon.RxSquare",
+    "src_svg": "rx/RxSquare.svg",
+    "component_id": "rx:RxSquare",
     "aliases": [
       "rx",
       "square"
@@ -2875,8 +2875,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxStack.svg",
-    "component_id": "Icon.RxStack",
+    "src_svg": "rx/RxStack.svg",
+    "component_id": "rx:RxStack",
     "aliases": [
       "rx",
       "stack"
@@ -2885,8 +2885,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxStar.svg",
-    "component_id": "Icon.RxStar",
+    "src_svg": "rx/RxStar.svg",
+    "component_id": "rx:RxStar",
     "aliases": [
       "rx",
       "star"
@@ -2895,8 +2895,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxStarFilled.svg",
-    "component_id": "Icon.RxStarFilled",
+    "src_svg": "rx/RxStarFilled.svg",
+    "component_id": "rx:RxStarFilled",
     "aliases": [
       "rx",
       "star",
@@ -2906,8 +2906,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxStitchesLogo.svg",
-    "component_id": "Icon.RxStitchesLogo",
+    "src_svg": "rx/RxStitchesLogo.svg",
+    "component_id": "rx:RxStitchesLogo",
     "aliases": [
       "rx",
       "stitches",
@@ -2917,8 +2917,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxStop.svg",
-    "component_id": "Icon.RxStop",
+    "src_svg": "rx/RxStop.svg",
+    "component_id": "rx:RxStop",
     "aliases": [
       "rx",
       "stop"
@@ -2927,8 +2927,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxStopwatch.svg",
-    "component_id": "Icon.RxStopwatch",
+    "src_svg": "rx/RxStopwatch.svg",
+    "component_id": "rx:RxStopwatch",
     "aliases": [
       "rx",
       "stopwatch"
@@ -2937,8 +2937,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxStretchHorizontally.svg",
-    "component_id": "Icon.RxStretchHorizontally",
+    "src_svg": "rx/RxStretchHorizontally.svg",
+    "component_id": "rx:RxStretchHorizontally",
     "aliases": [
       "rx",
       "stretch",
@@ -2948,8 +2948,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxStretchVertically.svg",
-    "component_id": "Icon.RxStretchVertically",
+    "src_svg": "rx/RxStretchVertically.svg",
+    "component_id": "rx:RxStretchVertically",
     "aliases": [
       "rx",
       "stretch",
@@ -2959,8 +2959,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxStrikethrough.svg",
-    "component_id": "Icon.RxStrikethrough",
+    "src_svg": "rx/RxStrikethrough.svg",
+    "component_id": "rx:RxStrikethrough",
     "aliases": [
       "rx",
       "strikethrough"
@@ -2969,8 +2969,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSun.svg",
-    "component_id": "Icon.RxSun",
+    "src_svg": "rx/RxSun.svg",
+    "component_id": "rx:RxSun",
     "aliases": [
       "rx",
       "sun"
@@ -2979,8 +2979,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSwitch.svg",
-    "component_id": "Icon.RxSwitch",
+    "src_svg": "rx/RxSwitch.svg",
+    "component_id": "rx:RxSwitch",
     "aliases": [
       "rx",
       "switch"
@@ -2989,8 +2989,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxSymbol.svg",
-    "component_id": "Icon.RxSymbol",
+    "src_svg": "rx/RxSymbol.svg",
+    "component_id": "rx:RxSymbol",
     "aliases": [
       "rx",
       "symbol"
@@ -2999,8 +2999,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTable.svg",
-    "component_id": "Icon.RxTable",
+    "src_svg": "rx/RxTable.svg",
+    "component_id": "rx:RxTable",
     "aliases": [
       "rx",
       "table"
@@ -3009,8 +3009,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTarget.svg",
-    "component_id": "Icon.RxTarget",
+    "src_svg": "rx/RxTarget.svg",
+    "component_id": "rx:RxTarget",
     "aliases": [
       "rx",
       "target"
@@ -3019,8 +3019,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxText.svg",
-    "component_id": "Icon.RxText",
+    "src_svg": "rx/RxText.svg",
+    "component_id": "rx:RxText",
     "aliases": [
       "rx",
       "text"
@@ -3029,8 +3029,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTextAlignBottom.svg",
-    "component_id": "Icon.RxTextAlignBottom",
+    "src_svg": "rx/RxTextAlignBottom.svg",
+    "component_id": "rx:RxTextAlignBottom",
     "aliases": [
       "rx",
       "text",
@@ -3041,8 +3041,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTextAlignCenter.svg",
-    "component_id": "Icon.RxTextAlignCenter",
+    "src_svg": "rx/RxTextAlignCenter.svg",
+    "component_id": "rx:RxTextAlignCenter",
     "aliases": [
       "rx",
       "text",
@@ -3053,8 +3053,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTextAlignJustify.svg",
-    "component_id": "Icon.RxTextAlignJustify",
+    "src_svg": "rx/RxTextAlignJustify.svg",
+    "component_id": "rx:RxTextAlignJustify",
     "aliases": [
       "rx",
       "text",
@@ -3065,8 +3065,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTextAlignLeft.svg",
-    "component_id": "Icon.RxTextAlignLeft",
+    "src_svg": "rx/RxTextAlignLeft.svg",
+    "component_id": "rx:RxTextAlignLeft",
     "aliases": [
       "rx",
       "text",
@@ -3077,8 +3077,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTextAlignMiddle.svg",
-    "component_id": "Icon.RxTextAlignMiddle",
+    "src_svg": "rx/RxTextAlignMiddle.svg",
+    "component_id": "rx:RxTextAlignMiddle",
     "aliases": [
       "rx",
       "text",
@@ -3089,8 +3089,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTextAlignRight.svg",
-    "component_id": "Icon.RxTextAlignRight",
+    "src_svg": "rx/RxTextAlignRight.svg",
+    "component_id": "rx:RxTextAlignRight",
     "aliases": [
       "rx",
       "text",
@@ -3101,8 +3101,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTextAlignTop.svg",
-    "component_id": "Icon.RxTextAlignTop",
+    "src_svg": "rx/RxTextAlignTop.svg",
+    "component_id": "rx:RxTextAlignTop",
     "aliases": [
       "rx",
       "text",
@@ -3113,8 +3113,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTextNone.svg",
-    "component_id": "Icon.RxTextNone",
+    "src_svg": "rx/RxTextNone.svg",
+    "component_id": "rx:RxTextNone",
     "aliases": [
       "rx",
       "text",
@@ -3124,8 +3124,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxThickArrowDown.svg",
-    "component_id": "Icon.RxThickArrowDown",
+    "src_svg": "rx/RxThickArrowDown.svg",
+    "component_id": "rx:RxThickArrowDown",
     "aliases": [
       "rx",
       "thick",
@@ -3136,8 +3136,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxThickArrowLeft.svg",
-    "component_id": "Icon.RxThickArrowLeft",
+    "src_svg": "rx/RxThickArrowLeft.svg",
+    "component_id": "rx:RxThickArrowLeft",
     "aliases": [
       "rx",
       "thick",
@@ -3148,8 +3148,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxThickArrowRight.svg",
-    "component_id": "Icon.RxThickArrowRight",
+    "src_svg": "rx/RxThickArrowRight.svg",
+    "component_id": "rx:RxThickArrowRight",
     "aliases": [
       "rx",
       "thick",
@@ -3160,8 +3160,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxThickArrowUp.svg",
-    "component_id": "Icon.RxThickArrowUp",
+    "src_svg": "rx/RxThickArrowUp.svg",
+    "component_id": "rx:RxThickArrowUp",
     "aliases": [
       "rx",
       "thick",
@@ -3172,8 +3172,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTimer.svg",
-    "component_id": "Icon.RxTimer",
+    "src_svg": "rx/RxTimer.svg",
+    "component_id": "rx:RxTimer",
     "aliases": [
       "rx",
       "timer"
@@ -3182,8 +3182,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTokens.svg",
-    "component_id": "Icon.RxTokens",
+    "src_svg": "rx/RxTokens.svg",
+    "component_id": "rx:RxTokens",
     "aliases": [
       "rx",
       "tokens"
@@ -3192,8 +3192,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTrackNext.svg",
-    "component_id": "Icon.RxTrackNext",
+    "src_svg": "rx/RxTrackNext.svg",
+    "component_id": "rx:RxTrackNext",
     "aliases": [
       "rx",
       "track",
@@ -3203,8 +3203,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTrackPrevious.svg",
-    "component_id": "Icon.RxTrackPrevious",
+    "src_svg": "rx/RxTrackPrevious.svg",
+    "component_id": "rx:RxTrackPrevious",
     "aliases": [
       "rx",
       "track",
@@ -3214,8 +3214,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTransform.svg",
-    "component_id": "Icon.RxTransform",
+    "src_svg": "rx/RxTransform.svg",
+    "component_id": "rx:RxTransform",
     "aliases": [
       "rx",
       "transform"
@@ -3224,8 +3224,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTransparencyGrid.svg",
-    "component_id": "Icon.RxTransparencyGrid",
+    "src_svg": "rx/RxTransparencyGrid.svg",
+    "component_id": "rx:RxTransparencyGrid",
     "aliases": [
       "rx",
       "transparency",
@@ -3235,8 +3235,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTrash.svg",
-    "component_id": "Icon.RxTrash",
+    "src_svg": "rx/RxTrash.svg",
+    "component_id": "rx:RxTrash",
     "aliases": [
       "rx",
       "trash"
@@ -3245,8 +3245,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTriangleDown.svg",
-    "component_id": "Icon.RxTriangleDown",
+    "src_svg": "rx/RxTriangleDown.svg",
+    "component_id": "rx:RxTriangleDown",
     "aliases": [
       "rx",
       "triangle",
@@ -3256,8 +3256,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTriangleLeft.svg",
-    "component_id": "Icon.RxTriangleLeft",
+    "src_svg": "rx/RxTriangleLeft.svg",
+    "component_id": "rx:RxTriangleLeft",
     "aliases": [
       "rx",
       "triangle",
@@ -3267,8 +3267,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTriangleRight.svg",
-    "component_id": "Icon.RxTriangleRight",
+    "src_svg": "rx/RxTriangleRight.svg",
+    "component_id": "rx:RxTriangleRight",
     "aliases": [
       "rx",
       "triangle",
@@ -3278,8 +3278,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTriangleUp.svg",
-    "component_id": "Icon.RxTriangleUp",
+    "src_svg": "rx/RxTriangleUp.svg",
+    "component_id": "rx:RxTriangleUp",
     "aliases": [
       "rx",
       "triangle",
@@ -3289,8 +3289,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxTwitterLogo.svg",
-    "component_id": "Icon.RxTwitterLogo",
+    "src_svg": "rx/RxTwitterLogo.svg",
+    "component_id": "rx:RxTwitterLogo",
     "aliases": [
       "rx",
       "twitter",
@@ -3300,8 +3300,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxUnderline.svg",
-    "component_id": "Icon.RxUnderline",
+    "src_svg": "rx/RxUnderline.svg",
+    "component_id": "rx:RxUnderline",
     "aliases": [
       "rx",
       "underline"
@@ -3310,8 +3310,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxUpdate.svg",
-    "component_id": "Icon.RxUpdate",
+    "src_svg": "rx/RxUpdate.svg",
+    "component_id": "rx:RxUpdate",
     "aliases": [
       "rx",
       "update"
@@ -3320,8 +3320,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxUpload.svg",
-    "component_id": "Icon.RxUpload",
+    "src_svg": "rx/RxUpload.svg",
+    "component_id": "rx:RxUpload",
     "aliases": [
       "rx",
       "upload"
@@ -3330,8 +3330,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxValue.svg",
-    "component_id": "Icon.RxValue",
+    "src_svg": "rx/RxValue.svg",
+    "component_id": "rx:RxValue",
     "aliases": [
       "rx",
       "value"
@@ -3340,8 +3340,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxValueNone.svg",
-    "component_id": "Icon.RxValueNone",
+    "src_svg": "rx/RxValueNone.svg",
+    "component_id": "rx:RxValueNone",
     "aliases": [
       "rx",
       "value",
@@ -3351,8 +3351,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxVercelLogo.svg",
-    "component_id": "Icon.RxVercelLogo",
+    "src_svg": "rx/RxVercelLogo.svg",
+    "component_id": "rx:RxVercelLogo",
     "aliases": [
       "rx",
       "vercel",
@@ -3362,8 +3362,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxVideo.svg",
-    "component_id": "Icon.RxVideo",
+    "src_svg": "rx/RxVideo.svg",
+    "component_id": "rx:RxVideo",
     "aliases": [
       "rx",
       "video"
@@ -3372,8 +3372,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxViewGrid.svg",
-    "component_id": "Icon.RxViewGrid",
+    "src_svg": "rx/RxViewGrid.svg",
+    "component_id": "rx:RxViewGrid",
     "aliases": [
       "rx",
       "view",
@@ -3383,8 +3383,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxViewHorizontal.svg",
-    "component_id": "Icon.RxViewHorizontal",
+    "src_svg": "rx/RxViewHorizontal.svg",
+    "component_id": "rx:RxViewHorizontal",
     "aliases": [
       "rx",
       "view",
@@ -3394,8 +3394,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxViewNone.svg",
-    "component_id": "Icon.RxViewNone",
+    "src_svg": "rx/RxViewNone.svg",
+    "component_id": "rx:RxViewNone",
     "aliases": [
       "rx",
       "view",
@@ -3405,8 +3405,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxViewVertical.svg",
-    "component_id": "Icon.RxViewVertical",
+    "src_svg": "rx/RxViewVertical.svg",
+    "component_id": "rx:RxViewVertical",
     "aliases": [
       "rx",
       "view",
@@ -3416,8 +3416,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxWidth.svg",
-    "component_id": "Icon.RxWidth",
+    "src_svg": "rx/RxWidth.svg",
+    "component_id": "rx:RxWidth",
     "aliases": [
       "rx",
       "width"
@@ -3426,8 +3426,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxZoomIn.svg",
-    "component_id": "Icon.RxZoomIn",
+    "src_svg": "rx/RxZoomIn.svg",
+    "component_id": "rx:RxZoomIn",
     "aliases": [
       "rx",
       "zoom",
@@ -3437,8 +3437,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/rx/RxZoomOut.svg",
-    "component_id": "Icon.RxZoomOut",
+    "src_svg": "rx/RxZoomOut.svg",
+    "component_id": "rx:RxZoomOut",
     "aliases": [
       "rx",
       "zoom",

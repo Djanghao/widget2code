@@ -141,7 +141,7 @@ def save_retrieval_svgs(
     icon_dir = output_dir / f"icon_{icon_index}"
     icon_dir.mkdir(parents=True, exist_ok=True)
 
-    render_script = Path(__file__).parents[4] / "libs" / "packages" / "icons" / "src" / "render-icon.js"
+    render_script = Path(__file__).parents[4] / "libs" / "js" / "icons" / "src" / "render-icon.js"
 
     if not render_script.exists():
         return
@@ -149,21 +149,10 @@ def save_retrieval_svgs(
     for rank, result in enumerate(retrieval_results[:top_n], start=1):
         try:
             component_id = result.get('component_id', '')
-            icon_name = result.get('name', '')
-
-            if not component_id or not icon_name:
+            if not component_id or ':' not in component_id:
                 continue
 
-            src_svg = result.get('src_svg', '')
-            if src_svg:
-                library = Path(src_svg).parent.name
-            else:
-                continue
-
-            if library == 'sf':
-                component_name = 'Icon' + ''.join(word.capitalize() for word in icon_name.split('.'))
-            else:
-                component_name = library.capitalize() + icon_name.replace('-', ' ').title().replace(' ', '')
+            library, component_name = component_id.split(':', 1)
 
             result_process = subprocess.run(
                 ['node', str(render_script), library, component_name],
@@ -174,8 +163,7 @@ def save_retrieval_svgs(
 
             if result_process.returncode == 0 and result_process.stdout:
                 svg_content = result_process.stdout
-
-                dest_filename = f"{rank}_{library}-{icon_name}.svg"
+                dest_filename = f"{rank}_{component_id.replace(':', '-')}.svg"
                 dest_path = icon_dir / dest_filename
 
                 with open(dest_path, 'w') as f:

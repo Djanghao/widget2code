@@ -1,7 +1,7 @@
 [
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAbout.svg",
-    "component_id": "Icon.FcAbout",
+    "src_svg": "fc/FcAbout.svg",
+    "component_id": "fc:FcAbout",
     "aliases": [
       "fc",
       "about"
@@ -13,8 +13,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAcceptDatabase.svg",
-    "component_id": "Icon.FcAcceptDatabase",
+    "src_svg": "fc/FcAcceptDatabase.svg",
+    "component_id": "fc:FcAcceptDatabase",
     "aliases": [
       "fc",
       "accept",
@@ -28,8 +28,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAddColumn.svg",
-    "component_id": "Icon.FcAddColumn",
+    "src_svg": "fc/FcAddColumn.svg",
+    "component_id": "fc:FcAddColumn",
     "aliases": [
       "fc",
       "add",
@@ -43,8 +43,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAddDatabase.svg",
-    "component_id": "Icon.FcAddDatabase",
+    "src_svg": "fc/FcAddDatabase.svg",
+    "component_id": "fc:FcAddDatabase",
     "aliases": [
       "fc",
       "add",
@@ -58,8 +58,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAddImage.svg",
-    "component_id": "Icon.FcAddImage",
+    "src_svg": "fc/FcAddImage.svg",
+    "component_id": "fc:FcAddImage",
     "aliases": [
       "fc",
       "add",
@@ -75,8 +75,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAddRow.svg",
-    "component_id": "Icon.FcAddRow",
+    "src_svg": "fc/FcAddRow.svg",
+    "component_id": "fc:FcAddRow",
     "aliases": [
       "fc",
       "add",
@@ -90,8 +90,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAddressBook.svg",
-    "component_id": "Icon.FcAddressBook",
+    "src_svg": "fc/FcAddressBook.svg",
+    "component_id": "fc:FcAddressBook",
     "aliases": [
       "fc",
       "address",
@@ -105,8 +105,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAdvance.svg",
-    "component_id": "Icon.FcAdvance",
+    "src_svg": "fc/FcAdvance.svg",
+    "component_id": "fc:FcAdvance",
     "aliases": [
       "fc",
       "advance"
@@ -117,8 +117,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAdvertising.svg",
-    "component_id": "Icon.FcAdvertising",
+    "src_svg": "fc/FcAdvertising.svg",
+    "component_id": "fc:FcAdvertising",
     "aliases": [
       "fc",
       "advertising"
@@ -132,8 +132,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAlarmClock.svg",
-    "component_id": "Icon.FcAlarmClock",
+    "src_svg": "fc/FcAlarmClock.svg",
+    "component_id": "fc:FcAlarmClock",
     "aliases": [
       "fc",
       "alarm",
@@ -148,8 +148,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAlphabeticalSortingAz.svg",
-    "component_id": "Icon.FcAlphabeticalSortingAz",
+    "src_svg": "fc/FcAlphabeticalSortingAz.svg",
+    "component_id": "fc:FcAlphabeticalSortingAz",
     "aliases": [
       "fc",
       "alphabetical",
@@ -163,8 +163,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAlphabeticalSortingZa.svg",
-    "component_id": "Icon.FcAlphabeticalSortingZa",
+    "src_svg": "fc/FcAlphabeticalSortingZa.svg",
+    "component_id": "fc:FcAlphabeticalSortingZa",
     "aliases": [
       "fc",
       "alphabetical",
@@ -178,8 +178,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAndroidOs.svg",
-    "component_id": "Icon.FcAndroidOs",
+    "src_svg": "fc/FcAndroidOs.svg",
+    "component_id": "fc:FcAndroidOs",
     "aliases": [
       "fc",
       "android",
@@ -191,8 +191,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAnswers.svg",
-    "component_id": "Icon.FcAnswers",
+    "src_svg": "fc/FcAnswers.svg",
+    "component_id": "fc:FcAnswers",
     "aliases": [
       "fc",
       "answers"
@@ -206,8 +206,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcApproval.svg",
-    "component_id": "Icon.FcApproval",
+    "src_svg": "fc/FcApproval.svg",
+    "component_id": "fc:FcApproval",
     "aliases": [
       "fc",
       "approval"
@@ -219,8 +219,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcApprove.svg",
-    "component_id": "Icon.FcApprove",
+    "src_svg": "fc/FcApprove.svg",
+    "component_id": "fc:FcApprove",
     "aliases": [
       "fc",
       "approve"
@@ -232,8 +232,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAreaChart.svg",
-    "component_id": "Icon.FcAreaChart",
+    "src_svg": "fc/FcAreaChart.svg",
+    "component_id": "fc:FcAreaChart",
     "aliases": [
       "fc",
       "area",
@@ -246,8 +246,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAssistant.svg",
-    "component_id": "Icon.FcAssistant",
+    "src_svg": "fc/FcAssistant.svg",
+    "component_id": "fc:FcAssistant",
     "aliases": [
       "fc",
       "assistant"
@@ -263,8 +263,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAudioFile.svg",
-    "component_id": "Icon.FcAudioFile",
+    "src_svg": "fc/FcAudioFile.svg",
+    "component_id": "fc:FcAudioFile",
     "aliases": [
       "fc",
       "audio",
@@ -278,8 +278,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAutomatic.svg",
-    "component_id": "Icon.FcAutomatic",
+    "src_svg": "fc/FcAutomatic.svg",
+    "component_id": "fc:FcAutomatic",
     "aliases": [
       "fc",
       "automatic"
@@ -291,8 +291,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcAutomotive.svg",
-    "component_id": "Icon.FcAutomotive",
+    "src_svg": "fc/FcAutomotive.svg",
+    "component_id": "fc:FcAutomotive",
     "aliases": [
       "fc",
       "automotive"
@@ -305,8 +305,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBadDecision.svg",
-    "component_id": "Icon.FcBadDecision",
+    "src_svg": "fc/FcBadDecision.svg",
+    "component_id": "fc:FcBadDecision",
     "aliases": [
       "fc",
       "bad",
@@ -319,8 +319,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBarChart.svg",
-    "component_id": "Icon.FcBarChart",
+    "src_svg": "fc/FcBarChart.svg",
+    "component_id": "fc:FcBarChart",
     "aliases": [
       "fc",
       "bar",
@@ -332,8 +332,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBbc.svg",
-    "component_id": "Icon.FcBbc",
+    "src_svg": "fc/FcBbc.svg",
+    "component_id": "fc:FcBbc",
     "aliases": [
       "fc",
       "bbc"
@@ -345,8 +345,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBearish.svg",
-    "component_id": "Icon.FcBearish",
+    "src_svg": "fc/FcBearish.svg",
+    "component_id": "fc:FcBearish",
     "aliases": [
       "fc",
       "bearish"
@@ -358,8 +358,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBinoculars.svg",
-    "component_id": "Icon.FcBinoculars",
+    "src_svg": "fc/FcBinoculars.svg",
+    "component_id": "fc:FcBinoculars",
     "aliases": [
       "fc",
       "binoculars"
@@ -373,8 +373,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBiohazard.svg",
-    "component_id": "Icon.FcBiohazard",
+    "src_svg": "fc/FcBiohazard.svg",
+    "component_id": "fc:FcBiohazard",
     "aliases": [
       "fc",
       "biohazard"
@@ -386,8 +386,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBiomass.svg",
-    "component_id": "Icon.FcBiomass",
+    "src_svg": "fc/FcBiomass.svg",
+    "component_id": "fc:FcBiomass",
     "aliases": [
       "fc",
       "biomass"
@@ -402,8 +402,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBiotech.svg",
-    "component_id": "Icon.FcBiotech",
+    "src_svg": "fc/FcBiotech.svg",
+    "component_id": "fc:FcBiotech",
     "aliases": [
       "fc",
       "biotech"
@@ -415,8 +415,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBookmark.svg",
-    "component_id": "Icon.FcBookmark",
+    "src_svg": "fc/FcBookmark.svg",
+    "component_id": "fc:FcBookmark",
     "aliases": [
       "fc",
       "bookmark"
@@ -427,8 +427,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBriefcase.svg",
-    "component_id": "Icon.FcBriefcase",
+    "src_svg": "fc/FcBriefcase.svg",
+    "component_id": "fc:FcBriefcase",
     "aliases": [
       "fc",
       "briefcase"
@@ -442,8 +442,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBrokenLink.svg",
-    "component_id": "Icon.FcBrokenLink",
+    "src_svg": "fc/FcBrokenLink.svg",
+    "component_id": "fc:FcBrokenLink",
     "aliases": [
       "fc",
       "broken",
@@ -456,8 +456,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBullish.svg",
-    "component_id": "Icon.FcBullish",
+    "src_svg": "fc/FcBullish.svg",
+    "component_id": "fc:FcBullish",
     "aliases": [
       "fc",
       "bullish"
@@ -469,8 +469,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBusiness.svg",
-    "component_id": "Icon.FcBusiness",
+    "src_svg": "fc/FcBusiness.svg",
+    "component_id": "fc:FcBusiness",
     "aliases": [
       "fc",
       "business"
@@ -483,8 +483,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBusinessContact.svg",
-    "component_id": "Icon.FcBusinessContact",
+    "src_svg": "fc/FcBusinessContact.svg",
+    "component_id": "fc:FcBusinessContact",
     "aliases": [
       "fc",
       "business",
@@ -497,8 +497,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBusinessman.svg",
-    "component_id": "Icon.FcBusinessman",
+    "src_svg": "fc/FcBusinessman.svg",
+    "component_id": "fc:FcBusinessman",
     "aliases": [
       "fc",
       "businessman"
@@ -514,8 +514,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcBusinesswoman.svg",
-    "component_id": "Icon.FcBusinesswoman",
+    "src_svg": "fc/FcBusinesswoman.svg",
+    "component_id": "fc:FcBusinesswoman",
     "aliases": [
       "fc",
       "businesswoman"
@@ -531,8 +531,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcButtingIn.svg",
-    "component_id": "Icon.FcButtingIn",
+    "src_svg": "fc/FcButtingIn.svg",
+    "component_id": "fc:FcButtingIn",
     "aliases": [
       "fc",
       "butting",
@@ -549,8 +549,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCableRelease.svg",
-    "component_id": "Icon.FcCableRelease",
+    "src_svg": "fc/FcCableRelease.svg",
+    "component_id": "fc:FcCableRelease",
     "aliases": [
       "fc",
       "cable",
@@ -564,8 +564,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCalculator.svg",
-    "component_id": "Icon.FcCalculator",
+    "src_svg": "fc/FcCalculator.svg",
+    "component_id": "fc:FcCalculator",
     "aliases": [
       "fc",
       "calculator"
@@ -581,8 +581,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCalendar.svg",
-    "component_id": "Icon.FcCalendar",
+    "src_svg": "fc/FcCalendar.svg",
+    "component_id": "fc:FcCalendar",
     "aliases": [
       "fc",
       "calendar"
@@ -597,8 +597,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCallTransfer.svg",
-    "component_id": "Icon.FcCallTransfer",
+    "src_svg": "fc/FcCallTransfer.svg",
+    "component_id": "fc:FcCallTransfer",
     "aliases": [
       "fc",
       "call",
@@ -611,8 +611,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCallback.svg",
-    "component_id": "Icon.FcCallback",
+    "src_svg": "fc/FcCallback.svg",
+    "component_id": "fc:FcCallback",
     "aliases": [
       "fc",
       "callback"
@@ -624,8 +624,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCamcorder.svg",
-    "component_id": "Icon.FcCamcorder",
+    "src_svg": "fc/FcCamcorder.svg",
+    "component_id": "fc:FcCamcorder",
     "aliases": [
       "fc",
       "camcorder"
@@ -641,8 +641,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCamcorderPro.svg",
-    "component_id": "Icon.FcCamcorderPro",
+    "src_svg": "fc/FcCamcorderPro.svg",
+    "component_id": "fc:FcCamcorderPro",
     "aliases": [
       "fc",
       "camcorder",
@@ -659,8 +659,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCamera.svg",
-    "component_id": "Icon.FcCamera",
+    "src_svg": "fc/FcCamera.svg",
+    "component_id": "fc:FcCamera",
     "aliases": [
       "fc",
       "camera"
@@ -675,8 +675,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCameraAddon.svg",
-    "component_id": "Icon.FcCameraAddon",
+    "src_svg": "fc/FcCameraAddon.svg",
+    "component_id": "fc:FcCameraAddon",
     "aliases": [
       "fc",
       "camera",
@@ -693,8 +693,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCameraIdentification.svg",
-    "component_id": "Icon.FcCameraIdentification",
+    "src_svg": "fc/FcCameraIdentification.svg",
+    "component_id": "fc:FcCameraIdentification",
     "aliases": [
       "fc",
       "camera",
@@ -711,8 +711,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCancel.svg",
-    "component_id": "Icon.FcCancel",
+    "src_svg": "fc/FcCancel.svg",
+    "component_id": "fc:FcCancel",
     "aliases": [
       "fc",
       "cancel"
@@ -723,8 +723,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCandleSticks.svg",
-    "component_id": "Icon.FcCandleSticks",
+    "src_svg": "fc/FcCandleSticks.svg",
+    "component_id": "fc:FcCandleSticks",
     "aliases": [
       "fc",
       "candle",
@@ -738,8 +738,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCapacitor.svg",
-    "component_id": "Icon.FcCapacitor",
+    "src_svg": "fc/FcCapacitor.svg",
+    "component_id": "fc:FcCapacitor",
     "aliases": [
       "fc",
       "capacitor"
@@ -752,8 +752,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCdLogo.svg",
-    "component_id": "Icon.FcCdLogo",
+    "src_svg": "fc/FcCdLogo.svg",
+    "component_id": "fc:FcCdLogo",
     "aliases": [
       "fc",
       "cd",
@@ -766,8 +766,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCellPhone.svg",
-    "component_id": "Icon.FcCellPhone",
+    "src_svg": "fc/FcCellPhone.svg",
+    "component_id": "fc:FcCellPhone",
     "aliases": [
       "fc",
       "cell",
@@ -782,8 +782,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcChargeBattery.svg",
-    "component_id": "Icon.FcChargeBattery",
+    "src_svg": "fc/FcChargeBattery.svg",
+    "component_id": "fc:FcChargeBattery",
     "aliases": [
       "fc",
       "charge",
@@ -796,8 +796,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCheckmark.svg",
-    "component_id": "Icon.FcCheckmark",
+    "src_svg": "fc/FcCheckmark.svg",
+    "component_id": "fc:FcCheckmark",
     "aliases": [
       "fc",
       "checkmark"
@@ -808,8 +808,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCircuit.svg",
-    "component_id": "Icon.FcCircuit",
+    "src_svg": "fc/FcCircuit.svg",
+    "component_id": "fc:FcCircuit",
     "aliases": [
       "fc",
       "circuit"
@@ -821,8 +821,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcClapperboard.svg",
-    "component_id": "Icon.FcClapperboard",
+    "src_svg": "fc/FcClapperboard.svg",
+    "component_id": "fc:FcClapperboard",
     "aliases": [
       "fc",
       "clapperboard"
@@ -834,8 +834,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcClearFilters.svg",
-    "component_id": "Icon.FcClearFilters",
+    "src_svg": "fc/FcClearFilters.svg",
+    "component_id": "fc:FcClearFilters",
     "aliases": [
       "fc",
       "clear",
@@ -850,8 +850,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcClock.svg",
-    "component_id": "Icon.FcClock",
+    "src_svg": "fc/FcClock.svg",
+    "component_id": "fc:FcClock",
     "aliases": [
       "fc",
       "clock"
@@ -863,8 +863,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCloseUpMode.svg",
-    "component_id": "Icon.FcCloseUpMode",
+    "src_svg": "fc/FcCloseUpMode.svg",
+    "component_id": "fc:FcCloseUpMode",
     "aliases": [
       "fc",
       "close",
@@ -882,8 +882,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCloth.svg",
-    "component_id": "Icon.FcCloth",
+    "src_svg": "fc/FcCloth.svg",
+    "component_id": "fc:FcCloth",
     "aliases": [
       "fc",
       "cloth"
@@ -896,8 +896,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCollaboration.svg",
-    "component_id": "Icon.FcCollaboration",
+    "src_svg": "fc/FcCollaboration.svg",
+    "component_id": "fc:FcCollaboration",
     "aliases": [
       "fc",
       "collaboration"
@@ -911,8 +911,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCollapse.svg",
-    "component_id": "Icon.FcCollapse",
+    "src_svg": "fc/FcCollapse.svg",
+    "component_id": "fc:FcCollapse",
     "aliases": [
       "fc",
       "collapse"
@@ -923,8 +923,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCollect.svg",
-    "component_id": "Icon.FcCollect",
+    "src_svg": "fc/FcCollect.svg",
+    "component_id": "fc:FcCollect",
     "aliases": [
       "fc",
       "collect"
@@ -936,8 +936,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcComboChart.svg",
-    "component_id": "Icon.FcComboChart",
+    "src_svg": "fc/FcComboChart.svg",
+    "component_id": "fc:FcComboChart",
     "aliases": [
       "fc",
       "combo",
@@ -950,8 +950,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCommandLine.svg",
-    "component_id": "Icon.FcCommandLine",
+    "src_svg": "fc/FcCommandLine.svg",
+    "component_id": "fc:FcCommandLine",
     "aliases": [
       "fc",
       "command",
@@ -966,8 +966,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcComments.svg",
-    "component_id": "Icon.FcComments",
+    "src_svg": "fc/FcComments.svg",
+    "component_id": "fc:FcComments",
     "aliases": [
       "fc",
       "comments"
@@ -978,8 +978,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCompactCamera.svg",
-    "component_id": "Icon.FcCompactCamera",
+    "src_svg": "fc/FcCompactCamera.svg",
+    "component_id": "fc:FcCompactCamera",
     "aliases": [
       "fc",
       "compact",
@@ -995,8 +995,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcConferenceCall.svg",
-    "component_id": "Icon.FcConferenceCall",
+    "src_svg": "fc/FcConferenceCall.svg",
+    "component_id": "fc:FcConferenceCall",
     "aliases": [
       "fc",
       "conference",
@@ -1011,8 +1011,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcContacts.svg",
-    "component_id": "Icon.FcContacts",
+    "src_svg": "fc/FcContacts.svg",
+    "component_id": "fc:FcContacts",
     "aliases": [
       "fc",
       "contacts"
@@ -1025,8 +1025,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCopyleft.svg",
-    "component_id": "Icon.FcCopyleft",
+    "src_svg": "fc/FcCopyleft.svg",
+    "component_id": "fc:FcCopyleft",
     "aliases": [
       "fc",
       "copyleft"
@@ -1038,8 +1038,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCopyright.svg",
-    "component_id": "Icon.FcCopyright",
+    "src_svg": "fc/FcCopyright.svg",
+    "component_id": "fc:FcCopyright",
     "aliases": [
       "fc",
       "copyright"
@@ -1051,8 +1051,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCrystalOscillator.svg",
-    "component_id": "Icon.FcCrystalOscillator",
+    "src_svg": "fc/FcCrystalOscillator.svg",
+    "component_id": "fc:FcCrystalOscillator",
     "aliases": [
       "fc",
       "crystal",
@@ -1066,8 +1066,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCurrencyExchange.svg",
-    "component_id": "Icon.FcCurrencyExchange",
+    "src_svg": "fc/FcCurrencyExchange.svg",
+    "component_id": "fc:FcCurrencyExchange",
     "aliases": [
       "fc",
       "currency",
@@ -1082,8 +1082,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCursor.svg",
-    "component_id": "Icon.FcCursor",
+    "src_svg": "fc/FcCursor.svg",
+    "component_id": "fc:FcCursor",
     "aliases": [
       "fc",
       "cursor"
@@ -1095,8 +1095,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcCustomerSupport.svg",
-    "component_id": "Icon.FcCustomerSupport",
+    "src_svg": "fc/FcCustomerSupport.svg",
+    "component_id": "fc:FcCustomerSupport",
     "aliases": [
       "fc",
       "customer",
@@ -1113,8 +1113,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDam.svg",
-    "component_id": "Icon.FcDam",
+    "src_svg": "fc/FcDam.svg",
+    "component_id": "fc:FcDam",
     "aliases": [
       "fc",
       "dam"
@@ -1127,8 +1127,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDataBackup.svg",
-    "component_id": "Icon.FcDataBackup",
+    "src_svg": "fc/FcDataBackup.svg",
+    "component_id": "fc:FcDataBackup",
     "aliases": [
       "fc",
       "data",
@@ -1141,8 +1141,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDataConfiguration.svg",
-    "component_id": "Icon.FcDataConfiguration",
+    "src_svg": "fc/FcDataConfiguration.svg",
+    "component_id": "fc:FcDataConfiguration",
     "aliases": [
       "fc",
       "data",
@@ -1156,8 +1156,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDataEncryption.svg",
-    "component_id": "Icon.FcDataEncryption",
+    "src_svg": "fc/FcDataEncryption.svg",
+    "component_id": "fc:FcDataEncryption",
     "aliases": [
       "fc",
       "data",
@@ -1171,8 +1171,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDataProtection.svg",
-    "component_id": "Icon.FcDataProtection",
+    "src_svg": "fc/FcDataProtection.svg",
+    "component_id": "fc:FcDataProtection",
     "aliases": [
       "fc",
       "data",
@@ -1185,8 +1185,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDataRecovery.svg",
-    "component_id": "Icon.FcDataRecovery",
+    "src_svg": "fc/FcDataRecovery.svg",
+    "component_id": "fc:FcDataRecovery",
     "aliases": [
       "fc",
       "data",
@@ -1199,8 +1199,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDataSheet.svg",
-    "component_id": "Icon.FcDataSheet",
+    "src_svg": "fc/FcDataSheet.svg",
+    "component_id": "fc:FcDataSheet",
     "aliases": [
       "fc",
       "data",
@@ -1214,8 +1214,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDatabase.svg",
-    "component_id": "Icon.FcDatabase",
+    "src_svg": "fc/FcDatabase.svg",
+    "component_id": "fc:FcDatabase",
     "aliases": [
       "fc",
       "database"
@@ -1226,8 +1226,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDebian.svg",
-    "component_id": "Icon.FcDebian",
+    "src_svg": "fc/FcDebian.svg",
+    "component_id": "fc:FcDebian",
     "aliases": [
       "fc",
       "debian"
@@ -1238,8 +1238,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDebt.svg",
-    "component_id": "Icon.FcDebt",
+    "src_svg": "fc/FcDebt.svg",
+    "component_id": "fc:FcDebt",
     "aliases": [
       "fc",
       "debt"
@@ -1254,8 +1254,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDecision.svg",
-    "component_id": "Icon.FcDecision",
+    "src_svg": "fc/FcDecision.svg",
+    "component_id": "fc:FcDecision",
     "aliases": [
       "fc",
       "decision"
@@ -1267,8 +1267,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDeleteColumn.svg",
-    "component_id": "Icon.FcDeleteColumn",
+    "src_svg": "fc/FcDeleteColumn.svg",
+    "component_id": "fc:FcDeleteColumn",
     "aliases": [
       "fc",
       "delete",
@@ -1282,8 +1282,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDeleteDatabase.svg",
-    "component_id": "Icon.FcDeleteDatabase",
+    "src_svg": "fc/FcDeleteDatabase.svg",
+    "component_id": "fc:FcDeleteDatabase",
     "aliases": [
       "fc",
       "delete",
@@ -1297,8 +1297,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDeleteRow.svg",
-    "component_id": "Icon.FcDeleteRow",
+    "src_svg": "fc/FcDeleteRow.svg",
+    "component_id": "fc:FcDeleteRow",
     "aliases": [
       "fc",
       "delete",
@@ -1312,8 +1312,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDepartment.svg",
-    "component_id": "Icon.FcDepartment",
+    "src_svg": "fc/FcDepartment.svg",
+    "component_id": "fc:FcDepartment",
     "aliases": [
       "fc",
       "department"
@@ -1327,8 +1327,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDeployment.svg",
-    "component_id": "Icon.FcDeployment",
+    "src_svg": "fc/FcDeployment.svg",
+    "component_id": "fc:FcDeployment",
     "aliases": [
       "fc",
       "deployment"
@@ -1343,8 +1343,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDiploma1.svg",
-    "component_id": "Icon.FcDiploma1",
+    "src_svg": "fc/FcDiploma1.svg",
+    "component_id": "fc:FcDiploma1",
     "aliases": [
       "fc",
       "diploma",
@@ -1358,8 +1358,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDiploma2.svg",
-    "component_id": "Icon.FcDiploma2",
+    "src_svg": "fc/FcDiploma2.svg",
+    "component_id": "fc:FcDiploma2",
     "aliases": [
       "fc",
       "diploma",
@@ -1373,8 +1373,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDisapprove.svg",
-    "component_id": "Icon.FcDisapprove",
+    "src_svg": "fc/FcDisapprove.svg",
+    "component_id": "fc:FcDisapprove",
     "aliases": [
       "fc",
       "disapprove"
@@ -1386,8 +1386,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDisclaimer.svg",
-    "component_id": "Icon.FcDisclaimer",
+    "src_svg": "fc/FcDisclaimer.svg",
+    "component_id": "fc:FcDisclaimer",
     "aliases": [
       "fc",
       "disclaimer"
@@ -1399,8 +1399,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDislike.svg",
-    "component_id": "Icon.FcDislike",
+    "src_svg": "fc/FcDislike.svg",
+    "component_id": "fc:FcDislike",
     "aliases": [
       "fc",
       "dislike"
@@ -1412,8 +1412,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDisplay.svg",
-    "component_id": "Icon.FcDisplay",
+    "src_svg": "fc/FcDisplay.svg",
+    "component_id": "fc:FcDisplay",
     "aliases": [
       "fc",
       "display"
@@ -1425,8 +1425,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDoNotInhale.svg",
-    "component_id": "Icon.FcDoNotInhale",
+    "src_svg": "fc/FcDoNotInhale.svg",
+    "component_id": "fc:FcDoNotInhale",
     "aliases": [
       "fc",
       "do",
@@ -1443,8 +1443,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDoNotInsert.svg",
-    "component_id": "Icon.FcDoNotInsert",
+    "src_svg": "fc/FcDoNotInsert.svg",
+    "component_id": "fc:FcDoNotInsert",
     "aliases": [
       "fc",
       "do",
@@ -1458,8 +1458,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDoNotMix.svg",
-    "component_id": "Icon.FcDoNotMix",
+    "src_svg": "fc/FcDoNotMix.svg",
+    "component_id": "fc:FcDoNotMix",
     "aliases": [
       "fc",
       "do",
@@ -1474,8 +1474,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDocument.svg",
-    "component_id": "Icon.FcDocument",
+    "src_svg": "fc/FcDocument.svg",
+    "component_id": "fc:FcDocument",
     "aliases": [
       "fc",
       "document"
@@ -1488,8 +1488,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDonate.svg",
-    "component_id": "Icon.FcDonate",
+    "src_svg": "fc/FcDonate.svg",
+    "component_id": "fc:FcDonate",
     "aliases": [
       "fc",
       "donate"
@@ -1504,8 +1504,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDoughnutChart.svg",
-    "component_id": "Icon.FcDoughnutChart",
+    "src_svg": "fc/FcDoughnutChart.svg",
+    "component_id": "fc:FcDoughnutChart",
     "aliases": [
       "fc",
       "doughnut",
@@ -1519,8 +1519,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDown.svg",
-    "component_id": "Icon.FcDown",
+    "src_svg": "fc/FcDown.svg",
+    "component_id": "fc:FcDown",
     "aliases": [
       "fc",
       "down"
@@ -1531,8 +1531,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDownLeft.svg",
-    "component_id": "Icon.FcDownLeft",
+    "src_svg": "fc/FcDownLeft.svg",
+    "component_id": "fc:FcDownLeft",
     "aliases": [
       "fc",
       "down",
@@ -1544,8 +1544,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDownRight.svg",
-    "component_id": "Icon.FcDownRight",
+    "src_svg": "fc/FcDownRight.svg",
+    "component_id": "fc:FcDownRight",
     "aliases": [
       "fc",
       "down",
@@ -1557,8 +1557,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDownload.svg",
-    "component_id": "Icon.FcDownload",
+    "src_svg": "fc/FcDownload.svg",
+    "component_id": "fc:FcDownload",
     "aliases": [
       "fc",
       "download"
@@ -1569,8 +1569,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDribbble.svg",
-    "component_id": "Icon.FcDribbble",
+    "src_svg": "fc/FcDribbble.svg",
+    "component_id": "fc:FcDribbble",
     "aliases": [
       "fc",
       "dribbble"
@@ -1582,8 +1582,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcDvdLogo.svg",
-    "component_id": "Icon.FcDvdLogo",
+    "src_svg": "fc/FcDvdLogo.svg",
+    "component_id": "fc:FcDvdLogo",
     "aliases": [
       "fc",
       "dvd",
@@ -1596,8 +1596,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcEditImage.svg",
-    "component_id": "Icon.FcEditImage",
+    "src_svg": "fc/FcEditImage.svg",
+    "component_id": "fc:FcEditImage",
     "aliases": [
       "fc",
       "edit",
@@ -1614,8 +1614,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcElectricalSensor.svg",
-    "component_id": "Icon.FcElectricalSensor",
+    "src_svg": "fc/FcElectricalSensor.svg",
+    "component_id": "fc:FcElectricalSensor",
     "aliases": [
       "fc",
       "electrical",
@@ -1629,8 +1629,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcElectricalThreshold.svg",
-    "component_id": "Icon.FcElectricalThreshold",
+    "src_svg": "fc/FcElectricalThreshold.svg",
+    "component_id": "fc:FcElectricalThreshold",
     "aliases": [
       "fc",
       "electrical",
@@ -1644,8 +1644,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcElectricity.svg",
-    "component_id": "Icon.FcElectricity",
+    "src_svg": "fc/FcElectricity.svg",
+    "component_id": "fc:FcElectricity",
     "aliases": [
       "fc",
       "electricity"
@@ -1656,8 +1656,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcElectroDevices.svg",
-    "component_id": "Icon.FcElectroDevices",
+    "src_svg": "fc/FcElectroDevices.svg",
+    "component_id": "fc:FcElectroDevices",
     "aliases": [
       "fc",
       "electro",
@@ -1670,8 +1670,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcElectronics.svg",
-    "component_id": "Icon.FcElectronics",
+    "src_svg": "fc/FcElectronics.svg",
+    "component_id": "fc:FcElectronics",
     "aliases": [
       "fc",
       "electronics"
@@ -1684,8 +1684,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcEmptyBattery.svg",
-    "component_id": "Icon.FcEmptyBattery",
+    "src_svg": "fc/FcEmptyBattery.svg",
+    "component_id": "fc:FcEmptyBattery",
     "aliases": [
       "fc",
       "empty",
@@ -1697,8 +1697,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcEmptyFilter.svg",
-    "component_id": "Icon.FcEmptyFilter",
+    "src_svg": "fc/FcEmptyFilter.svg",
+    "component_id": "fc:FcEmptyFilter",
     "aliases": [
       "fc",
       "empty",
@@ -1710,8 +1710,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcEmptyTrash.svg",
-    "component_id": "Icon.FcEmptyTrash",
+    "src_svg": "fc/FcEmptyTrash.svg",
+    "component_id": "fc:FcEmptyTrash",
     "aliases": [
       "fc",
       "empty",
@@ -1724,8 +1724,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcEndCall.svg",
-    "component_id": "Icon.FcEndCall",
+    "src_svg": "fc/FcEndCall.svg",
+    "component_id": "fc:FcEndCall",
     "aliases": [
       "fc",
       "end",
@@ -1738,8 +1738,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcEngineering.svg",
-    "component_id": "Icon.FcEngineering",
+    "src_svg": "fc/FcEngineering.svg",
+    "component_id": "fc:FcEngineering",
     "aliases": [
       "fc",
       "engineering"
@@ -1751,8 +1751,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcEnteringHeavenAlive.svg",
-    "component_id": "Icon.FcEnteringHeavenAlive",
+    "src_svg": "fc/FcEnteringHeavenAlive.svg",
+    "component_id": "fc:FcEnteringHeavenAlive",
     "aliases": [
       "fc",
       "entering",
@@ -1766,8 +1766,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcExpand.svg",
-    "component_id": "Icon.FcExpand",
+    "src_svg": "fc/FcExpand.svg",
+    "component_id": "fc:FcExpand",
     "aliases": [
       "fc",
       "expand"
@@ -1778,8 +1778,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcExpired.svg",
-    "component_id": "Icon.FcExpired",
+    "src_svg": "fc/FcExpired.svg",
+    "component_id": "fc:FcExpired",
     "aliases": [
       "fc",
       "expired"
@@ -1793,8 +1793,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcExport.svg",
-    "component_id": "Icon.FcExport",
+    "src_svg": "fc/FcExport.svg",
+    "component_id": "fc:FcExport",
     "aliases": [
       "fc",
       "export"
@@ -1806,8 +1806,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcExternal.svg",
-    "component_id": "Icon.FcExternal",
+    "src_svg": "fc/FcExternal.svg",
+    "component_id": "fc:FcExternal",
     "aliases": [
       "fc",
       "external"
@@ -1819,8 +1819,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFactory.svg",
-    "component_id": "Icon.FcFactory",
+    "src_svg": "fc/FcFactory.svg",
+    "component_id": "fc:FcFactory",
     "aliases": [
       "fc",
       "factory"
@@ -1833,8 +1833,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFactoryBreakdown.svg",
-    "component_id": "Icon.FcFactoryBreakdown",
+    "src_svg": "fc/FcFactoryBreakdown.svg",
+    "component_id": "fc:FcFactoryBreakdown",
     "aliases": [
       "fc",
       "factory",
@@ -1848,8 +1848,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFaq.svg",
-    "component_id": "Icon.FcFaq",
+    "src_svg": "fc/FcFaq.svg",
+    "component_id": "fc:FcFaq",
     "aliases": [
       "fc",
       "faq"
@@ -1863,8 +1863,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFeedIn.svg",
-    "component_id": "Icon.FcFeedIn",
+    "src_svg": "fc/FcFeedIn.svg",
+    "component_id": "fc:FcFeedIn",
     "aliases": [
       "fc",
       "feed",
@@ -1877,8 +1877,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFeedback.svg",
-    "component_id": "Icon.FcFeedback",
+    "src_svg": "fc/FcFeedback.svg",
+    "component_id": "fc:FcFeedback",
     "aliases": [
       "fc",
       "feedback"
@@ -1892,8 +1892,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFile.svg",
-    "component_id": "Icon.FcFile",
+    "src_svg": "fc/FcFile.svg",
+    "component_id": "fc:FcFile",
     "aliases": [
       "fc",
       "file"
@@ -1905,8 +1905,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFilingCabinet.svg",
-    "component_id": "Icon.FcFilingCabinet",
+    "src_svg": "fc/FcFilingCabinet.svg",
+    "component_id": "fc:FcFilingCabinet",
     "aliases": [
       "fc",
       "filing",
@@ -1921,8 +1921,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFilledFilter.svg",
-    "component_id": "Icon.FcFilledFilter",
+    "src_svg": "fc/FcFilledFilter.svg",
+    "component_id": "fc:FcFilledFilter",
     "aliases": [
       "fc",
       "filled",
@@ -1935,8 +1935,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFilm.svg",
-    "component_id": "Icon.FcFilm",
+    "src_svg": "fc/FcFilm.svg",
+    "component_id": "fc:FcFilm",
     "aliases": [
       "fc",
       "film"
@@ -1947,8 +1947,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFilmReel.svg",
-    "component_id": "Icon.FcFilmReel",
+    "src_svg": "fc/FcFilmReel.svg",
+    "component_id": "fc:FcFilmReel",
     "aliases": [
       "fc",
       "film",
@@ -1963,8 +1963,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFinePrint.svg",
-    "component_id": "Icon.FcFinePrint",
+    "src_svg": "fc/FcFinePrint.svg",
+    "component_id": "fc:FcFinePrint",
     "aliases": [
       "fc",
       "fine",
@@ -1980,8 +1980,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFlashAuto.svg",
-    "component_id": "Icon.FcFlashAuto",
+    "src_svg": "fc/FcFlashAuto.svg",
+    "component_id": "fc:FcFlashAuto",
     "aliases": [
       "fc",
       "flash",
@@ -1994,8 +1994,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFlashOff.svg",
-    "component_id": "Icon.FcFlashOff",
+    "src_svg": "fc/FcFlashOff.svg",
+    "component_id": "fc:FcFlashOff",
     "aliases": [
       "fc",
       "flash",
@@ -2008,8 +2008,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFlashOn.svg",
-    "component_id": "Icon.FcFlashOn",
+    "src_svg": "fc/FcFlashOn.svg",
+    "component_id": "fc:FcFlashOn",
     "aliases": [
       "fc",
       "flash",
@@ -2021,8 +2021,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFlowChart.svg",
-    "component_id": "Icon.FcFlowChart",
+    "src_svg": "fc/FcFlowChart.svg",
+    "component_id": "fc:FcFlowChart",
     "aliases": [
       "fc",
       "flow",
@@ -2036,8 +2036,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFolder.svg",
-    "component_id": "Icon.FcFolder",
+    "src_svg": "fc/FcFolder.svg",
+    "component_id": "fc:FcFolder",
     "aliases": [
       "fc",
       "folder"
@@ -2049,8 +2049,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFrame.svg",
-    "component_id": "Icon.FcFrame",
+    "src_svg": "fc/FcFrame.svg",
+    "component_id": "fc:FcFrame",
     "aliases": [
       "fc",
       "frame"
@@ -2062,8 +2062,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFullBattery.svg",
-    "component_id": "Icon.FcFullBattery",
+    "src_svg": "fc/FcFullBattery.svg",
+    "component_id": "fc:FcFullBattery",
     "aliases": [
       "fc",
       "full",
@@ -2075,8 +2075,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcFullTrash.svg",
-    "component_id": "Icon.FcFullTrash",
+    "src_svg": "fc/FcFullTrash.svg",
+    "component_id": "fc:FcFullTrash",
     "aliases": [
       "fc",
       "full",
@@ -2091,8 +2091,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcGallery.svg",
-    "component_id": "Icon.FcGallery",
+    "src_svg": "fc/FcGallery.svg",
+    "component_id": "fc:FcGallery",
     "aliases": [
       "fc",
       "gallery"
@@ -2107,8 +2107,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcGenealogy.svg",
-    "component_id": "Icon.FcGenealogy",
+    "src_svg": "fc/FcGenealogy.svg",
+    "component_id": "fc:FcGenealogy",
     "aliases": [
       "fc",
       "genealogy"
@@ -2121,8 +2121,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcGenericSortingAsc.svg",
-    "component_id": "Icon.FcGenericSortingAsc",
+    "src_svg": "fc/FcGenericSortingAsc.svg",
+    "component_id": "fc:FcGenericSortingAsc",
     "aliases": [
       "fc",
       "generic",
@@ -2135,8 +2135,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcGenericSortingDesc.svg",
-    "component_id": "Icon.FcGenericSortingDesc",
+    "src_svg": "fc/FcGenericSortingDesc.svg",
+    "component_id": "fc:FcGenericSortingDesc",
     "aliases": [
       "fc",
       "generic",
@@ -2149,8 +2149,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcGlobe.svg",
-    "component_id": "Icon.FcGlobe",
+    "src_svg": "fc/FcGlobe.svg",
+    "component_id": "fc:FcGlobe",
     "aliases": [
       "fc",
       "globe"
@@ -2162,8 +2162,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcGoodDecision.svg",
-    "component_id": "Icon.FcGoodDecision",
+    "src_svg": "fc/FcGoodDecision.svg",
+    "component_id": "fc:FcGoodDecision",
     "aliases": [
       "fc",
       "good",
@@ -2176,8 +2176,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcGoogle.svg",
-    "component_id": "Icon.FcGoogle",
+    "src_svg": "fc/FcGoogle.svg",
+    "component_id": "fc:FcGoogle",
     "aliases": [
       "fc",
       "google"
@@ -2191,8 +2191,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcGraduationCap.svg",
-    "component_id": "Icon.FcGraduationCap",
+    "src_svg": "fc/FcGraduationCap.svg",
+    "component_id": "fc:FcGraduationCap",
     "aliases": [
       "fc",
       "graduation",
@@ -2205,8 +2205,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcGrid.svg",
-    "component_id": "Icon.FcGrid",
+    "src_svg": "fc/FcGrid.svg",
+    "component_id": "fc:FcGrid",
     "aliases": [
       "fc",
       "grid"
@@ -2217,8 +2217,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcHeadset.svg",
-    "component_id": "Icon.FcHeadset",
+    "src_svg": "fc/FcHeadset.svg",
+    "component_id": "fc:FcHeadset",
     "aliases": [
       "fc",
       "headset"
@@ -2230,8 +2230,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcHeatMap.svg",
-    "component_id": "Icon.FcHeatMap",
+    "src_svg": "fc/FcHeatMap.svg",
+    "component_id": "fc:FcHeatMap",
     "aliases": [
       "fc",
       "heat",
@@ -2244,8 +2244,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcHighBattery.svg",
-    "component_id": "Icon.FcHighBattery",
+    "src_svg": "fc/FcHighBattery.svg",
+    "component_id": "fc:FcHighBattery",
     "aliases": [
       "fc",
       "high",
@@ -2258,8 +2258,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcHighPriority.svg",
-    "component_id": "Icon.FcHighPriority",
+    "src_svg": "fc/FcHighPriority.svg",
+    "component_id": "fc:FcHighPriority",
     "aliases": [
       "fc",
       "high",
@@ -2272,8 +2272,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcHome.svg",
-    "component_id": "Icon.FcHome",
+    "src_svg": "fc/FcHome.svg",
+    "component_id": "fc:FcHome",
     "aliases": [
       "fc",
       "home"
@@ -2289,8 +2289,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcIcons8Cup.svg",
-    "component_id": "Icon.Fc8Cup",
+    "src_svg": "fc/FcIcons8Cup.svg",
+    "component_id": "fc:Fc8Cup",
     "aliases": [
       "fc",
       "8",
@@ -2304,8 +2304,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcIdea.svg",
-    "component_id": "Icon.FcIdea",
+    "src_svg": "fc/FcIdea.svg",
+    "component_id": "fc:FcIdea",
     "aliases": [
       "fc",
       "idea"
@@ -2319,8 +2319,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcImageFile.svg",
-    "component_id": "Icon.FcImageFile",
+    "src_svg": "fc/FcImageFile.svg",
+    "component_id": "fc:FcImageFile",
     "aliases": [
       "fc",
       "image",
@@ -2335,8 +2335,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcImport.svg",
-    "component_id": "Icon.FcImport",
+    "src_svg": "fc/FcImport.svg",
+    "component_id": "fc:FcImport",
     "aliases": [
       "fc",
       "import"
@@ -2348,8 +2348,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcInTransit.svg",
-    "component_id": "Icon.FcInTransit",
+    "src_svg": "fc/FcInTransit.svg",
+    "component_id": "fc:FcInTransit",
     "aliases": [
       "fc",
       "in",
@@ -2366,8 +2366,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcInfo.svg",
-    "component_id": "Icon.FcInfo",
+    "src_svg": "fc/FcInfo.svg",
+    "component_id": "fc:FcInfo",
     "aliases": [
       "fc",
       "info"
@@ -2379,8 +2379,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcInspection.svg",
-    "component_id": "Icon.FcInspection",
+    "src_svg": "fc/FcInspection.svg",
+    "component_id": "fc:FcInspection",
     "aliases": [
       "fc",
       "inspection"
@@ -2394,8 +2394,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcIntegratedWebcam.svg",
-    "component_id": "Icon.FcIntegratedWebcam",
+    "src_svg": "fc/FcIntegratedWebcam.svg",
+    "component_id": "fc:FcIntegratedWebcam",
     "aliases": [
       "fc",
       "integrated",
@@ -2410,8 +2410,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcInternal.svg",
-    "component_id": "Icon.FcInternal",
+    "src_svg": "fc/FcInternal.svg",
+    "component_id": "fc:FcInternal",
     "aliases": [
       "fc",
       "internal"
@@ -2423,8 +2423,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcInvite.svg",
-    "component_id": "Icon.FcInvite",
+    "src_svg": "fc/FcInvite.svg",
+    "component_id": "fc:FcInvite",
     "aliases": [
       "fc",
       "invite"
@@ -2438,8 +2438,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcIpad.svg",
-    "component_id": "Icon.FcIpad",
+    "src_svg": "fc/FcIpad.svg",
+    "component_id": "fc:FcIpad",
     "aliases": [
       "fc",
       "ipad"
@@ -2452,8 +2452,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcIphone.svg",
-    "component_id": "Icon.FcIphone",
+    "src_svg": "fc/FcIphone.svg",
+    "component_id": "fc:FcIphone",
     "aliases": [
       "fc",
       "iphone"
@@ -2466,8 +2466,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcKey.svg",
-    "component_id": "Icon.FcKey",
+    "src_svg": "fc/FcKey.svg",
+    "component_id": "fc:FcKey",
     "aliases": [
       "fc",
       "key"
@@ -2479,8 +2479,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcKindle.svg",
-    "component_id": "Icon.FcKindle",
+    "src_svg": "fc/FcKindle.svg",
+    "component_id": "fc:FcKindle",
     "aliases": [
       "fc",
       "kindle"
@@ -2494,8 +2494,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLandscape.svg",
-    "component_id": "Icon.FcLandscape",
+    "src_svg": "fc/FcLandscape.svg",
+    "component_id": "fc:FcLandscape",
     "aliases": [
       "fc",
       "landscape"
@@ -2509,8 +2509,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLeave.svg",
-    "component_id": "Icon.FcLeave",
+    "src_svg": "fc/FcLeave.svg",
+    "component_id": "fc:FcLeave",
     "aliases": [
       "fc",
       "leave"
@@ -2524,8 +2524,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLeft.svg",
-    "component_id": "Icon.FcLeft",
+    "src_svg": "fc/FcLeft.svg",
+    "component_id": "fc:FcLeft",
     "aliases": [
       "fc",
       "left"
@@ -2536,8 +2536,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLeftDown.svg",
-    "component_id": "Icon.FcLeftDown",
+    "src_svg": "fc/FcLeftDown.svg",
+    "component_id": "fc:FcLeftDown",
     "aliases": [
       "fc",
       "left",
@@ -2549,8 +2549,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLeftDown2.svg",
-    "component_id": "Icon.FcLeftDown2",
+    "src_svg": "fc/FcLeftDown2.svg",
+    "component_id": "fc:FcLeftDown2",
     "aliases": [
       "fc",
       "left",
@@ -2563,8 +2563,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLeftUp.svg",
-    "component_id": "Icon.FcLeftUp",
+    "src_svg": "fc/FcLeftUp.svg",
+    "component_id": "fc:FcLeftUp",
     "aliases": [
       "fc",
       "left",
@@ -2576,8 +2576,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLeftUp2.svg",
-    "component_id": "Icon.FcLeftUp2",
+    "src_svg": "fc/FcLeftUp2.svg",
+    "component_id": "fc:FcLeftUp2",
     "aliases": [
       "fc",
       "left",
@@ -2590,8 +2590,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLibrary.svg",
-    "component_id": "Icon.FcLibrary",
+    "src_svg": "fc/FcLibrary.svg",
+    "component_id": "fc:FcLibrary",
     "aliases": [
       "fc",
       "library"
@@ -2603,8 +2603,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLightAtTheEndOfTunnel.svg",
-    "component_id": "Icon.FcLightAtTheEndOfTunnel",
+    "src_svg": "fc/FcLightAtTheEndOfTunnel.svg",
+    "component_id": "fc:FcLightAtTheEndOfTunnel",
     "aliases": [
       "fc",
       "light",
@@ -2621,8 +2621,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLike.svg",
-    "component_id": "Icon.FcLike",
+    "src_svg": "fc/FcLike.svg",
+    "component_id": "fc:FcLike",
     "aliases": [
       "fc",
       "like"
@@ -2633,8 +2633,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLikePlaceholder.svg",
-    "component_id": "Icon.FcLikePlaceholder",
+    "src_svg": "fc/FcLikePlaceholder.svg",
+    "component_id": "fc:FcLikePlaceholder",
     "aliases": [
       "fc",
       "like",
@@ -2646,8 +2646,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLineChart.svg",
-    "component_id": "Icon.FcLineChart",
+    "src_svg": "fc/FcLineChart.svg",
+    "component_id": "fc:FcLineChart",
     "aliases": [
       "fc",
       "line",
@@ -2660,8 +2660,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLink.svg",
-    "component_id": "Icon.FcLink",
+    "src_svg": "fc/FcLink.svg",
+    "component_id": "fc:FcLink",
     "aliases": [
       "fc",
       "link"
@@ -2673,8 +2673,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLinux.svg",
-    "component_id": "Icon.FcLinux",
+    "src_svg": "fc/FcLinux.svg",
+    "component_id": "fc:FcLinux",
     "aliases": [
       "fc",
       "linux"
@@ -2690,8 +2690,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcList.svg",
-    "component_id": "Icon.FcList",
+    "src_svg": "fc/FcList.svg",
+    "component_id": "fc:FcList",
     "aliases": [
       "fc",
       "list"
@@ -2702,8 +2702,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLock.svg",
-    "component_id": "Icon.FcLock",
+    "src_svg": "fc/FcLock.svg",
+    "component_id": "fc:FcLock",
     "aliases": [
       "fc",
       "lock"
@@ -2716,8 +2716,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLockLandscape.svg",
-    "component_id": "Icon.FcLockLandscape",
+    "src_svg": "fc/FcLockLandscape.svg",
+    "component_id": "fc:FcLockLandscape",
     "aliases": [
       "fc",
       "lock",
@@ -2731,8 +2731,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLockPortrait.svg",
-    "component_id": "Icon.FcLockPortrait",
+    "src_svg": "fc/FcLockPortrait.svg",
+    "component_id": "fc:FcLockPortrait",
     "aliases": [
       "fc",
       "lock",
@@ -2746,8 +2746,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLowBattery.svg",
-    "component_id": "Icon.FcLowBattery",
+    "src_svg": "fc/FcLowBattery.svg",
+    "component_id": "fc:FcLowBattery",
     "aliases": [
       "fc",
       "low",
@@ -2760,8 +2760,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcLowPriority.svg",
-    "component_id": "Icon.FcLowPriority",
+    "src_svg": "fc/FcLowPriority.svg",
+    "component_id": "fc:FcLowPriority",
     "aliases": [
       "fc",
       "low",
@@ -2774,8 +2774,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMakeDecision.svg",
-    "component_id": "Icon.FcMakeDecision",
+    "src_svg": "fc/FcMakeDecision.svg",
+    "component_id": "fc:FcMakeDecision",
     "aliases": [
       "fc",
       "make",
@@ -2788,8 +2788,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcManager.svg",
-    "component_id": "Icon.FcManager",
+    "src_svg": "fc/FcManager.svg",
+    "component_id": "fc:FcManager",
     "aliases": [
       "fc",
       "manager"
@@ -2805,8 +2805,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMediumPriority.svg",
-    "component_id": "Icon.FcMediumPriority",
+    "src_svg": "fc/FcMediumPriority.svg",
+    "component_id": "fc:FcMediumPriority",
     "aliases": [
       "fc",
       "medium",
@@ -2819,8 +2819,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMenu.svg",
-    "component_id": "Icon.FcMenu",
+    "src_svg": "fc/FcMenu.svg",
+    "component_id": "fc:FcMenu",
     "aliases": [
       "fc",
       "menu"
@@ -2831,8 +2831,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMiddleBattery.svg",
-    "component_id": "Icon.FcMiddleBattery",
+    "src_svg": "fc/FcMiddleBattery.svg",
+    "component_id": "fc:FcMiddleBattery",
     "aliases": [
       "fc",
       "middle",
@@ -2845,8 +2845,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMindMap.svg",
-    "component_id": "Icon.FcMindMap",
+    "src_svg": "fc/FcMindMap.svg",
+    "component_id": "fc:FcMindMap",
     "aliases": [
       "fc",
       "mind",
@@ -2860,8 +2860,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMinus.svg",
-    "component_id": "Icon.FcMinus",
+    "src_svg": "fc/FcMinus.svg",
+    "component_id": "fc:FcMinus",
     "aliases": [
       "fc",
       "minus"
@@ -2872,8 +2872,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMissedCall.svg",
-    "component_id": "Icon.FcMissedCall",
+    "src_svg": "fc/FcMissedCall.svg",
+    "component_id": "fc:FcMissedCall",
     "aliases": [
       "fc",
       "missed",
@@ -2886,8 +2886,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMms.svg",
-    "component_id": "Icon.FcMms",
+    "src_svg": "fc/FcMms.svg",
+    "component_id": "fc:FcMms",
     "aliases": [
       "fc",
       "mms"
@@ -2900,8 +2900,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMoneyTransfer.svg",
-    "component_id": "Icon.FcMoneyTransfer",
+    "src_svg": "fc/FcMoneyTransfer.svg",
+    "component_id": "fc:FcMoneyTransfer",
     "aliases": [
       "fc",
       "money",
@@ -2916,8 +2916,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMultipleCameras.svg",
-    "component_id": "Icon.FcMultipleCameras",
+    "src_svg": "fc/FcMultipleCameras.svg",
+    "component_id": "fc:FcMultipleCameras",
     "aliases": [
       "fc",
       "multiple",
@@ -2933,8 +2933,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMultipleDevices.svg",
-    "component_id": "Icon.FcMultipleDevices",
+    "src_svg": "fc/FcMultipleDevices.svg",
+    "component_id": "fc:FcMultipleDevices",
     "aliases": [
       "fc",
       "multiple",
@@ -2951,8 +2951,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMultipleInputs.svg",
-    "component_id": "Icon.FcMultipleInputs",
+    "src_svg": "fc/FcMultipleInputs.svg",
+    "component_id": "fc:FcMultipleInputs",
     "aliases": [
       "fc",
       "multiple",
@@ -2965,8 +2965,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMultipleSmartphones.svg",
-    "component_id": "Icon.FcMultipleSmartphones",
+    "src_svg": "fc/FcMultipleSmartphones.svg",
+    "component_id": "fc:FcMultipleSmartphones",
     "aliases": [
       "fc",
       "multiple",
@@ -2983,8 +2983,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcMusic.svg",
-    "component_id": "Icon.FcMusic",
+    "src_svg": "fc/FcMusic.svg",
+    "component_id": "fc:FcMusic",
     "aliases": [
       "fc",
       "music"
@@ -2995,8 +2995,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNegativeDynamic.svg",
-    "component_id": "Icon.FcNegativeDynamic",
+    "src_svg": "fc/FcNegativeDynamic.svg",
+    "component_id": "fc:FcNegativeDynamic",
     "aliases": [
       "fc",
       "negative",
@@ -3009,8 +3009,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNeutralDecision.svg",
-    "component_id": "Icon.FcNeutralDecision",
+    "src_svg": "fc/FcNeutralDecision.svg",
+    "component_id": "fc:FcNeutralDecision",
     "aliases": [
       "fc",
       "neutral",
@@ -3023,8 +3023,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNeutralTrading.svg",
-    "component_id": "Icon.FcNeutralTrading",
+    "src_svg": "fc/FcNeutralTrading.svg",
+    "component_id": "fc:FcNeutralTrading",
     "aliases": [
       "fc",
       "neutral",
@@ -3037,8 +3037,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNews.svg",
-    "component_id": "Icon.FcNews",
+    "src_svg": "fc/FcNews.svg",
+    "component_id": "fc:FcNews",
     "aliases": [
       "fc",
       "news"
@@ -3050,8 +3050,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNext.svg",
-    "component_id": "Icon.FcNext",
+    "src_svg": "fc/FcNext.svg",
+    "component_id": "fc:FcNext",
     "aliases": [
       "fc",
       "next"
@@ -3062,8 +3062,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNfcSign.svg",
-    "component_id": "Icon.FcNfcSign",
+    "src_svg": "fc/FcNfcSign.svg",
+    "component_id": "fc:FcNfcSign",
     "aliases": [
       "fc",
       "nfc",
@@ -3075,8 +3075,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNightLandscape.svg",
-    "component_id": "Icon.FcNightLandscape",
+    "src_svg": "fc/FcNightLandscape.svg",
+    "component_id": "fc:FcNightLandscape",
     "aliases": [
       "fc",
       "night",
@@ -3090,8 +3090,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNightPortrait.svg",
-    "component_id": "Icon.FcNightPortrait",
+    "src_svg": "fc/FcNightPortrait.svg",
+    "component_id": "fc:FcNightPortrait",
     "aliases": [
       "fc",
       "night",
@@ -3106,8 +3106,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNoIdea.svg",
-    "component_id": "Icon.FcNoIdea",
+    "src_svg": "fc/FcNoIdea.svg",
+    "component_id": "fc:FcNoIdea",
     "aliases": [
       "fc",
       "no",
@@ -3123,8 +3123,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNoVideo.svg",
-    "component_id": "Icon.FcNoVideo",
+    "src_svg": "fc/FcNoVideo.svg",
+    "component_id": "fc:FcNoVideo",
     "aliases": [
       "fc",
       "no",
@@ -3138,8 +3138,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNook.svg",
-    "component_id": "Icon.FcNook",
+    "src_svg": "fc/FcNook.svg",
+    "component_id": "fc:FcNook",
     "aliases": [
       "fc",
       "nook"
@@ -3153,8 +3153,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNumericalSorting12.svg",
-    "component_id": "Icon.FcNumericalSorting12",
+    "src_svg": "fc/FcNumericalSorting12.svg",
+    "component_id": "fc:FcNumericalSorting12",
     "aliases": [
       "fc",
       "numerical",
@@ -3168,8 +3168,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcNumericalSorting21.svg",
-    "component_id": "Icon.FcNumericalSorting21",
+    "src_svg": "fc/FcNumericalSorting21.svg",
+    "component_id": "fc:FcNumericalSorting21",
     "aliases": [
       "fc",
       "numerical",
@@ -3183,8 +3183,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcOk.svg",
-    "component_id": "Icon.FcOk",
+    "src_svg": "fc/FcOk.svg",
+    "component_id": "fc:FcOk",
     "aliases": [
       "fc",
       "ok"
@@ -3196,8 +3196,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcOldTimeCamera.svg",
-    "component_id": "Icon.FcOldTimeCamera",
+    "src_svg": "fc/FcOldTimeCamera.svg",
+    "component_id": "fc:FcOldTimeCamera",
     "aliases": [
       "fc",
       "old",
@@ -3215,8 +3215,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcOnlineSupport.svg",
-    "component_id": "Icon.FcOnlineSupport",
+    "src_svg": "fc/FcOnlineSupport.svg",
+    "component_id": "fc:FcOnlineSupport",
     "aliases": [
       "fc",
       "online",
@@ -3233,8 +3233,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcOpenedFolder.svg",
-    "component_id": "Icon.FcOpenedFolder",
+    "src_svg": "fc/FcOpenedFolder.svg",
+    "component_id": "fc:FcOpenedFolder",
     "aliases": [
       "fc",
       "opened",
@@ -3247,8 +3247,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcOrgUnit.svg",
-    "component_id": "Icon.FcOrgUnit",
+    "src_svg": "fc/FcOrgUnit.svg",
+    "component_id": "fc:FcOrgUnit",
     "aliases": [
       "fc",
       "org",
@@ -3262,8 +3262,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcOrganization.svg",
-    "component_id": "Icon.FcOrganization",
+    "src_svg": "fc/FcOrganization.svg",
+    "component_id": "fc:FcOrganization",
     "aliases": [
       "fc",
       "organization"
@@ -3276,8 +3276,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcOvertime.svg",
-    "component_id": "Icon.FcOvertime",
+    "src_svg": "fc/FcOvertime.svg",
+    "component_id": "fc:FcOvertime",
     "aliases": [
       "fc",
       "overtime"
@@ -3293,8 +3293,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPackage.svg",
-    "component_id": "Icon.FcPackage",
+    "src_svg": "fc/FcPackage.svg",
+    "component_id": "fc:FcPackage",
     "aliases": [
       "fc",
       "package"
@@ -3306,8 +3306,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPaid.svg",
-    "component_id": "Icon.FcPaid",
+    "src_svg": "fc/FcPaid.svg",
+    "component_id": "fc:FcPaid",
     "aliases": [
       "fc",
       "paid"
@@ -3322,8 +3322,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPanorama.svg",
-    "component_id": "Icon.FcPanorama",
+    "src_svg": "fc/FcPanorama.svg",
+    "component_id": "fc:FcPanorama",
     "aliases": [
       "fc",
       "panorama"
@@ -3338,8 +3338,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcParallelTasks.svg",
-    "component_id": "Icon.FcParallelTasks",
+    "src_svg": "fc/FcParallelTasks.svg",
+    "component_id": "fc:FcParallelTasks",
     "aliases": [
       "fc",
       "parallel",
@@ -3353,8 +3353,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPhone.svg",
-    "component_id": "Icon.FcPhone",
+    "src_svg": "fc/FcPhone.svg",
+    "component_id": "fc:FcPhone",
     "aliases": [
       "fc",
       "phone"
@@ -3365,8 +3365,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPhoneAndroid.svg",
-    "component_id": "Icon.FcPhoneAndroid",
+    "src_svg": "fc/FcPhoneAndroid.svg",
+    "component_id": "fc:FcPhoneAndroid",
     "aliases": [
       "fc",
       "phone",
@@ -3380,8 +3380,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPhotoReel.svg",
-    "component_id": "Icon.FcPhotoReel",
+    "src_svg": "fc/FcPhotoReel.svg",
+    "component_id": "fc:FcPhotoReel",
     "aliases": [
       "fc",
       "photo",
@@ -3396,8 +3396,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPicture.svg",
-    "component_id": "Icon.FcPicture",
+    "src_svg": "fc/FcPicture.svg",
+    "component_id": "fc:FcPicture",
     "aliases": [
       "fc",
       "picture"
@@ -3411,8 +3411,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPieChart.svg",
-    "component_id": "Icon.FcPieChart",
+    "src_svg": "fc/FcPieChart.svg",
+    "component_id": "fc:FcPieChart",
     "aliases": [
       "fc",
       "pie",
@@ -3426,8 +3426,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPlanner.svg",
-    "component_id": "Icon.FcPlanner",
+    "src_svg": "fc/FcPlanner.svg",
+    "component_id": "fc:FcPlanner",
     "aliases": [
       "fc",
       "planner"
@@ -3441,8 +3441,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPlus.svg",
-    "component_id": "Icon.FcPlus",
+    "src_svg": "fc/FcPlus.svg",
+    "component_id": "fc:FcPlus",
     "aliases": [
       "fc",
       "plus"
@@ -3454,8 +3454,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPodiumWithAudience.svg",
-    "component_id": "Icon.FcPodiumWithAudience",
+    "src_svg": "fc/FcPodiumWithAudience.svg",
+    "component_id": "fc:FcPodiumWithAudience",
     "aliases": [
       "fc",
       "podium",
@@ -3470,8 +3470,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPodiumWithSpeaker.svg",
-    "component_id": "Icon.FcPodiumWithSpeaker",
+    "src_svg": "fc/FcPodiumWithSpeaker.svg",
+    "component_id": "fc:FcPodiumWithSpeaker",
     "aliases": [
       "fc",
       "podium",
@@ -3487,8 +3487,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPodiumWithoutSpeaker.svg",
-    "component_id": "Icon.FcPodiumWithoutSpeaker",
+    "src_svg": "fc/FcPodiumWithoutSpeaker.svg",
+    "component_id": "fc:FcPodiumWithoutSpeaker",
     "aliases": [
       "fc",
       "podium",
@@ -3502,8 +3502,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPortraitMode.svg",
-    "component_id": "Icon.FcPortraitMode",
+    "src_svg": "fc/FcPortraitMode.svg",
+    "component_id": "fc:FcPortraitMode",
     "aliases": [
       "fc",
       "portrait",
@@ -3520,8 +3520,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPositiveDynamic.svg",
-    "component_id": "Icon.FcPositiveDynamic",
+    "src_svg": "fc/FcPositiveDynamic.svg",
+    "component_id": "fc:FcPositiveDynamic",
     "aliases": [
       "fc",
       "positive",
@@ -3534,8 +3534,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPrevious.svg",
-    "component_id": "Icon.FcPrevious",
+    "src_svg": "fc/FcPrevious.svg",
+    "component_id": "fc:FcPrevious",
     "aliases": [
       "fc",
       "previous"
@@ -3546,8 +3546,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPrint.svg",
-    "component_id": "Icon.FcPrint",
+    "src_svg": "fc/FcPrint.svg",
+    "component_id": "fc:FcPrint",
     "aliases": [
       "fc",
       "print"
@@ -3563,8 +3563,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPrivacy.svg",
-    "component_id": "Icon.FcPrivacy",
+    "src_svg": "fc/FcPrivacy.svg",
+    "component_id": "fc:FcPrivacy",
     "aliases": [
       "fc",
       "privacy"
@@ -3579,8 +3579,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcProcess.svg",
-    "component_id": "Icon.FcProcess",
+    "src_svg": "fc/FcProcess.svg",
+    "component_id": "fc:FcProcess",
     "aliases": [
       "fc",
       "process"
@@ -3591,8 +3591,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcPuzzle.svg",
-    "component_id": "Icon.FcPuzzle",
+    "src_svg": "fc/FcPuzzle.svg",
+    "component_id": "fc:FcPuzzle",
     "aliases": [
       "fc",
       "puzzle"
@@ -3603,8 +3603,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcQuestions.svg",
-    "component_id": "Icon.FcQuestions",
+    "src_svg": "fc/FcQuestions.svg",
+    "component_id": "fc:FcQuestions",
     "aliases": [
       "fc",
       "questions"
@@ -3618,8 +3618,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRadarPlot.svg",
-    "component_id": "Icon.FcRadarPlot",
+    "src_svg": "fc/FcRadarPlot.svg",
+    "component_id": "fc:FcRadarPlot",
     "aliases": [
       "fc",
       "radar",
@@ -3632,8 +3632,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRating.svg",
-    "component_id": "Icon.FcRating",
+    "src_svg": "fc/FcRating.svg",
+    "component_id": "fc:FcRating",
     "aliases": [
       "fc",
       "rating"
@@ -3645,8 +3645,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRatings.svg",
-    "component_id": "Icon.FcRatings",
+    "src_svg": "fc/FcRatings.svg",
+    "component_id": "fc:FcRatings",
     "aliases": [
       "fc",
       "ratings"
@@ -3660,8 +3660,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcReading.svg",
-    "component_id": "Icon.FcReading",
+    "src_svg": "fc/FcReading.svg",
+    "component_id": "fc:FcReading",
     "aliases": [
       "fc",
       "reading"
@@ -3674,8 +3674,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcReadingEbook.svg",
-    "component_id": "Icon.FcReadingEbook",
+    "src_svg": "fc/FcReadingEbook.svg",
+    "component_id": "fc:FcReadingEbook",
     "aliases": [
       "fc",
       "reading",
@@ -3690,8 +3690,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcReddit.svg",
-    "component_id": "Icon.FcReddit",
+    "src_svg": "fc/FcReddit.svg",
+    "component_id": "fc:FcReddit",
     "aliases": [
       "fc",
       "reddit"
@@ -3704,8 +3704,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRedo.svg",
-    "component_id": "Icon.FcRedo",
+    "src_svg": "fc/FcRedo.svg",
+    "component_id": "fc:FcRedo",
     "aliases": [
       "fc",
       "redo"
@@ -3716,8 +3716,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRefresh.svg",
-    "component_id": "Icon.FcRefresh",
+    "src_svg": "fc/FcRefresh.svg",
+    "component_id": "fc:FcRefresh",
     "aliases": [
       "fc",
       "refresh"
@@ -3728,8 +3728,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRegisteredTrademark.svg",
-    "component_id": "Icon.FcRegisteredTrademark",
+    "src_svg": "fc/FcRegisteredTrademark.svg",
+    "component_id": "fc:FcRegisteredTrademark",
     "aliases": [
       "fc",
       "registered",
@@ -3742,8 +3742,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRemoveImage.svg",
-    "component_id": "Icon.FcRemoveImage",
+    "src_svg": "fc/FcRemoveImage.svg",
+    "component_id": "fc:FcRemoveImage",
     "aliases": [
       "fc",
       "remove",
@@ -3759,8 +3759,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcReuse.svg",
-    "component_id": "Icon.FcReuse",
+    "src_svg": "fc/FcReuse.svg",
+    "component_id": "fc:FcReuse",
     "aliases": [
       "fc",
       "reuse"
@@ -3775,8 +3775,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRight.svg",
-    "component_id": "Icon.FcRight",
+    "src_svg": "fc/FcRight.svg",
+    "component_id": "fc:FcRight",
     "aliases": [
       "fc",
       "right"
@@ -3787,8 +3787,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRightDown.svg",
-    "component_id": "Icon.FcRightDown",
+    "src_svg": "fc/FcRightDown.svg",
+    "component_id": "fc:FcRightDown",
     "aliases": [
       "fc",
       "right",
@@ -3800,8 +3800,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRightDown2.svg",
-    "component_id": "Icon.FcRightDown2",
+    "src_svg": "fc/FcRightDown2.svg",
+    "component_id": "fc:FcRightDown2",
     "aliases": [
       "fc",
       "right",
@@ -3814,8 +3814,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRightUp.svg",
-    "component_id": "Icon.FcRightUp",
+    "src_svg": "fc/FcRightUp.svg",
+    "component_id": "fc:FcRightUp",
     "aliases": [
       "fc",
       "right",
@@ -3827,8 +3827,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRightUp2.svg",
-    "component_id": "Icon.FcRightUp2",
+    "src_svg": "fc/FcRightUp2.svg",
+    "component_id": "fc:FcRightUp2",
     "aliases": [
       "fc",
       "right",
@@ -3841,8 +3841,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRotateCamera.svg",
-    "component_id": "Icon.FcRotateCamera",
+    "src_svg": "fc/FcRotateCamera.svg",
+    "component_id": "fc:FcRotateCamera",
     "aliases": [
       "fc",
       "rotate",
@@ -3855,8 +3855,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRotateToLandscape.svg",
-    "component_id": "Icon.FcRotateToLandscape",
+    "src_svg": "fc/FcRotateToLandscape.svg",
+    "component_id": "fc:FcRotateToLandscape",
     "aliases": [
       "fc",
       "rotate",
@@ -3871,8 +3871,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRotateToPortrait.svg",
-    "component_id": "Icon.FcRotateToPortrait",
+    "src_svg": "fc/FcRotateToPortrait.svg",
+    "component_id": "fc:FcRotateToPortrait",
     "aliases": [
       "fc",
       "rotate",
@@ -3887,8 +3887,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRuler.svg",
-    "component_id": "Icon.FcRuler",
+    "src_svg": "fc/FcRuler.svg",
+    "component_id": "fc:FcRuler",
     "aliases": [
       "fc",
       "ruler"
@@ -3900,8 +3900,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcRules.svg",
-    "component_id": "Icon.FcRules",
+    "src_svg": "fc/FcRules.svg",
+    "component_id": "fc:FcRules",
     "aliases": [
       "fc",
       "rules"
@@ -3914,8 +3914,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSafe.svg",
-    "component_id": "Icon.FcSafe",
+    "src_svg": "fc/FcSafe.svg",
+    "component_id": "fc:FcSafe",
     "aliases": [
       "fc",
       "safe"
@@ -3931,8 +3931,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSalesPerformance.svg",
-    "component_id": "Icon.FcSalesPerformance",
+    "src_svg": "fc/FcSalesPerformance.svg",
+    "component_id": "fc:FcSalesPerformance",
     "aliases": [
       "fc",
       "sales",
@@ -3945,8 +3945,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcScatterPlot.svg",
-    "component_id": "Icon.FcScatterPlot",
+    "src_svg": "fc/FcScatterPlot.svg",
+    "component_id": "fc:FcScatterPlot",
     "aliases": [
       "fc",
       "scatter",
@@ -3959,8 +3959,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSearch.svg",
-    "component_id": "Icon.FcSearch",
+    "src_svg": "fc/FcSearch.svg",
+    "component_id": "fc:FcSearch",
     "aliases": [
       "fc",
       "search"
@@ -3974,8 +3974,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSelfServiceKiosk.svg",
-    "component_id": "Icon.FcSelfServiceKiosk",
+    "src_svg": "fc/FcSelfServiceKiosk.svg",
+    "component_id": "fc:FcSelfServiceKiosk",
     "aliases": [
       "fc",
       "self",
@@ -3991,8 +3991,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSelfie.svg",
-    "component_id": "Icon.FcSelfie",
+    "src_svg": "fc/FcSelfie.svg",
+    "component_id": "fc:FcSelfie",
     "aliases": [
       "fc",
       "selfie"
@@ -4008,8 +4008,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSerialTasks.svg",
-    "component_id": "Icon.FcSerialTasks",
+    "src_svg": "fc/FcSerialTasks.svg",
+    "component_id": "fc:FcSerialTasks",
     "aliases": [
       "fc",
       "serial",
@@ -4023,8 +4023,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcServiceMark.svg",
-    "component_id": "Icon.FcServiceMark",
+    "src_svg": "fc/FcServiceMark.svg",
+    "component_id": "fc:FcServiceMark",
     "aliases": [
       "fc",
       "service",
@@ -4037,8 +4037,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcServices.svg",
-    "component_id": "Icon.FcServices",
+    "src_svg": "fc/FcServices.svg",
+    "component_id": "fc:FcServices",
     "aliases": [
       "fc",
       "services"
@@ -4050,8 +4050,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSettings.svg",
-    "component_id": "Icon.FcSettings",
+    "src_svg": "fc/FcSettings.svg",
+    "component_id": "fc:FcSettings",
     "aliases": [
       "fc",
       "settings"
@@ -4063,8 +4063,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcShare.svg",
-    "component_id": "Icon.FcShare",
+    "src_svg": "fc/FcShare.svg",
+    "component_id": "fc:FcShare",
     "aliases": [
       "fc",
       "share"
@@ -4076,8 +4076,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcShipped.svg",
-    "component_id": "Icon.FcShipped",
+    "src_svg": "fc/FcShipped.svg",
+    "component_id": "fc:FcShipped",
     "aliases": [
       "fc",
       "shipped"
@@ -4092,8 +4092,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcShop.svg",
-    "component_id": "Icon.FcShop",
+    "src_svg": "fc/FcShop.svg",
+    "component_id": "fc:FcShop",
     "aliases": [
       "fc",
       "shop"
@@ -4109,8 +4109,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSignature.svg",
-    "component_id": "Icon.FcSignature",
+    "src_svg": "fc/FcSignature.svg",
+    "component_id": "fc:FcSignature",
     "aliases": [
       "fc",
       "signature"
@@ -4122,8 +4122,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSimCard.svg",
-    "component_id": "Icon.FcSimCard",
+    "src_svg": "fc/FcSimCard.svg",
+    "component_id": "fc:FcSimCard",
     "aliases": [
       "fc",
       "sim",
@@ -4137,8 +4137,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSimCardChip.svg",
-    "component_id": "Icon.FcSimCardChip",
+    "src_svg": "fc/FcSimCardChip.svg",
+    "component_id": "fc:FcSimCardChip",
     "aliases": [
       "fc",
       "sim",
@@ -4152,8 +4152,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSlrBackSide.svg",
-    "component_id": "Icon.FcSlrBackSide",
+    "src_svg": "fc/FcSlrBackSide.svg",
+    "component_id": "fc:FcSlrBackSide",
     "aliases": [
       "fc",
       "slr",
@@ -4171,8 +4171,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSmartphoneTablet.svg",
-    "component_id": "Icon.FcSmartphoneTablet",
+    "src_svg": "fc/FcSmartphoneTablet.svg",
+    "component_id": "fc:FcSmartphoneTablet",
     "aliases": [
       "fc",
       "smartphone",
@@ -4189,8 +4189,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSms.svg",
-    "component_id": "Icon.FcSms",
+    "src_svg": "fc/FcSms.svg",
+    "component_id": "fc:FcSms",
     "aliases": [
       "fc",
       "sms"
@@ -4202,8 +4202,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSoundRecordingCopyright.svg",
-    "component_id": "Icon.FcSoundRecordingCopyright",
+    "src_svg": "fc/FcSoundRecordingCopyright.svg",
+    "component_id": "fc:FcSoundRecordingCopyright",
     "aliases": [
       "fc",
       "sound",
@@ -4217,8 +4217,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSpeaker.svg",
-    "component_id": "Icon.FcSpeaker",
+    "src_svg": "fc/FcSpeaker.svg",
+    "component_id": "fc:FcSpeaker",
     "aliases": [
       "fc",
       "speaker"
@@ -4233,8 +4233,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSportsMode.svg",
-    "component_id": "Icon.FcSportsMode",
+    "src_svg": "fc/FcSportsMode.svg",
+    "component_id": "fc:FcSportsMode",
     "aliases": [
       "fc",
       "sports",
@@ -4248,8 +4248,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcStackOfPhotos.svg",
-    "component_id": "Icon.FcStackOfPhotos",
+    "src_svg": "fc/FcStackOfPhotos.svg",
+    "component_id": "fc:FcStackOfPhotos",
     "aliases": [
       "fc",
       "stack",
@@ -4267,8 +4267,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcStart.svg",
-    "component_id": "Icon.FcStart",
+    "src_svg": "fc/FcStart.svg",
+    "component_id": "fc:FcStart",
     "aliases": [
       "fc",
       "start"
@@ -4280,8 +4280,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcStatistics.svg",
-    "component_id": "Icon.FcStatistics",
+    "src_svg": "fc/FcStatistics.svg",
+    "component_id": "fc:FcStatistics",
     "aliases": [
       "fc",
       "statistics"
@@ -4295,8 +4295,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSteam.svg",
-    "component_id": "Icon.FcSteam",
+    "src_svg": "fc/FcSteam.svg",
+    "component_id": "fc:FcSteam",
     "aliases": [
       "fc",
       "steam"
@@ -4308,8 +4308,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcStumbleupon.svg",
-    "component_id": "Icon.FcStumbleupon",
+    "src_svg": "fc/FcStumbleupon.svg",
+    "component_id": "fc:FcStumbleupon",
     "aliases": [
       "fc",
       "stumbleupon"
@@ -4321,8 +4321,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSupport.svg",
-    "component_id": "Icon.FcSupport",
+    "src_svg": "fc/FcSupport.svg",
+    "component_id": "fc:FcSupport",
     "aliases": [
       "fc",
       "support"
@@ -4333,8 +4333,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSurvey.svg",
-    "component_id": "Icon.FcSurvey",
+    "src_svg": "fc/FcSurvey.svg",
+    "component_id": "fc:FcSurvey",
     "aliases": [
       "fc",
       "survey"
@@ -4349,8 +4349,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSwitchCamera.svg",
-    "component_id": "Icon.FcSwitchCamera",
+    "src_svg": "fc/FcSwitchCamera.svg",
+    "component_id": "fc:FcSwitchCamera",
     "aliases": [
       "fc",
       "switch",
@@ -4363,8 +4363,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcSynchronize.svg",
-    "component_id": "Icon.FcSynchronize",
+    "src_svg": "fc/FcSynchronize.svg",
+    "component_id": "fc:FcSynchronize",
     "aliases": [
       "fc",
       "synchronize"
@@ -4376,8 +4376,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcTabletAndroid.svg",
-    "component_id": "Icon.FcTabletAndroid",
+    "src_svg": "fc/FcTabletAndroid.svg",
+    "component_id": "fc:FcTabletAndroid",
     "aliases": [
       "fc",
       "tablet",
@@ -4391,8 +4391,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcTemplate.svg",
-    "component_id": "Icon.FcTemplate",
+    "src_svg": "fc/FcTemplate.svg",
+    "component_id": "fc:FcTemplate",
     "aliases": [
       "fc",
       "template"
@@ -4405,8 +4405,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcTimeline.svg",
-    "component_id": "Icon.FcTimeline",
+    "src_svg": "fc/FcTimeline.svg",
+    "component_id": "fc:FcTimeline",
     "aliases": [
       "fc",
       "timeline"
@@ -4421,8 +4421,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcTodoList.svg",
-    "component_id": "Icon.FcTodoList",
+    "src_svg": "fc/FcTodoList.svg",
+    "component_id": "fc:FcTodoList",
     "aliases": [
       "fc",
       "todo",
@@ -4435,8 +4435,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcTouchscreenSmartphone.svg",
-    "component_id": "Icon.FcTouchscreenSmartphone",
+    "src_svg": "fc/FcTouchscreenSmartphone.svg",
+    "component_id": "fc:FcTouchscreenSmartphone",
     "aliases": [
       "fc",
       "touchscreen",
@@ -4453,8 +4453,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcTrademark.svg",
-    "component_id": "Icon.FcTrademark",
+    "src_svg": "fc/FcTrademark.svg",
+    "component_id": "fc:FcTrademark",
     "aliases": [
       "fc",
       "trademark"
@@ -4466,8 +4466,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcTreeStructure.svg",
-    "component_id": "Icon.FcTreeStructure",
+    "src_svg": "fc/FcTreeStructure.svg",
+    "component_id": "fc:FcTreeStructure",
     "aliases": [
       "fc",
       "tree",
@@ -4481,8 +4481,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcTwoSmartphones.svg",
-    "component_id": "Icon.FcTwoSmartphones",
+    "src_svg": "fc/FcTwoSmartphones.svg",
+    "component_id": "fc:FcTwoSmartphones",
     "aliases": [
       "fc",
       "two",
@@ -4499,8 +4499,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcUndo.svg",
-    "component_id": "Icon.FcUndo",
+    "src_svg": "fc/FcUndo.svg",
+    "component_id": "fc:FcUndo",
     "aliases": [
       "fc",
       "undo"
@@ -4511,8 +4511,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcUnlock.svg",
-    "component_id": "Icon.FcUnlock",
+    "src_svg": "fc/FcUnlock.svg",
+    "component_id": "fc:FcUnlock",
     "aliases": [
       "fc",
       "unlock"
@@ -4525,8 +4525,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcUp.svg",
-    "component_id": "Icon.FcUp",
+    "src_svg": "fc/FcUp.svg",
+    "component_id": "fc:FcUp",
     "aliases": [
       "fc",
       "up"
@@ -4537,8 +4537,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcUpLeft.svg",
-    "component_id": "Icon.FcUpLeft",
+    "src_svg": "fc/FcUpLeft.svg",
+    "component_id": "fc:FcUpLeft",
     "aliases": [
       "fc",
       "up",
@@ -4550,8 +4550,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcUpRight.svg",
-    "component_id": "Icon.FcUpRight",
+    "src_svg": "fc/FcUpRight.svg",
+    "component_id": "fc:FcUpRight",
     "aliases": [
       "fc",
       "up",
@@ -4563,8 +4563,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcUpload.svg",
-    "component_id": "Icon.FcUpload",
+    "src_svg": "fc/FcUpload.svg",
+    "component_id": "fc:FcUpload",
     "aliases": [
       "fc",
       "upload"
@@ -4575,8 +4575,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcUsb.svg",
-    "component_id": "Icon.FcUsb",
+    "src_svg": "fc/FcUsb.svg",
+    "component_id": "fc:FcUsb",
     "aliases": [
       "fc",
       "usb"
@@ -4588,8 +4588,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcVideoCall.svg",
-    "component_id": "Icon.FcVideoCall",
+    "src_svg": "fc/FcVideoCall.svg",
+    "component_id": "fc:FcVideoCall",
     "aliases": [
       "fc",
       "video",
@@ -4602,8 +4602,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcVideoFile.svg",
-    "component_id": "Icon.FcVideoFile",
+    "src_svg": "fc/FcVideoFile.svg",
+    "component_id": "fc:FcVideoFile",
     "aliases": [
       "fc",
       "video",
@@ -4617,8 +4617,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcVideoProjector.svg",
-    "component_id": "Icon.FcVideoProjector",
+    "src_svg": "fc/FcVideoProjector.svg",
+    "component_id": "fc:FcVideoProjector",
     "aliases": [
       "fc",
       "video",
@@ -4634,8 +4634,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcViewDetails.svg",
-    "component_id": "Icon.FcViewDetails",
+    "src_svg": "fc/FcViewDetails.svg",
+    "component_id": "fc:FcViewDetails",
     "aliases": [
       "fc",
       "view",
@@ -4648,8 +4648,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcVip.svg",
-    "component_id": "Icon.FcVip",
+    "src_svg": "fc/FcVip.svg",
+    "component_id": "fc:FcVip",
     "aliases": [
       "fc",
       "vip"
@@ -4661,8 +4661,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcVlc.svg",
-    "component_id": "Icon.FcVlc",
+    "src_svg": "fc/FcVlc.svg",
+    "component_id": "fc:FcVlc",
     "aliases": [
       "fc",
       "vlc"
@@ -4675,8 +4675,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcVoicePresentation.svg",
-    "component_id": "Icon.FcVoicePresentation",
+    "src_svg": "fc/FcVoicePresentation.svg",
+    "component_id": "fc:FcVoicePresentation",
     "aliases": [
       "fc",
       "voice",
@@ -4690,8 +4690,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcVoicemail.svg",
-    "component_id": "Icon.FcVoicemail",
+    "src_svg": "fc/FcVoicemail.svg",
+    "component_id": "fc:FcVoicemail",
     "aliases": [
       "fc",
       "voicemail"
@@ -4702,8 +4702,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcWebcam.svg",
-    "component_id": "Icon.FcWebcam",
+    "src_svg": "fc/FcWebcam.svg",
+    "component_id": "fc:FcWebcam",
     "aliases": [
       "fc",
       "webcam"
@@ -4717,8 +4717,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcWiFiLogo.svg",
-    "component_id": "Icon.FcWiFiLogo",
+    "src_svg": "fc/FcWiFiLogo.svg",
+    "component_id": "fc:FcWiFiLogo",
     "aliases": [
       "fc",
       "wi",
@@ -4732,8 +4732,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcWikipedia.svg",
-    "component_id": "Icon.FcWikipedia",
+    "src_svg": "fc/FcWikipedia.svg",
+    "component_id": "fc:FcWikipedia",
     "aliases": [
       "fc",
       "wikipedia"
@@ -4745,8 +4745,8 @@
     ]
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fc/FcWorkflow.svg",
-    "component_id": "Icon.FcWorkflow",
+    "src_svg": "fc/FcWorkflow.svg",
+    "component_id": "fc:FcWorkflow",
     "aliases": [
       "fc",
       "workflow"

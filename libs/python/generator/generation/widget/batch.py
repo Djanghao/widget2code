@@ -210,7 +210,7 @@ class BatchGenerator:
 
             # 5. Save retrieval SVGs
             svg_source_dirs = [
-                Path(__file__).parents[4] / "libs" / "packages" / "icons" / "svg"
+                Path(__file__).parents[4] / "libs" / "js" / "icons" / "svg"
             ]
 
             per_icon = icon_debug.get('retrieval', {}).get('perIcon', [])

@@ -1,6 +1,6 @@
 {
-  "/home/darren/llm-widget-factory/assets/rx/RxAccessibility.svg": {
-    "component_id": "Icon.RxAccessibility",
+  "rx/RxAccessibility.svg": {
+    "component_id": "rx:RxAccessibility",
     "aliases": [
       "rx",
       "accessibility"
@@ -8,8 +8,8 @@
     "colors": [],
     "caption": "a black and white image of a person in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxActivityLog.svg": {
-    "component_id": "Icon.RxActivityLog",
+  "rx/RxActivityLog.svg": {
+    "component_id": "rx:RxActivityLog",
     "aliases": [
       "rx",
       "activity",
@@ -18,8 +18,8 @@
     "colors": [],
     "caption": "a black and white image of a list of items"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAlignBaseline.svg": {
-    "component_id": "Icon.RxAlignBaseline",
+  "rx/RxAlignBaseline.svg": {
+    "component_id": "rx:RxAlignBaseline",
     "aliases": [
       "rx",
       "align",
@@ -28,8 +28,8 @@
     "colors": [],
     "caption": "the letter a is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAlignBottom.svg": {
-    "component_id": "Icon.RxAlignBottom",
+  "rx/RxAlignBottom.svg": {
+    "component_id": "rx:RxAlignBottom",
     "aliases": [
       "rx",
       "align",
@@ -38,8 +38,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white icon"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAlignCenterHorizontally.svg": {
-    "component_id": "Icon.RxAlignCenterHorizontally",
+  "rx/RxAlignCenterHorizontally.svg": {
+    "component_id": "rx:RxAlignCenterHorizontally",
     "aliases": [
       "rx",
       "align",
@@ -49,8 +49,8 @@
     "colors": [],
     "caption": "a black and white icon of a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAlignCenterVertically.svg": {
-    "component_id": "Icon.RxAlignCenterVertically",
+  "rx/RxAlignCenterVertically.svg": {
+    "component_id": "rx:RxAlignCenterVertically",
     "aliases": [
       "rx",
       "align",
@@ -60,8 +60,8 @@
     "colors": [],
     "caption": "a black and white icon of a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAlignLeft.svg": {
-    "component_id": "Icon.RxAlignLeft",
+  "rx/RxAlignLeft.svg": {
+    "component_id": "rx:RxAlignLeft",
     "aliases": [
       "rx",
       "align",
@@ -70,8 +70,8 @@
     "colors": [],
     "caption": "a black and white image of a door handle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAlignRight.svg": {
-    "component_id": "Icon.RxAlignRight",
+  "rx/RxAlignRight.svg": {
+    "component_id": "rx:RxAlignRight",
     "aliases": [
       "rx",
       "align",
@@ -80,8 +80,8 @@
     "colors": [],
     "caption": "a black and white image of a door handle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAlignTop.svg": {
-    "component_id": "Icon.RxAlignTop",
+  "rx/RxAlignTop.svg": {
+    "component_id": "rx:RxAlignTop",
     "aliases": [
       "rx",
       "align",
@@ -90,8 +90,8 @@
     "colors": [],
     "caption": "a black and white image of the letter t"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAllSides.svg": {
-    "component_id": "Icon.RxAllSides",
+  "rx/RxAllSides.svg": {
+    "component_id": "rx:RxAllSides",
     "aliases": [
       "rx",
       "all",
@@ -100,8 +100,8 @@
     "colors": [],
     "caption": "a black and white image of four arrows pointing in different directions"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAngle.svg": {
-    "component_id": "Icon.RxAngle",
+  "rx/RxAngle.svg": {
+    "component_id": "rx:RxAngle",
     "aliases": [
       "rx",
       "angle"
@@ -109,8 +109,8 @@
     "colors": [],
     "caption": "a triangle with dots on it in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxArchive.svg": {
-    "component_id": "Icon.RxArchive",
+  "rx/RxArchive.svg": {
+    "component_id": "rx:RxArchive",
     "aliases": [
       "rx",
       "archive"
@@ -118,8 +118,8 @@
     "colors": [],
     "caption": "a black and white icon of a box on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxArrowBottomLeft.svg": {
-    "component_id": "Icon.RxArrowBottomLeft",
+  "rx/RxArrowBottomLeft.svg": {
+    "component_id": "rx:RxArrowBottomLeft",
     "aliases": [
       "rx",
       "arrow",
@@ -129,8 +129,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxArrowBottomRight.svg": {
-    "component_id": "Icon.RxArrowBottomRight",
+  "rx/RxArrowBottomRight.svg": {
+    "component_id": "rx:RxArrowBottomRight",
     "aliases": [
       "rx",
       "arrow",
@@ -140,8 +140,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxArrowDown.svg": {
-    "component_id": "Icon.RxArrowDown",
+  "rx/RxArrowDown.svg": {
+    "component_id": "rx:RxArrowDown",
     "aliases": [
       "rx",
       "arrow",
@@ -150,8 +150,8 @@
     "colors": [],
     "caption": "an arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxArrowLeft.svg": {
-    "component_id": "Icon.RxArrowLeft",
+  "rx/RxArrowLeft.svg": {
+    "component_id": "rx:RxArrowLeft",
     "aliases": [
       "rx",
       "arrow",
@@ -160,8 +160,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxArrowRight.svg": {
-    "component_id": "Icon.RxArrowRight",
+  "rx/RxArrowRight.svg": {
+    "component_id": "rx:RxArrowRight",
     "aliases": [
       "rx",
       "arrow",
@@ -170,8 +170,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxArrowTopLeft.svg": {
-    "component_id": "Icon.RxArrowTopLeft",
+  "rx/RxArrowTopLeft.svg": {
+    "component_id": "rx:RxArrowTopLeft",
     "aliases": [
       "rx",
       "arrow",
@@ -181,8 +181,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxArrowTopRight.svg": {
-    "component_id": "Icon.RxArrowTopRight",
+  "rx/RxArrowTopRight.svg": {
+    "component_id": "rx:RxArrowTopRight",
     "aliases": [
       "rx",
       "arrow",
@@ -192,8 +192,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxArrowUp.svg": {
-    "component_id": "Icon.RxArrowUp",
+  "rx/RxArrowUp.svg": {
+    "component_id": "rx:RxArrowUp",
     "aliases": [
       "rx",
       "arrow",
@@ -202,8 +202,8 @@
     "colors": [],
     "caption": "an arrow pointing up on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAspectRatio.svg": {
-    "component_id": "Icon.RxAspectRatio",
+  "rx/RxAspectRatio.svg": {
+    "component_id": "rx:RxAspectRatio",
     "aliases": [
       "rx",
       "aspect",
@@ -212,8 +212,8 @@
     "colors": [],
     "caption": "a black and white square with dots on it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxAvatar.svg": {
-    "component_id": "Icon.RxAvatar",
+  "rx/RxAvatar.svg": {
+    "component_id": "rx:RxAvatar",
     "aliases": [
       "rx",
       "avatar"
@@ -221,8 +221,8 @@
     "colors": [],
     "caption": "a black and white image of a person in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBackpack.svg": {
-    "component_id": "Icon.RxBackpack",
+  "rx/RxBackpack.svg": {
+    "component_id": "rx:RxBackpack",
     "aliases": [
       "rx",
       "backpack"
@@ -230,8 +230,8 @@
     "colors": [],
     "caption": "a briefcase icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBadge.svg": {
-    "component_id": "Icon.RxBadge",
+  "rx/RxBadge.svg": {
+    "component_id": "rx:RxBadge",
     "aliases": [
       "rx",
       "badge"
@@ -239,8 +239,8 @@
     "colors": [],
     "caption": "a black and white icon of a link"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBarChart.svg": {
-    "component_id": "Icon.RxBarChart",
+  "rx/RxBarChart.svg": {
+    "component_id": "rx:RxBarChart",
     "aliases": [
       "rx",
       "bar",
@@ -249,8 +249,8 @@
     "colors": [],
     "caption": "a black and white icon of a bar graph"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBell.svg": {
-    "component_id": "Icon.RxBell",
+  "rx/RxBell.svg": {
+    "component_id": "rx:RxBell",
     "aliases": [
       "rx",
       "bell"
@@ -258,8 +258,8 @@
     "colors": [],
     "caption": "a bell icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBlendingMode.svg": {
-    "component_id": "Icon.RxBlendingMode",
+  "rx/RxBlendingMode.svg": {
+    "component_id": "rx:RxBlendingMode",
     "aliases": [
       "rx",
       "blending",
@@ -268,8 +268,8 @@
     "colors": [],
     "caption": "a black and white image of a drop of water"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBookmark.svg": {
-    "component_id": "Icon.RxBookmark",
+  "rx/RxBookmark.svg": {
+    "component_id": "rx:RxBookmark",
     "aliases": [
       "rx",
       "bookmark"
@@ -277,8 +277,8 @@
     "colors": [],
     "caption": "a black and white icon of a bookmark"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBookmarkFilled.svg": {
-    "component_id": "Icon.RxBookmarkFilled",
+  "rx/RxBookmarkFilled.svg": {
+    "component_id": "rx:RxBookmarkFilled",
     "aliases": [
       "rx",
       "bookmark",
@@ -287,8 +287,8 @@
     "colors": [],
     "caption": "a black and white icon of a bookmark"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderAll.svg": {
-    "component_id": "Icon.RxBorderAll",
+  "rx/RxBorderAll.svg": {
+    "component_id": "rx:RxBorderAll",
     "aliases": [
       "rx",
       "border",
@@ -297,8 +297,8 @@
     "colors": [],
     "caption": "a square icon with dots on it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderBottom.svg": {
-    "component_id": "Icon.RxBorderBottom",
+  "rx/RxBorderBottom.svg": {
+    "component_id": "rx:RxBorderBottom",
     "aliases": [
       "rx",
       "border",
@@ -307,8 +307,8 @@
     "colors": [],
     "caption": "a black and white image of a square with dots"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderDashed.svg": {
-    "component_id": "Icon.RxBorderDashed",
+  "rx/RxBorderDashed.svg": {
+    "component_id": "rx:RxBorderDashed",
     "aliases": [
       "rx",
       "border",
@@ -317,8 +317,8 @@
     "colors": [],
     "caption": "four black dots are shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderDotted.svg": {
-    "component_id": "Icon.RxBorderDotted",
+  "rx/RxBorderDotted.svg": {
+    "component_id": "rx:RxBorderDotted",
     "aliases": [
       "rx",
       "border",
@@ -327,8 +327,8 @@
     "colors": [],
     "caption": "four black dots on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderLeft.svg": {
-    "component_id": "Icon.RxBorderLeft",
+  "rx/RxBorderLeft.svg": {
+    "component_id": "rx:RxBorderLeft",
     "aliases": [
       "rx",
       "border",
@@ -337,8 +337,8 @@
     "colors": [],
     "caption": "a black and white image of a square with dots"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderNone.svg": {
-    "component_id": "Icon.RxBorderNone",
+  "rx/RxBorderNone.svg": {
+    "component_id": "rx:RxBorderNone",
     "aliases": [
       "rx",
       "border",
@@ -347,8 +347,8 @@
     "colors": [],
     "caption": "an image of a square with black dots on it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderRight.svg": {
-    "component_id": "Icon.RxBorderRight",
+  "rx/RxBorderRight.svg": {
+    "component_id": "rx:RxBorderRight",
     "aliases": [
       "rx",
       "border",
@@ -357,8 +357,8 @@
     "colors": [],
     "caption": "a black and white image of a square with dots"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderSolid.svg": {
-    "component_id": "Icon.RxBorderSolid",
+  "rx/RxBorderSolid.svg": {
+    "component_id": "rx:RxBorderSolid",
     "aliases": [
       "rx",
       "border",
@@ -367,8 +367,8 @@
     "colors": [],
     "caption": "an image of a black line on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderSplit.svg": {
-    "component_id": "Icon.RxBorderSplit",
+  "rx/RxBorderSplit.svg": {
+    "component_id": "rx:RxBorderSplit",
     "aliases": [
       "rx",
       "border",
@@ -377,8 +377,8 @@
     "colors": [],
     "caption": "a black and white square with dots on it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderStyle.svg": {
-    "component_id": "Icon.RxBorderStyle",
+  "rx/RxBorderStyle.svg": {
+    "component_id": "rx:RxBorderStyle",
     "aliases": [
       "rx",
       "border",
@@ -387,8 +387,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a drum set"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderTop.svg": {
-    "component_id": "Icon.RxBorderTop",
+  "rx/RxBorderTop.svg": {
+    "component_id": "rx:RxBorderTop",
     "aliases": [
       "rx",
       "border",
@@ -397,8 +397,8 @@
     "colors": [],
     "caption": "a black and white image of a square with dots"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBorderWidth.svg": {
-    "component_id": "Icon.RxBorderWidth",
+  "rx/RxBorderWidth.svg": {
+    "component_id": "rx:RxBorderWidth",
     "aliases": [
       "rx",
       "border",
@@ -407,8 +407,8 @@
     "colors": [],
     "caption": "a black and white striped flag on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBox.svg": {
-    "component_id": "Icon.RxBox",
+  "rx/RxBox.svg": {
+    "component_id": "rx:RxBox",
     "aliases": [
       "rx",
       "box"
@@ -416,8 +416,8 @@
     "colors": [],
     "caption": "a square black and white icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxBoxModel.svg": {
-    "component_id": "Icon.RxBoxModel",
+  "rx/RxBoxModel.svg": {
+    "component_id": "rx:RxBoxModel",
     "aliases": [
       "rx",
       "box",
@@ -426,8 +426,8 @@
     "colors": [],
     "caption": "a square black and white icon with a square in the middle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxButton.svg": {
-    "component_id": "Icon.RxButton",
+  "rx/RxButton.svg": {
+    "component_id": "rx:RxButton",
     "aliases": [
       "rx",
       "button"
@@ -435,8 +435,8 @@
     "colors": [],
     "caption": "a black and white icon with three dots"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCalendar.svg": {
-    "component_id": "Icon.RxCalendar",
+  "rx/RxCalendar.svg": {
+    "component_id": "rx:RxCalendar",
     "aliases": [
       "rx",
       "calendar"
@@ -444,8 +444,8 @@
     "colors": [],
     "caption": "a calendar icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCamera.svg": {
-    "component_id": "Icon.RxCamera",
+  "rx/RxCamera.svg": {
+    "component_id": "rx:RxCamera",
     "aliases": [
       "rx",
       "camera"
@@ -453,8 +453,8 @@
     "colors": [],
     "caption": "a camera icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCardStack.svg": {
-    "component_id": "Icon.RxCardStack",
+  "rx/RxCardStack.svg": {
+    "component_id": "rx:RxCardStack",
     "aliases": [
       "rx",
       "card",
@@ -463,8 +463,8 @@
     "colors": [],
     "caption": "a black and white icon of a computer monitor"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCardStackMinus.svg": {
-    "component_id": "Icon.RxCardStackMinus",
+  "rx/RxCardStackMinus.svg": {
+    "component_id": "rx:RxCardStackMinus",
     "aliases": [
       "rx",
       "card",
@@ -474,8 +474,8 @@
     "colors": [],
     "caption": "a black and white icon of a computer"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCardStackPlus.svg": {
-    "component_id": "Icon.RxCardStackPlus",
+  "rx/RxCardStackPlus.svg": {
+    "component_id": "rx:RxCardStackPlus",
     "aliases": [
       "rx",
       "card",
@@ -485,8 +485,8 @@
     "colors": [],
     "caption": "a black and white icon of a computer with a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCaretDown.svg": {
-    "component_id": "Icon.RxCaretDown",
+  "rx/RxCaretDown.svg": {
+    "component_id": "rx:RxCaretDown",
     "aliases": [
       "rx",
       "caret",
@@ -495,8 +495,8 @@
     "colors": [],
     "caption": "a black and white image of the letter v"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCaretLeft.svg": {
-    "component_id": "Icon.RxCaretLeft",
+  "rx/RxCaretLeft.svg": {
+    "component_id": "rx:RxCaretLeft",
     "aliases": [
       "rx",
       "caret",
@@ -505,8 +505,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCaretRight.svg": {
-    "component_id": "Icon.RxCaretRight",
+  "rx/RxCaretRight.svg": {
+    "component_id": "rx:RxCaretRight",
     "aliases": [
       "rx",
       "caret",
@@ -515,8 +515,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCaretSort.svg": {
-    "component_id": "Icon.RxCaretSort",
+  "rx/RxCaretSort.svg": {
+    "component_id": "rx:RxCaretSort",
     "aliases": [
       "rx",
       "caret",
@@ -525,8 +525,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCaretUp.svg": {
-    "component_id": "Icon.RxCaretUp",
+  "rx/RxCaretUp.svg": {
+    "component_id": "rx:RxCaretUp",
     "aliases": [
       "rx",
       "caret",
@@ -535,8 +535,8 @@
     "colors": [],
     "caption": "a black and white icon of a triangle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxChatBubble.svg": {
-    "component_id": "Icon.RxChatBubble",
+  "rx/RxChatBubble.svg": {
+    "component_id": "rx:RxChatBubble",
     "aliases": [
       "rx",
       "chat",
@@ -545,8 +545,8 @@
     "colors": [],
     "caption": "a black and white image of a speech bubble"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCheck.svg": {
-    "component_id": "Icon.RxCheck",
+  "rx/RxCheck.svg": {
+    "component_id": "rx:RxCheck",
     "aliases": [
       "rx",
       "check"
@@ -554,8 +554,8 @@
     "colors": [],
     "caption": "a black check mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCheckCircled.svg": {
-    "component_id": "Icon.RxCheckCircled",
+  "rx/RxCheckCircled.svg": {
+    "component_id": "rx:RxCheckCircled",
     "aliases": [
       "rx",
       "check",
@@ -564,8 +564,8 @@
     "colors": [],
     "caption": "a black and white check mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCheckbox.svg": {
-    "component_id": "Icon.RxCheckbox",
+  "rx/RxCheckbox.svg": {
+    "component_id": "rx:RxCheckbox",
     "aliases": [
       "rx",
       "checkbox"
@@ -573,8 +573,8 @@
     "colors": [],
     "caption": "a check mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxChevronDown.svg": {
-    "component_id": "Icon.RxChevronDown",
+  "rx/RxChevronDown.svg": {
+    "component_id": "rx:RxChevronDown",
     "aliases": [
       "rx",
       "chevron",
@@ -583,8 +583,8 @@
     "colors": [],
     "caption": "a black and white image of the letter v"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxChevronLeft.svg": {
-    "component_id": "Icon.RxChevronLeft",
+  "rx/RxChevronLeft.svg": {
+    "component_id": "rx:RxChevronLeft",
     "aliases": [
       "rx",
       "chevron",
@@ -593,8 +593,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxChevronRight.svg": {
-    "component_id": "Icon.RxChevronRight",
+  "rx/RxChevronRight.svg": {
+    "component_id": "rx:RxChevronRight",
     "aliases": [
       "rx",
       "chevron",
@@ -603,8 +603,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxChevronUp.svg": {
-    "component_id": "Icon.RxChevronUp",
+  "rx/RxChevronUp.svg": {
+    "component_id": "rx:RxChevronUp",
     "aliases": [
       "rx",
       "chevron",
@@ -613,8 +613,8 @@
     "colors": [],
     "caption": "a black and white icon of a triangle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCircle.svg": {
-    "component_id": "Icon.RxCircle",
+  "rx/RxCircle.svg": {
+    "component_id": "rx:RxCircle",
     "aliases": [
       "rx",
       "circle"
@@ -622,8 +622,8 @@
     "colors": [],
     "caption": "a black circle is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCircleBackslash.svg": {
-    "component_id": "Icon.RxCircleBackslash",
+  "rx/RxCircleBackslash.svg": {
+    "component_id": "rx:RxCircleBackslash",
     "aliases": [
       "rx",
       "circle",
@@ -632,8 +632,8 @@
     "colors": [],
     "caption": "a black and white image of a no entry sign"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxClipboard.svg": {
-    "component_id": "Icon.RxClipboard",
+  "rx/RxClipboard.svg": {
+    "component_id": "rx:RxClipboard",
     "aliases": [
       "rx",
       "clipboard"
@@ -641,8 +641,8 @@
     "colors": [],
     "caption": "a black and white image of a clipboard on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxClipboardCopy.svg": {
-    "component_id": "Icon.RxClipboardCopy",
+  "rx/RxClipboardCopy.svg": {
+    "component_id": "rx:RxClipboardCopy",
     "aliases": [
       "rx",
       "clipboard",
@@ -651,8 +651,8 @@
     "colors": [],
     "caption": "a black and white icon of a clipboard with dots"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxClock.svg": {
-    "component_id": "Icon.RxClock",
+  "rx/RxClock.svg": {
+    "component_id": "rx:RxClock",
     "aliases": [
       "rx",
       "clock"
@@ -660,8 +660,8 @@
     "colors": [],
     "caption": "a black and white clock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCode.svg": {
-    "component_id": "Icon.RxCode",
+  "rx/RxCode.svg": {
+    "component_id": "rx:RxCode",
     "aliases": [
       "rx",
       "code"
@@ -669,8 +669,8 @@
     "colors": [],
     "caption": "a black and white icon with two arrows pointing in the same direction"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCodesandboxLogo.svg": {
-    "component_id": "Icon.RxCodesandboxLogo",
+  "rx/RxCodesandboxLogo.svg": {
+    "component_id": "rx:RxCodesandboxLogo",
     "aliases": [
       "rx",
       "codesandbox",
@@ -679,8 +679,8 @@
     "colors": [],
     "caption": "a black and white icon of a cube"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxColorWheel.svg": {
-    "component_id": "Icon.RxColorWheel",
+  "rx/RxColorWheel.svg": {
+    "component_id": "rx:RxColorWheel",
     "aliases": [
       "rx",
       "color",
@@ -689,8 +689,8 @@
     "colors": [],
     "caption": "wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel of fortune wheel"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxColumnSpacing.svg": {
-    "component_id": "Icon.RxColumnSpacing",
+  "rx/RxColumnSpacing.svg": {
+    "component_id": "rx:RxColumnSpacing",
     "aliases": [
       "rx",
       "column",
@@ -699,8 +699,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxColumns.svg": {
-    "component_id": "Icon.RxColumns",
+  "rx/RxColumns.svg": {
+    "component_id": "rx:RxColumns",
     "aliases": [
       "rx",
       "columns"
@@ -708,8 +708,8 @@
     "colors": [],
     "caption": "a black and white image of four black and white stripes"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCommit.svg": {
-    "component_id": "Icon.RxCommit",
+  "rx/RxCommit.svg": {
+    "component_id": "rx:RxCommit",
     "aliases": [
       "rx",
       "commit"
@@ -717,8 +717,8 @@
     "colors": [],
     "caption": "a black and white image of an electrical symbol"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxComponent1.svg": {
-    "component_id": "Icon.RxComponent1",
+  "rx/RxComponent1.svg": {
+    "component_id": "rx:RxComponent1",
     "aliases": [
       "rx",
       "component",
@@ -727,8 +727,8 @@
     "colors": [],
     "caption": "a black and white logo with four squares"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxComponent2.svg": {
-    "component_id": "Icon.RxComponent2",
+  "rx/RxComponent2.svg": {
+    "component_id": "rx:RxComponent2",
     "aliases": [
       "rx",
       "component",
@@ -737,8 +737,8 @@
     "colors": [],
     "caption": "a black and white icon with four squares"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxComponentBoolean.svg": {
-    "component_id": "Icon.RxComponentBoolean",
+  "rx/RxComponentBoolean.svg": {
+    "component_id": "rx:RxComponentBoolean",
     "aliases": [
       "rx",
       "component",
@@ -747,8 +747,8 @@
     "colors": [],
     "caption": "a black and white icon of a diamond shape"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxComponentInstance.svg": {
-    "component_id": "Icon.RxComponentInstance",
+  "rx/RxComponentInstance.svg": {
+    "component_id": "rx:RxComponentInstance",
     "aliases": [
       "rx",
       "component",
@@ -757,8 +757,8 @@
     "colors": [],
     "caption": "a black and white image of a diamond symbol"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxComponentNone.svg": {
-    "component_id": "Icon.RxComponentNone",
+  "rx/RxComponentNone.svg": {
+    "component_id": "rx:RxComponentNone",
     "aliases": [
       "rx",
       "component",
@@ -767,8 +767,8 @@
     "colors": [],
     "caption": "a black and white icon of a square with two lines"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxComponentPlaceholder.svg": {
-    "component_id": "Icon.RxComponentPlaceholder",
+  "rx/RxComponentPlaceholder.svg": {
+    "component_id": "rx:RxComponentPlaceholder",
     "aliases": [
       "rx",
       "component",
@@ -777,8 +777,8 @@
     "colors": [],
     "caption": "a black and white drawing of a square with dots"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxContainer.svg": {
-    "component_id": "Icon.RxContainer",
+  "rx/RxContainer.svg": {
+    "component_id": "rx:RxContainer",
     "aliases": [
       "rx",
       "container"
@@ -786,8 +786,8 @@
     "colors": [],
     "caption": "a black and white icon with dots on it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCookie.svg": {
-    "component_id": "Icon.RxCookie",
+  "rx/RxCookie.svg": {
+    "component_id": "rx:RxCookie",
     "aliases": [
       "rx",
       "cookie"
@@ -795,8 +795,8 @@
     "colors": [],
     "caption": "a black and white image of a cookie with sprinkles"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCopy.svg": {
-    "component_id": "Icon.RxCopy",
+  "rx/RxCopy.svg": {
+    "component_id": "rx:RxCopy",
     "aliases": [
       "rx",
       "copy"
@@ -804,8 +804,8 @@
     "colors": [],
     "caption": "two square icons on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCornerBottomLeft.svg": {
-    "component_id": "Icon.RxCornerBottomLeft",
+  "rx/RxCornerBottomLeft.svg": {
+    "component_id": "rx:RxCornerBottomLeft",
     "aliases": [
       "rx",
       "corner",
@@ -815,8 +815,8 @@
     "colors": [],
     "caption": "a black and white image of the letter l"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCornerBottomRight.svg": {
-    "component_id": "Icon.RxCornerBottomRight",
+  "rx/RxCornerBottomRight.svg": {
+    "component_id": "rx:RxCornerBottomRight",
     "aliases": [
       "rx",
       "corner",
@@ -826,8 +826,8 @@
     "colors": [],
     "caption": "a black and white image of the letter l"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCornerTopLeft.svg": {
-    "component_id": "Icon.RxCornerTopLeft",
+  "rx/RxCornerTopLeft.svg": {
+    "component_id": "rx:RxCornerTopLeft",
     "aliases": [
       "rx",
       "corner",
@@ -837,8 +837,8 @@
     "colors": [],
     "caption": "a black and white drawing of a curved line"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCornerTopRight.svg": {
-    "component_id": "Icon.RxCornerTopRight",
+  "rx/RxCornerTopRight.svg": {
+    "component_id": "rx:RxCornerTopRight",
     "aliases": [
       "rx",
       "corner",
@@ -848,8 +848,8 @@
     "colors": [],
     "caption": "a black curved line on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCorners.svg": {
-    "component_id": "Icon.RxCorners",
+  "rx/RxCorners.svg": {
+    "component_id": "rx:RxCorners",
     "aliases": [
       "rx",
       "corners"
@@ -857,8 +857,8 @@
     "colors": [],
     "caption": "a black and white image of a camera lens"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCountdownTimer.svg": {
-    "component_id": "Icon.RxCountdownTimer",
+  "rx/RxCountdownTimer.svg": {
+    "component_id": "rx:RxCountdownTimer",
     "aliases": [
       "rx",
       "countdown",
@@ -867,8 +867,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCounterClockwiseClock.svg": {
-    "component_id": "Icon.RxCounterClockwiseClock",
+  "rx/RxCounterClockwiseClock.svg": {
+    "component_id": "rx:RxCounterClockwiseClock",
     "aliases": [
       "rx",
       "counter",
@@ -878,8 +878,8 @@
     "colors": [],
     "caption": "a black and white clock icon with an arrow"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCrop.svg": {
-    "component_id": "Icon.RxCrop",
+  "rx/RxCrop.svg": {
+    "component_id": "rx:RxCrop",
     "aliases": [
       "rx",
       "crop"
@@ -887,8 +887,8 @@
     "colors": [],
     "caption": "a black square with two lines in it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCross1.svg": {
-    "component_id": "Icon.RxCross1",
+  "rx/RxCross1.svg": {
+    "component_id": "rx:RxCross1",
     "aliases": [
       "rx",
       "cross",
@@ -897,8 +897,8 @@
     "colors": [],
     "caption": "a black and white icon of a crossed x"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCross2.svg": {
-    "component_id": "Icon.RxCross2",
+  "rx/RxCross2.svg": {
+    "component_id": "rx:RxCross2",
     "aliases": [
       "rx",
       "cross",
@@ -907,8 +907,8 @@
     "colors": [],
     "caption": "a black and white icon of a crossed x"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCrossCircled.svg": {
-    "component_id": "Icon.RxCrossCircled",
+  "rx/RxCrossCircled.svg": {
+    "component_id": "rx:RxCrossCircled",
     "aliases": [
       "rx",
       "cross",
@@ -917,8 +917,8 @@
     "colors": [],
     "caption": "a black and white image of an x in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCrosshair1.svg": {
-    "component_id": "Icon.RxCrosshair1",
+  "rx/RxCrosshair1.svg": {
+    "component_id": "rx:RxCrosshair1",
     "aliases": [
       "rx",
       "crosshair",
@@ -927,8 +927,8 @@
     "colors": [],
     "caption": "a crosshairs symbol on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCrosshair2.svg": {
-    "component_id": "Icon.RxCrosshair2",
+  "rx/RxCrosshair2.svg": {
+    "component_id": "rx:RxCrosshair2",
     "aliases": [
       "rx",
       "crosshair",
@@ -937,8 +937,8 @@
     "colors": [],
     "caption": "a crosshairs icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCrumpledPaper.svg": {
-    "component_id": "Icon.RxCrumpledPaper",
+  "rx/RxCrumpledPaper.svg": {
+    "component_id": "rx:RxCrumpledPaper",
     "aliases": [
       "rx",
       "crumpled",
@@ -947,8 +947,8 @@
     "colors": [],
     "caption": "a black and white line drawing of an object"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCube.svg": {
-    "component_id": "Icon.RxCube",
+  "rx/RxCube.svg": {
+    "component_id": "rx:RxCube",
     "aliases": [
       "rx",
       "cube"
@@ -956,8 +956,8 @@
     "colors": [],
     "caption": "a black and white icon of a cube"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCursorArrow.svg": {
-    "component_id": "Icon.RxCursorArrow",
+  "rx/RxCursorArrow.svg": {
+    "component_id": "rx:RxCursorArrow",
     "aliases": [
       "rx",
       "cursor",
@@ -966,8 +966,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxCursorText.svg": {
-    "component_id": "Icon.RxCursorText",
+  "rx/RxCursorText.svg": {
+    "component_id": "rx:RxCursorText",
     "aliases": [
       "rx",
       "cursor",
@@ -976,8 +976,8 @@
     "colors": [],
     "caption": "a black and white image of the letter y"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDash.svg": {
-    "component_id": "Icon.RxDash",
+  "rx/RxDash.svg": {
+    "component_id": "rx:RxDash",
     "aliases": [
       "rx",
       "dash"
@@ -985,8 +985,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDashboard.svg": {
-    "component_id": "Icon.RxDashboard",
+  "rx/RxDashboard.svg": {
+    "component_id": "rx:RxDashboard",
     "aliases": [
       "rx",
       "dashboard"
@@ -994,8 +994,8 @@
     "colors": [],
     "caption": "four square icons on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDesktop.svg": {
-    "component_id": "Icon.RxDesktop",
+  "rx/RxDesktop.svg": {
+    "component_id": "rx:RxDesktop",
     "aliases": [
       "rx",
       "desktop"
@@ -1003,8 +1003,8 @@
     "colors": [],
     "caption": "a computer monitor icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDimensions.svg": {
-    "component_id": "Icon.RxDimensions",
+  "rx/RxDimensions.svg": {
+    "component_id": "rx:RxDimensions",
     "aliases": [
       "rx",
       "dimensions"
@@ -1012,8 +1012,8 @@
     "colors": [],
     "caption": "a black and white image of a square with arrows"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDisc.svg": {
-    "component_id": "Icon.RxDisc",
+  "rx/RxDisc.svg": {
+    "component_id": "rx:RxDisc",
     "aliases": [
       "rx",
       "disc"
@@ -1021,8 +1021,8 @@
     "colors": [],
     "caption": "a black and white icon of a circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDiscordLogo.svg": {
-    "component_id": "Icon.RxDiscordLogo",
+  "rx/RxDiscordLogo.svg": {
+    "component_id": "rx:RxDiscordLogo",
     "aliases": [
       "rx",
       "discord",
@@ -1031,8 +1031,8 @@
     "colors": [],
     "caption": "a black and white image of a smiling face"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDividerHorizontal.svg": {
-    "component_id": "Icon.RxDividerHorizontal",
+  "rx/RxDividerHorizontal.svg": {
+    "component_id": "rx:RxDividerHorizontal",
     "aliases": [
       "rx",
       "divider",
@@ -1041,8 +1041,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDividerVertical.svg": {
-    "component_id": "Icon.RxDividerVertical",
+  "rx/RxDividerVertical.svg": {
+    "component_id": "rx:RxDividerVertical",
     "aliases": [
       "rx",
       "divider",
@@ -1051,8 +1051,8 @@
     "colors": [],
     "caption": "a black and white image of a skateboard"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDot.svg": {
-    "component_id": "Icon.RxDot",
+  "rx/RxDot.svg": {
+    "component_id": "rx:RxDot",
     "aliases": [
       "rx",
       "dot"
@@ -1060,8 +1060,8 @@
     "colors": [],
     "caption": "a black circle is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDotFilled.svg": {
-    "component_id": "Icon.RxDotFilled",
+  "rx/RxDotFilled.svg": {
+    "component_id": "rx:RxDotFilled",
     "aliases": [
       "rx",
       "dot",
@@ -1070,8 +1070,8 @@
     "colors": [],
     "caption": "a black circle is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDotsHorizontal.svg": {
-    "component_id": "Icon.RxDotsHorizontal",
+  "rx/RxDotsHorizontal.svg": {
+    "component_id": "rx:RxDotsHorizontal",
     "aliases": [
       "rx",
       "dots",
@@ -1080,8 +1080,8 @@
     "colors": [],
     "caption": "four black dots on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDotsVertical.svg": {
-    "component_id": "Icon.RxDotsVertical",
+  "rx/RxDotsVertical.svg": {
+    "component_id": "rx:RxDotsVertical",
     "aliases": [
       "rx",
       "dots",
@@ -1090,8 +1090,8 @@
     "colors": [],
     "caption": "four black dots on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDoubleArrowDown.svg": {
-    "component_id": "Icon.RxDoubleArrowDown",
+  "rx/RxDoubleArrowDown.svg": {
+    "component_id": "rx:RxDoubleArrowDown",
     "aliases": [
       "rx",
       "double",
@@ -1101,8 +1101,8 @@
     "colors": [],
     "caption": "a black and white check mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDoubleArrowLeft.svg": {
-    "component_id": "Icon.RxDoubleArrowLeft",
+  "rx/RxDoubleArrowLeft.svg": {
+    "component_id": "rx:RxDoubleArrowLeft",
     "aliases": [
       "rx",
       "double",
@@ -1112,8 +1112,8 @@
     "colors": [],
     "caption": "two arrows pointing in the same direction on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDoubleArrowRight.svg": {
-    "component_id": "Icon.RxDoubleArrowRight",
+  "rx/RxDoubleArrowRight.svg": {
+    "component_id": "rx:RxDoubleArrowRight",
     "aliases": [
       "rx",
       "double",
@@ -1123,8 +1123,8 @@
     "colors": [],
     "caption": "two arrows pointing in the same direction on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDoubleArrowUp.svg": {
-    "component_id": "Icon.RxDoubleArrowUp",
+  "rx/RxDoubleArrowUp.svg": {
+    "component_id": "rx:RxDoubleArrowUp",
     "aliases": [
       "rx",
       "double",
@@ -1134,8 +1134,8 @@
     "colors": [],
     "caption": "two arrows pointing in the same direction on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDownload.svg": {
-    "component_id": "Icon.RxDownload",
+  "rx/RxDownload.svg": {
+    "component_id": "rx:RxDownload",
     "aliases": [
       "rx",
       "download"
@@ -1143,8 +1143,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDragHandleDots1.svg": {
-    "component_id": "Icon.RxDragHandleDots1",
+  "rx/RxDragHandleDots1.svg": {
+    "component_id": "rx:RxDragHandleDots1",
     "aliases": [
       "rx",
       "drag",
@@ -1155,8 +1155,8 @@
     "colors": [],
     "caption": "a black and white dot pattern on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDragHandleDots2.svg": {
-    "component_id": "Icon.RxDragHandleDots2",
+  "rx/RxDragHandleDots2.svg": {
+    "component_id": "rx:RxDragHandleDots2",
     "aliases": [
       "rx",
       "drag",
@@ -1167,8 +1167,8 @@
     "colors": [],
     "caption": "four black dots on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDragHandleHorizontal.svg": {
-    "component_id": "Icon.RxDragHandleHorizontal",
+  "rx/RxDragHandleHorizontal.svg": {
+    "component_id": "rx:RxDragHandleHorizontal",
     "aliases": [
       "rx",
       "drag",
@@ -1178,8 +1178,8 @@
     "colors": [],
     "caption": "a black and white image of four lines on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDragHandleVertical.svg": {
-    "component_id": "Icon.RxDragHandleVertical",
+  "rx/RxDragHandleVertical.svg": {
+    "component_id": "rx:RxDragHandleVertical",
     "aliases": [
       "rx",
       "drag",
@@ -1189,8 +1189,8 @@
     "colors": [],
     "caption": "a black and white image of four bars"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDrawingPin.svg": {
-    "component_id": "Icon.RxDrawingPin",
+  "rx/RxDrawingPin.svg": {
+    "component_id": "rx:RxDrawingPin",
     "aliases": [
       "rx",
       "drawing",
@@ -1199,8 +1199,8 @@
     "colors": [],
     "caption": "a black and white icon of a hammer"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDrawingPinFilled.svg": {
-    "component_id": "Icon.RxDrawingPinFilled",
+  "rx/RxDrawingPinFilled.svg": {
+    "component_id": "rx:RxDrawingPinFilled",
     "aliases": [
       "rx",
       "drawing",
@@ -1210,8 +1210,8 @@
     "colors": [],
     "caption": "a black and white image of a spool"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxDropdownMenu.svg": {
-    "component_id": "Icon.RxDropdownMenu",
+  "rx/RxDropdownMenu.svg": {
+    "component_id": "rx:RxDropdownMenu",
     "aliases": [
       "rx",
       "dropdown",
@@ -1220,8 +1220,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing down"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxEnter.svg": {
-    "component_id": "Icon.RxEnter",
+  "rx/RxEnter.svg": {
+    "component_id": "rx:RxEnter",
     "aliases": [
       "rx",
       "enter"
@@ -1229,8 +1229,8 @@
     "colors": [],
     "caption": "a black and white arrow pointing to the right"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxEnterFullScreen.svg": {
-    "component_id": "Icon.RxEnterFullScreen",
+  "rx/RxEnterFullScreen.svg": {
+    "component_id": "rx:RxEnterFullScreen",
     "aliases": [
       "rx",
       "enter",
@@ -1240,8 +1240,8 @@
     "colors": [],
     "caption": "an image of two black squares on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxEnvelopeClosed.svg": {
-    "component_id": "Icon.RxEnvelopeClosed",
+  "rx/RxEnvelopeClosed.svg": {
+    "component_id": "rx:RxEnvelopeClosed",
     "aliases": [
       "rx",
       "envelope",
@@ -1250,8 +1250,8 @@
     "colors": [],
     "caption": "an envelope icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxEnvelopeOpen.svg": {
-    "component_id": "Icon.RxEnvelopeOpen",
+  "rx/RxEnvelopeOpen.svg": {
+    "component_id": "rx:RxEnvelopeOpen",
     "aliases": [
       "rx",
       "envelope",
@@ -1260,8 +1260,8 @@
     "colors": [],
     "caption": "an envelope icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxEraser.svg": {
-    "component_id": "Icon.RxEraser",
+  "rx/RxEraser.svg": {
+    "component_id": "rx:RxEraser",
     "aliases": [
       "rx",
       "eraser"
@@ -1269,8 +1269,8 @@
     "colors": [],
     "caption": "a black and white icon of a cell phone"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxExclamationTriangle.svg": {
-    "component_id": "Icon.RxExclamationTriangle",
+  "rx/RxExclamationTriangle.svg": {
+    "component_id": "rx:RxExclamationTriangle",
     "aliases": [
       "rx",
       "exclamation",
@@ -1279,8 +1279,8 @@
     "colors": [],
     "caption": "a black and white warning sign with an exclamation mark"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxExit.svg": {
-    "component_id": "Icon.RxExit",
+  "rx/RxExit.svg": {
+    "component_id": "rx:RxExit",
     "aliases": [
       "rx",
       "exit"
@@ -1288,8 +1288,8 @@
     "colors": [],
     "caption": "an arrow pointing in the direction of an exit"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxExitFullScreen.svg": {
-    "component_id": "Icon.RxExitFullScreen",
+  "rx/RxExitFullScreen.svg": {
+    "component_id": "rx:RxExitFullScreen",
     "aliases": [
       "rx",
       "exit",
@@ -1299,8 +1299,8 @@
     "colors": [],
     "caption": "a black and white image of a cross with four arrows"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxExternalLink.svg": {
-    "component_id": "Icon.RxExternalLink",
+  "rx/RxExternalLink.svg": {
+    "component_id": "rx:RxExternalLink",
     "aliases": [
       "rx",
       "external",
@@ -1309,8 +1309,8 @@
     "colors": [],
     "caption": "a black and white icon with an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxEyeClosed.svg": {
-    "component_id": "Icon.RxEyeClosed",
+  "rx/RxEyeClosed.svg": {
+    "component_id": "rx:RxEyeClosed",
     "aliases": [
       "rx",
       "eye",
@@ -1319,8 +1319,8 @@
     "colors": [],
     "caption": "a black and white icon of a pair of eyelashes"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxEyeNone.svg": {
-    "component_id": "Icon.RxEyeNone",
+  "rx/RxEyeNone.svg": {
+    "component_id": "rx:RxEyeNone",
     "aliases": [
       "rx",
       "eye",
@@ -1329,8 +1329,8 @@
     "colors": [],
     "caption": "a black and white image of a no symbol"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxEyeOpen.svg": {
-    "component_id": "Icon.RxEyeOpen",
+  "rx/RxEyeOpen.svg": {
+    "component_id": "rx:RxEyeOpen",
     "aliases": [
       "rx",
       "eye",
@@ -1339,8 +1339,8 @@
     "colors": [],
     "caption": "an eye icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFace.svg": {
-    "component_id": "Icon.RxFace",
+  "rx/RxFace.svg": {
+    "component_id": "rx:RxFace",
     "aliases": [
       "rx",
       "face"
@@ -1348,8 +1348,8 @@
     "colors": [],
     "caption": "a smiley face icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFigmaLogo.svg": {
-    "component_id": "Icon.RxFigmaLogo",
+  "rx/RxFigmaLogo.svg": {
+    "component_id": "rx:RxFigmaLogo",
     "aliases": [
       "rx",
       "figma",
@@ -1358,8 +1358,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter b"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFile.svg": {
-    "component_id": "Icon.RxFile",
+  "rx/RxFile.svg": {
+    "component_id": "rx:RxFile",
     "aliases": [
       "rx",
       "file"
@@ -1367,8 +1367,8 @@
     "colors": [],
     "caption": "a black and white icon of a document"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFileMinus.svg": {
-    "component_id": "Icon.RxFileMinus",
+  "rx/RxFileMinus.svg": {
+    "component_id": "rx:RxFileMinus",
     "aliases": [
       "rx",
       "file",
@@ -1377,8 +1377,8 @@
     "colors": [],
     "caption": "a file icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFilePlus.svg": {
-    "component_id": "Icon.RxFilePlus",
+  "rx/RxFilePlus.svg": {
+    "component_id": "rx:RxFilePlus",
     "aliases": [
       "rx",
       "file",
@@ -1387,8 +1387,8 @@
     "colors": [],
     "caption": "a black and white icon of a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFileText.svg": {
-    "component_id": "Icon.RxFileText",
+  "rx/RxFileText.svg": {
+    "component_id": "rx:RxFileText",
     "aliases": [
       "rx",
       "file",
@@ -1397,8 +1397,8 @@
     "colors": [],
     "caption": "a document icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFontBold.svg": {
-    "component_id": "Icon.RxFontBold",
+  "rx/RxFontBold.svg": {
+    "component_id": "rx:RxFontBold",
     "aliases": [
       "rx",
       "font",
@@ -1407,8 +1407,8 @@
     "colors": [],
     "caption": "a black letter b on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFontFamily.svg": {
-    "component_id": "Icon.RxFontFamily",
+  "rx/RxFontFamily.svg": {
+    "component_id": "rx:RxFontFamily",
     "aliases": [
       "rx",
       "font",
@@ -1417,8 +1417,8 @@
     "colors": [],
     "caption": "the letter f is shown in black on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFontItalic.svg": {
-    "component_id": "Icon.RxFontItalic",
+  "rx/RxFontItalic.svg": {
+    "component_id": "rx:RxFontItalic",
     "aliases": [
       "rx",
       "font",
@@ -1427,8 +1427,8 @@
     "colors": [],
     "caption": "a black and white image of the letter t"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFontRoman.svg": {
-    "component_id": "Icon.RxFontRoman",
+  "rx/RxFontRoman.svg": {
+    "component_id": "rx:RxFontRoman",
     "aliases": [
       "rx",
       "font",
@@ -1437,8 +1437,8 @@
     "colors": [],
     "caption": "a black and white image of the letter i"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFontSize.svg": {
-    "component_id": "Icon.RxFontSize",
+  "rx/RxFontSize.svg": {
+    "component_id": "rx:RxFontSize",
     "aliases": [
       "rx",
       "font",
@@ -1447,8 +1447,8 @@
     "colors": [],
     "caption": "an arrow pointing up and down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFontStyle.svg": {
-    "component_id": "Icon.RxFontStyle",
+  "rx/RxFontStyle.svg": {
+    "component_id": "rx:RxFontStyle",
     "aliases": [
       "rx",
       "font",
@@ -1457,8 +1457,8 @@
     "colors": [],
     "caption": "a black and white image of the letter s"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFrame.svg": {
-    "component_id": "Icon.RxFrame",
+  "rx/RxFrame.svg": {
+    "component_id": "rx:RxFrame",
     "aliases": [
       "rx",
       "frame"
@@ -1466,8 +1466,8 @@
     "colors": [],
     "caption": "a black and white image of a square symbol"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxFramerLogo.svg": {
-    "component_id": "Icon.RxFramerLogo",
+  "rx/RxFramerLogo.svg": {
+    "component_id": "rx:RxFramerLogo",
     "aliases": [
       "rx",
       "framer",
@@ -1476,8 +1476,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter z"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxGear.svg": {
-    "component_id": "Icon.RxGear",
+  "rx/RxGear.svg": {
+    "component_id": "rx:RxGear",
     "aliases": [
       "rx",
       "gear"
@@ -1485,8 +1485,8 @@
     "colors": [],
     "caption": "a gear wheel icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxGithubLogo.svg": {
-    "component_id": "Icon.RxGithubLogo",
+  "rx/RxGithubLogo.svg": {
+    "component_id": "rx:RxGithubLogo",
     "aliases": [
       "rx",
       "github",
@@ -1495,8 +1495,8 @@
     "colors": [],
     "caption": "a black and white image of a cat in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxGlobe.svg": {
-    "component_id": "Icon.RxGlobe",
+  "rx/RxGlobe.svg": {
+    "component_id": "rx:RxGlobe",
     "aliases": [
       "rx",
       "globe"
@@ -1504,8 +1504,8 @@
     "colors": [],
     "caption": "a black and white icon of a globe"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxGrid.svg": {
-    "component_id": "Icon.RxGrid",
+  "rx/RxGrid.svg": {
+    "component_id": "rx:RxGrid",
     "aliases": [
       "rx",
       "grid"
@@ -1513,8 +1513,8 @@
     "colors": [],
     "caption": "a square icon with four squares in it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxGroup.svg": {
-    "component_id": "Icon.RxGroup",
+  "rx/RxGroup.svg": {
+    "component_id": "rx:RxGroup",
     "aliases": [
       "rx",
       "group"
@@ -1522,8 +1522,8 @@
     "colors": [],
     "caption": "a square frame with black lines on it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxHalf1.svg": {
-    "component_id": "Icon.RxHalf1",
+  "rx/RxHalf1.svg": {
+    "component_id": "rx:RxHalf1",
     "aliases": [
       "rx",
       "half",
@@ -1532,8 +1532,8 @@
     "colors": [],
     "caption": "a black and white image of a circle with two lines"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxHalf2.svg": {
-    "component_id": "Icon.RxHalf2",
+  "rx/RxHalf2.svg": {
+    "component_id": "rx:RxHalf2",
     "aliases": [
       "rx",
       "half",
@@ -1542,8 +1542,8 @@
     "colors": [],
     "caption": "a black and white circle with a half moon in it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxHamburgerMenu.svg": {
-    "component_id": "Icon.RxHamburgerMenu",
+  "rx/RxHamburgerMenu.svg": {
+    "component_id": "rx:RxHamburgerMenu",
     "aliases": [
       "rx",
       "hamburger",
@@ -1552,8 +1552,8 @@
     "colors": [],
     "caption": "three black lines on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxHand.svg": {
-    "component_id": "Icon.RxHand",
+  "rx/RxHand.svg": {
+    "component_id": "rx:RxHand",
     "aliases": [
       "rx",
       "hand"
@@ -1561,8 +1561,8 @@
     "colors": [],
     "caption": "a black glove icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxHeading.svg": {
-    "component_id": "Icon.RxHeading",
+  "rx/RxHeading.svg": {
+    "component_id": "rx:RxHeading",
     "aliases": [
       "rx",
       "heading"
@@ -1570,8 +1570,8 @@
     "colors": [],
     "caption": "a black and white image of the letter h"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxHeart.svg": {
-    "component_id": "Icon.RxHeart",
+  "rx/RxHeart.svg": {
+    "component_id": "rx:RxHeart",
     "aliases": [
       "rx",
       "heart"
@@ -1579,8 +1579,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a heart"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxHeartFilled.svg": {
-    "component_id": "Icon.RxHeartFilled",
+  "rx/RxHeartFilled.svg": {
+    "component_id": "rx:RxHeartFilled",
     "aliases": [
       "rx",
       "heart",
@@ -1589,8 +1589,8 @@
     "colors": [],
     "caption": "a black heart icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxHeight.svg": {
-    "component_id": "Icon.RxHeight",
+  "rx/RxHeight.svg": {
+    "component_id": "rx:RxHeight",
     "aliases": [
       "rx",
       "height"
@@ -1598,8 +1598,8 @@
     "colors": [],
     "caption": "an arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxHobbyKnife.svg": {
-    "component_id": "Icon.RxHobbyKnife",
+  "rx/RxHobbyKnife.svg": {
+    "component_id": "rx:RxHobbyKnife",
     "aliases": [
       "rx",
       "hobby",
@@ -1608,8 +1608,8 @@
     "colors": [],
     "caption": "a black and white illustration of a pencil"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxHome.svg": {
-    "component_id": "Icon.RxHome",
+  "rx/RxHome.svg": {
+    "component_id": "rx:RxHome",
     "aliases": [
       "rx",
       "home"
@@ -1617,8 +1617,8 @@
     "colors": [],
     "caption": "a house icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxIconjarLogo.svg": {
-    "component_id": "Icon.RxIconjarLogo",
+  "rx/RxIconjarLogo.svg": {
+    "component_id": "rx:RxIconjarLogo",
     "aliases": [
       "rx",
       "iconjar",
@@ -1627,8 +1627,8 @@
     "colors": [],
     "caption": "a jar of honey icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxIdCard.svg": {
-    "component_id": "Icon.RxIdCard",
+  "rx/RxIdCard.svg": {
+    "component_id": "rx:RxIdCard",
     "aliases": [
       "rx",
       "id",
@@ -1637,8 +1637,8 @@
     "colors": [],
     "caption": "a black and white icon of a document"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxImage.svg": {
-    "component_id": "Icon.RxImage",
+  "rx/RxImage.svg": {
+    "component_id": "rx:RxImage",
     "aliases": [
       "rx",
       "image"
@@ -1646,8 +1646,8 @@
     "colors": [],
     "caption": "a black and white photo icon with the sun and mountains"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxInfoCircled.svg": {
-    "component_id": "Icon.RxInfoCircled",
+  "rx/RxInfoCircled.svg": {
+    "component_id": "rx:RxInfoCircled",
     "aliases": [
       "rx",
       "info",
@@ -1656,8 +1656,8 @@
     "colors": [],
     "caption": "a black and white image of an i in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxInput.svg": {
-    "component_id": "Icon.RxInput",
+  "rx/RxInput.svg": {
+    "component_id": "rx:RxInput",
     "aliases": [
       "rx",
       "input"
@@ -1665,8 +1665,8 @@
     "colors": [],
     "caption": "a black and white image of a door handle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxInstagramLogo.svg": {
-    "component_id": "Icon.RxInstagramLogo",
+  "rx/RxInstagramLogo.svg": {
+    "component_id": "rx:RxInstagramLogo",
     "aliases": [
       "rx",
       "instagram",
@@ -1675,8 +1675,8 @@
     "colors": [],
     "caption": "a black and white image of an instagram icon"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxKeyboard.svg": {
-    "component_id": "Icon.RxKeyboard",
+  "rx/RxKeyboard.svg": {
+    "component_id": "rx:RxKeyboard",
     "aliases": [
       "rx",
       "keyboard"
@@ -1684,8 +1684,8 @@
     "colors": [],
     "caption": "a computer keyboard icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLapTimer.svg": {
-    "component_id": "Icon.RxLapTimer",
+  "rx/RxLapTimer.svg": {
+    "component_id": "rx:RxLapTimer",
     "aliases": [
       "rx",
       "lap",
@@ -1694,8 +1694,8 @@
     "colors": [],
     "caption": "a stopwatch icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLaptop.svg": {
-    "component_id": "Icon.RxLaptop",
+  "rx/RxLaptop.svg": {
+    "component_id": "rx:RxLaptop",
     "aliases": [
       "rx",
       "laptop"
@@ -1703,8 +1703,8 @@
     "colors": [],
     "caption": "a laptop computer icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLayers.svg": {
-    "component_id": "Icon.RxLayers",
+  "rx/RxLayers.svg": {
+    "component_id": "rx:RxLayers",
     "aliases": [
       "rx",
       "layers"
@@ -1712,8 +1712,8 @@
     "colors": [],
     "caption": "a black and white icon of a stack of books"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLayout.svg": {
-    "component_id": "Icon.RxLayout",
+  "rx/RxLayout.svg": {
+    "component_id": "rx:RxLayout",
     "aliases": [
       "rx",
       "layout"
@@ -1721,8 +1721,8 @@
     "colors": [],
     "caption": "a black and white icon with three bars"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLetterCaseCapitalize.svg": {
-    "component_id": "Icon.RxLetterCaseCapitalize",
+  "rx/RxLetterCaseCapitalize.svg": {
+    "component_id": "rx:RxLetterCaseCapitalize",
     "aliases": [
       "rx",
       "letter",
@@ -1732,8 +1732,8 @@
     "colors": [],
     "caption": "the letter a is shown in black on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLetterCaseLowercase.svg": {
-    "component_id": "Icon.RxLetterCaseLowercase",
+  "rx/RxLetterCaseLowercase.svg": {
+    "component_id": "rx:RxLetterCaseLowercase",
     "aliases": [
       "rx",
       "letter",
@@ -1743,8 +1743,8 @@
     "colors": [],
     "caption": "a black and white logo with the letters a and a"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLetterCaseToggle.svg": {
-    "component_id": "Icon.RxLetterCaseToggle",
+  "rx/RxLetterCaseToggle.svg": {
+    "component_id": "rx:RxLetterCaseToggle",
     "aliases": [
       "rx",
       "letter",
@@ -1754,8 +1754,8 @@
     "colors": [],
     "caption": "a black and white image of the letter a"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLetterCaseUppercase.svg": {
-    "component_id": "Icon.RxLetterCaseUppercase",
+  "rx/RxLetterCaseUppercase.svg": {
+    "component_id": "rx:RxLetterCaseUppercase",
     "aliases": [
       "rx",
       "letter",
@@ -1765,8 +1765,8 @@
     "colors": [],
     "caption": "a black and white image of the letter a"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLetterSpacing.svg": {
-    "component_id": "Icon.RxLetterSpacing",
+  "rx/RxLetterSpacing.svg": {
+    "component_id": "rx:RxLetterSpacing",
     "aliases": [
       "rx",
       "letter",
@@ -1775,8 +1775,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing to the word av"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLightningBolt.svg": {
-    "component_id": "Icon.RxLightningBolt",
+  "rx/RxLightningBolt.svg": {
+    "component_id": "rx:RxLightningBolt",
     "aliases": [
       "rx",
       "lightning",
@@ -1785,8 +1785,8 @@
     "colors": [],
     "caption": "a lightning bolt icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLineHeight.svg": {
-    "component_id": "Icon.RxLineHeight",
+  "rx/RxLineHeight.svg": {
+    "component_id": "rx:RxLineHeight",
     "aliases": [
       "rx",
       "line",
@@ -1795,8 +1795,8 @@
     "colors": [],
     "caption": "two arrows pointing up and down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLink1.svg": {
-    "component_id": "Icon.RxLink1",
+  "rx/RxLink1.svg": {
+    "component_id": "rx:RxLink1",
     "aliases": [
       "rx",
       "link",
@@ -1805,8 +1805,8 @@
     "colors": [],
     "caption": "a black and white image of the letter c"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLink2.svg": {
-    "component_id": "Icon.RxLink2",
+  "rx/RxLink2.svg": {
+    "component_id": "rx:RxLink2",
     "aliases": [
       "rx",
       "link",
@@ -1815,8 +1815,8 @@
     "colors": [],
     "caption": "a black and white icon of a link"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLinkBreak1.svg": {
-    "component_id": "Icon.RxLinkBreak1",
+  "rx/RxLinkBreak1.svg": {
+    "component_id": "rx:RxLinkBreak1",
     "aliases": [
       "rx",
       "link",
@@ -1826,8 +1826,8 @@
     "colors": [],
     "caption": "a black and white image of a no sign"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLinkBreak2.svg": {
-    "component_id": "Icon.RxLinkBreak2",
+  "rx/RxLinkBreak2.svg": {
+    "component_id": "rx:RxLinkBreak2",
     "aliases": [
       "rx",
       "link",
@@ -1837,8 +1837,8 @@
     "colors": [],
     "caption": "a black and white icon of a person with a gun"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLinkNone1.svg": {
-    "component_id": "Icon.RxLinkNone1",
+  "rx/RxLinkNone1.svg": {
+    "component_id": "rx:RxLinkNone1",
     "aliases": [
       "rx",
       "link",
@@ -1848,8 +1848,8 @@
     "colors": [],
     "caption": "a black and white image of the letter c"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLinkNone2.svg": {
-    "component_id": "Icon.RxLinkNone2",
+  "rx/RxLinkNone2.svg": {
+    "component_id": "rx:RxLinkNone2",
     "aliases": [
       "rx",
       "link",
@@ -1859,8 +1859,8 @@
     "colors": [],
     "caption": "a black and white icon of a link"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLinkedinLogo.svg": {
-    "component_id": "Icon.RxLinkedinLogo",
+  "rx/RxLinkedinLogo.svg": {
+    "component_id": "rx:RxLinkedinLogo",
     "aliases": [
       "rx",
       "linkedin",
@@ -1869,8 +1869,8 @@
     "colors": [],
     "caption": "a black and white image of the linked logo"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxListBullet.svg": {
-    "component_id": "Icon.RxListBullet",
+  "rx/RxListBullet.svg": {
+    "component_id": "rx:RxListBullet",
     "aliases": [
       "rx",
       "list",
@@ -1879,8 +1879,8 @@
     "colors": [],
     "caption": "a black and white icon with three dots"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLockClosed.svg": {
-    "component_id": "Icon.RxLockClosed",
+  "rx/RxLockClosed.svg": {
+    "component_id": "rx:RxLockClosed",
     "aliases": [
       "rx",
       "lock",
@@ -1889,8 +1889,8 @@
     "colors": [],
     "caption": "a padlock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLockOpen1.svg": {
-    "component_id": "Icon.RxLockOpen1",
+  "rx/RxLockOpen1.svg": {
+    "component_id": "rx:RxLockOpen1",
     "aliases": [
       "rx",
       "lock",
@@ -1900,8 +1900,8 @@
     "colors": [],
     "caption": "a padlock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLockOpen2.svg": {
-    "component_id": "Icon.RxLockOpen2",
+  "rx/RxLockOpen2.svg": {
+    "component_id": "rx:RxLockOpen2",
     "aliases": [
       "rx",
       "lock",
@@ -1911,8 +1911,8 @@
     "colors": [],
     "caption": "a padlock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxLoop.svg": {
-    "component_id": "Icon.RxLoop",
+  "rx/RxLoop.svg": {
+    "component_id": "rx:RxLoop",
     "aliases": [
       "rx",
       "loop"
@@ -1920,8 +1920,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMagicWand.svg": {
-    "component_id": "Icon.RxMagicWand",
+  "rx/RxMagicWand.svg": {
+    "component_id": "rx:RxMagicWand",
     "aliases": [
       "rx",
       "magic",
@@ -1930,8 +1930,8 @@
     "colors": [],
     "caption": "a black and white illustration of a magic wand"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMagnifyingGlass.svg": {
-    "component_id": "Icon.RxMagnifyingGlass",
+  "rx/RxMagnifyingGlass.svg": {
+    "component_id": "rx:RxMagnifyingGlass",
     "aliases": [
       "rx",
       "magnifying",
@@ -1940,8 +1940,8 @@
     "colors": [],
     "caption": "a magnifying glass icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMargin.svg": {
-    "component_id": "Icon.RxMargin",
+  "rx/RxMargin.svg": {
+    "component_id": "rx:RxMargin",
     "aliases": [
       "rx",
       "margin"
@@ -1949,8 +1949,8 @@
     "colors": [],
     "caption": "an image of a square with dots on it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMaskOff.svg": {
-    "component_id": "Icon.RxMaskOff",
+  "rx/RxMaskOff.svg": {
+    "component_id": "rx:RxMaskOff",
     "aliases": [
       "rx",
       "mask",
@@ -1959,8 +1959,8 @@
     "colors": [],
     "caption": "a camera icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMaskOn.svg": {
-    "component_id": "Icon.RxMaskOn",
+  "rx/RxMaskOn.svg": {
+    "component_id": "rx:RxMaskOn",
     "aliases": [
       "rx",
       "mask",
@@ -1969,8 +1969,8 @@
     "colors": [],
     "caption": "a black square with a white circle in the middle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMinus.svg": {
-    "component_id": "Icon.RxMinus",
+  "rx/RxMinus.svg": {
+    "component_id": "rx:RxMinus",
     "aliases": [
       "rx",
       "minus"
@@ -1978,8 +1978,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMinusCircled.svg": {
-    "component_id": "Icon.RxMinusCircled",
+  "rx/RxMinusCircled.svg": {
+    "component_id": "rx:RxMinusCircled",
     "aliases": [
       "rx",
       "minus",
@@ -1988,8 +1988,8 @@
     "colors": [],
     "caption": "a black and white image of an empty circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMix.svg": {
-    "component_id": "Icon.RxMix",
+  "rx/RxMix.svg": {
+    "component_id": "rx:RxMix",
     "aliases": [
       "rx",
       "mix"
@@ -1997,8 +1997,8 @@
     "colors": [],
     "caption": "a black and white image of four different symbols"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMixerHorizontal.svg": {
-    "component_id": "Icon.RxMixerHorizontal",
+  "rx/RxMixerHorizontal.svg": {
+    "component_id": "rx:RxMixerHorizontal",
     "aliases": [
       "rx",
       "mixer",
@@ -2007,8 +2007,8 @@
     "colors": [],
     "caption": "a black and white icon of two circles"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMixerVertical.svg": {
-    "component_id": "Icon.RxMixerVertical",
+  "rx/RxMixerVertical.svg": {
+    "component_id": "rx:RxMixerVertical",
     "aliases": [
       "rx",
       "mixer",
@@ -2017,8 +2017,8 @@
     "colors": [],
     "caption": "a pair of black and white electrical symbols"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMobile.svg": {
-    "component_id": "Icon.RxMobile",
+  "rx/RxMobile.svg": {
+    "component_id": "rx:RxMobile",
     "aliases": [
       "rx",
       "mobile"
@@ -2026,8 +2026,8 @@
     "colors": [],
     "caption": "a cell phone icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxModulzLogo.svg": {
-    "component_id": "Icon.RxModulzLogo",
+  "rx/RxModulzLogo.svg": {
+    "component_id": "rx:RxModulzLogo",
     "aliases": [
       "rx",
       "modulz",
@@ -2036,8 +2036,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter m"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMoon.svg": {
-    "component_id": "Icon.RxMoon",
+  "rx/RxMoon.svg": {
+    "component_id": "rx:RxMoon",
     "aliases": [
       "rx",
       "moon"
@@ -2045,8 +2045,8 @@
     "colors": [],
     "caption": "a black and white icon of a crescent with stars"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxMove.svg": {
-    "component_id": "Icon.RxMove",
+  "rx/RxMove.svg": {
+    "component_id": "rx:RxMove",
     "aliases": [
       "rx",
       "move"
@@ -2054,8 +2054,8 @@
     "colors": [],
     "caption": "three arrows pointing in different directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxNotionLogo.svg": {
-    "component_id": "Icon.RxNotionLogo",
+  "rx/RxNotionLogo.svg": {
+    "component_id": "rx:RxNotionLogo",
     "aliases": [
       "rx",
       "notion",
@@ -2064,8 +2064,8 @@
     "colors": [],
     "caption": "a black and white image of a cube with the letter n"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxOpacity.svg": {
-    "component_id": "Icon.RxOpacity",
+  "rx/RxOpacity.svg": {
+    "component_id": "rx:RxOpacity",
     "aliases": [
       "rx",
       "opacity"
@@ -2073,8 +2073,8 @@
     "colors": [],
     "caption": "a black water drop icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxOpenInNewWindow.svg": {
-    "component_id": "Icon.RxOpenInNewWindow",
+  "rx/RxOpenInNewWindow.svg": {
+    "component_id": "rx:RxOpenInNewWindow",
     "aliases": [
       "rx",
       "open",
@@ -2085,8 +2085,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxOverline.svg": {
-    "component_id": "Icon.RxOverline",
+  "rx/RxOverline.svg": {
+    "component_id": "rx:RxOverline",
     "aliases": [
       "rx",
       "overline"
@@ -2094,8 +2094,8 @@
     "colors": [],
     "caption": "a black and white icon with the letter u"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPadding.svg": {
-    "component_id": "Icon.RxPadding",
+  "rx/RxPadding.svg": {
+    "component_id": "rx:RxPadding",
     "aliases": [
       "rx",
       "padding"
@@ -2103,8 +2103,8 @@
     "colors": [],
     "caption": "a black and white square with dots on it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPaperPlane.svg": {
-    "component_id": "Icon.RxPaperPlane",
+  "rx/RxPaperPlane.svg": {
+    "component_id": "rx:RxPaperPlane",
     "aliases": [
       "rx",
       "paper",
@@ -2113,8 +2113,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPause.svg": {
-    "component_id": "Icon.RxPause",
+  "rx/RxPause.svg": {
+    "component_id": "rx:RxPause",
     "aliases": [
       "rx",
       "pause"
@@ -2122,8 +2122,8 @@
     "colors": [],
     "caption": "a black and white image of the letter h"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPencil1.svg": {
-    "component_id": "Icon.RxPencil1",
+  "rx/RxPencil1.svg": {
+    "component_id": "rx:RxPencil1",
     "aliases": [
       "rx",
       "pencil",
@@ -2132,8 +2132,8 @@
     "colors": [],
     "caption": "a black and white drawing of a pencil"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPencil2.svg": {
-    "component_id": "Icon.RxPencil2",
+  "rx/RxPencil2.svg": {
+    "component_id": "rx:RxPencil2",
     "aliases": [
       "rx",
       "pencil",
@@ -2142,8 +2142,8 @@
     "colors": [],
     "caption": "a black and white icon of a pen in a box"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPerson.svg": {
-    "component_id": "Icon.RxPerson",
+  "rx/RxPerson.svg": {
+    "component_id": "rx:RxPerson",
     "aliases": [
       "rx",
       "person"
@@ -2151,8 +2151,8 @@
     "colors": [],
     "caption": "a person icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPieChart.svg": {
-    "component_id": "Icon.RxPieChart",
+  "rx/RxPieChart.svg": {
+    "component_id": "rx:RxPieChart",
     "aliases": [
       "rx",
       "pie",
@@ -2161,8 +2161,8 @@
     "colors": [],
     "caption": "a black and white image of a circular clock"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPilcrow.svg": {
-    "component_id": "Icon.RxPilcrow",
+  "rx/RxPilcrow.svg": {
+    "component_id": "rx:RxPilcrow",
     "aliases": [
       "rx",
       "pilcrow"
@@ -2170,8 +2170,8 @@
     "colors": [],
     "caption": "a black and white image of the letter p"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPinBottom.svg": {
-    "component_id": "Icon.RxPinBottom",
+  "rx/RxPinBottom.svg": {
+    "component_id": "rx:RxPinBottom",
     "aliases": [
       "rx",
       "pin",
@@ -2180,8 +2180,8 @@
     "colors": [],
     "caption": "a down arrow icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPinLeft.svg": {
-    "component_id": "Icon.RxPinLeft",
+  "rx/RxPinLeft.svg": {
+    "component_id": "rx:RxPinLeft",
     "aliases": [
       "rx",
       "pin",
@@ -2190,8 +2190,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPinRight.svg": {
-    "component_id": "Icon.RxPinRight",
+  "rx/RxPinRight.svg": {
+    "component_id": "rx:RxPinRight",
     "aliases": [
       "rx",
       "pin",
@@ -2200,8 +2200,8 @@
     "colors": [],
     "caption": "a black arrow pointing in the direction of an arrow"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPinTop.svg": {
-    "component_id": "Icon.RxPinTop",
+  "rx/RxPinTop.svg": {
+    "component_id": "rx:RxPinTop",
     "aliases": [
       "rx",
       "pin",
@@ -2210,8 +2210,8 @@
     "colors": [],
     "caption": "a black arrow pointing up in the middle of a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPlay.svg": {
-    "component_id": "Icon.RxPlay",
+  "rx/RxPlay.svg": {
+    "component_id": "rx:RxPlay",
     "aliases": [
       "rx",
       "play"
@@ -2219,8 +2219,8 @@
     "colors": [],
     "caption": "a black and white icon of a play button"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPlus.svg": {
-    "component_id": "Icon.RxPlus",
+  "rx/RxPlus.svg": {
+    "component_id": "rx:RxPlus",
     "aliases": [
       "rx",
       "plus"
@@ -2228,8 +2228,8 @@
     "colors": [],
     "caption": "a black cross symbol on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxPlusCircled.svg": {
-    "component_id": "Icon.RxPlusCircled",
+  "rx/RxPlusCircled.svg": {
+    "component_id": "rx:RxPlusCircled",
     "aliases": [
       "rx",
       "plus",
@@ -2238,8 +2238,8 @@
     "colors": [],
     "caption": "a black plus sign in a circle on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxQuestionMark.svg": {
-    "component_id": "Icon.RxQuestionMark",
+  "rx/RxQuestionMark.svg": {
+    "component_id": "rx:RxQuestionMark",
     "aliases": [
       "rx",
       "question",
@@ -2248,8 +2248,8 @@
     "colors": [],
     "caption": "a question mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxQuestionMarkCircled.svg": {
-    "component_id": "Icon.RxQuestionMarkCircled",
+  "rx/RxQuestionMarkCircled.svg": {
+    "component_id": "rx:RxQuestionMarkCircled",
     "aliases": [
       "rx",
       "question",
@@ -2259,8 +2259,8 @@
     "colors": [],
     "caption": "a question mark in a circle on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxQuote.svg": {
-    "component_id": "Icon.RxQuote",
+  "rx/RxQuote.svg": {
+    "component_id": "rx:RxQuote",
     "aliases": [
       "rx",
       "quote"
@@ -2268,8 +2268,8 @@
     "colors": [],
     "caption": "a black and white image of two speech bubbles"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxRadiobutton.svg": {
-    "component_id": "Icon.RxRadiobutton",
+  "rx/RxRadiobutton.svg": {
+    "component_id": "rx:RxRadiobutton",
     "aliases": [
       "rx",
       "radiobutton"
@@ -2277,8 +2277,8 @@
     "colors": [],
     "caption": "a black and white image of an eye in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxReader.svg": {
-    "component_id": "Icon.RxReader",
+  "rx/RxReader.svg": {
+    "component_id": "rx:RxReader",
     "aliases": [
       "rx",
       "reader"
@@ -2286,8 +2286,8 @@
     "colors": [],
     "caption": "a document icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxReload.svg": {
-    "component_id": "Icon.RxReload",
+  "rx/RxReload.svg": {
+    "component_id": "rx:RxReload",
     "aliases": [
       "rx",
       "reload"
@@ -2295,8 +2295,8 @@
     "colors": [],
     "caption": "a black and white image of a circular arrow"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxReset.svg": {
-    "component_id": "Icon.RxReset",
+  "rx/RxReset.svg": {
+    "component_id": "rx:RxReset",
     "aliases": [
       "rx",
       "reset"
@@ -2304,8 +2304,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxResume.svg": {
-    "component_id": "Icon.RxResume",
+  "rx/RxResume.svg": {
+    "component_id": "rx:RxResume",
     "aliases": [
       "rx",
       "resume"
@@ -2313,8 +2313,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing down"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxRocket.svg": {
-    "component_id": "Icon.RxRocket",
+  "rx/RxRocket.svg": {
+    "component_id": "rx:RxRocket",
     "aliases": [
       "rx",
       "rocket"
@@ -2322,8 +2322,8 @@
     "colors": [],
     "caption": "a black and white icon of a rocket ship"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxRotateCounterClockwise.svg": {
-    "component_id": "Icon.RxRotateCounterClockwise",
+  "rx/RxRotateCounterClockwise.svg": {
+    "component_id": "rx:RxRotateCounterClockwise",
     "aliases": [
       "rx",
       "rotate",
@@ -2333,8 +2333,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing to a square"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxRowSpacing.svg": {
-    "component_id": "Icon.RxRowSpacing",
+  "rx/RxRowSpacing.svg": {
+    "component_id": "rx:RxRowSpacing",
     "aliases": [
       "rx",
       "row",
@@ -2343,8 +2343,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxRows.svg": {
-    "component_id": "Icon.RxRows",
+  "rx/RxRows.svg": {
+    "component_id": "rx:RxRows",
     "aliases": [
       "rx",
       "rows"
@@ -2352,8 +2352,8 @@
     "colors": [],
     "caption": "a black and white striped line is shown in this image"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxRulerHorizontal.svg": {
-    "component_id": "Icon.RxRulerHorizontal",
+  "rx/RxRulerHorizontal.svg": {
+    "component_id": "rx:RxRulerHorizontal",
     "aliases": [
       "rx",
       "ruler",
@@ -2362,8 +2362,8 @@
     "colors": [],
     "caption": "a ruler icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxRulerSquare.svg": {
-    "component_id": "Icon.RxRulerSquare",
+  "rx/RxRulerSquare.svg": {
+    "component_id": "rx:RxRulerSquare",
     "aliases": [
       "rx",
       "ruler",
@@ -2372,8 +2372,8 @@
     "colors": [],
     "caption": "a black and white illustration of a ruler"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxScissors.svg": {
-    "component_id": "Icon.RxScissors",
+  "rx/RxScissors.svg": {
+    "component_id": "rx:RxScissors",
     "aliases": [
       "rx",
       "scissors"
@@ -2381,8 +2381,8 @@
     "colors": [],
     "caption": "a black and white image of a pair of scissors"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSection.svg": {
-    "component_id": "Icon.RxSection",
+  "rx/RxSection.svg": {
+    "component_id": "rx:RxSection",
     "aliases": [
       "rx",
       "section"
@@ -2390,8 +2390,8 @@
     "colors": [],
     "caption": "a black and white image of a computer chip"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSewingPin.svg": {
-    "component_id": "Icon.RxSewingPin",
+  "rx/RxSewingPin.svg": {
+    "component_id": "rx:RxSewingPin",
     "aliases": [
       "rx",
       "sewing",
@@ -2400,8 +2400,8 @@
     "colors": [],
     "caption": "a black and white image of a key on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSewingPinFilled.svg": {
-    "component_id": "Icon.RxSewingPinFilled",
+  "rx/RxSewingPinFilled.svg": {
+    "component_id": "rx:RxSewingPinFilled",
     "aliases": [
       "rx",
       "sewing",
@@ -2411,8 +2411,8 @@
     "colors": [],
     "caption": "a black and white image of a spoon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxShadow.svg": {
-    "component_id": "Icon.RxShadow",
+  "rx/RxShadow.svg": {
+    "component_id": "rx:RxShadow",
     "aliases": [
       "rx",
       "shadow"
@@ -2420,8 +2420,8 @@
     "colors": [],
     "caption": "a black and white image of a circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxShadowInner.svg": {
-    "component_id": "Icon.RxShadowInner",
+  "rx/RxShadowInner.svg": {
+    "component_id": "rx:RxShadowInner",
     "aliases": [
       "rx",
       "shadow",
@@ -2430,8 +2430,8 @@
     "colors": [],
     "caption": "a black and white circle with a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxShadowNone.svg": {
-    "component_id": "Icon.RxShadowNone",
+  "rx/RxShadowNone.svg": {
+    "component_id": "rx:RxShadowNone",
     "aliases": [
       "rx",
       "shadow",
@@ -2440,8 +2440,8 @@
     "colors": [],
     "caption": "a black and white image of a no entry sign"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxShadowOuter.svg": {
-    "component_id": "Icon.RxShadowOuter",
+  "rx/RxShadowOuter.svg": {
+    "component_id": "rx:RxShadowOuter",
     "aliases": [
       "rx",
       "shadow",
@@ -2450,8 +2450,8 @@
     "colors": [],
     "caption": "a black circle with a shadow on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxShare1.svg": {
-    "component_id": "Icon.RxShare1",
+  "rx/RxShare1.svg": {
+    "component_id": "rx:RxShare1",
     "aliases": [
       "rx",
       "share",
@@ -2460,8 +2460,8 @@
     "colors": [],
     "caption": "a black and white icon of two circles"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxShare2.svg": {
-    "component_id": "Icon.RxShare2",
+  "rx/RxShare2.svg": {
+    "component_id": "rx:RxShare2",
     "aliases": [
       "rx",
       "share",
@@ -2470,8 +2470,8 @@
     "colors": [],
     "caption": "a black and white icon with an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxShuffle.svg": {
-    "component_id": "Icon.RxShuffle",
+  "rx/RxShuffle.svg": {
+    "component_id": "rx:RxShuffle",
     "aliases": [
       "rx",
       "shuffle"
@@ -2479,8 +2479,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSize.svg": {
-    "component_id": "Icon.RxSize",
+  "rx/RxSize.svg": {
+    "component_id": "rx:RxSize",
     "aliases": [
       "rx",
       "size"
@@ -2488,8 +2488,8 @@
     "colors": [],
     "caption": "an arrow pointing in the direction of the arrow"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSketchLogo.svg": {
-    "component_id": "Icon.RxSketchLogo",
+  "rx/RxSketchLogo.svg": {
+    "component_id": "rx:RxSketchLogo",
     "aliases": [
       "rx",
       "sketch",
@@ -2498,8 +2498,8 @@
     "colors": [],
     "caption": "a diamond icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSlash.svg": {
-    "component_id": "Icon.RxSlash",
+  "rx/RxSlash.svg": {
+    "component_id": "rx:RxSlash",
     "aliases": [
       "rx",
       "slash"
@@ -2507,8 +2507,8 @@
     "colors": [],
     "caption": "a black and white image of the number seven"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSlider.svg": {
-    "component_id": "Icon.RxSlider",
+  "rx/RxSlider.svg": {
+    "component_id": "rx:RxSlider",
     "aliases": [
       "rx",
       "slider"
@@ -2516,8 +2516,8 @@
     "colors": [],
     "caption": "an image of a black and white icon with a circle"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSpaceBetweenHorizontally.svg": {
-    "component_id": "Icon.RxSpaceBetweenHorizontally",
+  "rx/RxSpaceBetweenHorizontally.svg": {
+    "component_id": "rx:RxSpaceBetweenHorizontally",
     "aliases": [
       "rx",
       "space",
@@ -2527,8 +2527,8 @@
     "colors": [],
     "caption": "a black and white icon of two doors"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSpaceBetweenVertically.svg": {
-    "component_id": "Icon.RxSpaceBetweenVertically",
+  "rx/RxSpaceBetweenVertically.svg": {
+    "component_id": "rx:RxSpaceBetweenVertically",
     "aliases": [
       "rx",
       "space",
@@ -2538,8 +2538,8 @@
     "colors": [],
     "caption": "a black and white image of the letter t"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSpaceEvenlyHorizontally.svg": {
-    "component_id": "Icon.RxSpaceEvenlyHorizontally",
+  "rx/RxSpaceEvenlyHorizontally.svg": {
+    "component_id": "rx:RxSpaceEvenlyHorizontally",
     "aliases": [
       "rx",
       "space",
@@ -2549,8 +2549,8 @@
     "colors": [],
     "caption": "a black and white icon of a pair of glasses"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSpaceEvenlyVertically.svg": {
-    "component_id": "Icon.RxSpaceEvenlyVertically",
+  "rx/RxSpaceEvenlyVertically.svg": {
+    "component_id": "rx:RxSpaceEvenlyVertically",
     "aliases": [
       "rx",
       "space",
@@ -2560,8 +2560,8 @@
     "colors": [],
     "caption": "an image of a black and white icon of a door"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSpeakerLoud.svg": {
-    "component_id": "Icon.RxSpeakerLoud",
+  "rx/RxSpeakerLoud.svg": {
+    "component_id": "rx:RxSpeakerLoud",
     "aliases": [
       "rx",
       "speaker",
@@ -2570,8 +2570,8 @@
     "colors": [],
     "caption": "a speaker icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSpeakerModerate.svg": {
-    "component_id": "Icon.RxSpeakerModerate",
+  "rx/RxSpeakerModerate.svg": {
+    "component_id": "rx:RxSpeakerModerate",
     "aliases": [
       "rx",
       "speaker",
@@ -2580,8 +2580,8 @@
     "colors": [],
     "caption": "a speaker icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSpeakerOff.svg": {
-    "component_id": "Icon.RxSpeakerOff",
+  "rx/RxSpeakerOff.svg": {
+    "component_id": "rx:RxSpeakerOff",
     "aliases": [
       "rx",
       "speaker",
@@ -2590,8 +2590,8 @@
     "colors": [],
     "caption": "a black and white image of a speaker with an x and a minus sign"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSpeakerQuiet.svg": {
-    "component_id": "Icon.RxSpeakerQuiet",
+  "rx/RxSpeakerQuiet.svg": {
+    "component_id": "rx:RxSpeakerQuiet",
     "aliases": [
       "rx",
       "speaker",
@@ -2600,8 +2600,8 @@
     "colors": [],
     "caption": "a speaker icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSquare.svg": {
-    "component_id": "Icon.RxSquare",
+  "rx/RxSquare.svg": {
+    "component_id": "rx:RxSquare",
     "aliases": [
       "rx",
       "square"
@@ -2609,8 +2609,8 @@
     "colors": [],
     "caption": "a black square with a white border on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxStack.svg": {
-    "component_id": "Icon.RxStack",
+  "rx/RxStack.svg": {
+    "component_id": "rx:RxStack",
     "aliases": [
       "rx",
       "stack"
@@ -2618,8 +2618,8 @@
     "colors": [],
     "caption": "a black and white icon with a square shape"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxStar.svg": {
-    "component_id": "Icon.RxStar",
+  "rx/RxStar.svg": {
+    "component_id": "rx:RxStar",
     "aliases": [
       "rx",
       "star"
@@ -2627,8 +2627,8 @@
     "colors": [],
     "caption": "a black star icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxStarFilled.svg": {
-    "component_id": "Icon.RxStarFilled",
+  "rx/RxStarFilled.svg": {
+    "component_id": "rx:RxStarFilled",
     "aliases": [
       "rx",
       "star",
@@ -2637,8 +2637,8 @@
     "colors": [],
     "caption": "a black star icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxStitchesLogo.svg": {
-    "component_id": "Icon.RxStitchesLogo",
+  "rx/RxStitchesLogo.svg": {
+    "component_id": "rx:RxStitchesLogo",
     "aliases": [
       "rx",
       "stitches",
@@ -2647,8 +2647,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter z in it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxStop.svg": {
-    "component_id": "Icon.RxStop",
+  "rx/RxStop.svg": {
+    "component_id": "rx:RxStop",
     "aliases": [
       "rx",
       "stop"
@@ -2656,8 +2656,8 @@
     "colors": [],
     "caption": "a black square icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxStopwatch.svg": {
-    "component_id": "Icon.RxStopwatch",
+  "rx/RxStopwatch.svg": {
+    "component_id": "rx:RxStopwatch",
     "aliases": [
       "rx",
       "stopwatch"
@@ -2665,8 +2665,8 @@
     "colors": [],
     "caption": "a stopwatch icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxStretchHorizontally.svg": {
-    "component_id": "Icon.RxStretchHorizontally",
+  "rx/RxStretchHorizontally.svg": {
+    "component_id": "rx:RxStretchHorizontally",
     "aliases": [
       "rx",
       "stretch",
@@ -2675,8 +2675,8 @@
     "colors": [],
     "caption": "a black and white icon of the letter h"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxStretchVertically.svg": {
-    "component_id": "Icon.RxStretchVertically",
+  "rx/RxStretchVertically.svg": {
+    "component_id": "rx:RxStretchVertically",
     "aliases": [
       "rx",
       "stretch",
@@ -2685,8 +2685,8 @@
     "colors": [],
     "caption": "a black and white image of the letter i"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxStrikethrough.svg": {
-    "component_id": "Icon.RxStrikethrough",
+  "rx/RxStrikethrough.svg": {
+    "component_id": "rx:RxStrikethrough",
     "aliases": [
       "rx",
       "strikethrough"
@@ -2694,8 +2694,8 @@
     "colors": [],
     "caption": "the symbol for the letter u is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSun.svg": {
-    "component_id": "Icon.RxSun",
+  "rx/RxSun.svg": {
+    "component_id": "rx:RxSun",
     "aliases": [
       "rx",
       "sun"
@@ -2703,8 +2703,8 @@
     "colors": [],
     "caption": "a black and white icon of a sun"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSwitch.svg": {
-    "component_id": "Icon.RxSwitch",
+  "rx/RxSwitch.svg": {
+    "component_id": "rx:RxSwitch",
     "aliases": [
       "rx",
       "switch"
@@ -2712,8 +2712,8 @@
     "colors": [],
     "caption": "a black and white logo with two circles"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxSymbol.svg": {
-    "component_id": "Icon.RxSymbol",
+  "rx/RxSymbol.svg": {
+    "component_id": "rx:RxSymbol",
     "aliases": [
       "rx",
       "symbol"
@@ -2721,8 +2721,8 @@
     "colors": [],
     "caption": "a black and white image of a circular arrow"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTable.svg": {
-    "component_id": "Icon.RxTable",
+  "rx/RxTable.svg": {
+    "component_id": "rx:RxTable",
     "aliases": [
       "rx",
       "table"
@@ -2730,8 +2730,8 @@
     "colors": [],
     "caption": "a black and white icon with four squares"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTarget.svg": {
-    "component_id": "Icon.RxTarget",
+  "rx/RxTarget.svg": {
+    "component_id": "rx:RxTarget",
     "aliases": [
       "rx",
       "target"
@@ -2739,8 +2739,8 @@
     "colors": [],
     "caption": "a black and white image of a circular target"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxText.svg": {
-    "component_id": "Icon.RxText",
+  "rx/RxText.svg": {
+    "component_id": "rx:RxText",
     "aliases": [
       "rx",
       "text"
@@ -2748,8 +2748,8 @@
     "colors": [],
     "caption": "a black and white image of the letter t"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTextAlignBottom.svg": {
-    "component_id": "Icon.RxTextAlignBottom",
+  "rx/RxTextAlignBottom.svg": {
+    "component_id": "rx:RxTextAlignBottom",
     "aliases": [
       "rx",
       "text",
@@ -2759,8 +2759,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing down"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTextAlignCenter.svg": {
-    "component_id": "Icon.RxTextAlignCenter",
+  "rx/RxTextAlignCenter.svg": {
+    "component_id": "rx:RxTextAlignCenter",
     "aliases": [
       "rx",
       "text",
@@ -2770,8 +2770,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTextAlignJustify.svg": {
-    "component_id": "Icon.RxTextAlignJustify",
+  "rx/RxTextAlignJustify.svg": {
+    "component_id": "rx:RxTextAlignJustify",
     "aliases": [
       "rx",
       "text",
@@ -2781,8 +2781,8 @@
     "colors": [],
     "caption": "three black lines on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTextAlignLeft.svg": {
-    "component_id": "Icon.RxTextAlignLeft",
+  "rx/RxTextAlignLeft.svg": {
+    "component_id": "rx:RxTextAlignLeft",
     "aliases": [
       "rx",
       "text",
@@ -2792,8 +2792,8 @@
     "colors": [],
     "caption": "a black and white image of the letter e"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTextAlignMiddle.svg": {
-    "component_id": "Icon.RxTextAlignMiddle",
+  "rx/RxTextAlignMiddle.svg": {
+    "component_id": "rx:RxTextAlignMiddle",
     "aliases": [
       "rx",
       "text",
@@ -2803,8 +2803,8 @@
     "colors": [],
     "caption": "two arrows pointing in different directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTextAlignRight.svg": {
-    "component_id": "Icon.RxTextAlignRight",
+  "rx/RxTextAlignRight.svg": {
+    "component_id": "rx:RxTextAlignRight",
     "aliases": [
       "rx",
       "text",
@@ -2814,8 +2814,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTextAlignTop.svg": {
-    "component_id": "Icon.RxTextAlignTop",
+  "rx/RxTextAlignTop.svg": {
+    "component_id": "rx:RxTextAlignTop",
     "aliases": [
       "rx",
       "text",
@@ -2825,8 +2825,8 @@
     "colors": [],
     "caption": "an arrow pointing up and down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTextNone.svg": {
-    "component_id": "Icon.RxTextNone",
+  "rx/RxTextNone.svg": {
+    "component_id": "rx:RxTextNone",
     "aliases": [
       "rx",
       "text",
@@ -2835,8 +2835,8 @@
     "colors": [],
     "caption": "a black and white image of the letter t"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxThickArrowDown.svg": {
-    "component_id": "Icon.RxThickArrowDown",
+  "rx/RxThickArrowDown.svg": {
+    "component_id": "rx:RxThickArrowDown",
     "aliases": [
       "rx",
       "thick",
@@ -2846,8 +2846,8 @@
     "colors": [],
     "caption": "an arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxThickArrowLeft.svg": {
-    "component_id": "Icon.RxThickArrowLeft",
+  "rx/RxThickArrowLeft.svg": {
+    "component_id": "rx:RxThickArrowLeft",
     "aliases": [
       "rx",
       "thick",
@@ -2857,8 +2857,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxThickArrowRight.svg": {
-    "component_id": "Icon.RxThickArrowRight",
+  "rx/RxThickArrowRight.svg": {
+    "component_id": "rx:RxThickArrowRight",
     "aliases": [
       "rx",
       "thick",
@@ -2868,8 +2868,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxThickArrowUp.svg": {
-    "component_id": "Icon.RxThickArrowUp",
+  "rx/RxThickArrowUp.svg": {
+    "component_id": "rx:RxThickArrowUp",
     "aliases": [
       "rx",
       "thick",
@@ -2879,8 +2879,8 @@
     "colors": [],
     "caption": "an arrow pointing up on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTimer.svg": {
-    "component_id": "Icon.RxTimer",
+  "rx/RxTimer.svg": {
+    "component_id": "rx:RxTimer",
     "aliases": [
       "rx",
       "timer"
@@ -2888,8 +2888,8 @@
     "colors": [],
     "caption": "a black and white icon of a speedometer"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTokens.svg": {
-    "component_id": "Icon.RxTokens",
+  "rx/RxTokens.svg": {
+    "component_id": "rx:RxTokens",
     "aliases": [
       "rx",
       "tokens"
@@ -2897,8 +2897,8 @@
     "colors": [],
     "caption": "four black circles are shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTrackNext.svg": {
-    "component_id": "Icon.RxTrackNext",
+  "rx/RxTrackNext.svg": {
+    "component_id": "rx:RxTrackNext",
     "aliases": [
       "rx",
       "track",
@@ -2907,8 +2907,8 @@
     "colors": [],
     "caption": "a black and white symbol of an arrow pointing down"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTrackPrevious.svg": {
-    "component_id": "Icon.RxTrackPrevious",
+  "rx/RxTrackPrevious.svg": {
+    "component_id": "rx:RxTrackPrevious",
     "aliases": [
       "rx",
       "track",
@@ -2917,8 +2917,8 @@
     "colors": [],
     "caption": "a black and white symbol of the letter k"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTransform.svg": {
-    "component_id": "Icon.RxTransform",
+  "rx/RxTransform.svg": {
+    "component_id": "rx:RxTransform",
     "aliases": [
       "rx",
       "transform"
@@ -2926,8 +2926,8 @@
     "colors": [],
     "caption": "a black and white image of a square with two lines"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTransparencyGrid.svg": {
-    "component_id": "Icon.RxTransparencyGrid",
+  "rx/RxTransparencyGrid.svg": {
+    "component_id": "rx:RxTransparencyGrid",
     "aliases": [
       "rx",
       "transparency",
@@ -2936,8 +2936,8 @@
     "colors": [],
     "caption": "a gray and white checkerboard pattern on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTrash.svg": {
-    "component_id": "Icon.RxTrash",
+  "rx/RxTrash.svg": {
+    "component_id": "rx:RxTrash",
     "aliases": [
       "rx",
       "trash"
@@ -2945,8 +2945,8 @@
     "colors": [],
     "caption": "a black and white icon of a trash can"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTriangleDown.svg": {
-    "component_id": "Icon.RxTriangleDown",
+  "rx/RxTriangleDown.svg": {
+    "component_id": "rx:RxTriangleDown",
     "aliases": [
       "rx",
       "triangle",
@@ -2955,8 +2955,8 @@
     "colors": [],
     "caption": "a black triangle is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTriangleLeft.svg": {
-    "component_id": "Icon.RxTriangleLeft",
+  "rx/RxTriangleLeft.svg": {
+    "component_id": "rx:RxTriangleLeft",
     "aliases": [
       "rx",
       "triangle",
@@ -2965,8 +2965,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTriangleRight.svg": {
-    "component_id": "Icon.RxTriangleRight",
+  "rx/RxTriangleRight.svg": {
+    "component_id": "rx:RxTriangleRight",
     "aliases": [
       "rx",
       "triangle",
@@ -2975,8 +2975,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTriangleUp.svg": {
-    "component_id": "Icon.RxTriangleUp",
+  "rx/RxTriangleUp.svg": {
+    "component_id": "rx:RxTriangleUp",
     "aliases": [
       "rx",
       "triangle",
@@ -2985,8 +2985,8 @@
     "colors": [],
     "caption": "a black triangle is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxTwitterLogo.svg": {
-    "component_id": "Icon.RxTwitterLogo",
+  "rx/RxTwitterLogo.svg": {
+    "component_id": "rx:RxTwitterLogo",
     "aliases": [
       "rx",
       "twitter",
@@ -2995,8 +2995,8 @@
     "colors": [],
     "caption": "a black and white image of a twitter bird"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxUnderline.svg": {
-    "component_id": "Icon.RxUnderline",
+  "rx/RxUnderline.svg": {
+    "component_id": "rx:RxUnderline",
     "aliases": [
       "rx",
       "underline"
@@ -3004,8 +3004,8 @@
     "colors": [],
     "caption": "a black and white icon of the letter u"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxUpdate.svg": {
-    "component_id": "Icon.RxUpdate",
+  "rx/RxUpdate.svg": {
+    "component_id": "rx:RxUpdate",
     "aliases": [
       "rx",
       "update"
@@ -3013,8 +3013,8 @@
     "colors": [],
     "caption": "a black and white image of a circular arrow"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxUpload.svg": {
-    "component_id": "Icon.RxUpload",
+  "rx/RxUpload.svg": {
+    "component_id": "rx:RxUpload",
     "aliases": [
       "rx",
       "upload"
@@ -3022,8 +3022,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxValue.svg": {
-    "component_id": "Icon.RxValue",
+  "rx/RxValue.svg": {
+    "component_id": "rx:RxValue",
     "aliases": [
       "rx",
       "value"
@@ -3031,8 +3031,8 @@
     "colors": [],
     "caption": "a black circle is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxValueNone.svg": {
-    "component_id": "Icon.RxValueNone",
+  "rx/RxValueNone.svg": {
+    "component_id": "rx:RxValueNone",
     "aliases": [
       "rx",
       "value",
@@ -3041,8 +3041,8 @@
     "colors": [],
     "caption": "a black and white image of a no sign"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxVercelLogo.svg": {
-    "component_id": "Icon.RxVercelLogo",
+  "rx/RxVercelLogo.svg": {
+    "component_id": "rx:RxVercelLogo",
     "aliases": [
       "rx",
       "vercel",
@@ -3051,8 +3051,8 @@
     "colors": [],
     "caption": "a triangle is shown in black on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxVideo.svg": {
-    "component_id": "Icon.RxVideo",
+  "rx/RxVideo.svg": {
+    "component_id": "rx:RxVideo",
     "aliases": [
       "rx",
       "video"
@@ -3060,8 +3060,8 @@
     "colors": [],
     "caption": "a black and white play button on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxViewGrid.svg": {
-    "component_id": "Icon.RxViewGrid",
+  "rx/RxViewGrid.svg": {
+    "component_id": "rx:RxViewGrid",
     "aliases": [
       "rx",
       "view",
@@ -3070,8 +3070,8 @@
     "colors": [],
     "caption": "a black and white icon with four squares"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxViewHorizontal.svg": {
-    "component_id": "Icon.RxViewHorizontal",
+  "rx/RxViewHorizontal.svg": {
+    "component_id": "rx:RxViewHorizontal",
     "aliases": [
       "rx",
       "view",
@@ -3080,8 +3080,8 @@
     "colors": [],
     "caption": "a black and white icon of a credit card"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxViewNone.svg": {
-    "component_id": "Icon.RxViewNone",
+  "rx/RxViewNone.svg": {
+    "component_id": "rx:RxViewNone",
     "aliases": [
       "rx",
       "view",
@@ -3090,8 +3090,8 @@
     "colors": [],
     "caption": "a black and white image of a rectangle with a line through it"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxViewVertical.svg": {
-    "component_id": "Icon.RxViewVertical",
+  "rx/RxViewVertical.svg": {
+    "component_id": "rx:RxViewVertical",
     "aliases": [
       "rx",
       "view",
@@ -3100,8 +3100,8 @@
     "colors": [],
     "caption": "a black and white icon of a book"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxWidth.svg": {
-    "component_id": "Icon.RxWidth",
+  "rx/RxWidth.svg": {
+    "component_id": "rx:RxWidth",
     "aliases": [
       "rx",
       "width"
@@ -3109,8 +3109,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxZoomIn.svg": {
-    "component_id": "Icon.RxZoomIn",
+  "rx/RxZoomIn.svg": {
+    "component_id": "rx:RxZoomIn",
     "aliases": [
       "rx",
       "zoom",
@@ -3119,8 +3119,8 @@
     "colors": [],
     "caption": "a magnifying icon with a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/rx/RxZoomOut.svg": {
-    "component_id": "Icon.RxZoomOut",
+  "rx/RxZoomOut.svg": {
+    "component_id": "rx:RxZoomOut",
     "aliases": [
       "rx",
       "zoom",

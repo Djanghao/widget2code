@@ -33,6 +33,8 @@ Props: `fontSize`, `color`, `align` (left/center/right), `fontWeight`, `lineHeig
 
 ### Icon
 Props: `name`, `size`, `color`
+- **IMPORTANT**: Icon names must use `"prefix:ComponentName"` format (e.g., `"sf:SfBoltFill"`, `"lu:LuHeart"`, `"fa:FaCamera"`)
+- Supported prefixes: `ai`, `bi`, `bs`, `cg`, `ci`, `di`, `fa`, `fa6`, `fc`, `fi`, `gi`, `go`, `gr`, `hi`, `hi2`, `im`, `io`, `io5`, `lia`, `lu`, `md`, `pi`, `ri`, `rx`, `sf`, `si`, `sl`, `tb`, `tfi`, `ti`, `vsc`, `wi`
 [AVAILABLE_ICON_NAMES]
 - Can have `flex` prop (typically `"none"` for icons)
 

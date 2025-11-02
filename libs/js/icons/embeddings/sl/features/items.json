@@ -1,7 +1,7 @@
 [
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlActionRedo.svg",
-    "component_id": "Icon.SlActionRedo",
+    "src_svg": "sl/SlActionRedo.svg",
+    "component_id": "sl:SlActionRedo",
     "aliases": [
       "sl",
       "action",
@@ -11,8 +11,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlActionUndo.svg",
-    "component_id": "Icon.SlActionUndo",
+    "src_svg": "sl/SlActionUndo.svg",
+    "component_id": "sl:SlActionUndo",
     "aliases": [
       "sl",
       "action",
@@ -22,8 +22,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlAnchor.svg",
-    "component_id": "Icon.SlAnchor",
+    "src_svg": "sl/SlAnchor.svg",
+    "component_id": "sl:SlAnchor",
     "aliases": [
       "sl",
       "anchor"
@@ -32,8 +32,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlArrowDown.svg",
-    "component_id": "Icon.SlArrowDown",
+    "src_svg": "sl/SlArrowDown.svg",
+    "component_id": "sl:SlArrowDown",
     "aliases": [
       "sl",
       "arrow",
@@ -43,8 +43,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlArrowDownCircle.svg",
-    "component_id": "Icon.SlArrowDownCircle",
+    "src_svg": "sl/SlArrowDownCircle.svg",
+    "component_id": "sl:SlArrowDownCircle",
     "aliases": [
       "sl",
       "arrow",
@@ -55,8 +55,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlArrowLeft.svg",
-    "component_id": "Icon.SlArrowLeft",
+    "src_svg": "sl/SlArrowLeft.svg",
+    "component_id": "sl:SlArrowLeft",
     "aliases": [
       "sl",
       "arrow",
@@ -66,8 +66,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlArrowLeftCircle.svg",
-    "component_id": "Icon.SlArrowLeftCircle",
+    "src_svg": "sl/SlArrowLeftCircle.svg",
+    "component_id": "sl:SlArrowLeftCircle",
     "aliases": [
       "sl",
       "arrow",
@@ -78,8 +78,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlArrowRight.svg",
-    "component_id": "Icon.SlArrowRight",
+    "src_svg": "sl/SlArrowRight.svg",
+    "component_id": "sl:SlArrowRight",
     "aliases": [
       "sl",
       "arrow",
@@ -89,8 +89,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlArrowRightCircle.svg",
-    "component_id": "Icon.SlArrowRightCircle",
+    "src_svg": "sl/SlArrowRightCircle.svg",
+    "component_id": "sl:SlArrowRightCircle",
     "aliases": [
       "sl",
       "arrow",
@@ -101,8 +101,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlArrowUp.svg",
-    "component_id": "Icon.SlArrowUp",
+    "src_svg": "sl/SlArrowUp.svg",
+    "component_id": "sl:SlArrowUp",
     "aliases": [
       "sl",
       "arrow",
@@ -112,8 +112,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlArrowUpCircle.svg",
-    "component_id": "Icon.SlArrowUpCircle",
+    "src_svg": "sl/SlArrowUpCircle.svg",
+    "component_id": "sl:SlArrowUpCircle",
     "aliases": [
       "sl",
       "arrow",
@@ -124,8 +124,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBadge.svg",
-    "component_id": "Icon.SlBadge",
+    "src_svg": "sl/SlBadge.svg",
+    "component_id": "sl:SlBadge",
     "aliases": [
       "sl",
       "badge"
@@ -134,8 +134,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBag.svg",
-    "component_id": "Icon.SlBag",
+    "src_svg": "sl/SlBag.svg",
+    "component_id": "sl:SlBag",
     "aliases": [
       "sl",
       "bag"
@@ -144,8 +144,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBan.svg",
-    "component_id": "Icon.SlBan",
+    "src_svg": "sl/SlBan.svg",
+    "component_id": "sl:SlBan",
     "aliases": [
       "sl",
       "ban"
@@ -154,8 +154,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBasket.svg",
-    "component_id": "Icon.SlBasket",
+    "src_svg": "sl/SlBasket.svg",
+    "component_id": "sl:SlBasket",
     "aliases": [
       "sl",
       "basket"
@@ -164,8 +164,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBasketLoaded.svg",
-    "component_id": "Icon.SlBasketLoaded",
+    "src_svg": "sl/SlBasketLoaded.svg",
+    "component_id": "sl:SlBasketLoaded",
     "aliases": [
       "sl",
       "basket",
@@ -175,8 +175,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBell.svg",
-    "component_id": "Icon.SlBell",
+    "src_svg": "sl/SlBell.svg",
+    "component_id": "sl:SlBell",
     "aliases": [
       "sl",
       "bell"
@@ -185,8 +185,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBookOpen.svg",
-    "component_id": "Icon.SlBookOpen",
+    "src_svg": "sl/SlBookOpen.svg",
+    "component_id": "sl:SlBookOpen",
     "aliases": [
       "sl",
       "book",
@@ -196,8 +196,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBriefcase.svg",
-    "component_id": "Icon.SlBriefcase",
+    "src_svg": "sl/SlBriefcase.svg",
+    "component_id": "sl:SlBriefcase",
     "aliases": [
       "sl",
       "briefcase"
@@ -206,8 +206,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBubble.svg",
-    "component_id": "Icon.SlBubble",
+    "src_svg": "sl/SlBubble.svg",
+    "component_id": "sl:SlBubble",
     "aliases": [
       "sl",
       "bubble"
@@ -216,8 +216,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBubbles.svg",
-    "component_id": "Icon.SlBubbles",
+    "src_svg": "sl/SlBubbles.svg",
+    "component_id": "sl:SlBubbles",
     "aliases": [
       "sl",
       "bubbles"
@@ -226,8 +226,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlBulb.svg",
-    "component_id": "Icon.SlBulb",
+    "src_svg": "sl/SlBulb.svg",
+    "component_id": "sl:SlBulb",
     "aliases": [
       "sl",
       "bulb"
@@ -236,8 +236,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCalculator.svg",
-    "component_id": "Icon.SlCalculator",
+    "src_svg": "sl/SlCalculator.svg",
+    "component_id": "sl:SlCalculator",
     "aliases": [
       "sl",
       "calculator"
@@ -246,8 +246,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCalender.svg",
-    "component_id": "Icon.SlCalender",
+    "src_svg": "sl/SlCalender.svg",
+    "component_id": "sl:SlCalender",
     "aliases": [
       "sl",
       "calender"
@@ -256,8 +256,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCallEnd.svg",
-    "component_id": "Icon.SlCallEnd",
+    "src_svg": "sl/SlCallEnd.svg",
+    "component_id": "sl:SlCallEnd",
     "aliases": [
       "sl",
       "call",
@@ -267,8 +267,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCallIn.svg",
-    "component_id": "Icon.SlCallIn",
+    "src_svg": "sl/SlCallIn.svg",
+    "component_id": "sl:SlCallIn",
     "aliases": [
       "sl",
       "call",
@@ -278,8 +278,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCallOut.svg",
-    "component_id": "Icon.SlCallOut",
+    "src_svg": "sl/SlCallOut.svg",
+    "component_id": "sl:SlCallOut",
     "aliases": [
       "sl",
       "call",
@@ -289,8 +289,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCamera.svg",
-    "component_id": "Icon.SlCamera",
+    "src_svg": "sl/SlCamera.svg",
+    "component_id": "sl:SlCamera",
     "aliases": [
       "sl",
       "camera"
@@ -299,8 +299,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCamrecorder.svg",
-    "component_id": "Icon.SlCamrecorder",
+    "src_svg": "sl/SlCamrecorder.svg",
+    "component_id": "sl:SlCamrecorder",
     "aliases": [
       "sl",
       "camrecorder"
@@ -309,8 +309,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlChart.svg",
-    "component_id": "Icon.SlChart",
+    "src_svg": "sl/SlChart.svg",
+    "component_id": "sl:SlChart",
     "aliases": [
       "sl",
       "chart"
@@ -319,8 +319,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCheck.svg",
-    "component_id": "Icon.SlCheck",
+    "src_svg": "sl/SlCheck.svg",
+    "component_id": "sl:SlCheck",
     "aliases": [
       "sl",
       "check"
@@ -329,8 +329,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlChemistry.svg",
-    "component_id": "Icon.SlChemistry",
+    "src_svg": "sl/SlChemistry.svg",
+    "component_id": "sl:SlChemistry",
     "aliases": [
       "sl",
       "chemistry"
@@ -339,8 +339,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlClock.svg",
-    "component_id": "Icon.SlClock",
+    "src_svg": "sl/SlClock.svg",
+    "component_id": "sl:SlClock",
     "aliases": [
       "sl",
       "clock"
@@ -349,8 +349,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlClose.svg",
-    "component_id": "Icon.SlClose",
+    "src_svg": "sl/SlClose.svg",
+    "component_id": "sl:SlClose",
     "aliases": [
       "sl",
       "close"
@@ -359,8 +359,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCloudDownload.svg",
-    "component_id": "Icon.SlCloudDownload",
+    "src_svg": "sl/SlCloudDownload.svg",
+    "component_id": "sl:SlCloudDownload",
     "aliases": [
       "sl",
       "cloud",
@@ -370,8 +370,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCloudUpload.svg",
-    "component_id": "Icon.SlCloudUpload",
+    "src_svg": "sl/SlCloudUpload.svg",
+    "component_id": "sl:SlCloudUpload",
     "aliases": [
       "sl",
       "cloud",
@@ -381,8 +381,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCompass.svg",
-    "component_id": "Icon.SlCompass",
+    "src_svg": "sl/SlCompass.svg",
+    "component_id": "sl:SlCompass",
     "aliases": [
       "sl",
       "compass"
@@ -391,8 +391,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlControlEnd.svg",
-    "component_id": "Icon.SlControlEnd",
+    "src_svg": "sl/SlControlEnd.svg",
+    "component_id": "sl:SlControlEnd",
     "aliases": [
       "sl",
       "control",
@@ -402,8 +402,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlControlForward.svg",
-    "component_id": "Icon.SlControlForward",
+    "src_svg": "sl/SlControlForward.svg",
+    "component_id": "sl:SlControlForward",
     "aliases": [
       "sl",
       "control",
@@ -413,8 +413,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlControlPause.svg",
-    "component_id": "Icon.SlControlPause",
+    "src_svg": "sl/SlControlPause.svg",
+    "component_id": "sl:SlControlPause",
     "aliases": [
       "sl",
       "control",
@@ -424,8 +424,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlControlPlay.svg",
-    "component_id": "Icon.SlControlPlay",
+    "src_svg": "sl/SlControlPlay.svg",
+    "component_id": "sl:SlControlPlay",
     "aliases": [
       "sl",
       "control",
@@ -435,8 +435,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlControlRewind.svg",
-    "component_id": "Icon.SlControlRewind",
+    "src_svg": "sl/SlControlRewind.svg",
+    "component_id": "sl:SlControlRewind",
     "aliases": [
       "sl",
       "control",
@@ -446,8 +446,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlControlStart.svg",
-    "component_id": "Icon.SlControlStart",
+    "src_svg": "sl/SlControlStart.svg",
+    "component_id": "sl:SlControlStart",
     "aliases": [
       "sl",
       "control",
@@ -457,8 +457,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCreditCard.svg",
-    "component_id": "Icon.SlCreditCard",
+    "src_svg": "sl/SlCreditCard.svg",
+    "component_id": "sl:SlCreditCard",
     "aliases": [
       "sl",
       "credit",
@@ -468,8 +468,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCrop.svg",
-    "component_id": "Icon.SlCrop",
+    "src_svg": "sl/SlCrop.svg",
+    "component_id": "sl:SlCrop",
     "aliases": [
       "sl",
       "crop"
@@ -478,8 +478,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCup.svg",
-    "component_id": "Icon.SlCup",
+    "src_svg": "sl/SlCup.svg",
+    "component_id": "sl:SlCup",
     "aliases": [
       "sl",
       "cup"
@@ -488,8 +488,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCursor.svg",
-    "component_id": "Icon.SlCursor",
+    "src_svg": "sl/SlCursor.svg",
+    "component_id": "sl:SlCursor",
     "aliases": [
       "sl",
       "cursor"
@@ -498,8 +498,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlCursorMove.svg",
-    "component_id": "Icon.SlCursorMove",
+    "src_svg": "sl/SlCursorMove.svg",
+    "component_id": "sl:SlCursorMove",
     "aliases": [
       "sl",
       "cursor",
@@ -509,8 +509,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlDiamond.svg",
-    "component_id": "Icon.SlDiamond",
+    "src_svg": "sl/SlDiamond.svg",
+    "component_id": "sl:SlDiamond",
     "aliases": [
       "sl",
       "diamond"
@@ -519,8 +519,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlDirection.svg",
-    "component_id": "Icon.SlDirection",
+    "src_svg": "sl/SlDirection.svg",
+    "component_id": "sl:SlDirection",
     "aliases": [
       "sl",
       "direction"
@@ -529,8 +529,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlDirections.svg",
-    "component_id": "Icon.SlDirections",
+    "src_svg": "sl/SlDirections.svg",
+    "component_id": "sl:SlDirections",
     "aliases": [
       "sl",
       "directions"
@@ -539,8 +539,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlDisc.svg",
-    "component_id": "Icon.SlDisc",
+    "src_svg": "sl/SlDisc.svg",
+    "component_id": "sl:SlDisc",
     "aliases": [
       "sl",
       "disc"
@@ -549,8 +549,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlDislike.svg",
-    "component_id": "Icon.SlDislike",
+    "src_svg": "sl/SlDislike.svg",
+    "component_id": "sl:SlDislike",
     "aliases": [
       "sl",
       "dislike"
@@ -559,8 +559,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlDoc.svg",
-    "component_id": "Icon.SlDoc",
+    "src_svg": "sl/SlDoc.svg",
+    "component_id": "sl:SlDoc",
     "aliases": [
       "sl",
       "doc"
@@ -569,8 +569,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlDocs.svg",
-    "component_id": "Icon.SlDocs",
+    "src_svg": "sl/SlDocs.svg",
+    "component_id": "sl:SlDocs",
     "aliases": [
       "sl",
       "docs"
@@ -579,8 +579,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlDrawer.svg",
-    "component_id": "Icon.SlDrawer",
+    "src_svg": "sl/SlDrawer.svg",
+    "component_id": "sl:SlDrawer",
     "aliases": [
       "sl",
       "drawer"
@@ -589,8 +589,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlDrop.svg",
-    "component_id": "Icon.SlDrop",
+    "src_svg": "sl/SlDrop.svg",
+    "component_id": "sl:SlDrop",
     "aliases": [
       "sl",
       "drop"
@@ -599,8 +599,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEarphones.svg",
-    "component_id": "Icon.SlEarphones",
+    "src_svg": "sl/SlEarphones.svg",
+    "component_id": "sl:SlEarphones",
     "aliases": [
       "sl",
       "earphones"
@@ -609,8 +609,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEarphonesAlt.svg",
-    "component_id": "Icon.SlEarphonesAlt",
+    "src_svg": "sl/SlEarphonesAlt.svg",
+    "component_id": "sl:SlEarphonesAlt",
     "aliases": [
       "sl",
       "earphones",
@@ -620,8 +620,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEmotsmile.svg",
-    "component_id": "Icon.SlEmotsmile",
+    "src_svg": "sl/SlEmotsmile.svg",
+    "component_id": "sl:SlEmotsmile",
     "aliases": [
       "sl",
       "emotsmile"
@@ -630,8 +630,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEnergy.svg",
-    "component_id": "Icon.SlEnergy",
+    "src_svg": "sl/SlEnergy.svg",
+    "component_id": "sl:SlEnergy",
     "aliases": [
       "sl",
       "energy"
@@ -640,8 +640,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEnvelopeOpen.svg",
-    "component_id": "Icon.SlEnvelopeOpen",
+    "src_svg": "sl/SlEnvelopeOpen.svg",
+    "component_id": "sl:SlEnvelopeOpen",
     "aliases": [
       "sl",
       "envelope",
@@ -651,8 +651,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEnvolope.svg",
-    "component_id": "Icon.SlEnvolope",
+    "src_svg": "sl/SlEnvolope.svg",
+    "component_id": "sl:SlEnvolope",
     "aliases": [
       "sl",
       "envolope"
@@ -661,8 +661,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEnvolopeLetter.svg",
-    "component_id": "Icon.SlEnvolopeLetter",
+    "src_svg": "sl/SlEnvolopeLetter.svg",
+    "component_id": "sl:SlEnvolopeLetter",
     "aliases": [
       "sl",
       "envolope",
@@ -672,8 +672,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEqualizer.svg",
-    "component_id": "Icon.SlEqualizer",
+    "src_svg": "sl/SlEqualizer.svg",
+    "component_id": "sl:SlEqualizer",
     "aliases": [
       "sl",
       "equalizer"
@@ -682,8 +682,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEvent.svg",
-    "component_id": "Icon.SlEvent",
+    "src_svg": "sl/SlEvent.svg",
+    "component_id": "sl:SlEvent",
     "aliases": [
       "sl",
       "event"
@@ -692,8 +692,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlExclamation.svg",
-    "component_id": "Icon.SlExclamation",
+    "src_svg": "sl/SlExclamation.svg",
+    "component_id": "sl:SlExclamation",
     "aliases": [
       "sl",
       "exclamation"
@@ -702,8 +702,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEye.svg",
-    "component_id": "Icon.SlEye",
+    "src_svg": "sl/SlEye.svg",
+    "component_id": "sl:SlEye",
     "aliases": [
       "sl",
       "eye"
@@ -712,8 +712,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlEyeglass.svg",
-    "component_id": "Icon.SlEyeglass",
+    "src_svg": "sl/SlEyeglass.svg",
+    "component_id": "sl:SlEyeglass",
     "aliases": [
       "sl",
       "eyeglass"
@@ -722,8 +722,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlFeed.svg",
-    "component_id": "Icon.SlFeed",
+    "src_svg": "sl/SlFeed.svg",
+    "component_id": "sl:SlFeed",
     "aliases": [
       "sl",
       "feed"
@@ -732,8 +732,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlFilm.svg",
-    "component_id": "Icon.SlFilm",
+    "src_svg": "sl/SlFilm.svg",
+    "component_id": "sl:SlFilm",
     "aliases": [
       "sl",
       "film"
@@ -742,8 +742,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlFire.svg",
-    "component_id": "Icon.SlFire",
+    "src_svg": "sl/SlFire.svg",
+    "component_id": "sl:SlFire",
     "aliases": [
       "sl",
       "fire"
@@ -752,8 +752,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlFlag.svg",
-    "component_id": "Icon.SlFlag",
+    "src_svg": "sl/SlFlag.svg",
+    "component_id": "sl:SlFlag",
     "aliases": [
       "sl",
       "flag"
@@ -762,8 +762,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlFolder.svg",
-    "component_id": "Icon.SlFolder",
+    "src_svg": "sl/SlFolder.svg",
+    "component_id": "sl:SlFolder",
     "aliases": [
       "sl",
       "folder"
@@ -772,8 +772,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlFolderAlt.svg",
-    "component_id": "Icon.SlFolderAlt",
+    "src_svg": "sl/SlFolderAlt.svg",
+    "component_id": "sl:SlFolderAlt",
     "aliases": [
       "sl",
       "folder",
@@ -783,8 +783,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlFrame.svg",
-    "component_id": "Icon.SlFrame",
+    "src_svg": "sl/SlFrame.svg",
+    "component_id": "sl:SlFrame",
     "aliases": [
       "sl",
       "frame"
@@ -793,8 +793,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlGameController.svg",
-    "component_id": "Icon.SlGameController",
+    "src_svg": "sl/SlGameController.svg",
+    "component_id": "sl:SlGameController",
     "aliases": [
       "sl",
       "game",
@@ -804,8 +804,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlGhost.svg",
-    "component_id": "Icon.SlGhost",
+    "src_svg": "sl/SlGhost.svg",
+    "component_id": "sl:SlGhost",
     "aliases": [
       "sl",
       "ghost"
@@ -814,8 +814,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlGlobe.svg",
-    "component_id": "Icon.SlGlobe",
+    "src_svg": "sl/SlGlobe.svg",
+    "component_id": "sl:SlGlobe",
     "aliases": [
       "sl",
       "globe"
@@ -824,8 +824,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlGlobeAlt.svg",
-    "component_id": "Icon.SlGlobeAlt",
+    "src_svg": "sl/SlGlobeAlt.svg",
+    "component_id": "sl:SlGlobeAlt",
     "aliases": [
       "sl",
       "globe",
@@ -835,8 +835,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlGraduation.svg",
-    "component_id": "Icon.SlGraduation",
+    "src_svg": "sl/SlGraduation.svg",
+    "component_id": "sl:SlGraduation",
     "aliases": [
       "sl",
       "graduation"
@@ -845,8 +845,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlGraph.svg",
-    "component_id": "Icon.SlGraph",
+    "src_svg": "sl/SlGraph.svg",
+    "component_id": "sl:SlGraph",
     "aliases": [
       "sl",
       "graph"
@@ -855,8 +855,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlGrid.svg",
-    "component_id": "Icon.SlGrid",
+    "src_svg": "sl/SlGrid.svg",
+    "component_id": "sl:SlGrid",
     "aliases": [
       "sl",
       "grid"
@@ -865,8 +865,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlHandbag.svg",
-    "component_id": "Icon.SlHandbag",
+    "src_svg": "sl/SlHandbag.svg",
+    "component_id": "sl:SlHandbag",
     "aliases": [
       "sl",
       "handbag"
@@ -875,8 +875,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlHeart.svg",
-    "component_id": "Icon.SlHeart",
+    "src_svg": "sl/SlHeart.svg",
+    "component_id": "sl:SlHeart",
     "aliases": [
       "sl",
       "heart"
@@ -885,8 +885,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlHome.svg",
-    "component_id": "Icon.SlHome",
+    "src_svg": "sl/SlHome.svg",
+    "component_id": "sl:SlHome",
     "aliases": [
       "sl",
       "home"
@@ -895,8 +895,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlHourglass.svg",
-    "component_id": "Icon.SlHourglass",
+    "src_svg": "sl/SlHourglass.svg",
+    "component_id": "sl:SlHourglass",
     "aliases": [
       "sl",
       "hourglass"
@@ -905,8 +905,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlInfo.svg",
-    "component_id": "Icon.SlInfo",
+    "src_svg": "sl/SlInfo.svg",
+    "component_id": "sl:SlInfo",
     "aliases": [
       "sl",
       "info"
@@ -915,8 +915,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlKey.svg",
-    "component_id": "Icon.SlKey",
+    "src_svg": "sl/SlKey.svg",
+    "component_id": "sl:SlKey",
     "aliases": [
       "sl",
       "key"
@@ -925,8 +925,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlLayers.svg",
-    "component_id": "Icon.SlLayers",
+    "src_svg": "sl/SlLayers.svg",
+    "component_id": "sl:SlLayers",
     "aliases": [
       "sl",
       "layers"
@@ -935,8 +935,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlLike.svg",
-    "component_id": "Icon.SlLike",
+    "src_svg": "sl/SlLike.svg",
+    "component_id": "sl:SlLike",
     "aliases": [
       "sl",
       "like"
@@ -945,8 +945,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlLink.svg",
-    "component_id": "Icon.SlLink",
+    "src_svg": "sl/SlLink.svg",
+    "component_id": "sl:SlLink",
     "aliases": [
       "sl",
       "link"
@@ -955,8 +955,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlList.svg",
-    "component_id": "Icon.SlList",
+    "src_svg": "sl/SlList.svg",
+    "component_id": "sl:SlList",
     "aliases": [
       "sl",
       "list"
@@ -965,8 +965,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlLocationPin.svg",
-    "component_id": "Icon.SlLocationPin",
+    "src_svg": "sl/SlLocationPin.svg",
+    "component_id": "sl:SlLocationPin",
     "aliases": [
       "sl",
       "location",
@@ -976,8 +976,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlLock.svg",
-    "component_id": "Icon.SlLock",
+    "src_svg": "sl/SlLock.svg",
+    "component_id": "sl:SlLock",
     "aliases": [
       "sl",
       "lock"
@@ -986,8 +986,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlLockOpen.svg",
-    "component_id": "Icon.SlLockOpen",
+    "src_svg": "sl/SlLockOpen.svg",
+    "component_id": "sl:SlLockOpen",
     "aliases": [
       "sl",
       "lock",
@@ -997,8 +997,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlLogin.svg",
-    "component_id": "Icon.SlLogin",
+    "src_svg": "sl/SlLogin.svg",
+    "component_id": "sl:SlLogin",
     "aliases": [
       "sl",
       "login"
@@ -1007,8 +1007,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlLogout.svg",
-    "component_id": "Icon.SlLogout",
+    "src_svg": "sl/SlLogout.svg",
+    "component_id": "sl:SlLogout",
     "aliases": [
       "sl",
       "logout"
@@ -1017,8 +1017,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlLoop.svg",
-    "component_id": "Icon.SlLoop",
+    "src_svg": "sl/SlLoop.svg",
+    "component_id": "sl:SlLoop",
     "aliases": [
       "sl",
       "loop"
@@ -1027,8 +1027,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMagicWand.svg",
-    "component_id": "Icon.SlMagicWand",
+    "src_svg": "sl/SlMagicWand.svg",
+    "component_id": "sl:SlMagicWand",
     "aliases": [
       "sl",
       "magic",
@@ -1038,8 +1038,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMagnet.svg",
-    "component_id": "Icon.SlMagnet",
+    "src_svg": "sl/SlMagnet.svg",
+    "component_id": "sl:SlMagnet",
     "aliases": [
       "sl",
       "magnet"
@@ -1048,8 +1048,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMagnifier.svg",
-    "component_id": "Icon.SlMagnifier",
+    "src_svg": "sl/SlMagnifier.svg",
+    "component_id": "sl:SlMagnifier",
     "aliases": [
       "sl",
       "magnifier"
@@ -1058,8 +1058,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMagnifierAdd.svg",
-    "component_id": "Icon.SlMagnifierAdd",
+    "src_svg": "sl/SlMagnifierAdd.svg",
+    "component_id": "sl:SlMagnifierAdd",
     "aliases": [
       "sl",
       "magnifier",
@@ -1069,8 +1069,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMagnifierRemove.svg",
-    "component_id": "Icon.SlMagnifierRemove",
+    "src_svg": "sl/SlMagnifierRemove.svg",
+    "component_id": "sl:SlMagnifierRemove",
     "aliases": [
       "sl",
       "magnifier",
@@ -1080,8 +1080,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMap.svg",
-    "component_id": "Icon.SlMap",
+    "src_svg": "sl/SlMap.svg",
+    "component_id": "sl:SlMap",
     "aliases": [
       "sl",
       "map"
@@ -1090,8 +1090,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMenu.svg",
-    "component_id": "Icon.SlMenu",
+    "src_svg": "sl/SlMenu.svg",
+    "component_id": "sl:SlMenu",
     "aliases": [
       "sl",
       "menu"
@@ -1100,8 +1100,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMicrophone.svg",
-    "component_id": "Icon.SlMicrophone",
+    "src_svg": "sl/SlMicrophone.svg",
+    "component_id": "sl:SlMicrophone",
     "aliases": [
       "sl",
       "microphone"
@@ -1110,8 +1110,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMinus.svg",
-    "component_id": "Icon.SlMinus",
+    "src_svg": "sl/SlMinus.svg",
+    "component_id": "sl:SlMinus",
     "aliases": [
       "sl",
       "minus"
@@ -1120,8 +1120,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMouse.svg",
-    "component_id": "Icon.SlMouse",
+    "src_svg": "sl/SlMouse.svg",
+    "component_id": "sl:SlMouse",
     "aliases": [
       "sl",
       "mouse"
@@ -1130,8 +1130,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMusicTone.svg",
-    "component_id": "Icon.SlMusicTone",
+    "src_svg": "sl/SlMusicTone.svg",
+    "component_id": "sl:SlMusicTone",
     "aliases": [
       "sl",
       "music",
@@ -1141,8 +1141,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMusicToneAlt.svg",
-    "component_id": "Icon.SlMusicToneAlt",
+    "src_svg": "sl/SlMusicToneAlt.svg",
+    "component_id": "sl:SlMusicToneAlt",
     "aliases": [
       "sl",
       "music",
@@ -1153,8 +1153,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlMustache.svg",
-    "component_id": "Icon.SlMustache",
+    "src_svg": "sl/SlMustache.svg",
+    "component_id": "sl:SlMustache",
     "aliases": [
       "sl",
       "mustache"
@@ -1163,8 +1163,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlNote.svg",
-    "component_id": "Icon.SlNote",
+    "src_svg": "sl/SlNote.svg",
+    "component_id": "sl:SlNote",
     "aliases": [
       "sl",
       "note"
@@ -1173,8 +1173,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlNotebook.svg",
-    "component_id": "Icon.SlNotebook",
+    "src_svg": "sl/SlNotebook.svg",
+    "component_id": "sl:SlNotebook",
     "aliases": [
       "sl",
       "notebook"
@@ -1183,8 +1183,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlOptions.svg",
-    "component_id": "Icon.SlOptions",
+    "src_svg": "sl/SlOptions.svg",
+    "component_id": "sl:SlOptions",
     "aliases": [
       "sl",
       "options"
@@ -1193,8 +1193,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlOptionsVertical.svg",
-    "component_id": "Icon.SlOptionsVertical",
+    "src_svg": "sl/SlOptionsVertical.svg",
+    "component_id": "sl:SlOptionsVertical",
     "aliases": [
       "sl",
       "options",
@@ -1204,8 +1204,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlOrganization.svg",
-    "component_id": "Icon.SlOrganization",
+    "src_svg": "sl/SlOrganization.svg",
+    "component_id": "sl:SlOrganization",
     "aliases": [
       "sl",
       "organization"
@@ -1214,8 +1214,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPaperClip.svg",
-    "component_id": "Icon.SlPaperClip",
+    "src_svg": "sl/SlPaperClip.svg",
+    "component_id": "sl:SlPaperClip",
     "aliases": [
       "sl",
       "paper",
@@ -1225,8 +1225,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPaperPlane.svg",
-    "component_id": "Icon.SlPaperPlane",
+    "src_svg": "sl/SlPaperPlane.svg",
+    "component_id": "sl:SlPaperPlane",
     "aliases": [
       "sl",
       "paper",
@@ -1236,8 +1236,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPaypal.svg",
-    "component_id": "Icon.SlPaypal",
+    "src_svg": "sl/SlPaypal.svg",
+    "component_id": "sl:SlPaypal",
     "aliases": [
       "sl",
       "paypal"
@@ -1246,8 +1246,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPencil.svg",
-    "component_id": "Icon.SlPencil",
+    "src_svg": "sl/SlPencil.svg",
+    "component_id": "sl:SlPencil",
     "aliases": [
       "sl",
       "pencil"
@@ -1256,8 +1256,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPeople.svg",
-    "component_id": "Icon.SlPeople",
+    "src_svg": "sl/SlPeople.svg",
+    "component_id": "sl:SlPeople",
     "aliases": [
       "sl",
       "people"
@@ -1266,8 +1266,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPhone.svg",
-    "component_id": "Icon.SlPhone",
+    "src_svg": "sl/SlPhone.svg",
+    "component_id": "sl:SlPhone",
     "aliases": [
       "sl",
       "phone"
@@ -1276,8 +1276,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPicture.svg",
-    "component_id": "Icon.SlPicture",
+    "src_svg": "sl/SlPicture.svg",
+    "component_id": "sl:SlPicture",
     "aliases": [
       "sl",
       "picture"
@@ -1286,8 +1286,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPieChart.svg",
-    "component_id": "Icon.SlPieChart",
+    "src_svg": "sl/SlPieChart.svg",
+    "component_id": "sl:SlPieChart",
     "aliases": [
       "sl",
       "pie",
@@ -1297,8 +1297,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPin.svg",
-    "component_id": "Icon.SlPin",
+    "src_svg": "sl/SlPin.svg",
+    "component_id": "sl:SlPin",
     "aliases": [
       "sl",
       "pin"
@@ -1307,8 +1307,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPlane.svg",
-    "component_id": "Icon.SlPlane",
+    "src_svg": "sl/SlPlane.svg",
+    "component_id": "sl:SlPlane",
     "aliases": [
       "sl",
       "plane"
@@ -1317,8 +1317,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPlaylist.svg",
-    "component_id": "Icon.SlPlaylist",
+    "src_svg": "sl/SlPlaylist.svg",
+    "component_id": "sl:SlPlaylist",
     "aliases": [
       "sl",
       "playlist"
@@ -1327,8 +1327,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPlus.svg",
-    "component_id": "Icon.SlPlus",
+    "src_svg": "sl/SlPlus.svg",
+    "component_id": "sl:SlPlus",
     "aliases": [
       "sl",
       "plus"
@@ -1337,8 +1337,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPower.svg",
-    "component_id": "Icon.SlPower",
+    "src_svg": "sl/SlPower.svg",
+    "component_id": "sl:SlPower",
     "aliases": [
       "sl",
       "power"
@@ -1347,8 +1347,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPresent.svg",
-    "component_id": "Icon.SlPresent",
+    "src_svg": "sl/SlPresent.svg",
+    "component_id": "sl:SlPresent",
     "aliases": [
       "sl",
       "present"
@@ -1357,8 +1357,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPrinter.svg",
-    "component_id": "Icon.SlPrinter",
+    "src_svg": "sl/SlPrinter.svg",
+    "component_id": "sl:SlPrinter",
     "aliases": [
       "sl",
       "printer"
@@ -1367,8 +1367,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlPuzzle.svg",
-    "component_id": "Icon.SlPuzzle",
+    "src_svg": "sl/SlPuzzle.svg",
+    "component_id": "sl:SlPuzzle",
     "aliases": [
       "sl",
       "puzzle"
@@ -1377,8 +1377,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlQuestion.svg",
-    "component_id": "Icon.SlQuestion",
+    "src_svg": "sl/SlQuestion.svg",
+    "component_id": "sl:SlQuestion",
     "aliases": [
       "sl",
       "question"
@@ -1387,8 +1387,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlRefresh.svg",
-    "component_id": "Icon.SlRefresh",
+    "src_svg": "sl/SlRefresh.svg",
+    "component_id": "sl:SlRefresh",
     "aliases": [
       "sl",
       "refresh"
@@ -1397,8 +1397,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlReload.svg",
-    "component_id": "Icon.SlReload",
+    "src_svg": "sl/SlReload.svg",
+    "component_id": "sl:SlReload",
     "aliases": [
       "sl",
       "reload"
@@ -1407,8 +1407,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlRocket.svg",
-    "component_id": "Icon.SlRocket",
+    "src_svg": "sl/SlRocket.svg",
+    "component_id": "sl:SlRocket",
     "aliases": [
       "sl",
       "rocket"
@@ -1417,8 +1417,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlScreenDesktop.svg",
-    "component_id": "Icon.SlScreenDesktop",
+    "src_svg": "sl/SlScreenDesktop.svg",
+    "component_id": "sl:SlScreenDesktop",
     "aliases": [
       "sl",
       "screen",
@@ -1428,8 +1428,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlScreenSmartphone.svg",
-    "component_id": "Icon.SlScreenSmartphone",
+    "src_svg": "sl/SlScreenSmartphone.svg",
+    "component_id": "sl:SlScreenSmartphone",
     "aliases": [
       "sl",
       "screen",
@@ -1439,8 +1439,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlScreenTablet.svg",
-    "component_id": "Icon.SlScreenTablet",
+    "src_svg": "sl/SlScreenTablet.svg",
+    "component_id": "sl:SlScreenTablet",
     "aliases": [
       "sl",
       "screen",
@@ -1450,8 +1450,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSettings.svg",
-    "component_id": "Icon.SlSettings",
+    "src_svg": "sl/SlSettings.svg",
+    "component_id": "sl:SlSettings",
     "aliases": [
       "sl",
       "settings"
@@ -1460,8 +1460,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlShare.svg",
-    "component_id": "Icon.SlShare",
+    "src_svg": "sl/SlShare.svg",
+    "component_id": "sl:SlShare",
     "aliases": [
       "sl",
       "share"
@@ -1470,8 +1470,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlShareAlt.svg",
-    "component_id": "Icon.SlShareAlt",
+    "src_svg": "sl/SlShareAlt.svg",
+    "component_id": "sl:SlShareAlt",
     "aliases": [
       "sl",
       "share",
@@ -1481,8 +1481,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlShield.svg",
-    "component_id": "Icon.SlShield",
+    "src_svg": "sl/SlShield.svg",
+    "component_id": "sl:SlShield",
     "aliases": [
       "sl",
       "shield"
@@ -1491,8 +1491,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlShuffle.svg",
-    "component_id": "Icon.SlShuffle",
+    "src_svg": "sl/SlShuffle.svg",
+    "component_id": "sl:SlShuffle",
     "aliases": [
       "sl",
       "shuffle"
@@ -1501,8 +1501,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSizeActual.svg",
-    "component_id": "Icon.SlSizeActual",
+    "src_svg": "sl/SlSizeActual.svg",
+    "component_id": "sl:SlSizeActual",
     "aliases": [
       "sl",
       "size",
@@ -1512,8 +1512,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSizeFullscreen.svg",
-    "component_id": "Icon.SlSizeFullscreen",
+    "src_svg": "sl/SlSizeFullscreen.svg",
+    "component_id": "sl:SlSizeFullscreen",
     "aliases": [
       "sl",
       "size",
@@ -1523,8 +1523,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialBehance.svg",
-    "component_id": "Icon.SlSocialBehance",
+    "src_svg": "sl/SlSocialBehance.svg",
+    "component_id": "sl:SlSocialBehance",
     "aliases": [
       "sl",
       "social",
@@ -1534,8 +1534,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialDribbble.svg",
-    "component_id": "Icon.SlSocialDribbble",
+    "src_svg": "sl/SlSocialDribbble.svg",
+    "component_id": "sl:SlSocialDribbble",
     "aliases": [
       "sl",
       "social",
@@ -1545,8 +1545,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialDropbox.svg",
-    "component_id": "Icon.SlSocialDropbox",
+    "src_svg": "sl/SlSocialDropbox.svg",
+    "component_id": "sl:SlSocialDropbox",
     "aliases": [
       "sl",
       "social",
@@ -1556,8 +1556,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialFacebook.svg",
-    "component_id": "Icon.SlSocialFacebook",
+    "src_svg": "sl/SlSocialFacebook.svg",
+    "component_id": "sl:SlSocialFacebook",
     "aliases": [
       "sl",
       "social",
@@ -1567,8 +1567,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialFoursqare.svg",
-    "component_id": "Icon.SlSocialFoursqare",
+    "src_svg": "sl/SlSocialFoursqare.svg",
+    "component_id": "sl:SlSocialFoursqare",
     "aliases": [
       "sl",
       "social",
@@ -1578,8 +1578,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialGithub.svg",
-    "component_id": "Icon.SlSocialGithub",
+    "src_svg": "sl/SlSocialGithub.svg",
+    "component_id": "sl:SlSocialGithub",
     "aliases": [
       "sl",
       "social",
@@ -1589,8 +1589,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialGoogle.svg",
-    "component_id": "Icon.SlSocialGoogle",
+    "src_svg": "sl/SlSocialGoogle.svg",
+    "component_id": "sl:SlSocialGoogle",
     "aliases": [
       "sl",
       "social",
@@ -1600,8 +1600,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialInstagram.svg",
-    "component_id": "Icon.SlSocialInstagram",
+    "src_svg": "sl/SlSocialInstagram.svg",
+    "component_id": "sl:SlSocialInstagram",
     "aliases": [
       "sl",
       "social",
@@ -1611,8 +1611,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialLinkedin.svg",
-    "component_id": "Icon.SlSocialLinkedin",
+    "src_svg": "sl/SlSocialLinkedin.svg",
+    "component_id": "sl:SlSocialLinkedin",
     "aliases": [
       "sl",
       "social",
@@ -1622,8 +1622,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialPintarest.svg",
-    "component_id": "Icon.SlSocialPintarest",
+    "src_svg": "sl/SlSocialPintarest.svg",
+    "component_id": "sl:SlSocialPintarest",
     "aliases": [
       "sl",
       "social",
@@ -1633,8 +1633,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialReddit.svg",
-    "component_id": "Icon.SlSocialReddit",
+    "src_svg": "sl/SlSocialReddit.svg",
+    "component_id": "sl:SlSocialReddit",
     "aliases": [
       "sl",
       "social",
@@ -1644,8 +1644,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialSkype.svg",
-    "component_id": "Icon.SlSocialSkype",
+    "src_svg": "sl/SlSocialSkype.svg",
+    "component_id": "sl:SlSocialSkype",
     "aliases": [
       "sl",
       "social",
@@ -1655,8 +1655,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialSoundcloud.svg",
-    "component_id": "Icon.SlSocialSoundcloud",
+    "src_svg": "sl/SlSocialSoundcloud.svg",
+    "component_id": "sl:SlSocialSoundcloud",
     "aliases": [
       "sl",
       "social",
@@ -1666,8 +1666,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialSpotify.svg",
-    "component_id": "Icon.SlSocialSpotify",
+    "src_svg": "sl/SlSocialSpotify.svg",
+    "component_id": "sl:SlSocialSpotify",
     "aliases": [
       "sl",
       "social",
@@ -1677,8 +1677,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialSteam.svg",
-    "component_id": "Icon.SlSocialSteam",
+    "src_svg": "sl/SlSocialSteam.svg",
+    "component_id": "sl:SlSocialSteam",
     "aliases": [
       "sl",
       "social",
@@ -1688,8 +1688,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialStumbleupon.svg",
-    "component_id": "Icon.SlSocialStumbleupon",
+    "src_svg": "sl/SlSocialStumbleupon.svg",
+    "component_id": "sl:SlSocialStumbleupon",
     "aliases": [
       "sl",
       "social",
@@ -1699,8 +1699,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialTumblr.svg",
-    "component_id": "Icon.SlSocialTumblr",
+    "src_svg": "sl/SlSocialTumblr.svg",
+    "component_id": "sl:SlSocialTumblr",
     "aliases": [
       "sl",
       "social",
@@ -1710,8 +1710,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialTwitter.svg",
-    "component_id": "Icon.SlSocialTwitter",
+    "src_svg": "sl/SlSocialTwitter.svg",
+    "component_id": "sl:SlSocialTwitter",
     "aliases": [
       "sl",
       "social",
@@ -1721,8 +1721,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialVkontakte.svg",
-    "component_id": "Icon.SlSocialVkontakte",
+    "src_svg": "sl/SlSocialVkontakte.svg",
+    "component_id": "sl:SlSocialVkontakte",
     "aliases": [
       "sl",
       "social",
@@ -1732,8 +1732,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSocialYoutube.svg",
-    "component_id": "Icon.SlSocialYoutube",
+    "src_svg": "sl/SlSocialYoutube.svg",
+    "component_id": "sl:SlSocialYoutube",
     "aliases": [
       "sl",
       "social",
@@ -1743,8 +1743,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSpeech.svg",
-    "component_id": "Icon.SlSpeech",
+    "src_svg": "sl/SlSpeech.svg",
+    "component_id": "sl:SlSpeech",
     "aliases": [
       "sl",
       "speech"
@@ -1753,8 +1753,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSpeedometer.svg",
-    "component_id": "Icon.SlSpeedometer",
+    "src_svg": "sl/SlSpeedometer.svg",
+    "component_id": "sl:SlSpeedometer",
     "aliases": [
       "sl",
       "speedometer"
@@ -1763,8 +1763,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlStar.svg",
-    "component_id": "Icon.SlStar",
+    "src_svg": "sl/SlStar.svg",
+    "component_id": "sl:SlStar",
     "aliases": [
       "sl",
       "star"
@@ -1773,8 +1773,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSupport.svg",
-    "component_id": "Icon.SlSupport",
+    "src_svg": "sl/SlSupport.svg",
+    "component_id": "sl:SlSupport",
     "aliases": [
       "sl",
       "support"
@@ -1783,8 +1783,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSymbleFemale.svg",
-    "component_id": "Icon.SlSymbleFemale",
+    "src_svg": "sl/SlSymbleFemale.svg",
+    "component_id": "sl:SlSymbleFemale",
     "aliases": [
       "sl",
       "symble",
@@ -1794,8 +1794,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlSymbolMale.svg",
-    "component_id": "Icon.SlSymbolMale",
+    "src_svg": "sl/SlSymbolMale.svg",
+    "component_id": "sl:SlSymbolMale",
     "aliases": [
       "sl",
       "symbol",
@@ -1805,8 +1805,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlTag.svg",
-    "component_id": "Icon.SlTag",
+    "src_svg": "sl/SlTag.svg",
+    "component_id": "sl:SlTag",
     "aliases": [
       "sl",
       "tag"
@@ -1815,8 +1815,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlTarget.svg",
-    "component_id": "Icon.SlTarget",
+    "src_svg": "sl/SlTarget.svg",
+    "component_id": "sl:SlTarget",
     "aliases": [
       "sl",
       "target"
@@ -1825,8 +1825,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlTrash.svg",
-    "component_id": "Icon.SlTrash",
+    "src_svg": "sl/SlTrash.svg",
+    "component_id": "sl:SlTrash",
     "aliases": [
       "sl",
       "trash"
@@ -1835,8 +1835,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlTrophy.svg",
-    "component_id": "Icon.SlTrophy",
+    "src_svg": "sl/SlTrophy.svg",
+    "component_id": "sl:SlTrophy",
     "aliases": [
       "sl",
       "trophy"
@@ -1845,8 +1845,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlUmbrella.svg",
-    "component_id": "Icon.SlUmbrella",
+    "src_svg": "sl/SlUmbrella.svg",
+    "component_id": "sl:SlUmbrella",
     "aliases": [
       "sl",
       "umbrella"
@@ -1855,8 +1855,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlUser.svg",
-    "component_id": "Icon.SlUser",
+    "src_svg": "sl/SlUser.svg",
+    "component_id": "sl:SlUser",
     "aliases": [
       "sl",
       "user"
@@ -1865,8 +1865,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlUserFemale.svg",
-    "component_id": "Icon.SlUserFemale",
+    "src_svg": "sl/SlUserFemale.svg",
+    "component_id": "sl:SlUserFemale",
     "aliases": [
       "sl",
       "user",
@@ -1876,8 +1876,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlUserFollow.svg",
-    "component_id": "Icon.SlUserFollow",
+    "src_svg": "sl/SlUserFollow.svg",
+    "component_id": "sl:SlUserFollow",
     "aliases": [
       "sl",
       "user",
@@ -1887,8 +1887,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlUserFollowing.svg",
-    "component_id": "Icon.SlUserFollowing",
+    "src_svg": "sl/SlUserFollowing.svg",
+    "component_id": "sl:SlUserFollowing",
     "aliases": [
       "sl",
       "user",
@@ -1898,8 +1898,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlUserUnfollow.svg",
-    "component_id": "Icon.SlUserUnfollow",
+    "src_svg": "sl/SlUserUnfollow.svg",
+    "component_id": "sl:SlUserUnfollow",
     "aliases": [
       "sl",
       "user",
@@ -1909,8 +1909,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlVector.svg",
-    "component_id": "Icon.SlVector",
+    "src_svg": "sl/SlVector.svg",
+    "component_id": "sl:SlVector",
     "aliases": [
       "sl",
       "vector"
@@ -1919,8 +1919,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlVolume1.svg",
-    "component_id": "Icon.SlVolume1",
+    "src_svg": "sl/SlVolume1.svg",
+    "component_id": "sl:SlVolume1",
     "aliases": [
       "sl",
       "volume",
@@ -1930,8 +1930,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlVolume2.svg",
-    "component_id": "Icon.SlVolume2",
+    "src_svg": "sl/SlVolume2.svg",
+    "component_id": "sl:SlVolume2",
     "aliases": [
       "sl",
       "volume",
@@ -1941,8 +1941,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlVolumeOff.svg",
-    "component_id": "Icon.SlVolumeOff",
+    "src_svg": "sl/SlVolumeOff.svg",
+    "component_id": "sl:SlVolumeOff",
     "aliases": [
       "sl",
       "volume",
@@ -1952,8 +1952,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlWallet.svg",
-    "component_id": "Icon.SlWallet",
+    "src_svg": "sl/SlWallet.svg",
+    "component_id": "sl:SlWallet",
     "aliases": [
       "sl",
       "wallet"
@@ -1962,8 +1962,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/sl/SlWrench.svg",
-    "component_id": "Icon.SlWrench",
+    "src_svg": "sl/SlWrench.svg",
+    "component_id": "sl:SlWrench",
     "aliases": [
       "sl",
       "wrench"

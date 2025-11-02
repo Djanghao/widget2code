@@ -110,7 +110,7 @@ export function Icon({
       }
     }
 
-    // SF Symbols fallback (for non-prefixed icons or sf: prefix)
+    // SF Symbols fallback (supports both formats: "sf:bolt.fill" and "sf:SfBoltFill")
     const sfName = name.startsWith("sf:") ? name.replace("sf:", "") : name;
 
     if (iconCache.has(sfName)) {

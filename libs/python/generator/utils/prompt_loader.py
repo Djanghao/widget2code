@@ -1,6 +1,6 @@
 from pathlib import Path
 
-WIDGET2DSL_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "widget2dsl" / "widget2dsl-sf-lucide.md"
+WIDGET2DSL_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "widget2dsl" / "widget2dsl.md"
 WIDGET2DSL_GRAPH_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "widget2dsl" / "widget2dsl-graph-modified.md"
 PROMPT2DSL_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "prompt2dsl" / "prompt2dsl-sf-lucide.md"
 DYNAMIC_COMPONENT_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "dynamic" / "prompt2react" / "dynamic-component-prompt.md"

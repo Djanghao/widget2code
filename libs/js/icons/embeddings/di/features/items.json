@@ -1,7 +1,7 @@
 [
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiAndroid.svg",
-    "component_id": "Icon.DiAndroid",
+    "src_svg": "di/DiAndroid.svg",
+    "component_id": "di:DiAndroid",
     "aliases": [
       "di",
       "android"
@@ -10,8 +10,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiAngularSimple.svg",
-    "component_id": "Icon.DiAngularSimple",
+    "src_svg": "di/DiAngularSimple.svg",
+    "component_id": "di:DiAngularSimple",
     "aliases": [
       "di",
       "angular",
@@ -21,8 +21,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiAppcelerator.svg",
-    "component_id": "Icon.DiAppcelerator",
+    "src_svg": "di/DiAppcelerator.svg",
+    "component_id": "di:DiAppcelerator",
     "aliases": [
       "di",
       "appcelerator"
@@ -31,8 +31,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiApple.svg",
-    "component_id": "Icon.DiApple",
+    "src_svg": "di/DiApple.svg",
+    "component_id": "di:DiApple",
     "aliases": [
       "di",
       "apple"
@@ -41,8 +41,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiAppstore.svg",
-    "component_id": "Icon.DiAppstore",
+    "src_svg": "di/DiAppstore.svg",
+    "component_id": "di:DiAppstore",
     "aliases": [
       "di",
       "appstore"
@@ -51,8 +51,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiAptana.svg",
-    "component_id": "Icon.DiAptana",
+    "src_svg": "di/DiAptana.svg",
+    "component_id": "di:DiAptana",
     "aliases": [
       "di",
       "aptana"
@@ -61,8 +61,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiAsterisk.svg",
-    "component_id": "Icon.DiAsterisk",
+    "src_svg": "di/DiAsterisk.svg",
+    "component_id": "di:DiAsterisk",
     "aliases": [
       "di",
       "asterisk"
@@ -71,8 +71,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiAtlassian.svg",
-    "component_id": "Icon.DiAtlassian",
+    "src_svg": "di/DiAtlassian.svg",
+    "component_id": "di:DiAtlassian",
     "aliases": [
       "di",
       "atlassian"
@@ -81,8 +81,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiAtom.svg",
-    "component_id": "Icon.DiAtom",
+    "src_svg": "di/DiAtom.svg",
+    "component_id": "di:DiAtom",
     "aliases": [
       "di",
       "atom"
@@ -91,8 +91,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiAws.svg",
-    "component_id": "Icon.DiAws",
+    "src_svg": "di/DiAws.svg",
+    "component_id": "di:DiAws",
     "aliases": [
       "di",
       "aws"
@@ -101,8 +101,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiBackbone.svg",
-    "component_id": "Icon.DiBackbone",
+    "src_svg": "di/DiBackbone.svg",
+    "component_id": "di:DiBackbone",
     "aliases": [
       "di",
       "backbone"
@@ -111,8 +111,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiBingSmall.svg",
-    "component_id": "Icon.DiBingSmall",
+    "src_svg": "di/DiBingSmall.svg",
+    "component_id": "di:DiBingSmall",
     "aliases": [
       "di",
       "bing",
@@ -122,8 +122,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiBintray.svg",
-    "component_id": "Icon.DiBintray",
+    "src_svg": "di/DiBintray.svg",
+    "component_id": "di:DiBintray",
     "aliases": [
       "di",
       "bintray"
@@ -132,8 +132,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiBitbucket.svg",
-    "component_id": "Icon.DiBitbucket",
+    "src_svg": "di/DiBitbucket.svg",
+    "component_id": "di:DiBitbucket",
     "aliases": [
       "di",
       "bitbucket"
@@ -142,8 +142,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiBlackberry.svg",
-    "component_id": "Icon.DiBlackberry",
+    "src_svg": "di/DiBlackberry.svg",
+    "component_id": "di:DiBlackberry",
     "aliases": [
       "di",
       "blackberry"
@@ -152,8 +152,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiBootstrap.svg",
-    "component_id": "Icon.DiBootstrap",
+    "src_svg": "di/DiBootstrap.svg",
+    "component_id": "di:DiBootstrap",
     "aliases": [
       "di",
       "bootstrap"
@@ -162,8 +162,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiBower.svg",
-    "component_id": "Icon.DiBower",
+    "src_svg": "di/DiBower.svg",
+    "component_id": "di:DiBower",
     "aliases": [
       "di",
       "bower"
@@ -172,8 +172,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiBrackets.svg",
-    "component_id": "Icon.DiBrackets",
+    "src_svg": "di/DiBrackets.svg",
+    "component_id": "di:DiBrackets",
     "aliases": [
       "di",
       "brackets"
@@ -182,8 +182,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiBugsense.svg",
-    "component_id": "Icon.DiBugsense",
+    "src_svg": "di/DiBugsense.svg",
+    "component_id": "di:DiBugsense",
     "aliases": [
       "di",
       "bugsense"
@@ -192,8 +192,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCelluloid.svg",
-    "component_id": "Icon.DiCelluloid",
+    "src_svg": "di/DiCelluloid.svg",
+    "component_id": "di:DiCelluloid",
     "aliases": [
       "di",
       "celluloid"
@@ -202,8 +202,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiChrome.svg",
-    "component_id": "Icon.DiChrome",
+    "src_svg": "di/DiChrome.svg",
+    "component_id": "di:DiChrome",
     "aliases": [
       "di",
       "chrome"
@@ -212,8 +212,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCisco.svg",
-    "component_id": "Icon.DiCisco",
+    "src_svg": "di/DiCisco.svg",
+    "component_id": "di:DiCisco",
     "aliases": [
       "di",
       "cisco"
@@ -222,8 +222,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiClojure.svg",
-    "component_id": "Icon.DiClojure",
+    "src_svg": "di/DiClojure.svg",
+    "component_id": "di:DiClojure",
     "aliases": [
       "di",
       "clojure"
@@ -232,8 +232,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiClojureAlt.svg",
-    "component_id": "Icon.DiClojureAlt",
+    "src_svg": "di/DiClojureAlt.svg",
+    "component_id": "di:DiClojureAlt",
     "aliases": [
       "di",
       "clojure",
@@ -243,8 +243,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCloud9.svg",
-    "component_id": "Icon.DiCloud9",
+    "src_svg": "di/DiCloud9.svg",
+    "component_id": "di:DiCloud9",
     "aliases": [
       "di",
       "cloud",
@@ -254,8 +254,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCoda.svg",
-    "component_id": "Icon.DiCoda",
+    "src_svg": "di/DiCoda.svg",
+    "component_id": "di:DiCoda",
     "aliases": [
       "di",
       "coda"
@@ -264,8 +264,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCode.svg",
-    "component_id": "Icon.DiCode",
+    "src_svg": "di/DiCode.svg",
+    "component_id": "di:DiCode",
     "aliases": [
       "di",
       "code"
@@ -274,8 +274,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCodeBadge.svg",
-    "component_id": "Icon.DiCodeBadge",
+    "src_svg": "di/DiCodeBadge.svg",
+    "component_id": "di:DiCodeBadge",
     "aliases": [
       "di",
       "code",
@@ -285,8 +285,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCodeigniter.svg",
-    "component_id": "Icon.DiCodeigniter",
+    "src_svg": "di/DiCodeigniter.svg",
+    "component_id": "di:DiCodeigniter",
     "aliases": [
       "di",
       "codeigniter"
@@ -295,8 +295,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCodepen.svg",
-    "component_id": "Icon.DiCodepen",
+    "src_svg": "di/DiCodepen.svg",
+    "component_id": "di:DiCodepen",
     "aliases": [
       "di",
       "codepen"
@@ -305,8 +305,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCodrops.svg",
-    "component_id": "Icon.DiCodrops",
+    "src_svg": "di/DiCodrops.svg",
+    "component_id": "di:DiCodrops",
     "aliases": [
       "di",
       "codrops"
@@ -315,8 +315,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCoffeescript.svg",
-    "component_id": "Icon.DiCoffeescript",
+    "src_svg": "di/DiCoffeescript.svg",
+    "component_id": "di:DiCoffeescript",
     "aliases": [
       "di",
       "coffeescript"
@@ -325,8 +325,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCompass.svg",
-    "component_id": "Icon.DiCompass",
+    "src_svg": "di/DiCompass.svg",
+    "component_id": "di:DiCompass",
     "aliases": [
       "di",
       "compass"
@@ -335,8 +335,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiComposer.svg",
-    "component_id": "Icon.DiComposer",
+    "src_svg": "di/DiComposer.svg",
+    "component_id": "di:DiComposer",
     "aliases": [
       "di",
       "composer"
@@ -345,8 +345,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCreativecommons.svg",
-    "component_id": "Icon.DiCreativecommons",
+    "src_svg": "di/DiCreativecommons.svg",
+    "component_id": "di:DiCreativecommons",
     "aliases": [
       "di",
       "creativecommons"
@@ -355,8 +355,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCreativecommonsBadge.svg",
-    "component_id": "Icon.DiCreativecommonsBadge",
+    "src_svg": "di/DiCreativecommonsBadge.svg",
+    "component_id": "di:DiCreativecommonsBadge",
     "aliases": [
       "di",
       "creativecommons",
@@ -366,8 +366,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCss3.svg",
-    "component_id": "Icon.DiCss3",
+    "src_svg": "di/DiCss3.svg",
+    "component_id": "di:DiCss3",
     "aliases": [
       "di",
       "css",
@@ -377,8 +377,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCss3Full.svg",
-    "component_id": "Icon.DiCss3Full",
+    "src_svg": "di/DiCss3Full.svg",
+    "component_id": "di:DiCss3Full",
     "aliases": [
       "di",
       "css",
@@ -389,8 +389,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCssTricks.svg",
-    "component_id": "Icon.DiCssTricks",
+    "src_svg": "di/DiCssTricks.svg",
+    "component_id": "di:DiCssTricks",
     "aliases": [
       "di",
       "css",
@@ -400,8 +400,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiCssdeck.svg",
-    "component_id": "Icon.DiCssdeck",
+    "src_svg": "di/DiCssdeck.svg",
+    "component_id": "di:DiCssdeck",
     "aliases": [
       "di",
       "cssdeck"
@@ -410,8 +410,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDart.svg",
-    "component_id": "Icon.DiDart",
+    "src_svg": "di/DiDart.svg",
+    "component_id": "di:DiDart",
     "aliases": [
       "di",
       "dart"
@@ -420,8 +420,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDatabase.svg",
-    "component_id": "Icon.DiDatabase",
+    "src_svg": "di/DiDatabase.svg",
+    "component_id": "di:DiDatabase",
     "aliases": [
       "di",
       "database"
@@ -430,8 +430,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDebian.svg",
-    "component_id": "Icon.DiDebian",
+    "src_svg": "di/DiDebian.svg",
+    "component_id": "di:DiDebian",
     "aliases": [
       "di",
       "debian"
@@ -440,8 +440,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDigitalOcean.svg",
-    "component_id": "Icon.DiDigitalOcean",
+    "src_svg": "di/DiDigitalOcean.svg",
+    "component_id": "di:DiDigitalOcean",
     "aliases": [
       "di",
       "digital",
@@ -451,8 +451,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDjango.svg",
-    "component_id": "Icon.DiDjango",
+    "src_svg": "di/DiDjango.svg",
+    "component_id": "di:DiDjango",
     "aliases": [
       "di",
       "django"
@@ -461,8 +461,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDlang.svg",
-    "component_id": "Icon.DiDlang",
+    "src_svg": "di/DiDlang.svg",
+    "component_id": "di:DiDlang",
     "aliases": [
       "di",
       "dlang"
@@ -471,8 +471,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDocker.svg",
-    "component_id": "Icon.DiDocker",
+    "src_svg": "di/DiDocker.svg",
+    "component_id": "di:DiDocker",
     "aliases": [
       "di",
       "docker"
@@ -481,8 +481,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDoctrine.svg",
-    "component_id": "Icon.DiDoctrine",
+    "src_svg": "di/DiDoctrine.svg",
+    "component_id": "di:DiDoctrine",
     "aliases": [
       "di",
       "doctrine"
@@ -491,8 +491,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDojo.svg",
-    "component_id": "Icon.DiDojo",
+    "src_svg": "di/DiDojo.svg",
+    "component_id": "di:DiDojo",
     "aliases": [
       "di",
       "dojo"
@@ -501,8 +501,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDotnet.svg",
-    "component_id": "Icon.DiDotnet",
+    "src_svg": "di/DiDotnet.svg",
+    "component_id": "di:DiDotnet",
     "aliases": [
       "di",
       "dotnet"
@@ -511,8 +511,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDreamweaver.svg",
-    "component_id": "Icon.DiDreamweaver",
+    "src_svg": "di/DiDreamweaver.svg",
+    "component_id": "di:DiDreamweaver",
     "aliases": [
       "di",
       "dreamweaver"
@@ -521,8 +521,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDropbox.svg",
-    "component_id": "Icon.DiDropbox",
+    "src_svg": "di/DiDropbox.svg",
+    "component_id": "di:DiDropbox",
     "aliases": [
       "di",
       "dropbox"
@@ -531,8 +531,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiDrupal.svg",
-    "component_id": "Icon.DiDrupal",
+    "src_svg": "di/DiDrupal.svg",
+    "component_id": "di:DiDrupal",
     "aliases": [
       "di",
       "drupal"
@@ -541,8 +541,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiEclipse.svg",
-    "component_id": "Icon.DiEclipse",
+    "src_svg": "di/DiEclipse.svg",
+    "component_id": "di:DiEclipse",
     "aliases": [
       "di",
       "eclipse"
@@ -551,8 +551,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiEmber.svg",
-    "component_id": "Icon.DiEmber",
+    "src_svg": "di/DiEmber.svg",
+    "component_id": "di:DiEmber",
     "aliases": [
       "di",
       "ember"
@@ -561,8 +561,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiEnvato.svg",
-    "component_id": "Icon.DiEnvato",
+    "src_svg": "di/DiEnvato.svg",
+    "component_id": "di:DiEnvato",
     "aliases": [
       "di",
       "envato"
@@ -571,8 +571,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiErlang.svg",
-    "component_id": "Icon.DiErlang",
+    "src_svg": "di/DiErlang.svg",
+    "component_id": "di:DiErlang",
     "aliases": [
       "di",
       "erlang"
@@ -581,8 +581,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiExtjs.svg",
-    "component_id": "Icon.DiExtjs",
+    "src_svg": "di/DiExtjs.svg",
+    "component_id": "di:DiExtjs",
     "aliases": [
       "di",
       "extjs"
@@ -591,8 +591,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiFirebase.svg",
-    "component_id": "Icon.DiFirebase",
+    "src_svg": "di/DiFirebase.svg",
+    "component_id": "di:DiFirebase",
     "aliases": [
       "di",
       "firebase"
@@ -601,8 +601,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiFirefox.svg",
-    "component_id": "Icon.DiFirefox",
+    "src_svg": "di/DiFirefox.svg",
+    "component_id": "di:DiFirefox",
     "aliases": [
       "di",
       "firefox"
@@ -611,8 +611,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiFsharp.svg",
-    "component_id": "Icon.DiFsharp",
+    "src_svg": "di/DiFsharp.svg",
+    "component_id": "di:DiFsharp",
     "aliases": [
       "di",
       "fsharp"
@@ -621,8 +621,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGhost.svg",
-    "component_id": "Icon.DiGhost",
+    "src_svg": "di/DiGhost.svg",
+    "component_id": "di:DiGhost",
     "aliases": [
       "di",
       "ghost"
@@ -631,8 +631,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGhostSmall.svg",
-    "component_id": "Icon.DiGhostSmall",
+    "src_svg": "di/DiGhostSmall.svg",
+    "component_id": "di:DiGhostSmall",
     "aliases": [
       "di",
       "ghost",
@@ -642,8 +642,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGit.svg",
-    "component_id": "Icon.DiGit",
+    "src_svg": "di/DiGit.svg",
+    "component_id": "di:DiGit",
     "aliases": [
       "di",
       "git"
@@ -652,8 +652,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGitBranch.svg",
-    "component_id": "Icon.DiGitBranch",
+    "src_svg": "di/DiGitBranch.svg",
+    "component_id": "di:DiGitBranch",
     "aliases": [
       "di",
       "git",
@@ -663,8 +663,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGitCommit.svg",
-    "component_id": "Icon.DiGitCommit",
+    "src_svg": "di/DiGitCommit.svg",
+    "component_id": "di:DiGitCommit",
     "aliases": [
       "di",
       "git",
@@ -674,8 +674,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGitCompare.svg",
-    "component_id": "Icon.DiGitCompare",
+    "src_svg": "di/DiGitCompare.svg",
+    "component_id": "di:DiGitCompare",
     "aliases": [
       "di",
       "git",
@@ -685,8 +685,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGitMerge.svg",
-    "component_id": "Icon.DiGitMerge",
+    "src_svg": "di/DiGitMerge.svg",
+    "component_id": "di:DiGitMerge",
     "aliases": [
       "di",
       "git",
@@ -696,8 +696,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGitPullRequest.svg",
-    "component_id": "Icon.DiGitPullRequest",
+    "src_svg": "di/DiGitPullRequest.svg",
+    "component_id": "di:DiGitPullRequest",
     "aliases": [
       "di",
       "git",
@@ -708,8 +708,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGithub.svg",
-    "component_id": "Icon.DiGithub",
+    "src_svg": "di/DiGithub.svg",
+    "component_id": "di:DiGithub",
     "aliases": [
       "di",
       "github"
@@ -718,8 +718,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGithubAlt.svg",
-    "component_id": "Icon.DiGithubAlt",
+    "src_svg": "di/DiGithubAlt.svg",
+    "component_id": "di:DiGithubAlt",
     "aliases": [
       "di",
       "github",
@@ -729,8 +729,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGithubBadge.svg",
-    "component_id": "Icon.DiGithubBadge",
+    "src_svg": "di/DiGithubBadge.svg",
+    "component_id": "di:DiGithubBadge",
     "aliases": [
       "di",
       "github",
@@ -740,8 +740,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGithubFull.svg",
-    "component_id": "Icon.DiGithubFull",
+    "src_svg": "di/DiGithubFull.svg",
+    "component_id": "di:DiGithubFull",
     "aliases": [
       "di",
       "github",
@@ -751,8 +751,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGnu.svg",
-    "component_id": "Icon.DiGnu",
+    "src_svg": "di/DiGnu.svg",
+    "component_id": "di:DiGnu",
     "aliases": [
       "di",
       "gnu"
@@ -761,8 +761,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGo.svg",
-    "component_id": "Icon.DiGo",
+    "src_svg": "di/DiGo.svg",
+    "component_id": "di:DiGo",
     "aliases": [
       "di",
       "go"
@@ -771,8 +771,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGoogleAnalytics.svg",
-    "component_id": "Icon.DiGoogleAnalytics",
+    "src_svg": "di/DiGoogleAnalytics.svg",
+    "component_id": "di:DiGoogleAnalytics",
     "aliases": [
       "di",
       "google",
@@ -782,8 +782,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGoogleCloudPlatform.svg",
-    "component_id": "Icon.DiGoogleCloudPlatform",
+    "src_svg": "di/DiGoogleCloudPlatform.svg",
+    "component_id": "di:DiGoogleCloudPlatform",
     "aliases": [
       "di",
       "google",
@@ -794,8 +794,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGoogleDrive.svg",
-    "component_id": "Icon.DiGoogleDrive",
+    "src_svg": "di/DiGoogleDrive.svg",
+    "component_id": "di:DiGoogleDrive",
     "aliases": [
       "di",
       "google",
@@ -805,8 +805,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGrails.svg",
-    "component_id": "Icon.DiGrails",
+    "src_svg": "di/DiGrails.svg",
+    "component_id": "di:DiGrails",
     "aliases": [
       "di",
       "grails"
@@ -815,8 +815,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGroovy.svg",
-    "component_id": "Icon.DiGroovy",
+    "src_svg": "di/DiGroovy.svg",
+    "component_id": "di:DiGroovy",
     "aliases": [
       "di",
       "groovy"
@@ -825,8 +825,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGrunt.svg",
-    "component_id": "Icon.DiGrunt",
+    "src_svg": "di/DiGrunt.svg",
+    "component_id": "di:DiGrunt",
     "aliases": [
       "di",
       "grunt"
@@ -835,8 +835,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiGulp.svg",
-    "component_id": "Icon.DiGulp",
+    "src_svg": "di/DiGulp.svg",
+    "component_id": "di:DiGulp",
     "aliases": [
       "di",
       "gulp"
@@ -845,8 +845,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiHackernews.svg",
-    "component_id": "Icon.DiHackernews",
+    "src_svg": "di/DiHackernews.svg",
+    "component_id": "di:DiHackernews",
     "aliases": [
       "di",
       "hackernews"
@@ -855,8 +855,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiHaskell.svg",
-    "component_id": "Icon.DiHaskell",
+    "src_svg": "di/DiHaskell.svg",
+    "component_id": "di:DiHaskell",
     "aliases": [
       "di",
       "haskell"
@@ -865,8 +865,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiHeroku.svg",
-    "component_id": "Icon.DiHeroku",
+    "src_svg": "di/DiHeroku.svg",
+    "component_id": "di:DiHeroku",
     "aliases": [
       "di",
       "heroku"
@@ -875,8 +875,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiHtml5.svg",
-    "component_id": "Icon.DiHtml5",
+    "src_svg": "di/DiHtml5.svg",
+    "component_id": "di:DiHtml5",
     "aliases": [
       "di",
       "html",
@@ -886,8 +886,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiHtml53dEffects.svg",
-    "component_id": "Icon.DiHtml53DEffects",
+    "src_svg": "di/DiHtml53dEffects.svg",
+    "component_id": "di:DiHtml53DEffects",
     "aliases": [
       "di",
       "html",
@@ -899,8 +899,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiHtml5Connectivity.svg",
-    "component_id": "Icon.DiHtml5Connectivity",
+    "src_svg": "di/DiHtml5Connectivity.svg",
+    "component_id": "di:DiHtml5Connectivity",
     "aliases": [
       "di",
       "html",
@@ -911,8 +911,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiHtml5DeviceAccess.svg",
-    "component_id": "Icon.DiHtml5DeviceAccess",
+    "src_svg": "di/DiHtml5DeviceAccess.svg",
+    "component_id": "di:DiHtml5DeviceAccess",
     "aliases": [
       "di",
       "html",
@@ -924,8 +924,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiHtml5Multimedia.svg",
-    "component_id": "Icon.DiHtml5Multimedia",
+    "src_svg": "di/DiHtml5Multimedia.svg",
+    "component_id": "di:DiHtml5Multimedia",
     "aliases": [
       "di",
       "html",
@@ -936,8 +936,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiIe.svg",
-    "component_id": "Icon.DiIe",
+    "src_svg": "di/DiIe.svg",
+    "component_id": "di:DiIe",
     "aliases": [
       "di",
       "ie"
@@ -946,8 +946,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiIllustrator.svg",
-    "component_id": "Icon.DiIllustrator",
+    "src_svg": "di/DiIllustrator.svg",
+    "component_id": "di:DiIllustrator",
     "aliases": [
       "di",
       "illustrator"
@@ -956,8 +956,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiIntellij.svg",
-    "component_id": "Icon.DiIntellij",
+    "src_svg": "di/DiIntellij.svg",
+    "component_id": "di:DiIntellij",
     "aliases": [
       "di",
       "intellij"
@@ -966,8 +966,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiIonic.svg",
-    "component_id": "Icon.DiIonic",
+    "src_svg": "di/DiIonic.svg",
+    "component_id": "di:DiIonic",
     "aliases": [
       "di",
       "ionic"
@@ -976,8 +976,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiJava.svg",
-    "component_id": "Icon.DiJava",
+    "src_svg": "di/DiJava.svg",
+    "component_id": "di:DiJava",
     "aliases": [
       "di",
       "java"
@@ -986,8 +986,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiJavascript.svg",
-    "component_id": "Icon.DiJavascript",
+    "src_svg": "di/DiJavascript.svg",
+    "component_id": "di:DiJavascript",
     "aliases": [
       "di",
       "javascript"
@@ -996,8 +996,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiJavascript1.svg",
-    "component_id": "Icon.DiJavascript1",
+    "src_svg": "di/DiJavascript1.svg",
+    "component_id": "di:DiJavascript1",
     "aliases": [
       "di",
       "javascript",
@@ -1007,8 +1007,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiJekyllSmall.svg",
-    "component_id": "Icon.DiJekyllSmall",
+    "src_svg": "di/DiJekyllSmall.svg",
+    "component_id": "di:DiJekyllSmall",
     "aliases": [
       "di",
       "jekyll",
@@ -1018,8 +1018,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiJenkins.svg",
-    "component_id": "Icon.DiJenkins",
+    "src_svg": "di/DiJenkins.svg",
+    "component_id": "di:DiJenkins",
     "aliases": [
       "di",
       "jenkins"
@@ -1028,8 +1028,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiJira.svg",
-    "component_id": "Icon.DiJira",
+    "src_svg": "di/DiJira.svg",
+    "component_id": "di:DiJira",
     "aliases": [
       "di",
       "jira"
@@ -1038,8 +1038,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiJoomla.svg",
-    "component_id": "Icon.DiJoomla",
+    "src_svg": "di/DiJoomla.svg",
+    "component_id": "di:DiJoomla",
     "aliases": [
       "di",
       "joomla"
@@ -1048,8 +1048,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiJqueryLogo.svg",
-    "component_id": "Icon.DiJqueryLogo",
+    "src_svg": "di/DiJqueryLogo.svg",
+    "component_id": "di:DiJqueryLogo",
     "aliases": [
       "di",
       "jquery",
@@ -1059,8 +1059,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiJqueryUiLogo.svg",
-    "component_id": "Icon.DiJqueryUiLogo",
+    "src_svg": "di/DiJqueryUiLogo.svg",
+    "component_id": "di:DiJqueryUiLogo",
     "aliases": [
       "di",
       "jquery",
@@ -1071,8 +1071,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiJsBadge.svg",
-    "component_id": "Icon.DiJsBadge",
+    "src_svg": "di/DiJsBadge.svg",
+    "component_id": "di:DiJsBadge",
     "aliases": [
       "di",
       "js",
@@ -1082,8 +1082,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiKomodo.svg",
-    "component_id": "Icon.DiKomodo",
+    "src_svg": "di/DiKomodo.svg",
+    "component_id": "di:DiKomodo",
     "aliases": [
       "di",
       "komodo"
@@ -1092,8 +1092,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiKrakenjs.svg",
-    "component_id": "Icon.DiKrakenjs",
+    "src_svg": "di/DiKrakenjs.svg",
+    "component_id": "di:DiKrakenjs",
     "aliases": [
       "di",
       "krakenjs"
@@ -1102,8 +1102,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiKrakenjsBadge.svg",
-    "component_id": "Icon.DiKrakenjsBadge",
+    "src_svg": "di/DiKrakenjsBadge.svg",
+    "component_id": "di:DiKrakenjsBadge",
     "aliases": [
       "di",
       "krakenjs",
@@ -1113,8 +1113,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiLaravel.svg",
-    "component_id": "Icon.DiLaravel",
+    "src_svg": "di/DiLaravel.svg",
+    "component_id": "di:DiLaravel",
     "aliases": [
       "di",
       "laravel"
@@ -1123,8 +1123,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiLess.svg",
-    "component_id": "Icon.DiLess",
+    "src_svg": "di/DiLess.svg",
+    "component_id": "di:DiLess",
     "aliases": [
       "di",
       "less"
@@ -1133,8 +1133,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiLinux.svg",
-    "component_id": "Icon.DiLinux",
+    "src_svg": "di/DiLinux.svg",
+    "component_id": "di:DiLinux",
     "aliases": [
       "di",
       "linux"
@@ -1143,8 +1143,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMagento.svg",
-    "component_id": "Icon.DiMagento",
+    "src_svg": "di/DiMagento.svg",
+    "component_id": "di:DiMagento",
     "aliases": [
       "di",
       "magento"
@@ -1153,8 +1153,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMailchimp.svg",
-    "component_id": "Icon.DiMailchimp",
+    "src_svg": "di/DiMailchimp.svg",
+    "component_id": "di:DiMailchimp",
     "aliases": [
       "di",
       "mailchimp"
@@ -1163,8 +1163,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMarkdown.svg",
-    "component_id": "Icon.DiMarkdown",
+    "src_svg": "di/DiMarkdown.svg",
+    "component_id": "di:DiMarkdown",
     "aliases": [
       "di",
       "markdown"
@@ -1173,8 +1173,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMaterializecss.svg",
-    "component_id": "Icon.DiMaterializecss",
+    "src_svg": "di/DiMaterializecss.svg",
+    "component_id": "di:DiMaterializecss",
     "aliases": [
       "di",
       "materializecss"
@@ -1183,8 +1183,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMeteor.svg",
-    "component_id": "Icon.DiMeteor",
+    "src_svg": "di/DiMeteor.svg",
+    "component_id": "di:DiMeteor",
     "aliases": [
       "di",
       "meteor"
@@ -1193,8 +1193,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMeteorfull.svg",
-    "component_id": "Icon.DiMeteorfull",
+    "src_svg": "di/DiMeteorfull.svg",
+    "component_id": "di:DiMeteorfull",
     "aliases": [
       "di",
       "meteorfull"
@@ -1203,8 +1203,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMitlicence.svg",
-    "component_id": "Icon.DiMitlicence",
+    "src_svg": "di/DiMitlicence.svg",
+    "component_id": "di:DiMitlicence",
     "aliases": [
       "di",
       "mitlicence"
@@ -1213,8 +1213,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiModernizr.svg",
-    "component_id": "Icon.DiModernizr",
+    "src_svg": "di/DiModernizr.svg",
+    "component_id": "di:DiModernizr",
     "aliases": [
       "di",
       "modernizr"
@@ -1223,8 +1223,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMongodb.svg",
-    "component_id": "Icon.DiMongodb",
+    "src_svg": "di/DiMongodb.svg",
+    "component_id": "di:DiMongodb",
     "aliases": [
       "di",
       "mongodb"
@@ -1233,8 +1233,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMootools.svg",
-    "component_id": "Icon.DiMootools",
+    "src_svg": "di/DiMootools.svg",
+    "component_id": "di:DiMootools",
     "aliases": [
       "di",
       "mootools"
@@ -1243,8 +1243,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMootoolsBadge.svg",
-    "component_id": "Icon.DiMootoolsBadge",
+    "src_svg": "di/DiMootoolsBadge.svg",
+    "component_id": "di:DiMootoolsBadge",
     "aliases": [
       "di",
       "mootools",
@@ -1254,8 +1254,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMozilla.svg",
-    "component_id": "Icon.DiMozilla",
+    "src_svg": "di/DiMozilla.svg",
+    "component_id": "di:DiMozilla",
     "aliases": [
       "di",
       "mozilla"
@@ -1264,8 +1264,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMsqlServer.svg",
-    "component_id": "Icon.DiMsqlServer",
+    "src_svg": "di/DiMsqlServer.svg",
+    "component_id": "di:DiMsqlServer",
     "aliases": [
       "di",
       "msql",
@@ -1275,8 +1275,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiMysql.svg",
-    "component_id": "Icon.DiMysql",
+    "src_svg": "di/DiMysql.svg",
+    "component_id": "di:DiMysql",
     "aliases": [
       "di",
       "mysql"
@@ -1285,8 +1285,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiNancy.svg",
-    "component_id": "Icon.DiNancy",
+    "src_svg": "di/DiNancy.svg",
+    "component_id": "di:DiNancy",
     "aliases": [
       "di",
       "nancy"
@@ -1295,8 +1295,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiNetbeans.svg",
-    "component_id": "Icon.DiNetbeans",
+    "src_svg": "di/DiNetbeans.svg",
+    "component_id": "di:DiNetbeans",
     "aliases": [
       "di",
       "netbeans"
@@ -1305,8 +1305,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiNetmagazine.svg",
-    "component_id": "Icon.DiNetmagazine",
+    "src_svg": "di/DiNetmagazine.svg",
+    "component_id": "di:DiNetmagazine",
     "aliases": [
       "di",
       "netmagazine"
@@ -1315,8 +1315,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiNginx.svg",
-    "component_id": "Icon.DiNginx",
+    "src_svg": "di/DiNginx.svg",
+    "component_id": "di:DiNginx",
     "aliases": [
       "di",
       "nginx"
@@ -1325,8 +1325,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiNodejs.svg",
-    "component_id": "Icon.DiNodejs",
+    "src_svg": "di/DiNodejs.svg",
+    "component_id": "di:DiNodejs",
     "aliases": [
       "di",
       "nodejs"
@@ -1335,8 +1335,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiNodejsSmall.svg",
-    "component_id": "Icon.DiNodejsSmall",
+    "src_svg": "di/DiNodejsSmall.svg",
+    "component_id": "di:DiNodejsSmall",
     "aliases": [
       "di",
       "nodejs",
@@ -1346,8 +1346,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiNpm.svg",
-    "component_id": "Icon.DiNpm",
+    "src_svg": "di/DiNpm.svg",
+    "component_id": "di:DiNpm",
     "aliases": [
       "di",
       "npm"
@@ -1356,8 +1356,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiOnedrive.svg",
-    "component_id": "Icon.DiOnedrive",
+    "src_svg": "di/DiOnedrive.svg",
+    "component_id": "di:DiOnedrive",
     "aliases": [
       "di",
       "onedrive"
@@ -1366,8 +1366,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiOpenshift.svg",
-    "component_id": "Icon.DiOpenshift",
+    "src_svg": "di/DiOpenshift.svg",
+    "component_id": "di:DiOpenshift",
     "aliases": [
       "di",
       "openshift"
@@ -1376,8 +1376,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiOpensource.svg",
-    "component_id": "Icon.DiOpensource",
+    "src_svg": "di/DiOpensource.svg",
+    "component_id": "di:DiOpensource",
     "aliases": [
       "di",
       "opensource"
@@ -1386,8 +1386,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiOpera.svg",
-    "component_id": "Icon.DiOpera",
+    "src_svg": "di/DiOpera.svg",
+    "component_id": "di:DiOpera",
     "aliases": [
       "di",
       "opera"
@@ -1396,8 +1396,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiPerl.svg",
-    "component_id": "Icon.DiPerl",
+    "src_svg": "di/DiPerl.svg",
+    "component_id": "di:DiPerl",
     "aliases": [
       "di",
       "perl"
@@ -1406,8 +1406,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiPhonegap.svg",
-    "component_id": "Icon.DiPhonegap",
+    "src_svg": "di/DiPhonegap.svg",
+    "component_id": "di:DiPhonegap",
     "aliases": [
       "di",
       "phonegap"
@@ -1416,8 +1416,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiPhotoshop.svg",
-    "component_id": "Icon.DiPhotoshop",
+    "src_svg": "di/DiPhotoshop.svg",
+    "component_id": "di:DiPhotoshop",
     "aliases": [
       "di",
       "photoshop"
@@ -1426,8 +1426,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiPhp.svg",
-    "component_id": "Icon.DiPhp",
+    "src_svg": "di/DiPhp.svg",
+    "component_id": "di:DiPhp",
     "aliases": [
       "di",
       "php"
@@ -1436,8 +1436,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiPostgresql.svg",
-    "component_id": "Icon.DiPostgresql",
+    "src_svg": "di/DiPostgresql.svg",
+    "component_id": "di:DiPostgresql",
     "aliases": [
       "di",
       "postgresql"
@@ -1446,8 +1446,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiProlog.svg",
-    "component_id": "Icon.DiProlog",
+    "src_svg": "di/DiProlog.svg",
+    "component_id": "di:DiProlog",
     "aliases": [
       "di",
       "prolog"
@@ -1456,8 +1456,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiPython.svg",
-    "component_id": "Icon.DiPython",
+    "src_svg": "di/DiPython.svg",
+    "component_id": "di:DiPython",
     "aliases": [
       "di",
       "python"
@@ -1466,8 +1466,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiRackspace.svg",
-    "component_id": "Icon.DiRackspace",
+    "src_svg": "di/DiRackspace.svg",
+    "component_id": "di:DiRackspace",
     "aliases": [
       "di",
       "rackspace"
@@ -1476,8 +1476,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiRaphael.svg",
-    "component_id": "Icon.DiRaphael",
+    "src_svg": "di/DiRaphael.svg",
+    "component_id": "di:DiRaphael",
     "aliases": [
       "di",
       "raphael"
@@ -1486,8 +1486,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiRasberryPi.svg",
-    "component_id": "Icon.DiRasberryPi",
+    "src_svg": "di/DiRasberryPi.svg",
+    "component_id": "di:DiRasberryPi",
     "aliases": [
       "di",
       "rasberry",
@@ -1497,8 +1497,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiReact.svg",
-    "component_id": "Icon.DiReact",
+    "src_svg": "di/DiReact.svg",
+    "component_id": "di:DiReact",
     "aliases": [
       "di",
       "react"
@@ -1507,8 +1507,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiRedhat.svg",
-    "component_id": "Icon.DiRedhat",
+    "src_svg": "di/DiRedhat.svg",
+    "component_id": "di:DiRedhat",
     "aliases": [
       "di",
       "redhat"
@@ -1517,8 +1517,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiRedis.svg",
-    "component_id": "Icon.DiRedis",
+    "src_svg": "di/DiRedis.svg",
+    "component_id": "di:DiRedis",
     "aliases": [
       "di",
       "redis"
@@ -1527,8 +1527,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiRequirejs.svg",
-    "component_id": "Icon.DiRequirejs",
+    "src_svg": "di/DiRequirejs.svg",
+    "component_id": "di:DiRequirejs",
     "aliases": [
       "di",
       "requirejs"
@@ -1537,8 +1537,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiResponsive.svg",
-    "component_id": "Icon.DiResponsive",
+    "src_svg": "di/DiResponsive.svg",
+    "component_id": "di:DiResponsive",
     "aliases": [
       "di",
       "responsive"
@@ -1547,8 +1547,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiRor.svg",
-    "component_id": "Icon.DiRor",
+    "src_svg": "di/DiRor.svg",
+    "component_id": "di:DiRor",
     "aliases": [
       "di",
       "ror"
@@ -1557,8 +1557,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiRuby.svg",
-    "component_id": "Icon.DiRuby",
+    "src_svg": "di/DiRuby.svg",
+    "component_id": "di:DiRuby",
     "aliases": [
       "di",
       "ruby"
@@ -1567,8 +1567,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiRubyRough.svg",
-    "component_id": "Icon.DiRubyRough",
+    "src_svg": "di/DiRubyRough.svg",
+    "component_id": "di:DiRubyRough",
     "aliases": [
       "di",
       "ruby",
@@ -1578,8 +1578,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiRust.svg",
-    "component_id": "Icon.DiRust",
+    "src_svg": "di/DiRust.svg",
+    "component_id": "di:DiRust",
     "aliases": [
       "di",
       "rust"
@@ -1588,8 +1588,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSafari.svg",
-    "component_id": "Icon.DiSafari",
+    "src_svg": "di/DiSafari.svg",
+    "component_id": "di:DiSafari",
     "aliases": [
       "di",
       "safari"
@@ -1598,8 +1598,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSass.svg",
-    "component_id": "Icon.DiSass",
+    "src_svg": "di/DiSass.svg",
+    "component_id": "di:DiSass",
     "aliases": [
       "di",
       "sass"
@@ -1608,8 +1608,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiScala.svg",
-    "component_id": "Icon.DiScala",
+    "src_svg": "di/DiScala.svg",
+    "component_id": "di:DiScala",
     "aliases": [
       "di",
       "scala"
@@ -1618,8 +1618,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiScriptcs.svg",
-    "component_id": "Icon.DiScriptcs",
+    "src_svg": "di/DiScriptcs.svg",
+    "component_id": "di:DiScriptcs",
     "aliases": [
       "di",
       "scriptcs"
@@ -1628,8 +1628,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiScrum.svg",
-    "component_id": "Icon.DiScrum",
+    "src_svg": "di/DiScrum.svg",
+    "component_id": "di:DiScrum",
     "aliases": [
       "di",
       "scrum"
@@ -1638,8 +1638,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSenchatouch.svg",
-    "component_id": "Icon.DiSenchatouch",
+    "src_svg": "di/DiSenchatouch.svg",
+    "component_id": "di:DiSenchatouch",
     "aliases": [
       "di",
       "senchatouch"
@@ -1648,8 +1648,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSizzlejs.svg",
-    "component_id": "Icon.DiSizzlejs",
+    "src_svg": "di/DiSizzlejs.svg",
+    "component_id": "di:DiSizzlejs",
     "aliases": [
       "di",
       "sizzlejs"
@@ -1658,8 +1658,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSmashingMagazine.svg",
-    "component_id": "Icon.DiSmashingMagazine",
+    "src_svg": "di/DiSmashingMagazine.svg",
+    "component_id": "di:DiSmashingMagazine",
     "aliases": [
       "di",
       "smashing",
@@ -1669,8 +1669,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSnapSvg.svg",
-    "component_id": "Icon.DiSnapSvg",
+    "src_svg": "di/DiSnapSvg.svg",
+    "component_id": "di:DiSnapSvg",
     "aliases": [
       "di",
       "snap",
@@ -1680,8 +1680,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSpark.svg",
-    "component_id": "Icon.DiSpark",
+    "src_svg": "di/DiSpark.svg",
+    "component_id": "di:DiSpark",
     "aliases": [
       "di",
       "spark"
@@ -1690,8 +1690,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSqllite.svg",
-    "component_id": "Icon.DiSqllite",
+    "src_svg": "di/DiSqllite.svg",
+    "component_id": "di:DiSqllite",
     "aliases": [
       "di",
       "sqllite"
@@ -1700,8 +1700,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiStackoverflow.svg",
-    "component_id": "Icon.DiStackoverflow",
+    "src_svg": "di/DiStackoverflow.svg",
+    "component_id": "di:DiStackoverflow",
     "aliases": [
       "di",
       "stackoverflow"
@@ -1710,8 +1710,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiStreamline.svg",
-    "component_id": "Icon.DiStreamline",
+    "src_svg": "di/DiStreamline.svg",
+    "component_id": "di:DiStreamline",
     "aliases": [
       "di",
       "streamline"
@@ -1720,8 +1720,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiStylus.svg",
-    "component_id": "Icon.DiStylus",
+    "src_svg": "di/DiStylus.svg",
+    "component_id": "di:DiStylus",
     "aliases": [
       "di",
       "stylus"
@@ -1730,8 +1730,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSublime.svg",
-    "component_id": "Icon.DiSublime",
+    "src_svg": "di/DiSublime.svg",
+    "component_id": "di:DiSublime",
     "aliases": [
       "di",
       "sublime"
@@ -1740,8 +1740,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSwift.svg",
-    "component_id": "Icon.DiSwift",
+    "src_svg": "di/DiSwift.svg",
+    "component_id": "di:DiSwift",
     "aliases": [
       "di",
       "swift"
@@ -1750,8 +1750,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSymfony.svg",
-    "component_id": "Icon.DiSymfony",
+    "src_svg": "di/DiSymfony.svg",
+    "component_id": "di:DiSymfony",
     "aliases": [
       "di",
       "symfony"
@@ -1760,8 +1760,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiSymfonyBadge.svg",
-    "component_id": "Icon.DiSymfonyBadge",
+    "src_svg": "di/DiSymfonyBadge.svg",
+    "component_id": "di:DiSymfonyBadge",
     "aliases": [
       "di",
       "symfony",
@@ -1771,8 +1771,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiTechcrunch.svg",
-    "component_id": "Icon.DiTechcrunch",
+    "src_svg": "di/DiTechcrunch.svg",
+    "component_id": "di:DiTechcrunch",
     "aliases": [
       "di",
       "techcrunch"
@@ -1781,8 +1781,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiTerminal.svg",
-    "component_id": "Icon.DiTerminal",
+    "src_svg": "di/DiTerminal.svg",
+    "component_id": "di:DiTerminal",
     "aliases": [
       "di",
       "terminal"
@@ -1791,8 +1791,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiTerminalBadge.svg",
-    "component_id": "Icon.DiTerminalBadge",
+    "src_svg": "di/DiTerminalBadge.svg",
+    "component_id": "di:DiTerminalBadge",
     "aliases": [
       "di",
       "terminal",
@@ -1802,8 +1802,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiTravis.svg",
-    "component_id": "Icon.DiTravis",
+    "src_svg": "di/DiTravis.svg",
+    "component_id": "di:DiTravis",
     "aliases": [
       "di",
       "travis"
@@ -1812,8 +1812,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiTrello.svg",
-    "component_id": "Icon.DiTrello",
+    "src_svg": "di/DiTrello.svg",
+    "component_id": "di:DiTrello",
     "aliases": [
       "di",
       "trello"
@@ -1822,8 +1822,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiTypo3.svg",
-    "component_id": "Icon.DiTypo3",
+    "src_svg": "di/DiTypo3.svg",
+    "component_id": "di:DiTypo3",
     "aliases": [
       "di",
       "typo",
@@ -1833,8 +1833,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiUbuntu.svg",
-    "component_id": "Icon.DiUbuntu",
+    "src_svg": "di/DiUbuntu.svg",
+    "component_id": "di:DiUbuntu",
     "aliases": [
       "di",
       "ubuntu"
@@ -1843,8 +1843,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiUikit.svg",
-    "component_id": "Icon.DiUikit",
+    "src_svg": "di/DiUikit.svg",
+    "component_id": "di:DiUikit",
     "aliases": [
       "di",
       "uikit"
@@ -1853,8 +1853,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiUnitySmall.svg",
-    "component_id": "Icon.DiUnitySmall",
+    "src_svg": "di/DiUnitySmall.svg",
+    "component_id": "di:DiUnitySmall",
     "aliases": [
       "di",
       "unity",
@@ -1864,8 +1864,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiVim.svg",
-    "component_id": "Icon.DiVim",
+    "src_svg": "di/DiVim.svg",
+    "component_id": "di:DiVim",
     "aliases": [
       "di",
       "vim"
@@ -1874,8 +1874,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiVisualstudio.svg",
-    "component_id": "Icon.DiVisualstudio",
+    "src_svg": "di/DiVisualstudio.svg",
+    "component_id": "di:DiVisualstudio",
     "aliases": [
       "di",
       "visualstudio"
@@ -1884,8 +1884,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiW3C.svg",
-    "component_id": "Icon.DiW3C",
+    "src_svg": "di/DiW3C.svg",
+    "component_id": "di:DiW3C",
     "aliases": [
       "di",
       "w",
@@ -1896,8 +1896,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiWebplatform.svg",
-    "component_id": "Icon.DiWebplatform",
+    "src_svg": "di/DiWebplatform.svg",
+    "component_id": "di:DiWebplatform",
     "aliases": [
       "di",
       "webplatform"
@@ -1906,8 +1906,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiWindows.svg",
-    "component_id": "Icon.DiWindows",
+    "src_svg": "di/DiWindows.svg",
+    "component_id": "di:DiWindows",
     "aliases": [
       "di",
       "windows"
@@ -1916,8 +1916,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiWordpress.svg",
-    "component_id": "Icon.DiWordpress",
+    "src_svg": "di/DiWordpress.svg",
+    "component_id": "di:DiWordpress",
     "aliases": [
       "di",
       "wordpress"
@@ -1926,8 +1926,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiYahoo.svg",
-    "component_id": "Icon.DiYahoo",
+    "src_svg": "di/DiYahoo.svg",
+    "component_id": "di:DiYahoo",
     "aliases": [
       "di",
       "yahoo"
@@ -1936,8 +1936,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiYahooSmall.svg",
-    "component_id": "Icon.DiYahooSmall",
+    "src_svg": "di/DiYahooSmall.svg",
+    "component_id": "di:DiYahooSmall",
     "aliases": [
       "di",
       "yahoo",
@@ -1947,8 +1947,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiYeoman.svg",
-    "component_id": "Icon.DiYeoman",
+    "src_svg": "di/DiYeoman.svg",
+    "component_id": "di:DiYeoman",
     "aliases": [
       "di",
       "yeoman"
@@ -1957,8 +1957,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiYii.svg",
-    "component_id": "Icon.DiYii",
+    "src_svg": "di/DiYii.svg",
+    "component_id": "di:DiYii",
     "aliases": [
       "di",
       "yii"
@@ -1967,8 +1967,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/di/DiZend.svg",
-    "component_id": "Icon.DiZend",
+    "src_svg": "di/DiZend.svg",
+    "component_id": "di:DiZend",
     "aliases": [
       "di",
       "zend"

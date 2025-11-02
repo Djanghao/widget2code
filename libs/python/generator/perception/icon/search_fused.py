@@ -25,6 +25,10 @@ def _to_pascal(s: str) -> str:
 
 
 def _normalize_name_from_src(src: str) -> str:
+    """
+    DEPRECATED: Use component_id directly instead.
+    This function kept for backward compatibility.
+    """
     return Path(Path(src).name).stem
 
 def load_lib(lib_root: Path) -> Tuple[Any, List[Dict[str, Any]], np.ndarray, np.ndarray]:
@@ -161,22 +165,18 @@ def retrieve_svg_filenames_with_dual_details(
 
         hits_with_names = []
         for h in hits_fused:
-            src = h.get("src_svg")
-            if not src:
-                continue
-            name = _normalize_name_from_src(src)
-            svg_names.append(name)
-            h["name"] = name
-            hits_with_names.append(h)
+            name = h.get("component_id")
+            if name:
+                svg_names.append(name)
+                h["name"] = name
+                hits_with_names.append(h)
 
         hits_img_only_named = []
         for h in hits_img_only:
-            src = h.get("src_svg")
-            if not src:
-                continue
-            name = _normalize_name_from_src(src)
-            h["name"] = name
-            hits_img_only_named.append(h)
+            name = h.get("component_id")
+            if name:
+                h["name"] = name
+                hits_img_only_named.append(h)
 
         fused_hits_all.append(hits_with_names)
         img_only_hits_all.append(hits_img_only_named)
@@ -288,10 +288,10 @@ def retrieve_svg_filenames_from_libs_with_dual_details(
                 "score_txt": float(per_lib_sim_txt[lib_idx][local_j]),
                 "score_final": float(fused_arr[ridx]),
             }
-            src = h.get("src_svg")
-            if src:
-                h["name"] = _normalize_name_from_src(src)
-                svg_names.append(h["name"])
+            name = h.get("component_id")
+            if name:
+                h["name"] = name
+                svg_names.append(name)
             hits_fused.append(h)
 
         # Image-only Top10 from the same pool
@@ -313,9 +313,9 @@ def retrieve_svg_filenames_from_libs_with_dual_details(
                 "aliases": info.get("aliases"),
                 "score_img": float(per_lib_sim_img[lib_idx][local_j]),
             }
-            src = h.get("src_svg")
-            if src:
-                h["name"] = _normalize_name_from_src(src)
+            name = h.get("component_id")
+            if name:
+                h["name"] = name
             hits_img_only.append(h)
 
         fused_hits_all.append(hits_fused)

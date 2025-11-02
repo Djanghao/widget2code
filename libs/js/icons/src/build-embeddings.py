@@ -184,9 +184,46 @@ def extract_keywords_from_filename(p: Path) -> List[str]:
             seen.add(t); uniq.append(t)
     return uniq
 
-def filename_to_component_and_aliases(p: Path) -> Tuple[str, List[str]]:
+def _to_pascal_case(s: str) -> str:
+    """Convert string to PascalCase (e.g., 'bolt.fill' -> 'BoltFill')"""
+    parts = [p for p in re.split(r"[^a-zA-Z0-9]+", s or "") if p]
+    return "".join(p[:1].upper() + p[1:] for p in parts)
+
+
+def filename_to_component_and_aliases(p: Path, svg_dir: Path) -> Tuple[str, List[str]]:
+    """
+    Generate component_id and aliases from SVG path.
+
+    Returns:
+        component_id in format "prefix:ComponentName" (e.g., "lu:LuHeart", "sf:SfBoltFill")
+        aliases as list of keywords
+    """
     tokens = extract_keywords_from_filename(p)
-    comp = f"Icon.{''.join(word.capitalize() for word in p.stem.split('.'))}"
+
+    # Extract library prefix from path (e.g., "lu", "sf", "ai")
+    try:
+        rel_path = p.relative_to(svg_dir)
+        parts = rel_path.parts
+        library = parts[0] if parts else None
+    except (ValueError, IndexError):
+        library = None
+
+    # Generate component name based on library
+    if library == "sf":
+        # SF Symbols: convert dot notation to SfPascalCase
+        # e.g., "bolt.fill" -> "SfBoltFill"
+        pascal = _to_pascal_case(p.stem)
+        if not pascal.startswith("Sf"):
+            pascal = "Sf" + pascal
+        comp = f"sf:{pascal}"
+    elif library:
+        # Other libraries: use filename as-is with library prefix
+        # e.g., "AiFillHeart" -> "ai:AiFillHeart"
+        comp = f"{library}:{p.stem}"
+    else:
+        # Fallback: use old format
+        comp = f"Icon.{_to_pascal_case(p.stem)}"
+
     return comp, tokens
 
 _COLOR_RE_HEX = re.compile(r'#([0-9a-fA-F]{3,8})')
@@ -499,7 +536,7 @@ def build_library_inplace(
         bw = to_outline_bw(png_bytes)
         bw_pils.append(bw)
 
-        comp, aliases = filename_to_component_and_aliases(sp)
+        comp, aliases = filename_to_component_and_aliases(sp, svg_dir)
         colors = parse_svg_colors(sp)
 
         def raster_svg_to_centered_rgb(png_rgba_bytes: bytes,
@@ -542,8 +579,11 @@ def build_library_inplace(
             if not cap or not cap.strip():
                 cap = build_caption_from_keywords(aliases)
 
+        # Use relative path from svg_dir instead of absolute path
+        rel_path = sp.relative_to(svg_dir).as_posix()
+
         items.append({
-            "src_svg": str(sp.as_posix()),
+            "src_svg": rel_path,
             "component_id": comp,
             "aliases": aliases,
             "caption": cap,
@@ -551,7 +591,7 @@ def build_library_inplace(
         })
 
         if keep_metadata:
-            metadata_full[str(sp.as_posix())] = {
+            metadata_full[rel_path] = {
                 "component_id": comp,
                 "aliases": aliases,
                 "colors": colors,

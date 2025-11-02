@@ -1,6 +1,6 @@
 {
-  "/home/darren/llm-widget-factory/assets/go/GoAlert.svg": {
-    "component_id": "Icon.GoAlert",
+  "go/GoAlert.svg": {
+    "component_id": "go:GoAlert",
     "aliases": [
       "go",
       "alert"
@@ -8,8 +8,8 @@
     "colors": [],
     "caption": "a black and white warning sign on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoAlertFill.svg": {
-    "component_id": "Icon.GoAlertFill",
+  "go/GoAlertFill.svg": {
+    "component_id": "go:GoAlertFill",
     "aliases": [
       "go",
       "alert",
@@ -18,8 +18,8 @@
     "colors": [],
     "caption": "a black and white image of a warning sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArchive.svg": {
-    "component_id": "Icon.GoArchive",
+  "go/GoArchive.svg": {
+    "component_id": "go:GoArchive",
     "aliases": [
       "go",
       "archive"
@@ -27,8 +27,8 @@
     "colors": [],
     "caption": "a black and white icon of a box"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArrowBoth.svg": {
-    "component_id": "Icon.GoArrowBoth",
+  "go/GoArrowBoth.svg": {
+    "component_id": "go:GoArrowBoth",
     "aliases": [
       "go",
       "arrow",
@@ -37,8 +37,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArrowDown.svg": {
-    "component_id": "Icon.GoArrowDown",
+  "go/GoArrowDown.svg": {
+    "component_id": "go:GoArrowDown",
     "aliases": [
       "go",
       "arrow",
@@ -47,8 +47,8 @@
     "colors": [],
     "caption": "an arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArrowDownLeft.svg": {
-    "component_id": "Icon.GoArrowDownLeft",
+  "go/GoArrowDownLeft.svg": {
+    "component_id": "go:GoArrowDownLeft",
     "aliases": [
       "go",
       "arrow",
@@ -58,8 +58,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArrowDownRight.svg": {
-    "component_id": "Icon.GoArrowDownRight",
+  "go/GoArrowDownRight.svg": {
+    "component_id": "go:GoArrowDownRight",
     "aliases": [
       "go",
       "arrow",
@@ -69,8 +69,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArrowLeft.svg": {
-    "component_id": "Icon.GoArrowLeft",
+  "go/GoArrowLeft.svg": {
+    "component_id": "go:GoArrowLeft",
     "aliases": [
       "go",
       "arrow",
@@ -79,8 +79,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArrowRight.svg": {
-    "component_id": "Icon.GoArrowRight",
+  "go/GoArrowRight.svg": {
+    "component_id": "go:GoArrowRight",
     "aliases": [
       "go",
       "arrow",
@@ -89,8 +89,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArrowSwitch.svg": {
-    "component_id": "Icon.GoArrowSwitch",
+  "go/GoArrowSwitch.svg": {
+    "component_id": "go:GoArrowSwitch",
     "aliases": [
       "go",
       "arrow",
@@ -99,8 +99,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArrowUp.svg": {
-    "component_id": "Icon.GoArrowUp",
+  "go/GoArrowUp.svg": {
+    "component_id": "go:GoArrowUp",
     "aliases": [
       "go",
       "arrow",
@@ -109,8 +109,8 @@
     "colors": [],
     "caption": "an arrow pointing up on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArrowUpLeft.svg": {
-    "component_id": "Icon.GoArrowUpLeft",
+  "go/GoArrowUpLeft.svg": {
+    "component_id": "go:GoArrowUpLeft",
     "aliases": [
       "go",
       "arrow",
@@ -120,8 +120,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoArrowUpRight.svg": {
-    "component_id": "Icon.GoArrowUpRight",
+  "go/GoArrowUpRight.svg": {
+    "component_id": "go:GoArrowUpRight",
     "aliases": [
       "go",
       "arrow",
@@ -131,8 +131,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBeaker.svg": {
-    "component_id": "Icon.GoBeaker",
+  "go/GoBeaker.svg": {
+    "component_id": "go:GoBeaker",
     "aliases": [
       "go",
       "beaker"
@@ -140,8 +140,8 @@
     "colors": [],
     "caption": "a black and white illustration of a beaker"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBell.svg": {
-    "component_id": "Icon.GoBell",
+  "go/GoBell.svg": {
+    "component_id": "go:GoBell",
     "aliases": [
       "go",
       "bell"
@@ -149,8 +149,8 @@
     "colors": [],
     "caption": "a bell icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBellFill.svg": {
-    "component_id": "Icon.GoBellFill",
+  "go/GoBellFill.svg": {
+    "component_id": "go:GoBellFill",
     "aliases": [
       "go",
       "bell",
@@ -159,8 +159,8 @@
     "colors": [],
     "caption": "a bell icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBellSlash.svg": {
-    "component_id": "Icon.GoBellSlash",
+  "go/GoBellSlash.svg": {
+    "component_id": "go:GoBellSlash",
     "aliases": [
       "go",
       "bell",
@@ -169,8 +169,8 @@
     "colors": [],
     "caption": "a no bell icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBlocked.svg": {
-    "component_id": "Icon.GoBlocked",
+  "go/GoBlocked.svg": {
+    "component_id": "go:GoBlocked",
     "aliases": [
       "go",
       "blocked"
@@ -178,8 +178,8 @@
     "colors": [],
     "caption": "a black and white image of a stop sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBold.svg": {
-    "component_id": "Icon.GoBold",
+  "go/GoBold.svg": {
+    "component_id": "go:GoBold",
     "aliases": [
       "go",
       "bold"
@@ -187,8 +187,8 @@
     "colors": [],
     "caption": "a black letter b on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBook.svg": {
-    "component_id": "Icon.GoBook",
+  "go/GoBook.svg": {
+    "component_id": "go:GoBook",
     "aliases": [
       "go",
       "book"
@@ -196,8 +196,8 @@
     "colors": [],
     "caption": "an open book icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBookmark.svg": {
-    "component_id": "Icon.GoBookmark",
+  "go/GoBookmark.svg": {
+    "component_id": "go:GoBookmark",
     "aliases": [
       "go",
       "bookmark"
@@ -205,8 +205,8 @@
     "colors": [],
     "caption": "a black and white icon of a book"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBookmarkFill.svg": {
-    "component_id": "Icon.GoBookmarkFill",
+  "go/GoBookmarkFill.svg": {
+    "component_id": "go:GoBookmarkFill",
     "aliases": [
       "go",
       "bookmark",
@@ -215,8 +215,8 @@
     "colors": [],
     "caption": "a black bookmark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBookmarkSlash.svg": {
-    "component_id": "Icon.GoBookmarkSlash",
+  "go/GoBookmarkSlash.svg": {
+    "component_id": "go:GoBookmarkSlash",
     "aliases": [
       "go",
       "bookmark",
@@ -225,8 +225,8 @@
     "colors": [],
     "caption": "a black and white icon of a no sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBookmarkSlashFill.svg": {
-    "component_id": "Icon.GoBookmarkSlashFill",
+  "go/GoBookmarkSlashFill.svg": {
+    "component_id": "go:GoBookmarkSlashFill",
     "aliases": [
       "go",
       "bookmark",
@@ -236,8 +236,8 @@
     "colors": [],
     "caption": "a black and white icon of a black and white ribbon"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBriefcase.svg": {
-    "component_id": "Icon.GoBriefcase",
+  "go/GoBriefcase.svg": {
+    "component_id": "go:GoBriefcase",
     "aliases": [
       "go",
       "briefcase"
@@ -245,8 +245,8 @@
     "colors": [],
     "caption": "a briefcase icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBroadcast.svg": {
-    "component_id": "Icon.GoBroadcast",
+  "go/GoBroadcast.svg": {
+    "component_id": "go:GoBroadcast",
     "aliases": [
       "go",
       "broadcast"
@@ -254,8 +254,8 @@
     "colors": [],
     "caption": "a black and white image of a wifi symbol"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBrowser.svg": {
-    "component_id": "Icon.GoBrowser",
+  "go/GoBrowser.svg": {
+    "component_id": "go:GoBrowser",
     "aliases": [
       "go",
       "browser"
@@ -263,8 +263,8 @@
     "colors": [],
     "caption": "a web browser icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoBug.svg": {
-    "component_id": "Icon.GoBug",
+  "go/GoBug.svg": {
+    "component_id": "go:GoBug",
     "aliases": [
       "go",
       "bug"
@@ -272,8 +272,8 @@
     "colors": [],
     "caption": "a bug icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCalendar.svg": {
-    "component_id": "Icon.GoCalendar",
+  "go/GoCalendar.svg": {
+    "component_id": "go:GoCalendar",
     "aliases": [
       "go",
       "calendar"
@@ -281,8 +281,8 @@
     "colors": [],
     "caption": "a calendar icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCheck.svg": {
-    "component_id": "Icon.GoCheck",
+  "go/GoCheck.svg": {
+    "component_id": "go:GoCheck",
     "aliases": [
       "go",
       "check"
@@ -290,8 +290,8 @@
     "colors": [],
     "caption": "a black check mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCheckCircle.svg": {
-    "component_id": "Icon.GoCheckCircle",
+  "go/GoCheckCircle.svg": {
+    "component_id": "go:GoCheckCircle",
     "aliases": [
       "go",
       "check",
@@ -300,8 +300,8 @@
     "colors": [],
     "caption": "a black and white image of a check mark"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCheckCircleFill.svg": {
-    "component_id": "Icon.GoCheckCircleFill",
+  "go/GoCheckCircleFill.svg": {
+    "component_id": "go:GoCheckCircleFill",
     "aliases": [
       "go",
       "check",
@@ -311,8 +311,8 @@
     "colors": [],
     "caption": "a black and white check mark icon in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCheckbox.svg": {
-    "component_id": "Icon.GoCheckbox",
+  "go/GoCheckbox.svg": {
+    "component_id": "go:GoCheckbox",
     "aliases": [
       "go",
       "checkbox"
@@ -320,8 +320,8 @@
     "colors": [],
     "caption": "a check mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoChecklist.svg": {
-    "component_id": "Icon.GoChecklist",
+  "go/GoChecklist.svg": {
+    "component_id": "go:GoChecklist",
     "aliases": [
       "go",
       "checklist"
@@ -329,8 +329,8 @@
     "colors": [],
     "caption": "a black and white icon of a document with an arrow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoChevronDown.svg": {
-    "component_id": "Icon.GoChevronDown",
+  "go/GoChevronDown.svg": {
+    "component_id": "go:GoChevronDown",
     "aliases": [
       "go",
       "chevron",
@@ -339,8 +339,8 @@
     "colors": [],
     "caption": "a black and white image of the letter v"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoChevronLeft.svg": {
-    "component_id": "Icon.GoChevronLeft",
+  "go/GoChevronLeft.svg": {
+    "component_id": "go:GoChevronLeft",
     "aliases": [
       "go",
       "chevron",
@@ -349,8 +349,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoChevronRight.svg": {
-    "component_id": "Icon.GoChevronRight",
+  "go/GoChevronRight.svg": {
+    "component_id": "go:GoChevronRight",
     "aliases": [
       "go",
       "chevron",
@@ -359,8 +359,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoChevronUp.svg": {
-    "component_id": "Icon.GoChevronUp",
+  "go/GoChevronUp.svg": {
+    "component_id": "go:GoChevronUp",
     "aliases": [
       "go",
       "chevron",
@@ -369,8 +369,8 @@
     "colors": [],
     "caption": "a black and white icon of a triangle"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCircle.svg": {
-    "component_id": "Icon.GoCircle",
+  "go/GoCircle.svg": {
+    "component_id": "go:GoCircle",
     "aliases": [
       "go",
       "circle"
@@ -378,8 +378,8 @@
     "colors": [],
     "caption": "a black circle is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCircleSlash.svg": {
-    "component_id": "Icon.GoCircleSlash",
+  "go/GoCircleSlash.svg": {
+    "component_id": "go:GoCircleSlash",
     "aliases": [
       "go",
       "circle",
@@ -388,8 +388,8 @@
     "colors": [],
     "caption": "a black and white image of a no entry sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoClock.svg": {
-    "component_id": "Icon.GoClock",
+  "go/GoClock.svg": {
+    "component_id": "go:GoClock",
     "aliases": [
       "go",
       "clock"
@@ -397,8 +397,8 @@
     "colors": [],
     "caption": "a black and white clock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoClockFill.svg": {
-    "component_id": "Icon.GoClockFill",
+  "go/GoClockFill.svg": {
+    "component_id": "go:GoClockFill",
     "aliases": [
       "go",
       "clock",
@@ -407,8 +407,8 @@
     "colors": [],
     "caption": "a black and white clock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCloud.svg": {
-    "component_id": "Icon.GoCloud",
+  "go/GoCloud.svg": {
+    "component_id": "go:GoCloud",
     "aliases": [
       "go",
       "cloud"
@@ -416,8 +416,8 @@
     "colors": [],
     "caption": "a black cloud icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCloudOffline.svg": {
-    "component_id": "Icon.GoCloudOffline",
+  "go/GoCloudOffline.svg": {
+    "component_id": "go:GoCloudOffline",
     "aliases": [
       "go",
       "cloud",
@@ -426,8 +426,8 @@
     "colors": [],
     "caption": "a no cloud icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCode.svg": {
-    "component_id": "Icon.GoCode",
+  "go/GoCode.svg": {
+    "component_id": "go:GoCode",
     "aliases": [
       "go",
       "code"
@@ -435,8 +435,8 @@
     "colors": [],
     "caption": "two arrows pointing in the same direction on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCodeOfConduct.svg": {
-    "component_id": "Icon.GoCodeOfConduct",
+  "go/GoCodeOfConduct.svg": {
+    "component_id": "go:GoCodeOfConduct",
     "aliases": [
       "go",
       "code",
@@ -446,8 +446,8 @@
     "colors": [],
     "caption": "a black and white icon of a heart with two hands"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCodeReview.svg": {
-    "component_id": "Icon.GoCodeReview",
+  "go/GoCodeReview.svg": {
+    "component_id": "go:GoCodeReview",
     "aliases": [
       "go",
       "code",
@@ -456,8 +456,8 @@
     "colors": [],
     "caption": "a black and white icon of a speech bubble"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCodeSquare.svg": {
-    "component_id": "Icon.GoCodeSquare",
+  "go/GoCodeSquare.svg": {
+    "component_id": "go:GoCodeSquare",
     "aliases": [
       "go",
       "code",
@@ -466,8 +466,8 @@
     "colors": [],
     "caption": "a black and white icon with two arrows pointing to each other"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCodescan.svg": {
-    "component_id": "Icon.GoCodescan",
+  "go/GoCodescan.svg": {
+    "component_id": "go:GoCodescan",
     "aliases": [
       "go",
       "codescan"
@@ -475,8 +475,8 @@
     "colors": [],
     "caption": "a magnifying glass icon with the word code in it"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCodescanCheckmark.svg": {
-    "component_id": "Icon.GoCodescanCheckmark",
+  "go/GoCodescanCheckmark.svg": {
+    "component_id": "go:GoCodescanCheckmark",
     "aliases": [
       "go",
       "codescan",
@@ -485,8 +485,8 @@
     "colors": [],
     "caption": "a black and white icon of a magnifying glass with a check mark"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCodespaces.svg": {
-    "component_id": "Icon.GoCodespaces",
+  "go/GoCodespaces.svg": {
+    "component_id": "go:GoCodespaces",
     "aliases": [
       "go",
       "codespaces"
@@ -494,8 +494,8 @@
     "colors": [],
     "caption": "a computer icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoColumns.svg": {
-    "component_id": "Icon.GoColumns",
+  "go/GoColumns.svg": {
+    "component_id": "go:GoColumns",
     "aliases": [
       "go",
       "columns"
@@ -503,8 +503,8 @@
     "colors": [],
     "caption": "a black and white image of two black rectangles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCommandPalette.svg": {
-    "component_id": "Icon.GoCommandPalette",
+  "go/GoCommandPalette.svg": {
+    "component_id": "go:GoCommandPalette",
     "aliases": [
       "go",
       "command",
@@ -513,8 +513,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing down"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoComment.svg": {
-    "component_id": "Icon.GoComment",
+  "go/GoComment.svg": {
+    "component_id": "go:GoComment",
     "aliases": [
       "go",
       "comment"
@@ -522,8 +522,8 @@
     "colors": [],
     "caption": "a black and white image of a speech bubble"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCommentDiscussion.svg": {
-    "component_id": "Icon.GoCommentDiscussion",
+  "go/GoCommentDiscussion.svg": {
+    "component_id": "go:GoCommentDiscussion",
     "aliases": [
       "go",
       "comment",
@@ -532,8 +532,8 @@
     "colors": [],
     "caption": "two black speech bubbles on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCommit.svg": {
-    "component_id": "Icon.GoCommit",
+  "go/GoCommit.svg": {
+    "component_id": "go:GoCommit",
     "aliases": [
       "go",
       "commit"
@@ -541,8 +541,8 @@
     "colors": [],
     "caption": "a black and white image of an electrical symbol"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoContainer.svg": {
-    "component_id": "Icon.GoContainer",
+  "go/GoContainer.svg": {
+    "component_id": "go:GoContainer",
     "aliases": [
       "go",
       "container"
@@ -550,8 +550,8 @@
     "colors": [],
     "caption": "a black and white icon of a box"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCopilot.svg": {
-    "component_id": "Icon.GoCopilot",
+  "go/GoCopilot.svg": {
+    "component_id": "go:GoCopilot",
     "aliases": [
       "go",
       "copilot"
@@ -559,8 +559,8 @@
     "colors": [],
     "caption": "a black and white image of a helmet with goggles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCopy.svg": {
-    "component_id": "Icon.GoCopy",
+  "go/GoCopy.svg": {
+    "component_id": "go:GoCopy",
     "aliases": [
       "go",
       "copy"
@@ -568,8 +568,8 @@
     "colors": [],
     "caption": "a black and white icon of two squares"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCpu.svg": {
-    "component_id": "Icon.GoCpu",
+  "go/GoCpu.svg": {
+    "component_id": "go:GoCpu",
     "aliases": [
       "go",
       "cpu"
@@ -577,8 +577,8 @@
     "colors": [],
     "caption": "a black and white image of a computer chip"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCreditCard.svg": {
-    "component_id": "Icon.GoCreditCard",
+  "go/GoCreditCard.svg": {
+    "component_id": "go:GoCreditCard",
     "aliases": [
       "go",
       "credit",
@@ -587,8 +587,8 @@
     "colors": [],
     "caption": "a credit card icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoCrossReference.svg": {
-    "component_id": "Icon.GoCrossReference",
+  "go/GoCrossReference.svg": {
+    "component_id": "go:GoCrossReference",
     "aliases": [
       "go",
       "cross",
@@ -597,8 +597,8 @@
     "colors": [],
     "caption": "a black and white icon of a speech bubble with an arrow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDash.svg": {
-    "component_id": "Icon.GoDash",
+  "go/GoDash.svg": {
+    "component_id": "go:GoDash",
     "aliases": [
       "go",
       "dash"
@@ -606,8 +606,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDatabase.svg": {
-    "component_id": "Icon.GoDatabase",
+  "go/GoDatabase.svg": {
+    "component_id": "go:GoDatabase",
     "aliases": [
       "go",
       "database"
@@ -615,8 +615,8 @@
     "colors": [],
     "caption": "a black and white icon of a database"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDependabot.svg": {
-    "component_id": "Icon.GoDependabot",
+  "go/GoDependabot.svg": {
+    "component_id": "go:GoDependabot",
     "aliases": [
       "go",
       "dependabot"
@@ -624,8 +624,8 @@
     "colors": [],
     "caption": "a black and white icon of a robot"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDesktopDownload.svg": {
-    "component_id": "Icon.GoDesktopDownload",
+  "go/GoDesktopDownload.svg": {
+    "component_id": "go:GoDesktopDownload",
     "aliases": [
       "go",
       "desktop",
@@ -634,8 +634,8 @@
     "colors": [],
     "caption": "a black and white icon of a computer with a down arrow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDeviceCameraVideo.svg": {
-    "component_id": "Icon.GoDeviceCameraVideo",
+  "go/GoDeviceCameraVideo.svg": {
+    "component_id": "go:GoDeviceCameraVideo",
     "aliases": [
       "go",
       "device",
@@ -645,8 +645,8 @@
     "colors": [],
     "caption": "a video camera icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDeviceDesktop.svg": {
-    "component_id": "Icon.GoDeviceDesktop",
+  "go/GoDeviceDesktop.svg": {
+    "component_id": "go:GoDeviceDesktop",
     "aliases": [
       "go",
       "device",
@@ -655,8 +655,8 @@
     "colors": [],
     "caption": "a computer monitor icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDeviceMobile.svg": {
-    "component_id": "Icon.GoDeviceMobile",
+  "go/GoDeviceMobile.svg": {
+    "component_id": "go:GoDeviceMobile",
     "aliases": [
       "go",
       "device",
@@ -665,8 +665,8 @@
     "colors": [],
     "caption": "a black and white icon of a phone"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDiamond.svg": {
-    "component_id": "Icon.GoDiamond",
+  "go/GoDiamond.svg": {
+    "component_id": "go:GoDiamond",
     "aliases": [
       "go",
       "diamond"
@@ -674,8 +674,8 @@
     "colors": [],
     "caption": "a black and white image of a diamond symbol"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDiff.svg": {
-    "component_id": "Icon.GoDiff",
+  "go/GoDiff.svg": {
+    "component_id": "go:GoDiff",
     "aliases": [
       "go",
       "diff"
@@ -683,8 +683,8 @@
     "colors": [],
     "caption": "a black and white image of a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDiscussionClosed.svg": {
-    "component_id": "Icon.GoDiscussionClosed",
+  "go/GoDiscussionClosed.svg": {
+    "component_id": "go:GoDiscussionClosed",
     "aliases": [
       "go",
       "discussion",
@@ -693,8 +693,8 @@
     "colors": [],
     "caption": "a black and white icon of two check boxes"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDiscussionDuplicate.svg": {
-    "component_id": "Icon.GoDiscussionDuplicate",
+  "go/GoDiscussionDuplicate.svg": {
+    "component_id": "go:GoDiscussionDuplicate",
     "aliases": [
       "go",
       "discussion",
@@ -703,8 +703,8 @@
     "colors": [],
     "caption": "a black and white icon of two speech bubbles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDiscussionOutdated.svg": {
-    "component_id": "Icon.GoDiscussionOutdated",
+  "go/GoDiscussionOutdated.svg": {
+    "component_id": "go:GoDiscussionOutdated",
     "aliases": [
       "go",
       "discussion",
@@ -713,8 +713,8 @@
     "colors": [],
     "caption": "two speech bubbles with a clock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDot.svg": {
-    "component_id": "Icon.GoDot",
+  "go/GoDot.svg": {
+    "component_id": "go:GoDot",
     "aliases": [
       "go",
       "dot"
@@ -722,8 +722,8 @@
     "colors": [],
     "caption": "a black circle is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDotFill.svg": {
-    "component_id": "Icon.GoDotFill",
+  "go/GoDotFill.svg": {
+    "component_id": "go:GoDotFill",
     "aliases": [
       "go",
       "dot",
@@ -732,8 +732,8 @@
     "colors": [],
     "caption": "a black circle is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDownload.svg": {
-    "component_id": "Icon.GoDownload",
+  "go/GoDownload.svg": {
+    "component_id": "go:GoDownload",
     "aliases": [
       "go",
       "download"
@@ -741,8 +741,8 @@
     "colors": [],
     "caption": "a black and white image of a down arrow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoDuplicate.svg": {
-    "component_id": "Icon.GoDuplicate",
+  "go/GoDuplicate.svg": {
+    "component_id": "go:GoDuplicate",
     "aliases": [
       "go",
       "duplicate"
@@ -750,8 +750,8 @@
     "colors": [],
     "caption": "a black and white icon with a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoEye.svg": {
-    "component_id": "Icon.GoEye",
+  "go/GoEye.svg": {
+    "component_id": "go:GoEye",
     "aliases": [
       "go",
       "eye"
@@ -759,8 +759,8 @@
     "colors": [],
     "caption": "an eye icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoEyeClosed.svg": {
-    "component_id": "Icon.GoEyeClosed",
+  "go/GoEyeClosed.svg": {
+    "component_id": "go:GoEyeClosed",
     "aliases": [
       "go",
       "eye",
@@ -769,8 +769,8 @@
     "colors": [],
     "caption": "a black and white icon of an eye with a line through it"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFile.svg": {
-    "component_id": "Icon.GoFile",
+  "go/GoFile.svg": {
+    "component_id": "go:GoFile",
     "aliases": [
       "go",
       "file"
@@ -778,8 +778,8 @@
     "colors": [],
     "caption": "a black and white icon of a document"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFileBinary.svg": {
-    "component_id": "Icon.GoFileBinary",
+  "go/GoFileBinary.svg": {
+    "component_id": "go:GoFileBinary",
     "aliases": [
       "go",
       "file",
@@ -788,8 +788,8 @@
     "colors": [],
     "caption": "a black and white icon with the number 10 on it"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFileCode.svg": {
-    "component_id": "Icon.GoFileCode",
+  "go/GoFileCode.svg": {
+    "component_id": "go:GoFileCode",
     "aliases": [
       "go",
       "file",
@@ -798,8 +798,8 @@
     "colors": [],
     "caption": "a black and white icon of a file"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFileDiff.svg": {
-    "component_id": "Icon.GoFileDiff",
+  "go/GoFileDiff.svg": {
+    "component_id": "go:GoFileDiff",
     "aliases": [
       "go",
       "file",
@@ -808,8 +808,8 @@
     "colors": [],
     "caption": "a black and white image of a document with a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFileDirectory.svg": {
-    "component_id": "Icon.GoFileDirectory",
+  "go/GoFileDirectory.svg": {
+    "component_id": "go:GoFileDirectory",
     "aliases": [
       "go",
       "file",
@@ -818,8 +818,8 @@
     "colors": [],
     "caption": "a black folder icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFileDirectoryFill.svg": {
-    "component_id": "Icon.GoFileDirectoryFill",
+  "go/GoFileDirectoryFill.svg": {
+    "component_id": "go:GoFileDirectoryFill",
     "aliases": [
       "go",
       "file",
@@ -829,8 +829,8 @@
     "colors": [],
     "caption": "a black folder icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFileMedia.svg": {
-    "component_id": "Icon.GoFileMedia",
+  "go/GoFileMedia.svg": {
+    "component_id": "go:GoFileMedia",
     "aliases": [
       "go",
       "file",
@@ -839,8 +839,8 @@
     "colors": [],
     "caption": "a black and white photo icon"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFileSubmodule.svg": {
-    "component_id": "Icon.GoFileSubmodule",
+  "go/GoFileSubmodule.svg": {
+    "component_id": "go:GoFileSubmodule",
     "aliases": [
       "go",
       "file",
@@ -849,8 +849,8 @@
     "colors": [],
     "caption": "a black folder icon with an arrow pointing to the right"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFileSymlinkFile.svg": {
-    "component_id": "Icon.GoFileSymlink",
+  "go/GoFileSymlinkFile.svg": {
+    "component_id": "go:GoFileSymlink",
     "aliases": [
       "go",
       "file",
@@ -859,8 +859,8 @@
     "colors": [],
     "caption": "a black and white image of a document with an arrow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFileZip.svg": {
-    "component_id": "Icon.GoFileZip",
+  "go/GoFileZip.svg": {
+    "component_id": "go:GoFileZip",
     "aliases": [
       "go",
       "file",
@@ -869,8 +869,8 @@
     "colors": [],
     "caption": "a black and white icon of a file cabinet"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFilter.svg": {
-    "component_id": "Icon.GoFilter",
+  "go/GoFilter.svg": {
+    "component_id": "go:GoFilter",
     "aliases": [
       "go",
       "filter"
@@ -878,8 +878,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFlame.svg": {
-    "component_id": "Icon.GoFlame",
+  "go/GoFlame.svg": {
+    "component_id": "go:GoFlame",
     "aliases": [
       "go",
       "flame"
@@ -887,8 +887,8 @@
     "colors": [],
     "caption": "a flame icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFold.svg": {
-    "component_id": "Icon.GoFold",
+  "go/GoFold.svg": {
+    "component_id": "go:GoFold",
     "aliases": [
       "go",
       "fold"
@@ -896,8 +896,8 @@
     "colors": [],
     "caption": "two arrows pointing in different directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFoldDown.svg": {
-    "component_id": "Icon.GoFoldDown",
+  "go/GoFoldDown.svg": {
+    "component_id": "go:GoFoldDown",
     "aliases": [
       "go",
       "fold",
@@ -906,8 +906,8 @@
     "colors": [],
     "caption": "an arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoFoldUp.svg": {
-    "component_id": "Icon.GoFoldUp",
+  "go/GoFoldUp.svg": {
+    "component_id": "go:GoFoldUp",
     "aliases": [
       "go",
       "fold",
@@ -916,8 +916,8 @@
     "colors": [],
     "caption": "an arrow pointing up on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGear.svg": {
-    "component_id": "Icon.GoGear",
+  "go/GoGear.svg": {
+    "component_id": "go:GoGear",
     "aliases": [
       "go",
       "gear"
@@ -925,8 +925,8 @@
     "colors": [],
     "caption": "a gear wheel icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGift.svg": {
-    "component_id": "Icon.GoGift",
+  "go/GoGift.svg": {
+    "component_id": "go:GoGift",
     "aliases": [
       "go",
       "gift"
@@ -934,8 +934,8 @@
     "colors": [],
     "caption": "a black and white icon of a gift with a bow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGitBranch.svg": {
-    "component_id": "Icon.GoGitBranch",
+  "go/GoGitBranch.svg": {
+    "component_id": "go:GoGitBranch",
     "aliases": [
       "go",
       "git",
@@ -944,8 +944,8 @@
     "colors": [],
     "caption": "a black and white icon with two circles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGitCommit.svg": {
-    "component_id": "Icon.GoGitCommit",
+  "go/GoGitCommit.svg": {
+    "component_id": "go:GoGitCommit",
     "aliases": [
       "go",
       "git",
@@ -954,8 +954,8 @@
     "colors": [],
     "caption": "a black and white image of an electrical symbol"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGitCompare.svg": {
-    "component_id": "Icon.GoGitCompare",
+  "go/GoGitCompare.svg": {
+    "component_id": "go:GoGitCompare",
     "aliases": [
       "go",
       "git",
@@ -964,8 +964,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGitMerge.svg": {
-    "component_id": "Icon.GoGitMerge",
+  "go/GoGitMerge.svg": {
+    "component_id": "go:GoGitMerge",
     "aliases": [
       "go",
       "git",
@@ -974,8 +974,8 @@
     "colors": [],
     "caption": "a black and white icon of two circles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGitMergeQueue.svg": {
-    "component_id": "Icon.GoGitMergeQueue",
+  "go/GoGitMergeQueue.svg": {
+    "component_id": "go:GoGitMergeQueue",
     "aliases": [
       "go",
       "git",
@@ -985,8 +985,8 @@
     "colors": [],
     "caption": "a black and white icon with three circles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGitPullRequest.svg": {
-    "component_id": "Icon.GoGitPullRequest",
+  "go/GoGitPullRequest.svg": {
+    "component_id": "go:GoGitPullRequest",
     "aliases": [
       "go",
       "git",
@@ -996,8 +996,8 @@
     "colors": [],
     "caption": "two arrows pointing in different directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGitPullRequestClosed.svg": {
-    "component_id": "Icon.GoGitPullRequestClosed",
+  "go/GoGitPullRequestClosed.svg": {
+    "component_id": "go:GoGitPullRequestClosed",
     "aliases": [
       "go",
       "git",
@@ -1008,8 +1008,8 @@
     "colors": [],
     "caption": "two black and white icons with arrows pointing to each other"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGitPullRequestDraft.svg": {
-    "component_id": "Icon.GoGitPullRequestDraft",
+  "go/GoGitPullRequestDraft.svg": {
+    "component_id": "go:GoGitPullRequestDraft",
     "aliases": [
       "go",
       "git",
@@ -1020,8 +1020,8 @@
     "colors": [],
     "caption": "a black and white image of two circles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGlobe.svg": {
-    "component_id": "Icon.GoGlobe",
+  "go/GoGlobe.svg": {
+    "component_id": "go:GoGlobe",
     "aliases": [
       "go",
       "globe"
@@ -1029,8 +1029,8 @@
     "colors": [],
     "caption": "a black and white icon of a globe"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGoal.svg": {
-    "component_id": "Icon.GoGoal",
+  "go/GoGoal.svg": {
+    "component_id": "go:GoGoal",
     "aliases": [
       "go",
       "goal"
@@ -1038,8 +1038,8 @@
     "colors": [],
     "caption": "a black and white icon of a dart in a target"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGrabber.svg": {
-    "component_id": "Icon.GoGrabber",
+  "go/GoGrabber.svg": {
+    "component_id": "go:GoGrabber",
     "aliases": [
       "go",
       "grabber"
@@ -1047,8 +1047,8 @@
     "colors": [],
     "caption": "four black dots on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoGraph.svg": {
-    "component_id": "Icon.GoGraph",
+  "go/GoGraph.svg": {
+    "component_id": "go:GoGraph",
     "aliases": [
       "go",
       "graph"
@@ -1056,8 +1056,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a graph"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoHash.svg": {
-    "component_id": "Icon.GoHash",
+  "go/GoHash.svg": {
+    "component_id": "go:GoHash",
     "aliases": [
       "go",
       "hash"
@@ -1065,8 +1065,8 @@
     "colors": [],
     "caption": "hashtag symbol in black and white on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoHeading.svg": {
-    "component_id": "Icon.GoHeading",
+  "go/GoHeading.svg": {
+    "component_id": "go:GoHeading",
     "aliases": [
       "go",
       "heading"
@@ -1074,8 +1074,8 @@
     "colors": [],
     "caption": "a black and white image of the letter h"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoHeart.svg": {
-    "component_id": "Icon.GoHeart",
+  "go/GoHeart.svg": {
+    "component_id": "go:GoHeart",
     "aliases": [
       "go",
       "heart"
@@ -1083,8 +1083,8 @@
     "colors": [],
     "caption": "a black and white heart icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoHeartFill.svg": {
-    "component_id": "Icon.GoHeartFill",
+  "go/GoHeartFill.svg": {
+    "component_id": "go:GoHeartFill",
     "aliases": [
       "go",
       "heart",
@@ -1093,8 +1093,8 @@
     "colors": [],
     "caption": "a black heart icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoHistory.svg": {
-    "component_id": "Icon.GoHistory",
+  "go/GoHistory.svg": {
+    "component_id": "go:GoHistory",
     "aliases": [
       "go",
       "history"
@@ -1102,8 +1102,8 @@
     "colors": [],
     "caption": "a black and white icon of a clock with an arrow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoHome.svg": {
-    "component_id": "Icon.GoHome",
+  "go/GoHome.svg": {
+    "component_id": "go:GoHome",
     "aliases": [
       "go",
       "home"
@@ -1111,8 +1111,8 @@
     "colors": [],
     "caption": "a black and white icon of a house"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoHomeFill.svg": {
-    "component_id": "Icon.GoHomeFill",
+  "go/GoHomeFill.svg": {
+    "component_id": "go:GoHomeFill",
     "aliases": [
       "go",
       "home",
@@ -1121,8 +1121,8 @@
     "colors": [],
     "caption": "a black house icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoHorizontalRule.svg": {
-    "component_id": "Icon.GoHorizontalRule",
+  "go/GoHorizontalRule.svg": {
+    "component_id": "go:GoHorizontalRule",
     "aliases": [
       "go",
       "horizontal",
@@ -1131,8 +1131,8 @@
     "colors": [],
     "caption": "an image of a black line on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoHourglass.svg": {
-    "component_id": "Icon.GoHourglass",
+  "go/GoHourglass.svg": {
+    "component_id": "go:GoHourglass",
     "aliases": [
       "go",
       "hourglass"
@@ -1140,8 +1140,8 @@
     "colors": [],
     "caption": "an hourglass icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoHubot.svg": {
-    "component_id": "Icon.GoHubot",
+  "go/GoHubot.svg": {
+    "component_id": "go:GoHubot",
     "aliases": [
       "go",
       "hubot"
@@ -1149,8 +1149,8 @@
     "colors": [],
     "caption": "a black and white icon of a man wearing a helmet"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoImage.svg": {
-    "component_id": "Icon.GoImage",
+  "go/GoImage.svg": {
+    "component_id": "go:GoImage",
     "aliases": [
       "go",
       "image"
@@ -1158,8 +1158,8 @@
     "colors": [],
     "caption": "a black and white photo icon"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoInbox.svg": {
-    "component_id": "Icon.GoInbox",
+  "go/GoInbox.svg": {
+    "component_id": "go:GoInbox",
     "aliases": [
       "go",
       "inbox"
@@ -1167,8 +1167,8 @@
     "colors": [],
     "caption": "an envelope icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoInfinity.svg": {
-    "component_id": "Icon.GoInfinity",
+  "go/GoInfinity.svg": {
+    "component_id": "go:GoInfinity",
     "aliases": [
       "go",
       "infinity"
@@ -1176,8 +1176,8 @@
     "colors": [],
     "caption": "an infinity symbol is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoInfo.svg": {
-    "component_id": "Icon.GoInfo",
+  "go/GoInfo.svg": {
+    "component_id": "go:GoInfo",
     "aliases": [
       "go",
       "info"
@@ -1185,8 +1185,8 @@
     "colors": [],
     "caption": "a black and white icon with the word i in it"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoIssueClosed.svg": {
-    "component_id": "Icon.GoIssueClosed",
+  "go/GoIssueClosed.svg": {
+    "component_id": "go:GoIssueClosed",
     "aliases": [
       "go",
       "issue",
@@ -1195,8 +1195,8 @@
     "colors": [],
     "caption": "a black and white image of a check mark"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoIssueDraft.svg": {
-    "component_id": "Icon.GoIssueDraft",
+  "go/GoIssueDraft.svg": {
+    "component_id": "go:GoIssueDraft",
     "aliases": [
       "go",
       "issue",
@@ -1205,8 +1205,8 @@
     "colors": [],
     "caption": "a circle with black lines on it"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoIssueOpened.svg": {
-    "component_id": "Icon.GoIssueOpened",
+  "go/GoIssueOpened.svg": {
+    "component_id": "go:GoIssueOpened",
     "aliases": [
       "go",
       "issue",
@@ -1215,8 +1215,8 @@
     "colors": [],
     "caption": "a circle with a black dot in the center"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoIssueReopened.svg": {
-    "component_id": "Icon.GoIssueReopened",
+  "go/GoIssueReopened.svg": {
+    "component_id": "go:GoIssueReopened",
     "aliases": [
       "go",
       "issue",
@@ -1225,8 +1225,8 @@
     "colors": [],
     "caption": "a circular icon with arrows pointing in different directions"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoIssueTrackedBy.svg": {
-    "component_id": "Icon.GoIssueTrackedBy",
+  "go/GoIssueTrackedBy.svg": {
+    "component_id": "go:GoIssueTrackedBy",
     "aliases": [
       "go",
       "issue",
@@ -1236,8 +1236,8 @@
     "colors": [],
     "caption": "a circular icon with an arrow pointing to the right"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoIssueTracks.svg": {
-    "component_id": "Icon.GoIssueTracks",
+  "go/GoIssueTracks.svg": {
+    "component_id": "go:GoIssueTracks",
     "aliases": [
       "go",
       "issue",
@@ -1246,8 +1246,8 @@
     "colors": [],
     "caption": "a black and white icon with a circular shape"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoItalic.svg": {
-    "component_id": "Icon.GoItalic",
+  "go/GoItalic.svg": {
+    "component_id": "go:GoItalic",
     "aliases": [
       "go",
       "italic"
@@ -1255,8 +1255,8 @@
     "colors": [],
     "caption": "a black and white image of the letter z"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoIterations.svg": {
-    "component_id": "Icon.GoIterations",
+  "go/GoIterations.svg": {
+    "component_id": "go:GoIterations",
     "aliases": [
       "go",
       "iterations"
@@ -1264,8 +1264,8 @@
     "colors": [],
     "caption": "a black and white arrow pointing to the right"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoKebabHorizontal.svg": {
-    "component_id": "Icon.GoKebabHorizontal",
+  "go/GoKebabHorizontal.svg": {
+    "component_id": "go:GoKebabHorizontal",
     "aliases": [
       "go",
       "kebab",
@@ -1274,8 +1274,8 @@
     "colors": [],
     "caption": "four black dots are shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoKey.svg": {
-    "component_id": "Icon.GoKey",
+  "go/GoKey.svg": {
+    "component_id": "go:GoKey",
     "aliases": [
       "go",
       "key"
@@ -1283,8 +1283,8 @@
     "colors": [],
     "caption": "a key icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoLaw.svg": {
-    "component_id": "Icon.GoLaw",
+  "go/GoLaw.svg": {
+    "component_id": "go:GoLaw",
     "aliases": [
       "go",
       "law"
@@ -1292,8 +1292,8 @@
     "colors": [],
     "caption": "the scales of justice icon is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoLightBulb.svg": {
-    "component_id": "Icon.GoLightBulb",
+  "go/GoLightBulb.svg": {
+    "component_id": "go:GoLightBulb",
     "aliases": [
       "go",
       "light",
@@ -1302,8 +1302,8 @@
     "colors": [],
     "caption": "a light bulb icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoLink.svg": {
-    "component_id": "Icon.GoLink",
+  "go/GoLink.svg": {
+    "component_id": "go:GoLink",
     "aliases": [
       "go",
       "link"
@@ -1311,8 +1311,8 @@
     "colors": [],
     "caption": "a black and white icon of a link"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoLinkExternal.svg": {
-    "component_id": "Icon.GoLinkExternal",
+  "go/GoLinkExternal.svg": {
+    "component_id": "go:GoLinkExternal",
     "aliases": [
       "go",
       "link",
@@ -1321,8 +1321,8 @@
     "colors": [],
     "caption": "a black and white icon with an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoListOrdered.svg": {
-    "component_id": "Icon.GoListOrdered",
+  "go/GoListOrdered.svg": {
+    "component_id": "go:GoListOrdered",
     "aliases": [
       "go",
       "list",
@@ -1331,8 +1331,8 @@
     "colors": [],
     "caption": "a black and white image of two numbers on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoListUnordered.svg": {
-    "component_id": "Icon.GoListUnordered",
+  "go/GoListUnordered.svg": {
+    "component_id": "go:GoListUnordered",
     "aliases": [
       "go",
       "list",
@@ -1341,8 +1341,8 @@
     "colors": [],
     "caption": "a black and white icon with three dots"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoLocation.svg": {
-    "component_id": "Icon.GoLocation",
+  "go/GoLocation.svg": {
+    "component_id": "go:GoLocation",
     "aliases": [
       "go",
       "location"
@@ -1350,8 +1350,8 @@
     "colors": [],
     "caption": "a black and white icon of a location marker"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoLock.svg": {
-    "component_id": "Icon.GoLock",
+  "go/GoLock.svg": {
+    "component_id": "go:GoLock",
     "aliases": [
       "go",
       "lock"
@@ -1359,8 +1359,8 @@
     "colors": [],
     "caption": "a black and white icon of a padlock"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoLog.svg": {
-    "component_id": "Icon.GoLog",
+  "go/GoLog.svg": {
+    "component_id": "go:GoLog",
     "aliases": [
       "go",
       "log"
@@ -1368,8 +1368,8 @@
     "colors": [],
     "caption": "a black and white icon of a scroll"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMail.svg": {
-    "component_id": "Icon.GoMail",
+  "go/GoMail.svg": {
+    "component_id": "go:GoMail",
     "aliases": [
       "go",
       "mail"
@@ -1377,8 +1377,8 @@
     "colors": [],
     "caption": "an envelope icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMegaphone.svg": {
-    "component_id": "Icon.GoMegaphone",
+  "go/GoMegaphone.svg": {
+    "component_id": "go:GoMegaphone",
     "aliases": [
       "go",
       "megaphone"
@@ -1386,8 +1386,8 @@
     "colors": [],
     "caption": "a megaphone icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMention.svg": {
-    "component_id": "Icon.GoMention",
+  "go/GoMention.svg": {
+    "component_id": "go:GoMention",
     "aliases": [
       "go",
       "mention"
@@ -1395,8 +1395,8 @@
     "colors": [],
     "caption": "a black and white image of an email icon"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMilestone.svg": {
-    "component_id": "Icon.GoMilestone",
+  "go/GoMilestone.svg": {
+    "component_id": "go:GoMilestone",
     "aliases": [
       "go",
       "milestone"
@@ -1404,8 +1404,8 @@
     "colors": [],
     "caption": "a black and white arrow pointing to the right"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMirror.svg": {
-    "component_id": "Icon.GoMirror",
+  "go/GoMirror.svg": {
+    "component_id": "go:GoMirror",
     "aliases": [
       "go",
       "mirror"
@@ -1413,8 +1413,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMoon.svg": {
-    "component_id": "Icon.GoMoon",
+  "go/GoMoon.svg": {
+    "component_id": "go:GoMoon",
     "aliases": [
       "go",
       "moon"
@@ -1422,8 +1422,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a crescent"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMortarBoard.svg": {
-    "component_id": "Icon.GoMortarBoard",
+  "go/GoMortarBoard.svg": {
+    "component_id": "go:GoMortarBoard",
     "aliases": [
       "go",
       "mortar",
@@ -1432,8 +1432,8 @@
     "colors": [],
     "caption": "a graduation cap icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMoveToBottom.svg": {
-    "component_id": "Icon.GoMoveToBottom",
+  "go/GoMoveToBottom.svg": {
+    "component_id": "go:GoMoveToBottom",
     "aliases": [
       "go",
       "move",
@@ -1443,8 +1443,8 @@
     "colors": [],
     "caption": "a down arrow icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMoveToEnd.svg": {
-    "component_id": "Icon.GoMoveToEnd",
+  "go/GoMoveToEnd.svg": {
+    "component_id": "go:GoMoveToEnd",
     "aliases": [
       "go",
       "move",
@@ -1454,8 +1454,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMoveToStart.svg": {
-    "component_id": "Icon.GoMoveToStart",
+  "go/GoMoveToStart.svg": {
+    "component_id": "go:GoMoveToStart",
     "aliases": [
       "go",
       "move",
@@ -1465,8 +1465,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMoveToTop.svg": {
-    "component_id": "Icon.GoMoveToTop",
+  "go/GoMoveToTop.svg": {
+    "component_id": "go:GoMoveToTop",
     "aliases": [
       "go",
       "move",
@@ -1476,8 +1476,8 @@
     "colors": [],
     "caption": "an up arrow icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMultiSelect.svg": {
-    "component_id": "Icon.GoMultiSelect",
+  "go/GoMultiSelect.svg": {
+    "component_id": "go:GoMultiSelect",
     "aliases": [
       "go",
       "multi",
@@ -1486,8 +1486,8 @@
     "colors": [],
     "caption": "a black and white icon with arrows pointing in different directions"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoMute.svg": {
-    "component_id": "Icon.GoMute",
+  "go/GoMute.svg": {
+    "component_id": "go:GoMute",
     "aliases": [
       "go",
       "mute"
@@ -1495,8 +1495,8 @@
     "colors": [],
     "caption": "a black and white image of a speaker with an x and a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoNoEntry.svg": {
-    "component_id": "Icon.GoNoEntry",
+  "go/GoNoEntry.svg": {
+    "component_id": "go:GoNoEntry",
     "aliases": [
       "go",
       "no",
@@ -1505,8 +1505,8 @@
     "colors": [],
     "caption": "a black and white image of an empty circle"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoNorthStar.svg": {
-    "component_id": "Icon.GoNorthStar",
+  "go/GoNorthStar.svg": {
+    "component_id": "go:GoNorthStar",
     "aliases": [
       "go",
       "north",
@@ -1515,8 +1515,8 @@
     "colors": [],
     "caption": "a black and white star symbol on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoNote.svg": {
-    "component_id": "Icon.GoNote",
+  "go/GoNote.svg": {
+    "component_id": "go:GoNote",
     "aliases": [
       "go",
       "note"
@@ -1524,8 +1524,8 @@
     "colors": [],
     "caption": "a black and white image of an email icon"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoNumber.svg": {
-    "component_id": "Icon.GoNumber",
+  "go/GoNumber.svg": {
+    "component_id": "go:GoNumber",
     "aliases": [
       "go",
       "number"
@@ -1533,8 +1533,8 @@
     "colors": [],
     "caption": "a black and white image of the number three"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoOrganization.svg": {
-    "component_id": "Icon.GoOrganization",
+  "go/GoOrganization.svg": {
+    "component_id": "go:GoOrganization",
     "aliases": [
       "go",
       "organization"
@@ -1542,8 +1542,8 @@
     "colors": [],
     "caption": "a black and white icon of a gas station"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPackage.svg": {
-    "component_id": "Icon.GoPackage",
+  "go/GoPackage.svg": {
+    "component_id": "go:GoPackage",
     "aliases": [
       "go",
       "package"
@@ -1551,8 +1551,8 @@
     "colors": [],
     "caption": "a black and white icon of a cube"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPackageDependencies.svg": {
-    "component_id": "Icon.GoPackageDependencies",
+  "go/GoPackageDependencies.svg": {
+    "component_id": "go:GoPackageDependencies",
     "aliases": [
       "go",
       "package",
@@ -1561,8 +1561,8 @@
     "colors": [],
     "caption": "a black and white icon of a cube with an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPackageDependents.svg": {
-    "component_id": "Icon.GoPackageDependents",
+  "go/GoPackageDependents.svg": {
+    "component_id": "go:GoPackageDependents",
     "aliases": [
       "go",
       "package",
@@ -1571,8 +1571,8 @@
     "colors": [],
     "caption": "a black and white icon of a cube with an arrow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPaperAirplane.svg": {
-    "component_id": "Icon.GoPaperAirplane",
+  "go/GoPaperAirplane.svg": {
+    "component_id": "go:GoPaperAirplane",
     "aliases": [
       "go",
       "paper",
@@ -1581,8 +1581,8 @@
     "colors": [],
     "caption": "an arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPaperclip.svg": {
-    "component_id": "Icon.GoPaperclip",
+  "go/GoPaperclip.svg": {
+    "component_id": "go:GoPaperclip",
     "aliases": [
       "go",
       "paperclip"
@@ -1590,8 +1590,8 @@
     "colors": [],
     "caption": "a black and white image of a paper clip"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPasskeyFill.svg": {
-    "component_id": "Icon.GoPasskeyFill",
+  "go/GoPasskeyFill.svg": {
+    "component_id": "go:GoPasskeyFill",
     "aliases": [
       "go",
       "passkey",
@@ -1600,8 +1600,8 @@
     "colors": [],
     "caption": "a person with a key icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPaste.svg": {
-    "component_id": "Icon.GoPaste",
+  "go/GoPaste.svg": {
+    "component_id": "go:GoPaste",
     "aliases": [
       "go",
       "paste"
@@ -1609,8 +1609,8 @@
     "colors": [],
     "caption": "a black and white icon of a clipboard on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPencil.svg": {
-    "component_id": "Icon.GoPencil",
+  "go/GoPencil.svg": {
+    "component_id": "go:GoPencil",
     "aliases": [
       "go",
       "pencil"
@@ -1618,8 +1618,8 @@
     "colors": [],
     "caption": "a pencil icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPeople.svg": {
-    "component_id": "Icon.GoPeople",
+  "go/GoPeople.svg": {
+    "component_id": "go:GoPeople",
     "aliases": [
       "go",
       "people"
@@ -1627,8 +1627,8 @@
     "colors": [],
     "caption": "a black and white icon of two people"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPerson.svg": {
-    "component_id": "Icon.GoPerson",
+  "go/GoPerson.svg": {
+    "component_id": "go:GoPerson",
     "aliases": [
       "go",
       "person"
@@ -1636,8 +1636,8 @@
     "colors": [],
     "caption": "a black and white icon of a person"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPersonAdd.svg": {
-    "component_id": "Icon.GoPersonAdd",
+  "go/GoPersonAdd.svg": {
+    "component_id": "go:GoPersonAdd",
     "aliases": [
       "go",
       "person",
@@ -1646,8 +1646,8 @@
     "colors": [],
     "caption": "a black and white icon of a person with a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPersonFill.svg": {
-    "component_id": "Icon.GoPersonFill",
+  "go/GoPersonFill.svg": {
+    "component_id": "go:GoPersonFill",
     "aliases": [
       "go",
       "person",
@@ -1656,8 +1656,8 @@
     "colors": [],
     "caption": "a black silhouette of a person on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPin.svg": {
-    "component_id": "Icon.GoPin",
+  "go/GoPin.svg": {
+    "component_id": "go:GoPin",
     "aliases": [
       "go",
       "pin"
@@ -1665,8 +1665,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a lollipop"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPlay.svg": {
-    "component_id": "Icon.GoPlay",
+  "go/GoPlay.svg": {
+    "component_id": "go:GoPlay",
     "aliases": [
       "go",
       "play"
@@ -1674,8 +1674,8 @@
     "colors": [],
     "caption": "a black and white play button on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPlug.svg": {
-    "component_id": "Icon.GoPlug",
+  "go/GoPlug.svg": {
+    "component_id": "go:GoPlug",
     "aliases": [
       "go",
       "plug"
@@ -1683,8 +1683,8 @@
     "colors": [],
     "caption": "an electrical plug icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPlus.svg": {
-    "component_id": "Icon.GoPlus",
+  "go/GoPlus.svg": {
+    "component_id": "go:GoPlus",
     "aliases": [
       "go",
       "plus"
@@ -1692,8 +1692,8 @@
     "colors": [],
     "caption": "a black plus symbol on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPlusCircle.svg": {
-    "component_id": "Icon.GoPlusCircle",
+  "go/GoPlusCircle.svg": {
+    "component_id": "go:GoPlusCircle",
     "aliases": [
       "go",
       "plus",
@@ -1702,8 +1702,8 @@
     "colors": [],
     "caption": "a plus sign in a circle on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoProject.svg": {
-    "component_id": "Icon.GoProject",
+  "go/GoProject.svg": {
+    "component_id": "go:GoProject",
     "aliases": [
       "go",
       "project"
@@ -1711,8 +1711,8 @@
     "colors": [],
     "caption": "a black and white icon of a square"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoProjectRoadmap.svg": {
-    "component_id": "Icon.GoProjectRoadmap",
+  "go/GoProjectRoadmap.svg": {
+    "component_id": "go:GoProjectRoadmap",
     "aliases": [
       "go",
       "project",
@@ -1721,8 +1721,8 @@
     "colors": [],
     "caption": "a black and white icon of a document"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoProjectSymlink.svg": {
-    "component_id": "Icon.GoProjectSymlink",
+  "go/GoProjectSymlink.svg": {
+    "component_id": "go:GoProjectSymlink",
     "aliases": [
       "go",
       "project",
@@ -1731,8 +1731,8 @@
     "colors": [],
     "caption": "a black and white icon of a web browser"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoProjectTemplate.svg": {
-    "component_id": "Icon.GoProjectTemplate",
+  "go/GoProjectTemplate.svg": {
+    "component_id": "go:GoProjectTemplate",
     "aliases": [
       "go",
       "project",
@@ -1741,8 +1741,8 @@
     "colors": [],
     "caption": "a black and white square with a cross in the middle"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoPulse.svg": {
-    "component_id": "Icon.GoPulse",
+  "go/GoPulse.svg": {
+    "component_id": "go:GoPulse",
     "aliases": [
       "go",
       "pulse"
@@ -1750,8 +1750,8 @@
     "colors": [],
     "caption": "an image of an electrical wave on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoQuestion.svg": {
-    "component_id": "Icon.GoQuestion",
+  "go/GoQuestion.svg": {
+    "component_id": "go:GoQuestion",
     "aliases": [
       "go",
       "question"
@@ -1759,8 +1759,8 @@
     "colors": [],
     "caption": "a question mark in a circle on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoQuote.svg": {
-    "component_id": "Icon.GoQuote",
+  "go/GoQuote.svg": {
+    "component_id": "go:GoQuote",
     "aliases": [
       "go",
       "quote"
@@ -1768,8 +1768,8 @@
     "colors": [],
     "caption": "a black and white icon with two lines"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRead.svg": {
-    "component_id": "Icon.GoRead",
+  "go/GoRead.svg": {
+    "component_id": "go:GoRead",
     "aliases": [
       "go",
       "read"
@@ -1777,8 +1777,8 @@
     "colors": [],
     "caption": "an envelope icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRelFilePath.svg": {
-    "component_id": "Icon.GoRelFilePath",
+  "go/GoRelFilePath.svg": {
+    "component_id": "go:GoRelFilePath",
     "aliases": [
       "go",
       "rel",
@@ -1788,8 +1788,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white symbol"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoReply.svg": {
-    "component_id": "Icon.GoReply",
+  "go/GoReply.svg": {
+    "component_id": "go:GoReply",
     "aliases": [
       "go",
       "reply"
@@ -1797,8 +1797,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRepo.svg": {
-    "component_id": "Icon.GoRepo",
+  "go/GoRepo.svg": {
+    "component_id": "go:GoRepo",
     "aliases": [
       "go",
       "repo"
@@ -1806,8 +1806,8 @@
     "colors": [],
     "caption": "a book icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRepoForked.svg": {
-    "component_id": "Icon.GoRepoForked",
+  "go/GoRepoForked.svg": {
+    "component_id": "go:GoRepoForked",
     "aliases": [
       "go",
       "repo",
@@ -1816,8 +1816,8 @@
     "colors": [],
     "caption": "a black and white symbol with three circles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRepoLocked.svg": {
-    "component_id": "Icon.GoRepoLocked",
+  "go/GoRepoLocked.svg": {
+    "component_id": "go:GoRepoLocked",
     "aliases": [
       "go",
       "repo",
@@ -1826,8 +1826,8 @@
     "colors": [],
     "caption": "a padlock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRepoPush.svg": {
-    "component_id": "Icon.GoRepoPush",
+  "go/GoRepoPush.svg": {
+    "component_id": "go:GoRepoPush",
     "aliases": [
       "go",
       "repo",
@@ -1836,8 +1836,8 @@
     "colors": [],
     "caption": "a black and white icon of a book with an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRepoTemplate.svg": {
-    "component_id": "Icon.GoRepoTemplate",
+  "go/GoRepoTemplate.svg": {
+    "component_id": "go:GoRepoTemplate",
     "aliases": [
       "go",
       "repo",
@@ -1846,8 +1846,8 @@
     "colors": [],
     "caption": "a black and white icon of a book"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoReport.svg": {
-    "component_id": "Icon.GoReport",
+  "go/GoReport.svg": {
+    "component_id": "go:GoReport",
     "aliases": [
       "go",
       "report"
@@ -1855,8 +1855,8 @@
     "colors": [],
     "caption": "a black and white image of a speech bubble with an exclamation sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRocket.svg": {
-    "component_id": "Icon.GoRocket",
+  "go/GoRocket.svg": {
+    "component_id": "go:GoRocket",
     "aliases": [
       "go",
       "rocket"
@@ -1864,8 +1864,8 @@
     "colors": [],
     "caption": "a black and white icon of a rocket"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRows.svg": {
-    "component_id": "Icon.GoRows",
+  "go/GoRows.svg": {
+    "component_id": "go:GoRows",
     "aliases": [
       "go",
       "rows"
@@ -1873,8 +1873,8 @@
     "colors": [],
     "caption": "a black and white image of two rectangles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRss.svg": {
-    "component_id": "Icon.GoRss",
+  "go/GoRss.svg": {
+    "component_id": "go:GoRss",
     "aliases": [
       "go",
       "rss"
@@ -1882,8 +1882,8 @@
     "colors": [],
     "caption": "a black and white image of a rss icon"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoRuby.svg": {
-    "component_id": "Icon.GoRuby",
+  "go/GoRuby.svg": {
+    "component_id": "go:GoRuby",
     "aliases": [
       "go",
       "ruby"
@@ -1891,8 +1891,8 @@
     "colors": [],
     "caption": "a black diamond icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoScreenFull.svg": {
-    "component_id": "Icon.GoScreenFull",
+  "go/GoScreenFull.svg": {
+    "component_id": "go:GoScreenFull",
     "aliases": [
       "go",
       "screen",
@@ -1901,8 +1901,8 @@
     "colors": [],
     "caption": "an image of a square with two black rectangles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoScreenNormal.svg": {
-    "component_id": "Icon.GoScreenNormal",
+  "go/GoScreenNormal.svg": {
+    "component_id": "go:GoScreenNormal",
     "aliases": [
       "go",
       "screen",
@@ -1911,8 +1911,8 @@
     "colors": [],
     "caption": "a black and white image of four arrows pointing in different directions"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSearch.svg": {
-    "component_id": "Icon.GoSearch",
+  "go/GoSearch.svg": {
+    "component_id": "go:GoSearch",
     "aliases": [
       "go",
       "search"
@@ -1920,8 +1920,8 @@
     "colors": [],
     "caption": "a magnifying glass icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoServer.svg": {
-    "component_id": "Icon.GoServer",
+  "go/GoServer.svg": {
+    "component_id": "go:GoServer",
     "aliases": [
       "go",
       "server"
@@ -1929,8 +1929,8 @@
     "colors": [],
     "caption": "a black and white icon of a server on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoShare.svg": {
-    "component_id": "Icon.GoShare",
+  "go/GoShare.svg": {
+    "component_id": "go:GoShare",
     "aliases": [
       "go",
       "share"
@@ -1938,8 +1938,8 @@
     "colors": [],
     "caption": "a black and white icon with an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoShareAndroid.svg": {
-    "component_id": "Icon.GoShareAndroid",
+  "go/GoShareAndroid.svg": {
+    "component_id": "go:GoShareAndroid",
     "aliases": [
       "go",
       "share",
@@ -1948,8 +1948,8 @@
     "colors": [],
     "caption": "a black and white icon of two circles"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoShield.svg": {
-    "component_id": "Icon.GoShield",
+  "go/GoShield.svg": {
+    "component_id": "go:GoShield",
     "aliases": [
       "go",
       "shield"
@@ -1957,8 +1957,8 @@
     "colors": [],
     "caption": "a black and white icon of a shield with an exclamation mark"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoShieldCheck.svg": {
-    "component_id": "Icon.GoShieldCheck",
+  "go/GoShieldCheck.svg": {
+    "component_id": "go:GoShieldCheck",
     "aliases": [
       "go",
       "shield",
@@ -1967,8 +1967,8 @@
     "colors": [],
     "caption": "a black and white icon of a shield with a check mark"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoShieldLock.svg": {
-    "component_id": "Icon.GoShieldLock",
+  "go/GoShieldLock.svg": {
+    "component_id": "go:GoShieldLock",
     "aliases": [
       "go",
       "shield",
@@ -1977,8 +1977,8 @@
     "colors": [],
     "caption": "a black and white image of a shield with a keyhole"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoShieldSlash.svg": {
-    "component_id": "Icon.GoShieldSlash",
+  "go/GoShieldSlash.svg": {
+    "component_id": "go:GoShieldSlash",
     "aliases": [
       "go",
       "shield",
@@ -1987,8 +1987,8 @@
     "colors": [],
     "caption": "a black and white image of a no entry sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoShieldX.svg": {
-    "component_id": "Icon.GoShieldX",
+  "go/GoShieldX.svg": {
+    "component_id": "go:GoShieldX",
     "aliases": [
       "go",
       "shield",
@@ -1997,8 +1997,8 @@
     "colors": [],
     "caption": "a black and white icon of a shield with an x"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSidebarCollapse.svg": {
-    "component_id": "Icon.GoSidebarCollapse",
+  "go/GoSidebarCollapse.svg": {
+    "component_id": "go:GoSidebarCollapse",
     "aliases": [
       "go",
       "sidebar",
@@ -2007,8 +2007,8 @@
     "colors": [],
     "caption": "a black and white icon of a book with an arrow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSidebarExpand.svg": {
-    "component_id": "Icon.GoSidebarExpand",
+  "go/GoSidebarExpand.svg": {
+    "component_id": "go:GoSidebarExpand",
     "aliases": [
       "go",
       "sidebar",
@@ -2017,8 +2017,8 @@
     "colors": [],
     "caption": "a black and white icon with an arrow pointing to the right"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSignIn.svg": {
-    "component_id": "Icon.GoSignIn",
+  "go/GoSignIn.svg": {
+    "component_id": "go:GoSignIn",
     "aliases": [
       "go",
       "sign",
@@ -2027,8 +2027,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSignOut.svg": {
-    "component_id": "Icon.GoSignOut",
+  "go/GoSignOut.svg": {
+    "component_id": "go:GoSignOut",
     "aliases": [
       "go",
       "sign",
@@ -2037,8 +2037,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSingleSelect.svg": {
-    "component_id": "Icon.GoSingleSelect",
+  "go/GoSingleSelect.svg": {
+    "component_id": "go:GoSingleSelect",
     "aliases": [
       "go",
       "single",
@@ -2047,8 +2047,8 @@
     "colors": [],
     "caption": "a black and white image of a down arrow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSkip.svg": {
-    "component_id": "Icon.GoSkip",
+  "go/GoSkip.svg": {
+    "component_id": "go:GoSkip",
     "aliases": [
       "go",
       "skip"
@@ -2056,8 +2056,8 @@
     "colors": [],
     "caption": "a black and white image of a no entry sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSkipFill.svg": {
-    "component_id": "Icon.GoSkipFill",
+  "go/GoSkipFill.svg": {
+    "component_id": "go:GoSkipFill",
     "aliases": [
       "go",
       "skip",
@@ -2066,8 +2066,8 @@
     "colors": [],
     "caption": "a black and white image of a no sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSmiley.svg": {
-    "component_id": "Icon.GoSmiley",
+  "go/GoSmiley.svg": {
+    "component_id": "go:GoSmiley",
     "aliases": [
       "go",
       "smiley"
@@ -2075,8 +2075,8 @@
     "colors": [],
     "caption": "a smiley face icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSortAsc.svg": {
-    "component_id": "Icon.GoSortAsc",
+  "go/GoSortAsc.svg": {
+    "component_id": "go:GoSortAsc",
     "aliases": [
       "go",
       "sort",
@@ -2085,8 +2085,8 @@
     "colors": [],
     "caption": "an arrow pointing up and down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSortDesc.svg": {
-    "component_id": "Icon.GoSortDesc",
+  "go/GoSortDesc.svg": {
+    "component_id": "go:GoSortDesc",
     "aliases": [
       "go",
       "sort",
@@ -2095,8 +2095,8 @@
     "colors": [],
     "caption": "an arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSponsorTiers.svg": {
-    "component_id": "Icon.GoSponsorTiers",
+  "go/GoSponsorTiers.svg": {
+    "component_id": "go:GoSponsorTiers",
     "aliases": [
       "go",
       "sponsor",
@@ -2105,8 +2105,8 @@
     "colors": [],
     "caption": "a black and white icon of a heart with a ribbon"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSquare.svg": {
-    "component_id": "Icon.GoSquare",
+  "go/GoSquare.svg": {
+    "component_id": "go:GoSquare",
     "aliases": [
       "go",
       "square"
@@ -2114,8 +2114,8 @@
     "colors": [],
     "caption": "a square black and white icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSquareFill.svg": {
-    "component_id": "Icon.GoSquareFill",
+  "go/GoSquareFill.svg": {
+    "component_id": "go:GoSquareFill",
     "aliases": [
       "go",
       "square",
@@ -2124,8 +2124,8 @@
     "colors": [],
     "caption": "a square black button with a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSquirrel.svg": {
-    "component_id": "Icon.GoSquirrel",
+  "go/GoSquirrel.svg": {
+    "component_id": "go:GoSquirrel",
     "aliases": [
       "go",
       "squirrel"
@@ -2133,8 +2133,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a squirrel"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoStack.svg": {
-    "component_id": "Icon.GoStack",
+  "go/GoStack.svg": {
+    "component_id": "go:GoStack",
     "aliases": [
       "go",
       "stack"
@@ -2142,8 +2142,8 @@
     "colors": [],
     "caption": "a black and white icon of a stack of books"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoStar.svg": {
-    "component_id": "Icon.GoStar",
+  "go/GoStar.svg": {
+    "component_id": "go:GoStar",
     "aliases": [
       "go",
       "star"
@@ -2151,8 +2151,8 @@
     "colors": [],
     "caption": "a star icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoStarFill.svg": {
-    "component_id": "Icon.GoStarFill",
+  "go/GoStarFill.svg": {
+    "component_id": "go:GoStarFill",
     "aliases": [
       "go",
       "star",
@@ -2161,8 +2161,8 @@
     "colors": [],
     "caption": "a black star icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoStop.svg": {
-    "component_id": "Icon.GoStop",
+  "go/GoStop.svg": {
+    "component_id": "go:GoStop",
     "aliases": [
       "go",
       "stop"
@@ -2170,8 +2170,8 @@
     "colors": [],
     "caption": "a black and white image of a stop sign with an exclamation mark"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoStopwatch.svg": {
-    "component_id": "Icon.GoStopwatch",
+  "go/GoStopwatch.svg": {
+    "component_id": "go:GoStopwatch",
     "aliases": [
       "go",
       "stopwatch"
@@ -2179,8 +2179,8 @@
     "colors": [],
     "caption": "a stopwatch icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoStrikethrough.svg": {
-    "component_id": "Icon.GoStrikethrough",
+  "go/GoStrikethrough.svg": {
+    "component_id": "go:GoStrikethrough",
     "aliases": [
       "go",
       "strikethrough"
@@ -2188,8 +2188,8 @@
     "colors": [],
     "caption": "a black and white image of the letter s"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSun.svg": {
-    "component_id": "Icon.GoSun",
+  "go/GoSun.svg": {
+    "component_id": "go:GoSun",
     "aliases": [
       "go",
       "sun"
@@ -2197,8 +2197,8 @@
     "colors": [],
     "caption": "a sun icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoSync.svg": {
-    "component_id": "Icon.GoSync",
+  "go/GoSync.svg": {
+    "component_id": "go:GoSync",
     "aliases": [
       "go",
       "sync"
@@ -2206,8 +2206,8 @@
     "colors": [],
     "caption": "a black and white image of a circular arrow"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTab.svg": {
-    "component_id": "Icon.GoTab",
+  "go/GoTab.svg": {
+    "component_id": "go:GoTab",
     "aliases": [
       "go",
       "tab"
@@ -2215,8 +2215,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTable.svg": {
-    "component_id": "Icon.GoTable",
+  "go/GoTable.svg": {
+    "component_id": "go:GoTable",
     "aliases": [
       "go",
       "table"
@@ -2224,8 +2224,8 @@
     "colors": [],
     "caption": "a black and white icon of a window"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTag.svg": {
-    "component_id": "Icon.GoTag",
+  "go/GoTag.svg": {
+    "component_id": "go:GoTag",
     "aliases": [
       "go",
       "tag"
@@ -2233,8 +2233,8 @@
     "colors": [],
     "caption": "a black and white icon of a price tag"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTasklist.svg": {
-    "component_id": "Icon.GoTasklist",
+  "go/GoTasklist.svg": {
+    "component_id": "go:GoTasklist",
     "aliases": [
       "go",
       "tasklist"
@@ -2242,8 +2242,8 @@
     "colors": [],
     "caption": "a check mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTelescope.svg": {
-    "component_id": "Icon.GoTelescope",
+  "go/GoTelescope.svg": {
+    "component_id": "go:GoTelescope",
     "aliases": [
       "go",
       "telescope"
@@ -2251,8 +2251,8 @@
     "colors": [],
     "caption": "a telescope icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTelescopeFill.svg": {
-    "component_id": "Icon.GoTelescopeFill",
+  "go/GoTelescopeFill.svg": {
+    "component_id": "go:GoTelescopeFill",
     "aliases": [
       "go",
       "telescope",
@@ -2261,8 +2261,8 @@
     "colors": [],
     "caption": "a telescope icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTerminal.svg": {
-    "component_id": "Icon.GoTerminal",
+  "go/GoTerminal.svg": {
+    "component_id": "go:GoTerminal",
     "aliases": [
       "go",
       "terminal"
@@ -2270,8 +2270,8 @@
     "colors": [],
     "caption": "a black and white icon of a computer"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoThumbsdown.svg": {
-    "component_id": "Icon.GoThumbsdown",
+  "go/GoThumbsdown.svg": {
+    "component_id": "go:GoThumbsdown",
     "aliases": [
       "go",
       "thumbsdown"
@@ -2279,8 +2279,8 @@
     "colors": [],
     "caption": "a thumb down icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoThumbsup.svg": {
-    "component_id": "Icon.GoThumbsup",
+  "go/GoThumbsup.svg": {
+    "component_id": "go:GoThumbsup",
     "aliases": [
       "go",
       "thumbsup"
@@ -2288,8 +2288,8 @@
     "colors": [],
     "caption": "a black and white icon of a thumb up"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTools.svg": {
-    "component_id": "Icon.GoTools",
+  "go/GoTools.svg": {
+    "component_id": "go:GoTools",
     "aliases": [
       "go",
       "tools"
@@ -2297,8 +2297,8 @@
     "colors": [],
     "caption": "a wrench icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTrash.svg": {
-    "component_id": "Icon.GoTrash",
+  "go/GoTrash.svg": {
+    "component_id": "go:GoTrash",
     "aliases": [
       "go",
       "trash"
@@ -2306,8 +2306,8 @@
     "colors": [],
     "caption": "a trash can icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTriangleDown.svg": {
-    "component_id": "Icon.GoTriangleDown",
+  "go/GoTriangleDown.svg": {
+    "component_id": "go:GoTriangleDown",
     "aliases": [
       "go",
       "triangle",
@@ -2316,8 +2316,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTriangleLeft.svg": {
-    "component_id": "Icon.GoTriangleLeft",
+  "go/GoTriangleLeft.svg": {
+    "component_id": "go:GoTriangleLeft",
     "aliases": [
       "go",
       "triangle",
@@ -2326,8 +2326,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTriangleRight.svg": {
-    "component_id": "Icon.GoTriangleRight",
+  "go/GoTriangleRight.svg": {
+    "component_id": "go:GoTriangleRight",
     "aliases": [
       "go",
       "triangle",
@@ -2336,8 +2336,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTriangleUp.svg": {
-    "component_id": "Icon.GoTriangleUp",
+  "go/GoTriangleUp.svg": {
+    "component_id": "go:GoTriangleUp",
     "aliases": [
       "go",
       "triangle",
@@ -2346,8 +2346,8 @@
     "colors": [],
     "caption": "a triangle icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTrophy.svg": {
-    "component_id": "Icon.GoTrophy",
+  "go/GoTrophy.svg": {
+    "component_id": "go:GoTrophy",
     "aliases": [
       "go",
       "trophy"
@@ -2355,8 +2355,8 @@
     "colors": [],
     "caption": "a trophy icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoTypography.svg": {
-    "component_id": "Icon.GoTypography",
+  "go/GoTypography.svg": {
+    "component_id": "go:GoTypography",
     "aliases": [
       "go",
       "typography"
@@ -2364,8 +2364,8 @@
     "colors": [],
     "caption": "a black and white letter a on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoUnfold.svg": {
-    "component_id": "Icon.GoUnfold",
+  "go/GoUnfold.svg": {
+    "component_id": "go:GoUnfold",
     "aliases": [
       "go",
       "unfold"
@@ -2373,8 +2373,8 @@
     "colors": [],
     "caption": "two arrows pointing in different directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoUnlink.svg": {
-    "component_id": "Icon.GoUnlink",
+  "go/GoUnlink.svg": {
+    "component_id": "go:GoUnlink",
     "aliases": [
       "go",
       "unlink"
@@ -2382,8 +2382,8 @@
     "colors": [],
     "caption": "a black and white image of a no sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoUnlock.svg": {
-    "component_id": "Icon.GoUnlock",
+  "go/GoUnlock.svg": {
+    "component_id": "go:GoUnlock",
     "aliases": [
       "go",
       "unlock"
@@ -2391,8 +2391,8 @@
     "colors": [],
     "caption": "a padlock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoUnmute.svg": {
-    "component_id": "Icon.GoUnmute",
+  "go/GoUnmute.svg": {
+    "component_id": "go:GoUnmute",
     "aliases": [
       "go",
       "unmute"
@@ -2400,8 +2400,8 @@
     "colors": [],
     "caption": "a speaker icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoUnread.svg": {
-    "component_id": "Icon.GoUnread",
+  "go/GoUnread.svg": {
+    "component_id": "go:GoUnread",
     "aliases": [
       "go",
       "unread"
@@ -2409,8 +2409,8 @@
     "colors": [],
     "caption": "an email icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoUnverified.svg": {
-    "component_id": "Icon.GoUnverified",
+  "go/GoUnverified.svg": {
+    "component_id": "go:GoUnverified",
     "aliases": [
       "go",
       "unverified"
@@ -2418,8 +2418,8 @@
     "colors": [],
     "caption": "a question mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoUpload.svg": {
-    "component_id": "Icon.GoUpload",
+  "go/GoUpload.svg": {
+    "component_id": "go:GoUpload",
     "aliases": [
       "go",
       "upload"
@@ -2427,8 +2427,8 @@
     "colors": [],
     "caption": "an image of a black arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoVerified.svg": {
-    "component_id": "Icon.GoVerified",
+  "go/GoVerified.svg": {
+    "component_id": "go:GoVerified",
     "aliases": [
       "go",
       "verified"
@@ -2436,8 +2436,8 @@
     "colors": [],
     "caption": "a check mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoVersions.svg": {
-    "component_id": "Icon.GoVersions",
+  "go/GoVersions.svg": {
+    "component_id": "go:GoVersions",
     "aliases": [
       "go",
       "versions"
@@ -2445,8 +2445,8 @@
     "colors": [],
     "caption": "a black and white image of a tablet"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoVideo.svg": {
-    "component_id": "Icon.GoVideo",
+  "go/GoVideo.svg": {
+    "component_id": "go:GoVideo",
     "aliases": [
       "go",
       "video"
@@ -2454,8 +2454,8 @@
     "colors": [],
     "caption": "a video player icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoWorkflow.svg": {
-    "component_id": "Icon.GoWorkflow",
+  "go/GoWorkflow.svg": {
+    "component_id": "go:GoWorkflow",
     "aliases": [
       "go",
       "workflow"
@@ -2463,8 +2463,8 @@
     "colors": [],
     "caption": "a black and white icon of two squares"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoX.svg": {
-    "component_id": "Icon.GoX",
+  "go/GoX.svg": {
+    "component_id": "go:GoX",
     "aliases": [
       "go",
       "x"
@@ -2472,8 +2472,8 @@
     "colors": [],
     "caption": "a black and white icon of a crossed x"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoXCircle.svg": {
-    "component_id": "Icon.GoXcircle",
+  "go/GoXCircle.svg": {
+    "component_id": "go:GoXcircle",
     "aliases": [
       "go",
       "xcircle"
@@ -2481,8 +2481,8 @@
     "colors": [],
     "caption": "a black and white image of an x in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoXCircleFill.svg": {
-    "component_id": "Icon.GoXcircleFill",
+  "go/GoXCircleFill.svg": {
+    "component_id": "go:GoXcircleFill",
     "aliases": [
       "go",
       "xcircle",
@@ -2491,8 +2491,8 @@
     "colors": [],
     "caption": "a black and white circle with an x symbol"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoZap.svg": {
-    "component_id": "Icon.GoZap",
+  "go/GoZap.svg": {
+    "component_id": "go:GoZap",
     "aliases": [
       "go",
       "zap"
@@ -2500,8 +2500,8 @@
     "colors": [],
     "caption": "a black and white icon of a lightning bolt"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoZoomIn.svg": {
-    "component_id": "Icon.GoZoomIn",
+  "go/GoZoomIn.svg": {
+    "component_id": "go:GoZoomIn",
     "aliases": [
       "go",
       "zoom",
@@ -2510,8 +2510,8 @@
     "colors": [],
     "caption": "a magnifying icon with a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/go/GoZoomOut.svg": {
-    "component_id": "Icon.GoZoomOut",
+  "go/GoZoomOut.svg": {
+    "component_id": "go:GoZoomOut",
     "aliases": [
       "go",
       "zoom",

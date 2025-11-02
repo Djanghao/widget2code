@@ -1,6 +1,6 @@
 {
-  "/home/darren/llm-widget-factory/assets/di/DiAndroid.svg": {
-    "component_id": "Icon.DiAndroid",
+  "di/DiAndroid.svg": {
+    "component_id": "di:DiAndroid",
     "aliases": [
       "di",
       "android"
@@ -8,8 +8,8 @@
     "colors": [],
     "caption": "a black android icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiAngularSimple.svg": {
-    "component_id": "Icon.DiAngularSimple",
+  "di/DiAngularSimple.svg": {
+    "component_id": "di:DiAngularSimple",
     "aliases": [
       "di",
       "angular",
@@ -18,8 +18,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter a"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiAppcelerator.svg": {
-    "component_id": "Icon.DiAppcelerator",
+  "di/DiAppcelerator.svg": {
+    "component_id": "di:DiAppcelerator",
     "aliases": [
       "di",
       "appcelerator"
@@ -27,8 +27,8 @@
     "colors": [],
     "caption": "a black triangle with the word amazon on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiApple.svg": {
-    "component_id": "Icon.DiApple",
+  "di/DiApple.svg": {
+    "component_id": "di:DiApple",
     "aliases": [
       "di",
       "apple"
@@ -36,8 +36,8 @@
     "colors": [],
     "caption": "an apple logo is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiAppstore.svg": {
-    "component_id": "Icon.DiAppstore",
+  "di/DiAppstore.svg": {
+    "component_id": "di:DiAppstore",
     "aliases": [
       "di",
       "appstore"
@@ -45,8 +45,8 @@
     "colors": [],
     "caption": "a black and white logo with two pencils"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiAptana.svg": {
-    "component_id": "Icon.DiAptana",
+  "di/DiAptana.svg": {
+    "component_id": "di:DiAptana",
     "aliases": [
       "di",
       "aptana"
@@ -54,8 +54,8 @@
     "colors": [],
     "caption": "a gearwheel icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiAsterisk.svg": {
-    "component_id": "Icon.DiAsterisk",
+  "di/DiAsterisk.svg": {
+    "component_id": "di:DiAsterisk",
     "aliases": [
       "di",
       "asterisk"
@@ -63,8 +63,8 @@
     "colors": [],
     "caption": "a black and white image of an asterisk in a speech bubble"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiAtlassian.svg": {
-    "component_id": "Icon.DiAtlassian",
+  "di/DiAtlassian.svg": {
+    "component_id": "di:DiAtlassian",
     "aliases": [
       "di",
       "atlassian"
@@ -72,8 +72,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter y"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiAtom.svg": {
-    "component_id": "Icon.DiAtom",
+  "di/DiAtom.svg": {
+    "component_id": "di:DiAtom",
     "aliases": [
       "di",
       "atom"
@@ -81,8 +81,8 @@
     "colors": [],
     "caption": "an atomic symbol is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiAws.svg": {
-    "component_id": "Icon.DiAws",
+  "di/DiAws.svg": {
+    "component_id": "di:DiAws",
     "aliases": [
       "di",
       "aws"
@@ -90,8 +90,8 @@
     "colors": [],
     "caption": "a black and white illustration of three cubes"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiBackbone.svg": {
-    "component_id": "Icon.DiBackbone",
+  "di/DiBackbone.svg": {
+    "component_id": "di:DiBackbone",
     "aliases": [
       "di",
       "backbone"
@@ -99,8 +99,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter m"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiBingSmall.svg": {
-    "component_id": "Icon.DiBingSmall",
+  "di/DiBingSmall.svg": {
+    "component_id": "di:DiBingSmall",
     "aliases": [
       "di",
       "bing",
@@ -109,8 +109,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter b"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiBintray.svg": {
-    "component_id": "Icon.DiBintray",
+  "di/DiBintray.svg": {
+    "component_id": "di:DiBintray",
     "aliases": [
       "di",
       "bintray"
@@ -118,8 +118,8 @@
     "colors": [],
     "caption": "a black and white logo with the word bintray"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiBitbucket.svg": {
-    "component_id": "Icon.DiBitbucket",
+  "di/DiBitbucket.svg": {
+    "component_id": "di:DiBitbucket",
     "aliases": [
       "di",
       "bitbucket"
@@ -127,8 +127,8 @@
     "colors": [],
     "caption": "a black and white icon of a cup with a hole in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiBlackberry.svg": {
-    "component_id": "Icon.DiBlackberry",
+  "di/DiBlackberry.svg": {
+    "component_id": "di:DiBlackberry",
     "aliases": [
       "di",
       "blackberry"
@@ -136,8 +136,8 @@
     "colors": [],
     "caption": "the blackberry logo is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiBootstrap.svg": {
-    "component_id": "Icon.DiBootstrap",
+  "di/DiBootstrap.svg": {
+    "component_id": "di:DiBootstrap",
     "aliases": [
       "di",
       "bootstrap"
@@ -145,8 +145,8 @@
     "colors": [],
     "caption": "a black and white square with the letter b"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiBower.svg": {
-    "component_id": "Icon.DiBower",
+  "di/DiBower.svg": {
+    "component_id": "di:DiBower",
     "aliases": [
       "di",
       "bower"
@@ -154,8 +154,8 @@
     "colors": [],
     "caption": "a black and white bird with a leaf on its beak"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiBrackets.svg": {
-    "component_id": "Icon.DiBrackets",
+  "di/DiBrackets.svg": {
+    "component_id": "di:DiBrackets",
     "aliases": [
       "di",
       "brackets"
@@ -163,8 +163,8 @@
     "colors": [],
     "caption": "a black and white square with the letter c in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiBugsense.svg": {
-    "component_id": "Icon.DiBugsense",
+  "di/DiBugsense.svg": {
+    "component_id": "di:DiBugsense",
     "aliases": [
       "di",
       "bugsense"
@@ -172,8 +172,8 @@
     "colors": [],
     "caption": "a black and white image of an armadillo"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCelluloid.svg": {
-    "component_id": "Icon.DiCelluloid",
+  "di/DiCelluloid.svg": {
+    "component_id": "di:DiCelluloid",
     "aliases": [
       "di",
       "celluloid"
@@ -181,8 +181,8 @@
     "colors": [],
     "caption": "a black and white image of a cluster of circles"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiChrome.svg": {
-    "component_id": "Icon.DiChrome",
+  "di/DiChrome.svg": {
+    "component_id": "di:DiChrome",
     "aliases": [
       "di",
       "chrome"
@@ -190,8 +190,8 @@
     "colors": [],
     "caption": "a black and white circle with the letter c in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCisco.svg": {
-    "component_id": "Icon.DiCisco",
+  "di/DiCisco.svg": {
+    "component_id": "di:DiCisco",
     "aliases": [
       "di",
       "cisco"
@@ -199,8 +199,8 @@
     "colors": [],
     "caption": "the cisco logo is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiClojure.svg": {
-    "component_id": "Icon.DiClojure",
+  "di/DiClojure.svg": {
+    "component_id": "di:DiClojure",
     "aliases": [
       "di",
       "clojure"
@@ -208,8 +208,8 @@
     "colors": [],
     "caption": "a black and white drawing of a circle with two lines in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiClojureAlt.svg": {
-    "component_id": "Icon.DiClojureAlt",
+  "di/DiClojureAlt.svg": {
+    "component_id": "di:DiClojureAlt",
     "aliases": [
       "di",
       "clojure",
@@ -218,8 +218,8 @@
     "colors": [],
     "caption": "a black and white circular logo with the letters a and o"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCloud9.svg": {
-    "component_id": "Icon.DiCloud9",
+  "di/DiCloud9.svg": {
+    "component_id": "di:DiCloud9",
     "aliases": [
       "di",
       "cloud",
@@ -228,8 +228,8 @@
     "colors": [],
     "caption": "a cloud with the number nine on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCoda.svg": {
-    "component_id": "Icon.DiCoda",
+  "di/DiCoda.svg": {
+    "component_id": "di:DiCoda",
     "aliases": [
       "di",
       "coda"
@@ -237,8 +237,8 @@
     "colors": [],
     "caption": "a black and white illustration of a leaf with chopsticks"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCode.svg": {
-    "component_id": "Icon.DiCode",
+  "di/DiCode.svg": {
+    "component_id": "di:DiCode",
     "aliases": [
       "di",
       "code"
@@ -246,8 +246,8 @@
     "colors": [],
     "caption": "a black and white logo with the word css"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCodeBadge.svg": {
-    "component_id": "Icon.DiCodeBadge",
+  "di/DiCodeBadge.svg": {
+    "component_id": "di:DiCodeBadge",
     "aliases": [
       "di",
       "code",
@@ -256,8 +256,8 @@
     "colors": [],
     "caption": "a black and white image of a file with the word html"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCodeigniter.svg": {
-    "component_id": "Icon.DiCodeigniter",
+  "di/DiCodeigniter.svg": {
+    "component_id": "di:DiCodeigniter",
     "aliases": [
       "di",
       "codeigniter"
@@ -265,8 +265,8 @@
     "colors": [],
     "caption": "a black and white fire icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCodepen.svg": {
-    "component_id": "Icon.DiCodepen",
+  "di/DiCodepen.svg": {
+    "component_id": "di:DiCodepen",
     "aliases": [
       "di",
       "codepen"
@@ -274,8 +274,8 @@
     "colors": [],
     "caption": "a black and white icon of a cube"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCodrops.svg": {
-    "component_id": "Icon.DiCodrops",
+  "di/DiCodrops.svg": {
+    "component_id": "di:DiCodrops",
     "aliases": [
       "di",
       "codrops"
@@ -283,8 +283,8 @@
     "colors": [],
     "caption": "a black and white icon with a drop of water"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCoffeescript.svg": {
-    "component_id": "Icon.DiCoffeescript",
+  "di/DiCoffeescript.svg": {
+    "component_id": "di:DiCoffeescript",
     "aliases": [
       "di",
       "coffeescript"
@@ -292,8 +292,8 @@
     "colors": [],
     "caption": "a black and white silhouette of a cup of coffee"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCompass.svg": {
-    "component_id": "Icon.DiCompass",
+  "di/DiCompass.svg": {
+    "component_id": "di:DiCompass",
     "aliases": [
       "di",
       "compass"
@@ -301,8 +301,8 @@
     "colors": [],
     "caption": "a black and white icon of a star on a leaf"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiComposer.svg": {
-    "component_id": "Icon.DiComposer",
+  "di/DiComposer.svg": {
+    "component_id": "di:DiComposer",
     "aliases": [
       "di",
       "composer"
@@ -310,8 +310,8 @@
     "colors": [],
     "caption": "a black and white drawing of a man with his hands up"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCreativecommons.svg": {
-    "component_id": "Icon.DiCreativecommons",
+  "di/DiCreativecommons.svg": {
+    "component_id": "di:DiCreativecommons",
     "aliases": [
       "di",
       "creativecommons"
@@ -319,8 +319,8 @@
     "colors": [],
     "caption": "a black and white image of a copyright symbol"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCreativecommonsBadge.svg": {
-    "component_id": "Icon.DiCreativecommonsBadge",
+  "di/DiCreativecommonsBadge.svg": {
+    "component_id": "di:DiCreativecommonsBadge",
     "aliases": [
       "di",
       "creativecommons",
@@ -329,8 +329,8 @@
     "colors": [],
     "caption": "a black and white logo with the words creative commons"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCss3.svg": {
-    "component_id": "Icon.DiCss3",
+  "di/DiCss3.svg": {
+    "component_id": "di:DiCss3",
     "aliases": [
       "di",
       "css",
@@ -339,8 +339,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter e"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCss3Full.svg": {
-    "component_id": "Icon.DiCss3Full",
+  "di/DiCss3Full.svg": {
+    "component_id": "di:DiCss3Full",
     "aliases": [
       "di",
       "css",
@@ -350,8 +350,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter e"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCssTricks.svg": {
-    "component_id": "Icon.DiCssTricks",
+  "di/DiCssTricks.svg": {
+    "component_id": "di:DiCssTricks",
     "aliases": [
       "di",
       "css",
@@ -360,8 +360,8 @@
     "colors": [],
     "caption": "a black and white icon of a star"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiCssdeck.svg": {
-    "component_id": "Icon.DiCssdeck",
+  "di/DiCssdeck.svg": {
+    "component_id": "di:DiCssdeck",
     "aliases": [
       "di",
       "cssdeck"
@@ -369,8 +369,8 @@
     "colors": [],
     "caption": "a black and white icon with a circle in the middle"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDart.svg": {
-    "component_id": "Icon.DiDart",
+  "di/DiDart.svg": {
+    "component_id": "di:DiDart",
     "aliases": [
       "di",
       "dart"
@@ -378,8 +378,8 @@
     "colors": [],
     "caption": "a black and white drawing of a diamond"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDatabase.svg": {
-    "component_id": "Icon.DiDatabase",
+  "di/DiDatabase.svg": {
+    "component_id": "di:DiDatabase",
     "aliases": [
       "di",
       "database"
@@ -387,8 +387,8 @@
     "colors": [],
     "caption": "a database icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDebian.svg": {
-    "component_id": "Icon.DiDebian",
+  "di/DiDebian.svg": {
+    "component_id": "di:DiDebian",
     "aliases": [
       "di",
       "debian"
@@ -396,8 +396,8 @@
     "colors": [],
     "caption": "a black and white drawing of a spiral"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDigitalOcean.svg": {
-    "component_id": "Icon.DiDigitalOcean",
+  "di/DiDigitalOcean.svg": {
+    "component_id": "di:DiDigitalOcean",
     "aliases": [
       "di",
       "digital",
@@ -406,8 +406,8 @@
     "colors": [],
     "caption": "a black and white image of a cloud with waves"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDjango.svg": {
-    "component_id": "Icon.DiDjango",
+  "di/DiDjango.svg": {
+    "component_id": "di:DiDjango",
     "aliases": [
       "di",
       "django"
@@ -415,8 +415,8 @@
     "colors": [],
     "caption": "a black and white logo with the word django"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDlang.svg": {
-    "component_id": "Icon.DiDlang",
+  "di/DiDlang.svg": {
+    "component_id": "di:DiDlang",
     "aliases": [
       "di",
       "dlang"
@@ -424,8 +424,8 @@
     "colors": [],
     "caption": "a black and white photo of a camera with the letter d"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDocker.svg": {
-    "component_id": "Icon.DiDocker",
+  "di/DiDocker.svg": {
+    "component_id": "di:DiDocker",
     "aliases": [
       "di",
       "docker"
@@ -433,8 +433,8 @@
     "colors": [],
     "caption": "a whale with cargo containers on its back"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDoctrine.svg": {
-    "component_id": "Icon.DiDoctrine",
+  "di/DiDoctrine.svg": {
+    "component_id": "di:DiDoctrine",
     "aliases": [
       "di",
       "doctrine"
@@ -442,8 +442,8 @@
     "colors": [],
     "caption": "a black and white arrow pointing to the right"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDojo.svg": {
-    "component_id": "Icon.DiDojo",
+  "di/DiDojo.svg": {
+    "component_id": "di:DiDojo",
     "aliases": [
       "di",
       "dojo"
@@ -451,8 +451,8 @@
     "colors": [],
     "caption": "a black and white logo that says dojo"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDotnet.svg": {
-    "component_id": "Icon.DiDotnet",
+  "di/DiDotnet.svg": {
+    "component_id": "di:DiDotnet",
     "aliases": [
       "di",
       "dotnet"
@@ -460,8 +460,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter n"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDreamweaver.svg": {
-    "component_id": "Icon.DiDreamweaver",
+  "di/DiDreamweaver.svg": {
+    "component_id": "di:DiDreamweaver",
     "aliases": [
       "di",
       "dreamweaver"
@@ -469,8 +469,8 @@
     "colors": [],
     "caption": "a black and white square with the word dw on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDropbox.svg": {
-    "component_id": "Icon.DiDropbox",
+  "di/DiDropbox.svg": {
+    "component_id": "di:DiDropbox",
     "aliases": [
       "di",
       "dropbox"
@@ -478,8 +478,8 @@
     "colors": [],
     "caption": "the dropbox logo is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiDrupal.svg": {
-    "component_id": "Icon.DiDrupal",
+  "di/DiDrupal.svg": {
+    "component_id": "di:DiDrupal",
     "aliases": [
       "di",
       "drupal"
@@ -487,8 +487,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white logo"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiEclipse.svg": {
-    "component_id": "Icon.DiEclipse",
+  "di/DiEclipse.svg": {
+    "component_id": "di:DiEclipse",
     "aliases": [
       "di",
       "eclipse"
@@ -496,8 +496,8 @@
     "colors": [],
     "caption": "a black and white icon of a circle with three stripes"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiEmber.svg": {
-    "component_id": "Icon.DiEmber",
+  "di/DiEmber.svg": {
+    "component_id": "di:DiEmber",
     "aliases": [
       "di",
       "ember"
@@ -505,8 +505,8 @@
     "colors": [],
     "caption": "the word ember is written in black ink on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiEnvato.svg": {
-    "component_id": "Icon.DiEnvato",
+  "di/DiEnvato.svg": {
+    "component_id": "di:DiEnvato",
     "aliases": [
       "di",
       "envato"
@@ -514,8 +514,8 @@
     "colors": [],
     "caption": "a black silhouette of an egg on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiErlang.svg": {
-    "component_id": "Icon.DiErlang",
+  "di/DiErlang.svg": {
+    "component_id": "di:DiErlang",
     "aliases": [
       "di",
       "erlang"
@@ -523,8 +523,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter e"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiExtjs.svg": {
-    "component_id": "Icon.DiExtjs",
+  "di/DiExtjs.svg": {
+    "component_id": "di:DiExtjs",
     "aliases": [
       "di",
       "extjs"
@@ -532,8 +532,8 @@
     "colors": [],
     "caption": "a gear wheel icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiFirebase.svg": {
-    "component_id": "Icon.DiFirebase",
+  "di/DiFirebase.svg": {
+    "component_id": "di:DiFirebase",
     "aliases": [
       "di",
       "firebase"
@@ -541,8 +541,8 @@
     "colors": [],
     "caption": "a black and white illustration of a stack of data"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiFirefox.svg": {
-    "component_id": "Icon.DiFirefox",
+  "di/DiFirefox.svg": {
+    "component_id": "di:DiFirefox",
     "aliases": [
       "di",
       "firefox"
@@ -550,8 +550,8 @@
     "colors": [],
     "caption": "a black and white image of a fox in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiFsharp.svg": {
-    "component_id": "Icon.DiFsharp",
+  "di/DiFsharp.svg": {
+    "component_id": "di:DiFsharp",
     "aliases": [
       "di",
       "fsharp"
@@ -559,8 +559,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter d in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGhost.svg": {
-    "component_id": "Icon.DiGhost",
+  "di/DiGhost.svg": {
+    "component_id": "di:DiGhost",
     "aliases": [
       "di",
       "ghost"
@@ -568,8 +568,8 @@
     "colors": [],
     "caption": "the ghost logo is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGhostSmall.svg": {
-    "component_id": "Icon.DiGhostSmall",
+  "di/DiGhostSmall.svg": {
+    "component_id": "di:DiGhostSmall",
     "aliases": [
       "di",
       "ghost",
@@ -578,8 +578,8 @@
     "colors": [],
     "caption": "a black and white image of a symbol"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGit.svg": {
-    "component_id": "Icon.DiGit",
+  "di/DiGit.svg": {
+    "component_id": "di:DiGit",
     "aliases": [
       "di",
       "git"
@@ -587,8 +587,8 @@
     "colors": [],
     "caption": "a black and white icon with two arrows pointing to each other"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGitBranch.svg": {
-    "component_id": "Icon.DiGitBranch",
+  "di/DiGitBranch.svg": {
+    "component_id": "di:DiGitBranch",
     "aliases": [
       "di",
       "git",
@@ -597,8 +597,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white symbol"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGitCommit.svg": {
-    "component_id": "Icon.DiGitCommit",
+  "di/DiGitCommit.svg": {
+    "component_id": "di:DiGitCommit",
     "aliases": [
       "di",
       "git",
@@ -607,8 +607,8 @@
     "colors": [],
     "caption": "a black and white icon of a train station"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGitCompare.svg": {
-    "component_id": "Icon.DiGitCompare",
+  "di/DiGitCompare.svg": {
+    "component_id": "di:DiGitCompare",
     "aliases": [
       "di",
       "git",
@@ -617,8 +617,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGitMerge.svg": {
-    "component_id": "Icon.DiGitMerge",
+  "di/DiGitMerge.svg": {
+    "component_id": "di:DiGitMerge",
     "aliases": [
       "di",
       "git",
@@ -627,8 +627,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white icon"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGitPullRequest.svg": {
-    "component_id": "Icon.DiGitPullRequest",
+  "di/DiGitPullRequest.svg": {
+    "component_id": "di:DiGitPullRequest",
     "aliases": [
       "di",
       "git",
@@ -638,8 +638,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGithub.svg": {
-    "component_id": "Icon.DiGithub",
+  "di/DiGithub.svg": {
+    "component_id": "di:DiGithub",
     "aliases": [
       "di",
       "github"
@@ -647,8 +647,8 @@
     "colors": [],
     "caption": "a black and white logo with a cat in the center"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGithubAlt.svg": {
-    "component_id": "Icon.DiGithubAlt",
+  "di/DiGithubAlt.svg": {
+    "component_id": "di:DiGithubAlt",
     "aliases": [
       "di",
       "github",
@@ -657,8 +657,8 @@
     "colors": [],
     "caption": "a black and white image of a cat's face"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGithubBadge.svg": {
-    "component_id": "Icon.DiGithubBadge",
+  "di/DiGithubBadge.svg": {
+    "component_id": "di:DiGithubBadge",
     "aliases": [
       "di",
       "github",
@@ -667,8 +667,8 @@
     "colors": [],
     "caption": "a black and white image of a cat in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGithubFull.svg": {
-    "component_id": "Icon.DiGithubFull",
+  "di/DiGithubFull.svg": {
+    "component_id": "di:DiGithubFull",
     "aliases": [
       "di",
       "github",
@@ -677,8 +677,8 @@
     "colors": [],
     "caption": "a black and white logo with the word github"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGnu.svg": {
-    "component_id": "Icon.DiGnu",
+  "di/DiGnu.svg": {
+    "component_id": "di:DiGnu",
     "aliases": [
       "di",
       "gnu"
@@ -686,8 +686,8 @@
     "colors": [],
     "caption": "a black and white drawing of an ox with long horns"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGo.svg": {
-    "component_id": "Icon.DiGo",
+  "di/DiGo.svg": {
+    "component_id": "di:DiGo",
     "aliases": [
       "di",
       "go"
@@ -695,8 +695,8 @@
     "colors": [],
     "caption": "a coloring page of a cartoon bear with big eyes"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGoogleAnalytics.svg": {
-    "component_id": "Icon.DiGoogleAnalytics",
+  "di/DiGoogleAnalytics.svg": {
+    "component_id": "di:DiGoogleAnalytics",
     "aliases": [
       "di",
       "google",
@@ -705,8 +705,8 @@
     "colors": [],
     "caption": "a black and white icon of a graph"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGoogleCloudPlatform.svg": {
-    "component_id": "Icon.DiGoogleCloudPlatform",
+  "di/DiGoogleCloudPlatform.svg": {
+    "component_id": "di:DiGoogleCloudPlatform",
     "aliases": [
       "di",
       "google",
@@ -716,8 +716,8 @@
     "colors": [],
     "caption": "a black and white icon of a hexagon"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGoogleDrive.svg": {
-    "component_id": "Icon.DiGoogleDrive",
+  "di/DiGoogleDrive.svg": {
+    "component_id": "di:DiGoogleDrive",
     "aliases": [
       "di",
       "google",
@@ -726,8 +726,8 @@
     "colors": [],
     "caption": "a black triangle with a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGrails.svg": {
-    "component_id": "Icon.DiGrails",
+  "di/DiGrails.svg": {
+    "component_id": "di:DiGrails",
     "aliases": [
       "di",
       "grails"
@@ -735,8 +735,8 @@
     "colors": [],
     "caption": "a black and white icon with two cups on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGroovy.svg": {
-    "component_id": "Icon.DiGroovy",
+  "di/DiGroovy.svg": {
+    "component_id": "di:DiGroovy",
     "aliases": [
       "di",
       "groovy"
@@ -744,8 +744,8 @@
     "colors": [],
     "caption": "a black and white logo with the word groovy on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGrunt.svg": {
-    "component_id": "Icon.DiGrunt",
+  "di/DiGrunt.svg": {
+    "component_id": "di:DiGrunt",
     "aliases": [
       "di",
       "grunt"
@@ -753,8 +753,8 @@
     "colors": [],
     "caption": "the head of a wild boar on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiGulp.svg": {
-    "component_id": "Icon.DiGulp",
+  "di/DiGulp.svg": {
+    "component_id": "di:DiGulp",
     "aliases": [
       "di",
       "gulp"
@@ -762,8 +762,8 @@
     "colors": [],
     "caption": "a black and white image of a drink with a straw"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiHackernews.svg": {
-    "component_id": "Icon.DiHackernews",
+  "di/DiHackernews.svg": {
+    "component_id": "di:DiHackernews",
     "aliases": [
       "di",
       "hackernews"
@@ -771,8 +771,8 @@
     "colors": [],
     "caption": "a black and white square with the letter y in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiHaskell.svg": {
-    "component_id": "Icon.DiHaskell",
+  "di/DiHaskell.svg": {
+    "component_id": "di:DiHaskell",
     "aliases": [
       "di",
       "haskell"
@@ -780,8 +780,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter f"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiHeroku.svg": {
-    "component_id": "Icon.DiHeroku",
+  "di/DiHeroku.svg": {
+    "component_id": "di:DiHeroku",
     "aliases": [
       "di",
       "heroku"
@@ -789,8 +789,8 @@
     "colors": [],
     "caption": "a black and white image of the letter h"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiHtml5.svg": {
-    "component_id": "Icon.DiHtml5",
+  "di/DiHtml5.svg": {
+    "component_id": "di:DiHtml5",
     "aliases": [
       "di",
       "html",
@@ -799,8 +799,8 @@
     "colors": [],
     "caption": "a black and white logo with the number 5 in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiHtml53dEffects.svg": {
-    "component_id": "Icon.DiHtml53DEffects",
+  "di/DiHtml53dEffects.svg": {
+    "component_id": "di:DiHtml53DEffects",
     "aliases": [
       "di",
       "html",
@@ -811,8 +811,8 @@
     "colors": [],
     "caption": "a black and white logo of a cube"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiHtml5Connectivity.svg": {
-    "component_id": "Icon.DiHtml5Connectivity",
+  "di/DiHtml5Connectivity.svg": {
+    "component_id": "di:DiHtml5Connectivity",
     "aliases": [
       "di",
       "html",
@@ -822,8 +822,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter d in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiHtml5DeviceAccess.svg": {
-    "component_id": "Icon.DiHtml5DeviceAccess",
+  "di/DiHtml5DeviceAccess.svg": {
+    "component_id": "di:DiHtml5DeviceAccess",
     "aliases": [
       "di",
       "html",
@@ -834,8 +834,8 @@
     "colors": [],
     "caption": "a black and white logo with the word tv in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiHtml5Multimedia.svg": {
-    "component_id": "Icon.DiHtml5Multimedia",
+  "di/DiHtml5Multimedia.svg": {
+    "component_id": "di:DiHtml5Multimedia",
     "aliases": [
       "di",
       "html",
@@ -845,8 +845,8 @@
     "colors": [],
     "caption": "a movie clapper icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiIe.svg": {
-    "component_id": "Icon.DiIe",
+  "di/DiIe.svg": {
+    "component_id": "di:DiIe",
     "aliases": [
       "di",
       "ie"
@@ -854,8 +854,8 @@
     "colors": [],
     "caption": "the internet explorer logo is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiIllustrator.svg": {
-    "component_id": "Icon.DiIllustrator",
+  "di/DiIllustrator.svg": {
+    "component_id": "di:DiIllustrator",
     "aliases": [
       "di",
       "illustrator"
@@ -863,8 +863,8 @@
     "colors": [],
     "caption": "a black and white square with the word ai in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiIntellij.svg": {
-    "component_id": "Icon.DiIntellij",
+  "di/DiIntellij.svg": {
+    "component_id": "di:DiIntellij",
     "aliases": [
       "di",
       "intellij"
@@ -872,8 +872,8 @@
     "colors": [],
     "caption": "a black and white image of the letter j"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiIonic.svg": {
-    "component_id": "Icon.DiIonic",
+  "di/DiIonic.svg": {
+    "component_id": "di:DiIonic",
     "aliases": [
       "di",
       "ionic"
@@ -881,8 +881,8 @@
     "colors": [],
     "caption": "a black and white circle with a dot in the middle"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiJava.svg": {
-    "component_id": "Icon.DiJava",
+  "di/DiJava.svg": {
+    "component_id": "di:DiJava",
     "aliases": [
       "di",
       "java"
@@ -890,8 +890,8 @@
     "colors": [],
     "caption": "a black and white illustration of a cup of coffee"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiJavascript.svg": {
-    "component_id": "Icon.DiJavascript",
+  "di/DiJavascript.svg": {
+    "component_id": "di:DiJavascript",
     "aliases": [
       "di",
       "javascript"
@@ -899,8 +899,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter s in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiJavascript1.svg": {
-    "component_id": "Icon.DiJavascript1",
+  "di/DiJavascript1.svg": {
+    "component_id": "di:DiJavascript1",
     "aliases": [
       "di",
       "javascript",
@@ -909,8 +909,8 @@
     "colors": [],
     "caption": "a black and white image of the word js"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiJekyllSmall.svg": {
-    "component_id": "Icon.DiJekyllSmall",
+  "di/DiJekyllSmall.svg": {
+    "component_id": "di:DiJekyllSmall",
     "aliases": [
       "di",
       "jekyll",
@@ -919,8 +919,8 @@
     "colors": [],
     "caption": "a black and white drawing of a test tube"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiJenkins.svg": {
-    "component_id": "Icon.DiJenkins",
+  "di/DiJenkins.svg": {
+    "component_id": "di:DiJenkins",
     "aliases": [
       "di",
       "jenkins"
@@ -928,8 +928,8 @@
     "colors": [],
     "caption": "a black and white drawing of a man in a tuxedo"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiJira.svg": {
-    "component_id": "Icon.DiJira",
+  "di/DiJira.svg": {
+    "component_id": "di:DiJira",
     "aliases": [
       "di",
       "jira"
@@ -937,8 +937,8 @@
     "colors": [],
     "caption": "a black and white logo with two people holding hands"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiJoomla.svg": {
-    "component_id": "Icon.DiJoomla",
+  "di/DiJoomla.svg": {
+    "component_id": "di:DiJoomla",
     "aliases": [
       "di",
       "joomla"
@@ -946,8 +946,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiJqueryLogo.svg": {
-    "component_id": "Icon.DiJqueryLogo",
+  "di/DiJqueryLogo.svg": {
+    "component_id": "di:DiJqueryLogo",
     "aliases": [
       "di",
       "jquery",
@@ -956,8 +956,8 @@
     "colors": [],
     "caption": "a black and white logo with three curved lines"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiJqueryUiLogo.svg": {
-    "component_id": "Icon.DiJqueryUiLogo",
+  "di/DiJqueryUiLogo.svg": {
+    "component_id": "di:DiJqueryUiLogo",
     "aliases": [
       "di",
       "jquery",
@@ -967,8 +967,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter u in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiJsBadge.svg": {
-    "component_id": "Icon.DiJsBadge",
+  "di/DiJsBadge.svg": {
+    "component_id": "di:DiJsBadge",
     "aliases": [
       "di",
       "js",
@@ -977,8 +977,8 @@
     "colors": [],
     "caption": "a black and white logo with the word js on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiKomodo.svg": {
-    "component_id": "Icon.DiKomodo",
+  "di/DiKomodo.svg": {
+    "component_id": "di:DiKomodo",
     "aliases": [
       "di",
       "komodo"
@@ -986,8 +986,8 @@
     "colors": [],
     "caption": "a black and white logo of an eagle"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiKrakenjs.svg": {
-    "component_id": "Icon.DiKrakenjs",
+  "di/DiKrakenjs.svg": {
+    "component_id": "di:DiKrakenjs",
     "aliases": [
       "di",
       "krakenjs"
@@ -995,8 +995,8 @@
     "colors": [],
     "caption": "an octopus is shown in black and white on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiKrakenjsBadge.svg": {
-    "component_id": "Icon.DiKrakenjsBadge",
+  "di/DiKrakenjsBadge.svg": {
+    "component_id": "di:DiKrakenjsBadge",
     "aliases": [
       "di",
       "krakenjs",
@@ -1005,8 +1005,8 @@
     "colors": [],
     "caption": "an octopus logo on a black and white hexagon"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiLaravel.svg": {
-    "component_id": "Icon.DiLaravel",
+  "di/DiLaravel.svg": {
+    "component_id": "di:DiLaravel",
     "aliases": [
       "di",
       "laravel"
@@ -1014,8 +1014,8 @@
     "colors": [],
     "caption": "a black and white drawing of the letter l"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiLess.svg": {
-    "component_id": "Icon.DiLess",
+  "di/DiLess.svg": {
+    "component_id": "di:DiLess",
     "aliases": [
       "di",
       "less"
@@ -1023,8 +1023,8 @@
     "colors": [],
     "caption": "a black and white logo with the word less on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiLinux.svg": {
-    "component_id": "Icon.DiLinux",
+  "di/DiLinux.svg": {
+    "component_id": "di:DiLinux",
     "aliases": [
       "di",
       "linux"
@@ -1032,8 +1032,8 @@
     "colors": [],
     "caption": "a black and white drawing of a penguin"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMagento.svg": {
-    "component_id": "Icon.DiMagento",
+  "di/DiMagento.svg": {
+    "component_id": "di:DiMagento",
     "aliases": [
       "di",
       "magento"
@@ -1041,8 +1041,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white logo"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMailchimp.svg": {
-    "component_id": "Icon.DiMailchimp",
+  "di/DiMailchimp.svg": {
+    "component_id": "di:DiMailchimp",
     "aliases": [
       "di",
       "mailchimp"
@@ -1050,8 +1050,8 @@
     "colors": [],
     "caption": "a black and white logo with the word mailchimp"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMarkdown.svg": {
-    "component_id": "Icon.DiMarkdown",
+  "di/DiMarkdown.svg": {
+    "component_id": "di:DiMarkdown",
     "aliases": [
       "di",
       "markdown"
@@ -1059,8 +1059,8 @@
     "colors": [],
     "caption": "a black and white logo with the word m on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMaterializecss.svg": {
-    "component_id": "Icon.DiMaterializecss",
+  "di/DiMaterializecss.svg": {
+    "component_id": "di:DiMaterializecss",
     "aliases": [
       "di",
       "materializecss"
@@ -1068,8 +1068,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter m"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMeteor.svg": {
-    "component_id": "Icon.DiMeteor",
+  "di/DiMeteor.svg": {
+    "component_id": "di:DiMeteor",
     "aliases": [
       "di",
       "meteor"
@@ -1077,8 +1077,8 @@
     "colors": [],
     "caption": "a black and white illustration of a pair of claws"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMeteorfull.svg": {
-    "component_id": "Icon.DiMeteorfull",
+  "di/DiMeteorfull.svg": {
+    "component_id": "di:DiMeteorfull",
     "aliases": [
       "di",
       "meteorfull"
@@ -1086,8 +1086,8 @@
     "colors": [],
     "caption": "meteor logo with the title 'meteor logo'"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMitlicence.svg": {
-    "component_id": "Icon.DiMitlicence",
+  "di/DiMitlicence.svg": {
+    "component_id": "di:DiMitlicence",
     "aliases": [
       "di",
       "mitlicence"
@@ -1095,8 +1095,8 @@
     "colors": [],
     "caption": "a black and white logo with the word tim in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiModernizr.svg": {
-    "component_id": "Icon.DiModernizr",
+  "di/DiModernizr.svg": {
+    "component_id": "di:DiModernizr",
     "aliases": [
       "di",
       "modernizr"
@@ -1104,8 +1104,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white pyramid"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMongodb.svg": {
-    "component_id": "Icon.DiMongodb",
+  "di/DiMongodb.svg": {
+    "component_id": "di:DiMongodb",
     "aliases": [
       "di",
       "mongodb"
@@ -1113,8 +1113,8 @@
     "colors": [],
     "caption": "a black silhouette of a leaf on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMootools.svg": {
-    "component_id": "Icon.DiMootools",
+  "di/DiMootools.svg": {
+    "component_id": "di:DiMootools",
     "aliases": [
       "di",
       "mootools"
@@ -1122,8 +1122,8 @@
     "colors": [],
     "caption": "a black and white logo that says moo tools"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMootoolsBadge.svg": {
-    "component_id": "Icon.DiMootoolsBadge",
+  "di/DiMootoolsBadge.svg": {
+    "component_id": "di:DiMootoolsBadge",
     "aliases": [
       "di",
       "mootools",
@@ -1132,8 +1132,8 @@
     "colors": [],
     "caption": "a black wrench icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMozilla.svg": {
-    "component_id": "Icon.DiMozilla",
+  "di/DiMozilla.svg": {
+    "component_id": "di:DiMozilla",
     "aliases": [
       "di",
       "mozilla"
@@ -1141,8 +1141,8 @@
     "colors": [],
     "caption": "the head of a t - rex is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMsqlServer.svg": {
-    "component_id": "Icon.DiMsqlServer",
+  "di/DiMsqlServer.svg": {
+    "component_id": "di:DiMsqlServer",
     "aliases": [
       "di",
       "msql",
@@ -1151,8 +1151,8 @@
     "colors": [],
     "caption": "a black and white drawing of a spiral"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiMysql.svg": {
-    "component_id": "Icon.DiMysql",
+  "di/DiMysql.svg": {
+    "component_id": "di:DiMysql",
     "aliases": [
       "di",
       "mysql"
@@ -1160,8 +1160,8 @@
     "colors": [],
     "caption": "a black and white drawing of a dolphin"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiNancy.svg": {
-    "component_id": "Icon.DiNancy",
+  "di/DiNancy.svg": {
+    "component_id": "di:DiNancy",
     "aliases": [
       "di",
       "nancy"
@@ -1169,8 +1169,8 @@
     "colors": [],
     "caption": "a black silhouette of a woman's head with long hair"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiNetbeans.svg": {
-    "component_id": "Icon.DiNetbeans",
+  "di/DiNetbeans.svg": {
+    "component_id": "di:DiNetbeans",
     "aliases": [
       "di",
       "netbeans"
@@ -1178,8 +1178,8 @@
     "colors": [],
     "caption": "a black and white illustration of a cube"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiNetmagazine.svg": {
-    "component_id": "Icon.DiNetmagazine",
+  "di/DiNetmagazine.svg": {
+    "component_id": "di:DiNetmagazine",
     "aliases": [
       "di",
       "netmagazine"
@@ -1187,8 +1187,8 @@
     "colors": [],
     "caption": "a black and white logo with the word net"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiNginx.svg": {
-    "component_id": "Icon.DiNginx",
+  "di/DiNginx.svg": {
+    "component_id": "di:DiNginx",
     "aliases": [
       "di",
       "nginx"
@@ -1196,8 +1196,8 @@
     "colors": [],
     "caption": "a black and white logo with the word xing on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiNodejs.svg": {
-    "component_id": "Icon.DiNodejs",
+  "di/DiNodejs.svg": {
+    "component_id": "di:DiNodejs",
     "aliases": [
       "di",
       "nodejs"
@@ -1205,8 +1205,8 @@
     "colors": [],
     "caption": "a black and white logo with the word node on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiNodejsSmall.svg": {
-    "component_id": "Icon.DiNodejsSmall",
+  "di/DiNodejsSmall.svg": {
+    "component_id": "di:DiNodejsSmall",
     "aliases": [
       "di",
       "nodejs",
@@ -1215,8 +1215,8 @@
     "colors": [],
     "caption": "a black and white logo with the word js in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiNpm.svg": {
-    "component_id": "Icon.DiNpm",
+  "di/DiNpm.svg": {
+    "component_id": "di:DiNpm",
     "aliases": [
       "di",
       "npm"
@@ -1224,8 +1224,8 @@
     "colors": [],
     "caption": "a black and white logo with the word nmp on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiOnedrive.svg": {
-    "component_id": "Icon.DiOnedrive",
+  "di/DiOnedrive.svg": {
+    "component_id": "di:DiOnedrive",
     "aliases": [
       "di",
       "onedrive"
@@ -1233,8 +1233,8 @@
     "colors": [],
     "caption": "a black cloud icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiOpenshift.svg": {
-    "component_id": "Icon.DiOpenshift",
+  "di/DiOpenshift.svg": {
+    "component_id": "di:DiOpenshift",
     "aliases": [
       "di",
       "openshift"
@@ -1242,8 +1242,8 @@
     "colors": [],
     "caption": "a black and white logo with a circle in the middle"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiOpensource.svg": {
-    "component_id": "Icon.DiOpensource",
+  "di/DiOpensource.svg": {
+    "component_id": "di:DiOpensource",
     "aliases": [
       "di",
       "opensource"
@@ -1251,8 +1251,8 @@
     "colors": [],
     "caption": "a black and white image of a keyhole"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiOpera.svg": {
-    "component_id": "Icon.DiOpera",
+  "di/DiOpera.svg": {
+    "component_id": "di:DiOpera",
     "aliases": [
       "di",
       "opera"
@@ -1260,8 +1260,8 @@
     "colors": [],
     "caption": "a black and white image of the letter o"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiPerl.svg": {
-    "component_id": "Icon.DiPerl",
+  "di/DiPerl.svg": {
+    "component_id": "di:DiPerl",
     "aliases": [
       "di",
       "perl"
@@ -1269,8 +1269,8 @@
     "colors": [],
     "caption": "the onion logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiPhonegap.svg": {
-    "component_id": "Icon.DiPhonegap",
+  "di/DiPhonegap.svg": {
+    "component_id": "di:DiPhonegap",
     "aliases": [
       "di",
       "phonegap"
@@ -1278,8 +1278,8 @@
     "colors": [],
     "caption": "a black and white illustration of four cell phones"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiPhotoshop.svg": {
-    "component_id": "Icon.DiPhotoshop",
+  "di/DiPhotoshop.svg": {
+    "component_id": "di:DiPhotoshop",
     "aliases": [
       "di",
       "photoshop"
@@ -1287,8 +1287,8 @@
     "colors": [],
     "caption": "the adobe photoshop logo in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiPhp.svg": {
-    "component_id": "Icon.DiPhp",
+  "di/DiPhp.svg": {
+    "component_id": "di:DiPhp",
     "aliases": [
       "di",
       "php"
@@ -1296,8 +1296,8 @@
     "colors": [],
     "caption": "a black and white image of the word php"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiPostgresql.svg": {
-    "component_id": "Icon.DiPostgresql",
+  "di/DiPostgresql.svg": {
+    "component_id": "di:DiPostgresql",
     "aliases": [
       "di",
       "postgresql"
@@ -1305,8 +1305,8 @@
     "colors": [],
     "caption": "a black and white drawing of an elephant's head"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiProlog.svg": {
-    "component_id": "Icon.DiProlog",
+  "di/DiProlog.svg": {
+    "component_id": "di:DiProlog",
     "aliases": [
       "di",
       "prolog"
@@ -1314,8 +1314,8 @@
     "colors": [],
     "caption": "a black and white image of an owl with big eyes"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiPython.svg": {
-    "component_id": "Icon.DiPython",
+  "di/DiPython.svg": {
+    "component_id": "di:DiPython",
     "aliases": [
       "di",
       "python"
@@ -1323,8 +1323,8 @@
     "colors": [],
     "caption": "a black and white python logo on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiRackspace.svg": {
-    "component_id": "Icon.DiRackspace",
+  "di/DiRackspace.svg": {
+    "component_id": "di:DiRackspace",
     "aliases": [
       "di",
       "rackspace"
@@ -1332,8 +1332,8 @@
     "colors": [],
     "caption": "a black triangle with the word amazon on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiRaphael.svg": {
-    "component_id": "Icon.DiRaphael",
+  "di/DiRaphael.svg": {
+    "component_id": "di:DiRaphael",
     "aliases": [
       "di",
       "raphael"
@@ -1341,8 +1341,8 @@
     "colors": [],
     "caption": "a black and white logo with a person in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiRasberryPi.svg": {
-    "component_id": "Icon.DiRasberryPi",
+  "di/DiRasberryPi.svg": {
+    "component_id": "di:DiRasberryPi",
     "aliases": [
       "di",
       "rasberry",
@@ -1351,8 +1351,8 @@
     "colors": [],
     "caption": "a black and white drawing of a raspberry on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiReact.svg": {
-    "component_id": "Icon.DiReact",
+  "di/DiReact.svg": {
+    "component_id": "di:DiReact",
     "aliases": [
       "di",
       "react"
@@ -1360,8 +1360,8 @@
     "colors": [],
     "caption": "a black and white icon of an atom"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiRedhat.svg": {
-    "component_id": "Icon.DiRedhat",
+  "di/DiRedhat.svg": {
+    "component_id": "di:DiRedhat",
     "aliases": [
       "di",
       "redhat"
@@ -1369,8 +1369,8 @@
     "colors": [],
     "caption": "a black and white silhouette of a man wearing a hat"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiRedis.svg": {
-    "component_id": "Icon.DiRedis",
+  "di/DiRedis.svg": {
+    "component_id": "di:DiRedis",
     "aliases": [
       "di",
       "redis"
@@ -1378,8 +1378,8 @@
     "colors": [],
     "caption": "a black and white icon with a star in the middle"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiRequirejs.svg": {
-    "component_id": "Icon.DiRequirejs",
+  "di/DiRequirejs.svg": {
+    "component_id": "di:DiRequirejs",
     "aliases": [
       "di",
       "requirejs"
@@ -1387,8 +1387,8 @@
     "colors": [],
     "caption": "a black and white image of a target with an arrow"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiResponsive.svg": {
-    "component_id": "Icon.DiResponsive",
+  "di/DiResponsive.svg": {
+    "component_id": "di:DiResponsive",
     "aliases": [
       "di",
       "responsive"
@@ -1396,8 +1396,8 @@
     "colors": [],
     "caption": "a black and white image of a cell phone and a tablet"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiRor.svg": {
-    "component_id": "Icon.DiRor",
+  "di/DiRor.svg": {
+    "component_id": "di:DiRor",
     "aliases": [
       "di",
       "ror"
@@ -1405,8 +1405,8 @@
     "colors": [],
     "caption": "a black and white illustration of a wave"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiRuby.svg": {
-    "component_id": "Icon.DiRuby",
+  "di/DiRuby.svg": {
+    "component_id": "di:DiRuby",
     "aliases": [
       "di",
       "ruby"
@@ -1414,8 +1414,8 @@
     "colors": [],
     "caption": "a black diamond icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiRubyRough.svg": {
-    "component_id": "Icon.DiRubyRough",
+  "di/DiRubyRough.svg": {
+    "component_id": "di:DiRubyRough",
     "aliases": [
       "di",
       "ruby",
@@ -1424,8 +1424,8 @@
     "colors": [],
     "caption": "a black and white icon of a diamond"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiRust.svg": {
-    "component_id": "Icon.DiRust",
+  "di/DiRust.svg": {
+    "component_id": "di:DiRust",
     "aliases": [
       "di",
       "rust"
@@ -1433,8 +1433,8 @@
     "colors": [],
     "caption": "a black and white image of a gearwheel with the letter r"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSafari.svg": {
-    "component_id": "Icon.DiSafari",
+  "di/DiSafari.svg": {
+    "component_id": "di:DiSafari",
     "aliases": [
       "di",
       "safari"
@@ -1442,8 +1442,8 @@
     "colors": [],
     "caption": "a compass icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSass.svg": {
-    "component_id": "Icon.DiSass",
+  "di/DiSass.svg": {
+    "component_id": "di:DiSass",
     "aliases": [
       "di",
       "sass"
@@ -1451,8 +1451,8 @@
     "colors": [],
     "caption": "a black and white image of the word sass"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiScala.svg": {
-    "component_id": "Icon.DiScala",
+  "di/DiScala.svg": {
+    "component_id": "di:DiScala",
     "aliases": [
       "di",
       "scala"
@@ -1460,8 +1460,8 @@
     "colors": [],
     "caption": "a black and white icon of a stack of books"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiScriptcs.svg": {
-    "component_id": "Icon.DiScriptcs",
+  "di/DiScriptcs.svg": {
+    "component_id": "di:DiScriptcs",
     "aliases": [
       "di",
       "scriptcs"
@@ -1469,8 +1469,8 @@
     "colors": [],
     "caption": "a black and white circle with the word cs on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiScrum.svg": {
-    "component_id": "Icon.DiScrum",
+  "di/DiScrum.svg": {
+    "component_id": "di:DiScrum",
     "aliases": [
       "di",
       "scrum"
@@ -1478,8 +1478,8 @@
     "colors": [],
     "caption": "a black and white arrow pointing in the direction of the arrow"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSenchatouch.svg": {
-    "component_id": "Icon.DiSenchatouch",
+  "di/DiSenchatouch.svg": {
+    "component_id": "di:DiSenchatouch",
     "aliases": [
       "di",
       "senchatouch"
@@ -1487,8 +1487,8 @@
     "colors": [],
     "caption": "a black and white silhouette of a letter s"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSizzlejs.svg": {
-    "component_id": "Icon.DiSizzlejs",
+  "di/DiSizzlejs.svg": {
+    "component_id": "di:DiSizzlejs",
     "aliases": [
       "di",
       "sizzlejs"
@@ -1496,8 +1496,8 @@
     "colors": [],
     "caption": "a black and white arrow pointing to the right"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSmashingMagazine.svg": {
-    "component_id": "Icon.DiSmashingMagazine",
+  "di/DiSmashingMagazine.svg": {
+    "component_id": "di:DiSmashingMagazine",
     "aliases": [
       "di",
       "smashing",
@@ -1506,8 +1506,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter s"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSnapSvg.svg": {
-    "component_id": "Icon.DiSnapSvg",
+  "di/DiSnapSvg.svg": {
+    "component_id": "di:DiSnapSvg",
     "aliases": [
       "di",
       "snap",
@@ -1516,8 +1516,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter g in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSpark.svg": {
-    "component_id": "Icon.DiSpark",
+  "di/DiSpark.svg": {
+    "component_id": "di:DiSpark",
     "aliases": [
       "di",
       "spark"
@@ -1525,8 +1525,8 @@
     "colors": [],
     "caption": "a black and white logo with the word spark"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSqllite.svg": {
-    "component_id": "Icon.DiSqllite",
+  "di/DiSqllite.svg": {
+    "component_id": "di:DiSqllite",
     "aliases": [
       "di",
       "sqllite"
@@ -1534,8 +1534,8 @@
     "colors": [],
     "caption": "a black and white image of a feather"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiStackoverflow.svg": {
-    "component_id": "Icon.DiStackoverflow",
+  "di/DiStackoverflow.svg": {
+    "component_id": "di:DiStackoverflow",
     "aliases": [
       "di",
       "stackoverflow"
@@ -1543,8 +1543,8 @@
     "colors": [],
     "caption": "a black and white icon of a book being opened"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiStreamline.svg": {
-    "component_id": "Icon.DiStreamline",
+  "di/DiStreamline.svg": {
+    "component_id": "di:DiStreamline",
     "aliases": [
       "di",
       "streamline"
@@ -1552,8 +1552,8 @@
     "colors": [],
     "caption": "a black and white illustration of a stack of data"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiStylus.svg": {
-    "component_id": "Icon.DiStylus",
+  "di/DiStylus.svg": {
+    "component_id": "di:DiStylus",
     "aliases": [
       "di",
       "stylus"
@@ -1561,8 +1561,8 @@
     "colors": [],
     "caption": "a black and white logo with the word stylus"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSublime.svg": {
-    "component_id": "Icon.DiSublime",
+  "di/DiSublime.svg": {
+    "component_id": "di:DiSublime",
     "aliases": [
       "di",
       "sublime"
@@ -1570,8 +1570,8 @@
     "colors": [],
     "caption": "a black and white square with the letter s on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSwift.svg": {
-    "component_id": "Icon.DiSwift",
+  "di/DiSwift.svg": {
+    "component_id": "di:DiSwift",
     "aliases": [
       "di",
       "swift"
@@ -1579,8 +1579,8 @@
     "colors": [],
     "caption": "a black and white silhouette of a bird"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSymfony.svg": {
-    "component_id": "Icon.DiSymfony",
+  "di/DiSymfony.svg": {
+    "component_id": "di:DiSymfony",
     "aliases": [
       "di",
       "symfony"
@@ -1588,8 +1588,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter s"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiSymfonyBadge.svg": {
-    "component_id": "Icon.DiSymfonyBadge",
+  "di/DiSymfonyBadge.svg": {
+    "component_id": "di:DiSymfonyBadge",
     "aliases": [
       "di",
       "symfony",
@@ -1598,8 +1598,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter s in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiTechcrunch.svg": {
-    "component_id": "Icon.DiTechcrunch",
+  "di/DiTechcrunch.svg": {
+    "component_id": "di:DiTechcrunch",
     "aliases": [
       "di",
       "techcrunch"
@@ -1607,8 +1607,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter t in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiTerminal.svg": {
-    "component_id": "Icon.DiTerminal",
+  "di/DiTerminal.svg": {
+    "component_id": "di:DiTerminal",
     "aliases": [
       "di",
       "terminal"
@@ -1616,8 +1616,8 @@
     "colors": [],
     "caption": "a black and white image of a computer icon"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiTerminalBadge.svg": {
-    "component_id": "Icon.DiTerminalBadge",
+  "di/DiTerminalBadge.svg": {
+    "component_id": "di:DiTerminalBadge",
     "aliases": [
       "di",
       "terminal",
@@ -1626,8 +1626,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white symbol"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiTravis.svg": {
-    "component_id": "Icon.DiTravis",
+  "di/DiTravis.svg": {
+    "component_id": "di:DiTravis",
     "aliases": [
       "di",
       "travis"
@@ -1635,8 +1635,8 @@
     "colors": [],
     "caption": "a black and white square with the letter t on it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiTrello.svg": {
-    "component_id": "Icon.DiTrello",
+  "di/DiTrello.svg": {
+    "component_id": "di:DiTrello",
     "aliases": [
       "di",
       "trello"
@@ -1644,8 +1644,8 @@
     "colors": [],
     "caption": "a black and white icon of a door with two windows"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiTypo3.svg": {
-    "component_id": "Icon.DiTypo3",
+  "di/DiTypo3.svg": {
+    "component_id": "di:DiTypo3",
     "aliases": [
       "di",
       "typo",
@@ -1654,8 +1654,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white logo"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiUbuntu.svg": {
-    "component_id": "Icon.DiUbuntu",
+  "di/DiUbuntu.svg": {
+    "component_id": "di:DiUbuntu",
     "aliases": [
       "di",
       "ubuntu"
@@ -1663,8 +1663,8 @@
     "colors": [],
     "caption": "the ubuntu logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiUikit.svg": {
-    "component_id": "Icon.DiUikit",
+  "di/DiUikit.svg": {
+    "component_id": "di:DiUikit",
     "aliases": [
       "di",
       "uikit"
@@ -1672,8 +1672,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter c"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiUnitySmall.svg": {
-    "component_id": "Icon.DiUnitySmall",
+  "di/DiUnitySmall.svg": {
+    "component_id": "di:DiUnitySmall",
     "aliases": [
       "di",
       "unity",
@@ -1682,8 +1682,8 @@
     "colors": [],
     "caption": "a black and white logo with the word unity"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiVim.svg": {
-    "component_id": "Icon.DiVim",
+  "di/DiVim.svg": {
+    "component_id": "di:DiVim",
     "aliases": [
       "di",
       "vim"
@@ -1691,8 +1691,8 @@
     "colors": [],
     "caption": "a black and white logo with the word v in it"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiVisualstudio.svg": {
-    "component_id": "Icon.DiVisualstudio",
+  "di/DiVisualstudio.svg": {
+    "component_id": "di:DiVisualstudio",
     "aliases": [
       "di",
       "visualstudio"
@@ -1700,8 +1700,8 @@
     "colors": [],
     "caption": "a black and white image of an x symbol"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiW3C.svg": {
-    "component_id": "Icon.DiW3C",
+  "di/DiW3C.svg": {
+    "component_id": "di:DiW3C",
     "aliases": [
       "di",
       "w",
@@ -1711,8 +1711,8 @@
     "colors": [],
     "caption": "the w3cc logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiWebplatform.svg": {
-    "component_id": "Icon.DiWebplatform",
+  "di/DiWebplatform.svg": {
+    "component_id": "di:DiWebplatform",
     "aliases": [
       "di",
       "webplatform"
@@ -1720,8 +1720,8 @@
     "colors": [],
     "caption": "a black and white icon with the letter w"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiWindows.svg": {
-    "component_id": "Icon.DiWindows",
+  "di/DiWindows.svg": {
+    "component_id": "di:DiWindows",
     "aliases": [
       "di",
       "windows"
@@ -1729,8 +1729,8 @@
     "colors": [],
     "caption": "the windows logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiWordpress.svg": {
-    "component_id": "Icon.DiWordpress",
+  "di/DiWordpress.svg": {
+    "component_id": "di:DiWordpress",
     "aliases": [
       "di",
       "wordpress"
@@ -1738,8 +1738,8 @@
     "colors": [],
     "caption": "the wordpress logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiYahoo.svg": {
-    "component_id": "Icon.DiYahoo",
+  "di/DiYahoo.svg": {
+    "component_id": "di:DiYahoo",
     "aliases": [
       "di",
       "yahoo"
@@ -1747,8 +1747,8 @@
     "colors": [],
     "caption": "the yahoo logo is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiYahooSmall.svg": {
-    "component_id": "Icon.DiYahooSmall",
+  "di/DiYahooSmall.svg": {
+    "component_id": "di:DiYahooSmall",
     "aliases": [
       "di",
       "yahoo",
@@ -1757,8 +1757,8 @@
     "colors": [],
     "caption": "a black and white y logo on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiYeoman.svg": {
-    "component_id": "Icon.DiYeoman",
+  "di/DiYeoman.svg": {
+    "component_id": "di:DiYeoman",
     "aliases": [
       "di",
       "yeoman"
@@ -1766,8 +1766,8 @@
     "colors": [],
     "caption": "a black and white hat and mustache with a mustache"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiYii.svg": {
-    "component_id": "Icon.DiYii",
+  "di/DiYii.svg": {
+    "component_id": "di:DiYii",
     "aliases": [
       "di",
       "yii"
@@ -1775,8 +1775,8 @@
     "colors": [],
     "caption": "a black and white logo of a leaf"
   },
-  "/home/darren/llm-widget-factory/assets/di/DiZend.svg": {
-    "component_id": "Icon.DiZend",
+  "di/DiZend.svg": {
+    "component_id": "di:DiZend",
     "aliases": [
       "di",
       "zend"

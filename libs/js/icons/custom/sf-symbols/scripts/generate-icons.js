@@ -21,7 +21,7 @@ function toComponentName(str) {
     .map(p => (p ? p.charAt(0).toUpperCase() + p.slice(1) : ''))
     .join('')
   const base = core || 'Unnamed'
-  const withPrefix = base.startsWith('Icon') ? base : 'Icon' + base
+  const withPrefix = base.startsWith('Sf') ? base : 'Sf' + base
   return withPrefix
 }
 
@@ -150,7 +150,9 @@ for (const file of svgFiles) {
 const dynamicLines = []
 dynamicLines.push('export const sfDynamicIconImports = {')
 for (const { name, compName } of entries) {
+  // Support both dot notation (e.g., 'bolt.fill') and PascalCase (e.g., 'SfBoltFill')
   dynamicLines.push(`  '${name}': () => import('./components/${compName}.jsx'),`)
+  dynamicLines.push(`  '${compName}': () => import('./components/${compName}.jsx'),`)
 }
 dynamicLines.push('};')
 dynamicLines.push('')

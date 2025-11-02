@@ -31,13 +31,13 @@ Props: `fontSize`, `color`, `align` (left/center/right), `fontWeight`, `lineHeig
 Props: `name`, `size`, `color`
 - **IMPORTANT**: Always use prefix for icon names
 - Supports two icon libraries:
-  - **SF Symbols**: Use `sf:` prefix (required). Examples: `"sf:bolt.fill"`, `"sf:star.fill"`, `"sf:calendar"`
-  - **Lucide**: Use `lucide:` prefix (required). Examples: `"lucide:Sun"`, `"lucide:Heart"`, `"lucide:Calendar"`
-- Common SF Symbols: `"sf:cloud.sun.fill"`, `"sf:calendar"`, `"sf:checkmark.circle.fill"`, `"sf:magnifyingglass"`, `"sf:fork.knife"`
-- Common Lucide icons: `"lucide:Sun"`, `"lucide:Moon"`, `"lucide:Heart"`, `"lucide:Star"`, `"lucide:Home"`, `"lucide:User"`, `"lucide:Settings"`, `"lucide:Calendar"`
+  - **SF Symbols**: Use `sf:` prefix (required). Examples: `"sf:SfBoltFill"`, `"sf:SfStarFill"`, `"sf:SfCalendar"`
+  - **Lucide**: Use `lu:` prefix (required). Examples: `"lu:LuSun"`, `"lu:LuHeart"`, `"lu:LuCalendar"`
+- Common SF Symbols: `"sf:SfCloudSunFill"`, `"sf:SfCalendar"`, `"sf:SfCheckmarkCircleFill"`, `"sf:SfMagnifyingglass"`, `"sf:SfForkKnife"`
+- Common Lucide icons: `"lu:LuSun"`, `"lu:LuMoon"`, `"lu:LuHeart"`, `"lu:LuStar"`, `"lu:LuHome"`, `"lu:LuUser"`, `"lu:LuSettings"`, `"lu:LuCalendar"`
 - **Naming formats**:
-  - SF Symbols: lowercase with dots (e.g., `"sf:house.fill"`, `"sf:bolt.fill"`)
-  - Lucide: PascalCase (e.g., `"lucide:ArrowRight"`, `"lucide:ChevronDown"`)
+  - SF Symbols: PascalCase with Sf prefix (e.g., `"sf:SfHouseFill"`, `"sf:SfBoltFill"`)
+  - Lucide: PascalCase with Lu prefix (e.g., `"lu:LuArrowRight"`, `"lu:LuChevronDown"`)
 - Single-color icons support color customization via `color` prop
 - Can have `flex` prop (typically `"none"` for icons)
 
@@ -46,7 +46,7 @@ Props: `icon` (optional), `backgroundColor`, `color`, `borderRadius`, `fontSize`
 Node properties: `width` (optional), `height` (optional), `content` (for text buttons)
 - **IMPORTANT**: Buttons are RARE in widgets - most clickable elements are just icons. Only use Button when there's a clear button with background color and padding
 - Can contain either an icon OR text (not both)
-- **Icon button**: Set `icon` prop using the icon examples above (e.g., `"sf:bolt.fill"`, `"lucide:ArrowRight"`) - do not invent new names
+- **Icon button**: Set `icon` prop using the icon examples above (e.g., `"sf:SfBoltFill"`, `"lu:LuArrowRight"`) - do not invent new names
 - **Text button**: Set `content` with button text
 - **Circular buttons**: Set `borderRadius` to half of the size for circular icon buttons (e.g., `width: 40, height: 40, borderRadius: 20`)
 
@@ -121,7 +121,7 @@ Props: `percentage`, `color`, `backgroundColor`, `size`, `strokeWidth`, `iconNam
 Node properties: `content` (for text display)
 - For displaying circular/radial progress indicators with a single continuous progress value (0-100)
 - Can contain either an icon OR text in the center (not both)
-- **Icon display**: Set `iconName` prop using the icon examples above (e.g., `"sf:checkmark.circle.fill"`, `"lucide:Check"`) - do not invent new names
+- **Icon display**: Set `iconName` prop using the icon examples above (e.g., `"sf:SfCheckmarkCircleFill"`, `"lu:LuCheck"`) - do not invent new names
 - **Text display**: Set `content` with text to show in center (e.g., "75%", "8/10")
 - `percentage`: Progress value from 0-100
 - `size`: Overall diameter of the ring in pixels
@@ -211,9 +211,9 @@ Your output must be valid JSON following this structure:
 4. **Colors**: Use hex format (#RRGGBB or #RGB)
    - Ensure good contrast (e.g., white text on dark backgrounds)
 5. **Icons**:
-   - **ALWAYS use prefix**: `sf:` for SF Symbols, `lucide:` for Lucide
-   - **SF Symbols**: Use `sf:` prefix + lowercase with dots (e.g., `"sf:bolt.fill"`, `"sf:star.fill"`)
-   - **Lucide**: Use `lucide:` prefix + PascalCase (e.g., `"lucide:Sun"`, `"lucide:ArrowRight"`)
+   - **ALWAYS use prefix**: `sf:` for SF Symbols, `lu:` for Lucide
+   - **SF Symbols**: Use `sf:` prefix + PascalCase with Sf prefix (e.g., `"sf:SfBoltFill"`, `"sf:SfStarFill"`)
+   - **Lucide**: Use `lu:` prefix + PascalCase (e.g., `"lu:LuSun"`, `"lu:LuArrowRight"`)
    - Always set `flex: "none"` for icons to prevent stretching
    - Choose icon library based on design style: SF Symbols for iOS-style, Lucide for modern/minimal
 6. **Dimensions (width/height)**:
@@ -284,7 +284,7 @@ Output:
               "props": {
                 "size": 20,
                 "color": "#ffffff",
-                "name": "sf:calendar"
+                "name": "sf:SfCalendar"
               }
             },
             {
@@ -407,6 +407,6 @@ Output:
 - Output **only** valid JSON, no explanations or markdown
 - Ensure all brackets, braces, and quotes are balanced
 - Do not invent data; if text is unclear, use placeholder like "..."
-- **Icon names must include prefix**: `sf:icon.name` or `lucide:IconName`
+- **Icon names must include prefix**: `sf:SfIconName` or `lu:LuIconName`
 - All numeric values should be numbers, not strings
 - Boolean values: `true`/`false` (not strings)

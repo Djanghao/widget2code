@@ -1,7 +1,7 @@
 [
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiAlien.svg",
-    "component_id": "Icon.WiAlien",
+    "src_svg": "wi/WiAlien.svg",
+    "component_id": "wi:WiAlien",
     "aliases": [
       "wi",
       "alien"
@@ -10,8 +10,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiBarometer.svg",
-    "component_id": "Icon.WiBarometer",
+    "src_svg": "wi/WiBarometer.svg",
+    "component_id": "wi:WiBarometer",
     "aliases": [
       "wi",
       "barometer"
@@ -20,8 +20,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiCelsius.svg",
-    "component_id": "Icon.WiCelsius",
+    "src_svg": "wi/WiCelsius.svg",
+    "component_id": "wi:WiCelsius",
     "aliases": [
       "wi",
       "celsius"
@@ -30,8 +30,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiCloud.svg",
-    "component_id": "Icon.WiCloud",
+    "src_svg": "wi/WiCloud.svg",
+    "component_id": "wi:WiCloud",
     "aliases": [
       "wi",
       "cloud"
@@ -40,8 +40,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiCloudDown.svg",
-    "component_id": "Icon.WiCloudDown",
+    "src_svg": "wi/WiCloudDown.svg",
+    "component_id": "wi:WiCloudDown",
     "aliases": [
       "wi",
       "cloud",
@@ -51,8 +51,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiCloudRefresh.svg",
-    "component_id": "Icon.WiCloudRefresh",
+    "src_svg": "wi/WiCloudRefresh.svg",
+    "component_id": "wi:WiCloudRefresh",
     "aliases": [
       "wi",
       "cloud",
@@ -62,8 +62,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiCloudUp.svg",
-    "component_id": "Icon.WiCloudUp",
+    "src_svg": "wi/WiCloudUp.svg",
+    "component_id": "wi:WiCloudUp",
     "aliases": [
       "wi",
       "cloud",
@@ -73,8 +73,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiCloudy.svg",
-    "component_id": "Icon.WiCloudy",
+    "src_svg": "wi/WiCloudy.svg",
+    "component_id": "wi:WiCloudy",
     "aliases": [
       "wi",
       "cloudy"
@@ -83,8 +83,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiCloudyGusts.svg",
-    "component_id": "Icon.WiCloudyGusts",
+    "src_svg": "wi/WiCloudyGusts.svg",
+    "component_id": "wi:WiCloudyGusts",
     "aliases": [
       "wi",
       "cloudy",
@@ -94,8 +94,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiCloudyWindy.svg",
-    "component_id": "Icon.WiCloudyWindy",
+    "src_svg": "wi/WiCloudyWindy.svg",
+    "component_id": "wi:WiCloudyWindy",
     "aliases": [
       "wi",
       "cloudy",
@@ -105,8 +105,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayCloudy.svg",
-    "component_id": "Icon.WiDayCloudy",
+    "src_svg": "wi/WiDayCloudy.svg",
+    "component_id": "wi:WiDayCloudy",
     "aliases": [
       "wi",
       "day",
@@ -116,8 +116,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayCloudyGusts.svg",
-    "component_id": "Icon.WiDayCloudyGusts",
+    "src_svg": "wi/WiDayCloudyGusts.svg",
+    "component_id": "wi:WiDayCloudyGusts",
     "aliases": [
       "wi",
       "day",
@@ -128,8 +128,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayCloudyHigh.svg",
-    "component_id": "Icon.WiDayCloudyHigh",
+    "src_svg": "wi/WiDayCloudyHigh.svg",
+    "component_id": "wi:WiDayCloudyHigh",
     "aliases": [
       "wi",
       "day",
@@ -140,8 +140,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayCloudyWindy.svg",
-    "component_id": "Icon.WiDayCloudyWindy",
+    "src_svg": "wi/WiDayCloudyWindy.svg",
+    "component_id": "wi:WiDayCloudyWindy",
     "aliases": [
       "wi",
       "day",
@@ -152,8 +152,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayFog.svg",
-    "component_id": "Icon.WiDayFog",
+    "src_svg": "wi/WiDayFog.svg",
+    "component_id": "wi:WiDayFog",
     "aliases": [
       "wi",
       "day",
@@ -163,8 +163,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayHail.svg",
-    "component_id": "Icon.WiDayHail",
+    "src_svg": "wi/WiDayHail.svg",
+    "component_id": "wi:WiDayHail",
     "aliases": [
       "wi",
       "day",
@@ -174,8 +174,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayHaze.svg",
-    "component_id": "Icon.WiDayHaze",
+    "src_svg": "wi/WiDayHaze.svg",
+    "component_id": "wi:WiDayHaze",
     "aliases": [
       "wi",
       "day",
@@ -185,8 +185,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayLightWind.svg",
-    "component_id": "Icon.WiDayLightWind",
+    "src_svg": "wi/WiDayLightWind.svg",
+    "component_id": "wi:WiDayLightWind",
     "aliases": [
       "wi",
       "day",
@@ -197,8 +197,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayLightning.svg",
-    "component_id": "Icon.WiDayLightning",
+    "src_svg": "wi/WiDayLightning.svg",
+    "component_id": "wi:WiDayLightning",
     "aliases": [
       "wi",
       "day",
@@ -208,8 +208,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayRain.svg",
-    "component_id": "Icon.WiDayRain",
+    "src_svg": "wi/WiDayRain.svg",
+    "component_id": "wi:WiDayRain",
     "aliases": [
       "wi",
       "day",
@@ -219,8 +219,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayRainMix.svg",
-    "component_id": "Icon.WiDayRainMix",
+    "src_svg": "wi/WiDayRainMix.svg",
+    "component_id": "wi:WiDayRainMix",
     "aliases": [
       "wi",
       "day",
@@ -231,8 +231,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayRainWind.svg",
-    "component_id": "Icon.WiDayRainWind",
+    "src_svg": "wi/WiDayRainWind.svg",
+    "component_id": "wi:WiDayRainWind",
     "aliases": [
       "wi",
       "day",
@@ -243,8 +243,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayShowers.svg",
-    "component_id": "Icon.WiDayShowers",
+    "src_svg": "wi/WiDayShowers.svg",
+    "component_id": "wi:WiDayShowers",
     "aliases": [
       "wi",
       "day",
@@ -254,8 +254,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDaySleet.svg",
-    "component_id": "Icon.WiDaySleet",
+    "src_svg": "wi/WiDaySleet.svg",
+    "component_id": "wi:WiDaySleet",
     "aliases": [
       "wi",
       "day",
@@ -265,8 +265,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDaySleetStorm.svg",
-    "component_id": "Icon.WiDaySleetStorm",
+    "src_svg": "wi/WiDaySleetStorm.svg",
+    "component_id": "wi:WiDaySleetStorm",
     "aliases": [
       "wi",
       "day",
@@ -277,8 +277,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDaySnow.svg",
-    "component_id": "Icon.WiDaySnow",
+    "src_svg": "wi/WiDaySnow.svg",
+    "component_id": "wi:WiDaySnow",
     "aliases": [
       "wi",
       "day",
@@ -288,8 +288,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDaySnowThunderstorm.svg",
-    "component_id": "Icon.WiDaySnowThunderstorm",
+    "src_svg": "wi/WiDaySnowThunderstorm.svg",
+    "component_id": "wi:WiDaySnowThunderstorm",
     "aliases": [
       "wi",
       "day",
@@ -300,8 +300,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDaySnowWind.svg",
-    "component_id": "Icon.WiDaySnowWind",
+    "src_svg": "wi/WiDaySnowWind.svg",
+    "component_id": "wi:WiDaySnowWind",
     "aliases": [
       "wi",
       "day",
@@ -312,8 +312,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDaySprinkle.svg",
-    "component_id": "Icon.WiDaySprinkle",
+    "src_svg": "wi/WiDaySprinkle.svg",
+    "component_id": "wi:WiDaySprinkle",
     "aliases": [
       "wi",
       "day",
@@ -323,8 +323,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayStormShowers.svg",
-    "component_id": "Icon.WiDayStormShowers",
+    "src_svg": "wi/WiDayStormShowers.svg",
+    "component_id": "wi:WiDayStormShowers",
     "aliases": [
       "wi",
       "day",
@@ -335,8 +335,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDaySunny.svg",
-    "component_id": "Icon.WiDaySunny",
+    "src_svg": "wi/WiDaySunny.svg",
+    "component_id": "wi:WiDaySunny",
     "aliases": [
       "wi",
       "day",
@@ -346,8 +346,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDaySunnyOvercast.svg",
-    "component_id": "Icon.WiDaySunnyOvercast",
+    "src_svg": "wi/WiDaySunnyOvercast.svg",
+    "component_id": "wi:WiDaySunnyOvercast",
     "aliases": [
       "wi",
       "day",
@@ -358,8 +358,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayThunderstorm.svg",
-    "component_id": "Icon.WiDayThunderstorm",
+    "src_svg": "wi/WiDayThunderstorm.svg",
+    "component_id": "wi:WiDayThunderstorm",
     "aliases": [
       "wi",
       "day",
@@ -369,8 +369,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDayWindy.svg",
-    "component_id": "Icon.WiDayWindy",
+    "src_svg": "wi/WiDayWindy.svg",
+    "component_id": "wi:WiDayWindy",
     "aliases": [
       "wi",
       "day",
@@ -380,8 +380,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDegrees.svg",
-    "component_id": "Icon.WiDegrees",
+    "src_svg": "wi/WiDegrees.svg",
+    "component_id": "wi:WiDegrees",
     "aliases": [
       "wi",
       "degrees"
@@ -390,8 +390,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDirectionDown.svg",
-    "component_id": "Icon.WiDirectionDown",
+    "src_svg": "wi/WiDirectionDown.svg",
+    "component_id": "wi:WiDirectionDown",
     "aliases": [
       "wi",
       "direction",
@@ -401,8 +401,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDirectionDownLeft.svg",
-    "component_id": "Icon.WiDirectionDownLeft",
+    "src_svg": "wi/WiDirectionDownLeft.svg",
+    "component_id": "wi:WiDirectionDownLeft",
     "aliases": [
       "wi",
       "direction",
@@ -413,8 +413,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDirectionDownRight.svg",
-    "component_id": "Icon.WiDirectionDownRight",
+    "src_svg": "wi/WiDirectionDownRight.svg",
+    "component_id": "wi:WiDirectionDownRight",
     "aliases": [
       "wi",
       "direction",
@@ -425,8 +425,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDirectionLeft.svg",
-    "component_id": "Icon.WiDirectionLeft",
+    "src_svg": "wi/WiDirectionLeft.svg",
+    "component_id": "wi:WiDirectionLeft",
     "aliases": [
       "wi",
       "direction",
@@ -436,8 +436,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDirectionRight.svg",
-    "component_id": "Icon.WiDirectionRight",
+    "src_svg": "wi/WiDirectionRight.svg",
+    "component_id": "wi:WiDirectionRight",
     "aliases": [
       "wi",
       "direction",
@@ -447,8 +447,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDirectionUp.svg",
-    "component_id": "Icon.WiDirectionUp",
+    "src_svg": "wi/WiDirectionUp.svg",
+    "component_id": "wi:WiDirectionUp",
     "aliases": [
       "wi",
       "direction",
@@ -458,8 +458,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDirectionUpLeft.svg",
-    "component_id": "Icon.WiDirectionUpLeft",
+    "src_svg": "wi/WiDirectionUpLeft.svg",
+    "component_id": "wi:WiDirectionUpLeft",
     "aliases": [
       "wi",
       "direction",
@@ -470,8 +470,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDirectionUpRight.svg",
-    "component_id": "Icon.WiDirectionUpRight",
+    "src_svg": "wi/WiDirectionUpRight.svg",
+    "component_id": "wi:WiDirectionUpRight",
     "aliases": [
       "wi",
       "direction",
@@ -482,8 +482,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiDust.svg",
-    "component_id": "Icon.WiDust",
+    "src_svg": "wi/WiDust.svg",
+    "component_id": "wi:WiDust",
     "aliases": [
       "wi",
       "dust"
@@ -492,8 +492,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiEarthquake.svg",
-    "component_id": "Icon.WiEarthquake",
+    "src_svg": "wi/WiEarthquake.svg",
+    "component_id": "wi:WiEarthquake",
     "aliases": [
       "wi",
       "earthquake"
@@ -502,8 +502,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiFahrenheit.svg",
-    "component_id": "Icon.WiFahrenheit",
+    "src_svg": "wi/WiFahrenheit.svg",
+    "component_id": "wi:WiFahrenheit",
     "aliases": [
       "wi",
       "fahrenheit"
@@ -512,8 +512,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiFire.svg",
-    "component_id": "Icon.WiFire",
+    "src_svg": "wi/WiFire.svg",
+    "component_id": "wi:WiFire",
     "aliases": [
       "wi",
       "fire"
@@ -522,8 +522,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiFlood.svg",
-    "component_id": "Icon.WiFlood",
+    "src_svg": "wi/WiFlood.svg",
+    "component_id": "wi:WiFlood",
     "aliases": [
       "wi",
       "flood"
@@ -532,8 +532,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiFog.svg",
-    "component_id": "Icon.WiFog",
+    "src_svg": "wi/WiFog.svg",
+    "component_id": "wi:WiFog",
     "aliases": [
       "wi",
       "fog"
@@ -542,8 +542,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiGaleWarning.svg",
-    "component_id": "Icon.WiGaleWarning",
+    "src_svg": "wi/WiGaleWarning.svg",
+    "component_id": "wi:WiGaleWarning",
     "aliases": [
       "wi",
       "gale",
@@ -553,8 +553,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiHail.svg",
-    "component_id": "Icon.WiHail",
+    "src_svg": "wi/WiHail.svg",
+    "component_id": "wi:WiHail",
     "aliases": [
       "wi",
       "hail"
@@ -563,8 +563,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiHorizon.svg",
-    "component_id": "Icon.WiHorizon",
+    "src_svg": "wi/WiHorizon.svg",
+    "component_id": "wi:WiHorizon",
     "aliases": [
       "wi",
       "horizon"
@@ -573,8 +573,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiHorizonAlt.svg",
-    "component_id": "Icon.WiHorizonAlt",
+    "src_svg": "wi/WiHorizonAlt.svg",
+    "component_id": "wi:WiHorizonAlt",
     "aliases": [
       "wi",
       "horizon",
@@ -584,8 +584,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiHot.svg",
-    "component_id": "Icon.WiHot",
+    "src_svg": "wi/WiHot.svg",
+    "component_id": "wi:WiHot",
     "aliases": [
       "wi",
       "hot"
@@ -594,8 +594,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiHumidity.svg",
-    "component_id": "Icon.WiHumidity",
+    "src_svg": "wi/WiHumidity.svg",
+    "component_id": "wi:WiHumidity",
     "aliases": [
       "wi",
       "humidity"
@@ -604,8 +604,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiHurricane.svg",
-    "component_id": "Icon.WiHurricane",
+    "src_svg": "wi/WiHurricane.svg",
+    "component_id": "wi:WiHurricane",
     "aliases": [
       "wi",
       "hurricane"
@@ -614,8 +614,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiHurricaneWarning.svg",
-    "component_id": "Icon.WiHurricaneWarning",
+    "src_svg": "wi/WiHurricaneWarning.svg",
+    "component_id": "wi:WiHurricaneWarning",
     "aliases": [
       "wi",
       "hurricane",
@@ -625,8 +625,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiLightning.svg",
-    "component_id": "Icon.WiLightning",
+    "src_svg": "wi/WiLightning.svg",
+    "component_id": "wi:WiLightning",
     "aliases": [
       "wi",
       "lightning"
@@ -635,8 +635,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiLunarEclipse.svg",
-    "component_id": "Icon.WiLunarEclipse",
+    "src_svg": "wi/WiLunarEclipse.svg",
+    "component_id": "wi:WiLunarEclipse",
     "aliases": [
       "wi",
       "lunar",
@@ -646,8 +646,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMeteor.svg",
-    "component_id": "Icon.WiMeteor",
+    "src_svg": "wi/WiMeteor.svg",
+    "component_id": "wi:WiMeteor",
     "aliases": [
       "wi",
       "meteor"
@@ -656,8 +656,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltFirstQuarter.svg",
-    "component_id": "Icon.WiMoonAltFirstQuarter",
+    "src_svg": "wi/WiMoonAltFirstQuarter.svg",
+    "component_id": "wi:WiMoonAltFirstQuarter",
     "aliases": [
       "wi",
       "moon",
@@ -669,8 +669,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltFull.svg",
-    "component_id": "Icon.WiMoonAltFull",
+    "src_svg": "wi/WiMoonAltFull.svg",
+    "component_id": "wi:WiMoonAltFull",
     "aliases": [
       "wi",
       "moon",
@@ -681,8 +681,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltNew.svg",
-    "component_id": "Icon.WiMoonAltNew",
+    "src_svg": "wi/WiMoonAltNew.svg",
+    "component_id": "wi:WiMoonAltNew",
     "aliases": [
       "wi",
       "moon",
@@ -693,8 +693,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltThirdQuarter.svg",
-    "component_id": "Icon.WiMoonAltThirdQuarter",
+    "src_svg": "wi/WiMoonAltThirdQuarter.svg",
+    "component_id": "wi:WiMoonAltThirdQuarter",
     "aliases": [
       "wi",
       "moon",
@@ -706,8 +706,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent1.svg",
-    "component_id": "Icon.WiMoonAltWaningCrescent1",
+    "src_svg": "wi/WiMoonAltWaningCrescent1.svg",
+    "component_id": "wi:WiMoonAltWaningCrescent1",
     "aliases": [
       "wi",
       "moon",
@@ -720,8 +720,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent2.svg",
-    "component_id": "Icon.WiMoonAltWaningCrescent2",
+    "src_svg": "wi/WiMoonAltWaningCrescent2.svg",
+    "component_id": "wi:WiMoonAltWaningCrescent2",
     "aliases": [
       "wi",
       "moon",
@@ -734,8 +734,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent3.svg",
-    "component_id": "Icon.WiMoonAltWaningCrescent3",
+    "src_svg": "wi/WiMoonAltWaningCrescent3.svg",
+    "component_id": "wi:WiMoonAltWaningCrescent3",
     "aliases": [
       "wi",
       "moon",
@@ -748,8 +748,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent4.svg",
-    "component_id": "Icon.WiMoonAltWaningCrescent4",
+    "src_svg": "wi/WiMoonAltWaningCrescent4.svg",
+    "component_id": "wi:WiMoonAltWaningCrescent4",
     "aliases": [
       "wi",
       "moon",
@@ -762,8 +762,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent5.svg",
-    "component_id": "Icon.WiMoonAltWaningCrescent5",
+    "src_svg": "wi/WiMoonAltWaningCrescent5.svg",
+    "component_id": "wi:WiMoonAltWaningCrescent5",
     "aliases": [
       "wi",
       "moon",
@@ -776,8 +776,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningCrescent6.svg",
-    "component_id": "Icon.WiMoonAltWaningCrescent6",
+    "src_svg": "wi/WiMoonAltWaningCrescent6.svg",
+    "component_id": "wi:WiMoonAltWaningCrescent6",
     "aliases": [
       "wi",
       "moon",
@@ -790,8 +790,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous1.svg",
-    "component_id": "Icon.WiMoonAltWaningGibbous1",
+    "src_svg": "wi/WiMoonAltWaningGibbous1.svg",
+    "component_id": "wi:WiMoonAltWaningGibbous1",
     "aliases": [
       "wi",
       "moon",
@@ -804,8 +804,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous2.svg",
-    "component_id": "Icon.WiMoonAltWaningGibbous2",
+    "src_svg": "wi/WiMoonAltWaningGibbous2.svg",
+    "component_id": "wi:WiMoonAltWaningGibbous2",
     "aliases": [
       "wi",
       "moon",
@@ -818,8 +818,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous3.svg",
-    "component_id": "Icon.WiMoonAltWaningGibbous3",
+    "src_svg": "wi/WiMoonAltWaningGibbous3.svg",
+    "component_id": "wi:WiMoonAltWaningGibbous3",
     "aliases": [
       "wi",
       "moon",
@@ -832,8 +832,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous4.svg",
-    "component_id": "Icon.WiMoonAltWaningGibbous4",
+    "src_svg": "wi/WiMoonAltWaningGibbous4.svg",
+    "component_id": "wi:WiMoonAltWaningGibbous4",
     "aliases": [
       "wi",
       "moon",
@@ -846,8 +846,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous5.svg",
-    "component_id": "Icon.WiMoonAltWaningGibbous5",
+    "src_svg": "wi/WiMoonAltWaningGibbous5.svg",
+    "component_id": "wi:WiMoonAltWaningGibbous5",
     "aliases": [
       "wi",
       "moon",
@@ -860,8 +860,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaningGibbous6.svg",
-    "component_id": "Icon.WiMoonAltWaningGibbous6",
+    "src_svg": "wi/WiMoonAltWaningGibbous6.svg",
+    "component_id": "wi:WiMoonAltWaningGibbous6",
     "aliases": [
       "wi",
       "moon",
@@ -874,8 +874,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent1.svg",
-    "component_id": "Icon.WiMoonAltWaxingCrescent1",
+    "src_svg": "wi/WiMoonAltWaxingCrescent1.svg",
+    "component_id": "wi:WiMoonAltWaxingCrescent1",
     "aliases": [
       "wi",
       "moon",
@@ -888,8 +888,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent2.svg",
-    "component_id": "Icon.WiMoonAltWaxingCrescent2",
+    "src_svg": "wi/WiMoonAltWaxingCrescent2.svg",
+    "component_id": "wi:WiMoonAltWaxingCrescent2",
     "aliases": [
       "wi",
       "moon",
@@ -902,8 +902,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent3.svg",
-    "component_id": "Icon.WiMoonAltWaxingCrescent3",
+    "src_svg": "wi/WiMoonAltWaxingCrescent3.svg",
+    "component_id": "wi:WiMoonAltWaxingCrescent3",
     "aliases": [
       "wi",
       "moon",
@@ -916,8 +916,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent4.svg",
-    "component_id": "Icon.WiMoonAltWaxingCrescent4",
+    "src_svg": "wi/WiMoonAltWaxingCrescent4.svg",
+    "component_id": "wi:WiMoonAltWaxingCrescent4",
     "aliases": [
       "wi",
       "moon",
@@ -930,8 +930,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent5.svg",
-    "component_id": "Icon.WiMoonAltWaxingCrescent5",
+    "src_svg": "wi/WiMoonAltWaxingCrescent5.svg",
+    "component_id": "wi:WiMoonAltWaxingCrescent5",
     "aliases": [
       "wi",
       "moon",
@@ -944,8 +944,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingCrescent6.svg",
-    "component_id": "Icon.WiMoonAltWaxingCrescent6",
+    "src_svg": "wi/WiMoonAltWaxingCrescent6.svg",
+    "component_id": "wi:WiMoonAltWaxingCrescent6",
     "aliases": [
       "wi",
       "moon",
@@ -958,8 +958,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous1.svg",
-    "component_id": "Icon.WiMoonAltWaxingGibbous1",
+    "src_svg": "wi/WiMoonAltWaxingGibbous1.svg",
+    "component_id": "wi:WiMoonAltWaxingGibbous1",
     "aliases": [
       "wi",
       "moon",
@@ -972,8 +972,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous2.svg",
-    "component_id": "Icon.WiMoonAltWaxingGibbous2",
+    "src_svg": "wi/WiMoonAltWaxingGibbous2.svg",
+    "component_id": "wi:WiMoonAltWaxingGibbous2",
     "aliases": [
       "wi",
       "moon",
@@ -986,8 +986,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous3.svg",
-    "component_id": "Icon.WiMoonAltWaxingGibbous3",
+    "src_svg": "wi/WiMoonAltWaxingGibbous3.svg",
+    "component_id": "wi:WiMoonAltWaxingGibbous3",
     "aliases": [
       "wi",
       "moon",
@@ -1000,8 +1000,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous4.svg",
-    "component_id": "Icon.WiMoonAltWaxingGibbous4",
+    "src_svg": "wi/WiMoonAltWaxingGibbous4.svg",
+    "component_id": "wi:WiMoonAltWaxingGibbous4",
     "aliases": [
       "wi",
       "moon",
@@ -1014,8 +1014,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous5.svg",
-    "component_id": "Icon.WiMoonAltWaxingGibbous5",
+    "src_svg": "wi/WiMoonAltWaxingGibbous5.svg",
+    "component_id": "wi:WiMoonAltWaxingGibbous5",
     "aliases": [
       "wi",
       "moon",
@@ -1028,8 +1028,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonAltWaxingGibbous6.svg",
-    "component_id": "Icon.WiMoonAltWaxingGibbous6",
+    "src_svg": "wi/WiMoonAltWaxingGibbous6.svg",
+    "component_id": "wi:WiMoonAltWaxingGibbous6",
     "aliases": [
       "wi",
       "moon",
@@ -1042,8 +1042,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonFirstQuarter.svg",
-    "component_id": "Icon.WiMoonFirstQuarter",
+    "src_svg": "wi/WiMoonFirstQuarter.svg",
+    "component_id": "wi:WiMoonFirstQuarter",
     "aliases": [
       "wi",
       "moon",
@@ -1054,8 +1054,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonFull.svg",
-    "component_id": "Icon.WiMoonFull",
+    "src_svg": "wi/WiMoonFull.svg",
+    "component_id": "wi:WiMoonFull",
     "aliases": [
       "wi",
       "moon",
@@ -1065,8 +1065,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonNew.svg",
-    "component_id": "Icon.WiMoonNew",
+    "src_svg": "wi/WiMoonNew.svg",
+    "component_id": "wi:WiMoonNew",
     "aliases": [
       "wi",
       "moon",
@@ -1076,8 +1076,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonThirdQuarter.svg",
-    "component_id": "Icon.WiMoonThirdQuarter",
+    "src_svg": "wi/WiMoonThirdQuarter.svg",
+    "component_id": "wi:WiMoonThirdQuarter",
     "aliases": [
       "wi",
       "moon",
@@ -1088,8 +1088,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent1.svg",
-    "component_id": "Icon.WiMoonWaningCrescent1",
+    "src_svg": "wi/WiMoonWaningCrescent1.svg",
+    "component_id": "wi:WiMoonWaningCrescent1",
     "aliases": [
       "wi",
       "moon",
@@ -1101,8 +1101,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent2.svg",
-    "component_id": "Icon.WiMoonWaningCrescent2",
+    "src_svg": "wi/WiMoonWaningCrescent2.svg",
+    "component_id": "wi:WiMoonWaningCrescent2",
     "aliases": [
       "wi",
       "moon",
@@ -1114,8 +1114,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent3.svg",
-    "component_id": "Icon.WiMoonWaningCrescent3",
+    "src_svg": "wi/WiMoonWaningCrescent3.svg",
+    "component_id": "wi:WiMoonWaningCrescent3",
     "aliases": [
       "wi",
       "moon",
@@ -1127,8 +1127,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent4.svg",
-    "component_id": "Icon.WiMoonWaningCrescent4",
+    "src_svg": "wi/WiMoonWaningCrescent4.svg",
+    "component_id": "wi:WiMoonWaningCrescent4",
     "aliases": [
       "wi",
       "moon",
@@ -1140,8 +1140,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent5.svg",
-    "component_id": "Icon.WiMoonWaningCrescent5",
+    "src_svg": "wi/WiMoonWaningCrescent5.svg",
+    "component_id": "wi:WiMoonWaningCrescent5",
     "aliases": [
       "wi",
       "moon",
@@ -1153,8 +1153,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningCrescent6.svg",
-    "component_id": "Icon.WiMoonWaningCrescent6",
+    "src_svg": "wi/WiMoonWaningCrescent6.svg",
+    "component_id": "wi:WiMoonWaningCrescent6",
     "aliases": [
       "wi",
       "moon",
@@ -1166,8 +1166,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous1.svg",
-    "component_id": "Icon.WiMoonWaningGibbous1",
+    "src_svg": "wi/WiMoonWaningGibbous1.svg",
+    "component_id": "wi:WiMoonWaningGibbous1",
     "aliases": [
       "wi",
       "moon",
@@ -1179,8 +1179,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous2.svg",
-    "component_id": "Icon.WiMoonWaningGibbous2",
+    "src_svg": "wi/WiMoonWaningGibbous2.svg",
+    "component_id": "wi:WiMoonWaningGibbous2",
     "aliases": [
       "wi",
       "moon",
@@ -1192,8 +1192,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous3.svg",
-    "component_id": "Icon.WiMoonWaningGibbous3",
+    "src_svg": "wi/WiMoonWaningGibbous3.svg",
+    "component_id": "wi:WiMoonWaningGibbous3",
     "aliases": [
       "wi",
       "moon",
@@ -1205,8 +1205,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous4.svg",
-    "component_id": "Icon.WiMoonWaningGibbous4",
+    "src_svg": "wi/WiMoonWaningGibbous4.svg",
+    "component_id": "wi:WiMoonWaningGibbous4",
     "aliases": [
       "wi",
       "moon",
@@ -1218,8 +1218,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous5.svg",
-    "component_id": "Icon.WiMoonWaningGibbous5",
+    "src_svg": "wi/WiMoonWaningGibbous5.svg",
+    "component_id": "wi:WiMoonWaningGibbous5",
     "aliases": [
       "wi",
       "moon",
@@ -1231,8 +1231,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaningGibbous6.svg",
-    "component_id": "Icon.WiMoonWaningGibbous6",
+    "src_svg": "wi/WiMoonWaningGibbous6.svg",
+    "component_id": "wi:WiMoonWaningGibbous6",
     "aliases": [
       "wi",
       "moon",
@@ -1244,8 +1244,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxing6.svg",
-    "component_id": "Icon.WiMoonWaxing6",
+    "src_svg": "wi/WiMoonWaxing6.svg",
+    "component_id": "wi:WiMoonWaxing6",
     "aliases": [
       "wi",
       "moon",
@@ -1256,8 +1256,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingCrescent1.svg",
-    "component_id": "Icon.WiMoonWaxingCrescent1",
+    "src_svg": "wi/WiMoonWaxingCrescent1.svg",
+    "component_id": "wi:WiMoonWaxingCrescent1",
     "aliases": [
       "wi",
       "moon",
@@ -1269,8 +1269,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingCrescent2.svg",
-    "component_id": "Icon.WiMoonWaxingCrescent2",
+    "src_svg": "wi/WiMoonWaxingCrescent2.svg",
+    "component_id": "wi:WiMoonWaxingCrescent2",
     "aliases": [
       "wi",
       "moon",
@@ -1282,8 +1282,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingCrescent3.svg",
-    "component_id": "Icon.WiMoonWaxingCrescent3",
+    "src_svg": "wi/WiMoonWaxingCrescent3.svg",
+    "component_id": "wi:WiMoonWaxingCrescent3",
     "aliases": [
       "wi",
       "moon",
@@ -1295,8 +1295,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingCrescent4.svg",
-    "component_id": "Icon.WiMoonWaxingCrescent4",
+    "src_svg": "wi/WiMoonWaxingCrescent4.svg",
+    "component_id": "wi:WiMoonWaxingCrescent4",
     "aliases": [
       "wi",
       "moon",
@@ -1308,8 +1308,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingCrescent5.svg",
-    "component_id": "Icon.WiMoonWaxingCrescent5",
+    "src_svg": "wi/WiMoonWaxingCrescent5.svg",
+    "component_id": "wi:WiMoonWaxingCrescent5",
     "aliases": [
       "wi",
       "moon",
@@ -1321,8 +1321,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous1.svg",
-    "component_id": "Icon.WiMoonWaxingGibbous1",
+    "src_svg": "wi/WiMoonWaxingGibbous1.svg",
+    "component_id": "wi:WiMoonWaxingGibbous1",
     "aliases": [
       "wi",
       "moon",
@@ -1334,8 +1334,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous2.svg",
-    "component_id": "Icon.WiMoonWaxingGibbous2",
+    "src_svg": "wi/WiMoonWaxingGibbous2.svg",
+    "component_id": "wi:WiMoonWaxingGibbous2",
     "aliases": [
       "wi",
       "moon",
@@ -1347,8 +1347,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous3.svg",
-    "component_id": "Icon.WiMoonWaxingGibbous3",
+    "src_svg": "wi/WiMoonWaxingGibbous3.svg",
+    "component_id": "wi:WiMoonWaxingGibbous3",
     "aliases": [
       "wi",
       "moon",
@@ -1360,8 +1360,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous4.svg",
-    "component_id": "Icon.WiMoonWaxingGibbous4",
+    "src_svg": "wi/WiMoonWaxingGibbous4.svg",
+    "component_id": "wi:WiMoonWaxingGibbous4",
     "aliases": [
       "wi",
       "moon",
@@ -1373,8 +1373,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous5.svg",
-    "component_id": "Icon.WiMoonWaxingGibbous5",
+    "src_svg": "wi/WiMoonWaxingGibbous5.svg",
+    "component_id": "wi:WiMoonWaxingGibbous5",
     "aliases": [
       "wi",
       "moon",
@@ -1386,8 +1386,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonWaxingGibbous6.svg",
-    "component_id": "Icon.WiMoonWaxingGibbous6",
+    "src_svg": "wi/WiMoonWaxingGibbous6.svg",
+    "component_id": "wi:WiMoonWaxingGibbous6",
     "aliases": [
       "wi",
       "moon",
@@ -1399,8 +1399,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonrise.svg",
-    "component_id": "Icon.WiMoonrise",
+    "src_svg": "wi/WiMoonrise.svg",
+    "component_id": "wi:WiMoonrise",
     "aliases": [
       "wi",
       "moonrise"
@@ -1409,8 +1409,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiMoonset.svg",
-    "component_id": "Icon.WiMoonset",
+    "src_svg": "wi/WiMoonset.svg",
+    "component_id": "wi:WiMoonset",
     "aliases": [
       "wi",
       "moonset"
@@ -1419,8 +1419,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNa.svg",
-    "component_id": "Icon.WiNa",
+    "src_svg": "wi/WiNa.svg",
+    "component_id": "wi:WiNa",
     "aliases": [
       "wi",
       "na"
@@ -1429,8 +1429,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltCloudy.svg",
-    "component_id": "Icon.WiNightAltCloudy",
+    "src_svg": "wi/WiNightAltCloudy.svg",
+    "component_id": "wi:WiNightAltCloudy",
     "aliases": [
       "wi",
       "night",
@@ -1441,8 +1441,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltCloudyGusts.svg",
-    "component_id": "Icon.WiNightAltCloudyGusts",
+    "src_svg": "wi/WiNightAltCloudyGusts.svg",
+    "component_id": "wi:WiNightAltCloudyGusts",
     "aliases": [
       "wi",
       "night",
@@ -1454,8 +1454,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltCloudyHigh.svg",
-    "component_id": "Icon.WiNightAltCloudyHigh",
+    "src_svg": "wi/WiNightAltCloudyHigh.svg",
+    "component_id": "wi:WiNightAltCloudyHigh",
     "aliases": [
       "wi",
       "night",
@@ -1467,8 +1467,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltCloudyWindy.svg",
-    "component_id": "Icon.WiNightAltCloudyWindy",
+    "src_svg": "wi/WiNightAltCloudyWindy.svg",
+    "component_id": "wi:WiNightAltCloudyWindy",
     "aliases": [
       "wi",
       "night",
@@ -1480,8 +1480,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltHail.svg",
-    "component_id": "Icon.WiNightAltHail",
+    "src_svg": "wi/WiNightAltHail.svg",
+    "component_id": "wi:WiNightAltHail",
     "aliases": [
       "wi",
       "night",
@@ -1492,8 +1492,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltLightning.svg",
-    "component_id": "Icon.WiNightAltLightning",
+    "src_svg": "wi/WiNightAltLightning.svg",
+    "component_id": "wi:WiNightAltLightning",
     "aliases": [
       "wi",
       "night",
@@ -1504,8 +1504,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltPartlyCloudy.svg",
-    "component_id": "Icon.WiNightAltPartlyCloudy",
+    "src_svg": "wi/WiNightAltPartlyCloudy.svg",
+    "component_id": "wi:WiNightAltPartlyCloudy",
     "aliases": [
       "wi",
       "night",
@@ -1517,8 +1517,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltRain.svg",
-    "component_id": "Icon.WiNightAltRain",
+    "src_svg": "wi/WiNightAltRain.svg",
+    "component_id": "wi:WiNightAltRain",
     "aliases": [
       "wi",
       "night",
@@ -1529,8 +1529,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltRainMix.svg",
-    "component_id": "Icon.WiNightAltRainMix",
+    "src_svg": "wi/WiNightAltRainMix.svg",
+    "component_id": "wi:WiNightAltRainMix",
     "aliases": [
       "wi",
       "night",
@@ -1542,8 +1542,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltRainWind.svg",
-    "component_id": "Icon.WiNightAltRainWind",
+    "src_svg": "wi/WiNightAltRainWind.svg",
+    "component_id": "wi:WiNightAltRainWind",
     "aliases": [
       "wi",
       "night",
@@ -1555,8 +1555,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltShowers.svg",
-    "component_id": "Icon.WiNightAltShowers",
+    "src_svg": "wi/WiNightAltShowers.svg",
+    "component_id": "wi:WiNightAltShowers",
     "aliases": [
       "wi",
       "night",
@@ -1567,8 +1567,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltSleet.svg",
-    "component_id": "Icon.WiNightAltSleet",
+    "src_svg": "wi/WiNightAltSleet.svg",
+    "component_id": "wi:WiNightAltSleet",
     "aliases": [
       "wi",
       "night",
@@ -1579,8 +1579,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltSleetStorm.svg",
-    "component_id": "Icon.WiNightAltSleetStorm",
+    "src_svg": "wi/WiNightAltSleetStorm.svg",
+    "component_id": "wi:WiNightAltSleetStorm",
     "aliases": [
       "wi",
       "night",
@@ -1592,8 +1592,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltSnow.svg",
-    "component_id": "Icon.WiNightAltSnow",
+    "src_svg": "wi/WiNightAltSnow.svg",
+    "component_id": "wi:WiNightAltSnow",
     "aliases": [
       "wi",
       "night",
@@ -1604,8 +1604,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltSnowThunderstorm.svg",
-    "component_id": "Icon.WiNightAltSnowThunderstorm",
+    "src_svg": "wi/WiNightAltSnowThunderstorm.svg",
+    "component_id": "wi:WiNightAltSnowThunderstorm",
     "aliases": [
       "wi",
       "night",
@@ -1617,8 +1617,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltSnowWind.svg",
-    "component_id": "Icon.WiNightAltSnowWind",
+    "src_svg": "wi/WiNightAltSnowWind.svg",
+    "component_id": "wi:WiNightAltSnowWind",
     "aliases": [
       "wi",
       "night",
@@ -1630,8 +1630,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltSprinkle.svg",
-    "component_id": "Icon.WiNightAltSprinkle",
+    "src_svg": "wi/WiNightAltSprinkle.svg",
+    "component_id": "wi:WiNightAltSprinkle",
     "aliases": [
       "wi",
       "night",
@@ -1642,8 +1642,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltStormShowers.svg",
-    "component_id": "Icon.WiNightAltStormShowers",
+    "src_svg": "wi/WiNightAltStormShowers.svg",
+    "component_id": "wi:WiNightAltStormShowers",
     "aliases": [
       "wi",
       "night",
@@ -1655,8 +1655,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightAltThunderstorm.svg",
-    "component_id": "Icon.WiNightAltThunderstorm",
+    "src_svg": "wi/WiNightAltThunderstorm.svg",
+    "component_id": "wi:WiNightAltThunderstorm",
     "aliases": [
       "wi",
       "night",
@@ -1667,8 +1667,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightClear.svg",
-    "component_id": "Icon.WiNightClear",
+    "src_svg": "wi/WiNightClear.svg",
+    "component_id": "wi:WiNightClear",
     "aliases": [
       "wi",
       "night",
@@ -1678,8 +1678,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightCloudy.svg",
-    "component_id": "Icon.WiNightCloudy",
+    "src_svg": "wi/WiNightCloudy.svg",
+    "component_id": "wi:WiNightCloudy",
     "aliases": [
       "wi",
       "night",
@@ -1689,8 +1689,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightCloudyGusts.svg",
-    "component_id": "Icon.WiNightCloudyGusts",
+    "src_svg": "wi/WiNightCloudyGusts.svg",
+    "component_id": "wi:WiNightCloudyGusts",
     "aliases": [
       "wi",
       "night",
@@ -1701,8 +1701,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightCloudyHigh.svg",
-    "component_id": "Icon.WiNightCloudyHigh",
+    "src_svg": "wi/WiNightCloudyHigh.svg",
+    "component_id": "wi:WiNightCloudyHigh",
     "aliases": [
       "wi",
       "night",
@@ -1713,8 +1713,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightCloudyWindy.svg",
-    "component_id": "Icon.WiNightCloudyWindy",
+    "src_svg": "wi/WiNightCloudyWindy.svg",
+    "component_id": "wi:WiNightCloudyWindy",
     "aliases": [
       "wi",
       "night",
@@ -1725,8 +1725,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightFog.svg",
-    "component_id": "Icon.WiNightFog",
+    "src_svg": "wi/WiNightFog.svg",
+    "component_id": "wi:WiNightFog",
     "aliases": [
       "wi",
       "night",
@@ -1736,8 +1736,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightHail.svg",
-    "component_id": "Icon.WiNightHail",
+    "src_svg": "wi/WiNightHail.svg",
+    "component_id": "wi:WiNightHail",
     "aliases": [
       "wi",
       "night",
@@ -1747,8 +1747,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightLightning.svg",
-    "component_id": "Icon.WiNightLightning",
+    "src_svg": "wi/WiNightLightning.svg",
+    "component_id": "wi:WiNightLightning",
     "aliases": [
       "wi",
       "night",
@@ -1758,8 +1758,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightPartlyCloudy.svg",
-    "component_id": "Icon.WiNightPartlyCloudy",
+    "src_svg": "wi/WiNightPartlyCloudy.svg",
+    "component_id": "wi:WiNightPartlyCloudy",
     "aliases": [
       "wi",
       "night",
@@ -1770,8 +1770,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightRain.svg",
-    "component_id": "Icon.WiNightRain",
+    "src_svg": "wi/WiNightRain.svg",
+    "component_id": "wi:WiNightRain",
     "aliases": [
       "wi",
       "night",
@@ -1781,8 +1781,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightRainMix.svg",
-    "component_id": "Icon.WiNightRainMix",
+    "src_svg": "wi/WiNightRainMix.svg",
+    "component_id": "wi:WiNightRainMix",
     "aliases": [
       "wi",
       "night",
@@ -1793,8 +1793,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightRainWind.svg",
-    "component_id": "Icon.WiNightRainWind",
+    "src_svg": "wi/WiNightRainWind.svg",
+    "component_id": "wi:WiNightRainWind",
     "aliases": [
       "wi",
       "night",
@@ -1805,8 +1805,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightShowers.svg",
-    "component_id": "Icon.WiNightShowers",
+    "src_svg": "wi/WiNightShowers.svg",
+    "component_id": "wi:WiNightShowers",
     "aliases": [
       "wi",
       "night",
@@ -1816,8 +1816,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightSleet.svg",
-    "component_id": "Icon.WiNightSleet",
+    "src_svg": "wi/WiNightSleet.svg",
+    "component_id": "wi:WiNightSleet",
     "aliases": [
       "wi",
       "night",
@@ -1827,8 +1827,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightSleetStorm.svg",
-    "component_id": "Icon.WiNightSleetStorm",
+    "src_svg": "wi/WiNightSleetStorm.svg",
+    "component_id": "wi:WiNightSleetStorm",
     "aliases": [
       "wi",
       "night",
@@ -1839,8 +1839,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightSnow.svg",
-    "component_id": "Icon.WiNightSnow",
+    "src_svg": "wi/WiNightSnow.svg",
+    "component_id": "wi:WiNightSnow",
     "aliases": [
       "wi",
       "night",
@@ -1850,8 +1850,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightSnowThunderstorm.svg",
-    "component_id": "Icon.WiNightSnowThunderstorm",
+    "src_svg": "wi/WiNightSnowThunderstorm.svg",
+    "component_id": "wi:WiNightSnowThunderstorm",
     "aliases": [
       "wi",
       "night",
@@ -1862,8 +1862,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightSnowWind.svg",
-    "component_id": "Icon.WiNightSnowWind",
+    "src_svg": "wi/WiNightSnowWind.svg",
+    "component_id": "wi:WiNightSnowWind",
     "aliases": [
       "wi",
       "night",
@@ -1874,8 +1874,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightSprinkle.svg",
-    "component_id": "Icon.WiNightSprinkle",
+    "src_svg": "wi/WiNightSprinkle.svg",
+    "component_id": "wi:WiNightSprinkle",
     "aliases": [
       "wi",
       "night",
@@ -1885,8 +1885,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightStormShowers.svg",
-    "component_id": "Icon.WiNightStormShowers",
+    "src_svg": "wi/WiNightStormShowers.svg",
+    "component_id": "wi:WiNightStormShowers",
     "aliases": [
       "wi",
       "night",
@@ -1897,8 +1897,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiNightThunderstorm.svg",
-    "component_id": "Icon.WiNightThunderstorm",
+    "src_svg": "wi/WiNightThunderstorm.svg",
+    "component_id": "wi:WiNightThunderstorm",
     "aliases": [
       "wi",
       "night",
@@ -1908,8 +1908,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiRain.svg",
-    "component_id": "Icon.WiRain",
+    "src_svg": "wi/WiRain.svg",
+    "component_id": "wi:WiRain",
     "aliases": [
       "wi",
       "rain"
@@ -1918,8 +1918,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiRainMix.svg",
-    "component_id": "Icon.WiRainMix",
+    "src_svg": "wi/WiRainMix.svg",
+    "component_id": "wi:WiRainMix",
     "aliases": [
       "wi",
       "rain",
@@ -1929,8 +1929,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiRainWind.svg",
-    "component_id": "Icon.WiRainWind",
+    "src_svg": "wi/WiRainWind.svg",
+    "component_id": "wi:WiRainWind",
     "aliases": [
       "wi",
       "rain",
@@ -1940,8 +1940,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiRaindrop.svg",
-    "component_id": "Icon.WiRaindrop",
+    "src_svg": "wi/WiRaindrop.svg",
+    "component_id": "wi:WiRaindrop",
     "aliases": [
       "wi",
       "raindrop"
@@ -1950,8 +1950,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiRaindrops.svg",
-    "component_id": "Icon.WiRaindrops",
+    "src_svg": "wi/WiRaindrops.svg",
+    "component_id": "wi:WiRaindrops",
     "aliases": [
       "wi",
       "raindrops"
@@ -1960,8 +1960,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiRefresh.svg",
-    "component_id": "Icon.WiRefresh",
+    "src_svg": "wi/WiRefresh.svg",
+    "component_id": "wi:WiRefresh",
     "aliases": [
       "wi",
       "refresh"
@@ -1970,8 +1970,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiRefreshAlt.svg",
-    "component_id": "Icon.WiRefreshAlt",
+    "src_svg": "wi/WiRefreshAlt.svg",
+    "component_id": "wi:WiRefreshAlt",
     "aliases": [
       "wi",
       "refresh",
@@ -1981,8 +1981,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSandstorm.svg",
-    "component_id": "Icon.WiSandstorm",
+    "src_svg": "wi/WiSandstorm.svg",
+    "component_id": "wi:WiSandstorm",
     "aliases": [
       "wi",
       "sandstorm"
@@ -1991,8 +1991,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiShowers.svg",
-    "component_id": "Icon.WiShowers",
+    "src_svg": "wi/WiShowers.svg",
+    "component_id": "wi:WiShowers",
     "aliases": [
       "wi",
       "showers"
@@ -2001,8 +2001,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSleet.svg",
-    "component_id": "Icon.WiSleet",
+    "src_svg": "wi/WiSleet.svg",
+    "component_id": "wi:WiSleet",
     "aliases": [
       "wi",
       "sleet"
@@ -2011,8 +2011,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSmallCraftAdvisory.svg",
-    "component_id": "Icon.WiSmallCraftAdvisory",
+    "src_svg": "wi/WiSmallCraftAdvisory.svg",
+    "component_id": "wi:WiSmallCraftAdvisory",
     "aliases": [
       "wi",
       "small",
@@ -2023,8 +2023,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSmog.svg",
-    "component_id": "Icon.WiSmog",
+    "src_svg": "wi/WiSmog.svg",
+    "component_id": "wi:WiSmog",
     "aliases": [
       "wi",
       "smog"
@@ -2033,8 +2033,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSmoke.svg",
-    "component_id": "Icon.WiSmoke",
+    "src_svg": "wi/WiSmoke.svg",
+    "component_id": "wi:WiSmoke",
     "aliases": [
       "wi",
       "smoke"
@@ -2043,8 +2043,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSnow.svg",
-    "component_id": "Icon.WiSnow",
+    "src_svg": "wi/WiSnow.svg",
+    "component_id": "wi:WiSnow",
     "aliases": [
       "wi",
       "snow"
@@ -2053,8 +2053,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSnowWind.svg",
-    "component_id": "Icon.WiSnowWind",
+    "src_svg": "wi/WiSnowWind.svg",
+    "component_id": "wi:WiSnowWind",
     "aliases": [
       "wi",
       "snow",
@@ -2064,8 +2064,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSnowflakeCold.svg",
-    "component_id": "Icon.WiSnowflakeCold",
+    "src_svg": "wi/WiSnowflakeCold.svg",
+    "component_id": "wi:WiSnowflakeCold",
     "aliases": [
       "wi",
       "snowflake",
@@ -2075,8 +2075,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSolarEclipse.svg",
-    "component_id": "Icon.WiSolarEclipse",
+    "src_svg": "wi/WiSolarEclipse.svg",
+    "component_id": "wi:WiSolarEclipse",
     "aliases": [
       "wi",
       "solar",
@@ -2086,8 +2086,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSprinkle.svg",
-    "component_id": "Icon.WiSprinkle",
+    "src_svg": "wi/WiSprinkle.svg",
+    "component_id": "wi:WiSprinkle",
     "aliases": [
       "wi",
       "sprinkle"
@@ -2096,8 +2096,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiStars.svg",
-    "component_id": "Icon.WiStars",
+    "src_svg": "wi/WiStars.svg",
+    "component_id": "wi:WiStars",
     "aliases": [
       "wi",
       "stars"
@@ -2106,8 +2106,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiStormShowers.svg",
-    "component_id": "Icon.WiStormShowers",
+    "src_svg": "wi/WiStormShowers.svg",
+    "component_id": "wi:WiStormShowers",
     "aliases": [
       "wi",
       "storm",
@@ -2117,8 +2117,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiStormWarning.svg",
-    "component_id": "Icon.WiStormWarning",
+    "src_svg": "wi/WiStormWarning.svg",
+    "component_id": "wi:WiStormWarning",
     "aliases": [
       "wi",
       "storm",
@@ -2128,8 +2128,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiStrongWind.svg",
-    "component_id": "Icon.WiStrongWind",
+    "src_svg": "wi/WiStrongWind.svg",
+    "component_id": "wi:WiStrongWind",
     "aliases": [
       "wi",
       "strong",
@@ -2139,8 +2139,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSunrise.svg",
-    "component_id": "Icon.WiSunrise",
+    "src_svg": "wi/WiSunrise.svg",
+    "component_id": "wi:WiSunrise",
     "aliases": [
       "wi",
       "sunrise"
@@ -2149,8 +2149,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiSunset.svg",
-    "component_id": "Icon.WiSunset",
+    "src_svg": "wi/WiSunset.svg",
+    "component_id": "wi:WiSunset",
     "aliases": [
       "wi",
       "sunset"
@@ -2159,8 +2159,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiThermometer.svg",
-    "component_id": "Icon.WiThermometer",
+    "src_svg": "wi/WiThermometer.svg",
+    "component_id": "wi:WiThermometer",
     "aliases": [
       "wi",
       "thermometer"
@@ -2169,8 +2169,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiThermometerExterior.svg",
-    "component_id": "Icon.WiThermometerExterior",
+    "src_svg": "wi/WiThermometerExterior.svg",
+    "component_id": "wi:WiThermometerExterior",
     "aliases": [
       "wi",
       "thermometer",
@@ -2180,8 +2180,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiThermometerInternal.svg",
-    "component_id": "Icon.WiThermometerInternal",
+    "src_svg": "wi/WiThermometerInternal.svg",
+    "component_id": "wi:WiThermometerInternal",
     "aliases": [
       "wi",
       "thermometer",
@@ -2191,8 +2191,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiThunderstorm.svg",
-    "component_id": "Icon.WiThunderstorm",
+    "src_svg": "wi/WiThunderstorm.svg",
+    "component_id": "wi:WiThunderstorm",
     "aliases": [
       "wi",
       "thunderstorm"
@@ -2201,8 +2201,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime1.svg",
-    "component_id": "Icon.WiTime1",
+    "src_svg": "wi/WiTime1.svg",
+    "component_id": "wi:WiTime1",
     "aliases": [
       "wi",
       "time",
@@ -2212,8 +2212,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime10.svg",
-    "component_id": "Icon.WiTime10",
+    "src_svg": "wi/WiTime10.svg",
+    "component_id": "wi:WiTime10",
     "aliases": [
       "wi",
       "time",
@@ -2223,8 +2223,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime11.svg",
-    "component_id": "Icon.WiTime11",
+    "src_svg": "wi/WiTime11.svg",
+    "component_id": "wi:WiTime11",
     "aliases": [
       "wi",
       "time",
@@ -2234,8 +2234,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime12.svg",
-    "component_id": "Icon.WiTime12",
+    "src_svg": "wi/WiTime12.svg",
+    "component_id": "wi:WiTime12",
     "aliases": [
       "wi",
       "time",
@@ -2245,8 +2245,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime2.svg",
-    "component_id": "Icon.WiTime2",
+    "src_svg": "wi/WiTime2.svg",
+    "component_id": "wi:WiTime2",
     "aliases": [
       "wi",
       "time",
@@ -2256,8 +2256,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime3.svg",
-    "component_id": "Icon.WiTime3",
+    "src_svg": "wi/WiTime3.svg",
+    "component_id": "wi:WiTime3",
     "aliases": [
       "wi",
       "time",
@@ -2267,8 +2267,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime4.svg",
-    "component_id": "Icon.WiTime4",
+    "src_svg": "wi/WiTime4.svg",
+    "component_id": "wi:WiTime4",
     "aliases": [
       "wi",
       "time",
@@ -2278,8 +2278,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime5.svg",
-    "component_id": "Icon.WiTime5",
+    "src_svg": "wi/WiTime5.svg",
+    "component_id": "wi:WiTime5",
     "aliases": [
       "wi",
       "time",
@@ -2289,8 +2289,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime6.svg",
-    "component_id": "Icon.WiTime6",
+    "src_svg": "wi/WiTime6.svg",
+    "component_id": "wi:WiTime6",
     "aliases": [
       "wi",
       "time",
@@ -2300,8 +2300,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime7.svg",
-    "component_id": "Icon.WiTime7",
+    "src_svg": "wi/WiTime7.svg",
+    "component_id": "wi:WiTime7",
     "aliases": [
       "wi",
       "time",
@@ -2311,8 +2311,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime8.svg",
-    "component_id": "Icon.WiTime8",
+    "src_svg": "wi/WiTime8.svg",
+    "component_id": "wi:WiTime8",
     "aliases": [
       "wi",
       "time",
@@ -2322,8 +2322,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTime9.svg",
-    "component_id": "Icon.WiTime9",
+    "src_svg": "wi/WiTime9.svg",
+    "component_id": "wi:WiTime9",
     "aliases": [
       "wi",
       "time",
@@ -2333,8 +2333,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTornado.svg",
-    "component_id": "Icon.WiTornado",
+    "src_svg": "wi/WiTornado.svg",
+    "component_id": "wi:WiTornado",
     "aliases": [
       "wi",
       "tornado"
@@ -2343,8 +2343,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTrain.svg",
-    "component_id": "Icon.WiTrain",
+    "src_svg": "wi/WiTrain.svg",
+    "component_id": "wi:WiTrain",
     "aliases": [
       "wi",
       "train"
@@ -2353,8 +2353,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiTsunami.svg",
-    "component_id": "Icon.WiTsunami",
+    "src_svg": "wi/WiTsunami.svg",
+    "component_id": "wi:WiTsunami",
     "aliases": [
       "wi",
       "tsunami"
@@ -2363,8 +2363,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiUmbrella.svg",
-    "component_id": "Icon.WiUmbrella",
+    "src_svg": "wi/WiUmbrella.svg",
+    "component_id": "wi:WiUmbrella",
     "aliases": [
       "wi",
       "umbrella"
@@ -2373,8 +2373,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiVolcano.svg",
-    "component_id": "Icon.WiVolcano",
+    "src_svg": "wi/WiVolcano.svg",
+    "component_id": "wi:WiVolcano",
     "aliases": [
       "wi",
       "volcano"
@@ -2383,8 +2383,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort0.svg",
-    "component_id": "Icon.WiWindBeaufort0",
+    "src_svg": "wi/WiWindBeaufort0.svg",
+    "component_id": "wi:WiWindBeaufort0",
     "aliases": [
       "wi",
       "wind",
@@ -2395,8 +2395,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort1.svg",
-    "component_id": "Icon.WiWindBeaufort1",
+    "src_svg": "wi/WiWindBeaufort1.svg",
+    "component_id": "wi:WiWindBeaufort1",
     "aliases": [
       "wi",
       "wind",
@@ -2407,8 +2407,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort10.svg",
-    "component_id": "Icon.WiWindBeaufort10",
+    "src_svg": "wi/WiWindBeaufort10.svg",
+    "component_id": "wi:WiWindBeaufort10",
     "aliases": [
       "wi",
       "wind",
@@ -2419,8 +2419,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort11.svg",
-    "component_id": "Icon.WiWindBeaufort11",
+    "src_svg": "wi/WiWindBeaufort11.svg",
+    "component_id": "wi:WiWindBeaufort11",
     "aliases": [
       "wi",
       "wind",
@@ -2431,8 +2431,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort12.svg",
-    "component_id": "Icon.WiWindBeaufort12",
+    "src_svg": "wi/WiWindBeaufort12.svg",
+    "component_id": "wi:WiWindBeaufort12",
     "aliases": [
       "wi",
       "wind",
@@ -2443,8 +2443,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort2.svg",
-    "component_id": "Icon.WiWindBeaufort2",
+    "src_svg": "wi/WiWindBeaufort2.svg",
+    "component_id": "wi:WiWindBeaufort2",
     "aliases": [
       "wi",
       "wind",
@@ -2455,8 +2455,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort3.svg",
-    "component_id": "Icon.WiWindBeaufort3",
+    "src_svg": "wi/WiWindBeaufort3.svg",
+    "component_id": "wi:WiWindBeaufort3",
     "aliases": [
       "wi",
       "wind",
@@ -2467,8 +2467,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort4.svg",
-    "component_id": "Icon.WiWindBeaufort4",
+    "src_svg": "wi/WiWindBeaufort4.svg",
+    "component_id": "wi:WiWindBeaufort4",
     "aliases": [
       "wi",
       "wind",
@@ -2479,8 +2479,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort5.svg",
-    "component_id": "Icon.WiWindBeaufort5",
+    "src_svg": "wi/WiWindBeaufort5.svg",
+    "component_id": "wi:WiWindBeaufort5",
     "aliases": [
       "wi",
       "wind",
@@ -2491,8 +2491,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort6.svg",
-    "component_id": "Icon.WiWindBeaufort6",
+    "src_svg": "wi/WiWindBeaufort6.svg",
+    "component_id": "wi:WiWindBeaufort6",
     "aliases": [
       "wi",
       "wind",
@@ -2503,8 +2503,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort7.svg",
-    "component_id": "Icon.WiWindBeaufort7",
+    "src_svg": "wi/WiWindBeaufort7.svg",
+    "component_id": "wi:WiWindBeaufort7",
     "aliases": [
       "wi",
       "wind",
@@ -2515,8 +2515,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort8.svg",
-    "component_id": "Icon.WiWindBeaufort8",
+    "src_svg": "wi/WiWindBeaufort8.svg",
+    "component_id": "wi:WiWindBeaufort8",
     "aliases": [
       "wi",
       "wind",
@@ -2527,8 +2527,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindBeaufort9.svg",
-    "component_id": "Icon.WiWindBeaufort9",
+    "src_svg": "wi/WiWindBeaufort9.svg",
+    "component_id": "wi:WiWindBeaufort9",
     "aliases": [
       "wi",
       "wind",
@@ -2539,8 +2539,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindDeg.svg",
-    "component_id": "Icon.WiWindDeg",
+    "src_svg": "wi/WiWindDeg.svg",
+    "component_id": "wi:WiWindDeg",
     "aliases": [
       "wi",
       "wind",
@@ -2550,8 +2550,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/wi/WiWindy.svg",
-    "component_id": "Icon.WiWindy",
+    "src_svg": "wi/WiWindy.svg",
+    "component_id": "wi:WiWindy",
     "aliases": [
       "wi",
       "windy"

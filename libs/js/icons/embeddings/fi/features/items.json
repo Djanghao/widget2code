@@ -1,7 +1,7 @@
 [
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiActivity.svg",
-    "component_id": "Icon.FiActivity",
+    "src_svg": "fi/FiActivity.svg",
+    "component_id": "fi:FiActivity",
     "aliases": [
       "fi",
       "activity"
@@ -10,8 +10,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAirplay.svg",
-    "component_id": "Icon.FiAirplay",
+    "src_svg": "fi/FiAirplay.svg",
+    "component_id": "fi:FiAirplay",
     "aliases": [
       "fi",
       "airplay"
@@ -20,8 +20,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlertCircle.svg",
-    "component_id": "Icon.FiAlertCircle",
+    "src_svg": "fi/FiAlertCircle.svg",
+    "component_id": "fi:FiAlertCircle",
     "aliases": [
       "fi",
       "alert",
@@ -31,8 +31,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlertOctagon.svg",
-    "component_id": "Icon.FiAlertOctagon",
+    "src_svg": "fi/FiAlertOctagon.svg",
+    "component_id": "fi:FiAlertOctagon",
     "aliases": [
       "fi",
       "alert",
@@ -42,8 +42,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlertTriangle.svg",
-    "component_id": "Icon.FiAlertTriangle",
+    "src_svg": "fi/FiAlertTriangle.svg",
+    "component_id": "fi:FiAlertTriangle",
     "aliases": [
       "fi",
       "alert",
@@ -53,8 +53,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlignCenter.svg",
-    "component_id": "Icon.FiAlignCenter",
+    "src_svg": "fi/FiAlignCenter.svg",
+    "component_id": "fi:FiAlignCenter",
     "aliases": [
       "fi",
       "align",
@@ -64,8 +64,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlignJustify.svg",
-    "component_id": "Icon.FiAlignJustify",
+    "src_svg": "fi/FiAlignJustify.svg",
+    "component_id": "fi:FiAlignJustify",
     "aliases": [
       "fi",
       "align",
@@ -75,8 +75,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlignLeft.svg",
-    "component_id": "Icon.FiAlignLeft",
+    "src_svg": "fi/FiAlignLeft.svg",
+    "component_id": "fi:FiAlignLeft",
     "aliases": [
       "fi",
       "align",
@@ -86,8 +86,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAlignRight.svg",
-    "component_id": "Icon.FiAlignRight",
+    "src_svg": "fi/FiAlignRight.svg",
+    "component_id": "fi:FiAlignRight",
     "aliases": [
       "fi",
       "align",
@@ -97,8 +97,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAnchor.svg",
-    "component_id": "Icon.FiAnchor",
+    "src_svg": "fi/FiAnchor.svg",
+    "component_id": "fi:FiAnchor",
     "aliases": [
       "fi",
       "anchor"
@@ -107,8 +107,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAperture.svg",
-    "component_id": "Icon.FiAperture",
+    "src_svg": "fi/FiAperture.svg",
+    "component_id": "fi:FiAperture",
     "aliases": [
       "fi",
       "aperture"
@@ -117,8 +117,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArchive.svg",
-    "component_id": "Icon.FiArchive",
+    "src_svg": "fi/FiArchive.svg",
+    "component_id": "fi:FiArchive",
     "aliases": [
       "fi",
       "archive"
@@ -127,8 +127,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowDown.svg",
-    "component_id": "Icon.FiArrowDown",
+    "src_svg": "fi/FiArrowDown.svg",
+    "component_id": "fi:FiArrowDown",
     "aliases": [
       "fi",
       "arrow",
@@ -138,8 +138,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowDownCircle.svg",
-    "component_id": "Icon.FiArrowDownCircle",
+    "src_svg": "fi/FiArrowDownCircle.svg",
+    "component_id": "fi:FiArrowDownCircle",
     "aliases": [
       "fi",
       "arrow",
@@ -150,8 +150,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowDownLeft.svg",
-    "component_id": "Icon.FiArrowDownLeft",
+    "src_svg": "fi/FiArrowDownLeft.svg",
+    "component_id": "fi:FiArrowDownLeft",
     "aliases": [
       "fi",
       "arrow",
@@ -162,8 +162,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowDownRight.svg",
-    "component_id": "Icon.FiArrowDownRight",
+    "src_svg": "fi/FiArrowDownRight.svg",
+    "component_id": "fi:FiArrowDownRight",
     "aliases": [
       "fi",
       "arrow",
@@ -174,8 +174,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowLeft.svg",
-    "component_id": "Icon.FiArrowLeft",
+    "src_svg": "fi/FiArrowLeft.svg",
+    "component_id": "fi:FiArrowLeft",
     "aliases": [
       "fi",
       "arrow",
@@ -185,8 +185,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowLeftCircle.svg",
-    "component_id": "Icon.FiArrowLeftCircle",
+    "src_svg": "fi/FiArrowLeftCircle.svg",
+    "component_id": "fi:FiArrowLeftCircle",
     "aliases": [
       "fi",
       "arrow",
@@ -197,8 +197,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowRight.svg",
-    "component_id": "Icon.FiArrowRight",
+    "src_svg": "fi/FiArrowRight.svg",
+    "component_id": "fi:FiArrowRight",
     "aliases": [
       "fi",
       "arrow",
@@ -208,8 +208,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowRightCircle.svg",
-    "component_id": "Icon.FiArrowRightCircle",
+    "src_svg": "fi/FiArrowRightCircle.svg",
+    "component_id": "fi:FiArrowRightCircle",
     "aliases": [
       "fi",
       "arrow",
@@ -220,8 +220,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowUp.svg",
-    "component_id": "Icon.FiArrowUp",
+    "src_svg": "fi/FiArrowUp.svg",
+    "component_id": "fi:FiArrowUp",
     "aliases": [
       "fi",
       "arrow",
@@ -231,8 +231,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowUpCircle.svg",
-    "component_id": "Icon.FiArrowUpCircle",
+    "src_svg": "fi/FiArrowUpCircle.svg",
+    "component_id": "fi:FiArrowUpCircle",
     "aliases": [
       "fi",
       "arrow",
@@ -243,8 +243,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowUpLeft.svg",
-    "component_id": "Icon.FiArrowUpLeft",
+    "src_svg": "fi/FiArrowUpLeft.svg",
+    "component_id": "fi:FiArrowUpLeft",
     "aliases": [
       "fi",
       "arrow",
@@ -255,8 +255,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiArrowUpRight.svg",
-    "component_id": "Icon.FiArrowUpRight",
+    "src_svg": "fi/FiArrowUpRight.svg",
+    "component_id": "fi:FiArrowUpRight",
     "aliases": [
       "fi",
       "arrow",
@@ -267,8 +267,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAtSign.svg",
-    "component_id": "Icon.FiAtSign",
+    "src_svg": "fi/FiAtSign.svg",
+    "component_id": "fi:FiAtSign",
     "aliases": [
       "fi",
       "at",
@@ -278,8 +278,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiAward.svg",
-    "component_id": "Icon.FiAward",
+    "src_svg": "fi/FiAward.svg",
+    "component_id": "fi:FiAward",
     "aliases": [
       "fi",
       "award"
@@ -288,8 +288,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBarChart.svg",
-    "component_id": "Icon.FiBarChart",
+    "src_svg": "fi/FiBarChart.svg",
+    "component_id": "fi:FiBarChart",
     "aliases": [
       "fi",
       "bar",
@@ -299,8 +299,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBarChart2.svg",
-    "component_id": "Icon.FiBarChart2",
+    "src_svg": "fi/FiBarChart2.svg",
+    "component_id": "fi:FiBarChart2",
     "aliases": [
       "fi",
       "bar",
@@ -311,8 +311,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBattery.svg",
-    "component_id": "Icon.FiBattery",
+    "src_svg": "fi/FiBattery.svg",
+    "component_id": "fi:FiBattery",
     "aliases": [
       "fi",
       "battery"
@@ -321,8 +321,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBatteryCharging.svg",
-    "component_id": "Icon.FiBatteryCharging",
+    "src_svg": "fi/FiBatteryCharging.svg",
+    "component_id": "fi:FiBatteryCharging",
     "aliases": [
       "fi",
       "battery",
@@ -332,8 +332,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBell.svg",
-    "component_id": "Icon.FiBell",
+    "src_svg": "fi/FiBell.svg",
+    "component_id": "fi:FiBell",
     "aliases": [
       "fi",
       "bell"
@@ -342,8 +342,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBellOff.svg",
-    "component_id": "Icon.FiBellOff",
+    "src_svg": "fi/FiBellOff.svg",
+    "component_id": "fi:FiBellOff",
     "aliases": [
       "fi",
       "bell",
@@ -353,8 +353,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBluetooth.svg",
-    "component_id": "Icon.FiBluetooth",
+    "src_svg": "fi/FiBluetooth.svg",
+    "component_id": "fi:FiBluetooth",
     "aliases": [
       "fi",
       "bluetooth"
@@ -363,8 +363,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBold.svg",
-    "component_id": "Icon.FiBold",
+    "src_svg": "fi/FiBold.svg",
+    "component_id": "fi:FiBold",
     "aliases": [
       "fi",
       "bold"
@@ -373,8 +373,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBook.svg",
-    "component_id": "Icon.FiBook",
+    "src_svg": "fi/FiBook.svg",
+    "component_id": "fi:FiBook",
     "aliases": [
       "fi",
       "book"
@@ -383,8 +383,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBookOpen.svg",
-    "component_id": "Icon.FiBookOpen",
+    "src_svg": "fi/FiBookOpen.svg",
+    "component_id": "fi:FiBookOpen",
     "aliases": [
       "fi",
       "book",
@@ -394,8 +394,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBookmark.svg",
-    "component_id": "Icon.FiBookmark",
+    "src_svg": "fi/FiBookmark.svg",
+    "component_id": "fi:FiBookmark",
     "aliases": [
       "fi",
       "bookmark"
@@ -404,8 +404,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBox.svg",
-    "component_id": "Icon.FiBox",
+    "src_svg": "fi/FiBox.svg",
+    "component_id": "fi:FiBox",
     "aliases": [
       "fi",
       "box"
@@ -414,8 +414,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiBriefcase.svg",
-    "component_id": "Icon.FiBriefcase",
+    "src_svg": "fi/FiBriefcase.svg",
+    "component_id": "fi:FiBriefcase",
     "aliases": [
       "fi",
       "briefcase"
@@ -424,8 +424,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCalendar.svg",
-    "component_id": "Icon.FiCalendar",
+    "src_svg": "fi/FiCalendar.svg",
+    "component_id": "fi:FiCalendar",
     "aliases": [
       "fi",
       "calendar"
@@ -434,8 +434,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCamera.svg",
-    "component_id": "Icon.FiCamera",
+    "src_svg": "fi/FiCamera.svg",
+    "component_id": "fi:FiCamera",
     "aliases": [
       "fi",
       "camera"
@@ -444,8 +444,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCameraOff.svg",
-    "component_id": "Icon.FiCameraOff",
+    "src_svg": "fi/FiCameraOff.svg",
+    "component_id": "fi:FiCameraOff",
     "aliases": [
       "fi",
       "camera",
@@ -455,8 +455,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCast.svg",
-    "component_id": "Icon.FiCast",
+    "src_svg": "fi/FiCast.svg",
+    "component_id": "fi:FiCast",
     "aliases": [
       "fi",
       "cast"
@@ -465,8 +465,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCheck.svg",
-    "component_id": "Icon.FiCheck",
+    "src_svg": "fi/FiCheck.svg",
+    "component_id": "fi:FiCheck",
     "aliases": [
       "fi",
       "check"
@@ -475,8 +475,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCheckCircle.svg",
-    "component_id": "Icon.FiCheckCircle",
+    "src_svg": "fi/FiCheckCircle.svg",
+    "component_id": "fi:FiCheckCircle",
     "aliases": [
       "fi",
       "check",
@@ -486,8 +486,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCheckSquare.svg",
-    "component_id": "Icon.FiCheckSquare",
+    "src_svg": "fi/FiCheckSquare.svg",
+    "component_id": "fi:FiCheckSquare",
     "aliases": [
       "fi",
       "check",
@@ -497,8 +497,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronDown.svg",
-    "component_id": "Icon.FiChevronDown",
+    "src_svg": "fi/FiChevronDown.svg",
+    "component_id": "fi:FiChevronDown",
     "aliases": [
       "fi",
       "chevron",
@@ -508,8 +508,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronLeft.svg",
-    "component_id": "Icon.FiChevronLeft",
+    "src_svg": "fi/FiChevronLeft.svg",
+    "component_id": "fi:FiChevronLeft",
     "aliases": [
       "fi",
       "chevron",
@@ -519,8 +519,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronRight.svg",
-    "component_id": "Icon.FiChevronRight",
+    "src_svg": "fi/FiChevronRight.svg",
+    "component_id": "fi:FiChevronRight",
     "aliases": [
       "fi",
       "chevron",
@@ -530,8 +530,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronUp.svg",
-    "component_id": "Icon.FiChevronUp",
+    "src_svg": "fi/FiChevronUp.svg",
+    "component_id": "fi:FiChevronUp",
     "aliases": [
       "fi",
       "chevron",
@@ -541,8 +541,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronsDown.svg",
-    "component_id": "Icon.FiChevronsDown",
+    "src_svg": "fi/FiChevronsDown.svg",
+    "component_id": "fi:FiChevronsDown",
     "aliases": [
       "fi",
       "chevrons",
@@ -552,8 +552,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronsLeft.svg",
-    "component_id": "Icon.FiChevronsLeft",
+    "src_svg": "fi/FiChevronsLeft.svg",
+    "component_id": "fi:FiChevronsLeft",
     "aliases": [
       "fi",
       "chevrons",
@@ -563,8 +563,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronsRight.svg",
-    "component_id": "Icon.FiChevronsRight",
+    "src_svg": "fi/FiChevronsRight.svg",
+    "component_id": "fi:FiChevronsRight",
     "aliases": [
       "fi",
       "chevrons",
@@ -574,8 +574,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChevronsUp.svg",
-    "component_id": "Icon.FiChevronsUp",
+    "src_svg": "fi/FiChevronsUp.svg",
+    "component_id": "fi:FiChevronsUp",
     "aliases": [
       "fi",
       "chevrons",
@@ -585,8 +585,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiChrome.svg",
-    "component_id": "Icon.FiChrome",
+    "src_svg": "fi/FiChrome.svg",
+    "component_id": "fi:FiChrome",
     "aliases": [
       "fi",
       "chrome"
@@ -595,8 +595,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCircle.svg",
-    "component_id": "Icon.FiCircle",
+    "src_svg": "fi/FiCircle.svg",
+    "component_id": "fi:FiCircle",
     "aliases": [
       "fi",
       "circle"
@@ -605,8 +605,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiClipboard.svg",
-    "component_id": "Icon.FiClipboard",
+    "src_svg": "fi/FiClipboard.svg",
+    "component_id": "fi:FiClipboard",
     "aliases": [
       "fi",
       "clipboard"
@@ -615,8 +615,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiClock.svg",
-    "component_id": "Icon.FiClock",
+    "src_svg": "fi/FiClock.svg",
+    "component_id": "fi:FiClock",
     "aliases": [
       "fi",
       "clock"
@@ -625,8 +625,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloud.svg",
-    "component_id": "Icon.FiCloud",
+    "src_svg": "fi/FiCloud.svg",
+    "component_id": "fi:FiCloud",
     "aliases": [
       "fi",
       "cloud"
@@ -635,8 +635,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloudDrizzle.svg",
-    "component_id": "Icon.FiCloudDrizzle",
+    "src_svg": "fi/FiCloudDrizzle.svg",
+    "component_id": "fi:FiCloudDrizzle",
     "aliases": [
       "fi",
       "cloud",
@@ -646,8 +646,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloudLightning.svg",
-    "component_id": "Icon.FiCloudLightning",
+    "src_svg": "fi/FiCloudLightning.svg",
+    "component_id": "fi:FiCloudLightning",
     "aliases": [
       "fi",
       "cloud",
@@ -657,8 +657,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloudOff.svg",
-    "component_id": "Icon.FiCloudOff",
+    "src_svg": "fi/FiCloudOff.svg",
+    "component_id": "fi:FiCloudOff",
     "aliases": [
       "fi",
       "cloud",
@@ -668,8 +668,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloudRain.svg",
-    "component_id": "Icon.FiCloudRain",
+    "src_svg": "fi/FiCloudRain.svg",
+    "component_id": "fi:FiCloudRain",
     "aliases": [
       "fi",
       "cloud",
@@ -679,8 +679,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCloudSnow.svg",
-    "component_id": "Icon.FiCloudSnow",
+    "src_svg": "fi/FiCloudSnow.svg",
+    "component_id": "fi:FiCloudSnow",
     "aliases": [
       "fi",
       "cloud",
@@ -690,8 +690,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCode.svg",
-    "component_id": "Icon.FiCode",
+    "src_svg": "fi/FiCode.svg",
+    "component_id": "fi:FiCode",
     "aliases": [
       "fi",
       "code"
@@ -700,8 +700,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCodepen.svg",
-    "component_id": "Icon.FiCodepen",
+    "src_svg": "fi/FiCodepen.svg",
+    "component_id": "fi:FiCodepen",
     "aliases": [
       "fi",
       "codepen"
@@ -710,8 +710,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCodesandbox.svg",
-    "component_id": "Icon.FiCodesandbox",
+    "src_svg": "fi/FiCodesandbox.svg",
+    "component_id": "fi:FiCodesandbox",
     "aliases": [
       "fi",
       "codesandbox"
@@ -720,8 +720,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCoffee.svg",
-    "component_id": "Icon.FiCoffee",
+    "src_svg": "fi/FiCoffee.svg",
+    "component_id": "fi:FiCoffee",
     "aliases": [
       "fi",
       "coffee"
@@ -730,8 +730,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiColumns.svg",
-    "component_id": "Icon.FiColumns",
+    "src_svg": "fi/FiColumns.svg",
+    "component_id": "fi:FiColumns",
     "aliases": [
       "fi",
       "columns"
@@ -740,8 +740,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCommand.svg",
-    "component_id": "Icon.FiCommand",
+    "src_svg": "fi/FiCommand.svg",
+    "component_id": "fi:FiCommand",
     "aliases": [
       "fi",
       "command"
@@ -750,8 +750,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCompass.svg",
-    "component_id": "Icon.FiCompass",
+    "src_svg": "fi/FiCompass.svg",
+    "component_id": "fi:FiCompass",
     "aliases": [
       "fi",
       "compass"
@@ -760,8 +760,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCopy.svg",
-    "component_id": "Icon.FiCopy",
+    "src_svg": "fi/FiCopy.svg",
+    "component_id": "fi:FiCopy",
     "aliases": [
       "fi",
       "copy"
@@ -770,8 +770,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerDownLeft.svg",
-    "component_id": "Icon.FiCornerDownLeft",
+    "src_svg": "fi/FiCornerDownLeft.svg",
+    "component_id": "fi:FiCornerDownLeft",
     "aliases": [
       "fi",
       "corner",
@@ -782,8 +782,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerDownRight.svg",
-    "component_id": "Icon.FiCornerDownRight",
+    "src_svg": "fi/FiCornerDownRight.svg",
+    "component_id": "fi:FiCornerDownRight",
     "aliases": [
       "fi",
       "corner",
@@ -794,8 +794,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerLeftDown.svg",
-    "component_id": "Icon.FiCornerLeftDown",
+    "src_svg": "fi/FiCornerLeftDown.svg",
+    "component_id": "fi:FiCornerLeftDown",
     "aliases": [
       "fi",
       "corner",
@@ -806,8 +806,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerLeftUp.svg",
-    "component_id": "Icon.FiCornerLeftUp",
+    "src_svg": "fi/FiCornerLeftUp.svg",
+    "component_id": "fi:FiCornerLeftUp",
     "aliases": [
       "fi",
       "corner",
@@ -818,8 +818,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerRightDown.svg",
-    "component_id": "Icon.FiCornerRightDown",
+    "src_svg": "fi/FiCornerRightDown.svg",
+    "component_id": "fi:FiCornerRightDown",
     "aliases": [
       "fi",
       "corner",
@@ -830,8 +830,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerRightUp.svg",
-    "component_id": "Icon.FiCornerRightUp",
+    "src_svg": "fi/FiCornerRightUp.svg",
+    "component_id": "fi:FiCornerRightUp",
     "aliases": [
       "fi",
       "corner",
@@ -842,8 +842,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerUpLeft.svg",
-    "component_id": "Icon.FiCornerUpLeft",
+    "src_svg": "fi/FiCornerUpLeft.svg",
+    "component_id": "fi:FiCornerUpLeft",
     "aliases": [
       "fi",
       "corner",
@@ -854,8 +854,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCornerUpRight.svg",
-    "component_id": "Icon.FiCornerUpRight",
+    "src_svg": "fi/FiCornerUpRight.svg",
+    "component_id": "fi:FiCornerUpRight",
     "aliases": [
       "fi",
       "corner",
@@ -866,8 +866,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCpu.svg",
-    "component_id": "Icon.FiCpu",
+    "src_svg": "fi/FiCpu.svg",
+    "component_id": "fi:FiCpu",
     "aliases": [
       "fi",
       "cpu"
@@ -876,8 +876,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCreditCard.svg",
-    "component_id": "Icon.FiCreditCard",
+    "src_svg": "fi/FiCreditCard.svg",
+    "component_id": "fi:FiCreditCard",
     "aliases": [
       "fi",
       "credit",
@@ -887,8 +887,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCrop.svg",
-    "component_id": "Icon.FiCrop",
+    "src_svg": "fi/FiCrop.svg",
+    "component_id": "fi:FiCrop",
     "aliases": [
       "fi",
       "crop"
@@ -897,8 +897,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiCrosshair.svg",
-    "component_id": "Icon.FiCrosshair",
+    "src_svg": "fi/FiCrosshair.svg",
+    "component_id": "fi:FiCrosshair",
     "aliases": [
       "fi",
       "crosshair"
@@ -907,8 +907,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDatabase.svg",
-    "component_id": "Icon.FiDatabase",
+    "src_svg": "fi/FiDatabase.svg",
+    "component_id": "fi:FiDatabase",
     "aliases": [
       "fi",
       "database"
@@ -917,8 +917,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDelete.svg",
-    "component_id": "Icon.FiDelete",
+    "src_svg": "fi/FiDelete.svg",
+    "component_id": "fi:FiDelete",
     "aliases": [
       "fi",
       "delete"
@@ -927,8 +927,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDisc.svg",
-    "component_id": "Icon.FiDisc",
+    "src_svg": "fi/FiDisc.svg",
+    "component_id": "fi:FiDisc",
     "aliases": [
       "fi",
       "disc"
@@ -937,8 +937,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDivide.svg",
-    "component_id": "Icon.FiDivide",
+    "src_svg": "fi/FiDivide.svg",
+    "component_id": "fi:FiDivide",
     "aliases": [
       "fi",
       "divide"
@@ -947,8 +947,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDivideCircle.svg",
-    "component_id": "Icon.FiDivideCircle",
+    "src_svg": "fi/FiDivideCircle.svg",
+    "component_id": "fi:FiDivideCircle",
     "aliases": [
       "fi",
       "divide",
@@ -958,8 +958,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDivideSquare.svg",
-    "component_id": "Icon.FiDivideSquare",
+    "src_svg": "fi/FiDivideSquare.svg",
+    "component_id": "fi:FiDivideSquare",
     "aliases": [
       "fi",
       "divide",
@@ -969,8 +969,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDollarSign.svg",
-    "component_id": "Icon.FiDollarSign",
+    "src_svg": "fi/FiDollarSign.svg",
+    "component_id": "fi:FiDollarSign",
     "aliases": [
       "fi",
       "dollar",
@@ -980,8 +980,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDownload.svg",
-    "component_id": "Icon.FiDownload",
+    "src_svg": "fi/FiDownload.svg",
+    "component_id": "fi:FiDownload",
     "aliases": [
       "fi",
       "download"
@@ -990,8 +990,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDownloadCloud.svg",
-    "component_id": "Icon.FiDownloadCloud",
+    "src_svg": "fi/FiDownloadCloud.svg",
+    "component_id": "fi:FiDownloadCloud",
     "aliases": [
       "fi",
       "download",
@@ -1001,8 +1001,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDribbble.svg",
-    "component_id": "Icon.FiDribbble",
+    "src_svg": "fi/FiDribbble.svg",
+    "component_id": "fi:FiDribbble",
     "aliases": [
       "fi",
       "dribbble"
@@ -1011,8 +1011,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiDroplet.svg",
-    "component_id": "Icon.FiDroplet",
+    "src_svg": "fi/FiDroplet.svg",
+    "component_id": "fi:FiDroplet",
     "aliases": [
       "fi",
       "droplet"
@@ -1021,8 +1021,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiEdit.svg",
-    "component_id": "Icon.FiEdit",
+    "src_svg": "fi/FiEdit.svg",
+    "component_id": "fi:FiEdit",
     "aliases": [
       "fi",
       "edit"
@@ -1031,8 +1031,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiEdit2.svg",
-    "component_id": "Icon.FiEdit2",
+    "src_svg": "fi/FiEdit2.svg",
+    "component_id": "fi:FiEdit2",
     "aliases": [
       "fi",
       "edit",
@@ -1042,8 +1042,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiEdit3.svg",
-    "component_id": "Icon.FiEdit3",
+    "src_svg": "fi/FiEdit3.svg",
+    "component_id": "fi:FiEdit3",
     "aliases": [
       "fi",
       "edit",
@@ -1053,8 +1053,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiExternalLink.svg",
-    "component_id": "Icon.FiExternalLink",
+    "src_svg": "fi/FiExternalLink.svg",
+    "component_id": "fi:FiExternalLink",
     "aliases": [
       "fi",
       "external",
@@ -1064,8 +1064,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiEye.svg",
-    "component_id": "Icon.FiEye",
+    "src_svg": "fi/FiEye.svg",
+    "component_id": "fi:FiEye",
     "aliases": [
       "fi",
       "eye"
@@ -1074,8 +1074,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiEyeOff.svg",
-    "component_id": "Icon.FiEyeOff",
+    "src_svg": "fi/FiEyeOff.svg",
+    "component_id": "fi:FiEyeOff",
     "aliases": [
       "fi",
       "eye",
@@ -1085,8 +1085,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFacebook.svg",
-    "component_id": "Icon.FiFacebook",
+    "src_svg": "fi/FiFacebook.svg",
+    "component_id": "fi:FiFacebook",
     "aliases": [
       "fi",
       "facebook"
@@ -1095,8 +1095,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFastForward.svg",
-    "component_id": "Icon.FiFastForward",
+    "src_svg": "fi/FiFastForward.svg",
+    "component_id": "fi:FiFastForward",
     "aliases": [
       "fi",
       "fast",
@@ -1106,8 +1106,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFeather.svg",
-    "component_id": "Icon.FiFeather",
+    "src_svg": "fi/FiFeather.svg",
+    "component_id": "fi:FiFeather",
     "aliases": [
       "fi",
       "feather"
@@ -1116,8 +1116,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFigma.svg",
-    "component_id": "Icon.FiFigma",
+    "src_svg": "fi/FiFigma.svg",
+    "component_id": "fi:FiFigma",
     "aliases": [
       "fi",
       "figma"
@@ -1126,8 +1126,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFile.svg",
-    "component_id": "Icon.FiFile",
+    "src_svg": "fi/FiFile.svg",
+    "component_id": "fi:FiFile",
     "aliases": [
       "fi",
       "file"
@@ -1136,8 +1136,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFileMinus.svg",
-    "component_id": "Icon.FiFileMinus",
+    "src_svg": "fi/FiFileMinus.svg",
+    "component_id": "fi:FiFileMinus",
     "aliases": [
       "fi",
       "file",
@@ -1147,8 +1147,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFilePlus.svg",
-    "component_id": "Icon.FiFilePlus",
+    "src_svg": "fi/FiFilePlus.svg",
+    "component_id": "fi:FiFilePlus",
     "aliases": [
       "fi",
       "file",
@@ -1158,8 +1158,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFileText.svg",
-    "component_id": "Icon.FiFileText",
+    "src_svg": "fi/FiFileText.svg",
+    "component_id": "fi:FiFileText",
     "aliases": [
       "fi",
       "file",
@@ -1169,8 +1169,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFilm.svg",
-    "component_id": "Icon.FiFilm",
+    "src_svg": "fi/FiFilm.svg",
+    "component_id": "fi:FiFilm",
     "aliases": [
       "fi",
       "film"
@@ -1179,8 +1179,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFilter.svg",
-    "component_id": "Icon.FiFilter",
+    "src_svg": "fi/FiFilter.svg",
+    "component_id": "fi:FiFilter",
     "aliases": [
       "fi",
       "filter"
@@ -1189,8 +1189,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFlag.svg",
-    "component_id": "Icon.FiFlag",
+    "src_svg": "fi/FiFlag.svg",
+    "component_id": "fi:FiFlag",
     "aliases": [
       "fi",
       "flag"
@@ -1199,8 +1199,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFolder.svg",
-    "component_id": "Icon.FiFolder",
+    "src_svg": "fi/FiFolder.svg",
+    "component_id": "fi:FiFolder",
     "aliases": [
       "fi",
       "folder"
@@ -1209,8 +1209,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFolderMinus.svg",
-    "component_id": "Icon.FiFolderMinus",
+    "src_svg": "fi/FiFolderMinus.svg",
+    "component_id": "fi:FiFolderMinus",
     "aliases": [
       "fi",
       "folder",
@@ -1220,8 +1220,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFolderPlus.svg",
-    "component_id": "Icon.FiFolderPlus",
+    "src_svg": "fi/FiFolderPlus.svg",
+    "component_id": "fi:FiFolderPlus",
     "aliases": [
       "fi",
       "folder",
@@ -1231,8 +1231,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFramer.svg",
-    "component_id": "Icon.FiFramer",
+    "src_svg": "fi/FiFramer.svg",
+    "component_id": "fi:FiFramer",
     "aliases": [
       "fi",
       "framer"
@@ -1241,8 +1241,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiFrown.svg",
-    "component_id": "Icon.FiFrown",
+    "src_svg": "fi/FiFrown.svg",
+    "component_id": "fi:FiFrown",
     "aliases": [
       "fi",
       "frown"
@@ -1251,8 +1251,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGift.svg",
-    "component_id": "Icon.FiGift",
+    "src_svg": "fi/FiGift.svg",
+    "component_id": "fi:FiGift",
     "aliases": [
       "fi",
       "gift"
@@ -1261,8 +1261,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGitBranch.svg",
-    "component_id": "Icon.FiGitBranch",
+    "src_svg": "fi/FiGitBranch.svg",
+    "component_id": "fi:FiGitBranch",
     "aliases": [
       "fi",
       "git",
@@ -1272,8 +1272,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGitCommit.svg",
-    "component_id": "Icon.FiGitCommit",
+    "src_svg": "fi/FiGitCommit.svg",
+    "component_id": "fi:FiGitCommit",
     "aliases": [
       "fi",
       "git",
@@ -1283,8 +1283,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGitMerge.svg",
-    "component_id": "Icon.FiGitMerge",
+    "src_svg": "fi/FiGitMerge.svg",
+    "component_id": "fi:FiGitMerge",
     "aliases": [
       "fi",
       "git",
@@ -1294,8 +1294,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGitPullRequest.svg",
-    "component_id": "Icon.FiGitPullRequest",
+    "src_svg": "fi/FiGitPullRequest.svg",
+    "component_id": "fi:FiGitPullRequest",
     "aliases": [
       "fi",
       "git",
@@ -1306,8 +1306,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGithub.svg",
-    "component_id": "Icon.FiGithub",
+    "src_svg": "fi/FiGithub.svg",
+    "component_id": "fi:FiGithub",
     "aliases": [
       "fi",
       "github"
@@ -1316,8 +1316,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGitlab.svg",
-    "component_id": "Icon.FiGitlab",
+    "src_svg": "fi/FiGitlab.svg",
+    "component_id": "fi:FiGitlab",
     "aliases": [
       "fi",
       "gitlab"
@@ -1326,8 +1326,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGlobe.svg",
-    "component_id": "Icon.FiGlobe",
+    "src_svg": "fi/FiGlobe.svg",
+    "component_id": "fi:FiGlobe",
     "aliases": [
       "fi",
       "globe"
@@ -1336,8 +1336,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiGrid.svg",
-    "component_id": "Icon.FiGrid",
+    "src_svg": "fi/FiGrid.svg",
+    "component_id": "fi:FiGrid",
     "aliases": [
       "fi",
       "grid"
@@ -1346,8 +1346,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHardDrive.svg",
-    "component_id": "Icon.FiHardDrive",
+    "src_svg": "fi/FiHardDrive.svg",
+    "component_id": "fi:FiHardDrive",
     "aliases": [
       "fi",
       "hard",
@@ -1357,8 +1357,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHash.svg",
-    "component_id": "Icon.FiHash",
+    "src_svg": "fi/FiHash.svg",
+    "component_id": "fi:FiHash",
     "aliases": [
       "fi",
       "hash"
@@ -1367,8 +1367,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHeadphones.svg",
-    "component_id": "Icon.FiHeadphones",
+    "src_svg": "fi/FiHeadphones.svg",
+    "component_id": "fi:FiHeadphones",
     "aliases": [
       "fi",
       "headphones"
@@ -1377,8 +1377,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHeart.svg",
-    "component_id": "Icon.FiHeart",
+    "src_svg": "fi/FiHeart.svg",
+    "component_id": "fi:FiHeart",
     "aliases": [
       "fi",
       "heart"
@@ -1387,8 +1387,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHelpCircle.svg",
-    "component_id": "Icon.FiHelpCircle",
+    "src_svg": "fi/FiHelpCircle.svg",
+    "component_id": "fi:FiHelpCircle",
     "aliases": [
       "fi",
       "help",
@@ -1398,8 +1398,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHexagon.svg",
-    "component_id": "Icon.FiHexagon",
+    "src_svg": "fi/FiHexagon.svg",
+    "component_id": "fi:FiHexagon",
     "aliases": [
       "fi",
       "hexagon"
@@ -1408,8 +1408,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiHome.svg",
-    "component_id": "Icon.FiHome",
+    "src_svg": "fi/FiHome.svg",
+    "component_id": "fi:FiHome",
     "aliases": [
       "fi",
       "home"
@@ -1418,8 +1418,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiImage.svg",
-    "component_id": "Icon.FiImage",
+    "src_svg": "fi/FiImage.svg",
+    "component_id": "fi:FiImage",
     "aliases": [
       "fi",
       "image"
@@ -1428,8 +1428,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiInbox.svg",
-    "component_id": "Icon.FiInbox",
+    "src_svg": "fi/FiInbox.svg",
+    "component_id": "fi:FiInbox",
     "aliases": [
       "fi",
       "inbox"
@@ -1438,8 +1438,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiInfo.svg",
-    "component_id": "Icon.FiInfo",
+    "src_svg": "fi/FiInfo.svg",
+    "component_id": "fi:FiInfo",
     "aliases": [
       "fi",
       "info"
@@ -1448,8 +1448,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiInstagram.svg",
-    "component_id": "Icon.FiInstagram",
+    "src_svg": "fi/FiInstagram.svg",
+    "component_id": "fi:FiInstagram",
     "aliases": [
       "fi",
       "instagram"
@@ -1458,8 +1458,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiItalic.svg",
-    "component_id": "Icon.FiItalic",
+    "src_svg": "fi/FiItalic.svg",
+    "component_id": "fi:FiItalic",
     "aliases": [
       "fi",
       "italic"
@@ -1468,8 +1468,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiKey.svg",
-    "component_id": "Icon.FiKey",
+    "src_svg": "fi/FiKey.svg",
+    "component_id": "fi:FiKey",
     "aliases": [
       "fi",
       "key"
@@ -1478,8 +1478,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLayers.svg",
-    "component_id": "Icon.FiLayers",
+    "src_svg": "fi/FiLayers.svg",
+    "component_id": "fi:FiLayers",
     "aliases": [
       "fi",
       "layers"
@@ -1488,8 +1488,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLayout.svg",
-    "component_id": "Icon.FiLayout",
+    "src_svg": "fi/FiLayout.svg",
+    "component_id": "fi:FiLayout",
     "aliases": [
       "fi",
       "layout"
@@ -1498,8 +1498,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLifeBuoy.svg",
-    "component_id": "Icon.FiLifeBuoy",
+    "src_svg": "fi/FiLifeBuoy.svg",
+    "component_id": "fi:FiLifeBuoy",
     "aliases": [
       "fi",
       "life",
@@ -1509,8 +1509,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLink.svg",
-    "component_id": "Icon.FiLink",
+    "src_svg": "fi/FiLink.svg",
+    "component_id": "fi:FiLink",
     "aliases": [
       "fi",
       "link"
@@ -1519,8 +1519,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLink2.svg",
-    "component_id": "Icon.FiLink2",
+    "src_svg": "fi/FiLink2.svg",
+    "component_id": "fi:FiLink2",
     "aliases": [
       "fi",
       "link",
@@ -1530,8 +1530,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLinkedin.svg",
-    "component_id": "Icon.FiLinkedin",
+    "src_svg": "fi/FiLinkedin.svg",
+    "component_id": "fi:FiLinkedin",
     "aliases": [
       "fi",
       "linkedin"
@@ -1540,8 +1540,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiList.svg",
-    "component_id": "Icon.FiList",
+    "src_svg": "fi/FiList.svg",
+    "component_id": "fi:FiList",
     "aliases": [
       "fi",
       "list"
@@ -1550,8 +1550,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLoader.svg",
-    "component_id": "Icon.FiLoader",
+    "src_svg": "fi/FiLoader.svg",
+    "component_id": "fi:FiLoader",
     "aliases": [
       "fi",
       "loader"
@@ -1560,8 +1560,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLock.svg",
-    "component_id": "Icon.FiLock",
+    "src_svg": "fi/FiLock.svg",
+    "component_id": "fi:FiLock",
     "aliases": [
       "fi",
       "lock"
@@ -1570,8 +1570,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLogIn.svg",
-    "component_id": "Icon.FiLogIn",
+    "src_svg": "fi/FiLogIn.svg",
+    "component_id": "fi:FiLogIn",
     "aliases": [
       "fi",
       "log",
@@ -1581,8 +1581,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiLogOut.svg",
-    "component_id": "Icon.FiLogOut",
+    "src_svg": "fi/FiLogOut.svg",
+    "component_id": "fi:FiLogOut",
     "aliases": [
       "fi",
       "log",
@@ -1592,8 +1592,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMail.svg",
-    "component_id": "Icon.FiMail",
+    "src_svg": "fi/FiMail.svg",
+    "component_id": "fi:FiMail",
     "aliases": [
       "fi",
       "mail"
@@ -1602,8 +1602,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMap.svg",
-    "component_id": "Icon.FiMap",
+    "src_svg": "fi/FiMap.svg",
+    "component_id": "fi:FiMap",
     "aliases": [
       "fi",
       "map"
@@ -1612,8 +1612,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMapPin.svg",
-    "component_id": "Icon.FiMapPin",
+    "src_svg": "fi/FiMapPin.svg",
+    "component_id": "fi:FiMapPin",
     "aliases": [
       "fi",
       "map",
@@ -1623,8 +1623,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMaximize.svg",
-    "component_id": "Icon.FiMaximize",
+    "src_svg": "fi/FiMaximize.svg",
+    "component_id": "fi:FiMaximize",
     "aliases": [
       "fi",
       "maximize"
@@ -1633,8 +1633,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMaximize2.svg",
-    "component_id": "Icon.FiMaximize2",
+    "src_svg": "fi/FiMaximize2.svg",
+    "component_id": "fi:FiMaximize2",
     "aliases": [
       "fi",
       "maximize",
@@ -1644,8 +1644,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMeh.svg",
-    "component_id": "Icon.FiMeh",
+    "src_svg": "fi/FiMeh.svg",
+    "component_id": "fi:FiMeh",
     "aliases": [
       "fi",
       "meh"
@@ -1654,8 +1654,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMenu.svg",
-    "component_id": "Icon.FiMenu",
+    "src_svg": "fi/FiMenu.svg",
+    "component_id": "fi:FiMenu",
     "aliases": [
       "fi",
       "menu"
@@ -1664,8 +1664,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMessageCircle.svg",
-    "component_id": "Icon.FiMessageCircle",
+    "src_svg": "fi/FiMessageCircle.svg",
+    "component_id": "fi:FiMessageCircle",
     "aliases": [
       "fi",
       "message",
@@ -1675,8 +1675,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMessageSquare.svg",
-    "component_id": "Icon.FiMessageSquare",
+    "src_svg": "fi/FiMessageSquare.svg",
+    "component_id": "fi:FiMessageSquare",
     "aliases": [
       "fi",
       "message",
@@ -1686,8 +1686,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMic.svg",
-    "component_id": "Icon.FiMic",
+    "src_svg": "fi/FiMic.svg",
+    "component_id": "fi:FiMic",
     "aliases": [
       "fi",
       "mic"
@@ -1696,8 +1696,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMicOff.svg",
-    "component_id": "Icon.FiMicOff",
+    "src_svg": "fi/FiMicOff.svg",
+    "component_id": "fi:FiMicOff",
     "aliases": [
       "fi",
       "mic",
@@ -1707,8 +1707,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMinimize.svg",
-    "component_id": "Icon.FiMinimize",
+    "src_svg": "fi/FiMinimize.svg",
+    "component_id": "fi:FiMinimize",
     "aliases": [
       "fi",
       "minimize"
@@ -1717,8 +1717,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMinimize2.svg",
-    "component_id": "Icon.FiMinimize2",
+    "src_svg": "fi/FiMinimize2.svg",
+    "component_id": "fi:FiMinimize2",
     "aliases": [
       "fi",
       "minimize",
@@ -1728,8 +1728,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMinus.svg",
-    "component_id": "Icon.FiMinus",
+    "src_svg": "fi/FiMinus.svg",
+    "component_id": "fi:FiMinus",
     "aliases": [
       "fi",
       "minus"
@@ -1738,8 +1738,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMinusCircle.svg",
-    "component_id": "Icon.FiMinusCircle",
+    "src_svg": "fi/FiMinusCircle.svg",
+    "component_id": "fi:FiMinusCircle",
     "aliases": [
       "fi",
       "minus",
@@ -1749,8 +1749,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMinusSquare.svg",
-    "component_id": "Icon.FiMinusSquare",
+    "src_svg": "fi/FiMinusSquare.svg",
+    "component_id": "fi:FiMinusSquare",
     "aliases": [
       "fi",
       "minus",
@@ -1760,8 +1760,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMonitor.svg",
-    "component_id": "Icon.FiMonitor",
+    "src_svg": "fi/FiMonitor.svg",
+    "component_id": "fi:FiMonitor",
     "aliases": [
       "fi",
       "monitor"
@@ -1770,8 +1770,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMoon.svg",
-    "component_id": "Icon.FiMoon",
+    "src_svg": "fi/FiMoon.svg",
+    "component_id": "fi:FiMoon",
     "aliases": [
       "fi",
       "moon"
@@ -1780,8 +1780,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMoreHorizontal.svg",
-    "component_id": "Icon.FiMoreHorizontal",
+    "src_svg": "fi/FiMoreHorizontal.svg",
+    "component_id": "fi:FiMoreHorizontal",
     "aliases": [
       "fi",
       "more",
@@ -1791,8 +1791,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMoreVertical.svg",
-    "component_id": "Icon.FiMoreVertical",
+    "src_svg": "fi/FiMoreVertical.svg",
+    "component_id": "fi:FiMoreVertical",
     "aliases": [
       "fi",
       "more",
@@ -1802,8 +1802,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMousePointer.svg",
-    "component_id": "Icon.FiMousePointer",
+    "src_svg": "fi/FiMousePointer.svg",
+    "component_id": "fi:FiMousePointer",
     "aliases": [
       "fi",
       "mouse",
@@ -1813,8 +1813,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMove.svg",
-    "component_id": "Icon.FiMove",
+    "src_svg": "fi/FiMove.svg",
+    "component_id": "fi:FiMove",
     "aliases": [
       "fi",
       "move"
@@ -1823,8 +1823,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiMusic.svg",
-    "component_id": "Icon.FiMusic",
+    "src_svg": "fi/FiMusic.svg",
+    "component_id": "fi:FiMusic",
     "aliases": [
       "fi",
       "music"
@@ -1833,8 +1833,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiNavigation.svg",
-    "component_id": "Icon.FiNavigation",
+    "src_svg": "fi/FiNavigation.svg",
+    "component_id": "fi:FiNavigation",
     "aliases": [
       "fi",
       "navigation"
@@ -1843,8 +1843,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiNavigation2.svg",
-    "component_id": "Icon.FiNavigation2",
+    "src_svg": "fi/FiNavigation2.svg",
+    "component_id": "fi:FiNavigation2",
     "aliases": [
       "fi",
       "navigation",
@@ -1854,8 +1854,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiOctagon.svg",
-    "component_id": "Icon.FiOctagon",
+    "src_svg": "fi/FiOctagon.svg",
+    "component_id": "fi:FiOctagon",
     "aliases": [
       "fi",
       "octagon"
@@ -1864,8 +1864,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPackage.svg",
-    "component_id": "Icon.FiPackage",
+    "src_svg": "fi/FiPackage.svg",
+    "component_id": "fi:FiPackage",
     "aliases": [
       "fi",
       "package"
@@ -1874,8 +1874,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPaperclip.svg",
-    "component_id": "Icon.FiPaperclip",
+    "src_svg": "fi/FiPaperclip.svg",
+    "component_id": "fi:FiPaperclip",
     "aliases": [
       "fi",
       "paperclip"
@@ -1884,8 +1884,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPause.svg",
-    "component_id": "Icon.FiPause",
+    "src_svg": "fi/FiPause.svg",
+    "component_id": "fi:FiPause",
     "aliases": [
       "fi",
       "pause"
@@ -1894,8 +1894,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPauseCircle.svg",
-    "component_id": "Icon.FiPauseCircle",
+    "src_svg": "fi/FiPauseCircle.svg",
+    "component_id": "fi:FiPauseCircle",
     "aliases": [
       "fi",
       "pause",
@@ -1905,8 +1905,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPenTool.svg",
-    "component_id": "Icon.FiPenTool",
+    "src_svg": "fi/FiPenTool.svg",
+    "component_id": "fi:FiPenTool",
     "aliases": [
       "fi",
       "pen",
@@ -1916,8 +1916,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPercent.svg",
-    "component_id": "Icon.FiPercent",
+    "src_svg": "fi/FiPercent.svg",
+    "component_id": "fi:FiPercent",
     "aliases": [
       "fi",
       "percent"
@@ -1926,8 +1926,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhone.svg",
-    "component_id": "Icon.FiPhone",
+    "src_svg": "fi/FiPhone.svg",
+    "component_id": "fi:FiPhone",
     "aliases": [
       "fi",
       "phone"
@@ -1936,8 +1936,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneCall.svg",
-    "component_id": "Icon.FiPhoneCall",
+    "src_svg": "fi/FiPhoneCall.svg",
+    "component_id": "fi:FiPhoneCall",
     "aliases": [
       "fi",
       "phone",
@@ -1947,8 +1947,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneForwarded.svg",
-    "component_id": "Icon.FiPhoneForwarded",
+    "src_svg": "fi/FiPhoneForwarded.svg",
+    "component_id": "fi:FiPhoneForwarded",
     "aliases": [
       "fi",
       "phone",
@@ -1958,8 +1958,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneIncoming.svg",
-    "component_id": "Icon.FiPhoneIncoming",
+    "src_svg": "fi/FiPhoneIncoming.svg",
+    "component_id": "fi:FiPhoneIncoming",
     "aliases": [
       "fi",
       "phone",
@@ -1969,8 +1969,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneMissed.svg",
-    "component_id": "Icon.FiPhoneMissed",
+    "src_svg": "fi/FiPhoneMissed.svg",
+    "component_id": "fi:FiPhoneMissed",
     "aliases": [
       "fi",
       "phone",
@@ -1980,8 +1980,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneOff.svg",
-    "component_id": "Icon.FiPhoneOff",
+    "src_svg": "fi/FiPhoneOff.svg",
+    "component_id": "fi:FiPhoneOff",
     "aliases": [
       "fi",
       "phone",
@@ -1991,8 +1991,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPhoneOutgoing.svg",
-    "component_id": "Icon.FiPhoneOutgoing",
+    "src_svg": "fi/FiPhoneOutgoing.svg",
+    "component_id": "fi:FiPhoneOutgoing",
     "aliases": [
       "fi",
       "phone",
@@ -2002,8 +2002,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPieChart.svg",
-    "component_id": "Icon.FiPieChart",
+    "src_svg": "fi/FiPieChart.svg",
+    "component_id": "fi:FiPieChart",
     "aliases": [
       "fi",
       "pie",
@@ -2013,8 +2013,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPlay.svg",
-    "component_id": "Icon.FiPlay",
+    "src_svg": "fi/FiPlay.svg",
+    "component_id": "fi:FiPlay",
     "aliases": [
       "fi",
       "play"
@@ -2023,8 +2023,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPlayCircle.svg",
-    "component_id": "Icon.FiPlayCircle",
+    "src_svg": "fi/FiPlayCircle.svg",
+    "component_id": "fi:FiPlayCircle",
     "aliases": [
       "fi",
       "play",
@@ -2034,8 +2034,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPlus.svg",
-    "component_id": "Icon.FiPlus",
+    "src_svg": "fi/FiPlus.svg",
+    "component_id": "fi:FiPlus",
     "aliases": [
       "fi",
       "plus"
@@ -2044,8 +2044,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPlusCircle.svg",
-    "component_id": "Icon.FiPlusCircle",
+    "src_svg": "fi/FiPlusCircle.svg",
+    "component_id": "fi:FiPlusCircle",
     "aliases": [
       "fi",
       "plus",
@@ -2055,8 +2055,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPlusSquare.svg",
-    "component_id": "Icon.FiPlusSquare",
+    "src_svg": "fi/FiPlusSquare.svg",
+    "component_id": "fi:FiPlusSquare",
     "aliases": [
       "fi",
       "plus",
@@ -2066,8 +2066,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPocket.svg",
-    "component_id": "Icon.FiPocket",
+    "src_svg": "fi/FiPocket.svg",
+    "component_id": "fi:FiPocket",
     "aliases": [
       "fi",
       "pocket"
@@ -2076,8 +2076,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPower.svg",
-    "component_id": "Icon.FiPower",
+    "src_svg": "fi/FiPower.svg",
+    "component_id": "fi:FiPower",
     "aliases": [
       "fi",
       "power"
@@ -2086,8 +2086,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiPrinter.svg",
-    "component_id": "Icon.FiPrinter",
+    "src_svg": "fi/FiPrinter.svg",
+    "component_id": "fi:FiPrinter",
     "aliases": [
       "fi",
       "printer"
@@ -2096,8 +2096,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRadio.svg",
-    "component_id": "Icon.FiRadio",
+    "src_svg": "fi/FiRadio.svg",
+    "component_id": "fi:FiRadio",
     "aliases": [
       "fi",
       "radio"
@@ -2106,8 +2106,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRefreshCcw.svg",
-    "component_id": "Icon.FiRefreshCcw",
+    "src_svg": "fi/FiRefreshCcw.svg",
+    "component_id": "fi:FiRefreshCcw",
     "aliases": [
       "fi",
       "refresh",
@@ -2117,8 +2117,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRefreshCw.svg",
-    "component_id": "Icon.FiRefreshCw",
+    "src_svg": "fi/FiRefreshCw.svg",
+    "component_id": "fi:FiRefreshCw",
     "aliases": [
       "fi",
       "refresh",
@@ -2128,8 +2128,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRepeat.svg",
-    "component_id": "Icon.FiRepeat",
+    "src_svg": "fi/FiRepeat.svg",
+    "component_id": "fi:FiRepeat",
     "aliases": [
       "fi",
       "repeat"
@@ -2138,8 +2138,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRewind.svg",
-    "component_id": "Icon.FiRewind",
+    "src_svg": "fi/FiRewind.svg",
+    "component_id": "fi:FiRewind",
     "aliases": [
       "fi",
       "rewind"
@@ -2148,8 +2148,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRotateCcw.svg",
-    "component_id": "Icon.FiRotateCcw",
+    "src_svg": "fi/FiRotateCcw.svg",
+    "component_id": "fi:FiRotateCcw",
     "aliases": [
       "fi",
       "rotate",
@@ -2159,8 +2159,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRotateCw.svg",
-    "component_id": "Icon.FiRotateCw",
+    "src_svg": "fi/FiRotateCw.svg",
+    "component_id": "fi:FiRotateCw",
     "aliases": [
       "fi",
       "rotate",
@@ -2170,8 +2170,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiRss.svg",
-    "component_id": "Icon.FiRss",
+    "src_svg": "fi/FiRss.svg",
+    "component_id": "fi:FiRss",
     "aliases": [
       "fi",
       "rss"
@@ -2180,8 +2180,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSave.svg",
-    "component_id": "Icon.FiSave",
+    "src_svg": "fi/FiSave.svg",
+    "component_id": "fi:FiSave",
     "aliases": [
       "fi",
       "save"
@@ -2190,8 +2190,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiScissors.svg",
-    "component_id": "Icon.FiScissors",
+    "src_svg": "fi/FiScissors.svg",
+    "component_id": "fi:FiScissors",
     "aliases": [
       "fi",
       "scissors"
@@ -2200,8 +2200,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSearch.svg",
-    "component_id": "Icon.FiSearch",
+    "src_svg": "fi/FiSearch.svg",
+    "component_id": "fi:FiSearch",
     "aliases": [
       "fi",
       "search"
@@ -2210,8 +2210,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSend.svg",
-    "component_id": "Icon.FiSend",
+    "src_svg": "fi/FiSend.svg",
+    "component_id": "fi:FiSend",
     "aliases": [
       "fi",
       "send"
@@ -2220,8 +2220,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiServer.svg",
-    "component_id": "Icon.FiServer",
+    "src_svg": "fi/FiServer.svg",
+    "component_id": "fi:FiServer",
     "aliases": [
       "fi",
       "server"
@@ -2230,8 +2230,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSettings.svg",
-    "component_id": "Icon.FiSettings",
+    "src_svg": "fi/FiSettings.svg",
+    "component_id": "fi:FiSettings",
     "aliases": [
       "fi",
       "settings"
@@ -2240,8 +2240,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShare.svg",
-    "component_id": "Icon.FiShare",
+    "src_svg": "fi/FiShare.svg",
+    "component_id": "fi:FiShare",
     "aliases": [
       "fi",
       "share"
@@ -2250,8 +2250,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShare2.svg",
-    "component_id": "Icon.FiShare2",
+    "src_svg": "fi/FiShare2.svg",
+    "component_id": "fi:FiShare2",
     "aliases": [
       "fi",
       "share",
@@ -2261,8 +2261,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShield.svg",
-    "component_id": "Icon.FiShield",
+    "src_svg": "fi/FiShield.svg",
+    "component_id": "fi:FiShield",
     "aliases": [
       "fi",
       "shield"
@@ -2271,8 +2271,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShieldOff.svg",
-    "component_id": "Icon.FiShieldOff",
+    "src_svg": "fi/FiShieldOff.svg",
+    "component_id": "fi:FiShieldOff",
     "aliases": [
       "fi",
       "shield",
@@ -2282,8 +2282,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShoppingBag.svg",
-    "component_id": "Icon.FiShoppingBag",
+    "src_svg": "fi/FiShoppingBag.svg",
+    "component_id": "fi:FiShoppingBag",
     "aliases": [
       "fi",
       "shopping",
@@ -2293,8 +2293,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShoppingCart.svg",
-    "component_id": "Icon.FiShoppingCart",
+    "src_svg": "fi/FiShoppingCart.svg",
+    "component_id": "fi:FiShoppingCart",
     "aliases": [
       "fi",
       "shopping",
@@ -2304,8 +2304,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiShuffle.svg",
-    "component_id": "Icon.FiShuffle",
+    "src_svg": "fi/FiShuffle.svg",
+    "component_id": "fi:FiShuffle",
     "aliases": [
       "fi",
       "shuffle"
@@ -2314,8 +2314,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSidebar.svg",
-    "component_id": "Icon.FiSidebar",
+    "src_svg": "fi/FiSidebar.svg",
+    "component_id": "fi:FiSidebar",
     "aliases": [
       "fi",
       "sidebar"
@@ -2324,8 +2324,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSkipBack.svg",
-    "component_id": "Icon.FiSkipBack",
+    "src_svg": "fi/FiSkipBack.svg",
+    "component_id": "fi:FiSkipBack",
     "aliases": [
       "fi",
       "skip",
@@ -2335,8 +2335,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSkipForward.svg",
-    "component_id": "Icon.FiSkipForward",
+    "src_svg": "fi/FiSkipForward.svg",
+    "component_id": "fi:FiSkipForward",
     "aliases": [
       "fi",
       "skip",
@@ -2346,8 +2346,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSlack.svg",
-    "component_id": "Icon.FiSlack",
+    "src_svg": "fi/FiSlack.svg",
+    "component_id": "fi:FiSlack",
     "aliases": [
       "fi",
       "slack"
@@ -2356,8 +2356,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSlash.svg",
-    "component_id": "Icon.FiSlash",
+    "src_svg": "fi/FiSlash.svg",
+    "component_id": "fi:FiSlash",
     "aliases": [
       "fi",
       "slash"
@@ -2366,8 +2366,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSliders.svg",
-    "component_id": "Icon.FiSliders",
+    "src_svg": "fi/FiSliders.svg",
+    "component_id": "fi:FiSliders",
     "aliases": [
       "fi",
       "sliders"
@@ -2376,8 +2376,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSmartphone.svg",
-    "component_id": "Icon.FiSmartphone",
+    "src_svg": "fi/FiSmartphone.svg",
+    "component_id": "fi:FiSmartphone",
     "aliases": [
       "fi",
       "smartphone"
@@ -2386,8 +2386,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSmile.svg",
-    "component_id": "Icon.FiSmile",
+    "src_svg": "fi/FiSmile.svg",
+    "component_id": "fi:FiSmile",
     "aliases": [
       "fi",
       "smile"
@@ -2396,8 +2396,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSpeaker.svg",
-    "component_id": "Icon.FiSpeaker",
+    "src_svg": "fi/FiSpeaker.svg",
+    "component_id": "fi:FiSpeaker",
     "aliases": [
       "fi",
       "speaker"
@@ -2406,8 +2406,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSquare.svg",
-    "component_id": "Icon.FiSquare",
+    "src_svg": "fi/FiSquare.svg",
+    "component_id": "fi:FiSquare",
     "aliases": [
       "fi",
       "square"
@@ -2416,8 +2416,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiStar.svg",
-    "component_id": "Icon.FiStar",
+    "src_svg": "fi/FiStar.svg",
+    "component_id": "fi:FiStar",
     "aliases": [
       "fi",
       "star"
@@ -2426,8 +2426,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiStopCircle.svg",
-    "component_id": "Icon.FiStopCircle",
+    "src_svg": "fi/FiStopCircle.svg",
+    "component_id": "fi:FiStopCircle",
     "aliases": [
       "fi",
       "stop",
@@ -2437,8 +2437,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSun.svg",
-    "component_id": "Icon.FiSun",
+    "src_svg": "fi/FiSun.svg",
+    "component_id": "fi:FiSun",
     "aliases": [
       "fi",
       "sun"
@@ -2447,8 +2447,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSunrise.svg",
-    "component_id": "Icon.FiSunrise",
+    "src_svg": "fi/FiSunrise.svg",
+    "component_id": "fi:FiSunrise",
     "aliases": [
       "fi",
       "sunrise"
@@ -2457,8 +2457,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiSunset.svg",
-    "component_id": "Icon.FiSunset",
+    "src_svg": "fi/FiSunset.svg",
+    "component_id": "fi:FiSunset",
     "aliases": [
       "fi",
       "sunset"
@@ -2467,8 +2467,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTable.svg",
-    "component_id": "Icon.FiTable",
+    "src_svg": "fi/FiTable.svg",
+    "component_id": "fi:FiTable",
     "aliases": [
       "fi",
       "table"
@@ -2477,8 +2477,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTablet.svg",
-    "component_id": "Icon.FiTablet",
+    "src_svg": "fi/FiTablet.svg",
+    "component_id": "fi:FiTablet",
     "aliases": [
       "fi",
       "tablet"
@@ -2487,8 +2487,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTag.svg",
-    "component_id": "Icon.FiTag",
+    "src_svg": "fi/FiTag.svg",
+    "component_id": "fi:FiTag",
     "aliases": [
       "fi",
       "tag"
@@ -2497,8 +2497,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTarget.svg",
-    "component_id": "Icon.FiTarget",
+    "src_svg": "fi/FiTarget.svg",
+    "component_id": "fi:FiTarget",
     "aliases": [
       "fi",
       "target"
@@ -2507,8 +2507,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTerminal.svg",
-    "component_id": "Icon.FiTerminal",
+    "src_svg": "fi/FiTerminal.svg",
+    "component_id": "fi:FiTerminal",
     "aliases": [
       "fi",
       "terminal"
@@ -2517,8 +2517,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiThermometer.svg",
-    "component_id": "Icon.FiThermometer",
+    "src_svg": "fi/FiThermometer.svg",
+    "component_id": "fi:FiThermometer",
     "aliases": [
       "fi",
       "thermometer"
@@ -2527,8 +2527,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiThumbsDown.svg",
-    "component_id": "Icon.FiThumbsDown",
+    "src_svg": "fi/FiThumbsDown.svg",
+    "component_id": "fi:FiThumbsDown",
     "aliases": [
       "fi",
       "thumbs",
@@ -2538,8 +2538,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiThumbsUp.svg",
-    "component_id": "Icon.FiThumbsUp",
+    "src_svg": "fi/FiThumbsUp.svg",
+    "component_id": "fi:FiThumbsUp",
     "aliases": [
       "fi",
       "thumbs",
@@ -2549,8 +2549,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiToggleLeft.svg",
-    "component_id": "Icon.FiToggleLeft",
+    "src_svg": "fi/FiToggleLeft.svg",
+    "component_id": "fi:FiToggleLeft",
     "aliases": [
       "fi",
       "toggle",
@@ -2560,8 +2560,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiToggleRight.svg",
-    "component_id": "Icon.FiToggleRight",
+    "src_svg": "fi/FiToggleRight.svg",
+    "component_id": "fi:FiToggleRight",
     "aliases": [
       "fi",
       "toggle",
@@ -2571,8 +2571,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTool.svg",
-    "component_id": "Icon.FiTool",
+    "src_svg": "fi/FiTool.svg",
+    "component_id": "fi:FiTool",
     "aliases": [
       "fi",
       "tool"
@@ -2581,8 +2581,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTrash.svg",
-    "component_id": "Icon.FiTrash",
+    "src_svg": "fi/FiTrash.svg",
+    "component_id": "fi:FiTrash",
     "aliases": [
       "fi",
       "trash"
@@ -2591,8 +2591,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTrash2.svg",
-    "component_id": "Icon.FiTrash2",
+    "src_svg": "fi/FiTrash2.svg",
+    "component_id": "fi:FiTrash2",
     "aliases": [
       "fi",
       "trash",
@@ -2602,8 +2602,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTrello.svg",
-    "component_id": "Icon.FiTrello",
+    "src_svg": "fi/FiTrello.svg",
+    "component_id": "fi:FiTrello",
     "aliases": [
       "fi",
       "trello"
@@ -2612,8 +2612,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTrendingDown.svg",
-    "component_id": "Icon.FiTrendingDown",
+    "src_svg": "fi/FiTrendingDown.svg",
+    "component_id": "fi:FiTrendingDown",
     "aliases": [
       "fi",
       "trending",
@@ -2623,8 +2623,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTrendingUp.svg",
-    "component_id": "Icon.FiTrendingUp",
+    "src_svg": "fi/FiTrendingUp.svg",
+    "component_id": "fi:FiTrendingUp",
     "aliases": [
       "fi",
       "trending",
@@ -2634,8 +2634,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTriangle.svg",
-    "component_id": "Icon.FiTriangle",
+    "src_svg": "fi/FiTriangle.svg",
+    "component_id": "fi:FiTriangle",
     "aliases": [
       "fi",
       "triangle"
@@ -2644,8 +2644,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTruck.svg",
-    "component_id": "Icon.FiTruck",
+    "src_svg": "fi/FiTruck.svg",
+    "component_id": "fi:FiTruck",
     "aliases": [
       "fi",
       "truck"
@@ -2654,8 +2654,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTv.svg",
-    "component_id": "Icon.FiTv",
+    "src_svg": "fi/FiTv.svg",
+    "component_id": "fi:FiTv",
     "aliases": [
       "fi",
       "tv"
@@ -2664,8 +2664,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTwitch.svg",
-    "component_id": "Icon.FiTwitch",
+    "src_svg": "fi/FiTwitch.svg",
+    "component_id": "fi:FiTwitch",
     "aliases": [
       "fi",
       "twitch"
@@ -2674,8 +2674,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiTwitter.svg",
-    "component_id": "Icon.FiTwitter",
+    "src_svg": "fi/FiTwitter.svg",
+    "component_id": "fi:FiTwitter",
     "aliases": [
       "fi",
       "twitter"
@@ -2684,8 +2684,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiType.svg",
-    "component_id": "Icon.FiType",
+    "src_svg": "fi/FiType.svg",
+    "component_id": "fi:FiType",
     "aliases": [
       "fi",
       "type"
@@ -2694,8 +2694,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUmbrella.svg",
-    "component_id": "Icon.FiUmbrella",
+    "src_svg": "fi/FiUmbrella.svg",
+    "component_id": "fi:FiUmbrella",
     "aliases": [
       "fi",
       "umbrella"
@@ -2704,8 +2704,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUnderline.svg",
-    "component_id": "Icon.FiUnderline",
+    "src_svg": "fi/FiUnderline.svg",
+    "component_id": "fi:FiUnderline",
     "aliases": [
       "fi",
       "underline"
@@ -2714,8 +2714,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUnlock.svg",
-    "component_id": "Icon.FiUnlock",
+    "src_svg": "fi/FiUnlock.svg",
+    "component_id": "fi:FiUnlock",
     "aliases": [
       "fi",
       "unlock"
@@ -2724,8 +2724,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUpload.svg",
-    "component_id": "Icon.FiUpload",
+    "src_svg": "fi/FiUpload.svg",
+    "component_id": "fi:FiUpload",
     "aliases": [
       "fi",
       "upload"
@@ -2734,8 +2734,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUploadCloud.svg",
-    "component_id": "Icon.FiUploadCloud",
+    "src_svg": "fi/FiUploadCloud.svg",
+    "component_id": "fi:FiUploadCloud",
     "aliases": [
       "fi",
       "upload",
@@ -2745,8 +2745,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUser.svg",
-    "component_id": "Icon.FiUser",
+    "src_svg": "fi/FiUser.svg",
+    "component_id": "fi:FiUser",
     "aliases": [
       "fi",
       "user"
@@ -2755,8 +2755,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUserCheck.svg",
-    "component_id": "Icon.FiUserCheck",
+    "src_svg": "fi/FiUserCheck.svg",
+    "component_id": "fi:FiUserCheck",
     "aliases": [
       "fi",
       "user",
@@ -2766,8 +2766,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUserMinus.svg",
-    "component_id": "Icon.FiUserMinus",
+    "src_svg": "fi/FiUserMinus.svg",
+    "component_id": "fi:FiUserMinus",
     "aliases": [
       "fi",
       "user",
@@ -2777,8 +2777,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUserPlus.svg",
-    "component_id": "Icon.FiUserPlus",
+    "src_svg": "fi/FiUserPlus.svg",
+    "component_id": "fi:FiUserPlus",
     "aliases": [
       "fi",
       "user",
@@ -2788,8 +2788,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUserX.svg",
-    "component_id": "Icon.FiUserX",
+    "src_svg": "fi/FiUserX.svg",
+    "component_id": "fi:FiUserX",
     "aliases": [
       "fi",
       "user",
@@ -2799,8 +2799,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiUsers.svg",
-    "component_id": "Icon.FiUsers",
+    "src_svg": "fi/FiUsers.svg",
+    "component_id": "fi:FiUsers",
     "aliases": [
       "fi",
       "users"
@@ -2809,8 +2809,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVideo.svg",
-    "component_id": "Icon.FiVideo",
+    "src_svg": "fi/FiVideo.svg",
+    "component_id": "fi:FiVideo",
     "aliases": [
       "fi",
       "video"
@@ -2819,8 +2819,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVideoOff.svg",
-    "component_id": "Icon.FiVideoOff",
+    "src_svg": "fi/FiVideoOff.svg",
+    "component_id": "fi:FiVideoOff",
     "aliases": [
       "fi",
       "video",
@@ -2830,8 +2830,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVoicemail.svg",
-    "component_id": "Icon.FiVoicemail",
+    "src_svg": "fi/FiVoicemail.svg",
+    "component_id": "fi:FiVoicemail",
     "aliases": [
       "fi",
       "voicemail"
@@ -2840,8 +2840,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVolume.svg",
-    "component_id": "Icon.FiVolume",
+    "src_svg": "fi/FiVolume.svg",
+    "component_id": "fi:FiVolume",
     "aliases": [
       "fi",
       "volume"
@@ -2850,8 +2850,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVolume1.svg",
-    "component_id": "Icon.FiVolume1",
+    "src_svg": "fi/FiVolume1.svg",
+    "component_id": "fi:FiVolume1",
     "aliases": [
       "fi",
       "volume",
@@ -2861,8 +2861,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVolume2.svg",
-    "component_id": "Icon.FiVolume2",
+    "src_svg": "fi/FiVolume2.svg",
+    "component_id": "fi:FiVolume2",
     "aliases": [
       "fi",
       "volume",
@@ -2872,8 +2872,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiVolumeX.svg",
-    "component_id": "Icon.FiVolumeX",
+    "src_svg": "fi/FiVolumeX.svg",
+    "component_id": "fi:FiVolumeX",
     "aliases": [
       "fi",
       "volume",
@@ -2883,8 +2883,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiWatch.svg",
-    "component_id": "Icon.FiWatch",
+    "src_svg": "fi/FiWatch.svg",
+    "component_id": "fi:FiWatch",
     "aliases": [
       "fi",
       "watch"
@@ -2893,8 +2893,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiWifi.svg",
-    "component_id": "Icon.FiWifi",
+    "src_svg": "fi/FiWifi.svg",
+    "component_id": "fi:FiWifi",
     "aliases": [
       "fi",
       "wifi"
@@ -2903,8 +2903,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiWifiOff.svg",
-    "component_id": "Icon.FiWifiOff",
+    "src_svg": "fi/FiWifiOff.svg",
+    "component_id": "fi:FiWifiOff",
     "aliases": [
       "fi",
       "wifi",
@@ -2914,8 +2914,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiWind.svg",
-    "component_id": "Icon.FiWind",
+    "src_svg": "fi/FiWind.svg",
+    "component_id": "fi:FiWind",
     "aliases": [
       "fi",
       "wind"
@@ -2924,8 +2924,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiX.svg",
-    "component_id": "Icon.FiX",
+    "src_svg": "fi/FiX.svg",
+    "component_id": "fi:FiX",
     "aliases": [
       "fi",
       "x"
@@ -2934,8 +2934,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiXCircle.svg",
-    "component_id": "Icon.FiXcircle",
+    "src_svg": "fi/FiXCircle.svg",
+    "component_id": "fi:FiXcircle",
     "aliases": [
       "fi",
       "xcircle"
@@ -2944,8 +2944,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiXOctagon.svg",
-    "component_id": "Icon.FiXoctagon",
+    "src_svg": "fi/FiXOctagon.svg",
+    "component_id": "fi:FiXoctagon",
     "aliases": [
       "fi",
       "xoctagon"
@@ -2954,8 +2954,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiXSquare.svg",
-    "component_id": "Icon.FiXsquare",
+    "src_svg": "fi/FiXSquare.svg",
+    "component_id": "fi:FiXsquare",
     "aliases": [
       "fi",
       "xsquare"
@@ -2964,8 +2964,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiYoutube.svg",
-    "component_id": "Icon.FiYoutube",
+    "src_svg": "fi/FiYoutube.svg",
+    "component_id": "fi:FiYoutube",
     "aliases": [
       "fi",
       "youtube"
@@ -2974,8 +2974,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiZap.svg",
-    "component_id": "Icon.FiZap",
+    "src_svg": "fi/FiZap.svg",
+    "component_id": "fi:FiZap",
     "aliases": [
       "fi",
       "zap"
@@ -2984,8 +2984,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiZapOff.svg",
-    "component_id": "Icon.FiZapOff",
+    "src_svg": "fi/FiZapOff.svg",
+    "component_id": "fi:FiZapOff",
     "aliases": [
       "fi",
       "zap",
@@ -2995,8 +2995,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiZoomIn.svg",
-    "component_id": "Icon.FiZoomIn",
+    "src_svg": "fi/FiZoomIn.svg",
+    "component_id": "fi:FiZoomIn",
     "aliases": [
       "fi",
       "zoom",
@@ -3006,8 +3006,8 @@
     "colors": []
   },
   {
-    "src_svg": "/home/darren/llm-widget-factory/assets/fi/FiZoomOut.svg",
-    "component_id": "Icon.FiZoomOut",
+    "src_svg": "fi/FiZoomOut.svg",
+    "component_id": "fi:FiZoomOut",
     "aliases": [
       "fi",
       "zoom",

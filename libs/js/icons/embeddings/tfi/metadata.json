@@ -1,6 +1,6 @@
 {
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAgenda.svg": {
-    "component_id": "Icon.TfiAgenda",
+  "tfi/TfiAgenda.svg": {
+    "component_id": "tfi:TfiAgenda",
     "aliases": [
       "tfi",
       "agenda"
@@ -8,8 +8,8 @@
     "colors": [],
     "caption": "a black and white icon of a book"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAlarmClock.svg": {
-    "component_id": "Icon.TfiAlarmClock",
+  "tfi/TfiAlarmClock.svg": {
+    "component_id": "tfi:TfiAlarmClock",
     "aliases": [
       "tfi",
       "alarm",
@@ -18,8 +18,8 @@
     "colors": [],
     "caption": "an alarm clock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAlert.svg": {
-    "component_id": "Icon.TfiAlert",
+  "tfi/TfiAlert.svg": {
+    "component_id": "tfi:TfiAlert",
     "aliases": [
       "tfi",
       "alert"
@@ -27,8 +27,8 @@
     "colors": [],
     "caption": "a black and white image of a warning sign"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAlignCenter.svg": {
-    "component_id": "Icon.TfiAlignCenter",
+  "tfi/TfiAlignCenter.svg": {
+    "component_id": "tfi:TfiAlignCenter",
     "aliases": [
       "tfi",
       "align",
@@ -37,8 +37,8 @@
     "colors": [],
     "caption": "a black and white image of four lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAlignJustify.svg": {
-    "component_id": "Icon.TfiAlignJustify",
+  "tfi/TfiAlignJustify.svg": {
+    "component_id": "tfi:TfiAlignJustify",
     "aliases": [
       "tfi",
       "align",
@@ -47,8 +47,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAlignLeft.svg": {
-    "component_id": "Icon.TfiAlignLeft",
+  "tfi/TfiAlignLeft.svg": {
+    "component_id": "tfi:TfiAlignLeft",
     "aliases": [
       "tfi",
       "align",
@@ -57,8 +57,8 @@
     "colors": [],
     "caption": "a black and white image of three lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAlignRight.svg": {
-    "component_id": "Icon.TfiAlignRight",
+  "tfi/TfiAlignRight.svg": {
+    "component_id": "tfi:TfiAlignRight",
     "aliases": [
       "tfi",
       "align",
@@ -67,8 +67,8 @@
     "colors": [],
     "caption": "a black and white image of three lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAnchor.svg": {
-    "component_id": "Icon.TfiAnchor",
+  "tfi/TfiAnchor.svg": {
+    "component_id": "tfi:TfiAnchor",
     "aliases": [
       "tfi",
       "anchor"
@@ -76,8 +76,8 @@
     "colors": [],
     "caption": "an anchor icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAndroid.svg": {
-    "component_id": "Icon.TfiAndroid",
+  "tfi/TfiAndroid.svg": {
+    "component_id": "tfi:TfiAndroid",
     "aliases": [
       "tfi",
       "android"
@@ -85,8 +85,8 @@
     "colors": [],
     "caption": "a black android icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAngleDoubleDown.svg": {
-    "component_id": "Icon.TfiAngleDoubleDown",
+  "tfi/TfiAngleDoubleDown.svg": {
+    "component_id": "tfi:TfiAngleDoubleDown",
     "aliases": [
       "tfi",
       "angle",
@@ -96,8 +96,8 @@
     "colors": [],
     "caption": "a black and white image of a check mark"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAngleDoubleLeft.svg": {
-    "component_id": "Icon.TfiAngleDoubleLeft",
+  "tfi/TfiAngleDoubleLeft.svg": {
+    "component_id": "tfi:TfiAngleDoubleLeft",
     "aliases": [
       "tfi",
       "angle",
@@ -107,8 +107,8 @@
     "colors": [],
     "caption": "a black and white arrow symbol with two lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAngleDoubleRight.svg": {
-    "component_id": "Icon.TfiAngleDoubleRight",
+  "tfi/TfiAngleDoubleRight.svg": {
+    "component_id": "tfi:TfiAngleDoubleRight",
     "aliases": [
       "tfi",
       "angle",
@@ -118,8 +118,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAngleDoubleUp.svg": {
-    "component_id": "Icon.TfiAngleDoubleUp",
+  "tfi/TfiAngleDoubleUp.svg": {
+    "component_id": "tfi:TfiAngleDoubleUp",
     "aliases": [
       "tfi",
       "angle",
@@ -129,8 +129,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAngleDown.svg": {
-    "component_id": "Icon.TfiAngleDown",
+  "tfi/TfiAngleDown.svg": {
+    "component_id": "tfi:TfiAngleDown",
     "aliases": [
       "tfi",
       "angle",
@@ -139,8 +139,8 @@
     "colors": [],
     "caption": "a black and white image of the letter v"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAngleLeft.svg": {
-    "component_id": "Icon.TfiAngleLeft",
+  "tfi/TfiAngleLeft.svg": {
+    "component_id": "tfi:TfiAngleLeft",
     "aliases": [
       "tfi",
       "angle",
@@ -149,8 +149,8 @@
     "colors": [],
     "caption": "a black and white image of the letter k"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAngleRight.svg": {
-    "component_id": "Icon.TfiAngleRight",
+  "tfi/TfiAngleRight.svg": {
+    "component_id": "tfi:TfiAngleRight",
     "aliases": [
       "tfi",
       "angle",
@@ -159,8 +159,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAngleUp.svg": {
-    "component_id": "Icon.TfiAngleUp",
+  "tfi/TfiAngleUp.svg": {
+    "component_id": "tfi:TfiAngleUp",
     "aliases": [
       "tfi",
       "angle",
@@ -169,8 +169,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a triangle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiAnnouncement.svg": {
-    "component_id": "Icon.TfiAnnouncement",
+  "tfi/TfiAnnouncement.svg": {
+    "component_id": "tfi:TfiAnnouncement",
     "aliases": [
       "tfi",
       "announcement"
@@ -178,8 +178,8 @@
     "colors": [],
     "caption": "a megaphone icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiApple.svg": {
-    "component_id": "Icon.TfiApple",
+  "tfi/TfiApple.svg": {
+    "component_id": "tfi:TfiApple",
     "aliases": [
       "tfi",
       "apple"
@@ -187,8 +187,8 @@
     "colors": [],
     "caption": "an apple logo is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArchive.svg": {
-    "component_id": "Icon.TfiArchive",
+  "tfi/TfiArchive.svg": {
+    "component_id": "tfi:TfiArchive",
     "aliases": [
       "tfi",
       "archive"
@@ -196,8 +196,8 @@
     "colors": [],
     "caption": "a black and white icon of a box"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrow.svg": {
-    "component_id": "Icon.TfiArrow",
+  "tfi/TfiArrow.svg": {
+    "component_id": "tfi:TfiArrow",
     "aliases": [
       "tfi",
       "arrow"
@@ -205,8 +205,8 @@
     "colors": [],
     "caption": "a black and white image of three arrows pointing in different directions"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowCircleDown.svg": {
-    "component_id": "Icon.TfiArrowCircleDown",
+  "tfi/TfiArrowCircleDown.svg": {
+    "component_id": "tfi:TfiArrowCircleDown",
     "aliases": [
       "tfi",
       "arrow",
@@ -216,8 +216,8 @@
     "colors": [],
     "caption": "a black and white image of a clock with an arrow"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowCircleLeft.svg": {
-    "component_id": "Icon.TfiArrowCircleLeft",
+  "tfi/TfiArrowCircleLeft.svg": {
+    "component_id": "tfi:TfiArrowCircleLeft",
     "aliases": [
       "tfi",
       "arrow",
@@ -227,8 +227,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowCircleRight.svg": {
-    "component_id": "Icon.TfiArrowCircleRight",
+  "tfi/TfiArrowCircleRight.svg": {
+    "component_id": "tfi:TfiArrowCircleRight",
     "aliases": [
       "tfi",
       "arrow",
@@ -238,8 +238,8 @@
     "colors": [],
     "caption": "a black arrow in a circle on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowCircleUp.svg": {
-    "component_id": "Icon.TfiArrowCircleUp",
+  "tfi/TfiArrowCircleUp.svg": {
+    "component_id": "tfi:TfiArrowCircleUp",
     "aliases": [
       "tfi",
       "arrow",
@@ -249,8 +249,8 @@
     "colors": [],
     "caption": "a black and white circle with an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowDown.svg": {
-    "component_id": "Icon.TfiArrowDown",
+  "tfi/TfiArrowDown.svg": {
+    "component_id": "tfi:TfiArrowDown",
     "aliases": [
       "tfi",
       "arrow",
@@ -259,8 +259,8 @@
     "colors": [],
     "caption": "an arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowLeft.svg": {
-    "component_id": "Icon.TfiArrowLeft",
+  "tfi/TfiArrowLeft.svg": {
+    "component_id": "tfi:TfiArrowLeft",
     "aliases": [
       "tfi",
       "arrow",
@@ -269,8 +269,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowRight.svg": {
-    "component_id": "Icon.TfiArrowRight",
+  "tfi/TfiArrowRight.svg": {
+    "component_id": "tfi:TfiArrowRight",
     "aliases": [
       "tfi",
       "arrow",
@@ -279,8 +279,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowTopLeft.svg": {
-    "component_id": "Icon.TfiArrowTopLeft",
+  "tfi/TfiArrowTopLeft.svg": {
+    "component_id": "tfi:TfiArrowTopLeft",
     "aliases": [
       "tfi",
       "arrow",
@@ -290,8 +290,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right side of a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowTopRight.svg": {
-    "component_id": "Icon.TfiArrowTopRight",
+  "tfi/TfiArrowTopRight.svg": {
+    "component_id": "tfi:TfiArrowTopRight",
     "aliases": [
       "tfi",
       "arrow",
@@ -301,8 +301,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowUp.svg": {
-    "component_id": "Icon.TfiArrowUp",
+  "tfi/TfiArrowUp.svg": {
+    "component_id": "tfi:TfiArrowUp",
     "aliases": [
       "tfi",
       "arrow",
@@ -311,8 +311,8 @@
     "colors": [],
     "caption": "an arrow pointing up in a black and white image"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowsCorner.svg": {
-    "component_id": "Icon.TfiArrowsCorner",
+  "tfi/TfiArrowsCorner.svg": {
+    "component_id": "tfi:TfiArrowsCorner",
     "aliases": [
       "tfi",
       "arrows",
@@ -321,8 +321,8 @@
     "colors": [],
     "caption": "an arrow pointing in the direction of the arrow"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowsHorizontal.svg": {
-    "component_id": "Icon.TfiArrowsHorizontal",
+  "tfi/TfiArrowsHorizontal.svg": {
+    "component_id": "tfi:TfiArrowsHorizontal",
     "aliases": [
       "tfi",
       "arrows",
@@ -331,8 +331,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiArrowsVertical.svg": {
-    "component_id": "Icon.TfiArrowsVertical",
+  "tfi/TfiArrowsVertical.svg": {
+    "component_id": "tfi:TfiArrowsVertical",
     "aliases": [
       "tfi",
       "arrows",
@@ -341,8 +341,8 @@
     "colors": [],
     "caption": "a black arrow pointing up in the middle of a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBackLeft.svg": {
-    "component_id": "Icon.TfiBackLeft",
+  "tfi/TfiBackLeft.svg": {
+    "component_id": "tfi:TfiBackLeft",
     "aliases": [
       "tfi",
       "back",
@@ -351,8 +351,8 @@
     "colors": [],
     "caption": "a black and white image of a letter r"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBackRight.svg": {
-    "component_id": "Icon.TfiBackRight",
+  "tfi/TfiBackRight.svg": {
+    "component_id": "tfi:TfiBackRight",
     "aliases": [
       "tfi",
       "back",
@@ -361,8 +361,8 @@
     "colors": [],
     "caption": "a black and white image of a circular arrow"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBag.svg": {
-    "component_id": "Icon.TfiBag",
+  "tfi/TfiBag.svg": {
+    "component_id": "tfi:TfiBag",
     "aliases": [
       "tfi",
       "bag"
@@ -370,8 +370,8 @@
     "colors": [],
     "caption": "a black and white icon of a shopping bag"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBarChart.svg": {
-    "component_id": "Icon.TfiBarChart",
+  "tfi/TfiBarChart.svg": {
+    "component_id": "tfi:TfiBarChart",
     "aliases": [
       "tfi",
       "bar",
@@ -380,8 +380,8 @@
     "colors": [],
     "caption": "a bar graph icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBarChartAlt.svg": {
-    "component_id": "Icon.TfiBarChartAlt",
+  "tfi/TfiBarChartAlt.svg": {
+    "component_id": "tfi:TfiBarChartAlt",
     "aliases": [
       "tfi",
       "bar",
@@ -391,8 +391,8 @@
     "colors": [],
     "caption": "a bar graph icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBasketball.svg": {
-    "component_id": "Icon.TfiBasketball",
+  "tfi/TfiBasketball.svg": {
+    "component_id": "tfi:TfiBasketball",
     "aliases": [
       "tfi",
       "basketball"
@@ -400,8 +400,8 @@
     "colors": [],
     "caption": "a black and white image of a basketball ball"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBell.svg": {
-    "component_id": "Icon.TfiBell",
+  "tfi/TfiBell.svg": {
+    "component_id": "tfi:TfiBell",
     "aliases": [
       "tfi",
       "bell"
@@ -409,8 +409,8 @@
     "colors": [],
     "caption": "a bell icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBlackboard.svg": {
-    "component_id": "Icon.TfiBlackboard",
+  "tfi/TfiBlackboard.svg": {
+    "component_id": "tfi:TfiBlackboard",
     "aliases": [
       "tfi",
       "blackboard"
@@ -418,8 +418,8 @@
     "colors": [],
     "caption": "a black and white image of an easel on a tripod"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBolt.svg": {
-    "component_id": "Icon.TfiBolt",
+  "tfi/TfiBolt.svg": {
+    "component_id": "tfi:TfiBolt",
     "aliases": [
       "tfi",
       "bolt"
@@ -427,8 +427,8 @@
     "colors": [],
     "caption": "a lightning bolt icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBoltAlt.svg": {
-    "component_id": "Icon.TfiBoltAlt",
+  "tfi/TfiBoltAlt.svg": {
+    "component_id": "tfi:TfiBoltAlt",
     "aliases": [
       "tfi",
       "bolt",
@@ -437,8 +437,8 @@
     "colors": [],
     "caption": "a black and white image of a lightning bolt"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBook.svg": {
-    "component_id": "Icon.TfiBook",
+  "tfi/TfiBook.svg": {
+    "component_id": "tfi:TfiBook",
     "aliases": [
       "tfi",
       "book"
@@ -446,8 +446,8 @@
     "colors": [],
     "caption": "an open book icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBookmark.svg": {
-    "component_id": "Icon.TfiBookmark",
+  "tfi/TfiBookmark.svg": {
+    "component_id": "tfi:TfiBookmark",
     "aliases": [
       "tfi",
       "bookmark"
@@ -455,8 +455,8 @@
     "colors": [],
     "caption": "a black and white icon of a ribbon"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBookmarkAlt.svg": {
-    "component_id": "Icon.TfiBookmarkAlt",
+  "tfi/TfiBookmarkAlt.svg": {
+    "component_id": "tfi:TfiBookmarkAlt",
     "aliases": [
       "tfi",
       "bookmark",
@@ -465,8 +465,8 @@
     "colors": [],
     "caption": "a black and white icon of a book with a ribbon"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBriefcase.svg": {
-    "component_id": "Icon.TfiBriefcase",
+  "tfi/TfiBriefcase.svg": {
+    "component_id": "tfi:TfiBriefcase",
     "aliases": [
       "tfi",
       "briefcase"
@@ -474,8 +474,8 @@
     "colors": [],
     "caption": "a briefcase icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBrush.svg": {
-    "component_id": "Icon.TfiBrush",
+  "tfi/TfiBrush.svg": {
+    "component_id": "tfi:TfiBrush",
     "aliases": [
       "tfi",
       "brush"
@@ -483,8 +483,8 @@
     "colors": [],
     "caption": "a black and white drawing of a shovel"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiBrushAlt.svg": {
-    "component_id": "Icon.TfiBrushAlt",
+  "tfi/TfiBrushAlt.svg": {
+    "component_id": "tfi:TfiBrushAlt",
     "aliases": [
       "tfi",
       "brush",
@@ -493,8 +493,8 @@
     "colors": [],
     "caption": "a brush icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCalendar.svg": {
-    "component_id": "Icon.TfiCalendar",
+  "tfi/TfiCalendar.svg": {
+    "component_id": "tfi:TfiCalendar",
     "aliases": [
       "tfi",
       "calendar"
@@ -502,8 +502,8 @@
     "colors": [],
     "caption": "a calendar icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCamera.svg": {
-    "component_id": "Icon.TfiCamera",
+  "tfi/TfiCamera.svg": {
+    "component_id": "tfi:TfiCamera",
     "aliases": [
       "tfi",
       "camera"
@@ -511,8 +511,8 @@
     "colors": [],
     "caption": "a camera icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCar.svg": {
-    "component_id": "Icon.TfiCar",
+  "tfi/TfiCar.svg": {
+    "component_id": "tfi:TfiCar",
     "aliases": [
       "tfi",
       "car"
@@ -520,8 +520,8 @@
     "colors": [],
     "caption": "a car icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCheck.svg": {
-    "component_id": "Icon.TfiCheck",
+  "tfi/TfiCheck.svg": {
+    "component_id": "tfi:TfiCheck",
     "aliases": [
       "tfi",
       "check"
@@ -529,8 +529,8 @@
     "colors": [],
     "caption": "a black check mark on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCheckBox.svg": {
-    "component_id": "Icon.TfiCheckBox",
+  "tfi/TfiCheckBox.svg": {
+    "component_id": "tfi:TfiCheckBox",
     "aliases": [
       "tfi",
       "check",
@@ -539,8 +539,8 @@
     "colors": [],
     "caption": "a check mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiClip.svg": {
-    "component_id": "Icon.TfiClip",
+  "tfi/TfiClip.svg": {
+    "component_id": "tfi:TfiClip",
     "aliases": [
       "tfi",
       "clip"
@@ -548,8 +548,8 @@
     "colors": [],
     "caption": "a black and white image of a paper clip"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiClipboard.svg": {
-    "component_id": "Icon.TfiClipboard",
+  "tfi/TfiClipboard.svg": {
+    "component_id": "tfi:TfiClipboard",
     "aliases": [
       "tfi",
       "clipboard"
@@ -557,8 +557,8 @@
     "colors": [],
     "caption": "a black and white icon of a clipboard on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiClose.svg": {
-    "component_id": "Icon.TfiClose",
+  "tfi/TfiClose.svg": {
+    "component_id": "tfi:TfiClose",
     "aliases": [
       "tfi",
       "close"
@@ -566,8 +566,8 @@
     "colors": [],
     "caption": "a black and white cross on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCloud.svg": {
-    "component_id": "Icon.TfiCloud",
+  "tfi/TfiCloud.svg": {
+    "component_id": "tfi:TfiCloud",
     "aliases": [
       "tfi",
       "cloud"
@@ -575,8 +575,8 @@
     "colors": [],
     "caption": "a black cloud icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCloudDown.svg": {
-    "component_id": "Icon.TfiCloudDown",
+  "tfi/TfiCloudDown.svg": {
+    "component_id": "tfi:TfiCloudDown",
     "aliases": [
       "tfi",
       "cloud",
@@ -585,8 +585,8 @@
     "colors": [],
     "caption": "a cloud icon with an arrow pointing down"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCloudUp.svg": {
-    "component_id": "Icon.TfiCloudUp",
+  "tfi/TfiCloudUp.svg": {
+    "component_id": "tfi:TfiCloudUp",
     "aliases": [
       "tfi",
       "cloud",
@@ -595,8 +595,8 @@
     "colors": [],
     "caption": "a cloud with an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiComment.svg": {
-    "component_id": "Icon.TfiComment",
+  "tfi/TfiComment.svg": {
+    "component_id": "tfi:TfiComment",
     "aliases": [
       "tfi",
       "comment"
@@ -604,8 +604,8 @@
     "colors": [],
     "caption": "a black and white image of a speech bubble"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCommentAlt.svg": {
-    "component_id": "Icon.TfiCommentAlt",
+  "tfi/TfiCommentAlt.svg": {
+    "component_id": "tfi:TfiCommentAlt",
     "aliases": [
       "tfi",
       "comment",
@@ -614,8 +614,8 @@
     "colors": [],
     "caption": "a black and white image of a speech bubble"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiComments.svg": {
-    "component_id": "Icon.TfiComments",
+  "tfi/TfiComments.svg": {
+    "component_id": "tfi:TfiComments",
     "aliases": [
       "tfi",
       "comments"
@@ -623,8 +623,8 @@
     "colors": [],
     "caption": "a black and white image of two speech bubbles"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCommentsSmiley.svg": {
-    "component_id": "Icon.TfiCommentsSmiley",
+  "tfi/TfiCommentsSmiley.svg": {
+    "component_id": "tfi:TfiCommentsSmiley",
     "aliases": [
       "tfi",
       "comments",
@@ -633,8 +633,8 @@
     "colors": [],
     "caption": "a black and white image of a smiley face"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiControlBackward.svg": {
-    "component_id": "Icon.TfiControlBackward",
+  "tfi/TfiControlBackward.svg": {
+    "component_id": "tfi:TfiControlBackward",
     "aliases": [
       "tfi",
       "control",
@@ -643,8 +643,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing down"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiControlEject.svg": {
-    "component_id": "Icon.TfiControlEject",
+  "tfi/TfiControlEject.svg": {
+    "component_id": "tfi:TfiControlEject",
     "aliases": [
       "tfi",
       "control",
@@ -653,8 +653,8 @@
     "colors": [],
     "caption": "an image of a triangle with a line through it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiControlForward.svg": {
-    "component_id": "Icon.TfiControlForward",
+  "tfi/TfiControlForward.svg": {
+    "component_id": "tfi:TfiControlForward",
     "aliases": [
       "tfi",
       "control",
@@ -663,8 +663,8 @@
     "colors": [],
     "caption": "an arrow pointing to the right in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiControlPause.svg": {
-    "component_id": "Icon.TfiControlPause",
+  "tfi/TfiControlPause.svg": {
+    "component_id": "tfi:TfiControlPause",
     "aliases": [
       "tfi",
       "control",
@@ -673,8 +673,8 @@
     "colors": [],
     "caption": "a black and white image of two black rectangles"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiControlPlay.svg": {
-    "component_id": "Icon.TfiControlPlay",
+  "tfi/TfiControlPlay.svg": {
+    "component_id": "tfi:TfiControlPlay",
     "aliases": [
       "tfi",
       "control",
@@ -683,8 +683,8 @@
     "colors": [],
     "caption": "a black and white image of a triangle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiControlRecord.svg": {
-    "component_id": "Icon.TfiControlRecord",
+  "tfi/TfiControlRecord.svg": {
+    "component_id": "tfi:TfiControlRecord",
     "aliases": [
       "tfi",
       "control",
@@ -693,8 +693,8 @@
     "colors": [],
     "caption": "a black circle is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiControlShuffle.svg": {
-    "component_id": "Icon.TfiControlShuffle",
+  "tfi/TfiControlShuffle.svg": {
+    "component_id": "tfi:TfiControlShuffle",
     "aliases": [
       "tfi",
       "control",
@@ -703,8 +703,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiControlSkipBackward.svg": {
-    "component_id": "Icon.TfiControlSkipBackward",
+  "tfi/TfiControlSkipBackward.svg": {
+    "component_id": "tfi:TfiControlSkipBackward",
     "aliases": [
       "tfi",
       "control",
@@ -714,8 +714,8 @@
     "colors": [],
     "caption": "a black and white image of the letter k"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiControlSkipForward.svg": {
-    "component_id": "Icon.TfiControlSkipForward",
+  "tfi/TfiControlSkipForward.svg": {
+    "component_id": "tfi:TfiControlSkipForward",
     "aliases": [
       "tfi",
       "control",
@@ -725,8 +725,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing down"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiControlStop.svg": {
-    "component_id": "Icon.TfiControlStop",
+  "tfi/TfiControlStop.svg": {
+    "component_id": "tfi:TfiControlStop",
     "aliases": [
       "tfi",
       "control",
@@ -735,8 +735,8 @@
     "colors": [],
     "caption": "a square black and white image on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCreditCard.svg": {
-    "component_id": "Icon.TfiCreditCard",
+  "tfi/TfiCreditCard.svg": {
+    "component_id": "tfi:TfiCreditCard",
     "aliases": [
       "tfi",
       "credit",
@@ -745,8 +745,8 @@
     "colors": [],
     "caption": "a credit card icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCrown.svg": {
-    "component_id": "Icon.TfiCrown",
+  "tfi/TfiCrown.svg": {
+    "component_id": "tfi:TfiCrown",
     "aliases": [
       "tfi",
       "crown"
@@ -754,8 +754,8 @@
     "colors": [],
     "caption": "a crown icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCss3.svg": {
-    "component_id": "Icon.TfiCss3",
+  "tfi/TfiCss3.svg": {
+    "component_id": "tfi:TfiCss3",
     "aliases": [
       "tfi",
       "css",
@@ -764,8 +764,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter e"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCup.svg": {
-    "component_id": "Icon.TfiCup",
+  "tfi/TfiCup.svg": {
+    "component_id": "tfi:TfiCup",
     "aliases": [
       "tfi",
       "cup"
@@ -773,8 +773,8 @@
     "colors": [],
     "caption": "a trophy icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiCut.svg": {
-    "component_id": "Icon.TfiCut",
+  "tfi/TfiCut.svg": {
+    "component_id": "tfi:TfiCut",
     "aliases": [
       "tfi",
       "cut"
@@ -782,8 +782,8 @@
     "colors": [],
     "caption": "a black and white image of two scissors"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiDashboard.svg": {
-    "component_id": "Icon.TfiDashboard",
+  "tfi/TfiDashboard.svg": {
+    "component_id": "tfi:TfiDashboard",
     "aliases": [
       "tfi",
       "dashboard"
@@ -791,8 +791,8 @@
     "colors": [],
     "caption": "a speedometer icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiDesktop.svg": {
-    "component_id": "Icon.TfiDesktop",
+  "tfi/TfiDesktop.svg": {
+    "component_id": "tfi:TfiDesktop",
     "aliases": [
       "tfi",
       "desktop"
@@ -800,8 +800,8 @@
     "colors": [],
     "caption": "a computer monitor icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiDirection.svg": {
-    "component_id": "Icon.TfiDirection",
+  "tfi/TfiDirection.svg": {
+    "component_id": "tfi:TfiDirection",
     "aliases": [
       "tfi",
       "direction"
@@ -809,8 +809,8 @@
     "colors": [],
     "caption": "a black and white arrow pointing to the right"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiDirectionAlt.svg": {
-    "component_id": "Icon.TfiDirectionAlt",
+  "tfi/TfiDirectionAlt.svg": {
+    "component_id": "tfi:TfiDirectionAlt",
     "aliases": [
       "tfi",
       "direction",
@@ -819,8 +819,8 @@
     "colors": [],
     "caption": "a black and white sign with two arrows pointing in different directions"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiDownload.svg": {
-    "component_id": "Icon.TfiDownload",
+  "tfi/TfiDownload.svg": {
+    "component_id": "tfi:TfiDownload",
     "aliases": [
       "tfi",
       "download"
@@ -828,8 +828,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiDribbble.svg": {
-    "component_id": "Icon.TfiDribbble",
+  "tfi/TfiDribbble.svg": {
+    "component_id": "tfi:TfiDribbble",
     "aliases": [
       "tfi",
       "dribbble"
@@ -837,8 +837,8 @@
     "colors": [],
     "caption": "a black and white basketball ball on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiDropbox.svg": {
-    "component_id": "Icon.TfiDropbox",
+  "tfi/TfiDropbox.svg": {
+    "component_id": "tfi:TfiDropbox",
     "aliases": [
       "tfi",
       "dropbox"
@@ -846,8 +846,8 @@
     "colors": [],
     "caption": "the dropbox logo is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiDropboxAlt.svg": {
-    "component_id": "Icon.TfiDropboxAlt",
+  "tfi/TfiDropboxAlt.svg": {
+    "component_id": "tfi:TfiDropboxAlt",
     "aliases": [
       "tfi",
       "dropbox",
@@ -856,8 +856,8 @@
     "colors": [],
     "caption": "the dropbox logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiDrupal.svg": {
-    "component_id": "Icon.TfiDrupal",
+  "tfi/TfiDrupal.svg": {
+    "component_id": "tfi:TfiDrupal",
     "aliases": [
       "tfi",
       "drupal"
@@ -865,8 +865,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white logo"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiEmail.svg": {
-    "component_id": "Icon.TfiEmail",
+  "tfi/TfiEmail.svg": {
+    "component_id": "tfi:TfiEmail",
     "aliases": [
       "tfi",
       "email"
@@ -874,8 +874,8 @@
     "colors": [],
     "caption": "an envelope icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiEnvelope.svg": {
-    "component_id": "Icon.TfiEnvelope",
+  "tfi/TfiEnvelope.svg": {
+    "component_id": "tfi:TfiEnvelope",
     "aliases": [
       "tfi",
       "envelope"
@@ -883,8 +883,8 @@
     "colors": [],
     "caption": "a black and white icon of a square box"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiEraser.svg": {
-    "component_id": "Icon.TfiEraser",
+  "tfi/TfiEraser.svg": {
+    "component_id": "tfi:TfiEraser",
     "aliases": [
       "tfi",
       "eraser"
@@ -892,8 +892,8 @@
     "colors": [],
     "caption": "a black and white image of a broken phone"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiExchangeVertical.svg": {
-    "component_id": "Icon.TfiExchangeVertical",
+  "tfi/TfiExchangeVertical.svg": {
+    "component_id": "tfi:TfiExchangeVertical",
     "aliases": [
       "tfi",
       "exchange",
@@ -902,8 +902,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiExport.svg": {
-    "component_id": "Icon.TfiExport",
+  "tfi/TfiExport.svg": {
+    "component_id": "tfi:TfiExport",
     "aliases": [
       "tfi",
       "export"
@@ -911,8 +911,8 @@
     "colors": [],
     "caption": "a black and white illustration of an up arrow"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiEye.svg": {
-    "component_id": "Icon.TfiEye",
+  "tfi/TfiEye.svg": {
+    "component_id": "tfi:TfiEye",
     "aliases": [
       "tfi",
       "eye"
@@ -920,8 +920,8 @@
     "colors": [],
     "caption": "an eye icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFaceSad.svg": {
-    "component_id": "Icon.TfiFaceSad",
+  "tfi/TfiFaceSad.svg": {
+    "component_id": "tfi:TfiFaceSad",
     "aliases": [
       "tfi",
       "face",
@@ -930,8 +930,8 @@
     "colors": [],
     "caption": "a black and white image of a sad face"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFaceSmile.svg": {
-    "component_id": "Icon.TfiFaceSmile",
+  "tfi/TfiFaceSmile.svg": {
+    "component_id": "tfi:TfiFaceSmile",
     "aliases": [
       "tfi",
       "face",
@@ -940,8 +940,8 @@
     "colors": [],
     "caption": "a smiley face icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFacebook.svg": {
-    "component_id": "Icon.TfiFacebook",
+  "tfi/TfiFacebook.svg": {
+    "component_id": "tfi:TfiFacebook",
     "aliases": [
       "tfi",
       "facebook"
@@ -949,8 +949,8 @@
     "colors": [],
     "caption": "a black and white image of a facebook logo"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFile.svg": {
-    "component_id": "Icon.TfiFile",
+  "tfi/TfiFile.svg": {
+    "component_id": "tfi:TfiFile",
     "aliases": [
       "tfi",
       "file"
@@ -958,8 +958,8 @@
     "colors": [],
     "caption": "a black and white image of a document"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFiles.svg": {
-    "component_id": "Icon.TfiFiles",
+  "tfi/TfiFiles.svg": {
+    "component_id": "tfi:TfiFiles",
     "aliases": [
       "tfi",
       "files"
@@ -967,8 +967,8 @@
     "colors": [],
     "caption": "a black and white image of two documents"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFilter.svg": {
-    "component_id": "Icon.TfiFilter",
+  "tfi/TfiFilter.svg": {
+    "component_id": "tfi:TfiFilter",
     "aliases": [
       "tfi",
       "filter"
@@ -976,8 +976,8 @@
     "colors": [],
     "caption": "a black and white image of a martini glass"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFlag.svg": {
-    "component_id": "Icon.TfiFlag",
+  "tfi/TfiFlag.svg": {
+    "component_id": "tfi:TfiFlag",
     "aliases": [
       "tfi",
       "flag"
@@ -985,8 +985,8 @@
     "colors": [],
     "caption": "a black and white image of a flag"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFlagAlt.svg": {
-    "component_id": "Icon.TfiFlagAlt",
+  "tfi/TfiFlagAlt.svg": {
+    "component_id": "tfi:TfiFlagAlt",
     "aliases": [
       "tfi",
       "flag",
@@ -995,8 +995,8 @@
     "colors": [],
     "caption": "a black and white image of a flag"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFlagAlt2.svg": {
-    "component_id": "Icon.TfiFlagAlt2",
+  "tfi/TfiFlagAlt2.svg": {
+    "component_id": "tfi:TfiFlagAlt2",
     "aliases": [
       "tfi",
       "flag",
@@ -1006,8 +1006,8 @@
     "colors": [],
     "caption": "a black and white icon of a square and a rectangle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFlickr.svg": {
-    "component_id": "Icon.TfiFlickr",
+  "tfi/TfiFlickr.svg": {
+    "component_id": "tfi:TfiFlickr",
     "aliases": [
       "tfi",
       "flickr"
@@ -1015,8 +1015,8 @@
     "colors": [],
     "caption": "two circles are shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFlickrAlt.svg": {
-    "component_id": "Icon.TfiFlickrAlt",
+  "tfi/TfiFlickrAlt.svg": {
+    "component_id": "tfi:TfiFlickrAlt",
     "aliases": [
       "tfi",
       "flickr",
@@ -1025,8 +1025,8 @@
     "colors": [],
     "caption": "a black circle with two eyes in it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFolder.svg": {
-    "component_id": "Icon.TfiFolder",
+  "tfi/TfiFolder.svg": {
+    "component_id": "tfi:TfiFolder",
     "aliases": [
       "tfi",
       "folder"
@@ -1034,8 +1034,8 @@
     "colors": [],
     "caption": "a black and white icon of a folder"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiFullscreen.svg": {
-    "component_id": "Icon.TfiFullscreen",
+  "tfi/TfiFullscreen.svg": {
+    "component_id": "tfi:TfiFullscreen",
     "aliases": [
       "tfi",
       "fullscreen"
@@ -1043,8 +1043,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiGallery.svg": {
-    "component_id": "Icon.TfiGallery",
+  "tfi/TfiGallery.svg": {
+    "component_id": "tfi:TfiGallery",
     "aliases": [
       "tfi",
       "gallery"
@@ -1052,8 +1052,8 @@
     "colors": [],
     "caption": "a black and white image of a mountain"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiGame.svg": {
-    "component_id": "Icon.TfiGame",
+  "tfi/TfiGame.svg": {
+    "component_id": "tfi:TfiGame",
     "aliases": [
       "tfi",
       "game"
@@ -1061,8 +1061,8 @@
     "colors": [],
     "caption": "a black and white image of a video game controller"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiGift.svg": {
-    "component_id": "Icon.TfiGift",
+  "tfi/TfiGift.svg": {
+    "component_id": "tfi:TfiGift",
     "aliases": [
       "tfi",
       "gift"
@@ -1070,8 +1070,8 @@
     "colors": [],
     "caption": "a black and white icon of a gift with a bow"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiGithub.svg": {
-    "component_id": "Icon.TfiGithub",
+  "tfi/TfiGithub.svg": {
+    "component_id": "tfi:TfiGithub",
     "aliases": [
       "tfi",
       "github"
@@ -1079,8 +1079,8 @@
     "colors": [],
     "caption": "a black and white icon of a cat"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiGoogle.svg": {
-    "component_id": "Icon.TfiGoogle",
+  "tfi/TfiGoogle.svg": {
+    "component_id": "tfi:TfiGoogle",
     "aliases": [
       "tfi",
       "google"
@@ -1088,8 +1088,8 @@
     "colors": [],
     "caption": "a black and white image of a google plus logo"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHandDrag.svg": {
-    "component_id": "Icon.TfiHandDrag",
+  "tfi/TfiHandDrag.svg": {
+    "component_id": "tfi:TfiHandDrag",
     "aliases": [
       "tfi",
       "hand",
@@ -1098,8 +1098,8 @@
     "colors": [],
     "caption": "a hand icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHandOpen.svg": {
-    "component_id": "Icon.TfiHandOpen",
+  "tfi/TfiHandOpen.svg": {
+    "component_id": "tfi:TfiHandOpen",
     "aliases": [
       "tfi",
       "hand",
@@ -1108,8 +1108,8 @@
     "colors": [],
     "caption": "a hand icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHandPointDown.svg": {
-    "component_id": "Icon.TfiHandPointDown",
+  "tfi/TfiHandPointDown.svg": {
+    "component_id": "tfi:TfiHandPointDown",
     "aliases": [
       "tfi",
       "hand",
@@ -1119,8 +1119,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a hand pointing"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHandPointLeft.svg": {
-    "component_id": "Icon.TfiHandPointLeft",
+  "tfi/TfiHandPointLeft.svg": {
+    "component_id": "tfi:TfiHandPointLeft",
     "aliases": [
       "tfi",
       "hand",
@@ -1130,8 +1130,8 @@
     "colors": [],
     "caption": "a black and white illustration of a hand pointing"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHandPointRight.svg": {
-    "component_id": "Icon.TfiHandPointRight",
+  "tfi/TfiHandPointRight.svg": {
+    "component_id": "tfi:TfiHandPointRight",
     "aliases": [
       "tfi",
       "hand",
@@ -1141,8 +1141,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a hand pointing"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHandPointUp.svg": {
-    "component_id": "Icon.TfiHandPointUp",
+  "tfi/TfiHandPointUp.svg": {
+    "component_id": "tfi:TfiHandPointUp",
     "aliases": [
       "tfi",
       "hand",
@@ -1152,8 +1152,8 @@
     "colors": [],
     "caption": "a black and white icon of a hand pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHandStop.svg": {
-    "component_id": "Icon.TfiHandStop",
+  "tfi/TfiHandStop.svg": {
+    "component_id": "tfi:TfiHandStop",
     "aliases": [
       "tfi",
       "hand",
@@ -1162,8 +1162,8 @@
     "colors": [],
     "caption": "a hand icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHarddrive.svg": {
-    "component_id": "Icon.TfiHarddrive",
+  "tfi/TfiHarddrive.svg": {
+    "component_id": "tfi:TfiHarddrive",
     "aliases": [
       "tfi",
       "harddrive"
@@ -1171,8 +1171,8 @@
     "colors": [],
     "caption": "a black and white icon of a computer on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHarddrives.svg": {
-    "component_id": "Icon.TfiHarddrives",
+  "tfi/TfiHarddrives.svg": {
+    "component_id": "tfi:TfiHarddrives",
     "aliases": [
       "tfi",
       "harddrives"
@@ -1180,8 +1180,8 @@
     "colors": [],
     "caption": "a black and white icon of a server"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHeadphone.svg": {
-    "component_id": "Icon.TfiHeadphone",
+  "tfi/TfiHeadphone.svg": {
+    "component_id": "tfi:TfiHeadphone",
     "aliases": [
       "tfi",
       "headphone"
@@ -1189,8 +1189,8 @@
     "colors": [],
     "caption": "headphones icon isolated on white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHeadphoneAlt.svg": {
-    "component_id": "Icon.TfiHeadphoneAlt",
+  "tfi/TfiHeadphoneAlt.svg": {
+    "component_id": "tfi:TfiHeadphoneAlt",
     "aliases": [
       "tfi",
       "headphone",
@@ -1199,8 +1199,8 @@
     "colors": [],
     "caption": "a headset icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHeart.svg": {
-    "component_id": "Icon.TfiHeart",
+  "tfi/TfiHeart.svg": {
+    "component_id": "tfi:TfiHeart",
     "aliases": [
       "tfi",
       "heart"
@@ -1208,8 +1208,8 @@
     "colors": [],
     "caption": "a black and white heart icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHeartBroken.svg": {
-    "component_id": "Icon.TfiHeartBroken",
+  "tfi/TfiHeartBroken.svg": {
+    "component_id": "tfi:TfiHeartBroken",
     "aliases": [
       "tfi",
       "heart",
@@ -1218,8 +1218,8 @@
     "colors": [],
     "caption": "a black and white illustration of a heart with waves"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHelp.svg": {
-    "component_id": "Icon.TfiHelp",
+  "tfi/TfiHelp.svg": {
+    "component_id": "tfi:TfiHelp",
     "aliases": [
       "tfi",
       "help"
@@ -1227,8 +1227,8 @@
     "colors": [],
     "caption": "a question mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHelpAlt.svg": {
-    "component_id": "Icon.TfiHelpAlt",
+  "tfi/TfiHelpAlt.svg": {
+    "component_id": "tfi:TfiHelpAlt",
     "aliases": [
       "tfi",
       "help",
@@ -1237,8 +1237,8 @@
     "colors": [],
     "caption": "a question mark in a circle on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHome.svg": {
-    "component_id": "Icon.TfiHome",
+  "tfi/TfiHome.svg": {
+    "component_id": "tfi:TfiHome",
     "aliases": [
       "tfi",
       "home"
@@ -1246,8 +1246,8 @@
     "colors": [],
     "caption": "a house icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHtml5.svg": {
-    "component_id": "Icon.TfiHtml5",
+  "tfi/TfiHtml5.svg": {
+    "component_id": "tfi:TfiHtml5",
     "aliases": [
       "tfi",
       "html",
@@ -1256,8 +1256,8 @@
     "colors": [],
     "caption": "a black and white logo with the number 5 in it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiHummer.svg": {
-    "component_id": "Icon.TfiHummer",
+  "tfi/TfiHummer.svg": {
+    "component_id": "tfi:TfiHummer",
     "aliases": [
       "tfi",
       "hummer"
@@ -1265,8 +1265,8 @@
     "colors": [],
     "caption": "a black and white icon of a hammer"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiIdBadge.svg": {
-    "component_id": "Icon.TfiIdBadge",
+  "tfi/TfiIdBadge.svg": {
+    "component_id": "tfi:TfiIdBadge",
     "aliases": [
       "tfi",
       "id",
@@ -1275,8 +1275,8 @@
     "colors": [],
     "caption": "a black and white icon with a person's face"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiImage.svg": {
-    "component_id": "Icon.TfiImage",
+  "tfi/TfiImage.svg": {
+    "component_id": "tfi:TfiImage",
     "aliases": [
       "tfi",
       "image"
@@ -1284,8 +1284,8 @@
     "colors": [],
     "caption": "a black and white image of a mountain"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiImport.svg": {
-    "component_id": "Icon.TfiImport",
+  "tfi/TfiImport.svg": {
+    "component_id": "tfi:TfiImport",
     "aliases": [
       "tfi",
       "import"
@@ -1293,8 +1293,8 @@
     "colors": [],
     "caption": "a black and white icon of a down arrow"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiInfinite.svg": {
-    "component_id": "Icon.TfiInfinite",
+  "tfi/TfiInfinite.svg": {
+    "component_id": "tfi:TfiInfinite",
     "aliases": [
       "tfi",
       "infinite"
@@ -1302,8 +1302,8 @@
     "colors": [],
     "caption": "a black infinity symbol on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiInfo.svg": {
-    "component_id": "Icon.TfiInfo",
+  "tfi/TfiInfo.svg": {
+    "component_id": "tfi:TfiInfo",
     "aliases": [
       "tfi",
       "info"
@@ -1311,8 +1311,8 @@
     "colors": [],
     "caption": "a black and white image of the number one"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiInfoAlt.svg": {
-    "component_id": "Icon.TfiInfoAlt",
+  "tfi/TfiInfoAlt.svg": {
+    "component_id": "tfi:TfiInfoAlt",
     "aliases": [
       "tfi",
       "info",
@@ -1321,8 +1321,8 @@
     "colors": [],
     "caption": "a black and white image of an i in a circle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiInkPen.svg": {
-    "component_id": "Icon.TfiInkPen",
+  "tfi/TfiInkPen.svg": {
+    "component_id": "tfi:TfiInkPen",
     "aliases": [
       "tfi",
       "ink",
@@ -1331,8 +1331,8 @@
     "colors": [],
     "caption": "a black and white illustration of a map pin"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiInstagram.svg": {
-    "component_id": "Icon.TfiInstagram",
+  "tfi/TfiInstagram.svg": {
+    "component_id": "tfi:TfiInstagram",
     "aliases": [
       "tfi",
       "instagram"
@@ -1340,8 +1340,8 @@
     "colors": [],
     "caption": "a black and white image of an instagram icon"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiItalic.svg": {
-    "component_id": "Icon.TfiItalic",
+  "tfi/TfiItalic.svg": {
+    "component_id": "tfi:TfiItalic",
     "aliases": [
       "tfi",
       "italic"
@@ -1349,8 +1349,8 @@
     "colors": [],
     "caption": "a black and white image of the letter n"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiJoomla.svg": {
-    "component_id": "Icon.TfiJoomla",
+  "tfi/TfiJoomla.svg": {
+    "component_id": "tfi:TfiJoomla",
     "aliases": [
       "tfi",
       "joomla"
@@ -1358,8 +1358,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiJsfiddle.svg": {
-    "component_id": "Icon.TfiJsfiddle",
+  "tfi/TfiJsfiddle.svg": {
+    "component_id": "tfi:TfiJsfiddle",
     "aliases": [
       "tfi",
       "jsfiddle"
@@ -1367,8 +1367,8 @@
     "colors": [],
     "caption": "a cloud with an infinity symbol on it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiKey.svg": {
-    "component_id": "Icon.TfiKey",
+  "tfi/TfiKey.svg": {
+    "component_id": "tfi:TfiKey",
     "aliases": [
       "tfi",
       "key"
@@ -1376,8 +1376,8 @@
     "colors": [],
     "caption": "a black and white key icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayers.svg": {
-    "component_id": "Icon.TfiLayers",
+  "tfi/TfiLayers.svg": {
+    "component_id": "tfi:TfiLayers",
     "aliases": [
       "tfi",
       "layers"
@@ -1385,8 +1385,8 @@
     "colors": [],
     "caption": "a black and white image of two squares"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayersAlt.svg": {
-    "component_id": "Icon.TfiLayersAlt",
+  "tfi/TfiLayersAlt.svg": {
+    "component_id": "tfi:TfiLayersAlt",
     "aliases": [
       "tfi",
       "layers",
@@ -1395,8 +1395,8 @@
     "colors": [],
     "caption": "a black and white image of a computer screen"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayout.svg": {
-    "component_id": "Icon.TfiLayout",
+  "tfi/TfiLayout.svg": {
+    "component_id": "tfi:TfiLayout",
     "aliases": [
       "tfi",
       "layout"
@@ -1404,8 +1404,8 @@
     "colors": [],
     "caption": "a black and white image of a rectangle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutAccordionList.svg": {
-    "component_id": "Icon.TfiLayoutAccordionList",
+  "tfi/TfiLayoutAccordionList.svg": {
+    "component_id": "tfi:TfiLayoutAccordionList",
     "aliases": [
       "tfi",
       "layout",
@@ -1415,8 +1415,8 @@
     "colors": [],
     "caption": "a black and white icon of a computer screen"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutAccordionMerged.svg": {
-    "component_id": "Icon.TfiLayoutAccordionMerged",
+  "tfi/TfiLayoutAccordionMerged.svg": {
+    "component_id": "tfi:TfiLayoutAccordionMerged",
     "aliases": [
       "tfi",
       "layout",
@@ -1426,8 +1426,8 @@
     "colors": [],
     "caption": "a black and white image of a rectangle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutAccordionSeparated.svg": {
-    "component_id": "Icon.TfiLayoutAccordionSeparated",
+  "tfi/TfiLayoutAccordionSeparated.svg": {
+    "component_id": "tfi:TfiLayoutAccordionSeparated",
     "aliases": [
       "tfi",
       "layout",
@@ -1437,8 +1437,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white rectangle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutColumn2.svg": {
-    "component_id": "Icon.TfiLayoutColumn2",
+  "tfi/TfiLayoutColumn2.svg": {
+    "component_id": "tfi:TfiLayoutColumn2",
     "aliases": [
       "tfi",
       "layout",
@@ -1448,8 +1448,8 @@
     "colors": [],
     "caption": "a black and white image of two doors"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutColumn2Alt.svg": {
-    "component_id": "Icon.TfiLayoutColumn2Alt",
+  "tfi/TfiLayoutColumn2Alt.svg": {
+    "component_id": "tfi:TfiLayoutColumn2Alt",
     "aliases": [
       "tfi",
       "layout",
@@ -1460,8 +1460,8 @@
     "colors": [],
     "caption": "a black and white image of two doors"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutColumn3.svg": {
-    "component_id": "Icon.TfiLayoutColumn3",
+  "tfi/TfiLayoutColumn3.svg": {
+    "component_id": "tfi:TfiLayoutColumn3",
     "aliases": [
       "tfi",
       "layout",
@@ -1471,8 +1471,8 @@
     "colors": [],
     "caption": "a black and white image of three black rectangles"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutColumn3Alt.svg": {
-    "component_id": "Icon.TfiLayoutColumn3Alt",
+  "tfi/TfiLayoutColumn3Alt.svg": {
+    "component_id": "tfi:TfiLayoutColumn3Alt",
     "aliases": [
       "tfi",
       "layout",
@@ -1483,8 +1483,8 @@
     "colors": [],
     "caption": "a black and white image of three vertical lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutColumn4.svg": {
-    "component_id": "Icon.TfiLayoutColumn4",
+  "tfi/TfiLayoutColumn4.svg": {
+    "component_id": "tfi:TfiLayoutColumn4",
     "aliases": [
       "tfi",
       "layout",
@@ -1494,8 +1494,8 @@
     "colors": [],
     "caption": "a black and white image of four bars"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutColumn4Alt.svg": {
-    "component_id": "Icon.TfiLayoutColumn4Alt",
+  "tfi/TfiLayoutColumn4Alt.svg": {
+    "component_id": "tfi:TfiLayoutColumn4Alt",
     "aliases": [
       "tfi",
       "layout",
@@ -1506,8 +1506,8 @@
     "colors": [],
     "caption": "a black and white image of four bars"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutCtaBtnLeft.svg": {
-    "component_id": "Icon.TfiLayoutCtaBtnLeft",
+  "tfi/TfiLayoutCtaBtnLeft.svg": {
+    "component_id": "tfi:TfiLayoutCtaBtnLeft",
     "aliases": [
       "tfi",
       "layout",
@@ -1518,8 +1518,8 @@
     "colors": [],
     "caption": "a black and white image of an envelope"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutCtaBtnRight.svg": {
-    "component_id": "Icon.TfiLayoutCtaBtnRight",
+  "tfi/TfiLayoutCtaBtnRight.svg": {
+    "component_id": "tfi:TfiLayoutCtaBtnRight",
     "aliases": [
       "tfi",
       "layout",
@@ -1530,8 +1530,8 @@
     "colors": [],
     "caption": "a black and white image of an envelope"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutCtaCenter.svg": {
-    "component_id": "Icon.TfiLayoutCtaCenter",
+  "tfi/TfiLayoutCtaCenter.svg": {
+    "component_id": "tfi:TfiLayoutCtaCenter",
     "aliases": [
       "tfi",
       "layout",
@@ -1541,8 +1541,8 @@
     "colors": [],
     "caption": "a black and white image of an empty box"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutCtaLeft.svg": {
-    "component_id": "Icon.TfiLayoutCtaLeft",
+  "tfi/TfiLayoutCtaLeft.svg": {
+    "component_id": "tfi:TfiLayoutCtaLeft",
     "aliases": [
       "tfi",
       "layout",
@@ -1552,8 +1552,8 @@
     "colors": [],
     "caption": "a black and white image of an envelope"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutCtaRight.svg": {
-    "component_id": "Icon.TfiLayoutCtaRight",
+  "tfi/TfiLayoutCtaRight.svg": {
+    "component_id": "tfi:TfiLayoutCtaRight",
     "aliases": [
       "tfi",
       "layout",
@@ -1563,8 +1563,8 @@
     "colors": [],
     "caption": "a black and white image of an envelope"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutGrid2.svg": {
-    "component_id": "Icon.TfiLayoutGrid2",
+  "tfi/TfiLayoutGrid2.svg": {
+    "component_id": "tfi:TfiLayoutGrid2",
     "aliases": [
       "tfi",
       "layout",
@@ -1574,8 +1574,8 @@
     "colors": [],
     "caption": "a square with four black squares on it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutGrid2Alt.svg": {
-    "component_id": "Icon.TfiLayoutGrid2Alt",
+  "tfi/TfiLayoutGrid2Alt.svg": {
+    "component_id": "tfi:TfiLayoutGrid2Alt",
     "aliases": [
       "tfi",
       "layout",
@@ -1586,8 +1586,8 @@
     "colors": [],
     "caption": "a black and white square with four squares"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutGrid2Thumb.svg": {
-    "component_id": "Icon.TfiLayoutGrid2Thumb",
+  "tfi/TfiLayoutGrid2Thumb.svg": {
+    "component_id": "tfi:TfiLayoutGrid2Thumb",
     "aliases": [
       "tfi",
       "layout",
@@ -1598,8 +1598,8 @@
     "colors": [],
     "caption": "a black and white image of four squares"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutGrid3.svg": {
-    "component_id": "Icon.TfiLayoutGrid3",
+  "tfi/TfiLayoutGrid3.svg": {
+    "component_id": "tfi:TfiLayoutGrid3",
     "aliases": [
       "tfi",
       "layout",
@@ -1609,8 +1609,8 @@
     "colors": [],
     "caption": "a black and white square with nine squares in it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutGrid3Alt.svg": {
-    "component_id": "Icon.TfiLayoutGrid3Alt",
+  "tfi/TfiLayoutGrid3Alt.svg": {
+    "component_id": "tfi:TfiLayoutGrid3Alt",
     "aliases": [
       "tfi",
       "layout",
@@ -1621,8 +1621,8 @@
     "colors": [],
     "caption": "a black and white square with squares in it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutGrid4.svg": {
-    "component_id": "Icon.TfiLayoutGrid4",
+  "tfi/TfiLayoutGrid4.svg": {
+    "component_id": "tfi:TfiLayoutGrid4",
     "aliases": [
       "tfi",
       "layout",
@@ -1632,8 +1632,8 @@
     "colors": [],
     "caption": "a black and white image of a square pattern"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutGrid4Alt.svg": {
-    "component_id": "Icon.TfiLayoutGrid4Alt",
+  "tfi/TfiLayoutGrid4Alt.svg": {
+    "component_id": "tfi:TfiLayoutGrid4Alt",
     "aliases": [
       "tfi",
       "layout",
@@ -1644,8 +1644,8 @@
     "colors": [],
     "caption": "a black and white square with squares in it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutLineSolid.svg": {
-    "component_id": "Icon.TfiLayoutLineSolid",
+  "tfi/TfiLayoutLineSolid.svg": {
+    "component_id": "tfi:TfiLayoutLineSolid",
     "aliases": [
       "tfi",
       "layout",
@@ -1655,8 +1655,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutListLargeImage.svg": {
-    "component_id": "Icon.TfiLayoutListLargeImage",
+  "tfi/TfiLayoutListLargeImage.svg": {
+    "component_id": "tfi:TfiLayoutListLargeImage",
     "aliases": [
       "tfi",
       "layout",
@@ -1667,8 +1667,8 @@
     "colors": [],
     "caption": "a black and white icon of a television"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutListPost.svg": {
-    "component_id": "Icon.TfiLayoutListPost",
+  "tfi/TfiLayoutListPost.svg": {
+    "component_id": "tfi:TfiLayoutListPost",
     "aliases": [
       "tfi",
       "layout",
@@ -1678,8 +1678,8 @@
     "colors": [],
     "caption": "a black and white image of the letter e"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutListThumb.svg": {
-    "component_id": "Icon.TfiLayoutListThumb",
+  "tfi/TfiLayoutListThumb.svg": {
+    "component_id": "tfi:TfiLayoutListThumb",
     "aliases": [
       "tfi",
       "layout",
@@ -1689,8 +1689,8 @@
     "colors": [],
     "caption": "a check mark icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutListThumbAlt.svg": {
-    "component_id": "Icon.TfiLayoutListThumbAlt",
+  "tfi/TfiLayoutListThumbAlt.svg": {
+    "component_id": "tfi:TfiLayoutListThumbAlt",
     "aliases": [
       "tfi",
       "layout",
@@ -1701,8 +1701,8 @@
     "colors": [],
     "caption": "a black and white image of two black and white squares"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMediaCenter.svg": {
-    "component_id": "Icon.TfiLayoutMediaCenter",
+  "tfi/TfiLayoutMediaCenter.svg": {
+    "component_id": "tfi:TfiLayoutMediaCenter",
     "aliases": [
       "tfi",
       "layout",
@@ -1712,8 +1712,8 @@
     "colors": [],
     "caption": "a black and white image of a computer screen"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMediaCenterAlt.svg": {
-    "component_id": "Icon.TfiLayoutMediaCenterAlt",
+  "tfi/TfiLayoutMediaCenterAlt.svg": {
+    "component_id": "tfi:TfiLayoutMediaCenterAlt",
     "aliases": [
       "tfi",
       "layout",
@@ -1724,8 +1724,8 @@
     "colors": [],
     "caption": "a flat icon of a computer monitor on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMediaLeft.svg": {
-    "component_id": "Icon.TfiLayoutMediaLeft",
+  "tfi/TfiLayoutMediaLeft.svg": {
+    "component_id": "tfi:TfiLayoutMediaLeft",
     "aliases": [
       "tfi",
       "layout",
@@ -1735,8 +1735,8 @@
     "colors": [],
     "caption": "a black and white image of a square box"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMediaLeftAlt.svg": {
-    "component_id": "Icon.TfiLayoutMediaLeftAlt",
+  "tfi/TfiLayoutMediaLeftAlt.svg": {
+    "component_id": "tfi:TfiLayoutMediaLeftAlt",
     "aliases": [
       "tfi",
       "layout",
@@ -1747,8 +1747,8 @@
     "colors": [],
     "caption": "a black and white image of a television screen"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMediaOverlay.svg": {
-    "component_id": "Icon.TfiLayoutMediaOverlay",
+  "tfi/TfiLayoutMediaOverlay.svg": {
+    "component_id": "tfi:TfiLayoutMediaOverlay",
     "aliases": [
       "tfi",
       "layout",
@@ -1758,8 +1758,8 @@
     "colors": [],
     "caption": "a black and white image of a computer screen"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMediaOverlayAlt.svg": {
-    "component_id": "Icon.TfiLayoutMediaOverlayAlt",
+  "tfi/TfiLayoutMediaOverlayAlt.svg": {
+    "component_id": "tfi:TfiLayoutMediaOverlayAlt",
     "aliases": [
       "tfi",
       "layout",
@@ -1770,8 +1770,8 @@
     "colors": [],
     "caption": "a black and white photo of an empty frame"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMediaOverlayAlt2.svg": {
-    "component_id": "Icon.TfiLayoutMediaOverlayAlt2",
+  "tfi/TfiLayoutMediaOverlayAlt2.svg": {
+    "component_id": "tfi:TfiLayoutMediaOverlayAlt2",
     "aliases": [
       "tfi",
       "layout",
@@ -1783,8 +1783,8 @@
     "colors": [],
     "caption": "a black and white image of a rectangle with two lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMediaRight.svg": {
-    "component_id": "Icon.TfiLayoutMediaRight",
+  "tfi/TfiLayoutMediaRight.svg": {
+    "component_id": "tfi:TfiLayoutMediaRight",
     "aliases": [
       "tfi",
       "layout",
@@ -1794,8 +1794,8 @@
     "colors": [],
     "caption": "a black and white image of a square box"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMediaRightAlt.svg": {
-    "component_id": "Icon.TfiLayoutMediaRightAlt",
+  "tfi/TfiLayoutMediaRightAlt.svg": {
+    "component_id": "tfi:TfiLayoutMediaRightAlt",
     "aliases": [
       "tfi",
       "layout",
@@ -1806,8 +1806,8 @@
     "colors": [],
     "caption": "a flat icon of a television screen on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMenu.svg": {
-    "component_id": "Icon.TfiLayoutMenu",
+  "tfi/TfiLayoutMenu.svg": {
+    "component_id": "tfi:TfiLayoutMenu",
     "aliases": [
       "tfi",
       "layout",
@@ -1816,8 +1816,8 @@
     "colors": [],
     "caption": "a black and white image of three lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMenuFull.svg": {
-    "component_id": "Icon.TfiLayoutMenuFull",
+  "tfi/TfiLayoutMenuFull.svg": {
+    "component_id": "tfi:TfiLayoutMenuFull",
     "aliases": [
       "tfi",
       "layout",
@@ -1827,8 +1827,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a train"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMenuSeparated.svg": {
-    "component_id": "Icon.TfiLayoutMenuSeparated",
+  "tfi/TfiLayoutMenuSeparated.svg": {
+    "component_id": "tfi:TfiLayoutMenuSeparated",
     "aliases": [
       "tfi",
       "layout",
@@ -1838,8 +1838,8 @@
     "colors": [],
     "caption": "a black and white image of three black squares"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutMenuV.svg": {
-    "component_id": "Icon.TfiLayoutMenuV",
+  "tfi/TfiLayoutMenuV.svg": {
+    "component_id": "tfi:TfiLayoutMenuV",
     "aliases": [
       "tfi",
       "layout",
@@ -1849,8 +1849,8 @@
     "colors": [],
     "caption": "a black and white image of four lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutPlaceholder.svg": {
-    "component_id": "Icon.TfiLayoutPlaceholder",
+  "tfi/TfiLayoutPlaceholder.svg": {
+    "component_id": "tfi:TfiLayoutPlaceholder",
     "aliases": [
       "tfi",
       "layout",
@@ -1859,8 +1859,8 @@
     "colors": [],
     "caption": "a black and white image of an envelope"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutSidebar2.svg": {
-    "component_id": "Icon.TfiLayoutSidebar2",
+  "tfi/TfiLayoutSidebar2.svg": {
+    "component_id": "tfi:TfiLayoutSidebar2",
     "aliases": [
       "tfi",
       "layout",
@@ -1870,8 +1870,8 @@
     "colors": [],
     "caption": "a black and white image of a film strip"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutSidebarLeft.svg": {
-    "component_id": "Icon.TfiLayoutSidebarLeft",
+  "tfi/TfiLayoutSidebarLeft.svg": {
+    "component_id": "tfi:TfiLayoutSidebarLeft",
     "aliases": [
       "tfi",
       "layout",
@@ -1881,8 +1881,8 @@
     "colors": [],
     "caption": "an image of a black and white square"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutSidebarNone.svg": {
-    "component_id": "Icon.TfiLayoutSidebarNone",
+  "tfi/TfiLayoutSidebarNone.svg": {
+    "component_id": "tfi:TfiLayoutSidebarNone",
     "aliases": [
       "tfi",
       "layout",
@@ -1892,8 +1892,8 @@
     "colors": [],
     "caption": "a square black and white pattern on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutSidebarRight.svg": {
-    "component_id": "Icon.TfiLayoutSidebarRight",
+  "tfi/TfiLayoutSidebarRight.svg": {
+    "component_id": "tfi:TfiLayoutSidebarRight",
     "aliases": [
       "tfi",
       "layout",
@@ -1903,8 +1903,8 @@
     "colors": [],
     "caption": "an image of a square with black and white lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutSlider.svg": {
-    "component_id": "Icon.TfiLayoutSlider",
+  "tfi/TfiLayoutSlider.svg": {
+    "component_id": "tfi:TfiLayoutSlider",
     "aliases": [
       "tfi",
       "layout",
@@ -1913,8 +1913,8 @@
     "colors": [],
     "caption": "a black and white image of a rectangle with two arrows"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutSliderAlt.svg": {
-    "component_id": "Icon.TfiLayoutSliderAlt",
+  "tfi/TfiLayoutSliderAlt.svg": {
+    "component_id": "tfi:TfiLayoutSliderAlt",
     "aliases": [
       "tfi",
       "layout",
@@ -1924,8 +1924,8 @@
     "colors": [],
     "caption": "a black and white image of a rectangle with two lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutTab.svg": {
-    "component_id": "Icon.TfiLayoutTab",
+  "tfi/TfiLayoutTab.svg": {
+    "component_id": "tfi:TfiLayoutTab",
     "aliases": [
       "tfi",
       "layout",
@@ -1934,8 +1934,8 @@
     "colors": [],
     "caption": "a black and white icon of a folder"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutTabMin.svg": {
-    "component_id": "Icon.TfiLayoutTabMin",
+  "tfi/TfiLayoutTabMin.svg": {
+    "component_id": "tfi:TfiLayoutTabMin",
     "aliases": [
       "tfi",
       "layout",
@@ -1945,8 +1945,8 @@
     "colors": [],
     "caption": "a black and white logo with the letters nd"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutTabV.svg": {
-    "component_id": "Icon.TfiLayoutTabV",
+  "tfi/TfiLayoutTabV.svg": {
+    "component_id": "tfi:TfiLayoutTabV",
     "aliases": [
       "tfi",
       "layout",
@@ -1956,8 +1956,8 @@
     "colors": [],
     "caption": "a black and white line drawing of a book"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutTabWindow.svg": {
-    "component_id": "Icon.TfiLayoutTabWindow",
+  "tfi/TfiLayoutTabWindow.svg": {
+    "component_id": "tfi:TfiLayoutTabWindow",
     "aliases": [
       "tfi",
       "layout",
@@ -1967,8 +1967,8 @@
     "colors": [],
     "caption": "a black and white image of a computer screen"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutWidthDefault.svg": {
-    "component_id": "Icon.TfiLayoutWidthDefault",
+  "tfi/TfiLayoutWidthDefault.svg": {
+    "component_id": "tfi:TfiLayoutWidthDefault",
     "aliases": [
       "tfi",
       "layout",
@@ -1978,8 +1978,8 @@
     "colors": [],
     "caption": "a black and white image of a film strip on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutWidthDefaultAlt.svg": {
-    "component_id": "Icon.TfiLayoutWidthDefaultAlt",
+  "tfi/TfiLayoutWidthDefaultAlt.svg": {
+    "component_id": "tfi:TfiLayoutWidthDefaultAlt",
     "aliases": [
       "tfi",
       "layout",
@@ -1990,8 +1990,8 @@
     "colors": [],
     "caption": "an image of a square frame with black and white squares"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLayoutWidthFull.svg": {
-    "component_id": "Icon.TfiLayoutWidthFull",
+  "tfi/TfiLayoutWidthFull.svg": {
+    "component_id": "tfi:TfiLayoutWidthFull",
     "aliases": [
       "tfi",
       "layout",
@@ -2001,8 +2001,8 @@
     "colors": [],
     "caption": "a black square with a white border on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLightBulb.svg": {
-    "component_id": "Icon.TfiLightBulb",
+  "tfi/TfiLightBulb.svg": {
+    "component_id": "tfi:TfiLightBulb",
     "aliases": [
       "tfi",
       "light",
@@ -2011,8 +2011,8 @@
     "colors": [],
     "caption": "a light bulb icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLineDashed.svg": {
-    "component_id": "Icon.TfiLineDashed",
+  "tfi/TfiLineDashed.svg": {
+    "component_id": "tfi:TfiLineDashed",
     "aliases": [
       "tfi",
       "line",
@@ -2021,8 +2021,8 @@
     "colors": [],
     "caption": "a black and white image of three lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLineDotted.svg": {
-    "component_id": "Icon.TfiLineDotted",
+  "tfi/TfiLineDotted.svg": {
+    "component_id": "tfi:TfiLineDotted",
     "aliases": [
       "tfi",
       "line",
@@ -2031,8 +2031,8 @@
     "colors": [],
     "caption": "a black and white image of a line of squares"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLineDouble.svg": {
-    "component_id": "Icon.TfiLineDouble",
+  "tfi/TfiLineDouble.svg": {
+    "component_id": "tfi:TfiLineDouble",
     "aliases": [
       "tfi",
       "line",
@@ -2041,8 +2041,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLink.svg": {
-    "component_id": "Icon.TfiLink",
+  "tfi/TfiLink.svg": {
+    "component_id": "tfi:TfiLink",
     "aliases": [
       "tfi",
       "link"
@@ -2050,8 +2050,8 @@
     "colors": [],
     "caption": "a black and white image of a link"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLinkedin.svg": {
-    "component_id": "Icon.TfiLinkedin",
+  "tfi/TfiLinkedin.svg": {
+    "component_id": "tfi:TfiLinkedin",
     "aliases": [
       "tfi",
       "linkedin"
@@ -2059,8 +2059,8 @@
     "colors": [],
     "caption": "a black and white image of the linked logo"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLinux.svg": {
-    "component_id": "Icon.TfiLinux",
+  "tfi/TfiLinux.svg": {
+    "component_id": "tfi:TfiLinux",
     "aliases": [
       "tfi",
       "linux"
@@ -2068,8 +2068,8 @@
     "colors": [],
     "caption": "a black and white drawing of a penguin"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiList.svg": {
-    "component_id": "Icon.TfiList",
+  "tfi/TfiList.svg": {
+    "component_id": "tfi:TfiList",
     "aliases": [
       "tfi",
       "list"
@@ -2077,8 +2077,8 @@
     "colors": [],
     "caption": "a black and white check list with three circles"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiListOl.svg": {
-    "component_id": "Icon.TfiListOl",
+  "tfi/TfiListOl.svg": {
+    "component_id": "tfi:TfiListOl",
     "aliases": [
       "tfi",
       "list",
@@ -2087,8 +2087,8 @@
     "colors": [],
     "caption": "a black and white image of the number three"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLocationArrow.svg": {
-    "component_id": "Icon.TfiLocationArrow",
+  "tfi/TfiLocationArrow.svg": {
+    "component_id": "tfi:TfiLocationArrow",
     "aliases": [
       "tfi",
       "location",
@@ -2097,8 +2097,8 @@
     "colors": [],
     "caption": "a black arrow pointing to the right on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLocationPin.svg": {
-    "component_id": "Icon.TfiLocationPin",
+  "tfi/TfiLocationPin.svg": {
+    "component_id": "tfi:TfiLocationPin",
     "aliases": [
       "tfi",
       "location",
@@ -2107,8 +2107,8 @@
     "colors": [],
     "caption": "a black and white image of a location pin"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLock.svg": {
-    "component_id": "Icon.TfiLock",
+  "tfi/TfiLock.svg": {
+    "component_id": "tfi:TfiLock",
     "aliases": [
       "tfi",
       "lock"
@@ -2116,8 +2116,8 @@
     "colors": [],
     "caption": "a padlock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiLoop.svg": {
-    "component_id": "Icon.TfiLoop",
+  "tfi/TfiLoop.svg": {
+    "component_id": "tfi:TfiLoop",
     "aliases": [
       "tfi",
       "loop"
@@ -2125,8 +2125,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMagnet.svg": {
-    "component_id": "Icon.TfiMagnet",
+  "tfi/TfiMagnet.svg": {
+    "component_id": "tfi:TfiMagnet",
     "aliases": [
       "tfi",
       "magnet"
@@ -2134,8 +2134,8 @@
     "colors": [],
     "caption": "a black and white illustration of the letter u"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMap.svg": {
-    "component_id": "Icon.TfiMap",
+  "tfi/TfiMap.svg": {
+    "component_id": "tfi:TfiMap",
     "aliases": [
       "tfi",
       "map"
@@ -2143,8 +2143,8 @@
     "colors": [],
     "caption": "a black and white image of an open book"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMapAlt.svg": {
-    "component_id": "Icon.TfiMapAlt",
+  "tfi/TfiMapAlt.svg": {
+    "component_id": "tfi:TfiMapAlt",
     "aliases": [
       "tfi",
       "map",
@@ -2153,8 +2153,8 @@
     "colors": [],
     "caption": "a black and white icon of a map with a pin"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMarker.svg": {
-    "component_id": "Icon.TfiMarker",
+  "tfi/TfiMarker.svg": {
+    "component_id": "tfi:TfiMarker",
     "aliases": [
       "tfi",
       "marker"
@@ -2162,8 +2162,8 @@
     "colors": [],
     "caption": "a black and white icon of a pen"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMarkerAlt.svg": {
-    "component_id": "Icon.TfiMarkerAlt",
+  "tfi/TfiMarkerAlt.svg": {
+    "component_id": "tfi:TfiMarkerAlt",
     "aliases": [
       "tfi",
       "marker",
@@ -2172,8 +2172,8 @@
     "colors": [],
     "caption": "a black and white drawing of a pen on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMedall.svg": {
-    "component_id": "Icon.TfiMedall",
+  "tfi/TfiMedall.svg": {
+    "component_id": "tfi:TfiMedall",
     "aliases": [
       "tfi",
       "medall"
@@ -2181,8 +2181,8 @@
     "colors": [],
     "caption": "a black and white badge with a star in the middle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMedallAlt.svg": {
-    "component_id": "Icon.TfiMedallAlt",
+  "tfi/TfiMedallAlt.svg": {
+    "component_id": "tfi:TfiMedallAlt",
     "aliases": [
       "tfi",
       "medall",
@@ -2191,8 +2191,8 @@
     "colors": [],
     "caption": "a black and white icon of an award"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMenu.svg": {
-    "component_id": "Icon.TfiMenu",
+  "tfi/TfiMenu.svg": {
+    "component_id": "tfi:TfiMenu",
     "aliases": [
       "tfi",
       "menu"
@@ -2200,8 +2200,8 @@
     "colors": [],
     "caption": "an image of a black and white striped flag"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMenuAlt.svg": {
-    "component_id": "Icon.TfiMenuAlt",
+  "tfi/TfiMenuAlt.svg": {
+    "component_id": "tfi:TfiMenuAlt",
     "aliases": [
       "tfi",
       "menu",
@@ -2210,8 +2210,8 @@
     "colors": [],
     "caption": "a black and white check list with three dots"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMicrophone.svg": {
-    "component_id": "Icon.TfiMicrophone",
+  "tfi/TfiMicrophone.svg": {
+    "component_id": "tfi:TfiMicrophone",
     "aliases": [
       "tfi",
       "microphone"
@@ -2219,8 +2219,8 @@
     "colors": [],
     "caption": "a microphone icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMicrophoneAlt.svg": {
-    "component_id": "Icon.TfiMicrophoneAlt",
+  "tfi/TfiMicrophoneAlt.svg": {
+    "component_id": "tfi:TfiMicrophoneAlt",
     "aliases": [
       "tfi",
       "microphone",
@@ -2229,8 +2229,8 @@
     "colors": [],
     "caption": "a black and white icon of a microphone"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMicrosoft.svg": {
-    "component_id": "Icon.TfiMicrosoft",
+  "tfi/TfiMicrosoft.svg": {
+    "component_id": "tfi:TfiMicrosoft",
     "aliases": [
       "tfi",
       "microsoft"
@@ -2238,8 +2238,8 @@
     "colors": [],
     "caption": "the windows logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMicrosoftAlt.svg": {
-    "component_id": "Icon.TfiMicrosoftAlt",
+  "tfi/TfiMicrosoftAlt.svg": {
+    "component_id": "tfi:TfiMicrosoftAlt",
     "aliases": [
       "tfi",
       "microsoft",
@@ -2248,8 +2248,8 @@
     "colors": [],
     "caption": "the windows logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMinus.svg": {
-    "component_id": "Icon.TfiMinus",
+  "tfi/TfiMinus.svg": {
+    "component_id": "tfi:TfiMinus",
     "aliases": [
       "tfi",
       "minus"
@@ -2257,8 +2257,8 @@
     "colors": [],
     "caption": "a black and white image of a black and white line"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMobile.svg": {
-    "component_id": "Icon.TfiMobile",
+  "tfi/TfiMobile.svg": {
+    "component_id": "tfi:TfiMobile",
     "aliases": [
       "tfi",
       "mobile"
@@ -2266,8 +2266,8 @@
     "colors": [],
     "caption": "a black and white image of a phone on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMoney.svg": {
-    "component_id": "Icon.TfiMoney",
+  "tfi/TfiMoney.svg": {
+    "component_id": "tfi:TfiMoney",
     "aliases": [
       "tfi",
       "money"
@@ -2275,8 +2275,8 @@
     "colors": [],
     "caption": "a dollar sign icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMore.svg": {
-    "component_id": "Icon.TfiMore",
+  "tfi/TfiMore.svg": {
+    "component_id": "tfi:TfiMore",
     "aliases": [
       "tfi",
       "more"
@@ -2284,8 +2284,8 @@
     "colors": [],
     "caption": "four black circles are shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMoreAlt.svg": {
-    "component_id": "Icon.TfiMoreAlt",
+  "tfi/TfiMoreAlt.svg": {
+    "component_id": "tfi:TfiMoreAlt",
     "aliases": [
       "tfi",
       "more",
@@ -2294,8 +2294,8 @@
     "colors": [],
     "caption": "four black dots are shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMouse.svg": {
-    "component_id": "Icon.TfiMouse",
+  "tfi/TfiMouse.svg": {
+    "component_id": "tfi:TfiMouse",
     "aliases": [
       "tfi",
       "mouse"
@@ -2303,8 +2303,8 @@
     "colors": [],
     "caption": "a black and white image of a computer mouse"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMouseAlt.svg": {
-    "component_id": "Icon.TfiMouseAlt",
+  "tfi/TfiMouseAlt.svg": {
+    "component_id": "tfi:TfiMouseAlt",
     "aliases": [
       "tfi",
       "mouse",
@@ -2313,8 +2313,8 @@
     "colors": [],
     "caption": "a black and white image of a computer mouse"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMusic.svg": {
-    "component_id": "Icon.TfiMusic",
+  "tfi/TfiMusic.svg": {
+    "component_id": "tfi:TfiMusic",
     "aliases": [
       "tfi",
       "music"
@@ -2322,8 +2322,8 @@
     "colors": [],
     "caption": "a black and white image of a musical note"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiMusicAlt.svg": {
-    "component_id": "Icon.TfiMusicAlt",
+  "tfi/TfiMusicAlt.svg": {
+    "component_id": "tfi:TfiMusicAlt",
     "aliases": [
       "tfi",
       "music",
@@ -2332,8 +2332,8 @@
     "colors": [],
     "caption": "a music note icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiNa.svg": {
-    "component_id": "Icon.TfiNa",
+  "tfi/TfiNa.svg": {
+    "component_id": "tfi:TfiNa",
     "aliases": [
       "tfi",
       "na"
@@ -2341,8 +2341,8 @@
     "colors": [],
     "caption": "a black and white image of a no entry sign"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiNewWindow.svg": {
-    "component_id": "Icon.TfiNewWindow",
+  "tfi/TfiNewWindow.svg": {
+    "component_id": "tfi:TfiNewWindow",
     "aliases": [
       "tfi",
       "new",
@@ -2351,8 +2351,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing up"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiNotepad.svg": {
-    "component_id": "Icon.TfiNotepad",
+  "tfi/TfiNotepad.svg": {
+    "component_id": "tfi:TfiNotepad",
     "aliases": [
       "tfi",
       "notepad"
@@ -2360,8 +2360,8 @@
     "colors": [],
     "caption": "a black and white icon of a notebook"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPackage.svg": {
-    "component_id": "Icon.TfiPackage",
+  "tfi/TfiPackage.svg": {
+    "component_id": "tfi:TfiPackage",
     "aliases": [
       "tfi",
       "package"
@@ -2369,8 +2369,8 @@
     "colors": [],
     "caption": "a black and white illustration of a box"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPaintBucket.svg": {
-    "component_id": "Icon.TfiPaintBucket",
+  "tfi/TfiPaintBucket.svg": {
+    "component_id": "tfi:TfiPaintBucket",
     "aliases": [
       "tfi",
       "paint",
@@ -2379,8 +2379,8 @@
     "colors": [],
     "caption": "a black and white illustration of a water bottle with a drop of water"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPaintRoller.svg": {
-    "component_id": "Icon.TfiPaintRoller",
+  "tfi/TfiPaintRoller.svg": {
+    "component_id": "tfi:TfiPaintRoller",
     "aliases": [
       "tfi",
       "paint",
@@ -2389,8 +2389,8 @@
     "colors": [],
     "caption": "a black and white illustration of a paint roller"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPalette.svg": {
-    "component_id": "Icon.TfiPalette",
+  "tfi/TfiPalette.svg": {
+    "component_id": "tfi:TfiPalette",
     "aliases": [
       "tfi",
       "palette"
@@ -2398,8 +2398,8 @@
     "colors": [],
     "caption": "a black and white icon with a circle and two dots"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPanel.svg": {
-    "component_id": "Icon.TfiPanel",
+  "tfi/TfiPanel.svg": {
+    "component_id": "tfi:TfiPanel",
     "aliases": [
       "tfi",
       "panel"
@@ -2407,8 +2407,8 @@
     "colors": [],
     "caption": "a black and white icon with three circles"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiParagraph.svg": {
-    "component_id": "Icon.TfiParagraph",
+  "tfi/TfiParagraph.svg": {
+    "component_id": "tfi:TfiParagraph",
     "aliases": [
       "tfi",
       "paragraph"
@@ -2416,8 +2416,8 @@
     "colors": [],
     "caption": "a black and white logo that says tp"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPencil.svg": {
-    "component_id": "Icon.TfiPencil",
+  "tfi/TfiPencil.svg": {
+    "component_id": "tfi:TfiPencil",
     "aliases": [
       "tfi",
       "pencil"
@@ -2425,8 +2425,8 @@
     "colors": [],
     "caption": "a black and white drawing of a pencil"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPencilAlt.svg": {
-    "component_id": "Icon.TfiPencilAlt",
+  "tfi/TfiPencilAlt.svg": {
+    "component_id": "tfi:TfiPencilAlt",
     "aliases": [
       "tfi",
       "pencil",
@@ -2435,8 +2435,8 @@
     "colors": [],
     "caption": "a black and white icon of a pencil in a box"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPencilAlt2.svg": {
-    "component_id": "Icon.TfiPencilAlt2",
+  "tfi/TfiPencilAlt2.svg": {
+    "component_id": "tfi:TfiPencilAlt2",
     "aliases": [
       "tfi",
       "pencil",
@@ -2446,8 +2446,8 @@
     "colors": [],
     "caption": "a pencil icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPieChart.svg": {
-    "component_id": "Icon.TfiPieChart",
+  "tfi/TfiPieChart.svg": {
+    "component_id": "tfi:TfiPieChart",
     "aliases": [
       "tfi",
       "pie",
@@ -2456,8 +2456,8 @@
     "colors": [],
     "caption": "a black and white image of a pie chart"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPin.svg": {
-    "component_id": "Icon.TfiPin",
+  "tfi/TfiPin.svg": {
+    "component_id": "tfi:TfiPin",
     "aliases": [
       "tfi",
       "pin"
@@ -2465,8 +2465,8 @@
     "colors": [],
     "caption": "a black and white image of a stop sign"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPin2.svg": {
-    "component_id": "Icon.TfiPin2",
+  "tfi/TfiPin2.svg": {
+    "component_id": "tfi:TfiPin2",
     "aliases": [
       "tfi",
       "pin",
@@ -2475,8 +2475,8 @@
     "colors": [],
     "caption": "a black and white image of a lamp on a stand"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPinAlt.svg": {
-    "component_id": "Icon.TfiPinAlt",
+  "tfi/TfiPinAlt.svg": {
+    "component_id": "tfi:TfiPinAlt",
     "aliases": [
       "tfi",
       "pin",
@@ -2485,8 +2485,8 @@
     "colors": [],
     "caption": "a black and white illustration of a spoon"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPinterest.svg": {
-    "component_id": "Icon.TfiPinterest",
+  "tfi/TfiPinterest.svg": {
+    "component_id": "tfi:TfiPinterest",
     "aliases": [
       "tfi",
       "pinterest"
@@ -2494,8 +2494,8 @@
     "colors": [],
     "caption": "a black and white image of the pinterest logo"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPinterestAlt.svg": {
-    "component_id": "Icon.TfiPinterestAlt",
+  "tfi/TfiPinterestAlt.svg": {
+    "component_id": "tfi:TfiPinterestAlt",
     "aliases": [
       "tfi",
       "pinterest",
@@ -2504,8 +2504,8 @@
     "colors": [],
     "caption": "the pinterest logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPlug.svg": {
-    "component_id": "Icon.TfiPlug",
+  "tfi/TfiPlug.svg": {
+    "component_id": "tfi:TfiPlug",
     "aliases": [
       "tfi",
       "plug"
@@ -2513,8 +2513,8 @@
     "colors": [],
     "caption": "a black and white icon of a power plug"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPlus.svg": {
-    "component_id": "Icon.TfiPlus",
+  "tfi/TfiPlus.svg": {
+    "component_id": "tfi:TfiPlus",
     "aliases": [
       "tfi",
       "plus"
@@ -2522,8 +2522,8 @@
     "colors": [],
     "caption": "a black cross is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPowerOff.svg": {
-    "component_id": "Icon.TfiPowerOff",
+  "tfi/TfiPowerOff.svg": {
+    "component_id": "tfi:TfiPowerOff",
     "aliases": [
       "tfi",
       "power",
@@ -2532,8 +2532,8 @@
     "colors": [],
     "caption": "a black and white image of a power button"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPrinter.svg": {
-    "component_id": "Icon.TfiPrinter",
+  "tfi/TfiPrinter.svg": {
+    "component_id": "tfi:TfiPrinter",
     "aliases": [
       "tfi",
       "printer"
@@ -2541,8 +2541,8 @@
     "colors": [],
     "caption": "a printer icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiPulse.svg": {
-    "component_id": "Icon.TfiPulse",
+  "tfi/TfiPulse.svg": {
+    "component_id": "tfi:TfiPulse",
     "aliases": [
       "tfi",
       "pulse"
@@ -2550,8 +2550,8 @@
     "colors": [],
     "caption": "a black and white image of a heartbeat symbol"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiQuoteLeft.svg": {
-    "component_id": "Icon.TfiQuoteLeft",
+  "tfi/TfiQuoteLeft.svg": {
+    "component_id": "tfi:TfiQuoteLeft",
     "aliases": [
       "tfi",
       "quote",
@@ -2560,8 +2560,8 @@
     "colors": [],
     "caption": "the number six is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiQuoteRight.svg": {
-    "component_id": "Icon.TfiQuoteRight",
+  "tfi/TfiQuoteRight.svg": {
+    "component_id": "tfi:TfiQuoteRight",
     "aliases": [
       "tfi",
       "quote",
@@ -2570,8 +2570,8 @@
     "colors": [],
     "caption": "the number nine is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiReceipt.svg": {
-    "component_id": "Icon.TfiReceipt",
+  "tfi/TfiReceipt.svg": {
+    "component_id": "tfi:TfiReceipt",
     "aliases": [
       "tfi",
       "receipt"
@@ -2579,8 +2579,8 @@
     "colors": [],
     "caption": "a black and white icon of a document"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiReddit.svg": {
-    "component_id": "Icon.TfiReddit",
+  "tfi/TfiReddit.svg": {
+    "component_id": "tfi:TfiReddit",
     "aliases": [
       "tfi",
       "reddit"
@@ -2588,8 +2588,8 @@
     "colors": [],
     "caption": "a black and white drawing of a smiling face"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiReload.svg": {
-    "component_id": "Icon.TfiReload",
+  "tfi/TfiReload.svg": {
+    "component_id": "tfi:TfiReload",
     "aliases": [
       "tfi",
       "reload"
@@ -2597,8 +2597,8 @@
     "colors": [],
     "caption": "a black and white image of a circular arrow"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiRocket.svg": {
-    "component_id": "Icon.TfiRocket",
+  "tfi/TfiRocket.svg": {
+    "component_id": "tfi:TfiRocket",
     "aliases": [
       "tfi",
       "rocket"
@@ -2606,8 +2606,8 @@
     "colors": [],
     "caption": "a black and white illustration of a rocket"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiRss.svg": {
-    "component_id": "Icon.TfiRss",
+  "tfi/TfiRss.svg": {
+    "component_id": "tfi:TfiRss",
     "aliases": [
       "tfi",
       "rss"
@@ -2615,8 +2615,8 @@
     "colors": [],
     "caption": "a black and white image of a rss icon"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiRssAlt.svg": {
-    "component_id": "Icon.TfiRssAlt",
+  "tfi/TfiRssAlt.svg": {
+    "component_id": "tfi:TfiRssAlt",
     "aliases": [
       "tfi",
       "rss",
@@ -2625,8 +2625,8 @@
     "colors": [],
     "caption": "a black and white icon of a circle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiRuler.svg": {
-    "component_id": "Icon.TfiRuler",
+  "tfi/TfiRuler.svg": {
+    "component_id": "tfi:TfiRuler",
     "aliases": [
       "tfi",
       "ruler"
@@ -2634,8 +2634,8 @@
     "colors": [],
     "caption": "a ruler icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiRulerAlt.svg": {
-    "component_id": "Icon.TfiRulerAlt",
+  "tfi/TfiRulerAlt.svg": {
+    "component_id": "tfi:TfiRulerAlt",
     "aliases": [
       "tfi",
       "ruler",
@@ -2644,8 +2644,8 @@
     "colors": [],
     "caption": "a ruler icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiRulerAlt2.svg": {
-    "component_id": "Icon.TfiRulerAlt2",
+  "tfi/TfiRulerAlt2.svg": {
+    "component_id": "tfi:TfiRulerAlt2",
     "aliases": [
       "tfi",
       "ruler",
@@ -2655,8 +2655,8 @@
     "colors": [],
     "caption": "a black and white illustration of a triangle"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiRulerPencil.svg": {
-    "component_id": "Icon.TfiRulerPencil",
+  "tfi/TfiRulerPencil.svg": {
+    "component_id": "tfi:TfiRulerPencil",
     "aliases": [
       "tfi",
       "ruler",
@@ -2665,8 +2665,8 @@
     "colors": [],
     "caption": "a pencil and ruler icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSave.svg": {
-    "component_id": "Icon.TfiSave",
+  "tfi/TfiSave.svg": {
+    "component_id": "tfi:TfiSave",
     "aliases": [
       "tfi",
       "save"
@@ -2674,8 +2674,8 @@
     "colors": [],
     "caption": "an icon of a floppy disk on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSaveAlt.svg": {
-    "component_id": "Icon.TfiSaveAlt",
+  "tfi/TfiSaveAlt.svg": {
+    "component_id": "tfi:TfiSaveAlt",
     "aliases": [
       "tfi",
       "save",
@@ -2684,8 +2684,8 @@
     "colors": [],
     "caption": "an icon of a floppy disk on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSearch.svg": {
-    "component_id": "Icon.TfiSearch",
+  "tfi/TfiSearch.svg": {
+    "component_id": "tfi:TfiSearch",
     "aliases": [
       "tfi",
       "search"
@@ -2693,8 +2693,8 @@
     "colors": [],
     "caption": "a magnifying glass icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiServer.svg": {
-    "component_id": "Icon.TfiServer",
+  "tfi/TfiServer.svg": {
+    "component_id": "tfi:TfiServer",
     "aliases": [
       "tfi",
       "server"
@@ -2702,8 +2702,8 @@
     "colors": [],
     "caption": "a black and white illustration of a stack of data"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSettings.svg": {
-    "component_id": "Icon.TfiSettings",
+  "tfi/TfiSettings.svg": {
+    "component_id": "tfi:TfiSettings",
     "aliases": [
       "tfi",
       "settings"
@@ -2711,8 +2711,8 @@
     "colors": [],
     "caption": "a gear wheel icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShare.svg": {
-    "component_id": "Icon.TfiShare",
+  "tfi/TfiShare.svg": {
+    "component_id": "tfi:TfiShare",
     "aliases": [
       "tfi",
       "share"
@@ -2720,8 +2720,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow in a box"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShareAlt.svg": {
-    "component_id": "Icon.TfiShareAlt",
+  "tfi/TfiShareAlt.svg": {
+    "component_id": "tfi:TfiShareAlt",
     "aliases": [
       "tfi",
       "share",
@@ -2730,8 +2730,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow in a box"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSharethis.svg": {
-    "component_id": "Icon.TfiSharethis",
+  "tfi/TfiSharethis.svg": {
+    "component_id": "tfi:TfiSharethis",
     "aliases": [
       "tfi",
       "sharethis"
@@ -2739,8 +2739,8 @@
     "colors": [],
     "caption": "a black and white icon of two circles"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSharethisAlt.svg": {
-    "component_id": "Icon.TfiSharethisAlt",
+  "tfi/TfiSharethisAlt.svg": {
+    "component_id": "tfi:TfiSharethisAlt",
     "aliases": [
       "tfi",
       "sharethis",
@@ -2749,8 +2749,8 @@
     "colors": [],
     "caption": "a black and white icon with two circles"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShield.svg": {
-    "component_id": "Icon.TfiShield",
+  "tfi/TfiShield.svg": {
+    "component_id": "tfi:TfiShield",
     "aliases": [
       "tfi",
       "shield"
@@ -2758,8 +2758,8 @@
     "colors": [],
     "caption": "the shield logo is black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShiftLeft.svg": {
-    "component_id": "Icon.TfiShiftLeft",
+  "tfi/TfiShiftLeft.svg": {
+    "component_id": "tfi:TfiShiftLeft",
     "aliases": [
       "tfi",
       "shift",
@@ -2768,8 +2768,8 @@
     "colors": [],
     "caption": "a black arrow pointing in the direction of the arrow"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShiftLeftAlt.svg": {
-    "component_id": "Icon.TfiShiftLeftAlt",
+  "tfi/TfiShiftLeftAlt.svg": {
+    "component_id": "tfi:TfiShiftLeftAlt",
     "aliases": [
       "tfi",
       "shift",
@@ -2779,8 +2779,8 @@
     "colors": [],
     "caption": "a black and white image of an arrow pointing down"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShiftRight.svg": {
-    "component_id": "Icon.TfiShiftRight",
+  "tfi/TfiShiftRight.svg": {
+    "component_id": "tfi:TfiShiftRight",
     "aliases": [
       "tfi",
       "shift",
@@ -2789,8 +2789,8 @@
     "colors": [],
     "caption": "a black and white arrow pointing to the right"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShiftRightAlt.svg": {
-    "component_id": "Icon.TfiShiftRightAlt",
+  "tfi/TfiShiftRightAlt.svg": {
+    "component_id": "tfi:TfiShiftRightAlt",
     "aliases": [
       "tfi",
       "shift",
@@ -2800,8 +2800,8 @@
     "colors": [],
     "caption": "a black arrow pointing down on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShine.svg": {
-    "component_id": "Icon.TfiShine",
+  "tfi/TfiShine.svg": {
+    "component_id": "tfi:TfiShine",
     "aliases": [
       "tfi",
       "shine"
@@ -2809,8 +2809,8 @@
     "colors": [],
     "caption": "a black and white icon of a sun"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShoppingCart.svg": {
-    "component_id": "Icon.TfiShoppingCart",
+  "tfi/TfiShoppingCart.svg": {
+    "component_id": "tfi:TfiShoppingCart",
     "aliases": [
       "tfi",
       "shopping",
@@ -2819,8 +2819,8 @@
     "colors": [],
     "caption": "a shopping cart icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShoppingCartFull.svg": {
-    "component_id": "Icon.TfiShoppingCartFull",
+  "tfi/TfiShoppingCartFull.svg": {
+    "component_id": "tfi:TfiShoppingCartFull",
     "aliases": [
       "tfi",
       "shopping",
@@ -2830,8 +2830,8 @@
     "colors": [],
     "caption": "a shopping cart icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiShortcode.svg": {
-    "component_id": "Icon.TfiShortcode",
+  "tfi/TfiShortcode.svg": {
+    "component_id": "tfi:TfiShortcode",
     "aliases": [
       "tfi",
       "shortcode"
@@ -2839,8 +2839,8 @@
     "colors": [],
     "caption": "a black and white logo with the letter s in it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSignal.svg": {
-    "component_id": "Icon.TfiSignal",
+  "tfi/TfiSignal.svg": {
+    "component_id": "tfi:TfiSignal",
     "aliases": [
       "tfi",
       "signal"
@@ -2848,8 +2848,8 @@
     "colors": [],
     "caption": "a black and white image of a wifi symbol"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSkype.svg": {
-    "component_id": "Icon.TfiSkype",
+  "tfi/TfiSkype.svg": {
+    "component_id": "tfi:TfiSkype",
     "aliases": [
       "tfi",
       "skype"
@@ -2857,8 +2857,8 @@
     "colors": [],
     "caption": "a black and white image of the letter s"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSlice.svg": {
-    "component_id": "Icon.TfiSlice",
+  "tfi/TfiSlice.svg": {
+    "component_id": "tfi:TfiSlice",
     "aliases": [
       "tfi",
       "slice"
@@ -2866,8 +2866,8 @@
     "colors": [],
     "caption": "a knife icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSmallcap.svg": {
-    "component_id": "Icon.TfiSmallcap",
+  "tfi/TfiSmallcap.svg": {
+    "component_id": "tfi:TfiSmallcap",
     "aliases": [
       "tfi",
       "smallcap"
@@ -2875,8 +2875,8 @@
     "colors": [],
     "caption": "a black and white image of the letter t"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSoundcloud.svg": {
-    "component_id": "Icon.TfiSoundcloud",
+  "tfi/TfiSoundcloud.svg": {
+    "component_id": "tfi:TfiSoundcloud",
     "aliases": [
       "tfi",
       "soundcloud"
@@ -2884,8 +2884,8 @@
     "colors": [],
     "caption": "the soundcloud logo is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSplitH.svg": {
-    "component_id": "Icon.TfiSplitH",
+  "tfi/TfiSplitH.svg": {
+    "component_id": "tfi:TfiSplitH",
     "aliases": [
       "tfi",
       "split",
@@ -2894,8 +2894,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSplitV.svg": {
-    "component_id": "Icon.TfiSplitV",
+  "tfi/TfiSplitV.svg": {
+    "component_id": "tfi:TfiSplitV",
     "aliases": [
       "tfi",
       "split",
@@ -2904,8 +2904,8 @@
     "colors": [],
     "caption": "two arrows pointing in opposite directions on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSplitVAlt.svg": {
-    "component_id": "Icon.TfiSplitValt",
+  "tfi/TfiSplitVAlt.svg": {
+    "component_id": "tfi:TfiSplitValt",
     "aliases": [
       "tfi",
       "split",
@@ -2914,8 +2914,8 @@
     "colors": [],
     "caption": "a black and white image of a computer symbol"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSpray.svg": {
-    "component_id": "Icon.TfiSpray",
+  "tfi/TfiSpray.svg": {
+    "component_id": "tfi:TfiSpray",
     "aliases": [
       "tfi",
       "spray"
@@ -2923,8 +2923,8 @@
     "colors": [],
     "caption": "a spray can icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiStackOverflow.svg": {
-    "component_id": "Icon.TfiStackOverflow",
+  "tfi/TfiStackOverflow.svg": {
+    "component_id": "tfi:TfiStackOverflow",
     "aliases": [
       "tfi",
       "stack",
@@ -2933,8 +2933,8 @@
     "colors": [],
     "caption": "a black and white icon of a staircase"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiStamp.svg": {
-    "component_id": "Icon.TfiStamp",
+  "tfi/TfiStamp.svg": {
+    "component_id": "tfi:TfiStamp",
     "aliases": [
       "tfi",
       "stamp"
@@ -2942,8 +2942,8 @@
     "colors": [],
     "caption": "a stamp icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiStar.svg": {
-    "component_id": "Icon.TfiStar",
+  "tfi/TfiStar.svg": {
+    "component_id": "tfi:TfiStar",
     "aliases": [
       "tfi",
       "star"
@@ -2951,8 +2951,8 @@
     "colors": [],
     "caption": "a black star on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiStatsDown.svg": {
-    "component_id": "Icon.TfiStatsDown",
+  "tfi/TfiStatsDown.svg": {
+    "component_id": "tfi:TfiStatsDown",
     "aliases": [
       "tfi",
       "stats",
@@ -2961,8 +2961,8 @@
     "colors": [],
     "caption": "a black and white icon of a downward arrow"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiStatsUp.svg": {
-    "component_id": "Icon.TfiStatsUp",
+  "tfi/TfiStatsUp.svg": {
+    "component_id": "tfi:TfiStatsUp",
     "aliases": [
       "tfi",
       "stats",
@@ -2971,8 +2971,8 @@
     "colors": [],
     "caption": "a graph is shown on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiSupport.svg": {
-    "component_id": "Icon.TfiSupport",
+  "tfi/TfiSupport.svg": {
+    "component_id": "tfi:TfiSupport",
     "aliases": [
       "tfi",
       "support"
@@ -2980,8 +2980,8 @@
     "colors": [],
     "caption": "a medical bag icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTablet.svg": {
-    "component_id": "Icon.TfiTablet",
+  "tfi/TfiTablet.svg": {
+    "component_id": "tfi:TfiTablet",
     "aliases": [
       "tfi",
       "tablet"
@@ -2989,8 +2989,8 @@
     "colors": [],
     "caption": "a black and white image of a tablet computer"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTag.svg": {
-    "component_id": "Icon.TfiTag",
+  "tfi/TfiTag.svg": {
+    "component_id": "tfi:TfiTag",
     "aliases": [
       "tfi",
       "tag"
@@ -2998,8 +2998,8 @@
     "colors": [],
     "caption": "a black and white icon of a bookmark"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTarget.svg": {
-    "component_id": "Icon.TfiTarget",
+  "tfi/TfiTarget.svg": {
+    "component_id": "tfi:TfiTarget",
     "aliases": [
       "tfi",
       "target"
@@ -3007,8 +3007,8 @@
     "colors": [],
     "caption": "a crosshairs symbol on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiText.svg": {
-    "component_id": "Icon.TfiText",
+  "tfi/TfiText.svg": {
+    "component_id": "tfi:TfiText",
     "aliases": [
       "tfi",
       "text"
@@ -3016,8 +3016,8 @@
     "colors": [],
     "caption": "a black and white image of the letter t"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiThemifyFavicon.svg": {
-    "component_id": "Icon.TfiThemifyFavicon",
+  "tfi/TfiThemifyFavicon.svg": {
+    "component_id": "tfi:TfiThemifyFavicon",
     "aliases": [
       "tfi",
       "themify",
@@ -3026,8 +3026,8 @@
     "colors": [],
     "caption": "a black and white image of a smiley face in a speech bubble"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiThemifyFaviconAlt.svg": {
-    "component_id": "Icon.TfiThemifyFaviconAlt",
+  "tfi/TfiThemifyFaviconAlt.svg": {
+    "component_id": "tfi:TfiThemifyFaviconAlt",
     "aliases": [
       "tfi",
       "themify",
@@ -3037,8 +3037,8 @@
     "colors": [],
     "caption": "a black and white image of a smiley face in a speech bubble"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiThemifyLogo.svg": {
-    "component_id": "Icon.TfiThemifyLogo",
+  "tfi/TfiThemifyLogo.svg": {
+    "component_id": "tfi:TfiThemifyLogo",
     "aliases": [
       "tfi",
       "themify",
@@ -3047,8 +3047,8 @@
     "colors": [],
     "caption": "a black and white logo with the word themify written on it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiThought.svg": {
-    "component_id": "Icon.TfiThought",
+  "tfi/TfiThought.svg": {
+    "component_id": "tfi:TfiThought",
     "aliases": [
       "tfi",
       "thought"
@@ -3056,8 +3056,8 @@
     "colors": [],
     "caption": "a black and white image of a thought bubble"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiThumbDown.svg": {
-    "component_id": "Icon.TfiThumbDown",
+  "tfi/TfiThumbDown.svg": {
+    "component_id": "tfi:TfiThumbDown",
     "aliases": [
       "tfi",
       "thumb",
@@ -3066,8 +3066,8 @@
     "colors": [],
     "caption": "a black and white image of a thumb down"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiThumbUp.svg": {
-    "component_id": "Icon.TfiThumbUp",
+  "tfi/TfiThumbUp.svg": {
+    "component_id": "tfi:TfiThumbUp",
     "aliases": [
       "tfi",
       "thumb",
@@ -3076,8 +3076,8 @@
     "colors": [],
     "caption": "a black and white icon of a thumb up"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTicket.svg": {
-    "component_id": "Icon.TfiTicket",
+  "tfi/TfiTicket.svg": {
+    "component_id": "tfi:TfiTicket",
     "aliases": [
       "tfi",
       "ticket"
@@ -3085,8 +3085,8 @@
     "colors": [],
     "caption": "a black and white image of a ticket on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTime.svg": {
-    "component_id": "Icon.TfiTime",
+  "tfi/TfiTime.svg": {
+    "component_id": "tfi:TfiTime",
     "aliases": [
       "tfi",
       "time"
@@ -3094,8 +3094,8 @@
     "colors": [],
     "caption": "a black and white clock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTimer.svg": {
-    "component_id": "Icon.TfiTimer",
+  "tfi/TfiTimer.svg": {
+    "component_id": "tfi:TfiTimer",
     "aliases": [
       "tfi",
       "timer"
@@ -3103,8 +3103,8 @@
     "colors": [],
     "caption": "a stopwatch icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTrash.svg": {
-    "component_id": "Icon.TfiTrash",
+  "tfi/TfiTrash.svg": {
+    "component_id": "tfi:TfiTrash",
     "aliases": [
       "tfi",
       "trash"
@@ -3112,8 +3112,8 @@
     "colors": [],
     "caption": "a trash can icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTrello.svg": {
-    "component_id": "Icon.TfiTrello",
+  "tfi/TfiTrello.svg": {
+    "component_id": "tfi:TfiTrello",
     "aliases": [
       "tfi",
       "trello"
@@ -3121,8 +3121,8 @@
     "colors": [],
     "caption": "a black and white icon of a door with two windows"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTruck.svg": {
-    "component_id": "Icon.TfiTruck",
+  "tfi/TfiTruck.svg": {
+    "component_id": "tfi:TfiTruck",
     "aliases": [
       "tfi",
       "truck"
@@ -3130,8 +3130,8 @@
     "colors": [],
     "caption": "a truck icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTumblr.svg": {
-    "component_id": "Icon.TfiTumblr",
+  "tfi/TfiTumblr.svg": {
+    "component_id": "tfi:TfiTumblr",
     "aliases": [
       "tfi",
       "tumblr"
@@ -3139,8 +3139,8 @@
     "colors": [],
     "caption": "a black and white image of the letter t"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTumblrAlt.svg": {
-    "component_id": "Icon.TfiTumblrAlt",
+  "tfi/TfiTumblrAlt.svg": {
+    "component_id": "tfi:TfiTumblrAlt",
     "aliases": [
       "tfi",
       "tumblr",
@@ -3149,8 +3149,8 @@
     "colors": [],
     "caption": "a black and white image of the letter t"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTwitter.svg": {
-    "component_id": "Icon.TfiTwitter",
+  "tfi/TfiTwitter.svg": {
+    "component_id": "tfi:TfiTwitter",
     "aliases": [
       "tfi",
       "twitter"
@@ -3158,8 +3158,8 @@
     "colors": [],
     "caption": "a black and white image of a twitter bird"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiTwitterAlt.svg": {
-    "component_id": "Icon.TfiTwitterAlt",
+  "tfi/TfiTwitterAlt.svg": {
+    "component_id": "tfi:TfiTwitterAlt",
     "aliases": [
       "tfi",
       "twitter",
@@ -3168,8 +3168,8 @@
     "colors": [],
     "caption": "a black twitter logo on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiUnderline.svg": {
-    "component_id": "Icon.TfiUnderline",
+  "tfi/TfiUnderline.svg": {
+    "component_id": "tfi:TfiUnderline",
     "aliases": [
       "tfi",
       "underline"
@@ -3177,8 +3177,8 @@
     "colors": [],
     "caption": "a black and white image of the letter u"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiUnlink.svg": {
-    "component_id": "Icon.TfiUnlink",
+  "tfi/TfiUnlink.svg": {
+    "component_id": "tfi:TfiUnlink",
     "aliases": [
       "tfi",
       "unlink"
@@ -3186,8 +3186,8 @@
     "colors": [],
     "caption": "a black and white icon with the letter s"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiUnlock.svg": {
-    "component_id": "Icon.TfiUnlock",
+  "tfi/TfiUnlock.svg": {
+    "component_id": "tfi:TfiUnlock",
     "aliases": [
       "tfi",
       "unlock"
@@ -3195,8 +3195,8 @@
     "colors": [],
     "caption": "a padlock icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiUpload.svg": {
-    "component_id": "Icon.TfiUpload",
+  "tfi/TfiUpload.svg": {
+    "component_id": "tfi:TfiUpload",
     "aliases": [
       "tfi",
       "upload"
@@ -3204,8 +3204,8 @@
     "colors": [],
     "caption": "an arrow pointing up on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiUppercase.svg": {
-    "component_id": "Icon.TfiUppercase",
+  "tfi/TfiUppercase.svg": {
+    "component_id": "tfi:TfiUppercase",
     "aliases": [
       "tfi",
       "uppercase"
@@ -3213,8 +3213,8 @@
     "colors": [],
     "caption": "a black and white image of the letter t"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiUser.svg": {
-    "component_id": "Icon.TfiUser",
+  "tfi/TfiUser.svg": {
+    "component_id": "tfi:TfiUser",
     "aliases": [
       "tfi",
       "user"
@@ -3222,8 +3222,8 @@
     "colors": [],
     "caption": "a black silhouette of a man's head on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiVector.svg": {
-    "component_id": "Icon.TfiVector",
+  "tfi/TfiVector.svg": {
+    "component_id": "tfi:TfiVector",
     "aliases": [
       "tfi",
       "vector"
@@ -3231,8 +3231,8 @@
     "colors": [],
     "caption": "a black and white icon of a connector"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiVideoCamera.svg": {
-    "component_id": "Icon.TfiVideoCamera",
+  "tfi/TfiVideoCamera.svg": {
+    "component_id": "tfi:TfiVideoCamera",
     "aliases": [
       "tfi",
       "video",
@@ -3241,8 +3241,8 @@
     "colors": [],
     "caption": "a black and white icon of a camera"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiVideoClapper.svg": {
-    "component_id": "Icon.TfiVideoClapper",
+  "tfi/TfiVideoClapper.svg": {
+    "component_id": "tfi:TfiVideoClapper",
     "aliases": [
       "tfi",
       "video",
@@ -3251,8 +3251,8 @@
     "colors": [],
     "caption": "a movie clapper icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiViewGrid.svg": {
-    "component_id": "Icon.TfiViewGrid",
+  "tfi/TfiViewGrid.svg": {
+    "component_id": "tfi:TfiViewGrid",
     "aliases": [
       "tfi",
       "view",
@@ -3261,8 +3261,8 @@
     "colors": [],
     "caption": "a square with four black squares on it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiViewList.svg": {
-    "component_id": "Icon.TfiViewList",
+  "tfi/TfiViewList.svg": {
+    "component_id": "tfi:TfiViewList",
     "aliases": [
       "tfi",
       "view",
@@ -3271,8 +3271,8 @@
     "colors": [],
     "caption": "a black and white image of four lines"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiViewListAlt.svg": {
-    "component_id": "Icon.TfiViewListAlt",
+  "tfi/TfiViewListAlt.svg": {
+    "component_id": "tfi:TfiViewListAlt",
     "aliases": [
       "tfi",
       "view",
@@ -3282,8 +3282,8 @@
     "colors": [],
     "caption": "a black and white check list icon"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiVimeo.svg": {
-    "component_id": "Icon.TfiVimeo",
+  "tfi/TfiVimeo.svg": {
+    "component_id": "tfi:TfiVimeo",
     "aliases": [
       "tfi",
       "vimeo"
@@ -3291,8 +3291,8 @@
     "colors": [],
     "caption": "a black and white drawing of a letter v"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiVimeoAlt.svg": {
-    "component_id": "Icon.TfiVimeoAlt",
+  "tfi/TfiVimeoAlt.svg": {
+    "component_id": "tfi:TfiVimeoAlt",
     "aliases": [
       "tfi",
       "vimeo",
@@ -3301,8 +3301,8 @@
     "colors": [],
     "caption": "a black and white image of a letter v"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiVolume.svg": {
-    "component_id": "Icon.TfiVolume",
+  "tfi/TfiVolume.svg": {
+    "component_id": "tfi:TfiVolume",
     "aliases": [
       "tfi",
       "volume"
@@ -3310,8 +3310,8 @@
     "colors": [],
     "caption": "a speaker icon on a white background"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiWallet.svg": {
-    "component_id": "Icon.TfiWallet",
+  "tfi/TfiWallet.svg": {
+    "component_id": "tfi:TfiWallet",
     "aliases": [
       "tfi",
       "wallet"
@@ -3319,8 +3319,8 @@
     "colors": [],
     "caption": "a black and white icon of a wallet"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiWand.svg": {
-    "component_id": "Icon.TfiWand",
+  "tfi/TfiWand.svg": {
+    "component_id": "tfi:TfiWand",
     "aliases": [
       "tfi",
       "wand"
@@ -3328,8 +3328,8 @@
     "colors": [],
     "caption": "a black and white illustration of a wand"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiWheelchair.svg": {
-    "component_id": "Icon.TfiWheelchair",
+  "tfi/TfiWheelchair.svg": {
+    "component_id": "tfi:TfiWheelchair",
     "aliases": [
       "tfi",
       "wheelchair"
@@ -3337,8 +3337,8 @@
     "colors": [],
     "caption": "a black and white image of a person in a wheelchair"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiWidget.svg": {
-    "component_id": "Icon.TfiWidget",
+  "tfi/TfiWidget.svg": {
+    "component_id": "tfi:TfiWidget",
     "aliases": [
       "tfi",
       "widget"
@@ -3346,8 +3346,8 @@
     "colors": [],
     "caption": "a black and white image of a gear wheel"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiWidgetAlt.svg": {
-    "component_id": "Icon.TfiWidgetAlt",
+  "tfi/TfiWidgetAlt.svg": {
+    "component_id": "tfi:TfiWidgetAlt",
     "aliases": [
       "tfi",
       "widget",
@@ -3356,8 +3356,8 @@
     "colors": [],
     "caption": "a black and white square with a check mark"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiWidgetized.svg": {
-    "component_id": "Icon.TfiWidgetized",
+  "tfi/TfiWidgetized.svg": {
+    "component_id": "tfi:TfiWidgetized",
     "aliases": [
       "tfi",
       "widgetized"
@@ -3365,8 +3365,8 @@
     "colors": [],
     "caption": "an image of a square with black squares on it"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiWindow.svg": {
-    "component_id": "Icon.TfiWindow",
+  "tfi/TfiWindow.svg": {
+    "component_id": "tfi:TfiWindow",
     "aliases": [
       "tfi",
       "window"
@@ -3374,8 +3374,8 @@
     "colors": [],
     "caption": "a black and white icon of a web browser"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiWordpress.svg": {
-    "component_id": "Icon.TfiWordpress",
+  "tfi/TfiWordpress.svg": {
+    "component_id": "tfi:TfiWordpress",
     "aliases": [
       "tfi",
       "wordpress"
@@ -3383,8 +3383,8 @@
     "colors": [],
     "caption": "the wordpress logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiWorld.svg": {
-    "component_id": "Icon.TfiWorld",
+  "tfi/TfiWorld.svg": {
+    "component_id": "tfi:TfiWorld",
     "aliases": [
       "tfi",
       "world"
@@ -3392,8 +3392,8 @@
     "colors": [],
     "caption": "a black and white icon of a globe"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiWrite.svg": {
-    "component_id": "Icon.TfiWrite",
+  "tfi/TfiWrite.svg": {
+    "component_id": "tfi:TfiWrite",
     "aliases": [
       "tfi",
       "write"
@@ -3401,8 +3401,8 @@
     "colors": [],
     "caption": "a black and white icon of a pen and paper"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiYahoo.svg": {
-    "component_id": "Icon.TfiYahoo",
+  "tfi/TfiYahoo.svg": {
+    "component_id": "tfi:TfiYahoo",
     "aliases": [
       "tfi",
       "yahoo"
@@ -3410,8 +3410,8 @@
     "colors": [],
     "caption": "a black and white image of the letter y"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiYoutube.svg": {
-    "component_id": "Icon.TfiYoutube",
+  "tfi/TfiYoutube.svg": {
+    "component_id": "tfi:TfiYoutube",
     "aliases": [
       "tfi",
       "youtube"
@@ -3419,8 +3419,8 @@
     "colors": [],
     "caption": "the youtube logo is shown in black and white"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiZip.svg": {
-    "component_id": "Icon.TfiZip",
+  "tfi/TfiZip.svg": {
+    "component_id": "tfi:TfiZip",
     "aliases": [
       "tfi",
       "zip"
@@ -3428,8 +3428,8 @@
     "colors": [],
     "caption": "a black and white image of a file folder"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiZoomIn.svg": {
-    "component_id": "Icon.TfiZoomIn",
+  "tfi/TfiZoomIn.svg": {
+    "component_id": "tfi:TfiZoomIn",
     "aliases": [
       "tfi",
       "zoom",
@@ -3438,8 +3438,8 @@
     "colors": [],
     "caption": "a magnifying glass icon with a plus sign"
   },
-  "/home/darren/llm-widget-factory/assets/tfi/TfiZoomOut.svg": {
-    "component_id": "Icon.TfiZoomOut",
+  "tfi/TfiZoomOut.svg": {
+    "component_id": "tfi:TfiZoomOut",
     "aliases": [
       "tfi",
       "zoom",
