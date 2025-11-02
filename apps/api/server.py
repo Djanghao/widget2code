@@ -136,6 +136,31 @@ async def global_exception_handler(request: Request, exc: Exception):
         content={"success": False, "error": str(exc), "traceback": error_traceback}
     )
 
+@app.get("/health")
+async def health():
+    """Health check endpoint for service availability monitoring."""
+    health_info = {
+        "status": "ok",
+        "service": "Widget Factory API",
+        "model_cache_enabled": model_cache_enabled,
+    }
+
+    if model_cache_enabled:
+        health_info["models"] = {
+            "blip2_loaded": cached_blip2_pipe is not None,
+            "siglip_loaded": cached_siglip_pipe is not None,
+        }
+
+        if cached_blip2_pipe:
+            health_info["models"]["blip2_device"] = cached_blip2_pipe[2]
+
+        if cached_siglip_pipe:
+            health_info["models"]["siglip_device"] = cached_siglip_pipe[2]
+
+    health_info["cuda_available"] = use_cuda_for_retrieval
+
+    return health_info
+
 @app.post("/api/generate-widget")
 async def generate_widget(
     request: Request,
