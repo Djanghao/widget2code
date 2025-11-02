@@ -16,6 +16,7 @@ function HeadlessRenderer() {
   const widgetFrameRef = useRef(null);
   const resolveRef = useRef(null);
   const rejectRef = useRef(null);
+  const enableAutoResizeRef = useRef(false);
   const [frameEl, setFrameEl] = useState(null);
 
   const {
@@ -51,6 +52,7 @@ function HeadlessRenderer() {
           console.log('[Headless] 🎚️  AutoResize enabled:', enableAutoResize);
           console.log('[Headless] 📐 Spec provided:', !!spec);
 
+          enableAutoResizeRef.current = enableAutoResize;
           setEnableAutoResize(enableAutoResize);
 
           const state = usePlaygroundStore.getState();
@@ -179,7 +181,10 @@ function HeadlessRenderer() {
 
       const state = usePlaygroundStore.getState();
       console.log('[Headless] 🔍 Validating widget...');
-      const validation = validateWidget(widgetElement, state.widgetDSL);
+      // Only check aspect ratio if autoresize was enabled
+      const validation = validateWidget(widgetElement, state.widgetDSL, {
+        checkAspectRatio: enableAutoResizeRef.current
+      });
 
       if (!validation.valid) {
         console.warn('[Headless] ⚠️  Validation failed:', validation.issues);

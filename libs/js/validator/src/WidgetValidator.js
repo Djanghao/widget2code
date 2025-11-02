@@ -7,7 +7,8 @@
 
 import { measureOverflow } from '@widget-factory/resizer';
 
-export function validateWidget(widgetElement, spec) {
+export function validateWidget(widgetElement, spec, options = {}) {
+  const { checkAspectRatio = true } = options;
   const issues = [];
   const warnings = [];
 
@@ -34,7 +35,7 @@ export function validateWidget(widgetElement, spec) {
     issues.push('Content overflows container or padding area');
   }
 
-  if (expectedRatio && typeof expectedRatio === 'number' && isFinite(expectedRatio)) {
+  if (checkAspectRatio && expectedRatio && typeof expectedRatio === 'number' && isFinite(expectedRatio)) {
     const deviation = Math.abs(actualRatio - expectedRatio) / expectedRatio;
     if (deviation > 0.05) {
       issues.push(

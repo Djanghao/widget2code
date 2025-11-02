@@ -366,7 +366,8 @@ export async function batchRender(inputPath, options = {}) {
 
   console.log('🚀 Widget Factory - Batch Renderer\n');
   console.log(`Directory: ${inputPath}`);
-  console.log(`Concurrency: ${concurrency}\n`);
+  console.log(`Concurrency: ${concurrency}`);
+  console.log(`Force: ${force}\n`);
 
   const widgets = await findWidgetsToProcess(inputPath, { force });
 

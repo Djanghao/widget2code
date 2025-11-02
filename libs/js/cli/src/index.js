@@ -81,11 +81,29 @@ async function main() {
 
       case 'batch-render':
         if (commandArgs.length < 1) {
-          console.error('Error: batch-render requires <directory> [concurrency]');
+          console.error('Error: batch-render requires <directory> [options]');
           process.exit(1);
         }
-        const { failedCount } = await batchRender(commandArgs[0], {
-          concurrency: parseInt(commandArgs[1]) || 3
+        // Parse batch-render options
+        let concurrency = 3;
+        let force = false;
+        const directory = commandArgs[0];
+
+        for (let i = 1; i < commandArgs.length; i++) {
+          if (commandArgs[i] === '--concurrency' && commandArgs[i + 1]) {
+            concurrency = parseInt(commandArgs[i + 1]);
+            i++; // Skip next arg
+          } else if (commandArgs[i] === '--force') {
+            force = true;
+          } else if (!commandArgs[i].startsWith('--')) {
+            // Legacy support: bare number is concurrency
+            concurrency = parseInt(commandArgs[i]) || 3;
+          }
+        }
+
+        const { failedCount } = await batchRender(directory, {
+          concurrency,
+          force
         });
         process.exit(failedCount > 0 ? 1 : 0);
         break;
