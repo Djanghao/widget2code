@@ -2,6 +2,7 @@ export { WidgetShell } from "./WidgetShell.jsx";
 export { Text } from "./Text.jsx";
 export { Icon } from "./Icon.jsx";
 export { Button } from "./Button.jsx";
+export { Placeholder } from "./Placeholder.jsx";
 export { Sparkline } from "./Sparkline.jsx";
 export { AppLogo } from "./AppLogo.jsx";
 export { MapImage } from "./MapImage.jsx";

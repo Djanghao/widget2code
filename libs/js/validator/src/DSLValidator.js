@@ -145,24 +145,58 @@ export function fixWidgetDSL(spec) {
 
       if (!isLucideIcon && !isSFIcon && !VALID_COMPONENTS.has(node.component)) {
         const originalComponent = node.component;
-        node.component = 'Text';
-        node.content = `[Unknown: ${originalComponent}]`;
-        changes.push(`${path}: replaced unknown component "${originalComponent}" with Text placeholder`);
+        node.component = 'Placeholder';
+
+        // Preserve all visual/layout props for Placeholder
+        // Keep: backgroundColor, borderRadius, padding, margin, border, opacity, width, height, flex
+        // Remove: component-specific props that don't make sense for Placeholder
+        if (node.props) {
+          const visualProps = [
+            'backgroundColor', 'borderRadius', 'padding', 'margin',
+            'border', 'opacity', 'color'
+          ];
+          const propsToKeep = {};
+          for (const key of visualProps) {
+            if (node.props[key] !== undefined) {
+              propsToKeep[key] = node.props[key];
+            }
+          }
+          node.props = propsToKeep;
+        }
+
+        // Don't show label - keep visual fidelity
+        delete node.content;
+
+        changes.push(`${path}: replaced unknown component "${originalComponent}" with Placeholder`);
       }
 
       if (node.component === 'Icon') {
         if (!node.props || !node.props.name) {
-          node.component = 'Text';
-          node.content = '[Icon Missing Name]';
-          changes.push(`${path}: replaced Icon with missing name with Text placeholder`);
+          node.component = 'Placeholder';
+
+          // Keep visual props if any
+          if (node.props) {
+            const { name, ...visualProps } = node.props;
+            node.props = visualProps;
+          }
+
+          delete node.content;
+          changes.push(`${path}: replaced Icon with missing name with Placeholder`);
         }
       }
 
       if (node.component === 'Image') {
         if (!node.props || !node.props.src) {
-          node.component = 'Text';
-          node.content = '[Image Missing Src]';
-          changes.push(`${path}: replaced Image with missing src with Text placeholder`);
+          node.component = 'Placeholder';
+
+          // Keep visual props but remove invalid image props
+          if (node.props) {
+            const { src, url, ...visualProps } = node.props;
+            node.props = visualProps;
+          }
+
+          delete node.content;
+          changes.push(`${path}: replaced Image with missing src with Placeholder`);
         }
       }
     }
