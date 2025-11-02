@@ -60,30 +60,55 @@ def run_icon_detection_pipeline(
             candidate_roots = [default_sf_dir]
 
         existing_roots = [p for p in candidate_roots if p.exists()]
-        if existing_roots:
-            svg_names, per_icon_details = query_from_detections_with_details(
-                detections=pixel_dets_post,
-                image_bytes=image_bytes,
-                lib_roots=existing_roots,
-                filter_icon_only=True,
-                topk=int(retrieval_topk),
-                topm=int(retrieval_topm),
-                alpha=float(retrieval_alpha),
-            )
-            ordered_unique = []
-            seen = set()
-            for n in svg_names:
-                s = str(n).strip()
-                if not s:
-                    continue
-                if s not in seen:
-                    seen.add(s)
-                    ordered_unique.append(s)
-            icon_candidates = ordered_unique
 
-            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Icon retrieval: {len(icon_candidates)} candidates")
+        # Only run retrieval if icons were detected
+        if icon_count > 0:
+            if not existing_roots:
+                log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ❌ [{image_id}] ERROR: Icon embedding libraries not found. Searched paths: {[str(p) for p in candidate_roots]}")
+                log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ❌ [{image_id}] CRITICAL: Icon retrieval SKIPPED - icons will use fallback '+' symbol")
+            else:
+                try:
+                    svg_names, per_icon_details = query_from_detections_with_details(
+                        detections=pixel_dets_post,
+                        image_bytes=image_bytes,
+                        lib_roots=existing_roots,
+                        filter_icon_only=True,
+                        topk=int(retrieval_topk),
+                        topm=int(retrieval_topm),
+                        alpha=float(retrieval_alpha),
+                    )
+                    ordered_unique = []
+                    seen = set()
+                    for n in svg_names:
+                        s = str(n).strip()
+                        if not s:
+                            continue
+                        if s not in seen:
+                            seen.add(s)
+                            ordered_unique.append(s)
+                    icon_candidates = ordered_unique
+
+                    if len(icon_candidates) == 0 and icon_count > 0:
+                        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ❌ [{image_id}] ERROR: Icon retrieval returned 0 candidates for {icon_count} detected icons")
+                        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ❌ [{image_id}] CRITICAL: This usually means backend captioning service is not running (check port {os.getenv('BACKEND_PORT', '8010')})")
+                        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ❌ [{image_id}] IMPACT: All icons will use fallback '+' symbol in rendered output")
+                    else:
+                        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Icon retrieval: {len(icon_candidates)} candidates")
+
+                        # Check if per-icon details are empty (another failure indicator)
+                        if len(per_icon_details) == 0 and icon_count > 0:
+                            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ⚠️  [{image_id}] WARNING: No per-icon details generated despite {icon_count} icons detected")
+
+                except Exception as retrieval_error:
+                    log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ❌ [{image_id}] ERROR: Icon retrieval failed with exception: {type(retrieval_error).__name__}: {str(retrieval_error)}")
+                    log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ❌ [{image_id}] CRITICAL: Icon retrieval FAILED - icons will use fallback '+' symbol")
+                    import traceback
+                    log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Traceback: {traceback.format_exc()}")
+
     except Exception as e:
-        log_to_file(f"[icon-pipeline] skipped due to: {e}")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ❌ Icon pipeline failed: {type(e).__name__}: {str(e)}")
+        import traceback
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Traceback: {traceback.format_exc()}")
 
     return {
         "grounding_raw": grounding_raw,
