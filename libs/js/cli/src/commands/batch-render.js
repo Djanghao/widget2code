@@ -14,7 +14,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import sharp from 'sharp';
 
-async function findWidgetsToProcess(inputPath) {
+async function findWidgetsToProcess(inputPath, options = {}) {
+  const { force = false } = options;
   const stats = await fs.stat(inputPath);
 
   if (stats.isFile()) {
@@ -38,17 +39,20 @@ async function findWidgetsToProcess(inputPath) {
 
       let shouldProcess = true;
 
-      const debugExists = await fs.access(debugPath).then(() => true).catch(() => false);
-      if (debugExists) {
-        try {
-          const debugData = JSON.parse(await fs.readFile(debugPath, 'utf-8'));
-          const renderingStep = debugData.steps?.rendering;
+      // Skip status check if force is enabled
+      if (!force) {
+        const debugExists = await fs.access(debugPath).then(() => true).catch(() => false);
+        if (debugExists) {
+          try {
+            const debugData = JSON.parse(await fs.readFile(debugPath, 'utf-8'));
+            const renderingStep = debugData.steps?.rendering;
 
-          if (renderingStep && renderingStep.status === 'success') {
-            shouldProcess = false;
+            if (renderingStep && renderingStep.status === 'success') {
+              shouldProcess = false;
+            }
+          } catch (error) {
+            console.warn(`[${widgetId}] Warning: Failed to read debug.json, will process`);
           }
-        } catch (error) {
-          console.warn(`[${widgetId}] Warning: Failed to read debug.json, will process`);
         }
       }
 
@@ -337,13 +341,13 @@ async function renderWidget(renderer, widgetInfo) {
 }
 
 export async function batchRender(inputPath, options = {}) {
-  const { concurrency = 3, devServerUrl = 'http://localhost:3060' } = options;
+  const { concurrency = 3, devServerUrl = 'http://localhost:3060', force = false } = options;
 
   console.log('🚀 Widget Factory - Batch Renderer\n');
   console.log(`Directory: ${inputPath}`);
   console.log(`Concurrency: ${concurrency}\n`);
 
-  const widgets = await findWidgetsToProcess(inputPath);
+  const widgets = await findWidgetsToProcess(inputPath, { force });
 
   if (widgets.length === 0) {
     return { results: [], successCount: 0, failedCount: 0 };
@@ -423,11 +427,14 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 
   if (args.length < 1) {
     console.log(`
-Usage: widget-factory batch-render <directory> [concurrency]
+Usage: widget-factory batch-render <directory> [options]
 
 Arguments:
   directory     Path to directory containing widget subdirectories with DSL files
-  concurrency   Number of concurrent renderers (default: 3)
+
+Options:
+  --concurrency N   Number of concurrent renderers (default: 3)
+  --force           Force reprocess all widgets, even if already completed
 
 Description:
   Process widgets in-place within their own subdirectories.
@@ -436,15 +443,31 @@ Description:
 
 Examples:
   widget-factory batch-render ./widgets
-  widget-factory batch-render ./widgets 5
+  widget-factory batch-render ./widgets --concurrency 5
+  widget-factory batch-render ./widgets --force
+  widget-factory batch-render ./widgets --concurrency 1 --force
 `);
     process.exit(1);
   }
 
+  // Parse arguments
   const inputPath = path.resolve(args[0]);
-  const concurrency = parseInt(args[1]) || 3;
+  let concurrency = 3;
+  let force = false;
 
-  batchRender(inputPath, { concurrency })
+  for (let i = 1; i < args.length; i++) {
+    if (args[i] === '--concurrency' && args[i + 1]) {
+      concurrency = parseInt(args[i + 1]);
+      i++; // Skip next arg
+    } else if (args[i] === '--force') {
+      force = true;
+    } else if (!args[i].startsWith('--')) {
+      // Legacy support: bare number is concurrency
+      concurrency = parseInt(args[i]) || 3;
+    }
+  }
+
+  batchRender(inputPath, { concurrency, force })
     .then(({ failedCount }) => process.exit(failedCount > 0 ? 1 : 0))
     .catch((error) => {
       console.error('\n❌ Error:', error.message);
