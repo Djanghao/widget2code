@@ -3,7 +3,7 @@ import React from 'react';
 export function Image({
   width,
   height,
-  url,
+  src,
   borderRadius = 0,
   flex,
   flexGrow,
@@ -20,7 +20,7 @@ export function Image({
         width,
         height,
         borderRadius,
-        backgroundImage: `url(${url})`,
+        backgroundImage: src ? `url(${src})` : undefined,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
