@@ -148,7 +148,7 @@ All layouts use **flexbox containers**. There are two node types:
 **IMPORTANT**: For components like Image, Sparkline, and MapImage:
 - Specify `width` and `height` at the **node level** (outside props)
 - Do NOT put width/height inside `props`
-- Example: `{ "type": "leaf", "component": "Image", "width": 100, "height": 100, "props": { "url": "..." } }`
+- Example: `{ "type": "leaf", "component": "Image", "width": 100, "height": 100, "props": { "src": "..." } }`
 
 ## Output Format
 
@@ -326,7 +326,7 @@ Output:
           "height": 120,
           "flex": "none",
           "props": {
-            "url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
+            "src": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29"
           }
         },
         {

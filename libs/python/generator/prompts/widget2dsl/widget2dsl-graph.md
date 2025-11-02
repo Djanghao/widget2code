@@ -422,7 +422,7 @@ Output:
           "props": {
             "width": 338,
             "height": 120,
-            "url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+            "src": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
             "borderRadius": 0
           }
         },
