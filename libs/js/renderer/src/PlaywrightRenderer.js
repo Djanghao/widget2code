@@ -50,39 +50,39 @@ export class PlaywrightRenderer {
       viewport: this.options.viewportSize
     });
 
-    const page = await context.newPage();
-
-    page.on('console', msg => {
-      const type = msg.type();
-      const text = msg.text();
-
-      if (type === 'error') {
-        console.error('[Browser Error]', text);
-      } else if (type === 'warning') {
-        console.warn('[Browser Warning]', text);
-      } else if (this.options.verbose) {
-        console.log('[Browser]', text);
-      } else {
-        const importantPrefixes = [
-          '[Headless]',
-          '[Resource Preload]',
-          '[Resource Extract]',
-          '[Icon Preload]',
-          '[Image Preload]',
-          '[Start Compiling]'
-        ];
-
-        if (importantPrefixes.some(prefix => text.includes(prefix))) {
-          console.log('[Browser]', text);
-        }
-      }
-    });
-
-    page.on('pageerror', error => {
-      console.error('[Browser Page Error]', error.message);
-    });
-
     try {
+      const page = await context.newPage();
+
+      page.on('console', msg => {
+        const type = msg.type();
+        const text = msg.text();
+
+        if (type === 'error') {
+          console.error('[Browser Error]', text);
+        } else if (type === 'warning') {
+          console.warn('[Browser Warning]', text);
+        } else if (this.options.verbose) {
+          console.log('[Browser]', text);
+        } else {
+          const importantPrefixes = [
+            '[Headless]',
+            '[Resource Preload]',
+            '[Resource Extract]',
+            '[Icon Preload]',
+            '[Image Preload]',
+            '[Start Compiling]'
+          ];
+
+          if (importantPrefixes.some(prefix => text.includes(prefix))) {
+            console.log('[Browser]', text);
+          }
+        }
+      });
+
+      page.on('pageerror', error => {
+        console.error('[Browser Page Error]', error.message);
+      });
+
       const headlessUrl = `${this.options.devServerUrl}/headless.html`;
       console.log(`[PlaywrightRenderer] Navigating to ${headlessUrl}...`);
 
@@ -133,8 +133,6 @@ export class PlaywrightRenderer {
       const base64Data = result.imageData.split(',')[1];
       const imageBuffer = Buffer.from(base64Data, 'base64');
 
-      await context.close();
-
       return {
         success: true,
         validation: result.validation,
@@ -149,7 +147,6 @@ export class PlaywrightRenderer {
 
     } catch (error) {
       console.error('[PlaywrightRenderer] Error:', error.message);
-      await context.close();
 
       return {
         success: false,
@@ -157,6 +154,11 @@ export class PlaywrightRenderer {
         stack: error.stack,
         presetId
       };
+    } finally {
+      // Always close context to prevent memory leaks
+      await context.close().catch(err =>
+        console.error('[PlaywrightRenderer] Failed to close context:', err.message)
+      );
     }
   }
 
@@ -175,40 +177,40 @@ export class PlaywrightRenderer {
       viewport: this.options.viewportSize
     });
 
-    const page = await context.newPage();
-
-    page.on('console', msg => {
-      const type = msg.type();
-      const text = msg.text();
-
-      if (type === 'error') {
-        console.error('[Browser Error]', text);
-      } else if (type === 'warning') {
-        console.warn('[Browser Warning]', text);
-      } else if (this.options.verbose) {
-        console.log('[Browser]', text);
-      } else {
-        // Always show important logs even in non-verbose mode
-        const importantPrefixes = [
-          '[Headless]',
-          '[Resource Preload]',
-          '[Resource Extract]',
-          '[Icon Preload]',
-          '[Image Preload]',
-          '[Start Compiling]'
-        ];
-
-        if (importantPrefixes.some(prefix => text.includes(prefix))) {
-          console.log('[Browser]', text);
-        }
-      }
-    });
-
-    page.on('pageerror', error => {
-      console.error('[Browser Page Error]', error.message);
-    });
-
     try {
+      const page = await context.newPage();
+
+      page.on('console', msg => {
+        const type = msg.type();
+        const text = msg.text();
+
+        if (type === 'error') {
+          console.error('[Browser Error]', text);
+        } else if (type === 'warning') {
+          console.warn('[Browser Warning]', text);
+        } else if (this.options.verbose) {
+          console.log('[Browser]', text);
+        } else {
+          // Always show important logs even in non-verbose mode
+          const importantPrefixes = [
+            '[Headless]',
+            '[Resource Preload]',
+            '[Resource Extract]',
+            '[Icon Preload]',
+            '[Image Preload]',
+            '[Start Compiling]'
+          ];
+
+          if (importantPrefixes.some(prefix => text.includes(prefix))) {
+            console.log('[Browser]', text);
+          }
+        }
+      });
+
+      page.on('pageerror', error => {
+        console.error('[Browser Page Error]', error.message);
+      });
+
       const headlessUrl = `${this.options.devServerUrl}/headless.html`;
       console.log(`[PlaywrightRenderer] Navigating to ${headlessUrl}...`);
 
@@ -258,8 +260,6 @@ export class PlaywrightRenderer {
       const base64Data = result.imageData.split(',')[1];
       const imageBuffer = Buffer.from(base64Data, 'base64');
 
-      await context.close();
-
       return {
         success: true,
         validation: result.validation,
@@ -274,7 +274,6 @@ export class PlaywrightRenderer {
 
     } catch (error) {
       console.error('[PlaywrightRenderer] Error:', error.message);
-      await context.close();
 
       return {
         success: false,
@@ -282,6 +281,11 @@ export class PlaywrightRenderer {
         stack: error.stack,
         presetId
       };
+    } finally {
+      // Always close context to prevent memory leaks
+      await context.close().catch(err =>
+        console.error('[PlaywrightRenderer] Failed to close context:', err.message)
+      );
     }
   }
 
