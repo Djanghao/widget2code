@@ -14,6 +14,27 @@ import fs from 'fs/promises';
 import path from 'path';
 import sharp from 'sharp';
 
+// Track active renderers for graceful shutdown
+let activeRenderers = [];
+let isShuttingDown = false;
+
+async function cleanup(signal) {
+  if (isShuttingDown) return;
+  isShuttingDown = true;
+
+  console.log(`\n\n⚠️  Received ${signal}, cleaning up ${activeRenderers.length} renderer(s)...`);
+
+  await Promise.allSettled(
+    activeRenderers.map(r => r.close().catch(err => console.error('Cleanup error:', err.message)))
+  );
+
+  console.log('✓ Cleanup complete');
+  process.exit(signal === 'SIGINT' ? 130 : 1);
+}
+
+process.on('SIGINT', () => cleanup('SIGINT'));
+process.on('SIGTERM', () => cleanup('SIGTERM'));
+
 async function findWidgetsToProcess(inputPath, options = {}) {
   const { force = false } = options;
   const stats = await fs.stat(inputPath);
@@ -355,7 +376,7 @@ export async function batchRender(inputPath, options = {}) {
 
   console.log(`Found ${widgets.length} widget(s) to process\n`);
 
-  const renderers = [];
+  // Initialize renderers
   for (let i = 0; i < concurrency; i++) {
     const renderer = new PlaywrightRenderer({
       devServerUrl,
@@ -363,7 +384,7 @@ export async function batchRender(inputPath, options = {}) {
       verbose: false
     });
     await renderer.initialize();
-    renderers.push(renderer);
+    activeRenderers.push(renderer);
   }
 
   console.log('========================================');
@@ -387,11 +408,16 @@ export async function batchRender(inputPath, options = {}) {
     }
   };
 
-  const workers = renderers.map(renderer => processWidget(renderer));
-  await Promise.all(workers);
-
-  for (const renderer of renderers) {
-    await renderer.close();
+  try {
+    const workers = activeRenderers.map(renderer => processWidget(renderer));
+    await Promise.all(workers);
+  } finally {
+    // Ensure cleanup even if errors occur
+    console.log('\nCleaning up renderers...');
+    await Promise.allSettled(
+      activeRenderers.map(r => r.close())
+    );
+    activeRenderers = [];
   }
 
   const endTime = Date.now();
