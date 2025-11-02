@@ -70,7 +70,7 @@ class BatchGenerator:
         for image_path in sorted(all_images):
             widget_id = image_path.stem
             widget_dir = self.output_dir / widget_id
-            debug_file = widget_dir / "output" / "debug.json"
+            debug_file = widget_dir / "log" / "debug.json"
 
             should_process = True
 
@@ -119,22 +119,29 @@ class BatchGenerator:
         widget_dir.mkdir(parents=True, exist_ok=True)
 
         # Create directory structure
-        output_dir = widget_dir / "output"
-        images_dir = widget_dir / "images"
+        artifacts_dir = widget_dir / "artifacts"
+        log_dir = widget_dir / "log"
         prompts_dir = widget_dir / "prompts"
-        icon_crops_dir = images_dir / "4_icon_crops"
-        retrieval_dir = images_dir / "5_retrieval"
 
-        output_dir.mkdir(parents=True, exist_ok=True)
-        images_dir.mkdir(parents=True, exist_ok=True)
+        preprocess_dir = artifacts_dir / "1-preprocess"
+        grounding_dir = artifacts_dir / "2-grounding"
+        grounding_crops_dir = grounding_dir / "crops"
+        retrieval_dir = artifacts_dir / "3-retrieval"
+        dsl_dir = artifacts_dir / "4-dsl"
+
+        artifacts_dir.mkdir(parents=True, exist_ok=True)
+        log_dir.mkdir(parents=True, exist_ok=True)
         prompts_dir.mkdir(parents=True, exist_ok=True)
-        icon_crops_dir.mkdir(parents=True, exist_ok=True)
+        preprocess_dir.mkdir(parents=True, exist_ok=True)
+        grounding_dir.mkdir(parents=True, exist_ok=True)
+        grounding_crops_dir.mkdir(parents=True, exist_ok=True)
         retrieval_dir.mkdir(parents=True, exist_ok=True)
+        dsl_dir.mkdir(parents=True, exist_ok=True)
 
         # Prepare file paths
-        widget_file = output_dir / "widget.json"
-        debug_file = output_dir / "debug.json"
-        log_file = output_dir / "log"
+        widget_file = dsl_dir / "widget.json"
+        debug_file = log_dir / "debug.json"
+        log_file = log_dir / "log"
 
         start_time = datetime.now()
 
@@ -154,9 +161,12 @@ class BatchGenerator:
             except:
                 image_dims = None
 
-            # 1. Save original image
-            original_file = images_dir / "1_original.png"
-            shutil.copy2(image_path, original_file)
+            # 1. Save input image to root and artifacts
+            input_file = widget_dir / "input.png"
+            shutil.copy2(image_path, input_file)
+
+            original_in_preprocess = preprocess_dir / "1.1-original.png"
+            shutil.copy2(image_path, original_in_preprocess)
 
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🔄 DSL generation started")
 
@@ -185,27 +195,27 @@ class BatchGenerator:
             with open(widget_file, 'w') as f:
                 json.dump(widget_dsl, f, indent=2)
 
-            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ DSL generation finished")
-            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 💾 Generating visualizations...")
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] DSL generation finished")
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Generating visualizations...")
 
             # 2. Save preprocessed image
             preprocessed_bytes = preprocessed_info.get('bytes')
             if preprocessed_bytes:
-                with open(images_dir / "2_preprocessed.png", 'wb') as f:
+                with open(preprocess_dir / "1.2-preprocessed.png", 'wb') as f:
                     f.write(preprocessed_bytes)
 
             # 3. Generate grounding visualization
             grounding_detections = icon_debug.get('grounding', {}).get('postProcessed', [])
             if grounding_detections:
                 grounding_viz = draw_grounding_visualization(image_data, grounding_detections)
-                with open(images_dir / "3_grounding.png", 'wb') as f:
+                with open(grounding_dir / "grounding.png", 'wb') as f:
                     f.write(grounding_viz)
 
             # 4. Crop icon regions
             icon_detections = [d for d in grounding_detections if d.get('label') == 'icon']
             for idx, det in enumerate(icon_detections):
                 crop_bytes = crop_icon_region(image_data, det['bbox'])
-                with open(icon_crops_dir / f"icon_{idx}.png", 'wb') as f:
+                with open(grounding_crops_dir / f"icon-{idx+1}.png", 'wb') as f:
                     f.write(crop_bytes)
 
             # 5. Save retrieval SVGs
@@ -226,16 +236,16 @@ class BatchGenerator:
                         top_n=10
                     )
 
-            # 5. Save prompts
+            # 6. Save prompts
             if prompt_debug:
                 for stage_name, prompt_text in prompt_debug.items():
                     if isinstance(prompt_text, str) and stage_name.startswith('stage'):
                         # Map stage names to numbered files
                         stage_map = {
-                            'stage1_base': '1_base.md',
-                            'stage2_withGraphs': '2_withGraphs.md',
-                            'stage3_withIcons': '3_withIcons.md',
-                            'stage4_final': '4_final.md'
+                            'stage1_base': '1-base.md',
+                            'stage2_withGraphs': '2-with-graphs.md',
+                            'stage3_withIcons': '3-with-icons.md',
+                            'stage4_final': '4-final.md'
                         }
                         filename = stage_map.get(stage_name)
                         if filename:
@@ -245,23 +255,23 @@ class BatchGenerator:
             end_time = datetime.now()
             duration = (end_time - start_time).total_seconds()
 
-            log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ Visualizations saved")
+            log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Visualizations saved")
 
             # Count icons and graphs
             icon_count = icon_debug.get('detection', {}).get('iconCount', 0)
             graph_count = graph_debug.get('detection', {}).get('graphCount', 0)
 
             # Build file lists
-            icon_crop_files = [f"images/4_icon_crops/icon_{i}.png" for i in range(len(icon_detections))]
+            icon_crop_files = [f"artifacts/2-grounding/crops/icon-{i+1}.png" for i in range(len(icon_detections))]
 
             retrieval_files = {}
             for icon_data in per_icon:
                 icon_idx = icon_data.get('index', 0)
-                icon_dir = retrieval_dir / f"icon_{icon_idx}"
+                icon_dir = retrieval_dir / f"icon-{icon_idx+1}"
                 if icon_dir.exists():
                     svg_files = sorted(icon_dir.glob("*.svg"))
-                    retrieval_files[f"icon_{icon_idx}"] = [
-                        f"images/5_retrieval/icon_{icon_idx}/{f.name}" for f in svg_files
+                    retrieval_files[f"icon-{icon_idx+1}"] = [
+                        f"artifacts/3-retrieval/icon-{icon_idx+1}/{f.name}" for f in svg_files
                     ]
 
             # Create comprehensive debug.json
@@ -305,7 +315,7 @@ class BatchGenerator:
                 },
                 "output": {
                     "widgetDSL": {
-                        "saved": "output/widget.json"
+                        "saved": "artifacts/4-dsl/widget.json"
                     },
                     "statistics": {
                         "iconsDetected": icon_count,
@@ -313,23 +323,31 @@ class BatchGenerator:
                     }
                 },
                 "files": {
-                    "output": {
-                        "widget": "output/widget.json",
-                        "log": "output/log",
-                        "debug": "output/debug.json"
+                    "input": "input.png",
+                    "output": "output.png",
+                    "artifacts": {
+                        "1_preprocess": {
+                            "original": "artifacts/1-preprocess/1.1-original.png",
+                            "preprocessed": "artifacts/1-preprocess/1.2-preprocessed.png" if preprocessed_bytes else None
+                        },
+                        "2_grounding": {
+                            "visualization": "artifacts/2-grounding/grounding.png" if grounding_detections else None,
+                            "crops": icon_crop_files
+                        },
+                        "3_retrieval": retrieval_files,
+                        "4_dsl": {
+                            "widget": "artifacts/4-dsl/widget.json"
+                        }
                     },
-                    "images": {
-                        "1_original": "images/1_original.png",
-                        "2_preprocessed": "images/1_preprocessed.png",
-                        "3_grounding": "images/3_grounding.png" if grounding_detections else None,
-                        "4_icon_crops": icon_crop_files,
-                        "5_retrieval": retrieval_files
+                    "log": {
+                        "execution": "log/log",
+                        "debug": "log/debug.json"
                     },
                     "prompts": {
-                        "1_base": "prompts/1_base.md" if (prompts_dir / "1_base.md").exists() else None,
-                        "2_withGraphs": "prompts/2_withGraphs.md" if (prompts_dir / "2_withGraphs.md").exists() else None,
-                        "3_withIcons": "prompts/3_withIcons.md" if (prompts_dir / "3_withIcons.md").exists() else None,
-                        "4_final": "prompts/4_final.md" if (prompts_dir / "4_final.md").exists() else None
+                        "1_base": "prompts/1-base.md" if (prompts_dir / "1-base.md").exists() else None,
+                        "2_withGraphs": "prompts/2-with-graphs.md" if (prompts_dir / "2-with-graphs.md").exists() else None,
+                        "3_withIcons": "prompts/3-with-icons.md" if (prompts_dir / "3-with-icons.md").exists() else None,
+                        "4_final": "prompts/4-final.md" if (prompts_dir / "4-final.md").exists() else None
                     }
                 },
                 "metadata": {
@@ -391,11 +409,14 @@ class BatchGenerator:
                     "type": type(e).__name__
                 },
                 "files": {
-                    "output": {
-                        "debug": "output/debug.json"
+                    "input": "input.png" if (widget_dir / "input.png").exists() else None,
+                    "log": {
+                        "debug": "log/debug.json"
                     },
-                    "images": {
-                        "1_original": "images/1_original.png" if (images_dir / "1_original.png").exists() else None
+                    "artifacts": {
+                        "1_preprocess": {
+                            "original": "artifacts/1-preprocess/1.1-original.png" if (preprocess_dir / "1.1-original.png").exists() else None
+                        }
                     }
                 },
                 "metadata": {

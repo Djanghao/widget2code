@@ -46,7 +46,7 @@ def run_icon_detection_pipeline(
         icon_dets = [d for d in pixel_dets_post if str(d.get("label", "")).lower() == "icon"]
         icon_count = len(icon_dets)
 
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Icon grounding: {icon_count} icons")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Icon grounding: {icon_count} icons")
 
         # Resolve library roots from repo paths. If none provided, default to SF library.
         here = Path(__file__).resolve()
@@ -81,7 +81,7 @@ def run_icon_detection_pipeline(
                     ordered_unique.append(s)
             icon_candidates = ordered_unique
 
-            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Icon retrieval: {len(icon_candidates)} candidates")
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Icon retrieval: {len(icon_candidates)} candidates")
     except Exception as e:
         log_to_file(f"[icon-pipeline] skipped due to: {e}")
 

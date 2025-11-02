@@ -18,12 +18,7 @@ async function findWidgetsToProcess(inputPath) {
   const stats = await fs.stat(inputPath);
 
   if (stats.isFile()) {
-    if (!inputPath.endsWith('.json')) {
-      throw new Error('Input file must be a JSON file');
-    }
-    const widgetDir = path.dirname(inputPath);
-    const widgetId = path.basename(inputPath, '.json');
-    return [{ widgetId, widgetDir, dslFile: inputPath }];
+    throw new Error('Input must be a directory containing widget subdirectories');
   }
 
   if (stats.isDirectory()) {
@@ -35,25 +30,25 @@ async function findWidgetsToProcess(inputPath) {
 
       const widgetDir = path.join(inputPath, entry.name);
       const widgetId = entry.name;
-      const logPath = path.join(widgetDir, 'log.json');
-      const dslFile = path.join(widgetDir, `${widgetId}.json`);
+      const debugPath = path.join(widgetDir, 'log', 'debug.json');
+      const dslFile = path.join(widgetDir, 'artifacts', '4-dsl', 'widget.json');
 
       const dslExists = await fs.access(dslFile).then(() => true).catch(() => false);
       if (!dslExists) continue;
 
       let shouldProcess = true;
 
-      const logExists = await fs.access(logPath).then(() => true).catch(() => false);
-      if (logExists) {
+      const debugExists = await fs.access(debugPath).then(() => true).catch(() => false);
+      if (debugExists) {
         try {
-          const logData = JSON.parse(await fs.readFile(logPath, 'utf-8'));
-          const renderingStep = logData.steps?.rendering;
+          const debugData = JSON.parse(await fs.readFile(debugPath, 'utf-8'));
+          const renderingStep = debugData.steps?.rendering;
 
           if (renderingStep && renderingStep.status === 'success') {
             shouldProcess = false;
           }
         } catch (error) {
-          console.warn(`[${widgetId}] Warning: Failed to read log.json, will process`);
+          console.warn(`[${widgetId}] Warning: Failed to read debug.json, will process`);
         }
       }
 
@@ -70,7 +65,7 @@ async function findWidgetsToProcess(inputPath) {
     return widgets;
   }
 
-  throw new Error('Input must be a file or directory');
+  throw new Error('Input must be a directory');
 }
 
 async function loadSpec(specPath) {
@@ -80,11 +75,20 @@ async function loadSpec(specPath) {
 
 async function renderWidget(renderer, widgetInfo) {
   const { widgetId, widgetDir, dslFile } = widgetInfo;
-  const logPath = path.join(widgetDir, 'log.json');
-  const jsxPath = path.join(widgetDir, `${widgetId}.jsx`);
-  const pngPath = path.join(widgetDir, `${widgetId}.png`);
 
-  let logData = {
+  // New directory structure paths
+  const debugPath = path.join(widgetDir, 'log', 'debug.json');
+  const logFilePath = path.join(widgetDir, 'log', 'log');
+  const compilationDir = path.join(widgetDir, 'artifacts', '5-compilation');
+  const renderingDir = path.join(widgetDir, 'artifacts', '6-rendering');
+  const jsxPath = path.join(compilationDir, 'widget.jsx');
+  const outputPngPath = path.join(widgetDir, 'output.png');
+
+  // Create directories
+  await fs.mkdir(compilationDir, { recursive: true });
+  await fs.mkdir(renderingDir, { recursive: true });
+
+  let debugData = {
     widgetId,
     steps: {},
     files: {},
@@ -94,13 +98,16 @@ async function renderWidget(renderer, widgetInfo) {
     }
   };
 
-  const logExists = await fs.access(logPath).then(() => true).catch(() => false);
-  if (logExists) {
+  const debugExists = await fs.access(debugPath).then(() => true).catch(() => false);
+  if (debugExists) {
     try {
-      logData = JSON.parse(await fs.readFile(logPath, 'utf-8'));
-      logData.metadata.pipeline = 'full';
+      debugData = JSON.parse(await fs.readFile(debugPath, 'utf-8'));
+      if (!debugData.steps) debugData.steps = {};
+      if (!debugData.files) debugData.files = {};
+      if (!debugData.metadata) debugData.metadata = {};
+      debugData.metadata.pipeline = 'full';
     } catch (error) {
-      console.warn(`[${widgetId}] Warning: Failed to read existing log.json`);
+      console.warn(`[${widgetId}] Warning: Failed to read existing debug.json`);
     }
   }
 
@@ -133,13 +140,13 @@ async function renderWidget(renderer, widgetInfo) {
     const compilationEndTime = new Date();
     const compilationDuration = (compilationEndTime - compilationStartTime) / 1000;
 
-    logData.steps.compilation = {
+    debugData.steps.compilation = {
       status: 'success',
       startTime: compilationStartTime.toISOString(),
       endTime: compilationEndTime.toISOString(),
       duration: compilationDuration,
       output: {
-        jsxFile: `${widgetId}.jsx`,
+        jsxFile: 'artifacts/5-compilation/widget.jsx',
         validation: {
           changes: validation.changes || [],
           warnings: validation.warnings || []
@@ -163,7 +170,7 @@ async function renderWidget(renderer, widgetInfo) {
       throw new Error(`RAW render failed: ${rawResult.error}`);
     }
 
-    const rawPath = path.join(widgetDir, `${widgetId}_raw.png`);
+    const rawPath = path.join(renderingDir, '6.1-raw.png');
     await PlaywrightRenderer.saveImage(rawResult.imageBuffer, rawPath);
     console.log(`[${widgetId}] ✓ RAW: ${rawResult.metadata.width}×${rawResult.metadata.height}`);
 
@@ -179,23 +186,22 @@ async function renderWidget(renderer, widgetInfo) {
       throw new Error(`AUTORESIZE render failed: ${result.error}`);
     }
 
-    const autoresizePath = path.join(widgetDir, `${widgetId}_autoresize.png`);
+    const autoresizePath = path.join(renderingDir, '6.2-autoresize.png');
     await PlaywrightRenderer.saveImage(result.imageBuffer, autoresizePath);
     console.log(`[${widgetId}] ✓ AUTORESIZE: ${result.metadata.width}×${result.metadata.height}`);
 
-    // Save the default PNG (same as autoresize for backwards compatibility)
-    await PlaywrightRenderer.saveImage(result.imageBuffer, pngPath);
+    // Save the output PNG (same as autoresize)
+    await PlaywrightRenderer.saveImage(result.imageBuffer, outputPngPath);
     await fs.writeFile(dslFile, JSON.stringify(result.spec, null, 2), 'utf-8');
 
     // Step 3: Create RESCALED version (resize to match original image size)
-    const rescaledPath = path.join(widgetDir, `${widgetId}_rescaled.png`);
+    const rescaledPath = path.join(renderingDir, '6.3-rescale.png');
     try {
-      // Find original image file
-      const files = await fs.readdir(widgetDir);
-      const originalFile = files.find(f => f.startsWith(`${widgetId}_original`));
+      // Find original image file (should be at artifacts/1-preprocess/1.1-original.png)
+      const originalPath = path.join(widgetDir, 'artifacts', '1-preprocess', '1.1-original.png');
+      const originalExists = await fs.access(originalPath).then(() => true).catch(() => false);
 
-      if (originalFile) {
-        const originalPath = path.join(widgetDir, originalFile);
+      if (originalExists) {
         const originalMeta = await sharp(originalPath).metadata();
 
         // Resize autoresize PNG to match original dimensions
@@ -208,6 +214,8 @@ async function renderWidget(renderer, widgetInfo) {
           .toFile(rescaledPath);
 
         console.log(`[${widgetId}] ✓ RESCALED: ${originalMeta.width}×${originalMeta.height}`);
+      } else {
+        console.warn(`[${widgetId}] ⚠️  Original image not found, skipping rescale`);
       }
     } catch (rescaleError) {
       console.warn(`[${widgetId}] ⚠️  Failed to create rescaled image: ${rescaleError.message}`);
@@ -230,13 +238,12 @@ async function renderWidget(renderer, widgetInfo) {
       }
     }
 
-    logData.steps.rendering = {
+    debugData.steps.rendering = {
       status: aspectRatioValid ? 'success' : 'failed',
       startTime: renderingStartTime.toISOString(),
       endTime: renderingEndTime.toISOString(),
       duration: renderingDuration,
       output: {
-        pngFile: `${widgetId}.png`,
         naturalSize: result.naturalSize,
         finalSize: result.finalSize,
         aspectRatio: {
@@ -250,13 +257,24 @@ async function renderWidget(renderer, widgetInfo) {
       error: aspectRatioError ? { message: aspectRatioError, type: 'AspectRatioError' } : null
     };
 
-    logData.files.jsx = `${widgetId}.jsx`;
-    logData.files.png = `${widgetId}.png`;
-    logData.files.rawPng = `${widgetId}_raw.png`;
-    logData.files.autoresizePng = `${widgetId}_autoresize.png`;
-    logData.files.rescaledPng = `${widgetId}_rescaled.png`;
+    // Update files section in debug.json
+    if (!debugData.files.artifacts) debugData.files.artifacts = {};
+    debugData.files.artifacts['5_compilation'] = {
+      jsx: 'artifacts/5-compilation/widget.jsx'
+    };
+    debugData.files.artifacts['6_rendering'] = {
+      raw: 'artifacts/6-rendering/6.1-raw.png',
+      autoresize: 'artifacts/6-rendering/6.2-autoresize.png',
+      rescale: 'artifacts/6-rendering/6.3-rescale.png'
+    };
+    debugData.files.output = 'output.png';
 
-    await fs.writeFile(logPath, JSON.stringify(logData, null, 2), 'utf-8');
+    await fs.writeFile(debugPath, JSON.stringify(debugData, null, 2), 'utf-8');
+
+    // Append to log file
+    const logTimestamp = new Date().toISOString();
+    const logEntry = `[${logTimestamp}] [${widgetId}] Compilation: ${compilationDuration.toFixed(2)}s | Rendering: ${renderingDuration.toFixed(2)}s | Status: ${aspectRatioValid ? 'SUCCESS' : 'FAILED'}\n`;
+    await fs.appendFile(logFilePath, logEntry, 'utf-8');
 
     if (!aspectRatioValid) {
       throw new Error(aspectRatioError);
@@ -278,11 +296,11 @@ async function renderWidget(renderer, widgetInfo) {
     console.error(`[${widgetId}] ✗ Failed: ${error.message}`);
 
     const errorEndTime = new Date();
-    const errorPath = path.join(widgetDir, 'error.txt');
+    const errorPath = path.join(widgetDir, 'log', 'error.txt');
 
-    if (!logData.steps.compilation) {
+    if (!debugData.steps.compilation) {
       const compilationDuration = (errorEndTime - compilationStartTime) / 1000;
-      logData.steps.compilation = {
+      debugData.steps.compilation = {
         status: 'failed',
         startTime: compilationStartTime.toISOString(),
         endTime: errorEndTime.toISOString(),
@@ -292,11 +310,11 @@ async function renderWidget(renderer, widgetInfo) {
           type: error.constructor.name
         }
       };
-    } else if (!logData.steps.rendering) {
-      const renderingDuration = (errorEndTime - new Date(logData.steps.compilation.endTime)) / 1000;
-      logData.steps.rendering = {
+    } else if (!debugData.steps.rendering) {
+      const renderingDuration = (errorEndTime - new Date(debugData.steps.compilation.endTime)) / 1000;
+      debugData.steps.rendering = {
         status: 'failed',
-        startTime: logData.steps.compilation.endTime,
+        startTime: debugData.steps.compilation.endTime,
         endTime: errorEndTime.toISOString(),
         duration: renderingDuration,
         error: {
@@ -306,8 +324,13 @@ async function renderWidget(renderer, widgetInfo) {
       };
     }
 
-    await fs.writeFile(logPath, JSON.stringify(logData, null, 2), 'utf-8');
+    await fs.writeFile(debugPath, JSON.stringify(debugData, null, 2), 'utf-8');
     await fs.writeFile(errorPath, `Error: ${error.message}\n\n${error.stack || ''}`, 'utf-8');
+
+    // Append error to log file
+    const logTimestamp = new Date().toISOString();
+    const logEntry = `[${logTimestamp}] [${widgetId}] ERROR: ${error.message}\n`;
+    await fs.appendFile(logFilePath, logEntry, 'utf-8').catch(() => {});
 
     return { success: false, widgetId, error: error.message };
   }

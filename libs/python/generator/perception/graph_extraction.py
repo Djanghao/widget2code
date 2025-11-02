@@ -31,7 +31,7 @@ def detect_and_process_graphs(
     )
 
     total_charts = sum(chart_counts.values()) if chart_counts else 0
-    log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Graph detection: {total_charts} charts")
+    log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Graph detection: {total_charts} charts")
 
     graph_specs = []
     if should_use_graph_pipeline(chart_counts):
@@ -47,7 +47,7 @@ def detect_and_process_graphs(
             timeout=60,
             max_retries=2
         )
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ✅ Graph processing: {len(graph_specs)} specs")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Graph processing: {len(graph_specs)} specs")
 
     return chart_counts, graph_specs
 
