@@ -4,6 +4,7 @@ export const AVAILABLE_COMPONENTS = [
   'Text',
   'Icon',
   'Image',
+  'Button',
   'Sparkline',
   'AppLogo',
   'MapImage',
