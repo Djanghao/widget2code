@@ -57,7 +57,15 @@ def inject_graph_specs_to_prompt(
 ) -> str:
     if not graph_specs:
         if "[GRAPH_SPECS]" in base_prompt:
-            return base_prompt.replace("[GRAPH_SPECS]", "**No graph components detected in the image.**")
+            # Remove the entire ### Graph section when no graphs are detected
+            # This prevents VLM from thinking "Graph" is an available component
+            import re
+            # Match "### Graph\n[GRAPH_SPECS]\n" with optional whitespace
+            pattern = r'###\s+Graph\s*\n\s*\[GRAPH_SPECS\]\s*\n'
+            if re.search(pattern, base_prompt):
+                return re.sub(pattern, '', base_prompt)
+            # Fallback: just remove the placeholder
+            return base_prompt.replace("[GRAPH_SPECS]", "")
         return base_prompt
 
     graph_specs_text = format_graph_specs_for_injection(graph_specs)

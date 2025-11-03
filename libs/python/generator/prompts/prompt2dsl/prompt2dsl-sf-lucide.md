@@ -366,6 +366,264 @@ Output:
 }
 ```
 
+### Example 3: Calendar Widget with Styled Containers
+
+Input: Calendar widget showing event cards with colored backgrounds and rounded corners
+
+Output:
+```json
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": 0,
+              "width": 48,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#8e8e93",
+                    "fontWeight": 400
+                  },
+                  "content": "Tu"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 24,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "21"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "padding": 12,
+              "backgroundColor": "#8e4dff",
+              "borderRadius": 12,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "Project Onboarding Meeting"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#ffffff",
+                    "fontWeight": 400
+                  },
+                  "content": "09:15 - 10:15 AM"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+**Key Point**: For cards with background color and rounded corners, use `type: "container"` with `backgroundColor` and `borderRadius` properties. Do NOT use `component: "Container"` - that component does not exist!
+
+### Example 4: Music Player with ProgressBar
+
+Input: Music player widget showing album art, song info, playback controls, and progress bar
+
+Output:
+```json
+{
+  "widget": {
+    "backgroundColor": "#e5e5ea",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Image",
+          "height": 180,
+          "flex": "none",
+          "props": {
+            "src": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745",
+            "borderRadius": 12
+          }
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 4,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 18,
+                "color": "#000000",
+                "fontWeight": 700
+              },
+              "content": "Song Title"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 15,
+                "color": "#8e8e93",
+                "fontWeight": 400
+              },
+              "content": "Artist Name"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "name": "sf:SfBackwardFill",
+                "size": 32,
+                "color": "#000000"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "name": "sf:SfPlayFill",
+                "size": 40,
+                "color": "#000000"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "name": "sf:SfForwardFill",
+                "size": 32,
+                "color": "#000000"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "ProgressBar",
+              "flex": "none",
+              "props": {
+                "value": 45,
+                "max": 100,
+                "color": "#000000",
+                "backgroundColor": "#c7c7cc",
+                "height": 4,
+                "borderRadius": 2
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 0,
+              "flex": 0,
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 12,
+                    "color": "#8e8e93",
+                    "fontWeight": 400
+                  },
+                  "content": "1:32"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 12,
+                    "color": "#8e8e93",
+                    "fontWeight": 400
+                  },
+                  "content": "3:24"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+**Key Point**: For progress bars and sliders, use the `ProgressBar` component. Do NOT use `component: "Graph"` - that component does not exist! ProgressBar is the correct component for showing progress, loading states, or playback position.
+
 ## Important Notes
 
 - Output **only** valid JSON, no explanations or markdown
