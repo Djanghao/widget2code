@@ -288,10 +288,16 @@ async def generate_widget_full(
         raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
 
     image_data = await image.read()
-    return await generator.generate_widget_full(
+    result = await generator.generate_widget_full(
         image_data, image.filename, system_prompt, model, api_key,
         retrieval_topk, retrieval_topm, retrieval_alpha, gen_config, icon_lib_names
     )
+
+    # Remove binary data before JSON serialization to prevent UTF-8 decode error
+    if "preprocessedImage" in result and "bytes" in result["preprocessedImage"]:
+        del result["preprocessedImage"]["bytes"]
+
+    return result
 
 @app.post("/api/extract-icon-captions")
 async def extract_icon_captions(
