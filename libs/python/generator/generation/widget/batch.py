@@ -13,7 +13,6 @@ from pathlib import Path
 from datetime import datetime
 from typing import List, Tuple, Dict, Any
 from tqdm import tqdm
-from importlib.metadata import version
 
 from .single import generate_widget_full
 from ...config import GeneratorConfig
@@ -21,11 +20,17 @@ from ...exceptions import ValidationError, FileSizeError, GenerationError
 from ...utils.logger import setup_logger, log_to_file, log_to_console, separator, Colors
 from ...utils.visualization import draw_grounding_visualization, crop_icon_region, save_retrieval_svgs
 
-# Get package version
 try:
-    PACKAGE_VERSION = version("generator")
+    import json
+    root_package_json = Path(__file__).parent.parent.parent.parent.parent.parent / "package.json"
+    if root_package_json.exists():
+        with open(root_package_json) as f:
+            package_data = json.load(f)
+            WIDGET_FACTORY_VERSION = package_data.get("version", "unknown")
+    else:
+        WIDGET_FACTORY_VERSION = "unknown"
 except Exception:
-    PACKAGE_VERSION = "unknown"
+    WIDGET_FACTORY_VERSION = "unknown"
 
 
 class BatchGenerator:
@@ -277,7 +282,7 @@ class BatchGenerator:
             # Create comprehensive debug.json
             debug_data = {
                 "widgetId": widget_id,
-                "generatorVersion": PACKAGE_VERSION,
+                "widgetFactoryVersion": WIDGET_FACTORY_VERSION,
                 "execution": {
                     "startTime": start_time.isoformat(),
                     "endTime": end_time.isoformat(),
@@ -382,7 +387,7 @@ class BatchGenerator:
             # Create error debug.json
             debug_data = {
                 "widgetId": widget_id,
-                "generatorVersion": PACKAGE_VERSION,
+                "widgetFactoryVersion": WIDGET_FACTORY_VERSION,
                 "execution": {
                     "startTime": start_time.isoformat(),
                     "endTime": end_time.isoformat(),
@@ -456,7 +461,7 @@ class BatchGenerator:
 
         # Save config.json
         config_data = {
-            "generatorVersion": PACKAGE_VERSION,
+            "widgetFactoryVersion": WIDGET_FACTORY_VERSION,
             "startTime": datetime.now().isoformat(),
             "configuration": {
                 "inputDir": str(self.input_dir),
@@ -487,7 +492,7 @@ class BatchGenerator:
         log_to_console(separator(), Colors.CYAN)
         log_to_console("Widget Factory - Batch Generation", Colors.BOLD + Colors.BRIGHT_CYAN)
         log_to_console(separator(), Colors.CYAN)
-        log_to_console(f"Generator Version: {PACKAGE_VERSION}", Colors.BRIGHT_WHITE)
+        log_to_console(f"Widget Factory Version: {WIDGET_FACTORY_VERSION}", Colors.BRIGHT_WHITE)
         log_to_console(f"Start Time: {datetime.now().isoformat()}", Colors.BRIGHT_WHITE)
         log_to_console("")
         log_to_console("Configuration:", Colors.BRIGHT_YELLOW)

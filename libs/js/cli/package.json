@@ -1,6 +1,6 @@
 {
   "name": "@widget-factory/cli",
-  "version": "0.4.0",
+  "version": "0.0.0",
   "type": "module",
   "main": "./src/index.js",
   "bin": {
@@ -24,5 +24,6 @@
     "@widget-factory/renderer": "*",
     "playwright": "^1.40.0",
     "sharp": "^0.33.5"
-  }
+  },
+  "private": true
 }

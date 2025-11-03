@@ -1,6 +1,6 @@
 {
   "name": "@widget-factory/dsl",
-  "version": "0.4.0",
+  "version": "0.0.0",
   "type": "module",
   "main": "./src/index.js",
   "exports": {
@@ -11,5 +11,6 @@
     "widget",
     "dsl",
     "validation"
-  ]
+  ],
+  "private": true
 }
