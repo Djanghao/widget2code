@@ -1,7 +1,5 @@
 """WidgetDSL Generator - AI-powered widget generation from images"""
 
-__version__ = "0.4.0"
-
 from .config import GeneratorConfig
 from .generation import (
     get_default_prompt,

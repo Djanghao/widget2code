@@ -1,5 +1,32 @@
 # Changelog
 
+## 1.0.0 (2025-11-03)
+
+### Added
+- `/health` endpoint with detailed service and model status
+- Placeholder component to preserve visual layout for invalid components
+- Detailed error logging for icon retrieval pipeline failures
+- `--force` flag for batch reprocessing in renderer
+
+### Fixed
+- Binary data serialization error in `generate-widget-full` API response
+- Image component prop changed from `url` to `src` across codebase and prompts
+- Button component now properly registered in component registry
+- Icon naming system unified with prefix format
+- Config defaults now read from environment variables
+- SF Symbols components restored
+- FastAPI startup events migrated to lifespan context manager
+- Transformers model loading updated to use `dtype` parameter
+- Browser context cleanup with finally blocks in renderer
+- Graceful shutdown for batch rendering
+- Force arg passing in CLI
+- Aspect ratio validation skipped in RAW rendering phase
+- Empty Graph section removed from prompts, added container usage examples
+
+### Changed
+- Reorganized output structure with staged artifacts and unified logging
+- Version management unified to use `widgetFactoryVersion` from root package.json
+
 ## 0.4.0 (2025-11-01)
 
 ### Added
