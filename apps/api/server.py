@@ -8,6 +8,9 @@ from pydantic import BaseModel
 import os
 import asyncio
 import traceback
+import time
+import threading
+from datetime import datetime
 from dotenv import load_dotenv
 import generator
 from generator import GeneratorConfig
@@ -27,8 +30,10 @@ use_cuda_for_retrieval = os.getenv("USE_CUDA_FOR_RETRIEVAL", "true").lower() == 
 
 cached_blip2_pipe = None
 cached_siglip_pipe = None
+cached_siglip_image_pipe = None
 blip2_lock = None
 siglip_lock = None
+siglip_image_lock = None
 
 class EncodeTextsRequest(BaseModel):
     texts: List[str]
@@ -36,10 +41,11 @@ class EncodeTextsRequest(BaseModel):
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup
-    global cached_blip2_pipe, cached_siglip_pipe, blip2_lock, siglip_lock
+    global cached_blip2_pipe, cached_siglip_pipe, cached_siglip_image_pipe, blip2_lock, siglip_lock, siglip_image_lock
 
     blip2_lock = asyncio.Lock()
     siglip_lock = asyncio.Lock()
+    siglip_image_lock = asyncio.Lock()
 
     if model_cache_enabled:
         print("=" * 80)
@@ -65,14 +71,25 @@ async def lifespan(app: FastAPI):
             torch.cuda.is_available = original_cuda
         print(f"✓ BLIP2 model loaded on {cached_blip2_pipe[2]}")
 
-        print(f"\nLoading SigLIP model on {device_name}...")
+        print(f"\nLoading SigLIP text model on {device_name}...")
         if not use_cuda_for_retrieval:
             original_cuda = torch.cuda.is_available
             torch.cuda.is_available = lambda: False
         cached_siglip_pipe = load_siglip_text()
         if not use_cuda_for_retrieval:
             torch.cuda.is_available = original_cuda
-        print(f"✓ SigLIP model loaded on {cached_siglip_pipe[2]}")
+        print(f"✓ SigLIP text model loaded on {cached_siglip_pipe[2]}")
+
+        print(f"\nLoading SigLIP image model on {device_name}...")
+        from generator.perception.icon.query_embedding import _load_image_model
+        if not use_cuda_for_retrieval:
+            original_cuda = torch.cuda.is_available
+            torch.cuda.is_available = lambda: False
+        model, preprocess = _load_image_model(device_name.lower())
+        cached_siglip_image_pipe = (model, preprocess, device_name.lower())
+        if not use_cuda_for_retrieval:
+            torch.cuda.is_available = original_cuda
+        print(f"✓ SigLIP image model loaded on {cached_siglip_image_pipe[2]}")
 
         print("\n" + "=" * 80)
         print("All retrieval models loaded successfully!")
@@ -148,14 +165,18 @@ async def health():
     if model_cache_enabled:
         health_info["models"] = {
             "blip2_loaded": cached_blip2_pipe is not None,
-            "siglip_loaded": cached_siglip_pipe is not None,
+            "siglip_text_loaded": cached_siglip_pipe is not None,
+            "siglip_image_loaded": cached_siglip_image_pipe is not None,
         }
 
         if cached_blip2_pipe:
             health_info["models"]["blip2_device"] = cached_blip2_pipe[2]
 
         if cached_siglip_pipe:
-            health_info["models"]["siglip_device"] = cached_siglip_pipe[2]
+            health_info["models"]["siglip_text_device"] = cached_siglip_pipe[2]
+
+        if cached_siglip_image_pipe:
+            health_info["models"]["siglip_image_device"] = cached_siglip_image_pipe[2]
 
     health_info["cuda_available"] = use_cuda_for_retrieval
 
@@ -304,6 +325,10 @@ async def extract_icon_captions(
     request: Request,
     crops: List[UploadFile] = File(...),
 ):
+    start_time = time.time()
+    request_id = datetime.now().strftime("%H:%M:%S.%f")[:-3]
+    thread_id = threading.current_thread().ident
+
     if not model_cache_enabled or cached_blip2_pipe is None:
         raise HTTPException(
             status_code=503,
@@ -313,11 +338,21 @@ async def extract_icon_captions(
     from generator.perception.icon.query_caption import caption_from_bytes_list
 
     crops_bytes = [await crop.read() for crop in crops]
+    num_crops = len(crops_bytes)
+
+    print(f"[{request_id}] 🖼️  BLIP2 REQUEST | Thread: {thread_id} | Images: {num_crops}")
 
     async with blip2_lock:
+        lock_acquired_time = time.time()
+        wait_time = lock_acquired_time - start_time
+        print(f"[{request_id}] 🔒 BLIP2 LOCK ACQUIRED | Wait: {wait_time:.2f}s")
+
         captions = await asyncio.to_thread(
             caption_from_bytes_list, crops_bytes, cached_blip2_pipe
         )
+
+        process_time = time.time() - lock_acquired_time
+        print(f"[{request_id}] ✅ BLIP2 COMPLETED | Process: {process_time:.2f}s | Total: {time.time()-start_time:.2f}s")
 
     return {"success": True, "captions": captions}
 
@@ -326,6 +361,10 @@ async def encode_texts(
     request: Request,
     body: EncodeTextsRequest,
 ):
+    start_time = time.time()
+    request_id = datetime.now().strftime("%H:%M:%S.%f")[:-3]
+    thread_id = threading.current_thread().ident
+
     if not model_cache_enabled or cached_siglip_pipe is None:
         raise HTTPException(
             status_code=503,
@@ -335,12 +374,75 @@ async def encode_texts(
     from generator.perception.icon.query_caption import encode_texts_siglip
     import numpy as np
 
+    num_texts = len(body.texts)
+    print(f"[{request_id}] 📝 SigLIP-TEXT REQUEST | Thread: {thread_id} | Texts: {num_texts}")
+
     model, tokenizer, device = cached_siglip_pipe
 
     async with siglip_lock:
+        lock_acquired_time = time.time()
+        wait_time = lock_acquired_time - start_time
+        print(f"[{request_id}] 🔒 SigLIP-TEXT LOCK ACQUIRED | Wait: {wait_time:.2f}s")
+
         embeddings = await asyncio.to_thread(
             encode_texts_siglip, model, tokenizer, device, body.texts
         )
+
+        process_time = time.time() - lock_acquired_time
+        print(f"[{request_id}] ✅ SigLIP-TEXT COMPLETED | Process: {process_time:.2f}s | Total: {time.time()-start_time:.2f}s")
+
+    return {"success": True, "embeddings": embeddings.tolist()}
+
+@app.post("/api/encode-images")
+async def encode_images(
+    request: Request,
+    images: List[UploadFile] = File(...),
+):
+    """
+    Batch encode images to vectors using SigLIP image encoder.
+
+    Args:
+        images: List of image files (outline images)
+
+    Returns:
+        JSON with success status and embeddings array (N, 1152)
+    """
+    start_time = time.time()
+    request_id = datetime.now().strftime("%H:%M:%S.%f")[:-3]
+    thread_id = threading.current_thread().ident
+
+    if not model_cache_enabled or cached_siglip_image_pipe is None:
+        raise HTTPException(
+            status_code=503,
+            detail="Model caching not enabled. Set ENABLE_MODEL_CACHE=true"
+        )
+
+    from generator.perception.icon.query_embedding import _batch_encode_pils
+    from PIL import Image
+    import io
+
+    # Read uploaded images
+    pil_images = []
+    for img_file in images:
+        img_bytes = await img_file.read()
+        pil_images.append(Image.open(io.BytesIO(img_bytes)))
+
+    num_images = len(pil_images)
+    print(f"[{request_id}] 🎨 SigLIP-IMAGE REQUEST | Thread: {thread_id} | Images: {num_images}")
+
+    model, preprocess, device = cached_siglip_image_pipe
+
+    async with siglip_image_lock:
+        lock_acquired_time = time.time()
+        wait_time = lock_acquired_time - start_time
+        print(f"[{request_id}] 🔒 SigLIP-IMAGE LOCK ACQUIRED | Wait: {wait_time:.2f}s")
+
+        embeddings = await asyncio.to_thread(
+            _batch_encode_pils, model, preprocess, pil_images, device, 64
+        )
+
+        process_time = time.time() - lock_acquired_time
+        print(f"[{request_id}] ✅ SigLIP-IMAGE COMPLETED | Process: {process_time:.2f}s | Total: {time.time()-start_time:.2f}s")
 
     return {"success": True, "embeddings": embeddings.tolist()}
 

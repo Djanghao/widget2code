@@ -154,6 +154,41 @@ def to_outline_bw(
     out_valid = out_big[vy0:vy1, vx0:vx1]  # (target, target)
     return Image.fromarray(out_valid, mode="L").convert("RGB")
 
+def _encode_images_via_http(outline_pils: List[Image.Image]) -> np.ndarray:
+    """
+    Encode images to vectors via backend API.
+
+    Args:
+        outline_pils: List of PIL images (black-white outline images)
+
+    Returns:
+        np.ndarray: Image embeddings array with shape (N, 1152)
+    """
+    import os
+    import requests
+
+    backend_port = os.getenv("BACKEND_PORT", "8010")
+    backend_host = os.getenv("HOST", "0.0.0.0")
+    if backend_host == "0.0.0.0":
+        backend_host = "localhost"
+    url = f"http://{backend_host}:{backend_port}/api/encode-images"
+
+    # Serialize PIL images to bytes
+    files = []
+    for i, pil_img in enumerate(outline_pils):
+        buf = io.BytesIO()
+        pil_img.save(buf, format="PNG")
+        files.append(("images", (f"outline_{i}.png", buf.getvalue(), "image/png")))
+
+    response = requests.post(url, files=files, timeout=300)
+    response.raise_for_status()
+    result = response.json()
+
+    if not result.get("success"):
+        raise RuntimeError(f"Image encoding failed: {result.get('error')}")
+
+    return np.array(result["embeddings"], dtype="float32")
+
 def _load_image_model(device: str):
     model, _, preprocess = open_clip.create_model_and_transforms(
         MODEL_NAME, pretrained=PRETRAINED, device=device
@@ -223,9 +258,17 @@ def query_from_detections_with_details(
     if not color_pils:
         return [], []
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    model, preprocess = _load_image_model(device)
-    q_img_all = _batch_encode_pils(model, preprocess, outline_pils, device=device, batch=64)
+    import os
+    model_cache_enabled = os.getenv("ENABLE_MODEL_CACHE", "false").lower() == "true"
+
+    if model_cache_enabled:
+        # Use backend API for image encoding (recommended for production)
+        q_img_all = _encode_images_via_http(outline_pils)
+    else:
+        # Local model loading (development mode)
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        model, preprocess = _load_image_model(device)
+        q_img_all = _batch_encode_pils(model, preprocess, outline_pils, device=device, batch=64)
 
     crops_bytes: List[bytes] = []
     for im in color_pils:
