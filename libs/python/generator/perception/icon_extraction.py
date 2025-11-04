@@ -37,6 +37,7 @@ def run_icon_detection_pipeline(
             model=model,
             api_key=api_key,
             timeout=timeout,
+            image_id=image_id,
         )
 
         grounding_raw = raw_dets
@@ -76,6 +77,7 @@ def run_icon_detection_pipeline(
                         topk=int(retrieval_topk),
                         topm=int(retrieval_topm),
                         alpha=float(retrieval_alpha),
+                        image_id=image_id,
                     )
                     ordered_unique = []
                     seen = set()

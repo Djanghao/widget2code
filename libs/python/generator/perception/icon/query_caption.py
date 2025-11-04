@@ -33,39 +33,73 @@ SIGLIP_MODEL_NAME = "ViT-SO400M-16-SigLIP2-384"
 SIGLIP_PRETRAINED = "webli"
 EMB_BATCH = 64
 
-def _caption_via_http(crops_bytes: List[bytes]) -> List[str]:
+def _caption_via_http(crops_bytes: List[bytes], image_id: Optional[str] = None) -> List[str]:
     import os
     import requests
+    import time
+    from datetime import datetime
+
     backend_port = os.getenv("BACKEND_PORT", "8010")
     backend_host = os.getenv("HOST", "0.0.0.0")
     if backend_host == "0.0.0.0":
         backend_host = "localhost"
     url = f"http://{backend_host}:{backend_port}/api/extract-icon-captions"
 
+    icon_count = len(crops_bytes)
+    if image_id:
+        from ...utils.logger import log_to_file
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:Caption] Started ({icon_count} crops)")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:Caption] Sending HTTP request to backend...")
+
     files = [("crops", (f"crop_{i}.png", crop_bytes, "image/png"))
              for i, crop_bytes in enumerate(crops_bytes)]
 
+    start_time = time.time()
     response = requests.post(url, files=files, timeout=300)
+    duration = time.time() - start_time
+
     response.raise_for_status()
     result = response.json()
     if not result.get("success"):
         raise RuntimeError(f"Caption extraction failed: {result.get('error')}")
+
+    if image_id:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:Caption] HTTP response received in {duration:.2f}s")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:Caption] Completed in {duration:.2f}s")
+
     return result["captions"]
 
-def _encode_texts_via_http(texts: List[str]) -> np.ndarray:
+def _encode_texts_via_http(texts: List[str], image_id: Optional[str] = None) -> np.ndarray:
     import os
     import requests
+    import time
+    from datetime import datetime
+
     backend_port = os.getenv("BACKEND_PORT", "8010")
     backend_host = os.getenv("HOST", "0.0.0.0")
     if backend_host == "0.0.0.0":
         backend_host = "localhost"
     url = f"http://{backend_host}:{backend_port}/api/encode-texts"
 
+    caption_count = len(texts)
+    if image_id:
+        from ...utils.logger import log_to_file
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:TextEmbed] Started ({caption_count} captions)")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:TextEmbed] Sending HTTP request to backend...")
+
+    start_time = time.time()
     response = requests.post(url, json={"texts": texts}, timeout=300)
+    duration = time.time() - start_time
+
     response.raise_for_status()
     result = response.json()
     if not result.get("success"):
         raise RuntimeError(f"Text encoding failed: {result.get('error')}")
+
+    if image_id:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:TextEmbed] HTTP response received in {duration:.2f}s")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:TextEmbed] Completed in {duration:.2f}s")
+
     return np.array(result["embeddings"], dtype="float32")
 
 def build_blip2(model_id: str = BLIP2_MODEL_ID):
@@ -151,6 +185,7 @@ def caption_embed_and_retrieve_svgs_with_dual_details(
     topk: int = 50,
     topm: int = 10,
     alpha: float = 0.8,
+    image_id: Optional[str] = None,
 ) -> Tuple[List[str], List[str], List[List[Dict[str, Any]]], List[List[Dict[str, Any]]]]:
     if q_img_all is None or not isinstance(q_img_all, np.ndarray):
         raise ValueError("q_img_all must be a numpy array of precomputed image embeddings.")
@@ -161,8 +196,8 @@ def caption_embed_and_retrieve_svgs_with_dual_details(
     model_cache_enabled = os.getenv("ENABLE_MODEL_CACHE", "false").lower() == "true"
 
     if model_cache_enabled:
-        captions = _caption_via_http(crops_bytes)
-        q_txt_all = _encode_texts_via_http(captions)
+        captions = _caption_via_http(crops_bytes, image_id=image_id)
+        q_txt_all = _encode_texts_via_http(captions, image_id=image_id)
     else:
         blip2_pipe = build_blip2(BLIP2_MODEL_ID)
         captions = caption_from_bytes_list(crops_bytes, blip2_pipe)

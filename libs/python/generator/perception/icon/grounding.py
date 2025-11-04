@@ -218,9 +218,29 @@ def ground_single_image_with_stages(
     pp_margin_pct: float = 0.2,
     pp_min_area_ratio: float = 0.0005,
     pp_fallback_expand_pct: float = 0.15,
+    image_id: Optional[str] = None,
 ) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]], int, int]:
     if not isinstance(image_bytes, (bytes, bytearray)):
         raise TypeError("image_bytes must be raw bytes")
+
+    # Extract image_id from filename if not provided
+    if not image_id and filename:
+        from pathlib import Path
+        image_id = Path(filename).stem
+
+    # Import logging utilities
+    import time
+    from datetime import datetime
+    try:
+        from ...utils.logger import log_to_file
+        has_logger = True
+    except:
+        has_logger = False
+
+    overall_start = time.time()
+
+    if has_logger and image_id:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] Started")
 
     try:
         from .image_utils import preprocess_image_bytes_if_small
@@ -263,6 +283,12 @@ def ground_single_image_with_stages(
     vision_llm = LLM(**llm_kwargs)
     last_err = None
     parsed_items: List[Dict[str, Any]] = []
+
+    if has_logger and image_id:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] VLM API call started (model={model})")
+
+    vlm_start = time.time()
+
     for attempt in range(max_retries + 1):
         try:
             if stream:
@@ -285,6 +311,13 @@ def ground_single_image_with_stages(
             if attempt >= max_retries:
                 parsed_items = []
 
+    vlm_duration = time.time() - vlm_start
+
+    if has_logger and image_id:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] VLM API call completed in {vlm_duration:.2f}s")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] Parsing response...")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] Raw detections: {len(parsed_items)}")
+
     pixel_dets_pre = _scale_qwen_to_pixels(
         items=parsed_items,
         img_w=img_w,
@@ -300,5 +333,12 @@ def ground_single_image_with_stages(
         fallback_expand_pct=pp_fallback_expand_pct,
         clamp_to_image=True,
     )
+
+    icon_count = len([d for d in pixel_dets_post if d.get("label", "").lower() == "icon"])
+    overall_duration = time.time() - overall_start
+
+    if has_logger and image_id:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] Post-processed detections: {len(pixel_dets_post)} (icons: {icon_count})")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] Completed in {overall_duration:.2f}s")
 
     return parsed_items, pixel_dets_pre, pixel_dets_post, img_w, img_h

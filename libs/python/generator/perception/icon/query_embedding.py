@@ -12,7 +12,9 @@ Changes in this version:
 from __future__ import annotations
 from typing import Dict, Any, List, Tuple, Optional
 from pathlib import Path
+from datetime import datetime
 import io
+import time
 import numpy as np
 import torch
 import cv2
@@ -20,6 +22,7 @@ from PIL import Image, ImageOps
 import open_clip
 
 from .query_caption import caption_embed_and_retrieve_svgs_with_dual_details
+from ...utils.logger import log_to_file
 
 MODEL_NAME = "ViT-SO400M-16-SigLIP2-384"
 PRETRAINED = "webli"
@@ -226,6 +229,7 @@ def query_from_detections_with_details(
     topk: int = 50,
     topm: int = 10,
     alpha: float = 0.8,
+    image_id: Optional[str] = None,
 ) -> Tuple[List[str], List[Dict[str, Any]]]:
     if not detections:
         return [], []
@@ -261,14 +265,38 @@ def query_from_detections_with_details(
     import os
     model_cache_enabled = os.getenv("ENABLE_MODEL_CACHE", "false").lower() == "true"
 
+    # Log image embedding start
+    icon_count = len(outline_pils)
+    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    if image_id:
+        log_to_file(f"[{timestamp}] [{image_id}] [Icon Retrieval:ImageEmbed] Started ({icon_count} icons)")
+
+    start_time = time.time()
+
     if model_cache_enabled:
         # Use backend API for image encoding (recommended for production)
+        if image_id:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:ImageEmbed] Sending HTTP request to backend...")
+
         q_img_all = _encode_images_via_http(outline_pils)
+
+        duration = time.time() - start_time
+        if image_id:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:ImageEmbed] HTTP response received in {duration:.2f}s")
     else:
         # Local model loading (development mode)
         device = "cuda" if torch.cuda.is_available() else "cpu"
+        if image_id:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:ImageEmbed] Device: {device}")
+
         model, preprocess = _load_image_model(device)
         q_img_all = _batch_encode_pils(model, preprocess, outline_pils, device=device, batch=64)
+
+        duration = time.time() - start_time
+
+    # Log completion
+    if image_id:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:ImageEmbed] Completed in {duration:.2f}s")
 
     crops_bytes: List[bytes] = []
     for im in color_pils:
@@ -283,6 +311,7 @@ def query_from_detections_with_details(
         topk=topk,
         topm=topm,
         alpha=alpha,
+        image_id=image_id,
     )
 
     per_icon_details: List[Dict[str, Any]] = []

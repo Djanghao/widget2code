@@ -490,7 +490,7 @@ async def generate_widget_full(
         if "[AVAILABLE_COMPONENTS]" in prompt_final:
             prompt_final = prompt_final.replace("[AVAILABLE_COMPONENTS]", components_list)
 
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 VLM generation started")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] Started")
 
         vision_llm = LLM(
             model=model_to_use,
@@ -510,7 +510,16 @@ async def generate_widget_full(
             ]
         )]
 
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] VLM API call started (model={model_to_use})")
+
+        import time
+        dsl_start = time.time()
         response = vision_llm.chat(messages)
+        dsl_duration = time.time() - dsl_start
+
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] VLM API call completed in {dsl_duration:.2f}s")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] Parsing JSON...")
+
         result_text = clean_json_response(response.content)
 
         widget_spec = json.loads(result_text)
@@ -521,6 +530,8 @@ async def generate_widget_full(
             pass
 
         per_icon_details, global_merged = normalize_icon_details(per_icon_details)
+
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] Completed in {dsl_duration:.2f}s")
 
         return {
             "success": True,
