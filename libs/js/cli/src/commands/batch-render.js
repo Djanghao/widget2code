@@ -98,8 +98,9 @@ async function loadSpec(specPath) {
   return JSON.parse(specData);
 }
 
-async function renderWidget(renderer, widgetInfo) {
+async function renderWidget(renderer, widgetInfo, options = {}) {
   const { widgetId, widgetDir, dslFile } = widgetInfo;
+  const { force = false } = options;
 
   // New directory structure paths
   const debugPath = path.join(widgetDir, 'log', 'debug.json');
@@ -109,18 +110,20 @@ async function renderWidget(renderer, widgetInfo) {
   const jsxPath = path.join(compilationDir, 'widget.jsx');
   const outputPngPath = path.join(widgetDir, 'output.png');
 
-  // Clean up all existing artifacts before starting
-  try {
-    // Delete output.png if exists
-    await fs.unlink(outputPngPath).catch(() => {});
+  // Clean up all existing artifacts only if --force is enabled
+  if (force) {
+    try {
+      // Delete output.png if exists
+      await fs.unlink(outputPngPath).catch(() => {});
 
-    // Delete compilation artifacts
-    await fs.rm(compilationDir, { recursive: true, force: true }).catch(() => {});
+      // Delete compilation artifacts
+      await fs.rm(compilationDir, { recursive: true, force: true }).catch(() => {});
 
-    // Delete rendering artifacts
-    await fs.rm(renderingDir, { recursive: true, force: true }).catch(() => {});
-  } catch (error) {
-    console.warn(`[${widgetId}] Warning: Failed to clean up artifacts: ${error.message}`);
+      // Delete rendering artifacts
+      await fs.rm(renderingDir, { recursive: true, force: true }).catch(() => {});
+    } catch (error) {
+      console.warn(`[${widgetId}] Warning: Failed to clean up artifacts: ${error.message}`);
+    }
   }
 
   // Create directories
@@ -456,7 +459,7 @@ export async function batchRender(inputPath, options = {}) {
     while (queue.length > 0) {
       const widgetInfo = queue.shift();
       if (widgetInfo) {
-        const result = await renderWidget(renderer, widgetInfo);
+        const result = await renderWidget(renderer, widgetInfo, { force });
         results.push(result);
         completed++;
         console.log(`\nProgress: ${completed}/${widgets.length} (${Math.round(completed/widgets.length*100)}%)`);
