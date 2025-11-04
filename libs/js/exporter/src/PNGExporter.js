@@ -1,17 +1,57 @@
 import html2canvas from 'html2canvas';
 
 export async function captureWidgetAsPNG(widgetElement, options = {}) {
-  const { scale = 2, backgroundColor = null } = options;
+  const { scale = 2, backgroundColor = null, targetWidth, targetHeight, autoResizeOnly = false } = options;
+
+  // Calculate scale to match target dimensions if specified
+  let finalScale = scale;
+  if (targetWidth && targetHeight) {
+    const rect = widgetElement.getBoundingClientRect();
+    const scaleW = targetWidth / rect.width;
+    const scaleH = targetHeight / rect.height;
+    // Use the larger scale to ensure at least one dimension matches target
+    finalScale = Math.max(scaleW, scaleH);
+  }
 
   const canvas = await html2canvas(widgetElement, {
     backgroundColor,
-    scale,
+    scale: finalScale,
     logging: false,
     useCORS: true
   });
 
+  // If autoResizeOnly is true, return the scaled canvas without exact resize
+  if (autoResizeOnly) {
+    return new Promise((resolve, reject) => {
+      canvas.toBlob((blob) => {
+        if (!blob) {
+          reject(new Error('Failed to create blob from canvas'));
+          return;
+        }
+        resolve(blob);
+      }, 'image/png');
+    });
+  }
+
+  // If target dimensions are specified and canvas doesn't match exactly, resize
+  let finalCanvas = canvas;
+  if (targetWidth && targetHeight && (canvas.width !== targetWidth || canvas.height !== targetHeight)) {
+    const outputCanvas = document.createElement('canvas');
+    outputCanvas.width = targetWidth;
+    outputCanvas.height = targetHeight;
+
+    const ctx = outputCanvas.getContext('2d');
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+
+    // Resize the entire canvas to target dimensions (no cropping)
+    ctx.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, targetWidth, targetHeight);
+
+    finalCanvas = outputCanvas;
+  }
+
   return new Promise((resolve, reject) => {
-    canvas.toBlob((blob) => {
+    finalCanvas.toBlob((blob) => {
       if (!blob) {
         reject(new Error('Failed to create blob from canvas'));
         return;

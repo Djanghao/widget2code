@@ -199,12 +199,31 @@ async function renderWidget(renderer, widgetInfo) {
     await PlaywrightRenderer.saveImage(rawResult.imageBuffer, rawPath);
     console.log(`[${widgetId}] ✓ RAW: ${rawResult.metadata.width}×${rawResult.metadata.height}`);
 
-    // Step 2: Render AUTORESIZE version (with autoresize enabled)
-    console.log(`[${widgetId}] - Rendering AUTORESIZE...`);
+    // Step 2: Get original image dimensions for target size
+    const originalPath = path.join(widgetDir, 'artifacts', '1-preprocess', '1.1-original.png');
+    const originalExists = await fs.access(originalPath).then(() => true).catch(() => false);
+    let targetDimensions = null;
+
+    if (originalExists) {
+      const originalMeta = await sharp(originalPath).metadata();
+      targetDimensions = {
+        width: originalMeta.width,
+        height: originalMeta.height
+      };
+      console.log(`[${widgetId}] 🎯 Target dimensions from input: ${targetDimensions.width}×${targetDimensions.height}`);
+    }
+
+    // Step 3: Render AUTORESIZE version (with calculated scale for target dimensions)
+    console.log(`[${widgetId}] - Rendering AUTORESIZE${targetDimensions ? ' with calculated scale' : ''}...`);
     const result = await renderer.renderWidgetFromJSX(jsx, {
       enableAutoResize: true,
       presetId: widgetId,
-      spec: finalSpec
+      spec: finalSpec,
+      captureOptions: targetDimensions ? {
+        targetWidth: targetDimensions.width,
+        targetHeight: targetDimensions.height,
+        autoResizeOnly: true  // Only scale, don't exact resize yet
+      } : undefined
     });
 
     if (!result.success) {
@@ -218,42 +237,36 @@ async function renderWidget(renderer, widgetInfo) {
     // Update DSL file with corrected spec
     await fs.writeFile(dslFile, JSON.stringify(result.spec, null, 2), 'utf-8');
 
-    // Step 3: Create RESCALED version (resize to match original image size)
-    const rescaledPath = path.join(renderingDir, '6.3-rescale.png');
-    let rescaleSuccess = false;
+    // Step 4: Create RESIZE version (exact resize to match input dimensions)
+    const resizePath = path.join(renderingDir, '6.3-resize.png');
+    let resizeSuccess = false;
     try {
-      // Find original image file (should be at artifacts/1-preprocess/1.1-original.png)
-      const originalPath = path.join(widgetDir, 'artifacts', '1-preprocess', '1.1-original.png');
-      const originalExists = await fs.access(originalPath).then(() => true).catch(() => false);
-
-      if (originalExists) {
-        const originalMeta = await sharp(originalPath).metadata();
-
-        // Resize autoresize PNG to match original dimensions
+      if (originalExists && targetDimensions) {
+        // Resize autoresize PNG to exact target dimensions
         await sharp(autoresizePath)
-          .resize(originalMeta.width, originalMeta.height, {
+          .resize(targetDimensions.width, targetDimensions.height, {
             fit: 'fill',
             kernel: sharp.kernel.lanczos3
           })
           .png()
-          .toFile(rescaledPath);
+          .toFile(resizePath);
 
-        console.log(`[${widgetId}] ✓ RESCALED: ${originalMeta.width}×${originalMeta.height}`);
-        rescaleSuccess = true;
+        console.log(`[${widgetId}] ✓ RESIZE: ${targetDimensions.width}×${targetDimensions.height}`);
+        resizeSuccess = true;
       } else {
-        console.warn(`[${widgetId}] ⚠️  Original image not found, skipping rescale`);
+        console.warn(`[${widgetId}] ⚠️  Original image not found, skipping resize`);
       }
-    } catch (rescaleError) {
-      console.warn(`[${widgetId}] ⚠️  Failed to create rescaled image: ${rescaleError.message}`);
+    } catch (resizeError) {
+      console.warn(`[${widgetId}] ⚠️  Failed to create resized image: ${resizeError.message}`);
     }
 
-    // Save output.png (prefer rescale, fallback to autoresize)
-    if (rescaleSuccess) {
-      await fs.copyFile(rescaledPath, outputPngPath);
-      console.log(`[${widgetId}] ✓ OUTPUT: saved rescaled version`);
+    // Save output.png (prefer resize, fallback to autoresize)
+    if (resizeSuccess) {
+      await fs.copyFile(resizePath, outputPngPath);
+      console.log(`[${widgetId}] ✓ OUTPUT: saved resize version`);
     } else {
       await PlaywrightRenderer.saveImage(result.imageBuffer, outputPngPath);
-      console.log(`[${widgetId}] ✓ OUTPUT: saved autoresize version (rescale unavailable)`);
+      console.log(`[${widgetId}] ✓ OUTPUT: saved autoresize version (resize unavailable)`);
     }
 
     const renderingEndTime = new Date();
