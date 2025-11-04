@@ -158,6 +158,12 @@ async function renderWidget(renderer, widgetInfo) {
 
     const finalSpec = validation.fixed || spec;
 
+    // Remove width/height from widget root to allow autoresize to calculate them
+    if (finalSpec.widget) {
+      delete finalSpec.widget.width;
+      delete finalSpec.widget.height;
+    }
+
     console.log(`[${widgetId}] Compiling DSL to JSX...`);
     const jsx = compileWidgetDSLToJSX(finalSpec);
     await fs.writeFile(jsxPath, jsx, 'utf-8');
