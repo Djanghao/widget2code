@@ -53,6 +53,14 @@ export class PlaywrightRenderer {
     try {
       const page = await context.newPage();
 
+      // Block favicon requests to prevent 404 errors
+      await page.route('**/favicon.ico', route => route.abort());
+
+      // Log failed requests to debug 404 errors
+      page.on('requestfailed', request => {
+        console.error(`[Browser Error] Request failed: ${request.url()} - ${request.failure().errorText}`);
+      });
+
       page.on('console', msg => {
         const type = msg.type();
         const text = msg.text();
@@ -179,6 +187,14 @@ export class PlaywrightRenderer {
 
     try {
       const page = await context.newPage();
+
+      // Block favicon requests to prevent 404 errors
+      await page.route('**/favicon.ico', route => route.abort());
+
+      // Log failed requests to debug 404 errors
+      page.on('requestfailed', request => {
+        console.error(`[Browser Error] Request failed: ${request.url()} - ${request.failure().errorText}`);
+      });
 
       page.on('console', msg => {
         const type = msg.type();
