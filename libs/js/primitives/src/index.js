@@ -1,4 +1,5 @@
 export { WidgetShell } from "./WidgetShell.jsx";
+export { ComponentErrorBoundary } from "./ComponentErrorBoundary.jsx";
 export { Text } from "./Text.jsx";
 export { Icon } from "./Icon.jsx";
 export { Button } from "./Button.jsx";

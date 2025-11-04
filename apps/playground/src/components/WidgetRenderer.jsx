@@ -97,32 +97,10 @@ class WidgetErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
-      return (
-        <div
-          style={{
-            display: "inline-flex",
-            maxWidth: 640,
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "flex-start",
-            color: "#ff6b6b",
-            backgroundColor: "#3a0a0a",
-            border: "1px solid #6e1a1a",
-            borderRadius: 10,
-            padding: 12,
-            boxSizing: "border-box",
-          }}
-        >
-          <div style={{ fontWeight: 700, marginBottom: 8 }}>
-            Widget Rendering Error:
-          </div>
-          <div
-            style={{ whiteSpace: "pre-wrap", fontSize: 12, color: "#ff9999" }}
-          >
-            {String(this.state.error?.message || this.state.error)}
-          </div>
-        </div>
-      );
+      // Return null instead of error UI - individual components already have error boundaries
+      // This is a widget-level fallback that should rarely trigger
+      console.error('[WidgetErrorBoundary] Widget-level error, rendering empty');
+      return null;
     }
 
     return this.props.children;

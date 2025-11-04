@@ -14,7 +14,7 @@ export function compileWidgetDSLToJSX(widgetDSL) {
 
   const imports = new Set();
   imports.add("import React from 'react';");
-  imports.add("import { WidgetShell } from '@widget-factory/primitives';");
+  imports.add("import { WidgetShell, ComponentErrorBoundary } from '@widget-factory/primitives';");
 
   const lines = [];
   const write = (line) => {
@@ -142,11 +142,20 @@ export function compileWidgetDSLToJSX(widgetDSL) {
       }
 
       const propsStr = propsCode.length > 0 ? " " + propsCode.join(" ") : "";
+
+      // Wrap leaf components in ComponentErrorBoundary for granular error handling
+      const boundaryProps = [];
+      if (width !== undefined) boundaryProps.push(`width={${JSON.stringify(width)}}`);
+      if (height !== undefined) boundaryProps.push(`height={${JSON.stringify(height)}}`);
+      const boundaryPropsStr = boundaryProps.length > 0 ? " " + boundaryProps.join(" ") : "";
+
+      write(`${indent}<ComponentErrorBoundary${boundaryPropsStr}>`);
       if (childrenStr)
         write(
-          `${indent}<${componentName}${propsStr}>${childrenStr}</${componentName}>`
+          `${indent}  <${componentName}${propsStr}>${childrenStr}</${componentName}>`
         );
-      else write(`${indent}<${componentName}${propsStr} />`);
+      else write(`${indent}  <${componentName}${propsStr} />`);
+      write(`${indent}</ComponentErrorBoundary>`);
       return;
     }
   }

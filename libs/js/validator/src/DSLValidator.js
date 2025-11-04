@@ -114,6 +114,33 @@ export function fixWidgetDSL(spec) {
   function fixNode(node, path) {
     if (!node || typeof node !== 'object') return;
 
+    // Auto-fix invalid type values
+    if (node.type !== 'container' && node.type !== 'leaf') {
+      const originalType = node.type;
+      // Check if node has children
+      const hasChildren = node.children && Array.isArray(node.children) && node.children.length > 0;
+
+      if (hasChildren) {
+        // Convert to container to preserve nested content
+        node.type = 'container';
+        changes.push(`${path}: auto-converted invalid type "${originalType}" to container (has ${node.children.length} children)`);
+      } else if (originalType === 'divider') {
+        // Special case: divider without children becomes Divider component
+        node.type = 'leaf';
+        node.component = 'Divider';
+        if (!node.props) node.props = {};
+        delete node.children;
+        changes.push(`${path}: auto-converted type "divider" to leaf with Divider component`);
+      } else {
+        // Any other invalid type becomes Placeholder
+        node.type = 'leaf';
+        node.component = 'Placeholder';
+        if (!node.props) node.props = {};
+        delete node.children;
+        changes.push(`${path}: auto-converted invalid type "${originalType}" to leaf with Placeholder component`);
+      }
+    }
+
     if (node.type === 'container') {
       if (!node.children || !Array.isArray(node.children)) {
         node.children = [];
