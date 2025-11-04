@@ -109,6 +109,20 @@ async function renderWidget(renderer, widgetInfo) {
   const jsxPath = path.join(compilationDir, 'widget.jsx');
   const outputPngPath = path.join(widgetDir, 'output.png');
 
+  // Clean up all existing artifacts before starting
+  try {
+    // Delete output.png if exists
+    await fs.unlink(outputPngPath).catch(() => {});
+
+    // Delete compilation artifacts
+    await fs.rm(compilationDir, { recursive: true, force: true }).catch(() => {});
+
+    // Delete rendering artifacts
+    await fs.rm(renderingDir, { recursive: true, force: true }).catch(() => {});
+  } catch (error) {
+    console.warn(`[${widgetId}] Warning: Failed to clean up artifacts: ${error.message}`);
+  }
+
   // Create directories
   await fs.mkdir(compilationDir, { recursive: true });
   await fs.mkdir(renderingDir, { recursive: true });
@@ -221,10 +235,19 @@ async function renderWidget(renderer, widgetInfo) {
 
     // Step 3: Render AUTORESIZE version (with calculated scale for target dimensions)
     console.log(`[${widgetId}] - Rendering AUTORESIZE${targetDimensions ? ' with calculated scale' : ''}...`);
+
+    // Use input image's aspect ratio for autoresize instead of DSL's aspect ratio
+    const autoresizeSpec = { ...finalSpec };
+    if (targetDimensions && autoresizeSpec.widget) {
+      const inputAspectRatio = targetDimensions.width / targetDimensions.height;
+      console.log(`[${widgetId}] 📐 Using input aspect ratio: ${inputAspectRatio.toFixed(4)} (was: ${autoresizeSpec.widget.aspectRatio?.toFixed(4) || 'undefined'})`);
+      autoresizeSpec.widget = { ...autoresizeSpec.widget, aspectRatio: inputAspectRatio };
+    }
+
     const result = await renderer.renderWidgetFromJSX(jsx, {
       enableAutoResize: true,
       presetId: widgetId,
-      spec: finalSpec,
+      spec: autoresizeSpec,
       captureOptions: targetDimensions ? {
         targetWidth: targetDimensions.width,
         targetHeight: targetDimensions.height,
@@ -278,7 +301,10 @@ async function renderWidget(renderer, widgetInfo) {
     const renderingEndTime = new Date();
     const renderingDuration = (renderingEndTime - renderingStartTime) / 1000;
 
-    const expectedAspectRatio = spec.widget?.aspectRatio;
+    // Use input image's aspect ratio for validation if available, otherwise use original DSL
+    const expectedAspectRatio = targetDimensions
+      ? (targetDimensions.width / targetDimensions.height)
+      : spec.widget?.aspectRatio;
     const actualAspectRatio = result.metadata.aspectRatio;
 
     let aspectRatioValid = true;
