@@ -3,7 +3,7 @@ import React from 'react';
 export function MapImage({
   width,
   height,
-  url,
+  src,
   flex,
   flexGrow,
   flexShrink,
@@ -13,7 +13,7 @@ export function MapImage({
 }) {
   return (
     <img
-      src={url}
+      src={src}
       alt="Map"
       {...rest}
       style={{

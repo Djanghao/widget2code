@@ -45,13 +45,13 @@ Node properties: `width` (number), `height` (number)
 [GRAPH_SPECS]
 
 ### Image
-Props: `url` (Unsplash URL), `borderRadius` (number)
+Props: `src` (Unsplash URL), `borderRadius` (number)
 Node properties: `width` (number), `height` (number)
 - **CRITICAL**: MUST use Unsplash URLs: `https://images.unsplash.com/photo-[ID]`
 - Choose image matching widget's visual content/theme
 - Specify `width`, `height` at node level (NOT in props)
 - `width` optional - omit to stretch horizontally
-- Example: `{"type": "leaf", "component": "Image", "width": 100, "height": 100, "props": {"url": "https://images.unsplash.com/photo-[ID]"}}`
+- Example: `{"type": "leaf", "component": "Image", "width": 100, "height": 100, "props": {"src": "https://images.unsplash.com/photo-[ID]"}}`
 
 ### Checkbox
 Props: `size` (number), `checked` (boolean), `color` (hex)
@@ -65,11 +65,11 @@ Node properties: `width` (number), `height` (number)
 - Example: `{"type": "leaf", "component": "Sparkline", "width": 100, "height": 30, "flex": "none", "props": {"color": "#007AFF", "data": [10, 20, 15, 30, 25]}}`
 
 ### MapImage
-Props: `url` (Unsplash URL)
+Props: `src` (Unsplash URL)
 Node properties: `width` (number), `height` (number)
 - **CRITICAL**: MUST use Unsplash map/aerial URLs: `https://images.unsplash.com/photo-[ID]`
 - Specify `width`, `height` at node level
-- Example: `{"type": "leaf", "component": "MapImage", "height": 120, "props": {"url": "https://images.unsplash.com/photo-[ID]"}}`
+- Example: `{"type": "leaf", "component": "MapImage", "height": 120, "props": {"src": "https://images.unsplash.com/photo-[ID]"}}`
 
 ### AppLogo
 Props: `name` (string), `size` (number), `backgroundColor` (hex)
