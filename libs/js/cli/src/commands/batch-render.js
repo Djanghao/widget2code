@@ -160,8 +160,21 @@ async function renderWidget(renderer, widgetInfo, options = {}) {
 
     const spec = await loadSpec(dslFile);
 
+    // Save 1-raw: Original DSL from VLM
+    const rawDslPath = path.join(compilationDir, '1-raw.json');
+    await fs.writeFile(rawDslPath, JSON.stringify(spec, null, 2), 'utf-8');
+
     const validation = validateAndFix(spec);
+
+    // Save validation changes log
     if (validation.changes && validation.changes.length > 0) {
+      const validationChangesPath = path.join(compilationDir, 'validation-changes.json');
+      await fs.writeFile(validationChangesPath, JSON.stringify({
+        changes: validation.changes,
+        warnings: validation.warnings || [],
+        timestamp: new Date().toISOString()
+      }, null, 2), 'utf-8');
+
       console.log(`[${widgetId}] ⚠️  Auto-fixed ${validation.changes.length} issue(s):`);
       validation.changes.forEach(change => console.log(`  - ${change}`));
     }
@@ -173,13 +186,23 @@ async function renderWidget(renderer, widgetInfo, options = {}) {
       throw new Error(`DSL validation failed: ${validation.errors.join(', ')}`);
     }
 
-    const finalSpec = validation.fixed || spec;
+    // Save 2-after-validation: DSL after validator fixes (deep copy to preserve original)
+    const afterValidationSpec = validation.fixed || spec;
+    const afterValidationPath = path.join(compilationDir, '2-after-validation.json');
+    await fs.writeFile(afterValidationPath, JSON.stringify(afterValidationSpec, null, 2), 'utf-8');
+
+    // Create final spec for compilation (deep copy to avoid modifying afterValidationSpec)
+    const finalSpec = JSON.parse(JSON.stringify(afterValidationSpec));
 
     // Remove width/height from widget root to allow autoresize to calculate them
     if (finalSpec.widget) {
       delete finalSpec.widget.width;
       delete finalSpec.widget.height;
     }
+
+    // Save 3-final: DSL actually used for compilation (after validation + width/height removal)
+    const finalDslPath = path.join(compilationDir, '3-final.json');
+    await fs.writeFile(finalDslPath, JSON.stringify(finalSpec, null, 2), 'utf-8');
 
     console.log(`[${widgetId}] Compiling DSL to JSX...`);
     const jsx = compileWidgetDSLToJSX(finalSpec);

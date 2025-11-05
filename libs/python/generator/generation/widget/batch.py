@@ -209,14 +209,24 @@ class BatchGenerator:
                 with open(preprocess_dir / "1.2-preprocessed.png", 'wb') as f:
                     f.write(preprocessed_bytes)
 
-            # 3. Generate grounding visualization
+            # 3. Save grounding data (raw JSON)
+            if icon_debug.get('grounding'):
+                grounding_data = {
+                    "raw": icon_debug['grounding'].get('raw', []),
+                    "pixel": icon_debug['grounding'].get('pixel', []),
+                    "postProcessed": icon_debug['grounding'].get('postProcessed', []),
+                }
+                with open(grounding_dir / "grounding-data.json", 'w') as f:
+                    json.dump(grounding_data, f, indent=2)
+
+            # 4. Generate grounding visualization
             grounding_detections = icon_debug.get('grounding', {}).get('postProcessed', [])
             if grounding_detections:
                 grounding_viz = draw_grounding_visualization(image_data, grounding_detections)
                 with open(grounding_dir / "grounding.png", 'wb') as f:
                     f.write(grounding_viz)
 
-            # 4. Crop icon regions
+            # 5. Crop icon regions
             icon_detections = [d for d in grounding_detections if d.get('label') == 'icon']
             for idx, det in enumerate(icon_detections):
                 crop_bytes = crop_icon_region(image_data, det['bbox'])
