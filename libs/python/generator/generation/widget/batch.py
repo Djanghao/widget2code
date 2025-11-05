@@ -209,12 +209,31 @@ class BatchGenerator:
                 with open(preprocess_dir / "1.2-preprocessed.png", 'wb') as f:
                     f.write(preprocessed_bytes)
 
-            # 3. Save grounding data (raw JSON)
+            # 3. Save grounding data (raw JSON with complete metadata)
             if icon_debug.get('grounding'):
+                raw_detections = icon_debug['grounding'].get('raw', [])
+                pixel_detections = icon_debug['grounding'].get('pixel', [])
+                post_processed = icon_debug['grounding'].get('postProcessed', [])
+
+                # Count detections by label
+                label_counts = {}
+                for det in post_processed:
+                    label = det.get('label', 'unknown')
+                    label_counts[label] = label_counts.get(label, 0) + 1
+
                 grounding_data = {
-                    "raw": icon_debug['grounding'].get('raw', []),
-                    "pixel": icon_debug['grounding'].get('pixel', []),
-                    "postProcessed": icon_debug['grounding'].get('postProcessed', []),
+                    "metadata": {
+                        "imageWidth": image_dims.get('width') if image_dims else None,
+                        "imageHeight": image_dims.get('height') if image_dims else None,
+                        "totalDetections": len(post_processed),
+                        "detectionsByLabel": label_counts,
+                        "generatedAt": datetime.now().isoformat()
+                    },
+                    "detections": {
+                        "raw": raw_detections,
+                        "pixel": pixel_detections,
+                        "postProcessed": post_processed
+                    }
                 }
                 with open(grounding_dir / "grounding-data.json", 'w') as f:
                     json.dump(grounding_data, f, indent=2)

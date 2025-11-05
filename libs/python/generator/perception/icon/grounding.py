@@ -22,64 +22,33 @@ from provider_hub import LLM, ChatMessage
 from .post_process import post_process_pixel_detections
 
 DEFAULT_PROMPT = """
-You are an expert mobile-UI understanding assistant. OUTPUT JSON ONLY. Return a single JSON array. No extra text.
-INPUT
-- image: Screenshot of a mobile dashboard with widgets.
-KEY CONSTRAINTS
+You are an expert mobile-UI understanding assistant. OUTPUT JSON ONLY. Return a single array of objects:
+{"bbox": [x1, y1, x2, y2], "label": "<class>", "description": "<text>"}.
+No extra text.
+Classes:
+Icon, AppLogo, Text, Button, Checkbox, Divider, Indicator, Sparkline, Image, ProgressRing, Slider, Switch, Others, and Graph types: BarChart, LineChart, PieChart, RadarChart, StackedBarChart, ProgressBar.
+Rules:
+- Each box: tight integer coords (x1<x2,y1<y2), fully inside image.
 - Icon boxes must tightly include all visible strokes, including anti-aliased edge pixels; DO NOT CROP any stroke.
-- **If an icon appears on a solid chip/button/FAB, annotate ONLY THE INNER PICTOGRAM as icon; do not annotate the outer container.**
-- Process each image INDEPENDENTLY; do not use cross-image context.
-GOAL
-- Identify each widget's elements and return precise bounding boxes, assigning each detected region to exactly one class:
-    1. "text"
-    2. "icon"
-    3. "progress_bar" (circular/linear progress rings/bars)
-    4. "divider" (separators/lines/pipes)
-    5. "avatar"
-    6. "swipe_handle"
-    7. "clock"
-    8. "image" (photos/illustrations; large visual content not a simple pictogram)
-    9. "graph" (sparklines, charts, heatmaps)
-DEFINITIONS
-- icon: small pictograms (arrows, gear, bell, share, chevrons, stock arrows, weather glyphs, etc.). Simple glyph-style logos count as icon. 
-- text: readable words/numbers. Only group close, same-style text into one box.
-- progress_bar: Label "progress_bar" only if BOTH are visible: a background track and a partial filled arc.
-- divider: horizontal or vertical separators (≈1-3 px) or thin bars; each divider is a separate tight box.
-- avatar: circular user/profile images (faces/initials). Square rounded photos → prefer image.
-- swipe_handle: grabbers/handles (e.g., bottom pill), tight on the handle only.
-- clock: analog face (one box).
-- image: photos/illustrations; if text overlays an image, annotate only the image.
-- graph: bounded plotting areas (lines/bars/pies/scatter/heatmaps/gauges).
-SPECIAL RULES
-- Neatly arranged components: For rows/columns of visually similar items at a common alignment (e.g., a row of icons), PREFER using the same category consistently for all items in that row/column IF they are ACTUALLY SIMILAR.
-- When a progress ring/bar or icon contains text inside it, annotate BOTH:
-    * the full ring/bar as "progress_bar" (include track + filled segment) or icon as "icon", and each distinct inner text with "text".
-    * The inner boxes are separate from the "progress_bar" or "icon" box; overlap is allowed.
-- For dividers:
-    * Always annotate thin vertical lead bars that appear at the start of a line (e.g., a blue | before the title) as "divider" with a tight bounding box separate from content after it.
-    * Always annotate the horizontal line BETWEEN two row/list items as "divider" with a tight bounding box. Typical thickness is 1-3 px.
-    * Do not merge these divider boxes with adjacent "text" or "container" boxes; each divider is its own box.
-- Maps: base map is image. Only annotate extra UI on top (chips, pins, zoom, search).
-- Rows/columns of similar pictograms: Do not group multiple icons; annotate each pictogram separately, label each as an individual icon.
-- Bounding box rules (integer pixels; x1<x2, y1<y2; fully inside image)
-- Boxes MUST BE TIGHT and PRECISE.
-- Prefer multiple small boxes over one large covering box.
-- No overlaps unless elements visibly overlap.
-- Do not annotate background or empty padding.
-STRICT OUTPUT (JSON only)
+- No padding/background. No cross-image context.
+- If an Icon sits on a button/FAB, annotate only the inner pictogram as Icon.
+- If a Button contains Icon or Text, annotate BOTH the Button and all inner elements separately.
+- Similar aligned icons/text → annotate individually.
+- Overlap allowed only when visually overlapping.
+- Prefer precise small boxes.
+Description format:
+- Icon/AppLogo: short phrase + color → "(color: #RRGGBB)".
+  e.g. "cloud and sun icon (color: #FFFFFF)".
+- Text: visible text content + color.
+  e.g. "Hello world! (color: #000000)".
+- Others (including Button, Graph, etc.): concise (≤10 words) visual description.
+  e.g. "line chart with blue and red lines".
+Output example:
 [
-  {"bbox_2d": [x1, y1, x2, y2], "label": "<class>"},
-  {"bbox_2d": [x1, y1, x2, y2], "label": "<class>"}
+  {"bbox": [10,20,60,70], "label": "Icon", "description": "bell icon (color: #F9F9F9)"},
+  {"bbox": [80,25,200,60], "label": "Text", "description": "Settings (color: #000000)"},
+  {"bbox": [70,15,210,75], "label": "Button", "description": "rectangular button with icon and text"}
 ]
-VALIDATION
-1. Integer coordinates; each bbox satisfies x1<x2 and y1<y2; fully inside image.
-2. Icon precision checks:
-    a. No icon box contains chip/button fill or padding; only the glyph strokes/shape.
-    b. For icons on solid shapes, only the icon is annotated (no outer container).
-3. Text grouping respected (spatially close + same style only).
-4. progress_bar/graph cover entire tracks/axes.
-5. For images with overlaid text: only image is annotated.
-6. For maps: only extra UI is annotated, not base map content.
 """.strip()
 
 def parse_grounding_response(text: str) -> List[Dict[str, Any]]:
@@ -98,15 +67,22 @@ def parse_grounding_response(text: str) -> List[Dict[str, Any]]:
     for i, item in enumerate(data):
         if not isinstance(item, dict):
             raise ValueError(f"Item {i} is not an object/dict")
-        if "bbox_2d" not in item or "label" not in item:
-            raise ValueError(f"Item {i} missing 'bbox_2d' or 'label'")
-        bbox = item["bbox_2d"]
+        # Support both new format (bbox) and legacy format (bbox_2d)
+        bbox_key = "bbox" if "bbox" in item else "bbox_2d"
+        if bbox_key not in item or "label" not in item:
+            raise ValueError(f"Item {i} missing '{bbox_key}' or 'label'")
+        bbox = item[bbox_key]
         if (not isinstance(bbox, list)) or len(bbox) != 4 or not all(isinstance(v, (int, float)) for v in bbox):
-            raise ValueError(f"Item {i} has invalid 'bbox_2d' (must be 4 numbers)")
+            raise ValueError(f"Item {i} has invalid '{bbox_key}' (must be 4 numbers)")
         label = item["label"]
         if not isinstance(label, str):
             raise ValueError(f"Item {i} has non-string 'label'")
-        out.append({"bbox_2d": bbox, "label": label})
+        # Normalize to bbox_2d for internal processing
+        result = {"bbox_2d": bbox, "label": label}
+        # Preserve description if present
+        if "description" in item:
+            result["description"] = item["description"]
+        out.append(result)
     return out
 
 def get_image_size_from_bytes(image_bytes: bytes) -> Tuple[int, int]:
