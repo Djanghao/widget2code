@@ -132,16 +132,24 @@ Node properties: `content` (for text display)
 
 ### Slider
 Props: `value`, `enabled`, `color`, `thumbColor`, `thumbSize`, `width`, `height`
-- A horizontal slider control consisting of a track bar with a circular thumb/knob positioned along it
-- Visual appearance: a horizontal rounded bar with the left portion filled (from 0 to current value) and a circular thumb indicator at the value position
-- `value`: Current value from 0-100 (e.g., 75)
-- `enabled`: Boolean, set to `false` for disabled/muted appearance (default: true)
-- `color`: Color of the filled portion of the slider track (e.g., "#007AFF", "#34C759")
-- `thumbColor`: Color of the circular slider thumb/knob (default: "#f0f0f0")
-- `thumbSize`: Size of the circular thumb in pixels (optional, defaults to `height * 5`)
-- `width`: Width of the slider in pixels (e.g., 200)
-- `height`: Height/thickness of the slider track in pixels (e.g., 4, 6)
+- Visual appearance: horizontal rounded bar with left portion filled and a circular thumb at the value position
+- `value`: Current value 0-100
+- `enabled`: Boolean (default: true)
+- `color`: Filled track color
+- `thumbColor`: Circular thumb color (default: "#f0f0f0")
+- `thumbSize`: Thumb size in pixels (optional, defaults to `height * 5`)
+- `width`, `height`: Dimensions in pixels
 - Typically `flex: 0` or `flex: "none"`
+
+### Switch
+Props: `on`, `onColor`, `offColor`, `thumbColor`, `width`, `height`
+- Visual appearance: rounded pill with circular thumb on left (off) or right (on)
+- `on`: Boolean state
+- `onColor`: Background when on (e.g., "#34C759")
+- `offColor`: Background when off (e.g., "#e0e0e0")
+- `thumbColor`: Thumb color (default: "#ffffff")
+- `width`, `height`: Dimensions in pixels (default: 51×31)
+- Typically `flex: "none"`
 
 ## Layout System
 
@@ -178,7 +186,7 @@ All layouts use **flexbox containers**. There are two node types:
 ```json
 {
   "type": "leaf",
-  "component": "Text" | "Icon" | "Button" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator" | "Slider" | "ProgressRing",
+  "component": "Text" | "Icon" | "Button" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator" | "Slider" | "Switch" | "ProgressRing",
   "flex": number | "none" | 0 | 1,
   "width": number | string (optional, for layout control),
   "height": number | string (optional, for layout control),
@@ -408,6 +416,51 @@ Output:
               "content": "June 7, 2020"
             }
           ]
+        }
+      ]
+    }
+  }
+}
+```
+
+### Example 3: Switch and Slider
+
+Input: Widget with Wi-Fi switch (on) and brightness slider at 70%
+
+Output:
+```json
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Switch",
+          "flex": "none",
+          "props": {
+            "on": true,
+            "onColor": "#34C759",
+            "width": 51,
+            "height": 31
+          }
+        },
+        {
+          "type": "leaf",
+          "component": "Slider",
+          "flex": 0,
+          "props": {
+            "value": 70,
+            "color": "#FF9500",
+            "width": 200,
+            "height": 4
+          }
         }
       ]
     }
