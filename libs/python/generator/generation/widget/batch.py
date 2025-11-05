@@ -248,9 +248,10 @@ class BatchGenerator:
                         # Map stage names to numbered files
                         stage_map = {
                             'stage1_base': '1-base.md',
-                            'stage2_withGraphs': '2-with-graphs.md',
-                            'stage3_withIcons': '3-with-icons.md',
-                            'stage4_final': '4-final.md'
+                            'stage2_withColors': '2-with-colors.md',
+                            'stage3_withGraphs': '3-with-graphs.md',
+                            'stage4_withIcons': '4-with-icons.md',
+                            'stage5_final': '5-final.md'
                         }
                         filename = stage_map.get(stage_name)
                         if filename:

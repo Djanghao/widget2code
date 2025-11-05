@@ -465,13 +465,28 @@ async def generate_widget_full(
         # Step 1: Base prompt
         base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
 
-        # Step 2: Add graph specs
+        # Step 2: Detect and inject colors
+        from ...perception.color_extraction import (
+            detect_and_process_colors,
+            inject_colors_to_prompt,
+            format_color_injection
+        )
+        color_results = detect_and_process_colors(
+            image_bytes=image_bytes,
+            filename=image_filename,
+            n_colors=10,
+            k_clusters=8
+        )
+        color_injection_text = format_color_injection(color_results)
+        prompt_with_colors = inject_colors_to_prompt(base_prompt, color_results)
+
+        # Step 3: Add graph specs
         from ...perception.graph.pipeline import format_graph_specs_for_injection
         graph_injection_text = format_graph_specs_for_injection(graph_specs) if graph_specs else ""
 
-        prompt_with_graphs = inject_graph_specs_to_prompt(base_prompt, graph_specs)
+        prompt_with_graphs = inject_graph_specs_to_prompt(prompt_with_colors, graph_specs)
 
-        # Step 3: Add icon specs
+        # Step 4: Add icon specs
         icon_injection_text = format_icon_prompt_injection(
             icon_count=icon_count,
             per_icon_details=per_icon_details,
@@ -484,7 +499,7 @@ async def generate_widget_full(
         else:
             prompt_with_icons = prompt_with_icons + "\n\n" + icon_injection_text
 
-        # Step 4: Add available components list
+        # Step 5: Add available components list
         components_list = get_available_components_list(graph_specs)
         prompt_final = prompt_with_icons
         if "[AVAILABLE_COMPONENTS]" in prompt_final:
@@ -567,6 +582,16 @@ async def generate_widget_full(
                     "injectedText": icon_injection_text,
                 }
             },
+            "colorDebugInfo": {
+                "detection": {
+                    "hasColors": len(color_results) > 0,
+                    "colorCount": len(color_results),
+                },
+                "colors": color_results,
+                "promptInjection": {
+                    "injectedText": color_injection_text,
+                }
+            },
             "graphDebugInfo": {
                 "detection": {
                     "chartCounts": chart_counts,
@@ -581,10 +606,12 @@ async def generate_widget_full(
             },
             "promptDebugInfo": {
                 "stage1_base": base_prompt,
-                "stage2_withGraphs": prompt_with_graphs,
-                "stage3_withIcons": prompt_with_icons,
-                "stage4_final": prompt_final,
+                "stage2_withColors": prompt_with_colors,
+                "stage3_withGraphs": prompt_with_graphs,
+                "stage4_withIcons": prompt_with_icons,
+                "stage5_final": prompt_final,
                 "injections": {
+                    "color": color_injection_text,
                     "graph": graph_injection_text,
                     "icon": icon_injection_text,
                     "components": components_list,

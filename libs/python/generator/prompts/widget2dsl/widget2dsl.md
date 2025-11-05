@@ -38,6 +38,9 @@ Props: `name`, `size`, `color`
 [AVAILABLE_ICON_NAMES]
 - Can have `flex` prop (typically `"none"` for icons)
 
+### Color Palette
+[COLOR_PALETTE]
+
 ### Button
 Props: `icon` (optional), `backgroundColor`, `color`, `borderRadius`, `fontSize`, `fontWeight`, `padding`
 Node properties: `width` (optional), `height` (optional), `content` (for text buttons)
