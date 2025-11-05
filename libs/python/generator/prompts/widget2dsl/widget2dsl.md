@@ -133,6 +133,19 @@ Node properties: `content` (for text display)
 - `backgroundColor`: Color of the background track
 - Typically `flex: "none"`
 
+### Slider
+Props: `value`, `enabled`, `color`, `thumbColor`, `thumbSize`, `width`, `height`
+- A horizontal slider control consisting of a track bar with a circular thumb/knob positioned along it
+- Visual appearance: a horizontal rounded bar with the left portion filled (from 0 to current value) and a circular thumb indicator at the value position
+- `value`: Current value from 0-100 (e.g., 75)
+- `enabled`: Boolean, set to `false` for disabled/muted appearance (default: true)
+- `color`: Color of the filled portion of the slider track (e.g., "#007AFF", "#34C759")
+- `thumbColor`: Color of the circular slider thumb/knob (default: "#f0f0f0")
+- `thumbSize`: Size of the circular thumb in pixels (optional, defaults to `height * 5`)
+- `width`: Width of the slider in pixels (e.g., 200)
+- `height`: Height/thickness of the slider track in pixels (e.g., 4, 6)
+- Typically `flex: 0` or `flex: "none"`
+
 ## Layout System
 
 All layouts use **flexbox containers**. There are two node types:
@@ -168,7 +181,7 @@ All layouts use **flexbox containers**. There are two node types:
 ```json
 {
   "type": "leaf",
-  "component": "Text" | "Icon" | "Button" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator",
+  "component": "Text" | "Icon" | "Button" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator" | "Slider" | "ProgressRing",
   "flex": number | "none" | 0 | 1,
   "width": number | string (optional, for layout control),
   "height": number | string (optional, for layout control),

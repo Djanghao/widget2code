@@ -11,6 +11,7 @@ export { Image } from "./Image.jsx";
 export { Checkbox } from "./Checkbox.jsx";
 export { Indicator } from "./Indicator.jsx";
 export { Divider } from "./Divider.jsx";
+export { Slider } from "./Slider.jsx";
 
 export { LineChart } from "./LineChart.jsx";
 export { BarChart } from "./BarChart.jsx";
@@ -31,6 +32,7 @@ export const AVAILABLE_COMPONENTS = [
   'Checkbox',
   'Indicator',
   'Divider',
+  'Slider',
   'LineChart',
   'BarChart',
   'StackedBarChart',

@@ -12,6 +12,7 @@ export const AVAILABLE_COMPONENTS = [
   'Checkbox',
   'Indicator',
   'Divider',
+  'Slider',
   'LineChart',
   'BarChart',
   'StackedBarChart',
