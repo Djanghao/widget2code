@@ -75,10 +75,13 @@ llm-widget-factory/
 │   │   └── dynamic/      # Dynamic imports
 │   └── python/           # Python package
 │       └── generator/    # AI-powered widget generation
+├── tools/                # Evaluation and analysis tools
+│   └── evaluation/       # Widget quality metrics & hard case analysis
 └── scripts/              # Shell scripts for workflows
     ├── generation/       # Widget generation scripts
     ├── rendering/        # Compilation & rendering
     ├── pipeline/         # End-to-end workflows
+    ├── evaluation/       # Quality evaluation scripts
     ├── dev/              # Development servers
     └── setup/            # Installation
 ```
@@ -272,6 +275,20 @@ All scripts have been tested and verified:
 
 See [Test Report](results/script-tests/TEST_REPORT.md) for details.
 
+## Evaluation
+
+Evaluate widget generation quality and analyze hard cases:
+
+```bash
+# Setup evaluation environment (first time only)
+./tools/evaluation/setup.sh
+
+# Run evaluation
+./scripts/evaluation/run_evaluation.sh <results-dir> <output-dir>
+```
+
+See [tools/evaluation/README.md](./tools/evaluation/README.md) for details.
+
 ## Implementation Details
 
 ### WidgetDSL Format
@@ -341,6 +358,9 @@ See [scripts/README.md](./scripts/README.md) for complete documentation.
 # Pipeline
 ./scripts/pipeline/run-full.sh <image> <output-dir>
 ./scripts/pipeline/run-batch-full.sh <input-dir> <output-dir> [concurrency]
+
+# Evaluation
+./scripts/evaluation/run_evaluation.sh <results-dir> <output-dir>
 
 # Development
 ./scripts/dev/start-dev.sh      # Frontend server
