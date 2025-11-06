@@ -19,6 +19,9 @@ Props: `backgroundColor` (hex), `borderRadius` (number), `padding` (number), `as
 
 [LAYOUT_INFO]
 
+### Color Palette
+[COLOR_PALETTE]
+
 ### Text
 Props: `fontSize` (number), `color` (hex), `align` (left/center/right), `fontWeight` (number), `lineHeight` (number)
 - `fontWeight`: 300 (light), 400 (normal), 500 (medium), 600 (semibold), 700 (bold)
@@ -31,9 +34,6 @@ Props: `name` (string with prefix:Name), `size` (number), `color` (hex)
 - Prefixes: `ai`, `bi`, `bs`, `cg`, `ci`, `di`, `fa`, `fa6`, `fc`, `fi`, `gi`, `go`, `gr`, `hi`, `hi2`, `im`, `io`, `io5`, `lia`, `lu`, `md`, `pi`, `ri`, `rx`, `sf`, `si`, `sl`, `tb`, `tfi`, `ti`, `vsc`, `wi`
 [AVAILABLE_ICON_NAMES]
 - Example: `{"type": "leaf", "component": "Icon", "flex": "none", "props": {"name": "sf:SfHeart", "size": 24, "color": "#FF0000"}}`
-
-### Color Palette
-[COLOR_PALETTE]
 
 ### Button
 Props: `icon` (icon name), `backgroundColor` (hex), `color` (hex), `borderRadius` (number), `fontSize` (number), `fontWeight` (number), `padding` (number), `content` (text)

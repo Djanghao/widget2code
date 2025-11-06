@@ -102,9 +102,9 @@ def inject_colors_to_prompt(base_prompt: str, colors: List[Tuple[str, float]]) -
         # Replace placeholder with color data
         return base_prompt.replace("[COLOR_PALETTE]", color_text)
     else:
-        # Insert before Graph section as fallback
-        if "### Graph" in base_prompt:
-            return base_prompt.replace("### Graph", f"### Color Palette\n{color_text}\n\n### Graph")
+        # Insert before Text section as fallback (colors should come before components that use them)
+        if "### Text" in base_prompt:
+            return base_prompt.replace("### Text", f"### Color Palette\n{color_text}\n\n### Text")
         else:
-            # If Graph section not found, append at the end
+            # If Text section not found, append at the end
             return f"{base_prompt}\n\n### Color Palette\n{color_text}"
