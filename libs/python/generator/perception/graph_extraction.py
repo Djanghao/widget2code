@@ -9,12 +9,13 @@ def detect_and_process_graphs(
     image_bytes: bytes,
     filename: Optional[str],
     provider: Optional[str],
-    api_key: str,
+    api_key: str,  # For graph detection
     model: str,
     temperature: float,
     max_tokens: int,
     timeout: int,
     max_retries: int,
+    graph_gen_api_key: Optional[str] = None,  # For graph generation (optional)
 ) -> tuple[dict, list]:
     image_id = Path(filename).stem if filename else "unknown"
 
@@ -35,19 +36,21 @@ def detect_and_process_graphs(
 
     graph_specs = []
     if should_use_graph_pipeline(chart_counts):
+        # Use dedicated graph_gen_api_key if provided, otherwise fallback to api_key
+        gen_key = graph_gen_api_key if graph_gen_api_key else api_key
         graph_specs = process_graphs_in_image(
             image_bytes=image_bytes,
             filename=filename,
             chart_counts=chart_counts,
             provider=provider,
-            api_key=api_key,
+            api_key=gen_key,  # Use dedicated key for graph generation
             model=model,
             temperature=0.3,
             max_tokens=3000,
             timeout=60,
             max_retries=2
         )
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Graph processing: {len(graph_specs)} specs")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Graph generation: {len(graph_specs)} specs")
 
     return chart_counts, graph_specs
 

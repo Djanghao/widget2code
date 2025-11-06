@@ -49,7 +49,31 @@ class BatchGenerator:
         self.output_dir = output_dir
         self.concurrency = concurrency
         self.config = GeneratorConfig.from_env()
-        self.api_key = api_key or os.getenv("DASHSCOPE_API_KEY")
+
+        # Read base API key
+        base_api_key = api_key or os.getenv("DASHSCOPE_API_KEY")
+
+        # Read specialized API keys (with fallback to base key)
+        # These allow using different accounts for parallel tasks to bypass rate limits
+        self.layout_api_key = os.getenv("DASHSCOPE_LAYOUT_API_KEY") or base_api_key
+        self.graph_det_api_key = os.getenv("DASHSCOPE_GRAPH_DET_API_KEY") or base_api_key
+        self.graph_gen_api_key = os.getenv("DASHSCOPE_GRAPH_GEN_API_KEY") or base_api_key
+        self.dsl_gen_api_key = os.getenv("DASHSCOPE_DSL_GEN_API_KEY") or base_api_key
+
+        # Track which keys are using fallback
+        self.missing_keys = []
+        if not os.getenv("DASHSCOPE_LAYOUT_API_KEY"):
+            self.missing_keys.append("DASHSCOPE_LAYOUT_API_KEY")
+        if not os.getenv("DASHSCOPE_GRAPH_DET_API_KEY"):
+            self.missing_keys.append("DASHSCOPE_GRAPH_DET_API_KEY")
+        if not os.getenv("DASHSCOPE_GRAPH_GEN_API_KEY"):
+            self.missing_keys.append("DASHSCOPE_GRAPH_GEN_API_KEY")
+        if not os.getenv("DASHSCOPE_DSL_GEN_API_KEY"):
+            self.missing_keys.append("DASHSCOPE_DSL_GEN_API_KEY")
+
+        # Keep for backward compatibility
+        self.api_key = base_api_key
+
         self.model = model or self.config.default_model
         self.icon_lib_names = icon_lib_names
 
@@ -181,7 +205,11 @@ class BatchGenerator:
                 image_filename=image_path.name,
                 system_prompt=None,
                 model=self.model,
-                api_key=self.api_key,
+                api_key=self.api_key,  # Keep for backward compatibility
+                layout_api_key=self.layout_api_key,          # Dedicated key for layout detection
+                graph_det_api_key=self.graph_det_api_key,    # Dedicated key for graph detection
+                graph_gen_api_key=self.graph_gen_api_key,    # Dedicated key for graph generation
+                dsl_gen_api_key=self.dsl_gen_api_key,        # Dedicated key for DSL generation
                 retrieval_topk=self.config.retrieval_topk,
                 retrieval_topm=self.config.retrieval_topm,
                 retrieval_alpha=self.config.retrieval_alpha,
@@ -569,6 +597,19 @@ class BatchGenerator:
         log_to_console(f"  Concurrency: {self.concurrency}", Colors.BRIGHT_GREEN)
         log_to_console(f"  Max File Size: {self.config.max_file_size_mb}MB")
         log_to_console(f"  Max Requests/Min: {self.config.max_requests_per_minute}")
+        log_to_console("")
+
+        # Warn if using fallback API keys
+        if self.missing_keys:
+            log_to_console("API Keys Configuration:", Colors.BRIGHT_YELLOW)
+            log_to_console(f"  ⚠️  WARNING: Using fallback DASHSCOPE_API_KEY for {len(self.missing_keys)} API calls", Colors.BRIGHT_RED)
+            log_to_console(f"  Missing specialized keys: {', '.join(self.missing_keys)}", Colors.RED)
+            log_to_console(f"  This may cause rate limiting issues during batch processing.", Colors.RED)
+            log_to_console(f"  To maximize throughput, configure these keys in .env file:", Colors.YELLOW)
+            for key in self.missing_keys:
+                log_to_console(f"    - {key}", Colors.DIM)
+            log_to_console("")
+
         log_to_console(separator(), Colors.CYAN)
 
         if not self.api_key:

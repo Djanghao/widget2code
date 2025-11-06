@@ -384,15 +384,43 @@ async def generate_widget_full(
     image_filename: str | None,
     system_prompt: str,
     model: str,
-    api_key: str,
+    api_key: str,  # Keep for backward compatibility (defaults for all if specialized keys not provided)
     retrieval_topk: int,
     retrieval_topm: int,
     retrieval_alpha: float,
     config: GeneratorConfig,
     icon_lib_names: str,
+    layout_api_key: str = None,      # Dedicated API key for layout detection
+    graph_det_api_key: str = None,   # Dedicated API key for graph detection
+    graph_gen_api_key: str = None,   # Dedicated API key for graph generation
+    dsl_gen_api_key: str = None,     # Dedicated API key for DSL generation
 ):
     from pathlib import Path
     image_id = Path(image_filename).stem if image_filename else "unknown"
+
+    # Fallback: use base api_key if specialized keys not provided
+    # Track which keys are using fallback for warning
+    fallback_keys = []
+
+    if layout_api_key is None:
+        layout_api_key = api_key
+        fallback_keys.append("DASHSCOPE_LAYOUT_API_KEY")
+    if graph_det_api_key is None:
+        graph_det_api_key = api_key
+        fallback_keys.append("DASHSCOPE_GRAPH_DET_API_KEY")
+    if graph_gen_api_key is None:
+        graph_gen_api_key = api_key
+        fallback_keys.append("DASHSCOPE_GRAPH_GEN_API_KEY")
+    if dsl_gen_api_key is None:
+        dsl_gen_api_key = api_key
+        fallback_keys.append("DASHSCOPE_DSL_GEN_API_KEY")
+
+    # Log warning if any specialized keys are missing (only to log file, not console)
+    if fallback_keys:
+        from ...utils.logger import log_to_file
+        from datetime import datetime
+        warning_msg = f"⚠️  Using fallback DASHSCOPE_API_KEY for {len(fallback_keys)} API calls: {', '.join(fallback_keys)}"
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] {warning_msg}")
 
     import tempfile
     import asyncio
@@ -422,7 +450,7 @@ async def generate_widget_full(
             image_bytes=image_bytes,
             filename=image_filename,
             model=(model or "qwen3-vl-flash"),
-            api_key=api_key,
+            api_key=layout_api_key,  # Use dedicated layout API key
             timeout=config.timeout,
             image_id=image_id,
         )
@@ -448,7 +476,7 @@ async def generate_widget_full(
                 image_bytes=image_bytes,
                 filename=image_filename,
                 model=(model or "qwen3-vl-flash"),
-                api_key=api_key,
+                api_key=api_key,  # Icon retrieval doesn't need API key (local), but kept for compatibility
                 layout_detections=layout_post,  # NEW: Pass layout results
                 img_width=img_width,            # NEW: Pass image dimensions
                 img_height=img_height,
@@ -463,12 +491,13 @@ async def generate_widget_full(
                 image_bytes=image_bytes,
                 filename=image_filename,
                 provider=None,
-                api_key=api_key,
+                api_key=graph_det_api_key,  # Use dedicated graph detection API key
                 model=model_to_use,
                 temperature=0.1,
                 max_tokens=500,
                 timeout=config.timeout,
                 max_retries=2,
+                graph_gen_api_key=graph_gen_api_key,  # Use dedicated graph generation API key
             )
         )
 
@@ -546,7 +575,7 @@ async def generate_widget_full(
             max_tokens=32768,
             timeout=config.timeout,
             system_prompt=prompt_final,
-            api_key=api_key
+            api_key=dsl_gen_api_key  # Use dedicated DSL generation API key
         )
 
         image_content = prepare_image_content(temp_file_path)
