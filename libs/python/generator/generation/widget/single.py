@@ -396,6 +396,11 @@ async def generate_widget_full(
     dsl_gen_api_key: str = None,     # Dedicated API key for DSL generation
 ):
     from pathlib import Path
+    from datetime import datetime
+    from ...utils.logger import log_to_file
+    import tempfile
+    import asyncio
+
     image_id = Path(image_filename).stem if image_filename else "unknown"
 
     # Fallback: use base api_key if specialized keys not provided
@@ -417,13 +422,8 @@ async def generate_widget_full(
 
     # Log warning if any specialized keys are missing (only to log file, not console)
     if fallback_keys:
-        from ...utils.logger import log_to_file
-        from datetime import datetime
         warning_msg = f"⚠️  Using fallback DASHSCOPE_API_KEY for {len(fallback_keys)} API calls: {', '.join(fallback_keys)}"
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] {warning_msg}")
-
-    import tempfile
-    import asyncio
     temp_file = None
     try:
         validate_file_size(len(image_data), config.max_file_size_mb)
