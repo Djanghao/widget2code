@@ -241,19 +241,22 @@ class BatchGenerator:
                     json.dump(layout_data, f, indent=2)
 
             # 4. Generate layout visualization
+            # Use preprocessed image because bbox coordinates are based on preprocessed dimensions
             layout_detections = layout_debug.get('postProcessed', [])
+            visualization_image = preprocessed_bytes if preprocessed_bytes else image_data
             if layout_detections:
-                layout_viz = draw_grounding_visualization(image_data, layout_detections)
+                layout_viz = draw_grounding_visualization(visualization_image, layout_detections)
                 with open(layout_dir / "layout-visualization.png", 'wb') as f:
                     f.write(layout_viz)
 
             # 5. Crop icon regions
+            # Use preprocessed image because bbox coordinates are based on preprocessed dimensions
             icon_detections = [d for d in layout_detections if d.get('label', '').lower() == 'icon']
             for idx, det in enumerate(icon_detections):
                 bbox = det.get('bbox')
                 if bbox and len(bbox) == 4:
                     try:
-                        crop_bytes = crop_icon_region(image_data, bbox)
+                        crop_bytes = crop_icon_region(visualization_image, bbox)
                         with open(layout_crops_dir / f"icon-{idx+1}.png", 'wb') as f:
                             f.write(crop_bytes)
                     except Exception as e:
