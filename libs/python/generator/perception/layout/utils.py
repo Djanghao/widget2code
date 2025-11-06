@@ -76,6 +76,10 @@ def format_layout_for_prompt(
     lines.append("")
     lines.append("### Complete Element List:")
 
+    # Add widget boundary as reference (normalized coordinates [0,1000])
+    aspect_ratio = round(img_width / img_height, 3) if img_height > 0 else 1.0
+    lines.append(f"0. Widget [0, 0, 1000, 1000] - \"entire widget boundary (aspect ratio: {aspect_ratio})\"")
+
     # List all detections with details
     for idx, det in enumerate(detections, 1):
         bbox = det.get('bbox', [])
