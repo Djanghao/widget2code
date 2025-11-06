@@ -482,6 +482,10 @@ async def generate_widget_full(
         # ========== Stage 1: Base Prompt ==========
         base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
 
+        # Fill in aspect ratio in base prompt
+        if "[ASPECT_RATIO]" in base_prompt:
+            base_prompt = base_prompt.replace("[ASPECT_RATIO]", str(round(aspect_ratio, 3)))
+
         # ========== Stage 2: Layout Injection (NEW) ==========
         from ...perception.layout import format_layout_for_prompt
 
@@ -491,11 +495,8 @@ async def generate_widget_full(
         if "[LAYOUT_INFO]" in prompt_with_layout:
             prompt_with_layout = prompt_with_layout.replace("[LAYOUT_INFO]", layout_injection_text)
         else:
-            # Fallback: append after aspect ratio placeholder
-            prompt_with_layout = prompt_with_layout.replace(
-                "[ASPECT_RATIO]",
-                f"[ASPECT_RATIO]\n\n{layout_injection_text}"
-            )
+            # Fallback: append at the end (aspect ratio already filled in stage 1)
+            prompt_with_layout = prompt_with_layout + f"\n\n{layout_injection_text}"
 
         # ========== Stage 3: Colors (was Stage 2) ==========
         from ...perception.color_extraction import (
