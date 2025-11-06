@@ -129,8 +129,8 @@ class BatchGenerator:
         prompts_dir = widget_dir / "prompts"
 
         preprocess_dir = artifacts_dir / "1-preprocess"
-        grounding_dir = artifacts_dir / "2-grounding"
-        grounding_crops_dir = grounding_dir / "crops"
+        layout_dir = artifacts_dir / "2-layout"  # Renamed from 2-grounding
+        layout_crops_dir = layout_dir / "icon-crops"  # Renamed from crops
         retrieval_dir = artifacts_dir / "3-retrieval"
         dsl_dir = artifacts_dir / "4-dsl"
 
@@ -138,8 +138,8 @@ class BatchGenerator:
         log_dir.mkdir(parents=True, exist_ok=True)
         prompts_dir.mkdir(parents=True, exist_ok=True)
         preprocess_dir.mkdir(parents=True, exist_ok=True)
-        grounding_dir.mkdir(parents=True, exist_ok=True)
-        grounding_crops_dir.mkdir(parents=True, exist_ok=True)
+        layout_dir.mkdir(parents=True, exist_ok=True)
+        layout_crops_dir.mkdir(parents=True, exist_ok=True)
         retrieval_dir.mkdir(parents=True, exist_ok=True)
         dsl_dir.mkdir(parents=True, exist_ok=True)
 
@@ -191,6 +191,7 @@ class BatchGenerator:
 
             # Extract data from result
             widget_dsl = result.get('widgetDSL', result) if isinstance(result, dict) else result
+            layout_debug = result.get('layoutDebugInfo', {}) if isinstance(result, dict) else {}  # NEW
             icon_debug = result.get('iconDebugInfo', {}) if isinstance(result, dict) else {}
             graph_debug = result.get('graphDebugInfo', {}) if isinstance(result, dict) else {}
             prompt_debug = result.get('promptDebugInfo', {}) if isinstance(result, dict) else {}
@@ -209,22 +210,23 @@ class BatchGenerator:
                 with open(preprocess_dir / "1.2-preprocessed.png", 'wb') as f:
                     f.write(preprocessed_bytes)
 
-            # 3. Save grounding data (raw JSON with complete metadata)
-            if icon_debug.get('grounding'):
-                raw_detections = icon_debug['grounding'].get('raw', [])
-                pixel_detections = icon_debug['grounding'].get('pixel', [])
-                post_processed = icon_debug['grounding'].get('postProcessed', [])
+            # 3. Save layout data (NEW: replaces grounding data)
+            label_counts = {}  # Initialize outside if block to avoid NameError
+
+            if layout_debug:
+                raw_detections = layout_debug.get('raw', [])
+                pixel_detections = layout_debug.get('pixel', [])
+                post_processed = layout_debug.get('postProcessed', [])
 
                 # Count detections by label
-                label_counts = {}
                 for det in post_processed:
                     label = det.get('label', 'unknown')
                     label_counts[label] = label_counts.get(label, 0) + 1
 
-                grounding_data = {
+                layout_data = {
                     "metadata": {
-                        "imageWidth": image_dims.get('width') if image_dims else None,
-                        "imageHeight": image_dims.get('height') if image_dims else None,
+                        "imageWidth": layout_debug.get('imageWidth'),
+                        "imageHeight": layout_debug.get('imageHeight'),
                         "totalDetections": len(post_processed),
                         "detectionsByLabel": label_counts,
                         "generatedAt": datetime.now().isoformat()
@@ -235,22 +237,27 @@ class BatchGenerator:
                         "postProcessed": post_processed
                     }
                 }
-                with open(grounding_dir / "grounding-data.json", 'w') as f:
-                    json.dump(grounding_data, f, indent=2)
+                with open(layout_dir / "layout-data.json", 'w') as f:
+                    json.dump(layout_data, f, indent=2)
 
-            # 4. Generate grounding visualization
-            grounding_detections = icon_debug.get('grounding', {}).get('postProcessed', [])
-            if grounding_detections:
-                grounding_viz = draw_grounding_visualization(image_data, grounding_detections)
-                with open(grounding_dir / "grounding.png", 'wb') as f:
-                    f.write(grounding_viz)
+            # 4. Generate layout visualization
+            layout_detections = layout_debug.get('postProcessed', [])
+            if layout_detections:
+                layout_viz = draw_grounding_visualization(image_data, layout_detections)
+                with open(layout_dir / "layout-visualization.png", 'wb') as f:
+                    f.write(layout_viz)
 
             # 5. Crop icon regions
-            icon_detections = [d for d in grounding_detections if d.get('label') == 'icon']
+            icon_detections = [d for d in layout_detections if d.get('label', '').lower() == 'icon']
             for idx, det in enumerate(icon_detections):
-                crop_bytes = crop_icon_region(image_data, det['bbox'])
-                with open(grounding_crops_dir / f"icon-{idx+1}.png", 'wb') as f:
-                    f.write(crop_bytes)
+                bbox = det.get('bbox')
+                if bbox and len(bbox) == 4:
+                    try:
+                        crop_bytes = crop_icon_region(image_data, bbox)
+                        with open(layout_crops_dir / f"icon-{idx+1}.png", 'wb') as f:
+                            f.write(crop_bytes)
+                    except Exception as e:
+                        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Warning: Failed to crop icon {idx+1}: {str(e)}")
 
             # 5. Save retrieval SVGs
             svg_source_dirs = [
@@ -274,13 +281,14 @@ class BatchGenerator:
             if prompt_debug:
                 for stage_name, prompt_text in prompt_debug.items():
                     if isinstance(prompt_text, str) and stage_name.startswith('stage'):
-                        # Map stage names to numbered files
+                        # Map stage names to numbered files (NEW: updated for 6 stages)
                         stage_map = {
                             'stage1_base': '1-base.md',
-                            'stage2_withColors': '2-with-colors.md',
-                            'stage3_withGraphs': '3-with-graphs.md',
-                            'stage4_withIcons': '4-with-icons.md',
-                            'stage5_final': '5-final.md'
+                            'stage2_withLayout': '2-with-layout.md',  # NEW
+                            'stage3_withColors': '3-with-colors.md',  # Renamed from 2
+                            'stage4_withGraphs': '4-with-graphs.md',  # Renamed from 3
+                            'stage5_withIcons': '5-with-icons.md',    # Renamed from 4
+                            'stage6_final': '6-final.md'              # Renamed from 5
                         }
                         filename = stage_map.get(stage_name)
                         if filename:
@@ -296,8 +304,12 @@ class BatchGenerator:
             icon_count = icon_debug.get('detection', {}).get('iconCount', 0)
             graph_count = graph_debug.get('detection', {}).get('graphCount', 0)
 
-            # Build file lists
-            icon_crop_files = [f"artifacts/2-grounding/crops/icon-{i+1}.png" for i in range(len(icon_detections))]
+            # Build file lists (only include files that were actually created)
+            icon_crop_files = [
+                f"artifacts/2-layout/icon-crops/icon-{i+1}.png"
+                for i in range(len(icon_detections))
+                if (layout_crops_dir / f"icon-{i+1}.png").exists()
+            ]
 
             retrieval_files = {}
             for icon_data in per_icon:
@@ -341,7 +353,14 @@ class BatchGenerator:
                     }
                 },
                 "steps": {
-                    "iconGrounding": icon_debug.get('grounding', {}),
+                    "layoutDetection": {  # NEW: Layout detection
+                        "totalElements": layout_debug.get('totalDetections', 0),
+                        "elementsByType": label_counts,
+                        "imageSize": {
+                            "width": layout_debug.get('imageWidth'),
+                            "height": layout_debug.get('imageHeight')
+                        }
+                    },
                     "iconRetrieval": icon_debug.get('retrieval', {}),
                     "iconDetection": icon_debug.get('detection', {}),
                     "graphDetection": graph_debug.get('detection', {}),
@@ -365,9 +384,10 @@ class BatchGenerator:
                             "original": "artifacts/1-preprocess/1.1-original.png",
                             "preprocessed": "artifacts/1-preprocess/1.2-preprocessed.png" if preprocessed_bytes else None
                         },
-                        "2_grounding": {
-                            "visualization": "artifacts/2-grounding/grounding.png" if grounding_detections else None,
-                            "crops": icon_crop_files
+                        "2_layout": {  # Renamed from 2_grounding
+                            "data": "artifacts/2-layout/layout-data.json",
+                            "visualization": "artifacts/2-layout/layout-visualization.png" if layout_detections else None,
+                            "iconCrops": icon_crop_files
                         },
                         "3_retrieval": retrieval_files,
                         "4_dsl": {
@@ -380,9 +400,11 @@ class BatchGenerator:
                     },
                     "prompts": {
                         "1_base": "prompts/1-base.md" if (prompts_dir / "1-base.md").exists() else None,
-                        "2_withGraphs": "prompts/2-with-graphs.md" if (prompts_dir / "2-with-graphs.md").exists() else None,
-                        "3_withIcons": "prompts/3-with-icons.md" if (prompts_dir / "3-with-icons.md").exists() else None,
-                        "4_final": "prompts/4-final.md" if (prompts_dir / "4-final.md").exists() else None
+                        "2_withLayout": "prompts/2-with-layout.md" if (prompts_dir / "2-with-layout.md").exists() else None,  # NEW
+                        "3_withColors": "prompts/3-with-colors.md" if (prompts_dir / "3-with-colors.md").exists() else None,  # Renamed
+                        "4_withGraphs": "prompts/4-with-graphs.md" if (prompts_dir / "4-with-graphs.md").exists() else None,  # Renamed
+                        "5_withIcons": "prompts/5-with-icons.md" if (prompts_dir / "5-with-icons.md").exists() else None,    # Renamed
+                        "6_final": "prompts/6-final.md" if (prompts_dir / "6-final.md").exists() else None                   # Renamed
                     }
                 },
                 "metadata": {

@@ -412,6 +412,24 @@ async def generate_widget_full(
         validate_model(model, model_to_use, vision_models)
         validate_api_key(api_key)
 
+        # ========== Layout Detection (NEW: Stage 0) ==========
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection started")
+
+        from ...perception.layout import detect_layout
+
+        layout_raw, layout_pixel, layout_post, img_width, img_height = await asyncio.to_thread(
+            detect_layout,
+            image_bytes=image_bytes,
+            filename=image_filename,
+            model=(model or "qwen3-vl-flash"),
+            api_key=api_key,
+            timeout=config.timeout,
+            image_id=image_id,
+        )
+
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection completed: {len(layout_post)} elements")
+
+        # ========== Icon & Graph Extraction (Parallel) ==========
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 Parallel extraction started")
 
         # Parse icon library names from JSON array, e.g., '["sf", "lucide"]'
@@ -431,6 +449,9 @@ async def generate_widget_full(
                 filename=image_filename,
                 model=(model or "qwen3-vl-flash"),
                 api_key=api_key,
+                layout_detections=layout_post,  # NEW: Pass layout results
+                img_width=img_width,            # NEW: Pass image dimensions
+                img_height=img_height,
                 retrieval_topk=retrieval_topk,
                 retrieval_topm=retrieval_topm,
                 retrieval_alpha=retrieval_alpha,
@@ -453,19 +474,30 @@ async def generate_widget_full(
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Parallel extraction: Icons:{icon_result['icon_count']}, Charts:{sum(chart_counts.values()) if chart_counts else 0}")
 
-        grounding_raw = icon_result["grounding_raw"]
-        grounding_pixel = icon_result["grounding_pixel"]
-        post_processed = icon_result["post_processed"]
+        # Extract icon results (NEW: no longer includes grounding data)
         per_icon_details = icon_result["per_icon_details"]
         icon_candidates = icon_result["icon_candidates"]
         icon_count = icon_result["icon_count"]
-        img_width = icon_result["img_width"]
-        img_height = icon_result["img_height"]
 
-        # Step 1: Base prompt
+        # ========== Stage 1: Base Prompt ==========
         base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
 
-        # Step 2: Detect and inject colors
+        # ========== Stage 2: Layout Injection (NEW) ==========
+        from ...perception.layout import format_layout_for_prompt
+
+        layout_injection_text = format_layout_for_prompt(layout_post, img_width, img_height)
+        prompt_with_layout = base_prompt
+
+        if "[LAYOUT_INFO]" in prompt_with_layout:
+            prompt_with_layout = prompt_with_layout.replace("[LAYOUT_INFO]", layout_injection_text)
+        else:
+            # Fallback: append after aspect ratio placeholder
+            prompt_with_layout = prompt_with_layout.replace(
+                "[ASPECT_RATIO]",
+                f"[ASPECT_RATIO]\n\n{layout_injection_text}"
+            )
+
+        # ========== Stage 3: Colors (was Stage 2) ==========
         from ...perception.color_extraction import (
             detect_and_process_colors,
             inject_colors_to_prompt,
@@ -478,15 +510,15 @@ async def generate_widget_full(
             k_clusters=8
         )
         color_injection_text = format_color_injection(color_results)
-        prompt_with_colors = inject_colors_to_prompt(base_prompt, color_results)
+        prompt_with_colors = inject_colors_to_prompt(prompt_with_layout, color_results)
 
-        # Step 3: Add graph specs
+        # ========== Stage 4: Graphs (was Stage 3) ==========
         from ...perception.graph.pipeline import format_graph_specs_for_injection
         graph_injection_text = format_graph_specs_for_injection(graph_specs) if graph_specs else ""
 
         prompt_with_graphs = inject_graph_specs_to_prompt(prompt_with_colors, graph_specs)
 
-        # Step 4: Add icon specs
+        # ========== Stage 5: Icons (was Stage 4) ==========
         icon_injection_text = format_icon_prompt_injection(
             icon_count=icon_count,
             per_icon_details=per_icon_details,
@@ -499,7 +531,7 @@ async def generate_widget_full(
         else:
             prompt_with_icons = prompt_with_icons + "\n\n" + icon_injection_text
 
-        # Step 5: Add available components list
+        # ========== Stage 6: Components List (was Stage 5) ==========
         components_list = get_available_components_list(graph_specs)
         prompt_final = prompt_with_icons
         if "[AVAILABLE_COMPONENTS]" in prompt_final:
@@ -558,16 +590,23 @@ async def generate_widget_full(
                 "height": height,
                 "aspectRatio": aspect_ratio,
             },
+            "layoutDebugInfo": {  # NEW: Layout detection results
+                "raw": layout_raw,
+                "pixel": layout_pixel,
+                "postProcessed": layout_post,
+                "imageWidth": img_width,
+                "imageHeight": img_height,
+                "totalDetections": len(layout_post),
+                "promptInjection": {
+                    "injectedText": layout_injection_text,
+                }
+            },
             "iconDebugInfo": {
                 "detection": {
                     "iconCount": icon_count,
                     "imageSize": {"width": img_width, "height": img_height},
                 },
-                "grounding": {
-                    "raw": grounding_raw,
-                    "pixel": grounding_pixel,
-                    "postProcessed": post_processed,
-                },
+                # REMOVED: grounding (now in layoutDebugInfo)
                 "retrieval": {
                     "candidates": icon_candidates,
                     "perIcon": per_icon_details,
@@ -606,11 +645,13 @@ async def generate_widget_full(
             },
             "promptDebugInfo": {
                 "stage1_base": base_prompt,
-                "stage2_withColors": prompt_with_colors,
-                "stage3_withGraphs": prompt_with_graphs,
-                "stage4_withIcons": prompt_with_icons,
-                "stage5_final": prompt_final,
+                "stage2_withLayout": prompt_with_layout,      # NEW
+                "stage3_withColors": prompt_with_colors,      # Renamed from stage2
+                "stage4_withGraphs": prompt_with_graphs,      # Renamed from stage3
+                "stage5_withIcons": prompt_with_icons,        # Renamed from stage4
+                "stage6_final": prompt_final,                 # Renamed from stage5
                 "injections": {
+                    "layout": layout_injection_text,          # NEW
                     "color": color_injection_text,
                     "graph": graph_injection_text,
                     "icon": icon_injection_text,

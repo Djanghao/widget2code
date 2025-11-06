@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-vision_grounding_single_llm_memory.py (no-COCO)
-- Single image in (bytes)
+Layout Detection Module
+- Detects all UI elements in widget images (icons, text, buttons, etc.)
 - Single vision-LLM call → parse → Qwen-style [0,1000] → pixel coords
 - Post-process with post_process_pixel_detections
-- Return: [{"bbox":[x1,y1,x2,y2], "label":"icon"}, ...]
-- No filesystem I/O, no COCO conversion
+- Return: [{"bbox":[x1,y1,x2,y2], "label":"Icon", "description":"..."}, ...]
 """
 
 from __future__ import annotations
@@ -19,7 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from PIL import Image
 
 from provider_hub import LLM, ChatMessage
-from .post_process import post_process_pixel_detections
+from ..icon.post_process import post_process_pixel_detections
 
 DEFAULT_PROMPT = """
 You are an expert mobile-UI understanding assistant. OUTPUT JSON ONLY. Return a single array of objects:
@@ -51,7 +50,8 @@ Output example:
 ]
 """.strip()
 
-def parse_grounding_response(text: str) -> List[Dict[str, Any]]:
+def parse_layout_response(text: str) -> List[Dict[str, Any]]:
+    """Parse VLM response and extract layout detections."""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     fenced = re.match(r"^\s*```[a-zA-Z0-9_-]*\s*(.*?)\s*```\s*$", text, re.DOTALL)
@@ -86,11 +86,13 @@ def parse_grounding_response(text: str) -> List[Dict[str, Any]]:
     return out
 
 def get_image_size_from_bytes(image_bytes: bytes) -> Tuple[int, int]:
+    """Extract image dimensions from bytes."""
     with Image.open(io.BytesIO(image_bytes)) as img:
         w, h = img.size
     return int(w), int(h)
 
 def _guess_mime_from_filename(filename: Optional[str]) -> str:
+    """Guess MIME type from filename extension."""
     if not filename:
         return "image/png"
     name = filename.lower()
@@ -107,6 +109,7 @@ def _guess_mime_from_filename(filename: Optional[str]) -> str:
     return "image/png"
 
 def prepare_image_content_from_bytes(image_bytes: bytes, filename: Optional[str]) -> Dict[str, Any]:
+    """Prepare image content for VLM API."""
     mime = None
     try:
         with Image.open(io.BytesIO(image_bytes)) as im:
@@ -132,13 +135,13 @@ def prepare_image_content_from_bytes(image_bytes: bytes, filename: Optional[str]
     data_url = f"data:{mime};base64,{b64}"
     return {"type": "image_url", "image_url": {"url": data_url}}
 
-# Qwen [0,1000] → pixel detections
 def _scale_qwen_to_pixels(
     items: List[Dict[str, Any]],
     img_w: int,
     img_h: int,
     clamp_to_image: bool = True,
 ) -> List[Dict[str, Any]]:
+    """Convert Qwen [0,1000] coordinates to pixel coordinates."""
     dets: List[Dict[str, Any]] = []
     for it in items:
         rx1, ry1, rx2, ry2 = it["bbox_2d"]
@@ -161,19 +164,17 @@ def _scale_qwen_to_pixels(
         if (x2i - x1i) < 1 or (y2i - y1i) < 1:
             continue
 
-        dets.append({
+        det = {
             "bbox": [x1i, y1i, x2i, y2i],
-            "label": it.get("label", "icon"),
-        })
+            "label": it.get("label", "unknown"),
+        }
+        # Preserve description if present
+        if "description" in it:
+            det["description"] = it["description"]
+        dets.append(det)
     return dets
 
-# public API
-__all__ = [
-    "ground_single_image_with_stages",
-]
-
-
-def ground_single_image_with_stages(
+def detect_layout(
     *,
     image_bytes: bytes,
     filename: Optional[str] = None,
@@ -196,6 +197,39 @@ def ground_single_image_with_stages(
     pp_fallback_expand_pct: float = 0.15,
     image_id: Optional[str] = None,
 ) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]], int, int]:
+    """
+    Detect layout elements in a widget image.
+
+    Args:
+        image_bytes: Raw image bytes
+        filename: Optional filename (for logging)
+        prompt: Detection prompt (defaults to DEFAULT_PROMPT)
+        provider: LLM provider
+        api_key: API key
+        base_url: API base URL
+        model: Model name
+        temperature: Sampling temperature
+        top_p: Nucleus sampling parameter
+        max_tokens: Maximum response tokens
+        timeout: Request timeout in seconds
+        thinking: Enable thinking mode
+        stream: Enable streaming
+        stream_options: Stream options
+        clamp_to_image: Clamp boxes to image bounds
+        max_retries: Maximum retry attempts
+        pp_margin_pct: Post-process margin percentage
+        pp_min_area_ratio: Minimum area ratio for filtering
+        pp_fallback_expand_pct: Fallback expansion percentage
+        image_id: Optional image identifier (for logging)
+
+    Returns:
+        Tuple of (parsed_items, pixel_dets_pre, pixel_dets_post, img_w, img_h):
+            - parsed_items: Raw detections (bbox_2d in [0,1000])
+            - pixel_dets_pre: Pixel coordinates (pre-processing)
+            - pixel_dets_post: Post-processed detections (final)
+            - img_w: Image width
+            - img_h: Image height
+    """
     if not isinstance(image_bytes, (bytes, bytearray)):
         raise TypeError("image_bytes must be raw bytes")
 
@@ -205,7 +239,6 @@ def ground_single_image_with_stages(
         image_id = Path(filename).stem
 
     # Import logging utilities
-    import time
     from datetime import datetime
     try:
         from ...utils.logger import log_to_file
@@ -216,10 +249,10 @@ def ground_single_image_with_stages(
     overall_start = time.time()
 
     if has_logger and image_id:
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] Started")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] Started")
 
     try:
-        from .image_utils import preprocess_image_bytes_if_small
+        from ..icon.image_utils import preprocess_image_bytes_if_small
     except Exception:
         preprocess_image_bytes_if_small = None  # type: ignore
     if preprocess_image_bytes_if_small is not None:
@@ -261,7 +294,7 @@ def ground_single_image_with_stages(
     parsed_items: List[Dict[str, Any]] = []
 
     if has_logger and image_id:
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] VLM API call started (model={model})")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] VLM API call started (model={model})")
 
     vlm_start = time.time()
 
@@ -280,7 +313,7 @@ def ground_single_image_with_stages(
                 resp = vision_llm.chat(messages)
                 content_text = getattr(resp, "content", None) if not isinstance(resp, dict) else resp.get("content", "")
 
-            parsed_items = parse_grounding_response(content_text) if content_text else []
+            parsed_items = parse_layout_response(content_text) if content_text else []
             break
         except Exception as e:
             last_err = e
@@ -290,9 +323,9 @@ def ground_single_image_with_stages(
     vlm_duration = time.time() - vlm_start
 
     if has_logger and image_id:
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] VLM API call completed in {vlm_duration:.2f}s")
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] Parsing response...")
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] Raw detections: {len(parsed_items)}")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] VLM API call completed in {vlm_duration:.2f}s")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] Parsing response...")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] Raw detections: {len(parsed_items)}")
 
     pixel_dets_pre = _scale_qwen_to_pixels(
         items=parsed_items,
@@ -310,11 +343,18 @@ def ground_single_image_with_stages(
         clamp_to_image=True,
     )
 
-    icon_count = len([d for d in pixel_dets_post if d.get("label", "").lower() == "icon"])
+    total_detections = len(pixel_dets_post)
     overall_duration = time.time() - overall_start
 
     if has_logger and image_id:
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] Post-processed detections: {len(pixel_dets_post)} (icons: {icon_count})")
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Grounding] Completed in {overall_duration:.2f}s")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] Post-processed detections: {total_detections}")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] Completed in {overall_duration:.2f}s")
 
     return parsed_items, pixel_dets_pre, pixel_dets_post, img_w, img_h
+
+
+__all__ = [
+    "detect_layout",
+    "DEFAULT_PROMPT",
+    "parse_layout_response",
+]

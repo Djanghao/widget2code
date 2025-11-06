@@ -17,6 +17,7 @@ BBOX_COLORS = {
     'text': '#34C759',
     'graph': '#007AFF',
     'button': '#FF9500',
+    'image': '#AF52DE',
     'default': '#8E8E93'
 }
 
@@ -25,6 +26,7 @@ BBOX_WIDTHS = {
     'text': 2,
     'graph': 3,
     'button': 2,
+    'image': 3,
     'default': 2
 }
 
@@ -32,6 +34,7 @@ BBOX_WIDTHS = {
 BBOX_STYLES = {
     'icon': 'solid',
     'graph': 'solid',
+    'image': 'solid',
     'text': 'dashed',
     'button': 'dashed',
     'default': 'dashed'
@@ -143,19 +146,22 @@ def draw_grounding_visualization(
     grouped = {}
     labels_used = set()
     for det in detections:
-        label = det.get('label', 'default')
+        # Normalize label to lowercase for consistent lookup
+        label = det.get('label', 'default').lower()
         labels_used.add(label)
         if label not in grouped:
             grouped[label] = []
         grouped[label].append(det)
 
     # Draw order: dashed elements first, then solid (so icon/graph are on top)
-    draw_order = ['text', 'button', 'default', 'graph', 'icon']
+    # Separate labels by style for drawing order
+    solid_labels = [lbl for lbl in grouped.keys() if BBOX_STYLES.get(lbl, 'dashed') == 'solid']
+    dashed_labels = [lbl for lbl in grouped.keys() if BBOX_STYLES.get(lbl, 'dashed') == 'dashed']
 
-    for label in draw_order:
-        if label not in grouped:
-            continue
+    # Draw dashed first, then solid (so solid appears on top)
+    all_labels = dashed_labels + solid_labels
 
+    for label in all_labels:
         color = BBOX_COLORS.get(label, BBOX_COLORS['default'])
         width = BBOX_WIDTHS.get(label, BBOX_WIDTHS['default'])
         style = BBOX_STYLES.get(label, 'dashed')

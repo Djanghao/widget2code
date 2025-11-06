@@ -1,53 +1,62 @@
 import os
 from pathlib import Path
-from typing import Optional
+from typing import Any, Dict, List, Optional
 
 def run_icon_detection_pipeline(
     image_bytes: bytes,
     filename: Optional[str],
     model: str,
     api_key: str,
+    layout_detections: List[Dict],  # NEW: Accept layout detection results
+    img_width: int,                 # NEW: Image width
+    img_height: int,                # NEW: Image height
     retrieval_topk: int = 50,
     retrieval_topm: int = 10,
     retrieval_alpha: float = 0.8,
-    lib_names: Optional[list[str]] = None,
+    lib_names: Optional[List[str]] = None,
     timeout: int = 300,
-) -> dict:
+) -> Dict[str, Any]:
+    """
+    Run icon detection and retrieval pipeline.
+
+    NOTE: This function no longer performs grounding. It receives layout detection
+    results and filters for icons, then performs retrieval.
+
+    Args:
+        image_bytes: Raw image bytes
+        filename: Image filename
+        model: Model name (kept for potential future use)
+        api_key: API key (kept for potential future use)
+        layout_detections: Post-processed layout detection results
+        img_width: Image width in pixels
+        img_height: Image height in pixels
+        retrieval_topk: Top-K candidates for retrieval
+        retrieval_topm: Top-M candidates to keep
+        retrieval_alpha: Alpha parameter for retrieval scoring
+        lib_names: Icon library names
+        timeout: Timeout in seconds
+
+    Returns:
+        Dictionary with icon retrieval results
+    """
     from datetime import datetime
     from ..utils.logger import log_to_file
+    from .layout import get_icons_from_layout
 
     image_id = Path(filename).stem if filename else "unknown"
 
-    grounding_raw = []
-    grounding_pixel = []
-    post_processed = []
     per_icon_details = []
     icon_candidates = []
-    icon_count = 0
-    img_width = 0
-    img_height = 0
+    icon_count = 0  # Initialize to avoid NameError if try block fails
 
     try:
-        from .icon.grounding import ground_single_image_with_stages
         from .icon.query_embedding import query_from_detections_with_details
 
-        raw_dets, pixel_dets_pre, pixel_dets_post, img_width, img_height = ground_single_image_with_stages(
-            image_bytes=image_bytes,
-            filename=filename,
-            model=model,
-            api_key=api_key,
-            timeout=timeout,
-            image_id=image_id,
-        )
-
-        grounding_raw = raw_dets
-        grounding_pixel = pixel_dets_pre
-        post_processed = pixel_dets_post
-
-        icon_dets = [d for d in pixel_dets_post if str(d.get("label", "")).lower() == "icon"]
+        # Filter icons from layout detections (NEW: using layout module)
+        icon_dets = get_icons_from_layout(layout_detections)
         icon_count = len(icon_dets)
 
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Icon grounding: {icon_count} icons")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Icon grounding: {icon_count} icons (from layout)")
 
         # Resolve library roots from repo paths. If none provided, default to SF library.
         here = Path(__file__).resolve()
@@ -70,7 +79,7 @@ def run_icon_detection_pipeline(
             else:
                 try:
                     svg_names, per_icon_details = query_from_detections_with_details(
-                        detections=pixel_dets_post,
+                        detections=layout_detections,  # Changed: use layout_detections directly
                         image_bytes=image_bytes,
                         lib_roots=existing_roots,
                         filter_icon_only=True,
@@ -113,14 +122,9 @@ def run_icon_detection_pipeline(
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Traceback: {traceback.format_exc()}")
 
     return {
-        "grounding_raw": grounding_raw,
-        "grounding_pixel": grounding_pixel,
-        "post_processed": post_processed,
         "per_icon_details": per_icon_details,
         "icon_candidates": icon_candidates,
         "icon_count": icon_count,
-        "img_width": img_width,
-        "img_height": img_height,
     }
 
 def format_icon_prompt_injection(

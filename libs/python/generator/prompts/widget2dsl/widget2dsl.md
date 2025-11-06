@@ -17,6 +17,8 @@ Props: `backgroundColor` (hex), `borderRadius` (number), `padding` (number), `as
 - Must wrap entire widget
 - `aspectRatio`: [ASPECT_RATIO]
 
+[LAYOUT_INFO]
+
 ### Text
 Props: `fontSize` (number), `color` (hex), `align` (left/center/right), `fontWeight` (number), `lineHeight` (number)
 - `fontWeight`: 300 (light), 400 (normal), 500 (medium), 600 (semibold), 700 (bold)
