@@ -1,4 +1,4 @@
-from .validation import check_rate_limit, validate_model, validate_api_key, validate_file_size
+from .validation import validate_model, validate_api_key, validate_file_size
 from .prompt_loader import (
     load_default_prompt,
     load_widget2dsl_prompt,
@@ -12,7 +12,6 @@ from .logger import setup_logger, get_logger, log_to_file, log_to_console, separ
 from .visualization import draw_grounding_visualization, crop_icon_region, save_retrieval_svgs
 
 __all__ = [
-    "check_rate_limit",
     "validate_model",
     "validate_api_key",
     "validate_file_size",

@@ -45,8 +45,6 @@ def main():
             image_data=image_data,
             image_filename=Path(image_path).name,
             system_prompt=None,
-            model=os.getenv('DEFAULT_MODEL', 'qwen3-vl-flash'),
-            api_key=os.getenv('DASHSCOPE_API_KEY'),
             retrieval_topk=config.retrieval_topk,
             retrieval_topm=config.retrieval_topm,
             retrieval_alpha=config.retrieval_alpha,
@@ -67,6 +65,10 @@ def main():
 def batch_main():
     """CLI entry point for batch widget generation."""
     import os
+    from generator.config import GeneratorConfig
+
+    # Load config to get default concurrency
+    config = GeneratorConfig.from_env()
 
     parser = argparse.ArgumentParser(
         description='Batch generate WidgetDSL from multiple images',
@@ -85,14 +87,14 @@ Examples:
     parser.add_argument(
         '-c', '--concurrency',
         type=int,
-        default=3,
-        help='Number of images to process in parallel (default: 3)'
+        default=config.concurrency,
+        help=f'Number of images to process in parallel (default: {config.concurrency} from CONCURRENCY env)'
     )
     parser.add_argument(
         '-m', '--model',
         type=str,
-        default=os.getenv('DEFAULT_MODEL', 'qwen3-vl-flash'),
-        help='Model to use (default: from DEFAULT_MODEL env or qwen3-vl-flash)'
+        default=None,
+        help='Model name (ignored, uses DEFAULT_MODEL from .env)'
     )
     parser.add_argument(
         '--icon-libs',
@@ -103,7 +105,8 @@ Examples:
     parser.add_argument(
         '--api-key',
         type=str,
-        help='API key (defaults to DASHSCOPE_API_KEY env var)'
+        default=None,
+        help='API key (ignored, uses DEFAULT_API_KEY from .env)'
     )
 
     args = parser.parse_args()

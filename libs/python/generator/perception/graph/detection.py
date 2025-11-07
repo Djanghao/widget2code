@@ -104,6 +104,7 @@ def detect_charts_in_image(
     temperature: float = 0.1,  # Lower temp for more consistent detection
     max_tokens: int = 500,
     timeout: int = 30,
+    thinking: bool = False,
     max_retries: int = 2,
 ) -> Dict[str, int]:
     """
@@ -145,6 +146,8 @@ def detect_charts_in_image(
         llm_kwargs["api_key"] = api_key
     if base_url:
         llm_kwargs["base_url"] = base_url
+    if thinking:
+        llm_kwargs["thinking"] = True
 
     # Call LLM with retries
     vision_llm = LLM(**llm_kwargs)

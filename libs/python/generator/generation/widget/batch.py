@@ -49,32 +49,6 @@ class BatchGenerator:
         self.output_dir = output_dir
         self.concurrency = concurrency
         self.config = GeneratorConfig.from_env()
-
-        # Read base API key
-        base_api_key = api_key or os.getenv("DASHSCOPE_API_KEY")
-
-        # Read specialized API keys (with fallback to base key)
-        # These allow using different accounts for parallel tasks to bypass rate limits
-        self.layout_api_key = os.getenv("DASHSCOPE_LAYOUT_API_KEY") or base_api_key
-        self.graph_det_api_key = os.getenv("DASHSCOPE_GRAPH_DET_API_KEY") or base_api_key
-        self.graph_gen_api_key = os.getenv("DASHSCOPE_GRAPH_GEN_API_KEY") or base_api_key
-        self.dsl_gen_api_key = os.getenv("DASHSCOPE_DSL_GEN_API_KEY") or base_api_key
-
-        # Track which keys are using fallback
-        self.missing_keys = []
-        if not os.getenv("DASHSCOPE_LAYOUT_API_KEY"):
-            self.missing_keys.append("DASHSCOPE_LAYOUT_API_KEY")
-        if not os.getenv("DASHSCOPE_GRAPH_DET_API_KEY"):
-            self.missing_keys.append("DASHSCOPE_GRAPH_DET_API_KEY")
-        if not os.getenv("DASHSCOPE_GRAPH_GEN_API_KEY"):
-            self.missing_keys.append("DASHSCOPE_GRAPH_GEN_API_KEY")
-        if not os.getenv("DASHSCOPE_DSL_GEN_API_KEY"):
-            self.missing_keys.append("DASHSCOPE_DSL_GEN_API_KEY")
-
-        # Keep for backward compatibility
-        self.api_key = base_api_key
-
-        self.model = model or self.config.default_model
         self.icon_lib_names = icon_lib_names
 
         self.output_dir.mkdir(parents=True, exist_ok=True)
@@ -204,12 +178,6 @@ class BatchGenerator:
                 image_data=image_data,
                 image_filename=image_path.name,
                 system_prompt=None,
-                model=self.model,
-                api_key=self.api_key,  # Keep for backward compatibility
-                layout_api_key=self.layout_api_key,          # Dedicated key for layout detection
-                graph_det_api_key=self.graph_det_api_key,    # Dedicated key for graph detection
-                graph_gen_api_key=self.graph_gen_api_key,    # Dedicated key for graph generation
-                dsl_gen_api_key=self.dsl_gen_api_key,        # Dedicated key for DSL generation
                 retrieval_topk=self.config.retrieval_topk,
                 retrieval_topm=self.config.retrieval_topm,
                 retrieval_alpha=self.config.retrieval_alpha,
@@ -374,7 +342,7 @@ class BatchGenerator:
                     }
                 },
                 "config": {
-                    "model": self.model,
+                    "model": self.config.default_model,
                     "timeout": self.config.timeout,
                     "iconLibraries": json.loads(self.icon_lib_names),
                     "retrieval": {
@@ -483,7 +451,7 @@ class BatchGenerator:
                     "fileSizeBytes": image_path.stat().st_size if image_path.exists() else None
                 },
                 "config": {
-                    "model": self.model,
+                    "model": self.config.default_model,
                     "timeout": self.config.timeout,
                     "iconLibraries": json.loads(self.icon_lib_names),
                     "retrieval": {
@@ -573,8 +541,31 @@ class BatchGenerator:
                 "runLog": str(self.output_dir / "run.log")
             },
             "modelSettings": {
-                "model": self.model,
-                "timeout": self.config.timeout
+                "defaultModel": self.config.default_model,
+                "defaultEnableThinking": self.config.default_enable_thinking,
+                "timeout": self.config.timeout,
+                "stages": {
+                    "layout": {
+                        "model": self.config.get_layout_model(),
+                        "thinking": self.config.get_layout_thinking(),
+                        "override": self.config.layout_model is not None or self.config.layout_enable_thinking is not None
+                    },
+                    "graphDetection": {
+                        "model": self.config.get_graph_det_model(),
+                        "thinking": self.config.get_graph_det_thinking(),
+                        "override": self.config.graph_det_model is not None or self.config.graph_det_enable_thinking is not None
+                    },
+                    "graphGeneration": {
+                        "model": self.config.get_graph_gen_model(),
+                        "thinking": self.config.get_graph_gen_thinking(),
+                        "override": self.config.graph_gen_model is not None or self.config.graph_gen_enable_thinking is not None
+                    },
+                    "dslGeneration": {
+                        "model": self.config.get_dsl_gen_model(),
+                        "thinking": self.config.get_dsl_gen_thinking(),
+                        "override": self.config.dsl_gen_model is not None or self.config.dsl_gen_enable_thinking is not None
+                    }
+                }
             },
             "retrievalSettings": {
                 "topK": self.config.retrieval_topk,
@@ -585,8 +576,7 @@ class BatchGenerator:
             "processingSettings": {
                 "concurrency": self.concurrency,
                 "threadPoolSize": max_workers,
-                "maxFileSizeMB": self.config.max_file_size_mb,
-                "maxRequestsPerMinute": self.config.max_requests_per_minute
+                "maxFileSizeMB": self.config.max_file_size_mb
             }
         }
 
@@ -606,8 +596,28 @@ class BatchGenerator:
         log_to_console(f"  Run Log: {self.output_dir / 'run.log'}", Colors.DIM)
         log_to_console("")
         log_to_console("Model Settings:", Colors.BRIGHT_YELLOW)
-        log_to_console(f"  Model: {self.model}", Colors.BRIGHT_MAGENTA)
+        log_to_console(f"  Default Model: {self.config.default_model}", Colors.BRIGHT_MAGENTA)
+        log_to_console(f"  Default Thinking: {self.config.default_enable_thinking}")
         log_to_console(f"  Timeout: {self.config.timeout}s")
+        log_to_console("")
+
+        # Show stage-specific configuration
+        log_to_console("Stage Configuration:", Colors.BRIGHT_YELLOW)
+
+        stages_info = [
+            ("Layout Detection", "layout"),
+            ("Graph Detection", "graph_det"),
+            ("Graph Generation", "graph_gen"),
+            ("DSL Generation", "dsl_gen"),
+        ]
+
+        for stage_name, stage_prefix in stages_info:
+            model = getattr(self.config, f'get_{stage_prefix}_model')()
+            thinking = getattr(self.config, f'get_{stage_prefix}_thinking')()
+
+            log_to_console(f"  {stage_name}:")
+            log_to_console(f"    Model: {model}")
+            log_to_console(f"    Thinking: {thinking}")
         log_to_console("")
         log_to_console("Retrieval Settings:", Colors.BRIGHT_YELLOW)
         log_to_console(f"  Top-K: {self.config.retrieval_topk}")
@@ -619,24 +629,13 @@ class BatchGenerator:
         log_to_console(f"  Concurrency: {self.concurrency}", Colors.BRIGHT_GREEN)
         log_to_console(f"  Thread Pool Size: {max_workers}", Colors.BRIGHT_GREEN)
         log_to_console(f"  Max File Size: {self.config.max_file_size_mb}MB")
-        log_to_console(f"  Max Requests/Min: {self.config.max_requests_per_minute}")
         log_to_console("")
-
-        # Warn if using fallback API keys
-        if self.missing_keys:
-            log_to_console("API Keys Configuration:", Colors.BRIGHT_YELLOW)
-            log_to_console(f"  ⚠️  WARNING: Using fallback DASHSCOPE_API_KEY for {len(self.missing_keys)} API calls", Colors.BRIGHT_RED)
-            log_to_console(f"  Missing specialized keys: {', '.join(self.missing_keys)}", Colors.RED)
-            log_to_console(f"  This may cause rate limiting issues during batch processing.", Colors.RED)
-            log_to_console(f"  To maximize throughput, configure these keys in .env file:", Colors.YELLOW)
-            for key in self.missing_keys:
-                log_to_console(f"    - {key}", Colors.DIM)
-            log_to_console("")
 
         log_to_console(separator(), Colors.CYAN)
 
-        if not self.api_key:
-            log_to_console("Error: DASHSCOPE_API_KEY not found in environment", Colors.BRIGHT_RED)
+        # Check if API key is configured
+        if not self.config.default_api_key:
+            log_to_console("Error: DEFAULT_API_KEY not found in .env", Colors.BRIGHT_RED)
             raise ValueError("API key not found")
 
         images = self.find_images_to_process()
@@ -701,9 +700,9 @@ async def batch_generate(
     Args:
         input_dir: Input directory containing images
         output_dir: Output directory for generated DSL files
-        concurrency: Number of images to process in parallel (default: 3)
-        api_key: API key (defaults to DASHSCOPE_API_KEY env var)
-        model: Model to use (defaults to DEFAULT_MODEL from config)
+        concurrency: Number of images to process in parallel (default: from CONCURRENCY env var)
+        api_key: API key (ignored, uses DEFAULT_API_KEY from .env)
+        model: Model name (ignored, uses DEFAULT_MODEL from .env)
         icon_lib_names: Icon libraries as JSON array string (default: '["sf", "lucide"]')
     """
     generator = BatchGenerator(

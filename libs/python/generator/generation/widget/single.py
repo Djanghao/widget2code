@@ -16,7 +16,6 @@ import sys
 from ...config import GeneratorConfig
 from ...exceptions import ValidationError, FileSizeError, GenerationError
 from ...utils import (
-    check_rate_limit,
     validate_model,
     validate_api_key,
     validate_file_size,
@@ -383,17 +382,11 @@ async def generate_widget_full(
     image_data: bytes,
     image_filename: str | None,
     system_prompt: str,
-    model: str,
-    api_key: str,  # Keep for backward compatibility (defaults for all if specialized keys not provided)
     retrieval_topk: int,
     retrieval_topm: int,
     retrieval_alpha: float,
     config: GeneratorConfig,
     icon_lib_names: str,
-    layout_api_key: str = None,      # Dedicated API key for layout detection
-    graph_det_api_key: str = None,   # Dedicated API key for graph detection
-    graph_gen_api_key: str = None,   # Dedicated API key for graph generation
-    dsl_gen_api_key: str = None,     # Dedicated API key for DSL generation
 ):
     from pathlib import Path
     from datetime import datetime
@@ -403,27 +396,6 @@ async def generate_widget_full(
 
     image_id = Path(image_filename).stem if image_filename else "unknown"
 
-    # Fallback: use base api_key if specialized keys not provided
-    # Track which keys are using fallback for warning
-    fallback_keys = []
-
-    if layout_api_key is None:
-        layout_api_key = api_key
-        fallback_keys.append("DASHSCOPE_LAYOUT_API_KEY")
-    if graph_det_api_key is None:
-        graph_det_api_key = api_key
-        fallback_keys.append("DASHSCOPE_GRAPH_DET_API_KEY")
-    if graph_gen_api_key is None:
-        graph_gen_api_key = api_key
-        fallback_keys.append("DASHSCOPE_GRAPH_GEN_API_KEY")
-    if dsl_gen_api_key is None:
-        dsl_gen_api_key = api_key
-        fallback_keys.append("DASHSCOPE_DSL_GEN_API_KEY")
-
-    # Log warning if any specialized keys are missing (only to log file, not console)
-    if fallback_keys:
-        warning_msg = f"⚠️  Using fallback DASHSCOPE_API_KEY for {len(fallback_keys)} API calls: {', '.join(fallback_keys)}"
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] {warning_msg}")
     temp_file = None
     try:
         validate_file_size(len(image_data), config.max_file_size_mb)
@@ -434,12 +406,6 @@ async def generate_widget_full(
             temp_file.write(image_bytes)
             temp_file_path = temp_file.name
 
-        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        model_to_use = (model or "qwen3-vl-flash").strip()
-
-        validate_model(model, model_to_use, vision_models)
-        validate_api_key(api_key)
-
         # ========== Layout Detection (NEW: Stage 0) ==========
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection started")
 
@@ -449,9 +415,10 @@ async def generate_widget_full(
             detect_layout,
             image_bytes=image_bytes,
             filename=image_filename,
-            model=(model or "qwen3-vl-flash"),
-            api_key=layout_api_key,  # Use dedicated layout API key
+            model=config.get_layout_model(),
+            api_key=config.get_layout_api_key(),
             timeout=config.timeout,
+            thinking=config.get_layout_thinking(),
             image_id=image_id,
         )
 
@@ -475,10 +442,10 @@ async def generate_widget_full(
                 run_icon_detection_pipeline,
                 image_bytes=image_bytes,
                 filename=image_filename,
-                model=(model or "qwen3-vl-flash"),
-                api_key=api_key,  # Icon retrieval doesn't need API key (local), but kept for compatibility
-                layout_detections=layout_post,  # NEW: Pass layout results
-                img_width=img_width,            # NEW: Pass image dimensions
+                model=config.default_model,  # Icon detection uses default model
+                api_key=config.default_api_key,  # Icon retrieval is local, but parameter kept for compatibility
+                layout_detections=layout_post,
+                img_width=img_width,
                 img_height=img_height,
                 retrieval_topk=retrieval_topk,
                 retrieval_topm=retrieval_topm,
@@ -491,13 +458,17 @@ async def generate_widget_full(
                 image_bytes=image_bytes,
                 filename=image_filename,
                 provider=None,
-                api_key=graph_det_api_key,  # Use dedicated graph detection API key
-                model=model_to_use,
+                api_key=config.get_graph_det_api_key(),
+                model=config.get_graph_det_model(),
                 temperature=0.1,
                 max_tokens=500,
                 timeout=config.timeout,
                 max_retries=2,
-                graph_gen_api_key=graph_gen_api_key,  # Use dedicated graph generation API key
+                graph_gen_api_key=config.get_graph_gen_api_key(),
+                graph_det_thinking=config.get_graph_det_thinking(),
+                graph_gen_thinking=config.get_graph_gen_thinking(),
+                graph_det_model=config.get_graph_det_model(),
+                graph_gen_model=config.get_graph_gen_model(),
             )
         )
 
@@ -570,12 +541,13 @@ async def generate_widget_full(
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] Started")
 
         vision_llm = LLM(
-            model=model_to_use,
+            model=config.get_dsl_gen_model(),
             temperature=0.5,
             max_tokens=32768,
             timeout=config.timeout,
+            thinking=config.get_dsl_gen_thinking(),
             system_prompt=prompt_final,
-            api_key=dsl_gen_api_key  # Use dedicated DSL generation API key
+            api_key=config.get_dsl_gen_api_key()
         )
 
         image_content = prepare_image_content(temp_file_path)
@@ -587,7 +559,7 @@ async def generate_widget_full(
             ]
         )]
 
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] VLM API call started (model={model_to_use})")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] VLM API call started (model={config.get_dsl_gen_model()}, thinking={config.get_dsl_gen_thinking()})")
 
         import time
         dsl_start = time.time()

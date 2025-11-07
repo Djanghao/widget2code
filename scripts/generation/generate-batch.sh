@@ -19,7 +19,23 @@ fi
 
 INPUT_DIR=$1
 OUTPUT_DIR=$2
-CONCURRENCY=${3:-3}
+
+# Concurrency: command line > .env > error
+if [ -n "$3" ]; then
+    CONCURRENCY=$3
+    echo "📊 Using concurrency from command line: $CONCURRENCY"
+elif [ -n "$CONCURRENCY" ]; then
+    echo "📊 Using concurrency from .env: $CONCURRENCY"
+else
+    echo "❌ ERROR: CONCURRENCY not specified"
+    echo ""
+    echo "Please either:"
+    echo "  1. Set CONCURRENCY in .env file"
+    echo "  2. Or provide as third argument: $0 <input-dir> <output-dir> <concurrency>"
+    echo ""
+    echo "Example: $0 ./images ./output 200"
+    exit 1
+fi
 
 # Check if ENABLE_MODEL_CACHE is true
 if [ "${ENABLE_MODEL_CACHE}" = "true" ]; then

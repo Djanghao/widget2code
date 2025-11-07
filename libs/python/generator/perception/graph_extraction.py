@@ -16,6 +16,10 @@ def detect_and_process_graphs(
     timeout: int,
     max_retries: int,
     graph_gen_api_key: Optional[str] = None,  # For graph generation (optional)
+    graph_det_thinking: bool = False,  # Thinking mode for graph detection
+    graph_gen_thinking: bool = False,  # Thinking mode for graph generation
+    graph_det_model: Optional[str] = None,  # Model for graph detection (optional)
+    graph_gen_model: Optional[str] = None,  # Model for graph generation (optional)
 ) -> tuple[dict, list]:
     image_id = Path(filename).stem if filename else "unknown"
 
@@ -24,10 +28,11 @@ def detect_and_process_graphs(
         filename=filename,
         provider=provider,
         api_key=api_key,
-        model=model,
+        model=graph_det_model if graph_det_model else model,
         temperature=temperature,
         max_tokens=max_tokens,
         timeout=timeout,
+        thinking=graph_det_thinking,
         max_retries=max_retries
     )
 
@@ -44,10 +49,11 @@ def detect_and_process_graphs(
             chart_counts=chart_counts,
             provider=provider,
             api_key=gen_key,  # Use dedicated key for graph generation
-            model=model,
+            model=graph_gen_model if graph_gen_model else model,
             temperature=0.3,
             max_tokens=3000,
             timeout=60,
+            thinking=graph_gen_thinking,
             max_retries=2
         )
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Graph generation: {len(graph_specs)} specs")

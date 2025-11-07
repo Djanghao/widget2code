@@ -119,6 +119,7 @@ def process_graphs_in_image(
     temperature: float = 0.3,  # Slightly higher for creative details
     max_tokens: int = 3000,
     timeout: int = 60,
+    thinking: bool = False,
     max_retries: int = 2,
 ) -> List[Dict[str, Any]]:
     """
@@ -181,6 +182,8 @@ def process_graphs_in_image(
         llm_kwargs["api_key"] = api_key
     if base_url:
         llm_kwargs["base_url"] = base_url
+    if thinking:
+        llm_kwargs["thinking"] = True
 
     # Call LLM with retries
     vision_llm = LLM(**llm_kwargs)
