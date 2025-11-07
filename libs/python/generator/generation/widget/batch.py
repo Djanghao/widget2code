@@ -9,10 +9,18 @@ import asyncio
 import json
 import os
 import shutil
+import threading
+import time
 from pathlib import Path
 from datetime import datetime
-from typing import List, Tuple, Dict, Any
+from typing import List, Tuple, Dict, Any, Optional
+from collections import defaultdict
 from tqdm import tqdm
+
+from rich.console import Console
+from rich.table import Table
+from rich.live import Live
+from rich.box import ROUNDED
 
 from .single import generate_widget_full
 from ...config import GeneratorConfig
@@ -31,6 +39,106 @@ try:
         WIDGET_FACTORY_VERSION = "unknown"
 except Exception:
     WIDGET_FACTORY_VERSION = "unknown"
+
+
+class StageTracker:
+    """Thread-safe tracker for image processing stages."""
+
+    STAGES = [
+        "waiting",
+        "preprocessing",
+        "layout",
+        "icon/graph",
+        "color",
+        "dsl",
+        "render",
+        "done",
+        "failed"
+    ]
+
+    def __init__(self):
+        self.lock = threading.Lock()
+        # Current stage for each image: {image_id: stage_name}
+        self.current_stages: Dict[str, str] = {}
+        # Stage timing: {image_id: {stage_name: [start_time, end_time]}}
+        self.stage_times: Dict[str, Dict[str, List[float]]] = defaultdict(lambda: defaultdict(list))
+        # Overall timing: {image_id: start_time}
+        self.image_start_times: Dict[str, float] = {}
+
+    def set_stage(self, image_id: str, stage: str):
+        """Update the current stage for an image."""
+        with self.lock:
+            current_time = time.time()
+
+            # Record end time for previous stage
+            if image_id in self.current_stages:
+                old_stage = self.current_stages[image_id]
+                if old_stage in self.stage_times[image_id] and len(self.stage_times[image_id][old_stage]) == 1:
+                    # Only append end time if we have start time but no end time yet
+                    self.stage_times[image_id][old_stage].append(current_time)
+
+            # Update to new stage
+            self.current_stages[image_id] = stage
+
+            # Record start time for new stage
+            if stage not in ["done", "failed"]:
+                self.stage_times[image_id][stage] = [current_time]
+            else:
+                # For done/failed, record both start and end
+                self.stage_times[image_id][stage] = [current_time, current_time]
+
+    def start_image(self, image_id: str):
+        """Mark an image as started processing."""
+        with self.lock:
+            self.image_start_times[image_id] = time.time()
+            self.current_stages[image_id] = "waiting"
+
+    def get_stats(self) -> Dict[str, Any]:
+        """Get current statistics for all stages."""
+        with self.lock:
+            # Count images in each stage
+            stage_counts = {stage: 0 for stage in self.STAGES}
+            for stage in self.current_stages.values():
+                if stage in stage_counts:
+                    stage_counts[stage] += 1
+
+            # Calculate average times for each stage (in milliseconds)
+            stage_avg_times = {}
+            stage_min_times = {}
+            stage_max_times = {}
+
+            for stage in self.STAGES:
+                if stage in ["waiting", "failed"]:
+                    continue
+
+                all_durations = []
+                for image_id, times_dict in self.stage_times.items():
+                    if stage in times_dict and len(times_dict[stage]) >= 2:
+                        duration = (times_dict[stage][1] - times_dict[stage][0]) * 1000  # to ms
+                        all_durations.append(duration)
+
+                if all_durations:
+                    stage_avg_times[stage] = sum(all_durations) / len(all_durations)
+                    stage_min_times[stage] = min(all_durations)
+                    stage_max_times[stage] = max(all_durations)
+                else:
+                    stage_avg_times[stage] = 0
+                    stage_min_times[stage] = 0
+                    stage_max_times[stage] = 0
+
+            total_images = len(self.current_stages)
+            active_images = total_images - stage_counts.get("done", 0) - stage_counts.get("failed", 0)
+
+            return {
+                "stage_counts": stage_counts,
+                "stage_avg_times": stage_avg_times,
+                "stage_min_times": stage_min_times,
+                "stage_max_times": stage_max_times,
+                "total_images": total_images,
+                "active_images": active_images,
+                "completed": stage_counts.get("done", 0),
+                "failed": stage_counts.get("failed", 0),
+            }
 
 
 class BatchGenerator:
@@ -58,6 +166,130 @@ class BatchGenerator:
         self.failed = 0
         self.results = []
         self.pbar = None
+
+        # Stage tracking
+        self.stage_tracker = StageTracker()
+        self.show_stage_table = os.getenv('SHOW_STAGE_TABLE', 'true').lower() == 'true'
+        self.live_display: Optional[Live] = None
+        self.display_thread: Optional[threading.Thread] = None
+        self.display_running = False
+        self.start_time = None
+
+    def _create_status_table(self) -> Table:
+        """Create a Rich table showing current stage statistics."""
+        stats = self.stage_tracker.get_stats()
+
+        table = Table(
+            title="[bold cyan]Widget Generation Progress[/bold cyan]",
+            box=ROUNDED,
+            show_header=True,
+            header_style="bold magenta",
+            title_style="bold cyan",
+        )
+
+        table.add_column("Stage", style="cyan", no_wrap=True, width=15)
+        table.add_column("Count", justify="right", style="green", width=8)
+        table.add_column("Percent", justify="right", style="yellow", width=10)
+        table.add_column("Avg Time", justify="right", style="blue", width=12)
+        table.add_column("Min Time", justify="right", style="dim", width=12)
+        table.add_column("Max Time", justify="right", style="dim", width=12)
+
+        stage_counts = stats["stage_counts"]
+        stage_avg_times = stats["stage_avg_times"]
+        stage_min_times = stats["stage_min_times"]
+        stage_max_times = stats["stage_max_times"]
+        total = stats["total_images"]
+
+        # Stage name mapping for display
+        stage_names = {
+            "waiting": "Waiting",
+            "preprocessing": "Preprocessing",
+            "layout": "Layout",
+            "icon/graph": "Icon/Graph",
+            "color": "Color",
+            "dsl": "DSL",
+            "render": "Render",
+            "done": "Done",
+            "failed": "Failed"
+        }
+
+        for stage in StageTracker.STAGES:
+            count = stage_counts.get(stage, 0)
+            percent = (count / total * 100) if total > 0 else 0
+
+            if stage in ["waiting", "failed"]:
+                avg_time_str = "-"
+                min_time_str = "-"
+                max_time_str = "-"
+            else:
+                avg_time = stage_avg_times.get(stage, 0)
+                min_time = stage_min_times.get(stage, 0)
+                max_time = stage_max_times.get(stage, 0)
+
+                avg_time_str = f"{avg_time:.0f}ms" if avg_time > 0 else "-"
+                min_time_str = f"{min_time:.0f}ms" if min_time > 0 else "-"
+                max_time_str = f"{max_time:.0f}ms" if max_time > 0 else "-"
+
+            # Color coding for count
+            if count > 0:
+                if stage == "done":
+                    count_style = "[bold green]"
+                elif stage == "failed":
+                    count_style = "[bold red]"
+                else:
+                    count_style = "[bold white]"
+            else:
+                count_style = "[dim]"
+
+            table.add_row(
+                stage_names[stage],
+                f"{count_style}{count}[/]",
+                f"{percent:.1f}%",
+                avg_time_str,
+                min_time_str,
+                max_time_str
+            )
+
+        # Summary row
+        success_rate = (stats["completed"] / (stats["completed"] + stats["failed"]) * 100) if (stats["completed"] + stats["failed"]) > 0 else 0
+
+        # Calculate uptime and ETA
+        if self.start_time:
+            elapsed = time.time() - self.start_time
+            elapsed_str = time.strftime("%H:%M:%S", time.gmtime(elapsed))
+
+            if stats["completed"] > 0 and stats["active_images"] > 0:
+                avg_time_per_image = elapsed / stats["completed"]
+                eta_seconds = avg_time_per_image * stats["active_images"]
+                eta_str = time.strftime("%H:%M:%S", time.gmtime(eta_seconds))
+            else:
+                eta_str = "--:--:--"
+        else:
+            elapsed_str = "00:00:00"
+            eta_str = "--:--:--"
+
+        table.add_section()
+        table.add_row(
+            "[bold]SUMMARY[/bold]",
+            f"[bold]{total}[/bold]",
+            "",
+            "",
+            "",
+            ""
+        )
+
+        # Add summary info as caption
+        summary_text = (
+            f"[bold]Active:[/bold] {stats['active_images']} | "
+            f"[bold green]Completed:[/bold green] {stats['completed']} | "
+            f"[bold red]Failed:[/bold red] {stats['failed']} | "
+            f"[bold yellow]Success Rate:[/bold yellow] {success_rate:.1f}%\n"
+            f"[bold]Uptime:[/bold] {elapsed_str} | "
+            f"[bold]ETA:[/bold] {eta_str}"
+        )
+        table.caption = summary_text
+
+        return table
 
     def find_images_to_process(self) -> List[Path]:
         """Find image files that need processing (skip already completed)."""
@@ -121,6 +353,9 @@ class BatchGenerator:
         widget_dir = self.output_dir / widget_id
         widget_dir.mkdir(parents=True, exist_ok=True)
 
+        # Initialize stage tracking for this image
+        self.stage_tracker.start_image(widget_id)
+
         # Create directory structure
         artifacts_dir = widget_dir / "artifacts"
         log_dir = widget_dir / "log"
@@ -183,6 +418,8 @@ class BatchGenerator:
                 retrieval_alpha=self.config.retrieval_alpha,
                 config=self.config,
                 icon_lib_names=self.icon_lib_names,
+                stage_tracker=self.stage_tracker,
+                image_id=widget_id,
             )
 
             # Extract data from result
@@ -198,6 +435,10 @@ class BatchGenerator:
                 json.dump(widget_dsl, f, indent=2)
 
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] DSL generation finished")
+
+            # Update stage: render (saving artifacts and visualizations)
+            self.stage_tracker.set_stage(widget_id, "render")
+
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Generating visualizations...")
 
             # 2. Save preprocessed image
@@ -419,6 +660,10 @@ class BatchGenerator:
             self._save_widget_log(widget_id, log_file)
 
             self.completed += 1
+
+            # Mark as done in stage tracker
+            self.stage_tracker.set_stage(widget_id, "done")
+
             log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ COMPLETED ({duration:.1f}s)")
 
             # Update progress bar
@@ -483,6 +728,9 @@ class BatchGenerator:
             # Save debug.json
             with open(debug_file, 'w') as f:
                 json.dump(debug_data, f, indent=2)
+
+            # Mark as failed in stage tracker
+            self.stage_tracker.set_stage(widget_id, "failed")
 
             log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ❌ FAILED - {error_msg}")
 
@@ -646,23 +894,57 @@ class BatchGenerator:
             return
 
         log_to_console(f"Processing {self.total} images", Colors.BRIGHT_GREEN)
+        log_to_console("")
 
+        self.start_time = time.time()
         start_time = datetime.now()
 
-        # Initialize progress bar (always show)
-        self.pbar = tqdm(
-            total=self.total,
-            desc="Generating widgets",
-            unit="img"
-        )
+        # Use Rich Live table if enabled, otherwise use tqdm
+        if self.show_stage_table:
+            console = Console()
 
-        try:
-            await self.process_batch(images)
-        finally:
-            if self.pbar:
-                self.pbar.close()
-            # Clean up thread pool
-            executor.shutdown(wait=True)
+            # Create live display context
+            with Live(self._create_status_table(), console=console, refresh_per_second=1, transient=False) as live:
+                self.live_display = live
+
+                # Create background update thread
+                def update_display():
+                    while self.display_running:
+                        try:
+                            live.update(self._create_status_table())
+                            time.sleep(1)  # Update every second
+                        except Exception:
+                            pass
+
+                self.display_running = True
+                self.display_thread = threading.Thread(target=update_display, daemon=True)
+                self.display_thread.start()
+
+                try:
+                    await self.process_batch(images)
+                finally:
+                    self.display_running = False
+                    if self.display_thread:
+                        self.display_thread.join(timeout=2)
+                    # Final update to show completion
+                    live.update(self._create_status_table())
+                    # Clean up thread pool
+                    executor.shutdown(wait=True)
+        else:
+            # Fallback to tqdm
+            self.pbar = tqdm(
+                total=self.total,
+                desc="Generating widgets",
+                unit="img"
+            )
+
+            try:
+                await self.process_batch(images)
+            finally:
+                if self.pbar:
+                    self.pbar.close()
+                # Clean up thread pool
+                executor.shutdown(wait=True)
 
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()

@@ -387,6 +387,8 @@ async def generate_widget_full(
     retrieval_alpha: float,
     config: GeneratorConfig,
     icon_lib_names: str,
+    stage_tracker=None,
+    image_id: str = None,
 ):
     from pathlib import Path
     from datetime import datetime
@@ -394,11 +396,16 @@ async def generate_widget_full(
     import tempfile
     import asyncio
 
-    image_id = Path(image_filename).stem if image_filename else "unknown"
+    if image_id is None:
+        image_id = Path(image_filename).stem if image_filename else "unknown"
 
     temp_file = None
     try:
         validate_file_size(len(image_data), config.max_file_size_mb)
+
+        # Update stage: preprocessing
+        if stage_tracker:
+            stage_tracker.set_stage(image_id, "preprocessing")
 
         image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
 
@@ -407,6 +414,10 @@ async def generate_widget_full(
             temp_file_path = temp_file.name
 
         # ========== Layout Detection (NEW: Stage 0) ==========
+        # Update stage: layout
+        if stage_tracker:
+            stage_tracker.set_stage(image_id, "layout")
+
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection started")
 
         from ...perception.layout import detect_layout
@@ -425,6 +436,10 @@ async def generate_widget_full(
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection completed: {len(layout_post)} elements")
 
         # ========== Icon & Graph Extraction (Parallel) ==========
+        # Update stage: icon/graph (icon and graph detection run in parallel)
+        if stage_tracker:
+            stage_tracker.set_stage(image_id, "icon/graph")
+
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 Parallel extraction started")
 
         # Parse icon library names from JSON array, e.g., '["sf", "lucide"]'
@@ -499,6 +514,10 @@ async def generate_widget_full(
             prompt_with_layout = prompt_with_layout + f"\n\n{layout_injection_text}"
 
         # ========== Stage 3: Colors (was Stage 2) ==========
+        # Update stage: color
+        if stage_tracker:
+            stage_tracker.set_stage(image_id, "color")
+
         from ...perception.color_extraction import (
             detect_and_process_colors,
             inject_colors_to_prompt,
@@ -537,6 +556,10 @@ async def generate_widget_full(
         prompt_final = prompt_with_icons
         if "[AVAILABLE_COMPONENTS]" in prompt_final:
             prompt_final = prompt_final.replace("[AVAILABLE_COMPONENTS]", components_list)
+
+        # Update stage: dsl
+        if stage_tracker:
+            stage_tracker.set_stage(image_id, "dsl")
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] Started")
 

@@ -23,6 +23,7 @@ dependencies = [
     "faiss-cpu",
     "cairosvg",
     "tqdm",
+    "rich",
 ]
 
 [project.optional-dependencies]
