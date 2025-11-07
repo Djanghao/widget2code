@@ -292,7 +292,7 @@ class BatchGenerator:
         return table
 
     def find_images_to_process(self) -> List[Path]:
-        """Find image files that need processing (skip already completed)."""
+        """Find image files that need processing (skip already completed, clean up failed ones)."""
         extensions = {'.png', '.jpg', '.jpeg', '.webp', '.bmp'}
         all_images = []
 
@@ -306,20 +306,61 @@ class BatchGenerator:
             widget_id = image_path.stem
             widget_dir = self.output_dir / widget_id
             debug_file = widget_dir / "log" / "debug.json"
+            dsl_file = widget_dir / "artifacts" / "4-dsl" / "widget.json"
 
             should_process = True
+            should_clean = False
 
+            # Check if both debug.json shows success AND DSL file actually exists and is valid
             if debug_file.exists():
                 try:
                     with open(debug_file, 'r') as f:
                         debug_data = json.load(f)
                         execution_status = debug_data.get('execution', {}).get('status', '')
 
-                        if execution_status == 'success':
-                            should_process = False
-                            log_to_file(f"[Skip] {image_path.name} - already generated")
+                        if execution_status == 'success' and dsl_file.exists():
+                            # Verify DSL file is valid and not empty
+                            try:
+                                # Check file size first
+                                dsl_file_size = dsl_file.stat().st_size
+                                if dsl_file_size == 0:
+                                    should_clean = True
+                                    log_to_file(f"[Reprocess] {image_path.name} - DSL file is empty (0 bytes), cleaning up")
+                                else:
+                                    with open(dsl_file, 'r') as dsl_f:
+                                        dsl_content = json.load(dsl_f)
+                                        # Check if DSL has meaningful content (not just {}, [], or null)
+                                        if dsl_content and isinstance(dsl_content, dict) and len(dsl_content) > 0:
+                                            should_process = False
+                                            log_to_file(f"[Skip] {image_path.name} - already generated")
+                                        else:
+                                            should_clean = True
+                                            log_to_file(f"[Reprocess] {image_path.name} - DSL file has no meaningful content, cleaning up")
+                            except (json.JSONDecodeError, Exception) as dsl_e:
+                                should_clean = True
+                                log_to_file(f"[Reprocess] {image_path.name} - DSL file is corrupted or unreadable, cleaning up")
+                        else:
+                            # Failed or DSL missing - clean up and reprocess
+                            should_clean = True
+                            if execution_status == 'success' and not dsl_file.exists():
+                                log_to_file(f"[Reprocess] {image_path.name} - status success but DSL file missing, cleaning up")
+                            else:
+                                log_to_file(f"[Reprocess] {image_path.name} - status is '{execution_status}', cleaning up")
                 except Exception as e:
-                    log_to_file(f"[Warning] Failed to read debug.json for {image_path.name}, will process")
+                    log_to_file(f"[Warning] Failed to read debug.json for {image_path.name}, will clean up and process")
+                    should_clean = True
+            elif widget_dir.exists():
+                # Widget dir exists but no debug.json - something went wrong, clean up
+                should_clean = True
+                log_to_file(f"[Reprocess] {image_path.name} - incomplete output, cleaning up")
+
+            # Clean up if needed
+            if should_clean and widget_dir.exists():
+                try:
+                    shutil.rmtree(widget_dir)
+                    log_to_file(f"[Cleaned] {image_path.name} - removed all previous artifacts")
+                except Exception as e:
+                    log_to_file(f"[Warning] Failed to clean up {widget_dir}: {str(e)}")
 
             if should_process:
                 images_to_process.append(image_path)
