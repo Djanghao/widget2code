@@ -436,9 +436,9 @@ async def generate_widget_full(
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection completed: {len(layout_post)} elements")
 
         # ========== Icon & Graph Extraction (Parallel) ==========
-        # Update stage: icon/graph (icon and graph detection run in parallel)
+        # Update stage: perception (icon and graph detection run in parallel)
         if stage_tracker:
-            stage_tracker.set_stage(image_id, "icon/graph")
+            stage_tracker.set_stage(image_id, "perception")
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 Parallel extraction started")
 
@@ -452,13 +452,16 @@ async def generate_widget_full(
             except json.JSONDecodeError:
                 pass
 
-        icon_result, (chart_counts, graph_specs) = await asyncio.gather(
-            asyncio.to_thread(
+        # Wrapper functions to track substage timing
+        async def track_icon_substage():
+            if stage_tracker:
+                stage_tracker.set_substage(image_id, "perception.icon", is_start=True)
+            result = await asyncio.to_thread(
                 run_icon_detection_pipeline,
                 image_bytes=image_bytes,
                 filename=image_filename,
-                model=config.default_model,  # Icon detection uses default model
-                api_key=config.default_api_key,  # Icon retrieval is local, but parameter kept for compatibility
+                model=config.default_model,
+                api_key=config.default_api_key,
                 layout_detections=layout_post,
                 img_width=img_width,
                 img_height=img_height,
@@ -467,8 +470,15 @@ async def generate_widget_full(
                 retrieval_alpha=retrieval_alpha,
                 lib_names=lib_names,
                 timeout=config.timeout,
-            ),
-            asyncio.to_thread(
+            )
+            if stage_tracker:
+                stage_tracker.set_substage(image_id, "perception.icon", is_start=False)
+            return result
+
+        async def track_graph_substage():
+            if stage_tracker:
+                stage_tracker.set_substage(image_id, "perception.graph", is_start=True)
+            result = await asyncio.to_thread(
                 detect_and_process_graphs,
                 image_bytes=image_bytes,
                 filename=image_filename,
@@ -485,6 +495,13 @@ async def generate_widget_full(
                 graph_det_model=config.get_graph_det_model(),
                 graph_gen_model=config.get_graph_gen_model(),
             )
+            if stage_tracker:
+                stage_tracker.set_substage(image_id, "perception.graph", is_start=False)
+            return result
+
+        icon_result, (chart_counts, graph_specs) = await asyncio.gather(
+            track_icon_substage(),
+            track_graph_substage()
         )
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Parallel extraction: Icons:{icon_result['icon_count']}, Charts:{sum(chart_counts.values()) if chart_counts else 0}")

@@ -44,22 +44,27 @@ except Exception:
 class StageTracker:
     """Thread-safe tracker for image processing stages."""
 
+    # Define stage hierarchy with display names and indentation
     STAGES = [
-        "waiting",
-        "preprocessing",
-        "layout",
-        "icon/graph",
-        "color",
-        "dsl",
-        "render",
-        "done",
-        "failed"
+        {"key": "waiting", "display": "Waiting", "indent": 0},
+        {"key": "preprocessing", "display": "1. Preprocessing", "indent": 0},
+        {"key": "layout", "display": "2. Layout", "indent": 0},
+        {"key": "perception", "display": "3. Perception", "indent": 0},
+        {"key": "perception.icon", "display": "├─ Icon", "indent": 1, "parent": "perception"},
+        {"key": "perception.graph", "display": "└─ Graph", "indent": 1, "parent": "perception"},
+        {"key": "color", "display": "4. Color", "indent": 0},
+        {"key": "dsl", "display": "5. DSL", "indent": 0},
+        {"key": "render", "display": "6. Render", "indent": 0},
+        {"key": "done", "display": "✓ Done", "indent": 0},
+        {"key": "failed", "display": "✗ Failed", "indent": 0}
     ]
 
     def __init__(self):
         self.lock = threading.Lock()
         # Current stage for each image: {image_id: stage_name}
         self.current_stages: Dict[str, str] = {}
+        # Sub-stage tracking for parallel stages: {image_id: {substage: [start, end]}}
+        self.substage_times: Dict[str, Dict[str, List[float]]] = defaultdict(lambda: defaultdict(list))
         # Stage timing: {image_id: {stage_name: [start_time, end_time]}}
         self.stage_times: Dict[str, Dict[str, List[float]]] = defaultdict(lambda: defaultdict(list))
         # Overall timing: {image_id: start_time}
@@ -87,6 +92,23 @@ class StageTracker:
                 # For done/failed, record both start and end
                 self.stage_times[image_id][stage] = [current_time, current_time]
 
+    def set_substage(self, image_id: str, substage: str, is_start: bool = True):
+        """
+        Track substages for parallel processing.
+
+        Args:
+            image_id: Image identifier
+            substage: Substage key (e.g., "perception.icon", "perception.graph")
+            is_start: True for start, False for end
+        """
+        with self.lock:
+            current_time = time.time()
+            if is_start:
+                self.substage_times[image_id][substage] = [current_time]
+            else:
+                if substage in self.substage_times[image_id] and len(self.substage_times[image_id][substage]) == 1:
+                    self.substage_times[image_id][substage].append(current_time)
+
     def start_image(self, image_id: str):
         """Mark an image as started processing."""
         with self.lock:
@@ -94,10 +116,10 @@ class StageTracker:
             self.current_stages[image_id] = "waiting"
 
     def get_stats(self) -> Dict[str, Any]:
-        """Get current statistics for all stages."""
+        """Get current statistics for all stages and substages."""
         with self.lock:
             # Count images in each stage
-            stage_counts = {stage: 0 for stage in self.STAGES}
+            stage_counts = {stage["key"]: 0 for stage in self.STAGES}
             for stage in self.current_stages.values():
                 if stage in stage_counts:
                     stage_counts[stage] += 1
@@ -107,24 +129,54 @@ class StageTracker:
             stage_min_times = {}
             stage_max_times = {}
 
-            for stage in self.STAGES:
-                if stage in ["waiting", "failed"]:
+            for stage_def in self.STAGES:
+                stage_key = stage_def["key"]
+                if stage_key in ["waiting", "failed"]:
+                    continue
+
+                # Skip substages for main stage timing (they're calculated separately)
+                if "parent" in stage_def:
                     continue
 
                 all_durations = []
                 for image_id, times_dict in self.stage_times.items():
-                    if stage in times_dict and len(times_dict[stage]) >= 2:
-                        duration = (times_dict[stage][1] - times_dict[stage][0]) * 1000  # to ms
+                    if stage_key in times_dict and len(times_dict[stage_key]) >= 2:
+                        duration = (times_dict[stage_key][1] - times_dict[stage_key][0]) * 1000  # to ms
                         all_durations.append(duration)
 
                 if all_durations:
-                    stage_avg_times[stage] = sum(all_durations) / len(all_durations)
-                    stage_min_times[stage] = min(all_durations)
-                    stage_max_times[stage] = max(all_durations)
+                    stage_avg_times[stage_key] = sum(all_durations) / len(all_durations)
+                    stage_min_times[stage_key] = min(all_durations)
+                    stage_max_times[stage_key] = max(all_durations)
                 else:
-                    stage_avg_times[stage] = 0
-                    stage_min_times[stage] = 0
-                    stage_max_times[stage] = 0
+                    stage_avg_times[stage_key] = 0
+                    stage_min_times[stage_key] = 0
+                    stage_max_times[stage_key] = 0
+
+            # Calculate substage times
+            substage_avg_times = {}
+            substage_min_times = {}
+            substage_max_times = {}
+
+            for stage_def in self.STAGES:
+                if "parent" not in stage_def:
+                    continue
+
+                substage_key = stage_def["key"]
+                all_durations = []
+                for image_id, substage_dict in self.substage_times.items():
+                    if substage_key in substage_dict and len(substage_dict[substage_key]) >= 2:
+                        duration = (substage_dict[substage_key][1] - substage_dict[substage_key][0]) * 1000
+                        all_durations.append(duration)
+
+                if all_durations:
+                    substage_avg_times[substage_key] = sum(all_durations) / len(all_durations)
+                    substage_min_times[substage_key] = min(all_durations)
+                    substage_max_times[substage_key] = max(all_durations)
+                else:
+                    substage_avg_times[substage_key] = 0
+                    substage_min_times[substage_key] = 0
+                    substage_max_times[substage_key] = 0
 
             total_images = len(self.current_stages)
             active_images = total_images - stage_counts.get("done", 0) - stage_counts.get("failed", 0)
@@ -134,6 +186,9 @@ class StageTracker:
                 "stage_avg_times": stage_avg_times,
                 "stage_min_times": stage_min_times,
                 "stage_max_times": stage_max_times,
+                "substage_avg_times": substage_avg_times,
+                "substage_min_times": substage_min_times,
+                "substage_max_times": substage_max_times,
                 "total_images": total_images,
                 "active_images": active_images,
                 "completed": stage_counts.get("done", 0),
@@ -176,7 +231,7 @@ class BatchGenerator:
         self.start_time = None
 
     def _create_status_table(self) -> Table:
-        """Create a Rich table showing current stage statistics."""
+        """Create a Rich table showing current stage statistics with hierarchy."""
         stats = self.stage_tracker.get_stats()
 
         table = Table(
@@ -187,7 +242,7 @@ class BatchGenerator:
             title_style="bold cyan",
         )
 
-        table.add_column("Stage", style="cyan", no_wrap=True, width=15)
+        table.add_column("Stage", style="cyan", no_wrap=False, width=25)
         table.add_column("Count", justify="right", style="green", width=8)
         table.add_column("Percent", justify="right", style="yellow", width=10)
         table.add_column("Avg Time", justify="right", style="blue", width=12)
@@ -198,52 +253,65 @@ class BatchGenerator:
         stage_avg_times = stats["stage_avg_times"]
         stage_min_times = stats["stage_min_times"]
         stage_max_times = stats["stage_max_times"]
+        substage_avg_times = stats["substage_avg_times"]
+        substage_min_times = stats["substage_min_times"]
+        substage_max_times = stats["substage_max_times"]
         total = stats["total_images"]
 
-        # Stage name mapping for display
-        stage_names = {
-            "waiting": "Waiting",
-            "preprocessing": "Preprocessing",
-            "layout": "Layout",
-            "icon/graph": "Icon/Graph",
-            "color": "Color",
-            "dsl": "DSL",
-            "render": "Render",
-            "done": "Done",
-            "failed": "Failed"
-        }
+        for stage_def in StageTracker.STAGES:
+            stage_key = stage_def["key"]
+            display_name = stage_def["display"]
+            indent = stage_def.get("indent", 0)
+            is_substage = "parent" in stage_def
 
-        for stage in StageTracker.STAGES:
-            count = stage_counts.get(stage, 0)
+            # Apply indentation
+            indent_str = "   " * indent
+            stage_display = f"{indent_str}{display_name}"
+
+            # Get count - for substages, count from parent
+            if is_substage:
+                parent_key = stage_def["parent"]
+                count = stage_counts.get(parent_key, 0)
+            else:
+                count = stage_counts.get(stage_key, 0)
+
             percent = (count / total * 100) if total > 0 else 0
 
-            if stage in ["waiting", "failed"]:
-                avg_time_str = "-"
-                min_time_str = "-"
-                max_time_str = "-"
+            # Get timing based on whether it's a substage
+            if is_substage:
+                avg_time = substage_avg_times.get(stage_key, 0)
+                min_time = substage_min_times.get(stage_key, 0)
+                max_time = substage_max_times.get(stage_key, 0)
+            elif stage_key in ["waiting", "failed"]:
+                avg_time = min_time = max_time = 0
             else:
-                avg_time = stage_avg_times.get(stage, 0)
-                min_time = stage_min_times.get(stage, 0)
-                max_time = stage_max_times.get(stage, 0)
+                avg_time = stage_avg_times.get(stage_key, 0)
+                min_time = stage_min_times.get(stage_key, 0)
+                max_time = stage_max_times.get(stage_key, 0)
 
-                avg_time_str = f"{avg_time:.0f}ms" if avg_time > 0 else "-"
-                min_time_str = f"{min_time:.0f}ms" if min_time > 0 else "-"
-                max_time_str = f"{max_time:.0f}ms" if max_time > 0 else "-"
+            avg_time_str = f"{avg_time:.0f}ms" if avg_time > 0 else "-"
+            min_time_str = f"{min_time:.0f}ms" if min_time > 0 else "-"
+            max_time_str = f"{max_time:.0f}ms" if max_time > 0 else "-"
 
             # Color coding for count
-            if count > 0:
-                if stage == "done":
+            if is_substage:
+                count_style = "[dim cyan]"  # Substages are dimmed
+                count_display = f"{count_style}{count}[/]"
+            elif count > 0:
+                if stage_key == "done":
                     count_style = "[bold green]"
-                elif stage == "failed":
+                elif stage_key == "failed":
                     count_style = "[bold red]"
                 else:
                     count_style = "[bold white]"
+                count_display = f"{count_style}{count}[/]"
             else:
                 count_style = "[dim]"
+                count_display = f"{count_style}{count}[/]"
 
             table.add_row(
-                stage_names[stage],
-                f"{count_style}{count}[/]",
+                stage_display,
+                count_display,
                 f"{percent:.1f}%",
                 avg_time_str,
                 min_time_str,
