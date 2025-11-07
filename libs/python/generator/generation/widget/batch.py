@@ -817,8 +817,9 @@ class BatchGenerator:
         loop.set_default_executor(executor)
         # ========== Thread Pool Configured ==========
 
-        # Setup logging
-        setup_logger(self.output_dir / "run.log")
+        # Setup logging with run timestamp
+        run_start_time = datetime.now().isoformat()
+        setup_logger(self.output_dir / "run.log", run_start_time=run_start_time)
 
         # Save config.json
         config_data = {
@@ -1000,6 +1001,13 @@ class BatchGenerator:
         success_color = Colors.BRIGHT_GREEN if self.failed == 0 else Colors.BRIGHT_YELLOW if self.completed > 0 else Colors.BRIGHT_RED
         log_to_console(f"Results: {self.completed}/{self.total} succeeded, {self.failed} failed", success_color)
         log_to_console(separator(), Colors.CYAN)
+
+        # Write run end marker to log file
+        log_to_file("=" * 80)
+        log_to_file(f"RUN END: {end_time.isoformat()}")
+        log_to_file(f"Results: {self.completed}/{self.total} succeeded, {self.failed} failed")
+        log_to_file("=" * 80)
+        log_to_file("")
 
         if self.failed > 0:
             log_to_console("")

@@ -39,11 +39,12 @@ class Colors:
     BRIGHT_WHITE = '\033[97m'
 
 
-def setup_logger(log_file: Path):
+def setup_logger(log_file: Path, run_start_time: str = None):
     """Setup global file logger for batch generation
 
     Args:
         log_file: Path to the log file (e.g., output_dir/run.log)
+        run_start_time: ISO timestamp for the run start (optional)
     """
     global _logger, _log_file
 
@@ -54,11 +55,19 @@ def setup_logger(log_file: Path):
     _logger.setLevel(logging.INFO)
     _logger.handlers.clear()
 
-    # File handler
-    fh = logging.FileHandler(log_file, mode='w', encoding='utf-8')
+    # File handler - use append mode to keep history
+    fh = logging.FileHandler(log_file, mode='a', encoding='utf-8')
     fh.setFormatter(logging.Formatter('%(message)s'))
     _logger.addHandler(fh)
     _logger.propagate = False
+
+    # Write run separator and timestamp
+    if run_start_time:
+        separator_line = "=" * 80
+        _logger.info("")
+        _logger.info(separator_line)
+        _logger.info(f"RUN START: {run_start_time}")
+        _logger.info(separator_line)
 
 
 def get_logger() -> Optional[logging.Logger]:
