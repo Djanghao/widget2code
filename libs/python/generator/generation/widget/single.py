@@ -591,7 +591,7 @@ async def generate_widget_full(
 
         import time
         dsl_start = time.time()
-        response = vision_llm.chat(messages)
+        response = await asyncio.to_thread(vision_llm.chat, messages)
         dsl_duration = time.time() - dsl_start
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] VLM API call completed in {dsl_duration:.2f}s")
