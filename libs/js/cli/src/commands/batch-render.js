@@ -62,8 +62,12 @@ async function findWidgetsToProcess(inputPath, options = {}) {
 
       // Skip status check if force is enabled
       if (!force) {
+        const outputPngPath = path.join(widgetDir, 'output.png');
         const debugExists = await fs.access(debugPath).then(() => true).catch(() => false);
-        if (debugExists) {
+        const outputExists = await fs.access(outputPngPath).then(() => true).catch(() => false);
+
+        // Only skip if both debug.json shows success AND output.png exists
+        if (debugExists && outputExists) {
           try {
             const debugData = JSON.parse(await fs.readFile(debugPath, 'utf-8'));
             const renderingStep = debugData.steps?.rendering;
