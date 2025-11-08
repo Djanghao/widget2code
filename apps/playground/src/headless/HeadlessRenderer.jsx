@@ -121,14 +121,15 @@ function HeadlessRenderer() {
                 await currentState.executeAutoResize(aspectRatio, widgetFrameRef);
                 // Note: executeAutoResize will call writebackSpecSize, which now works because widgetDSL is set
 
-                console.log('[Headless] ✅ Auto-resize complete, waiting 500ms for stabilization...');
+                console.log('[Headless] ✅ Auto-resize complete, waiting 1000ms for stabilization...');
               } else {
                 console.log('[Headless] ⏭️  Skipping auto-resize');
               }
 
+              // Wait longer to allow image error handlers to complete
               setTimeout(() => {
                 completeRendering(resolve, reject, captureOptions, renderStartTime);
-              }, 500);
+              }, 1000);
             } else {
               requestAnimationFrame(waitForIdle);
             }
