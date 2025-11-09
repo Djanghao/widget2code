@@ -11,6 +11,10 @@ from typing import Any, Dict, List, Optional, Union
 from dataclasses import dataclass
 from openai import OpenAI, AsyncOpenAI
 
+# Import rate limiter for global API rate limiting
+from ..utils.rate_limiter import get_rate_limiter
+from ..config import GeneratorConfig
+
 
 @dataclass
 class ChatMessage:
@@ -196,6 +200,9 @@ class OpenAIProvider:
             >>> response = provider.chat(messages)
             >>> print(response.content)
         """
+        # Acquire rate limit token (blocks if needed)
+        _rate_limiter.acquire_sync()
+
         # Convert ChatMessage to OpenAI format
         formatted_messages = []
 
@@ -286,6 +293,9 @@ class OpenAIProvider:
             >>> response = await provider.async_chat(messages)
             >>> print(response.content)
         """
+        # Acquire rate limit token (blocks if needed)
+        await _rate_limiter.acquire()
+
         # Convert ChatMessage to OpenAI format
         formatted_messages = []
 
@@ -354,3 +364,17 @@ class OpenAIProvider:
     async def aclose(self):
         """Close the async client and release resources."""
         await self.async_client.close()
+
+
+# -----------------------------------------------------------------------------
+# Global rate limiter - initialized once on module load
+# -----------------------------------------------------------------------------
+# Initialize rate limiter once with config from environment
+# This is safe because the rate limiter is immutable after initialization
+try:
+    _config = GeneratorConfig.from_env()
+    _rate_limiter = get_rate_limiter(_config.requests_per_minute)
+except Exception as e:
+    # If initialization fails, create a disabled limiter
+    print(f"[OpenAIProvider] Warning: Failed to initialize rate limiter: {e}")
+    _rate_limiter = get_rate_limiter(0)  # Disabled

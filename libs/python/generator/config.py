@@ -21,6 +21,7 @@ class GeneratorConfig:
     retrieval_topm: int = 10
     retrieval_alpha: float = 0.8
     concurrency: int = 3
+    requests_per_minute: int = 60  # Global LLM API rate limit (0 to disable)
 
     # Stage-specific timeouts (in seconds)
     default_timeout: int = 500
@@ -321,6 +322,7 @@ class GeneratorConfig:
             retrieval_topm=int(os.getenv('RETRIEVAL_TOPM', '10')),
             retrieval_alpha=float(os.getenv('RETRIEVAL_ALPHA', '0.8')),
             concurrency=int(os.getenv('CONCURRENCY', '3')),
+            requests_per_minute=int(os.getenv('REQUESTS_PER_MINUTE', '60')),
 
             # Timeouts
             default_timeout=int(os.getenv('DEFAULT_TIMEOUT', '500')),
