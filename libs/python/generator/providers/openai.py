@@ -118,8 +118,10 @@ class OpenAIProvider:
         base_url: Optional[str] = None,
         temperature: float = 0.5,
         top_k: Optional[int] = None,
+        top_p: Optional[float] = None,
         max_tokens: int = 2000,
         timeout: int = 60,
+        system_prompt: Optional[str] = None,
         thinking: bool = False,
         thinking_budget: int = 500,
         vl_high_resolution: bool = False,
@@ -134,8 +136,10 @@ class OpenAIProvider:
             base_url: API endpoint URL (optional, defaults to OpenAI)
             temperature: Sampling temperature (0.0-1.0)
             top_k: Top-k sampling parameter (optional)
+            top_p: Top-p (nucleus) sampling parameter (optional)
             max_tokens: Maximum tokens to generate
             timeout: Request timeout in seconds
+            system_prompt: System prompt to prepend to all conversations (optional)
             thinking: Enable thinking mode (qwen3-vl models only)
             thinking_budget: Max tokens for thinking process
             vl_high_resolution: Enable high-resolution mode for images
@@ -146,8 +150,10 @@ class OpenAIProvider:
         self.base_url = base_url
         self.temperature = temperature
         self.top_k = top_k
+        self.top_p = top_p
         self.max_tokens = max_tokens
         self.timeout = timeout
+        self.system_prompt = system_prompt
         self.thinking = thinking
         self.thinking_budget = thinking_budget
         self.vl_high_resolution = vl_high_resolution
@@ -187,6 +193,14 @@ class OpenAIProvider:
         """
         # Convert ChatMessage to OpenAI format
         formatted_messages = []
+
+        # Add system prompt as first message if provided
+        if self.system_prompt:
+            formatted_messages.append({
+                "role": "system",
+                "content": self.system_prompt
+            })
+
         for msg in messages:
             formatted_messages.append({
                 "role": msg.role,
@@ -205,6 +219,11 @@ class OpenAIProvider:
         top_k = kwargs.get('top_k', self.top_k)
         if top_k is not None:
             extra_body['top_k'] = top_k
+
+        # Add top_p if provided
+        top_p = kwargs.get('top_p', self.top_p)
+        if top_p is not None:
+            extra_body['top_p'] = top_p
 
         # Override with extra_params
         extra_body.update(self.extra_params.get('extra_body', {}))

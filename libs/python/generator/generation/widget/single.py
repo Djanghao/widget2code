@@ -5,7 +5,7 @@
 # Date: 2025-10-30
 # -----------------------------------------------------------------------------
 
-from provider_hub import LLM, ChatMessage, prepare_image_content
+from ...providers import OpenAIProvider, ChatMessage, prepare_image_content
 from PIL import Image
 import io
 import json
@@ -70,13 +70,14 @@ async def generate_widget(
         validate_model(model, model_to_use, vision_models)
         validate_api_key(api_key)
 
-        vision_llm = LLM(
+        vision_llm = OpenAIProvider(
             model=model_to_use,
+            api_key=api_key,
+            base_url=config.default_base_url,
             temperature=0.5,
             max_tokens=32768,
             timeout=60,
             system_prompt=prompt,
-            api_key=api_key
         )
 
         image_content = prepare_image_content(temp_file_path)
@@ -134,13 +135,14 @@ async def generate_widget_text(
         validate_model(model, model_to_use, qwen_supported)
         validate_api_key(api_key)
 
-        text_llm = LLM(
+        text_llm = OpenAIProvider(
             model=model_to_use,
+            api_key=api_key,
+            base_url=config.default_base_url,
             temperature=0.5,
             max_tokens=2000,
             timeout=60,
             system_prompt=system_prompt,
-            api_key=api_key
         )
 
         messages = [ChatMessage(
@@ -226,13 +228,14 @@ async def generate_widget_with_icons(
         validate_model(model, model_to_use, vision_models)
         validate_api_key(api_key)
 
-        vision_llm = LLM(
+        vision_llm = OpenAIProvider(
             model=model_to_use,
+            api_key=api_key,
+            base_url=config.default_base_url,
             temperature=0.5,
             max_tokens=32768,
             timeout=config.timeout,
             system_prompt=prompt_final,
-            api_key=api_key
         )
 
         image_content = prepare_image_content(temp_file_path)
@@ -332,13 +335,14 @@ async def generate_widget_with_graph(
         base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
         enhanced_prompt = inject_graph_specs_to_prompt(base_prompt, graph_specs)
 
-        vision_llm = LLM(
+        vision_llm = OpenAIProvider(
             model=model_to_use,
+            api_key=api_key,
+            base_url=config.default_base_url,
             temperature=0.5,
             max_tokens=32768,
             timeout=60,
             system_prompt=enhanced_prompt,
-            api_key=api_key
         )
 
         image_content = prepare_image_content(temp_file_path)
@@ -580,14 +584,19 @@ async def generate_widget_full(
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] Started")
 
-        vision_llm = LLM(
+        vision_llm = OpenAIProvider(
             model=config.get_dsl_gen_model(),
-            temperature=0.5,
+            api_key=config.get_dsl_gen_api_key(),
+            base_url=config.get_dsl_gen_base_url(),
+            temperature=config.get_dsl_gen_temperature(),
+            top_k=config.get_dsl_gen_top_k(),
+            top_p=config.get_dsl_gen_top_p(),
             max_tokens=32768,
             timeout=config.timeout,
-            thinking=config.get_dsl_gen_thinking(),
             system_prompt=prompt_final,
-            api_key=config.get_dsl_gen_api_key()
+            thinking=config.get_dsl_gen_thinking(),
+            thinking_budget=config.get_dsl_gen_thinking_budget(),
+            vl_high_resolution=config.get_dsl_gen_vl_high_resolution(),
         )
 
         image_content = prepare_image_content(temp_file_path)

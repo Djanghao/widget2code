@@ -17,7 +17,7 @@ import time
 from typing import Any, Dict, List, Optional, Tuple
 from PIL import Image
 
-from provider_hub import LLM, ChatMessage
+from ...providers import OpenAIProvider, ChatMessage
 from ..icon.post_process import post_process_pixel_detections
 
 DEFAULT_PROMPT = """
@@ -280,6 +280,8 @@ def detect_layout(
 
     llm_kwargs: Dict[str, Any] = dict(
         model=model,
+        api_key=api_key if api_key else "",
+        base_url=base_url if base_url else "https://dashscope.aliyuncs.com/compatible-mode/v1",
         temperature=temperature,
         max_tokens=max_tokens,
         timeout=timeout,
@@ -289,18 +291,8 @@ def detect_layout(
         llm_kwargs["top_p"] = top_p
     if thinking:
         llm_kwargs["thinking"] = True
-    if provider:
-        llm_kwargs["provider"] = provider
-    if api_key:
-        llm_kwargs["api_key"] = api_key
-    if base_url:
-        llm_kwargs["base_url"] = base_url
-    if stream:
-        llm_kwargs["stream"] = True
-        if stream_options:
-            llm_kwargs["stream_options"] = stream_options
 
-    vision_llm = LLM(**llm_kwargs)
+    vision_llm = OpenAIProvider(**llm_kwargs)
     last_err = None
     parsed_items: List[Dict[str, Any]] = []
 
@@ -311,18 +303,8 @@ def detect_layout(
 
     for attempt in range(max_retries + 1):
         try:
-            if stream:
-                joined: List[str] = []
-                for chunk in vision_llm.chat(messages):
-                    piece = getattr(chunk, "content", None)
-                    if piece is None and isinstance(chunk, dict):
-                        piece = chunk.get("content")
-                    if piece:
-                        joined.append(piece)
-                content_text = "".join(joined) if joined else ""
-            else:
-                resp = vision_llm.chat(messages)
-                content_text = getattr(resp, "content", None) if not isinstance(resp, dict) else resp.get("content", "")
+            resp = vision_llm.chat(messages)
+            content_text = getattr(resp, "content", None) if not isinstance(resp, dict) else resp.get("content", "")
 
             parsed_items = parse_layout_response(content_text) if content_text else []
             break

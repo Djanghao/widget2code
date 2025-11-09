@@ -5,7 +5,7 @@
 # Date: 2025-10-30
 # -----------------------------------------------------------------------------
 
-from provider_hub import LLM, ChatMessage, prepare_image_content
+from ...providers import OpenAIProvider, ChatMessage, prepare_image_content
 from PIL import Image
 import io
 import os
@@ -50,13 +50,14 @@ async def generate_component(
 
     validate_api_key(api_key)
 
-    component_llm = LLM(
+    component_llm = OpenAIProvider(
         model=model_to_use,
+        api_key=api_key,
+        base_url=config.default_base_url,
         temperature=0.7,
         max_tokens=2000,
         timeout=60,
         system_prompt=system_prompt_final,
-        api_key=api_key
     )
 
     messages = [ChatMessage(
@@ -115,13 +116,14 @@ async def generate_component_from_image(
 
         validate_api_key(api_key)
 
-        vision_llm = LLM(
+        vision_llm = OpenAIProvider(
             model=model_to_use,
+            api_key=api_key,
+            base_url=config.default_base_url,
             temperature=0.5,
             max_tokens=2000,
             timeout=60,
             system_prompt=system_prompt_final,
-            api_key=api_key
         )
 
         image_content = prepare_image_content(temp_file_path)

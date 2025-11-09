@@ -14,7 +14,7 @@ import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from provider_hub import LLM, ChatMessage
+from ...providers import OpenAIProvider, ChatMessage
 
 # Chart prompt files path
 GRAPHS_PROMPT_DIR = Path(__file__).parent.parent.parent / "prompts" / "graphs"
@@ -170,23 +170,19 @@ def process_graphs_in_image(
     # Configure LLM
     llm_kwargs: Dict[str, Any] = {
         "model": model,
+        "api_key": api_key if api_key else "",
+        "base_url": base_url if base_url else "https://dashscope.aliyuncs.com/compatible-mode/v1",
         "temperature": temperature,
         "max_tokens": max_tokens,
         "timeout": timeout,
         "system_prompt": "You are a WidgetDSL graph specification expert. Generate detailed, pixel-perfect specifications for charts.",
     }
 
-    if provider:
-        llm_kwargs["provider"] = provider
-    if api_key:
-        llm_kwargs["api_key"] = api_key
-    if base_url:
-        llm_kwargs["base_url"] = base_url
     if thinking:
         llm_kwargs["thinking"] = True
 
     # Call LLM with retries
-    vision_llm = LLM(**llm_kwargs)
+    vision_llm = OpenAIProvider(**llm_kwargs)
     last_err = None
     graph_specs = []
 
