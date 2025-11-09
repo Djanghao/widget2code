@@ -33,9 +33,9 @@ SIGLIP_MODEL_NAME = "ViT-SO400M-16-SigLIP2-384"
 SIGLIP_PRETRAINED = "webli"
 EMB_BATCH = 64
 
-def _caption_via_http(crops_bytes: List[bytes], image_id: Optional[str] = None) -> List[str]:
+async def _caption_via_http(crops_bytes: List[bytes], image_id: Optional[str] = None) -> List[str]:
     import os
-    import requests
+    import httpx
     import time
     from datetime import datetime
 
@@ -55,7 +55,8 @@ def _caption_via_http(crops_bytes: List[bytes], image_id: Optional[str] = None) 
              for i, crop_bytes in enumerate(crops_bytes)]
 
     start_time = time.time()
-    response = requests.post(url, files=files, timeout=300)
+    async with httpx.AsyncClient(timeout=300.0) as client:
+        response = await client.post(url, files=files)
     duration = time.time() - start_time
 
     response.raise_for_status()
@@ -69,9 +70,9 @@ def _caption_via_http(crops_bytes: List[bytes], image_id: Optional[str] = None) 
 
     return result["captions"]
 
-def _encode_texts_via_http(texts: List[str], image_id: Optional[str] = None) -> np.ndarray:
+async def _encode_texts_via_http(texts: List[str], image_id: Optional[str] = None) -> np.ndarray:
     import os
-    import requests
+    import httpx
     import time
     from datetime import datetime
 
@@ -88,7 +89,8 @@ def _encode_texts_via_http(texts: List[str], image_id: Optional[str] = None) -> 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:TextEmbed] Sending HTTP request to backend...")
 
     start_time = time.time()
-    response = requests.post(url, json={"texts": texts}, timeout=300)
+    async with httpx.AsyncClient(timeout=300.0) as client:
+        response = await client.post(url, json={"texts": texts})
     duration = time.time() - start_time
 
     response.raise_for_status()
@@ -177,7 +179,7 @@ __all__ = [
 ]
 
 
-def caption_embed_and_retrieve_svgs_with_dual_details(
+async def caption_embed_and_retrieve_svgs_with_dual_details(
     *,
     lib_roots: List[Path],
     q_img_all: np.ndarray,
@@ -196,8 +198,8 @@ def caption_embed_and_retrieve_svgs_with_dual_details(
     model_cache_enabled = os.getenv("ENABLE_MODEL_CACHE", "false").lower() == "true"
 
     if model_cache_enabled:
-        captions = _caption_via_http(crops_bytes, image_id=image_id)
-        q_txt_all = _encode_texts_via_http(captions, image_id=image_id)
+        captions = await _caption_via_http(crops_bytes, image_id=image_id)
+        q_txt_all = await _encode_texts_via_http(captions, image_id=image_id)
     else:
         blip2_pipe = build_blip2(BLIP2_MODEL_ID)
         captions = caption_from_bytes_list(crops_bytes, blip2_pipe)

@@ -185,7 +185,7 @@ def _scale_qwen_to_pixels(
         dets.append(det)
     return dets
 
-def detect_layout(
+async def detect_layout(
     *,
     image_bytes: bytes,
     filename: Optional[str] = None,
@@ -303,7 +303,7 @@ def detect_layout(
 
     for attempt in range(max_retries + 1):
         try:
-            resp = vision_llm.chat(messages)
+            resp = await vision_llm.async_chat(messages)
             content_text = getattr(resp, "content", None) if not isinstance(resp, dict) else resp.get("content", "")
 
             parsed_items = parse_layout_response(content_text) if content_text else []

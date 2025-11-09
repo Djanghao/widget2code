@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-def run_icon_detection_pipeline(
+async def run_icon_detection_pipeline(
     image_bytes: bytes,
     filename: Optional[str],
     model: str,
@@ -78,7 +78,7 @@ def run_icon_detection_pipeline(
                 log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] ❌ [{image_id}] CRITICAL: Icon retrieval SKIPPED - icons will use fallback '+' symbol")
             else:
                 try:
-                    svg_names, per_icon_details = query_from_detections_with_details(
+                    svg_names, per_icon_details = await query_from_detections_with_details(
                         detections=layout_detections,  # Changed: use layout_detections directly
                         image_bytes=image_bytes,
                         lib_roots=existing_roots,

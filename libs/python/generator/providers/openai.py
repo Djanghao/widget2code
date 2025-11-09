@@ -9,7 +9,7 @@ import os
 import base64
 from typing import Any, Dict, List, Optional, Union
 from dataclasses import dataclass
-from openai import OpenAI
+from openai import OpenAI, AsyncOpenAI
 
 
 @dataclass
@@ -159,8 +159,13 @@ class OpenAIProvider:
         self.vl_high_resolution = vl_high_resolution
         self.extra_params = kwargs
 
-        # Create OpenAI client
+        # Create synchronous and asynchronous OpenAI clients
         self.client = OpenAI(
+            api_key=api_key,
+            base_url=base_url,
+            timeout=timeout,
+        )
+        self.async_client = AsyncOpenAI(
             api_key=api_key,
             base_url=base_url,
             timeout=timeout,
@@ -255,3 +260,97 @@ class OpenAIProvider:
             model=completion.model,
             finish_reason=completion.choices[0].finish_reason
         )
+
+    async def async_chat(
+        self,
+        messages: List[ChatMessage],
+        **kwargs
+    ) -> ChatResponse:
+        """
+        Send asynchronous chat completion request.
+
+        Args:
+            messages: List of ChatMessage objects
+            **kwargs: Override parameters (temperature, top_k, max_tokens, etc.)
+
+        Returns:
+            ChatResponse with model output
+
+        Examples:
+            >>> messages = [
+            ...     ChatMessage(role="user", content=[
+            ...         {"type": "text", "text": "这是什么"},
+            ...         prepare_image_content("/path/to/image.png")
+            ...     ])
+            ... ]
+            >>> response = await provider.async_chat(messages)
+            >>> print(response.content)
+        """
+        # Convert ChatMessage to OpenAI format
+        formatted_messages = []
+
+        # Add system prompt as first message if provided
+        if self.system_prompt:
+            formatted_messages.append({
+                "role": "system",
+                "content": self.system_prompt
+            })
+
+        for msg in messages:
+            formatted_messages.append({
+                "role": msg.role,
+                "content": msg.content
+            })
+
+        # Prepare extra_body for DashScope-specific parameters
+        extra_body = {}
+        if self.thinking:
+            extra_body['enable_thinking'] = True
+            extra_body['thinking_budget'] = self.thinking_budget
+        if self.vl_high_resolution:
+            extra_body['vl_high_resolution_images'] = True
+
+        # Add top_k if provided
+        top_k = kwargs.get('top_k', self.top_k)
+        if top_k is not None:
+            extra_body['top_k'] = top_k
+
+        # Add top_p if provided
+        top_p = kwargs.get('top_p', self.top_p)
+        if top_p is not None:
+            extra_body['top_p'] = top_p
+
+        # Override with extra_params
+        extra_body.update(self.extra_params.get('extra_body', {}))
+
+        # Merge kwargs
+        temperature = kwargs.get('temperature', self.temperature)
+        max_tokens = kwargs.get('max_tokens', self.max_tokens)
+
+        # Call OpenAI API asynchronously
+        completion = await self.async_client.chat.completions.create(
+            model=self.model,
+            messages=formatted_messages,
+            temperature=temperature,
+            max_tokens=max_tokens,
+            extra_body=extra_body if extra_body else None,
+        )
+
+        # Extract response
+        content = completion.choices[0].message.content
+        usage = {
+            "prompt_tokens": completion.usage.prompt_tokens,
+            "completion_tokens": completion.usage.completion_tokens,
+            "total_tokens": completion.usage.total_tokens,
+        } if completion.usage else None
+
+        return ChatResponse(
+            content=content,
+            usage=usage,
+            model=completion.model,
+            finish_reason=completion.choices[0].finish_reason
+        )
+
+    async def aclose(self):
+        """Close the async client and release resources."""
+        await self.async_client.close()

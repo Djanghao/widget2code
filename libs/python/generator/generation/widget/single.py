@@ -426,8 +426,7 @@ async def generate_widget_full(
 
         from ...perception.layout import detect_layout
 
-        layout_raw, layout_pixel, layout_post, img_width, img_height = await asyncio.to_thread(
-            detect_layout,
+        layout_raw, layout_pixel, layout_post, img_width, img_height = await detect_layout(
             image_bytes=image_bytes,
             filename=image_filename,
             model=config.get_layout_model(),
@@ -444,7 +443,10 @@ async def generate_widget_full(
         if stage_tracker:
             stage_tracker.set_stage(image_id, "perception")
 
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] 🔄 Parallel extraction started")
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] Started")
+
+        import time
+        parallel_start = time.time()
 
         # Parse icon library names from JSON array, e.g., '["sf", "lucide"]'
         lib_names = None
@@ -460,8 +462,7 @@ async def generate_widget_full(
         async def track_icon_substage():
             if stage_tracker:
                 stage_tracker.set_substage(image_id, "perception.icon", is_start=True)
-            result = await asyncio.to_thread(
-                run_icon_detection_pipeline,
+            result = await run_icon_detection_pipeline(
                 image_bytes=image_bytes,
                 filename=image_filename,
                 model=config.default_model,
@@ -482,8 +483,7 @@ async def generate_widget_full(
         async def track_graph_substage():
             if stage_tracker:
                 stage_tracker.set_substage(image_id, "perception.graph", is_start=True)
-            result = await asyncio.to_thread(
-                detect_and_process_graphs,
+            result = await detect_and_process_graphs(
                 image_bytes=image_bytes,
                 filename=image_filename,
                 provider=None,
@@ -508,7 +508,10 @@ async def generate_widget_full(
             track_graph_substage()
         )
 
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Parallel extraction: Icons:{icon_result['icon_count']}, Charts:{sum(chart_counts.values()) if chart_counts else 0}")
+        parallel_duration = time.time() - parallel_start
+        icon_count = icon_result['icon_count']
+        chart_count = sum(chart_counts.values()) if chart_counts else 0
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] Completed in {parallel_duration:.2f}s (Icons:{icon_count}, Charts:{chart_count})")
 
         # Extract icon results (NEW: no longer includes grounding data)
         per_icon_details = icon_result["per_icon_details"]
@@ -612,7 +615,7 @@ async def generate_widget_full(
 
         import time
         dsl_start = time.time()
-        response = await asyncio.to_thread(vision_llm.chat, messages)
+        response = await vision_llm.async_chat(messages)
         dsl_duration = time.time() - dsl_start
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] VLM API call completed in {dsl_duration:.2f}s")

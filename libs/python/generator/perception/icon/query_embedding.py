@@ -157,7 +157,7 @@ def to_outline_bw(
     out_valid = out_big[vy0:vy1, vx0:vx1]  # (target, target)
     return Image.fromarray(out_valid, mode="L").convert("RGB")
 
-def _encode_images_via_http(outline_pils: List[Image.Image]) -> np.ndarray:
+async def _encode_images_via_http(outline_pils: List[Image.Image]) -> np.ndarray:
     """
     Encode images to vectors via backend API.
 
@@ -168,7 +168,7 @@ def _encode_images_via_http(outline_pils: List[Image.Image]) -> np.ndarray:
         np.ndarray: Image embeddings array with shape (N, 1152)
     """
     import os
-    import requests
+    import httpx
 
     backend_port = os.getenv("BACKEND_PORT", "8010")
     backend_host = os.getenv("HOST", "0.0.0.0")
@@ -183,7 +183,8 @@ def _encode_images_via_http(outline_pils: List[Image.Image]) -> np.ndarray:
         pil_img.save(buf, format="PNG")
         files.append(("images", (f"outline_{i}.png", buf.getvalue(), "image/png")))
 
-    response = requests.post(url, files=files, timeout=300)
+    async with httpx.AsyncClient(timeout=300.0) as client:
+        response = await client.post(url, files=files)
     response.raise_for_status()
     result = response.json()
 
@@ -220,7 +221,7 @@ __all__ = [
 ]
 
 
-def query_from_detections_with_details(
+async def query_from_detections_with_details(
     *,
     detections: List[Dict[str, Any]],
     image_bytes: bytes,
@@ -278,7 +279,7 @@ def query_from_detections_with_details(
         if image_id:
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:ImageEmbed] Sending HTTP request to backend...")
 
-        q_img_all = _encode_images_via_http(outline_pils)
+        q_img_all = await _encode_images_via_http(outline_pils)
 
         duration = time.time() - start_time
         if image_id:
@@ -304,7 +305,7 @@ def query_from_detections_with_details(
         im.save(buf, format="PNG")
         crops_bytes.append(buf.getvalue())
 
-    svg_names, captions, fused_hits_all, img_only_hits_all = caption_embed_and_retrieve_svgs_with_dual_details(
+    svg_names, captions, fused_hits_all, img_only_hits_all = await caption_embed_and_retrieve_svgs_with_dual_details(
         lib_roots=lib_roots,
         q_img_all=q_img_all,
         crops_bytes=crops_bytes,

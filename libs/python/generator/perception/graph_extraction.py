@@ -5,7 +5,7 @@ from .graph.detection import detect_charts_in_image, should_use_graph_pipeline
 from .graph.pipeline import process_graphs_in_image, format_graph_specs_for_injection
 from ..utils.logger import log_to_file
 
-def detect_and_process_graphs(
+async def detect_and_process_graphs(
     image_bytes: bytes,
     filename: Optional[str],
     provider: Optional[str],
@@ -23,7 +23,7 @@ def detect_and_process_graphs(
 ) -> tuple[dict, list]:
     image_id = Path(filename).stem if filename else "unknown"
 
-    chart_counts = detect_charts_in_image(
+    chart_counts = await detect_charts_in_image(
         image_bytes=image_bytes,
         filename=filename,
         provider=provider,
@@ -43,7 +43,7 @@ def detect_and_process_graphs(
     if should_use_graph_pipeline(chart_counts):
         # Use dedicated graph_gen_api_key if provided, otherwise fallback to api_key
         gen_key = graph_gen_api_key if graph_gen_api_key else api_key
-        graph_specs = process_graphs_in_image(
+        graph_specs = await process_graphs_in_image(
             image_bytes=image_bytes,
             filename=filename,
             chart_counts=chart_counts,

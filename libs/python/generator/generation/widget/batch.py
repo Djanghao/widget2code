@@ -865,25 +865,6 @@ class BatchGenerator:
     async def run(self):
         """Main execution flow."""
         import asyncio
-        import concurrent.futures
-
-        # ========== Configure Thread Pool ==========
-        # Read MAX_THREAD_POOL_WORKERS from environment, or auto-calculate
-        max_workers = int(os.getenv('MAX_THREAD_POOL_WORKERS', 0))
-        if max_workers <= 0:
-            # Auto-calculate: concurrency * 2 (for icon+graph parallel) + buffer
-            max_workers = self.concurrency * 2 + 50
-
-        # Create thread pool executor
-        executor = concurrent.futures.ThreadPoolExecutor(
-            max_workers=max_workers,
-            thread_name_prefix="widget_worker"
-        )
-
-        # Set as default executor for asyncio
-        loop = asyncio.get_running_loop()
-        loop.set_default_executor(executor)
-        # ========== Thread Pool Configured ==========
 
         # Setup logging with run timestamp
         run_start_time = datetime.now().isoformat()
@@ -933,7 +914,6 @@ class BatchGenerator:
             },
             "processingSettings": {
                 "concurrency": self.concurrency,
-                "threadPoolSize": max_workers,
                 "maxFileSizeMB": self.config.max_file_size_mb
             }
         }
@@ -985,7 +965,6 @@ class BatchGenerator:
         log_to_console("")
         log_to_console("Processing Settings:", Colors.BRIGHT_YELLOW)
         log_to_console(f"  Concurrency: {self.concurrency}", Colors.BRIGHT_GREEN)
-        log_to_console(f"  Thread Pool Size: {max_workers}", Colors.BRIGHT_GREEN)
         log_to_console(f"  Max File Size: {self.config.max_file_size_mb}MB")
         log_to_console("")
 
@@ -1038,8 +1017,6 @@ class BatchGenerator:
                         self.display_thread.join(timeout=2)
                     # Final update to show completion
                     live.update(self._create_status_table())
-                    # Clean up thread pool
-                    executor.shutdown(wait=True)
         else:
             # Fallback to tqdm
             self.pbar = tqdm(
@@ -1053,8 +1030,6 @@ class BatchGenerator:
             finally:
                 if self.pbar:
                     self.pbar.close()
-                # Clean up thread pool
-                executor.shutdown(wait=True)
 
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()

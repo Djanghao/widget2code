@@ -92,7 +92,7 @@ def prepare_image_content_from_bytes(image_bytes: bytes, filename: Optional[str]
     b64 = base64.b64encode(image_bytes).decode("ascii")
     return {"type": "image_url", "image_url": {"url": f"data:{mime};base64,{b64}"}}
 
-def detect_charts_in_image(
+async def detect_charts_in_image(
     *,
     image_bytes: bytes,
     filename: Optional[str] = None,
@@ -115,6 +115,22 @@ def detect_charts_in_image(
     """
     if not isinstance(image_bytes, (bytes, bytearray)):
         raise TypeError("image_bytes must be raw bytes")
+
+    # Extract image_id for logging
+    from datetime import datetime
+    import time
+    image_id = Path(filename).stem if filename else "unknown"
+
+    try:
+        from ...utils.logger import log_to_file
+        has_logger = True
+    except (ImportError, Exception):
+        has_logger = False
+
+    if has_logger:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Graph Detection] Started")
+
+    start_time = time.time()
 
     # Load the graph detection prompt dynamically
     graph_detection_prompt = load_graph_detection_prompt()
@@ -150,9 +166,14 @@ def detect_charts_in_image(
     last_err = None
     chart_counts = {chart_type: 0 for chart_type in SUPPORTED_CHART_TYPES}
 
+    if has_logger:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Graph Detection] VLM API call started (model={model}, thinking={thinking})")
+
+    vlm_start = time.time()
+
     for attempt in range(max_retries + 1):
         try:
-            resp = vision_llm.chat(messages)
+            resp = await vision_llm.async_chat(messages)
             content_text = getattr(resp, "content", None) if not isinstance(resp, dict) else resp.get("content", "")
 
             if content_text:
@@ -164,6 +185,14 @@ def detect_charts_in_image(
             if attempt >= max_retries:
                 # Return zero counts on failure
                 chart_counts = {chart_type: 0 for chart_type in SUPPORTED_CHART_TYPES}
+
+    vlm_duration = time.time() - vlm_start
+    total_duration = time.time() - start_time
+
+    if has_logger:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Graph Detection] VLM API call completed in {vlm_duration:.2f}s")
+        total_charts = sum(chart_counts.values())
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Graph Detection] Completed in {total_duration:.2f}s ({total_charts} charts detected)")
 
     return chart_counts
 

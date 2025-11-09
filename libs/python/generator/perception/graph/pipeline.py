@@ -106,7 +106,7 @@ def parse_graph_spec_response(text: str) -> List[Dict[str, Any]]:
     except json.JSONDecodeError as e:
         raise ValueError(f"Invalid JSON response: {e}")
 
-def process_graphs_in_image(
+async def process_graphs_in_image(
     *,
     image_bytes: bytes,
     filename: Optional[str] = None,
@@ -133,6 +133,23 @@ def process_graphs_in_image(
     # Check if any charts were detected
     if not any(count > 0 for count in chart_counts.values()):
         return []
+
+    # Extract image_id for logging
+    import time
+    from datetime import datetime
+    image_id = Path(filename).stem if filename else "unknown"
+
+    try:
+        from ...utils.logger import log_to_file
+        has_logger = True
+    except (ImportError, Exception):
+        has_logger = False
+
+    total_charts = sum(chart_counts.values())
+    if has_logger:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Graph Generation] Started ({total_charts} charts)")
+
+    start_time = time.time()
 
     # Generate the combined graph prompt
     graph_prompt = generate_graph_prompt(chart_counts)
@@ -186,9 +203,14 @@ def process_graphs_in_image(
     last_err = None
     graph_specs = []
 
+    if has_logger:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Graph Generation] VLM API call started (model={model}, thinking={thinking})")
+
+    vlm_start = time.time()
+
     for attempt in range(max_retries + 1):
         try:
-            resp = vision_llm.chat(messages)
+            resp = await vision_llm.async_chat(messages)
             content_text = getattr(resp, "content", None) if not isinstance(resp, dict) else resp.get("content", "")
 
             if content_text:
@@ -200,6 +222,14 @@ def process_graphs_in_image(
             if attempt >= max_retries:
                 # Return empty specs on failure
                 graph_specs = []
+
+    vlm_duration = time.time() - vlm_start
+    total_duration = time.time() - start_time
+
+    if has_logger:
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Graph Generation] VLM API call completed in {vlm_duration:.2f}s")
+        spec_count = len(graph_specs)
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Graph Generation] Completed in {total_duration:.2f}s ({spec_count} specs generated)")
 
     return graph_specs
 
