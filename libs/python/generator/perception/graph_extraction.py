@@ -20,6 +20,7 @@ async def detect_and_process_graphs(
     graph_gen_thinking: bool = False,  # Thinking mode for graph generation
     graph_det_model: Optional[str] = None,  # Model for graph detection (optional)
     graph_gen_model: Optional[str] = None,  # Model for graph generation (optional)
+    graph_gen_timeout: Optional[int] = None,  # Timeout for graph generation (optional)
 ) -> tuple[dict, list]:
     image_id = Path(filename).stem if filename else "unknown"
 
@@ -43,6 +44,8 @@ async def detect_and_process_graphs(
     if should_use_graph_pipeline(chart_counts):
         # Use dedicated graph_gen_api_key if provided, otherwise fallback to api_key
         gen_key = graph_gen_api_key if graph_gen_api_key else api_key
+        # Use graph_gen_timeout if provided, otherwise default to 60
+        gen_timeout = graph_gen_timeout if graph_gen_timeout is not None else 60
         graph_specs = await process_graphs_in_image(
             image_bytes=image_bytes,
             filename=filename,
@@ -52,9 +55,9 @@ async def detect_and_process_graphs(
             model=graph_gen_model if graph_gen_model else model,
             temperature=0.3,
             max_tokens=3000,
-            timeout=60,
+            timeout=gen_timeout,
             thinking=graph_gen_thinking,
-            max_retries=2
+            max_retries=0
         )
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Graph generation: {len(graph_specs)} specs")
 

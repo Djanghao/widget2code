@@ -76,7 +76,7 @@ async def generate_widget(
             base_url=config.default_base_url,
             temperature=0.5,
             max_tokens=32768,
-            timeout=60,
+            timeout=config.get_dsl_gen_timeout(),
             system_prompt=prompt,
         )
 
@@ -106,6 +106,17 @@ async def generate_widget(
             "widgetDSL": widget_spec,
             "aspectRatio": round(aspect_ratio, 3),
             "usage": response.usage
+        }
+    except asyncio.TimeoutError as e:
+        # Timeout occurred - log and return failure
+        stage_name = "unknown"
+        if stage_tracker:
+            stage_name = stage_tracker.get_current_stage(image_id) or "unknown"
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ❌ TIMEOUT in {stage_name} stage")
+        return {
+            "success": False,
+            "error": f"Timeout in {stage_name} stage",
+            "error_type": "timeout"
         }
     except json.JSONDecodeError as e:
         raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
@@ -141,7 +152,7 @@ async def generate_widget_text(
             base_url=config.default_base_url,
             temperature=0.5,
             max_tokens=2000,
-            timeout=60,
+            timeout=config.get_dsl_gen_timeout(),
             system_prompt=system_prompt,
         )
 
@@ -191,15 +202,30 @@ async def generate_widget_with_icons(
 
         base_prompt = system_prompt if system_prompt else load_default_prompt()
 
-        icon_result = run_icon_detection_pipeline(
+        # Run layout detection first to get layout_detections for icon detection
+        from ...perception.layout import detect_layout
+        layout_raw, layout_pixel, layout_post, img_width, img_height = await detect_layout(
+            image_bytes=image_bytes,
+            filename=image_filename,
+            model=config.get_layout_model(),
+            api_key=config.get_layout_api_key(),
+            timeout=config.get_layout_timeout(),
+            thinking=config.get_layout_thinking(),
+            max_retries=0,
+        )
+
+        icon_result = await run_icon_detection_pipeline(
             image_bytes=image_bytes,
             filename=image_filename,
             model=(model or "qwen3-vl-flash"),
             api_key=api_key,
+            layout_detections=layout_post,
+            img_width=img_width,
+            img_height=img_height,
             retrieval_topk=retrieval_topk,
             retrieval_topm=retrieval_topm,
             retrieval_alpha=retrieval_alpha,
-            timeout=config.timeout,
+            timeout=config.get_icon_retrieval_timeout(),
         )
 
         grounding_raw = icon_result["grounding_raw"]
@@ -234,7 +260,7 @@ async def generate_widget_with_icons(
             base_url=config.default_base_url,
             temperature=0.5,
             max_tokens=32768,
-            timeout=config.timeout,
+            timeout=config.get_dsl_gen_timeout(),
             system_prompt=prompt_final,
         )
 
@@ -278,6 +304,17 @@ async def generate_widget_with_icons(
                 }
             }
         }
+    except asyncio.TimeoutError as e:
+        # Timeout occurred - log and return failure
+        stage_name = "unknown"
+        if stage_tracker:
+            stage_name = stage_tracker.get_current_stage(image_id) or "unknown"
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ❌ TIMEOUT in {stage_name} stage")
+        return {
+            "success": False,
+            "error": f"Timeout in {stage_name} stage",
+            "error_type": "timeout"
+        }
     except json.JSONDecodeError as e:
         raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
     finally:
@@ -316,7 +353,7 @@ async def generate_widget_with_graph(
         validate_api_key(api_key)
 
         print(f"[{datetime.now()}] Step 1: Detecting charts in image...")
-        chart_counts, graph_specs = detect_and_process_graphs(
+        chart_counts, graph_specs = await detect_and_process_graphs(
             image_bytes=image_bytes,
             filename=image_filename,
             provider=None,
@@ -324,8 +361,9 @@ async def generate_widget_with_graph(
             model=model_to_use,
             temperature=0.1,
             max_tokens=500,
-            timeout=30,
-            max_retries=2
+            timeout=config.get_graph_det_timeout(),
+            max_retries=2,
+            graph_gen_timeout=config.get_graph_gen_timeout(),
         )
 
         print(f"[{datetime.now()}] Detected charts: {chart_counts}")
@@ -341,7 +379,7 @@ async def generate_widget_with_graph(
             base_url=config.default_base_url,
             temperature=0.5,
             max_tokens=32768,
-            timeout=60,
+            timeout=config.get_dsl_gen_timeout(),
             system_prompt=enhanced_prompt,
         )
 
@@ -371,6 +409,17 @@ async def generate_widget_with_graph(
             "widgetDSL": widget_spec,
             "aspectRatio": round(aspect_ratio, 3),
             "usage": response.usage
+        }
+    except asyncio.TimeoutError as e:
+        # Timeout occurred - log and return failure
+        stage_name = "unknown"
+        if stage_tracker:
+            stage_name = stage_tracker.get_current_stage(image_id) or "unknown"
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ❌ TIMEOUT in {stage_name} stage")
+        return {
+            "success": False,
+            "error": f"Timeout in {stage_name} stage",
+            "error_type": "timeout"
         }
     except json.JSONDecodeError as e:
         raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
@@ -426,14 +475,18 @@ async def generate_widget_full(
 
         from ...perception.layout import detect_layout
 
-        layout_raw, layout_pixel, layout_post, img_width, img_height = await detect_layout(
-            image_bytes=image_bytes,
-            filename=image_filename,
-            model=config.get_layout_model(),
-            api_key=config.get_layout_api_key(),
-            timeout=config.timeout,
-            thinking=config.get_layout_thinking(),
-            image_id=image_id,
+        layout_raw, layout_pixel, layout_post, img_width, img_height = await asyncio.wait_for(
+            detect_layout(
+                image_bytes=image_bytes,
+                filename=image_filename,
+                model=config.get_layout_model(),
+                api_key=config.get_layout_api_key(),
+                timeout=config.get_layout_timeout(),
+                thinking=config.get_layout_thinking(),
+                max_retries=0,
+                image_id=image_id,
+            ),
+            timeout=config.get_layout_timeout()
         )
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection completed: {len(layout_post)} elements")
@@ -474,7 +527,7 @@ async def generate_widget_full(
                 retrieval_topm=retrieval_topm,
                 retrieval_alpha=retrieval_alpha,
                 lib_names=lib_names,
-                timeout=config.timeout,
+                timeout=config.get_icon_retrieval_timeout(),
             )
             if stage_tracker:
                 stage_tracker.set_substage(image_id, "perception.icon", is_start=False)
@@ -491,21 +544,29 @@ async def generate_widget_full(
                 model=config.get_graph_det_model(),
                 temperature=0.1,
                 max_tokens=500,
-                timeout=config.timeout,
-                max_retries=2,
+                timeout=config.get_graph_det_timeout(),
+                max_retries=0,
                 graph_gen_api_key=config.get_graph_gen_api_key(),
                 graph_det_thinking=config.get_graph_det_thinking(),
                 graph_gen_thinking=config.get_graph_gen_thinking(),
                 graph_det_model=config.get_graph_det_model(),
                 graph_gen_model=config.get_graph_gen_model(),
+                graph_gen_timeout=config.get_graph_gen_timeout(),
             )
             if stage_tracker:
                 stage_tracker.set_substage(image_id, "perception.graph", is_start=False)
             return result
 
-        icon_result, (chart_counts, graph_specs) = await asyncio.gather(
-            track_icon_substage(),
-            track_graph_substage()
+        # Use the maximum of icon and graph timeouts for parallel execution
+        # Graph stage includes both detection and generation (sequential), so add their timeouts
+        graph_total_timeout = config.get_graph_det_timeout() + config.get_graph_gen_timeout()
+        parallel_timeout = max(config.get_icon_retrieval_timeout(), graph_total_timeout)
+        icon_result, (chart_counts, graph_specs) = await asyncio.wait_for(
+            asyncio.gather(
+                track_icon_substage(),
+                track_graph_substage()
+            ),
+            timeout=parallel_timeout
         )
 
         parallel_duration = time.time() - parallel_start
@@ -595,7 +656,7 @@ async def generate_widget_full(
             top_k=config.get_dsl_gen_top_k(),
             top_p=config.get_dsl_gen_top_p(),
             max_tokens=32768,
-            timeout=config.timeout,
+            timeout=config.get_dsl_gen_timeout(),
             system_prompt=prompt_final,
             thinking=config.get_dsl_gen_thinking(),
             thinking_budget=config.get_dsl_gen_thinking_budget(),
@@ -615,7 +676,10 @@ async def generate_widget_full(
 
         import time
         dsl_start = time.time()
-        response = await vision_llm.async_chat(messages)
+        response = await asyncio.wait_for(
+            vision_llm.async_chat(messages),
+            timeout=config.get_dsl_gen_timeout()
+        )
         dsl_duration = time.time() - dsl_start
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] VLM API call completed in {dsl_duration:.2f}s")
@@ -712,6 +776,17 @@ async def generate_widget_full(
                     "components": components_list,
                 }
             }
+        }
+    except asyncio.TimeoutError as e:
+        # Timeout occurred - log and return failure
+        stage_name = "unknown"
+        if stage_tracker:
+            stage_name = stage_tracker.get_current_stage(image_id) or "unknown"
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ❌ TIMEOUT in {stage_name} stage")
+        return {
+            "success": False,
+            "error": f"Timeout in {stage_name} stage",
+            "error_type": "timeout"
         }
     except json.JSONDecodeError as e:
         raise GenerationError(f"Invalid JSON from VLM: {str(e)}")

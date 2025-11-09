@@ -183,7 +183,13 @@ async def _encode_images_via_http(outline_pils: List[Image.Image]) -> np.ndarray
         pil_img.save(buf, format="PNG")
         files.append(("images", (f"outline_{i}.png", buf.getvalue(), "image/png")))
 
-    async with httpx.AsyncClient(timeout=300.0) as client:
+    # Get timeout configuration from environment
+    import os
+    timeout_seconds = float(os.getenv("ICON_RETRIEVAL_TIMEOUT", os.getenv("DEFAULT_TIMEOUT", "500")))
+    connect_timeout = float(os.getenv("HTTP_CONNECT_TIMEOUT", "30"))
+    timeout_config = httpx.Timeout(timeout=timeout_seconds, connect=connect_timeout)
+
+    async with httpx.AsyncClient(timeout=timeout_config) as client:
         response = await client.post(url, files=files)
     response.raise_for_status()
     result = response.json()

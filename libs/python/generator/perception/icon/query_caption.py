@@ -54,8 +54,14 @@ async def _caption_via_http(crops_bytes: List[bytes], image_id: Optional[str] = 
     files = [("crops", (f"crop_{i}.png", crop_bytes, "image/png"))
              for i, crop_bytes in enumerate(crops_bytes)]
 
+    # Get timeout configuration from environment
+    import os
+    timeout_seconds = float(os.getenv("ICON_RETRIEVAL_TIMEOUT", os.getenv("DEFAULT_TIMEOUT", "500")))
+    connect_timeout = float(os.getenv("HTTP_CONNECT_TIMEOUT", "30"))
+    timeout_config = httpx.Timeout(timeout=timeout_seconds, connect=connect_timeout)
+
     start_time = time.time()
-    async with httpx.AsyncClient(timeout=300.0) as client:
+    async with httpx.AsyncClient(timeout=timeout_config) as client:
         response = await client.post(url, files=files)
     duration = time.time() - start_time
 
@@ -88,8 +94,14 @@ async def _encode_texts_via_http(texts: List[str], image_id: Optional[str] = Non
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:TextEmbed] Started ({caption_count} captions)")
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:TextEmbed] Sending HTTP request to backend...")
 
+    # Get timeout configuration from environment
+    import os
+    timeout_seconds = float(os.getenv("ICON_RETRIEVAL_TIMEOUT", os.getenv("DEFAULT_TIMEOUT", "500")))
+    connect_timeout = float(os.getenv("HTTP_CONNECT_TIMEOUT", "30"))
+    timeout_config = httpx.Timeout(timeout=timeout_seconds, connect=connect_timeout)
+
     start_time = time.time()
-    async with httpx.AsyncClient(timeout=300.0) as client:
+    async with httpx.AsyncClient(timeout=timeout_config) as client:
         response = await client.post(url, json={"texts": texts})
     duration = time.time() - start_time
 

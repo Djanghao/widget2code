@@ -693,7 +693,7 @@ class BatchGenerator:
                 },
                 "config": {
                     "model": self.config.default_model,
-                    "timeout": self.config.timeout,
+                    "timeout": self.config.default_timeout,
                     "iconLibraries": json.loads(self.icon_lib_names),
                     "retrieval": {
                         "topK": self.config.retrieval_topk,
@@ -806,7 +806,7 @@ class BatchGenerator:
                 },
                 "config": {
                     "model": self.config.default_model,
-                    "timeout": self.config.timeout,
+                    "timeout": self.config.default_timeout,
                     "iconLibraries": json.loads(self.icon_lib_names),
                     "retrieval": {
                         "topK": self.config.retrieval_topk,
@@ -882,7 +882,7 @@ class BatchGenerator:
             "modelSettings": {
                 "defaultModel": self.config.default_model,
                 "defaultEnableThinking": self.config.default_enable_thinking,
-                "timeout": self.config.timeout,
+                "timeout": self.config.default_timeout,
                 "stages": {
                     "layout": {
                         "model": self.config.get_layout_model(),
@@ -936,7 +936,7 @@ class BatchGenerator:
         log_to_console("Model Settings:", Colors.BRIGHT_YELLOW)
         log_to_console(f"  Default Model: {self.config.default_model}", Colors.BRIGHT_MAGENTA)
         log_to_console(f"  Default Thinking: {self.config.default_enable_thinking}")
-        log_to_console(f"  Timeout: {self.config.timeout}s")
+        log_to_console(f"  Default Timeout: {self.config.default_timeout}s")
         log_to_console("")
 
         # Show stage-specific configuration

@@ -20,8 +20,15 @@ class GeneratorConfig:
     retrieval_topk: int = 50
     retrieval_topm: int = 10
     retrieval_alpha: float = 0.8
-    timeout: int = 300
     concurrency: int = 3
+
+    # Stage-specific timeouts (in seconds)
+    default_timeout: int = 500
+    layout_timeout: Optional[int] = None
+    graph_det_timeout: Optional[int] = None
+    graph_gen_timeout: Optional[int] = None
+    dsl_gen_timeout: Optional[int] = None
+    icon_retrieval_timeout: Optional[int] = None
 
     # ========================================================================
     # Default settings (used as fallback for all stages)
@@ -236,6 +243,29 @@ class GeneratorConfig:
         return self.dsl_gen_vl_high_resolution if self.dsl_gen_vl_high_resolution is not None else self.default_vl_high_resolution
 
     # ========================================================================
+    # Timeout getters
+    # ========================================================================
+    def get_layout_timeout(self) -> int:
+        """Get layout detection timeout with fallback to default"""
+        return self.layout_timeout if self.layout_timeout is not None else self.default_timeout
+
+    def get_graph_det_timeout(self) -> int:
+        """Get graph detection timeout with fallback to default"""
+        return self.graph_det_timeout if self.graph_det_timeout is not None else self.default_timeout
+
+    def get_graph_gen_timeout(self) -> int:
+        """Get graph generation timeout with fallback to default"""
+        return self.graph_gen_timeout if self.graph_gen_timeout is not None else self.default_timeout
+
+    def get_dsl_gen_timeout(self) -> int:
+        """Get DSL generation timeout with fallback to default"""
+        return self.dsl_gen_timeout if self.dsl_gen_timeout is not None else self.default_timeout
+
+    def get_icon_retrieval_timeout(self) -> int:
+        """Get icon retrieval timeout with fallback to default"""
+        return self.icon_retrieval_timeout if self.icon_retrieval_timeout is not None else self.default_timeout
+
+    # ========================================================================
     # Factory methods
     # ========================================================================
 
@@ -290,8 +320,15 @@ class GeneratorConfig:
             retrieval_topk=int(os.getenv('RETRIEVAL_TOPK', '50')),
             retrieval_topm=int(os.getenv('RETRIEVAL_TOPM', '10')),
             retrieval_alpha=float(os.getenv('RETRIEVAL_ALPHA', '0.8')),
-            timeout=int(os.getenv('TIMEOUT', '300')),
             concurrency=int(os.getenv('CONCURRENCY', '3')),
+
+            # Timeouts
+            default_timeout=int(os.getenv('DEFAULT_TIMEOUT', '500')),
+            layout_timeout=get_optional_int('LAYOUT_TIMEOUT'),
+            graph_det_timeout=get_optional_int('GRAPH_DET_TIMEOUT'),
+            graph_gen_timeout=get_optional_int('GRAPH_GEN_TIMEOUT'),
+            dsl_gen_timeout=get_optional_int('DSL_GEN_TIMEOUT'),
+            icon_retrieval_timeout=get_optional_int('ICON_RETRIEVAL_TIMEOUT'),
 
             # Default settings
             default_api_key=os.getenv('DEFAULT_API_KEY', ''),
