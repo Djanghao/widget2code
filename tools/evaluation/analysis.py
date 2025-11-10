@@ -136,9 +136,9 @@ METRIC_DOCS = {
         "improvement": "Maintain similar visual structure and texture as GT; avoid blur or distortion; maintain edge sharpness"
     },
     "lp": {
-        "name": "Learned Perceptual Image Patch Similarity (LPIPS)",
-        "description": "Measures perceptual image difference using deep neural networks (lower is better, inverted here)",
-        "measurement": "Extract features using VGG network, compute distance in feature space. Score = 100 - LPIPS value",
+        "name": "Learned Perceptual Image Patch Similarity (LPIPS, inverted)",
+        "description": "Measures perceptual image similarity using deep neural networks (higher is better after inversion)",
+        "measurement": "Extract features using VGG network, compute distance in feature space. Score = 100 × (1 - LPIPS_raw), where raw LPIPS is distance (lower raw = better similarity)",
         "improvement": "Maintain consistency with GT in visual style, color distribution, texture details; avoid unnatural artifacts"
     },
     "edgef1": {
@@ -192,7 +192,7 @@ METRIC_DOCS = {
     "perceptual_score": {
         "name": "Perceptual Composite Score",
         "description": "Weighted sum of 3 perceptual quality-related metrics",
-        "measurement": "Weights: ssim(45%), lp_inverted(35%), edgef1(20%)",
+        "measurement": "Weights: ssim(45%), lp(35%), edgef1(20%). Note: lp is already inverted (higher = better)",
         "improvement": "Balance structural similarity and perceptual quality"
     },
     "style_score": {

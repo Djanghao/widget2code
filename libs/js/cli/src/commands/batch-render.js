@@ -447,7 +447,8 @@ async function renderWidget(renderer, widgetInfo, options = {}) {
 }
 
 export async function batchRender(inputPath, options = {}) {
-  const { concurrency = 3, devServerUrl = 'http://localhost:3060', force = false } = options;
+  const frontendPort = process.env.FRONTEND_PORT || '3060';
+  const { concurrency = 3, devServerUrl = `http://localhost:${frontendPort}`, force = false } = options;
 
   console.log('🚀 Widget Factory - Batch Renderer\n');
   console.log(`Directory: ${inputPath}`);

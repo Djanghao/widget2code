@@ -27,11 +27,11 @@ usage() {
     cat << EOF
 ${BLUE}Widget Quality Evaluation Script${NC}
 
-Usage: $0 <PRED_DIR> <OUTPUT_DIR> [OPTIONS]
+Usage: $0 <PRED_DIR> [OUTPUT_DIR] [OPTIONS]
 
 ${YELLOW}Arguments:${NC}
   PRED_DIR              Path to prediction/results directory (required)
-  OUTPUT_DIR            Path to output directory for hard cases (required)
+  OUTPUT_DIR            Path to output directory for analysis (optional, default: PRED_DIR/.analysis)
 
 ${YELLOW}Options:${NC}
   -g, --gt_dir PATH     Path to ground truth directory
@@ -43,24 +43,27 @@ ${YELLOW}Options:${NC}
   -h, --help            Show this help message
 
 ${YELLOW}Examples:${NC}
-  # Basic usage
-  $0 results/test-1000-qwen3vl-plus-v1.2.0 assets/hard-cases
+  # Basic usage (output to results/my-test/.analysis)
+  $0 results/my-test
+
+  # Specify custom output directory
+  $0 results/my-test assets/analysis-my-test
 
   # With custom GT directory
-  $0 results/my-test output/hard-cases -g /path/to/GT
+  $0 results/my-test -g /path/to/GT
 
   # Use more workers for faster processing
-  $0 results/my-test output/hard-cases -w 16
+  $0 results/my-test -w 16
 
   # Only run hard case analysis (skip evaluation)
-  $0 results/my-test output/hard-cases --skip-eval
+  $0 results/my-test --skip-eval
 
   # Custom hard case threshold (top 10%)
-  $0 results/my-test output/hard-cases -k 10.0
+  $0 results/my-test -k 10.0
 
 ${YELLOW}Output Files:${NC}
-  PRED_DIR/evaluation.xlsx                      - Average metrics summary
   PRED_DIR/image_*/evaluation.json              - Individual evaluation results
+  OUTPUT_DIR/evaluation.xlsx                    - Average metrics summary
   OUTPUT_DIR/hard_cases_analysis_report.md      - Comprehensive analysis report
   OUTPUT_DIR/hard_cases_summary.csv             - CSV summary of hard cases
   OUTPUT_DIR/metrics_stats.json                 - Quartile statistics
@@ -143,11 +146,10 @@ if [ -z "$PRED_DIR" ]; then
     exit 1
 fi
 
+# Default OUTPUT_DIR to PRED_DIR/.analysis if not provided
 if [ -z "$OUTPUT_DIR" ]; then
-    echo -e "${RED}Error: OUTPUT_DIR (output directory) is required${NC}"
-    echo ""
-    usage
-    exit 1
+    OUTPUT_DIR="${PRED_DIR}/.analysis"
+    echo -e "${YELLOW}ℹ  OUTPUT_DIR not specified, using default: $OUTPUT_DIR${NC}"
 fi
 
 # Convert to absolute paths and normalize

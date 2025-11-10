@@ -12,13 +12,15 @@ import time
 import threading
 from datetime import datetime
 from dotenv import load_dotenv
+
+# Load .env BEFORE importing generator to ensure rate limiter gets correct config
+root_dir = Path(__file__).parent.parent.parent
+load_dotenv(root_dir / ".env")
+
 import generator
 from generator import GeneratorConfig
 from generator.exceptions import ValidationError, FileSizeError, GenerationError, RateLimitError
 from generator.utils.validation import check_rate_limit
-
-root_dir = Path(__file__).parent.parent.parent
-load_dotenv(root_dir / ".env")
 
 gen_config = GeneratorConfig.from_env()
 

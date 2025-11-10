@@ -11,7 +11,8 @@ import path from 'path';
 import sharp from 'sharp';
 
 export async function render(jsxPath, outputPath, options = {}) {
-  const { devServerUrl = 'http://localhost:3060' } = options;
+  const frontendPort = process.env.FRONTEND_PORT || '3060';
+  const { devServerUrl = `http://localhost:${frontendPort}` } = options;
 
   try {
     // Optional output path - defaults to same directory, same name with .png extension

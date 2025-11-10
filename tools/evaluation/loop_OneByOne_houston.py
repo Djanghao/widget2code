@@ -41,7 +41,14 @@ def evaluate_single_pair(gt_file, gt_dir, pred_dir):
     try:
         num = gt_file.replace("gt_", "").replace(".png", "")
         gt_path = os.path.join(gt_dir, gt_file)
+
+        # Try _rerun suffix first, then fall back to regular
+        image_folder_rerun = os.path.join(pred_dir, f"image_{num}_rerun")
         image_folder = os.path.join(pred_dir, f"image_{num}")
+
+        if os.path.isdir(image_folder_rerun):
+            image_folder = image_folder_rerun
+
         pred_path = os.path.join(image_folder, "output.png")
 
         if not os.path.exists(pred_path):
