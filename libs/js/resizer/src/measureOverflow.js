@@ -40,9 +40,16 @@ export function measureOverflow(element) {
 
     let crossesPaddingOrOutside = false;
     const all = element.querySelectorAll('*');
+
     for (let i = 0; i < all.length; i++) {
       const el = all[i];
       if (el === element) continue;
+
+      const isSVGElement = el.namespaceURI === 'http://www.w3.org/2000/svg';
+      if (isSVGElement) {
+        continue;
+      }
+
       const r = el.getBoundingClientRect();
       if ((r.width || 0) <= 0 && (r.height || 0) <= 0) continue;
 
