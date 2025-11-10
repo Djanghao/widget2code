@@ -6,6 +6,7 @@ IMPORTANT:
 - Include all visual details for pixel-perfect replication
 - If multiple instances of the same chart type exist, include separate specifications for each
 - Each specification should be complete and ready for WidgetDSL integration
+- Do not specify a height or width parameter; these will be set automatically by the WidgetShell
 
 RESPONSE FORMAT (JSON only):
 {
