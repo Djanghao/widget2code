@@ -115,6 +115,11 @@ class StageTracker:
             self.image_start_times[image_id] = time.time()
             self.current_stages[image_id] = "waiting"
 
+    def get_current_stage(self, image_id: str) -> str:
+        """Get the current stage for an image."""
+        with self.lock:
+            return self.current_stages.get(image_id, "unknown")
+
     def get_stats(self) -> Dict[str, Any]:
         """Get current statistics for all stages and substages."""
         with self.lock:
@@ -476,14 +481,21 @@ class BatchGenerator:
         retrieval_dir = artifacts_dir / "3-retrieval"
         dsl_dir = artifacts_dir / "4-dsl"
 
+        # Create base directories (always needed)
         artifacts_dir.mkdir(parents=True, exist_ok=True)
         log_dir.mkdir(parents=True, exist_ok=True)
         prompts_dir.mkdir(parents=True, exist_ok=True)
         preprocess_dir.mkdir(parents=True, exist_ok=True)
-        layout_dir.mkdir(parents=True, exist_ok=True)
-        layout_crops_dir.mkdir(parents=True, exist_ok=True)
-        retrieval_dir.mkdir(parents=True, exist_ok=True)
         dsl_dir.mkdir(parents=True, exist_ok=True)
+
+        # Conditionally create pipeline-specific directories
+        if self.config.enable_layout_pipeline:
+            layout_dir.mkdir(parents=True, exist_ok=True)
+            if self.config.enable_icon_pipeline:
+                layout_crops_dir.mkdir(parents=True, exist_ok=True)
+
+        if self.config.enable_icon_pipeline:
+            retrieval_dir.mkdir(parents=True, exist_ok=True)
 
         # Prepare file paths
         widget_file = dsl_dir / "widget.json"
@@ -533,11 +545,11 @@ class BatchGenerator:
 
             # Extract data from result
             widget_dsl = result.get('widgetDSL', result) if isinstance(result, dict) else result
-            layout_debug = result.get('layoutDebugInfo', {}) if isinstance(result, dict) else {}  # NEW
-            icon_debug = result.get('iconDebugInfo', {}) if isinstance(result, dict) else {}
-            graph_debug = result.get('graphDebugInfo', {}) if isinstance(result, dict) else {}
-            prompt_debug = result.get('promptDebugInfo', {}) if isinstance(result, dict) else {}
-            preprocessed_info = result.get('preprocessedImage', {}) if isinstance(result, dict) else {}
+            layout_debug = (result.get('layoutDebugInfo') or {}) if isinstance(result, dict) else {}  # NEW
+            icon_debug = (result.get('iconDebugInfo') or {}) if isinstance(result, dict) else {}
+            graph_debug = (result.get('graphDebugInfo') or {}) if isinstance(result, dict) else {}
+            prompt_debug = (result.get('promptDebugInfo') or {}) if isinstance(result, dict) else {}
+            preprocessed_info = (result.get('preprocessedImage') or {}) if isinstance(result, dict) else {}
 
             # Save widget DSL
             with open(widget_file, 'w') as f:
@@ -550,6 +562,12 @@ class BatchGenerator:
 
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Generating visualizations...")
 
+            # Read pipeline enable flags for conditional artifact saving
+            enable_layout = self.config.enable_layout_pipeline
+            enable_icon = self.config.enable_icon_pipeline
+            enable_graph = self.config.enable_graph_pipeline
+            enable_color = self.config.enable_color_pipeline
+
             # 2. Save preprocessed image
             preprocessed_bytes = preprocessed_info.get('bytes')
             if preprocessed_bytes:
@@ -559,10 +577,10 @@ class BatchGenerator:
             # 3. Save layout data (NEW: replaces grounding data)
             label_counts = {}  # Initialize outside if block to avoid NameError
 
-            if layout_debug:
-                raw_detections = layout_debug.get('raw', [])
-                pixel_detections = layout_debug.get('pixel', [])
-                post_processed = layout_debug.get('postProcessed', [])
+            if layout_debug and enable_layout:
+                raw_detections = layout_debug.get('raw') or []
+                pixel_detections = layout_debug.get('pixel') or []
+                post_processed = layout_debug.get('postProcessed') or []
 
                 # Count detections by label
                 for det in post_processed:
@@ -588,43 +606,47 @@ class BatchGenerator:
 
             # 4. Generate layout visualization
             # Use preprocessed image because bbox coordinates are based on preprocessed dimensions
-            layout_detections = layout_debug.get('postProcessed', [])
+            layout_detections = (layout_debug.get('postProcessed') or []) if (layout_debug and enable_layout) else []
             visualization_image = preprocessed_bytes if preprocessed_bytes else image_data
-            if layout_detections:
+            if layout_detections and enable_layout:
                 layout_viz = draw_grounding_visualization(visualization_image, layout_detections)
                 with open(layout_dir / "layout-visualization.png", 'wb') as f:
                     f.write(layout_viz)
 
             # 5. Crop icon regions
             # Use preprocessed image because bbox coordinates are based on preprocessed dimensions
-            icon_detections = [d for d in layout_detections if d.get('label', '').lower() == 'icon']
-            for idx, det in enumerate(icon_detections):
-                bbox = det.get('bbox')
-                if bbox and len(bbox) == 4:
-                    try:
-                        crop_bytes = crop_icon_region(visualization_image, bbox)
-                        with open(layout_crops_dir / f"icon-{idx+1}.png", 'wb') as f:
-                            f.write(crop_bytes)
-                    except Exception as e:
-                        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Warning: Failed to crop icon {idx+1}: {str(e)}")
+            icon_detections = []
+            if enable_layout and enable_icon and layout_detections:
+                icon_detections = [d for d in layout_detections if d.get('label', '').lower() == 'icon']
+                for idx, det in enumerate(icon_detections):
+                    bbox = det.get('bbox')
+                    if bbox and len(bbox) == 4:
+                        try:
+                            crop_bytes = crop_icon_region(visualization_image, bbox)
+                            with open(layout_crops_dir / f"icon-{idx+1}.png", 'wb') as f:
+                                f.write(crop_bytes)
+                        except Exception as e:
+                            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Warning: Failed to crop icon {idx+1}: {str(e)}")
 
             # 5. Save retrieval SVGs
-            svg_source_dirs = [
-                Path(__file__).parents[4] / "libs" / "js" / "icons" / "svg"
-            ]
+            per_icon = []
+            if enable_icon and icon_debug:
+                svg_source_dirs = [
+                    Path(__file__).parents[4] / "libs" / "js" / "icons" / "svg"
+                ]
 
-            per_icon = icon_debug.get('retrieval', {}).get('perIcon', [])
-            for icon_data in per_icon:
-                icon_idx = icon_data.get('index', 0)
-                top_candidates = icon_data.get('topCandidates', [])
-                if top_candidates:
-                    save_retrieval_svgs(
-                        retrieval_results=top_candidates,
-                        icon_index=icon_idx,
-                        output_dir=retrieval_dir,
-                        svg_source_dirs=svg_source_dirs,
-                        top_n=10
-                    )
+                per_icon = (icon_debug.get('retrieval') or {}).get('perIcon', []) if icon_debug else []
+                for icon_data in per_icon:
+                    icon_idx = icon_data.get('index', 0)
+                    top_candidates = icon_data.get('topCandidates') or []
+                    if top_candidates:
+                        save_retrieval_svgs(
+                            retrieval_results=top_candidates,
+                            icon_index=icon_idx,
+                            output_dir=retrieval_dir,
+                            svg_source_dirs=svg_source_dirs,
+                            top_n=10
+                        )
 
             # 6. Save prompts
             if prompt_debug:
@@ -650,8 +672,8 @@ class BatchGenerator:
             log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Visualizations saved")
 
             # Count icons and graphs
-            icon_count = icon_debug.get('detection', {}).get('iconCount', 0)
-            graph_count = graph_debug.get('detection', {}).get('graphCount', 0)
+            icon_count = (icon_debug.get('detection') or {}).get('iconCount', 0) if icon_debug else 0
+            graph_count = (graph_debug.get('detection') or {}).get('graphCount', 0) if graph_debug else 0
 
             # Build file lists (only include files that were actually created)
             icon_crop_files = [
@@ -699,21 +721,40 @@ class BatchGenerator:
                         "topK": self.config.retrieval_topk,
                         "topM": self.config.retrieval_topm,
                         "alpha": self.config.retrieval_alpha
+                    },
+                    "pipelinesEnabled": {
+                        "layout": self.config.enable_layout_pipeline,
+                        "icon": self.config.enable_icon_pipeline,
+                        "graph": self.config.enable_graph_pipeline,
+                        "color": self.config.enable_color_pipeline
                     }
                 },
                 "steps": {
                     "layoutDetection": {  # NEW: Layout detection
-                        "totalElements": layout_debug.get('totalDetections', 0),
-                        "elementsByType": label_counts,
+                        "enabled": enable_layout,
+                        "totalElements": layout_debug.get('totalDetections', 0) if (layout_debug and enable_layout) else None,
+                        "elementsByType": label_counts if enable_layout else {},
                         "imageSize": {
-                            "width": layout_debug.get('imageWidth'),
-                            "height": layout_debug.get('imageHeight')
+                            "width": layout_debug.get('imageWidth') if (layout_debug and enable_layout) else None,
+                            "height": layout_debug.get('imageHeight') if (layout_debug and enable_layout) else None
                         }
                     },
-                    "iconRetrieval": icon_debug.get('retrieval', {}),
-                    "iconDetection": icon_debug.get('detection', {}),
-                    "graphDetection": graph_debug.get('detection', {}),
-                    "graphSpecs": graph_debug.get('specs', []),
+                    "iconRetrieval": {
+                        "enabled": enable_icon,
+                        **((icon_debug.get('retrieval') or {}) if (icon_debug and enable_icon) else {})
+                    },
+                    "iconDetection": {
+                        "enabled": enable_icon,
+                        **((icon_debug.get('detection') or {}) if (icon_debug and enable_icon) else {})
+                    },
+                    "graphDetection": {
+                        "enabled": enable_graph,
+                        **((graph_debug.get('detection') or {}) if (graph_debug and enable_graph) else {})
+                    },
+                    "graphSpecs": (graph_debug.get('specs') or []) if (graph_debug and enable_graph) else [],
+                    "colorExtraction": {
+                        "enabled": enable_color
+                    },
                     "promptConstruction": prompt_debug
                 },
                 "output": {
@@ -721,8 +762,8 @@ class BatchGenerator:
                         "saved": "artifacts/4-dsl/widget.json"
                     },
                     "statistics": {
-                        "iconsDetected": icon_count,
-                        "graphsDetected": graph_count
+                        "iconsDetected": icon_count if enable_icon else None,
+                        "graphsDetected": graph_count if enable_graph else None
                     }
                 },
                 "files": {
@@ -734,11 +775,11 @@ class BatchGenerator:
                             "preprocessed": "artifacts/1-preprocess/1.2-preprocessed.png" if preprocessed_bytes else None
                         },
                         "2_layout": {  # Renamed from 2_grounding
-                            "data": "artifacts/2-layout/layout-data.json",
-                            "visualization": "artifacts/2-layout/layout-visualization.png" if layout_detections else None,
-                            "iconCrops": icon_crop_files
-                        },
-                        "3_retrieval": retrieval_files,
+                            "data": "artifacts/2-layout/layout-data.json" if enable_layout else None,
+                            "visualization": "artifacts/2-layout/layout-visualization.png" if (enable_layout and layout_detections) else None,
+                            "iconCrops": icon_crop_files if (enable_layout and enable_icon) else []
+                        } if enable_layout else None,
+                        "3_retrieval": retrieval_files if enable_icon else None,
                         "4_dsl": {
                             "widget": "artifacts/4-dsl/widget.json"
                         }
@@ -878,6 +919,12 @@ class BatchGenerator:
                 "inputDir": str(self.input_dir),
                 "outputDir": str(self.output_dir),
                 "runLog": str(self.output_dir / "run.log")
+            },
+            "pipelineSettings": {
+                "layoutEnabled": self.config.enable_layout_pipeline,
+                "iconEnabled": self.config.enable_icon_pipeline,
+                "graphEnabled": self.config.enable_graph_pipeline,
+                "colorEnabled": self.config.enable_color_pipeline
             },
             "modelSettings": {
                 "defaultModel": self.config.default_model,

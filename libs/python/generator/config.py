@@ -23,6 +23,12 @@ class GeneratorConfig:
     concurrency: int = 3
     requests_per_minute: int = 60  # Global LLM API rate limit (0 to disable)
 
+    # Pipeline feature flags
+    enable_layout_pipeline: bool = True
+    enable_icon_pipeline: bool = True
+    enable_graph_pipeline: bool = True
+    enable_color_pipeline: bool = True
+
     # Stage-specific timeouts (in seconds)
     default_timeout: int = 500
     layout_timeout: Optional[int] = None
@@ -323,6 +329,12 @@ class GeneratorConfig:
             retrieval_alpha=float(os.getenv('RETRIEVAL_ALPHA', '0.8')),
             concurrency=int(os.getenv('CONCURRENCY', '3')),
             requests_per_minute=int(os.getenv('REQUESTS_PER_MINUTE', '60')),
+
+            # Pipeline feature flags
+            enable_layout_pipeline=os.getenv('ENABLE_LAYOUT_PIPELINE', 'true').lower() in ('true', '1', 'yes'),
+            enable_icon_pipeline=os.getenv('ENABLE_ICON_PIPELINE', 'true').lower() in ('true', '1', 'yes'),
+            enable_graph_pipeline=os.getenv('ENABLE_GRAPH_PIPELINE', 'true').lower() in ('true', '1', 'yes'),
+            enable_color_pipeline=os.getenv('ENABLE_COLOR_PIPELINE', 'true').lower() in ('true', '1', 'yes'),
 
             # Timeouts
             default_timeout=int(os.getenv('DEFAULT_TIMEOUT', '500')),

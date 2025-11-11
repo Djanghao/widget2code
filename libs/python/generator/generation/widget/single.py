@@ -452,6 +452,12 @@ async def generate_widget_full(
     if image_id is None:
         image_id = Path(image_filename).stem if image_filename else "unknown"
 
+    # Read pipeline enable flags from config
+    enable_layout = config.enable_layout_pipeline
+    enable_icon = config.enable_icon_pipeline
+    enable_graph = config.enable_graph_pipeline
+    enable_color = config.enable_color_pipeline
+
     temp_file = None
     try:
         validate_file_size(len(image_data), config.max_file_size_mb)
@@ -467,37 +473,39 @@ async def generate_widget_full(
             temp_file_path = temp_file.name
 
         # ========== Layout Detection (NEW: Stage 0) ==========
-        # Update stage: layout
-        if stage_tracker:
-            stage_tracker.set_stage(image_id, "layout")
+        if enable_layout:
+            # Update stage: layout
+            if stage_tracker:
+                stage_tracker.set_stage(image_id, "layout")
 
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection started")
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection started")
 
-        from ...perception.layout import detect_layout
+            from ...perception.layout import detect_layout
 
-        layout_raw, layout_pixel, layout_post, img_width, img_height = await asyncio.wait_for(
-            detect_layout(
-                image_bytes=image_bytes,
-                filename=image_filename,
-                model=config.get_layout_model(),
-                api_key=config.get_layout_api_key(),
-                timeout=config.get_layout_timeout(),
-                thinking=config.get_layout_thinking(),
-                max_retries=0,
-                image_id=image_id,
-            ),
-            timeout=config.get_layout_timeout()
-        )
+            layout_raw, layout_pixel, layout_post, img_width, img_height = await asyncio.wait_for(
+                detect_layout(
+                    image_bytes=image_bytes,
+                    filename=image_filename,
+                    model=config.get_layout_model(),
+                    api_key=config.get_layout_api_key(),
+                    timeout=config.get_layout_timeout(),
+                    thinking=config.get_layout_thinking(),
+                    max_retries=0,
+                    image_id=image_id,
+                ),
+                timeout=config.get_layout_timeout()
+            )
 
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection completed: {len(layout_post)} elements")
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection completed: {len(layout_post)} elements")
+        else:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Layout detection (disabled in config)")
+            layout_raw = None
+            layout_pixel = None
+            layout_post = None
+            img_width = width
+            img_height = height
 
         # ========== Icon & Graph Extraction (Parallel) ==========
-        # Update stage: perception (icon and graph detection run in parallel)
-        if stage_tracker:
-            stage_tracker.set_stage(image_id, "perception")
-
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] Started")
-
         import time
         parallel_start = time.time()
 
@@ -557,22 +565,81 @@ async def generate_widget_full(
                 stage_tracker.set_substage(image_id, "perception.graph", is_start=False)
             return result
 
-        # Use the maximum of icon and graph timeouts for parallel execution
-        # Graph stage includes both detection and generation (sequential), so add their timeouts
-        graph_total_timeout = config.get_graph_det_timeout() + config.get_graph_gen_timeout()
-        parallel_timeout = max(config.get_icon_retrieval_timeout(), graph_total_timeout)
-        icon_result, (chart_counts, graph_specs) = await asyncio.wait_for(
-            asyncio.gather(
-                track_icon_substage(),
-                track_graph_substage()
-            ),
-            timeout=parallel_timeout
-        )
+        # Determine which pipelines to run
+        # Icon depends on layout (needs layout_detections to filter icons)
+        run_icon = enable_icon and layout_post is not None
+        # Graph is independent (does not need layout_detections)
+        run_graph = enable_graph
 
-        parallel_duration = time.time() - parallel_start
-        icon_count = icon_result['icon_count']
-        chart_count = sum(chart_counts.values()) if chart_counts else 0
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] Completed in {parallel_duration:.2f}s (Icons:{icon_count}, Charts:{chart_count})")
+        # Build task list based on enabled pipelines
+        tasks = []
+        task_names = []
+
+        if run_icon:
+            tasks.append(track_icon_substage())
+            task_names.append("icon")
+        elif not enable_icon:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Icon detection (disabled in config)")
+        else:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Icon detection (layout disabled)")
+
+        if run_graph:
+            tasks.append(track_graph_substage())
+            task_names.append("graph")
+        else:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Graph detection (disabled in config)")
+
+        # Execute parallel tasks if any are enabled
+        if tasks:
+            # Update stage: perception (icon and graph detection run in parallel)
+            if stage_tracker:
+                stage_tracker.set_stage(image_id, "perception")
+
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] Started ({', '.join(task_names)})")
+
+            # Use the maximum of icon and graph timeouts for parallel execution
+            graph_total_timeout = config.get_graph_det_timeout() + config.get_graph_gen_timeout()
+            parallel_timeout = max(config.get_icon_retrieval_timeout(), graph_total_timeout)
+
+            results = await asyncio.wait_for(
+                asyncio.gather(*tasks),
+                timeout=parallel_timeout
+            )
+
+            # Parse results based on which tasks ran
+            result_idx = 0
+            if run_icon:
+                icon_result = results[result_idx]
+                result_idx += 1
+            else:
+                # Default empty icon result
+                icon_result = {
+                    "per_icon_details": [],
+                    "icon_candidates": [],
+                    "icon_count": 0
+                }
+
+            if run_graph:
+                chart_counts, graph_specs = results[result_idx]
+            else:
+                # Default empty graph result
+                chart_counts = {}
+                graph_specs = []
+
+            parallel_duration = time.time() - parallel_start
+            icon_count = icon_result['icon_count']
+            chart_count = sum(chart_counts.values()) if chart_counts else 0
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] Completed in {parallel_duration:.2f}s (Icons:{icon_count}, Charts:{chart_count})")
+        else:
+            # No perception tasks enabled
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] No tasks to run")
+            icon_result = {
+                "per_icon_details": [],
+                "icon_candidates": [],
+                "icon_count": 0
+            }
+            chart_counts = {}
+            graph_specs = []
 
         # Extract icon results (NEW: no longer includes grounding data)
         per_icon_details = icon_result["per_icon_details"]
@@ -587,54 +654,75 @@ async def generate_widget_full(
             base_prompt = base_prompt.replace("[ASPECT_RATIO]", str(round(aspect_ratio, 3)))
 
         # ========== Stage 2: Layout Injection (NEW) ==========
-        from ...perception.layout import format_layout_for_prompt
+        if enable_layout and layout_post is not None:
+            from ...perception.layout import format_layout_for_prompt
 
-        layout_injection_text = format_layout_for_prompt(layout_post, img_width, img_height)
-        prompt_with_layout = base_prompt
+            layout_injection_text = format_layout_for_prompt(layout_post, img_width, img_height)
+            prompt_with_layout = base_prompt
 
-        if "[LAYOUT_INFO]" in prompt_with_layout:
-            prompt_with_layout = prompt_with_layout.replace("[LAYOUT_INFO]", layout_injection_text)
+            if "[LAYOUT_INFO]" in prompt_with_layout:
+                prompt_with_layout = prompt_with_layout.replace("[LAYOUT_INFO]", layout_injection_text)
+            else:
+                # Fallback: append at the end (aspect ratio already filled in stage 1)
+                prompt_with_layout = prompt_with_layout + f"\n\n{layout_injection_text}"
         else:
-            # Fallback: append at the end (aspect ratio already filled in stage 1)
-            prompt_with_layout = prompt_with_layout + f"\n\n{layout_injection_text}"
+            # Layout not enabled, keep placeholder as-is
+            layout_injection_text = ""
+            prompt_with_layout = base_prompt
 
         # ========== Stage 3: Colors (was Stage 2) ==========
-        # Update stage: color
-        if stage_tracker:
-            stage_tracker.set_stage(image_id, "color")
+        if enable_color:
+            # Update stage: color
+            if stage_tracker:
+                stage_tracker.set_stage(image_id, "color")
 
-        from ...perception.color_extraction import (
-            detect_and_process_colors,
-            inject_colors_to_prompt,
-            format_color_injection
-        )
-        color_results = detect_and_process_colors(
-            image_bytes=image_bytes,
-            filename=image_filename,
-            n_colors=10,
-            k_clusters=8
-        )
-        color_injection_text = format_color_injection(color_results)
-        prompt_with_colors = inject_colors_to_prompt(prompt_with_layout, color_results)
+            from ...perception.color_extraction import (
+                detect_and_process_colors,
+                inject_colors_to_prompt,
+                format_color_injection
+            )
+            color_results = detect_and_process_colors(
+                image_bytes=image_bytes,
+                filename=image_filename,
+                n_colors=10,
+                k_clusters=8
+            )
+            color_injection_text = format_color_injection(color_results)
+            prompt_with_colors = inject_colors_to_prompt(prompt_with_layout, color_results)
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Color extraction completed")
+        else:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Color extraction (disabled in config)")
+            color_results = []
+            color_injection_text = ""
+            prompt_with_colors = prompt_with_layout
 
         # ========== Stage 4: Graphs (was Stage 3) ==========
-        from ...perception.graph.pipeline import format_graph_specs_for_injection
-        graph_injection_text = format_graph_specs_for_injection(graph_specs) if graph_specs else ""
-
-        prompt_with_graphs = inject_graph_specs_to_prompt(prompt_with_colors, graph_specs)
+        if enable_graph and graph_specs:
+            from ...perception.graph.pipeline import format_graph_specs_for_injection
+            graph_injection_text = format_graph_specs_for_injection(graph_specs)
+            prompt_with_graphs = inject_graph_specs_to_prompt(prompt_with_colors, graph_specs)
+        else:
+            # Graph not enabled or no graphs detected, keep placeholder as-is
+            graph_injection_text = ""
+            prompt_with_graphs = prompt_with_colors
 
         # ========== Stage 5: Icons (was Stage 4) ==========
-        icon_injection_text = format_icon_prompt_injection(
-            icon_count=icon_count,
-            per_icon_details=per_icon_details,
-            retrieval_topm=retrieval_topm,
-        )
+        if enable_icon and icon_count > 0:
+            icon_injection_text = format_icon_prompt_injection(
+                icon_count=icon_count,
+                per_icon_details=per_icon_details,
+                retrieval_topm=retrieval_topm,
+            )
 
-        prompt_with_icons = prompt_with_graphs
-        if "[AVAILABLE_ICON_NAMES]" in prompt_with_icons:
-            prompt_with_icons = prompt_with_icons.replace("[AVAILABLE_ICON_NAMES]", icon_injection_text)
+            prompt_with_icons = prompt_with_graphs
+            if "[AVAILABLE_ICON_NAMES]" in prompt_with_icons:
+                prompt_with_icons = prompt_with_icons.replace("[AVAILABLE_ICON_NAMES]", icon_injection_text)
+            else:
+                prompt_with_icons = prompt_with_icons + "\n\n" + icon_injection_text
         else:
-            prompt_with_icons = prompt_with_icons + "\n\n" + icon_injection_text
+            # Icon not enabled or no icons detected, keep placeholder as-is
+            icon_injection_text = ""
+            prompt_with_icons = prompt_with_graphs
 
         # ========== Stage 6: Components List (was Stage 5) ==========
         components_list = get_available_components_list(graph_specs)
@@ -714,7 +802,7 @@ async def generate_widget_full(
                 "postProcessed": layout_post,
                 "imageWidth": img_width,
                 "imageHeight": img_height,
-                "totalDetections": len(layout_post),
+                "totalDetections": len(layout_post) if layout_post else 0,
                 "promptInjection": {
                     "injectedText": layout_injection_text,
                 }
