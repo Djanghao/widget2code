@@ -313,8 +313,6 @@ export const PieChart = ({
         }}
         opts={{
           renderer: "svg",
-          width: "auto",
-          height: "auto",
         }}
         notMerge={true}
         lazyUpdate={true}

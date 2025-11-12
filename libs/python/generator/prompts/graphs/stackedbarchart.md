@@ -27,6 +27,21 @@ Focus on extracting these elements:
 - Top segment (light gray): [60, 25, 65, 40, 15, 75, 30] (to reach 100% total)
 - This represents: [Series1, Series2] where values may or may not sum to 100%
 
+## Axis Configuration - IMPORTANT
+**The component automatically calculates axis ranges:**
+
+- **min**: Always defaults to 0 (stacked charts start at zero)
+- **max**: Automatically calculated from stacked totals using smart rounding
+  - Sums all series values for each category
+  - Finds maximum stacked total
+  - Applies magnitude-aware rounding (e.g., 65 → 80, 847 → 1000, 23 → 30)
+  - Override by setting explicit `max` value if exact range needed
+
+**Only specify axis values when:**
+- Image shows explicit max value (e.g., "0-100" scale)
+- Exact intervals are visible (e.g., grid lines every 10 units)
+- Otherwise, omit `max` and `interval` to use automatic calculation
+
 ## Visual Styling
 - **Colors**: One color per series, matching series order
 - **Background**: Chart background color
@@ -74,7 +89,9 @@ Focus on extracting these elements:
 - **showTitle**: false (no title shown)
 - **orientation**: "vertical" (bars go up)
 - **theme**: "light" (light background)
-- **min**: 0 (start from zero)
+- **min**: 0 (always start from zero)
+- **max**: AUTO-CALCULATED (omit unless visible in image)
+- **interval**: AUTO-CALCULATED (omit unless grid spacing visible)
 - **showXAxisTicks**: true (show tick marks on X axis)
 - **showYAxisTicks**: true (show tick marks on Y axis)
 - **showXAxisLabels**: true (show category labels)

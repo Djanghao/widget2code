@@ -1,3 +1,4 @@
+import React from "react";
 import ReactECharts from "echarts-for-react";
 
 export const LineChart = ({
@@ -92,10 +93,36 @@ export const LineChart = ({
 
   // Calculate min/max if not provided - handle empty data gracefully
   const hasData = allDataPoints.length > 0;
-  const calculatedMin =
-    min !== undefined ? min : hasData ? Math.min(...allDataPoints) * 0.9 : 0;
-  const calculatedMax =
-    max !== undefined ? max : hasData ? Math.max(...allDataPoints) * 1.1 : 100;
+
+  let calculatedMin;
+  if (min !== undefined) {
+    calculatedMin = min;
+  } else if (hasData) {
+    const minValue = Math.min(...allDataPoints);
+    if (minValue >= 0) {
+      calculatedMin = 0;
+    } else {
+      const magnitude = Math.pow(10, Math.floor(Math.log10(Math.abs(minValue))));
+      const normalized = minValue / magnitude;
+      const roundedNormalized = Math.floor(normalized * 1.1);
+      calculatedMin = roundedNormalized * magnitude;
+    }
+  } else {
+    calculatedMin = 0;
+  }
+
+  let calculatedMax;
+  if (max !== undefined) {
+    calculatedMax = max;
+  } else if (hasData) {
+    const maxValue = Math.max(...allDataPoints);
+    const magnitude = Math.pow(10, Math.floor(Math.log10(maxValue)));
+    const normalized = maxValue / magnitude;
+    const roundedNormalized = Math.ceil(normalized * 1.1);
+    calculatedMax = roundedNormalized * magnitude;
+  } else {
+    calculatedMax = 100;
+  }
 
   // Calculate intervals based on tick parameters
   let calculatedYInterval = interval;
@@ -265,7 +292,7 @@ export const LineChart = ({
     grid: {
       left: 0,
       right: 0,
-      top: showTitle && title ? 30 : 0,
+      top: showTitle && title ? 30 : 10,
       bottom: 0,
       containLabel: true,
     },
@@ -486,8 +513,6 @@ export const LineChart = ({
         }}
         opts={{
           renderer: "svg",
-          width: "auto",
-          height: "auto",
         }}
         notMerge={true}
         lazyUpdate={true}

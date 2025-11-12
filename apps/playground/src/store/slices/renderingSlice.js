@@ -113,11 +113,14 @@ const createRenderingSlice = (set, get) => ({
       if (!hasGraphs || graphsFullyLoaded) return true;
 
       const canvases = frame.querySelectorAll('canvas');
-      if (canvases.length === 0) {
+      const svgs = frame.querySelectorAll('svg');
+
+      if (canvases.length === 0 && svgs.length === 0) {
         return false;
       }
 
       let allLoaded = true;
+
       canvases.forEach((canvas) => {
         const ctx = canvas.getContext('2d');
         if (!ctx) {
@@ -136,9 +139,21 @@ const createRenderingSlice = (set, get) => ({
         }
       });
 
+      svgs.forEach((svg) => {
+        const bbox = svg.getBBox();
+        const hasContent = bbox.width > 0 && bbox.height > 0;
+
+        const children = svg.querySelectorAll('path, circle, rect, line, polyline, polygon, text');
+        const hasElements = children.length > 0;
+
+        if (!hasContent || !hasElements) {
+          allLoaded = false;
+        }
+      });
+
       if (allLoaded && !graphsFullyLoaded) {
         graphsFullyLoaded = true;
-        console.log(`📊 [Natural Size] All ${canvases.length} graph(s) have rendered content`);
+        console.log(`📊 [Natural Size] All ${canvases.length + svgs.length} graph(s) have rendered content (${canvases.length} canvas, ${svgs.length} SVG)`);
       }
 
       return allLoaded;

@@ -16,6 +16,20 @@ Focus on extracting these elements:
 - Note any bars with zero values
 - For grouped bars, maintain series order from legend
 
+## Axis Configuration - IMPORTANT
+**The component automatically calculates axis ranges:**
+
+- **min**: Defaults to 0 for positive values, uses smart rounding for negative values
+- **max**: Automatically calculated using smart rounding
+  - Applies magnitude-aware rounding (e.g., 65 → 80, 847 → 1000, 23 → 30)
+  - Adds 10% padding for better visualization
+  - Override by setting explicit `max` value if exact range needed
+
+**Only specify axis values when:**
+- Image shows explicit max value (e.g., "0-100" scale)
+- Exact intervals are visible (e.g., grid lines every 10 units)
+- Otherwise, omit `max` and `interval` to use automatic calculation
+
 ## Visual Styling
 - **Colors**: For single series, one color; for multiple series, array of colors
 - **Background**: Chart background color
@@ -60,7 +74,9 @@ Focus on extracting these elements:
 - **showTitle**: false (no title shown)
 - **orientation**: "vertical" (bars go up)
 - **theme**: "light" (light background)
-- **min**: 0 (start from zero)
+- **min**: AUTO-CALCULATED (omit unless visible in image)
+- **max**: AUTO-CALCULATED (omit unless visible in image)
+- **interval**: AUTO-CALCULATED (omit unless grid spacing visible)
 - **showXAxisTicks**: true (show tick marks on X axis)
 - **showYAxisTicks**: true (show tick marks on Y axis)
 - **showXAxisLabels**: true (show category labels)

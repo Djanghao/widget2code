@@ -359,8 +359,6 @@ export const RadarChart = ({
         }}
         opts={{
           renderer: "svg",
-          width: "auto",
-          height: "auto",
         }}
         notMerge={true}
         lazyUpdate={true}

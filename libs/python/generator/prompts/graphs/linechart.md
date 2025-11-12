@@ -8,9 +8,23 @@ Focus on extracting these elements:
 - Observe data trends and patterns
 - Identify multiple data series if present
 
+## Axis Configuration - IMPORTANT
+**The component automatically calculates axis ranges:**
+
+- **min**: Defaults to 0 for positive values, uses smart rounding for negative values
+- **max**: Automatically calculated using smart rounding
+  - Applies magnitude-aware rounding (e.g., 65 → 80, 847 → 1000, 23 → 30)
+  - Adds 10% padding for better visualization
+  - Override by setting explicit `max` value if exact range needed
+
+**Only specify axis values when:**
+- Image shows explicit max value (e.g., "0-100" scale)
+- Exact intervals are visible (e.g., grid lines every 10 units)
+- Otherwise, omit `max` and `interval` to use automatic calculation
+
 ## Axes Configuration
-- **X-Axis**: Label text, min/max values, tick intervals
-- **Y-Axis**: Label text, min/max values, tick intervals
+- **X-Axis**: Label text, tick intervals
+- **Y-Axis**: Label text, tick intervals
 - **Grid lines**: Color, style (solid/dashed), visibility
 - **Tick marks**: Position, color, size
 - **Axis labels**: Font size, color, positioning
@@ -83,13 +97,15 @@ Focus on extracting these elements:
 
 ## Default Behavior (when not visible in image):
 - **showTitle**: false (no title shown)
+- **min**: AUTO-CALCULATED (omit unless visible in image)
+- **max**: AUTO-CALCULATED (omit unless visible in image)
+- **interval**: AUTO-CALCULATED (omit unless grid spacing visible)
 - **lineWidth**: 2 (medium thickness lines)
 - **pointStyle**:
   - **shape**: "circle" (circular points)
   - **size**: 6 (small point size)
   - **borderWidth**: 2 (white border around points)
 - **xAxis & yAxis**:
-  - **min**: 0 (start from zero)
   - **showTicks**: true (show tick marks)
   - **tickColor**: "#666666" (medium gray)
   - **labelColor**: "#333333" (dark gray)

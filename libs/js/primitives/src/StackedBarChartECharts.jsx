@@ -77,9 +77,41 @@ export const StackedBarChart = ({
 
   // Calculate min/max if not provided
   const hasData = allDataPoints.length > 0;
-  const calculatedMin = min !== undefined ? min : hasData ? 0 : 0; // Stacked charts typically start at 0
-  const calculatedMax =
-    max !== undefined ? max : hasData ? Math.max(...allDataPoints) * 1.1 : 100;
+  const calculatedMin = min !== undefined ? min : 0;
+
+  // For stacked charts, calculate max based on stacked totals
+  let calculatedMax;
+  if (max !== undefined) {
+    calculatedMax = max;
+  } else if (hasData && isMultiSeries && Array.isArray(data)) {
+    const stackedTotals = [];
+    const maxLength = Math.max(...data.map((series) => (Array.isArray(series) ? series.length : 0)));
+
+    for (let i = 0; i < maxLength; i++) {
+      let total = 0;
+      data.forEach((series) => {
+        if (Array.isArray(series) && series[i] !== undefined) {
+          total += series[i] || 0;
+        }
+      });
+      stackedTotals.push(total);
+    }
+
+    const maxStackedValue = Math.max(...stackedTotals);
+
+    const magnitude = Math.pow(10, Math.floor(Math.log10(maxStackedValue)));
+    const normalized = maxStackedValue / magnitude;
+    const roundedNormalized = Math.ceil(normalized * 1.1);
+    calculatedMax = roundedNormalized * magnitude;
+  } else if (hasData) {
+    const maxValue = Math.max(...allDataPoints);
+    const magnitude = Math.pow(10, Math.floor(Math.log10(maxValue)));
+    const normalized = maxValue / magnitude;
+    const roundedNormalized = Math.ceil(normalized * 1.1);
+    calculatedMax = roundedNormalized * magnitude;
+  } else {
+    calculatedMax = 100;
+  }
 
   // Calculate intervals based on tick parameters
   let calculatedInterval = interval;
@@ -211,7 +243,7 @@ export const StackedBarChart = ({
     grid: {
       left: 0,
       right: 0,
-      top: showTitle && title ? 30 : 0,
+      top: showTitle && title ? 30 : 10,
       bottom: 0,
       containLabel: true,
     },
@@ -403,8 +435,6 @@ export const StackedBarChart = ({
         }}
         opts={{
           renderer: "svg",
-          width: "auto",
-          height: "auto",
         }}
         notMerge={true}
         lazyUpdate={true}
