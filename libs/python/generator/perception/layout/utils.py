@@ -95,6 +95,11 @@ def format_layout_for_prompt(
         else:
             lines.append(f"{idx}. {label} {bbox_str}")
 
+    # Add instruction to use these components in DSL generation
+    lines.append("")
+    lines.append("### DSL Generation Requirement:")
+    lines.append("When generating the WidgetDSL, you MUST use the detected elements above as components in your output. Each detected element should correspond to a component in the DSL structure (Icon → Icon component, Text → Text component, Button → Button component, etc.). Ensure all detected elements are represented in the final widget structure.")
+
     return '\n'.join(lines)
 
 
