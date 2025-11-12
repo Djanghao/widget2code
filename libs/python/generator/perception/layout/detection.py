@@ -21,88 +21,112 @@ from ...providers import OpenAIProvider, ChatMessage
 from ..icon.post_process import post_process_pixel_detections
 
 DEFAULT_PROMPT = """
-You are an expert mobile-UI understanding assistant. OUTPUT JSON ONLY. Return a single array of objects:
-{"bbox": [x1, y1, x2, y2], "label": "<class>", "description": "<text>"}.
+You are an expert mobile-UI grounding assistant. OUTPUT JSON ONLY.
+Return ONE array of objects:
+{"bbox":[x1,y1,x2,y2],"label":"<class>","description":"<tokens>"}.
 No extra text.
 
-DETECTION PRINCIPLE: HIGH RECALL - detect ALL elements, even if uncertain. Better to over-detect than miss elements.
+GOAL: HIGH RECALL. Detect ALL visible UI elements with tight integer boxes (include anti-aliased edges).
 
-ELEMENT CLASSES (by visual structure, sizes vary widely):
+---
 
-BASIC ELEMENTS:
-- Icon: SVG pictogram/symbol with simple vector shapes. Single-color or simple gradient. Any size (small ~16px to large ~48px+). MUST tightly include ALL strokes and anti-aliased edges.
-- AppLogo: Square app logo with slightly rounded corners (~22% border-radius), solid background + centered letter/symbol. Any size. Distinguished from Icon by being app brand identifier.
-- Text: Any readable text - labels, numbers, titles, descriptions. Any font size, any weight, single/multi-line. Detect ALL text.
-- Image: Photo, illustration, or complex artwork with realistic imagery or detailed graphics.
+## 🎨 VISUAL CHARACTERISTICS (for grounding)
 
-INTERACTIVE CONTROLS:
-- Button: Rounded rectangle with background fill (usually ~8px border-radius), may contain icon OR text OR both. Has padding. May have shadow/elevation. Detect both Button AND inner icon/text separately.
-- Checkbox: CIRCULAR shape (border-radius = 50%), either (1) empty with colored border, or (2) filled solid with white checkmark inside. Any size.
-- Switch: Horizontal pill shape with rounded ends + circular thumb inside that slides. Pill has colored (ON) or gray (OFF) background. Thumb is circle positioned left (OFF) or right (ON). Width usually ~2× height.
-- Slider: Horizontal control = thin track bar + prominent circular thumb. Track has two colors: active (from start to thumb) and inactive (thumb to end). Thumb is much larger than track thickness (usually 5× track height).
+**Icon** — simple vector pictogram or symbol; flat color or simple gradient, usually clean strokes and geometric shapes.  
+**AppLogo** — subset of Icon representing well-known global brands/products (Google, Chrome, Apple, Microsoft, Spotify, Twitter/X, Instagram, YouTube, GitHub, etc.); typically square with solid background and central mark.  
+**Text** — any readable alphanumeric glyphs; labels, numbers, or titles. Ignore texts inside charts (except buttons).  
+**Image** — photographic or illustrative content with complex textures or gradients.  
+**Button** — filled rounded rect/pill/circle background (often colored or elevated) containing icon or text. Detect both Button and inner Icon/Text separately.  
+**Checkbox** — circular or square tick control; may be hollow (unchecked) or filled with a checkmark (checked).  
+**Switch** — horizontal pill track with circular thumb sliding left/right between off/on states.  
+**Slider** — thin horizontal track with a larger circular thumb marking a value.  
+**Divider** — 1–2 px straight line separator, horizontal or vertical.  
+**Indicator** — narrow vertical colored bar or stripe for category/status.  
+**ProgressBar** — long thin bar partially filled to indicate completion percentage (horizontal or vertical).  
+**ProgressRing** — circular ring partially filled with a colored arc; may contain icon, text, or be empty.  
+**Sparkline** — tiny minimalist line chart showing a short trend, **without** axes, ticks, or grid.  
+**Container** — background panel/card grouping multiple elements; solid or blurred fill, often with rounded corners and padding.
 
-VISUAL INDICATORS (EASILY MISSED - DETECT CAREFULLY):
-- Divider: Very thin line (1-2px thick) separating sections, horizontal OR vertical. Can be SOLID or DASHED pattern. Usually light gray but any color. Spans container width/height. CRITICAL: Detect ALL dividers including faint/dashed ones.
-- Indicator: Narrow vertical colored bar (2-8px width, extends vertically). Solid fill, acts as status marker or accent stripe. NOTE: May appear as STACKED INDICATORS - multiple short vertical bars in a column with small gaps between them (detect each bar individually).
-- ProgressBar: Horizontal bar showing percentage completion. Structure: rounded rectangle track (background) containing filled portion (foreground). Track is full width, fill width = percentage. Both parts have rounded ends. Any height (thin ~12px to thick ~24px+).
-- ProgressRing: Circular/ring progress indicator. Structure: circular stroke forming partial arc (gap = remaining %). Gray background circle + colored progress arc. May contain centered icon or text. Any diameter.
-- Sparkline: Tiny trend line chart - simple connected line path, NO axes, NO grid, NO labels. Just a line (sometimes with gradient fill below). Very compact inline visualization.
+---
 
-CHART ELEMENTS (HAVE AXES AND LABELS):
-- BarChart: Vertical or horizontal rectangular bars with gaps between them. Has coordinate axes, optional grid, axis labels. Bars represent categorical data. May be single-color or multi-color (grouped/stacked).
-- LineChart: Connected line path(s) with data points. Has X/Y axes, optional grid, axis labels, line connecting sequential points. Shows continuous trends.
-- PieChart: Circle divided into wedge-shaped slices radiating from center. Each slice different color, represents proportion. May have labels or legend.
-- RadarChart: Polygon/spider web with 3+ axes radiating from center. Radial grid lines, axis labels at endpoints, polygon shape connecting data points.
-- StackedBarChart: Like BarChart but each bar composed of multiple colored segments stacked together. Segments share aligned edges within each bar.
+## 📊 CHART VISUAL CHARACTERISTICS
 
-LAYOUT ELEMENT:
-- Container: Background shape or panel grouping other elements. Rounded rectangles, cards, clickable areas, panels. CRITICAL: Always detect BOTH Container AND all inner elements separately.
+Each chart is ONE element.  
+Include title, axes, ticks, legends, and value labels inside its bbox.  
+Do **not** mark inner text, dividers, or gridlines separately.
 
-DETECTION RULES (PRIORITIZE RECALL):
-1. Detect ALL instances - if unsure, include it. Missing elements is worse than false positives.
-2. Tight bounding boxes with integer coords (x1<x2, y1<y2), fully inside image.
-3. Icon precision: Include ALL strokes and anti-aliased edges.
-4. Nested detection: If Container/Button contains Icon/Text, detect ALL layers separately.
-5. Divider emphasis: Detect EVERY divider line, including faint ones, dashed ones, vertical ones.
-6. Indicator variants: Detect individual indicators even in stacked groups (multiple short bars in column).
-7. Shape-based distinction:
-   - Checkbox = CIRCULAR (border-radius 50%)
-   - Switch = PILL + circular thumb inside
-   - Slider = thin track + large circular thumb
-   - ProgressBar = horizontal rounded bar with two-part structure (track + fill)
-   - ProgressRing = circular arc stroke
-8. Size is NOT a constraint - elements can be any size.
-9. No padding around bboxes. Overlap only when visually overlapping.
+**BarChart** — vertical or horizontal rectangular bars of uniform width; single color per bar; used to compare categories.  
+**StackedBarChart** — bars divided into multiple colored segments stacked together; shows composition or proportions.  
+**LineChart** — one or more continuous lines connecting data points; often with axes and gridlines; shows time-based trends.  
+**PieChart** — circle divided into wedge-shaped slices; donut variants count as PieChart; shows proportions of a whole.  
+**RadarChart** — spider/web-style polygon chart with radial axes; grid of concentric shapes and lines connecting data points.
 
-DESCRIPTION FORMAT:
-- Icon: brief what + color. Example: "heart icon (color: #FF3B30)"
-- AppLogo: app name + color. Example: "Music app (color: #FC3C44)"
-- Text: exact visible text + color. Example: "Temperature 72° (color: #FFFFFF)"
-- Container: shape + contents. Example: "rounded card with weather info"
-- Button: appearance + content. Example: "blue button with play icon"
-- Divider: orientation + style. Example: "horizontal dashed divider"
-- Indicator: color + context. Example: "red status indicator bar"
-- Charts: type + brief features. Example: "vertical bar chart with 5 bars"
-- Others: concise description (≤10 words).
+---
 
-OUTPUT EXAMPLE:
+## ⚙️ DESCRIPTION TOKENS (concise comma-separated key:value)
+
+| Class | Example tokens |
+|-------|----------------|
+| Icon | type:heart,color:#FF3B30 |
+| AppLogo | brand:Google,bg:#FFFFFF |
+| Text | text:"Label",color:#FFFFFF,weight:600 |
+| Image | src:unsplash,shape:rect,w:120,h:80 |
+| Button | shape:rect,bg:#007AFF,r:12,pad:8 |
+| Checkbox | state:checked,size:20,color:#34C759 |
+| Switch | state:on,size:51x31,track:#34C759,thumb:#FFFFFF |
+| Slider | value:70,size:200x6,track:#E5E5EA,thumb:#FF9500 |
+| Divider | orient:h,type:solid,thick:1,color:#E5E5EA |
+| Indicator | color:#FF9500,thick:4,height:80px |
+| ProgressBar | value:60,size:200x12,fill:#34C759,track:#D1D1D6 |
+| ProgressRing | value:75,size:80,stroke:6,arc:#34C759,track:#E0E0E0,center:icon |
+| Sparkline | points:12,fill:true,color:#34C759 |
+| BarChart | dir:v,bars:5,series:1,grid:true,legend:false |
+| LineChart | lines:2,points:true,area:true,grid:true |
+| PieChart | slices:6,donut:true |
+| RadarChart | axes:6,grid:true,legend:true |
+| StackedBarChart | dir:v,categories:5,stacks:3,grid:true |
+| Container | shape:rounded,pad:16,bg:#1C1C1E,r:20 |
+
+---
+
+## 🧠 DISAMBIGUATION
+- Tiny line with no axes/grid → Sparkline.  
+- Bars with multiple colored segments → StackedBarChart.  
+- Donut circle → PieChart.  
+- Circular progress arc (partial fill) → ProgressRing.  
+- Never label gridlines as Divider.  
+- Choose the closest chart type by structure if uncertain.
+
+---
+
+## ✅ FULL OUTPUT EXAMPLES (every element)
+
 [
-  {"bbox": [10,200,250,350], "label": "Container", "description": "rounded card background"},
-  {"bbox": [25,220,65,260], "label": "AppLogo", "description": "Calendar app (color: #FF3B30)"},
-  {"bbox": [75,230,230,248], "label": "Text", "description": "Today's Schedule (color: #000000)"},
-  {"bbox": [25,270,230,320], "label": "BarChart", "description": "horizontal bar chart with 5 bars"},
-  {"bbox": [240,225,245,340], "label": "Indicator", "description": "blue vertical status bar"},
-  {"bbox": [240,228,245,255], "label": "Indicator", "description": "blue indicator segment"},
-  {"bbox": [240,260,245,287], "label": "Indicator", "description": "blue indicator segment"},
-  {"bbox": [240,292,245,319], "label": "Indicator", "description": "blue indicator segment"},
-  {"bbox": [15,360,235,361], "label": "Divider", "description": "horizontal solid divider"},
-  {"bbox": [15,400,40,440], "label": "Icon", "description": "bell icon (color: #007AFF)"},
-  {"bbox": [50,410,200,425], "label": "ProgressBar", "description": "horizontal progress 70% filled"},
-  {"bbox": [210,400,270,460], "label": "ProgressRing", "description": "circular progress ring 85%"},
-  {"bbox": [280,420,380,428], "label": "Slider", "description": "horizontal slider at 60%"},
-  {"bbox": [390,418,410,438], "label": "Checkbox", "description": "checked circular checkbox (color: #34C759)"},
-  {"bbox": [420,414,471,445], "label": "Switch", "description": "switch ON state (color: #34C759)"}
+  {"bbox":[12,16,280,180],"label":"Container","description":"shape:rounded,pad:16,bg:#1C1C1E,r:20"},
+  {"bbox":[24,28,64,68],"label":"Icon","description":"type:heart,color:#FF3B30"},
+  {"bbox":[72,28,112,68],"label":"AppLogo","description":"brand:Chrome,bg:#FFFFFF"},
+  {"bbox":[120,32,260,50],"label":"Text","description":"text:'Skills Assessment',color:#FFFFFF,weight:600"},
+  {"bbox":[24,80,160,120],"label":"Image","description":"src:unsplash,shape:rect,w:136,h:40"},
+  {"bbox":[24,140,84,200],"label":"Button","description":"shape:circle,bg:#007AFF,r:30,pad:10"},
+  {"bbox":[36,152,72,188],"label":"Icon","description":"type:play,color:#FFFFFF"},
+  {"bbox":[100,140,200,200],"label":"Button","description":"shape:rect,bg:#5856D6,r:12,pad:8"},
+  {"bbox":[110,160,190,180],"label":"Text","description":"text:'Submit',color:#FFFFFF,weight:500"},
+  {"bbox":[220,220,240,240],"label":"Checkbox","description":"state:checked,size:20,color:#34C759"},
+  {"bbox":[260,220,320,240],"label":"Switch","description":"state:on,size:51x31,track:#34C759,thumb:#FFFFFF"},
+  {"bbox":[24,260,220,280],"label":"Slider","description":"value:70,size:200x6,track:#E5E5EA,thumb:#FF9500"},
+  {"bbox":[24,300,240,302],"label":"Divider","description":"orient:h,type:solid,thick:1,color:#E5E5EA"},
+  {"bbox":[260,300,264,380],"label":"Indicator","description":"color:#FF9500,thick:4,height:80px"},
+  {"bbox":[24,340,220,360],"label":"ProgressBar","description":"value:60,size:200x12,fill:#34C759,track:#D1D1D6"},
+  {"bbox":[260,340,340,420],"label":"ProgressRing","description":"value:75,size:80,stroke:6,arc:#34C759,track:#E0E0E0,center:icon"},
+  {"bbox":[280,360,320,400],"label":"Icon","description":"type:checkmark,color:#34C759"},
+  {"bbox":[24,420,140,460],"label":"Sparkline","description":"points:12,fill:true,color:#34C759"},
+  {"bbox":[160,420,380,540],"label":"BarChart","description":"dir:v,bars:5,series:1,grid:true,legend:false"},
+  {"bbox":[400,420,640,540],"label":"LineChart","description":"lines:2,points:true,area:true,grid:true"},
+  {"bbox":[24,560,180,700],"label":"PieChart","description":"slices:6,donut:true"},
+  {"bbox":[200,560,360,700],"label":"RadarChart","description":"axes:6,grid:true,legend:true"},
+  {"bbox":[380,560,560,700],"label":"StackedBarChart","description":"dir:v,categories:5,stacks:3,grid:true"}
 ]
+
 """.strip()
 
 def parse_layout_response(text: str) -> List[Dict[str, Any]]:
