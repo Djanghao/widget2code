@@ -67,11 +67,11 @@ Node properties: `width` (number), `height` (number)
 - Example: `{"type": "leaf", "component": "Sparkline", "width": 100, "height": 30, "flex": "none", "props": {"color": "#007AFF", "data": [10, 20, 15, 30, 25]}}`
 
 ### MapImage
-Props: `src` (Unsplash URL)
+Props: `src` (preset ID)
 Node properties: `width` (number), `height` (number)
-- **CRITICAL**: MUST use Unsplash map/aerial URLs: `https://images.unsplash.com/photo-[ID]`
+- **CRITICAL**: Must use one of these preset IDs: `"light-google-map"`, `"dark-google-map"`, `"satellite-google-map"`
 - Specify `width`, `height` at node level
-- Example: `{"type": "leaf", "component": "MapImage", "height": 120, "props": {"src": "https://images.unsplash.com/photo-[ID]"}}`
+- Example: `{"type": "leaf", "component": "MapImage", "height": 120, "props": {"src": "light-google-map"}}`
 
 ### AppLogo
 Props: `name` (string), `size` (number), `backgroundColor` (hex)

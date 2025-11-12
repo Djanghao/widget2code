@@ -88,14 +88,13 @@ Props: `width`, `height`, `color`, `data` (array of numbers)
 - Example: `[0, 15, 10, 25, 20, 35, 30, 45, 40, 55, 50, 65, 60, 75, 70]`
 
 ### MapImage
-Props: `url`, `height`, `width` (optional)
+Props: `src`, `height`, `width` (optional)
 - For map screenshots/static maps
-- **CRITICAL**: Must use Unsplash map/aerial images
-- Format: `https://images.unsplash.com/photo-[ID]`
-- Example: `"https://images.unsplash.com/photo-1524661135-423995f22d0b"` (map view)
-- **DO NOT use Mapbox API or other map services** - always use Unsplash images
+- **CRITICAL**: Must use one of these preset IDs: `"light-google-map"`, `"dark-google-map"`, `"satellite-google-map"`
+- **DO NOT use external URLs** - only use preset IDs
 - Like Image, usually specify only `height` to let width fill the container
 - Can have `flex` prop
+- Example: `{"type": "leaf", "component": "MapImage", "height": 200, "props": {"src": "light-google-map"}}`
 
 ### AppLogo
 Props: `name`, `size`, `backgroundColor`

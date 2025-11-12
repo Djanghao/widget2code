@@ -79,16 +79,18 @@ Node properties: `width`, `height`
 - Typically use `flex: "none"` to maintain fixed dimensions
 
 ### MapImage
-Props: `url`
+Props: `src`
 Node properties: `width` (optional), `height`
 - For map screenshots/static maps
-- **CRITICAL**: Must use Unsplash map/aerial images
-- Format: `https://images.unsplash.com/photo-[ID]`
-- Example: `"https://images.unsplash.com/photo-1524661135-423995f22d0b"` (map view)
-- **DO NOT use Mapbox API or other map services** - always use Unsplash images
+- **CRITICAL**: Must use one of the following preset IDs:
+  - `"light-google-map"` - Light-themed street map
+  - `"dark-google-map"` - Dark-themed street map
+  - `"satellite-google-map"` - Satellite/aerial view map
+- **DO NOT use external URLs** - only use preset IDs
 - **Layout dimensions**: Specify `width` and `height` at the node level (NOT in props)
 - Like Image, usually specify only `height` to let width fill the container
 - Can have `flex` prop
+- Example: `{"type": "leaf", "component": "MapImage", "height": 200, "props": {"src": "light-google-map"}}`
 
 ### AppLogo
 Props: `name`, `size`, `backgroundColor`
