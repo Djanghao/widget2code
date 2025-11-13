@@ -1,0 +1,216 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 18,
+            "color": "#000000",
+            "fontWeight": 600,
+            "align": "center"
+          },
+          "content": "Donut Chart Showcase"
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "flex": 0,
+              "props": {
+                "variant": "donut",
+                "data": [75, 25],
+                "labels": ["Complete", "Remaining"],
+                "colors": ["#10B981", "#E5E7EB"],
+                "innerRadius": 65,
+                "outerRadius": 85,
+                "backgroundColor": "transparent",
+                "theme": "light",
+                "showLabels": false,
+                "showLegend": false,
+                "centerIconName": "check-circle",
+                "centerIconSize": 32,
+                "centerIconColor": "#10B981",
+                "centerValue": "75%",
+                "minWidth": 120,
+                "minHeight": 120
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "flex": 0,
+              "props": {
+                "variant": "donut",
+                "data": [45, 55],
+                "labels": ["Progress", "Remaining"],
+                "colors": ["#3B82F6", "#E5E7EB"],
+                "innerRadius": 65,
+                "outerRadius": 85,
+                "backgroundColor": "transparent",
+                "theme": "light",
+                "showLabels": false,
+                "showLegend": false,
+                "centerIconName": "clock",
+                "centerIconSize": 28,
+                "centerIconColor": "#3B82F6",
+                "centerValue": "45%",
+                "minWidth": 120,
+                "minHeight": 120
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "flex": 0,
+              "props": {
+                "variant": "donut",
+                "data": [30, 70],
+                "labels": ["Used", "Available"],
+                "colors": ["#F59E0B", "#E5E7EB"],
+                "innerRadius": 60,
+                "outerRadius": 85,
+                "backgroundColor": "transparent",
+                "theme": "light",
+                "showLabels": false,
+                "showLegend": false,
+                "centerIconName": "alert-triangle",
+                "centerIconSize": 26,
+                "centerIconColor": "#F59E0B",
+                "minWidth": 110,
+                "minHeight": 110
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "flex": 0,
+              "props": {
+                "variant": "donut",
+                "data": [1234],
+                "labels": ["Total"],
+                "colors": ["#8B5CF6"],
+                "innerRadius": 60,
+                "outerRadius": 85,
+                "backgroundColor": "transparent",
+                "theme": "light",
+                "showLabels": false,
+                "showLegend": false,
+                "centerText": "Total",
+                "centerValue": "1,234",
+                "minWidth": 110,
+                "minHeight": 110
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "flex": 0,
+              "props": {
+                "variant": "ring",
+                "data": [85, 15],
+                "labels": ["Revenue", "Costs"],
+                "colors": ["#10B981", "#EF4444"],
+                "innerRadius": 70,
+                "outerRadius": 85,
+                "backgroundColor": "transparent",
+                "theme": "light",
+                "showLabels": false,
+                "showLegend": false,
+                "centerIconName": "trending-up",
+                "centerIconSize": 32,
+                "centerIconColor": "#10B981",
+                "minWidth": 110,
+                "minHeight": 110
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "flex": 0,
+              "props": {
+                "variant": "donut",
+                "data": [65, 25, 10],
+                "labels": ["Active", "Pending", "Failed"],
+                "colors": ["#34C759", "#F59E0B", "#EF4444"],
+                "innerRadius": 55,
+                "outerRadius": 80,
+                "backgroundColor": "transparent",
+                "theme": "light",
+                "showLabels": false,
+                "showLegend": false,
+                "centerIconName": "users",
+                "centerIconSize": 28,
+                "centerIconColor": "#34C759",
+                "centerValue": "2,540",
+                "minWidth": 100,
+                "minHeight": 100
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "flex": 0,
+              "props": {
+                "variant": "donut",
+                "data": [100],
+                "labels": ["Complete"],
+                "colors": ["#10B981"],
+                "innerRadius": 55,
+                "outerRadius": 80,
+                "backgroundColor": "transparent",
+                "theme": "light",
+                "showLabels": false,
+                "showLegend": false,
+                "centerIconName": "check",
+                "centerIconSize": 36,
+                "centerIconColor": "#10B981",
+                "minWidth": 100,
+                "minHeight": 100
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 16,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "Storage Usage"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#8E8E93",
+                "name": "lu:LuHardDrive"
+              }
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 11,
+            "color": "#8E8E93"
+          },
+          "content": "Total capacity and usage breakdown"
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 1,
+          "props": {
+            "data": [450, 280, 120, 150],
+            "labels": ["Documents", "Photos", "Videos", "Other"],
+            "colors": ["#007AFF", "#34C759", "#FF9500", "#8E8E93"],
+            "theme": "dark",
+            "variant": "donut",
+            "innerRadius": 60,
+            "showLabels": false,
+            "centerIconName": "lu:LuHardDrive",
+            "centerIconSize": 40,
+            "centerIconColor": "#007AFF",
+            "centerValue": "1TB",
+            "borderWidth": 2,
+            "borderColor": "#1c1c1e",
+            "roundedSegments": true,
+            "segmentBorderRadius": 8
+          }
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 0,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 6,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "size": 10,
+                        "color": "#007AFF",
+                        "name": "lu:LuSquare"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#d1d1d6"
+                      },
+                      "content": "Documents"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "450GB"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 6,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "size": 10,
+                        "color": "#34C759",
+                        "name": "lu:LuSquare"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#d1d1d6"
+                      },
+                      "content": "Photos"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "280GB"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 6,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "size": 10,
+                        "color": "#FF9500",
+                        "name": "lu:LuSquare"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#d1d1d6"
+                      },
+                      "content": "Videos"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "120GB"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

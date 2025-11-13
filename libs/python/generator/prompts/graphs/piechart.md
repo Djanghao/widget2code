@@ -5,7 +5,11 @@ Focus on extracting these elements:
 ## Chart Identification
 - **Title**: Extract title text (set showTitle: false if none)
 - **Variant**: "pie" (solid), "donut" (with center hole), or "ring" (thin ring)
-- **Center content**: Text or values displayed in center (for donut/ring)
+- **Center content**: For donut/ring variants, identify center elements:
+  - **Icons**: Status indicators (checkmark, alert, info, etc.)
+  - **Text labels**: Descriptive text or categories
+  - **Values**: Numbers, percentages, or metrics
+  - **Combined**: Icon + value, text + value, or icon + text + value
 
 ## Segment Analysis
 - **Segments**: Count individual pie segments
@@ -22,6 +26,58 @@ Focus on extracting these elements:
 - **Center hole**: Inner radius percentage for donut charts (60-75 typical)
 - **Outer size**: Outer radius percentage (80-90 typical)
 
+## Center Content Props (for donut/ring only):
+**IMPORTANT**: You can combine these props flexibly. Choose ONE of these patterns:
+
+1. **Icon only** (status indicator, large icon):
+   - `centerIconName`: Icon name (e.g., "lu:LuCheckCircle", "lu:LuAlertTriangle")
+   - `centerIconSize`: Icon size (24-48 typical)
+   - `centerIconColor`: Icon color (hex) - optional, uses theme color if omitted
+
+2. **Icon + Value** (icon with metric below):
+   - `centerIconName`: Icon name
+   - `centerIconSize`: Icon size
+   - `centerIconColor`: Icon color (optional)
+   - `centerValue`: Numeric value or percentage
+
+3. **Icon + Text + Value** (icon with label and metric):
+   - `centerIconName`: Icon name
+   - `centerIconSize`: Icon size
+   - `centerIconColor`: Icon color (optional)
+   - `centerText`: Descriptive label (NOT used when icon present)
+   - `centerValue`: Numeric value or percentage
+
+4. **Text + Value** (label with metric):
+   - `centerText`: Descriptive label
+   - `centerValue`: Numeric value or percentage
+   - (No icon)
+
+5. **Text only** (custom content):
+   - `centerContent`: Any text content
+   - (No icon, overrides centerText and centerValue)
+
+6. **Value only** (large metric):
+   - `centerValue`: The value to display (will be large and bold)
+   - (No icon or text)
+
+**Priority Order**: If multiple props are set, they display in this order:
+- Icon (if `centerIconName` is set) OR custom content (if `centerContent` is set)
+- Text label (if `centerText` is set and no icon/custom content)
+- Value (if `centerValue` is set)
+
+## Icon Selection Guide:
+Choose appropriate icons based on semantic meaning:
+- Completion/Success: "check-circle", "check", "circle-check"
+- Progress/Partial: "clock", "loader", "progress"
+- Warning/Alert: "alert-triangle", "alert-circle"
+- Error/Failed: "x-circle", "alert-octagon"
+- Info/Stats: "info", "pie-chart", "bar-chart"
+- Target/Goal: "target", "crosshair"
+- Up/Growth: "trending-up", "arrow-up-circle"
+- Down/Decline: "trending-down", "arrow-down-circle"
+- User/People: "user", "users"
+- Money/Finance: "dollar-sign", "credit-card"
+
 ## Return WidgetDSL specification:
 ```json
 {
@@ -29,7 +85,7 @@ Focus on extracting these elements:
   "spec": {
     "title": "Chart Title",
     "showTitle": true,
-    "data": [30, 25, 20, 15, 10],  // Segment values
+    "data": [30, 25, 20, 15, 10],
     "labels": ["Segment 1", "Segment 2", "Segment 3", "Segment 4", "Segment 5"],
     "colors": ["#3B82F6", "#EF4444", "#10B981", "#F59E0B", "#8B5CF6"],
     "backgroundColor": "#FFFFFF",
@@ -37,8 +93,10 @@ Focus on extracting these elements:
     "variant": "donut",
     "innerRadius": 70,
     "outerRadius": 90,
-    "centerText": "Total: 100",
-    "centerValue": "100%",
+    "centerIconName": "check-circle",
+    "centerIconSize": 32,
+    "centerIconColor": "#10B981",
+    "centerValue": "85%",
     "showLabels": true,
     "showValues": true,
     "showPercentages": true,
@@ -76,15 +134,56 @@ Focus on extracting these elements:
 - **legendPosition**: "right" (legend on right side)
 - **animated**: false (no animation)
 - **backgroundColor**: "#FFFFFF" (white background)
+- **centerIconName**: null (no icon in center)
+- **centerIconSize**: 32 (default icon size if used)
+- **centerIconColor**: null (uses theme text color if not specified)
+- **centerContent**: null (no custom content)
+- **centerText**: null (no label text)
+- **centerValue**: null (no value display)
 
-For solid pie chart:
+## Common Patterns:
+
+**Solid pie chart** (no center content):
 ```json
 {
   "variant": "pie",
   "innerRadius": 0,
+  "centerIconName": null,
+  "centerContent": null,
   "centerText": null,
   "centerValue": null
 }
 ```
 
-Extract exact segment sizes, colors, and styling for pixel-perfect replication.
+**Donut with completion status**:
+```json
+{
+  "variant": "donut",
+  "innerRadius": 65,
+  "centerIconName": "check-circle",
+  "centerIconSize": 36,
+  "centerIconColor": "#10B981",
+  "centerValue": "100%"
+}
+```
+
+**Donut with metric display**:
+```json
+{
+  "variant": "donut",
+  "innerRadius": 60,
+  "centerText": "Total",
+  "centerValue": "1,234"
+}
+```
+
+**Ring with large value**:
+```json
+{
+  "variant": "ring",
+  "innerRadius": 70,
+  "centerValue": "85%"
+}
+```
+
+Extract exact segment sizes, colors, styling, and center content for pixel-perfect replication.

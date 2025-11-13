@@ -1,5 +1,6 @@
 import React from "react";
 import ReactECharts from "echarts-for-react";
+import { Icon } from "./Icon.jsx";
 
 export const PieChart = ({
   title = "Pie Chart",
@@ -48,6 +49,11 @@ export const PieChart = ({
   // Center styling
   centerTextStyle = {},
   centerValueStyle = {},
+  // Icon support for center content
+  centerIconName,
+  centerIconSize = 32,
+  centerIconColor,
+  centerContent,
   // Min/max for data validation
   min,
   max,
@@ -243,49 +249,11 @@ export const PieChart = ({
     animation: false, // Disable all animations for static mode
   };
 
-  // Add center text/value for donut charts
-  if (
+  const shouldShowCenterContent =
     (variant === "donut" || variant === "ring") &&
-    (centerText || centerValue)
-  ) {
-    const centerGraphic = [];
+    (centerIconName || centerContent || centerText || centerValue);
 
-    if (centerText) {
-      centerGraphic.push({
-        type: "text",
-        left: "center",
-        top: centerValue ? "center" : "middle",
-        style: {
-          text: centerText,
-          textAlign: "center",
-          fill: currentTheme.textColor,
-          fontSize: 14,
-          fontWeight: "normal",
-          ...centerTextStyle,
-        },
-      });
-    }
-
-    if (centerValue) {
-      centerGraphic.push({
-        type: "text",
-        left: "center",
-        top: centerText ? "60%" : "middle",
-        style: {
-          text: centerValue,
-          textAlign: "center",
-          fill: currentTheme.textColor,
-          fontSize: centerText ? 18 : 24,
-          fontWeight: "bold",
-          ...centerValueStyle,
-        },
-      });
-    }
-
-    if (centerGraphic.length > 0) {
-      echartOption.graphic = centerGraphic;
-    }
-  }
+  const defaultCenterIconColor = centerIconColor || currentTheme.textColor;
 
   return (
     <div
@@ -301,6 +269,7 @@ export const PieChart = ({
         display: "flex",
         alignItems: "stretch",
         justifyContent: "stretch",
+        position: "relative",
       }}
     >
       <ReactECharts
@@ -318,6 +287,74 @@ export const PieChart = ({
         lazyUpdate={true}
         {...props}
       />
+
+      {shouldShowCenterContent && (
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "4px",
+            pointerEvents: "none",
+          }}
+        >
+          {centerIconName ? (
+            <Icon
+              name={centerIconName}
+              size={centerIconSize}
+              color={defaultCenterIconColor}
+            />
+          ) : centerContent ? (
+            <span
+              style={{
+                color: currentTheme.textColor,
+                fontSize: "14px",
+                fontWeight: "normal",
+                whiteSpace: "nowrap",
+                textAlign: "center",
+                ...centerTextStyle,
+              }}
+            >
+              {centerContent}
+            </span>
+          ) : null}
+
+          {centerText && !centerIconName && !centerContent && (
+            <span
+              style={{
+                color: currentTheme.textColor,
+                fontSize: "14px",
+                fontWeight: "normal",
+                whiteSpace: "nowrap",
+                textAlign: "center",
+                ...centerTextStyle,
+              }}
+            >
+              {centerText}
+            </span>
+          )}
+
+          {centerValue && (
+            <span
+              style={{
+                color: currentTheme.textColor,
+                fontSize: centerText || centerIconName || centerContent ? "18px" : "24px",
+                fontWeight: "bold",
+                whiteSpace: "nowrap",
+                textAlign: "center",
+                ...centerValueStyle,
+              }}
+            >
+              {centerValue}
+            </span>
+          )}
+        </div>
+      )}
     </div>
   );
 };
