@@ -1,12 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
+import { LineChart } from "./LineChartECharts.jsx";
 
 export function Sparkline({
   width = 80,
   height = 40,
   color = "#34C759",
   data = [],
-  fill = false,
+  showArea = false,
+  smooth = false,
   baseline = null,
+  gradientIntensity = 0.4,
   flex,
   flexGrow,
   flexShrink,
@@ -14,96 +17,53 @@ export function Sparkline({
   style = {},
   ...rest
 }) {
-  const canvasRef = useRef(null);
+  // Build props for LineChart
+  const lineChartProps = {
+    color,
+    data,
+    showArea,
+    smooth,
+    gradientIntensity,
+    // Fixed configuration for sparkline behavior
+    width: "100%",
+    height: "100%",
+    minWidth: width,
+    minHeight: height,
+    theme: "dark",
+    showMarkers: false,
+    showXAxisLabels: false,
+    showYAxisLabels: false,
+    showXAxisTicks: false,
+    showYAxisTicks: false,
+    backgroundColor: "transparent",
+  };
 
-  useEffect(() => {
-    if (!data || data.length < 2 || !canvasRef.current) return;
+  // Add baseline as X-axis trendline if provided
+  if (baseline !== null && baseline !== undefined) {
+    lineChartProps.showXTrendline = true;
+    lineChartProps.xTrendlineValue = baseline;
+    lineChartProps.xTrendlineColor = color;
+    lineChartProps.xTrendlineStyle = "dashed";
+    lineChartProps.xTrendlineWidth = 1;
+    lineChartProps.xTrendlineLabel = "";
+  }
 
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    const dpr = window.devicePixelRatio || 1;
-
-    canvas.width = width * dpr;
-    canvas.height = height * dpr;
-    ctx.scale(dpr, dpr);
-
-    ctx.clearRect(0, 0, width, height);
-
-    const max = Math.max(...data);
-    const min = Math.min(...data);
-    const range = max - min || 1;
-
-    if (baseline !== null && baseline >= min && baseline <= max) {
-      const baselineY = height - ((baseline - min) / range) * height;
-      ctx.beginPath();
-      ctx.setLineDash([4, 4]);
-      ctx.strokeStyle = color + "66";
-      ctx.lineWidth = 1;
-      ctx.moveTo(0, baselineY);
-      ctx.lineTo(width, baselineY);
-      ctx.stroke();
-      ctx.setLineDash([]);
-    }
-
-    if (fill) {
-      const gradient = ctx.createLinearGradient(0, 0, 0, height);
-      gradient.addColorStop(0, color + "66");
-      gradient.addColorStop(1, color + "00");
-
-      ctx.beginPath();
-      data.forEach((value, index) => {
-        const x = (index / (data.length - 1)) * width;
-        const y = height - ((value - min) / range) * height;
-
-        if (index === 0) {
-          ctx.moveTo(x, y);
-        } else {
-          ctx.lineTo(x, y);
-        }
-      });
-
-      ctx.lineTo(width, height);
-      ctx.lineTo(0, height);
-      ctx.closePath();
-      ctx.fillStyle = gradient;
-      ctx.fill();
-    }
-
-    ctx.beginPath();
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 2;
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-
-    data.forEach((value, index) => {
-      const x = (index / (data.length - 1)) * width;
-      const y = height - ((value - min) / range) * height;
-
-      if (index === 0) {
-        ctx.moveTo(x, y);
-      } else {
-        ctx.lineTo(x, y);
-      }
-    });
-
-    ctx.stroke();
-  }, [width, height, color, data, fill, baseline]);
+  // Build container style
+  const containerStyle = {
+    width: `${width}px`,
+    height: `${height}px`,
+    display: "block",
+    flexShrink: 0,
+    ...style,
+    ...(flex !== undefined ? { flex } : {}),
+    ...(flexGrow !== undefined ? { flexGrow } : {}),
+    ...(flexShrink !== undefined ? { flexShrink } : {}),
+    ...(flexBasis !== undefined ? { flexBasis } : {}),
+  };
 
   return (
-    <canvas
-      ref={canvasRef}
-      {...rest}
-      style={{
-        width: `${width}px`,
-        height: `${height}px`,
-        display: "block",
-        flexShrink: 0,
-        ...style,
-        ...(flex !== undefined ? { flex } : {}),
-        ...(flexGrow !== undefined ? { flexGrow } : {}),
-        ...(flexShrink !== undefined ? { flexShrink } : {}),
-        ...(flexBasis !== undefined ? { flexBasis } : {}),
-      }}
-    />
+    <div style={containerStyle} {...rest}>
+      <LineChart {...lineChartProps} />
+    </div>
   );
 }

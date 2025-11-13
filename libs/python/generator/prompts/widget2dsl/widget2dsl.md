@@ -61,11 +61,15 @@ Props: `size` (number), `checked` (boolean), `color` (hex)
 - Example: `{"type": "leaf", "component": "Checkbox", "flex": "none", "props": {"size": 20, "checked": true, "color": "#007AFF"}}`
 
 ### Sparkline
-Props: `color` (hex), `data` (array of numbers), `fill` (boolean), `baseline` (number)
+Props: `color` (hex), `data` (array of numbers), `showArea` (boolean), `smooth` (boolean), `gradientIntensity` (number 0-1), `baseline` (number)
 Node properties: `width` (number), `height` (number)
-- `data`: array of 10-100 numbers
-- Specify `width`, `height` at node level
-- Example: `{"type": "leaf", "component": "Sparkline", "width": 100, "height": 30, "flex": "none", "props": {"color": "#007AFF", "data": [10, 20, 15, 30, 25]}}`
+- `data`: array of 10-100 numbers representing the trend line
+- `showArea`: fill area under the line (default: false)
+- `smooth`: use smooth curves (true) or straight lines (false, default)
+- `gradientIntensity`: opacity of filled area gradient, 0-1 (default: 0.4)
+- `baseline`: optional horizontal reference line value (shown as dashed line)
+- Specify `width`, `height` at node level (typical: 80x40)
+- Example: `{"type": "leaf", "component": "Sparkline", "width": 80, "height": 40, "flex": "none", "props": {"color": "#34C759", "data": [10, 20, 15, 30, 25], "showArea": true, "smooth": false}}`
 
 ### MapImage
 Props: `src` (preset ID)
