@@ -38,6 +38,13 @@ Focus on extracting these elements:
 - **Bar styling**: Width, border radius, spacing between bars
 - **Value labels**: Whether values are displayed on/above bars
 
+## Axis Label Customization (Advanced)
+- **Label colors**: `xAxisLabelColor`, `yAxisLabelColor` - Custom colors for axis labels
+- **Label sizes**: `xAxisLabelFontSize`, `yAxisLabelFontSize` - Font size in pixels (default: 11)
+- **Label rotation**: `xAxisLabelRotate`, `yAxisLabelRotate` - Rotation angle in degrees (0 = horizontal)
+- **Label suffixes**: `xAxisLabelSuffix`, `yAxisLabelSuffix` - Add suffix to axis values (e.g., "m" for minutes, "%" for percentages)
+- **Custom formatters**: For special number formatting (use sparingly)
+
 ## Return WidgetDSL specification:
 ```json
 {

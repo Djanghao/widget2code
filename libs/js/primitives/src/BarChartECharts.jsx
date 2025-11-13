@@ -36,6 +36,17 @@ export const BarChart = ({
   // Axis label positioning
   xAxisLabelPosition = "bottom", // 'top' or 'bottom'
   yAxisLabelPosition = "left", // 'left' or 'right'
+  // Axis label formatting
+  xAxisLabelFormatter,
+  yAxisLabelFormatter,
+  xAxisLabelSuffix,
+  yAxisLabelSuffix,
+  xAxisLabelRotate = 0,
+  yAxisLabelRotate = 0,
+  xAxisLabelFontSize = 11,
+  yAxisLabelFontSize = 11,
+  xAxisLabelColor,
+  yAxisLabelColor,
   // Bar rounding/border radius
   barBorderRadius = 0, // Border radius for all bars (number or array)
   barBorderRadiusTop = null, // Top border radius override
@@ -210,10 +221,10 @@ export const BarChart = ({
       show: false, // Disable tooltips for static mode
     },
     grid: {
-      left: 0,
-      right: 0,
+      left: showYAxisLabels && yAxisLabelPosition === "left" ? 10 : 0,
+      right: showYAxisLabels && yAxisLabelPosition === "right" ? 10 : 0,
       top: showTitle && title ? 30 : 10,
-      bottom: 0,
+      bottom: showXAxisLabels ? 10 : 5,
       containLabel: true,
     },
     xAxis: {
@@ -227,10 +238,15 @@ export const BarChart = ({
       position: xAxisLabelPosition, // 'top' or 'bottom'
       axisLabel: {
         show: showXAxisLabels,
-        color: currentTheme.textColor,
-        fontSize: 11,
+        color: xAxisLabelColor || currentTheme.textColor,
+        fontSize: xAxisLabelFontSize,
+        rotate: xAxisLabelRotate,
         interval: isHorizontal ? "auto" : calculatedCategoryInterval || "auto",
-        formatter: isHorizontal
+        formatter: xAxisLabelFormatter || (xAxisLabelSuffix
+          ? function (value) {
+              return value + xAxisLabelSuffix;
+            }
+          : isHorizontal
           ? function (value) {
               if (value >= 1000000) {
                 return (value / 1000000).toFixed(1) + "M";
@@ -239,7 +255,7 @@ export const BarChart = ({
               }
               return value;
             }
-          : undefined,
+          : undefined),
       },
       axisLine: { show: false },
       axisTick: { show: false },
@@ -263,10 +279,15 @@ export const BarChart = ({
       position: yAxisLabelPosition, // 'left' or 'right'
       axisLabel: {
         show: showYAxisLabels,
-        color: currentTheme.textColor,
-        fontSize: 11,
+        color: yAxisLabelColor || currentTheme.textColor,
+        fontSize: yAxisLabelFontSize,
+        rotate: yAxisLabelRotate,
         interval: isHorizontal ? calculatedCategoryInterval || "auto" : "auto",
-        formatter: isHorizontal
+        formatter: yAxisLabelFormatter || (yAxisLabelSuffix
+          ? function (value) {
+              return value + yAxisLabelSuffix;
+            }
+          : isHorizontal
           ? undefined
           : function (value) {
               if (value >= 1000000) {
@@ -275,7 +296,7 @@ export const BarChart = ({
                 return (value / 1000).toFixed(1) + "K";
               }
               return value;
-            },
+            }),
       },
       axisLine: { show: false },
       axisTick: { show: false },

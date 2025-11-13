@@ -47,9 +47,11 @@ Focus on extracting these elements:
    - `centerText`: Descriptive label (NOT used when icon present)
    - `centerValue`: Numeric value or percentage
 
-4. **Text + Value** (label with metric):
-   - `centerText`: Descriptive label
-   - `centerValue`: Numeric value or percentage
+4. **Text + Value** (label with metric) - **MOST COMMON**:
+   - `centerValue`: Numeric value or percentage (displays ABOVE)
+   - `centerText`: Descriptive label (displays BELOW)
+   - `centerValueStyle`: Custom styling for value (fontSize, fontWeight, color)
+   - `centerTextStyle`: Custom styling for text (fontSize, fontWeight, color)
    - (No icon)
 
 5. **Text only** (custom content):
@@ -60,10 +62,16 @@ Focus on extracting these elements:
    - `centerValue`: The value to display (will be large and bold)
    - (No icon or text)
 
-**Priority Order**: If multiple props are set, they display in this order:
+**Rendering Order**: When both text and value are present, centerValue renders ABOVE centerText:
 - Icon (if `centerIconName` is set) OR custom content (if `centerContent` is set)
-- Text label (if `centerText` is set and no icon/custom content)
-- Value (if `centerValue` is set)
+- Value (if `centerValue` is set) - renders at top
+- Text label (if `centerText` is set and no icon/custom content) - renders at bottom
+
+**Center Content Styling (Advanced)**:
+- `centerValueStyle`: Object with `fontSize` (e.g., "26px"), `fontWeight` (e.g., "400"), `color` (hex)
+- `centerTextStyle`: Object with `fontSize` (e.g., "11px"), `fontWeight` (e.g., "400"), `color` (hex)
+- `centerTextGap`: Number (default: 0) - Gap in pixels between centerValue and centerText (e.g., 4 for 4px spacing)
+- `useCenterGraphic`: Boolean (default: true) - uses native ECharts rendering for better positioning. Set to false for legacy HTML overlay rendering
 
 ## Icon Selection Guide:
 Choose appropriate icons based on semantic meaning:
@@ -140,6 +148,10 @@ Choose appropriate icons based on semantic meaning:
 - **centerContent**: null (no custom content)
 - **centerText**: null (no label text)
 - **centerValue**: null (no value display)
+- **centerValueStyle**: {} (default: fontSize 32px, bold, theme text color)
+- **centerTextStyle**: {} (default: fontSize 11px, normal, theme text color)
+- **centerTextGap**: 0 (no extra gap between centerValue and centerText)
+- **useCenterGraphic**: true (use native ECharts rendering for center content)
 
 ## Common Patterns:
 
@@ -167,13 +179,24 @@ Choose appropriate icons based on semantic meaning:
 }
 ```
 
-**Donut with metric display**:
+**Donut with metric display** (value above text):
 ```json
 {
   "variant": "donut",
   "innerRadius": 60,
+  "centerValue": "1,234",
   "centerText": "Total",
-  "centerValue": "1,234"
+  "centerValueStyle": {
+    "fontSize": "26px",
+    "fontWeight": "400",
+    "color": "#ffffff"
+  },
+  "centerTextStyle": {
+    "fontSize": "11px",
+    "fontWeight": "400",
+    "color": "#8E8E93"
+  },
+  "centerTextGap": 4
 }
 ```
 

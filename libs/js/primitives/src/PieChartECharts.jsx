@@ -49,11 +49,14 @@ export const PieChart = ({
   // Center styling
   centerTextStyle = {},
   centerValueStyle = {},
+  centerTextGap = 0, // Gap between centerValue and centerText (in pixels)
   // Icon support for center content
   centerIconName,
   centerIconSize = 32,
   centerIconColor,
   centerContent,
+  // Rendering method for center text/value
+  useCenterGraphic = true, // Use ECharts graphic (true) or HTML overlay (false)
   // Min/max for data validation
   min,
   max,
@@ -193,6 +196,78 @@ export const PieChart = ({
           data: processedData.map((item) => item.name),
         }
       : undefined,
+    graphic: useCenterGraphic && (variant === "donut" || variant === "ring") && (centerText || centerValue) ? (() => {
+      const valueFontSize = parseInt(centerValueStyle?.fontSize) || 32;
+      const textFontSize = parseInt(centerTextStyle?.fontSize) || 11;
+      const gap = centerTextGap;
+
+      if (centerValue && centerText) {
+        // Both texts present - position with gap
+        // Use fixed percentages adjusted by gap
+        const valueTop = 44 - (gap * 0.1); // Move up slightly based on gap
+        const textTop = 54 + (gap * 0.1); // Move down slightly based on gap
+
+        return [
+          {
+            type: "text",
+            left: "center",
+            top: `${valueTop}%`,
+            style: {
+              text: centerValue,
+              textAlign: "center",
+              fill: centerValueStyle?.color || currentTheme.textColor,
+              fontSize: valueFontSize,
+              fontWeight: centerValueStyle?.fontWeight || "bold",
+            },
+            z: 100,
+          },
+          {
+            type: "text",
+            left: "center",
+            top: `${textTop}%`,
+            style: {
+              text: centerText,
+              textAlign: "center",
+              fill: centerTextStyle?.color || currentTheme.textColor,
+              fontSize: textFontSize,
+              fontWeight: centerTextStyle?.fontWeight || "normal",
+            },
+            z: 100,
+          },
+        ];
+      } else if (centerValue) {
+        // Only value
+        return [{
+          type: "text",
+          left: "center",
+          top: "middle",
+          style: {
+            text: centerValue,
+            textAlign: "center",
+            fill: centerValueStyle?.color || currentTheme.textColor,
+            fontSize: valueFontSize,
+            fontWeight: centerValueStyle?.fontWeight || "bold",
+          },
+          z: 100,
+        }];
+      } else if (centerText) {
+        // Only text
+        return [{
+          type: "text",
+          left: "center",
+          top: "middle",
+          style: {
+            text: centerText,
+            textAlign: "center",
+            fill: centerTextStyle?.color || currentTheme.textColor,
+            fontSize: textFontSize,
+            fontWeight: centerTextStyle?.fontWeight || "normal",
+          },
+          z: 100,
+        }];
+      }
+      return [];
+    })() : undefined,
     series: [
       {
         name: title,
@@ -251,7 +326,7 @@ export const PieChart = ({
 
   const shouldShowCenterContent =
     (variant === "donut" || variant === "ring") &&
-    (centerIconName || centerContent || centerText || centerValue);
+    (centerIconName || centerContent || (!useCenterGraphic && (centerText || centerValue)));
 
   const defaultCenterIconColor = centerIconColor || currentTheme.textColor;
 
@@ -310,18 +385,22 @@ export const PieChart = ({
               color={defaultCenterIconColor}
             />
           ) : centerContent ? (
-            <span
-              style={{
-                color: currentTheme.textColor,
-                fontSize: "14px",
-                fontWeight: "normal",
-                whiteSpace: "nowrap",
-                textAlign: "center",
-                ...centerTextStyle,
-              }}
-            >
-              {centerContent}
-            </span>
+            typeof centerContent === 'string' ? (
+              <span
+                style={{
+                  color: currentTheme.textColor,
+                  fontSize: "14px",
+                  fontWeight: "normal",
+                  whiteSpace: "nowrap",
+                  textAlign: "center",
+                  ...centerTextStyle,
+                }}
+              >
+                {centerContent}
+              </span>
+            ) : (
+              centerContent
+            )
           ) : null}
 
           {centerText && !centerIconName && !centerContent && (
@@ -339,11 +418,11 @@ export const PieChart = ({
             </span>
           )}
 
-          {centerValue && (
+          {centerValue && !centerContent && (
             <span
               style={{
                 color: currentTheme.textColor,
-                fontSize: centerText || centerIconName || centerContent ? "18px" : "24px",
+                fontSize: centerText || centerIconName ? "18px" : "24px",
                 fontWeight: "bold",
                 whiteSpace: "nowrap",
                 textAlign: "center",
