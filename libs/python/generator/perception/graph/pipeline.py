@@ -33,40 +33,119 @@ def load_common_prompt() -> str:
         return common_file.read_text(encoding="utf-8").strip()
     return "You are a WidgetDSL graph specification expert. Analyze this image and generate detailed specifications for the charts shown."
 
-def generate_graph_prompt(chart_counts: Dict[str, int]) -> str:
-    """Generate a combined prompt for all detected charts."""
-    chart_descriptions = []
+def extract_chart_counts_from_layout(layout_detections: List[Dict[str, Any]]) -> Dict[str, int]:
+    """
+    Extract chart types and counts from layout detection results.
 
-    for chart_type, count in chart_counts.items():
-        if count > 0:
-            if count == 1:
-                chart_descriptions.append(f"1 {chart_type}")
-            else:
-                chart_descriptions.append(f"{count} {chart_type}s")
+    Args:
+        layout_detections: List of layout detections with 'label' field
 
-    if not chart_descriptions:
+    Returns:
+        Dictionary with chart types as keys and counts as values
+    """
+    # Chart types that we support
+    chart_types = {
+        "BarChart", "StackedBarChart", "LineChart", "PieChart",
+        "RadarChart", "ProgressBar", "ProgressRing", "Sparkline"
+    }
+
+    # Count each chart type
+    chart_counts = {chart_type: 0 for chart_type in chart_types}
+
+    for detection in layout_detections:
+        label = detection.get("label", "")
+        if label in chart_types:
+            chart_counts[label] += 1
+
+    return chart_counts
+
+def extract_chart_detections_from_layout(layout_detections: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Extract complete chart detection information from layout detection results.
+
+    Args:
+        layout_detections: List of layout detections with 'label', 'bbox', 'description' fields
+
+    Returns:
+        List of chart detections with type, bbox, and description
+    """
+    # Chart types that we support
+    chart_types = {
+        "BarChart", "StackedBarChart", "LineChart", "PieChart",
+        "RadarChart", "ProgressBar", "ProgressRing", "Sparkline"
+    }
+
+    chart_detections = []
+
+    for detection in layout_detections:
+        label = detection.get("label", "")
+        if label in chart_types:
+            chart_detections.append({
+                "type": label,
+                "bbox": detection.get("bbox", []),
+                "description": detection.get("description", "")
+            })
+
+    return chart_detections
+
+def generate_graph_prompt(chart_detections: List[Dict[str, Any]]) -> str:
+    """
+    Generate a combined prompt for all detected charts with layout grounding information.
+
+    Args:
+        chart_detections: List of chart detections with 'type', 'bbox', 'description' fields
+
+    Returns:
+        Combined prompt string with layout information
+    """
+    if not chart_detections:
         return ""
 
     # Load common instructions
     common_prompt = load_common_prompt()
 
+    # Build chart list with grounding information
+    chart_list = []
+    for i, detection in enumerate(chart_detections, 1):
+        chart_type = detection.get("type", "Unknown")
+        bbox = detection.get("bbox", [])
+        description = detection.get("description", "")
+
+        bbox_str = f"[{bbox[0]}, {bbox[1]}, {bbox[2]}, {bbox[3]}]" if len(bbox) == 4 else "unknown"
+        desc_str = f" ({description})" if description else ""
+
+        chart_list.append(f"  {i}. {chart_type} at bbox {bbox_str}{desc_str}")
+
+    # Group by chart type for guidelines
+    chart_types = {}
+    for detection in chart_detections:
+        chart_type = detection.get("type", "Unknown")
+        chart_types[chart_type] = chart_types.get(chart_type, 0) + 1
+
     # Build prompt with loaded chart-specific instructions
     prompt_parts = [
         common_prompt,
         "",
-        f"This image contains: {', '.join(chart_descriptions)}",
+        "## DETECTED CHARTS (from layout grounding):",
         "",
-        "For each chart detected, generate a detailed WidgetDSL specification according to the following guidelines:",
+        *chart_list,
+        "",
+        "## IMPORTANT:",
+        "- Use the bbox coordinates to identify the chart location in the image",
+        "- The description provides visual characteristics detected during layout analysis",
+        "- Focus on extracting precise data values, colors, labels, and styling",
+        "- Generate specifications in the same order as listed above",
+        "",
+        "## CHART TYPE GUIDELINES:",
         ""
     ]
 
-    for chart_type, count in chart_counts.items():
-        if count > 0:
-            chart_prompt = load_chart_prompt(chart_type)
-            if chart_prompt:
-                prompt_parts.append(f"--- {chart_type} (x{count}) ---")
-                prompt_parts.append(chart_prompt)
-                prompt_parts.append("")
+    for chart_type, count in chart_types.items():
+        chart_prompt = load_chart_prompt(chart_type)
+        if chart_prompt:
+            prompt_parts.append(f"--- {chart_type} (x{count}) ---")
+            prompt_parts.append(chart_prompt)
+            prompt_parts.append("")
 
     return "\n".join(prompt_parts)
 
@@ -110,7 +189,7 @@ async def process_graphs_in_image(
     *,
     image_bytes: bytes,
     filename: Optional[str] = None,
-    chart_counts: Dict[str, int],
+    chart_detections: List[Dict[str, Any]],
     # LLM config
     provider: Optional[str] = None,
     api_key: Optional[str] = None,
@@ -125,13 +204,20 @@ async def process_graphs_in_image(
     """
     Process detected charts in an image and generate detailed graph specifications.
 
-    Returns a list of graph specifications ready for injection into WidgetDSL.
+    Args:
+        image_bytes: Raw image bytes
+        filename: Optional filename
+        chart_detections: List of chart detections with 'type', 'bbox', 'description' fields
+        ... (LLM config parameters)
+
+    Returns:
+        List of graph specifications ready for injection into WidgetDSL.
     """
     if not isinstance(image_bytes, (bytes, bytearray)):
         raise TypeError("image_bytes must be raw bytes")
 
     # Check if any charts were detected
-    if not any(count > 0 for count in chart_counts.values()):
+    if not chart_detections:
         return []
 
     # Extract image_id for logging
@@ -145,14 +231,14 @@ async def process_graphs_in_image(
     except (ImportError, Exception):
         has_logger = False
 
-    total_charts = sum(chart_counts.values())
+    total_charts = len(chart_detections)
     if has_logger:
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Graph Generation] Started ({total_charts} charts)")
 
     start_time = time.time()
 
-    # Generate the combined graph prompt
-    graph_prompt = generate_graph_prompt(chart_counts)
+    # Generate the combined graph prompt with layout information
+    graph_prompt = generate_graph_prompt(chart_detections)
     if not graph_prompt:
         return []
 

@@ -277,23 +277,6 @@ async def generate_widget_icons(
         retrieval_topk, retrieval_topm, retrieval_alpha, gen_config
     )
 
-@app.post("/api/generate-widget-graph")
-async def generate_widget_graph(
-    request: Request,
-    image: UploadFile = File(...),
-    system_prompt: str = Form(None),
-    model: str = Form(None),
-    api_key: str = Form(None),
-):
-    client_ip = request.client.host
-    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
-        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
-
-    image_data = await image.read()
-    return await generator.generate_widget_with_graph(
-        image_data, image.filename, system_prompt, model, api_key, gen_config
-    )
-
 @app.post("/api/generate-widget-full")
 async def generate_widget_full(
     request: Request,

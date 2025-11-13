@@ -32,6 +32,7 @@ GOAL: HIGH RECALL. Detect ALL visible UI elements with tight integer boxes (incl
 
 ## 🎨 VISUAL CHARACTERISTICS (for grounding)
 
+**Container** — background panel/card grouping multiple elements; solid or blurred fill, often with rounded corners and padding.
 **Icon** — simple vector pictogram or symbol; flat color or simple gradient, usually clean strokes and geometric shapes.  
 **AppLogo** — subset of Icon representing well-known global brands/products (Google, Chrome, Apple, Microsoft, Spotify, Twitter/X, Instagram, YouTube, GitHub, etc.); typically square with solid background and central mark.  
 **Text** — any readable alphanumeric glyphs; labels, numbers, or titles. Ignore texts inside charts (except buttons).  
@@ -42,10 +43,6 @@ GOAL: HIGH RECALL. Detect ALL visible UI elements with tight integer boxes (incl
 **Slider** — thin horizontal track with a larger circular thumb marking a value.  
 **Divider** — 1–2 px straight line separator, horizontal or vertical.  
 **Indicator** — narrow vertical colored bar or stripe for category/status.  
-**ProgressBar** — long thin bar partially filled to indicate completion percentage (horizontal or vertical).  
-**ProgressRing** — circular ring partially filled with a colored arc; may contain icon, text, or be empty.  
-**Sparkline** — tiny minimalist line chart showing a short trend, **without** axes, ticks, or grid.  
-**Container** — background panel/card grouping multiple elements; solid or blurred fill, often with rounded corners and padding.
 
 ---
 
@@ -61,6 +58,9 @@ Do **not** mark inner text, dividers, or gridlines separately.
 **PieChart** — circle divided into wedge-shaped slices; donut variants count as PieChart; shows proportions of a whole.  
 **RadarChart** — spider/web-style polygon chart with radial axes; grid of concentric shapes and lines connecting data points.
 
+**ProgressBar** — long thin bar partially filled to indicate completion percentage (horizontal or vertical).  
+**ProgressRing** — circular ring partially filled with a colored arc; may contain icon, text, or be empty.  
+**Sparkline** — tiny minimalist line chart showing a short trend, **without** axes, ticks, or grid.  
 ---
 
 ## ⚙️ DESCRIPTION TOKENS (concise comma-separated key:value)

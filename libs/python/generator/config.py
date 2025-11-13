@@ -32,7 +32,6 @@ class GeneratorConfig:
     # Stage-specific timeouts (in seconds)
     default_timeout: int = 500
     layout_timeout: Optional[int] = None
-    graph_det_timeout: Optional[int] = None
     graph_gen_timeout: Optional[int] = None
     dsl_gen_timeout: Optional[int] = None
     icon_retrieval_timeout: Optional[int] = None
@@ -63,17 +62,6 @@ class GeneratorConfig:
     layout_enable_thinking: Optional[bool] = None
     layout_thinking_budget: Optional[int] = None
     layout_vl_high_resolution: Optional[bool] = None
-
-    # Graph detection
-    graph_det_api_key: Optional[str] = None
-    graph_det_model: Optional[str] = None
-    graph_det_base_url: Optional[str] = None
-    graph_det_temperature: Optional[float] = None
-    graph_det_top_k: Optional[int] = None
-    graph_det_top_p: Optional[float] = None
-    graph_det_enable_thinking: Optional[bool] = None
-    graph_det_thinking_budget: Optional[int] = None
-    graph_det_vl_high_resolution: Optional[bool] = None
 
     # Graph generation
     graph_gen_api_key: Optional[str] = None
@@ -137,43 +125,6 @@ class GeneratorConfig:
     def get_layout_vl_high_resolution(self) -> bool:
         """Get layout vl_high_resolution with fallback to default"""
         return self.layout_vl_high_resolution if self.layout_vl_high_resolution is not None else self.default_vl_high_resolution
-
-    # Graph detection getters
-    def get_graph_det_api_key(self) -> str:
-        """Get graph detection API key with fallback to default"""
-        return self.graph_det_api_key if self.graph_det_api_key else self.default_api_key
-
-    def get_graph_det_model(self) -> str:
-        """Get graph detection model with fallback to default"""
-        return self.graph_det_model if self.graph_det_model else self.default_model
-
-    def get_graph_det_base_url(self) -> str:
-        """Get graph detection base URL with fallback to default"""
-        return self.graph_det_base_url if self.graph_det_base_url else self.default_base_url
-
-    def get_graph_det_temperature(self) -> float:
-        """Get graph detection temperature with fallback to default"""
-        return self.graph_det_temperature if self.graph_det_temperature is not None else self.default_temperature
-
-    def get_graph_det_top_k(self) -> Optional[int]:
-        """Get graph detection top_k with fallback to default"""
-        return self.graph_det_top_k if self.graph_det_top_k is not None else self.default_top_k
-
-    def get_graph_det_top_p(self) -> Optional[float]:
-        """Get graph detection top_p with fallback to default"""
-        return self.graph_det_top_p if self.graph_det_top_p is not None else self.default_top_p
-
-    def get_graph_det_thinking(self) -> bool:
-        """Get graph detection thinking with fallback to default"""
-        return self.graph_det_enable_thinking if self.graph_det_enable_thinking is not None else self.default_enable_thinking
-
-    def get_graph_det_thinking_budget(self) -> int:
-        """Get graph detection thinking budget with fallback to default"""
-        return self.graph_det_thinking_budget if self.graph_det_thinking_budget is not None else self.default_thinking_budget
-
-    def get_graph_det_vl_high_resolution(self) -> bool:
-        """Get graph detection vl_high_resolution with fallback to default"""
-        return self.graph_det_vl_high_resolution if self.graph_det_vl_high_resolution is not None else self.default_vl_high_resolution
 
     # Graph generation getters
     def get_graph_gen_api_key(self) -> str:
@@ -256,10 +207,6 @@ class GeneratorConfig:
         """Get layout detection timeout with fallback to default"""
         return self.layout_timeout if self.layout_timeout is not None else self.default_timeout
 
-    def get_graph_det_timeout(self) -> int:
-        """Get graph detection timeout with fallback to default"""
-        return self.graph_det_timeout if self.graph_det_timeout is not None else self.default_timeout
-
     def get_graph_gen_timeout(self) -> int:
         """Get graph generation timeout with fallback to default"""
         return self.graph_gen_timeout if self.graph_gen_timeout is not None else self.default_timeout
@@ -339,7 +286,6 @@ class GeneratorConfig:
             # Timeouts
             default_timeout=int(os.getenv('DEFAULT_TIMEOUT', '500')),
             layout_timeout=get_optional_int('LAYOUT_TIMEOUT'),
-            graph_det_timeout=get_optional_int('GRAPH_DET_TIMEOUT'),
             graph_gen_timeout=get_optional_int('GRAPH_GEN_TIMEOUT'),
             dsl_gen_timeout=get_optional_int('DSL_GEN_TIMEOUT'),
             icon_retrieval_timeout=get_optional_int('ICON_RETRIEVAL_TIMEOUT'),
@@ -365,17 +311,6 @@ class GeneratorConfig:
             layout_enable_thinking=get_optional_bool('LAYOUT_ENABLE_THINKING'),
             layout_thinking_budget=get_optional_int('LAYOUT_THINKING_BUDGET'),
             layout_vl_high_resolution=get_optional_bool('LAYOUT_VL_HIGH_RESOLUTION'),
-
-            # Graph detection (optional overrides)
-            graph_det_api_key=get_optional_str('GRAPH_DET_API_KEY'),
-            graph_det_model=get_optional_str('GRAPH_DET_MODEL'),
-            graph_det_base_url=get_optional_str('GRAPH_DET_BASE_URL'),
-            graph_det_temperature=get_optional_float('GRAPH_DET_TEMPERATURE'),
-            graph_det_top_k=get_optional_int('GRAPH_DET_TOP_K'),
-            graph_det_top_p=get_optional_float('GRAPH_DET_TOP_P'),
-            graph_det_enable_thinking=get_optional_bool('GRAPH_DET_ENABLE_THINKING'),
-            graph_det_thinking_budget=get_optional_int('GRAPH_DET_THINKING_BUDGET'),
-            graph_det_vl_high_resolution=get_optional_bool('GRAPH_DET_VL_HIGH_RESOLUTION'),
 
             # Graph generation (optional overrides)
             graph_gen_api_key=get_optional_str('GRAPH_GEN_API_KEY'),

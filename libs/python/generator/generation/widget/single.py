@@ -30,7 +30,7 @@ from ...perception import (
     preprocess_image_for_widget,
     run_icon_detection_pipeline,
     format_icon_prompt_injection,
-    detect_and_process_graphs,
+    detect_and_process_graphs_from_layout,
     inject_graph_specs_to_prompt,
     get_available_components_list,
 )
@@ -325,112 +325,6 @@ async def generate_widget_with_icons(
                 pass
 
 
-async def generate_widget_with_graph(
-    image_data: bytes,
-    image_filename: str | None,
-    system_prompt: str,
-    model: str,
-    api_key: str,
-    config: GeneratorConfig,
-):
-    print(f"[{datetime.now()}] generate-widget request")
-
-    import tempfile
-    temp_file = None
-    try:
-        validate_file_size(len(image_data), config.max_file_size_mb)
-
-        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
-
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
-            temp_file.write(image_bytes)
-            temp_file_path = temp_file.name
-
-        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        model_to_use = (model or "qwen3-vl-flash").strip()
-
-        validate_model(model, model_to_use, vision_models)
-        validate_api_key(api_key)
-
-        print(f"[{datetime.now()}] Step 1: Detecting charts in image...")
-        chart_counts, graph_specs = await detect_and_process_graphs(
-            image_bytes=image_bytes,
-            filename=image_filename,
-            provider=None,
-            api_key=api_key,
-            model=model_to_use,
-            temperature=0.1,
-            max_tokens=500,
-            timeout=config.get_graph_det_timeout(),
-            max_retries=2,
-            graph_gen_timeout=config.get_graph_gen_timeout(),
-        )
-
-        print(f"[{datetime.now()}] Detected charts: {chart_counts}")
-        if graph_specs:
-            print(f"[{datetime.now()}] Step 2: Processing graphs... Generated {len(graph_specs)} graph specifications")
-
-        base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
-        enhanced_prompt = inject_graph_specs_to_prompt(base_prompt, graph_specs)
-
-        vision_llm = OpenAIProvider(
-            model=model_to_use,
-            api_key=api_key,
-            base_url=config.default_base_url,
-            temperature=0.5,
-            max_tokens=32768,
-            timeout=config.get_dsl_gen_timeout(),
-            system_prompt=enhanced_prompt,
-        )
-
-        image_content = prepare_image_content(temp_file_path)
-
-        messages = [ChatMessage(
-            role="user",
-            content=[
-                {"type": "text", "text": "Please analyze this widget image and generate the WidgetDSL JSON according to the instructions."},
-                image_content
-            ]
-        )]
-
-        response = vision_llm.chat(messages)
-
-        result_text = clean_json_response(response.content)
-
-        widget_spec = json.loads(result_text)
-        try:
-            if isinstance(widget_spec, dict) and isinstance(widget_spec.get("widget"), dict):
-                widget_spec["widget"]["aspectRatio"] = round(aspect_ratio, 3)
-        except Exception:
-            pass
-
-        return {
-            "success": True,
-            "widgetDSL": widget_spec,
-            "aspectRatio": round(aspect_ratio, 3),
-            "usage": response.usage
-        }
-    except asyncio.TimeoutError as e:
-        # Timeout occurred - log and return failure
-        stage_name = "unknown"
-        if stage_tracker:
-            stage_name = stage_tracker.get_current_stage(image_id) or "unknown"
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ❌ TIMEOUT in {stage_name} stage")
-        return {
-            "success": False,
-            "error": f"Timeout in {stage_name} stage",
-            "error_type": "timeout"
-        }
-    except json.JSONDecodeError as e:
-        raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
-    finally:
-        if 'temp_file_path' in locals():
-            try:
-                os.unlink(temp_file_path)
-            except:
-                pass
-
-
 async def generate_widget_full(
     image_data: bytes,
     image_filename: str | None,
@@ -544,22 +438,15 @@ async def generate_widget_full(
         async def track_graph_substage():
             if stage_tracker:
                 stage_tracker.set_substage(image_id, "perception.graph", is_start=True)
-            result = await detect_and_process_graphs(
+            result = await detect_and_process_graphs_from_layout(
                 image_bytes=image_bytes,
                 filename=image_filename,
+                layout_detections=layout_post,
                 provider=None,
-                api_key=config.get_graph_det_api_key(),
-                model=config.get_graph_det_model(),
-                temperature=0.1,
-                max_tokens=500,
-                timeout=config.get_graph_det_timeout(),
-                max_retries=0,
                 graph_gen_api_key=config.get_graph_gen_api_key(),
-                graph_det_thinking=config.get_graph_det_thinking(),
-                graph_gen_thinking=config.get_graph_gen_thinking(),
-                graph_det_model=config.get_graph_det_model(),
                 graph_gen_model=config.get_graph_gen_model(),
                 graph_gen_timeout=config.get_graph_gen_timeout(),
+                graph_gen_thinking=config.get_graph_gen_thinking(),
             )
             if stage_tracker:
                 stage_tracker.set_substage(image_id, "perception.graph", is_start=False)
@@ -568,8 +455,8 @@ async def generate_widget_full(
         # Determine which pipelines to run
         # Icon depends on layout (needs layout_detections to filter icons)
         run_icon = enable_icon and layout_post is not None
-        # Graph is independent (does not need layout_detections)
-        run_graph = enable_graph
+        # Graph now also depends on layout (needs layout_detections to extract chart types)
+        run_graph = enable_graph and layout_post is not None
 
         # Build task list based on enabled pipelines
         tasks = []
@@ -586,8 +473,10 @@ async def generate_widget_full(
         if run_graph:
             tasks.append(track_graph_substage())
             task_names.append("graph")
-        else:
+        elif not enable_graph:
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Graph detection (disabled in config)")
+        else:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Graph detection (layout disabled)")
 
         # Execute parallel tasks if any are enabled
         if tasks:
@@ -598,8 +487,8 @@ async def generate_widget_full(
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] Started ({', '.join(task_names)})")
 
             # Use the maximum of icon and graph timeouts for parallel execution
-            graph_total_timeout = config.get_graph_det_timeout() + config.get_graph_gen_timeout()
-            parallel_timeout = max(config.get_icon_retrieval_timeout(), graph_total_timeout)
+            # Note: graph now only uses graph_gen_timeout (no separate detection phase)
+            parallel_timeout = max(config.get_icon_retrieval_timeout(), config.get_graph_gen_timeout())
 
             results = await asyncio.wait_for(
                 asyncio.gather(*tasks),
