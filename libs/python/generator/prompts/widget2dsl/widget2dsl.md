@@ -20,99 +20,17 @@ Props: `backgroundColor` (hex), `borderRadius` (number), `padding` (number), `as
 
 [LAYOUT_INFO]
 
+## Detected Components (MUST USE)
+
+**CRITICAL**: The following components were detected in the layout grounding. You **MUST** use these components in your DSL output to match the detected UI elements.
+
+[PRIMITIVE_DEFINITIONS]
+
 ### Color Palette
 [COLOR_PALETTE]
 
-### Text
-Props: `fontSize` (number), `color` (hex), `align` (left/center/right), `fontWeight` (number), `lineHeight` (number)
-- `fontWeight`: 300 (light), 400 (normal), 500 (medium), 600 (semibold), 700 (bold)
-- Can use special characters like "█" for color blocks
-- Example: `{"type": "leaf", "component": "Text", "props": {"fontSize": 16, "color": "#000000"}, "content": "Hello"}`
-
-### Icon
-Props: `name` (string with prefix:Name), `size` (number), `color` (hex)
-- **IMPORTANT**: Must use `"prefix:ComponentName"` format (e.g., `"sf:SfBoltFill"`, `"lu:LuHeart"`)
-- Prefixes: `ai`, `bi`, `bs`, `cg`, `ci`, `di`, `fa`, `fa6`, `fc`, `fi`, `gi`, `go`, `gr`, `hi`, `hi2`, `im`, `io`, `io5`, `lia`, `lu`, `md`, `pi`, `ri`, `rx`, `sf`, `si`, `sl`, `tb`, `tfi`, `ti`, `vsc`, `wi`
-[AVAILABLE_ICON_NAMES]
-- Example: `{"type": "leaf", "component": "Icon", "flex": "none", "props": {"name": "sf:SfHeart", "size": 24, "color": "#FF0000"}}`
-
-### Button
-Props: `icon` (icon name), `backgroundColor` (hex), `color` (hex), `borderRadius` (number), `fontSize` (number), `fontWeight` (number), `padding` (number), `content` (text)
-Node properties: `width` (number), `height` (number)
-- **RARE in widgets** - only use when clear button with background/padding exists
-- Contains either icon OR text (not both)
-- Circular: set `borderRadius` to half size (e.g., `width: 40, height: 40, borderRadius: 20`)
-- Example: `{"type": "leaf", "component": "Button", "props": {"icon": "sf:SfPlus", "backgroundColor": "#007AFF", "color": "#fff", "borderRadius": 12, "padding": 12}}`
-
 ### Graph
 [GRAPH_SPECS]
-
-### Image
-Props: `src` (Unsplash URL), `borderRadius` (number)
-Node properties: `width` (number), `height` (number)
-- **CRITICAL**: MUST use Unsplash URLs: `https://images.unsplash.com/photo-[ID]`
-- Choose image matching widget's visual content/theme
-- Specify `width`, `height` at node level (NOT in props)
-- `width` optional - omit to stretch horizontally
-- Example: `{"type": "leaf", "component": "Image", "width": 100, "height": 100, "props": {"src": "https://images.unsplash.com/photo-[ID]"}}`
-
-### Checkbox
-Props: `size` (number), `checked` (boolean), `color` (hex)
-- Example: `{"type": "leaf", "component": "Checkbox", "flex": "none", "props": {"size": 20, "checked": true, "color": "#007AFF"}}`
-
-### Sparkline
-Props: `color` (hex), `data` (array of numbers), `showArea` (boolean), `smooth` (boolean), `gradientIntensity` (number 0-1), `baseline` (number)
-Node properties: `width` (number), `height` (number)
-- `data`: array of 10-100 numbers representing the trend line
-- `showArea`: fill area under the line (default: false)
-- `smooth`: use smooth curves (true) or straight lines (false, default)
-- `gradientIntensity`: opacity of filled area gradient, 0-1 (default: 0.4)
-- `baseline`: optional horizontal reference line value (shown as dashed line)
-- Specify `width`, `height` at node level (typical: 80x40)
-- Example: `{"type": "leaf", "component": "Sparkline", "width": 80, "height": 40, "flex": "none", "props": {"color": "#34C759", "data": [10, 20, 15, 30, 25], "showArea": true, "smooth": false}}`
-
-### MapImage
-Props: `src` (preset ID)
-Node properties: `width` (number), `height` (number)
-- **CRITICAL**: Must use one of these preset IDs: `"light-google-map"`, `"dark-google-map"`, `"satellite-google-map"`
-- Specify `width`, `height` at node level
-- Example: `{"type": "leaf", "component": "MapImage", "height": 120, "props": {"src": "light-google-map"}}`
-
-### AppLogo
-Props: `name` (string), `size` (number), `backgroundColor` (hex)
-- First letter of `name` displayed
-- Border radius auto-calculated (22% of size)
-- Example: `{"type": "leaf", "component": "AppLogo", "flex": "none", "props": {"name": "Music", "size": 40, "backgroundColor": "#FF3B30"}}`
-
-### Divider
-Props: `orientation` (horizontal/vertical), `type` (solid/dashed), `color` (hex), `thickness` (number)
-- Example: `{"type": "leaf", "component": "Divider", "flex": "none", "props": {"orientation": "horizontal", "color": "#e5e5ea", "thickness": 1}}`
-
-### Indicator
-Props: `color` (hex), `thickness` (number), `height` (number/string)
-- Vertical color bar (e.g., calendar categories)
-- Example: `{"type": "leaf", "component": "Indicator", "flex": "none", "props": {"color": "#FF9500", "thickness": 4, "height": "100%"}}`
-
-### ProgressRing
-Props: `percentage` (0-100), `color` (hex), `backgroundColor` (hex), `size` (number), `strokeWidth` (number), `iconName` (icon name), `iconSize` (number), `iconColor` (hex), `textColor` (hex), `fontSize` (number), `fontWeight` (number)
-Node properties: `content` (text)
-- Circular progress (0-100)
-- Contains icon OR text in center (not both), or empty
-- Examples:
-  - With icon: `{"type": "leaf", "component": "ProgressRing", "flex": "none", "props": {"percentage": 75, "color": "#34C759", "backgroundColor": "#e0e0e0", "size": 80, "strokeWidth": 6, "iconName": "sf:SfCheckmark", "iconSize": 32, "iconColor": "#34C759"}}`
-  - With text: `{"type": "leaf", "component": "ProgressRing", "flex": "none", "props": {"percentage": 75, "color": "#34C759", "backgroundColor": "#e0e0e0", "size": 80, "strokeWidth": 6, "textColor": "#000000", "fontSize": 16, "fontWeight": 600}, "content": "75%"}`
-  - Empty: `{"type": "leaf", "component": "ProgressRing", "flex": "none", "props": {"percentage": 75, "color": "#34C759", "backgroundColor": "#e0e0e0", "size": 80, "strokeWidth": 6}}`
-
-### Slider
-Props: `value` (0-100), `enabled` (boolean), `color` (hex), `thumbColor` (hex), `thumbSize` (number), `width` (number), `height` (number)
-- Visual: horizontal rounded bar with filled left portion and circular thumb at value position
-- `thumbSize`: optional (default: `height * 5`)
-- Example: `{"type": "leaf", "component": "Slider", "flex": 0, "props": {"value": 70, "color": "#FF9500", "width": 200, "height": 4}}`
-
-### Switch
-Props: `on` (boolean), `onColor` (hex), `offColor` (hex), `thumbColor` (hex), `width` (number), `height` (number)
-- Visual: rounded pill with circular thumb on left (off) or right (on)
-- Example: `{"type": "leaf", "component": "Switch", "flex": "none", "props": {"on": true, "onColor": "#34C759", "offColor": "#e0e0e0", "width": 51, "height": 31}}`
 
 ## Layout System
 
@@ -149,7 +67,7 @@ All layouts use **flexbox containers**. There are two node types:
 ```json
 {
   "type": "leaf",
-  "component": "Text" | "Icon" | "Button" | "Image" | "Checkbox" | "Sparkline" | "MapImage" | "AppLogo" | "Divider" | "Indicator" | "Slider" | "Switch" | "ProgressRing",
+  "component": [AVAILABLE_COMPONENTS],
   "flex": number | "none" | 0 | 1,
   "width": number | string (optional, for layout control),
   "height": number | string (optional, for layout control),
@@ -185,15 +103,16 @@ Your output must be valid JSON following this structure:
 
 ## Guidelines
 
-1. **Layout**: Identify ALL elements and structure (rows/columns). Use containers for grouping, leaves for components.
-2. **Colors**: Hex format (#RRGGBB). Ensure good contrast.
-3. **Spacing (CRITICAL)**:
+1. **Detected Components (CRITICAL)**: You MUST use the components defined in "Detected Components (MUST USE)" section above. These were detected from layout grounding and represent the actual UI elements in the image. Do NOT omit any detected component types.
+2. **Layout**: Identify ALL elements and structure (rows/columns). Use containers for grouping, leaves for components.
+3. **Colors**: Hex format (#RRGGBB). Ensure good contrast.
+4. **Spacing (CRITICAL)**:
    - Replicate exact spacing from image
    - `gap`: spacing between children, `padding`: internal spacing
    - **iOS Standards**: Widget padding=16, Container padding=16 (standard) or 11 (tight), Gap values=4/6/8/11/16/20
-4. **Text**: Extract exact text, preserve capitalization
-5. **Alignment**: `alignMain` (start/end/center/between/around), `alignCross` (start/end/center/stretch)
-6. **Visual Accuracy**: Match font sizes, weights, colors, icon sizes, visual hierarchy
+5. **Text**: Extract exact text, preserve capitalization
+6. **Alignment**: `alignMain` (start/end/center/between/around), `alignCross` (start/end/center/stretch)
+7. **Visual Accuracy**: Match font sizes, weights, colors, icon sizes, visual hierarchy
 
 ## Example
 
@@ -476,6 +395,7 @@ Output:
 
 ## Important Notes
 
+- **CRITICAL**: You MUST use ALL component types listed in "Detected Components (MUST USE)" section. These components were detected in the image and must appear in your DSL output.
 - Output **only** valid JSON, no explanations or markdown
 - Ensure all brackets, braces, and quotes are balanced
 - Use exact icon names from [AVAILABLE_ICON_NAMES]

@@ -88,17 +88,30 @@ def inject_graph_specs_to_prompt(
     else:
         return f"{base_prompt}\n\n{graph_specs_text}"
 
-def get_available_components_list(graph_specs: list = None) -> str:
-    """Generate a list of available component names, including detected graphs."""
-    base_components = [
-        "Text", "Icon", "Image", "Checkbox", "Sparkline",
-        "MapImage", "AppLogo", "Divider", "Indicator"
-    ]
+def get_available_components_list(graph_specs: list = None, detected_primitives: set = None) -> str:
+    """
+    Generate a list of available component names, including detected primitives and graphs.
 
+    Args:
+        graph_specs: List of graph specifications (for adding graph types)
+        detected_primitives: Set of detected primitive component types
+
+    Returns:
+        Comma-separated string of component names
+    """
+    # Start with detected primitives if provided, otherwise use default base components
+    if detected_primitives:
+        all_components = sorted(detected_primitives)
+    else:
+        # Fallback to hardcoded list if primitives not provided
+        all_components = [
+            "Text", "Icon", "Image", "Checkbox", "Sparkline",
+            "MapImage", "AppLogo", "Divider", "Indicator"
+        ]
+
+    # Add detected graph types
     if graph_specs:
         graph_types = [spec.get("type") for spec in graph_specs if spec.get("type")]
-        all_components = base_components + graph_types
-    else:
-        all_components = base_components
+        all_components = all_components + graph_types
 
     return ", ".join(all_components)

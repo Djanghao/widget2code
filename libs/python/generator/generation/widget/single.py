@@ -33,6 +33,8 @@ from ...perception import (
     detect_and_process_graphs_from_layout,
     inject_graph_specs_to_prompt,
     get_available_components_list,
+    extract_primitive_types_from_layout,
+    inject_primitives_to_prompt,
 )
 from ...perception.icon_extraction import normalize_icon_details
 
@@ -559,6 +561,20 @@ async def generate_widget_full(
             layout_injection_text = ""
             prompt_with_layout = base_prompt
 
+        # ========== Stage 2.5: Primitive Definitions (NEW) ==========
+        if enable_layout and layout_post is not None:
+            # Extract detected primitive types from layout
+            detected_primitives = extract_primitive_types_from_layout(layout_post)
+
+            # Inject primitive component definitions into prompt
+            prompt_with_primitives = inject_primitives_to_prompt(prompt_with_layout, detected_primitives)
+
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Primitive definitions injected: {', '.join(sorted(detected_primitives)) if detected_primitives else 'none'}")
+        else:
+            # Layout not enabled, skip primitive injection
+            detected_primitives = set()
+            prompt_with_primitives = prompt_with_layout
+
         # ========== Stage 3: Colors (was Stage 2) ==========
         if enable_color:
             # Update stage: color
@@ -577,13 +593,13 @@ async def generate_widget_full(
                 k_clusters=8
             )
             color_injection_text = format_color_injection(color_results)
-            prompt_with_colors = inject_colors_to_prompt(prompt_with_layout, color_results)
+            prompt_with_colors = inject_colors_to_prompt(prompt_with_primitives, color_results)
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Color extraction completed")
         else:
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Color extraction (disabled in config)")
             color_results = []
             color_injection_text = ""
-            prompt_with_colors = prompt_with_layout
+            prompt_with_colors = prompt_with_primitives
 
         # ========== Stage 4: Graphs (was Stage 3) ==========
         if enable_graph and graph_specs:
@@ -614,7 +630,7 @@ async def generate_widget_full(
             prompt_with_icons = prompt_with_graphs
 
         # ========== Stage 6: Components List (was Stage 5) ==========
-        components_list = get_available_components_list(graph_specs)
+        components_list = get_available_components_list(graph_specs, detected_primitives)
         prompt_final = prompt_with_icons
         if "[AVAILABLE_COMPONENTS]" in prompt_final:
             prompt_final = prompt_final.replace("[AVAILABLE_COMPONENTS]", components_list)
