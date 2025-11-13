@@ -420,7 +420,7 @@ export const LineChart = ({
 
   // X-axis trendline (horizontal average line)
   if (showXTrendline) {
-    const dataLength = Array.isArray(labels)
+    const dataLength = Array.isArray(labels) && labels.length > 0
       ? labels.length
       : Array.isArray(data)
       ? data.length
@@ -434,17 +434,16 @@ export const LineChart = ({
         width: xTrendlineWidth,
         type:
           xTrendlineStyle === "dashed"
-            ? "dashed"
+            ? [5, 5]
             : xTrendlineStyle === "dotted"
-            ? "dotted"
+            ? [2, 2]
             : "solid",
       },
       symbol: "none",
-      itemStyle: { opacity: 0 },
-      areaStyle: { opacity: 0 },
+      showSymbol: false,
       emphasis: { disabled: true },
       silent: true,
-      z: 10, // Render on top
+      z: 10,
     });
   }
 
