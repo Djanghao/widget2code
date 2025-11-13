@@ -1,8 +1,10 @@
 import React from 'react';
+import { Icon } from './Icon';
 
 export function AppLogo({
   size = 20,
   name = '',
+  icon = null,  // NEW: Icon name from retrieval (e.g., "si:SiGoogle")
   backgroundColor = '#007AFF',
   flex,
   flexGrow,
@@ -11,6 +13,23 @@ export function AppLogo({
   style = {},
   ...rest
 }) {
+  // If icon is provided, render using Icon component
+  if (icon) {
+    return (
+      <Icon
+        name={icon}
+        size={size}
+        flex={flex}
+        flexGrow={flexGrow}
+        flexShrink={flexShrink}
+        flexBasis={flexBasis}
+        style={style}
+        {...rest}
+      />
+    );
+  }
+
+  // Otherwise, render first letter as fallback
   const firstLetter = name.charAt(0).toUpperCase();
 
   return (

@@ -24,6 +24,22 @@ def get_icons_from_layout(layout_detections: List[Dict]) -> List[Dict]:
     ]
 
 
+def get_applogos_from_layout(layout_detections: List[Dict]) -> List[Dict]:
+    """
+    Filter applogo elements from layout detections.
+
+    Args:
+        layout_detections: List of detection dictionaries
+
+    Returns:
+        List of applogo detections only
+    """
+    return [
+        d for d in layout_detections
+        if d.get("label", "").lower() == "applogo"
+    ]
+
+
 def format_layout_for_prompt(
     detections: List[Dict],
     img_width: int,
@@ -105,5 +121,6 @@ def format_layout_for_prompt(
 
 __all__ = [
     "get_icons_from_layout",
+    "get_applogos_from_layout",
     "format_layout_for_prompt",
 ]

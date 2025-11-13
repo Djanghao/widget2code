@@ -288,15 +288,20 @@ async def generate_widget_full(
     retrieval_topm: int = Form(gen_config.retrieval_topm),
     retrieval_alpha: float = Form(gen_config.retrieval_alpha),
     icon_lib_names: str = Form(None),
+    applogo_lib_names: str = Form(None),  # NEW: AppLogo library names
 ):
     client_ip = request.client.host
     if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
         raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
 
+    # Use environment variable defaults if not provided
+    if applogo_lib_names is None:
+        applogo_lib_names = os.getenv('APPLOGO_LIB_NAMES', '["si"]')
+
     image_data = await image.read()
     result = await generator.generate_widget_full(
         image_data, image.filename, system_prompt, model, api_key,
-        retrieval_topk, retrieval_topm, retrieval_alpha, gen_config, icon_lib_names
+        retrieval_topk, retrieval_topm, retrieval_alpha, gen_config, icon_lib_names, applogo_lib_names
     )
 
     # Remove binary data before JSON serialization to prevent UTF-8 decode error

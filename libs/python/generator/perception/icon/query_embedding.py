@@ -233,6 +233,7 @@ async def query_from_detections_with_details(
     image_bytes: bytes,
     lib_roots: List[Path],
     filter_icon_only: bool = True,
+    filter_label: str = "icon",  # NEW: Specify which label to filter for
     topk: int = 50,
     topm: int = 10,
     alpha: float = 0.8,
@@ -247,7 +248,8 @@ async def query_from_detections_with_details(
     icon_detections: List[Dict[str, Any]] = []
 
     for det in detections:
-        if filter_icon_only and str(det.get("label", "")).lower() != "icon":
+        label = str(det.get("label", "")).lower()
+        if filter_icon_only and label != filter_label.lower():
             continue
         bbox = det.get("bbox")
         if not bbox or len(bbox) != 4:

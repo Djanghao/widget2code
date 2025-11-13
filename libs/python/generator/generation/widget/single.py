@@ -336,6 +336,7 @@ async def generate_widget_full(
     retrieval_alpha: float,
     config: GeneratorConfig,
     icon_lib_names: str,
+    applogo_lib_names: str = None,  # NEW: AppLogo library names
     stage_tracker=None,
     image_id: str = None,
 ):
@@ -351,6 +352,7 @@ async def generate_widget_full(
     # Read pipeline enable flags from config
     enable_layout = config.enable_layout_pipeline
     enable_icon = config.enable_icon_pipeline
+    enable_applogo = config.enable_icon_pipeline  # AppLogo uses same flag as icon
     enable_graph = config.enable_graph_pipeline
     enable_color = config.enable_color_pipeline
 
@@ -415,6 +417,16 @@ async def generate_widget_full(
             except json.JSONDecodeError:
                 pass
 
+        # Parse applogo library names from JSON array, e.g., '["si"]'
+        applogo_lib_names_parsed = None
+        if applogo_lib_names:
+            try:
+                parsed = json.loads(applogo_lib_names)
+                if isinstance(parsed, list):
+                    applogo_lib_names_parsed = [str(name).strip() for name in parsed if str(name).strip()]
+            except json.JSONDecodeError:
+                pass
+
         # Wrapper functions to track substage timing
         async def track_icon_substage():
             if stage_tracker:
@@ -437,6 +449,28 @@ async def generate_widget_full(
                 stage_tracker.set_substage(image_id, "perception.icon", is_start=False)
             return result
 
+        async def track_applogo_substage():
+            if stage_tracker:
+                stage_tracker.set_substage(image_id, "perception.applogo", is_start=True)
+            from ...perception.applogo_extraction import run_applogo_detection_pipeline
+            result = await run_applogo_detection_pipeline(
+                image_bytes=image_bytes,
+                filename=image_filename,
+                model=config.default_model,
+                api_key=config.default_api_key,
+                layout_detections=layout_post,
+                img_width=img_width,
+                img_height=img_height,
+                retrieval_topk=retrieval_topk,
+                retrieval_topm=retrieval_topm,
+                retrieval_alpha=retrieval_alpha,
+                lib_names=applogo_lib_names_parsed,
+                timeout=config.get_icon_retrieval_timeout(),  # Use same timeout as icon
+            )
+            if stage_tracker:
+                stage_tracker.set_substage(image_id, "perception.applogo", is_start=False)
+            return result
+
         async def track_graph_substage():
             if stage_tracker:
                 stage_tracker.set_substage(image_id, "perception.graph", is_start=True)
@@ -457,6 +491,8 @@ async def generate_widget_full(
         # Determine which pipelines to run
         # Icon depends on layout (needs layout_detections to filter icons)
         run_icon = enable_icon and layout_post is not None
+        # AppLogo depends on layout (needs layout_detections to filter applogos)
+        run_applogo = enable_applogo and layout_post is not None
         # Graph now also depends on layout (needs layout_detections to extract chart types)
         run_graph = enable_graph and layout_post is not None
 
@@ -471,6 +507,14 @@ async def generate_widget_full(
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Icon detection (disabled in config)")
         else:
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Icon detection (layout disabled)")
+
+        if run_applogo:
+            tasks.append(track_applogo_substage())
+            task_names.append("applogo")
+        elif not enable_applogo:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: AppLogo detection (disabled in config)")
+        else:
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: AppLogo detection (layout disabled)")
 
         if run_graph:
             tasks.append(track_graph_substage())
@@ -510,6 +554,17 @@ async def generate_widget_full(
                     "icon_count": 0
                 }
 
+            if run_applogo:
+                applogo_result = results[result_idx]
+                result_idx += 1
+            else:
+                # Default empty applogo result
+                applogo_result = {
+                    "per_applogo_details": [],
+                    "applogo_candidates": [],
+                    "applogo_count": 0
+                }
+
             if run_graph:
                 chart_counts, graph_specs = results[result_idx]
             else:
@@ -519,8 +574,9 @@ async def generate_widget_full(
 
             parallel_duration = time.time() - parallel_start
             icon_count = icon_result['icon_count']
+            applogo_count = applogo_result['applogo_count']
             chart_count = sum(chart_counts.values()) if chart_counts else 0
-            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] Completed in {parallel_duration:.2f}s (Icons:{icon_count}, Charts:{chart_count})")
+            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] Completed in {parallel_duration:.2f}s (Icons:{icon_count}, AppLogos:{applogo_count}, Charts:{chart_count})")
         else:
             # No perception tasks enabled
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Perception:Parallel] No tasks to run")
@@ -529,13 +585,23 @@ async def generate_widget_full(
                 "icon_candidates": [],
                 "icon_count": 0
             }
+            applogo_result = {
+                "per_applogo_details": [],
+                "applogo_candidates": [],
+                "applogo_count": 0
+            }
             chart_counts = {}
             graph_specs = []
 
-        # Extract icon results (NEW: no longer includes grounding data)
+        # Extract icon results
         per_icon_details = icon_result["per_icon_details"]
         icon_candidates = icon_result["icon_candidates"]
         icon_count = icon_result["icon_count"]
+
+        # Extract applogo results
+        per_applogo_details = applogo_result["per_applogo_details"]
+        applogo_candidates = applogo_result["applogo_candidates"]
+        applogo_count = applogo_result["applogo_count"]
 
         # ========== Stage 1: Base Prompt ==========
         base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
@@ -623,15 +689,34 @@ async def generate_widget_full(
             if "[AVAILABLE_ICON_NAMES]" in prompt_with_icons:
                 prompt_with_icons = prompt_with_icons.replace("[AVAILABLE_ICON_NAMES]", icon_injection_text)
             else:
-                prompt_with_icons = prompt_with_icons + "\n\n" + icon_injection_text
+                prompt_with_icons = prompt_with_graphs + "\n\n" + icon_injection_text
         else:
             # Icon not enabled or no icons detected, keep placeholder as-is
             icon_injection_text = ""
             prompt_with_icons = prompt_with_graphs
 
+        # ========== Stage 5.5: AppLogos ==========
+        if enable_applogo and applogo_count > 0:
+            from ...perception.applogo_extraction import format_applogo_prompt_injection
+            applogo_injection_text = format_applogo_prompt_injection(
+                applogo_count=applogo_count,
+                per_applogo_details=per_applogo_details,
+                retrieval_topm=retrieval_topm,
+            )
+
+            prompt_with_applogos = prompt_with_icons
+            if "[AVAILABLE_APPLOGO_NAMES]" in prompt_with_applogos:
+                prompt_with_applogos = prompt_with_applogos.replace("[AVAILABLE_APPLOGO_NAMES]", applogo_injection_text)
+            else:
+                prompt_with_applogos = prompt_with_icons + "\n\n" + applogo_injection_text
+        else:
+            # AppLogo not enabled or no applogos detected, keep placeholder as-is
+            applogo_injection_text = ""
+            prompt_with_applogos = prompt_with_icons
+
         # ========== Stage 6: Components List (was Stage 5) ==========
         components_list = get_available_components_list(graph_specs, detected_primitives)
-        prompt_final = prompt_with_icons
+        prompt_final = prompt_with_applogos
         if "[AVAILABLE_COMPONENTS]" in prompt_final:
             prompt_final = prompt_final.replace("[AVAILABLE_COMPONENTS]", components_list)
 
@@ -732,6 +817,24 @@ async def generate_widget_full(
                     "injectedText": icon_injection_text,
                 }
             },
+            "applogoDebugInfo": {
+                "detection": {
+                    "applogoCount": applogo_count,
+                    "imageSize": {"width": img_width, "height": img_height},
+                },
+                "retrieval": {
+                    "candidates": applogo_candidates,
+                    "perApplogo": per_applogo_details,
+                    "parameters": {
+                        "topk": retrieval_topk,
+                        "topm": retrieval_topm,
+                        "alpha": retrieval_alpha,
+                    }
+                },
+                "promptInjection": {
+                    "injectedText": applogo_injection_text,
+                }
+            },
             "colorDebugInfo": {
                 "detection": {
                     "hasColors": len(color_results) > 0,
@@ -760,12 +863,14 @@ async def generate_widget_full(
                 "stage3_withColors": prompt_with_colors,      # Renamed from stage2
                 "stage4_withGraphs": prompt_with_graphs,      # Renamed from stage3
                 "stage5_withIcons": prompt_with_icons,        # Renamed from stage4
+                "stage5_5_withApplogos": prompt_with_applogos,  # NEW: AppLogo injection
                 "stage6_final": prompt_final,                 # Renamed from stage5
                 "injections": {
                     "layout": layout_injection_text,          # NEW
                     "color": color_injection_text,
                     "graph": graph_injection_text,
                     "icon": icon_injection_text,
+                    "applogo": applogo_injection_text,        # NEW
                     "components": components_list,
                 }
             }

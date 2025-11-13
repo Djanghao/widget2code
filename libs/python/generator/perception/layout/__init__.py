@@ -11,11 +11,12 @@ It provides:
 """
 
 from .detection import detect_layout, DEFAULT_PROMPT, parse_layout_response
-from .utils import get_icons_from_layout, format_layout_for_prompt
+from .utils import get_icons_from_layout, get_applogos_from_layout, format_layout_for_prompt
 
 __all__ = [
     "detect_layout",
     "get_icons_from_layout",
+    "get_applogos_from_layout",
     "format_layout_for_prompt",
     "DEFAULT_PROMPT",
     "parse_layout_response",
