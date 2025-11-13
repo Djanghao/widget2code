@@ -1,0 +1,408 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1.783,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "icon": "sf:circle.hexagongrid.fill",
+                    "size": 40,
+                    "color": "#FFA726"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 20,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "Product Activity"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "flex": "none",
+                  "props": {
+                    "content": "1W",
+                    "backgroundColor": "#2c2c2e",
+                    "color": "#8E8E93",
+                    "borderRadius": 8,
+                    "fontSize": 12,
+                    "fontWeight": 500,
+                    "padding": 8
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "flex": "none",
+                  "props": {
+                    "content": "1M",
+                    "backgroundColor": "#3a3a3c",
+                    "color": "#ffffff",
+                    "borderRadius": 8,
+                    "fontSize": 12,
+                    "fontWeight": 600,
+                    "padding": 8
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "flex": "none",
+                  "props": {
+                    "content": "3W",
+                    "backgroundColor": "#2c2c2e",
+                    "color": "#8E8E93",
+                    "borderRadius": 8,
+                    "fontSize": 12,
+                    "fontWeight": 500,
+                    "padding": 8
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "flex": "none",
+                  "props": {
+                    "content": "YTD",
+                    "backgroundColor": "#2c2c2e",
+                    "color": "#8E8E93",
+                    "borderRadius": 8,
+                    "fontSize": 12,
+                    "fontWeight": 500,
+                    "padding": 8
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "flex": "none",
+                  "props": {
+                    "content": "Total",
+                    "backgroundColor": "#2c2c2e",
+                    "color": "#8E8E93",
+                    "borderRadius": 8,
+                    "fontSize": 12,
+                    "fontWeight": 500,
+                    "padding": 8
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "flex": 1,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "width": 180,
+              "height": 180,
+              "flex": "none",
+              "props": {
+                "variant": "donut",
+                "innerRadius": 60,
+                "data": [110000, 98000, 140000, 67236],
+                "labels": ["To Be Packed", "Process Delivery", "Delivery Done", "Returned"],
+                "colors": ["#5AC8FA", "#FFA726", "#34C759", "#FF2D55"],
+                "theme": "dark",
+                "centerText": "Total Activity",
+                "centerValue": "415,236",
+                "centerTextStyle": {
+                  "fontSize": 12,
+                  "fill": "#8E8E93"
+                },
+                "centerValueStyle": {
+                  "fontSize": 24,
+                  "fill": "#ffffff",
+                  "fontWeight": "bold"
+                }
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 16,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "alignMain": "between",
+                  "children": [
+                    {
+                      "type": "container",
+                      "direction": "row",
+                      "gap": 8,
+                      "flex": 1,
+                      "alignCross": "center",
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "component": "Icon",
+                          "flex": "none",
+                          "props": {
+                            "icon": "sf:square.fill",
+                            "size": 12,
+                            "color": "#5AC8FA"
+                          }
+                        },
+                        {
+                          "type": "leaf",
+                          "component": "Text",
+                          "flex": 1,
+                          "props": {
+                            "fontSize": 16,
+                            "color": "#ffffff",
+                            "fontWeight": 500
+                          },
+                          "content": "To Be Packed"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 18,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "110,000"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Divider",
+                  "flex": "none",
+                  "props": {
+                    "type": "dotted",
+                    "color": "#3a3a3c"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "alignMain": "between",
+                  "children": [
+                    {
+                      "type": "container",
+                      "direction": "row",
+                      "gap": 8,
+                      "flex": 1,
+                      "alignCross": "center",
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "component": "Icon",
+                          "flex": "none",
+                          "props": {
+                            "icon": "sf:square.fill",
+                            "size": 12,
+                            "color": "#FFA726"
+                          }
+                        },
+                        {
+                          "type": "leaf",
+                          "component": "Text",
+                          "flex": 1,
+                          "props": {
+                            "fontSize": 16,
+                            "color": "#ffffff",
+                            "fontWeight": 500
+                          },
+                          "content": "Process Delivery"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 18,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "98,000"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Divider",
+                  "flex": "none",
+                  "props": {
+                    "type": "dotted",
+                    "color": "#3a3a3c"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "alignMain": "between",
+                  "children": [
+                    {
+                      "type": "container",
+                      "direction": "row",
+                      "gap": 8,
+                      "flex": 1,
+                      "alignCross": "center",
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "component": "Icon",
+                          "flex": "none",
+                          "props": {
+                            "icon": "sf:square.fill",
+                            "size": 12,
+                            "color": "#34C759"
+                          }
+                        },
+                        {
+                          "type": "leaf",
+                          "component": "Text",
+                          "flex": 1,
+                          "props": {
+                            "fontSize": 16,
+                            "color": "#ffffff",
+                            "fontWeight": 500
+                          },
+                          "content": "Delivery Done"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 18,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "140,000"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Divider",
+                  "flex": "none",
+                  "props": {
+                    "type": "dotted",
+                    "color": "#3a3a3c"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "alignMain": "between",
+                  "children": [
+                    {
+                      "type": "container",
+                      "direction": "row",
+                      "gap": 8,
+                      "flex": 1,
+                      "alignCross": "center",
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "component": "Icon",
+                          "flex": "none",
+                          "props": {
+                            "icon": "sf:square.fill",
+                            "size": 12,
+                            "color": "#FF2D55"
+                          }
+                        },
+                        {
+                          "type": "leaf",
+                          "component": "Text",
+                          "flex": 1,
+                          "props": {
+                            "fontSize": 16,
+                            "color": "#ffffff",
+                            "fontWeight": 500
+                          },
+                          "content": "Returned"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 18,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "67,236"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

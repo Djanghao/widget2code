@@ -32,6 +32,7 @@ export function Button({
     border: 'none',
     cursor: 'pointer',
     userSelect: 'none',
+    whiteSpace: 'nowrap',
     ...style,
     ...(width !== undefined ? { width: typeof width === 'number' ? `${width}px` : width } : {}),
     ...(height !== undefined ? { height: typeof height === 'number' ? `${height}px` : height } : {}),

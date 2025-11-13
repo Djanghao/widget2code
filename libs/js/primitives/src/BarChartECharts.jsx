@@ -51,6 +51,8 @@ export const BarChart = ({
   barBorderRadius = 0, // Border radius for all bars (number or array)
   barBorderRadiusTop = null, // Top border radius override
   barBorderRadiusBottom = null, // Bottom border radius override
+  // Label color customization
+  labelColor = null, // Custom color for axis labels (overrides theme)
   ...props
 }) => {
   // Theme configurations

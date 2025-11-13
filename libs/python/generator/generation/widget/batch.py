@@ -936,11 +936,6 @@ class BatchGenerator:
                         "thinking": self.config.get_layout_thinking(),
                         "override": self.config.layout_model is not None or self.config.layout_enable_thinking is not None
                     },
-                    "graphDetection": {
-                        "model": self.config.get_graph_det_model(),
-                        "thinking": self.config.get_graph_det_thinking(),
-                        "override": self.config.graph_det_model is not None or self.config.graph_det_enable_thinking is not None
-                    },
                     "graphGeneration": {
                         "model": self.config.get_graph_gen_model(),
                         "thinking": self.config.get_graph_gen_thinking(),
@@ -991,7 +986,6 @@ class BatchGenerator:
 
         stages_info = [
             ("Layout Detection", "layout"),
-            ("Graph Detection", "graph_det"),
             ("Graph Generation", "graph_gen"),
             ("DSL Generation", "dsl_gen"),
         ]

@@ -31,6 +31,14 @@ import weatherSmallFigma from "../examples/weather-small-figma.json";
 import weatherMediumFigma from "../examples/weather-medium-figma.json";
 import batteriesLightMedium from "../examples/batteries-light-medium.json";
 
+// Graph Test Widgets
+import marketingChannelsDark from "../examples/marketing-channels-dark.json";
+import screenTimeDark from "../examples/screen-time-dark.json";
+import focusFitnessLight from "../examples/focus-fitness-light.json";
+import screenTimeSimpleDark from "../examples/screen-time-simple-dark.json";
+import productActivityDark from "../examples/product-activity-dark.json";
+import salesOverviewLight from "../examples/sales-overview-light.json";
+
 // Icon Tests
 import iconsVariantsShowcase from "../examples/icons-variants-showcase.json";
 import iconsUltimateTest from "../examples/icons-ultimate-test.json";
@@ -76,6 +84,32 @@ export const examples = {
   batteriesLightMedium: {
     name: "Batteries - Light - Medium",
     spec: batteriesLightMedium,
+  },
+
+  // Graph Test Widgets
+  marketingChannelsDark: {
+    name: "📊 Marketing Channels - Dark",
+    spec: marketingChannelsDark,
+  },
+  screenTimeDark: {
+    name: "📊 Screen Time - Dark",
+    spec: screenTimeDark,
+  },
+  focusFitnessLight: {
+    name: "📊 Focus Fitness - Light",
+    spec: focusFitnessLight,
+  },
+  screenTimeSimpleDark: {
+    name: "📊 Screen Time Simple - Dark",
+    spec: screenTimeSimpleDark,
+  },
+  productActivityDark: {
+    name: "📊 Product Activity - Dark",
+    spec: productActivityDark,
+  },
+  salesOverviewLight: {
+    name: "📊 Sales Overview - Light",
+    spec: salesOverviewLight,
   },
 
   // Icon Tests
