@@ -44,47 +44,58 @@ async function findWidgetsToProcess(inputPath, options = {}) {
   }
 
   if (stats.isDirectory()) {
-    const entries = await fs.readdir(inputPath, { withFileTypes: true });
     const widgets = [];
 
-    for (const entry of entries) {
-      if (!entry.isDirectory()) continue;
+    // Recursively scan directories to find widget folders
+    async function scanDirectory(dirPath) {
+      const entries = await fs.readdir(dirPath, { withFileTypes: true });
 
-      const widgetDir = path.join(inputPath, entry.name);
-      const widgetId = entry.name;
-      const debugPath = path.join(widgetDir, 'log', 'debug.json');
-      const dslFile = path.join(widgetDir, 'artifacts', '4-dsl', 'widget.json');
+      for (const entry of entries) {
+        if (!entry.isDirectory()) continue;
 
-      const dslExists = await fs.access(dslFile).then(() => true).catch(() => false);
-      if (!dslExists) continue;
+        const fullPath = path.join(dirPath, entry.name);
+        const debugPath = path.join(fullPath, 'log', 'debug.json');
+        const dslFile = path.join(fullPath, 'artifacts', '4-dsl', 'widget.json');
 
-      let shouldProcess = true;
+        const dslExists = await fs.access(dslFile).then(() => true).catch(() => false);
 
-      // Skip status check if force is enabled
-      if (!force) {
-        const outputPngPath = path.join(widgetDir, 'output.png');
-        const debugExists = await fs.access(debugPath).then(() => true).catch(() => false);
-        const outputExists = await fs.access(outputPngPath).then(() => true).catch(() => false);
+        if (dslExists) {
+          // This is a widget directory
+          const widgetId = entry.name;
+          let shouldProcess = true;
 
-        // Only skip if both debug.json shows success AND output.png exists
-        if (debugExists && outputExists) {
-          try {
-            const debugData = JSON.parse(await fs.readFile(debugPath, 'utf-8'));
-            const renderingStep = debugData.steps?.rendering;
+          // Skip status check if force is enabled
+          if (!force) {
+            const outputPngPath = path.join(fullPath, 'output.png');
+            const debugExists = await fs.access(debugPath).then(() => true).catch(() => false);
+            const outputExists = await fs.access(outputPngPath).then(() => true).catch(() => false);
 
-            if (renderingStep && renderingStep.status === 'success') {
-              shouldProcess = false;
+            // Only skip if both debug.json shows success AND output.png exists
+            if (debugExists && outputExists) {
+              try {
+                const debugData = JSON.parse(await fs.readFile(debugPath, 'utf-8'));
+                const renderingStep = debugData.steps?.rendering;
+
+                if (renderingStep && renderingStep.status === 'success') {
+                  shouldProcess = false;
+                }
+              } catch (error) {
+                console.warn(`[${widgetId}] Warning: Failed to read debug.json, will process`);
+              }
             }
-          } catch (error) {
-            console.warn(`[${widgetId}] Warning: Failed to read debug.json, will process`);
           }
+
+          if (shouldProcess) {
+            widgets.push({ widgetId, widgetDir: fullPath, dslFile });
+          }
+        } else {
+          // Not a widget directory, scan recursively for subdirectories
+          await scanDirectory(fullPath);
         }
       }
-
-      if (shouldProcess) {
-        widgets.push({ widgetId, widgetDir, dslFile });
-      }
     }
+
+    await scanDirectory(inputPath);
 
     if (widgets.length === 0) {
       console.log('All widgets already processed. Use --force to reprocess.');

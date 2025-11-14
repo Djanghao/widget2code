@@ -370,14 +370,22 @@ class BatchGenerator:
         all_images = []
 
         for ext in extensions:
-            all_images.extend(self.input_dir.glob(f'*{ext}'))
-            all_images.extend(self.input_dir.glob(f'*{ext.upper()}'))
+            # Recursively search for images in subdirectories
+            all_images.extend(self.input_dir.glob(f'**/*{ext}'))
+            all_images.extend(self.input_dir.glob(f'**/*{ext.upper()}'))
 
         images_to_process = []
 
         for image_path in sorted(all_images):
-            widget_id = image_path.stem
-            widget_dir = self.output_dir / widget_id
+            # Get relative path from input_dir to preserve subdirectory structure
+            rel_path = image_path.relative_to(self.input_dir)
+            # Create widget_dir preserving subdirectory: output_dir/category/widget_id
+            if rel_path.parent != Path('.'):
+                # Image is in a subdirectory
+                widget_dir = self.output_dir / rel_path.parent / image_path.stem
+            else:
+                # Image is in root input_dir
+                widget_dir = self.output_dir / image_path.stem
             debug_file = widget_dir / "log" / "debug.json"
             dsl_file = widget_dir / "artifacts" / "4-dsl" / "widget.json"
 
@@ -464,7 +472,16 @@ class BatchGenerator:
     async def generate_single(self, image_path: Path) -> Tuple[Path, bool, str]:
         """Generate widget DSL for a single image with complete debug data and visualizations."""
         widget_id = image_path.stem
-        widget_dir = self.output_dir / widget_id
+
+        # Preserve subdirectory structure in output
+        rel_path = image_path.relative_to(self.input_dir)
+        if rel_path.parent != Path('.'):
+            # Image is in a subdirectory
+            widget_dir = self.output_dir / rel_path.parent / widget_id
+        else:
+            # Image is in root input_dir
+            widget_dir = self.output_dir / widget_id
+
         widget_dir.mkdir(parents=True, exist_ok=True)
 
         # Initialize stage tracking for this image
