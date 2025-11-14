@@ -2,7 +2,6 @@ from .validation import validate_model, validate_api_key, validate_file_size
 from .prompt_loader import (
     load_default_prompt,
     load_widget2dsl_prompt,
-    load_widget2dsl_graph_prompt,
     load_prompt2dsl_prompt,
     load_dynamic_component_prompt,
     load_dynamic_component_image_prompt,
@@ -17,7 +16,6 @@ __all__ = [
     "validate_file_size",
     "load_default_prompt",
     "load_widget2dsl_prompt",
-    "load_widget2dsl_graph_prompt",
     "load_prompt2dsl_prompt",
     "load_dynamic_component_prompt",
     "load_dynamic_component_image_prompt",

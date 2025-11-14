@@ -8,7 +8,7 @@ import PreviewPanel from './components/core/PreviewPanel.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import SectionHeader from './components/core/SectionHeader.jsx';
 import { useApiKey } from './components/ApiKeyManager.jsx';
-import textPrompt from '../../../libs/python/generator/prompts/prompt2dsl/prompt2dsl-sf-lucide.md?raw';
+import prompt2dslPrompt from '../../../libs/python/generator/prompts/prompt2dsl/prompt2dsl.md?raw';
 
 const TEXT_MODELS = [
   { value: 'qwen3-coder-plus', label: 'qwen3-coder-plus' },
@@ -22,7 +22,7 @@ const TEXT_MODELS = [
 function Prompt2Code() {
   const { apiKey, hasApiKey } = useApiKey();
   const [prompt, setPrompt] = useState('');
-  const [systemPrompt, setSystemPrompt] = useState(textPrompt);
+  const [systemPrompt, setSystemPrompt] = useState(prompt2dslPrompt);
   const [model, setModel] = useState('qwen3-coder-plus');
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState(null);
@@ -165,7 +165,7 @@ function Prompt2Code() {
           onChange={setSystemPrompt}
           model={model}
           setModel={setModel}
-          onReset={() => setSystemPrompt(textPrompt)}
+          onReset={() => setSystemPrompt(prompt2dslPrompt)}
           modelOptions={TEXT_MODELS}
           dotColor="#34C759"
         />

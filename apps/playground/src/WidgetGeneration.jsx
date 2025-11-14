@@ -16,8 +16,8 @@ import PreviewPanel from './components/core/PreviewPanel.jsx';
 import SystemPromptEditor from './components/core/SystemPromptEditor.jsx';
 import SectionHeader from './components/core/SectionHeader.jsx';
 import { useApiKey } from './components/ApiKeyManager.jsx';
-import textPrompt from '../../../libs/python/generator/prompts/prompt2dsl/prompt2dsl-sf-lucide.md?raw';
-import imagePrompt from '../../../libs/python/generator/prompts/widget2dsl/widget2dsl-graph-modified.md?raw';
+import prompt2dslPrompt from '../../../libs/python/generator/prompts/prompt2dsl/prompt2dsl.md?raw';
+import widget2dslPrompt from '../../../libs/python/generator/prompts/widget2dsl/widget2dsl.md?raw';
 
 const TEXT_MODELS = [
   { value: 'qwen3-coder-plus', label: 'qwen3-coder-plus' },
@@ -41,8 +41,8 @@ function WidgetGeneration() {
   const [prompt, setPrompt] = useState('');
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
-  const [systemPrompt, setSystemPrompt] = useState(textPrompt);
-  const [defaultPrompt, setDefaultPrompt] = useState(textPrompt);
+  const [systemPrompt, setSystemPrompt] = useState(prompt2dslPrompt);
+  const [defaultPrompt, setDefaultPrompt] = useState(prompt2dslPrompt);
   const [model, setModel] = useState('qwen3-coder-plus');
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState(null);
@@ -58,7 +58,7 @@ function WidgetGeneration() {
   const [isDownloading, setIsDownloading] = useState(false);
 
   useEffect(() => {
-    const p = mode === 'text' ? textPrompt : imagePrompt;
+    const p = mode === 'text' ? prompt2dslPrompt : widget2dslPrompt;
     setSystemPrompt(p);
     setDefaultPrompt(p);
 
