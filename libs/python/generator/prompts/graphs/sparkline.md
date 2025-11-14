@@ -9,11 +9,13 @@ Focus on extracting these elements:
 
 ## Visual Styling
 - **Line color**: Extract the color of the line
+- **Line width**: Thickness of the line in pixels (default: 2)
 - **Area fill**: Whether the area under the line is filled
 - **Gradient intensity**: Opacity of the filled area (0-1, where higher is more opaque)
 - **Smooth**: Whether the line is smoothed (curved) or straight between points
 - **Baseline**: Optional horizontal reference line value (dashed line)
 - **Width/Height**: Overall dimensions of the sparkline
+- **Min/Max**: Optional Y-axis range constraints to control the scale
 
 ## Return WidgetDSL specification:
 ```json
@@ -27,7 +29,10 @@ Focus on extracting these elements:
     "showArea": true,
     "gradientIntensity": 0.4,
     "smooth": false,
-    "baseline": 50
+    "baseline": 50,
+    "lineWidth": 2,
+    "min": 0,
+    "max": 100
   }
 }
 ```
@@ -41,6 +46,9 @@ Focus on extracting these elements:
 - **gradientIntensity**: Number 0-1 - opacity of the filled area gradient (0 = transparent, 1 = fully opaque)
 - **smooth**: Boolean - whether to use smooth curves (true) or straight lines (false)
 - **baseline**: Optional number - y-value for horizontal reference line (shown as dashed line)
+- **lineWidth**: Number - thickness of the line in pixels (default: 2)
+- **min**: Optional number - minimum value for Y-axis range
+- **max**: Optional number - maximum value for Y-axis range
 
 ## Default Behavior (when not visible in image):
 - **width**: 80
@@ -50,6 +58,9 @@ Focus on extracting these elements:
 - **gradientIntensity**: 0.4 (40% opacity when showArea is true)
 - **smooth**: false (straight lines between points)
 - **baseline**: null (no baseline reference line)
+- **lineWidth**: 2 (2px line thickness)
+- **min**: null (auto-calculated from data)
+- **max**: null (auto-calculated from data)
 
 ## Examples:
 
@@ -89,6 +100,23 @@ Smooth curve with custom gradient:
   "showArea": true,
   "gradientIntensity": 0.6,
   "smooth": true
+}
+```
+
+Advanced example with all parameters:
+```json
+{
+  "data": [40, 8, 22, 24, 23, 25, 27, 28, 32, 36],
+  "width": 100,
+  "height": 40,
+  "color": "#FF9500",
+  "showArea": true,
+  "gradientIntensity": 0.6,
+  "smooth": false,
+  "baseline": 200,
+  "lineWidth": 2,
+  "min": 100,
+  "max": 300
 }
 ```
 

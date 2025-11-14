@@ -21,6 +21,11 @@ import photosSmallLight from "../examples/photos-small-light.json";
 import healthSmallDark from "../examples/health-small-dark.json";
 import batteryMediumLight from "../examples/battery-medium-light.json";
 import stocksMediumLight from "../examples/stocks-medium-light.json";
+import stocksListDark from "../examples/stocks-list-dark.json";
+import stocksListDarkWoIcon from "../examples/stocks-list-dark-wo-icon.json";
+import stocksListDarkWoIconLayout from "../examples/stocks-list-dark-wo-icon-layout.json";
+import stocksListDarkWoIconLayoutColor from "../examples/stocks-list-dark-wo-icon-layout-color.json";
+import stocksListDarkWoIconLayoutColorGraph from "../examples/stocks-list-dark-wo-icon-layout-color-graph.json";
 import weatherLargeLight from "../examples/weather-large-light.json";
 import stockLargeDark from "../examples/stock-large-dark.json";
 import batteriesFigma from "../examples/batteries-figma.json";
@@ -48,6 +53,8 @@ import buttonShowcase from "../examples/button-showcase.json";
 import progressringShowcase from "../examples/progressring-showcase.json";
 import fitnessActivityRings from "../examples/fitness-activity-rings.json";
 import circularContainersShowcase from "../examples/circular-containers-showcase.json";
+import piechartDonutShowcase from "../examples/piechart-donut-showcase.json";
+import piechartDonutIconExample from "../examples/piechart-donut-icon-example.json";
 
 export const examples = {
   weatherSmallLight: { name: "Weather S-Light", spec: weatherSmallLight },
@@ -73,6 +80,23 @@ export const examples = {
   healthSmallDark: { name: "Health S-Dark", spec: healthSmallDark },
   batteryMediumLight: { name: "Battery M-Light", spec: batteryMediumLight },
   stocksMediumLight: { name: "Stocks M-Light", spec: stocksMediumLight },
+  stocksListDark: { name: "Stocks List - Dark", spec: stocksListDark },
+  stocksListDarkWoIcon: {
+    name: "Stocks List - Dark (No Icon)",
+    spec: stocksListDarkWoIcon,
+  },
+  stocksListDarkWoIconLayout: {
+    name: "Stocks List - Dark (Layout)",
+    spec: stocksListDarkWoIconLayout,
+  },
+  stocksListDarkWoIconLayoutColor: {
+    name: "Stocks List - Dark (Layout+Color)",
+    spec: stocksListDarkWoIconLayoutColor,
+  },
+  stocksListDarkWoIconLayoutColorGraph: {
+    name: "Stocks List - Dark (Layout+Color+Graph)",
+    spec: stocksListDarkWoIconLayoutColorGraph,
+  },
   weatherLargeLight: { name: "Weather L-Light", spec: weatherLargeLight },
   stockLargeDark: { name: "Stock L-Dark", spec: stockLargeDark },
   batteriesFigma: { name: "Batteries (Figma)", spec: batteriesFigma },
@@ -138,5 +162,13 @@ export const examples = {
   circularContainersShowcase: {
     name: "⭕ Circular Containers",
     spec: circularContainersShowcase,
+  },
+  piechartDonutShowcase: {
+    name: "🥧 PieChart Donut Showcase",
+    spec: piechartDonutShowcase,
+  },
+  piechartDonutIconExample: {
+    name: "🥧 PieChart Donut + Icon",
+    spec: piechartDonutIconExample,
   },
 };
