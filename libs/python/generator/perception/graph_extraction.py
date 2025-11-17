@@ -16,8 +16,9 @@ async def detect_and_process_graphs_from_layout(
     provider: Optional[str],
     graph_gen_api_key: str,
     graph_gen_model: str,
-    graph_gen_timeout: int = 60,
+    graph_gen_timeout: int = 600,
     graph_gen_thinking: bool = False,
+    graph_gen_max_tokens: Optional[int] = None,
 ) -> tuple[dict, list]:
     """
     Extract chart information from layout detections and generate graph specifications.
@@ -55,7 +56,7 @@ async def detect_and_process_graphs_from_layout(
             api_key=graph_gen_api_key,
             model=graph_gen_model,
             temperature=0.3,
-            max_tokens=3000,
+            max_tokens=graph_gen_max_tokens if graph_gen_max_tokens is not None else 10000,
             timeout=graph_gen_timeout,
             thinking=graph_gen_thinking,
             max_retries=0

@@ -119,6 +119,7 @@ async def generate_widget_full(
                         timeout=config.get_layout_timeout(),
                         thinking=config.get_layout_thinking(),
                         vl_high_resolution=config.get_layout_vl_high_resolution(),
+                        max_tokens=config.get_layout_max_tokens(),
                         max_retries=0,  # keep internal retries off; we control with outer loop
                         image_id=image_id,
                     ),
@@ -223,6 +224,7 @@ async def generate_widget_full(
                 graph_gen_model=config.get_graph_gen_model(),
                 graph_gen_timeout=config.get_graph_gen_timeout(),
                 graph_gen_thinking=config.get_graph_gen_thinking(),
+                graph_gen_max_tokens=config.get_graph_gen_max_tokens(),
             )
             if stage_tracker:
                 stage_tracker.set_substage(image_id, "perception.graph", is_start=False)
@@ -473,7 +475,7 @@ async def generate_widget_full(
             temperature=config.get_dsl_gen_temperature(),
             top_k=config.get_dsl_gen_top_k(),
             top_p=config.get_dsl_gen_top_p(),
-            max_tokens=32768,
+            max_tokens=config.get_dsl_gen_max_tokens(),
             timeout=config.get_dsl_gen_timeout(),
             system_prompt=prompt_final,
             thinking=config.get_dsl_gen_thinking(),

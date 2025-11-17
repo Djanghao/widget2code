@@ -35,6 +35,12 @@ class GeneratorConfig:
     graph_gen_timeout: Optional[int] = None
     dsl_gen_timeout: Optional[int] = None
     icon_retrieval_timeout: Optional[int] = None
+    
+    # Max tokens configuration (per-stage with default fallback)
+    default_max_tokens: Optional[int] = None
+    layout_max_tokens: Optional[int] = None
+    graph_gen_max_tokens: Optional[int] = None
+    dsl_gen_max_tokens: Optional[int] = None
     # Retries
     layout_max_retries: Optional[int] = None
 
@@ -226,6 +232,25 @@ class GeneratorConfig:
         return self.layout_max_retries if self.layout_max_retries is not None else 0
 
     # ========================================================================
+    # Max tokens getters
+    # ========================================================================
+    def get_default_max_tokens(self) -> int:
+        """Global default max tokens for stages that don't override explicitly"""
+        return self.default_max_tokens if self.default_max_tokens is not None else 2000
+
+    def get_layout_max_tokens(self) -> int:
+        """Layout detection max tokens with fallback to default_max_tokens"""
+        return self.layout_max_tokens if self.layout_max_tokens is not None else self.get_default_max_tokens()
+
+    def get_graph_gen_max_tokens(self) -> int:
+        """Graph generation max tokens with fallback to default_max_tokens"""
+        return self.graph_gen_max_tokens if self.graph_gen_max_tokens is not None else self.get_default_max_tokens()
+
+    def get_dsl_gen_max_tokens(self) -> int:
+        """DSL generation max tokens with fallback to default_max_tokens"""
+        return self.dsl_gen_max_tokens if self.dsl_gen_max_tokens is not None else self.get_default_max_tokens()
+
+    # ========================================================================
     # Factory methods
     # ========================================================================
 
@@ -295,6 +320,12 @@ class GeneratorConfig:
             graph_gen_timeout=get_optional_int('GRAPH_GEN_TIMEOUT'),
             dsl_gen_timeout=get_optional_int('DSL_GEN_TIMEOUT'),
             icon_retrieval_timeout=get_optional_int('ICON_RETRIEVAL_TIMEOUT'),
+
+            # Max tokens
+            default_max_tokens=get_optional_int('DEFAULT_MAX_TOKENS'),
+            layout_max_tokens=get_optional_int('LAYOUT_MAX_TOKENS'),
+            graph_gen_max_tokens=get_optional_int('GRAPH_GEN_MAX_TOKENS'),
+            dsl_gen_max_tokens=get_optional_int('DSL_GEN_MAX_TOKENS'),
             layout_max_retries=get_optional_int('LAYOUT_MAX_RETRIES'),
 
             # Default settings
