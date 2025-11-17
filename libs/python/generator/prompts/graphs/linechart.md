@@ -121,5 +121,20 @@ Focus on extracting these elements:
   - **fontSize**: 12 (default font size)
   - **textColor**: "#333333" (dark gray)
 - **backgroundColor**: "#FFFFFF" (white background)
-
+- **trendlines**:
+  - **xTrendline**:
+    - **show**: false (only show if visible in image)
+    - **value**: undefined (calculated as average if not specified)
+    - **color**: "#FF6B6B" (red)
+    - **style**: "dashed" (dashed line)
+    - **width**: 2 (medium width)
+    - **label**: "Average" (default label)
+  - **yTrendline**:
+    - **show**: false (only show if visible in image)
+    - **position**: 0.95 (95% along X-axis by default)
+    - **color**: "#4ECDC4" (teal)
+    - **style**: "dashed" (dashed line)
+    - **width**: 2 (medium width)
+    - **label**: "Current" (default label)
+      
 Extract all visual details accurately for pixel-perfect replication.
