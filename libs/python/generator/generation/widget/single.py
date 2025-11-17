@@ -110,7 +110,7 @@ async def generate_widget_full(
             img_height = height
 
             for attempt in range(attempts):
-                layout_raw, layout_pixel, layout_post, img_width, img_height = await asyncio.wait_for(
+                layout_raw, layout_pixel, layout_post, img_width, img_height, layout_raw_text = await asyncio.wait_for(
                     detect_layout(
                         image_bytes=image_bytes,
                         filename=image_filename,
@@ -532,6 +532,7 @@ async def generate_widget_full(
                 "postProcessed": layout_post,
                 "imageWidth": img_width,
                 "imageHeight": img_height,
+                "rawText": layout_raw_text,
                 "totalDetections": len(layout_post) if layout_post else 0,
                 "promptInjection": {
                     "injectedText": layout_injection_text,

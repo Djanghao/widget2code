@@ -276,7 +276,7 @@ async def detect_layout(
     pp_min_area_ratio: float = 0.0005,
     pp_fallback_expand_pct: float = 0.15,
     image_id: Optional[str] = None,
-) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]], int, int]:
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[Dict[str, Any]], int, int, str]:
     """
     Detect layout elements in a widget image.
 
@@ -303,12 +303,13 @@ async def detect_layout(
         image_id: Optional image identifier (for logging)
 
     Returns:
-        Tuple of (parsed_items, pixel_dets_pre, pixel_dets_post, img_w, img_h):
+        Tuple of (parsed_items, pixel_dets_pre, pixel_dets_post, img_w, img_h, raw_text):
             - parsed_items: Raw detections (bbox_2d in [0,1000])
             - pixel_dets_pre: Pixel coordinates (pre-processing)
             - pixel_dets_post: Post-processed detections (final)
             - img_w: Image width
             - img_h: Image height
+            - raw_text: Original model response text (unparsed)
     """
     if not isinstance(image_bytes, (bytes, bytearray)):
         raise TypeError("image_bytes must be raw bytes")
@@ -374,15 +375,28 @@ async def detect_layout(
 
     vlm_start = time.time()
 
+    last_content_text: str = ""
     for attempt in range(max_retries + 1):
         try:
             resp = await vision_llm.async_chat(messages)
             content_text = getattr(resp, "content", None) if not isinstance(resp, dict) else resp.get("content", "")
-
+            last_content_text = content_text or ""
             parsed_items = parse_layout_response(content_text) if content_text else []
             break
         except Exception as e:
             last_err = e
+            if has_logger and image_id:
+                try:
+                    snippet = (last_content_text or "")[:300].replace("\n", " ")
+                    log_to_file(
+                        f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] Parse error: {type(e).__name__}: {str(e)}"
+                    )
+                    if snippet:
+                        log_to_file(
+                            f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] Raw snippet: {snippet}"
+                        )
+                except Exception:
+                    pass
             if attempt >= max_retries:
                 parsed_items = []
 
@@ -416,7 +430,7 @@ async def detect_layout(
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] Post-processed detections: {total_detections}")
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Layout Detection] Completed in {overall_duration:.2f}s")
 
-    return parsed_items, pixel_dets_pre, pixel_dets_post, img_w, img_h
+    return parsed_items, pixel_dets_pre, pixel_dets_post, img_w, img_h, last_content_text
 
 
 __all__ = [

@@ -152,6 +152,16 @@ class ArtifactManager:
             with open(self.layout_dir / "layout-visualization.png", 'wb') as f:
                 f.write(layout_viz)
 
+        # Save raw model response text if available
+        raw_text = layout_debug.get('rawText') if isinstance(layout_debug, dict) else None
+        try:
+            if raw_text is not None:
+                with open(self.layout_dir / "llm-response.txt", 'w', encoding='utf-8') as f:
+                    f.write(str(raw_text))
+        except Exception:
+            # Best-effort; ignore failures
+            pass
+
     def save_icon_crops(
         self,
         layout_detections: List[Dict[str, Any]],
