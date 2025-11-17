@@ -184,38 +184,30 @@ async def health():
 
     return health_info
 
-@app.post("/api/generate-widget")
-async def generate_widget(
-    request: Request,
-    image: UploadFile = File(...),
-    system_prompt: str = Form(None),
-    model: str = Form(None),
-    api_key: str = Form(None),
-):
-    client_ip = request.client.host
-    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
-        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+# DEPRECATED: This endpoint has been removed as part of the generate refactor
+# The underlying function generate_widget() no longer exists
+# Use /api/generate-widget-full instead for full pipeline generation
+# @app.post("/api/generate-widget")
+# async def generate_widget(
+#     request: Request,
+#     image: UploadFile = File(...),
+#     system_prompt: str = Form(None),
+#     model: str = Form(None),
+#     api_key: str = Form(None),
+# ):
+#     raise HTTPException(status_code=410, detail="Endpoint deprecated. Use /api/generate-widget-full instead.")
 
-    image_data = await image.read()
-    return await generator.generate_widget(
-        image_data, image.filename, system_prompt, model, api_key, gen_config
-    )
-
-@app.post("/api/generate-widget-text")
-async def generate_widget_text(
-    request: Request,
-    system_prompt: str = Form(...),
-    user_prompt: str = Form(...),
-    model: str = Form(None),
-    api_key: str = Form(None),
-):
-    client_ip = request.client.host
-    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
-        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
-
-    return await generator.generate_widget_text(
-        system_prompt, user_prompt, model, api_key, gen_config
-    )
+# DEPRECATED: This endpoint has been removed as part of the generate refactor
+# The underlying function generate_widget_text() no longer exists
+# @app.post("/api/generate-widget-text")
+# async def generate_widget_text(
+#     request: Request,
+#     system_prompt: str = Form(...),
+#     user_prompt: str = Form(...),
+#     model: str = Form(None),
+#     api_key: str = Form(None),
+# ):
+#     raise HTTPException(status_code=410, detail="Endpoint deprecated and removed.")
 
 @app.post("/api/generate-component")
 async def generate_component(
@@ -256,26 +248,21 @@ async def generate_component_from_image(
         model, system_prompt, api_key, gen_config
     )
 
-@app.post("/api/generate-widget-icons")
-async def generate_widget_icons(
-    request: Request,
-    image: UploadFile = File(...),
-    system_prompt: str = Form(None),
-    model: str = Form(None),
-    api_key: str = Form(None),
-    retrieval_topk: int = Form(gen_config.retrieval_topk),
-    retrieval_topm: int = Form(gen_config.retrieval_topm),
-    retrieval_alpha: float = Form(gen_config.retrieval_alpha),
-):
-    client_ip = request.client.host
-    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
-        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
-
-    image_data = await image.read()
-    return await generator.generate_widget_with_icons(
-        image_data, image.filename, system_prompt, model, api_key,
-        retrieval_topk, retrieval_topm, retrieval_alpha, gen_config
-    )
+# DEPRECATED: This endpoint has been removed as part of the generate refactor
+# The underlying function generate_widget_with_icons() no longer exists
+# Use /api/generate-widget-full instead for full pipeline generation with icons
+# @app.post("/api/generate-widget-icons")
+# async def generate_widget_icons(
+#     request: Request,
+#     image: UploadFile = File(...),
+#     system_prompt: str = Form(None),
+#     model: str = Form(None),
+#     api_key: str = Form(None),
+#     retrieval_topk: int = Form(gen_config.retrieval_topk),
+#     retrieval_topm: int = Form(gen_config.retrieval_topm),
+#     retrieval_alpha: float = Form(gen_config.retrieval_alpha),
+# ):
+#     raise HTTPException(status_code=410, detail="Endpoint deprecated. Use /api/generate-widget-full instead.")
 
 @app.post("/api/generate-widget-full")
 async def generate_widget_full(

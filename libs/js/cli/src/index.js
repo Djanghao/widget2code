@@ -9,7 +9,7 @@
 
 import { compile } from './commands/compile.js';
 import { render } from './commands/render.js';
-import { batchRender } from './commands/batch-render.js';
+import { batchRender } from '@widget-factory/renderer';
 
 function printHelp() {
   console.log(`
@@ -22,20 +22,22 @@ Commands:
     Compile WidgetDSL to React JSX code
     Output defaults to same directory with .jsx extension
 
-  render <input.jsx> [output.png] [dev-server-url]
-    Render JSX widget to PNG image
-    Output defaults to same directory with .png extension
+  render <widget-directory>
+    Render a single widget from its directory (DSL → JSX → PNG)
+    Widget directory must contain a DSL file at artifacts/4-dsl/widget.json
+    Output will be saved in the same directory
 
-  batch-render <directory> [concurrency]
+  batch-render <directory> [options]
     Batch render widgets from DSL specs in-place
     Directory must contain widget subdirectories with DSL files
+    Options: --concurrency N, --force
 
 Examples:
   widget-factory compile widget.json
   widget-factory compile widget.json custom.jsx
-  widget-factory render widget.jsx
-  widget-factory render widget.jsx custom.png
-  widget-factory batch-render ./widgets ./output 5
+  widget-factory render ./results/tmp/image_0001
+  widget-factory batch-render ./results/tmp
+  widget-factory batch-render ./results/tmp --concurrency 5 --force
 
 Options:
   --help, -h    Show this help message
@@ -71,12 +73,10 @@ async function main() {
 
       case 'render':
         if (commandArgs.length < 1) {
-          console.error('Error: render requires <jsx-file-path> [output-png-path] [dev-server-url]');
+          console.error('Error: render requires <widget-directory>');
           process.exit(1);
         }
-        await render(commandArgs[0], commandArgs[1], {
-          devServerUrl: commandArgs[2] || 'http://localhost:3060'
-        });
+        await render(commandArgs[0]);
         break;
 
       case 'batch-render':

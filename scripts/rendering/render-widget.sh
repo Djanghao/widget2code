@@ -10,34 +10,47 @@ fi
 
 FRONTEND_PORT=${FRONTEND_PORT:-3060}
 
-if [ $# -lt 2 ]; then
-    echo "Usage: $0 <dsl-json-or-jsx-file> <output-png> [dev-server-url]"
-    echo "Example: $0 widget.json widget.png"
-    echo "Example: $0 widget.jsx widget.png"
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <widget-directory>"
+    echo ""
+    echo "Description:"
+    echo "  Render a single widget from its directory."
+    echo "  The widget directory must contain a DSL file at artifacts/4-dsl/widget.json"
+    echo ""
+    echo "Examples:"
+    echo "  $0 ./results/tmp/image_0001"
+    echo "  $0 ./widgets/my-widget"
+    echo ""
+    echo "Output:"
+    echo "  - artifacts/5-compilation/widget.jsx"
+    echo "  - artifacts/6-rendering/6.1-raw.png"
+    echo "  - artifacts/6-rendering/6.2-autoresize.png"
+    echo "  - artifacts/6-rendering/6.3-resize.png"
+    echo "  - output.png (final output)"
     exit 1
 fi
 
-INPUT_PATH=$1
-OUTPUT_PATH=$2
-DEV_SERVER=${3:-"http://localhost:$FRONTEND_PORT"}
+WIDGET_DIR=$1
+DEV_SERVER="http://localhost:$FRONTEND_PORT"
 
-# Check if input is a JSON file (DSL) or JSX file
-if [[ "$INPUT_PATH" == *.json ]]; then
-    # It's a DSL JSON file, need to compile first
-    DSL_PATH=$INPUT_PATH
-    JSX_PATH="${DSL_PATH%.json}.jsx"
-
-    echo "Compiling DSL to JSX: $DSL_PATH -> $JSX_PATH"
-    npx widget-factory compile "$DSL_PATH" "$JSX_PATH"
-
-    echo "Rendering JSX to PNG: $JSX_PATH -> $OUTPUT_PATH"
-    npx widget-factory render "$JSX_PATH" "$OUTPUT_PATH" "$DEV_SERVER"
-elif [[ "$INPUT_PATH" == *.jsx ]]; then
-    # It's already a JSX file, render directly
-    JSX_PATH=$INPUT_PATH
-    echo "Rendering JSX to PNG: $JSX_PATH -> $OUTPUT_PATH"
-    npx widget-factory render "$JSX_PATH" "$OUTPUT_PATH" "$DEV_SERVER"
-else
-    echo "Error: Input file must be either .json (DSL) or .jsx file"
+# Validate that widget directory exists
+if [ ! -d "$WIDGET_DIR" ]; then
+    echo "Error: Widget directory does not exist: $WIDGET_DIR"
     exit 1
 fi
+
+# Validate that DSL file exists
+DSL_FILE="$WIDGET_DIR/artifacts/4-dsl/widget.json"
+if [ ! -f "$DSL_FILE" ]; then
+    echo "Error: DSL file not found: $DSL_FILE"
+    echo ""
+    echo "The widget directory must contain a generated DSL file from the generation pipeline."
+    echo "Please run generate-widget first to create the DSL."
+    exit 1
+fi
+
+echo "Rendering widget: $WIDGET_DIR"
+echo "Dev Server: $DEV_SERVER"
+echo ""
+
+npx widget-factory render "$WIDGET_DIR"

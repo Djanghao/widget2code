@@ -22,11 +22,10 @@ from rich.table import Table
 from rich.live import Live
 from rich.box import ROUNDED
 
-from .single import generate_widget_full
+from .single import generate_widget_full, generate_single_widget
 from ...config import GeneratorConfig
 from ...exceptions import ValidationError, FileSizeError, GenerationError
 from ...utils.logger import setup_logger, log_to_file, log_to_console, separator, Colors
-from ...utils.visualization import draw_grounding_visualization, crop_icon_region, save_retrieval_svgs
 
 try:
     import json
@@ -448,466 +447,49 @@ class BatchGenerator:
 
         return images_to_process
 
-    def _save_widget_log(self, widget_id: str, log_file: Path):
-        """Extract logs for this widget from run.log and save to widget's log file"""
-        try:
-            run_log_file = self.output_dir / "run.log"
-            if not run_log_file.exists():
-                return
-
-            # Read run.log and extract lines for this widget
-            with open(run_log_file, 'r') as f:
-                lines = f.readlines()
-
-            # Filter lines that contain this widget_id
-            widget_logs = [line for line in lines if f"[{widget_id}]" in line]
-
-            if widget_logs:
-                with open(log_file, 'w') as f:
-                    f.writelines(widget_logs)
-        except Exception:
-            # If log extraction fails, just skip it
-            pass
-
     async def generate_single(self, image_path: Path) -> Tuple[Path, bool, str]:
-        """Generate widget DSL for a single image with complete debug data and visualizations."""
+        """
+        Generate widget DSL for a single image with complete debug data and visualizations.
+
+        This method is a thin wrapper that preserves subdirectory structure and
+        delegates all artifact management to generate_single_widget from single.py.
+        """
         widget_id = image_path.stem
 
         # Preserve subdirectory structure in output
         rel_path = image_path.relative_to(self.input_dir)
         if rel_path.parent != Path('.'):
-            # Image is in a subdirectory
-            widget_dir = self.output_dir / rel_path.parent / widget_id
+            # Image is in a subdirectory - create parent dirs
+            output_parent = self.output_dir / rel_path.parent
+            output_parent.mkdir(parents=True, exist_ok=True)
+            effective_output_dir = output_parent
         else:
             # Image is in root input_dir
-            widget_dir = self.output_dir / widget_id
+            effective_output_dir = self.output_dir
 
-        widget_dir.mkdir(parents=True, exist_ok=True)
+        # Call the unified single widget generator
+        success, widget_dir, error_msg = await generate_single_widget(
+            image_path=image_path,
+            output_dir=effective_output_dir,
+            config=self.config,
+            icon_lib_names=self.icon_lib_names,
+            stage_tracker=self.stage_tracker,
+            run_log_path=self.output_dir / "run.log"
+        )
 
-        # Initialize stage tracking for this image
-        self.stage_tracker.start_image(widget_id)
-
-        # Create directory structure
-        artifacts_dir = widget_dir / "artifacts"
-        log_dir = widget_dir / "log"
-        prompts_dir = widget_dir / "prompts"
-
-        preprocess_dir = artifacts_dir / "1-preprocess"
-        layout_dir = artifacts_dir / "2-layout"  # Renamed from 2-grounding
-        layout_crops_dir = layout_dir / "icon-crops"  # Renamed from crops
-        retrieval_dir = artifacts_dir / "3-retrieval"
-        dsl_dir = artifacts_dir / "4-dsl"
-
-        # Create base directories (always needed)
-        artifacts_dir.mkdir(parents=True, exist_ok=True)
-        log_dir.mkdir(parents=True, exist_ok=True)
-        prompts_dir.mkdir(parents=True, exist_ok=True)
-        preprocess_dir.mkdir(parents=True, exist_ok=True)
-        dsl_dir.mkdir(parents=True, exist_ok=True)
-
-        # Conditionally create pipeline-specific directories
-        if self.config.enable_layout_pipeline:
-            layout_dir.mkdir(parents=True, exist_ok=True)
-            if self.config.enable_icon_pipeline:
-                layout_crops_dir.mkdir(parents=True, exist_ok=True)
-
-        if self.config.enable_icon_pipeline:
-            retrieval_dir.mkdir(parents=True, exist_ok=True)
-
-        # Prepare file paths
-        widget_file = dsl_dir / "widget.json"
-        debug_file = log_dir / "debug.json"
-        log_file = log_dir / "log"
-
-        start_time = datetime.now()
-
-        try:
-            log_to_file(f"[{start_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🚀 START")
-
-            # Read image data
-            with open(image_path, 'rb') as f:
-                image_data = f.read()
-
-            # Get image size and dimensions
-            image_size = image_path.stat().st_size
-            try:
-                from PIL import Image
-                with Image.open(image_path) as img:
-                    image_dims = {"width": img.width, "height": img.height}
-            except:
-                image_dims = None
-
-            # 1. Save input image to root and artifacts
-            input_file = widget_dir / "input.png"
-            shutil.copy2(image_path, input_file)
-
-            original_in_preprocess = preprocess_dir / "1.1-original.png"
-            shutil.copy2(image_path, original_in_preprocess)
-
-            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🔄 DSL generation started")
-
-            # 2. Generate widget DSL with full debug info
-            result = await generate_widget_full(
-                image_data=image_data,
-                image_filename=image_path.name,
-                system_prompt=None,
-                retrieval_topk=self.config.retrieval_topk,
-                retrieval_topm=self.config.retrieval_topm,
-                retrieval_alpha=self.config.retrieval_alpha,
-                config=self.config,
-                icon_lib_names=self.icon_lib_names,
-                stage_tracker=self.stage_tracker,
-                image_id=widget_id,
-            )
-
-            # Extract data from result
-            widget_dsl = result.get('widgetDSL', result) if isinstance(result, dict) else result
-            layout_debug = (result.get('layoutDebugInfo') or {}) if isinstance(result, dict) else {}  # NEW
-            icon_debug = (result.get('iconDebugInfo') or {}) if isinstance(result, dict) else {}
-            graph_debug = (result.get('graphDebugInfo') or {}) if isinstance(result, dict) else {}
-            prompt_debug = (result.get('promptDebugInfo') or {}) if isinstance(result, dict) else {}
-            preprocessed_info = (result.get('preprocessedImage') or {}) if isinstance(result, dict) else {}
-
-            # Save widget DSL
-            with open(widget_file, 'w') as f:
-                json.dump(widget_dsl, f, indent=2)
-
-            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] DSL generation finished")
-
-            # Update stage: render (saving artifacts and visualizations)
-            self.stage_tracker.set_stage(widget_id, "render")
-
-            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Generating visualizations...")
-
-            # Read pipeline enable flags for conditional artifact saving
-            enable_layout = self.config.enable_layout_pipeline
-            enable_icon = self.config.enable_icon_pipeline
-            enable_graph = self.config.enable_graph_pipeline
-            enable_color = self.config.enable_color_pipeline
-
-            # 2. Save preprocessed image
-            preprocessed_bytes = preprocessed_info.get('bytes')
-            if preprocessed_bytes:
-                with open(preprocess_dir / "1.2-preprocessed.png", 'wb') as f:
-                    f.write(preprocessed_bytes)
-
-            # 3. Save layout data (NEW: replaces grounding data)
-            label_counts = {}  # Initialize outside if block to avoid NameError
-
-            if layout_debug and enable_layout:
-                raw_detections = layout_debug.get('raw') or []
-                pixel_detections = layout_debug.get('pixel') or []
-                post_processed = layout_debug.get('postProcessed') or []
-
-                # Count detections by label
-                for det in post_processed:
-                    label = det.get('label', 'unknown')
-                    label_counts[label] = label_counts.get(label, 0) + 1
-
-                layout_data = {
-                    "metadata": {
-                        "imageWidth": layout_debug.get('imageWidth'),
-                        "imageHeight": layout_debug.get('imageHeight'),
-                        "totalDetections": len(post_processed),
-                        "detectionsByLabel": label_counts,
-                        "generatedAt": datetime.now().isoformat()
-                    },
-                    "detections": {
-                        "raw": raw_detections,
-                        "pixel": pixel_detections,
-                        "postProcessed": post_processed
-                    }
-                }
-                with open(layout_dir / "layout-data.json", 'w') as f:
-                    json.dump(layout_data, f, indent=2)
-
-            # 4. Generate layout visualization
-            # Use preprocessed image because bbox coordinates are based on preprocessed dimensions
-            layout_detections = (layout_debug.get('postProcessed') or []) if (layout_debug and enable_layout) else []
-            visualization_image = preprocessed_bytes if preprocessed_bytes else image_data
-            if layout_detections and enable_layout:
-                layout_viz = draw_grounding_visualization(visualization_image, layout_detections)
-                with open(layout_dir / "layout-visualization.png", 'wb') as f:
-                    f.write(layout_viz)
-
-            # 5. Crop icon regions
-            # Use preprocessed image because bbox coordinates are based on preprocessed dimensions
-            icon_detections = []
-            if enable_layout and enable_icon and layout_detections:
-                icon_detections = [d for d in layout_detections if d.get('label', '').lower() == 'icon']
-                for idx, det in enumerate(icon_detections):
-                    bbox = det.get('bbox')
-                    if bbox and len(bbox) == 4:
-                        try:
-                            crop_bytes = crop_icon_region(visualization_image, bbox)
-                            with open(layout_crops_dir / f"icon-{idx+1}.png", 'wb') as f:
-                                f.write(crop_bytes)
-                        except Exception as e:
-                            log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Warning: Failed to crop icon {idx+1}: {str(e)}")
-
-            # 5. Save retrieval SVGs
-            per_icon = []
-            if enable_icon and icon_debug:
-                svg_source_dirs = [
-                    Path(__file__).parents[4] / "libs" / "js" / "icons" / "svg"
-                ]
-
-                per_icon = (icon_debug.get('retrieval') or {}).get('perIcon', []) if icon_debug else []
-                for icon_data in per_icon:
-                    icon_idx = icon_data.get('index', 0)
-                    top_candidates = icon_data.get('topCandidates') or []
-                    if top_candidates:
-                        save_retrieval_svgs(
-                            retrieval_results=top_candidates,
-                            icon_index=icon_idx,
-                            output_dir=retrieval_dir,
-                            svg_source_dirs=svg_source_dirs,
-                            top_n=10
-                        )
-
-            # 6. Save prompts
-            if prompt_debug:
-                for stage_name, prompt_text in prompt_debug.items():
-                    if isinstance(prompt_text, str) and stage_name.startswith('stage'):
-                        # Map stage names to numbered files (NEW: updated for 6 stages)
-                        stage_map = {
-                            'stage1_base': '1-base.md',
-                            'stage2_withLayout': '2-with-layout.md',  # NEW
-                            'stage3_withColors': '3-with-colors.md',  # Renamed from 2
-                            'stage4_withGraphs': '4-with-graphs.md',  # Renamed from 3
-                            'stage5_withIcons': '5-with-icons.md',    # Renamed from 4
-                            'stage6_final': '6-final.md'              # Renamed from 5
-                        }
-                        filename = stage_map.get(stage_name)
-                        if filename:
-                            with open(prompts_dir / filename, 'w') as f:
-                                f.write(prompt_text)
-
-            end_time = datetime.now()
-            duration = (end_time - start_time).total_seconds()
-
-            log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Visualizations saved")
-
-            # Count icons and graphs
-            icon_count = (icon_debug.get('detection') or {}).get('iconCount', 0) if icon_debug else 0
-            graph_count = (graph_debug.get('detection') or {}).get('graphCount', 0) if graph_debug else 0
-
-            # Build file lists (only include files that were actually created)
-            icon_crop_files = [
-                f"artifacts/2-layout/icon-crops/icon-{i+1}.png"
-                for i in range(len(icon_detections))
-                if (layout_crops_dir / f"icon-{i+1}.png").exists()
-            ]
-
-            retrieval_files = {}
-            for icon_data in per_icon:
-                icon_idx = icon_data.get('index', 0)
-                icon_dir = retrieval_dir / f"icon-{icon_idx+1}"
-                if icon_dir.exists():
-                    svg_files = sorted(icon_dir.glob("*.svg"))
-                    retrieval_files[f"icon-{icon_idx+1}"] = [
-                        f"artifacts/3-retrieval/icon-{icon_idx+1}/{f.name}" for f in svg_files
-                    ]
-
-            # Create comprehensive debug.json
-            debug_data = {
-                "widgetId": widget_id,
-                "widgetFactoryVersion": WIDGET_FACTORY_VERSION,
-                "execution": {
-                    "startTime": start_time.isoformat(),
-                    "endTime": end_time.isoformat(),
-                    "duration": duration,
-                    "status": "success"
-                },
-                "input": {
-                    "filename": image_path.name,
-                    "originalPath": str(image_path.absolute()),
-                    "fileSizeBytes": image_size,
-                    "dimensions": image_dims,
-                    "preprocessed": {
-                        "width": preprocessed_info.get('width'),
-                        "height": preprocessed_info.get('height'),
-                        "aspectRatio": preprocessed_info.get('aspectRatio')
-                    }
-                },
-                "config": {
-                    "model": self.config.default_model,
-                    "timeout": self.config.default_timeout,
-                    "iconLibraries": json.loads(self.icon_lib_names),
-                    "retrieval": {
-                        "topK": self.config.retrieval_topk,
-                        "topM": self.config.retrieval_topm,
-                        "alpha": self.config.retrieval_alpha
-                    },
-                    "pipelinesEnabled": {
-                        "layout": self.config.enable_layout_pipeline,
-                        "icon": self.config.enable_icon_pipeline,
-                        "graph": self.config.enable_graph_pipeline,
-                        "color": self.config.enable_color_pipeline
-                    }
-                },
-                "steps": {
-                    "layoutDetection": {  # NEW: Layout detection
-                        "enabled": enable_layout,
-                        "totalElements": layout_debug.get('totalDetections', 0) if (layout_debug and enable_layout) else None,
-                        "elementsByType": label_counts if enable_layout else {},
-                        "imageSize": {
-                            "width": layout_debug.get('imageWidth') if (layout_debug and enable_layout) else None,
-                            "height": layout_debug.get('imageHeight') if (layout_debug and enable_layout) else None
-                        }
-                    },
-                    "iconRetrieval": {
-                        "enabled": enable_icon,
-                        **((icon_debug.get('retrieval') or {}) if (icon_debug and enable_icon) else {})
-                    },
-                    "iconDetection": {
-                        "enabled": enable_icon,
-                        **((icon_debug.get('detection') or {}) if (icon_debug and enable_icon) else {})
-                    },
-                    "graphDetection": {
-                        "enabled": enable_graph,
-                        **((graph_debug.get('detection') or {}) if (graph_debug and enable_graph) else {})
-                    },
-                    "graphSpecs": (graph_debug.get('specs') or []) if (graph_debug and enable_graph) else [],
-                    "colorExtraction": {
-                        "enabled": enable_color
-                    },
-                    "promptConstruction": prompt_debug
-                },
-                "output": {
-                    "widgetDSL": {
-                        "saved": "artifacts/4-dsl/widget.json"
-                    },
-                    "statistics": {
-                        "iconsDetected": icon_count if enable_icon else None,
-                        "graphsDetected": graph_count if enable_graph else None
-                    }
-                },
-                "files": {
-                    "input": "input.png",
-                    "output": "output.png",
-                    "artifacts": {
-                        "1_preprocess": {
-                            "original": "artifacts/1-preprocess/1.1-original.png",
-                            "preprocessed": "artifacts/1-preprocess/1.2-preprocessed.png" if preprocessed_bytes else None
-                        },
-                        "2_layout": {  # Renamed from 2_grounding
-                            "data": "artifacts/2-layout/layout-data.json" if enable_layout else None,
-                            "visualization": "artifacts/2-layout/layout-visualization.png" if (enable_layout and layout_detections) else None,
-                            "iconCrops": icon_crop_files if (enable_layout and enable_icon) else []
-                        } if enable_layout else None,
-                        "3_retrieval": retrieval_files if enable_icon else None,
-                        "4_dsl": {
-                            "widget": "artifacts/4-dsl/widget.json"
-                        }
-                    },
-                    "log": {
-                        "execution": "log/log",
-                        "debug": "log/debug.json"
-                    },
-                    "prompts": {
-                        "1_base": "prompts/1-base.md" if (prompts_dir / "1-base.md").exists() else None,
-                        "2_withLayout": "prompts/2-with-layout.md" if (prompts_dir / "2-with-layout.md").exists() else None,  # NEW
-                        "3_withColors": "prompts/3-with-colors.md" if (prompts_dir / "3-with-colors.md").exists() else None,  # Renamed
-                        "4_withGraphs": "prompts/4-with-graphs.md" if (prompts_dir / "4-with-graphs.md").exists() else None,  # Renamed
-                        "5_withIcons": "prompts/5-with-icons.md" if (prompts_dir / "5-with-icons.md").exists() else None,    # Renamed
-                        "6_final": "prompts/6-final.md" if (prompts_dir / "6-final.md").exists() else None                   # Renamed
-                    }
-                },
-                "metadata": {
-                    "pipeline": "generation"
-                }
-            }
-
-            # Save debug.json
-            with open(debug_file, 'w') as f:
-                json.dump(debug_data, f, indent=2)
-
-            # Extract and save widget-specific log
-            self._save_widget_log(widget_id, log_file)
-
+        # Update counters
+        if success:
             self.completed += 1
-
-            # Mark as done in stage tracker
-            self.stage_tracker.set_stage(widget_id, "done")
-
-            log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ COMPLETED ({duration:.1f}s)")
-
-            # Update progress bar
-            if self.pbar:
-                success_rate = (self.completed / (self.completed + self.failed) * 100) if (self.completed + self.failed) > 0 else 0
-                self.pbar.set_postfix(success=f"{success_rate:.1f}%", failed=self.failed)
-                self.pbar.update(1)
-
-            return (image_path, True, str(widget_dir))
-
-        except Exception as e:
+        else:
             self.failed += 1
-            end_time = datetime.now()
-            duration = (end_time - start_time).total_seconds()
-            error_msg = f"{type(e).__name__}: {str(e)}"
 
-            # Create error debug.json
-            debug_data = {
-                "widgetId": widget_id,
-                "widgetFactoryVersion": WIDGET_FACTORY_VERSION,
-                "execution": {
-                    "startTime": start_time.isoformat(),
-                    "endTime": end_time.isoformat(),
-                    "duration": duration,
-                    "status": "failed"
-                },
-                "input": {
-                    "filename": image_path.name,
-                    "originalPath": str(image_path.absolute()),
-                    "fileSizeBytes": image_path.stat().st_size if image_path.exists() else None
-                },
-                "config": {
-                    "model": self.config.default_model,
-                    "timeout": self.config.default_timeout,
-                    "iconLibraries": json.loads(self.icon_lib_names),
-                    "retrieval": {
-                        "topK": self.config.retrieval_topk,
-                        "topM": self.config.retrieval_topm,
-                        "alpha": self.config.retrieval_alpha
-                    }
-                },
-                "error": {
-                    "message": str(e),
-                    "type": type(e).__name__
-                },
-                "files": {
-                    "input": "input.png" if (widget_dir / "input.png").exists() else None,
-                    "log": {
-                        "debug": "log/debug.json"
-                    },
-                    "artifacts": {
-                        "1_preprocess": {
-                            "original": "artifacts/1-preprocess/1.1-original.png" if (preprocess_dir / "1.1-original.png").exists() else None
-                        }
-                    }
-                },
-                "metadata": {
-                    "pipeline": "generation"
-                }
-            }
+        # Update progress bar
+        if self.pbar:
+            success_rate = (self.completed / (self.completed + self.failed) * 100) if (self.completed + self.failed) > 0 else 0
+            self.pbar.set_postfix(success=f"{success_rate:.1f}%", failed=self.failed)
+            self.pbar.update(1)
 
-            # Save debug.json
-            with open(debug_file, 'w') as f:
-                json.dump(debug_data, f, indent=2)
-
-            # Mark as failed in stage tracker
-            self.stage_tracker.set_stage(widget_id, "failed")
-
-            log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ❌ FAILED - {error_msg}")
-
-            # Update progress bar
-            if self.pbar:
-                success_rate = (self.completed / (self.completed + self.failed) * 100) if (self.completed + self.failed) > 0 else 0
-                self.pbar.set_postfix(success=f"{success_rate:.1f}%", failed=self.failed)
-                self.pbar.update(1)
-
-            return (image_path, False, error_msg)
+        return (image_path, success, error_msg or str(widget_dir))
 
     async def process_batch(self, images: List[Path]):
         """Process images with controlled concurrency."""

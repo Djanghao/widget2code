@@ -13,52 +13,49 @@ from pathlib import Path
 
 
 def main():
-    """CLI entry point for widget generation."""
-    if len(sys.argv) < 2:
-        print("Usage: generate-widget <image-path> [output-path]")
-        print("Example: generate-widget input.png [output.json]")
+    """CLI entry point for single widget generation."""
+    if len(sys.argv) < 3:
+        print("Usage: generate-widget <image-path> <output-dir>")
+        print("Example: generate-widget input.png ./output")
+        print("")
+        print("Note: This will create output-dir/image-name/ with full artifacts")
+        print("      The DSL will be at output-dir/image-name/artifacts/4-dsl/widget.json")
         sys.exit(1)
 
     image_path = sys.argv[1]
-
-    # Optional output path - defaults to same directory, same name with .json extension
-    if len(sys.argv) >= 3:
-        output_path = sys.argv[2]
-    else:
-        input_file = Path(image_path)
-        output_path = str(input_file.with_suffix('.json'))
+    output_dir = sys.argv[2]
 
     if not Path(image_path).exists():
         print(f"Error: Image file not found: {image_path}")
         sys.exit(1)
 
-    from generator import generate_widget_full
+    from generator.generation.widget import generate_single_widget
     from generator.config import GeneratorConfig
     import os
 
     try:
-        with open(image_path, 'rb') as f:
-            image_data = f.read()
-
         config = GeneratorConfig.from_env()
-        result = asyncio.run(generate_widget_full(
-            image_data=image_data,
-            image_filename=Path(image_path).name,
-            system_prompt=None,
-            retrieval_topk=config.retrieval_topk,
-            retrieval_topm=config.retrieval_topm,
-            retrieval_alpha=config.retrieval_alpha,
+
+        success, widget_dir, error = asyncio.run(generate_single_widget(
+            image_path=image_path,
+            output_dir=output_dir,
             config=config,
             icon_lib_names=os.getenv('ICON_LIB_NAMES', '["sf", "lucide"]'),
         ))
 
-        dsl_to_save = result.get('widgetDSL', result) if isinstance(result, dict) else result
-        with open(output_path, 'w') as f:
-            json.dump(dsl_to_save, f, indent=2)
-
-        print(f"Widget generated successfully: {output_path}")
+        if success:
+            dsl_path = widget_dir / "artifacts" / "4-dsl" / "widget.json"
+            print(f"✓ Widget generated successfully!")
+            print(f"  Widget directory: {widget_dir}")
+            print(f"  DSL file: {dsl_path}")
+            print(f"  Debug info: {widget_dir / 'log' / 'debug.json'}")
+        else:
+            print(f"✗ Widget generation failed: {error}")
+            sys.exit(1)
     except Exception as e:
         print(f"Error generating widget: {e}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
 
 

@@ -20,6 +20,12 @@ fi
 INPUT_DIR=$1
 OUTPUT_DIR=$2
 
+# Validate input directory exists
+if [ ! -d "$INPUT_DIR" ]; then
+    echo "Error: Input directory not found: $INPUT_DIR"
+    exit 1
+fi
+
 # Concurrency: command line > .env > error
 if [ -n "$3" ]; then
     CONCURRENCY=$3

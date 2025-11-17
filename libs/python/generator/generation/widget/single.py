@@ -10,8 +10,10 @@ from PIL import Image
 import io
 import json
 import os
+import asyncio
 from datetime import datetime
-import sys
+from pathlib import Path
+from typing import Tuple, Optional
 
 from ...config import GeneratorConfig
 from ...exceptions import ValidationError, FileSizeError, GenerationError
@@ -26,6 +28,7 @@ from ...utils import (
     clean_code_response,
 )
 from ...utils.logger import log_to_file
+from ...utils.artifact_manager import ArtifactManager
 from ...perception import (
     preprocess_image_for_widget,
     run_icon_detection_pipeline,
@@ -41,290 +44,6 @@ from ...perception.icon_extraction import normalize_icon_details
 
 async def get_default_prompt():
     return {"prompt": load_default_prompt()}
-
-
-async def generate_widget(
-    image_data: bytes,
-    image_filename: str | None,
-    system_prompt: str,
-    model: str,
-    api_key: str,
-    config: GeneratorConfig,
-):
-    print(f"[{datetime.now()}] generate-widget request")
-
-    import tempfile
-    temp_file = None
-    try:
-        validate_file_size(len(image_data), config.max_file_size_mb)
-
-        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
-
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
-            temp_file.write(image_bytes)
-            temp_file_path = temp_file.name
-
-        prompt = system_prompt if system_prompt else load_default_prompt()
-
-        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        model_to_use = (model or "qwen3-vl-flash").strip()
-
-        validate_model(model, model_to_use, vision_models)
-        validate_api_key(api_key)
-
-        vision_llm = OpenAIProvider(
-            model=model_to_use,
-            api_key=api_key,
-            base_url=config.default_base_url,
-            temperature=0.5,
-            max_tokens=32768,
-            timeout=config.get_dsl_gen_timeout(),
-            system_prompt=prompt,
-        )
-
-        image_content = prepare_image_content(temp_file_path)
-
-        messages = [ChatMessage(
-            role="user",
-            content=[
-                {"type": "text", "text": "Please analyze this widget image and generate the WidgetDSL JSON according to the instructions."},
-                image_content
-            ]
-        )]
-
-        response = vision_llm.chat(messages)
-
-        result_text = clean_json_response(response.content)
-
-        widget_spec = json.loads(result_text)
-        try:
-            if isinstance(widget_spec, dict) and isinstance(widget_spec.get("widget"), dict):
-                widget_spec["widget"]["aspectRatio"] = round(aspect_ratio, 3)
-        except Exception:
-            pass
-
-        return {
-            "success": True,
-            "widgetDSL": widget_spec,
-            "aspectRatio": round(aspect_ratio, 3),
-            "usage": response.usage
-        }
-    except asyncio.TimeoutError as e:
-        # Timeout occurred - log and return failure
-        stage_name = "unknown"
-        if stage_tracker:
-            stage_name = stage_tracker.get_current_stage(image_id) or "unknown"
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ❌ TIMEOUT in {stage_name} stage")
-        return {
-            "success": False,
-            "error": f"Timeout in {stage_name} stage",
-            "error_type": "timeout"
-        }
-    except json.JSONDecodeError as e:
-        raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
-    finally:
-        if 'temp_file_path' in locals():
-            try:
-                os.unlink(temp_file_path)
-            except:
-                pass
-
-
-async def generate_widget_text(
-    system_prompt: str,
-    user_prompt: str,
-    model: str,
-    api_key: str,
-    config: GeneratorConfig,
-):
-    print(f"[{datetime.now()}] generate-widget-text request")
-
-    try:
-        text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
-        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        qwen_supported = text_models | vision_models
-        model_to_use = (model or "qwen3-vl-flash").strip()
-
-        validate_model(model, model_to_use, qwen_supported)
-        validate_api_key(api_key)
-
-        text_llm = OpenAIProvider(
-            model=model_to_use,
-            api_key=api_key,
-            base_url=config.default_base_url,
-            temperature=0.5,
-            max_tokens=2000,
-            timeout=config.get_dsl_gen_timeout(),
-            system_prompt=system_prompt,
-        )
-
-        messages = [ChatMessage(
-            role="user",
-            content=[
-                {"type": "text", "text": user_prompt}
-            ]
-        )]
-
-        response = text_llm.chat(messages)
-        result_text = clean_json_response(response.content)
-
-        widget_spec = json.loads(result_text)
-
-        return {
-            "success": True,
-            "widgetDSL": widget_spec
-        }
-    except json.JSONDecodeError as e:
-        raise GenerationError(f"Invalid JSON from LLM: {str(e)}")
-
-
-async def generate_widget_with_icons(
-    image_data: bytes,
-    image_filename: str | None,
-    system_prompt: str,
-    model: str,
-    api_key: str,
-    retrieval_topk: int,
-    retrieval_topm: int,
-    retrieval_alpha: float,
-    config: GeneratorConfig,
-):
-    print(f"[{datetime.now()}] generate-widget-full request")
-
-    import tempfile
-    temp_file = None
-    try:
-        validate_file_size(len(image_data), config.max_file_size_mb)
-
-        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
-
-        with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
-            temp_file.write(image_bytes)
-            temp_file_path = temp_file.name
-
-        base_prompt = system_prompt if system_prompt else load_default_prompt()
-
-        # Run layout detection first to get layout_detections for icon detection
-        from ...perception.layout import detect_layout
-        layout_raw, layout_pixel, layout_post, img_width, img_height = await detect_layout(
-            image_bytes=image_bytes,
-            filename=image_filename,
-            model=config.get_layout_model(),
-            api_key=config.get_layout_api_key(),
-            timeout=config.get_layout_timeout(),
-            thinking=config.get_layout_thinking(),
-            max_retries=0,
-        )
-
-        icon_result = await run_icon_detection_pipeline(
-            image_bytes=image_bytes,
-            filename=image_filename,
-            model=(model or "qwen3-vl-flash"),
-            api_key=api_key,
-            layout_detections=layout_post,
-            img_width=img_width,
-            img_height=img_height,
-            retrieval_topk=retrieval_topk,
-            retrieval_topm=retrieval_topm,
-            retrieval_alpha=retrieval_alpha,
-            timeout=config.get_icon_retrieval_timeout(),
-        )
-
-        grounding_raw = icon_result["grounding_raw"]
-        grounding_pixel = icon_result["grounding_pixel"]
-        post_processed = icon_result["post_processed"]
-        per_icon_details = icon_result["per_icon_details"]
-        icon_candidates = icon_result["icon_candidates"]
-        icon_count = icon_result["icon_count"]
-        img_width = icon_result["img_width"]
-        img_height = icon_result["img_height"]
-
-        extra_str = format_icon_prompt_injection(
-            icon_count=icon_count,
-            per_icon_details=per_icon_details,
-            retrieval_topm=retrieval_topm,
-        )
-
-        if "[AVAILABLE_ICON_NAMES]" in base_prompt:
-            prompt_final = base_prompt.replace("[AVAILABLE_ICON_NAMES]", extra_str)
-        else:
-            prompt_final = base_prompt + extra_str
-
-        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
-        model_to_use = (model or "qwen3-vl-flash").strip()
-
-        validate_model(model, model_to_use, vision_models)
-        validate_api_key(api_key)
-
-        vision_llm = OpenAIProvider(
-            model=model_to_use,
-            api_key=api_key,
-            base_url=config.default_base_url,
-            temperature=0.5,
-            max_tokens=32768,
-            timeout=config.get_dsl_gen_timeout(),
-            system_prompt=prompt_final,
-        )
-
-        image_content = prepare_image_content(temp_file_path)
-        messages = [ChatMessage(
-            role="user",
-            content=[
-                {"type": "text", "text": "Analyze this widget image and generate the WidgetDSL JSON using constraints and icon hints in the system prompt."},
-                image_content
-            ]
-        )]
-
-        response = vision_llm.chat(messages)
-        result_text = clean_json_response(response.content)
-
-        widget_spec = json.loads(result_text)
-        try:
-            if isinstance(widget_spec, dict) and isinstance(widget_spec.get("widget"), dict):
-                widget_spec["widget"]["aspectRatio"] = round(aspect_ratio, 3)
-        except Exception:
-            pass
-
-        per_icon_details, global_merged = normalize_icon_details(per_icon_details)
-
-        return {
-            "success": True,
-            "widgetDSL": widget_spec,
-            "aspectRatio": round(aspect_ratio, 3),
-            "iconCandidates": icon_candidates,
-            "iconCount": icon_count,
-            "iconDebugInfo": {
-                "imageSize": {"width": img_width, "height": img_height},
-                "grounding": {
-                    "raw": grounding_raw,
-                    "pixel": grounding_pixel
-                },
-                "postProcessed": post_processed,
-                "retrievals": {
-                    "perIcon": per_icon_details,
-                    "globalMerged": global_merged
-                }
-            }
-        }
-    except asyncio.TimeoutError as e:
-        # Timeout occurred - log and return failure
-        stage_name = "unknown"
-        if stage_tracker:
-            stage_name = stage_tracker.get_current_stage(image_id) or "unknown"
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ❌ TIMEOUT in {stage_name} stage")
-        return {
-            "success": False,
-            "error": f"Timeout in {stage_name} stage",
-            "error_type": "timeout"
-        }
-    except json.JSONDecodeError as e:
-        raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
-    finally:
-        if 'temp_file_path' in locals():
-            try:
-                os.unlink(temp_file_path)
-            except:
-                pass
 
 
 async def generate_widget_full(
@@ -875,17 +594,6 @@ async def generate_widget_full(
                 }
             }
         }
-    except asyncio.TimeoutError as e:
-        # Timeout occurred - log and return failure
-        stage_name = "unknown"
-        if stage_tracker:
-            stage_name = stage_tracker.get_current_stage(image_id) or "unknown"
-        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ❌ TIMEOUT in {stage_name} stage")
-        return {
-            "success": False,
-            "error": f"Timeout in {stage_name} stage",
-            "error_type": "timeout"
-        }
     except json.JSONDecodeError as e:
         raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
     finally:
@@ -894,3 +602,199 @@ async def generate_widget_full(
                 os.unlink(temp_file_path)
             except:
                 pass
+
+async def generate_single_widget(
+    image_path: Path | str,
+    output_dir: Path | str,
+    config: Optional[GeneratorConfig] = None,
+    icon_lib_names: str = '["sf", "lucide"]',
+    stage_tracker = None,
+    run_log_path: Optional[Path] = None
+) -> Tuple[bool, Optional[Path], Optional[str]]:
+    """
+    Generate a single widget with complete artifacts and debug information.
+
+    This is a high-level wrapper around generate_widget_full that handles
+    all file system operations, artifact creation, and debug information.
+
+    Args:
+        image_path: Path to input image file
+        output_dir: Directory where widget folder will be created
+        config: Generator configuration (defaults to env config)
+        icon_lib_names: Icon library names as JSON array string
+        stage_tracker: Optional stage tracker for batch processing
+        run_log_path: Optional path to global run.log for log extraction
+
+    Returns:
+        Tuple of (success: bool, widget_dir: Path, error_msg: str)
+        - success: True if generation succeeded
+        - widget_dir: Path to the created widget directory
+        - error_msg: Error message if failed, None if succeeded
+
+    Example:
+        >>> success, widget_dir, error = await generate_single_widget(
+        ...     image_path="input.png",
+        ...     output_dir="./output",
+        ...     config=GeneratorConfig.from_env()
+        ... )
+        >>> if success:
+        ...     print(f"Generated: {widget_dir}/artifacts/4-dsl/widget.json")
+    """
+    # Convert to Path objects
+    image_path = Path(image_path)
+    output_dir = Path(output_dir)
+
+    # Use default config if not provided
+    if config is None:
+        config = GeneratorConfig.from_env()
+
+    # Create widget directory (preserve subdirectory structure if needed)
+    widget_id = image_path.stem
+    widget_dir = output_dir / widget_id
+    widget_dir.mkdir(parents=True, exist_ok=True)
+
+    # Initialize artifact manager
+    artifact_mgr = ArtifactManager(widget_dir, widget_id, config)
+
+    # Setup directories
+    artifact_mgr.setup_directories()
+
+    # Update stage tracker if provided
+    if stage_tracker:
+        stage_tracker.start_image(widget_id)
+        stage_tracker.set_stage(widget_id, "preprocessing")
+
+    start_time = datetime.now()
+
+    try:
+        log_to_file(f"[{start_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🚀 START")
+
+        # Read image data
+        with open(image_path, 'rb') as f:
+            image_data = f.read()
+
+        # Get image size and dimensions
+        image_size = image_path.stat().st_size
+        try:
+            with Image.open(image_path) as img:
+                image_dims = {"width": img.width, "height": img.height}
+        except:
+            image_dims = None
+
+        # Save input image
+        artifact_mgr.save_input_image(image_path)
+
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] 🔄 DSL generation started")
+
+        # Generate widget DSL with full debug info
+        result = await generate_widget_full(
+            image_data=image_data,
+            image_filename=image_path.name,
+            system_prompt=None,
+            retrieval_topk=config.retrieval_topk,
+            retrieval_topm=config.retrieval_topm,
+            retrieval_alpha=config.retrieval_alpha,
+            config=config,
+            icon_lib_names=icon_lib_names,
+            stage_tracker=stage_tracker,
+            image_id=widget_id,
+        )
+
+        # Check if generation was successful
+        if not result.get('success', True):
+            error_msg = result.get('error', 'Unknown error')
+            raise GenerationError(error_msg)
+
+        # Extract data from result
+        widget_dsl = result.get('widgetDSL', result) if isinstance(result, dict) else result
+        layout_debug = result.get('layoutDebugInfo') if isinstance(result, dict) else None
+        icon_debug = result.get('iconDebugInfo') if isinstance(result, dict) else None
+        graph_debug = result.get('graphDebugInfo') if isinstance(result, dict) else None
+        prompt_debug = result.get('promptDebugInfo') if isinstance(result, dict) else None
+        preprocessed_info = result.get('preprocessedImage') if isinstance(result, dict) else None
+
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] DSL generation finished")
+
+        # Update stage: render (saving artifacts and visualizations)
+        if stage_tracker:
+            stage_tracker.set_stage(widget_id, "render")
+
+        log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Generating visualizations...")
+
+        # Save all artifacts using ArtifactManager
+        preprocessed_bytes = preprocessed_info.get('bytes') if preprocessed_info else None
+        if preprocessed_bytes:
+            artifact_mgr.save_preprocessed_image(preprocessed_bytes)
+
+        # Save layout artifacts
+        visualization_image = preprocessed_bytes if preprocessed_bytes else image_data
+        artifact_mgr.save_layout_artifacts(layout_debug, visualization_image)
+
+        # Save icon crops
+        layout_detections = (layout_debug.get('postProcessed') or []) if layout_debug else []
+        artifact_mgr.save_icon_crops(layout_detections, visualization_image)
+
+        # Save retrieval artifacts
+        artifact_mgr.save_retrieval_artifacts(icon_debug)
+
+        # Save prompts
+        artifact_mgr.save_prompts(prompt_debug)
+
+        # Save widget DSL
+        artifact_mgr.save_widget_dsl(widget_dsl)
+
+        end_time = datetime.now()
+
+        log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Visualizations saved")
+
+        # Create and save debug.json
+        debug_data = artifact_mgr.create_debug_json(
+            start_time=start_time,
+            end_time=end_time,
+            image_path=image_path,
+            image_size=image_size,
+            image_dims=image_dims,
+            result=result,
+            icon_lib_names=icon_lib_names,
+            error=None
+        )
+        artifact_mgr.save_debug_json(debug_data)
+
+        # Extract and save widget-specific log
+        if run_log_path:
+            artifact_mgr.save_widget_log(run_log_path)
+
+        # Mark as done in stage tracker
+        if stage_tracker:
+            stage_tracker.set_stage(widget_id, "done")
+
+        duration = (end_time - start_time).total_seconds()
+        log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ✅ COMPLETED ({duration:.1f}s)")
+
+        return (True, widget_dir, None)
+
+    except Exception as e:
+        end_time = datetime.now()
+        duration = (end_time - start_time).total_seconds()
+        error_msg = f"{type(e).__name__}: {str(e)}"
+
+        # Create error debug.json
+        debug_data = artifact_mgr.create_debug_json(
+            start_time=start_time,
+            end_time=end_time,
+            image_path=image_path,
+            image_size=image_path.stat().st_size if image_path.exists() else 0,
+            image_dims=None,
+            result={},
+            icon_lib_names=icon_lib_names,
+            error=e
+        )
+        artifact_mgr.save_debug_json(debug_data)
+
+        # Mark as failed in stage tracker
+        if stage_tracker:
+            stage_tracker.set_stage(widget_id, "failed")
+
+        log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ❌ FAILED - {error_msg}")
+
+        return (False, widget_dir, error_msg)
