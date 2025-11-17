@@ -35,6 +35,8 @@ class GeneratorConfig:
     graph_gen_timeout: Optional[int] = None
     dsl_gen_timeout: Optional[int] = None
     icon_retrieval_timeout: Optional[int] = None
+    # Retries
+    layout_max_retries: Optional[int] = None
 
     # ========================================================================
     # Default settings (used as fallback for all stages)
@@ -219,6 +221,10 @@ class GeneratorConfig:
         """Get icon retrieval timeout with fallback to default"""
         return self.icon_retrieval_timeout if self.icon_retrieval_timeout is not None else self.default_timeout
 
+    def get_layout_max_retries(self) -> int:
+        """Get layout detection max retries (0 = no extra retry)"""
+        return self.layout_max_retries if self.layout_max_retries is not None else 0
+
     # ========================================================================
     # Factory methods
     # ========================================================================
@@ -289,6 +295,7 @@ class GeneratorConfig:
             graph_gen_timeout=get_optional_int('GRAPH_GEN_TIMEOUT'),
             dsl_gen_timeout=get_optional_int('DSL_GEN_TIMEOUT'),
             icon_retrieval_timeout=get_optional_int('ICON_RETRIEVAL_TIMEOUT'),
+            layout_max_retries=get_optional_int('LAYOUT_MAX_RETRIES'),
 
             # Default settings
             default_api_key=os.getenv('DEFAULT_API_KEY', ''),

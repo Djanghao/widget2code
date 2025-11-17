@@ -99,19 +99,39 @@ async def generate_widget_full(
 
             from ...perception.layout import detect_layout
 
-            layout_raw, layout_pixel, layout_post, img_width, img_height = await asyncio.wait_for(
-                detect_layout(
-                    image_bytes=image_bytes,
-                    filename=image_filename,
-                    model=config.get_layout_model(),
-                    api_key=config.get_layout_api_key(),
-                    timeout=config.get_layout_timeout(),
-                    thinking=config.get_layout_thinking(),
-                    max_retries=0,
-                    image_id=image_id,
-                ),
-                timeout=config.get_layout_timeout()
-            )
+            # External retry wrapper: retry on empty results (raw/postProcessed) up to LAYOUT_MAX_RETRIES
+            max_retries = max(0, config.get_layout_max_retries())
+            attempts = 1 + max_retries
+
+            layout_raw = []
+            layout_pixel = []
+            layout_post = []
+            img_width = width
+            img_height = height
+
+            for attempt in range(attempts):
+                layout_raw, layout_pixel, layout_post, img_width, img_height = await asyncio.wait_for(
+                    detect_layout(
+                        image_bytes=image_bytes,
+                        filename=image_filename,
+                        model=config.get_layout_model(),
+                        api_key=config.get_layout_api_key(),
+                        timeout=config.get_layout_timeout(),
+                        thinking=config.get_layout_thinking(),
+                        max_retries=0,  # keep internal retries off; we control with outer loop
+                        image_id=image_id,
+                    ),
+                    timeout=config.get_layout_timeout()
+                )
+
+                has_any = (bool(layout_raw) and len(layout_raw) > 0) or (bool(layout_post) and len(layout_post) > 0)
+                if has_any or attempt >= max_retries:
+                    break
+
+                # Visible warning when empty and we still have retries left
+                log_to_file(
+                    f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Warning: Layout returned 0 detections, retrying {attempt + 1}/{max_retries}"
+                )
 
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection completed: {len(layout_post)} elements")
         else:
