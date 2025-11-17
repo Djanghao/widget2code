@@ -267,6 +267,7 @@ async def detect_layout(
     max_tokens: int = 2000,
     timeout: int = 60,
     thinking: bool = False,
+    vl_high_resolution: bool = False,
     stream: bool = False,
     stream_options: Optional[Dict[str, Any]] = None,
     clamp_to_image: bool = True,
@@ -359,6 +360,10 @@ async def detect_layout(
         llm_kwargs["top_p"] = top_p
     if thinking:
         llm_kwargs["thinking"] = True
+
+    # Pass high-resolution flag if requested
+    if vl_high_resolution:
+        llm_kwargs["vl_high_resolution"] = True
 
     vision_llm = OpenAIProvider(**llm_kwargs)
     last_err = None

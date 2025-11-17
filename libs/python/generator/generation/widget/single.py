@@ -118,6 +118,7 @@ async def generate_widget_full(
                         api_key=config.get_layout_api_key(),
                         timeout=config.get_layout_timeout(),
                         thinking=config.get_layout_thinking(),
+                        vl_high_resolution=config.get_layout_vl_high_resolution(),
                         max_retries=0,  # keep internal retries off; we control with outer loop
                         image_id=image_id,
                     ),
