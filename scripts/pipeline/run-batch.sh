@@ -53,9 +53,32 @@ echo "Step 1+2: Generating and rendering in parallel (per image)..."
 
 echo ""
 echo "=================================================="
-echo "✅ Batch pipeline completed (integrated rendering)"
+echo "✅ Generation + per-image evaluation completed"
 echo "Root output dir: $OUTPUT_DIR"
 echo "  Each widget is under: $OUTPUT_DIR/<image-stem>/"
 echo "  Final PNG at:        $OUTPUT_DIR/<image-stem>/output.png"
 echo "  Artifacts at:        $OUTPUT_DIR/<image-stem>/artifacts/"
 echo "=================================================="
+
+# Final analysis aggregation (.analysis)
+ANALYSIS_DIR="$OUTPUT_DIR/.analysis"
+TOP_K_PERCENT=${TOP_K_PERCENT:-5.0}
+
+echo "Running final hard-case analysis to: $ANALYSIS_DIR"
+
+# Prefer full evaluation wrapper if GT_DIR available, but skip re-evaluation
+GT_DIR=${EVAL_GT_DIR:-}
+if [ -n "$GT_DIR" ] && [ -d "$GT_DIR" ]; then
+  ./scripts/evaluation/run_evaluation.sh "$OUTPUT_DIR" "$ANALYSIS_DIR" --skip-eval -g "$GT_DIR" || true
+else
+  # Fallback: run analysis-only without GT dir requirement
+  VENV_DIR="tools/evaluation/.venv"
+  PY=python3
+  if [ -d "$VENV_DIR" ]; then
+    PY="$VENV_DIR/bin/python"
+  fi
+  "$PY" tools/evaluation/analysis.py --results-dir "$OUTPUT_DIR" --output-dir "$ANALYSIS_DIR" --top-k-percent "$TOP_K_PERCENT" || true
+fi
+
+echo ""
+echo "✅ Batch pipeline + analysis completed"

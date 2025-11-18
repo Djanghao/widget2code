@@ -26,7 +26,6 @@ from .single import generate_widget_full, generate_single_widget
 from ...config import GeneratorConfig
 from ...exceptions import ValidationError, FileSizeError, GenerationError
 from ...utils.logger import setup_logger, log_to_file, log_to_console, separator, Colors
-from subprocess import CalledProcessError
 
 try:
     import json
@@ -56,6 +55,7 @@ class StageTracker:
         {"key": "dsl", "display": "5. DSL", "indent": 0},
         {"key": "artifacts", "display": "5. Artifacts", "indent": 0},
         {"key": "render", "display": "6. Render", "indent": 0},
+        {"key": "evaluation", "display": "7. Evaluation", "indent": 0},
         {"key": "done", "display": "✓ Done", "indent": 0},
         {"key": "failed", "display": "✗ Failed", "indent": 0}
     ]
@@ -488,10 +488,39 @@ class BatchGenerator:
                     log_to_file(f"[Render][{widget_id}] {line}")
 
             if proc.returncode == 0:
-                # Success
-                self.stage_tracker.set_stage(widget_id, "done")
-                self.completed += 1
                 log_to_file(f"[Render End] [{widget_id}] ✓ success")
+                self.stage_tracker.set_stage(widget_id, "evaluation")
+                try:
+                    eval_cmd = [
+                        "bash", "./scripts/evaluation/run_eval_single.sh", str(widget_dir)
+                    ]
+                    gt_dir_env = os.getenv('EVAL_GT_DIR')
+                    if gt_dir_env:
+                        eval_cmd.append(gt_dir_env)
+                    log_to_file(f"[Eval Start] [{widget_id}] cmd: {' '.join(eval_cmd)}")
+                    eval_proc = await asyncio.create_subprocess_exec(
+                        *eval_cmd,
+                        stdout=asyncio.subprocess.PIPE,
+                        stderr=asyncio.subprocess.STDOUT,
+                    )
+                    out, _ = await eval_proc.communicate()
+                    out_text = out.decode(errors='ignore') if out else ''
+                    for line in out_text.splitlines():
+                        log_to_file(f"[Eval][{widget_id}] {line}")
+                    if eval_proc.returncode == 0:
+                        log_to_file(f"[Eval End] [{widget_id}] ✓ success")
+                        self.stage_tracker.set_stage(widget_id, "done")
+                        self.completed += 1
+                    else:
+                        log_to_file(f"[Eval End] [{widget_id}] ✗ failed code {eval_proc.returncode}")
+                        self.stage_tracker.set_stage(widget_id, "failed")
+                        self.failed += 1
+                        return  # Early return; progress bar updated below
+                except Exception as e:
+                    log_to_file(f"[Eval Error] [{widget_id}] {type(e).__name__}: {e}")
+                    self.stage_tracker.set_stage(widget_id, "failed")
+                    self.failed += 1
+                    return
             else:
                 # Failure
                 self.stage_tracker.set_stage(widget_id, "failed")
