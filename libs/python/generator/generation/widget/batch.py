@@ -50,6 +50,7 @@ class StageTracker:
         {"key": "layout", "display": "2. Layout", "indent": 0},
         {"key": "perception", "display": "3. Perception", "indent": 0},
         {"key": "perception.icon", "display": "├─ Icon", "indent": 1, "parent": "perception"},
+        {"key": "perception.applogo", "display": "├─ AppLogo", "indent": 1, "parent": "perception"},
         {"key": "perception.graph", "display": "└─ Graph", "indent": 1, "parent": "perception"},
         {"key": "color", "display": "4. Color", "indent": 0},
         {"key": "dsl", "display": "5. DSL", "indent": 0},
@@ -184,6 +185,20 @@ class StageTracker:
                     substage_min_times[substage_key] = 0
                     substage_max_times[substage_key] = 0
 
+            # Cumulative "entered" counts for stages (main) and substages
+            # A stage/substage is considered "entered" if we recorded at least a start time.
+            stage_entered_counts = {s["key"]: 0 for s in self.STAGES if "parent" not in s}
+            for image_id, times_dict in self.stage_times.items():
+                for stage_key, times in times_dict.items():
+                    if stage_key in stage_entered_counts and len(times) >= 1:
+                        stage_entered_counts[stage_key] += 1
+
+            substage_entered_counts = {s["key"]: 0 for s in self.STAGES if "parent" in s}
+            for image_id, sub_dict in self.substage_times.items():
+                for sub_key, times in sub_dict.items():
+                    if sub_key in substage_entered_counts and len(times) >= 1:
+                        substage_entered_counts[sub_key] += 1
+
             total_images = len(self.current_stages)
             active_images = total_images - stage_counts.get("done", 0) - stage_counts.get("failed", 0)
 
@@ -195,6 +210,8 @@ class StageTracker:
                 "substage_avg_times": substage_avg_times,
                 "substage_min_times": substage_min_times,
                 "substage_max_times": substage_max_times,
+                "stage_entered_counts": stage_entered_counts,
+                "substage_entered_counts": substage_entered_counts,
                 "total_images": total_images,
                 "active_images": active_images,
                 "completed": stage_counts.get("done", 0),
@@ -272,6 +289,8 @@ class BatchGenerator:
         substage_avg_times = stats["substage_avg_times"]
         substage_min_times = stats["substage_min_times"]
         substage_max_times = stats["substage_max_times"]
+        stage_entered_counts = stats.get("stage_entered_counts", {})
+        substage_entered_counts = stats.get("substage_entered_counts", {})
         total = stats["total_images"]
 
         for stage_def in StageTracker.STAGES:
@@ -284,12 +303,20 @@ class BatchGenerator:
             indent_str = "   " * indent
             stage_display = f"{indent_str}{display_name}"
 
-            # Get count - for substages, count from parent
-            if is_substage:
-                parent_key = stage_def["parent"]
-                count = stage_counts.get(parent_key, 0)
+            # Get count
+            # - For perception (main): show cumulative entered count
+            # - For perception.icon / perception.graph: show their own cumulative entered counts
+            # - Otherwise: preserve original behavior (current in-stage count or parent count)
+            if not is_substage and stage_key == "perception":
+                count = stage_entered_counts.get(stage_key, 0)
+            elif is_substage and stage_key in ("perception.icon", "perception.applogo", "perception.graph"):
+                count = substage_entered_counts.get(stage_key, 0)
             else:
-                count = stage_counts.get(stage_key, 0)
+                if is_substage:
+                    parent_key = stage_def["parent"]
+                    count = stage_counts.get(parent_key, 0)
+                else:
+                    count = stage_counts.get(stage_key, 0)
 
             percent = (count / total * 100) if total > 0 else 0
 
