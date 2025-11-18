@@ -633,7 +633,8 @@ async def generate_single_widget(
     config: Optional[GeneratorConfig] = None,
     icon_lib_names: str = '["sf", "lucide"]',
     stage_tracker = None,
-    run_log_path: Optional[Path] = None
+    run_log_path: Optional[Path] = None,
+    integrated_render: bool = False,
 ) -> Tuple[bool, Optional[Path], Optional[str]]:
     """
     Generate a single widget with complete artifacts and debug information.
@@ -739,9 +740,9 @@ async def generate_single_widget(
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] DSL generation finished")
 
-        # Update stage: render (saving artifacts and visualizations)
+        # Update stage: artifacts (saving visualizations and intermediate files)
         if stage_tracker:
-            stage_tracker.set_stage(widget_id, "render")
+            stage_tracker.set_stage(widget_id, "artifacts")
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Generating visualizations...")
 
@@ -788,8 +789,8 @@ async def generate_single_widget(
         if run_log_path:
             artifact_mgr.save_widget_log(run_log_path)
 
-        # Mark as done in stage tracker
-        if stage_tracker:
+        # Mark as done in stage tracker (only when not using integrated rendering)
+        if stage_tracker and not integrated_render:
             stage_tracker.set_stage(widget_id, "done")
 
         duration = (end_time - start_time).total_seconds()
@@ -818,7 +819,7 @@ async def generate_single_widget(
         # Mark as failed in stage tracker
         if stage_tracker:
             stage_tracker.set_stage(widget_id, "failed")
-
+        
         log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] ❌ FAILED - {error_msg}")
 
         return (False, widget_dir, error_msg)
