@@ -393,8 +393,10 @@ const createRenderingSlice = (set, get) => ({
   },
 
 
-  validateWidget: (widgetElement, spec) => {
-    const result = validateWidgetFn(widgetElement, spec);
+  validateWidget: (widgetElement, spec, options) => {
+    // Forward options (e.g., { checkAspectRatio }) so callers like HeadlessRenderer
+    // can control validation behavior per stage (RAW vs AUTORESIZE)
+    const result = validateWidgetFn(widgetElement, spec, options);
     console.log(`🔍 [Validation]`, result);
     return result;
   },

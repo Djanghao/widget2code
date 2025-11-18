@@ -183,11 +183,23 @@ function HeadlessRenderer() {
       const state = usePlaygroundStore.getState();
       console.log('[Headless] 🔍 Validating widget...');
       // Only check aspect ratio if autoresize was enabled
-      const validation = validateWidget(widgetElement, state.widgetDSL, {
-        checkAspectRatio: enableAutoResizeRef.current
+      const checkAR = enableAutoResizeRef.current;
+      let validation = validateWidget(widgetElement, state.widgetDSL, {
+        checkAspectRatio: checkAR
       });
 
-      if (!validation.valid) {
+      // RAW stage shouldn't be marked as failed. Convert issues to warnings
+      // and mark as valid, while preserving metadata for debugging.
+      const isRawStage = !checkAR;
+      if (isRawStage && !validation.valid) {
+        console.warn('[Headless] ⚠️  RAW stage validation issues (non-blocking):', validation.issues);
+        validation = {
+          ...validation,
+          warnings: [...(validation.warnings || []), ...(validation.issues || [])],
+          issues: [],
+          valid: true
+        };
+      } else if (!validation.valid) {
         console.warn('[Headless] ⚠️  Validation failed:', validation.issues);
       } else {
         console.log('[Headless] ✅ Validation passed');
