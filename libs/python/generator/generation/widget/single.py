@@ -58,6 +58,8 @@ async def generate_widget_full(
     applogo_lib_names: str = None,  # NEW: AppLogo library names
     stage_tracker=None,
     image_id: str = None,
+    artifact_mgr: 'ArtifactManager' = None,
+    incremental_save: bool = False,
 ):
     from pathlib import Path
     from datetime import datetime
@@ -84,6 +86,13 @@ async def generate_widget_full(
             stage_tracker.set_stage(image_id, "preprocessing")
 
         image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
+
+        # Incremental save: preprocessed image
+        if incremental_save and artifact_mgr is not None:
+            try:
+                artifact_mgr.save_preprocessed_image(image_bytes)
+            except Exception:
+                pass
 
         with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
             temp_file.write(image_bytes)
@@ -136,6 +145,22 @@ async def generate_widget_full(
                 )
 
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] Layout detection completed: {len(layout_post)} elements")
+
+            # Incremental save: layout artifacts and icon crops (based on layout)
+            if incremental_save and artifact_mgr is not None:
+                try:
+                    layout_debug_local = {
+                        'raw': layout_raw or [],
+                        'pixel': layout_pixel or [],
+                        'postProcessed': layout_post or [],
+                        'imageWidth': img_width,
+                        'imageHeight': img_height,
+                        'rawText': locals().get('layout_raw_text', '')
+                    }
+                    artifact_mgr.save_layout_artifacts(layout_debug_local, image_bytes)
+                    artifact_mgr.save_icon_crops(layout_post or [], image_bytes)
+                except Exception:
+                    pass
         else:
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] ⊘ SKIPPED: Layout detection (disabled in config)")
             layout_raw = None
@@ -348,6 +373,13 @@ async def generate_widget_full(
         # ========== Stage 1: Base Prompt ==========
         base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
 
+        # Incremental save: prompt stage 1
+        if incremental_save and artifact_mgr is not None:
+            try:
+                artifact_mgr.save_prompts({'stage1_base': base_prompt})
+            except Exception:
+                pass
+
         # Fill in aspect ratio in base prompt
         if "[ASPECT_RATIO]" in base_prompt:
             base_prompt = base_prompt.replace("[ASPECT_RATIO]", str(round(aspect_ratio, 3)))
@@ -462,6 +494,25 @@ async def generate_widget_full(
         if "[AVAILABLE_COMPONENTS]" in prompt_final:
             prompt_final = prompt_final.replace("[AVAILABLE_COMPONENTS]", components_list)
 
+        # Incremental save: prompt evolution snapshots
+        if incremental_save and artifact_mgr is not None:
+            try:
+                snapshot = {}
+                if 'prompt_with_layout' in locals():
+                    snapshot['stage2_withLayout'] = locals().get('prompt_with_layout')
+                if 'prompt_with_colors' in locals():
+                    snapshot['stage3_withColors'] = locals().get('prompt_with_colors')
+                if 'prompt_with_graphs' in locals():
+                    snapshot['stage4_withGraphs'] = locals().get('prompt_with_graphs')
+                if 'prompt_with_icons' in locals():
+                    snapshot['stage5_withIcons'] = locals().get('prompt_with_icons')
+                if 'prompt_with_applogos' in locals():
+                    snapshot['stage5_5_withApplogos'] = locals().get('prompt_with_applogos')
+                snapshot['stage6_final'] = prompt_final
+                artifact_mgr.save_prompts(snapshot)
+            except Exception:
+                pass
+
         # Update stage: dsl
         if stage_tracker:
             stage_tracker.set_stage(image_id, "dsl")
@@ -515,6 +566,13 @@ async def generate_widget_full(
             pass
 
         per_icon_details, global_merged = normalize_icon_details(per_icon_details)
+
+        # Incremental save: DSL file
+        if incremental_save and artifact_mgr is not None and isinstance(widget_spec, dict):
+            try:
+                artifact_mgr.save_widget_dsl(widget_spec)
+            except Exception:
+                pass
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [DSL Generation] Completed in {dsl_duration:.2f}s")
 
@@ -635,6 +693,7 @@ async def generate_single_widget(
     stage_tracker = None,
     run_log_path: Optional[Path] = None,
     integrated_render: bool = False,
+    incremental_save: bool = True,
 ) -> Tuple[bool, Optional[Path], Optional[str]]:
     """
     Generate a single widget with complete artifacts and debug information.
@@ -723,6 +782,8 @@ async def generate_single_widget(
             icon_lib_names=icon_lib_names,
             stage_tracker=stage_tracker,
             image_id=widget_id,
+            artifact_mgr=artifact_mgr,
+            incremental_save=incremental_save,
         )
 
         # Check if generation was successful
@@ -740,33 +801,34 @@ async def generate_single_widget(
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] DSL generation finished")
 
-        # Update stage: artifacts (saving visualizations and intermediate files)
-        if stage_tracker:
+        # Update stage: artifacts (only if not saving incrementally)
+        if stage_tracker and not incremental_save:
             stage_tracker.set_stage(widget_id, "artifacts")
 
         log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Generating visualizations...")
 
-        # Save all artifacts using ArtifactManager
-        preprocessed_bytes = preprocessed_info.get('bytes') if preprocessed_info else None
-        if preprocessed_bytes:
-            artifact_mgr.save_preprocessed_image(preprocessed_bytes)
+        # Save all artifacts (only if not already saved incrementally)
+        if not incremental_save:
+            preprocessed_bytes = preprocessed_info.get('bytes') if preprocessed_info else None
+            if preprocessed_bytes:
+                artifact_mgr.save_preprocessed_image(preprocessed_bytes)
 
-        # Save layout artifacts
-        visualization_image = preprocessed_bytes if preprocessed_bytes else image_data
-        artifact_mgr.save_layout_artifacts(layout_debug, visualization_image)
+            # Save layout artifacts
+            visualization_image = preprocessed_bytes if preprocessed_bytes else image_data
+            artifact_mgr.save_layout_artifacts(layout_debug, visualization_image)
 
-        # Save icon crops
-        layout_detections = (layout_debug.get('postProcessed') or []) if layout_debug else []
-        artifact_mgr.save_icon_crops(layout_detections, visualization_image)
+            # Save icon crops
+            layout_detections = (layout_debug.get('postProcessed') or []) if layout_debug else []
+            artifact_mgr.save_icon_crops(layout_detections, visualization_image)
 
-        # Save retrieval artifacts
-        artifact_mgr.save_retrieval_artifacts(icon_debug)
+            # Save retrieval artifacts
+            artifact_mgr.save_retrieval_artifacts(icon_debug)
 
-        # Save prompts
-        artifact_mgr.save_prompts(prompt_debug)
+            # Save prompts
+            artifact_mgr.save_prompts(prompt_debug)
 
-        # Save widget DSL
-        artifact_mgr.save_widget_dsl(widget_dsl)
+            # Save widget DSL
+            artifact_mgr.save_widget_dsl(widget_dsl)
 
         end_time = datetime.now()
 
