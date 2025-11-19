@@ -830,6 +830,10 @@ async def generate_single_widget(
             # Save widget DSL
             artifact_mgr.save_widget_dsl(widget_dsl)
 
+        # In incremental mode, also save retrieval artifacts so 3-retrieval is populated
+        if incremental_save:
+            artifact_mgr.save_retrieval_artifacts(icon_debug)
+
         end_time = datetime.now()
 
         log_to_file(f"[{end_time.strftime('%Y-%m-%d %H:%M:%S')}] [{widget_id}] Visualizations saved")

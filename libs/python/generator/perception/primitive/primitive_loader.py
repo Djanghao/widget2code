@@ -101,22 +101,79 @@ def build_primitives_definitions(detected_primitives: Set[str]) -> str:
     return "\n\n".join(definitions)
 
 
+def build_fallback_primitives_definitions(detected_primitives: Set[str]) -> str:
+    """
+    Build fallback component definitions for primitives NOT detected.
+
+    This provides a safety net - if layout detection missed a component type,
+    the VLM can still use it if it sees it in the image.
+
+    Args:
+        detected_primitives: Set of primitive component types already detected
+
+    Returns:
+        Combined string with definitions for non-detected primitives
+    """
+    # All supported primitive types
+    all_primitive_types = {
+        "Text", "Icon", "Button", "Image", "Checkbox",
+        "MapImage", "AppLogo", "Divider", "Indicator",
+        "Slider", "Switch"
+    }
+
+    # Find primitives that were NOT detected
+    fallback_types = all_primitive_types - detected_primitives
+
+    if not fallback_types:
+        return ""
+
+    # Sort for consistent ordering
+    sorted_types = sorted(fallback_types)
+
+    definitions = []
+    for primitive_type in sorted_types:
+        prompt = load_primitive_prompt(primitive_type)
+        if prompt:
+            definitions.append(prompt)
+
+    if not definitions:
+        return ""
+
+    # Join with double newline for separation
+    return "\n\n".join(definitions)
+
+
 def inject_primitives_to_prompt(base_prompt: str, detected_primitives: Set[str]) -> str:
     """
     Inject primitive component definitions into the base prompt.
 
+    Injects both detected primitives (MUST USE) and fallback primitives (optional).
+
     Args:
-        base_prompt: Base prompt template with [PRIMITIVE_DEFINITIONS] placeholder
+        base_prompt: Base prompt template with [PRIMITIVE_DEFINITIONS] and [FALLBACK_PRIMITIVES] placeholders
         detected_primitives: Set of detected primitive types
 
     Returns:
-        Prompt with primitive definitions injected or placeholder removed
+        Prompt with primitive definitions injected or placeholders removed
     """
+    # Build detected primitives section
     primitives_text = build_primitives_definitions(detected_primitives)
 
+    # Build fallback primitives section (for components NOT detected)
+    fallback_text = build_fallback_primitives_definitions(detected_primitives)
+
+    # Replace placeholders
+    result = base_prompt
+
     if primitives_text:
-        # Replace placeholder with actual definitions
-        return base_prompt.replace("[PRIMITIVE_DEFINITIONS]", primitives_text)
+        result = result.replace("[PRIMITIVE_DEFINITIONS]", primitives_text)
     else:
-        # Remove placeholder if no primitives detected
-        return base_prompt.replace("[PRIMITIVE_DEFINITIONS]", "")
+        result = result.replace("[PRIMITIVE_DEFINITIONS]", "")
+
+    if fallback_text:
+        result = result.replace("[FALLBACK_PRIMITIVES]", fallback_text)
+    else:
+        # If no fallback needed (all primitives detected), remove the entire fallback section
+        result = result.replace("[FALLBACK_PRIMITIVES]", "")
+
+    return result

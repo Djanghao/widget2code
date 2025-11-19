@@ -26,6 +26,12 @@ Props: `backgroundColor` (hex), `borderRadius` (number), `padding` (number), `as
 
 [PRIMITIVE_DEFINITIONS]
 
+## Optional Components (use if visible in image but not detected above)
+
+**FALLBACK**: If you see components in the image that were NOT listed in "Detected Components" above, you may use the following components as a fallback. Only use these if the visual element exists in the image but was missed by layout detection.
+
+[FALLBACK_PRIMITIVES]
+
 ### Color Palette
 [COLOR_PALETTE]
 
@@ -104,15 +110,16 @@ Your output must be valid JSON following this structure:
 ## Guidelines
 
 1. **Detected Components (CRITICAL)**: You MUST use the components defined in "Detected Components (MUST USE)" section above. These were detected from layout grounding and represent the actual UI elements in the image. Do NOT omit any detected component types.
-2. **Layout**: Identify ALL elements and structure (rows/columns). Use containers for grouping, leaves for components.
-3. **Colors**: Hex format (#RRGGBB). Ensure good contrast.
-4. **Spacing (CRITICAL)**:
+2. **Optional Components (Fallback)**: If you see UI elements in the image that were NOT detected above (e.g., an icon or divider that was missed), you MAY use components from "Optional Components" section as a fallback. Only use fallback components if you can clearly see them in the image.
+3. **Layout**: Identify ALL elements and structure (rows/columns). Use containers for grouping, leaves for components.
+4. **Colors**: Hex format (#RRGGBB). Ensure good contrast.
+5. **Spacing (CRITICAL)**:
    - Replicate exact spacing from image
    - `gap`: spacing between children, `padding`: internal spacing
    - **iOS Standards**: Widget padding=16, Container padding=16 (standard) or 11 (tight), Gap values=4/6/8/11/16/20
-5. **Text**: Extract exact text, preserve capitalization
-6. **Alignment**: `alignMain` (start/end/center/between/around), `alignCross` (start/end/center/stretch)
-7. **Visual Accuracy**: Match font sizes, weights, colors, icon sizes, visual hierarchy
+6. **Text**: Extract exact text, preserve capitalization
+7. **Alignment**: `alignMain` (start/end/center/between/around), `alignCross` (start/end/center/stretch)
+8. **Visual Accuracy**: Match font sizes, weights, colors, icon sizes, visual hierarchy
 
 ## Example
 
@@ -396,6 +403,7 @@ Output:
 ## Important Notes
 
 - **CRITICAL**: You MUST use ALL component types listed in "Detected Components (MUST USE)" section. These components were detected in the image and must appear in your DSL output.
+- **FALLBACK**: If you see components in the image that are missing from "Detected Components", you may use components from "Optional Components (use if visible)" section.
 - Output **only** valid JSON, no explanations or markdown
 - Ensure all brackets, braces, and quotes are balanced
 - Use exact icon names from [AVAILABLE_ICON_NAMES]
