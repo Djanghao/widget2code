@@ -12,13 +12,18 @@ fi
 unset TRANSFORMERS_CACHE
 
 if [ $# -lt 2 ]; then
-    echo "Usage: $0 <input-dir> <output-dir> [concurrency]"
+    echo "Usage: $0 <input-dir> <output-dir> [concurrency] [--force]"
     echo "Example: $0 ./images ./generated 5"
+    echo "Example: $0 ./images ./generated 5 --force"
+    echo ""
+    echo "Options:"
+    echo "  --force    Force reprocess all images, even if already generated"
     exit 1
 fi
 
 INPUT_DIR=$1
 OUTPUT_DIR=$2
+FORCE_FLAG=""
 
 # Validate input directory exists
 if [ ! -d "$INPUT_DIR" ]; then
@@ -26,21 +31,41 @@ if [ ! -d "$INPUT_DIR" ]; then
     exit 1
 fi
 
-# Concurrency: command line > .env > error
-if [ -n "$3" ]; then
-    CONCURRENCY=$3
-    echo "📊 Using concurrency from command line: $CONCURRENCY"
-elif [ -n "$CONCURRENCY" ]; then
-    echo "📊 Using concurrency from .env: $CONCURRENCY"
-else
-    echo "❌ ERROR: CONCURRENCY not specified"
-    echo ""
-    echo "Please either:"
-    echo "  1. Set CONCURRENCY in .env file"
-    echo "  2. Or provide as third argument: $0 <input-dir> <output-dir> <concurrency>"
-    echo ""
-    echo "Example: $0 ./images ./output 200"
-    exit 1
+# Parse remaining arguments for concurrency and --force flag
+shift 2  # Remove first two arguments (input and output dirs)
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --force)
+            FORCE_FLAG="--force"
+            echo "🔄 Force reprocessing enabled - will regenerate all images"
+            shift
+            ;;
+        *)
+            # Assume it's concurrency if it's a number
+            if [[ "$1" =~ ^[0-9]+$ ]]; then
+                CONCURRENCY=$1
+                echo "📊 Using concurrency from command line: $CONCURRENCY"
+            fi
+            shift
+            ;;
+    esac
+done
+
+# Check concurrency: command line > .env > error
+if [ -z "$CONCURRENCY" ]; then
+    if [ -n "${CONCURRENCY:-}" ]; then
+        echo "📊 Using concurrency from .env: $CONCURRENCY"
+    else
+        echo "❌ ERROR: CONCURRENCY not specified"
+        echo ""
+        echo "Please either:"
+        echo "  1. Set CONCURRENCY in .env file"
+        echo "  2. Or provide as third argument: $0 <input-dir> <output-dir> <concurrency>"
+        echo ""
+        echo "Example: $0 ./images ./output 200"
+        echo "Example: $0 ./images ./output 200 --force"
+        exit 1
+    fi
 fi
 
 # Check if ENABLE_MODEL_CACHE is true
@@ -88,4 +113,4 @@ fi
 
 source apps/api/.venv/bin/activate
 
-generate-widget-batch "$INPUT_DIR" "$OUTPUT_DIR" --concurrency "$CONCURRENCY"
+generate-widget-batch "$INPUT_DIR" "$OUTPUT_DIR" --concurrency "$CONCURRENCY" $FORCE_FLAG

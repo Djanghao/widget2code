@@ -105,6 +105,11 @@ Examples:
         default=None,
         help='API key (ignored, uses DEFAULT_API_KEY from .env)'
     )
+    parser.add_argument(
+        '--force',
+        action='store_true',
+        help='Force reprocess all images, even if already generated'
+    )
 
     args = parser.parse_args()
 
@@ -129,6 +134,7 @@ Examples:
             api_key=args.api_key,
             model=args.model,
             icon_lib_names=args.icon_libs,
+            force=args.force,
         ))
     except KeyboardInterrupt:
         print("\n\nInterrupted by user")

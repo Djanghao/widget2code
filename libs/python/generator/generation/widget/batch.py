@@ -238,12 +238,14 @@ class BatchGenerator:
         api_key: str = None,
         model: str = None,
         icon_lib_names: str = '["sf", "lucide"]',
+        force: bool = False,
     ):
         self.input_dir = input_dir
         self.output_dir = output_dir
         self.concurrency = concurrency
         self.config = GeneratorConfig.from_env()
         self.icon_lib_names = icon_lib_names
+        self.force = force
 
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -434,51 +436,58 @@ class BatchGenerator:
             debug_file = widget_dir / "log" / "debug.json"
             dsl_file = widget_dir / "artifacts" / "4-dsl" / "widget.json"
 
-            should_process = True
-            should_clean = False
+            # If force flag is set, always process and clean up existing artifacts
+            if self.force:
+                should_process = True
+                should_clean = widget_dir.exists()
+                if should_clean:
+                    log_to_file(f"[Force] {image_path.name} - force reprocessing, cleaning up existing artifacts")
+            else:
+                should_process = True
+                should_clean = False
 
-            # Check if both debug.json shows success AND DSL file actually exists and is valid
-            if debug_file.exists():
-                try:
-                    with open(debug_file, 'r') as f:
-                        debug_data = json.load(f)
-                        execution_status = debug_data.get('execution', {}).get('status', '')
+                # Check if both debug.json shows success AND DSL file actually exists and is valid
+                if debug_file.exists():
+                    try:
+                        with open(debug_file, 'r') as f:
+                            debug_data = json.load(f)
+                            execution_status = debug_data.get('execution', {}).get('status', '')
 
-                        if execution_status == 'success' and dsl_file.exists():
-                            # Verify DSL file is valid and not empty
-                            try:
-                                # Check file size first
-                                dsl_file_size = dsl_file.stat().st_size
-                                if dsl_file_size == 0:
+                            if execution_status == 'success' and dsl_file.exists():
+                                # Verify DSL file is valid and not empty
+                                try:
+                                    # Check file size first
+                                    dsl_file_size = dsl_file.stat().st_size
+                                    if dsl_file_size == 0:
+                                        should_clean = True
+                                        log_to_file(f"[Reprocess] {image_path.name} - DSL file is empty (0 bytes), cleaning up")
+                                    else:
+                                        with open(dsl_file, 'r') as dsl_f:
+                                            dsl_content = json.load(dsl_f)
+                                            # Check if DSL has meaningful content (not just {}, [], or null)
+                                            if dsl_content and isinstance(dsl_content, dict) and len(dsl_content) > 0:
+                                                should_process = False
+                                                log_to_file(f"[Skip] {image_path.name} - already generated")
+                                            else:
+                                                should_clean = True
+                                                log_to_file(f"[Reprocess] {image_path.name} - DSL file has no meaningful content, cleaning up")
+                                except (json.JSONDecodeError, Exception) as dsl_e:
                                     should_clean = True
-                                    log_to_file(f"[Reprocess] {image_path.name} - DSL file is empty (0 bytes), cleaning up")
-                                else:
-                                    with open(dsl_file, 'r') as dsl_f:
-                                        dsl_content = json.load(dsl_f)
-                                        # Check if DSL has meaningful content (not just {}, [], or null)
-                                        if dsl_content and isinstance(dsl_content, dict) and len(dsl_content) > 0:
-                                            should_process = False
-                                            log_to_file(f"[Skip] {image_path.name} - already generated")
-                                        else:
-                                            should_clean = True
-                                            log_to_file(f"[Reprocess] {image_path.name} - DSL file has no meaningful content, cleaning up")
-                            except (json.JSONDecodeError, Exception) as dsl_e:
-                                should_clean = True
-                                log_to_file(f"[Reprocess] {image_path.name} - DSL file is corrupted or unreadable, cleaning up")
-                        else:
-                            # Failed or DSL missing - clean up and reprocess
-                            should_clean = True
-                            if execution_status == 'success' and not dsl_file.exists():
-                                log_to_file(f"[Reprocess] {image_path.name} - status success but DSL file missing, cleaning up")
+                                    log_to_file(f"[Reprocess] {image_path.name} - DSL file is corrupted or unreadable, cleaning up")
                             else:
-                                log_to_file(f"[Reprocess] {image_path.name} - status is '{execution_status}', cleaning up")
-                except Exception as e:
-                    log_to_file(f"[Warning] Failed to read debug.json for {image_path.name}, will clean up and process")
+                                # Failed or DSL missing - clean up and reprocess
+                                should_clean = True
+                                if execution_status == 'success' and not dsl_file.exists():
+                                    log_to_file(f"[Reprocess] {image_path.name} - status success but DSL file missing, cleaning up")
+                                else:
+                                    log_to_file(f"[Reprocess] {image_path.name} - status is '{execution_status}', cleaning up")
+                    except Exception as e:
+                        log_to_file(f"[Warning] Failed to read debug.json for {image_path.name}, will clean up and process")
+                        should_clean = True
+                elif widget_dir.exists():
+                    # Widget dir exists but no debug.json - something went wrong, clean up
                     should_clean = True
-            elif widget_dir.exists():
-                # Widget dir exists but no debug.json - something went wrong, clean up
-                should_clean = True
-                log_to_file(f"[Reprocess] {image_path.name} - incomplete output, cleaning up")
+                    log_to_file(f"[Reprocess] {image_path.name} - incomplete output, cleaning up")
 
             # Clean up if needed
             if should_clean and widget_dir.exists():
@@ -853,6 +862,7 @@ async def batch_generate(
     api_key: str = None,
     model: str = None,
     icon_lib_names: str = '["sf", "lucide"]',
+    force: bool = False,
 ):
     """
     Batch generate WidgetDSL from multiple images.
@@ -864,6 +874,7 @@ async def batch_generate(
         api_key: API key (ignored, uses DEFAULT_API_KEY from .env)
         model: Model name (ignored, uses DEFAULT_MODEL from .env)
         icon_lib_names: Icon libraries as JSON array string (default: '["sf", "lucide"]')
+        force: Force reprocess all images, even if already generated (default: False)
     """
     generator = BatchGenerator(
         input_dir=Path(input_dir),
@@ -872,6 +883,7 @@ async def batch_generate(
         api_key=api_key,
         model=model,
         icon_lib_names=icon_lib_names,
+        force=force,
     )
 
     await generator.run()
