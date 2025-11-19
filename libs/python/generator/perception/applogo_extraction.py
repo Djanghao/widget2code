@@ -179,8 +179,8 @@ def format_applogo_prompt_injection(
     lines.extend([
         "### Selection Rules for AppLogo:",
         "1. For each detected applogo, select the BEST matching icon from its candidate list",
-        "2. Use the `icon` prop with the full icon name (e.g., `\"icon\": \"si:SiGoogle\"`)",
-        "3. If no good match is found, use the `name` prop with a descriptive text (e.g., `\"name\": \"MyApp\"`)",
+        "2. Use the `name` prop with the full icon name (e.g., `\"name\": \"si:SiGoogle\"`) and optionally `color` to set glyph color",
+        "3. If no good match is found, use a fallback text-based logo (e.g., `\"name\": \"MyApp\"`)",
         "4. AppLogo candidates are from brand/company icon libraries (primarily Simple Icons)",
         "",
     ])

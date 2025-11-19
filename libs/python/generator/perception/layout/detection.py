@@ -68,7 +68,7 @@ Do **not** mark inner text, dividers, or gridlines separately.
 | Class | Example tokens |
 |-------|----------------|
 | Icon | type:heart,color:#FF3B30 |
-| AppLogo | brand:Google,bg:#FFFFFF |
+| AppLogo | brand:Google,color:#FFFFFF |
 | Text | text:"Label",color:#FFFFFF,weight:600 |
 | Image | src:unsplash,shape:rect,w:120,h:80 |
 | Button | shape:rect,bg:#007AFF,r:12,pad:8 |
@@ -104,7 +104,7 @@ Do **not** mark inner text, dividers, or gridlines separately.
 [
   {"bbox":[12,16,280,180],"label":"Container","description":"shape:rounded,pad:16,bg:#1C1C1E,r:20"},
   {"bbox":[24,28,64,68],"label":"Icon","description":"type:heart,color:#FF3B30"},
-  {"bbox":[72,28,112,68],"label":"AppLogo","description":"brand:Chrome,bg:#FFFFFF"},
+  {"bbox":[72,28,112,68],"label":"AppLogo","description":"brand:Chrome,color:#FFFFFF"},
   {"bbox":[120,32,260,50],"label":"Text","description":"text:'Skills Assessment',color:#FFFFFF,weight:600"},
   {"bbox":[24,80,160,120],"label":"Image","description":"src:unsplash,shape:rect,w:136,h:40"},
   {"bbox":[24,140,84,200],"label":"Button","description":"shape:circle,bg:#007AFF,r:30,pad:10"},

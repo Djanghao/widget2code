@@ -96,15 +96,15 @@ export function compileWidgetDSLToJSX(widgetDSL) {
         );
       }
 
-      const isIcon = componentName === "Icon";
-      const iconName = isIcon ? props?.name : null;
+      const isIconLike = componentName === "Icon" || componentName === "AppLogo";
+      const iconName = isIconLike ? props?.name : null;
       const iconData = iconName ? parseIconName(iconName) : { isIcon: false };
 
       // Icons are now handled by the Icon primitive component
       // No need to generate direct icon imports - Icon component handles lazy loading
       if (iconData.isIcon) {
-        // Just use the Icon primitive with the name prop (e.g., "lu:LuHeart")
-        imports.add(`import { Icon } from '@widget-factory/primitives';`);
+        // Use Icon/AppLogo primitive with the name prop (e.g., "si:SiYoutube")
+        imports.add(`import { ${componentName} } from '@widget-factory/primitives';`);
       } else {
         imports.add(
           `import { ${componentName} } from '@widget-factory/primitives';`
