@@ -41,6 +41,7 @@ def main():
             output_dir=output_dir,
             config=config,
             icon_lib_names=os.getenv('ICON_LIB_NAMES', '["sf", "lucide"]'),
+            applogo_lib_names=os.getenv('APPLOGO_LIB_NAMES', '["si"]'),
         ))
 
         if success:

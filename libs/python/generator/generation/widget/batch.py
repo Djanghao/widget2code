@@ -609,6 +609,7 @@ class BatchGenerator:
             output_dir=effective_output_dir,
             config=self.config,
             icon_lib_names=self.icon_lib_names,
+            applogo_lib_names=os.getenv('APPLOGO_LIB_NAMES', '["si"]'),
             stage_tracker=self.stage_tracker,
             run_log_path=self.output_dir / "run.log",
             integrated_render=self.integrated_render,

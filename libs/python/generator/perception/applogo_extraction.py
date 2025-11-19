@@ -95,14 +95,17 @@ async def run_applogo_detection_pipeline(
                         timeout=timeout
                     )
 
-                    # Collect unique applogo candidates
+                    # Collect unique applogo candidates from svg_names (consistent with icon pipeline)
+                    ordered_unique = []
                     seen = set()
-                    for detail in per_applogo_details:
-                        for candidate in detail.get("topCandidates", []):
-                            icon_name = candidate.get("icon")
-                            if icon_name and icon_name not in seen:
-                                applogo_candidates.append(icon_name)
-                                seen.add(icon_name)
+                    for n in svg_names:
+                        s = str(n).strip()
+                        if not s:
+                            continue
+                        if s not in seen:
+                            seen.add(s)
+                            ordered_unique.append(s)
+                    applogo_candidates = ordered_unique
 
                     log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] AppLogo retrieval: {len(per_applogo_details)} applogos processed, {len(applogo_candidates)} unique candidates")
 
@@ -165,8 +168,8 @@ def format_applogo_prompt_injection(
         if top_candidates:
             lines.append(f"  - Candidates (top {len(top_candidates)}):")
             for rank, candidate in enumerate(top_candidates, 1):
-                icon_name = candidate.get("icon", "")
-                score = candidate.get("score", 0.0)
+                icon_name = candidate.get("name") or candidate.get("component_id") or ""
+                score = candidate.get("score_final", 0.0)
                 lines.append(f"    {rank}. `{icon_name}` (score: {score:.3f})")
         else:
             lines.append(f"  - No candidates retrieved")

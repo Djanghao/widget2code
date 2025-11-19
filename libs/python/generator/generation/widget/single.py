@@ -159,6 +159,7 @@ async def generate_widget_full(
                     }
                     artifact_mgr.save_layout_artifacts(layout_debug_local, image_bytes)
                     artifact_mgr.save_icon_crops(layout_post or [], image_bytes)
+                    artifact_mgr.save_applogo_crops(layout_post or [], image_bytes)
                 except Exception:
                     pass
         else:
@@ -690,6 +691,7 @@ async def generate_single_widget(
     output_dir: Path | str,
     config: Optional[GeneratorConfig] = None,
     icon_lib_names: str = '["sf", "lucide"]',
+    applogo_lib_names: Optional[str] = None,
     stage_tracker = None,
     run_log_path: Optional[Path] = None,
     integrated_render: bool = False,
@@ -780,6 +782,7 @@ async def generate_single_widget(
             retrieval_alpha=config.retrieval_alpha,
             config=config,
             icon_lib_names=icon_lib_names,
+            applogo_lib_names=(applogo_lib_names if applogo_lib_names is not None else os.getenv('APPLOGO_LIB_NAMES', '["si"]')),
             stage_tracker=stage_tracker,
             image_id=widget_id,
             artifact_mgr=artifact_mgr,
@@ -820,9 +823,11 @@ async def generate_single_widget(
             # Save icon crops
             layout_detections = (layout_debug.get('postProcessed') or []) if layout_debug else []
             artifact_mgr.save_icon_crops(layout_detections, visualization_image)
+            artifact_mgr.save_applogo_crops(layout_detections, visualization_image)
 
             # Save retrieval artifacts
             artifact_mgr.save_retrieval_artifacts(icon_debug)
+            artifact_mgr.save_applogo_retrieval_artifacts(result.get('applogoDebugInfo') if isinstance(result, dict) else None)
 
             # Save prompts
             artifact_mgr.save_prompts(prompt_debug)
@@ -833,6 +838,7 @@ async def generate_single_widget(
         # In incremental mode, also save retrieval artifacts so 3-retrieval is populated
         if incremental_save:
             artifact_mgr.save_retrieval_artifacts(icon_debug)
+            artifact_mgr.save_applogo_retrieval_artifacts(result.get('applogoDebugInfo') if isinstance(result, dict) else None)
 
         end_time = datetime.now()
 
@@ -847,6 +853,7 @@ async def generate_single_widget(
             image_dims=image_dims,
             result=result,
             icon_lib_names=icon_lib_names,
+            applogo_lib_names=(applogo_lib_names if applogo_lib_names is not None else os.getenv('APPLOGO_LIB_NAMES', '["si"]')),
             error=None
         )
         artifact_mgr.save_debug_json(debug_data)
@@ -878,6 +885,7 @@ async def generate_single_widget(
             image_dims=None,
             result={},
             icon_lib_names=icon_lib_names,
+            applogo_lib_names=(applogo_lib_names if applogo_lib_names is not None else os.getenv('APPLOGO_LIB_NAMES', '["si"]')),
             error=e
         )
         artifact_mgr.save_debug_json(debug_data)

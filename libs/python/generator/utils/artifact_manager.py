@@ -38,6 +38,7 @@ class ArtifactManager:
         self.preprocess_dir = self.artifacts_dir / "1-preprocess"
         self.layout_dir = self.artifacts_dir / "2-layout"
         self.layout_crops_dir = self.layout_dir / "icon-crops"
+        self.layout_applogo_crops_dir = self.layout_dir / "applogo-crops"
         self.retrieval_dir = self.artifacts_dir / "3-retrieval"
         self.dsl_dir = self.artifacts_dir / "4-dsl"
 
@@ -60,6 +61,7 @@ class ArtifactManager:
             self.layout_dir.mkdir(parents=True, exist_ok=True)
             if self.config.enable_icon_pipeline:
                 self.layout_crops_dir.mkdir(parents=True, exist_ok=True)
+                self.layout_applogo_crops_dir.mkdir(parents=True, exist_ok=True)
 
         if self.config.enable_icon_pipeline:
             self.retrieval_dir.mkdir(parents=True, exist_ok=True)
@@ -194,6 +196,38 @@ class ArtifactManager:
                     from .logger import log_to_file
                     log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{self.widget_id}] Warning: Failed to crop icon {idx+1}: {str(e)}")
 
+    def save_applogo_crops(
+        self,
+        layout_detections: List[Dict[str, Any]],
+        image_bytes: bytes
+    ):
+        """
+        Crop and save applogo regions from layout detections.
+
+        Args:
+            layout_detections: Post-processed layout detections
+            image_bytes: Preprocessed image to crop from
+        """
+        if not self.config.enable_layout_pipeline or not self.config.enable_icon_pipeline:
+            return
+
+        if not layout_detections:
+            return
+
+        # Filter applogo detections
+        applogo_detections = [d for d in layout_detections if d.get('label', '').lower() == 'applogo']
+
+        for idx, det in enumerate(applogo_detections):
+            bbox = det.get('bbox')
+            if bbox and len(bbox) == 4:
+                try:
+                    crop_bytes = crop_icon_region(image_bytes, bbox)
+                    with open(self.layout_applogo_crops_dir / f"applogo-{idx+1}.png", 'wb') as f:
+                        f.write(crop_bytes)
+                except Exception as e:
+                    from .logger import log_to_file
+                    log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{self.widget_id}] Warning: Failed to crop applogo {idx+1}: {str(e)}")
+
     def save_retrieval_artifacts(self, icon_debug: Optional[Dict[str, Any]]):
         """
         Save icon retrieval SVG artifacts.
@@ -218,7 +252,36 @@ class ArtifactManager:
                     icon_index=icon_idx,
                     output_dir=self.retrieval_dir,
                     svg_source_dirs=svg_source_dirs,
-                    top_n=10
+                    top_n=10,
+                    prefix="icon"
+                )
+
+    def save_applogo_retrieval_artifacts(self, applogo_debug: Optional[Dict[str, Any]]):
+        """
+        Save applogo retrieval SVG artifacts.
+
+        Args:
+            applogo_debug: AppLogo debug information from generate_widget_full
+        """
+        if not self.config.enable_icon_pipeline or not applogo_debug:
+            return
+
+        svg_source_dirs = [
+            Path(__file__).parents[4] / "libs" / "js" / "icons" / "svg"
+        ]
+
+        per_applogo = (applogo_debug.get('retrieval') or {}).get('perApplogo', [])
+        for app_data in per_applogo:
+            idx = app_data.get('index', 0)
+            top_candidates = app_data.get('topCandidates') or []
+            if top_candidates:
+                save_retrieval_svgs(
+                    retrieval_results=top_candidates,
+                    icon_index=idx,
+                    output_dir=self.retrieval_dir,
+                    svg_source_dirs=svg_source_dirs,
+                    top_n=10,
+                    prefix="applogo"
                 )
 
     def save_prompts(self, prompt_debug: Optional[Dict[str, Any]]):
@@ -269,6 +332,7 @@ class ArtifactManager:
         image_dims: Optional[Dict[str, int]],
         result: Dict[str, Any],
         icon_lib_names: str,
+        applogo_lib_names: Optional[str] = None,
         error: Optional[Exception] = None
     ) -> Dict[str, Any]:
         """
@@ -292,6 +356,12 @@ class ArtifactManager:
             icon_libs = json_loads(icon_lib_names)
         except:
             icon_libs = ["sf", "lucide"]
+
+        try:
+            from json import loads as json_loads
+            applogo_libs = json_loads(applogo_lib_names) if applogo_lib_names else None
+        except:
+            applogo_libs = None
 
         try:
             from pathlib import Path as PathLib
@@ -327,6 +397,7 @@ class ArtifactManager:
                 "model": self.config.default_model,
                 "timeout": self.config.default_timeout,
                 "iconLibraries": icon_libs,
+                "applogoLibraries": applogo_libs,
                 "retrieval": {
                     "topK": self.config.retrieval_topk,
                     "topM": self.config.retrieval_topm,
@@ -451,6 +522,17 @@ class ArtifactManager:
                     f"artifacts/3-retrieval/icon-{icon_idx+1}/{f.name}" for f in svg_files
                 ]
 
+        # Include applogo retrieval files
+        per_applogo = (applogo_debug.get('retrieval') or {}).get('perApplogo', []) if applogo_debug else []
+        for app_data in per_applogo:
+            app_idx = app_data.get('index', 0)
+            app_dir = self.retrieval_dir / f"applogo-{app_idx+1}"
+            if app_dir.exists():
+                svg_files = sorted(app_dir.glob("*.svg"))
+                retrieval_files[f"applogo-{app_idx+1}"] = [
+                    f"artifacts/3-retrieval/applogo-{app_idx+1}/{f.name}" for f in svg_files
+                ]
+
         debug_data["files"] = {
             "input": "input.png",
             "artifacts": {
@@ -461,7 +543,12 @@ class ArtifactManager:
                 "2_layout": {
                     "data": "artifacts/2-layout/layout-data.json" if self.config.enable_layout_pipeline else None,
                     "visualization": "artifacts/2-layout/layout-visualization.png" if (self.config.enable_layout_pipeline and layout_detections) else None,
-                    "iconCrops": icon_crop_files if (self.config.enable_layout_pipeline and self.config.enable_icon_pipeline) else []
+                    "iconCrops": icon_crop_files if (self.config.enable_layout_pipeline and self.config.enable_icon_pipeline) else [],
+                    "applogoCrops": [
+                        f"artifacts/2-layout/applogo-crops/applogo-{i+1}.png"
+                        for i in range(len([d for d in layout_detections if d.get('label','').lower() == 'applogo']))
+                        if (self.layout_applogo_crops_dir / f"applogo-{i+1}.png").exists()
+                    ] if (self.config.enable_layout_pipeline and self.config.enable_icon_pipeline) else []
                 } if self.config.enable_layout_pipeline else None,
                 "3_retrieval": retrieval_files if self.config.enable_icon_pipeline else None,
                 "4_dsl": {

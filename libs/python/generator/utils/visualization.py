@@ -14,6 +14,7 @@ import shutil
 
 BBOX_COLORS = {
     'icon': '#FF3B30',
+    'applogo': '#FF3B30',
     'text': '#34C759',
     'graph': '#007AFF',
     'button': '#FF9500',
@@ -23,6 +24,7 @@ BBOX_COLORS = {
 
 BBOX_WIDTHS = {
     'icon': 3,
+    'applogo': 3,
     'text': 2,
     'graph': 3,
     'button': 2,
@@ -33,6 +35,7 @@ BBOX_WIDTHS = {
 # Solid line for icon and graph, dashed for others
 BBOX_STYLES = {
     'icon': 'solid',
+    'applogo': 'solid',
     'graph': 'solid',
     'image': 'solid',
     'text': 'dashed',
@@ -226,7 +229,8 @@ def save_retrieval_svgs(
     icon_index: int,
     output_dir: Path,
     svg_source_dirs: List[Path],
-    top_n: int = 10
+    top_n: int = 10,
+    prefix: str = "icon",
 ):
     """
     Save retrieval result SVG files to specified folder
@@ -244,7 +248,7 @@ def save_retrieval_svgs(
     import subprocess
     import os
 
-    icon_dir = output_dir / f"icon-{icon_index + 1}"
+    icon_dir = output_dir / f"{prefix}-{icon_index + 1}"
     icon_dir.mkdir(parents=True, exist_ok=True)
 
     render_script = Path(__file__).parents[4] / "libs" / "js" / "icons" / "src" / "render-icon.js"
