@@ -56,8 +56,8 @@ export function Sparkline({
 
   // Build container style
   const containerStyle = {
-    width: `${width}px`,
-    height: `${height}px`,
+    width: typeof width === "number" ? `${width}px` : width,
+    height: typeof height === "number" ? `${height}px` : height,
     display: "block",
     flexShrink: 0,
     ...style,
