@@ -1,0 +1,53 @@
+{
+  "widget": {
+    "backgroundColor": "#FFF8E1",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "props": { "style": { "border": "3px solid #000", "boxShadow": "8px 8px 0 #000", "backgroundColor": "#FFFFFF" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "padding": 8,
+          "props": { "style": { "borderBottom": "3px solid #000" } },
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 900, "color": "#000", "style": { "textTransform": "uppercase" } }, "content": "Segment Totals" },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:chart.bar.doc.horizontal.fill", "size": 18, "color": "#000" } }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "StackedBarChart",
+          "flex": 1,
+          "props": {
+            "data": [
+              [12, 10, 6, 4],
+              [10, 8, 6, 3],
+              [8, 6, 4, 2]
+            ],
+            "labels": ["Q1", "Q2", "Q3", "Q4"],
+            "colors": ["#000000", "#f59e0c", "#FFE08A"],
+            "theme": "light",
+            "orientation": "vertical",
+            "barBorderRadius": 0,
+            "showLabels": true,
+            "showValues": true,
+            "labelPosition": "inside",
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "borderWidth": 0,
+            "height": 180
+          }
+        }
+      ]
+    }
+  }
+}

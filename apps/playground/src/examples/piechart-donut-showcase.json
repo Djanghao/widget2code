@@ -50,7 +50,6 @@
                 "centerIconName": "check-circle",
                 "centerIconSize": 32,
                 "centerIconColor": "#10B981",
-                "centerValue": "75%",
                 "minWidth": 120,
                 "minHeight": 120
               }
@@ -73,7 +72,6 @@
                 "centerIconName": "clock",
                 "centerIconSize": 28,
                 "centerIconColor": "#3B82F6",
-                "centerValue": "45%",
                 "minWidth": 120,
                 "minHeight": 120
               }
@@ -125,8 +123,6 @@
                 "theme": "light",
                 "showLabels": false,
                 "showLegend": false,
-                "centerText": "Total",
-                "centerValue": "1,234",
                 "minWidth": 110,
                 "minHeight": 110
               }
@@ -181,7 +177,6 @@
                 "centerIconName": "users",
                 "centerIconSize": 28,
                 "centerIconColor": "#34C759",
-                "centerValue": "2,540",
                 "minWidth": 100,
                 "minHeight": 100
               }

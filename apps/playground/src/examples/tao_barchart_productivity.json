@@ -1,0 +1,145 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 22,
+    "padding": 20,
+    "aspectRatio": 1.5,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 18,
+                "fontWeight": 600,
+                "color": "#000000"
+              },
+              "content": "Productivity"
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 4,
+              "alignCross": "center",
+              "backgroundColor": "#E8F5E9",
+              "padding": 6,
+              "borderRadius": 100,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 12,
+                    "fontWeight": 600,
+                    "color": "#2E7D32"
+                  },
+                  "content": "↑ 3.5%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "stretch",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93",
+                    "fontWeight": 500
+                  },
+                  "content": "PEAK"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 20,
+                    "fontWeight": 600,
+                    "color": "#000000"
+                  },
+                  "content": "88%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93",
+                    "fontWeight": 500
+                  },
+                  "content": "AVERAGE"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 20,
+                    "fontWeight": 600,
+                    "color": "#000000"
+                  },
+                  "content": "75%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "flex": 1,
+          "props": {
+            "data": [72, 85, 68, 88, 76, 82],
+            "labels": ["W1", "W2", "W3", "W4", "W5", "W6"],
+            "colors": ["#34C759"],
+            "theme": "light",
+            "showXAxisLabels": true,
+            "showYAxisLabels": false,
+            "showXAxisTicks": false,
+            "showYAxisTicks": false,
+            "barBorderRadiusTop": 12,
+            "barBorderRadiusBottom": 0,
+            "height": "100%"
+          }
+        }
+      ]
+    }
+  }
+}

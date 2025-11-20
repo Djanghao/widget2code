@@ -1,0 +1,200 @@
+{
+  "widget": {
+    "backgroundColor": "#1E1E1E",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1.055,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 3,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 12,
+                "fontWeight": 700,
+                "color": "#60A5FA",
+                "letterSpacing": 1.5
+              },
+              "content": "SALES FUNNEL"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 22,
+                "fontWeight": 800,
+                "color": "#E0E7FF"
+              },
+              "content": "Conversion Performance"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "LineChart",
+          "flex": 1,
+          "props": {
+            "data": [
+ [2.1, 3.8, 2.9, 4.5, 3.2, 5.1, 4.4, 6.2, 5.1, 6.8, 5.5, 7.6],
+ [1.4, 2.8, 2.1, 3.9, 2.8, 4.9, 3.8, 5.5, 4.9, 5.2, 4.8, 6.02]
+],
+            "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "colors": ["#60A5FA", "#34D399"],
+            "seriesNames": ["Desktop", "Mobile"],
+            "theme": "dark",
+            "smooth": false,
+            "showArea": true,
+            "gradientIntensity": 0.32,
+            "gradientStartColor": "#93C5FD",
+            "gradientEndColor": "#001F3F",
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showXAxisTicks": true,
+            "showYAxisTicks": true,
+            "tickLineColor": "rgba(96, 165, 250, 0.1)",
+            "tickLineStyle": "dotted",
+            "tickLineWidth": 0.8,
+            "showMarkers": true,
+            "markerStyle": "square",
+            "markerSize": 5,
+            "markerColor": "#60A5FA",
+            "markerBorderColor": "#001F3F",
+            "markerBorderWidth": 2,
+            "showXTrendline": true,
+            "xTrendlineColor": "#FCA5A5",
+            "xTrendlineStyle": "dashed",
+            "xTrendlineWidth": 1.5,
+            "xTrendlineLabel": "Target: 6%",
+            "height": 140
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "stretch",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 1,
+              "backgroundColor": "rgba(96, 165, 250, 0.1)",
+              "borderRadius": 10,
+              "padding": 12,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 9,
+                        "color": "#60A5FA",
+                        "fontWeight": 700
+                      },
+                      "content": "DESKTOP RATE"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 14,
+                        "fontWeight": 800,
+                        "color": "#93C5FD"
+                      },
+                      "content": "7.6%"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 20,
+                    "color": "#1E3A8A"
+                  },
+                  "content": "→"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 1,
+              "backgroundColor": "rgba(52, 211, 153, 0.1)",
+              "borderRadius": 10,
+              "padding": 12,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 9,
+                        "color": "#34D399",
+                        "fontWeight": 700
+                      },
+                      "content": "MOBILE RATE"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 14,
+                        "fontWeight": 800,
+                        "color": "#34D399"
+                      },
+                      "content": "5.4%"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#10B981",
+                    "fontWeight": 700
+                  },
+                  "content": "-2%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

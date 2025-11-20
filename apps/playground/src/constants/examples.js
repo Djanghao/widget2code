@@ -43,6 +43,26 @@ import focusFitnessLight from "../examples/focus-fitness-light.json";
 import screenTimeSimpleDark from "../examples/screen-time-simple-dark.json";
 import productActivityDark from "../examples/product-activity-dark.json";
 import salesOverviewLight from "../examples/sales-overview-light.json";
+import taoBarchartExpense from "../examples/tao_barchart_expense.json";
+import taoBarchartProductivity from "../examples/tao_barchart_productivity.json";
+import taoBarchartRevenue from "../examples/tao_barchart_revenue.json";
+import taoBarchartTraffic from "../examples/tao_barchart_traffic.json";
+import taoBarchartWebsite from "../examples/tao_barchart_website.json";
+import taoLinechartConversion from "../examples/tao_linechart_conversion.json";
+import taoLinechartSatis from "../examples/tao_linechart_satis.json";
+import taoLinechartUptime from "../examples/tao_linechart_uptime.json";
+import taoLinechartUser from "../examples/tao_linechart_user.json";
+import taoLinechartVelocity from "../examples/tao_linechart_velocity.json";
+import taoPiechartCustomer from "../examples/tao_piechart_customer.json";
+import taoPiechartMarket from "../examples/tao_piechart_market.json";
+import taoPiechartRefer from "../examples/tao_piechart_refer.json";
+import taoPiechartRevenue from "../examples/tao_piechart_revenue.json";
+import taoPiechartTypes from "../examples/tao_piechart_types.json";
+import taoStackedbarBrowser from "../examples/tao_stackedbar_browser.json";
+import taoStackedbarChannel from "../examples/tao_stackedbar_channel.json";
+import taoStackedbarEnvironment from "../examples/tao_stackedbar_environment.json";
+import taoStackedbarPlatform from "../examples/tao_stackedbar_platform.json";
+import taoStackedbarRevenue from "../examples/tao_stackedbar_revenue.json";
 
 // Icon Tests
 import iconsVariantsShowcase from "../examples/icons-variants-showcase.json";
@@ -127,20 +147,25 @@ import appendixImageComplex2_3 from "../examples/appendix-image-complex-2-3.json
 import appendixCheckboxComplex2_1 from "../examples/appendix-checkbox-complex-2-1.json";
 import appendixCheckboxComplex2_2 from "../examples/appendix-checkbox-complex-2-2.json";
 import appendixCheckboxComplex2_3 from "../examples/appendix-checkbox-complex-2-3.json";
- 
- 
+
+
 import appendixProgressbarComplex2_1 from "../examples/appendix-progressbar-complex-2-1.json";
 import appendixProgressbarComplex2_2 from "../examples/appendix-progressbar-complex-2-2.json";
 import appendixProgressbarComplex2_3 from "../examples/appendix-progressbar-complex-2-3.json";
- 
- 
+
+
 import appendixBarchartComplex2_1 from "../examples/appendix-barchart-complex-2-1.json";
 import appendixBarchartComplex2_2 from "../examples/appendix-barchart-complex-2-2.json";
 import appendixBarchartComplex2_3 from "../examples/appendix-barchart-complex-2-3.json";
 import appendixLinechartComplex2_1 from "../examples/appendix-linechart-complex-2-1.json";
 import appendixLinechartComplex2_2 from "../examples/appendix-linechart-complex-2-2.json";
 import appendixLinechartComplex2_3 from "../examples/appendix-linechart-complex-2-3.json";
- 
+
+import appendixPiechartComplex2_1 from "../examples/appendix-piechart-complex-2-1.json";
+import appendixPiechartComplex2_2 from "../examples/appendix-piechart-complex-2-2.json";
+import appendixPiechartComplex2_3 from "../examples/appendix-piechart-complex-2-3.json";
+import appendixPiechartComplex2_4 from "../examples/appendix-piechart-complex-2-4.json";
+
 import appendixRadarchartComplex2_1 from "../examples/appendix-radarchart-complex-2-1.json";
 import appendixRadarchartComplex2_2 from "../examples/appendix-radarchart-complex-2-2.json";
 import appendixRadarchartComplex2_3 from "../examples/appendix-radarchart-complex-2-3.json";
@@ -150,6 +175,22 @@ import appendixSparklineComplex2_3 from "../examples/appendix-sparkline-complex-
 import appendixApplogoComplex2_1 from "../examples/appendix-applogo-complex-2-1.json";
 import appendixApplogoComplex2_2 from "../examples/appendix-applogo-complex-2-2.json";
 import appendixApplogoComplex2_3 from "../examples/appendix-applogo-complex-2-3.json";
+import appendixStackedbarchartComplex2_1 from "../examples/appendix-stackedbarchart-complex-2-1.json";
+import appendixStackedbarchartComplex2_2 from "../examples/appendix-stackedbarchart-complex-2-2.json";
+import appendixStackedbarchartComplex2_3 from "../examples/appendix-stackedbarchart-complex-2-3.json";
+import appendixStackedbarchartComplex2_4 from "../examples/appendix-stackedbarchart-complex-2-4.json";
+
+import appendixTextComplex2_4 from "../examples/appendix-text-complex-2-4.json";
+import appendixButtonComplex2_4 from "../examples/appendix-button-complex-2-4.json";
+import appendixIconComplex2_4 from "../examples/appendix-icon-complex-2-4.json";
+import appendixImageComplex2_4 from "../examples/appendix-image-complex-2-4.json";
+import appendixCheckboxComplex2_4 from "../examples/appendix-checkbox-complex-2-4.json";
+import appendixProgressbarComplex2_4 from "../examples/appendix-progressbar-complex-2-4.json";
+import appendixBarchartComplex2_4 from "../examples/appendix-barchart-complex-2-4.json";
+import appendixLinechartComplex2_4 from "../examples/appendix-linechart-complex-2-4.json";
+import appendixRadarchartComplex2_4 from "../examples/appendix-radarchart-complex-2-4.json";
+import appendixSparklineComplex2_4 from "../examples/appendix-sparkline-complex-2-4.json";
+import appendixApplogoComplex2_4 from "../examples/appendix-applogo-complex-2-4.json";
 
 export const examples = {
   weatherSmallLight: { name: "Weather S-Light", spec: weatherSmallLight },
@@ -230,6 +271,26 @@ export const examples = {
     name: "📊 Sales Overview - Light",
     spec: salesOverviewLight,
   },
+  taoBarchartExpense: { name: "📊 TAO BarChart - Expense", spec: taoBarchartExpense },
+  taoBarchartProductivity: { name: "📊 TAO BarChart - Productivity", spec: taoBarchartProductivity },
+  taoBarchartRevenue: { name: "📊 TAO BarChart - Revenue", spec: taoBarchartRevenue },
+  taoBarchartTraffic: { name: "📊 TAO BarChart - Traffic", spec: taoBarchartTraffic },
+  taoBarchartWebsite: { name: "📊 TAO BarChart - Website", spec: taoBarchartWebsite },
+  taoLinechartConversion: { name: "📊 TAO LineChart - Conversion", spec: taoLinechartConversion },
+  taoLinechartSatis: { name: "📊 TAO LineChart - Satisfaction", spec: taoLinechartSatis },
+  taoLinechartUptime: { name: "📊 TAO LineChart - Uptime", spec: taoLinechartUptime },
+  taoLinechartUser: { name: "📊 TAO LineChart - User", spec: taoLinechartUser },
+  taoLinechartVelocity: { name: "📊 TAO LineChart - Velocity", spec: taoLinechartVelocity },
+  taoPiechartCustomer: { name: "📊 TAO PieChart - Customer", spec: taoPiechartCustomer },
+  taoPiechartMarket: { name: "📊 TAO PieChart - Market", spec: taoPiechartMarket },
+  taoPiechartRefer: { name: "📊 TAO PieChart - Refer", spec: taoPiechartRefer },
+  taoPiechartRevenue: { name: "📊 TAO PieChart - Revenue", spec: taoPiechartRevenue },
+  taoPiechartTypes: { name: "📊 TAO PieChart - Types", spec: taoPiechartTypes },
+  taoStackedbarBrowser: { name: "📊 TAO StackedBar - Browser", spec: taoStackedbarBrowser },
+  taoStackedbarChannel: { name: "📊 TAO StackedBar - Channel", spec: taoStackedbarChannel },
+  taoStackedbarEnvironment: { name: "📊 TAO StackedBar - Environment", spec: taoStackedbarEnvironment },
+  taoStackedbarPlatform: { name: "📊 TAO StackedBar - Platform", spec: taoStackedbarPlatform },
+  taoStackedbarRevenue: { name: "📊 TAO StackedBar - Revenue", spec: taoStackedbarRevenue },
 
   // Icon Tests
   iconsVariantsShowcase: {
@@ -338,20 +399,29 @@ export const examples = {
   appendixCheckboxComplex2_1: { name: "🚀 Checkbox (Cyberpunk)", spec: appendixCheckboxComplex2_1 },
   appendixCheckboxComplex2_2: { name: "🚀 Checkbox (Minimalist)", spec: appendixCheckboxComplex2_2 },
   appendixCheckboxComplex2_3: { name: "🚀 Checkbox (Glass)", spec: appendixCheckboxComplex2_3 },
- 
- 
+
+
   appendixProgressbarComplex2_1: { name: "🚀 ProgressBar (Cyberpunk)", spec: appendixProgressbarComplex2_1 },
   appendixProgressbarComplex2_2: { name: "🚀 ProgressBar (Minimalist)", spec: appendixProgressbarComplex2_2 },
   appendixProgressbarComplex2_3: { name: "🚀 ProgressBar (Glass)", spec: appendixProgressbarComplex2_3 },
- 
- 
+
+
   appendixBarchartComplex2_1: { name: "🚀 BarChart (Cyberpunk)", spec: appendixBarchartComplex2_1 },
   appendixBarchartComplex2_2: { name: "🚀 BarChart (Minimalist)", spec: appendixBarchartComplex2_2 },
   appendixBarchartComplex2_3: { name: "🚀 BarChart (Glass)", spec: appendixBarchartComplex2_3 },
+  appendixStackedbarchartComplex2_1: { name: "🚀 StackedBarChart (Cyberpunk)", spec: appendixStackedbarchartComplex2_1 },
+  appendixStackedbarchartComplex2_2: { name: "🚀 StackedBarChart (Minimalist)", spec: appendixStackedbarchartComplex2_2 },
+  appendixStackedbarchartComplex2_3: { name: "🚀 StackedBarChart (Glass)", spec: appendixStackedbarchartComplex2_3 },
+  appendixStackedbarchartComplex2_4: { name: "🚀 StackedBarChart (Brutalist)", spec: appendixStackedbarchartComplex2_4 },
   appendixLinechartComplex2_1: { name: "🚀 LineChart (Cyberpunk)", spec: appendixLinechartComplex2_1 },
   appendixLinechartComplex2_2: { name: "🚀 LineChart (Minimalist)", spec: appendixLinechartComplex2_2 },
   appendixLinechartComplex2_3: { name: "🚀 LineChart (Glass)", spec: appendixLinechartComplex2_3 },
- 
+
+  appendixPiechartComplex2_1: { name: "🚀 PieChart (Cyberpunk)", spec: appendixPiechartComplex2_1 },
+  appendixPiechartComplex2_2: { name: "🚀 PieChart (Minimalist)", spec: appendixPiechartComplex2_2 },
+  appendixPiechartComplex2_3: { name: "🚀 PieChart (Glass)", spec: appendixPiechartComplex2_3 },
+  appendixPiechartComplex2_4: { name: "🚀 PieChart (Neo-Brutalism)", spec: appendixPiechartComplex2_4 },
+
   appendixRadarchartComplex2_1: { name: "🚀 RadarChart (Cyberpunk)", spec: appendixRadarchartComplex2_1 },
   appendixRadarchartComplex2_2: { name: "🚀 RadarChart (Minimalist)", spec: appendixRadarchartComplex2_2 },
   appendixRadarchartComplex2_3: { name: "🚀 RadarChart (Glass)", spec: appendixRadarchartComplex2_3 },
@@ -361,4 +431,16 @@ export const examples = {
   appendixApplogoComplex2_1: { name: "🚀 AppLogo (Cyberpunk)", spec: appendixApplogoComplex2_1 },
   appendixApplogoComplex2_2: { name: "🚀 AppLogo (Minimalist)", spec: appendixApplogoComplex2_2 },
   appendixApplogoComplex2_3: { name: "🚀 AppLogo (Glass)", spec: appendixApplogoComplex2_3 },
+
+  appendixTextComplex2_4: { name: "🚀 Text (Cyberpunk)", spec: appendixTextComplex2_4 },
+  appendixButtonComplex2_4: { name: "🚀 Button (Cyberpunk)", spec: appendixButtonComplex2_4 },
+  appendixIconComplex2_4: { name: "🚀 Icon (Cyberpunk)", spec: appendixIconComplex2_4 },
+  appendixImageComplex2_4: { name: "🚀 Image (Cyberpunk)", spec: appendixImageComplex2_4 },
+  appendixCheckboxComplex2_4: { name: "🚀 Checkbox (Cyberpunk)", spec: appendixCheckboxComplex2_4 },
+  appendixProgressbarComplex2_4: { name: "🚀 ProgressBar (Cyberpunk)", spec: appendixProgressbarComplex2_4 },
+  appendixBarchartComplex2_4: { name: "🚀 BarChart (Cyberpunk)", spec: appendixBarchartComplex2_4 },
+  appendixLinechartComplex2_4: { name: "🚀 LineChart (Cyberpunk)", spec: appendixLinechartComplex2_4 },
+  appendixRadarchartComplex2_4: { name: "🚀 RadarChart (Cyberpunk)", spec: appendixRadarchartComplex2_4 },
+  appendixSparklineComplex2_4: { name: "🚀 Sparkline (Cyberpunk)", spec: appendixSparklineComplex2_4 },
+  appendixApplogoComplex2_4: { name: "🚀 AppLogo (Cyberpunk)", spec: appendixApplogoComplex2_4 },
 };

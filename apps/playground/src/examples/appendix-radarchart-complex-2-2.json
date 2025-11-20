@@ -1,7 +1,7 @@
 {
   "widget": {
     "backgroundColor": "#FFFFFF",
-    "borderRadius": 0,
+    "borderRadius": 20,
     "padding": 32,
     "aspectRatio": 1,
     "root": {
@@ -15,8 +15,26 @@
           "direction": "col",
           "gap": 8,
           "children": [
-            { "type": "leaf", "component": "Text", "props": { "fontSize": 32, "fontWeight": 800, "color": "#000000" }, "content": "Skills" },
-            { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#888888", "fontWeight": 600 }, "content": "COMPETENCY MATRIX" }
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 32,
+                "fontWeight": 800,
+                "color": "#000000"
+              },
+              "content": "Skills"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 14,
+                "color": "#888888",
+                "fontWeight": 600
+              },
+              "content": "COMPETENCY MATRIX"
+            }
           ]
         },
         {
@@ -30,23 +48,51 @@
               "component": "RadarChart",
               "props": {
                 "indicators": [
-                  { "name": "Design", "max": 100 },
-                  { "name": "Code", "max": 100 },
-                  { "name": "Manage", "max": 100 },
-                  { "name": "Write", "max": 100 },
-                  { "name": "Speak", "max": 100 }
+                  {
+                    "name": "Design",
+                    "max": 100
+                  },
+                  {
+                    "name": "Code",
+                    "max": 100
+                  },
+                  {
+                    "name": "Manage",
+                    "max": 100
+                  },
+                  {
+                    "name": "Write",
+                    "max": 100
+                  },
+                  {
+                    "name": "Speak",
+                    "max": 100
+                  }
                 ],
                 "data": [
-                  [90, 80, 70, 85, 75]
+                  [
+                    90,
+                    80,
+                    70,
+                    85,
+                    75
+                  ]
                 ],
-                "color": "#000000",
-                "fillOpacity": 0.1,
-                "strokeWidth": 3,
+                "color": "#FF2E63",
+                "areaOpacity": 0.2,
+                "strokeWidth": 2,
                 "showGrid": true,
                 "gridColor": "#E5E5E5",
                 "textColor": "#000000",
-                "height": 200,
-                "width": 200
+                "theme": "light",
+                "height": 220,
+                "width": 220,
+                "radarShape": "circle",
+                "splitNumber": 4,
+                "splitLineStyle": "dotted",
+                "axisLineStyle": "dotted",
+                "showPoints": false,
+                "radius": "60%"
               }
             }
           ]

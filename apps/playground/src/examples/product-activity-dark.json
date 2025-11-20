@@ -148,8 +148,6 @@
                 "labels": ["To Be Packed", "Process Delivery", "Delivery Done", "Returned"],
                 "colors": ["#5AC8FA", "#FFA726", "#34C759", "#FF2D55"],
                 "theme": "dark",
-                "centerText": "Total Activity",
-                "centerValue": "415,236",
                 "centerTextStyle": {
                   "fontSize": 12,
                   "fill": "#8E8E93"

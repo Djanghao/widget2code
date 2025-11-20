@@ -1,0 +1,57 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "#000" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "padding": 16,
+          "props": { "style": { "borderBottom": "1px solid #333" } },
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#888", "fontFamily": "monospace" }, "content": "BTC/USD" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 24, "fontWeight": 700, "color": "#F7931A", "fontFamily": "monospace", "style": { "textShadow": "0 0 10px rgba(247, 147, 26, 0.5)" } }, "content": "$64,231" }
+              ]
+            },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:bitcoinsign.circle.fill", "size": 24, "color": "#F7931A" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 16,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "props": {
+                "data": [62000, 63500, 62800, 64000, 63200, 64500, 63800, 65000, 64200, 64800, 63500, 64231],
+                "color": "#F7931A",
+                "height": 100,
+                "width": "100%",
+                "strokeWidth": 2,
+                "fillOpacity": 0.1,
+                "showArea": true,
+                "curveType": "step"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

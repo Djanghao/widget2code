@@ -1,0 +1,68 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "#000" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "padding": 24,
+          "props": { "style": { "backgroundColor": "rgba(0, 0, 0, 0.5)", "borderRadius": 20, "border": "1px solid #333" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "RadarChart",
+              "props": {
+                "indicators": [
+                  { "name": "ATK", "max": 100 },
+                  { "name": "DEF", "max": 100 },
+                  { "name": "SPD", "max": 100 },
+                  { "name": "INT", "max": 100 },
+                  { "name": "LUCK", "max": 100 }
+                ],
+                "data": [
+                  [95, 60, 90, 75, 50]
+                ],
+                "color": "#00FF00",
+                "areaOpacity": 0.2,
+                "strokeWidth": 2,
+                "showGrid": true,
+                "gridColor": "#333",
+                "textColor": "#00FF00",
+                "height": 220,
+                "width": 220,
+                "radarShape": "polygon",
+                "splitNumber": 4,
+                "splitLineStyle": "dashed",
+                "axisLineStyle": "dashed",
+                "showPoints": true,
+                "pointSize": 4,
+                "markerStyle": "square"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "center",
+          "gap": 8,
+          "children": [
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:gamecontroller.fill", "size": 16, "color": "#00FF00" } },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#00FF00", "fontFamily": "monospace", "style": { "textShadow": "0 0 5px rgba(0,255,0,0.5)" } }, "content": "STATS_MATRIX" }
+          ]
+        }
+      ]
+    }
+  }
+}

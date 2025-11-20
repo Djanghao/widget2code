@@ -1,0 +1,59 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "linear-gradient(135deg, #050505 0%, #000 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 800, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "STACKED_STATS" },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:bolt.fill", "size": 18, "color": "#00FF9D" } }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "StackedBarChart",
+          "flex": 1,
+          "props": {
+            "data": [
+              [30, 22, 16, 9],
+              [18, 14, 10, 6],
+              [12, 10, 8, 5]
+            ],
+            "labels": ["ALPHA", "BETA", "GAMMA", "DELTA"],
+            "colors": ["#00FF9D", "#00E5FF", "#FF0055"],
+            "theme": "dark",
+            "orientation": "horizontal",
+            "barBorderRadius": 0,
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showXAxisTicks": true,
+            "tickLineColor": "rgba(0,255,157,0.25)",
+            "height": 160
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "alignMain": "center",
+          "children": [
+            { "type": "container", "direction": "row", "gap": 6, "alignCross": "center", "children": [ { "type": "container", "width": 10, "height": 10, "backgroundColor": "#00FF9D", "props": { "style": { "borderRadius": 5, "boxShadow": "0 0 6px rgba(0,255,157,0.6)" } } }, { "type": "leaf", "component": "Text", "props": { "fontSize": 11, "color": "#8E8E93" }, "content": "A" } ] },
+            { "type": "container", "direction": "row", "gap": 6, "alignCross": "center", "children": [ { "type": "container", "width": 10, "height": 10, "backgroundColor": "#00E5FF", "props": { "style": { "borderRadius": 5, "boxShadow": "0 0 6px rgba(0,229,255,0.6)" } } }, { "type": "leaf", "component": "Text", "props": { "fontSize": 11, "color": "#8E8E93" }, "content": "B" } ] },
+            { "type": "container", "direction": "row", "gap": 6, "alignCross": "center", "children": [ { "type": "container", "width": 10, "height": 10, "backgroundColor": "#FF0055", "props": { "style": { "borderRadius": 5, "boxShadow": "0 0 6px rgba(255,0,85,0.6)" } } }, { "type": "leaf", "component": "Text", "props": { "fontSize": 11, "color": "#8E8E93" }, "content": "C" } ] }
+          ]
+        }
+      ]
+    }
+  }
+}

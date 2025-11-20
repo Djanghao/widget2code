@@ -1,0 +1,49 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 32,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#000000" }, "content": "Weekly Traffic" },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#888888", "fontWeight": 600 }, "content": "MINIMALIST" }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "StackedBarChart",
+          "flex": 1,
+          "props": {
+            "data": [
+              [30, 25, 22, 18, 16],
+              [10, 8, 7, 5, 5]
+            ],
+            "labels": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+            "colors": ["#000000", "#E5E5E5"],
+            "theme": "light",
+            "orientation": "vertical",
+            "barBorderRadiusTop": 10,
+            "barBorderRadiusBottom": 0,
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showYAxisTicks": true,
+            "tickLineColor": "#E5E5E5",
+            "showTotal": false,
+            "height": 180
+          }
+        }
+      ]
+    }
+  }
+}

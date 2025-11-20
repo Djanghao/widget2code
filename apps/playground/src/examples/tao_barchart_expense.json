@@ -1,0 +1,142 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 22,
+    "padding": 20,
+    "aspectRatio": 1.5,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 18,
+                "fontWeight": 600,
+                "color": "#FFFFFF"
+              },
+              "content": "Expenses"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 14,
+                "fontWeight": 500,
+                "color": "#8E8E93"
+              },
+              "content": "This Month"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "flex": 1,
+          "props": {
+            "data": [33, 28, 22, 12, 6],
+            "labels": ["Ops", "Mktg", "Tech", "Admin", "Other"],
+            "colors": ["#BF5AF2", "#AC4CE6", "#9A3ED9", "#8831CC", "#7623BF"],
+            "theme": "dark",
+            "orientation": "horizontal",
+            "showXAxisLabels": false,
+            "showYAxisLabels": true,
+            "showXAxisTicks": false,
+            "showYAxisTicks": false,
+            "barBorderRadius": 100,
+            "yAxisLabelPosition": "left",
+            "showValues": true,
+            "height": "100%"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "stretch",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "backgroundColor": "#2C2C2E",
+              "borderRadius": 12,
+              "padding": 10,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93",
+                    "fontWeight": 600
+                  },
+                  "content": "TOTAL"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 15,
+                    "fontWeight": 600,
+                    "color": "#FFFFFF"
+                  },
+                  "content": "$1.2M"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "backgroundColor": "#2C2C2E",
+              "borderRadius": 12,
+              "padding": 10,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93",
+                    "fontWeight": 600
+                  },
+                  "content": "REMAINING"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 15,
+                    "fontWeight": 600,
+                    "color": "#32D74B"
+                  },
+                  "content": "$360K"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

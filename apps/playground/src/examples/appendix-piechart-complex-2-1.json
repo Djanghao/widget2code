@@ -1,0 +1,98 @@
+{
+  "widget": {
+    "backgroundColor": "#050505",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "radial-gradient(circle at center, #111 0%, #000 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "padding": 16,
+          "props": { "style": { "borderBottom": "1px solid #333" } },
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#00E5FF", "fontFamily": "monospace", "style": { "textShadow": "0 0 8px rgba(0, 229, 255, 0.5)" } }, "content": "STORAGE_ALLOC" },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:internaldrive.fill", "size": 20, "color": "#00E5FF" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "props": {
+                "data": [40, 30, 20, 10],
+                "colors": ["#00E5FF", "#FF0055", "#FFFF00", "#333333"],
+                "variant": "donut",
+                "innerRadius": 60,
+                "outerRadius": 85,
+                "roundedSegments": true,
+                "segmentBorderRadius": 6,
+                "borderWidth": 2,
+                "borderColor": "#000000",
+                "showLabels": false,
+                "showLegend": false,
+                "startAngle": 90,
+                "centerText": "USED",
+                "centerValue": "85%",
+                "centerTextStyle": { "fill": "#00E5FF", "fontSize": 12, "fontWeight": 600, "fontFamily": "monospace" },
+                "centerValueStyle": { "fill": "#00E5FF", "fontSize": 20, "fontWeight": 800, "fontFamily": "monospace" },
+                "height": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "center",
+          "gap": 16,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 6,
+              "children": [
+                { "type": "container", "width": 8, "height": 8, "backgroundColor": "#00E5FF", "props": { "style": { "boxShadow": "0 0 5px #00E5FF" } } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 10, "color": "#00E5FF", "fontFamily": "monospace" }, "content": "SYS" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 6,
+              "children": [
+                { "type": "container", "width": 8, "height": 8, "backgroundColor": "#FF0055", "props": { "style": { "boxShadow": "0 0 5px #FF0055" } } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 10, "color": "#FF0055", "fontFamily": "monospace" }, "content": "APPS" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 6,
+              "children": [
+                { "type": "container", "width": 8, "height": 8, "backgroundColor": "#FFFF00", "props": { "style": { "boxShadow": "0 0 5px #FFFF00" } } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 10, "color": "#FFFF00", "fontFamily": "monospace" }, "content": "LOGS" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

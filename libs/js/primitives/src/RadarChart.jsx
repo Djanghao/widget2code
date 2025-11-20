@@ -342,7 +342,8 @@ export const RadarChart = ({
         maxHeight: height,
         minWidth: minWidth,
         minHeight: minHeight,
-        overflow: "hidden",
+        // Allow axis labels around the radar to fully render
+        overflow: "visible",
         boxSizing: "border-box",
         display: "flex",
         alignItems: "stretch",

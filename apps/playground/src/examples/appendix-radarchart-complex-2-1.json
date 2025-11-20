@@ -1,7 +1,7 @@
 {
   "widget": {
     "backgroundColor": "#000000",
-    "borderRadius": 0,
+    "borderRadius": 20,
     "padding": 24,
     "aspectRatio": 1,
     "root": {
@@ -46,6 +46,11 @@
                 "strokeWidth": 2,
                 "showGrid": true,
                 "gridColor": "#333",
+                "radarShape": "polygon",
+                "showPoints": true,
+                "pointSize": 6,
+                "markerStyle": "diamond",
+                "splitLineStyle": "dashed",
                 "textColor": "#00FF9D",
                 "height": 220,
                 "width": 220

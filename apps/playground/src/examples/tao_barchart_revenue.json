@@ -1,0 +1,130 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 22,
+    "padding": 20,
+    "aspectRatio": 1.5,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 18,
+                "fontWeight": 600,
+                "color": "#FFFFFF"
+              },
+              "content": "Revenue"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 18,
+                "fontWeight": 600,
+                "color": "#30D158"
+              },
+              "content": "$620K"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "flex": 1,
+          "props": {
+            "data": [
+              [35, 33, 26, 29, 29, 31],
+              [39, 42, 34, 40, 36, 43]
+            ],
+            "labels": ["J", "F", "M", "A", "M", "J"],
+            "colors": ["#30D158", "#FFD60A"],
+            "seriesNames": ["Actual", "Target"],
+            "theme": "dark",
+            "showXAxisLabels": true,
+            "showYAxisLabels": false,
+            "showXAxisTicks": false,
+            "showYAxisTicks": false,
+            "barBorderRadiusTop": 0,
+            "barBorderRadiusBottom": 0,
+            "height": "100%"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 6,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "width": 8,
+                  "height": 8,
+                  "borderRadius": 4,
+                  "backgroundColor": "#30D158"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 12,
+                    "color": "#8E8E93",
+                    "fontWeight": 500
+                  },
+                  "content": "Actual"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 6,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "width": 8,
+                  "height": 8,
+                  "borderRadius": 4,
+                  "backgroundColor": "#FFD60A"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 12,
+                    "color": "#8E8E93",
+                    "fontWeight": 500
+                  },
+                  "content": "Target"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
