@@ -12,6 +12,8 @@ export const LineChart = ({
   backgroundColor = "transparent",
   smooth = true,
   showArea = true,
+  // By default, enable boundary gap to avoid edge label clipping
+  boundaryGap = true,
   min,
   max,
   interval,
@@ -296,9 +298,9 @@ export const LineChart = ({
       bottom: 0,
       containLabel: true,
     },
-    xAxis: {
+  xAxis: {
       type: "category",
-      boundaryGap: false,
+      boundaryGap: boundaryGap,
       data: Array.isArray(labels) ? labels : [],
       position: xAxisLabelPosition, // 'top' or 'bottom'
       axisLabel: {
