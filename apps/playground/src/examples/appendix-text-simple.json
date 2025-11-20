@@ -1,0 +1,48 @@
+{
+  "widget": {
+    "backgroundColor": "#F2F2F7",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "start",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 34,
+            "fontWeight": 700,
+            "color": "#000000"
+          },
+          "content": "Hello"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 17,
+            "fontWeight": 400,
+            "color": "#3C3C43"
+          },
+          "content": "This is an example of HarmonyOS-style typography. Clean, readable, and elegant."
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 13,
+            "fontWeight": 500,
+            "color": "#8E8E93"
+          },
+          "content": "CAPTION TEXT"
+        }
+      ]
+    }
+  }
+}

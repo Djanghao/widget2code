@@ -1,0 +1,157 @@
+{
+  "widget": {
+    "backgroundColor": "#F2F2F7",
+    "borderRadius": 32,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 22, "fontWeight": 700, "color": "#000000" }, "content": "Device Storage" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "128 GB Total" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "alignCross": "end",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 22, "fontWeight": 700, "color": "#000000" }, "content": "45.2 GB" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "Used" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 4,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "height": 24,
+              "props": { "style": { "borderRadius": 12, "overflow": "hidden" } },
+              "children": [
+                { "type": "container", "flex": 4, "backgroundColor": "#FF3B30" },
+                { "type": "container", "flex": 3, "backgroundColor": "#FF9500" },
+                { "type": "container", "flex": 2, "backgroundColor": "#30D158" },
+                { "type": "container", "flex": 1, "backgroundColor": "#007AFF" },
+                { "type": "container", "flex": 6, "backgroundColor": "#E5E5EA" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "padding": 12,
+              "backgroundColor": "#FFFFFF",
+              "props": { "style": { "borderRadius": 16 } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "container", "width": 12, "height": 12, "backgroundColor": "#FF3B30", "props": { "style": { "borderRadius": 6 } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" }, "content": "Apps" }
+                  ]
+                },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "color": "#8E8E93" }, "content": "24.5 GB" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "padding": 12,
+              "backgroundColor": "#FFFFFF",
+              "props": { "style": { "borderRadius": 16 } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "container", "width": 12, "height": 12, "backgroundColor": "#FF9500", "props": { "style": { "borderRadius": 6 } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" }, "content": "Photos" }
+                  ]
+                },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "color": "#8E8E93" }, "content": "12.8 GB" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "padding": 12,
+              "backgroundColor": "#FFFFFF",
+              "props": { "style": { "borderRadius": 16 } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "container", "width": 12, "height": 12, "backgroundColor": "#30D158", "props": { "style": { "borderRadius": 6 } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" }, "content": "Messages" }
+                  ]
+                },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "color": "#8E8E93" }, "content": "5.2 GB" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "padding": 12,
+              "backgroundColor": "#FFFFFF",
+              "props": { "style": { "borderRadius": 16 } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "container", "width": 12, "height": 12, "backgroundColor": "#007AFF", "props": { "style": { "borderRadius": 6 } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" }, "content": "System Data" }
+                  ]
+                },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "color": "#8E8E93" }, "content": "2.7 GB" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

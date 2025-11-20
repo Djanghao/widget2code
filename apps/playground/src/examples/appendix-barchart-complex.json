@@ -1,0 +1,75 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93", "fontWeight": 600, "textTransform": "uppercase" }, "content": "Total Balance" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 28, "fontWeight": 700, "color": "#FFFFFF" }, "content": "$12,450.00" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 4,
+              "padding": 6,
+              "paddingX": 12,
+              "paddingY": 6,
+              "backgroundColor": "rgba(52, 199, 89, 0.2)",
+              "props": { "style": { "borderRadius": 100 } },
+              "children": [
+                { "type": "leaf", "component": "Icon", "props": { "name": "sf:arrow.up.right", "size": 12, "color": "#34C759" } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "fontWeight": 600, "color": "#34C759" }, "content": "12%" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "BarChart",
+              "props": {
+                "data": [850, 1200, 950, 1500, 1100, 1800, 1600],
+                "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                "color": "#0A84FF",
+                "backgroundColor": "transparent",
+                "barBorderRadius": 6,
+                "showXAxisLabels": true,
+                "showYAxisLabels": true,
+                "showValues": false,
+                "height": "100%",
+                "theme": "dark",
+                "showXAxisTicks": false,
+                "showYAxisTicks": true,
+                "tickLineStyle": "dashed",
+                "tickLineColor": "rgba(255,255,255,0.1)",
+                "yAxisTickCount": 4,
+                "xAxisLabelPosition": "bottom"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

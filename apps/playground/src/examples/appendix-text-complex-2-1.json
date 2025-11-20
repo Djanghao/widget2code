@@ -1,0 +1,40 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 0,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "linear-gradient(90deg, #000 0%, #050505 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "LOG_ENTRY" },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#888", "fontFamily": "monospace" }, "content": "#4092" }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "props": { "style": { "borderLeft": "2px solid #00FF9D", "paddingLeft": 16 } },
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#CCCCCC", "fontFamily": "monospace", "lineHeight": 1.5 }, "content": "System initialization complete.\nNeural interfaces online.\nWaiting for user input...\n> _" }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "color": "#FF0055", "fontFamily": "monospace", "textAlign": "right" },
+          "content": "STATUS: READY"
+        }
+      ]
+    }
+  }
+}

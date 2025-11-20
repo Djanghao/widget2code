@@ -1,0 +1,101 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "fontWeight": 600, "color": "#007AFF", "textTransform": "uppercase" }, "content": "App of the Day" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 28, "fontWeight": 700, "color": "#000000" }, "content": "Duolingo" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "AppLogo",
+              "props": {
+                "name": "si:SiDuolingo",
+                "size": 64,
+                "color": "#58CC02",
+                "style": { "backgroundColor": "#FFFFFF", "padding": 8, "borderRadius": 16, "boxShadow": "0 4px 12px rgba(0,0,0,0.1)" }
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "props": { "style": { "position": "relative" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Image",
+              "props": {
+                "src": "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                "width": "100%",
+                "height": "100%",
+                "borderRadius": 16,
+                "style": { "objectFit": "cover" }
+              }
+            },
+            {
+              "type": "container",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "bottom": 0,
+                  "left": 0,
+                  "right": 0,
+                  "padding": 20,
+                  "background": "linear-gradient(to top, rgba(0,0,0,0.8), transparent)",
+                  "borderRadius": "0 0 16px 16px"
+                }
+              },
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#FFFFFF" }, "content": "Learn a new language for free." }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "padding": 16,
+          "backgroundColor": "#F2F2F7",
+          "props": { "style": { "borderRadius": 16 } },
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "Duolingo Inc." },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93" }, "content": "Education • 4.7 ★" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": { "content": "GET", "color": "#007AFF", "backgroundColor": "#E5E5EA", "fontSize": 14, "fontWeight": 700, "borderRadius": 20, "paddingX": 20, "height": 32 }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

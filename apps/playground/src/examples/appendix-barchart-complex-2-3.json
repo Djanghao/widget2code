@@ -1,0 +1,54 @@
+{
+  "widget": {
+    "backgroundColor": "#8EC5FC",
+    "borderRadius": 40,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "padding": 16,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.4)", "backdropFilter": "blur(20px)", "borderRadius": 24, "border": "1px solid rgba(255, 255, 255, 0.5)" } },
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#333" }, "content": "Activity" },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#555" }, "content": "Last 7 Days" }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 16,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.4)", "backdropFilter": "blur(20px)", "borderRadius": 24, "border": "1px solid rgba(255, 255, 255, 0.5)" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "BarChart",
+              "props": {
+                "data": [
+                  [6, 8, 5, 9, 7, 8, 6]
+                ],
+                "colors": ["#FFFFFF"],
+                "seriesNames": ["Hours"],
+                "backgroundColor": "transparent",
+                "showGrid": false,
+                "barWidth": 16,
+                "height": "100%",
+                "labels": ["M", "T", "W", "T", "F", "S", "S"],
+                "theme": "light"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

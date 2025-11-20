@@ -1,0 +1,101 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 32,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "alignMain": "between",
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 8,
+              "children": [
+                { "type": "leaf", "component": "Icon", "props": { "name": "sf:gamecontroller.fill", "size": 24, "color": "#30D158" } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#FFFFFF" }, "content": "Player 1" }
+              ]
+            },
+            {
+              "type": "container",
+              "paddingY": 4,
+              "paddingX": 12,
+              "backgroundColor": "#2C2C2E",
+              "props": { "style": { "borderRadius": 100 } },
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "fontWeight": 700, "color": "#30D158" }, "content": "CONNECTED" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "alignMain": "center",
+              "alignCross": "center",
+              "gap": 8,
+              "children": [
+                { "type": "leaf", "component": "Button", "props": { "icon": "sf:chevron.up", "backgroundColor": "#3A3A3C", "color": "#FFFFFF", "width": 44, "height": 44, "borderRadius": 8 } },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "children": [
+                    { "type": "leaf", "component": "Button", "props": { "icon": "sf:chevron.left", "backgroundColor": "#3A3A3C", "color": "#FFFFFF", "width": 44, "height": 44, "borderRadius": 8 } },
+                    { "type": "leaf", "component": "Button", "props": { "icon": "sf:circle.fill", "backgroundColor": "#1C1C1E", "color": "#1C1C1E", "width": 44, "height": 44 } },
+                    { "type": "leaf", "component": "Button", "props": { "icon": "sf:chevron.right", "backgroundColor": "#3A3A3C", "color": "#FFFFFF", "width": 44, "height": 44, "borderRadius": 8 } }
+                  ]
+                },
+                { "type": "leaf", "component": "Button", "props": { "icon": "sf:chevron.down", "backgroundColor": "#3A3A3C", "color": "#FFFFFF", "width": 44, "height": 44, "borderRadius": 8 } }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "alignMain": "center",
+              "alignCross": "center",
+              "gap": 16,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 16,
+                  "children": [
+                    { "type": "leaf", "component": "Button", "props": { "content": "Y", "backgroundColor": "#FFD60A", "color": "#000000", "width": 48, "height": 48, "borderRadius": 24, "fontWeight": 800, "fontSize": 20, "style": { "boxShadow": "0 4px 0 #C2A300" } } },
+                    { "type": "leaf", "component": "Button", "props": { "content": "X", "backgroundColor": "#0A84FF", "color": "#FFFFFF", "width": 48, "height": 48, "borderRadius": 24, "fontWeight": 800, "fontSize": 20, "style": { "boxShadow": "0 4px 0 #005DB3" } } }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 16,
+                  "children": [
+                    { "type": "leaf", "component": "Button", "props": { "content": "B", "backgroundColor": "#FF3B30", "color": "#FFFFFF", "width": 48, "height": 48, "borderRadius": 24, "fontWeight": 800, "fontSize": 20, "style": { "boxShadow": "0 4px 0 #B3261E" } } },
+                    { "type": "leaf", "component": "Button", "props": { "content": "A", "backgroundColor": "#30D158", "color": "#FFFFFF", "width": 48, "height": 48, "borderRadius": 24, "fontWeight": 800, "fontSize": 20, "style": { "boxShadow": "0 4px 0 #208E3B" } } }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

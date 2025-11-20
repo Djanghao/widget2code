@@ -1,0 +1,88 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "props": {
+                "percentage": 75,
+                "color": "#FF2D55",
+                "backgroundColor": "rgba(255, 45, 85, 0.2)",
+                "size": 60,
+                "strokeWidth": 8,
+                "iconName": "sf:flame.fill",
+                "iconSize": 20,
+                "iconColor": "#FF2D55"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "props": {
+                "percentage": 50,
+                "color": "#34C759",
+                "backgroundColor": "rgba(52, 199, 89, 0.2)",
+                "size": 60,
+                "strokeWidth": 8,
+                "iconName": "sf:figure.walk",
+                "iconSize": 20,
+                "iconColor": "#34C759"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "props": {
+                "percentage": 90,
+                "color": "#007AFF",
+                "backgroundColor": "rgba(0, 122, 255, 0.2)",
+                "size": 60,
+                "strokeWidth": 8,
+                "iconName": "sf:arrow.up",
+                "iconSize": 20,
+                "iconColor": "#007AFF"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 4,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 20, "fontWeight": 700, "color": "#FFFFFF" },
+              "content": "Activity"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 14, "color": "#8E8E93" },
+              "content": "Keep moving!"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

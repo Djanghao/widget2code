@@ -1,0 +1,123 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 22, "fontWeight": 700, "color": "#000000" },
+              "content": "Expenses"
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": { "content": "This Month", "color": "#007AFF", "backgroundColor": "#F2F2F7", "fontSize": 14, "fontWeight": 600, "borderRadius": 12, "height": 32, "paddingX": 12 }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "PieChart",
+                  "props": {
+                    "variant": "donut",
+                    "data": [
+                      { "value": 1200, "name": "Rent", "color": "#FF3B30" },
+                      { "value": 450, "name": "Food", "color": "#FF9500" },
+                      { "value": 300, "name": "Transport", "color": "#FFCC00" },
+                      { "value": 200, "name": "Utils", "color": "#34C759" },
+                      { "value": 150, "name": "Others", "color": "#007AFF" }
+                    ],
+                    "innerRadius": 50,
+                    "outerRadius": 70,
+                    "centerText": "Total",
+                    "centerValue": "$2,300",
+                    "showLegend": false,
+                    "theme": "light",
+                    "height": "100%"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 12,
+              "flex": 1,
+              "alignMain": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 8,
+                  "children": [
+                    { "type": "container", "props": { "style": { "width": 10, "height": 10, "borderRadius": 5, "backgroundColor": "#FF3B30" } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#000000", "flex": 1 }, "content": "Rent" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "52%" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 8,
+                  "children": [
+                    { "type": "container", "props": { "style": { "width": 10, "height": 10, "borderRadius": 5, "backgroundColor": "#FF9500" } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#000000", "flex": 1 }, "content": "Food" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "20%" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 8,
+                  "children": [
+                    { "type": "container", "props": { "style": { "width": 10, "height": 10, "borderRadius": 5, "backgroundColor": "#FFCC00" } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#000000", "flex": 1 }, "content": "Transport" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "13%" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 8,
+                  "children": [
+                    { "type": "container", "props": { "style": { "width": 10, "height": 10, "borderRadius": 5, "backgroundColor": "#34C759" } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#000000", "flex": 1 }, "content": "Utils" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "9%" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

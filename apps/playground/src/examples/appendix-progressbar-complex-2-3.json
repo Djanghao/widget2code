@@ -1,0 +1,70 @@
+{
+  "widget": {
+    "backgroundColor": "#FF9A9E",
+    "borderRadius": 40,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "direction": "col",
+          "alignMain": "center",
+          "padding": 24,
+          "gap": 24,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.3)", "backdropFilter": "blur(20px)", "borderRadius": 32, "border": "1px solid rgba(255, 255, 255, 0.4)" } },
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#FFFFFF" }, "content": "Storage" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#FFFFFF" }, "content": "85 GB / 100 GB" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressBar",
+              "props": {
+                "value": 85,
+                "color": "#FFFFFF",
+                "backgroundColor": "rgba(255, 255, 255, 0.3)",
+                "height": 16,
+                "style": { "borderRadius": 8 }
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#FFFFFF" }, "content": "iCloud" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#FFFFFF" }, "content": "42 GB / 50 GB" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressBar",
+              "props": {
+                "value": 84,
+                "color": "#FFFFFF",
+                "backgroundColor": "rgba(255, 255, 255, 0.3)",
+                "height": 16,
+                "style": { "borderRadius": 8 }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

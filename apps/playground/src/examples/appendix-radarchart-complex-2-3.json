@@ -1,0 +1,61 @@
+{
+  "widget": {
+    "backgroundColor": "#D4FC79",
+    "borderRadius": 40,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "padding": 24,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.4)", "backdropFilter": "blur(20px)", "borderRadius": 32, "border": "1px solid rgba(255, 255, 255, 0.5)" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "RadarChart",
+              "props": {
+                "indicators": [
+                  { "name": "Speed", "max": 100 },
+                  { "name": "Power", "max": 100 },
+                  { "name": "Tech", "max": 100 },
+                  { "name": "Stamina", "max": 100 },
+                  { "name": "Tactics", "max": 100 }
+                ],
+                "data": [
+                  [85, 90, 75, 95, 80]
+                ],
+                "color": "#0BA360",
+                "areaOpacity": 0.25,
+                "strokeWidth": 3,
+                "showGrid": true,
+                "gridColor": "rgba(0, 0, 0, 0.25)",
+                "textColor": "#1B4332",
+                "height": 220,
+                "width": 220
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "center",
+          "gap": 8,
+          "children": [
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:bolt.shield.fill", "size": 16, "color": "#1B4332" } },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#1B4332", "style": { "textShadow": "0 1px 2px rgba(255,255,255,0.4)" } }, "content": "Attributes" }
+          ]
+        }
+      ]
+    }
+  }
+}

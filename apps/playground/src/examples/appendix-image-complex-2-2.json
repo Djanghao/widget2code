@@ -1,0 +1,41 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 0,
+    "padding": 32,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Image",
+              "props": {
+                "src": "https://images.unsplash.com/photo-1501854140884-074bf6b243e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                "width": "100%",
+                "height": "100%",
+                "style": { "objectFit": "cover" }
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 24, "fontWeight": 800, "color": "#000000" }, "content": "Nature" },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#888888", "fontWeight": 600 }, "content": "PHOTOGRAPHY COLLECTION" }
+          ]
+        }
+      ]
+    }
+  }
+}

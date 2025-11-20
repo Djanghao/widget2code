@@ -1,0 +1,19 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 0,
+    "padding": 32,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "alignMain": "center",
+      "children": [
+        { "type": "leaf", "component": "Text", "props": { "fontSize": 48, "fontWeight": 800, "color": "#000000", "lineHeight": 1 }, "content": "Less is\nMore." },
+        { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "color": "#888888", "fontWeight": 400, "lineHeight": 1.5 }, "content": "Simplicity is the ultimate sophistication." }
+      ]
+    }
+  }
+}

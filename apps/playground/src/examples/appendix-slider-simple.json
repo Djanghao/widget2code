@@ -1,0 +1,78 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "stretch",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": { "name": "sf:sun.min.fill", "size": 18, "color": "#8E8E93" }
+            },
+            {
+              "type": "leaf",
+              "component": "Slider",
+              "props": {
+                "value": 75,
+                "color": "#000000",
+                "thumbColor": "#FFFFFF",
+                "height": 6,
+                "thumbSize": 24,
+                "style": { "flex": 1 }
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": { "name": "sf:sun.max.fill", "size": 24, "color": "#8E8E93" }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": { "name": "sf:speaker.fill", "size": 18, "color": "#8E8E93" }
+            },
+            {
+              "type": "leaf",
+              "component": "Slider",
+              "props": {
+                "value": 40,
+                "color": "#007AFF",
+                "thumbColor": "#FFFFFF",
+                "height": 6,
+                "thumbSize": 24,
+                "style": { "flex": 1 }
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": { "name": "sf:speaker.wave.3.fill", "size": 24, "color": "#8E8E93" }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

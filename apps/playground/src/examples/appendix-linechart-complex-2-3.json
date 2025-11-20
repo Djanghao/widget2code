@@ -1,0 +1,64 @@
+{
+  "widget": {
+    "backgroundColor": "#8EC5FC",
+    "borderRadius": 40,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "padding": 16,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.3)", "backdropFilter": "blur(20px)", "borderRadius": 24, "border": "1px solid rgba(255, 255, 255, 0.4)" } },
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#FFFFFF" }, "content": "Heart Rate" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 24, "fontWeight": 700, "color": "#FFFFFF" }, "content": "72 BPM" }
+              ]
+            },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:heart.fill", "size": 24, "color": "#FFFFFF" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 16,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.3)", "backdropFilter": "blur(20px)", "borderRadius": 24, "border": "1px solid rgba(255, 255, 255, 0.4)" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "LineChart",
+              "props": {
+                "data": [
+                  [65, 70, 68, 74, 72, 80, 72, 75, 70, 68]
+                ],
+                "colors": ["#FFFFFF"],
+                "seriesNames": ["BPM"],
+                "backgroundColor": "transparent",
+                "showArea": true,
+                "gradientIntensity": 0.2,
+                "strokeWidth": 3,
+                "showGrid": false,
+                "showDots": true,
+                "dotSize": 4,
+                "height": "100%",
+                "theme": "light"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

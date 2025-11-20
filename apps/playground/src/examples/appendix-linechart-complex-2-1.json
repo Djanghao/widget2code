@@ -1,0 +1,81 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 0,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "backgroundImage": "linear-gradient(rgba(0, 255, 157, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 157, 0.05) 1px, transparent 1px)", "backgroundSize": "20px 20px" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "NET_TRAFFIC" },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "1.2 TB" }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "props": { "style": { "border": "1px solid #333", "backgroundColor": "rgba(0,0,0,0.5)" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "LineChart",
+              "props": {
+                "data": [
+                  [10, 40, 30, 70, 50, 90, 80],
+                  [5, 20, 15, 40, 30, 60, 50]
+                ],
+                "colors": ["#00FF9D", "#FF0055"],
+                "seriesNames": ["IN", "OUT"],
+                "backgroundColor": "transparent",
+                "showArea": false,
+                "strokeWidth": 2,
+                "showGrid": true,
+                "gridColor": "#333",
+                "showDots": true,
+                "dotSize": 4,
+                "height": "100%",
+                "theme": "dark"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "alignCross": "center",
+              "children": [
+                { "type": "container", "width": 8, "height": 8, "backgroundColor": "#00FF9D" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#888", "fontFamily": "monospace" }, "content": "INBOUND" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "alignCross": "center",
+              "children": [
+                { "type": "container", "width": 8, "height": 8, "backgroundColor": "#FF0055" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#888", "fontFamily": "monospace" }, "content": "OUTBOUND" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

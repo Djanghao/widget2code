@@ -1,0 +1,59 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 0,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "linear-gradient(135deg, #050505 0%, #000 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "STATS_HEX" },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:hexagon.fill", "size": 20, "color": "#00FF9D" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "RadarChart",
+              "props": {
+                "indicators": [
+                  { "name": "STR", "max": 150 },
+                  { "name": "DEX", "max": 150 },
+                  { "name": "INT", "max": 150 },
+                  { "name": "WIS", "max": 150 },
+                  { "name": "CON", "max": 150 },
+                  { "name": "CHA", "max": 150 }
+                ],
+                "data": [
+                  [120, 98, 86, 99, 85, 65]
+                ],
+                "color": "#00FF9D",
+                "fillOpacity": 0.2,
+                "strokeWidth": 2,
+                "showGrid": true,
+                "gridColor": "#333",
+                "textColor": "#00FF9D",
+                "height": 220,
+                "width": 220
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

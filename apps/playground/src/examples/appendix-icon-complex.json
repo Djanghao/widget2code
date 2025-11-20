@@ -1,0 +1,120 @@
+{
+  "widget": {
+    "backgroundColor": "#F2F2F7",
+    "borderRadius": 24,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "flex": 1,
+              "backgroundColor": "#FFFFFF",
+              "padding": 16,
+              "props": { "style": { "borderRadius": 16, "boxShadow": "0 2px 8px rgba(0,0,0,0.05)" } },
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": { "name": "sf:house.fill", "size": 28, "color": "#007AFF" }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" },
+                  "content": "Home"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "flex": 1,
+              "backgroundColor": "#FFFFFF",
+              "padding": 16,
+              "props": { "style": { "borderRadius": 16, "boxShadow": "0 2px 8px rgba(0,0,0,0.05)" } },
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": { "name": "sf:waveform.path.ecg", "size": 28, "color": "#FF2D55" }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" },
+                  "content": "Health"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "flex": 1,
+              "backgroundColor": "#FFFFFF",
+              "padding": 16,
+              "props": { "style": { "borderRadius": 16, "boxShadow": "0 2px 8px rgba(0,0,0,0.05)" } },
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": { "name": "sf:envelope.fill", "size": 28, "color": "#34C759" }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" },
+                  "content": "Mail"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "flex": 1,
+              "backgroundColor": "#FFFFFF",
+              "padding": 16,
+              "props": { "style": { "borderRadius": 16, "boxShadow": "0 2px 8px rgba(0,0,0,0.05)" } },
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": { "name": "sf:gearshape.fill", "size": 28, "color": "#8E8E93" }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" },
+                  "content": "Settings"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

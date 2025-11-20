@@ -1,0 +1,72 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" }, "content": "Heart Rate" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93" }, "content": "72 BPM" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "props": {
+                "data": [68, 70, 72, 75, 73, 71, 72],
+                "color": "#FF2D55",
+                "width": 60,
+                "height": 30,
+                "smooth": true,
+                "lineWidth": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" }, "content": "Steps" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93" }, "content": "8,432" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "props": {
+                "data": [5000, 6000, 8000, 7500, 9000, 8432],
+                "color": "#34C759",
+                "width": 60,
+                "height": 30,
+                "showArea": true,
+                "smooth": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

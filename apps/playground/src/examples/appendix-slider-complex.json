@@ -1,0 +1,106 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 18, "fontWeight": 600, "color": "#FFFFFF" },
+              "content": "Adjustments"
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": { "content": "Reset", "color": "#FFD60A", "backgroundColor": "transparent", "fontSize": 14, "fontWeight": 600 }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 20,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignMain": "between",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93", "fontWeight": 600 }, "content": "EXPOSURE" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#FFFFFF", "fontWeight": 600 }, "content": "+0.5" }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Slider",
+                  "props": { "value": 65, "color": "#FFFFFF", "thumbColor": "#FFFFFF", "height": 24, "thumbSize": 20 }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignMain": "between",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93", "fontWeight": 600 }, "content": "CONTRAST" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#FFFFFF", "fontWeight": 600 }, "content": "-12" }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Slider",
+                  "props": { "value": 38, "color": "#FFFFFF", "thumbColor": "#FFFFFF", "height": 24, "thumbSize": 20 }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignMain": "between",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93", "fontWeight": 600 }, "content": "SATURATION" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#FFD60A", "fontWeight": 600 }, "content": "+24" }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Slider",
+                  "props": { "value": 74, "color": "#FFD60A", "thumbColor": "#FFD60A", "height": 24, "thumbSize": 20 }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

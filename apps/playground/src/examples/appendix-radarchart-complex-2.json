@@ -1,0 +1,93 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 32,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" }, "content": "Skills" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "Performance Review" }
+              ]
+            },
+            {
+              "type": "container",
+              "padding": 8,
+              "backgroundColor": "#2C2C2E",
+              "props": { "style": { "borderRadius": 12 } },
+              "children": [
+                { "type": "leaf", "component": "Icon", "props": { "name": "sf:hexagon.fill", "size": 20, "color": "#AF52DE" } }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "RadarChart",
+              "props": {
+                "data": [
+                  [90, 85, 70, 95, 80, 75],
+                  [70, 75, 85, 65, 90, 80]
+                ],
+                "labels": ["Coding", "Design", "Team", "Speed", "Quality", "Comms"],
+                "colors": ["#AF52DE", "#30D158"],
+                "fillOpacity": 0.3,
+                "strokeWidth": 2,
+                "showLabels": true,
+                "labelColor": "#FFFFFF",
+                "gridColor": "rgba(255,255,255,0.1)",
+                "height": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "center",
+          "gap": 24,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 8,
+              "children": [
+                { "type": "container", "width": 8, "height": 8, "backgroundColor": "#AF52DE", "props": { "style": { "borderRadius": 4 } } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "fontWeight": 600, "color": "#8E8E93" }, "content": "You" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 8,
+              "children": [
+                { "type": "container", "width": 8, "height": 8, "backgroundColor": "#30D158", "props": { "style": { "borderRadius": 4 } } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "fontWeight": 600, "color": "#8E8E93" }, "content": "Average" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
