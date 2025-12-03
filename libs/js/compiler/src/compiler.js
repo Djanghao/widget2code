@@ -7,6 +7,46 @@
 
 import { parseIconName } from "./iconLibraryUtils.js";
 
+export function generateContainerLayout(widgetDSL) {
+  if (!widgetDSL.widget?.root) {
+    throw new Error("Invalid widget spec: missing widget.root");
+  }
+
+  const lines = [];
+  const write = (line) => {
+    lines.push(line);
+  };
+
+  function renderLayoutNode(node, depth = 0) {
+    const indent = "  ".repeat(depth);
+
+    if (node.type === "container") {
+      const { direction = "row", children = [] } = node;
+      const containerType = direction === "col" ? "VStack" : "HStack";
+
+      write(`${indent}<${containerType}>`);
+
+      children.forEach((child) => {
+        if (child.type === "container") {
+          renderLayoutNode(child, depth + 1);
+        } else if (child.type === "leaf") {
+          const leafIndent = "  ".repeat(depth + 1);
+          write(`${leafIndent}<Component />`);
+        }
+      });
+
+      write(`${indent}</${containerType}>`);
+      return;
+    }
+  }
+
+  write("<WidgetShell>");
+  renderLayoutNode(widgetDSL.widget.root, 1);
+  write("</WidgetShell>");
+
+  return lines.join("\n");
+}
+
 export function compileWidgetDSLToJSX(widgetDSL) {
   if (!widgetDSL.widget?.root) {
     throw new Error("Invalid widget spec: missing widget.root");
@@ -25,7 +65,7 @@ export function compileWidgetDSLToJSX(widgetDSL) {
       ? `=${JSON.stringify(value)}`
       : `={${JSON.stringify(value)}}`;
 
-  function renderNode(node, depth = 0) {
+  function renderNode(node, depth = 0, path = "") {
     const indent = "  ".repeat(depth);
 
     if (node.type === "container") {
@@ -80,8 +120,8 @@ export function compileWidgetDSLToJSX(widgetDSL) {
         styles.push(`alignItems: '${alignMap[alignCross] || alignCross}'`);
       }
 
-      write(`${indent}<div style={{ ${styles.join(", ")} }}>`);
-      children.forEach((child) => renderNode(child, depth + 1));
+      write(`${indent}<div data-element-path="${path}" data-element-type="container" style={{ ${styles.join(", ")} }}>`);
+      children.forEach((child, index) => renderNode(child, depth + 1, path ? `${path}.${index}` : `${index}`));
       write(`${indent}</div>`);
       return;
     }
@@ -149,18 +189,20 @@ export function compileWidgetDSLToJSX(widgetDSL) {
       if (height !== undefined) boundaryProps.push(`height={${JSON.stringify(height)}}`);
       const boundaryPropsStr = boundaryProps.length > 0 ? " " + boundaryProps.join(" ") : "";
 
-      write(`${indent}<ComponentErrorBoundary${boundaryPropsStr}>`);
+      write(`${indent}<span data-element-path="${path}" data-element-type="leaf" data-component="${componentName}">`);
+      write(`${indent}  <ComponentErrorBoundary${boundaryPropsStr}>`);
       if (childrenStr)
         write(
-          `${indent}  <${componentName}${propsStr}>${childrenStr}</${componentName}>`
+          `${indent}    <${componentName}${propsStr}>${childrenStr}</${componentName}>`
         );
-      else write(`${indent}  <${componentName}${propsStr} />`);
-      write(`${indent}</ComponentErrorBoundary>`);
+      else write(`${indent}    <${componentName}${propsStr} />`);
+      write(`${indent}  </ComponentErrorBoundary>`);
+      write(`${indent}</span>`);
       return;
     }
   }
 
-  renderNode(widgetDSL.widget.root, 2);
+  renderNode(widgetDSL.widget.root, 2, "root");
 
   const importsCode = Array.from(imports).join("\n");
 

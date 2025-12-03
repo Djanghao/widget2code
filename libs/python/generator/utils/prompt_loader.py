@@ -2,6 +2,9 @@ from pathlib import Path
 
 WIDGET2DSL_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "widget2dsl" / "widget2dsl.md"
 PROMPT2DSL_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "prompt2dsl" / "prompt2dsl.md"
+WIDGET2DSL_GRAPH_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "widget2dsl" / "widget2dsl-graph-modified.md"
+PROMPT2DSL_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "prompt2dsl" / "prompt2dsl-sf-lucide.md"
+PROMPT2DSL_WITH_REFERENCE_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "prompt2dsl" / "prompt2dsl-with-reference.md"
 DYNAMIC_COMPONENT_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "dynamic" / "prompt2react" / "dynamic-component-prompt.md"
 DYNAMIC_COMPONENT_IMAGE_PROMPT_PATH = Path(__file__).parent.parent / "prompts" / "dynamic" / "image2react" / "dynamic-component-image-prompt.md"
 
@@ -26,4 +29,9 @@ def load_dynamic_component_prompt():
 def load_dynamic_component_image_prompt():
     if DYNAMIC_COMPONENT_IMAGE_PROMPT_PATH.exists():
         return DYNAMIC_COMPONENT_IMAGE_PROMPT_PATH.read_text(encoding="utf-8")
+    return ""
+
+def load_prompt2dsl_with_reference_prompt():
+    if PROMPT2DSL_WITH_REFERENCE_PROMPT_PATH.exists():
+        return PROMPT2DSL_WITH_REFERENCE_PROMPT_PATH.read_text(encoding="utf-8")
     return ""

@@ -1,0 +1,115 @@
+{
+  "domain": "navigation",
+  "descriptions": [
+    {
+      "id": "navigation-001",
+      "prompt": "A widget showing current location",
+      "complexity": "simple",
+      "metrics": [
+        "location"
+      ]
+    },
+    {
+      "id": "navigation-002",
+      "prompt": "A widget displaying location with map",
+      "complexity": "medium",
+      "metrics": [
+        "location"
+      ],
+      "visualization": [
+        "map"
+      ]
+    },
+    {
+      "id": "navigation-003",
+      "prompt": "A widget showing next turn direction",
+      "complexity": "medium",
+      "metrics": [
+        "directions"
+      ]
+    },
+    {
+      "id": "navigation-004",
+      "prompt": "A widget displaying ETA and distance",
+      "complexity": "medium",
+      "metrics": [
+        "directions"
+      ]
+    },
+    {
+      "id": "navigation-005",
+      "prompt": "A widget showing route overview",
+      "complexity": "complex",
+      "metrics": [
+        "directions"
+      ],
+      "visualization": [
+        "map"
+      ]
+    },
+    {
+      "id": "navigation-006",
+      "prompt": "A widget showing traffic conditions",
+      "complexity": "medium",
+      "metrics": [
+        "traffic"
+      ]
+    },
+    {
+      "id": "navigation-007",
+      "prompt": "A widget displaying commute time",
+      "complexity": "simple",
+      "metrics": [
+        "commute"
+      ]
+    },
+    {
+      "id": "navigation-008",
+      "prompt": "A widget showing ETA to home",
+      "complexity": "medium",
+      "metrics": [
+        "eta"
+      ]
+    },
+    {
+      "id": "navigation-009",
+      "prompt": "A widget showing nearby places",
+      "complexity": "medium",
+      "metrics": [
+        "places"
+      ]
+    },
+    {
+      "id": "navigation-010",
+      "prompt": "A widget displaying saved locations",
+      "complexity": "medium",
+      "metrics": [
+        "locations"
+      ]
+    },
+    {
+      "id": "navigation-011",
+      "prompt": "A widget showing parking location",
+      "complexity": "medium",
+      "metrics": [
+        "parking"
+      ]
+    },
+    {
+      "id": "navigation-012",
+      "prompt": "A widget showing next bus arrival",
+      "complexity": "medium",
+      "metrics": [
+        "transit"
+      ]
+    },
+    {
+      "id": "navigation-013",
+      "prompt": "A widget displaying transit schedule",
+      "complexity": "complex",
+      "metrics": [
+        "transit"
+      ]
+    }
+  ]
+}

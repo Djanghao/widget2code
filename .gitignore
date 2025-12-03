@@ -29,4 +29,12 @@ pnpm-debug.log*
 tests/
 backup/
 tmp/
+
+input_images/
+reference-widgets/
 results/
+output/
+.github/
+batch-render-ready/
+libs/js/mutator/results/
+widgets/

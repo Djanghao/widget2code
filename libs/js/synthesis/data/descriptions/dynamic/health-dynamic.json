@@ -1,0 +1,301 @@
+{
+  "domain": "health",
+  "total": 49,
+  "generated": "2025-11-05T16:03:06.286Z",
+  "variations": [
+    {
+      "id": "health-dynamic-001",
+      "prompt": "A dashboard widget showing active energy",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-002",
+      "prompt": "A minimal widget showing heart rate with a trend sparkline and percentage change",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-003",
+      "prompt": "A large widget showing mindfulness minutes",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-004",
+      "prompt": "A compact widget showing heart rate",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-005",
+      "prompt": "A minimal widget showing distance walked",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-006",
+      "prompt": "A large widget showing mindfulness minutes with a monthly view",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-007",
+      "prompt": "A large widget showing active energy",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-008",
+      "prompt": "A detailed widget showing resting energy and today vs yesterday",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-009",
+      "prompt": "A detailed widget showing calories with a progress bar",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-010",
+      "prompt": "A large widget showing blood pressure with activity rings",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-011",
+      "prompt": "A dashboard widget showing heart rate with percentage display and time remaining",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-012",
+      "prompt": "A detailed widget showing heart rate and goal comparison",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-013",
+      "prompt": "A dashboard widget showing mindfulness minutes and percentage change",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-014",
+      "prompt": "A dashboard widget showing steps with activity rings",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-015",
+      "prompt": "A minimal widget showing vo2 max with a bar chart and personal record",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-016",
+      "prompt": "A small widget showing active energy",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-017",
+      "prompt": "A compact widget showing distance walked",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-018",
+      "prompt": "A large widget showing calories",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-019",
+      "prompt": "A large widget showing distance walked with a pie chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-020",
+      "prompt": "A small widget showing active energy with a pie chart and today vs yesterday",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-021",
+      "prompt": "A detailed widget showing active energy and percentage change",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-022",
+      "prompt": "A minimal widget showing mindfulness minutes with a weekly trend and today vs yesterday",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-023",
+      "prompt": "A detailed widget showing blood pressure and percentage change",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-024",
+      "prompt": "A large widget showing water intake",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-025",
+      "prompt": "A compact widget showing exercise time",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-026",
+      "prompt": "A large widget showing blood pressure",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-027",
+      "prompt": "A large widget showing calories and weekly average",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-028",
+      "prompt": "A detailed widget showing sleep",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-029",
+      "prompt": "A small widget showing calories with a pie chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-030",
+      "prompt": "A detailed widget showing water intake",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-031",
+      "prompt": "A large widget showing calories with a progress bar and personal record",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-032",
+      "prompt": "A compact widget showing heart rate",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-033",
+      "prompt": "A small widget showing distance walked with a progress ring",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-034",
+      "prompt": "A minimal widget showing mindfulness minutes",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-035",
+      "prompt": "A compact widget showing active energy with a bar chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-036",
+      "prompt": "A large widget showing stand hours",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-037",
+      "prompt": "A dashboard widget showing sleep with percentage display",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-038",
+      "prompt": "A large widget showing resting energy with a line chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-039",
+      "prompt": "A compact widget showing mindfulness minutes with a bar chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-040",
+      "prompt": "A dashboard widget showing water intake with percentage display",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-041",
+      "prompt": "A large widget showing exercise time and personal record",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-042",
+      "prompt": "A minimal widget showing vo2 max",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-043",
+      "prompt": "A compact widget showing heart rate and steps",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-044",
+      "prompt": "A compact widget showing calories and exercise time with a progress bar",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-045",
+      "prompt": "A large widget showing steps and distance walked with activity rings",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-046",
+      "prompt": "A small widget showing heart rate, calories and steps",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-047",
+      "prompt": "A large widget showing sleep and mindfulness minutes with a trend sparkline",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-048",
+      "prompt": "A small widget showing water intake, steps and calories with a progress bar",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "health-dynamic-049",
+      "prompt": "A large widget showing weight and active energy with percentage display",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

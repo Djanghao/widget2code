@@ -1,0 +1,153 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#007AFF",
+                "name": "sf:chart.bar.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "Sales Dashboard"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93",
+                    "fontWeight": 600
+                  },
+                  "content": "MONTHLY SALES"
+                },
+                {
+                  "type": "leaf",
+                  "component": "StackedBarChart",
+                  "width": 160,
+                  "height": 100,
+                  "flex": "none",
+                  "props": {
+                    "data": [
+                      { "name": "Product A", "value": 45000, "color": "#007AFF" },
+                      { "name": "Product B", "value": 32000, "color": "#34C759" },
+                      { "name": "Product C", "value": 28000, "color": "#FF9500" }
+                    ],
+                    "categories": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                    "showGrid": false,
+                    "showLabels": false,
+                    "barWidth": 18
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "$105,000"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93",
+                    "fontWeight": 600
+                  },
+                  "content": "PERFORMANCE"
+                },
+                {
+                  "type": "leaf",
+                  "component": "RadarChart",
+                  "width": 120,
+                  "height": 100,
+                  "flex": "none",
+                  "props": {
+                    "data": [
+                      { "axis": "Quality", "value": 85 },
+                      { "axis": "Price", "value": 70 },
+                      { "axis": "Service", "value": 90 },
+                      { "axis": "Delivery", "value": 75 },
+                      { "axis": "Support", "value": 88 }
+                    ],
+                    "color": "#FF3B30",
+                    "fillOpacity": 0.2,
+                    "showGrid": true,
+                    "showLabels": false,
+                    "gridColor": "#f0f0f0"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "81.6% Score"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

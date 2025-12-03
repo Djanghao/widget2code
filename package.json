@@ -11,13 +11,17 @@
     "start": "npm start --workspace=apps/playground",
     "dev": "npm run dev --workspace=apps/playground",
     "dev:full": "npm run dev:full --workspace=apps/playground",
-    "api": "cd apps/api && ./.venv/bin/python server.py",
+    "api": "cd apps\\api && .venv\\Scripts\\python.exe server.py",
+    "api:batch1": "concurrently --kill-others-on-fail \"cross-env BACKEND_PORT=8011 npm run api\" \"cross-env BACKEND_PORT=8012 npm run api\" \"cross-env BACKEND_PORT=8013 npm run api\" \"cross-env BACKEND_PORT=8014 npm run api\"",
+    "api:batch2": "concurrently --kill-others-on-fail \"cross-env BACKEND_PORT=8015 npm run api\" \"cross-env BACKEND_PORT=8016 npm run api\" \"cross-env BACKEND_PORT=8017 npm run api\" \"cross-env BACKEND_PORT=8018 npm run api\"",
+    "api:batch3": "concurrently --kill-others-on-fail \"cross-env BACKEND_PORT=8019 npm run api\" \"cross-env BACKEND_PORT=8020 npm run api\" \"cross-env BACKEND_PORT=8021 npm run api\" \"cross-env BACKEND_PORT=8022 npm run api\"",
     "build": "npm run build --workspaces --if-present",
     "prepare:dynamic": "node libs/js/icons/custom/sf-symbols/scripts/prepare-dynamic-icons.js",
     "build:icons": "node libs/js/icons/custom/sf-symbols/scripts/generate-icons.js",
     "render": "npm run render --workspace=apps/playground"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "vite": "^5.0.0"
   },
   "dependencies": {

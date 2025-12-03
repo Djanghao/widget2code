@@ -111,6 +111,17 @@ if [ "${ENABLE_MODEL_CACHE}" = "true" ]; then
     echo ""
 fi
 
-source apps/api/.venv/bin/activate
+# Activate virtual environment (cross-platform)
+if [ -f apps/api/.venv/Scripts/activate ]; then
+    # Windows (Git Bash, MINGW, etc.)
+    source apps/api/.venv/Scripts/activate
+elif [ -f apps/api/.venv/bin/activate ]; then
+    # Unix-like (Linux, macOS)
+    source apps/api/.venv/bin/activate
+else
+    echo "Error: Virtual environment activation script not found"
+    echo "Expected: apps/api/.venv/Scripts/activate (Windows) or apps/api/.venv/bin/activate (Unix)"
+    exit 1
+fi
 
 generate-widget-batch "$INPUT_DIR" "$OUTPUT_DIR" --concurrency "$CONCURRENCY" $FORCE_FLAG

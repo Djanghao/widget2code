@@ -1,0 +1,246 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 24,
+    "padding": 20,
+    "aspectRatio": 2,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignMain": "space-between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 20,
+                    "color": "#000000",
+                    "name": "sf:chart.line.uptrend.xyaxis"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "AAPL"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 13,
+                "color": "#34C759",
+                "fontWeight": 600
+              },
+              "content": "+2.4%"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 4,
+          "flex": 0,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 6,
+              "flex": 0,
+              "alignCross": "baseline",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 32,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "$182.52"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#34C759",
+                    "fontWeight": 500
+                  },
+                  "content": "+4.27"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 13,
+                "color": "#8E8E93"
+              },
+              "content": "Apple Inc."
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "LineChart",
+          "flex": 1,
+          "props": {
+            "data": [175.2, 176.8, 178.5, 177.2, 179.8, 181.5, 180.2, 182.52],
+            "width": 340,
+            "height": 80,
+            "strokeWidth": 2.5,
+            "color": "#34C759",
+            "showDots": false,
+            "showGrid": true,
+            "gridColor": "#E5E5EA"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "flex": 0,
+          "alignMain": "space-around",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "OPEN"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "$178.25"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "HIGH"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "$183.42"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "LOW"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "$177.98"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "MKT CAP"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "2.84T"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

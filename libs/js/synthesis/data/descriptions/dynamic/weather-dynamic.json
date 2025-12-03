@@ -1,0 +1,259 @@
+{
+  "domain": "weather",
+  "total": 42,
+  "generated": "2025-11-05T16:03:06.290Z",
+  "variations": [
+    {
+      "id": "weather-dynamic-001",
+      "prompt": "A detailed weather widget showing pressure with temperature chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-002",
+      "prompt": "A forecast widget showing pressure with hourly forecast",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-003",
+      "prompt": "A detailed weather widget showing wind speed with hourly forecast",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-004",
+      "prompt": "A detailed weather widget showing UV index",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-005",
+      "prompt": "A compact weather widget showing precipitation with condition icons",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-006",
+      "prompt": "A detailed weather widget showing air quality with temperature chart and pollen count",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-007",
+      "prompt": "A compact weather widget showing precipitation",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-008",
+      "prompt": "A forecast widget showing pressure",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-009",
+      "prompt": "A forecast widget showing UV index",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-010",
+      "prompt": "A forecast widget showing wind speed and high/low temps",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-011",
+      "prompt": "A minimal weather widget showing precipitation with hourly forecast and moon phase",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-012",
+      "prompt": "A detailed weather widget showing wind speed with condition icons",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-013",
+      "prompt": "A detailed weather widget showing precipitation with weekly view",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-014",
+      "prompt": "A forecast widget showing sunrise time and weather alerts",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-015",
+      "prompt": "A minimal weather widget showing temperature",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-016",
+      "prompt": "A detailed weather widget showing air quality",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-017",
+      "prompt": "A minimal weather widget showing feels like temperature",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-018",
+      "prompt": "A compact weather widget showing air quality",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-019",
+      "prompt": "A forecast widget showing air quality with 5-day forecast and pollen count",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-020",
+      "prompt": "A detailed weather widget showing visibility and pollen count",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-021",
+      "prompt": "A minimal weather widget showing air quality with radar map",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-022",
+      "prompt": "A minimal weather widget showing UV index",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-023",
+      "prompt": "A compact weather widget showing air quality",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-024",
+      "prompt": "A minimal weather widget showing feels like temperature with weekly view and moon phase",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-025",
+      "prompt": "A compact weather widget showing sunrise time with hourly forecast and moon phase",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-026",
+      "prompt": "A minimal weather widget showing pressure with condition icons",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-027",
+      "prompt": "A compact weather widget showing sunrise time with weekly view",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-028",
+      "prompt": "A minimal weather widget showing pressure with condition icons and pollen count",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-029",
+      "prompt": "A compact weather widget showing air quality with radar map",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-030",
+      "prompt": "A compact weather widget showing precipitation",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-031",
+      "prompt": "A minimal weather widget showing visibility",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-032",
+      "prompt": "A compact weather widget showing sunrise time with condition icons",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-033",
+      "prompt": "A compact weather widget showing UV index",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-034",
+      "prompt": "A minimal weather widget showing temperature and feels like temperature",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-035",
+      "prompt": "A minimal weather widget showing temperature, humidity and wind speed",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-036",
+      "prompt": "A compact weather widget showing UV index and air quality with temperature chart",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-037",
+      "prompt": "A forecast widget showing sunrise time and sunset time",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-038",
+      "prompt": "A weather widget showing current conditions with forecast",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-039",
+      "prompt": "A weather widget showing today conditions with forecast",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-040",
+      "prompt": "A weather widget showing this week conditions with forecast",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-041",
+      "prompt": "A weather widget showing hourly conditions with forecast",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "weather-dynamic-042",
+      "prompt": "A weather widget showing daily conditions with forecast",
+      "complexity": "medium",
+      "generated": true
+    }
+  ]
+}

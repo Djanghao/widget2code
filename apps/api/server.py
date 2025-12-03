@@ -197,17 +197,64 @@ async def health():
 # ):
 #     raise HTTPException(status_code=410, detail="Endpoint deprecated. Use /api/generate-widget-full instead.")
 
-# DEPRECATED: This endpoint has been removed as part of the generate refactor
-# The underlying function generate_widget_text() no longer exists
-# @app.post("/api/generate-widget-text")
-# async def generate_widget_text(
-#     request: Request,
-#     system_prompt: str = Form(...),
-#     user_prompt: str = Form(...),
-#     model: str = Form(None),
-#     api_key: str = Form(None),
-# ):
-#     raise HTTPException(status_code=410, detail="Endpoint deprecated and removed.")
+
+# PREVIOUSLY DEPRECATED: This endpoint had previously been removed as part of the generate refactor, but re-added back in to support synthetic generation
+@app.post("/api/generate-widget-text")
+async def generate_widget_text(
+    request: Request,
+    system_prompt: str = Form(...),
+    user_prompt: str = Form(...),
+    model: str = Form(None),
+    api_key: str = Form(None),
+):
+    client_ip = request.client.host
+    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+
+    # Fallback to environment variable if api_key not provided
+    api_key_to_use = api_key or os.getenv('DASHSCOPE_API_KEY')
+    # Fallback to config default model if not provided
+    model_to_use = model or gen_config.default_model
+
+    return await generator.generate_widget_text(
+        system_prompt, user_prompt, model_to_use, api_key_to_use, gen_config
+    )
+
+@app.post("/api/generate-widget-text-with-reference")
+async def generate_widget_text_with_reference(
+    request: Request,
+    reference_image: UploadFile = File(...),
+    system_prompt: str = Form(None),
+    user_prompt: str = Form(...),
+    model: str = Form(None),
+    api_key: str = Form(None),
+):
+    """
+    Generate widget from text prompt with reference image for style guidance.
+
+    Args:
+        reference_image: Reference widget image for style inspiration
+        system_prompt: Optional custom system prompt (defaults to with-reference template)
+        user_prompt: Widget description
+        model: Optional model name (defaults to qwen3-vl-flash)
+        api_key: Optional API key (defaults to env DASHSCOPE_API_KEY)
+    """
+    client_ip = request.client.host
+    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+        raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
+
+    # Fallback to environment variable if api_key not provided
+    api_key_to_use = api_key or os.getenv('DASHSCOPE_API_KEY')
+    # Fallback to config default model if not provided
+    model_to_use = model or gen_config.default_model
+
+    # Read reference image data
+    reference_image_data = await reference_image.read()
+
+    return await generator.generate_widget_text_with_reference(
+        system_prompt, user_prompt, reference_image_data, reference_image.filename,
+        model_to_use, api_key_to_use, gen_config
+    )
 
 @app.post("/api/generate-component")
 async def generate_component(
@@ -422,6 +469,76 @@ async def encode_images(
         print(f"[{request_id}] ✅ SigLIP-IMAGE COMPLETED | Process: {process_time:.2f}s | Total: {time.time()-start_time:.2f}s")
 
     return {"success": True, "embeddings": embeddings.tolist()}
+
+@app.get("/api/dsl-batches")
+async def list_dsl_batches():
+    """
+    List all available DSL batch files from the generator results directory.
+    Returns a list of batch files grouped by run ID.
+    """
+    try:
+        results_dir = root_dir / "libs" / "js" / "mutator" / "results"
+        
+        if not results_dir.exists():
+            return {"success": True, "batches": []}
+        
+        batches = []
+        for run_dir in sorted(results_dir.glob("run-*"), reverse=True):
+            if run_dir.is_dir():
+                for batch_file in sorted(run_dir.glob("*-batch-*.json")):
+                    # Get file stats
+                    stats = batch_file.stat()
+                    size_mb = stats.st_size / (1024 * 1024)
+                    
+                    batches.append({
+                        "runId": run_dir.name,
+                        "filename": batch_file.name,
+                        "path": f"{run_dir.name}/{batch_file.name}",
+                        "sizeMB": round(size_mb, 2),
+                        "modified": stats.st_mtime
+                    })
+        
+        return {"success": True, "batches": batches}
+    except Exception as e:
+        print(f"Error listing DSL batches: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={"success": False, "error": str(e)}
+        )
+
+@app.get("/api/dsl-batches/{run_id}/{filename}")
+async def get_dsl_batch(run_id: str, filename: str):
+    """
+    Get a specific DSL batch file by run ID and filename.
+    Returns the JSON content of the batch file.
+    """
+    try:
+        # Validate path components to prevent directory traversal
+        if ".." in run_id or ".." in filename:
+            raise HTTPException(status_code=400, detail="Invalid path")
+        
+        batch_path = root_dir / "libs" / "js" / "mutator" / "results" / run_id / filename
+        
+        if not batch_path.exists():
+            raise HTTPException(status_code=404, detail="Batch file not found")
+        
+        if not batch_path.is_file():
+            raise HTTPException(status_code=400, detail="Invalid file")
+        
+        # Read and return the JSON file
+        import json
+        with open(batch_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        return {"success": True, "data": data}
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Error reading DSL batch: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={"success": False, "error": str(e)}
+        )
 
 if __name__ == "__main__":
     import uvicorn

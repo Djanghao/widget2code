@@ -1,1 +1,2 @@
-export { compileWidgetDSLToJSX } from './compiler.js';
+export { compileWidgetDSLToJSX, generateContainerLayout } from "./compiler.js";
+export { compileWidgetDSLToHTML } from "./html-compiler.js";

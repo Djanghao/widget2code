@@ -1,0 +1,246 @@
+{
+  "domain": "productivity",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "productivity-img-001",
+      "prompt": "A task widget with checkbox, task name, due date, and priority flag",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "task or checkbox icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-002",
+      "prompt": "A calendar event widget with event photo, title, time, and attendees",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "calendar or event photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-003",
+      "prompt": "A note widget with note thumbnail, title, last edited date, and tags",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "note preview or thumbnail",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-004",
+      "prompt": "A pomodoro timer widget with tomato icon, time remaining, session count, and break indicator",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "pomodoro tomato or timer",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "productivity-img-005",
+      "prompt": "A habit tracker widget with habit icon, streak count, completion calendar, and goal",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "habit tracking icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-006",
+      "prompt": "A document widget with document thumbnail, filename, last modified, and collaborators",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "document preview thumbnail",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-007",
+      "prompt": "A goal widget with goal visualization, target, progress percentage, and deadline",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "goal or target visualization",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-008",
+      "prompt": "A time tracking widget with project icon, time logged, task, and billing rate",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "time or clock icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-009",
+      "prompt": "A meeting widget with meeting room photo, title, participants, and join link",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "meeting room or video call",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-010",
+      "prompt": "A project widget with project banner, completion percentage, team members, and deadline",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "project banner or logo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "productivity-img-011",
+      "prompt": "A bookmark widget with webpage preview, title, URL, and save date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "webpage preview thumbnail",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-012",
+      "prompt": "A focus mode widget with zen background, timer, distractions blocked, and session type",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "zen or focus background",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "productivity-img-013",
+      "prompt": "A spreadsheet widget with sheet preview, name, last edit, and key metrics",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "spreadsheet preview",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-014",
+      "prompt": "A reminder widget with reminder icon, message, time, and snooze option",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "bell or reminder icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-015",
+      "prompt": "A team collaboration widget with team photo, active members, shared files, and chat",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "team members photos",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "productivity-img-016",
+      "prompt": "A brainstorm widget with mind map visual, ideas count, contributors, and topic",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "mind map or brainstorm visual",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "productivity-img-017",
+      "prompt": "A presentation widget with slide preview, presentation name, slide count, and edit link",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "presentation slide preview",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-018",
+      "prompt": "A invoice widget with invoice document, client name, amount due, and payment status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "invoice document preview",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-019",
+      "prompt": "A password vault widget with vault icon, stored passwords count, and security score",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "vault or lock icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-020",
+      "prompt": "A kanban board widget with board columns, task cards, assignees, and progress",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "kanban board layout",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "productivity-img-021",
+      "prompt": "A email draft widget with draft preview, recipient, subject, and save time",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "email draft preview",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-022",
+      "prompt": "A scanner widget with scanned document preview, type, date, and OCR status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "scanned document preview",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-023",
+      "prompt": "A signature widget with signature image, signee name, document, and timestamp",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "digital signature",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-024",
+      "prompt": "A whiteboard widget with whiteboard sketch, collaborators, and edit timestamp",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "whiteboard sketch or drawing",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "productivity-img-025",
+      "prompt": "A form widget with form preview, title, submissions count, and response rate",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "form preview",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-026",
+      "prompt": "A milestone widget with milestone badge, achievement, completion date, and celebration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "milestone badge or trophy",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-027",
+      "prompt": "A file sync widget with cloud icon, sync status, storage used, and last backup",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "cloud sync icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-028",
+      "prompt": "A report widget with report chart preview, title, metrics, and generation date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "report chart or graph",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "productivity-img-029",
+      "prompt": "A workflow automation widget with workflow diagram, trigger, actions, and run count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "workflow diagram",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "productivity-img-030",
+      "prompt": "A certification widget with certificate image, credential name, issuer, and expiry date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "certificate or badge image",
+      "imagePlacement": "left-thumbnail"
+    }
+  ]
+}

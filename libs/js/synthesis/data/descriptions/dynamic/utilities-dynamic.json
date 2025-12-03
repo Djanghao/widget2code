@@ -1,0 +1,193 @@
+{
+  "domain": "utilities",
+  "total": 31,
+  "generated": "2025-11-05T16:03:06.300Z",
+  "variations": [
+    {
+      "id": "utilities-dynamic-001",
+      "prompt": "A battery widget showing network speed with progress ring",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-002",
+      "prompt": "A storage widget showing WiFi status",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-003",
+      "prompt": "A battery widget showing screen time and available space",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-004",
+      "prompt": "A network widget showing data usage with progress ring",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-005",
+      "prompt": "A system widget showing memory usage with progress bar",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-006",
+      "prompt": "A battery widget showing battery level with icon indicator and signal strength",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-007",
+      "prompt": "A network widget showing battery level",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-008",
+      "prompt": "A network widget showing battery level",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-009",
+      "prompt": "A storage widget showing memory usage with usage graph",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-010",
+      "prompt": "A battery widget showing charging status with usage graph",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-011",
+      "prompt": "A system widget showing screen time with percentage and signal strength",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-012",
+      "prompt": "A network widget showing CPU usage",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-013",
+      "prompt": "A system widget showing battery level and charging rate",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-014",
+      "prompt": "A battery widget showing CPU usage with progress bar",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-015",
+      "prompt": "A network widget showing storage space",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-016",
+      "prompt": "A battery widget showing storage space",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-017",
+      "prompt": "A network widget showing battery level with icon indicator",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-018",
+      "prompt": "A network widget showing storage space",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-019",
+      "prompt": "A battery widget showing WiFi status with progress bar",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-020",
+      "prompt": "A network widget showing charging status with progress ring",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-021",
+      "prompt": "A battery widget showing charging status",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-022",
+      "prompt": "A network widget showing CPU usage with usage graph",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-023",
+      "prompt": "A battery widget showing storage space",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-024",
+      "prompt": "A storage widget showing memory usage with percentage and time remaining",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-025",
+      "prompt": "A system widget showing charging status with progress ring",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-026",
+      "prompt": "A battery widget showing network speed",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-027",
+      "prompt": "A system widget showing screen time",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-028",
+      "prompt": "A storage widget showing battery level and charging status with progress ring",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-029",
+      "prompt": "A system widget showing storage space and available space with percentage",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-030",
+      "prompt": "A network widget showing WiFi status and network speed",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "utilities-dynamic-031",
+      "prompt": "A system widget showing CPU usage and memory usage",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

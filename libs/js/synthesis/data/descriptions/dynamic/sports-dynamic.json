@@ -1,0 +1,187 @@
+{
+  "domain": "sports",
+  "total": 30,
+  "generated": "2025-11-05T16:03:06.301Z",
+  "variations": [
+    {
+      "id": "sports-dynamic-001",
+      "prompt": "A standings widget showing team standings",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-002",
+      "prompt": "A live game widget showing recent results and game status",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-003",
+      "prompt": "A live game widget showing live score with stats bars",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-004",
+      "prompt": "A standings widget showing game clock",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-005",
+      "prompt": "A standings widget showing team standings with stats bars",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-006",
+      "prompt": "A live game widget showing team standings with team logos",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-007",
+      "prompt": "A schedule widget showing team standings with score display and game status",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-008",
+      "prompt": "A standings widget showing recent results with standings table and next game",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-009",
+      "prompt": "A standings widget showing league table with stats bars",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-010",
+      "prompt": "A standings widget showing upcoming games",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-011",
+      "prompt": "A schedule widget showing game clock",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-012",
+      "prompt": "A live game widget showing match events",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-013",
+      "prompt": "A scoreboard widget showing match events with score display",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-014",
+      "prompt": "A live game widget showing player stats with score display",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-015",
+      "prompt": "A live game widget showing live score",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-016",
+      "prompt": "A live game widget showing match events and game status",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-017",
+      "prompt": "A scoreboard widget showing game clock",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-018",
+      "prompt": "A schedule widget showing fantasy points and next game",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-019",
+      "prompt": "A scoreboard widget showing league table",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-020",
+      "prompt": "A schedule widget showing league table",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-021",
+      "prompt": "A standings widget showing live score with score display",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-022",
+      "prompt": "A schedule widget showing match events with standings table",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-023",
+      "prompt": "A live game widget showing recent results",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-024",
+      "prompt": "A schedule widget showing league table",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-025",
+      "prompt": "A schedule widget showing upcoming games and next game",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-026",
+      "prompt": "A live game widget showing player stats with stats bars and win/loss record",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-027",
+      "prompt": "A live game widget showing live score",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-028",
+      "prompt": "A standings widget showing live score and game clock",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-029",
+      "prompt": "A scoreboard widget showing team standings and recent results with stats bars",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "sports-dynamic-030",
+      "prompt": "A schedule widget showing player stats and fantasy points",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

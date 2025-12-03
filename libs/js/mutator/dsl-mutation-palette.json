@@ -1,0 +1,583 @@
+{
+  "mutationPalette": {
+    "nodeTypes": {
+      "container": {
+        "type": "container",
+        "requiredFields": ["type", "children"],
+        "optionalFields": ["direction", "gap", "padding", "alignMain", "alignCross", "flex", "width", "height", "backgroundColor"]
+      },
+      "leaf": {
+        "type": "leaf",
+        "requiredFields": ["type", "component"],
+        "optionalFields": ["props", "flex", "width", "height", "content"]
+      }
+    },
+
+    "containerValues": {
+      "direction": ["row", "col"],
+      "alignMain": ["start", "end", "center", "between"],
+      "alignCross": ["start", "end", "center"],
+      "gap": [0, 4, 6, 8, 11, 12, 16, 20, 24],
+      "padding": [0, 4, 8, 11, 12, 16, 20, 24],
+      "flex": [0, 1],
+      "backgroundColor": [
+        "#ffffff", "#f8f9fa", "#e9ecef", "#dee2e6",
+        "#000000", "#212529", "#343a40", "#495057",
+        "#007bff", "#6610f2", "#6f42c1", "#e83e8c",
+        "#dc3545", "#fd7e14", "#ffc107", "#28a745",
+        "#20c997", "#17a2b8", "#6c757d", "#343a40",
+        "transparent"
+      ]
+    },
+
+    "components": {
+      "basic": ["Text", "Icon", "Image", "MapImage", "Checkbox", "Divider", "Indicator", "AppLogo"],
+      "charts": ["BarChart", "LineChart", "PieChart", "RadarChart", "StackedBarChart", "Sparkline", "ProgressBar", "ProgressRing"]
+    },
+
+    "textProps": {
+      "fontSize": [10, 11, 12, 14, 16, 18, 20, 24, 28, 32],
+      "fontWeight": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      "align": ["left", "center", "right"],
+      "lineHeight": [1.0, 1.2, 1.3, 1.4, 1.5, 1.6],
+      "color": [
+        "#000000", "#212529", "#343a40", "#495057", "#6c757d",
+        "#ffffff", "#f8f9fa", "#e9ecef", "#dee2e6", "#ced4da",
+        "#007bff", "#0056b3", "#004085", "#002752",
+        "#28a745", "#1e7e34", "#155724", "#0c3615",
+        "#dc3545", "#bd2130", "#721c24", "#461a21",
+        "#ffc107", "#e0a800", "#d39e00", "#856404",
+        "#17a2b8", "#117a8b", "#0c5460", "#063d47",
+        "#6f42c1", "#5a32a3", "#4a2c8a", "#36206f",
+        "rgba(0, 0, 0, 0.85)", "rgba(255, 255, 255, 0.85)",
+        "rgba(0, 0, 0, 0.6)", "rgba(255, 255, 255, 0.6)"
+      ]
+    },
+
+    "iconProps": {
+      "size": [12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 48],
+      "color": [
+        "#000000", "#ffffff", "#007bff", "#28a745", "#dc3545",
+        "#ffc107", "#17a2b8", "#6f42c1", "#343a40", "#6c757d",
+        "rgba(0, 0, 0, 0.85)", "rgba(255, 255, 255, 0.85)"
+      ],
+      "sfNames": [
+        "star", "star.fill", "heart", "heart.fill", "plus", "plus.fill",
+        "minus", "minus.fill", "checkmark", "checkmark.circle", "checkmark.circle.fill",
+        "xmark", "xmark.circle", "xmark.circle.fill", "arrow.up", "arrow.down",
+        "arrow.left", "arrow.right", "arrow.up.circle", "arrow.down.circle",
+        "house", "house.fill", "person", "person.fill", "gear", "gearshape",
+        "gearshape.fill", "bell", "bell.fill", "envelope", "envelope.fill",
+        "phone", "phone.fill", "camera", "camera.fill", "photo", "photo.fill",
+        "music.note", "music.note.list", "play", "play.fill", "pause", "pause.fill",
+        "stop", "stop.fill", "backward", "backward.fill", "forward", "forward.fill",
+        "calendar", "calendar.circle", "clock", "clock.fill", "alarm", "alarm.fill",
+        "bookmark", "bookmark.fill", "flag", "flag.fill", "location", "location.fill",
+        "map", "map.fill", "magnifyingglass", "trash", "trash.fill", "square",
+        "square.fill", "circle", "circle.fill", "triangle", "triangle.fill",
+        "rectangle", "rectangle.fill", "doc", "doc.fill", "folder", "folder.fill",
+        "cloud", "cloud.fill", "sun.max", "sun.max.fill", "moon", "moon.fill",
+        "cloud.sun", "cloud.sun.fill", "cloud.rain", "cloud.rain.fill", "cloud.bolt",
+        "bolt", "bolt.fill", "tornado", "hurricane", "snow", "flame",
+        "flame.fill", "waterdrop", "waterdrop.fill", "leaf", "leaf.fill", "tree",
+        "tree.fill", "car", "car.fill", "airplane", "airplane.arrival",
+        "train.side.front.car", "bicycle", "bus", "bus.fill", "ferry", "ferry.fill",
+        "cablecar", "cablecar.fill", "scooter", "figure.walk", "figure.run",
+        "sportscourt", "sportscourt.fill", "tennis.racket", "tennis.ball", "basketball",
+        "basketball.fill", "football", "football.fill", "baseball", "baseball.fill",
+        "soccerball", "soccerball.fill", "hockey.puck", "tabletennis.paddle",
+        "badminton.racket", "shuttlecock", "golfball", "archery.bow", "trophy",
+        "trophy.fill", "medal", "medal.fill", "gift", "gift.fill", "birthday.cake",
+        "birthday.cake.fill", "party.popper", "balloon", "balloon.fill", "pawprint",
+        "pawprint.fill", "hare", "hare.fill", "bear", "bear.fill", "elephant",
+        "fish", "fish.fill", "bird", "bird.fill", "butterfly", "ant", "ant.fill",
+        "ladybug", "ladybug.fill", "cockroach", "cockroach.fill", "pills",
+        "pills.fill", "stethoscope", "cross.case", "cross.case.fill", "bandage",
+        "bandage.fill", "crutches", "walker", "cane", "lungs", "lungs.fill",
+        "brain", "brain.fill", "heart.circle", "heart.circle.fill", "kidney",
+        "kidney.fill", "liver", "liver.fill", "stomach", "eye", "eye.fill",
+        "eyebrow", "nose", "mouth", "mouth.fill", "ear", "ear.fill",
+        "hand.thumbsup", "hand.thumbsup.fill", "hand.thumbsdown", "hand.thumbsdown.fill",
+        "hand.point.up", "hand.point.up.fill", "hand.point.down", "hand.point.down.fill",
+        "hand.point.left", "hand.point.left.fill", "hand.point.right", "hand.point.right.fill",
+        "hand.wave", "hand.wave.fill", "hand.tap", "hand.tap.fill", "hand.draw",
+        "hand.pinch", "speaker.wave.1", "speaker.wave.2", "speaker.wave.3",
+        "speaker.slash", "speaker.slash.fill", "mic", "mic.fill", "mic.slash",
+        "mic.slash.fill", "headphones", "airpods", "airpods.left", "airpods.right",
+        "airpods.pro", "airpods.pro.left", "airpods.pro.right", "airpods.max",
+        "airpods.max.left", "airpods.max.right", "hifispeaker", "hifispeaker.fill",
+        "tv", "tv.fill", "display", "display.2", "desktopcomputer", "imac",
+        "macbook", "macmini", "server.rack", "cylinder.fill", "cpu", "memorychip",
+        "internaldrive", "externaldrive", "externaldrive.fill", "externaldrive.connected",
+        "externaldrive.connected.fill", "network", "externaldrive.badge.plus",
+        "externaldrive.badge.minus", "externaldrive.badge.checkmark", "externaldrive.badge.xmark",
+        "externaldrive.badge.personal", "externaldrive.badge.wifi", "externaldrive.badge.timemachine",
+        "externaldrive.badge.icloud", "icloud", "icloud.fill", "icloud.circle", "icloud.circle.fill",
+        "icloud.slash", "icloud.slash.fill", "icloud.and.arrow.up", "icloud.and.arrow.up.fill",
+        "icloud.and.arrow.down", "icloud.and.arrow.down.fill", "icloud.and.arrow.left",
+        "icloud.and.arrow.left.fill", "icloud.and.arrow.right", "icloud.and.arrow.right.fill",
+        "icloud.square", "icloud.square.fill", "icloud.square.and.arrow.up", "icloud.square.and.arrow.up.fill",
+        "icloud.square.and.arrow.down", "icloud.square.and.arrow.down.fill", "icloud.square.and.arrow.left",
+        "icloud.square.and.arrow.left.fill", "icloud.square.and.arrow.right", "icloud.square.and.arrow.right.fill",
+        "wifi", "wifi.slash", "wifi.exclamationmark", "antenna.radiowaves.left.and.right",
+        "antenna.radiowaves.left.and.right.slash", "app.dashed", "app.badge", "app.badge.checkmark",
+        "app.badge.plus", "app.fill", "app", "app.connected.to.app.below.fill",
+        "app.connected.to.app.below", "app.gift", "app.gift.fill", "app.clipboard",
+        "app.clipboard.fill", "app.clipboard.clipboard", "app.clipboard.clipboard.fill",
+        "rectangle.dashed", "rectangle.dashed.and.rectangle", "rectangle.dashed.and.rectangle.fill",
+        "rectangle.split.1x2", "rectangle.split.2x1", "rectangle.split.2x2",
+        "rectangle.split.3x1", "rectangle.split.3x3", "rectangle.split.3x3.fill",
+        "rectangle.compress.vertical", "rectangle.expand.vertical", "rectangle.compress.horizontal",
+        "rectangle.expand.horizontal", "rectangle.and.text.magnifyingglass", "rectangle.and.arrow.up.right",
+        "rectangle.and.arrow.up.right.fill", "rectangle.and.arrow.down.right", "rectangle.and.arrow.down.right.fill",
+        "rectangle.and.paperclip", "rectangle.portrait", "rectangle.portrait.fill",
+        "rectangle.portrait.and.arrow.right", "rectangle.portrait.and.arrow.right.fill",
+        "rectangle.portrait.and.arrow.left", "rectangle.portrait.and.arrow.left.fill",
+        "rectangle.stack", "rectangle.stack.fill", "rectangle.stack.badge.plus",
+        "rectangle.stack.badge.minus", "rectangle.stack.badge.play", "rectangle.stack.badge.play.fill",
+        "rectangle.stack.badge.person.crop", "rectangle.stack.badge.person.crop.fill",
+        "rectangle.stack.badge.checkmark", "rectangle.stack.badge.checkmark.fill",
+        "rectangle.stack.badge.xmark", "rectangle.stack.badge.xmark.fill",
+        "square.and.arrow.up", "square.and.arrow.up.fill", "square.and.arrow.down",
+        "square.and.arrow.down.fill", "square.and.arrow.up.on.square", "square.and.arrow.up.on.square.fill",
+        "square.and.arrow.down.on.square", "square.and.arrow.down.on.square.fill",
+        "square.and.arrow.left", "square.and.arrow.left.fill", "square.and.arrow.right",
+        "square.and.arrow.right.fill", "square.and.pencil", "square.and.pencil.fill",
+        "square.and.line.vertical.and.square", "square.and.line.vertical.and.square.fill",
+        "square.split.2x1", "square.split.1x2", "square.split.2x2", "square.split.3x3",
+        "square.split.diagonal", "square.split.diagonal.2x2", "square.split.diagonal.fill",
+        "square.split.diagonal.2x2.fill", "square.split.bottomrightquarter", "square.split.bottomrightquarter.fill",
+        "square.stack", "square.stack.fill", "square.stack.3d", "square.stack.3d.down.right",
+        "square.stack.3d.down.right.fill", "square.stack.3d.down.left", "square.stack.3d.down.left.fill",
+        "square.stack.3d.up", "square.stack.3d.up.fill", "square.stack.3d.up.right",
+        "square.stack.3d.up.right.fill", "square.stack.3d.up.left", "square.stack.3d.up.left.fill",
+        "square.stack.3d.down", "square.stack.3d.down.fill", "square.stack.3d.slash",
+        "square.stack.3d.slash.fill", "square.grid.2x2", "square.grid.3x2", "square.grid.3x3",
+        "square.grid.3x3.fill", "square.grid.3x3.square", "square.grid.3x3.square.fill",
+        "square.grid.4x4", "square.grid.4x4.fill", "square.grid.3x3.fill.square", "square.grid.3x3.fill.square.fill",
+        "diamond", "diamond.fill", "hexagon", "hexagon.fill", "octagon", "octagon.fill",
+        "pentagon", "pentagon.fill", "pentagon.lefthalf.filled", "triangle.lefthalf.filled",
+        "triangle.righthalf.filled", "triangle.topleadinghalf.filled", "triangle.topleadinghalf.filled.fill",
+        "triangle.toprighthalf.filled", "triangle.toplefthalf.filled", "triangle.toprighthalf.filled.fill",
+        "triangle.bottomlefthalf.filled", "triangle.bottomlefthalf.filled.fill", "triangle.bottomrighthalf.filled",
+        "triangle.bottomrighthalf.filled.fill", "triangle.split", "triangle.split.fill",
+        "triangle.split.diagonal", "triangle.split.diagonal.fill", "triangle.split.top",
+        "triangle.split.top.fill", "triangle.split.bottom", "triangle.split.bottom.fill",
+        "triangle.split.side", "triangle.split.side.fill", "triangle.split.topleftbottomright",
+        "triangle.split.toprightbottomleft", "triangle.center.inset.filled", "triangle.fill",
+        "triangle.lefthalf.fill", "triangle.righthalf.fill", "triangle.toplefthalf.fill",
+        "triangle.topleadinghalf.fill", "triangle.toprighthalf.fill", "triangle.toplefthalf.fill.fill",
+        "triangle.toprighthalf.fill.fill", "triangle.bottomlefthalf.fill", "triangle.bottomlefthalf.fill.fill",
+        "triangle.bottomrighthalf.fill", "triangle.bottomrighthalf.fill.fill", "triangle.split.diagonal.2x2",
+        "triangle.split.diagonal.2x2.fill", "triangle.split.bottomrightquarter", "triangle.split.bottomrightquarter.fill"
+      ],
+      "lucideNames": [
+        "Home", "User", "Settings", "Bell", "Mail", "Phone", "Camera", "Image",
+        "Music", "Play", "Pause", "SkipBack", "SkipForward", "Volume2", "VolumeX",
+        "Calendar", "Clock", "MapPin", "Search", "Filter", "Plus", "Minus", "X",
+        "Check", "ChevronDown", "ChevronUp", "ChevronLeft", "ChevronRight", "ArrowUp",
+        "ArrowDown", "ArrowLeft", "ArrowRight", "Menu", "MoreVertical", "MoreHorizontal",
+        "Edit", "Trash", "Save", "Download", "Upload", "Share", "Heart", "Star",
+        "Bookmark", "MessageSquare", "MessageCircle", "Paperclip", "Lock", "Unlock",
+        "Eye", "EyeOff", "Shield", "AlertCircle", "AlertTriangle", "Info", "HelpCircle",
+        "Moon", "Sun", "Cloud", "CloudRain", "CloudSnow", "Umbrella", "Wind", "Thermometer",
+        "Activity", "TrendingUp", "TrendingDown", "BarChart", "BarChart2", "PieChart", "LineChart",
+        "Zap", "Battery", "Wifi", "WifiOff", "Bluetooth", "BluetoothOff", "Cpu", "HardDrive",
+        "Database", "Server", "CloudOff", "Navigation", "Compass", "Map", "Globe", "Link",
+        "Unlink", "ExternalLink", "Copy", "Clipboard", "FileText", "Folder", "FolderOpen",
+        "Archive", "Package", "Send", "Inbox", "Archive", "Trash2", "RefreshCw", "RefreshCcw",
+        "RotateCw", "RotateCcw", "Undo", "Redo", "ZoomIn", "ZoomOut", "Maximize", "Minimize",
+        "Expand", "Shrink", "Move", "Grab", "Hand", "MousePointer", "Touchpad", "Monitor",
+        "Tablet", "Smartphone", "Laptop", "Headphones", "Speaker", "Mic", "MicOff", "Video",
+        "VideoOff", "CameraOff", "Camera2", "Aperture", "ImageOff", "Film", "Tv", "Radio",
+        "Headset", "Voicemail", "PhoneForwarded", "PhoneMissed", "PhoneIncoming", "PhoneOutgoing",
+        "MessageSquare", "MessageCircle", "AtSign", "Hash", "Percent", "DollarSign", "PoundSterling",
+        "Euro", "CreditCard", "Banknote", "Wallet", "Gift", "ShoppingBag", "ShoppingCart",
+        "Package", "Truck", "Plane", "Train", "Car", "Bicycle", "Motorcycle", "Bus",
+        "Ferry", "Anchor", "Compass", "Map", "MapPin", "Navigation", "Navigation2", "Globe",
+        "Sunrise", "Sunset", "Mountain", "MountainSnow", "Trees", "TreePine", "Flower", "Leaf",
+        "Bug", "Fish", "Bird", "Cat", "Dog", "Rabbit", "Horse", "PawPrint",
+        "Footprints", "Zap", "ZapOff", "Activity", "Target", "Crosshair", "Telescope", "Microscope",
+        "TestTube", "Pill", "Syringe", "Stethoscope", "Heart", "HeartHandshake", "Lungs",
+        "Bone", "Eye", "EyeOff", "Ear", "EarOff", "Nose", "Mouth", "Smile",
+        "Frown", "Meh", "Angry", "Laugh", "Kiss", "Grin", "Grinning", "Tongue",
+        "Wink", "Dizzy", "Frown", "Angry", "Meh", "Smile", "Grin", "Laugh",
+        "Wink", "Kiss", "Tongue", "Dizzy"
+      ]
+    },
+
+    "chartProps": {
+      "common": {
+        "width": ["100%", "auto"],
+        "height": ["100%", "auto"],
+        "minWidth": [100, 150, 200, 250, 300],
+        "minHeight": [60, 80, 100, 120, 150, 200],
+        "backgroundColor": [
+          "#ffffff", "#f8f9fa", "#e9ecef", "#dee2e6",
+          "#000000", "#212529", "#343a40", "#495057",
+          "transparent"
+        ],
+        "theme": ["light", "dark"]
+      },
+      "barChart": {
+        "orientation": ["vertical", "horizontal"],
+        "showValues": [true, false]
+      },
+      "lineChart": {
+        "smooth": [true, false],
+        "showArea": [true, false],
+        "showMarkers": [true, false],
+        "showXTrendline": [true, false],
+        "showYTrendline": [true, false]
+      },
+      "pieChart": {
+        "variant": ["pie", "donut", "ring"],
+        "innerRadius": [0, 20, 30, 40, 50, 60],
+        "outerRadius": [60, 70, 80, 90, 100],
+        "startAngle": [0, 45, 90, 135, 180, 225, 270, 315],
+        "showLabels": [true, false],
+        "showValues": [true, false],
+        "showPercentages": [true, false]
+      },
+      "progressBar": {
+        "orientation": ["horizontal", "vertical"],
+        "variant": ["default", "success", "warning", "danger"],
+        "size": ["small", "medium", "large"]
+      },
+      "progressRing": {
+        "thickness": [4, 6, 8, 10, 12]
+      },
+      "sparkline": {
+        "fill": [true, false],
+        "baseline": [true, false]
+      }
+    },
+
+    "dataPatterns": {
+      "small": {
+        "count": [3, 4, 5, 6, 7, 8],
+        "range": [0, 10, 25, 50, 100]
+      },
+      "medium": {
+        "count": [5, 6, 7, 8, 9, 10, 12, 15],
+        "range": [0, 100, 250, 500, 1000]
+      },
+      "large": {
+        "count": [10, 12, 15, 18, 20, 25, 30],
+        "range": [0, 1000, 2500, 5000, 10000]
+      },
+      "chartTypes": {
+        "sparkline": [10, 15, 20, 25, 30, 40, 50],
+        "progress": [0, 25, 50, 75, 100],
+        "percentage": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+      }
+    },
+
+    "textContent": {
+      "short": ["Home", "Work", "School", "Gym", "Store", "Bank", "Park", "Hospital", "Library", "Restaurant"],
+      "medium": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "long": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      "metrics": ["Temperature", "Humidity", "Pressure", "Wind Speed", "UV Index", "Visibility", "Air Quality", "Sunrise", "Sunset"],
+      "financial": ["Stock Price", "Market Cap", "Volume", "Change", "High", "Low", "Open", "Close"],
+      "health": ["Steps", "Calories", "Heart Rate", "Distance", "Active Minutes", "Sleep", "Water", "Weight"],
+      "labels": ["Q1", "Q2", "Q3", "Q4", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "cities": ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego"],
+      "countries": ["USA", "Canada", "Mexico", "Brazil", "UK", "France", "Germany", "Italy", "Spain", "Japan", "China", "India"],
+      "status": ["Active", "Inactive", "Pending", "Completed", "Failed", "Success", "Warning", "Error"],
+      "priority": ["Low", "Medium", "High", "Critical", "Urgent", "Normal"],
+      "time": ["Now", "Today", "Tomorrow", "Yesterday", "This Week", "Last Week", "This Month", "Last Month"]
+    },
+
+    "widgetProperties": {
+      "aspectRatio": [0.5, 0.75, 0.95, 1.0, 1.25, 1.5, 2.0, 2.14],
+      "borderRadius": [0, 4, 8, 12, 16, 20, 24, 28, 32],
+      "padding": [0, 4, 8, 12, 16, 20, 24, 28, 32],
+      "width": [150, 200, 250, 300, 350, 400, 450, 500],
+      "height": [150, 200, 250, 300, 350, 400, 450, 500]
+    },
+
+    "mutationOperations": [
+      "mutateBackgroundColor",
+      "mutateTextColor",
+      "mutateFontSize",
+      "mutateGap",
+      "mutatePadding",
+      "mutateFlex",
+      "mutateDirection",
+      "mutateAlignment",
+      "mutateBorderRadius",
+      "mutateSize",
+      "mutateIconName",
+      "mutateIconSize",
+      "mutateContent",
+      "mutateChartData",
+      "mutateChartColors",
+      "mutateChartOrientation",
+      "addNode",
+      "removeNode",
+      "swapNodes",
+      "changeComponentType",
+      "mutateWidgetProperties",
+      "mutateFontWeight",
+      "mutateLineHeight",
+      "mutateWidgetAspectRatio",
+      "duplicateNode",
+      "nestNode",
+      "flattenNode",
+      "mutateChartVariant",
+      "mutateTextAlignment"
+    ],
+
+    "mutationWeights": {
+      "colorMutations": 0.20,
+      "sizeMutations": 0.15,
+      "layoutMutations": 0.15,
+      "contentMutations": 0.12,
+      "chartMutations": 0.08,
+      "structureMutations": 0.20,
+      "styleMutations": 0.10
+    },
+
+    "themes": {
+      "light": {
+        "name": "Light Mode",
+        "description": "Clean, bright interface with light backgrounds",
+        "widget": {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 16
+        },
+        "backgrounds": {
+          "primary": "#FFFFFF",
+          "secondary": "#F8F9FA",
+          "tertiary": "#E9ECEF"
+        },
+        "text": {
+          "primary": "#000000",
+          "secondary": "#495057",
+          "tertiary": "#6C757D",
+          "fontWeights": [400, 500, 600]
+        },
+        "borders": {
+          "color": "#DEE2E6",
+          "radius": [8, 12, 16]
+        },
+        "shadows": {
+          "enabled": true,
+          "color": "rgba(0, 0, 0, 0.1)"
+        },
+        "accents": [
+          "#007BFF",
+          "#28A745",
+          "#FFC107",
+          "#DC3545",
+          "#17A2B8"
+        ]
+      },
+      "dark": {
+        "name": "Dark Mode",
+        "description": "Modern dark interface with contrast",
+        "widget": {
+          "backgroundColor": "#1C1C1E",
+          "borderRadius": 20
+        },
+        "backgrounds": {
+          "primary": "#1C1C1E",
+          "secondary": "#2C2C2E",
+          "tertiary": "#3A3A3C"
+        },
+        "text": {
+          "primary": "#FFFFFF",
+          "secondary": "#E5E5E7",
+          "tertiary": "#AEAEB2",
+          "fontWeights": [300, 400, 500]
+        },
+        "borders": {
+          "color": "#48484A",
+          "radius": [12, 16, 20]
+        },
+        "shadows": {
+          "enabled": false,
+          "color": null
+        },
+        "accents": [
+          "#0A84FF",
+          "#30D158",
+          "#FFD60A",
+          "#FF453A",
+          "#64D2FF"
+        ]
+      },
+      "colorful": {
+        "name": "Colorful Mode",
+        "description": "Vibrant, expressive interface with bold colors",
+        "widget": {
+          "backgroundColor": "#0D0221",
+          "borderRadius": 24
+        },
+        "backgrounds": {
+          "primary": "#0D0221",
+          "secondary": "#190A33",
+          "tertiary": "#2D1B69"
+        },
+        "text": {
+          "primary": "#FFFFFF",
+          "secondary": "#FFE5F1",
+          "tertiary": "#E0AAFF",
+          "fontWeights": [500, 600, 700]
+        },
+        "borders": {
+          "color": "#8338EC",
+          "radius": [16, 20, 24]
+        },
+        "shadows": {
+          "enabled": true,
+          "color": "rgba(131, 56, 236, 0.3)"
+        },
+        "accents": [
+          "#FF006E",
+          "#8338EC",
+          "#3A86FF",
+          "#FFBE0B",
+          "#06FFA5"
+        ]
+      },
+      "glassmorphism": {
+        "name": "Glass Mode",
+        "description": "Translucent, frosted glass aesthetic",
+        "widget": {
+          "backgroundColor": "rgba(255, 255, 255, 0.1)",
+          "borderRadius": 20
+        },
+        "backgrounds": {
+          "primary": "rgba(255, 255, 255, 0.1)",
+          "secondary": "rgba(255, 255, 255, 0.15)",
+          "tertiary": "rgba(255, 255, 255, 0.2)"
+        },
+        "text": {
+          "primary": "rgba(255, 255, 255, 0.95)",
+          "secondary": "rgba(255, 255, 255, 0.75)",
+          "tertiary": "rgba(255, 255, 255, 0.55)",
+          "fontWeights": [300, 400, 500]
+        },
+        "borders": {
+          "color": "rgba(255, 255, 255, 0.2)",
+          "radius": [16, 20, 24]
+        },
+        "shadows": {
+          "enabled": true,
+          "color": "rgba(0, 0, 0, 0.1)"
+        },
+        "accents": [
+          "rgba(100, 210, 255, 0.8)",
+          "rgba(191, 90, 242, 0.8)",
+          "rgba(255, 214, 10, 0.8)",
+          "rgba(48, 209, 88, 0.8)",
+          "rgba(255, 69, 58, 0.8)"
+        ]
+      },
+      "minimal": {
+        "name": "Minimal Mode",
+        "description": "Ultra-clean, stripped-back design",
+        "widget": {
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 0
+        },
+        "backgrounds": {
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "tertiary": "#FAFAFA"
+        },
+        "text": {
+          "primary": "#000000",
+          "secondary": "#666666",
+          "tertiary": "#999999",
+          "fontWeights": [300, 400, 500]
+        },
+        "borders": {
+          "color": "#E0E0E0",
+          "radius": [0, 4, 8]
+        },
+        "shadows": {
+          "enabled": false,
+          "color": null
+        },
+        "accents": [
+          "#000000",
+          "#333333",
+          "#666666"
+        ],
+        "maxComponents": 5,
+        "removeDecorative": true
+      }
+    },
+
+    "sizeVariants": {
+      "compact": {
+        "name": "Compact",
+        "description": "Dense, space-efficient layout",
+        "multiplier": 0.75,
+        "fontSize": {
+          "base": [10, 11, 12, 14],
+          "title": [16, 18, 20],
+          "subtitle": [12, 13, 14]
+        },
+        "iconSize": {
+          "small": [12, 14, 16],
+          "medium": [16, 18, 20],
+          "large": [20, 24, 28]
+        },
+        "spacing": {
+          "gap": [4, 6, 8, 10],
+          "padding": [8, 10, 12, 14]
+        },
+        "borderRadius": {
+          "multiplier": 0.8
+        }
+      },
+      "medium": {
+        "name": "Medium (Default)",
+        "description": "Balanced, comfortable layout",
+        "multiplier": 1.0,
+        "fontSize": {
+          "base": [12, 14, 16, 18],
+          "title": [20, 24, 28],
+          "subtitle": [14, 16, 18]
+        },
+        "iconSize": {
+          "small": [16, 18, 20],
+          "medium": [20, 24, 28],
+          "large": [28, 32, 36]
+        },
+        "spacing": {
+          "gap": [8, 12, 16, 20],
+          "padding": [12, 16, 20, 24]
+        },
+        "borderRadius": {
+          "multiplier": 1.0
+        }
+      },
+      "large": {
+        "name": "Large",
+        "description": "Spacious, easy-to-read layout",
+        "multiplier": 1.33,
+        "fontSize": {
+          "base": [16, 18, 20, 22],
+          "title": [28, 32, 36],
+          "subtitle": [18, 20, 22]
+        },
+        "iconSize": {
+          "small": [20, 24, 28],
+          "medium": [28, 32, 36],
+          "large": [40, 48, 56]
+        },
+        "spacing": {
+          "gap": [12, 16, 20, 24],
+          "padding": [16, 20, 24, 28]
+        },
+        "borderRadius": {
+          "multiplier": 1.2
+        }
+      }
+    }
+  }
+}

@@ -34,4 +34,4 @@ for arg in "$@"; do
     fi
 done
 
-npx widget-factory batch-render "$DIRECTORY" --concurrency "$CONCURRENCY" $FORCE_FLAG
+npx widget-factory batch-render "$DIRECTORY" --concurrency "$CONCURRENCY" --port "$FRONTEND_PORT" $FORCE_FLAG

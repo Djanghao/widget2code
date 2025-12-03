@@ -7,20 +7,21 @@
  * @date 2025-10-03
  */
 
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { examples } from './constants/examples.js';
-import { parseAspectRatio } from '@widget-factory/dsl';
-import { exportWidget } from '@widget-factory/exporter';
-import AppHeader from './components/Header/AppHeader.jsx';
-import MaterialsModal from './components/MaterialsModal/index.jsx';
-import ApiKeyManager, { useApiKey } from './components/ApiKeyManager.jsx';
-import useWidgetFrame from './hooks/useWidgetFrame.js';
-import PresetsTab from './components/PresetsTab/index.jsx';
-import Widget2Code from './Widget2Code.jsx';
-import Prompt2Code from './Prompt2Code.jsx';
-import Documentation from './Documentation.jsx';
-import DynamicComponentGenerator from './DynamicComponentGenerator.jsx';
-import usePlaygroundStore from './store/index.js';
+import React, { useState, useRef, useEffect, useCallback } from "react";
+import { examples } from "./constants/examples.js";
+import { parseAspectRatio } from "@widget-factory/dsl";
+import { exportWidget } from "@widget-factory/exporter";
+import AppHeader from "./components/Header/AppHeader.jsx";
+import MaterialsModal from "./components/MaterialsModal/index.jsx";
+import ApiKeyManager, { useApiKey } from "./components/ApiKeyManager.jsx";
+import useWidgetFrame from "./hooks/useWidgetFrame.js";
+import PresetsTab from "./components/PresetsTab/index.jsx";
+import Widget2Code from "./Widget2Code.jsx";
+import Prompt2Code from "./Prompt2Code.jsx";
+import Documentation from "./Documentation.jsx";
+import DynamicComponentGenerator from "./DynamicComponentGenerator.jsx";
+import DSLMutations from "./DSLMutations.jsx";
+import usePlaygroundStore from "./store/index.js";
 
 function App() {
   const { apiKey, setApiKey } = useApiKey();
@@ -41,11 +42,11 @@ function App() {
     executeAutoResize,
     compileFromEdited,
     initializeApp,
-    validateWidget
+    validateWidget,
   } = usePlaygroundStore();
 
-  const [activeTab, setActiveTab] = useState('presets');
-  const [editedSpec, setEditedSpec] = useState('');
+  const [activeTab, setActiveTab] = useState("presets");
+  const [editedSpec, setEditedSpec] = useState("");
   const [showComponentsModal, setShowComponentsModal] = useState(false);
   const [showApiKeyManager, setShowApiKeyManager] = useState(false);
   const [selectedPath, setSelectedPath] = useState(null);
@@ -56,7 +57,8 @@ function App() {
   const specTextareaRef = useRef(null);
   const compileTimerRef = useRef(null);
 
-  const handleSelectNode = (path) => setSelectedPath(prev => (prev === path ? null : path));
+  const handleSelectNode = (path) =>
+    setSelectedPath((prev) => (prev === path ? null : path));
 
   useEffect(() => {
     initializeApp(widgetFrameRef);
@@ -69,30 +71,37 @@ function App() {
         setSelectedPath(null);
       }
     };
-    document.addEventListener('click', onDocClick);
-    return () => document.removeEventListener('click', onDocClick);
+    document.addEventListener("click", onDocClick);
+    return () => document.removeEventListener("click", onDocClick);
   }, []);
 
   const currentExample = examples[selectedPreset];
-  const currentSpec = editedSpec || (widgetDSL ? JSON.stringify(widgetDSL, null, 2) : JSON.stringify(currentExample.spec, null, 2));
-  const isLoading = renderingPhase !== 'idle';
+  const currentSpec =
+    editedSpec ||
+    (widgetDSL
+      ? JSON.stringify(widgetDSL, null, 2)
+      : JSON.stringify(currentExample.spec, null, 2));
+  const isLoading = renderingPhase !== "idle";
 
-  const handleSpecChange = useCallback((value) => {
-    setEditedSpec(value);
+  const handleSpecChange = useCallback(
+    (value) => {
+      setEditedSpec(value);
 
-    if (compileTimerRef.current) {
-      clearTimeout(compileTimerRef.current);
-    }
+      if (compileTimerRef.current) {
+        clearTimeout(compileTimerRef.current);
+      }
 
-    compileTimerRef.current = setTimeout(() => {
-      compileFromEdited(value, widgetFrameRef);
-    }, 300);
-  }, [compileFromEdited]);
+      compileTimerRef.current = setTimeout(() => {
+        compileFromEdited(value, widgetFrameRef);
+      }, 300);
+    },
+    [compileFromEdited]
+  );
 
   const handleExampleChange = (key) => {
     setSelectedPath(null);
     setFrameSize({ width: 0, height: 0 });
-    setEditedSpec('');
+    setEditedSpec("");
 
     if (compileTimerRef.current) {
       clearTimeout(compileTimerRef.current);
@@ -107,41 +116,45 @@ function App() {
   const handleDownloadWidget = async () => {
     const widgetElement = widgetFrameRef.current?.firstElementChild;
     if (!widgetElement) {
-      console.error('Widget element not found');
-      alert('Widget element not found');
+      console.error("Widget element not found");
+      alert("Widget element not found");
       return;
     }
 
-    if (operationMode !== 'idle') {
-      console.warn('Cannot download: operation in progress');
+    if (operationMode !== "idle") {
+      console.warn("Cannot download: operation in progress");
       alert(`Cannot download: ${operationMode} in progress. Please wait.`);
       return;
     }
 
-    console.log('\n📥 [Download] Starting widget download...');
+    console.log("\n📥 [Download] Starting widget download...");
 
     const validation = validateWidget(widgetElement, widgetDSL);
 
     if (!validation.valid) {
-      console.error('❌ [Download] Validation failed:', validation.issues);
-      const issuesText = validation.issues.map(i => `• ${i}`).join('\n');
-      alert(`Cannot download widget due to quality issues:\n\n${issuesText}\n\nPlease fix these issues first.`);
+      console.error("❌ [Download] Validation failed:", validation.issues);
+      const issuesText = validation.issues.map((i) => `• ${i}`).join("\n");
+      alert(
+        `Cannot download widget due to quality issues:\n\n${issuesText}\n\nPlease fix these issues first.`
+      );
       return;
     }
 
     if (validation.warnings.length > 0) {
-      console.warn('⚠️ [Download] Validation warnings:', validation.warnings);
-      const warningsText = validation.warnings.map(w => `• ${w}`).join('\n');
-      const proceed = confirm(`Widget has minor quality warnings:\n\n${warningsText}\n\nDownload anyway?`);
+      console.warn("⚠️ [Download] Validation warnings:", validation.warnings);
+      const warningsText = validation.warnings.map((w) => `• ${w}`).join("\n");
+      const proceed = confirm(
+        `Widget has minor quality warnings:\n\n${warningsText}\n\nDownload anyway?`
+      );
       if (!proceed) {
-        console.log('📥 [Download] Cancelled by user');
+        console.log("📥 [Download] Cancelled by user");
         return;
       }
     }
 
-    console.log('✅ [Download] Validation passed, proceeding...');
+    console.log("✅ [Download] Validation passed, proceeding...");
 
-    setOperationMode('downloading');
+    setOperationMode("downloading");
 
     try {
       const result = await exportWidget(
@@ -151,35 +164,39 @@ function App() {
       );
 
       console.log(`✅ [Download] Completed: ${result.filename}`);
-      setOperationMode('idle');
+      setOperationMode("idle");
     } catch (error) {
-      console.error('❌ [Download] Failed:', error);
+      console.error("❌ [Download] Failed:", error);
       alert(`Download failed: ${error.message}`);
-      setOperationMode('idle');
+      setOperationMode("idle");
     }
   };
 
-  const handleAutoResizeByRatio = useCallback(async (ratioOverride) => {
-    const r = ratioOverride ?? parseAspectRatio(ratioInput);
-    if (!r) return;
+  const handleAutoResizeByRatio = useCallback(
+    async (ratioOverride) => {
+      const r = ratioOverride ?? parseAspectRatio(ratioInput);
+      if (!r) return;
 
-    await executeAutoResize(r, widgetFrameRef);
-  }, [ratioInput, executeAutoResize]);
-
-  
+      await executeAutoResize(r, widgetFrameRef);
+    },
+    [ratioInput, executeAutoResize]
+  );
 
   const { frameSize, setFrameSize } = useWidgetFrame(frameEl);
 
   return (
-    <div style={{
-      height: '100vh',
-      backgroundColor: '#1c1c1e',
-      padding: '16px 24px',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-      display: 'flex',
-      flexDirection: 'column',
-      overflow: 'hidden'
-    }}>
+    <div
+      style={{
+        height: "100vh",
+        backgroundColor: "#1c1c1e",
+        padding: "16px 24px",
+        fontFamily:
+          '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden",
+      }}
+    >
       <AppHeader
         activeTab={activeTab}
         onTabChange={setActiveTab}
@@ -187,7 +204,7 @@ function App() {
         onApiKeyClick={() => setShowApiKeyManager(true)}
       />
 
-      {activeTab === 'presets' && (
+      {activeTab === "presets" && (
         <PresetsTab
           selectedExample={selectedPreset}
           handleExampleChange={handleExampleChange}
@@ -219,29 +236,70 @@ function App() {
         />
       )}
 
-
-
-      {activeTab === 'guides' && (
-        <div key="guides" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
+      {activeTab === "guides" && (
+        <div
+          key="guides"
+          style={{
+            flex: 1,
+            minHeight: 0,
+            animation: "fadeIn 0.2s ease-in-out",
+          }}
+        >
           <Documentation />
         </div>
       )}
 
-      {activeTab === 'dynamic' && (
-        <div key="dynamic" style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', animation: 'fadeIn 0.2s ease-in-out' }}>
+      {activeTab === "dynamic" && (
+        <div
+          key="dynamic"
+          style={{
+            flex: 1,
+            minHeight: 0,
+            display: "flex",
+            flexDirection: "column",
+            animation: "fadeIn 0.2s ease-in-out",
+          }}
+        >
           <DynamicComponentGenerator />
         </div>
       )}
 
-      {activeTab === 'widget2code' && (
-        <div key="widget2code" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
+      {activeTab === "widget2code" && (
+        <div
+          key="widget2code"
+          style={{
+            flex: 1,
+            minHeight: 0,
+            animation: "fadeIn 0.2s ease-in-out",
+          }}
+        >
           <Widget2Code />
         </div>
       )}
 
-      {activeTab === 'prompt2code' && (
-        <div key="prompt2code" style={{ flex: 1, minHeight: 0, animation: 'fadeIn 0.2s ease-in-out' }}>
+      {activeTab === "prompt2code" && (
+        <div
+          key="prompt2code"
+          style={{
+            flex: 1,
+            minHeight: 0,
+            animation: "fadeIn 0.2s ease-in-out",
+          }}
+        >
           <Prompt2Code />
+        </div>
+      )}
+
+      {activeTab === "dsl-mutations" && (
+        <div
+          key="dsl-mutations"
+          style={{
+            flex: 1,
+            minHeight: 0,
+            animation: "fadeIn 0.2s ease-in-out",
+          }}
+        >
+          <DSLMutations />
         </div>
       )}
 

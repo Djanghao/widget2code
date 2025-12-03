@@ -1,0 +1,307 @@
+{
+  "domain": "social",
+  "total": 50,
+  "generated": "2025-11-05T16:03:06.307Z",
+  "variations": [
+    {
+      "id": "social-dynamic-001",
+      "prompt": "A post widget showing following count with analytics graph",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-002",
+      "prompt": "A profile widget showing following count",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-003",
+      "prompt": "A story widget showing profile stats",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-004",
+      "prompt": "A profile widget showing post likes",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-005",
+      "prompt": "A social widget showing post likes",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-006",
+      "prompt": "A story widget showing engagement rate with engagement chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-007",
+      "prompt": "A post widget showing trending posts with post preview and post timestamp",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-008",
+      "prompt": "A feed widget showing reach with story ring",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-009",
+      "prompt": "A post widget showing notifications with trending indicators",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-010",
+      "prompt": "A story widget showing comments with trending indicators",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-011",
+      "prompt": "A profile widget showing mentions with profile photo and follow button",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-012",
+      "prompt": "A feed widget showing saved posts",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-013",
+      "prompt": "A post widget showing shares with trending indicators",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-014",
+      "prompt": "A profile widget showing messages",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-015",
+      "prompt": "A profile widget showing profile stats and share count",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-016",
+      "prompt": "A post widget showing profile stats and growth percentage",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-017",
+      "prompt": "A profile widget showing post likes with notification badges and share count",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-018",
+      "prompt": "A post widget showing latest post with demographics pie chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-019",
+      "prompt": "A profile widget showing engagement rate and growth percentage",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-020",
+      "prompt": "A profile widget showing post likes and follow button",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-021",
+      "prompt": "A post widget showing notifications and post timestamp",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-022",
+      "prompt": "A story widget showing following count with time series and engagement metrics",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-023",
+      "prompt": "An analytics widget showing post likes and share count",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-024",
+      "prompt": "A feed widget showing saved posts",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-025",
+      "prompt": "An analytics widget showing notifications with trending indicators",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-026",
+      "prompt": "A post widget showing trending posts",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-027",
+      "prompt": "A feed widget showing latest post with demographics pie chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-028",
+      "prompt": "A social widget showing engagement rate",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-029",
+      "prompt": "A feed widget showing following count",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-030",
+      "prompt": "A feed widget showing notifications with analytics graph",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-031",
+      "prompt": "A social widget showing trending posts with engagement chart and growth percentage",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-032",
+      "prompt": "A post widget showing followers count",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-033",
+      "prompt": "An analytics widget showing story views with analytics graph",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-034",
+      "prompt": "A social widget showing shares",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-035",
+      "prompt": "A social widget showing mentions with analytics graph and share count",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-036",
+      "prompt": "An analytics widget showing followers count with time series",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-037",
+      "prompt": "A profile widget showing post likes with post preview",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-038",
+      "prompt": "An analytics widget showing latest post and engagement metrics",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-039",
+      "prompt": "A story widget showing messages and engagement metrics",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-040",
+      "prompt": "A post widget showing latest post with engagement chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-041",
+      "prompt": "A story widget showing post likes with post preview and post timestamp",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-042",
+      "prompt": "A social widget showing reach with post preview",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-043",
+      "prompt": "An analytics widget showing trending posts and follow button",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-044",
+      "prompt": "A story widget showing messages",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-045",
+      "prompt": "A profile widget showing shares and verified badge",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-046",
+      "prompt": "A story widget showing latest post and likes with post preview",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-047",
+      "prompt": "An analytics widget showing followers count and following count with post preview",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-048",
+      "prompt": "A social widget showing story views and reach",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-049",
+      "prompt": "A profile widget showing engagement rate and post likes",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "social-dynamic-050",
+      "prompt": "A social widget showing notifications and messages",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "domain": "smart-home",
+  "total": 37,
+  "generated": "2025-11-05T16:03:06.297Z",
+  "variations": [
+    {
+      "id": "smart-home-dynamic-001",
+      "prompt": "A climate widget showing thermostat temperature and schedule",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-002",
+      "prompt": "A lights widget showing room temperature with usage chart and auto mode indicator",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-003",
+      "prompt": "A climate widget showing cameras",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-004",
+      "prompt": "A home overview widget showing air quality",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-005",
+      "prompt": "A security widget showing thermostat temperature",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-006",
+      "prompt": "A home overview widget showing cameras with controls",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-007",
+      "prompt": "A home overview widget showing thermostat temperature with usage chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-008",
+      "prompt": "A home overview widget showing room temperature and schedule",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-009",
+      "prompt": "A climate widget showing door locks with on/off toggle and auto mode indicator",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-010",
+      "prompt": "A lights widget showing window blinds and energy cost",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-011",
+      "prompt": "A room widget showing air quality with camera feed",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-012",
+      "prompt": "A home overview widget showing thermostat temperature with on/off toggle and auto mode indicator",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-013",
+      "prompt": "A home overview widget showing lights status with temperature slider and energy cost",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-014",
+      "prompt": "A room widget showing security system",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-015",
+      "prompt": "A home overview widget showing humidity level with controls",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-016",
+      "prompt": "A climate widget showing window blinds with brightness slider and control buttons",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-017",
+      "prompt": "A home overview widget showing energy usage with controls",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-018",
+      "prompt": "A lights widget showing room temperature with brightness slider",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-019",
+      "prompt": "A lights widget showing cameras with on/off toggle",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-020",
+      "prompt": "A climate widget showing humidity level",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-021",
+      "prompt": "A security widget showing door locks with temperature slider",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-022",
+      "prompt": "A home overview widget showing lights status with on/off toggle",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-023",
+      "prompt": "A lights widget showing room temperature",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-024",
+      "prompt": "A home overview widget showing cameras with brightness slider",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-025",
+      "prompt": "A room widget showing air quality with on/off toggle",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-026",
+      "prompt": "A climate widget showing security system and schedule",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-027",
+      "prompt": "A home overview widget showing humidity level with temperature slider and control buttons",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-028",
+      "prompt": "A security widget showing air quality",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-029",
+      "prompt": "A climate widget showing air quality with brightness slider",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-030",
+      "prompt": "A climate widget showing window blinds with camera feed",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-031",
+      "prompt": "A security widget showing thermostat temperature and humidity level with temperature slider",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-032",
+      "prompt": "A home overview widget showing lights status and energy usage",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-033",
+      "prompt": "A security widget showing security system and door locks with on/off toggle",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-034",
+      "prompt": "A lights widget showing room temperature and thermostat temperature with temperature slider",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-035",
+      "prompt": "A smart home widget showing living room status with controls",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-036",
+      "prompt": "A smart home widget showing bedroom status with controls",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "smart-home-dynamic-037",
+      "prompt": "A smart home widget showing kitchen status with controls",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

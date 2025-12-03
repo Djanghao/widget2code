@@ -1,0 +1,66 @@
+{
+  "$schema": "./runner-config.schema.json",
+  "description": "Batch 1 of 3 - Apple and Android styles",
+  "runners": [
+    {
+      "name": "apple-style-completed",
+      "port": 8011,
+      "promptPreset": "apple-style",
+      "domains": [
+        "health"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": true,
+        "useDynamic": false,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "apple-style-incomplete",
+      "port": 8012,
+      "promptPreset": "apple-style",
+      "domains": [
+        "utilities"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "android-style-completed",
+      "port": 8013,
+      "promptPreset": "android-style",
+      "domains": [
+        "finance",
+        "media"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": false,
+        "useDynamic": true,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "android-style-incomplete",
+      "port": 8014,
+      "promptPreset": "android-style",
+      "domains": [
+        "sports"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    }
+  ],
+  "globalOptions": {
+    "referenceImagesDir": null,
+    "imageUrlsDir": "./scripts/synthesis/descriptions/image-urls",
+    "referencesPerDescription": 2
+  }
+}

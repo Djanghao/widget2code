@@ -1,0 +1,396 @@
+{
+  "domain": "health",
+  "descriptions": [
+    {
+      "id": "health-001",
+      "prompt": "A widget showing current heart rate",
+      "complexity": "simple",
+      "metrics": [
+        "heart-rate"
+      ]
+    },
+    {
+      "id": "health-002",
+      "prompt": "A widget showing current heart rate with BPM label",
+      "complexity": "simple",
+      "metrics": [
+        "heart-rate"
+      ]
+    },
+    {
+      "id": "health-003",
+      "prompt": "A widget showing heart rate with a trend sparkline",
+      "complexity": "medium",
+      "metrics": [
+        "heart-rate"
+      ],
+      "visualization": [
+        "sparkline"
+      ]
+    },
+    {
+      "id": "health-004",
+      "prompt": "A widget displaying heart rate with weekly trend chart",
+      "complexity": "medium",
+      "metrics": [
+        "heart-rate"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "health-005",
+      "prompt": "A compact widget showing current heart rate and resting heart rate",
+      "complexity": "medium",
+      "metrics": [
+        "heart-rate"
+      ]
+    },
+    {
+      "id": "health-006",
+      "prompt": "A widget showing steps taken today",
+      "complexity": "simple",
+      "metrics": [
+        "steps"
+      ]
+    },
+    {
+      "id": "health-007",
+      "prompt": "A widget showing steps with goal progress",
+      "complexity": "medium",
+      "metrics": [
+        "steps"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "health-008",
+      "prompt": "A widget displaying steps with a progress bar and goal",
+      "complexity": "medium",
+      "metrics": [
+        "steps"
+      ],
+      "visualization": [
+        "progress-bar"
+      ]
+    },
+    {
+      "id": "health-009",
+      "prompt": "A widget showing steps with weekly bar chart",
+      "complexity": "medium",
+      "metrics": [
+        "steps"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "health-010",
+      "prompt": "A widget showing steps count and distance walked",
+      "complexity": "medium",
+      "metrics": [
+        "steps",
+        "distance"
+      ]
+    },
+    {
+      "id": "health-011",
+      "prompt": "A widget with activity rings for move, exercise, and stand",
+      "complexity": "medium",
+      "metrics": [
+        "activity"
+      ],
+      "visualization": [
+        "rings"
+      ]
+    },
+    {
+      "id": "health-012",
+      "prompt": "A widget showing activity rings with percentage labels",
+      "complexity": "medium",
+      "metrics": [
+        "activity"
+      ],
+      "visualization": [
+        "rings"
+      ]
+    },
+    {
+      "id": "health-013",
+      "prompt": "A large widget with activity rings and detailed stats",
+      "complexity": "complex",
+      "metrics": [
+        "activity"
+      ],
+      "visualization": [
+        "rings"
+      ]
+    },
+    {
+      "id": "health-014",
+      "prompt": "A compact widget showing just the move ring",
+      "complexity": "simple",
+      "metrics": [
+        "activity"
+      ],
+      "visualization": [
+        "ring"
+      ]
+    },
+    {
+      "id": "health-015",
+      "prompt": "A widget showing calories burned today",
+      "complexity": "simple",
+      "metrics": [
+        "calories"
+      ]
+    },
+    {
+      "id": "health-016",
+      "prompt": "A widget displaying calories burned with progress ring",
+      "complexity": "medium",
+      "metrics": [
+        "calories"
+      ],
+      "visualization": [
+        "ring"
+      ]
+    },
+    {
+      "id": "health-017",
+      "prompt": "A widget showing calories burned vs goal",
+      "complexity": "medium",
+      "metrics": [
+        "calories"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "health-018",
+      "prompt": "A widget displaying calories with weekly trend",
+      "complexity": "medium",
+      "metrics": [
+        "calories"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "health-019",
+      "prompt": "A widget showing hours slept last night",
+      "complexity": "simple",
+      "metrics": [
+        "sleep"
+      ]
+    },
+    {
+      "id": "health-020",
+      "prompt": "A widget displaying sleep hours with bar chart",
+      "complexity": "medium",
+      "metrics": [
+        "sleep"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "health-021",
+      "prompt": "A widget showing sleep quality and duration",
+      "complexity": "medium",
+      "metrics": [
+        "sleep"
+      ]
+    },
+    {
+      "id": "health-022",
+      "prompt": "A widget displaying weekly sleep pattern",
+      "complexity": "complex",
+      "metrics": [
+        "sleep"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "health-023",
+      "prompt": "A widget showing last workout summary",
+      "complexity": "medium",
+      "metrics": [
+        "workout"
+      ]
+    },
+    {
+      "id": "health-024",
+      "prompt": "A widget displaying workout time and calories",
+      "complexity": "medium",
+      "metrics": [
+        "workout"
+      ]
+    },
+    {
+      "id": "health-025",
+      "prompt": "A widget showing workout type with duration",
+      "complexity": "medium",
+      "metrics": [
+        "workout"
+      ]
+    },
+    {
+      "id": "health-026",
+      "prompt": "A widget with workout stats and start button",
+      "complexity": "complex",
+      "metrics": [
+        "workout"
+      ]
+    },
+    {
+      "id": "health-027",
+      "prompt": "A widget showing heart rate and steps side by side",
+      "complexity": "medium",
+      "metrics": [
+        "heart-rate",
+        "steps"
+      ]
+    },
+    {
+      "id": "health-028",
+      "prompt": "A widget displaying steps, calories, and distance",
+      "complexity": "complex",
+      "metrics": [
+        "steps",
+        "calories",
+        "distance"
+      ]
+    },
+    {
+      "id": "health-029",
+      "prompt": "A dashboard widget with heart rate, steps, and sleep",
+      "complexity": "complex",
+      "metrics": [
+        "heart-rate",
+        "steps",
+        "sleep"
+      ]
+    },
+    {
+      "id": "health-030",
+      "prompt": "A widget showing activity rings with step count below",
+      "complexity": "complex",
+      "metrics": [
+        "activity",
+        "steps"
+      ],
+      "visualization": [
+        "rings"
+      ]
+    },
+    {
+      "id": "health-031",
+      "prompt": "A widget displaying heart rate with trend and current steps",
+      "complexity": "complex",
+      "metrics": [
+        "heart-rate",
+        "steps"
+      ],
+      "visualization": [
+        "sparkline"
+      ]
+    },
+    {
+      "id": "health-032",
+      "prompt": "A comprehensive health summary with multiple metrics",
+      "complexity": "complex",
+      "metrics": [
+        "heart-rate",
+        "steps",
+        "calories",
+        "sleep"
+      ]
+    },
+    {
+      "id": "health-033",
+      "prompt": "A widget showing daily water intake",
+      "complexity": "simple",
+      "metrics": [
+        "water"
+      ]
+    },
+    {
+      "id": "health-034",
+      "prompt": "A widget displaying water intake with progress",
+      "complexity": "medium",
+      "metrics": [
+        "water"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "health-035",
+      "prompt": "A widget showing water intake goal with glasses visualization",
+      "complexity": "medium",
+      "metrics": [
+        "water"
+      ],
+      "visualization": [
+        "progress-bar"
+      ]
+    },
+    {
+      "id": "health-036",
+      "prompt": "A widget showing current weight",
+      "complexity": "simple",
+      "metrics": [
+        "weight"
+      ]
+    },
+    {
+      "id": "health-037",
+      "prompt": "A widget displaying weight with trend graph",
+      "complexity": "medium",
+      "metrics": [
+        "weight"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "health-038",
+      "prompt": "A widget showing weight change over 30 days",
+      "complexity": "medium",
+      "metrics": [
+        "weight"
+      ],
+      "visualization": [
+        "sparkline"
+      ]
+    },
+    {
+      "id": "health-039",
+      "prompt": "A widget showing blood pressure reading",
+      "complexity": "simple",
+      "metrics": [
+        "blood-pressure"
+      ]
+    },
+    {
+      "id": "health-040",
+      "prompt": "A widget displaying systolic and diastolic pressure",
+      "complexity": "medium",
+      "metrics": [
+        "blood-pressure"
+      ]
+    }
+  ]
+}

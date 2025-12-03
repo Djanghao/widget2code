@@ -1,2 +1,12 @@
-export { validateWidget } from './WidgetValidator.js';
-export { validateWidgetDSL, fixWidgetDSL, validateAndFix } from './DSLValidator.js';
+// Standardized API - all validation functionality exposed through these functions
+export {
+  validate,
+  fix,
+  validateAndFixDSL,
+  validateRenderedWidget,
+  canCompile,
+  batchValidate,
+  batchValidateAndFix,
+  getValidationReport,
+  validateWithSuggestions
+} from './api.js';

@@ -1,0 +1,139 @@
+{
+  "domain": "media",
+  "descriptions": [
+    {
+      "id": "media-001",
+      "prompt": "A widget showing now playing song",
+      "complexity": "medium",
+      "metrics": [
+        "music"
+      ]
+    },
+    {
+      "id": "media-002",
+      "prompt": "A widget displaying now playing with album art",
+      "complexity": "medium",
+      "metrics": [
+        "music"
+      ]
+    },
+    {
+      "id": "media-003",
+      "prompt": "A widget showing song with playback controls",
+      "complexity": "complex",
+      "metrics": [
+        "music"
+      ]
+    },
+    {
+      "id": "media-004",
+      "prompt": "A widget displaying music player with progress bar",
+      "complexity": "complex",
+      "metrics": [
+        "music"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "media-005",
+      "prompt": "A compact music widget with just song and artist",
+      "complexity": "simple",
+      "metrics": [
+        "music"
+      ]
+    },
+    {
+      "id": "media-006",
+      "prompt": "A widget showing favorite playlist",
+      "complexity": "medium",
+      "metrics": [
+        "playlist"
+      ]
+    },
+    {
+      "id": "media-007",
+      "prompt": "A widget displaying recently played songs",
+      "complexity": "medium",
+      "metrics": [
+        "history"
+      ]
+    },
+    {
+      "id": "media-008",
+      "prompt": "A widget showing playlist with song count",
+      "complexity": "medium",
+      "metrics": [
+        "playlist"
+      ]
+    },
+    {
+      "id": "media-009",
+      "prompt": "A widget showing current podcast episode",
+      "complexity": "medium",
+      "metrics": [
+        "podcast"
+      ]
+    },
+    {
+      "id": "media-010",
+      "prompt": "A widget displaying podcast with playback position",
+      "complexity": "complex",
+      "metrics": [
+        "podcast"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "media-011",
+      "prompt": "A widget showing new podcast episodes",
+      "complexity": "medium",
+      "metrics": [
+        "podcast"
+      ]
+    },
+    {
+      "id": "media-012",
+      "prompt": "A widget showing recently watched videos",
+      "complexity": "medium",
+      "metrics": [
+        "video"
+      ]
+    },
+    {
+      "id": "media-013",
+      "prompt": "A widget displaying continue watching",
+      "complexity": "medium",
+      "metrics": [
+        "video"
+      ]
+    },
+    {
+      "id": "media-014",
+      "prompt": "A widget showing photo of the day",
+      "complexity": "simple",
+      "metrics": [
+        "photo"
+      ]
+    },
+    {
+      "id": "media-015",
+      "prompt": "A widget displaying recent photos grid",
+      "complexity": "medium",
+      "metrics": [
+        "photos"
+      ]
+    },
+    {
+      "id": "media-016",
+      "prompt": "A widget showing photo memories",
+      "complexity": "medium",
+      "metrics": [
+        "photo"
+      ]
+    }
+  ]
+}

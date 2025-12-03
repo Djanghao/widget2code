@@ -15,7 +15,7 @@ import { preloadImages } from '@widget-factory/primitives/utils/preloadImages.js
 import { iconCache } from '@widget-factory/primitives/utils/iconCache.js';
 import { sfDynamicIconImports } from '@widget-factory/icons/sf-symbols';
 import { findOptimalSize, waitForStable } from '@widget-factory/resizer/index.js';
-import { validateWidget as validateWidgetFn } from '@widget-factory/validator/index.js';
+import { validateRenderedWidget as validateWidgetFn } from '@widget-factory/validator/index.js';
 
 const createRenderingSlice = (set, get) => ({
   renderingPhase: 'idle',

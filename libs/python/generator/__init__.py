@@ -3,6 +3,9 @@
 from .config import GeneratorConfig
 from .generation import (
     get_default_prompt,
+    generate_widget,
+    generate_widget_text,
+    generate_widget_text_with_reference,
     generate_component,
     generate_component_from_image,
     generate_widget_full,
@@ -17,6 +20,9 @@ from . import utils
 __all__ = [
     "GeneratorConfig",
     "get_default_prompt",
+    "generate_widget",
+    "generate_widget_text",
+    "generate_widget_text_with_reference",
     "generate_component",
     "generate_component_from_image",
     "generate_widget_full",

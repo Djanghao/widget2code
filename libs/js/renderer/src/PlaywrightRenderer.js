@@ -150,6 +150,7 @@ export class PlaywrightRenderer {
         spec: result.spec,
         jsx: jsxCode,
         imageBuffer,
+        boundingBoxes: result.boundingBoxes,
         presetId
       };
 
@@ -285,6 +286,7 @@ export class PlaywrightRenderer {
         spec: result.spec,
         jsx: result.jsx,
         imageBuffer,
+        boundingBoxes: result.boundingBoxes,
         presetId
       };
 

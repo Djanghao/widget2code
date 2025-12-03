@@ -338,6 +338,12 @@ export default function AppHeader({
                   >
                     Guides
                   </MobileMenuItem>
+                  <MobileMenuItem
+                    active={activeTab === "dsl-mutations"}
+                    onClick={() => handleTabChange("dsl-mutations")}
+                  >
+                    DSL Mutations
+                  </MobileMenuItem>
                 </div>
 
                 <div
@@ -444,6 +450,12 @@ export default function AppHeader({
                 onClick={() => onTabChange("guides")}
               >
                 Guides
+              </TabButton>
+              <TabButton
+                active={activeTab === "dsl-mutations"}
+                onClick={() => onTabChange("dsl-mutations")}
+              >
+                DSL Mutations
               </TabButton>
               <ExternalLink href="http://202.78.161.188:8080/">
                 FastCVAT

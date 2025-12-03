@@ -1,0 +1,242 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 22,
+    "padding": 18,
+    "aspectRatio": 1.5,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 18,
+                "color": "#FA114F",
+                "name": "sf:figure.run"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 15,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "Activity"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 1,
+          "alignMain": "space-between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": -30,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "ProgressRing",
+                  "props": {
+                    "progress": 0.85,
+                    "size": 80,
+                    "strokeWidth": 10,
+                    "color": "#FA114F",
+                    "backgroundColor": "#FFEBEE"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "ProgressRing",
+                  "props": {
+                    "progress": 0.62,
+                    "size": 60,
+                    "strokeWidth": 10,
+                    "color": "#B0F246",
+                    "backgroundColor": "#F1FFDE"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "ProgressRing",
+                  "props": {
+                    "progress": 0.95,
+                    "size": 40,
+                    "strokeWidth": 10,
+                    "color": "#00E7FF",
+                    "backgroundColor": "#E0F9FF"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 10,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "props": {
+                        "size": 14,
+                        "color": "#FA114F",
+                        "name": "sf:circle.fill"
+                      }
+                    },
+                    {
+                      "type": "container",
+                      "direction": "col",
+                      "gap": 0,
+                      "flex": 1,
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "component": "Text",
+                          "props": {
+                            "fontSize": 16,
+                            "color": "#000000",
+                            "fontWeight": 600
+                          },
+                          "content": "512/600"
+                        },
+                        {
+                          "type": "leaf",
+                          "component": "Text",
+                          "props": {
+                            "fontSize": 11,
+                            "color": "#8E8E93"
+                          },
+                          "content": "CAL"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "props": {
+                        "size": 14,
+                        "color": "#B0F246",
+                        "name": "sf:circle.fill"
+                      }
+                    },
+                    {
+                      "type": "container",
+                      "direction": "col",
+                      "gap": 0,
+                      "flex": 1,
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "component": "Text",
+                          "props": {
+                            "fontSize": 16,
+                            "color": "#000000",
+                            "fontWeight": 600
+                          },
+                          "content": "25/40"
+                        },
+                        {
+                          "type": "leaf",
+                          "component": "Text",
+                          "props": {
+                            "fontSize": 11,
+                            "color": "#8E8E93"
+                          },
+                          "content": "MIN"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "props": {
+                        "size": 14,
+                        "color": "#00E7FF",
+                        "name": "sf:circle.fill"
+                      }
+                    },
+                    {
+                      "type": "container",
+                      "direction": "col",
+                      "gap": 0,
+                      "flex": 1,
+                      "children": [
+                        {
+                          "type": "leaf",
+                          "component": "Text",
+                          "props": {
+                            "fontSize": 16,
+                            "color": "#000000",
+                            "fontWeight": 600
+                          },
+                          "content": "11/12"
+                        },
+                        {
+                          "type": "leaf",
+                          "component": "Text",
+                          "props": {
+                            "fontSize": 11,
+                            "color": "#8E8E93"
+                          },
+                          "content": "HRS"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

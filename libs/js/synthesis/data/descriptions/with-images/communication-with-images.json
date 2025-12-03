@@ -1,0 +1,246 @@
+{
+  "domain": "communication",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "communication-img-001",
+      "prompt": "A message preview widget with sender photo, name, message snippet, and timestamp",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "contact profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-002",
+      "prompt": "A video call widget with caller photo, name, and call duration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "caller profile photo",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "communication-img-003",
+      "prompt": "A shared media widget showing shared image with sender name and date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "shared photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "communication-img-004",
+      "prompt": "A contact widget with contact photo, name, phone number, and last contact date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "contact profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-005",
+      "prompt": "An email widget with sender photo, subject, preview text, and timestamp",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sender profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-006",
+      "prompt": "A voice message widget with sender photo, waveform, duration, and timestamp",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sender profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-007",
+      "prompt": "A group chat widget with group icon, group name, last message, and unread count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "group chat icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-008",
+      "prompt": "A missed call widget with caller photo, name, time of call, and call back button",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "caller profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-009",
+      "prompt": "A voicemail widget with caller photo, duration, transcription preview, and timestamp",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "caller profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-010",
+      "prompt": "A status update widget with contact photo, status text/emoji, and time posted",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "contact profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-011",
+      "prompt": "A shared contact widget with shared person's photo, name, and sender info",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "shared contact photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-012",
+      "prompt": "A scheduled message widget with recipient photo, scheduled time, and message preview",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "recipient profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-013",
+      "prompt": "A reaction widget with message image, who reacted, reaction emoji, and timestamp",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "message content or sender photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-014",
+      "prompt": "A file share widget with file icon, sender photo, file name, size, and download status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sender profile photo with file icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-015",
+      "prompt": "A broadcast message widget with channel icon, message, sender, and reach count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "broadcast channel icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-016",
+      "prompt": "A typing indicator widget with contact photo, name, and animated typing dots",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "contact profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-017",
+      "prompt": "A pinned message widget with sender photo, message content, and pin icon",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sender profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-018",
+      "prompt": "A location share widget with map thumbnail, sender photo, and location name",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "map thumbnail with location pin",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "communication-img-019",
+      "prompt": "A poll message widget with creator photo, question, voting options, and results",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "creator profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-020",
+      "prompt": "A disappearing message widget with sender photo, timer icon, and countdown",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sender profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-021",
+      "prompt": "A meeting invite widget with organizer photo, meeting title, time, and join link",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "organizer profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-022",
+      "prompt": "A chat backup widget with chat icon, last backup time, and storage size",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "chat or cloud icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-023",
+      "prompt": "A blocked contact widget with contact photo, name, and unblock option",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "contact profile photo with blocked indicator",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-024",
+      "prompt": "A chat request widget with requester photo, mutual connections, and message preview",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "requester profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-025",
+      "prompt": "A translation widget with sender photo, original message, and translated text",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sender profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-026",
+      "prompt": "A shared playlist widget with album art, sender photo, playlist name, and track count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "playlist cover art",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-027",
+      "prompt": "A forwarded message widget with original sender photo, forwarder name, and message",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "original sender photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-028",
+      "prompt": "A chat theme widget with theme preview image, name, and apply button",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "chat theme preview",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "communication-img-029",
+      "prompt": "A read receipt widget with reader photos, message preview, and read time",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "reader profile photos",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "communication-img-030",
+      "prompt": "A suggested reply widget with contact photo, incoming message, and quick reply options",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "contact profile photo",
+      "imagePlacement": "left-thumbnail"
+    }
+  ]
+}

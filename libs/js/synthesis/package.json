@@ -1,0 +1,28 @@
+{
+  "name": "@llm-widget-factory/synthesis",
+  "version": "1.0.0",
+  "description": "Widget synthesis system for generating synthetic widget datasets",
+  "type": "module",
+  "main": "./description-generators/index.js",
+  "exports": {
+    ".": "./description-generators/index.js",
+    "./description-generators": "./description-generators/index.js",
+    "./batch": "./batch/batch-generate-widgets.js",
+    "./postprocess": "./postprocess/prepare-render.js"
+  },
+  "scripts": {
+    "setup": "node description-generators/generate-descriptions.js && node description-generators/generate-domain-prompts.js",
+    "setup:all": "node description-generators/generate-descriptions.js && node description-generators/generate-dynamic-variations.js && node description-generators/generate-image-descriptions.js && node description-generators/generate-domain-prompts.js",
+    "generate": "node batch/batch-generate-widgets.js",
+    "generate:parallel": "node batch/run-parallel.js",
+    "postprocess": "node postprocess/prepare-render.js"
+  },
+  "keywords": [
+    "widget",
+    "synthesis",
+    "generation",
+    "dsl"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -13,7 +13,9 @@ import os
 import asyncio
 from datetime import datetime
 from pathlib import Path
-from typing import Tuple, Optional
+from typing import Tuple, Optional, Dict, Any
+import base64
+import sys
 
 from ...config import GeneratorConfig
 from ...exceptions import ValidationError, FileSizeError, GenerationError
@@ -24,6 +26,7 @@ from ...utils import (
     load_default_prompt,
     load_widget2dsl_prompt,
     load_prompt2dsl_prompt,
+    load_prompt2dsl_with_reference_prompt,
     clean_json_response,
     clean_code_response,
 )
@@ -42,8 +45,474 @@ from ...perception import (
 from ...perception.icon_extraction import normalize_icon_details
 
 
+def _guess_mime_from_filename(filename: Optional[str]) -> str:
+    """Guess MIME type from filename extension."""
+    if not filename:
+        return "image/png"
+    ext = os.path.splitext(filename)[1].lower()
+    if ext in (".jpg", ".jpeg"):
+        return "image/jpeg"
+    elif ext == ".png":
+        return "image/png"
+    elif ext == ".webp":
+        return "image/webp"
+    elif ext == ".gif":
+        return "image/gif"
+    elif ext == ".bmp":
+        return "image/bmp"
+    elif ext in (".tif", ".tiff"):
+        return "image/tiff"
+    return "image/png"
+
+
+def prepare_image_content_from_bytes(image_bytes: bytes, filename: Optional[str] = None) -> Dict[str, Any]:
+    """
+    Convert image bytes to the format expected by vision models.
+    Returns a dict with type='image_url' and a base64-encoded data URL.
+    """
+    mime = None
+    try:
+        with Image.open(io.BytesIO(image_bytes)) as im:
+            fmt = (im.format or "").upper()
+            if fmt == "JPEG":
+                mime = "image/jpeg"
+            elif fmt == "PNG":
+                mime = "image/png"
+            elif fmt == "WEBP":
+                mime = "image/webp"
+            elif fmt == "GIF":
+                mime = "image/gif"
+            elif fmt == "BMP":
+                mime = "image/bmp"
+            elif fmt in ("TIFF", "TIF"):
+                mime = "image/tiff"
+    except Exception:
+        mime = None
+    
+    if not mime:
+        mime = _guess_mime_from_filename(filename)
+
+    b64 = base64.b64encode(image_bytes).decode("ascii")
+    data_url = f"data:{mime};base64,{b64}"
+    return {"type": "image_url", "image_url": {"url": data_url}}
+
+
 async def get_default_prompt():
     return {"prompt": load_default_prompt()}
+
+
+async def generate_widget(
+    image_data: bytes,
+    image_filename: str | None,
+    system_prompt: str,
+    model: str,
+    api_key: str,
+    config: GeneratorConfig,
+):
+    print(f"[{datetime.now()}] generate-widget request")
+
+    import tempfile
+    temp_file = None
+    try:
+        validate_file_size(len(image_data), config.max_file_size_mb)
+
+        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
+
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
+            temp_file.write(image_bytes)
+            temp_file_path = temp_file.name
+
+        prompt = system_prompt if system_prompt else load_default_prompt()
+
+        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash", "doubao-seed-1-6-vision-250815"}
+        model_to_use = (model or "qwen3-vl-flash").strip()
+
+        validate_model(model, model_to_use, vision_models)
+        validate_api_key(api_key)
+
+        vision_llm = LLM(
+            model=model_to_use,
+            temperature=0.5,
+            max_tokens=32768,
+            timeout=config.timeout,
+            system_prompt=prompt,
+            api_key=api_key
+        )
+
+        image_content = prepare_image_content(temp_file_path)
+
+        messages = [ChatMessage(
+            role="user",
+            content=[
+                {"type": "text", "text": "Please analyze this widget image and generate the WidgetDSL JSON according to the instructions."},
+                image_content
+            ]
+        )]
+
+        response = vision_llm.chat(messages)
+
+        result_text = clean_json_response(response.content)
+
+        widget_spec = json.loads(result_text)
+        try:
+            if isinstance(widget_spec, dict) and isinstance(widget_spec.get("widget"), dict):
+                widget_spec["widget"]["aspectRatio"] = round(aspect_ratio, 3)
+        except Exception:
+            pass
+
+        return {
+            "success": True,
+            "widgetDSL": widget_spec,
+            "aspectRatio": round(aspect_ratio, 3),
+            "usage": response.usage
+        }
+    except json.JSONDecodeError as e:
+        raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
+    finally:
+        if 'temp_file_path' in locals():
+            try:
+                os.unlink(temp_file_path)
+            except:
+                pass
+
+
+async def generate_widget_text(
+    system_prompt: str,
+    user_prompt: str,
+    model: str,
+    api_key: str,
+    config: GeneratorConfig,
+):
+    print(f"[{datetime.now()}] generate-widget-text request this one! BAOZE")
+
+    try:
+        text_models = {"qwen3-max", "qwen3-coder-480b-a35b-instruct", "qwen3-coder-plus"}
+        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash", "doubao-seed-1-6-vision-250815"}
+        doubao_models = {"doubao-seed-1-6-vision-250815", "doubao-pro-32k", "doubao-lite-32k", "doubao-pro-4k", "doubao-lite-4k"}
+        supported_models = text_models | vision_models | doubao_models
+        model_to_use = (model or config.default_model or "qwen3-vl-flash").strip()
+        print("BAOZE: It's erroring out here")
+        validate_model(model, model_to_use, supported_models)
+        validate_api_key(api_key)
+
+        text_llm = LLM(
+            model=model_to_use,
+            temperature=0.5,
+            max_tokens=2000,
+            timeout=config.timeout,
+            system_prompt=system_prompt,
+            api_key=api_key
+        )
+
+        messages = [ChatMessage(
+            role="user",
+            content=[
+                {"type": "text", "text": user_prompt}
+            ]
+        )]
+
+        response = text_llm.chat(messages)
+        result_text = clean_json_response(response.content)
+
+        widget_spec = json.loads(result_text)
+
+        return {
+            "success": True,
+            "widgetDSL": widget_spec
+        }
+    except json.JSONDecodeError as e:
+        raise GenerationError(f"Invalid JSON from LLM: {str(e)}")
+
+
+async def generate_widget_text_with_reference(
+    system_prompt: str,
+    user_prompt: str,
+    reference_image_data: bytes,
+    reference_image_filename: str | None,
+    model: str,
+    api_key: str,
+    config: GeneratorConfig,
+):
+    """
+    Generate widget from text prompt with reference image for style guidance.
+
+    Args:
+        system_prompt: System prompt (or None to use default with-reference prompt)
+        user_prompt: User's widget description
+        reference_image_data: Reference widget image bytes for style inspiration
+        reference_image_filename: Original filename of reference image
+        model: Model to use (must be a vision model)
+        api_key: API key for the model
+        config: Generator configuration
+
+    Returns:
+        Dictionary with success status and widget DSL
+    """
+    print(f"[{datetime.now()}] generate-widget-text-with-reference request")
+
+    try:
+        # Only vision models supported (since we need to process reference image)
+        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash"}
+        doubao_vision_models = {"doubao-seed-1-6-vision-250815"}
+        supported_vision_models = vision_models | doubao_vision_models
+        model_to_use = (model or config.default_model or "qwen3-vl-flash").strip()
+
+        validate_model(model, model_to_use, supported_vision_models)
+        validate_api_key(api_key)
+
+        # Use default with-reference prompt if no custom prompt provided
+        system_prompt_final = system_prompt or load_prompt2dsl_with_reference_prompt()
+
+        # Prepare reference image - convert bytes to base64 data URL
+        image_content = prepare_image_content_from_bytes(reference_image_data, reference_image_filename)
+
+        # Initialize vision LLM
+        vision_llm = LLM(
+            model=model_to_use,
+            temperature=0.5,
+            max_tokens=2000,
+            timeout=config.timeout,
+            system_prompt=system_prompt_final,
+            api_key=api_key
+        )
+
+        # Build message with reference image first, then text prompt
+        messages = [ChatMessage(
+            role="user",
+            content=[
+                {"type": "text", "text": "Reference widget image for style inspiration:"},
+                image_content,
+                {"type": "text", "text": f"\n\nWidget to generate:\n{user_prompt}"}
+            ]
+        )]
+
+        response = vision_llm.chat(messages)
+        result_text = clean_json_response(response.content)
+
+        widget_spec = json.loads(result_text)
+
+        return {
+            "success": True,
+            "widgetDSL": widget_spec,
+            "referenceImage": reference_image_filename
+        }
+    except json.JSONDecodeError as e:
+        raise GenerationError(f"Invalid JSON from LLM: {str(e)}")
+
+
+async def generate_widget_with_icons(
+    image_data: bytes,
+    image_filename: str | None,
+    system_prompt: str,
+    model: str,
+    api_key: str,
+    retrieval_topk: int,
+    retrieval_topm: int,
+    retrieval_alpha: float,
+    config: GeneratorConfig,
+):
+    print(f"[{datetime.now()}] generate-widget-full request")
+
+    import tempfile
+    temp_file = None
+    try:
+        validate_file_size(len(image_data), config.max_file_size_mb)
+
+        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
+
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
+            temp_file.write(image_bytes)
+            temp_file_path = temp_file.name
+
+        base_prompt = system_prompt if system_prompt else load_default_prompt()
+
+        icon_result = run_icon_detection_pipeline(
+            image_bytes=image_bytes,
+            filename=image_filename,
+            model=(model or "qwen3-vl-flash"),
+            api_key=api_key,
+            retrieval_topk=retrieval_topk,
+            retrieval_topm=retrieval_topm,
+            retrieval_alpha=retrieval_alpha,
+            timeout=config.timeout,
+        )
+
+        grounding_raw = icon_result["grounding_raw"]
+        grounding_pixel = icon_result["grounding_pixel"]
+        post_processed = icon_result["post_processed"]
+        per_icon_details = icon_result["per_icon_details"]
+        icon_candidates = icon_result["icon_candidates"]
+        icon_count = icon_result["icon_count"]
+        img_width = icon_result["img_width"]
+        img_height = icon_result["img_height"]
+
+        extra_str = format_icon_prompt_injection(
+            icon_count=icon_count,
+            per_icon_details=per_icon_details,
+            retrieval_topm=retrieval_topm,
+        )
+
+        if "[AVAILABLE_ICON_NAMES]" in base_prompt:
+            prompt_final = base_prompt.replace("[AVAILABLE_ICON_NAMES]", extra_str)
+        else:
+            prompt_final = base_prompt + extra_str
+
+        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash", "doubao-seed-1-6-vision-250815"}
+        model_to_use = (model or "qwen3-vl-flash").strip()
+
+        validate_model(model, model_to_use, vision_models)
+        validate_api_key(api_key)
+
+        vision_llm = LLM(
+            model=model_to_use,
+            temperature=0.5,
+            max_tokens=32768,
+            timeout=config.timeout,
+            system_prompt=prompt_final,
+            api_key=api_key
+        )
+
+        image_content = prepare_image_content(temp_file_path)
+        messages = [ChatMessage(
+            role="user",
+            content=[
+                {"type": "text", "text": "Analyze this widget image and generate the WidgetDSL JSON using constraints and icon hints in the system prompt."},
+                image_content
+            ]
+        )]
+
+        response = vision_llm.chat(messages)
+        result_text = clean_json_response(response.content)
+
+        widget_spec = json.loads(result_text)
+        try:
+            if isinstance(widget_spec, dict) and isinstance(widget_spec.get("widget"), dict):
+                widget_spec["widget"]["aspectRatio"] = round(aspect_ratio, 3)
+        except Exception:
+            pass
+
+        per_icon_details, global_merged = normalize_icon_details(per_icon_details)
+
+        return {
+            "success": True,
+            "widgetDSL": widget_spec,
+            "aspectRatio": round(aspect_ratio, 3),
+            "iconCandidates": icon_candidates,
+            "iconCount": icon_count,
+            "iconDebugInfo": {
+                "imageSize": {"width": img_width, "height": img_height},
+                "grounding": {
+                    "raw": grounding_raw,
+                    "pixel": grounding_pixel
+                },
+                "postProcessed": post_processed,
+                "retrievals": {
+                    "perIcon": per_icon_details,
+                    "globalMerged": global_merged
+                }
+            }
+        }
+    except json.JSONDecodeError as e:
+        raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
+    finally:
+        if 'temp_file_path' in locals():
+            try:
+                os.unlink(temp_file_path)
+            except:
+                pass
+
+
+async def generate_widget_with_graph(
+    image_data: bytes,
+    image_filename: str | None,
+    system_prompt: str,
+    model: str,
+    api_key: str,
+    config: GeneratorConfig,
+):
+    print(f"[{datetime.now()}] generate-widget request")
+
+    import tempfile
+    temp_file = None
+    try:
+        validate_file_size(len(image_data), config.max_file_size_mb)
+
+        image_bytes, width, height, aspect_ratio = preprocess_image_for_widget(image_data, min_target_edge=1000)
+
+        with tempfile.NamedTemporaryFile(delete=False, suffix='.png') as temp_file:
+            temp_file.write(image_bytes)
+            temp_file_path = temp_file.name
+
+        vision_models = {"qwen3-vl-235b-a22b-instruct", "qwen3-vl-235b-a22b-thinking", "qwen3-vl-plus", "qwen3-vl-flash", "doubao-seed-1-6-vision-250815"}
+        model_to_use = (model or "qwen3-vl-flash").strip()
+
+        validate_model(model, model_to_use, vision_models)
+        validate_api_key(api_key)
+
+        print(f"[{datetime.now()}] Step 1: Detecting charts in image...")
+        chart_counts, graph_specs = detect_and_process_graphs(
+            image_bytes=image_bytes,
+            filename=image_filename,
+            provider=None,
+            api_key=api_key,
+            model=model_to_use,
+            temperature=0.1,
+            max_tokens=500,
+            timeout=30,
+            max_retries=2
+        )
+
+        print(f"[{datetime.now()}] Detected charts: {chart_counts}")
+        if graph_specs:
+            print(f"[{datetime.now()}] Step 2: Processing graphs... Generated {len(graph_specs)} graph specifications")
+
+        base_prompt = system_prompt if system_prompt else load_widget2dsl_prompt()
+        enhanced_prompt = inject_graph_specs_to_prompt(base_prompt, graph_specs)
+
+        vision_llm = LLM(
+            model=model_to_use,
+            temperature=0.5,
+            max_tokens=32768,
+            timeout=config.timeout,
+            system_prompt=enhanced_prompt,
+            api_key=api_key
+        )
+
+        image_content = prepare_image_content(temp_file_path)
+
+        messages = [ChatMessage(
+            role="user",
+            content=[
+                {"type": "text", "text": "Please analyze this widget image and generate the WidgetDSL JSON according to the instructions."},
+                image_content
+            ]
+        )]
+
+        response = vision_llm.chat(messages)
+
+        result_text = clean_json_response(response.content)
+
+        widget_spec = json.loads(result_text)
+        try:
+            if isinstance(widget_spec, dict) and isinstance(widget_spec.get("widget"), dict):
+                widget_spec["widget"]["aspectRatio"] = round(aspect_ratio, 3)
+        except Exception:
+            pass
+
+        return {
+            "success": True,
+            "widgetDSL": widget_spec,
+            "aspectRatio": round(aspect_ratio, 3),
+            "usage": response.usage
+        }
+    except json.JSONDecodeError as e:
+        raise GenerationError(f"Invalid JSON from VLM: {str(e)}")
+    finally:
+        if 'temp_file_path' in locals():
+            try:
+                os.unlink(temp_file_path)
+            except:
+                pass
 
 
 async def generate_widget_full(

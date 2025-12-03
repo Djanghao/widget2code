@@ -1,0 +1,69 @@
+{
+  "$schema": "./runner-config.schema.json",
+  "description": "More Complicated",
+  "runners": [
+    {
+      "name": "more-components-addon-1",
+      "port": 8015,
+      "promptPreset": "more-components",
+      "domains": [
+        "communication"
+      ],
+      "options": {
+        "limit": 50,
+        "useStatic": false,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "more-components-addon-2",
+      "port": 8016,
+      "promptPreset": "more-components",
+      "domains": [
+        "utilies",
+        "smart-home"
+      ],
+      "options": {
+        "limit": 50,
+        "useStatic": false,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "more-components-addon-3",
+      "port": 8017,
+      "promptPreset": "more-components",
+      "domains": [
+        "health",
+        "food"
+      ],
+      "options": {
+        "limit": 50,
+        "useStatic": false,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "more-components-addon-4",
+      "port": 8018,
+      "promptPreset": "more-components",
+      "domains": [
+        "finance"
+      ],
+      "options": {
+        "limit": 50,
+        "useStatic": false,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    }
+  ],
+  "globalOptions": {
+    "referenceImagesDir": null,
+    "imageUrlsDir": "./scripts/synthesis/descriptions/image-urls",
+    "referencesPerDescription": 2
+  }
+}

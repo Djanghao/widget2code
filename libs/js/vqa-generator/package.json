@@ -1,0 +1,20 @@
+{
+  "name": "@widget-factory/vqa-generator",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./index.js": "./src/index.js"
+  },
+  "description": "VQA dataset generator for UI understanding and grounding tasks",
+  "keywords": [
+    "vqa",
+    "dataset",
+    "ui-understanding",
+    "grounding",
+    "referring"
+  ],
+  "dependencies": {},
+  "private": true
+}

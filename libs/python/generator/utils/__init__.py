@@ -3,6 +3,7 @@ from .prompt_loader import (
     load_default_prompt,
     load_widget2dsl_prompt,
     load_prompt2dsl_prompt,
+    load_prompt2dsl_with_reference_prompt,
     load_dynamic_component_prompt,
     load_dynamic_component_image_prompt,
 )
@@ -17,6 +18,7 @@ __all__ = [
     "load_default_prompt",
     "load_widget2dsl_prompt",
     "load_prompt2dsl_prompt",
+    "load_prompt2dsl_with_reference_prompt",
     "load_dynamic_component_prompt",
     "load_dynamic_component_image_prompt",
     "clean_json_response",

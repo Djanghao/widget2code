@@ -56,7 +56,7 @@ async def generate_component(
         base_url=config.default_base_url,
         temperature=0.7,
         max_tokens=2000,
-        timeout=60,
+        timeout=config.timeout,
         system_prompt=system_prompt_final,
     )
 
@@ -122,7 +122,7 @@ async def generate_component_from_image(
             base_url=config.default_base_url,
             temperature=0.5,
             max_tokens=2000,
-            timeout=60,
+            timeout=config.timeout,
             system_prompt=system_prompt_final,
         )
 

@@ -167,6 +167,90 @@ function HeadlessRenderer() {
 
   }, []);
 
+  const getTightTextBounds = (element) => {
+    const textNodes = [];
+    const walker = document.createTreeWalker(
+      element,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+
+    let node;
+    while (node = walker.nextNode()) {
+      if (node.textContent.trim()) {
+        textNodes.push(node);
+      }
+    }
+
+    if (textNodes.length === 0) return null;
+
+    const range = document.createRange();
+    range.setStartBefore(textNodes[0]);
+    range.setEndAfter(textNodes[textNodes.length - 1]);
+
+    const rangeBounds = range.getBoundingClientRect();
+    if (!rangeBounds || rangeBounds.width === 0) return null;
+
+    const rects = range.getClientRects();
+    if (rects.length === 0) return null;
+
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+
+    for (let i = 0; i < rects.length; i++) {
+      const rect = rects[i];
+      if (rect.width > 0 && rect.height > 0) {
+        minX = Math.min(minX, rect.left);
+        minY = Math.min(minY, rect.top);
+        maxX = Math.max(maxX, rect.right);
+        maxY = Math.max(maxY, rect.bottom);
+      }
+    }
+
+    if (!isFinite(minX)) return null;
+
+    return {
+      x: minX,
+      y: minY,
+      width: maxX - minX,
+      height: maxY - minY
+    };
+  };
+
+  const captureElementBoundingBoxes = (widgetElement) => {
+    const elements = widgetElement.querySelectorAll('[data-element-path]');
+    const boxes = {};
+
+    const widgetRect = widgetElement.getBoundingClientRect();
+
+    elements.forEach(el => {
+      const path = el.getAttribute('data-element-path');
+      const type = el.getAttribute('data-element-type');
+      const component = el.getAttribute('data-component') || null;
+      let rect = el.getBoundingClientRect();
+
+      if (component === 'Text') {
+        const tightBounds = getTightTextBounds(el);
+        if (tightBounds) {
+          rect = tightBounds;
+        }
+      }
+
+      boxes[path] = {
+        type,
+        component,
+        x: Math.round(rect.x - widgetRect.x),
+        y: Math.round(rect.y - widgetRect.y),
+        width: Math.round(rect.width),
+        height: Math.round(rect.height),
+        absoluteX: Math.round(rect.x),
+        absoluteY: Math.round(rect.y)
+      };
+    });
+
+    return boxes;
+  };
+
   const completeRendering = async (resolve, reject, captureOptions, renderStartTime) => {
     try {
       console.log('[Headless] 🎯 Starting final capture phase...');
@@ -209,10 +293,15 @@ function HeadlessRenderer() {
       console.log('[Headless] 📏 Natural size:', state.naturalSize);
       console.log('[Headless] 📏 Final size:', state.finalSize);
 
+      console.log('[Headless] 📦 Capturing element bounding boxes...');
+      const imageScale = captureOptions.scale || 2;
+      const boundingBoxes = captureElementBoundingBoxes(widgetElement);
+      console.log(`[Headless] ✅ Captured ${Object.keys(boundingBoxes).length} element bounding boxes`);
+
       console.log('[Headless] 📸 Capturing PNG with options:', captureOptions);
       const captureStartTime = performance.now();
       const blob = await captureWidgetAsPNG(widgetElement, {
-        scale: 2,
+        scale: imageScale,
         backgroundColor: null,
         ...captureOptions
       });
@@ -237,7 +326,11 @@ function HeadlessRenderer() {
         finalSize: state.finalSize,
         spec: state.widgetDSL,
         jsx: state.generatedJSX,
-        imageData: base64
+        imageData: base64,
+        boundingBoxes: {
+          scale: imageScale,
+          elements: boundingBoxes
+        }
       });
 
     } catch (error) {
