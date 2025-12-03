@@ -1,395 +1,192 @@
-# Widget Factory
+# Widget2Code: From Visual Widgets to UI Code via Multimodal LLMs
 
-Transform phone widget screenshots into React widgets using LLM and AI-native WidgetDSL.
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Paper](https://img.shields.io/badge/paper-arxiv-red.svg)](https://)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github)](https://github.com/Djanghao/widget-factory/tree/main)
 
-**Pipeline**: Image → WidgetDSL (JSON) → JSX → PNG
+![Description]()
 
-## Quick Start
+## Overview
 
-### One-Command Setup
+**Widget Factory** is an end-to-end infrastructure with a widget-specific DSL, a multi-target compiler, and an adaptive rendering module for geometry-consistent widget reconstruction from screenshot image.
+
+## Key Capabilities
+
+### 1. Widget Generation
+Automatically generate WidgetDSL specifications from screenshots using advanced vision-language models with:
+- Icon detection and intelligent retrieval from 57,000+ icons
+- Multi-chart recognition (LineChart, BarChart, StackedBarChart, RadarChart, PieChart, etc.)
+- Layout and composition analysis
+- Color extraction and preservation
+- Batch processing with configurable concurrency (supports 100+ concurrent workers)
+
+### 2. Component Library
+20 production-ready UI components plus extensive icon support:
+- **Layout**: WidgetShell, Container
+- **Text**: Text, Button, AppLogo
+- **Visual**: Icon, Image, MapImage, Divider, Indicator
+- **Input**: Checkbox, Slider, Switch
+- **Charts**: LineChart, BarChart, StackedBarChart, RadarChart, PieChart, ProgressBar, ProgressRing, Sparkline
+
+### 3. Interactive Playground
+Web-based interface for widget creation and editing:
+- Preset templates gallery
+- Image upload and DSL generation
+- Natural language widget generation
+- Real-time JSON editing with syntax highlighting
+- Tree-based widget structure visualization
+- PNG export with dimension control
+- Responsive design preview
+
+### 4. Flexible Architecture
+Modular, composable design enabling multiple workflows:
+- Standalone generation (Python)
+- Server-based rendering (FastAPI + Playwright)
+- Programmatic API (JavaScript/TypeScript)
+- Command-line tools (Node.js)
+The platform leverages Vision-Language Models (By default, Qwen) for intelligent image analysis and includes a comprehensive component library with 6,950+ SF Symbols and 57,000+ additional icons with AI-powered retrieval.
+
+## Getting Started
+
+### Installation
+
+**One-Command Setup**:
 ```bash
 ./scripts/setup/install.sh
 ```
-Installs all dependencies (Node.js packages + Python environment).
+
+Installs all dependencies including Node.js packages and isolated Python environment.
+
+**Manual Setup**:
+```bash
+# Install Node.js dependencies
+npm install
+
+# Setup Python environment
+cd libs/python
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
 
 ### Configuration
+
+Create `.env` file with API credentials:
 ```bash
 cp .env.example .env
-# Add your DASHSCOPE_API_KEY
+# Edit .env and add DASHSCOPE_API_KEY
 ```
 
-### Generate Widgets from Images
+### Quick Start
 
-**Single image**:
+**Generate widgets from images**:
 ```bash
-./scripts/generation/generate-widget.sh input.png output.json
+# Single image
+./scripts/generation/generate-widget.sh mockup.png output/widget.json
+
+# Batch processing (5 concurrent workers)
+./scripts/generation/generate-batch.sh ./mockups ./output 5
 ```
 
-**Batch processing**:
+**Start interactive playground**:
 ```bash
-./scripts/generation/generate-batch.sh ./images ./output 5
-```
-Processes multiple images with 5 concurrent workers.
+# Frontend server only (port 3060)
+npm run dev
 
-### Compile DSL to JSX
-```bash
-./scripts/rendering/compile-widget.sh widget.json widget.jsx
-```
-
-### Development Playground
-```bash
-# Start frontend server (port 3060)
-./scripts/dev/start-dev.sh
-
-# Or start both frontend + API
+# Frontend + API backend
 npm run dev:full
 ```
 
-### Full Pipeline (Image → PNG)
+**Full pipeline (Image → PNG)**:
 ```bash
 # Terminal 1: Start server
 ./scripts/dev/start-dev.sh
 
-# Terminal 2: Run pipeline
-./scripts/pipeline/run-full.sh design.png ./output
-```
-
-## Project Structure
-
-```
-llm-widget-factory/
-├── apps/
-│   ├── api/              # Python FastAPI backend for AI generation
-│   └── playground/       # React web playground for visual editing
-├── libs/
-│   ├── js/               # JavaScript/TypeScript packages
-│   │   ├── cli/          # Command-line tools
-│   │   ├── compiler/     # DSL → JSX compiler
-│   │   ├── dsl/          # WidgetDSL spec & validation
-│   │   ├── exporter/     # PNG export utilities
-│   │   ├── icons/        # 6950+ icon components & source files
-│   │   ├── primitives/   # Base UI components
-│   │   ├── renderer/     # Runtime JSX renderer
-│   │   ├── validator/    # DSL validation
-│   │   ├── resizer/      # Auto-resize utilities
-│   │   └── dynamic/      # Dynamic imports
-│   └── python/           # Python package
-│       └── generator/    # AI-powered widget generation
-├── tools/                # Evaluation and analysis tools
-│   └── evaluation/       # Widget quality metrics & hard case analysis
-└── scripts/              # Shell scripts for workflows
-    ├── generation/       # Widget generation scripts
-    ├── rendering/        # Compilation & rendering
-    ├── pipeline/         # End-to-end workflows
-    ├── evaluation/       # Quality evaluation scripts
-    ├── dev/              # Development servers
-    └── setup/            # Installation
-```
-
-## Core Workflows
-
-### 1. AI Generation (No Server)
-Transform design mockups into WidgetDSL using Vision-Language Models.
-
-```bash
-# Single image
-./scripts/generation/generate-widget.sh mockup.png widget.json
-
-# Batch processing (10 concurrent)
-./scripts/generation/generate-batch.sh ./mockups ./output 10
-```
-
-**Output per image**:
-- `widget.json` - Generated WidgetDSL
-- `images/` - Debug visualizations (grounding, crops, retrieval)
-- `prompts/` - Generation prompts at each stage
-- `debug.json` - Detailed generation metadata
-
-**Features**:
-- Icon detection & retrieval (6950+ icons)
-- Graph/chart recognition
-- Layout analysis
-- Parallel processing with configurable concurrency
-
-### 2. Compilation (No Server)
-Compile WidgetDSL to portable React JSX files.
-
-```bash
-./scripts/rendering/compile-widget.sh widget.json widget.jsx
-```
-
-**Programmatic Usage**:
-```js
-import { compileWidgetDSLToJSX } from '@widget-factory/compiler';
-
-const jsx = compileWidgetDSLToJSX(widgetSpec);
-```
-
-### 3. Rendering (Requires Server)
-Render JSX to PNG using Playwright headless browser.
-
-```bash
-# Start dev server first
-./scripts/dev/start-dev.sh
-
-# Then render
-./scripts/rendering/render-widget.sh widget.jsx output.png
-```
-
-**Output**:
-- `output.png` - Auto-resized widget
-- `output_raw.png` - Natural layout size
-- `output_autoresize.png` - Same as default
-
-### 4. Full Pipeline
-Complete workflow from image to PNG.
-
-```bash
-# Single image
+# Terminal 2: Generate widget
 ./scripts/pipeline/run-full.sh design.png ./result
-
-# Batch processing
-./scripts/pipeline/run-batch-full.sh ./designs ./results 5
 ```
 
-## NPM Packages
 
-Published packages under `@widget-factory/*`:
+## Project Architecture
 
-- **[@widget-factory/dsl](./libs/js/packages/dsl/)** - WidgetDSL specification & validation
-- **[@widget-factory/compiler](./libs/js/packages/compiler/)** - DSL → JSX compiler
-- **[@widget-factory/renderer](./libs/js/packages/renderer/)** - Runtime JSX renderer
-- **[@widget-factory/exporter](./libs/js/packages/exporter/)** - PNG export utilities
-- **[@widget-factory/primitives](./libs/js/packages/primitives/)** - UI components (Text, Icon, Button, etc.)
-- **[@widget-factory/icons](./libs/js/packages/icons/)** - 6950+ icon components
-- **[@widget-factory/cli](./libs/js/packages/cli/)** - Command-line tools
+### Directory Structure
 
-## Python Package
-
-**[generator](./libs/python/)** - AI-powered widget generation from images
-
-**Installation**:
-```bash
-cd libs/python
-pip install -e .
 ```
-
-**CLI**:
-```bash
-generate-widget input.png output.json
-generate-widget-batch ./images ./output --concurrency 5
+widget-factory/
+├── apps/
+│   ├── api/                  # FastAPI backend service
+│   │   ├── server.py         # Main server entry point
+│   │   ├── routes/           # API endpoints
+│   │   └── ...
+│   └── playground/           # React web interface
+│       ├── src/
+│       │   ├── components/   # React components
+│       │   ├── pages/        # Page layouts
+│       │   └── ...
+│       └── vite.config.ts
+├── libs/
+│   ├── js/                   # JavaScript/TypeScript packages (@widget-factory/*)
+│   │   ├── dsl/              # WidgetDSL specification & validation
+│   │   ├── compiler/         # DSL → JSX compilation
+│   │   ├── renderer/         # JSX → PNG rendering
+│   │   ├── primitives/       # 20 UI components
+│   │   ├── icons/            # Icon system (57,000+ icons)
+│   │   ├── cli/              # Command-line interface
+│   │   ├── exporter/         # Client-side PNG export
+│   │   ├── validator/        # DSL validation engine
+│   │   ├── resizer/          # Auto-resize utilities
+│   │   ├── dynamic/          # Dynamic component imports
+│   │   └── ...
+│   └── python/               # Python packages
+│       └── generator/        # AI widget generation engine
+│           ├── perception/   # Image analysis
+│           ├── generation/   # Widget/component generation
+│           ├── providers/    # LLM integrations
+│           └── utils/        # Utilities & caching
+├── scripts/                  # Shell automation
+│   ├── generation/           # Widget generation workflows
+│   ├── rendering/            # Compilation & rendering
+│   ├── pipeline/             # End-to-end pipelines
+│   ├── dev/                  # Development servers
+│   └── setup/                # Installation & configuration
+├── tools/                    # Analysis & evaluation
+│   └── evaluation/           # Quality metrics & hard case analysis
+└── README.md
 ```
-
-**Features**:
-- Vision-Language Model integration (Qwen-VL)
-- Icon grounding & retrieval (BLIP2 + SigLIP)
-- Graph detection
-- Batch processing with progress tracking
-- Debug visualizations
-
-## Configuration
 
 ### Environment Variables
 
-Configure via `.env` file:
+Create `.env` file:
 
 ```bash
-# API Keys
-DASHSCOPE_API_KEY=your-key-here
+# API Configuration
+DASHSCOPE_API_KEY=your-api-key
 
 # Server Ports
 BACKEND_PORT=8010
 FRONTEND_PORT=3060
 HOST=0.0.0.0
 
-# AI Model Settings
-DEFAULT_MODEL=qwen3-vl-flash
+# AI Models
+DEFAULT_MODEL=qwen3-vl-plus              # qwen3-vl-flash, qwen3-vl-plus, qwen3-vl-235b
 TIMEOUT=800
 
-# Icon Retrieval
-RETRIEVAL_TOPK=50
-RETRIEVAL_TOPM=10
-RETRIEVAL_ALPHA=0.8
+# Icon Retrieval (FAISS)
+RETRIEVAL_TOPK=50                        # Top-k similar icons
+RETRIEVAL_TOPM=10                        # Top-m for re-ranking
+RETRIEVAL_ALPHA=0.8                      # Text/image weight
 
 # Performance
-ENABLE_MODEL_CACHE=true
-USE_CUDA_FOR_RETRIEVAL=true
+ENABLE_MODEL_CACHE=true                  # Cache models for concurrent requests
+USE_CUDA_FOR_RETRIEVAL=true              # GPU acceleration for embeddings
+BATCH_SIZE=4                              # Generation batch size
+CONCURRENCY=100                           # Max concurrent workers
 
 # Security
 MAX_FILE_SIZE_MB=100
 MAX_REQUESTS_PER_MINUTE=1000
 
 # Debug
-SAVE_DEBUG_VISUALIZATIONS=true
-SAVE_PROMPTS=true
+SAVE_DEBUG_VISUALIZATIONS=true           # Save intermediate images
+SAVE_PROMPTS=true                        # Save generation prompts
 ```
-
-### Model Caching
-
-Enable for high-concurrency batch processing:
-```bash
-ENABLE_MODEL_CACHE=true
-USE_CUDA_FOR_RETRIEVAL=true
-```
-
-Models (BLIP2, SigLIP) load once at startup and are shared across all requests with thread-safe access. Supports 200+ concurrent requests.
-
-## Development
-
-### Start Dev Server
-```bash
-# Frontend only (port 3060)
-npm run dev
-
-# Frontend + API
-npm run dev:full
-```
-
-### Build for Production
-```bash
-npm run build
-npm start  # Serves at http://localhost:4173
-```
-
-### Regenerate Icons
-Only needed when updating SF Symbols source:
-```bash
-npm run build:icons
-```
-Generates 6950+ React components with lazy loading.
-
-## Testing
-
-All scripts have been tested and verified:
-
-```bash
-# Run test suite
-./scripts/generation/generate-batch.sh assets/images-10 results/test 1
-
-# Test compilation
-./scripts/rendering/compile-widget.sh results/test/*/output/widget.json test.jsx
-
-# Test full pipeline (requires server)
-./scripts/pipeline/run-full.sh assets/images-10/image_0001.png results/pipeline-test
-```
-
-See [Test Report](results/script-tests/TEST_REPORT.md) for details.
-
-## Evaluation
-
-Evaluate widget generation quality and analyze hard cases:
-
-```bash
-# Setup evaluation environment (first time only)
-./tools/evaluation/setup.sh
-
-# Run evaluation
-./scripts/evaluation/run_evaluation.sh <results-dir> <output-dir>
-```
-
-See [tools/evaluation/README.md](./tools/evaluation/README.md) for details.
-
-## Implementation Details
-
-### WidgetDSL Format
-Hierarchical JSON structure with containers and leaf components:
-
-```json
-{
-  "widget": {
-    "backgroundColor": "#ffffff",
-    "borderRadius": 16,
-    "padding": 12,
-    "root": {
-      "type": "container",
-      "direction": "col",
-      "gap": 8,
-      "children": [
-        {
-          "type": "leaf",
-          "component": "Text",
-          "props": { "fontSize": 16, "color": "#000000" },
-          "content": "Hello World"
-        }
-      ]
-    }
-  }
-}
-```
-
-### Icon System
-6950+ SF Symbols with lazy loading:
-```jsx
-<Icon name="sf:circle.fill" size={24} color="#000000" />
-<Icon name="lucide:Sun" />
-```
-
-Icons load on-demand via dynamic imports. Resources preload before rendering for accurate layout measurement.
-
-### Layout System
-Flex-based containers with explicit component properties:
-- Use `flex` prop for flex properties
-- Use `style` for other CSS
-- Automatic aspect ratio preservation
-- Natural size measurement before resize
-
-### Rendering Pipeline
-1. Extract resources from WidgetDSL
-2. Preload icons and images in parallel
-3. Compile to JSX after resources loaded
-4. Measure natural size accurately
-5. Auto-resize to target dimensions
-6. Export to PNG
-
-## Scripts Reference
-
-See [scripts/README.md](./scripts/README.md) for complete documentation.
-
-**Quick Reference**:
-```bash
-# Generation
-./scripts/generation/generate-widget.sh <image> <output.json>
-./scripts/generation/generate-batch.sh <input-dir> <output-dir> [concurrency]
-
-# Rendering
-./scripts/rendering/compile-widget.sh <dsl.json> <output.jsx>
-./scripts/rendering/render-widget.sh <widget.jsx> <output.png>
-
-# Pipeline
-./scripts/pipeline/run-full.sh <image> <output-dir>
-./scripts/pipeline/run-batch-full.sh <input-dir> <output-dir> [concurrency]
-
-# Evaluation
-./scripts/evaluation/run_evaluation.sh <results-dir> <output-dir>
-
-# Development
-./scripts/dev/start-dev.sh      # Frontend server
-./scripts/dev/start-api.sh      # API server
-./scripts/dev/start-full.sh     # Both servers
-
-# Setup
-./scripts/setup/install.sh      # Install all dependencies
-```
-
-## Architecture
-
-### Monorepo Organization
-
-- `apps/` - Deployable applications (api, playground)
-- `libs/js/` - JavaScript/TypeScript packages
-- `libs/python/` - Python packages
-- `scripts/` - Automation shell scripts
-
-### Package Dependencies
-
-```
-@widget-factory/primitives
-  ↓
-@widget-factory/dsl → @widget-factory/compiler → @widget-factory/renderer
-  ↓                      ↓
-@widget-factory/icons  @widget-factory/exporter
-```
-
-## License
-
-MIT
