@@ -4,7 +4,7 @@
 [![Paper](https://img.shields.io/badge/paper-arxiv-red.svg)](https://)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github)](https://github.com/Djanghao/widget-factory/tree/main)
 
-![Description]()
+![Description](![overview](https://github.com/user-attachments/assets/20fb1917-7cc2-4148-a900-0a7c0cd276ac))
 
 ## Overview
 
