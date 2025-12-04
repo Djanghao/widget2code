@@ -25,9 +25,6 @@ FROM_STAGE=1
 TO_STAGE=4
 SKIP_STAGES=""
 QUICK_TEST=false
-SYNTHESIS_LIMIT=10
-MUTATOR_COUNT=100
-CONCURRENCY=3
 
 print_help() {
   cat <<EOF
@@ -69,6 +66,10 @@ Examples:
   # Run all except rendering
   $0 --skip-stage=3
 
+Note:
+  Configuration is managed within each stage's script in scripts/<domain>/
+  To adjust parameters (limits, counts, concurrency), edit the respective run-*.sh files
+
 Directory Structure:
   output/
   ├── 1-synthesis/
@@ -103,8 +104,6 @@ for arg in "$@"; do
       ;;
     --quick-test)
       QUICK_TEST=true
-      SYNTHESIS_LIMIT=5
-      MUTATOR_COUNT=5
       ;;
     --help|-h)
       print_help
@@ -120,9 +119,9 @@ done
 
 if [ "$QUICK_TEST" = true ]; then
   echo "⚡ QUICK TEST MODE"
-  echo "  - Synthesis: $SYNTHESIS_LIMIT widgets"
-  echo "  - Mutator: $MUTATOR_COUNT base DSLs (×5 themes = $((MUTATOR_COUNT * 5)) total)"
-  echo "  - Concurrency: $CONCURRENCY"
+  echo "  - Synthesis: 5 widgets"
+  echo "  - Mutator: 5 base DSLs (×5 themes = 25 total)"
+  echo "  - Concurrency: 3"
   echo ""
 fi
 
@@ -167,7 +166,11 @@ log_stage_skipped() {
 if should_run_stage 1; then
   log_stage 1 "Synthesis"
 
-  bash "$SCRIPT_DIR/stages/1-run-synthesis.sh" $SYNTHESIS_LIMIT
+  if [ "$QUICK_TEST" = true ]; then
+    bash "$PROJECT_ROOT/scripts/synthesis/run-synthesis-batch-test.sh"
+  else
+    bash "$SCRIPT_DIR/stages/1-run-synthesis.sh"
+  fi
 
   log_stage_complete 1
 else
@@ -177,7 +180,11 @@ fi
 if should_run_stage 2; then
   log_stage 2 "Mutator"
 
-  bash "$SCRIPT_DIR/stages/2-run-mutator.sh" $MUTATOR_COUNT
+  if [ "$QUICK_TEST" = true ]; then
+    bash "$PROJECT_ROOT/scripts/mutator/run-mutator-test.sh"
+  else
+    bash "$SCRIPT_DIR/stages/2-run-mutator.sh"
+  fi
 
   log_stage_complete 2
 else
@@ -187,7 +194,11 @@ fi
 if should_run_stage 3; then
   log_stage 3 "Rendering"
 
-  bash "$SCRIPT_DIR/stages/3-run-rendering.sh" $CONCURRENCY
+  if [ "$QUICK_TEST" = true ]; then
+    bash "$PROJECT_ROOT/scripts/rendering/render-batch-vqa-test.sh"
+  else
+    bash "$SCRIPT_DIR/stages/3-run-rendering.sh"
+  fi
 
   log_stage_complete 3
 else
@@ -197,7 +208,11 @@ fi
 if should_run_stage 4; then
   log_stage 4 "VQA Generation"
 
-  bash "$SCRIPT_DIR/stages/4-run-vqa.sh" "$PROJECT_ROOT/output/4-vqa"
+  if [ "$QUICK_TEST" = true ]; then
+    bash "$PROJECT_ROOT/scripts/vqa-constructor/run-vqa-test.sh"
+  else
+    bash "$SCRIPT_DIR/stages/4-run-vqa.sh"
+  fi
 
   log_stage_complete 4
 else

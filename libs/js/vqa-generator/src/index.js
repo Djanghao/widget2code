@@ -32,6 +32,8 @@ export {
 export {
   generateReferringVQA,
   generateGroundingVQA,
+  generateGeneralGroundingVQA,
+  generateCategoryGroundingVQA,
   generateLayoutVQA,
   generateAllVQA,
   getVQAStatistics
@@ -40,3 +42,7 @@ export {
 export {
   batchGenerateVQA
 } from './batch-generator.js';
+
+export {
+  batchGenerateVQAWithSplit
+} from './batch-generator-split.js';

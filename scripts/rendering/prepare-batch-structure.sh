@@ -68,8 +68,10 @@ for json_file in "$SOURCE_DIR"/*.json; do
 
     target_dir="$OUTPUT_DIR/$widget_id/artifacts/4-dsl"
     target_file="$target_dir/widget.json"
+    log_dir="$OUTPUT_DIR/$widget_id/log"
 
     mkdir -p "$target_dir"
+    mkdir -p "$log_dir"
 
     cp "$json_file" "$target_file"
 

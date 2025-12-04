@@ -9,8 +9,9 @@
 
 import { compileToJSX } from "./commands/compile.js";
 import { render } from "./commands/render.js";
-import { batchRender } from "./commands/batch-render.js";
+import { batchRender } from "@widget-factory/renderer";
 import { batchGenerateVQA } from "./commands/batch-generate-vqa.js";
+import { batchGenerateVQAWithSplit } from "./commands/batch-generate-vqa-split.js";
 
 function printHelp() {
   console.log(`
@@ -36,7 +37,7 @@ Commands:
   batch-generate-vqa <directory> [options]
     Generate VQA dataset for UI understanding tasks
     Requires widgets with DSL, bounding boxes, and rendered images
-    Options: 
+    Options:
       --output-dir <path>       Output directory (default: <directory>/vqa-dataset)
       --dataset-root <path>     Root path for image references (default: <directory>)
       --continue-from <widget>  Continue from specific widget ID
@@ -44,31 +45,23 @@ Commands:
       --target-size <number>    Target size for combined dataset
       --widget-list <file>      Process only widgets listed in file (one per line)
 
-Examples:
-  widget-factory compile widget.json
-  widget-factory compile widget.json custom.jsx
-<<<<<<< HEAD
-  widget-factory render ./results/tmp/image_0001
-  widget-factory batch-render ./results/tmp
-  widget-factory batch-render ./results/tmp --concurrency 5 --force
-=======
-  widget-factory render widget.jsx
-  widget-factory render widget.jsx custom.png
-  widget-factory batch-render ./widgets ./output 5
-  widget-factory batch-generate-vqa ./widgets
-  widget-factory batch-generate-vqa ./widgets --output-dir ./vqa-data
-  widget-factory batch-generate-vqa ./widgets --widget-list newly-rendered.txt
+  batch-generate-vqa-split <directory> [options]
+    Generate VQA dataset with train/val/test split (7:1:2)
+    Distribution: 60% general grounding, 10% category grounding, 20% referring, 10% layout
+    Options:
+      --output-dir <path>       Output directory (default: ./results/vqa-dataset-v3)
+      --dataset-root <path>     Root path for image references (default: <directory>)
+      --widget-list <file>      Process only widgets listed in file (one per line)
+      --seed <number>           Random seed for reproducible splits (default: 42)
 
 Examples:
   widget-factory compile widget.json
   widget-factory compile widget.json custom.jsx
-  widget-factory render widget.jsx
-  widget-factory render widget.jsx custom.png
-  widget-factory batch-render ./widgets ./output 5
-  widget-factory batch-generate-vqa ./widgets
-  widget-factory batch-generate-vqa ./widgets --output-dir ./vqa-data
-  widget-factory batch-generate-vqa ./widgets --avoid ./old/combined.json --target-size 1000
->>>>>>> ae2690af (feat: add batch vqa construction)
+  widget-factory render ./results/tmp/image_0001
+  widget-factory batch-render ./results/tmp
+  widget-factory batch-render ./results/tmp --concurrency 5 --force
+  widget-factory batch-generate-vqa-split ./widgets
+  widget-factory batch-generate-vqa-split ./widgets --output-dir ./vqa-split --seed 123
 
 Options:
   --help, -h    Show this help message
@@ -204,6 +197,50 @@ async function main() {
           vqaOptions
         );
         process.exit(vqaFailedCount > 0 ? 1 : 0);
+        break;
+
+      case "batch-generate-vqa-split":
+        if (commandArgs.length < 1) {
+          console.error(
+            "Error: batch-generate-vqa-split requires <directory> [options]"
+          );
+          process.exit(1);
+        }
+        // Parse batch-generate-vqa-split options
+        let vqaSplitOutputDir = null;
+        let vqaSplitDatasetRoot = null;
+        let vqaSplitWidgetList = null;
+        let vqaSplitSeed = 42;
+        const vqaSplitDirectory = commandArgs[0];
+
+        for (let i = 1; i < commandArgs.length; i++) {
+          if (commandArgs[i] === "--output-dir" && commandArgs[i + 1]) {
+            vqaSplitOutputDir = commandArgs[i + 1];
+            i++;
+          } else if (
+            commandArgs[i] === "--dataset-root" &&
+            commandArgs[i + 1]
+          ) {
+            vqaSplitDatasetRoot = commandArgs[i + 1];
+            i++;
+          } else if (commandArgs[i] === "--widget-list" && commandArgs[i + 1]) {
+            vqaSplitWidgetList = commandArgs[i + 1];
+            i++;
+          } else if (commandArgs[i] === "--seed" && commandArgs[i + 1]) {
+            vqaSplitSeed = parseInt(commandArgs[i + 1]);
+            i++;
+          }
+        }
+
+        const vqaSplitOptions = { seed: vqaSplitSeed };
+        if (vqaSplitOutputDir) vqaSplitOptions.outputDir = vqaSplitOutputDir;
+        if (vqaSplitDatasetRoot)
+          vqaSplitOptions.datasetRoot = vqaSplitDatasetRoot;
+        if (vqaSplitWidgetList)
+          vqaSplitOptions.widgetListPath = vqaSplitWidgetList;
+
+        await batchGenerateVQAWithSplit(vqaSplitDirectory, vqaSplitOptions);
+        process.exit(0);
         break;
 
       default:

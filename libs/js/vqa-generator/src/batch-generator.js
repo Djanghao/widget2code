@@ -219,6 +219,19 @@ function filterDuplicates(vqaPairs, avoidHashes) {
 }
 
 /**
+ * Add task type metadata to VQA pairs
+ * @param {Array} pairs - VQA pairs
+ * @param {string} taskType - Task type: 'referring', 'grounding', or 'layout'
+ * @returns {Array} VQA pairs with task metadata
+ */
+function addTaskMetadata(pairs, taskType) {
+  return pairs.map(pair => ({
+    ...pair,
+    task: taskType
+  }));
+}
+
+/**
  * Sample VQA pairs with a 4:3:2 ratio (referring:grounding:layout)
  * WITHOUT repeating any pairs - uses the smallest category as the limiting factor
  * Optionally limits the total combined size
@@ -226,7 +239,7 @@ function filterDuplicates(vqaPairs, avoidHashes) {
  * @param {Array} grounding - Grounding VQA pairs
  * @param {Array} layout - Layout VQA pairs
  * @param {number} targetSize - Optional target size for combined dataset
- * @returns {Array} Randomly sampled combined array
+ * @returns {Array} Randomly sampled combined array with task metadata
  */
 function sampleWithRatio(referring, grounding, layout, targetSize = null) {
   // Randomly sample from each array
@@ -254,8 +267,8 @@ function sampleWithRatio(referring, grounding, layout, targetSize = null) {
       limitingFactor = Math.min(referring.length, grounding.length);
     }
 
-    const sampledReferring = shuffleArray(referring).slice(0, limitingFactor);
-    const sampledGrounding = shuffleArray(grounding).slice(0, limitingFactor);
+    const sampledReferring = addTaskMetadata(shuffleArray(referring).slice(0, limitingFactor), 'referring');
+    const sampledGrounding = addTaskMetadata(shuffleArray(grounding).slice(0, limitingFactor), 'grounding');
 
     const combined = [...sampledReferring, ...sampledGrounding];
     return shuffleArray(combined);
@@ -280,9 +293,9 @@ function sampleWithRatio(referring, grounding, layout, targetSize = null) {
   const groundingCount = Math.floor(limitingFactor * 3);
   const layoutCount = Math.floor(limitingFactor * 2);
 
-  const sampledReferring = shuffleArray(referring).slice(0, referringCount);
-  const sampledGrounding = shuffleArray(grounding).slice(0, groundingCount);
-  const sampledLayout = shuffleArray(layout).slice(0, layoutCount);
+  const sampledReferring = addTaskMetadata(shuffleArray(referring).slice(0, referringCount), 'referring');
+  const sampledGrounding = addTaskMetadata(shuffleArray(grounding).slice(0, groundingCount), 'grounding');
+  const sampledLayout = addTaskMetadata(shuffleArray(layout).slice(0, layoutCount), 'layout');
 
   console.log(`📊 Sampling: ${referringCount} referring + ${groundingCount} grounding + ${layoutCount} layout`);
 

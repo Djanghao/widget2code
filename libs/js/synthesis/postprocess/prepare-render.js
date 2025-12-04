@@ -7,8 +7,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configuration
-const INPUT_DIR = "../../../output/1-synthesis/batch-generated";
-const OUTPUT_DIR = "../../../output/1-synthesis/render-ready";
+const INPUT_DIR = "../../../../output/1-synthesis/batch-generated";
+const OUTPUT_DIR = "../../../../output/1-synthesis/render-ready";
 
 // Parse command-line arguments
 const args = process.argv.slice(2);

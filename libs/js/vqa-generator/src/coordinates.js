@@ -32,13 +32,13 @@ export function normalizeBoundingBox(bbox, imageWidth, imageHeight) {
 
 /**
  * Format bounding box as array for Qwen3-VL
- * Format: [y1, x1, y2, x2] in [0, 1000] range
+ * Format: [x1, y1, x2, y2] in [0, 1000] range
  * @param {Object} normalizedBox - Normalized bounding box {xmin, ymin, xmax, ymax}
- * @returns {Array<number>} Formatted bounding box array [y1, x1, y2, x2]
+ * @returns {Array<number>} Formatted bounding box array [x1, y1, x2, y2]
  */
 export function formatBoundingBox(normalizedBox) {
   const { xmin, ymin, xmax, ymax } = normalizedBox;
-  return [ymin, xmin, ymax, xmax];
+  return [xmin, ymin, xmax, ymax];
 }
 
 /**
@@ -46,7 +46,7 @@ export function formatBoundingBox(normalizedBox) {
  * @param {Object} bbox - Raw bounding box with x, y, width, height
  * @param {number} imageWidth - Image width in pixels
  * @param {number} imageHeight - Image height in pixels
- * @returns {Array<number>} Formatted bounding box array [y1, x1, y2, x2]
+ * @returns {Array<number>} Formatted bounding box array [x1, y1, x2, y2]
  */
 export function processBoundingBox(bbox, imageWidth, imageHeight) {
   const normalized = normalizeBoundingBox(bbox, imageWidth, imageHeight);

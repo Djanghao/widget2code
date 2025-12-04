@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 // Load .env file
 function loadEnv() {
-  const envPath = path.join(__dirname, '../../../.env');
+  const envPath = path.join(__dirname, '../../../../.env');
   if (fs.existsSync(envPath)) {
     const envContent = fs.readFileSync(envPath, 'utf-8');
     envContent.split('\n').forEach(line => {
@@ -37,9 +37,9 @@ const LLM_GENERATED_DIR = path.join(DESCRIPTIONS_DIR, "llm-generated");
 const IMAGE_URLS_DIR = path.join(DESCRIPTIONS_DIR, "image-urls");
 const PROMPTS_DIR = path.join(
   __dirname,
-  "../../../python/generator/prompts/prompt2dsl/domains"
+  "../../../../libs/python/generator/prompts/prompt2dsl/domains"
 );
-const OUTPUT_DIR = path.join(__dirname, "../../../output/1-synthesis/batch-generated");
+const OUTPUT_DIR = path.join(__dirname, "../../../../output/1-synthesis/batch-generated");
 const PRESETS_FILE = path.join(__dirname, "../config/prompt-presets.json");
 
 /**

@@ -72,7 +72,7 @@ export function fillTemplate(template, values) {
 
 /**
  * Get all referring questions for a bounding box (Box-to-Text)
- * @param {Array<number>} formattedBox - Formatted bounding box array [y1, x1, y2, x2]
+ * @param {Array<number>} formattedBox - Formatted bounding box array [x1, y1, x2, y2]
  * @param {boolean} isText - Whether this is a Text component
  * @returns {Array<string>} Array of question variations
  */

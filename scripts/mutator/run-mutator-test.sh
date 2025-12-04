@@ -5,9 +5,9 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
-COUNT=100
+COUNT=5
 
-echo "Stage 2: Mutator"
+echo "Stage 2: Mutator (QUICK TEST)"
 echo "  Count: $COUNT base DSLs"
 echo "  Mode: controlled (theme transformations only)"
 echo "  Themes: all (5 theme variants)"

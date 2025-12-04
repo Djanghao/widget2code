@@ -11,7 +11,7 @@ import {
   compileWidgetDSLToJSX,
   generateContainerLayout,
 } from "@widget-factory/compiler";
-import { validateAndFix } from "@widget-factory/validator";
+import { validateAndFixDSL } from "@widget-factory/validator";
 import fs from "fs/promises";
 import path from "path";
 import sharp from "sharp";
@@ -83,6 +83,7 @@ export async function renderSingleWidget(renderer, widgetDir, options = {}) {
   // Create directories
   await fs.mkdir(compilationDir, { recursive: true });
   await fs.mkdir(renderingDir, { recursive: true });
+  await fs.mkdir(path.dirname(debugPath), { recursive: true });
 
   // Load or initialize debug.json
   let debugData = {
@@ -123,7 +124,7 @@ export async function renderSingleWidget(renderer, widgetDir, options = {}) {
     const rawDslPath = path.join(compilationDir, "1-raw.json");
     await fs.writeFile(rawDslPath, JSON.stringify(spec, null, 2), "utf-8");
 
-    const validation = validateAndFix(spec);
+    const validation = validateAndFixDSL(spec);
 
     // Save validation changes log
     if (validation.changes && validation.changes.length > 0) {

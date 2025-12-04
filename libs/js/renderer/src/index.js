@@ -8,10 +8,10 @@ export {
   saveImage,
   generateFilename,
   renderAndSave,
-  batchRender
-} from './api.js';
+  // batchRender
+} from "./api.js";
 
 // Advanced: Export class for cases requiring direct control (e.g., concurrent rendering)
-export { PlaywrightRenderer } from './PlaywrightRenderer.js';
-export { renderSingleWidget } from './renderSingleWidget.js';
-export { batchRender } from './batchRender.js';
+export { PlaywrightRenderer } from "./PlaywrightRenderer.js";
+export { renderSingleWidget } from "./renderSingleWidget.js";
+export { batchRender } from "./batchRender.js";
