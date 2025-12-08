@@ -1,0 +1,50 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "#1A1A1A" },
+          "content": "Performance"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 11, "fontWeight": 400, "color": "#666666" },
+          "content": "Circle shape, smooth curves"
+        },
+        {
+          "type": "leaf",
+          "component": "RadarChart",
+          "flex": 1,
+          "props": {
+            "data": [75, 68, 82, 90, 71],
+            "labels": ["Quality", "Speed", "Innovation", "Support", "Value"],
+            "radarShape": "circle",
+            "splitNumber": 4,
+            "smooth": true,
+            "color": "#4F46E5",
+            "backgroundColor": "transparent",
+            "areaOpacity": 0.25,
+            "lineWidth": 2,
+            "showPoints": false,
+            "gridColor": "rgba(0, 0, 0, 0.08)",
+            "splitLineStyle": "dashed",
+            "axisLineStyle": "solid",
+            "height": "100%",
+            "theme": "light"
+          }
+        }
+      ]
+    }
+  }
+}

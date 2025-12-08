@@ -1,0 +1,50 @@
+{
+  "widget": {
+    "backgroundColor": "rgba(255, 255, 255, 0.1)",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 22, "fontWeight": 700, "color": "rgba(255, 255, 255, 0.95)" },
+          "content": "Usage Stats"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 500, "color": "rgba(255, 255, 255, 0.7)" },
+          "content": "Rounded segments"
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 1,
+          "props": {
+            "data": [45, 30, 15, 10],
+            "labels": ["Active", "Idle", "Sleep", "Off"],
+            "colors": ["rgba(139, 92, 246, 0.9)", "rgba(236, 72, 153, 0.9)", "rgba(251, 191, 36, 0.9)", "rgba(59, 130, 246, 0.9)"],
+            "variant": "pie",
+            "backgroundColor": "transparent",
+            "roundedSegments": true,
+            "segmentBorderRadius": 8,
+            "showLabels": true,
+            "showValues": true,
+            "labelPosition": "inside",
+            "outerRadius": 70,
+            "startAngle": 180,
+            "clockwise": false,
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

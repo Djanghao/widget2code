@@ -1,0 +1,57 @@
+{
+  "widget": {
+    "backgroundColor": "rgba(30, 30, 46, 0.8)",
+    "borderRadius": 24,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "props": {
+        "style": {
+          "backdropFilter": "blur(20px)"
+        }
+      },
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "rgba(255, 255, 255, 0.95)" },
+          "content": "Music Streams"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 400, "color": "rgba(255, 255, 255, 0.6)" },
+          "content": "Streams vs Downloads"
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "props": {
+            "data": [
+              [120, 180, 145, 210, 165, 195, 230],
+              [80, 120, 95, 140, 110, 130, 155]
+            ],
+            "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            "colors": ["#A78BFA", "#34D399"],
+            "seriesNames": ["Streams", "Downloads"],
+            "backgroundColor": "transparent",
+            "barBorderRadius": 10,
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showValues": false,
+            "height": "100%",
+            "theme": "dark",
+            "showXAxisTicks": false,
+            "showYAxisTicks": true,
+            "tickLineStyle": "dashed",
+            "tickLineColor": "rgba(255,255,255,0.08)"
+          }
+        }
+      ]
+    }
+  }
+}

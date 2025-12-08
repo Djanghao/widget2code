@@ -1,0 +1,49 @@
+{
+  "widget": {
+    "backgroundColor": "#1E3A8A",
+    "borderRadius": 20,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "#F8FAFC" },
+          "content": "Revenue Growth"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 500, "color": "#DBEAFE" },
+          "content": "Custom intervals"
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "props": {
+            "data": [42000, 58000, 51000, 67000, 73000, 69000, 82000],
+            "labels": ["Q1", "Q2", "Q3", "Q4", "Q1", "Q2", "Q3"],
+            "colors": ["#60A5FA", "#60A5FA", "#60A5FA", "#34D399", "#34D399", "#34D399", "#F472B6"],
+            "backgroundColor": "transparent",
+            "barBorderRadius": [8, 8, 0, 0],
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showValues": false,
+            "height": "100%",
+            "theme": "dark",
+            "showXAxisTicks": false,
+            "showYAxisTicks": true,
+            "tickLineStyle": "solid",
+            "tickLineColor": "rgba(248, 250, 252, 0.1)",
+            "yAxisTickInterval": 20000
+          }
+        }
+      ]
+    }
+  }
+}

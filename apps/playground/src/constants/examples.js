@@ -192,6 +192,56 @@ import appendixRadarchartComplex2_4 from "../examples/appendix-radarchart-comple
 import appendixSparklineComplex2_4 from "../examples/appendix-sparkline-complex-2-4.json";
 import appendixApplogoComplex2_4 from "../examples/appendix-applogo-complex-2-4.json";
 
+// Preset Variants - Text
+import presetTextVariant1 from "../examples/preset-text-variant-1.json";
+import presetTextVariant2 from "../examples/preset-text-variant-2.json";
+import presetTextVariant3 from "../examples/preset-text-variant-3.json";
+import presetTextVariant4 from "../examples/preset-text-variant-4.json";
+import presetTextVariant5 from "../examples/preset-text-variant-5.json";
+import presetTextVariant6 from "../examples/preset-text-variant-6.json";
+import presetTextVariant7 from "../examples/preset-text-variant-7.json";
+import presetTextVariant8 from "../examples/preset-text-variant-8.json";
+
+// Preset Variants - Button
+import presetButtonVariant1 from "../examples/preset-button-variant-1.json";
+import presetButtonVariant2 from "../examples/preset-button-variant-2.json";
+import presetButtonVariant3 from "../examples/preset-button-variant-3.json";
+import presetButtonVariant4 from "../examples/preset-button-variant-4.json";
+import presetButtonVariant5 from "../examples/preset-button-variant-5.json";
+import presetButtonVariant6 from "../examples/preset-button-variant-6.json";
+import presetButtonVariant7 from "../examples/preset-button-variant-7.json";
+import presetButtonVariant8 from "../examples/preset-button-variant-8.json";
+
+// Preset Variants - Icon
+import presetIconVariant1 from "../examples/preset-icon-variant-1.json";
+import presetIconVariant2 from "../examples/preset-icon-variant-2.json";
+import presetIconVariant3 from "../examples/preset-icon-variant-3.json";
+import presetIconVariant4 from "../examples/preset-icon-variant-4.json";
+import presetIconVariant5 from "../examples/preset-icon-variant-5.json";
+import presetIconVariant6 from "../examples/preset-icon-variant-6.json";
+import presetIconVariant7 from "../examples/preset-icon-variant-7.json";
+import presetIconVariant8 from "../examples/preset-icon-variant-8.json";
+
+// Preset Variants - BarChart
+import presetBarchartVariant1 from "../examples/preset-barchart-variant-1.json";
+import presetBarchartVariant2 from "../examples/preset-barchart-variant-2.json";
+import presetBarchartVariant3 from "../examples/preset-barchart-variant-3.json";
+import presetBarchartVariant4 from "../examples/preset-barchart-variant-4.json";
+import presetBarchartVariant5 from "../examples/preset-barchart-variant-5.json";
+import presetBarchartVariant6 from "../examples/preset-barchart-variant-6.json";
+import presetBarchartVariant7 from "../examples/preset-barchart-variant-7.json";
+import presetBarchartVariant8 from "../examples/preset-barchart-variant-8.json";
+
+// Preset Variants - RadarChart
+import presetRadarchartVariant1 from "../examples/preset-radarchart-variant-1.json";
+import presetRadarchartVariant2 from "../examples/preset-radarchart-variant-2.json";
+import presetRadarchartVariant3 from "../examples/preset-radarchart-variant-3.json";
+import presetRadarchartVariant4 from "../examples/preset-radarchart-variant-4.json";
+import presetRadarchartVariant5 from "../examples/preset-radarchart-variant-5.json";
+import presetRadarchartVariant6 from "../examples/preset-radarchart-variant-6.json";
+import presetRadarchartVariant7 from "../examples/preset-radarchart-variant-7.json";
+import presetRadarchartVariant8 from "../examples/preset-radarchart-variant-8.json";
+
 export const examples = {
   weatherSmallLight: { name: "Weather S-Light", spec: weatherSmallLight },
   weatherMediumDark: { name: "Weather M-Dark", spec: weatherMediumDark },
@@ -443,4 +493,54 @@ export const examples = {
   appendixRadarchartComplex2_4: { name: "🚀 RadarChart (Cyberpunk)", spec: appendixRadarchartComplex2_4 },
   appendixSparklineComplex2_4: { name: "🚀 Sparkline (Cyberpunk)", spec: appendixSparklineComplex2_4 },
   appendixApplogoComplex2_4: { name: "🚀 AppLogo (Cyberpunk)", spec: appendixApplogoComplex2_4 },
+
+  // Preset Variants - Text
+  presetTextVariant1: { name: "🎨 Text (Cyberpunk)", spec: presetTextVariant1 },
+  presetTextVariant2: { name: "🎨 Text (Minimal)", spec: presetTextVariant2 },
+  presetTextVariant3: { name: "🎨 Text (Glass)", spec: presetTextVariant3 },
+  presetTextVariant4: { name: "🎨 Text (Gradient)", spec: presetTextVariant4 },
+  presetTextVariant5: { name: "🎨 Text (Dark Mode)", spec: presetTextVariant5 },
+  presetTextVariant6: { name: "🎨 Text (Neon)", spec: presetTextVariant6 },
+  presetTextVariant7: { name: "🎨 Text (Natural)", spec: presetTextVariant7 },
+  presetTextVariant8: { name: "🎨 Text (Business)", spec: presetTextVariant8 },
+
+  // Preset Variants - Button
+  presetButtonVariant1: { name: "🎨 Button (Cyberpunk)", spec: presetButtonVariant1 },
+  presetButtonVariant2: { name: "🎨 Button (Minimal)", spec: presetButtonVariant2 },
+  presetButtonVariant3: { name: "🎨 Button (Glass)", spec: presetButtonVariant3 },
+  presetButtonVariant4: { name: "🎨 Button (Gradient)", spec: presetButtonVariant4 },
+  presetButtonVariant5: { name: "🎨 Button (Dark Mode)", spec: presetButtonVariant5 },
+  presetButtonVariant6: { name: "🎨 Button (Neon)", spec: presetButtonVariant6 },
+  presetButtonVariant7: { name: "🎨 Button (Natural)", spec: presetButtonVariant7 },
+  presetButtonVariant8: { name: "🎨 Button (Business)", spec: presetButtonVariant8 },
+
+  // Preset Variants - Icon
+  presetIconVariant1: { name: "🎨 Icon (Cyberpunk)", spec: presetIconVariant1 },
+  presetIconVariant2: { name: "🎨 Icon (Minimal)", spec: presetIconVariant2 },
+  presetIconVariant3: { name: "🎨 Icon (Glass)", spec: presetIconVariant3 },
+  presetIconVariant4: { name: "🎨 Icon (Gradient)", spec: presetIconVariant4 },
+  presetIconVariant5: { name: "🎨 Icon (Dark Mode)", spec: presetIconVariant5 },
+  presetIconVariant6: { name: "🎨 Icon (Neon)", spec: presetIconVariant6 },
+  presetIconVariant7: { name: "🎨 Icon (Natural)", spec: presetIconVariant7 },
+  presetIconVariant8: { name: "🎨 Icon (Business)", spec: presetIconVariant8 },
+
+  // Preset Variants - BarChart
+  presetBarchartVariant1: { name: "🎨 BarChart (Cyberpunk)", spec: presetBarchartVariant1 },
+  presetBarchartVariant2: { name: "🎨 BarChart (Minimal)", spec: presetBarchartVariant2 },
+  presetBarchartVariant3: { name: "🎨 BarChart (Glass)", spec: presetBarchartVariant3 },
+  presetBarchartVariant4: { name: "🎨 BarChart (Gradient)", spec: presetBarchartVariant4 },
+  presetBarchartVariant5: { name: "🎨 BarChart (Dark Mode)", spec: presetBarchartVariant5 },
+  presetBarchartVariant6: { name: "🎨 BarChart (Neon)", spec: presetBarchartVariant6 },
+  presetBarchartVariant7: { name: "🎨 BarChart (Natural)", spec: presetBarchartVariant7 },
+  presetBarchartVariant8: { name: "🎨 BarChart (Business)", spec: presetBarchartVariant8 },
+
+  // Preset Variants - RadarChart
+  presetRadarchartVariant1: { name: "🎨 RadarChart (Cyberpunk)", spec: presetRadarchartVariant1 },
+  presetRadarchartVariant2: { name: "🎨 RadarChart (Minimal)", spec: presetRadarchartVariant2 },
+  presetRadarchartVariant3: { name: "🎨 RadarChart (Glass)", spec: presetRadarchartVariant3 },
+  presetRadarchartVariant4: { name: "🎨 RadarChart (Colorful)", spec: presetRadarchartVariant4 },
+  presetRadarchartVariant5: { name: "🎨 RadarChart (Dark Mode)", spec: presetRadarchartVariant5 },
+  presetRadarchartVariant6: { name: "🎨 RadarChart (Neon)", spec: presetRadarchartVariant6 },
+  presetRadarchartVariant7: { name: "🎨 RadarChart (Natural)", spec: presetRadarchartVariant7 },
+  presetRadarchartVariant8: { name: "🎨 RadarChart (Business)", spec: presetRadarchartVariant8 },
 };

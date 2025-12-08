@@ -1,0 +1,58 @@
+{
+  "widget": {
+    "backgroundColor": "#0A0E27",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "start",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 40,
+            "fontWeight": 800,
+            "color": "#00F0FF"
+          },
+          "content": "CYBER"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 40,
+            "fontWeight": 800,
+            "color": "#FF00EA"
+          },
+          "content": "PUNK"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 14,
+            "fontWeight": 600,
+            "color": "#00F0FF"
+          },
+          "content": "DIGITAL FUTURE AWAITS"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "#8B8D98"
+          },
+          "content": "Neon-lit streets of tomorrow"
+        }
+      ]
+    }
+  }
+}

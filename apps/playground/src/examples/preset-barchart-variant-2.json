@@ -1,0 +1,49 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "#1A1A1A" },
+          "content": "Sales Overview"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 400, "color": "#6B6B6B" },
+          "content": "Horizontal view"
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "props": {
+            "data": [45, 68, 52, 89, 73, 61, 95],
+            "labels": ["Product A", "Product B", "Product C", "Product D", "Product E", "Product F", "Product G"],
+            "color": "#3B82F6",
+            "backgroundColor": "transparent",
+            "orientation": "horizontal",
+            "barBorderRadius": 8,
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showValues": false,
+            "height": "100%",
+            "theme": "light",
+            "showXAxisTicks": true,
+            "showYAxisTicks": false,
+            "tickLineStyle": "dashed",
+            "tickLineColor": "rgba(0,0,0,0.08)"
+          }
+        }
+      ]
+    }
+  }
+}
