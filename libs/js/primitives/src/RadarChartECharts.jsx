@@ -6,6 +6,7 @@ export const RadarChart = ({
   showTitle = false,
   data = [],
   labels = [],
+  labelSize = 11,
   indicators = [],
   color = "#6DD400",
   colors = [],
@@ -172,6 +173,29 @@ export const RadarChart = ({
     };
   };
 
+  // Helper 1: Calculate max width before wrapping based on font size
+  // e.g., if font is 10px, allow 70px width (approx 7 letters) before wrapping
+  const smartLabelWidth = labelSize * 7;
+
+  // Helper 2: Dynamic Radius Logic
+  // If we have "clutter" (legend/title), shrink radius to 65% default
+  const smartRadius = showTitle || showLegend ? "65%" : radius;
+
+  // Helper 3: Dynamic Center Logic
+  // Moves chart up/down based on where the legend is
+  const smartCenter = (() => {
+    // If user passed a custom center (not 50%), trust them
+    if (center[1] !== "50%") return center;
+
+    if (showTitle || (showLegend && legendPosition === "top")) {
+      return [center[0], "60%"]; // Push down away from top title
+    }
+    if (showLegend && legendPosition === "bottom") {
+      return [center[0], "4%"]; // Push up away from bottom legend
+    }
+    return center;
+  })();
+
   // Handle both single series and multi-series data
   const isMultiSeries =
     Array.isArray(data) && data.length > 0 && Array.isArray(data[0]);
@@ -275,15 +299,29 @@ export const RadarChart = ({
       indicator: radarIndicators,
       shape: radarShape,
       splitNumber: splitNumber,
-      center: center,
-      radius: radius,
       startAngle: startAngle,
+
+      // USE THE NEW HELPERS HERE
+      center: smartCenter,
+      radius: smartRadius,
+
       name: {
         textStyle: {
           color: finalTextColor,
-          fontSize: 11,
+
+          // 1. Apply the new font size
+          fontSize: labelSize,
+
+          // 2. Trigger the overflow logic
+          width: smartLabelWidth,
+          overflow: "break",
+          lineHeight: labelSize + 4, // Adds breathing room between wrapped lines
         },
-        // Include axisName properties except formatter (which is not supported)
+
+        // 3. Dynamic Gap: bring text closer if font is small
+        nameGap: labelSize < 12 ? 5 : 10,
+
+        // ... keep your existing key reducer
         ...Object.keys(axisName).reduce((acc, key) => {
           if (key !== "formatter") {
             acc[key] = axisName[key];
@@ -367,34 +405,3 @@ export const RadarChart = ({
     </div>
   );
 };
-
-// Preset variants for common use cases
-export const SkillsRadarChart = (props) => (
-  <RadarChart
-    {...props}
-    radarShape="polygon"
-    areaOpacity={0.4}
-    color="#6DD400"
-    showPoints={true}
-  />
-);
-
-export const PerformanceRadarChart = (props) => (
-  <RadarChart
-    {...props}
-    radarShape="circle"
-    areaOpacity={0.2}
-    color="#007bff"
-    showValues={true}
-  />
-);
-
-export const ComparisonRadarChart = (props) => (
-  <RadarChart
-    {...props}
-    radarShape="polygon"
-    areaOpacity={0.3}
-    showLegend={true}
-    legendPosition="bottom"
-  />
-);
