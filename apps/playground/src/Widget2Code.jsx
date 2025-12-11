@@ -25,7 +25,7 @@ function Widget2Code() {
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [systemPrompt, setSystemPrompt] = useState(imagePrompt);
-  const [model, setModel] = useState('qwen3-vl-235b-a22b-instruct');
+  const [model, setModel] = useState('qwen3-vl-plus');
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState(null);
   const [previewSpec, setPreviewSpec] = useState(null);

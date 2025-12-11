@@ -21,6 +21,7 @@ import generator
 from generator import GeneratorConfig
 from generator.exceptions import ValidationError, FileSizeError, GenerationError, RateLimitError
 from generator.utils.validation import check_rate_limit
+from generator.generation.widget import generate_widget_full
 
 gen_config = GeneratorConfig.from_env()
 
@@ -208,7 +209,7 @@ async def generate_widget_text(
     api_key: str = Form(None),
 ):
     client_ip = request.client.host
-    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+    if not check_rate_limit(client_ip, gen_config.requests_per_minute):
         raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
 
     # Fallback to environment variable if api_key not provided
@@ -240,7 +241,7 @@ async def generate_widget_text_with_reference(
         api_key: Optional API key (defaults to env DASHSCOPE_API_KEY)
     """
     client_ip = request.client.host
-    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+    if not check_rate_limit(client_ip, gen_config.requests_per_minute):
         raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
 
     # Fallback to environment variable if api_key not provided
@@ -267,7 +268,7 @@ async def generate_component(
     api_key: str = Form(None),
 ):
     client_ip = request.client.host
-    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+    if not check_rate_limit(client_ip, gen_config.requests_per_minute):
         raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
 
     return await generator.generate_component(
@@ -286,7 +287,7 @@ async def generate_component_from_image(
     api_key: str = Form(None),
 ):
     client_ip = request.client.host
-    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+    if not check_rate_limit(client_ip, gen_config.requests_per_minute):
         raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
 
     image_data = await image.read()
@@ -312,7 +313,7 @@ async def generate_component_from_image(
 #     raise HTTPException(status_code=410, detail="Endpoint deprecated. Use /api/generate-widget-full instead.")
 
 @app.post("/api/generate-widget-full")
-async def generate_widget_full(
+async def generate_widget_full_endpoint(
     request: Request,
     image: UploadFile = File(...),
     system_prompt: str = Form(None),
@@ -325,7 +326,7 @@ async def generate_widget_full(
     applogo_lib_names: str = Form(None),  # NEW: AppLogo library names
 ):
     client_ip = request.client.host
-    if not check_rate_limit(client_ip, gen_config.max_requests_per_minute):
+    if not check_rate_limit(client_ip, gen_config.requests_per_minute):
         raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
 
     # Use environment variable defaults if not provided
@@ -333,8 +334,8 @@ async def generate_widget_full(
         applogo_lib_names = os.getenv('APPLOGO_LIB_NAMES', '["si"]')
 
     image_data = await image.read()
-    result = await generator.generate_widget_full(
-        image_data, image.filename, system_prompt, model, api_key,
+    result = await generate_widget_full(
+        image_data, image.filename, system_prompt,
         retrieval_topk, retrieval_topm, retrieval_alpha, gen_config, icon_lib_names, applogo_lib_names
     )
 
