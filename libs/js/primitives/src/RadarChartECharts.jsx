@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import ReactECharts from "echarts-for-react";
 
 export const RadarChart = ({
@@ -22,7 +22,7 @@ export const RadarChart = ({
   smooth = false, // Enable smooth curves for rounded corners
   axisName = {},
   center = ["50%", "50%"],
-  radius = "75%",
+  radius = "65%",
   startAngle = 90,
   // Visual customization
   areaOpacity = 0.3,
@@ -178,8 +178,8 @@ export const RadarChart = ({
   const smartLabelWidth = labelSize * 7;
 
   // Helper 2: Dynamic Radius Logic
-  // If we have "clutter" (legend/title), shrink radius to 65% default
-  const smartRadius = showTitle || showLegend ? "65%" : radius;
+  // If we have "clutter" (legend/title), shrink radius to 55% default
+  const smartRadius = showTitle || showLegend ? "55%" : radius;
 
   // Helper 3: Dynamic Center Logic
   // Moves chart up/down based on where the legend is
@@ -188,10 +188,10 @@ export const RadarChart = ({
     if (center[1] !== "50%") return center;
 
     if (showTitle || (showLegend && legendPosition === "top")) {
-      return [center[0], "60%"]; // Push down away from top title
+      return [center[0], "55%"]; // Push down away from top title
     }
     if (showLegend && legendPosition === "bottom") {
-      return [center[0], "4%"]; // Push up away from bottom legend
+      return [center[0], "45%"]; // Push up away from bottom legend
     }
     return center;
   })();
@@ -371,6 +371,23 @@ export const RadarChart = ({
     animation: false, // Disable all animations for static mode
   };
 
+  const chartRef = useRef(null);
+
+  useEffect(() => {
+    const instance = chartRef.current?.getEchartsInstance?.();
+    if (!instance) return;
+
+    const nudgeResize = () => {
+      instance.resize();
+    };
+
+    const rafId = requestAnimationFrame(() => {
+      requestAnimationFrame(nudgeResize);
+    });
+
+    return () => cancelAnimationFrame(rafId);
+  }, []);
+
   return (
     <div
       style={{
@@ -388,6 +405,7 @@ export const RadarChart = ({
       }}
     >
       <ReactECharts
+        ref={chartRef}
         option={echartOption}
         style={{
           width: "100%",
