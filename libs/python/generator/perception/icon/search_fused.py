@@ -294,14 +294,13 @@ def retrieve_svg_filenames_from_libs_with_dual_details(
                 svg_names.append(name)
             hits_fused.append(h)
 
-        # Image-only Top10 from the same pool
+        # Image-only Top10 from ALL candidates (not just fused pool)
         img_scores_arr = np.array(img_scores)
-        order_img_pool = np.argsort(-img_scores_arr[pool_indices])
-        m_img = min(10, len(order_img_pool))
+        order_img_all = np.argsort(-img_scores_arr)
+        m_img = min(10, len(order_img_all))
         hits_img_only: List[Dict[str, Any]] = []
         for rank in range(m_img):
-            ridx_pool = int(order_img_pool[rank])
-            ridx = int(pool_indices[ridx_pool])
+            ridx = int(order_img_all[rank])
             lib_idx, local_j = merged_pairs[ridx]
             idx = per_lib_idxs[lib_idx][local_j]
             _root, _index, items, _lib_img, _lib_txt = libs[lib_idx]

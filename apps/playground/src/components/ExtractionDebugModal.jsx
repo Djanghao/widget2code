@@ -149,10 +149,11 @@ export default function ExtractionDebugModal({ isOpen, onClose, data, baseImageU
 
   // Icon data
   const iconDebug = data?.iconDebugInfo || {};
-  const groundingBoxes = (iconDebug?.grounding?.pixel || []).filter(
+  const layoutDebug = data?.layoutDebugInfo || {};
+  const groundingBoxes = (layoutDebug?.pixel || []).filter(
     d => String(d?.label || '').toLowerCase() === 'icon' && Array.isArray(d?.bbox) && d.bbox.length === 4
   );
-  const postProcessedBoxes = (iconDebug?.grounding?.postProcessed || []).filter(
+  const postProcessedBoxes = (layoutDebug?.postProcessed || []).filter(
     d => String(d?.label || '').toLowerCase() === 'icon' && Array.isArray(d?.bbox) && d.bbox.length === 4
   );
   const candidates = iconDebug?.retrieval?.candidates || [];

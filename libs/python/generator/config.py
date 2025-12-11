@@ -236,7 +236,7 @@ class GeneratorConfig:
     # ========================================================================
     def get_default_max_tokens(self) -> int:
         """Global default max tokens for stages that don't override explicitly"""
-        return self.default_max_tokens if self.default_max_tokens is not None else 2000
+        return self.default_max_tokens if self.default_max_tokens is not None else 20000
 
     def get_layout_max_tokens(self) -> int:
         """Layout detection max tokens with fallback to default_max_tokens"""

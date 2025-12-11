@@ -330,6 +330,8 @@ async def generate_widget_full_endpoint(
         raise HTTPException(status_code=429, detail="Rate limit exceeded. Please try again later.")
 
     # Use environment variable defaults if not provided
+    if icon_lib_names is None:
+        icon_lib_names = os.getenv('ICON_LIB_NAMES', '["sf", "lucide"]')
     if applogo_lib_names is None:
         applogo_lib_names = os.getenv('APPLOGO_LIB_NAMES', '["si"]')
 

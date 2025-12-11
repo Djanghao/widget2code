@@ -129,13 +129,7 @@ function Widget2Code() {
     try {
       const formData = new FormData();
       formData.append('system_prompt', systemPrompt);
-      if (model) formData.append('model', model);
-      if (apiKey) formData.append('api_key', apiKey);
-      formData.append('retrieval_topk', '50');
-      formData.append('retrieval_topm', '10');
-      formData.append('retrieval_alpha', '0.8');
       formData.append('image', image);
-      formData.append('icon_lib_names', 'sf');
 
       const response = await fetch('/api/generate-widget-full', { method: 'POST', body: formData });
       const data = await response.json();
