@@ -56,42 +56,28 @@ async def lifespan(app: FastAPI):
         print("=" * 80)
 
         from generator.perception.icon.query_caption import (
-            build_blip2, load_siglip_text, BLIP2_MODEL_ID
+            load_blip2, load_siglip_text, BLIP2_MODEL_ID
         )
         import torch
 
         if use_cuda_for_retrieval and not torch.cuda.is_available():
             print("WARNING: USE_CUDA_FOR_RETRIEVAL=true but CUDA not available, falling back to CPU")
 
-        device_name = "CUDA" if (use_cuda_for_retrieval and torch.cuda.is_available()) else "CPU"
+        device = "cuda" if (use_cuda_for_retrieval and torch.cuda.is_available()) else "cpu"
+        device_name = device.upper()
 
         print(f"\nLoading BLIP2 model ({BLIP2_MODEL_ID}) on {device_name}...")
-        if not use_cuda_for_retrieval:
-            original_cuda = torch.cuda.is_available
-            torch.cuda.is_available = lambda: False
-        cached_blip2_pipe = build_blip2(BLIP2_MODEL_ID)
-        if not use_cuda_for_retrieval:
-            torch.cuda.is_available = original_cuda
+        cached_blip2_pipe = load_blip2(device=device)
         print(f"✓ BLIP2 model loaded on {cached_blip2_pipe[2]}")
 
         print(f"\nLoading SigLIP text model on {device_name}...")
-        if not use_cuda_for_retrieval:
-            original_cuda = torch.cuda.is_available
-            torch.cuda.is_available = lambda: False
-        cached_siglip_pipe = load_siglip_text()
-        if not use_cuda_for_retrieval:
-            torch.cuda.is_available = original_cuda
+        cached_siglip_pipe = load_siglip_text(device=device)
         print(f"✓ SigLIP text model loaded on {cached_siglip_pipe[2]}")
 
         print(f"\nLoading SigLIP image model on {device_name}...")
-        from generator.perception.icon.query_embedding import _load_image_model
-        if not use_cuda_for_retrieval:
-            original_cuda = torch.cuda.is_available
-            torch.cuda.is_available = lambda: False
-        model, preprocess = _load_image_model(device_name.lower())
-        cached_siglip_image_pipe = (model, preprocess, device_name.lower())
-        if not use_cuda_for_retrieval:
-            torch.cuda.is_available = original_cuda
+        from generator.perception.icon.query_embedding import load_siglip_image
+        model, preprocess, device_used = load_siglip_image(device=device)
+        cached_siglip_image_pipe = (model, preprocess, device_used)
         print(f"✓ SigLIP image model loaded on {cached_siglip_image_pipe[2]}")
 
         print("\n" + "=" * 80)
@@ -159,10 +145,14 @@ async def global_exception_handler(request: Request, exc: Exception):
 @app.get("/health")
 async def health():
     """Health check endpoint for service availability monitoring."""
+    import torch
+
     health_info = {
         "status": "ok",
         "service": "Widget Factory API",
         "model_cache_enabled": model_cache_enabled,
+        "cuda_available": torch.cuda.is_available(),
+        "cuda_enabled_in_config": use_cuda_for_retrieval,
     }
 
     if model_cache_enabled:
@@ -180,8 +170,6 @@ async def health():
 
         if cached_siglip_image_pipe:
             health_info["models"]["siglip_image_device"] = cached_siglip_image_pipe[2]
-
-    health_info["cuda_available"] = use_cuda_for_retrieval
 
     return health_info
 
@@ -444,7 +432,7 @@ async def encode_images(
             detail="Model caching not enabled. Set ENABLE_MODEL_CACHE=true"
         )
 
-    from generator.perception.icon.query_embedding import _batch_encode_pils
+    from generator.perception.icon.query_embedding import batch_encode_pils
     from PIL import Image
     import io
 
@@ -465,7 +453,7 @@ async def encode_images(
         print(f"[{request_id}] 🔒 SigLIP-IMAGE LOCK ACQUIRED | Wait: {wait_time:.2f}s")
 
         embeddings = await asyncio.to_thread(
-            _batch_encode_pils, model, preprocess, pil_images, device, 64
+            batch_encode_pils, model, preprocess, pil_images, device, 64
         )
 
         process_time = time.time() - lock_acquired_time

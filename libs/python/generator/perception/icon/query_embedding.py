@@ -199,14 +199,30 @@ async def _encode_images_via_http(outline_pils: List[Image.Image]) -> np.ndarray
 
     return np.array(result["embeddings"], dtype="float32")
 
-def _load_image_model(device: str):
-    model, _, preprocess = open_clip.create_model_and_transforms(
-        MODEL_NAME, pretrained=PRETRAINED, device=device
-    )
-    model.eval()
-    return model, preprocess
+def load_siglip_image(device: str = None):
+    if device is None:
+        device = "cuda" if torch.cuda.is_available() else "cpu"
 
-def _batch_encode_pils(model, preprocess, pil_images: List[Image.Image], device: str, batch: int = 64) -> np.ndarray:
+    # Try loading on requested device, fallback to CPU if CUDA fails
+    if device == "cuda":
+        try:
+            model, _, preprocess = open_clip.create_model_and_transforms(
+                MODEL_NAME, pretrained=PRETRAINED, device=device
+            )
+            model.eval()
+        except Exception as e:
+            print(f"⚠ SigLIP-image failed on CUDA: {e}\n→ Falling back to CPU...")
+            device = "cpu"
+
+    if device == "cpu":
+        model, _, preprocess = open_clip.create_model_and_transforms(
+            MODEL_NAME, pretrained=PRETRAINED, device=device
+        )
+        model.eval()
+
+    return model, preprocess, device
+
+def batch_encode_pils(model, preprocess, pil_images: List[Image.Image], device: str, batch: int = 64) -> np.ndarray:
     zs: List[np.ndarray] = []
     with torch.no_grad():
         for i in range(0, len(pil_images), batch):
@@ -298,8 +314,8 @@ async def query_from_detections_with_details(
         if image_id:
             log_to_file(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] [{image_id}] [Icon Retrieval:ImageEmbed] Device: {device}")
 
-        model, preprocess = _load_image_model(device)
-        q_img_all = _batch_encode_pils(model, preprocess, outline_pils, device=device, batch=64)
+        model, preprocess, device_used = load_siglip_image(device)
+        q_img_all = batch_encode_pils(model, preprocess, outline_pils, device=device, batch=64)
 
         duration = time.time() - start_time
 

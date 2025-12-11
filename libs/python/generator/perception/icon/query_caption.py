@@ -116,26 +116,35 @@ async def _encode_texts_via_http(texts: List[str], image_id: Optional[str] = Non
 
     return np.array(result["embeddings"], dtype="float32")
 
-def build_blip2(model_id: str = BLIP2_MODEL_ID):
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    dtype = torch.float16 if device == "cuda" else torch.float32
-    processor = Blip2Processor.from_pretrained(model_id, use_fast=True)
-    device_map = {"": 0} if device == "cuda" else {"": "cpu"}
-    model = Blip2ForConditionalGeneration.from_pretrained(
-        model_id,
-        dtype=dtype,
-        device_map=device_map,
-        low_cpu_mem_usage=True,
-    ).eval()
+def load_blip2(device: str = None):
+    if device is None:
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+
+    # Try loading on requested device, fallback to CPU if CUDA fails
+    if device == "cuda":
+        try:
+            dtype, device_map = torch.float16, {"": 0}
+            processor = Blip2Processor.from_pretrained(BLIP2_MODEL_ID, use_fast=True)
+            model = Blip2ForConditionalGeneration.from_pretrained(
+                BLIP2_MODEL_ID, dtype=dtype, device_map=device_map, low_cpu_mem_usage=True
+            ).eval()
+        except Exception as e:
+            print(f"⚠ BLIP2 failed on CUDA: {e}\n→ Falling back to CPU...")
+            device = "cpu"
+
+    if device == "cpu":
+        dtype, device_map = torch.float32, {"": "cpu"}
+        processor = Blip2Processor.from_pretrained(BLIP2_MODEL_ID, use_fast=True)
+        model = Blip2ForConditionalGeneration.from_pretrained(
+            BLIP2_MODEL_ID, dtype=dtype, device_map=device_map, low_cpu_mem_usage=True
+        ).eval()
+
     tok = processor.tokenizer
-    if getattr(tok, "pad_token_id", None) is None and getattr(tok, "eos_token_id", None) is not None:
+    if tok.pad_token_id is None:
         tok.pad_token_id = tok.eos_token_id
-    if getattr(model, "config", None) is not None:
-        model.config.pad_token_id = tok.pad_token_id
-        model.config.eos_token_id = tok.eos_token_id
-    if getattr(model, "generation_config", None) is not None:
-        model.generation_config.pad_token_id = tok.pad_token_id
-        model.generation_config.eos_token_id = tok.eos_token_id
+        model.config.pad_token_id = tok.eos_token_id
+        if hasattr(model, 'generation_config'):
+            model.generation_config.pad_token_id = tok.eos_token_id
     return model, processor, device
 
 def caption_from_bytes_list(crops_bytes: List[bytes],
@@ -157,13 +166,29 @@ def caption_from_bytes_list(crops_bytes: List[bytes],
             caps.append(text)
     return caps
 
-def load_siglip_text():
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-    model, _, _ = open_clip.create_model_and_transforms(
-        SIGLIP_MODEL_NAME, pretrained=SIGLIP_PRETRAINED, device=device
-    )
-    model.eval()
-    tokenizer = open_clip.get_tokenizer(SIGLIP_MODEL_NAME)
+def load_siglip_text(device: str = None):
+    if device is None:
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+
+    # Try loading on requested device, fallback to CPU if CUDA fails
+    if device == "cuda":
+        try:
+            model, _, _ = open_clip.create_model_and_transforms(
+                SIGLIP_MODEL_NAME, pretrained=SIGLIP_PRETRAINED, device=device
+            )
+            model.eval()
+            tokenizer = open_clip.get_tokenizer(SIGLIP_MODEL_NAME)
+        except Exception as e:
+            print(f"⚠ SigLIP-text failed on CUDA: {e}\n→ Falling back to CPU...")
+            device = "cpu"
+
+    if device == "cpu":
+        model, _, _ = open_clip.create_model_and_transforms(
+            SIGLIP_MODEL_NAME, pretrained=SIGLIP_PRETRAINED, device=device
+        )
+        model.eval()
+        tokenizer = open_clip.get_tokenizer(SIGLIP_MODEL_NAME)
+
     return model, tokenizer, device
 
 def encode_texts_siglip(model, tokenizer, device: str, texts: List[str]) -> np.ndarray:
@@ -213,10 +238,11 @@ async def caption_embed_and_retrieve_svgs_with_dual_details(
         captions = await _caption_via_http(crops_bytes, image_id=image_id)
         q_txt_all = await _encode_texts_via_http(captions, image_id=image_id)
     else:
-        blip2_pipe = build_blip2(BLIP2_MODEL_ID)
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        blip2_pipe = load_blip2(device=device)
         captions = caption_from_bytes_list(crops_bytes, blip2_pipe)
 
-        tmodel, tokenizer, tdevice = load_siglip_text()
+        tmodel, tokenizer, tdevice = load_siglip_text(device=device)
         q_txt_all = encode_texts_siglip(tmodel, tokenizer, tdevice, captions)
 
     q_ids = [f"q{i:04d}" for i in range(len(crops_bytes))]
