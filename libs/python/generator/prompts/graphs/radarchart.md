@@ -82,7 +82,8 @@ Focus on extracting these elements:
     "areaOpacity": 0.3,
     "showPoints": true,
     "gridColor": "#DDDDDD",
-    "textColor": "#555555"
+    "textColor": "#555555",
+    "labelSize": 11
   }
 }
 ```
@@ -107,5 +108,6 @@ Focus on extracting these elements:
 - **textColor**: "#555555" (medium gray text)
 - **backgroundColor**: "#FFFFFF" (white background)
 - **theme**: "light" (light background)
+- **labelSize**: 11 (font size for indicator labels)
 
 Extract exact indicator names, data values, and styling for pixel-perfect replication.

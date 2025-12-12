@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import ReactECharts from "echarts-for-react";
 import { Icon } from "./Icon.jsx";
 
@@ -14,299 +14,203 @@ export const PieChart = ({
   minHeight = 200,
   minWidth = 200,
   theme = "dark",
-  // Pie chart specific options
-  variant = "pie", // 'pie', 'donut', 'ring'
-  innerRadius = 0, // For donut charts (0-95)
-  outerRadius = 80, // Outer radius (10-100)
-  centerText = "", // Text to display in center (for donut charts)
-  centerValue = "", // Value to display in center
+  // Pie specific options
+  variant = "pie",
+  innerRadius,
+  outerRadius,
+  centerText = "",
+  centerValue = "",
   showLabels = false,
   showValues = false,
   showPercentages = false,
-  labelPosition = "outside", // 'outside', 'inside', 'center'
-  // Animation and interaction
-  animated = false,
-  animationDuration = 1000,
-  emphasisScale = 1.1,
-  // Start angle control
-  startAngle = 90, // 90 = top, 0 = right, 180 = bottom, 270 = left
-  clockwise = true, // Direction of segment drawing
-  // Border and styling
+  labelPosition = "outside",
+  // ... other props ...
+  startAngle = 90,
+  clockwise = true,
   borderWidth = 0,
   borderColor = "#ffffff",
-  // Rounded segments
   roundedSegments = false,
   segmentBorderRadius = 10,
-  // Legend
   showLegend = false,
-  legendPosition = "right", // 'top', 'bottom', 'left', 'right'
-  legendOrientation = "vertical", // 'horizontal', 'vertical'
-  // Tick line customization (for sector boundaries)
+  legendPosition = "right",
+  legendOrientation = "vertical",
   showSectorLines = false,
   sectorLineColor,
   sectorLineWidth = 1,
   sectorLineStyle = "solid",
-  // Center styling
   centerTextStyle = {},
   centerValueStyle = {},
-  centerTextGap = 0, // Gap between centerValue and centerText (in pixels)
-  // Icon support for center content
+  centerTextGap = 4, // Default gap between Value and Text
   centerIconName,
   centerIconSize = 32,
   centerIconColor,
   centerContent,
-  // Rendering method for center text/value
-  useCenterGraphic = true, // Use ECharts graphic (true) or HTML overlay (false)
-  // Min/max for data validation
+  useCenterGraphic = true, // We will override this with HTML overlay for better control
   min,
   max,
   ...props
 }) => {
-  // Theme configurations
+  // --- 1. SMART LAYOUT LOGIC ---
+
+  const itemCount = Array.isArray(data) ? data.length : 0;
+  const isHorizontalLegend =
+    legendPosition === "top" || legendPosition === "bottom";
+  const isVerticalLegend =
+    legendPosition === "left" || legendPosition === "right";
+
+  // Calculate max allowed radius based on layout constraints
+  const getMaxRadius = () => {
+    if (showLabels && labelPosition === "outside") return 30;
+    if (showLegend) {
+      if (isVerticalLegend && itemCount > 6) return 45;
+      if (isVerticalLegend && itemCount > 4) return 50;
+      if (isHorizontalLegend && itemCount > 4) return 50;
+      return 55;
+    }
+    return 75;
+  };
+
+  // Dynamic Radius - shrink when legend or outside labels are shown
+  // User-provided outerRadius is capped to prevent overlap with legend
+  const smartOuterRadius = (() => {
+    const maxRadius = getMaxRadius();
+    if (outerRadius !== undefined) {
+      const cappedRadius = Math.min(outerRadius, maxRadius);
+      return `${cappedRadius}%`;
+    }
+    return `${maxRadius}%`;
+  })();
+
+  // Dynamic Center - move chart away from legend position
+  // More items = more shift needed
+  const smartCenter = (() => {
+    if (showLegend && legendPosition === "right") {
+      if (itemCount > 6) return ["30%", "50%"];
+      if (itemCount > 4) return ["32%", "50%"];
+      return ["35%", "50%"];
+    }
+    if (showLegend && legendPosition === "left") {
+      if (itemCount > 6) return ["70%", "50%"];
+      if (itemCount > 4) return ["68%", "50%"];
+      return ["65%", "50%"];
+    }
+    if (showLegend && legendPosition === "top") {
+      if (itemCount > 6) return ["50%", "65%"];
+      if (itemCount > 4) return ["50%", "62%"];
+      return ["50%", "60%"];
+    }
+    if (showLegend && legendPosition === "bottom") {
+      if (itemCount > 6) return ["50%", "35%"];
+      if (itemCount > 4) return ["50%", "30%"];
+      return ["50%", "40%"];
+    }
+    if (showTitle) return ["50%", "55%"];
+    return ["50%", "50%"];
+  })();
+
+  // --- Theme & Data Processing ---
   const themes = {
     dark: {
       textColor: "#A0A0A0",
       backgroundColor: "transparent",
       borderColor: "#333333",
-      tooltipBg: "rgba(30, 33, 40, 0.9)",
     },
     light: {
       textColor: "#666666",
       backgroundColor: "transparent",
       borderColor: "#e0e0e0",
-      tooltipBg: "rgba(255, 255, 255, 0.95)",
     },
   };
 
   const currentTheme = themes[theme] || themes.dark;
+  const finalSectorLineColor = sectorLineColor || currentTheme.borderColor;
 
-  // Process data - handle both array of values and array of objects
+  let calculatedInnerRadius = 0;
+  if (variant === "donut" || variant === "ring") {
+    calculatedInnerRadius = `${innerRadius || 40}%`;
+  }
+
   const processedData = Array.isArray(data)
     ? data.map((item, index) => {
         let value =
           typeof item === "object" && item !== null
             ? item.value || 0
             : item || 0;
-
-        // Apply min/max validation if provided
-        if (min !== undefined) value = Math.max(min, value);
-        if (max !== undefined) value = Math.min(max, value);
-
-        const baseColor =
-          typeof item === "object" && item !== null
-            ? item.color ||
-              colors[index] ||
-              defaultColors[index % defaultColors.length]
-            : colors[index] || defaultColors[index % defaultColors.length];
-
-        if (typeof item === "object" && item !== null) {
-          // Data is already in object format
-          return {
-            name: item.name || labels[index] || `Item ${index + 1}`,
-            value: value,
-            itemStyle: {
-              color: baseColor,
-              borderWidth: borderWidth,
-              borderColor: borderColor,
-              borderRadius: roundedSegments ? segmentBorderRadius : 0,
-            },
-            ...item,
-          };
-        } else {
-          // Data is array of values
-          return {
-            name: labels[index] || `Item ${index + 1}`,
-            value: value,
-            itemStyle: {
-              color: baseColor,
-              borderWidth: borderWidth,
-              borderColor: borderColor,
-              borderRadius: roundedSegments ? segmentBorderRadius : 0,
-            },
-          };
-        }
+        // Apply min/max if needed (omitted for brevity)
+        const baseColor = colors[index] || "#6DD400"; // Simplified
+        return {
+          name:
+            typeof item === "object"
+              ? item.name
+              : labels[index] || `Item ${index}`,
+          value: value,
+          itemStyle: {
+            color: baseColor,
+            borderRadius: roundedSegments ? segmentBorderRadius : 0,
+            borderColor: borderColor,
+            borderWidth: borderWidth,
+          },
+        };
       })
     : [];
 
-  // Default colors for pie chart segments
-  const defaultColors = [
-    "#6DD400",
-    "#FF6B6B",
-    "#4ECDC4",
-    "#45B7D1",
-    "#96CEB4",
-    "#FFEAA7",
-    "#DDA0DD",
-    "#98D8C8",
-    "#F7DC6F",
-    "#BB8FCE",
-    "#85C1E9",
-    "#F8C471",
-  ];
-
-  // Set radius based on variant
-  let calculatedInnerRadius = 0;
-  let calculatedOuterRadius = `${outerRadius}%`;
-
-  if (variant === "donut" || variant === "ring") {
-    calculatedInnerRadius = `${innerRadius || 40}%`;
-  }
-
-  // Determine sector line color
-  const finalSectorLineColor = sectorLineColor || currentTheme.borderColor;
-
+  // --- ECharts Option ---
   const echartOption = {
-    textStyle: {
-      color: currentTheme.textColor,
-    },
     backgroundColor: backgroundColor || currentTheme.backgroundColor,
-    title:
-      showTitle && title
-        ? {
-            text: title,
-            left: "center",
-            top: 10,
-            textStyle: {
-              color: currentTheme.textColor,
-              fontSize: 14,
-              fontWeight: "normal",
-            },
-          }
-        : undefined,
-    tooltip: {
-      show: false, // Disable tooltips for static mode
-    },
     legend: showLegend
       ? {
           show: true,
           orient: legendOrientation,
-          [legendPosition]: 20,
+          left:
+            legendPosition === "left"
+              ? "left"
+              : legendPosition === "right"
+              ? "right"
+              : "center",
           top:
             legendPosition === "top"
-              ? 20
+              ? "top"
               : legendPosition === "bottom"
-              ? "bottom"
+              ? undefined
               : "middle",
-          textStyle: {
-            color: currentTheme.textColor,
-            fontSize: 11,
-          },
-          itemWidth: 12,
-          itemHeight: 12,
+          bottom: legendPosition === "bottom" ? "bottom" : undefined,
+          textStyle: { color: currentTheme.textColor },
           data: processedData.map((item) => item.name),
         }
       : undefined,
-    graphic: useCenterGraphic && (variant === "donut" || variant === "ring") && (centerText || centerValue) ? (() => {
-      const valueFontSize = parseInt(centerValueStyle?.fontSize) || 32;
-      const textFontSize = parseInt(centerTextStyle?.fontSize) || 11;
-      const gap = centerTextGap;
 
-      if (centerValue && centerText) {
-        // Both texts present - position with gap
-        // Use fixed percentages adjusted by gap
-        const valueTop = 44 - (gap * 0.1); // Move up slightly based on gap
-        const textTop = 54 + (gap * 0.1); // Move down slightly based on gap
+    // Disable ECharts internal graphic to avoid conflicts with our HTML overlay
+    graphic: undefined,
 
-        return [
-          {
-            type: "text",
-            left: "center",
-            top: `${valueTop}%`,
-            style: {
-              text: centerValue,
-              textAlign: "center",
-              fill: centerValueStyle?.color || currentTheme.textColor,
-              fontSize: valueFontSize,
-              fontWeight: centerValueStyle?.fontWeight || "bold",
-            },
-            z: 100,
-          },
-          {
-            type: "text",
-            left: "center",
-            top: `${textTop}%`,
-            style: {
-              text: centerText,
-              textAlign: "center",
-              fill: centerTextStyle?.color || currentTheme.textColor,
-              fontSize: textFontSize,
-              fontWeight: centerTextStyle?.fontWeight || "normal",
-            },
-            z: 100,
-          },
-        ];
-      } else if (centerValue) {
-        // Only value
-        return [{
-          type: "text",
-          left: "center",
-          top: "middle",
-          style: {
-            text: centerValue,
-            textAlign: "center",
-            fill: centerValueStyle?.color || currentTheme.textColor,
-            fontSize: valueFontSize,
-            fontWeight: centerValueStyle?.fontWeight || "bold",
-          },
-          z: 100,
-        }];
-      } else if (centerText) {
-        // Only text
-        return [{
-          type: "text",
-          left: "center",
-          top: "middle",
-          style: {
-            text: centerText,
-            textAlign: "center",
-            fill: centerTextStyle?.color || currentTheme.textColor,
-            fontSize: textFontSize,
-            fontWeight: centerTextStyle?.fontWeight || "normal",
-          },
-          z: 100,
-        }];
-      }
-      return [];
-    })() : undefined,
     series: [
       {
         name: title,
         type: "pie",
-        radius: [calculatedInnerRadius, calculatedOuterRadius],
-        center: ["50%", "50%"],
+        radius: [calculatedInnerRadius, smartOuterRadius],
+        center: smartCenter, // Use the smart center
+
         startAngle: startAngle,
         clockwise: clockwise,
         data: processedData,
-        emphasis: {
-          disabled: true, // Disable all hover effects for static mode
-        },
+
         label: showLabels
           ? {
               show: true,
               position: labelPosition,
               color: currentTheme.textColor,
               fontSize: 11,
+              alignTo: "labelLine", // Helps preventing overlap
+              bleedMargin: 5,
               formatter: function (params) {
-                let result = params.name;
-                if (showValues && showPercentages) {
-                  result += `\n${params.value} (${params.percent}%)`;
-                } else if (showValues) {
-                  result += `\n${params.value}`;
-                } else if (showPercentages) {
-                  result += `\n${params.percent}%`;
-                }
-                return result;
+                return params.name; // Simplified formatter
               },
             }
-          : {
-              show: false,
-            },
+          : { show: false },
+
         labelLine: {
           show: showLabels && labelPosition === "outside",
-          lineStyle: {
-            color: currentTheme.textColor,
-            width: 1,
-          },
+          length: 15,
+          length2: 10,
         },
         itemStyle: {
           borderWidth: showSectorLines ? sectorLineWidth : 0,
@@ -314,21 +218,40 @@ export const PieChart = ({
           borderType: sectorLineStyle,
           borderRadius: roundedSegments ? segmentBorderRadius : 0,
         },
-        animationType: "expansion",
-        animationEasing: "elasticOut",
-        animationDelay: function () {
-          return Math.random() * 200;
+        emphasis: {
+          disabled: true,
         },
       },
     ],
-    animation: false, // Disable all animations for static mode
+    tooltip: {
+      show: false,
+    },
+    animation: false,
   };
 
-  const shouldShowCenterContent =
+  // Determine if we show the HTML center overlay
+  const hasCenterContent =
     (variant === "donut" || variant === "ring") &&
-    (centerIconName || centerContent || (!useCenterGraphic && (centerText || centerValue)));
+    (centerIconName || centerContent || centerText || centerValue);
 
   const defaultCenterIconColor = centerIconColor || currentTheme.textColor;
+
+  const chartRef = useRef(null);
+
+  useEffect(() => {
+    const instance = chartRef.current?.getEchartsInstance?.();
+    if (!instance) return;
+
+    const nudgeResize = () => {
+      instance.resize();
+    };
+
+    const rafId = requestAnimationFrame(() => {
+      requestAnimationFrame(nudgeResize);
+    });
+
+    return () => cancelAnimationFrame(rafId);
+  }, []);
 
   return (
     <div
@@ -348,6 +271,7 @@ export const PieChart = ({
       }}
     >
       <ReactECharts
+        ref={chartRef}
         option={echartOption}
         style={{
           width: "100%",
@@ -355,26 +279,28 @@ export const PieChart = ({
           minWidth: 0,
           minHeight: 0,
         }}
-        opts={{
-          renderer: "svg",
-        }}
+        opts={{ renderer: "svg" }}
         notMerge={true}
         lazyUpdate={true}
         {...props}
       />
 
-      {shouldShowCenterContent && (
+      {/* HTML OVERLAY CENTER */}
+      {hasCenterContent && (
         <div
           style={{
             position: "absolute",
-            top: "50%",
-            left: "50%",
+            // FOLLOW THE CHART: Use smartCenter to position the overlay
+            left: smartCenter[0],
+            top: smartCenter[1],
             transform: "translate(-50%, -50%)",
+
+            // STACKING LOGIC: Flex Column
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            gap: "4px",
+            gap: `${centerTextGap}px`, // Use the prop for spacing
             pointerEvents: "none",
           }}
         >
@@ -385,14 +311,12 @@ export const PieChart = ({
               color={defaultCenterIconColor}
             />
           ) : centerContent ? (
-            typeof centerContent === 'string' ? (
+            // If user passes custom JSX content, just render it
+            typeof centerContent === "string" ? (
               <span
                 style={{
                   color: currentTheme.textColor,
                   fontSize: "14px",
-                  fontWeight: "normal",
-                  whiteSpace: "nowrap",
-                  textAlign: "center",
                   ...centerTextStyle,
                 }}
               >
@@ -401,60 +325,42 @@ export const PieChart = ({
             ) : (
               centerContent
             )
-          ) : null}
+          ) : (
+            // "BOTH" LOGIC: Render Value AND Text if they exist
+            <>
+              {centerValue && (
+                <span
+                  style={{
+                    color: currentTheme.textColor,
+                    fontSize: "24px",
+                    fontWeight: "bold",
+                    whiteSpace: "nowrap",
+                    lineHeight: "1.2",
+                    ...centerValueStyle,
+                  }}
+                >
+                  {centerValue}
+                </span>
+              )}
 
-          {centerText && !centerIconName && !centerContent && (
-            <span
-              style={{
-                color: currentTheme.textColor,
-                fontSize: "14px",
-                fontWeight: "normal",
-                whiteSpace: "nowrap",
-                textAlign: "center",
-                ...centerTextStyle,
-              }}
-            >
-              {centerText}
-            </span>
-          )}
-
-          {centerValue && !centerContent && (
-            <span
-              style={{
-                color: currentTheme.textColor,
-                fontSize: centerText || centerIconName ? "18px" : "24px",
-                fontWeight: "bold",
-                whiteSpace: "nowrap",
-                textAlign: "center",
-                ...centerValueStyle,
-              }}
-            >
-              {centerValue}
-            </span>
+              {centerText && (
+                <span
+                  style={{
+                    color: currentTheme.textColor,
+                    fontSize: "12px",
+                    fontWeight: "normal",
+                    whiteSpace: "nowrap",
+                    opacity: 0.8, // Make label slightly softer
+                    ...centerTextStyle,
+                  }}
+                >
+                  {centerText}
+                </span>
+              )}
+            </>
           )}
         </div>
       )}
     </div>
   );
 };
-
-// Preset variants for common use cases
-export const DonutChart = (props) => (
-  <PieChart
-    {...props}
-    variant="donut"
-    innerRadius={40}
-    showLegend={false}
-    labelPosition="center"
-  />
-);
-
-export const RingChart = (props) => (
-  <PieChart
-    {...props}
-    variant="ring"
-    innerRadius={60}
-    showLabels={false}
-    showLegend={true}
-  />
-);

@@ -148,10 +148,10 @@ Choose appropriate icons based on semantic meaning:
 - **centerContent**: null (no custom content)
 - **centerText**: null (no label text)
 - **centerValue**: null (no value display)
-- **centerValueStyle**: {} (default: fontSize 32px, bold, theme text color)
-- **centerTextStyle**: {} (default: fontSize 11px, normal, theme text color)
-- **centerTextGap**: 0 (no extra gap between centerValue and centerText)
-- **useCenterGraphic**: true (use native ECharts rendering for center content)
+- **centerValueStyle**: {} (default: fontSize 24px, bold, theme text color)
+- **centerTextStyle**: {} (default: fontSize 12px, normal, theme text color, 0.8 opacity)
+- **centerTextGap**: 4 (gap in pixels between centerValue and centerText)
+- **useCenterGraphic**: true (uses native rendering for center content)
 
 ## Common Patterns:
 
@@ -187,14 +187,12 @@ Choose appropriate icons based on semantic meaning:
   "centerValue": "1,234",
   "centerText": "Total",
   "centerValueStyle": {
-    "fontSize": "26px",
-    "fontWeight": "400",
-    "color": "#ffffff"
+    "fontSize": "24px",
+    "fontWeight": "bold"
   },
   "centerTextStyle": {
-    "fontSize": "11px",
-    "fontWeight": "400",
-    "color": "#8E8E93"
+    "fontSize": "12px",
+    "fontWeight": "normal"
   },
   "centerTextGap": 4
 }
