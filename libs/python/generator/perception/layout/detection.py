@@ -18,6 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from PIL import Image
 
 from ...providers import OpenAIProvider, ChatMessage
+from ...utils import prepare_image_content_from_bytes
 from ..icon.post_process import post_process_pixel_detections
 
 DEFAULT_PROMPT = """
@@ -170,49 +171,6 @@ def get_image_size_from_bytes(image_bytes: bytes) -> Tuple[int, int]:
         w, h = img.size
     return int(w), int(h)
 
-def _guess_mime_from_filename(filename: Optional[str]) -> str:
-    """Guess MIME type from filename extension."""
-    if not filename:
-        return "image/png"
-    name = filename.lower()
-    if name.endswith(".jpg") or name.endswith(".jpeg"):
-        return "image/jpeg"
-    if name.endswith(".webp"):
-        return "image/webp"
-    if name.endswith(".gif"):
-        return "image/gif"
-    if name.endswith(".bmp"):
-        return "image/bmp"
-    if name.endswith(".tiff") or name.endswith(".tif"):
-        return "image/tiff"
-    return "image/png"
-
-def prepare_image_content_from_bytes(image_bytes: bytes, filename: Optional[str]) -> Dict[str, Any]:
-    """Prepare image content for VLM API."""
-    mime = None
-    try:
-        with Image.open(io.BytesIO(image_bytes)) as im:
-            fmt = (im.format or "").upper()
-            if fmt == "JPEG":
-                mime = "image/jpeg"
-            elif fmt == "PNG":
-                mime = "image/png"
-            elif fmt == "WEBP":
-                mime = "image/webp"
-            elif fmt == "GIF":
-                mime = "image/gif"
-            elif fmt == "BMP":
-                mime = "image/bmp"
-            elif fmt in ("TIFF", "TIF"):
-                mime = "image/tiff"
-    except Exception:
-        mime = None
-    if not mime:
-        mime = _guess_mime_from_filename(filename)
-
-    b64 = base64.b64encode(image_bytes).decode("ascii")
-    data_url = f"data:{mime};base64,{b64}"
-    return {"type": "image_url", "image_url": {"url": data_url}}
 
 def _scale_qwen_to_pixels(
     items: List[Dict[str, Any]],

@@ -10,6 +10,7 @@ def clean_json_response(text: str) -> str:
 
     return result.strip()
 
+
 def clean_code_response(code: str) -> str:
     result = code.strip()
 
