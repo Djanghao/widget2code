@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import ReactECharts from "echarts-for-react";
 import { Icon } from "./Icon.jsx";
 
@@ -16,8 +16,8 @@ export const PieChart = ({
   theme = "dark",
   // Pie specific options
   variant = "pie",
-  innerRadius = 0,
-  outerRadius = 80,
+  innerRadius,
+  outerRadius,
   centerText = "",
   centerValue = "",
   showLabels = false,
@@ -52,23 +52,60 @@ export const PieChart = ({
 }) => {
   // --- 1. SMART LAYOUT LOGIC ---
 
-  // FIX FOR OVERLAP: Dynamic Center
-  // If the legend is on the side, we must move the chart away from it.
-  const smartCenter = (() => {
-    if (showLegend && legendPosition === "right") return ["35%", "50%"];
-    if (showLegend && legendPosition === "left") return ["65%", "50%"];
-    if (showLegend && legendPosition === "top") return ["50%", "60%"];
-    if (showLegend && legendPosition === "bottom") return ["50%", "40%"];
-    return ["50%", "50%"];
+  const itemCount = Array.isArray(data) ? data.length : 0;
+  const isHorizontalLegend =
+    legendPosition === "top" || legendPosition === "bottom";
+  const isVerticalLegend =
+    legendPosition === "left" || legendPosition === "right";
+
+  // Calculate max allowed radius based on layout constraints
+  const getMaxRadius = () => {
+    if (showLabels && labelPosition === "outside") return 30;
+    if (showLegend) {
+      if (isVerticalLegend && itemCount > 6) return 45;
+      if (isVerticalLegend && itemCount > 4) return 50;
+      if (isHorizontalLegend && itemCount > 4) return 50;
+      return 55;
+    }
+    return 75;
+  };
+
+  // Dynamic Radius - shrink when legend or outside labels are shown
+  // User-provided outerRadius is capped to prevent overlap with legend
+  const smartOuterRadius = (() => {
+    const maxRadius = getMaxRadius();
+    if (outerRadius !== undefined) {
+      const cappedRadius = Math.min(outerRadius, maxRadius);
+      return `${cappedRadius}%`;
+    }
+    return `${maxRadius}%`;
   })();
 
-  // FIX FOR TRUNCATION: Dynamic Radius
-  // If labels are 'outside', shrink to 60% to give text room.
-  const smartOuterRadius = (() => {
-    if (outerRadius !== 80) return `${outerRadius}%`; // Respect manual override
-    if (showLabels && labelPosition === "outside") return "60%";
-    if (showLegend) return "70%";
-    return `${outerRadius}%`;
+  // Dynamic Center - move chart away from legend position
+  // More items = more shift needed
+  const smartCenter = (() => {
+    if (showLegend && legendPosition === "right") {
+      if (itemCount > 6) return ["30%", "50%"];
+      if (itemCount > 4) return ["32%", "50%"];
+      return ["35%", "50%"];
+    }
+    if (showLegend && legendPosition === "left") {
+      if (itemCount > 6) return ["70%", "50%"];
+      if (itemCount > 4) return ["68%", "50%"];
+      return ["65%", "50%"];
+    }
+    if (showLegend && legendPosition === "top") {
+      if (itemCount > 6) return ["50%", "65%"];
+      if (itemCount > 4) return ["50%", "62%"];
+      return ["50%", "60%"];
+    }
+    if (showLegend && legendPosition === "bottom") {
+      if (itemCount > 6) return ["50%", "35%"];
+      if (itemCount > 4) return ["50%", "30%"];
+      return ["50%", "40%"];
+    }
+    if (showTitle) return ["50%", "55%"];
+    return ["50%", "50%"];
   })();
 
   // --- Theme & Data Processing ---
@@ -120,25 +157,23 @@ export const PieChart = ({
   // --- ECharts Option ---
   const echartOption = {
     backgroundColor: backgroundColor || currentTheme.backgroundColor,
-
     legend: showLegend
       ? {
           show: true,
           orient: legendOrientation,
           left:
             legendPosition === "left"
-              ? 20
+              ? "left"
               : legendPosition === "right"
-              ? undefined
+              ? "right"
               : "center",
-          right: legendPosition === "right" ? 20 : undefined,
           top:
             legendPosition === "top"
-              ? 20
+              ? "top"
               : legendPosition === "bottom"
               ? undefined
               : "middle",
-          bottom: legendPosition === "bottom" ? 20 : undefined,
+          bottom: legendPosition === "bottom" ? "bottom" : undefined,
           textStyle: { color: currentTheme.textColor },
           data: processedData.map((item) => item.name),
         }
@@ -183,8 +218,14 @@ export const PieChart = ({
           borderType: sectorLineStyle,
           borderRadius: roundedSegments ? segmentBorderRadius : 0,
         },
+        emphasis: {
+          disabled: true,
+        },
       },
     ],
+    tooltip: {
+      show: false,
+    },
     animation: false,
   };
 
@@ -194,6 +235,23 @@ export const PieChart = ({
     (centerIconName || centerContent || centerText || centerValue);
 
   const defaultCenterIconColor = centerIconColor || currentTheme.textColor;
+
+  const chartRef = useRef(null);
+
+  useEffect(() => {
+    const instance = chartRef.current?.getEchartsInstance?.();
+    if (!instance) return;
+
+    const nudgeResize = () => {
+      instance.resize();
+    };
+
+    const rafId = requestAnimationFrame(() => {
+      requestAnimationFrame(nudgeResize);
+    });
+
+    return () => cancelAnimationFrame(rafId);
+  }, []);
 
   return (
     <div
@@ -205,12 +263,22 @@ export const PieChart = ({
         minWidth: minWidth,
         minHeight: minHeight,
         overflow: "hidden",
+        boxSizing: "border-box",
+        display: "flex",
+        alignItems: "stretch",
+        justifyContent: "stretch",
         position: "relative",
       }}
     >
       <ReactECharts
+        ref={chartRef}
         option={echartOption}
-        style={{ width: "100%", height: "100%" }}
+        style={{
+          width: "100%",
+          height: "100%",
+          minWidth: 0,
+          minHeight: 0,
+        }}
         opts={{ renderer: "svg" }}
         notMerge={true}
         lazyUpdate={true}
