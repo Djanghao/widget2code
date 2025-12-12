@@ -49,7 +49,7 @@ pip install -r tools/evaluation/requirements.txt
 tools/evaluation/
 ├── README.md                    # This file
 ├── main.py                      # Main entry point: integrated evaluation pipeline
-├── analysis.py                  # Hard case analysis and reporting
+├── analysis.py                  # Statistics generation and reporting
 ├── eval.py                      # Multi-threaded evaluation script
 ├── widget_quality/              # Core evaluation metrics library
 │   ├── composite.py            # Composite scoring
@@ -76,26 +76,25 @@ tools/evaluation/
 
 ### 1. Run Complete Evaluation Pipeline
 
-Evaluate a set of generated widgets against ground truth and analyze hard cases:
+Evaluate generated widgets against ground truth and generate statistics:
 
 ```bash
 python main.py \
   --gt_dir /path/to/GT \
   --pred_dir /path/to/results \
-  --workers 8 \
-  --top_k_percent 5.0
+  --output_dir /path/to/output \
+  --workers 8
 ```
 
 **Arguments:**
 - `--gt_dir`: Path to ground truth directory (required)
 - `--pred_dir`: Path to prediction directory (required)
-- `--output_dir`: Output directory for hard cases (default: `{pred_dir}/hard-cases-analysis`)
+- `--output_dir`: Output directory for statistics (default: `{pred_dir}/.analysis`)
 - `--workers`: Number of worker threads (default: 4)
-- `--top_k_percent`: Percentage of lowest-scoring images to identify as hard cases (default: 5.0)
 - `--skip_eval`: Skip evaluation step (assumes evaluation.json files already exist)
-- `--skip_analysis`: Skip hard case analysis step
+- `--cuda`: Use GPU for LPIPS computation (default: CPU)
 
-**Expected Structure:**
+**Expected Directory Structure:**
 ```
 GT/
   gt_0001.png
@@ -103,10 +102,9 @@ GT/
   ...
 
 results/
-  image_0001/
-    output.png
-  image_0002/
-    output.png
+  image_0001/output.png  (old structure)
+  OR
+  0001/pred.png          (new structure)
   ...
 ```
 
@@ -135,21 +133,17 @@ python eval.py \
 
 ### 3. Run Analysis Only
 
-Analyze existing evaluation results and identify hard cases:
+Generate statistics from existing evaluation results:
 
 ```bash
 python analysis.py \
   --results-dir /path/to/results \
-  --output-dir /path/to/hard-cases \
-  --top-k-percent 5.0
+  --output-dir /path/to/output
 ```
 
 **Output:**
-- `hard_cases_analysis_report.md`: Comprehensive analysis report with metrics documentation
-- `hard_cases_summary.csv`: CSV summary of all hard cases
-- `metrics_stats.json`: Quartile statistics for all metrics
-- `input/`: GT images with original names
-- `output/`: Generated images with metric deltas in filenames (e.g., `image_0123_[lp:-39.1_total:-22.5].png`)
+- `metrics_stats.json`: Detailed statistics with quartiles (q1, q2, q3), mean, std, min, max for all metrics
+- `metrics.xlsx`: Metrics summary table with two-level headers
 
 ## Metrics
 
@@ -177,42 +171,12 @@ The toolkit evaluates 12 metrics across 5 categories:
 ### Geometry Metrics (1 metric)
 - **geo_score**: Aspect ratio and dimensionality fidelity
 
-## Hard Case Analysis
-
-Hard cases are identified using the following criteria:
-1. Rank all images by each metric
-2. Select bottom k% (default 5%) for each metric
-3. Filter only images scoring below baseline max for that metric
-4. A single image may be flagged by multiple metrics
-
-Each hard case image in the output folder includes the metric deltas in the filename, showing which metrics caused it to be flagged and by how much it underperformed.
-
-## Baseline Max Scores
-
-The analysis compares against baseline maximum scores defined in `analysis.py`. These baselines are used to identify hard cases where generated widgets underperform compared to the best historical results.
-
-Key metrics and their baselines:
-```python
-MarginAsymmetry: 65.893
-ContentAspectDiff: 67.632
-AreaRatioDiff: 80.014
-TextJaccard: 59.591
-ContrastDiff: 60.562
-ContrastLocalDiff: 42.875
-ssim: 70.345
-lp: 51.241
-PaletteDistance: 49.084
-Vibrancy: 46.919
-PolarityConsistency: 65.088
-geo_score: 61.354
-```
-
 ## Development
 
 To modify or extend the evaluation metrics, edit the files in `widget_quality/`:
 - Add new metrics in the appropriate category module
 - Update `composite.py` to include new metrics in scoring
-- Update `METRIC_DOCS` in `analysis.py` to document new metrics
+- Update `METRIC_CATEGORIES` in `analysis.py` for statistics generation
 
 ## Notes
 

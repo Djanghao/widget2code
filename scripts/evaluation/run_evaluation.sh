@@ -1,6 +1,6 @@
 #!/bin/bash
 # Widget Quality Evaluation Script
-# Simple interface for running widget evaluation and hard case analysis
+# Simple interface for running widget evaluation and statistics generation
 
 set -e  # Exit on error
 
@@ -19,7 +19,7 @@ fi
 
 # Default values
 WORKERS=8
-TOP_K_PERCENT=5.0
+USE_CUDA=false
 
 # Colors for output
 RED='\033[0;31m'
@@ -37,44 +37,40 @@ Usage: $0 <PRED_DIR> [OUTPUT_DIR] [OPTIONS]
 
 ${YELLOW}Arguments:${NC}
   PRED_DIR              Path to prediction/results directory (required)
-  OUTPUT_DIR            Path to output directory for analysis (optional, default: PRED_DIR/.analysis)
+  OUTPUT_DIR            Path to output directory for statistics (optional, default: PRED_DIR/.analysis)
 
 ${YELLOW}Options:${NC}
   -g, --gt_dir PATH     Path to ground truth directory
                         (default: GT_DIR from .env, required if not set)
   -w, --workers NUM     Number of worker threads (default: $WORKERS)
-  -k, --top_k NUM       Percentage of lowest-scoring images as hard cases (default: $TOP_K_PERCENT)
   --skip-eval           Skip evaluation step (assumes evaluation.json already exist)
-  --skip-analysis       Skip hard case analysis step
+  --cuda                Use CUDA/GPU for computation (default: CPU)
   -h, --help            Show this help message
 
 ${YELLOW}Examples:${NC}
-  # Basic usage (output to results/my-test/.analysis)
+  # Basic usage (CPU, output to results/my-test/.analysis)
   $0 results/my-test
 
   # Specify custom output directory
-  $0 results/my-test assets/analysis-my-test
+  $0 results/my-test assets/stats-my-test
 
   # With custom GT directory
   $0 results/my-test -g /path/to/GT
 
+  # Use GPU for faster processing
+  $0 results/my-test --cuda
+
   # Use more workers for faster processing
   $0 results/my-test -w 16
 
-  # Only run hard case analysis (skip evaluation)
+  # Only generate statistics (skip evaluation)
   $0 results/my-test --skip-eval
 
-  # Custom hard case threshold (top 10%)
-  $0 results/my-test -k 10.0
-
 ${YELLOW}Output Files:${NC}
-  PRED_DIR/image_*/evaluation.json              - Individual evaluation results
-  OUTPUT_DIR/evaluation.xlsx                    - Average metrics summary
-  OUTPUT_DIR/hard_cases_analysis_report.md      - Comprehensive analysis report
-  OUTPUT_DIR/hard_cases_summary.csv             - CSV summary of hard cases
-  OUTPUT_DIR/metrics_stats.json                 - Quartile statistics
-  OUTPUT_DIR/input/                             - GT images of hard cases
-  OUTPUT_DIR/output/                            - Generated images with metric deltas
+  PRED_DIR/image_*/evaluation.json    - Individual evaluation results
+  PRED_DIR/evaluation.xlsx            - Average metrics summary (from evaluation)
+  OUTPUT_DIR/metrics_stats.json       - Detailed statistics with quartiles
+  OUTPUT_DIR/metrics.xlsx             - Metrics summary table
 
 EOF
 }
@@ -97,7 +93,6 @@ OUTPUT_DIR=""
 GT_DIR_FROM_ENV="${GT_DIR:-}"
 GT_DIR_FROM_CMD=""
 SKIP_EVAL=false
-SKIP_ANALYSIS=false
 
 # Get first two positional arguments
 if [ $# -ge 1 ] && [[ ! "$1" =~ ^- ]]; then
@@ -121,16 +116,12 @@ while [[ $# -gt 0 ]]; do
             WORKERS="$2"
             shift 2
             ;;
-        -k|--top_k)
-            TOP_K_PERCENT="$2"
-            shift 2
-            ;;
         --skip-eval)
             SKIP_EVAL=true
             shift
             ;;
-        --skip-analysis)
-            SKIP_ANALYSIS=true
+        --cuda)
+            USE_CUDA=true
             shift
             ;;
         -h|--help)
@@ -228,25 +219,22 @@ echo -e "${GREEN}GT Directory:${NC}     $GT_DIR $GT_DIR_SOURCE"
 echo -e "${GREEN}Prediction Dir:${NC}   $PRED_DIR"
 echo -e "${GREEN}Output Dir:${NC}       $OUTPUT_DIR"
 echo -e "${GREEN}Workers:${NC}          $WORKERS"
-echo -e "${GREEN}Top-k Percent:${NC}    $TOP_K_PERCENT%"
+echo -e "${GREEN}CUDA:${NC}             $(if [ "$USE_CUDA" = true ]; then echo "Enabled"; else echo "Disabled (CPU)"; fi)"
 if [ "$SKIP_EVAL" = true ]; then
     echo -e "${YELLOW}⏩ Skipping evaluation step${NC}"
-fi
-if [ "$SKIP_ANALYSIS" = true ]; then
-    echo -e "${YELLOW}⏩ Skipping analysis step${NC}"
 fi
 echo -e "${BLUE}========================================${NC}"
 echo ""
 
 # Build command
-CMD="\"$PYTHON_CMD\" \"$EVAL_TOOL\" --gt_dir \"$GT_DIR\" --pred_dir \"$PRED_DIR\" --output_dir \"$OUTPUT_DIR\" --workers $WORKERS --top_k_percent $TOP_K_PERCENT"
+CMD="\"$PYTHON_CMD\" \"$EVAL_TOOL\" --gt_dir \"$GT_DIR\" --pred_dir \"$PRED_DIR\" --output_dir \"$OUTPUT_DIR\" --workers $WORKERS"
 
 if [ "$SKIP_EVAL" = true ]; then
     CMD="$CMD --skip_eval"
 fi
 
-if [ "$SKIP_ANALYSIS" = true ]; then
-    CMD="$CMD --skip_analysis"
+if [ "$USE_CUDA" = true ]; then
+    CMD="$CMD --cuda"
 fi
 
 # Run command

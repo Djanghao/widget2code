@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Widget Evaluation Pipeline
-Performs end-to-end evaluation and hard case analysis.
+Performs widget quality evaluation and generates statistics.
 
 Usage:
     python main.py --gt_dir <GT_DIR> --pred_dir <PRED_DIR> [OPTIONS]
@@ -57,26 +57,16 @@ def run_evaluation(gt_dir: str, pred_dir: str, num_workers: int = 4, use_cuda: b
     print("\n✅ Evaluation completed successfully!\n")
 
 
-def load_evaluation_summary(pred_dir: str):
-    """Load evaluation_summary.json if it exists"""
-    summary_file = Path(pred_dir) / "evaluation_summary.json"
-    if summary_file.exists():
-        with open(summary_file, 'r') as f:
-            return json.load(f)
-    return None
-
-
-def run_hard_case_analysis(pred_dir: str, output_dir: str, top_k_percent: float = 5.0):
+def run_statistics_generation(pred_dir: str, output_dir: str):
     """
-    Run hard case analysis using analysis.py
+    Generate metrics statistics using analysis.py
 
     Args:
         pred_dir: Path to prediction directory (contains evaluation.json files)
-        output_dir: Path to output directory for hard cases
-        top_k_percent: Percentage of lowest-scoring images to flag as hard cases
+        output_dir: Path to output directory for statistics files
     """
     print("=" * 80)
-    print("STEP 2: Analyzing Hard Cases")
+    print("STEP 2: Generating Metrics Statistics")
     print("=" * 80)
 
     analysis_script = Path(__file__).parent / "analysis.py"
@@ -89,8 +79,7 @@ def run_hard_case_analysis(pred_dir: str, output_dir: str, top_k_percent: float 
         sys.executable,
         str(analysis_script),
         "--results-dir", pred_dir,
-        "--output-dir", output_dir,
-        "--top-k-percent", str(top_k_percent)
+        "--output-dir", output_dir
     ]
 
     print(f"Running: {' '.join(cmd)}\n")
@@ -98,10 +87,10 @@ def run_hard_case_analysis(pred_dir: str, output_dir: str, top_k_percent: float 
     result = subprocess.run(cmd, capture_output=False, text=True)
 
     if result.returncode != 0:
-        print(f"❌ Hard case analysis failed with return code {result.returncode}")
+        print(f"❌ Statistics generation failed with return code {result.returncode}")
         sys.exit(1)
 
-    print("\n✅ Hard case analysis completed successfully!\n")
+    print("\n✅ Statistics generation completed successfully!\n")
 
 
 def print_summary(gt_dir: str, pred_dir: str, output_dir: str):
@@ -111,7 +100,7 @@ def print_summary(gt_dir: str, pred_dir: str, output_dir: str):
     print("=" * 80)
     print(f"📂 Ground Truth Directory: {gt_dir}")
     print(f"📂 Prediction Directory: {pred_dir}")
-    print(f"📂 Hard Cases Output: {output_dir}")
+    print(f"📂 Statistics Output: {output_dir}")
     print()
 
     # Check for evaluation summary
@@ -119,17 +108,14 @@ def print_summary(gt_dir: str, pred_dir: str, output_dir: str):
     if eval_summary.exists():
         print(f"📊 Evaluation Summary: {eval_summary}")
 
-    # Check for hard case outputs
-    report_file = Path(output_dir) / "hard_cases_analysis_report.md"
-    if report_file.exists():
-        print(f"📄 Analysis Report: {report_file}")
+    # Check for statistics outputs
+    stats_file = Path(output_dir) / "metrics_stats.json"
+    if stats_file.exists():
+        print(f"📈 Metrics Statistics: {stats_file}")
 
-    input_dir = Path(output_dir) / "input"
-    output_img_dir = Path(output_dir) / "output"
-    if input_dir.exists() and output_img_dir.exists():
-        input_count = len(list(input_dir.glob("*.png")))
-        output_count = len(list(output_img_dir.glob("*.png")))
-        print(f"🖼️  Hard Case Images: {input_count} GT + {output_count} generated")
+    metrics_xlsx = Path(output_dir) / "metrics.xlsx"
+    if metrics_xlsx.exists():
+        print(f"📊 Metrics Excel: {metrics_xlsx}")
 
     print()
     print("✅ All steps completed successfully!")
@@ -137,20 +123,28 @@ def print_summary(gt_dir: str, pred_dir: str, output_dir: str):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Widget Evaluation Pipeline - Evaluate and analyze hard cases",
+        description="Widget Evaluation Pipeline - Evaluate and generate statistics",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Basic usage
+  # Basic usage (CPU)
   python main.py --gt_dir /path/to/GT --pred_dir /path/to/results
 
-  # Specify custom output directory and workers
+  # Use GPU for faster computation
+  python main.py --gt_dir /path/to/GT --pred_dir /path/to/results --cuda
+
+  # Custom output directory and more workers
   python main.py \\
     --gt_dir /path/to/GT \\
     --pred_dir /path/to/results \\
-    --output_dir /path/to/hard_cases \\
-    --workers 8 \\
-    --top_k_percent 10.0
+    --output_dir /path/to/stats \\
+    --workers 8
+
+  # Skip evaluation (if evaluation.json already exists)
+  python main.py \\
+    --gt_dir /path/to/GT \\
+    --pred_dir /path/to/results \\
+    --skip_eval
         """
     )
 
@@ -173,7 +167,7 @@ Examples:
         "--output_dir",
         type=str,
         default=None,
-        help="Path to output directory for hard cases (default: {pred_dir}/hard-cases-analysis)"
+        help="Path to output directory for statistics (default: {pred_dir}/.analysis)"
     )
     parser.add_argument(
         "--workers",
@@ -182,20 +176,9 @@ Examples:
         help="Number of worker threads for evaluation (default: 4)"
     )
     parser.add_argument(
-        "--top_k_percent",
-        type=float,
-        default=5.0,
-        help="Percentage of lowest-scoring images to identify as hard cases (default: 5.0)"
-    )
-    parser.add_argument(
         "--skip_eval",
         action="store_true",
         help="Skip evaluation step (assumes evaluation.json files already exist)"
-    )
-    parser.add_argument(
-        "--skip_analysis",
-        action="store_true",
-        help="Skip hard case analysis step"
     )
     parser.add_argument(
         "--cuda",
@@ -221,17 +204,17 @@ Examples:
     if args.output_dir:
         output_dir = Path(args.output_dir)
     else:
-        output_dir = pred_dir / "hard-cases-analysis"
+        output_dir = pred_dir / ".analysis"
 
-    print()
-    print("=" * 80)
-    print("WIDGET EVALUATION PIPELINE")
+    # Print configuration
+    print("\n" + "=" * 80)
+    print("Widget Quality Evaluation Pipeline")
     print("=" * 80)
     print(f"GT Directory:     {gt_dir}")
     print(f"Prediction Dir:   {pred_dir}")
     print(f"Output Dir:       {output_dir}")
     print(f"Workers:          {args.workers}")
-    print(f"Top-k Percent:    {args.top_k_percent}%")
+    print(f"CUDA:             {'Enabled' if args.cuda else 'Disabled (CPU)'}")
     print("=" * 80)
     print()
 
@@ -241,11 +224,8 @@ Examples:
     else:
         print("⏩ Skipping evaluation step (--skip_eval)\n")
 
-    # Step 2: Run hard case analysis
-    if not args.skip_analysis:
-        run_hard_case_analysis(str(pred_dir), str(output_dir), args.top_k_percent)
-    else:
-        print("⏩ Skipping hard case analysis step (--skip_analysis)\n")
+    # Step 2: Generate statistics (always run)
+    run_statistics_generation(str(pred_dir), str(output_dir))
 
     # Print summary
     print_summary(str(gt_dir), str(pred_dir), str(output_dir))

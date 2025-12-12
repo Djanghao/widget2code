@@ -14,75 +14,90 @@ Run the setup script to create an isolated environment:
 
 This creates a virtual environment at `tools/evaluation/.venv` with all dependencies. The evaluation script will automatically use this environment.
 
+### Environment Variables
+
+Set `GT_DIR` in `.env` to avoid specifying it every time:
+
+```bash
+# .env
+GT_DIR=/path/to/ground/truth
+```
+
 ## Quick Start
 
 ### Basic Usage
 
 ```bash
-./scripts/evaluation/run_evaluation.sh <PRED_DIR> <OUTPUT_DIR>
+./scripts/evaluation/run_evaluation.sh <PRED_DIR> [OUTPUT_DIR]
 ```
 
 **Example:**
 ```bash
-# Run from project root
-./scripts/evaluation/run_evaluation.sh results/test-1000-qwen3vl-plus-v1.2.0 assets/hard-cases
+# Run from project root (uses .env GT_DIR, outputs to PRED_DIR/.analysis)
+./scripts/evaluation/run_evaluation.sh results/my-test
+
+# With custom output directory
+./scripts/evaluation/run_evaluation.sh results/my-test assets/stats
 ```
 
 This will:
-1. ⚡ Evaluate all GT-prediction pairs (using 8 threads)
-2. 📊 Generate `evaluation.xlsx` summary report
-3. 🔍 Identify hard cases (bottom 5% per metric)
-4. 📝 Generate comprehensive analysis report to `assets/hard-cases/`
-5. 🖼️ Copy hard case images (with metric delta annotations)
+1. ⚡ Evaluate all GT-prediction pairs (multi-threaded)
+2. 💾 Save `evaluation.json` per image and `evaluation.xlsx` summary
+3. 📊 Generate statistics to output directory (`.analysis` by default)
 
 ## Arguments
 
-### Required Arguments
+### Positional Arguments
 
-1. **PRED_DIR**
+1. **PRED_DIR** (required)
    - Directory containing prediction results
-   - Format: `image_0001/output.png`, `image_0002/output.png`, ...
+   - Supports two structures:
+     - Old: `image_0001/output.png`, `image_0002/output.png`, ...
+     - New: `0001/pred.png`, `0002/pred.png`, ...
 
-2. **OUTPUT_DIR**
-   - Output directory for hard case analysis
+2. **OUTPUT_DIR** (optional)
+   - Output directory for statistics (default: `{PRED_DIR}/.analysis`)
    - Will be created automatically if doesn't exist
 
-### Optional Arguments
+### Optional Flags
 
-- `-g, --gt_dir PATH`: Ground truth directory path (default: `/shared/zhixiang_team/widget_research/Comparison/GT`)
+- `-g, --gt_dir PATH`: Ground truth directory path (overrides .env)
 - `-w, --workers NUM`: Number of worker threads (default: 8)
-- `-k, --top_k NUM`: Hard case percentage threshold (default: 5.0)
 - `--skip-eval`: Skip evaluation step (if evaluation.json already exist)
-- `--skip-analysis`: Skip analysis step
+- `--cuda`: Use GPU for LPIPS computation (default: CPU)
 - `-h, --help`: Show help message
 
 ## Usage Examples
 
-### 1. Basic Usage
+### 1. Basic Usage (CPU)
 ```bash
-./scripts/evaluation/run_evaluation.sh results/test-1000-qwen3vl-plus-v1.2.0 assets/hard-cases
+./scripts/evaluation/run_evaluation.sh results/my-test
 ```
 
-### 2. Custom GT Directory
+### 2. With GPU Acceleration
 ```bash
-./scripts/evaluation/run_evaluation.sh results/my-test output/hard-cases -g /path/to/GT
+./scripts/evaluation/run_evaluation.sh results/my-test --cuda
 ```
 
-### 3. More Workers (Faster)
+### 3. Custom GT Directory
 ```bash
-./scripts/evaluation/run_evaluation.sh results/my-test output/hard-cases -w 16
+./scripts/evaluation/run_evaluation.sh results/my-test -g /path/to/GT
 ```
 
-### 4. Analysis Only (Skip Evaluation)
+### 4. More Workers (Faster)
+```bash
+./scripts/evaluation/run_evaluation.sh results/my-test -w 16
+```
+
+### 5. Statistics Only (Skip Evaluation)
 ```bash
 # If evaluation.json files already exist
-./scripts/evaluation/run_evaluation.sh results/my-test output/hard-cases --skip-eval
+./scripts/evaluation/run_evaluation.sh results/my-test --skip-eval
 ```
 
-### 5. Custom Hard Case Threshold
+### 6. Custom Output Directory
 ```bash
-# Extract top 10% instead of 5%
-./scripts/evaluation/run_evaluation.sh results/my-test output/hard-cases -k 10.0
+./scripts/evaluation/run_evaluation.sh results/my-test assets/my-stats
 ```
 
 ## Output Files
@@ -90,49 +105,51 @@ This will:
 After running, the following files will be generated:
 
 ### In Prediction Directory:
-- `evaluation.xlsx` - Average metrics summary
-- `image_*/evaluation.json` - Detailed evaluation results per image
+- `evaluation.xlsx` - Average metrics summary with two-level headers
+- `image_*/evaluation.json` or `*/evaluation.json` - Detailed results per image
 
-### In Output Directory:
-- `hard_cases_analysis_report.md` - Comprehensive analysis report (with metrics documentation)
-- `hard_cases_summary.csv` - CSV summary of hard cases
-- `metrics_stats.json` - Quartile statistics for all metrics
-- `input/` - GT images of hard cases (original names)
-- `output/` - Generated images of hard cases (filenames include metric deltas)
+### In Output Directory (default: `{PRED_DIR}/.analysis`):
+- `metrics_stats.json` - Detailed statistics (q1, q2, q3, mean, std, min, max) for all 12 metrics
+- `metrics.xlsx` - Metrics summary table
 
 ### Example Output Structure
 
 ```
-prediction_dir/
-├── image_0001/
-│   ├── output.png
+results/my-test/
+├── 0001/
+│   ├── pred.png
 │   └── evaluation.json          ← Generated
-├── image_0002/
-│   ├── output.png
+├── 0002/
+│   ├── pred.png
 │   └── evaluation.json          ← Generated
-└── evaluation.xlsx               ← Generated
-
-output_dir/
-├── hard_cases_analysis_report.md
-├── hard_cases_summary.csv
-├── metrics_stats.json
-├── input/
-│   ├── image_0001.png
-│   └── image_0123.png
-└── output/
-    ├── image_0001_[ElementCountDiff:-14.3].png
-    └── image_0123_[lp:-39.1_total:-22.5].png
+├── evaluation.xlsx               ← Generated (avg metrics)
+└── .analysis/                    ← Generated (default OUTPUT_DIR)
+    ├── metrics_stats.json        ← Detailed statistics
+    └── metrics.xlsx              ← Summary table
 ```
+
+## Metrics
+
+The evaluation computes 12 metrics across 5 categories:
+
+- **Layout** (3): MarginAsymmetry, ContentAspectDiff, AreaRatioDiff
+- **Legibility** (3): TextJaccard, ContrastDiff, ContrastLocalDiff
+- **Style** (3): PaletteDistance, Vibrancy, PolarityConsistency
+- **Perceptual** (2): SSIM, LPIPS
+- **Geometry** (1): geo_score
+
+All metrics are transformed to 0-100 scale (higher is better).
 
 ## Notes
 
-1. **First Run**: Don't use any skip flags to get complete results
-2. **Re-analysis**: Use `--skip-eval` if evaluation.json files already exist to save time
-3. **Performance**: Increase `-w` parameter for faster processing on multi-core machines
-4. **Relative Paths**: Script supports both relative paths (relative to project root) and absolute paths
+1. **First Run**: Run without skip flags to get complete results
+2. **Re-analysis**: Use `--skip-eval` if evaluation.json files exist to save time
+3. **Performance**: Increase `-w` for faster processing on multi-core machines
+4. **GPU Usage**: Add `--cuda` flag to use GPU for LPIPS (much faster)
+5. **Paths**: Script supports both relative and absolute paths
 
 ## Related Documentation
 
 - [Tools Documentation](../../tools/evaluation/README.md) - Detailed metrics documentation
 - [Python Entry Point](../../tools/evaluation/main.py) - Main pipeline script
-- [Analysis Tool](../../tools/evaluation/analysis.py) - Hard case analysis script
+- [Analysis Tool](../../tools/evaluation/analysis.py) - Statistics generation script

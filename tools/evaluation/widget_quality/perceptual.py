@@ -39,6 +39,7 @@ import cv2
 # Default to CPU (can be changed with set_device)
 device = torch.device("cpu")
 lpips_vgg = None
+_initialized = False
 
 def set_device(use_cuda=False):
     """Set the device for LPIPS computation. Call this before running evaluation.
@@ -46,7 +47,7 @@ def set_device(use_cuda=False):
     Args:
         use_cuda: If True, use CUDA if available. If False, use CPU.
     """
-    global device, lpips_vgg
+    global device, lpips_vgg, _initialized
 
     if use_cuda and torch.cuda.is_available():
         device = torch.device("cuda")
@@ -55,9 +56,14 @@ def set_device(use_cuda=False):
 
     # Initialize LPIPS model on the correct device
     lpips_vgg = LPIPS(net="vgg").to(device)
-    print(f"[Perceptual] Using device: {device}")
 
-# Initialize with CPU by default
+    # Only print when explicitly called (not during module init)
+    if _initialized:
+        print(f"✓ Perceptual metrics device: {device}")
+
+    _initialized = True
+
+# Initialize with CPU by default (silent)
 set_device(use_cuda=False)
 
 

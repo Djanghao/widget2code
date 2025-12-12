@@ -36,22 +36,36 @@ def convert_to_serializable(obj):
 def evaluate_single_pair(gt_file, gt_dir, pred_dir):
     """
     Evaluate a single GT-prediction pair.
+    Supports two directory structures:
+      - image_{num}/output.png  (old structure)
+      - {num}/pred.png          (new structure)
     Returns (success, result_dict, error_message)
     """
     try:
         num = gt_file.replace("gt_", "").replace(".png", "")
         gt_path = os.path.join(gt_dir, gt_file)
 
-        # Try _rerun suffix first, then fall back to regular
-        image_folder_rerun = os.path.join(pred_dir, f"image_{num}_rerun")
-        image_folder = os.path.join(pred_dir, f"image_{num}")
+        # Try different prediction file locations in order of priority
+        possible_paths = [
+            # Old structure: image_{num}/output.png
+            (os.path.join(pred_dir, f"image_{num}"), "output.png"),
+            # New structure: {num}/pred.png
+            (os.path.join(pred_dir, num), "pred.png"),
+            # New structure alternative: {num}/output.png
+            (os.path.join(pred_dir, num), "output.png"),
+        ]
 
-        if os.path.isdir(image_folder_rerun):
-            image_folder = image_folder_rerun
+        pred_path = None
+        image_folder = None
 
-        pred_path = os.path.join(image_folder, "output.png")
+        for folder, filename in possible_paths:
+            candidate_path = os.path.join(folder, filename)
+            if os.path.exists(candidate_path):
+                pred_path = candidate_path
+                image_folder = folder
+                break
 
-        if not os.path.exists(pred_path):
+        if pred_path is None:
             return (False, None, f"Missing prediction for {num}")
 
         # Load pair
