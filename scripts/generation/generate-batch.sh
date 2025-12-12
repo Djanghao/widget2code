@@ -13,11 +13,13 @@ unset TRANSFORMERS_CACHE
 
 if [ $# -lt 2 ]; then
     echo "Usage: $0 <input-dir> <output-dir> [concurrency] [--force]"
+    echo "Example: $0 ./images ./generated"
     echo "Example: $0 ./images ./generated 5"
     echo "Example: $0 ./images ./generated 5 --force"
     echo ""
     echo "Options:"
-    echo "  --force    Force reprocess all images, even if already generated"
+    echo "  concurrency    Number of parallel workers (default: 1, or from .env CONCURRENCY)"
+    echo "  --force        Force reprocess all images, even if already generated"
     exit 1
 fi
 
@@ -43,29 +45,24 @@ while [ $# -gt 0 ]; do
         *)
             # Assume it's concurrency if it's a number
             if [[ "$1" =~ ^[0-9]+$ ]]; then
-                CONCURRENCY=$1
-                echo "📊 Using concurrency from command line: $CONCURRENCY"
+                CONCURRENCY_CMD=$1
             fi
             shift
             ;;
     esac
 done
 
-# Check concurrency: command line > .env > error
-if [ -z "$CONCURRENCY" ]; then
-    if [ -n "${CONCURRENCY:-}" ]; then
-        echo "📊 Using concurrency from .env: $CONCURRENCY"
-    else
-        echo "❌ ERROR: CONCURRENCY not specified"
-        echo ""
-        echo "Please either:"
-        echo "  1. Set CONCURRENCY in .env file"
-        echo "  2. Or provide as third argument: $0 <input-dir> <output-dir> <concurrency>"
-        echo ""
-        echo "Example: $0 ./images ./output 200"
-        echo "Example: $0 ./images ./output 200 --force"
-        exit 1
-    fi
+# Set concurrency: command line > .env > default (1)
+CONCURRENCY_FROM_ENV="${CONCURRENCY:-}"
+CONCURRENCY=${CONCURRENCY_CMD:-${CONCURRENCY:-1}}
+
+# Print concurrency source
+if [ -n "$CONCURRENCY_CMD" ]; then
+    echo "📊 Using concurrency from command line: $CONCURRENCY"
+elif [ -n "$CONCURRENCY_FROM_ENV" ]; then
+    echo "📊 Using concurrency from .env: $CONCURRENCY"
+else
+    echo "📊 Using default concurrency: $CONCURRENCY"
 fi
 
 # Check if ENABLE_MODEL_CACHE is true

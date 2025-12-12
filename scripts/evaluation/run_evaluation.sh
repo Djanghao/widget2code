@@ -10,8 +10,14 @@ PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 EVAL_TOOL="$PROJECT_ROOT/tools/evaluation/main.py"
 VENV_DIR="$PROJECT_ROOT/tools/evaluation/.venv"
 
+# Load .env if present
+if [ -f "$PROJECT_ROOT/.env" ]; then
+  set -a
+  source "$PROJECT_ROOT/.env"
+  set +a
+fi
+
 # Default values
-DEFAULT_GT_DIR="/shared/zhixiang_team/widget_research/Comparison/GT"
 WORKERS=8
 TOP_K_PERCENT=5.0
 
@@ -35,7 +41,7 @@ ${YELLOW}Arguments:${NC}
 
 ${YELLOW}Options:${NC}
   -g, --gt_dir PATH     Path to ground truth directory
-                        (default: $DEFAULT_GT_DIR)
+                        (default: GT_DIR from .env, required if not set)
   -w, --workers NUM     Number of worker threads (default: $WORKERS)
   -k, --top_k NUM       Percentage of lowest-scoring images as hard cases (default: $TOP_K_PERCENT)
   --skip-eval           Skip evaluation step (assumes evaluation.json already exist)
@@ -88,7 +94,8 @@ fi
 # Parse positional arguments
 PRED_DIR=""
 OUTPUT_DIR=""
-GT_DIR="$DEFAULT_GT_DIR"
+GT_DIR_FROM_ENV="${GT_DIR:-}"
+GT_DIR_FROM_CMD=""
 SKIP_EVAL=false
 SKIP_ANALYSIS=false
 
@@ -107,7 +114,7 @@ fi
 while [[ $# -gt 0 ]]; do
     case $1 in
         -g|--gt_dir)
-            GT_DIR="$2"
+            GT_DIR_FROM_CMD="$2"
             shift 2
             ;;
         -w|--workers)
@@ -137,6 +144,19 @@ while [[ $# -gt 0 ]]; do
             ;;
     esac
 done
+
+# Set GT_DIR: command line > .env > error
+GT_DIR="${GT_DIR_FROM_CMD:-${GT_DIR_FROM_ENV}}"
+
+if [ -z "$GT_DIR" ]; then
+    echo -e "${RED}Error: Ground truth directory not specified${NC}"
+    echo -e "${YELLOW}Please either:${NC}"
+    echo -e "  1. Set GT_DIR in .env file"
+    echo -e "  2. Or provide via -g flag: $0 <PRED_DIR> -g /path/to/GT"
+    echo ""
+    usage
+    exit 1
+fi
 
 # Validate required arguments
 if [ -z "$PRED_DIR" ]; then
@@ -191,12 +211,20 @@ else
     echo ""
 fi
 
+# Print GT_DIR source
+GT_DIR_SOURCE=""
+if [ -n "$GT_DIR_FROM_CMD" ]; then
+    GT_DIR_SOURCE="(from -g flag)"
+elif [ -n "$GT_DIR_FROM_ENV" ]; then
+    GT_DIR_SOURCE="(from .env)"
+fi
+
 # Print configuration
 echo ""
 echo -e "${BLUE}========================================${NC}"
 echo -e "${BLUE}  Widget Quality Evaluation${NC}"
 echo -e "${BLUE}========================================${NC}"
-echo -e "${GREEN}GT Directory:${NC}     $GT_DIR"
+echo -e "${GREEN}GT Directory:${NC}     $GT_DIR $GT_DIR_SOURCE"
 echo -e "${GREEN}Prediction Dir:${NC}   $PRED_DIR"
 echo -e "${GREEN}Output Dir:${NC}       $OUTPUT_DIR"
 echo -e "${GREEN}Workers:${NC}          $WORKERS"

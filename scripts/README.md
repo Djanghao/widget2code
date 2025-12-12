@@ -10,16 +10,17 @@ Configure `.env` with your `DASHSCOPE_API_KEY`
 
 ## Quick Start
 
-### Full Pipeline (Image → PNG)
-```bash
-# Auto-manages server, creates DSL, JSX, and PNG
-./scripts/pipeline/run-full.sh input.png ./output
-```
+Run generation, rendering, and evaluation manually in sequence:
 
-### Batch Process
 ```bash
-# Process multiple images (5 concurrent)
-./scripts/pipeline/run-batch-full.sh ./images ./output 5
+# Step 1: Generate widget DSL
+./scripts/generation/generate-widget.sh input.png ./output
+
+# Step 2: Render widget to PNG
+./scripts/rendering/render-widget.sh ./output/<widget-name>
+
+# Step 3: Run evaluation (optional)
+./scripts/evaluation/run_evaluation.sh ./output ./analysis
 ```
 
 ## Available Scripts
@@ -60,25 +61,25 @@ Configure `.env` with your `DASHSCOPE_API_KEY`
 ./scripts/rendering/render-batch.sh ./widgets ./output 5
 ```
 
-### Pipeline
+### Evaluation
 ```bash
-# Full: Image → DSL → JSX → PNG
-./scripts/pipeline/run-full.sh input.png ./output
+# Run evaluation on generated widgets
+./scripts/evaluation/run_evaluation.sh ./output ./analysis
 
-# Batch full pipeline
-./scripts/pipeline/run-batch-full.sh ./images ./output 5
+# With ground truth directory
+./scripts/evaluation/run_evaluation.sh ./output ./analysis -g ./ground-truth
 ```
 
 ## Server Requirement
 
-Rendering and pipeline scripts require playground server running:
+Rendering scripts require playground server running:
 
 ```bash
 # Terminal 1: Start server
 ./scripts/dev/start-dev.sh
 
 # Terminal 2: Run rendering tasks
-./scripts/pipeline/run-full.sh design.png ./output
+./scripts/rendering/render-widget.sh ./output/<widget-name>
 ```
 
 ## Examples
@@ -96,8 +97,13 @@ cat widget.jsx
 
 ### Complete workflow
 ```bash
-./scripts/pipeline/run-full.sh design.png ./result
-# Output: ./result/{design.json, design.jsx, design.png}
+# Step 1: Generate DSL
+./scripts/generation/generate-widget.sh design.png ./result
+
+# Step 2: Render to PNG
+./scripts/rendering/render-widget.sh ./result/design
+
+# Output: ./result/design/{artifacts/, output.png}
 ```
 
 ## Configuration
