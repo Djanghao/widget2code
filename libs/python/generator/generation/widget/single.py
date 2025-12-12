@@ -66,7 +66,7 @@ async def generate_widget_text(
             model=model_to_use,
             temperature=0.5,
             max_tokens=2000,
-            timeout=config.timeout,
+            timeout=config.default_timeout,
             system_prompt=system_prompt,
             api_key=api_key
         )
@@ -136,7 +136,7 @@ async def generate_widget_text_with_reference(
             model=model_to_use,
             temperature=0.5,
             max_tokens=2000,
-            timeout=config.timeout,
+            timeout=config.default_timeout,
             system_prompt=system_prompt_final,
             api_key=api_key
         )
@@ -288,6 +288,7 @@ async def generate_widget_full(
             layout_post = None
             img_width = width
             img_height = height
+            layout_raw_text = ""
 
         # ========== Icon & Graph Extraction (Parallel) ==========
         import time
