@@ -13,75 +13,48 @@ import pandas as pd
 import numpy as np
 
 
-# Baseline MAX scores (23 metrics in order)
+# Baseline MAX scores (12 metrics - removed deprecated metrics and composite scores)
 BASELINE_MAX = {
-    # Layout metrics
-    "MarginDelta": 58.176,
-    "EdgeCrowding": 76.306,
+    # Layout metrics (3)
     "MarginAsymmetry": 65.893,
-    "CentroidDisplacement": 44.093,
     "ContentAspectDiff": 67.632,
-    "AlignmentError": 49.263,
     "AreaRatioDiff": 80.014,
-    "ElementCountDiff": 14.289,
-    "layout_score": 58.206,
-    # Legibility metrics
+
+    # Legibility metrics (3)
     "TextJaccard": 59.591,
     "ContrastDiff": 60.562,
     "ContrastLocalDiff": 42.875,
-    "legibility_score": 56.946,
-    # Perceptual metrics
+
+    # Perceptual metrics (2)
     "ssim": 70.345,
     "lp": 51.241,
-    "edgef1": 28.585,
-    "perceptual_score": 26.701,
-    # Style metrics
+
+    # Style metrics (3)
     "PaletteDistance": 49.084,
     "Vibrancy": 46.919,
     "PolarityConsistency": 65.088,
-    "style_score": 51.975,
-    # Geometry and Overall
+
+    # Geometry (1)
     "geo_score": 61.354,
-    "total": 51.282,
 }
 
-# Metric categories for better organization
+# Metric categories (12 metrics - removed deprecated metrics and composite scores)
 METRIC_CATEGORIES = {
-    "LayoutScore": ["MarginDelta", "EdgeCrowding", "MarginAsymmetry", "CentroidDisplacement",
-                    "ContentAspectDiff", "AlignmentError", "AreaRatioDiff", "ElementCountDiff", "layout_score"],
-    "LegibilityScore": ["TextJaccard", "ContrastDiff", "ContrastLocalDiff", "legibility_score"],
-    "PerceptualScore": ["ssim", "lp", "edgef1", "perceptual_score"],
-    "StyleScore": ["PaletteDistance", "Vibrancy", "PolarityConsistency", "style_score"],
+    "LayoutScore": ["MarginAsymmetry", "ContentAspectDiff", "AreaRatioDiff"],
+    "LegibilityScore": ["TextJaccard", "ContrastDiff", "ContrastLocalDiff"],
+    "StyleScore": ["PaletteDistance", "Vibrancy", "PolarityConsistency"],
+    "PerceptualScore": ["ssim", "lp"],
     "Geometry": ["geo_score"],
-    "Overall": ["total"],
 }
 
-# Detailed metric documentation
+# Detailed metric documentation (only for the 12 retained metrics)
 METRIC_DOCS = {
     # Layout Metrics
-    "MarginDelta": {
-        "name": "Margin Delta",
-        "description": "Measures the average absolute difference of margins (top, bottom, left, right) between GT and generated image",
-        "measurement": "Extract content region via edge detection, compute margins on all four sides, take average difference. Converted to score using exponential decay function",
-        "improvement": "Ensure generated widget maintains similar margin ratios as GT; adjust layout algorithm to maintain consistency when centering or aligning content"
-    },
-    "EdgeCrowding": {
-        "name": "Edge Crowding",
-        "description": "Measures the proportion of content placed near image boundaries (within 5% edge band)",
-        "measurement": "Calculate proportion of content pixels within 5% edge band. Score = 100 * (1 - √proportion)",
-        "improvement": "Avoid placing important elements too close to edges; ensure sufficient whitespace around content"
-    },
     "MarginAsymmetry": {
         "name": "Margin Asymmetry",
         "description": "Measures the asymmetry degree of margin differences (std/mean)",
         "measurement": "Calculate ratio of standard deviation to mean of margin differences between GT and generated",
         "improvement": "Maintain symmetry in margin ratios or follow GT's symmetry pattern; avoid random imbalanced layouts"
-    },
-    "CentroidDisplacement": {
-        "name": "Centroid Displacement",
-        "description": "Measures displacement of content centroid (geometric center) relative to GT",
-        "measurement": "Calculate centroid coordinate difference, normalized by image diagonal length",
-        "improvement": "Ensure overall content position matches GT; adjust layout algorithm's alignment strategy (center/left/right align)"
     },
     "ContentAspectDiff": {
         "name": "Content Aspect Ratio Difference",
@@ -89,23 +62,11 @@ METRIC_DOCS = {
         "measurement": "Extract minimum bounding rectangle of content, compute aspect ratio, take absolute log difference",
         "improvement": "Maintain same content aspect ratio as GT; avoid stretching or compressing elements"
     },
-    "AlignmentError": {
-        "name": "Alignment Error",
-        "description": "Measures consistency of internal element alignment (relative to GT)",
-        "measurement": "Detect internal elements via connected components, compute average minimum distance from each element center to corresponding GT element",
-        "improvement": "Maintain relative positions between multiple elements; use grid alignment or baseline alignment"
-    },
     "AreaRatioDiff": {
         "name": "Area Ratio Difference",
         "description": "Measures difference in internal element area distribution",
         "measurement": "Calculate average area proportion of connected components, compare difference between GT and generated",
         "improvement": "Maintain relative size proportions of elements; avoid elements being too large or too small"
-    },
-    "ElementCountDiff": {
-        "name": "Element Count Difference",
-        "description": "Measures difference in number of detected internal elements",
-        "measurement": "Count elements via connected component analysis, calculate absolute difference",
-        "improvement": "Ensure generated element count matches GT; avoid missing or extra UI components"
     },
 
     # Legibility Metrics
@@ -141,12 +102,6 @@ METRIC_DOCS = {
         "measurement": "Extract features using VGG network, compute distance in feature space. Score = 100 × (1 - LPIPS_raw), where raw LPIPS is distance (lower raw = better similarity)",
         "improvement": "Maintain consistency with GT in visual style, color distribution, texture details; avoid unnatural artifacts"
     },
-    "edgef1": {
-        "name": "Edge F1 Score",
-        "description": "Measures edge detection matching degree (harmonic mean of precision and recall)",
-        "measurement": "Use Canny edge detection, compute true positive, false positive, false negative within tolerance range",
-        "improvement": "Maintain sharp edges and contours; avoid blurred or missing edges; reduce noisy edges"
-    },
 
     # Style Metrics
     "PaletteDistance": {
@@ -174,38 +129,6 @@ METRIC_DOCS = {
         "description": "Measures how well generated image's aspect ratio and size match GT",
         "measurement": "Calculate log differences in aspect ratio and area, use weighted exponential decay function",
         "improvement": "Strictly maintain GT's image dimensions and aspect ratio; avoid scaling distortions"
-    },
-
-    # Composite Scores
-    "layout_score": {
-        "name": "Layout Composite Score",
-        "description": "Weighted sum of 8 layout-related metrics",
-        "measurement": "Weights: MarginDelta(20%), EdgeCrowding(15%), MarginAsymmetry(15%), CentroidDisplacement(10%), ContentAspectDiff(10%), AlignmentError(15%), AreaRatioDiff(10%), ElementCountDiff(5%)",
-        "improvement": "Comprehensively optimize all layout metrics above"
-    },
-    "legibility_score": {
-        "name": "Legibility Composite Score",
-        "description": "Weighted sum of 3 text and contrast-related metrics",
-        "measurement": "Weights: TextJaccard(60%), ContrastDiff(25%), ContrastLocalDiff(15%)",
-        "improvement": "Prioritize text content correctness, then optimize contrast"
-    },
-    "perceptual_score": {
-        "name": "Perceptual Composite Score",
-        "description": "Weighted sum of 3 perceptual quality-related metrics",
-        "measurement": "Weights: ssim(45%), lp(35%), edgef1(20%). Note: lp is already inverted (higher = better)",
-        "improvement": "Balance structural similarity and perceptual quality"
-    },
-    "style_score": {
-        "name": "Style Composite Score",
-        "description": "Weighted sum of 3 color style-related metrics",
-        "measurement": "Weights: PaletteDistance(40%), Vibrancy(35%), PolarityConsistency(25%)",
-        "improvement": "Maintain overall color style consistency"
-    },
-    "total": {
-        "name": "Overall Score",
-        "description": "Weighted sum of all category scores",
-        "measurement": "Weights: layout_score(35%), legibility_score(25%), perceptual_score(20%), style_score(10%), geo_score(10%)",
-        "improvement": "Comprehensively optimize all metrics, with focus on layout and legibility"
     }
 }
 
@@ -614,48 +537,42 @@ def save_summary_files(df: pd.DataFrame, hard_cases_df: pd.DataFrame,
     header_row2 = [None]  # Sub-headers
     data_row = [run_name]  # Data values
 
-    # LayoutScore columns
-    layout_metrics = ["MarginDelta", "EdgeCrowding", "MarginAsymmetry", "CentroidDisplacement",
-                      "ContentAspectDiff", "AlignmentError", "AreaRatioDiff", "ElementCountDiff", "layout_score"]
+    # LayoutScore columns (only 3 metrics)
+    layout_metrics = ["MarginAsymmetry", "ContentAspectDiff", "AreaRatioDiff"]
     header_row1.append('LayoutScore')
     header_row1.extend([None] * (len(layout_metrics) - 1))
     for metric in layout_metrics:
         header_row2.append(metric)
         data_row.append(round(df[metric].mean(), 3))
 
-    # LegibilityScore columns
-    legibility_metrics = ["TextJaccard", "ContrastDiff", "ContrastLocalDiff", "legibility_score"]
+    # LegibilityScore columns (only 3 metrics)
+    legibility_metrics = ["TextJaccard", "ContrastDiff", "ContrastLocalDiff"]
     header_row1.append('LegibilityScore')
     header_row1.extend([None] * (len(legibility_metrics) - 1))
     for metric in legibility_metrics:
         header_row2.append(metric)
         data_row.append(round(df[metric].mean(), 3))
 
-    # PerceptualScore columns
-    perceptual_metrics = ["ssim", "lp", "edgef1", "perceptual_score"]
+    # PerceptualScore columns (only 2 metrics)
+    perceptual_metrics = ["ssim", "lp"]
     header_row1.append('PerceptualScore')
     header_row1.extend([None] * (len(perceptual_metrics) - 1))
     for metric in perceptual_metrics:
         header_row2.append(metric)
         data_row.append(round(df[metric].mean(), 3))
 
-    # StyleScore columns
-    style_metrics = ["PaletteDistance", "Vibrancy", "PolarityConsistency", "style_score"]
+    # StyleScore columns (only 3 metrics)
+    style_metrics = ["PaletteDistance", "Vibrancy", "PolarityConsistency"]
     header_row1.append('StyleScore')
     header_row1.extend([None] * (len(style_metrics) - 1))
     for metric in style_metrics:
         header_row2.append(metric)
         data_row.append(round(df[metric].mean(), 3))
 
-    # Geometry
+    # Geometry (1 metric)
     header_row1.append('Geometry')
     header_row2.append(None)
     data_row.append(round(df['geo_score'].mean(), 3))
-
-    # Overall
-    header_row1.append('Overall')
-    header_row2.append(None)
-    data_row.append(round(df['total'].mean(), 3))
 
     # Create DataFrame with all three rows
     metrics_df = pd.DataFrame([header_row1, header_row2, data_row])

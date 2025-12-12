@@ -15,20 +15,21 @@ import subprocess
 from pathlib import Path
 
 
-def run_evaluation(gt_dir: str, pred_dir: str, num_workers: int = 4):
+def run_evaluation(gt_dir: str, pred_dir: str, num_workers: int = 4, use_cuda: bool = False):
     """
-    Run widget quality evaluation using loop_OneByOne_houston.py
+    Run widget quality evaluation using eval.py
 
     Args:
         gt_dir: Path to ground truth directory
         pred_dir: Path to prediction directory
         num_workers: Number of worker threads
+        use_cuda: Whether to use CUDA/GPU for computation
     """
     print("=" * 80)
     print("STEP 1: Running Widget Quality Evaluation")
     print("=" * 80)
 
-    eval_script = Path(__file__).parent / "loop_OneByOne_houston.py"
+    eval_script = Path(__file__).parent / "eval.py"
 
     if not eval_script.exists():
         print(f"❌ Error: Evaluation script not found at {eval_script}")
@@ -41,6 +42,9 @@ def run_evaluation(gt_dir: str, pred_dir: str, num_workers: int = 4):
         "--baseline_dir", pred_dir,
         "--workers", str(num_workers)
     ]
+
+    if use_cuda:
+        cmd.append("--cuda")
 
     print(f"Running: {' '.join(cmd)}\n")
 
@@ -193,6 +197,11 @@ Examples:
         action="store_true",
         help="Skip hard case analysis step"
     )
+    parser.add_argument(
+        "--cuda",
+        action="store_true",
+        help="Use CUDA/GPU for computation (default: CPU)"
+    )
 
     args = parser.parse_args()
 
@@ -228,7 +237,7 @@ Examples:
 
     # Step 1: Run evaluation
     if not args.skip_eval:
-        run_evaluation(str(gt_dir), str(pred_dir), args.workers)
+        run_evaluation(str(gt_dir), str(pred_dir), args.workers, args.cuda)
     else:
         print("⏩ Skipping evaluation step (--skip_eval)\n")
 

@@ -36,27 +36,31 @@ from scipy.ndimage import distance_transform_edt
 import numpy as np
 import cv2
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-lpips_vgg = LPIPS(net="vgg").to(device)
+# Default to CPU (can be changed with set_device)
+device = torch.device("cpu")
+lpips_vgg = None
+
+def set_device(use_cuda=False):
+    """Set the device for LPIPS computation. Call this before running evaluation.
+
+    Args:
+        use_cuda: If True, use CUDA if available. If False, use CPU.
+    """
+    global device, lpips_vgg
+
+    if use_cuda and torch.cuda.is_available():
+        device = torch.device("cuda")
+    else:
+        device = torch.device("cpu")
+
+    # Initialize LPIPS model on the correct device
+    lpips_vgg = LPIPS(net="vgg").to(device)
+    print(f"[Perceptual] Using device: {device}")
+
+# Initialize with CPU by default
+set_device(use_cuda=False)
 
 
-
-def compute_soft_edge_f1(gt_gray, pr_gray, sigma=1.0, tol=2):
-    e1 = canny(gt_gray, sigma=sigma)
-    e2 = canny(pr_gray, sigma=sigma)
-
-    # distance transform for tolerance
-    dt1 = distance_transform_edt(~e1)
-    dt2 = distance_transform_edt(~e2)
-
-    tp = np.sum((e1 & (dt2 <= tol)) | (e2 & (dt1 <= tol)))
-    fp = np.sum(e2 & (dt1 > tol))
-    fn = np.sum(e1 & (dt2 > tol))
-
-    prec = tp / (tp + fp + 1e-6)
-    rec = tp / (tp + fn + 1e-6)
-    f1 = 2 * prec * rec / (prec + rec + 1e-6)
-    return float(f1)
 
 def compute_perceptual(gt, gen):
     """Compute perceptual metrics efficiently with GPU LPIPS."""
@@ -70,13 +74,8 @@ def compute_perceptual(gt, gen):
         lp = float(lpips_vgg(gt_t, gen_t).item())
         # lp = 0.5
 
-    # Edge-F1
-    gray_gt = cv2.cvtColor((gt*255).astype(np.uint8), cv2.COLOR_RGB2GRAY)
-    gray_gen = cv2.cvtColor((gen*255).astype(np.uint8), cv2.COLOR_RGB2GRAY)
-    f1 = edge_f1 = compute_soft_edge_f1(gray_gt, gray_gen)
-
+    # Only return SSIM and LPIPS (EdgeF1 removed)
     return {
         "SSIM": ssim_val,
-        "LPIPS": lp,
-        "EdgeF1": f1
+        "LPIPS": lp
     }

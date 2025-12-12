@@ -50,13 +50,13 @@ tools/evaluation/
 ├── README.md                    # This file
 ├── main.py                      # Main entry point: integrated evaluation pipeline
 ├── analysis.py                  # Hard case analysis and reporting
-├── loop_OneByOne_houston.py     # Multi-threaded evaluation script
+├── eval.py                      # Multi-threaded evaluation script
 ├── widget_quality/              # Core evaluation metrics library
 │   ├── composite.py            # Composite scoring
 │   ├── geometry.py             # Geometry metrics
 │   ├── layout.py               # Layout metrics
 │   ├── legibility.py           # Legibility metrics
-│   ├── perceptual.py           # Perceptual metrics (SSIM, LPIPS, EdgeF1)
+│   ├── perceptual.py           # Perceptual metrics (SSIM, LPIPS)
 │   ├── style.py                # Style metrics
 │   └── utils.py                # Utility functions
 ├── utils/                       # Utility scripts
@@ -115,10 +115,18 @@ results/
 Compute quality metrics for all GT-prediction pairs:
 
 ```bash
-python loop_OneByOne_houston.py \
+# Evaluate all images (default: CPU)
+python eval.py \
   --gt_dir /path/to/GT \
   --baseline_dir /path/to/results \
   --workers 8
+
+# Use GPU for faster computation
+python eval.py \
+  --gt_dir /path/to/GT \
+  --baseline_dir /path/to/results \
+  --workers 8 \
+  --cuda
 ```
 
 **Output:**
@@ -145,42 +153,29 @@ python analysis.py \
 
 ## Metrics
 
-The toolkit evaluates 23 metrics across 5 categories:
+The toolkit evaluates 12 metrics across 5 categories:
 
-### Layout Metrics (8 metrics, weight: 35%)
-- **MarginDelta**: Average absolute margin difference
-- **EdgeCrowding**: Content proximity to edges
+### Layout Metrics (3 metrics)
 - **MarginAsymmetry**: Margin asymmetry degree
-- **CentroidDisplacement**: Content centroid displacement
 - **ContentAspectDiff**: Content aspect ratio difference
-- **AlignmentError**: Internal element alignment consistency
 - **AreaRatioDiff**: Element area distribution difference
-- **ElementCountDiff**: Number of detected elements difference
 
-### Legibility Metrics (3 metrics, weight: 20%)
+### Legibility Metrics (3 metrics)
 - **TextJaccard**: Text content similarity (Jaccard index)
-- **ContrastDiff**: Average contrast difference
-- **ContrastLocalDiff**: Local contrast difference (edges)
+- **ContrastDiff**: Global contrast difference
+- **ContrastLocalDiff**: Local contrast difference
 
-### Perceptual Metrics (3 metrics, weight: 25%)
+### Perceptual Metrics (2 metrics)
 - **SSIM**: Structural similarity index
 - **LPIPS**: Learned perceptual image patch similarity
-- **EdgeF1**: Edge detection F1 score
 
-### Style Metrics (3 metrics, weight: 15%)
+### Style Metrics (3 metrics)
 - **PaletteDistance**: Color palette distance
-- **Vibrancy**: Color vibrancy difference
+- **Vibrancy**: Color vibrancy consistency
 - **PolarityConsistency**: Brightness polarity consistency
 
-### Geometry Metrics (1 metric, weight: 5%)
+### Geometry Metrics (1 metric)
 - **geo_score**: Aspect ratio and dimensionality fidelity
-
-### Composite Scores
-- **layout_score**: Weighted average of layout metrics
-- **legibility_score**: Weighted average of legibility metrics
-- **perceptual_score**: Weighted average of perceptual metrics
-- **style_score**: Weighted average of style metrics
-- **total**: Overall quality score (weighted average of all categories)
 
 ## Hard Case Analysis
 
@@ -194,32 +189,22 @@ Each hard case image in the output folder includes the metric deltas in the file
 
 ## Baseline Max Scores
 
-The analysis compares against these baseline maximum scores:
+The analysis compares against baseline maximum scores defined in `analysis.py`. These baselines are used to identify hard cases where generated widgets underperform compared to the best historical results.
 
+Key metrics and their baselines:
 ```python
-MarginDelta: 58.176
-EdgeCrowding: 76.306
 MarginAsymmetry: 65.893
-CentroidDisplacement: 43.308
-ContentAspectDiff: 79.630
-AlignmentError: 40.912
-AreaRatioDiff: 87.634
-ElementCountDiff: 14.286
-TextJaccard: 66.587
-ContrastDiff: 60.556
-ContrastLocalDiff: 42.876
-SSIM: 66.424
-LPIPS: 34.099
-EdgeF1: 25.189
-PaletteDistance: 49.051
-Vibrancy: 46.908
-PolarityConsistency: 65.094
-layout_score: 30.793
-legibility_score: 50.011
-perceptual_score: 26.700
-style_score: 48.583
-geo_score: 100.0
-total: 51.282
+ContentAspectDiff: 67.632
+AreaRatioDiff: 80.014
+TextJaccard: 59.591
+ContrastDiff: 60.562
+ContrastLocalDiff: 42.875
+ssim: 70.345
+lp: 51.241
+PaletteDistance: 49.084
+Vibrancy: 46.919
+PolarityConsistency: 65.088
+geo_score: 61.354
 ```
 
 ## Development

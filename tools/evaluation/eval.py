@@ -7,7 +7,7 @@ import pandas as pd
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
 from widget_quality.utils import load_image, resize_to_match
-from widget_quality.perceptual import compute_perceptual
+from widget_quality.perceptual import compute_perceptual, set_device
 from widget_quality.layout import compute_layout
 from widget_quality.legibility import compute_legibility
 from widget_quality.style import compute_style
@@ -152,12 +152,8 @@ def evaluate_pairs(gt_dir="GT", pred_dir="baseline", num_workers=4):
                     counts["evaluated"] += 1
                     all_scores.append(result)
 
-                    print(f"[{i}/{total_gt}] ✅ {result['id']} evaluated → Overall {result['OverallScore']['total']:.2f} \
-        Layout: {result['LayoutScore']['layout_score']:.2f}\
-        Legibility: {result['LegibilityScore']['legibility_score']:.2f}\
-        Perceptual: {result['PerceptualScore']['perceptual_score']:.2f}\
-        Style: {result['StyleScore']['style_score']:.2f}\
-        Geo: {result['Geometry']['geo_score']:.2f}")
+                    print(f"[{i}/{total_gt}] ✅ {result['id']} evaluated → "
+                          f"Geo={result['Geometry']['geo_score']:.2f}")
                 else:
                     if "Missing prediction" in error_msg:
                         counts["missing_pred"] += 1
@@ -175,7 +171,7 @@ def evaluate_pairs(gt_dir="GT", pred_dir="baseline", num_workers=4):
 
     # --- Compute averages ---
     if all_scores:
-        keys = ["LayoutScore", "LegibilityScore", "PerceptualScore", "StyleScore", "Geometry", "OverallScore"]
+        keys = ["LayoutScore", "LegibilityScore", "StyleScore", "PerceptualScore", "Geometry"]
         avg = {}
 
         for k in keys:
@@ -211,53 +207,47 @@ def evaluate_pairs(gt_dir="GT", pred_dir="baseline", num_workers=4):
         run_name = os.path.basename(pred_dir)
         data_row.append(run_name)
 
-        # LayoutScore columns
+        # LayoutScore columns (only 3 metrics)
         if 'LayoutScore' in avg and isinstance(avg['LayoutScore'], dict):
-            layout_items = list(avg['LayoutScore'].items())
+            layout_metrics = ['MarginAsymmetry', 'ContentAspectDiff', 'AreaRatioDiff']
             header_row1.append('LayoutScore')
-            header_row1.extend([None] * (len(layout_items) - 1))
-            for key, value in layout_items:
-                header_row2.append(key)
-                data_row.append(round(value, 3))
+            header_row1.extend([None] * (len(layout_metrics) - 1))
+            for metric in layout_metrics:
+                header_row2.append(metric)
+                data_row.append(round(avg['LayoutScore'].get(metric, 0), 3))
 
-        # LegibilityScore columns
+        # LegibilityScore columns (only 3 metrics)
         if 'LegibilityScore' in avg and isinstance(avg['LegibilityScore'], dict):
-            legib_items = list(avg['LegibilityScore'].items())
+            legibility_metrics = ['TextJaccard', 'ContrastDiff', 'ContrastLocalDiff']
             header_row1.append('LegibilityScore')
-            header_row1.extend([None] * (len(legib_items) - 1))
-            for key, value in legib_items:
-                header_row2.append(key)
-                data_row.append(round(value, 3))
+            header_row1.extend([None] * (len(legibility_metrics) - 1))
+            for metric in legibility_metrics:
+                header_row2.append(metric)
+                data_row.append(round(avg['LegibilityScore'].get(metric, 0), 3))
 
-        # PerceptualScore columns
-        if 'PerceptualScore' in avg and isinstance(avg['PerceptualScore'], dict):
-            percep_items = list(avg['PerceptualScore'].items())
-            header_row1.append('PerceptualScore')
-            header_row1.extend([None] * (len(percep_items) - 1))
-            for key, value in percep_items:
-                header_row2.append(key)
-                data_row.append(round(value, 3))
-
-        # StyleScore columns
+        # StyleScore columns (only 3 metrics)
         if 'StyleScore' in avg and isinstance(avg['StyleScore'], dict):
-            style_items = list(avg['StyleScore'].items())
+            style_metrics = ['PaletteDistance', 'Vibrancy', 'PolarityConsistency']
             header_row1.append('StyleScore')
-            header_row1.extend([None] * (len(style_items) - 1))
-            for key, value in style_items:
-                header_row2.append(key)
-                data_row.append(round(value, 3))
+            header_row1.extend([None] * (len(style_metrics) - 1))
+            for metric in style_metrics:
+                header_row2.append(metric)
+                data_row.append(round(avg['StyleScore'].get(metric, 0), 3))
 
-        # Geometry
+        # PerceptualScore columns (only 2 metrics)
+        if 'PerceptualScore' in avg and isinstance(avg['PerceptualScore'], dict):
+            perceptual_metrics = ['ssim', 'lp']
+            header_row1.append('PerceptualScore')
+            header_row1.extend([None] * (len(perceptual_metrics) - 1))
+            for metric in perceptual_metrics:
+                header_row2.append(metric)
+                data_row.append(round(avg['PerceptualScore'].get(metric, 0), 3))
+
+        # Geometry (1 metric)
         if 'Geometry' in avg and isinstance(avg['Geometry'], dict):
             header_row1.append('Geometry')
             header_row2.append(None)
             data_row.append(round(avg['Geometry']['geo_score'], 3))
-
-        # Overall
-        if 'OverallScore' in avg and isinstance(avg['OverallScore'], dict):
-            header_row1.append('Overall')
-            header_row2.append(None)
-            data_row.append(round(avg['OverallScore']['total'], 3))
 
         # Create DataFrame with all three rows
         df = pd.DataFrame([header_row1, header_row2, data_row])
@@ -284,8 +274,13 @@ if __name__ == "__main__":
                         help='Path to baseline/prediction directory (required)')
     parser.add_argument('--workers', type=int, default=4,
                         help='Number of worker threads for parallel processing (default: 4)')
+    parser.add_argument('--cuda', action='store_true',
+                        help='Use CUDA/GPU for computation (default: CPU)')
 
     args = parser.parse_args()
+
+    # Set device for perceptual metrics (LPIPS)
+    set_device(use_cuda=args.cuda)
 
     # Check if directories exist
     if not os.path.exists(args.gt_dir):

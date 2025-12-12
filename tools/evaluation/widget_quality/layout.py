@@ -98,10 +98,9 @@ def analyze_internal_structure(mask_gt, mask_gen, min_area=10):
     # else:
     #     align_error = 0.0
 
+    # Only return the metric we need (AreaRatioDiff)
     return {
-        "ElementCountDiff": count_diff,
-        "AreaRatioDiff": float(area_ratio_diff),
-        "AlignmentError": float(align_error)
+        "AreaRatioDiff": float(area_ratio_diff)
     }
 
 
@@ -139,18 +138,11 @@ def compute_layout(gt, gen):
     # --- Inner metrics ---
     inner = analyze_internal_structure(mask_gt, mask_gen)
 
-    # Combine everything
+    # Return only the 3 metrics we need: MarginAsymmetry, ContentAspectDiff, AreaRatioDiff
     return {
-        # Outer layout
-        "MarginDelta": float(margin_delta),
-        "EdgeCrowding": float(crowd_rate),
         "MarginAsymmetry": float(margin_asym),
-        "CentroidDisplacement": float(centroid_disp),
         "ContentAspectDiff": float(aspect_diff),
-        # Inner layout
-        "ElementCountDiff": inner["ElementCountDiff"],
-        "AreaRatioDiff": inner["AreaRatioDiff"],
-        "AlignmentError": inner["AlignmentError"]
+        "AreaRatioDiff": inner["AreaRatioDiff"]
     }
 
 
