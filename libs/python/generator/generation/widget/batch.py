@@ -54,9 +54,7 @@ class StageTracker:
         {"key": "perception.graph", "display": "└─ Graph", "indent": 1, "parent": "perception"},
         {"key": "color", "display": "4. Color", "indent": 0},
         {"key": "dsl", "display": "5. DSL", "indent": 0},
-        {"key": "artifacts", "display": "5. Artifacts", "indent": 0},
-        {"key": "render", "display": "6. Render", "indent": 0},
-        {"key": "evaluation", "display": "7. Evaluation", "indent": 0},
+        {"key": "artifacts", "display": "6. Artifacts", "indent": 0},
         {"key": "done", "display": "✓ Done", "indent": 0},
         {"key": "failed", "display": "✗ Failed", "indent": 0}
     ]
@@ -254,16 +252,6 @@ class BatchGenerator:
         self.failed = 0
         self.results = []
         self.pbar = None
-
-        # Integrated rendering settings
-        self.integrated_render = os.getenv('INTEGRATED_RENDER', 'false').lower() == 'true'
-        try:
-            self.render_concurrency = int(os.getenv('RENDER_CONCURRENCY', str(self.concurrency)))
-        except Exception:
-            self.render_concurrency = self.concurrency
-        self.render_semaphore: Optional[asyncio.Semaphore] = None
-        self.render_tasks: List[asyncio.Task] = []
-        self.render_results: List[Tuple[str, bool, str]] = []
 
         # Stage tracking
         self.stage_tracker = StageTracker()
@@ -502,87 +490,6 @@ class BatchGenerator:
 
         return images_to_process
 
-    async def _render_single_widget(self, widget_dir: Path, widget_id: str):
-        """Render a single widget directory using the JS renderer.
-
-        Updates StageTracker to 'render' when starting and to 'done' or 'failed' on completion.
-        Also updates internal completed/failed counters and progress bar in non-live mode.
-        """
-        try:
-            # Move to render stage
-            self.stage_tracker.set_stage(widget_id, "render")
-
-            # Use the shell script wrapper to ensure consistent env
-            cmd = ["bash", "./scripts/rendering/render-widget.sh", str(widget_dir)]
-
-            log_to_file(f"[Render Start] [{widget_id}] cmd: {' '.join(cmd)}")
-
-            # Spawn subprocess and capture output to run.log
-            proc = await asyncio.create_subprocess_exec(
-                *cmd,
-                stdout=asyncio.subprocess.PIPE,
-                stderr=asyncio.subprocess.STDOUT,
-            )
-
-            stdout, _ = await proc.communicate()
-            output_text = stdout.decode(errors='ignore') if stdout else ''
-            if output_text:
-                for line in output_text.splitlines():
-                    log_to_file(f"[Render][{widget_id}] {line}")
-
-            if proc.returncode == 0:
-                log_to_file(f"[Render End] [{widget_id}] ✓ success")
-                self.stage_tracker.set_stage(widget_id, "evaluation")
-                try:
-                    eval_cmd = [
-                        "bash", "./scripts/evaluation/run_eval_single.sh", str(widget_dir)
-                    ]
-                    gt_dir_env = os.getenv('EVAL_GT_DIR')
-                    if gt_dir_env:
-                        eval_cmd.append(gt_dir_env)
-                    log_to_file(f"[Eval Start] [{widget_id}] cmd: {' '.join(eval_cmd)}")
-                    eval_proc = await asyncio.create_subprocess_exec(
-                        *eval_cmd,
-                        stdout=asyncio.subprocess.PIPE,
-                        stderr=asyncio.subprocess.STDOUT,
-                    )
-                    out, _ = await eval_proc.communicate()
-                    out_text = out.decode(errors='ignore') if out else ''
-                    for line in out_text.splitlines():
-                        log_to_file(f"[Eval][{widget_id}] {line}")
-                    if eval_proc.returncode == 0:
-                        log_to_file(f"[Eval End] [{widget_id}] ✓ success")
-                        self.stage_tracker.set_stage(widget_id, "done")
-                        self.completed += 1
-                    else:
-                        log_to_file(f"[Eval End] [{widget_id}] ✗ failed code {eval_proc.returncode}")
-                        self.stage_tracker.set_stage(widget_id, "failed")
-                        self.failed += 1
-                        return  # Early return; progress bar updated below
-                except Exception as e:
-                    log_to_file(f"[Eval Error] [{widget_id}] {type(e).__name__}: {e}")
-                    self.stage_tracker.set_stage(widget_id, "failed")
-                    self.failed += 1
-                    return
-            else:
-                # Failure
-                self.stage_tracker.set_stage(widget_id, "failed")
-                self.failed += 1
-                self.render_results.append((widget_id, False, f"exit {proc.returncode}"))
-                log_to_file(f"[Render End] [{widget_id}] ✗ failed with code {proc.returncode}")
-
-            # Update progress bar if used
-            if self.pbar:
-                success_rate = (self.completed / (self.completed + self.failed) * 100) if (self.completed + self.failed) > 0 else 0
-                self.pbar.set_postfix(success=f"{success_rate:.1f}%", failed=self.failed)
-                self.pbar.update(1)
-
-        except Exception as e:
-            self.stage_tracker.set_stage(widget_id, "failed")
-            self.failed += 1
-            self.render_results.append((widget_id, False, str(e)))
-            log_to_file(f"[Render Error] [{widget_id}] {type(e).__name__}: {e}")
-
     async def generate_single(self, image_path: Path) -> Tuple[Path, bool, str]:
         """
         Generate widget DSL for a single image with complete debug data and visualizations.
@@ -612,34 +519,20 @@ class BatchGenerator:
             applogo_lib_names=os.getenv('APPLOGO_LIB_NAMES', '["si"]'),
             stage_tracker=self.stage_tracker,
             run_log_path=self.output_dir / "run.log",
-            integrated_render=self.integrated_render,
+            integrated_render=False,
         )
 
-        # Schedule integrated rendering if enabled and generation succeeded
-        if success and self.integrated_render and widget_dir is not None:
-            # Determine widget_id (same as image stem)
-            widget_id = image_path.stem
-            # Lazily create render semaphore
-            if self.render_semaphore is None:
-                self.render_semaphore = asyncio.Semaphore(self.render_concurrency)
-
-            async def _render_with_semaphore():
-                async with self.render_semaphore:
-                    await self._render_single_widget(widget_dir, widget_id)
-
-            task = asyncio.create_task(_render_with_semaphore())
-            self.render_tasks.append(task)
+        # Update counters
+        if success:
+            self.completed += 1
         else:
-            # No integrated rendering (or generation failed): finalize counters now
-            if success:
-                self.completed += 1
-            else:
-                self.failed += 1
+            self.failed += 1
 
-            if self.pbar:
-                success_rate = (self.completed / (self.completed + self.failed) * 100) if (self.completed + self.failed) > 0 else 0
-                self.pbar.set_postfix(success=f"{success_rate:.1f}%", failed=self.failed)
-                self.pbar.update(1)
+        # Update progress bar if used
+        if self.pbar:
+            success_rate = (self.completed / (self.completed + self.failed) * 100) if (self.completed + self.failed) > 0 else 0
+            self.pbar.set_postfix(success=f"{success_rate:.1f}%", failed=self.failed)
+            self.pbar.update(1)
 
         return (image_path, success, error_msg or str(widget_dir))
 
@@ -653,10 +546,6 @@ class BatchGenerator:
 
         tasks = [process_with_semaphore(img) for img in images]
         self.results = await asyncio.gather(*tasks, return_exceptions=False)
-
-        # If integrated rendering is enabled, wait for all render tasks to finish
-        if self.integrated_render and self.render_tasks:
-            await asyncio.gather(*self.render_tasks, return_exceptions=False)
 
     async def run(self):
         """Main execution flow."""

@@ -190,3 +190,45 @@ MAX_REQUESTS_PER_MINUTE=1000
 SAVE_DEBUG_VISUALIZATIONS=true           # Save intermediate images
 SAVE_PROMPTS=true                        # Save generation prompts
 ```
+
+## Evaluation
+
+### Benchmark Results
+
+The evaluation results on multiple benchmarks are available for download:
+
+**Download Link**: [Benchmarks Dataset (1.5GB)](https://drive.google.com/file/d/1TFLrW5lBLFX_hK7U9nQLRLiYn_hDOiT_/view?usp=sharing)
+
+This archive contains evaluation results across 13 benchmark datasets:
+- DCGen-Extracted-Widget
+- Design2Code-Extracted-Widget
+- Doubao_size
+- GPT_size
+- Gemini_size
+- LatCoder-Extracted-Widget
+- Pix2Code-Pytorch
+- Qwen3VL_235b_size
+- Screencoder
+- UICopilot
+- UIUG
+- WebSight-VLM-8B
+- Widget2Code
+
+To use the benchmarks:
+```bash
+# Install gdown (if not already installed)
+pip install gdown
+
+# Download using gdown (1.5GB)
+gdown --fuzzy "https://drive.google.com/file/d/1TFLrW5lBLFX_hK7U9nQLRLiYn_hDOiT_/view?usp=sharing"
+
+# If download fails, manually download from:
+# https://drive.google.com/file/d/1TFLrW5lBLFX_hK7U9nQLRLiYn_hDOiT_/view?usp=sharing
+
+# Extract to data/ directory
+mkdir -p data
+unzip benchmarks_backup_20251213.zip -d data/
+
+# Run evaluation on all benchmarks
+./scripts/evaluation/run_all_benchmarks.sh
+```
