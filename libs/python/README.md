@@ -59,4 +59,4 @@ Core dependencies include:
 
 ## License
 
-Part of the llm-widget-factory project.
+Part of the widget-factory project.

@@ -1,6 +1,6 @@
 {
-  "name": "@llm-widget-factory/synthesis",
-  "version": "1.0.0",
+  "name": "@widget-factory/synthesis",
+  "version": "0.0.0",
   "description": "Widget synthesis system for generating synthetic widget datasets",
   "type": "module",
   "main": "./description-generators/index.js",

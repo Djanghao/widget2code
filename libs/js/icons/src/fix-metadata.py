@@ -16,7 +16,7 @@ def extract_library_and_filename(path_str: str) -> tuple[str, str]:
     Extract library prefix and filename from path.
 
     Examples:
-        "/home/darren/llm-widget-factory/assets/ai/AiFillHeart.svg" -> ("ai", "AiFillHeart.svg")
+        "/path/to/widget-factory/assets/ai/AiFillHeart.svg" -> ("ai", "AiFillHeart.svg")
         "lu/LuHeart.svg" -> ("lu", "LuHeart.svg")
     """
     path = Path(path_str)

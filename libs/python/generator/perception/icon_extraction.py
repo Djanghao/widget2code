@@ -60,7 +60,7 @@ async def run_icon_detection_pipeline(
 
         # Resolve library roots from repo paths. If none provided, default to SF library.
         here = Path(__file__).resolve()
-        repo_root = here.parents[4]  # .../llm-widget-factory
+        repo_root = here.parents[4]  # .../widget-factory
         base_embeddings_dir = repo_root / "libs" / "js" / "icons" / "embeddings"
         default_sf_dir = base_embeddings_dir / "sf"
 

@@ -21,8 +21,8 @@ Automatically generate WidgetDSL specifications from screenshots using advanced 
 - Batch processing with configurable concurrency (supports 100+ concurrent workers)
 
 ### 2. Component Library
-20 production-ready UI components plus extensive icon support:
-- **Layout**: WidgetShell, Container
+19 production-ready UI components plus extensive icon support:
+- **Layout**: WidgetShell
 - **Text**: Text, Button, AppLogo
 - **Visual**: Icon, Image, MapImage, Divider, Indicator
 - **Input**: Checkbox, Slider, Switch
@@ -57,24 +57,12 @@ The platform leverages Vision-Language Models (By default, Qwen) for intelligent
 
 Installs all dependencies including Node.js packages and isolated Python environment.
 
-**Manual Setup**:
-```bash
-# Install Node.js dependencies
-npm install
-
-# Setup Python environment
-cd libs/python
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .
-```
-
 ### Configuration
 
 Create `.env` file with API credentials:
 ```bash
 cp .env.example .env
-# Edit .env and add DASHSCOPE_API_KEY
+# Edit .env and add DEFAULT_API_KEY
 ```
 
 ### Quick Start
@@ -97,70 +85,13 @@ npm run dev
 npm run dev:full
 ```
 
-**Full pipeline (Image → PNG)**:
-```bash
-# Terminal 1: Start server
-./scripts/dev/start-dev.sh
-
-# Terminal 2: Generate widget
-./scripts/pipeline/run-full.sh design.png ./result
-```
-
-
-## Project Architecture
-
-### Directory Structure
-
-```
-widget-factory/
-├── apps/
-│   ├── api/                  # FastAPI backend service
-│   │   ├── server.py         # Main server entry point
-│   │   ├── routes/           # API endpoints
-│   │   └── ...
-│   └── playground/           # React web interface
-│       ├── src/
-│       │   ├── components/   # React components
-│       │   ├── pages/        # Page layouts
-│       │   └── ...
-│       └── vite.config.ts
-├── libs/
-│   ├── js/                   # JavaScript/TypeScript packages (@widget-factory/*)
-│   │   ├── dsl/              # WidgetDSL specification & validation
-│   │   ├── compiler/         # DSL → JSX compilation
-│   │   ├── renderer/         # JSX → PNG rendering
-│   │   ├── primitives/       # 20 UI components
-│   │   ├── icons/            # Icon system (57,000+ icons)
-│   │   ├── cli/              # Command-line interface
-│   │   ├── exporter/         # Client-side PNG export
-│   │   ├── validator/        # DSL validation engine
-│   │   ├── resizer/          # Auto-resize utilities
-│   │   ├── dynamic/          # Dynamic component imports
-│   │   └── ...
-│   └── python/               # Python packages
-│       └── generator/        # AI widget generation engine
-│           ├── perception/   # Image analysis
-│           ├── generation/   # Widget/component generation
-│           ├── providers/    # LLM integrations
-│           └── utils/        # Utilities & caching
-├── scripts/                  # Shell automation
-│   ├── generation/           # Widget generation workflows
-│   ├── rendering/            # Compilation & rendering
-│   ├── pipeline/             # End-to-end pipelines
-│   ├── dev/                  # Development servers
-│   └── setup/                # Installation & configuration
-├── tools/                    # Analysis & evaluation
-│   └── evaluation/           # Quality metrics & hard case analysis
-└── README.md
-```
-
-### Environment Variables
+## Environment Variables
 
 Create `.env` file:
 
 ```bash
 # API Configuration
-DASHSCOPE_API_KEY=your-api-key
+DEFAULT_API_KEY=your-api-key
 
 # Server Ports
 BACKEND_PORT=8010

@@ -19,14 +19,6 @@ This will:
 
 The evaluation script will automatically use this environment when running.
 
-### Manual Installation
-
-If you prefer to install in your current environment:
-
-```bash
-pip install -r tools/evaluation/requirements.txt
-```
-
 ### System Dependencies
 
 **Tesseract OCR** (required for text metrics):
@@ -94,9 +86,9 @@ GT/
   ...
 
 results/
-  image_0001/output.png  (old structure)
+  image_0001/output.png
   OR
-  0001/pred.png          (new structure)
+  0001/pred.png
   ...
 ```
 
