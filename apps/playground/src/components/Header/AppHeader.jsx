@@ -28,85 +28,33 @@ const TabButton = ({ active, onClick, children }) => (
   </button>
 );
 
-const ExternalLink = ({ href, children }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
+const MobileMenuItem = ({ active, onClick, children }) => (
+  <button
+    onClick={onClick}
     style={{
-      padding: "8px 16px",
-      fontSize: 15,
+      padding: "16px 24px",
+      fontSize: 16,
       fontWeight: 500,
-      backgroundColor: "transparent",
-      color: "#8e8e93",
+      backgroundColor: active ? "#2c2c2e" : "transparent",
+      color: active ? "#007AFF" : "#f5f5f7",
       border: "none",
-      textDecoration: "none",
+      borderLeft: active ? "3px solid #007AFF" : "3px solid transparent",
       cursor: "pointer",
       transition: "all 0.2s ease",
-      position: "relative",
+      textAlign: "left",
+      width: "100%",
+      display: "block",
     }}
     onMouseEnter={(e) => {
-      e.target.style.color = "#f5f5f7";
+      if (!active) e.target.style.backgroundColor = "#2c2c2e";
     }}
     onMouseLeave={(e) => {
-      e.target.style.color = "#8e8e93";
+      if (!active) e.target.style.backgroundColor = "transparent";
     }}
   >
     {children}
-  </a>
+  </button>
 );
-
-const MobileMenuItem = ({ active, onClick, children, isExternal, href }) => {
-  const baseStyle = {
-    padding: "16px 24px",
-    fontSize: 16,
-    fontWeight: 500,
-    backgroundColor: active ? "#2c2c2e" : "transparent",
-    color: active ? "#007AFF" : "#f5f5f7",
-    border: "none",
-    borderLeft: active ? "3px solid #007AFF" : "3px solid transparent",
-    cursor: "pointer",
-    transition: "all 0.2s ease",
-    textAlign: "left",
-    width: "100%",
-    display: "block",
-    textDecoration: "none",
-  };
-
-  if (isExternal) {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={baseStyle}
-        onMouseEnter={(e) => {
-          if (!active) e.target.style.backgroundColor = "#2c2c2e";
-        }}
-        onMouseLeave={(e) => {
-          if (!active) e.target.style.backgroundColor = "transparent";
-        }}
-      >
-        {children}
-      </a>
-    );
-  }
-
-  return (
-    <button
-      onClick={onClick}
-      style={baseStyle}
-      onMouseEnter={(e) => {
-        if (!active) e.target.style.backgroundColor = "#2c2c2e";
-      }}
-      onMouseLeave={(e) => {
-        if (!active) e.target.style.backgroundColor = "transparent";
-      }}
-    >
-      {children}
-    </button>
-  );
-};
 
 export default function AppHeader({
   activeTab,
@@ -320,68 +268,6 @@ export default function AppHeader({
                   >
                     Widget2Code
                   </MobileMenuItem>
-                  <MobileMenuItem
-                    active={activeTab === "prompt2code"}
-                    onClick={() => handleTabChange("prompt2code")}
-                  >
-                    Prompt2Code
-                  </MobileMenuItem>
-                  <MobileMenuItem
-                    active={activeTab === "dynamic"}
-                    onClick={() => handleTabChange("dynamic")}
-                  >
-                    Dynamic
-                  </MobileMenuItem>
-                  <MobileMenuItem
-                    active={activeTab === "guides"}
-                    onClick={() => handleTabChange("guides")}
-                  >
-                    Guides
-                  </MobileMenuItem>
-                  <MobileMenuItem
-                    active={activeTab === "dsl-mutations"}
-                    onClick={() => handleTabChange("dsl-mutations")}
-                  >
-                    DSL Mutations
-                  </MobileMenuItem>
-                </div>
-
-                <div
-                  style={{
-                    padding: "16px 0 8px",
-                    borderTop: "1px solid #2c2c2e",
-                  }}
-                >
-                  <div
-                    style={{
-                      padding: "0 24px 12px",
-                      fontSize: 13,
-                      fontWeight: 600,
-                      color: "#8e8e93",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.5px",
-                    }}
-                  >
-                    External Links
-                  </div>
-                  <MobileMenuItem isExternal href="http://202.78.161.188:8080/">
-                    FastCVAT
-                  </MobileMenuItem>
-                  <MobileMenuItem isExternal href="http://202.78.161.188:3000/">
-                    Qwen API OpenWebUI
-                  </MobileMenuItem>
-                  <MobileMenuItem
-                    isExternal
-                    href="http://202.78.161.188:3010/viewer/"
-                  >
-                    W2C Viewer
-                  </MobileMenuItem>
-                  <MobileMenuItem
-                    isExternal
-                    href="http://202.78.161.188:3010/playground/"
-                  >
-                    W2C Playground
-                  </MobileMenuItem>
                 </div>
               </nav>
             </>
@@ -433,42 +319,6 @@ export default function AppHeader({
               >
                 Widget2Code
               </TabButton>
-              <TabButton
-                active={activeTab === "prompt2code"}
-                onClick={() => onTabChange("prompt2code")}
-              >
-                Prompt2Code
-              </TabButton>
-              <TabButton
-                active={activeTab === "dynamic"}
-                onClick={() => onTabChange("dynamic")}
-              >
-                Dynamic
-              </TabButton>
-              <TabButton
-                active={activeTab === "guides"}
-                onClick={() => onTabChange("guides")}
-              >
-                Guides
-              </TabButton>
-              <TabButton
-                active={activeTab === "dsl-mutations"}
-                onClick={() => onTabChange("dsl-mutations")}
-              >
-                DSL Mutations
-              </TabButton>
-              <ExternalLink href="http://202.78.161.188:8080/">
-                FastCVAT
-              </ExternalLink>
-              <ExternalLink href="http://202.78.161.188:3000/">
-                Qwen API OpenWebUI
-              </ExternalLink>
-              <ExternalLink href="http://202.78.161.188:3010/viewer/">
-                W2C Viewer
-              </ExternalLink>
-              <ExternalLink href="http://202.78.161.188:3010/playground/">
-                W2C Playground
-              </ExternalLink>
             </div>
           </div>
           <div style={{ display: "flex", gap: 12, alignItems: "center" }}>

@@ -1,7 +1,7 @@
 /**
  * @file App.jsx
  * @description Main application component for the widget playground.
- * Provides tabbed interface for presets, widget-to-dsl, prompt-to-dsl, and guides.
+ * Provides tabbed interface for presets and widget-to-code.
  * Manages widget compilation, preview, auto-resize, and download functionality.
  * @author Houston Zhang
  * @date 2025-10-03
@@ -17,10 +17,6 @@ import ApiKeyManager, { useApiKey } from "./components/ApiKeyManager.jsx";
 import useWidgetFrame from "./hooks/useWidgetFrame.js";
 import PresetsTab from "./components/PresetsTab/index.jsx";
 import Widget2Code from "./Widget2Code.jsx";
-import Prompt2Code from "./Prompt2Code.jsx";
-import Documentation from "./Documentation.jsx";
-import DynamicComponentGenerator from "./DynamicComponentGenerator.jsx";
-import DSLMutations from "./DSLMutations.jsx";
 import usePlaygroundStore from "./store/index.js";
 
 function App() {
@@ -175,7 +171,15 @@ function App() {
   const handleAutoResizeByRatio = useCallback(
     async (ratioOverride) => {
       const r = ratioOverride ?? parseAspectRatio(ratioInput);
-      if (!r) return;
+      if (!r) {
+        alert(
+          'Invalid aspect ratio. Please enter a valid ratio like:\n\n' +
+          '• 16:9 or 16/9\n' +
+          '• 1.777 (decimal)\n' +
+          '• 4:3, 3:2, 1:1, etc.'
+        );
+        return;
+      }
 
       await executeAutoResize(r, widgetFrameRef);
     },
@@ -236,34 +240,6 @@ function App() {
         />
       )}
 
-      {activeTab === "guides" && (
-        <div
-          key="guides"
-          style={{
-            flex: 1,
-            minHeight: 0,
-            animation: "fadeIn 0.2s ease-in-out",
-          }}
-        >
-          <Documentation />
-        </div>
-      )}
-
-      {activeTab === "dynamic" && (
-        <div
-          key="dynamic"
-          style={{
-            flex: 1,
-            minHeight: 0,
-            display: "flex",
-            flexDirection: "column",
-            animation: "fadeIn 0.2s ease-in-out",
-          }}
-        >
-          <DynamicComponentGenerator />
-        </div>
-      )}
-
       {activeTab === "widget2code" && (
         <div
           key="widget2code"
@@ -274,32 +250,6 @@ function App() {
           }}
         >
           <Widget2Code />
-        </div>
-      )}
-
-      {activeTab === "prompt2code" && (
-        <div
-          key="prompt2code"
-          style={{
-            flex: 1,
-            minHeight: 0,
-            animation: "fadeIn 0.2s ease-in-out",
-          }}
-        >
-          <Prompt2Code />
-        </div>
-      )}
-
-      {activeTab === "dsl-mutations" && (
-        <div
-          key="dsl-mutations"
-          style={{
-            flex: 1,
-            minHeight: 0,
-            animation: "fadeIn 0.2s ease-in-out",
-          }}
-        >
-          <DSLMutations />
         </div>
       )}
 
