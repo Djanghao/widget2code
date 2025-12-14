@@ -14,6 +14,21 @@ export function useApiKey() {
     return localStorage.getItem(API_KEY_STORAGE_KEY) || '';
   });
 
+  // Listen for storage changes from other components
+  useEffect(() => {
+    const handleStorageChange = () => {
+      const currentKey = localStorage.getItem(API_KEY_STORAGE_KEY) || '';
+      setApiKeyState(currentKey);
+    };
+
+    // Listen to custom event for same-window updates
+    window.addEventListener('apiKeyChanged', handleStorageChange);
+
+    return () => {
+      window.removeEventListener('apiKeyChanged', handleStorageChange);
+    };
+  }, []);
+
   const setApiKey = (key) => {
     const trimmedKey = key.trim();
     if (trimmedKey) {
@@ -22,11 +37,17 @@ export function useApiKey() {
       localStorage.removeItem(API_KEY_STORAGE_KEY);
     }
     setApiKeyState(trimmedKey);
+
+    // Dispatch custom event to notify other components
+    window.dispatchEvent(new Event('apiKeyChanged'));
   };
 
   const clearApiKey = () => {
     localStorage.removeItem(API_KEY_STORAGE_KEY);
     setApiKeyState('');
+
+    // Dispatch custom event to notify other components
+    window.dispatchEvent(new Event('apiKeyChanged'));
   };
 
   return { apiKey, setApiKey, clearApiKey, hasApiKey: !!apiKey };
@@ -37,10 +58,8 @@ export default function ApiKeyManager({ apiKey, onSave, onClose }) {
   const [showWarning, setShowWarning] = useState(!apiKey);
 
   const handleSave = () => {
-    if (inputValue.trim()) {
-      onSave(inputValue.trim());
-      onClose();
-    }
+    onSave(inputValue.trim());
+    onClose();
   };
 
   return (
@@ -186,30 +205,25 @@ export default function ApiKeyManager({ apiKey, onSave, onClose }) {
           </button>
           <button
             onClick={handleSave}
-            disabled={!inputValue.trim()}
             style={{
               padding: '10px 20px',
-              backgroundColor: inputValue.trim() ? '#007AFF' : '#3a3a3c',
+              backgroundColor: inputValue.trim() ? '#007AFF' : '#FF3B30',
               color: '#f5f5f7',
               border: 'none',
               borderRadius: 8,
               fontSize: 14,
               fontWeight: 600,
-              cursor: inputValue.trim() ? 'pointer' : 'not-allowed',
+              cursor: 'pointer',
               transition: 'all 0.2s'
             }}
             onMouseEnter={(e) => {
-              if (inputValue.trim()) {
-                e.currentTarget.style.backgroundColor = '#0051D5';
-              }
+              e.currentTarget.style.backgroundColor = inputValue.trim() ? '#0051D5' : '#D32F2F';
             }}
             onMouseLeave={(e) => {
-              if (inputValue.trim()) {
-                e.currentTarget.style.backgroundColor = '#007AFF';
-              }
+              e.currentTarget.style.backgroundColor = inputValue.trim() ? '#007AFF' : '#FF3B30';
             }}
           >
-            Save API Key
+            {inputValue.trim() ? 'Save API Key' : 'Clear API Key'}
           </button>
         </div>
       </div>
