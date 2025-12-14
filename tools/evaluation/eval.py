@@ -282,8 +282,8 @@ def evaluate_pairs(gt_dir="GT", pred_dir="baseline", num_workers=4):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Evaluate widget quality metrics between GT and prediction images.')
     parser.add_argument('--gt_dir', type=str,
-                        default="/shared/zhixiang_team/widget_research/Comparison/GT",
-                        help='Path to ground truth directory (default: /shared/zhixiang_team/widget_research/Comparison/GT)')
+                        default="GT",
+                        help='Path to ground truth directory (default: GT)')
     parser.add_argument('--baseline_dir', type=str, required=True,
                         help='Path to baseline/prediction directory (required)')
     parser.add_argument('--workers', type=int, default=4,

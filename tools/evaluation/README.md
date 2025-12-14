@@ -59,17 +59,9 @@ tools/evaluation/
 │   ├── perceptual.py           # Perceptual metrics (SSIM, LPIPS)
 │   ├── style.py                # Style metrics
 │   └── utils.py                # Utility functions
-├── utils/                       # Utility scripts
-│   ├── bbx_extraction.py       # Bounding box extraction
-│   └── comparison.py           # Single image pair comparison
-├── examples/                    # Example usage scripts
-│   ├── example.py              # Basic example
-│   └── example_loop.py         # Loop evaluation example
-└── archived/                    # Old/deprecated scripts
-    ├── loop_OneByOne.py        # Legacy evaluation script
-    ├── loop_metrics.py         # Old metrics loop
-    ├── loo_only.py             # Leave-one-out test
-    └── filter_hard.py          # Deprecated hard case filter
+└── utils/                       # Utility scripts
+    ├── bbx_extraction.py       # Bounding box extraction
+    └── comparison.py           # Single image pair comparison
 ```
 
 ## Quick Start
