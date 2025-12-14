@@ -30,7 +30,6 @@ const TabButton = ({ active, onClick, children }) => (
 export default function MaterialsModal({ isOpen, onClose }) {
   const [modalTab, setModalTab] = useState('components');
   const [iconColor, setIconColor] = useState('rgba(255, 255, 255, 0.85)');
-  const [iconLibrary, setIconLibrary] = useState('sf');
 
   if (!isOpen) return null;
 
@@ -104,8 +103,6 @@ export default function MaterialsModal({ isOpen, onClose }) {
             <IconsTab
               iconColor={iconColor}
               setIconColor={setIconColor}
-              iconLibrary={iconLibrary}
-              setIconLibrary={setIconLibrary}
             />
           )}
         </div>

@@ -23,24 +23,8 @@ const sfIconCategories = {
   'Food & Drink': ['cup.and.saucer.fill', 'mug.fill', 'takeoutbag.and.cup.and.straw.fill', 'waterbottle.fill', 'wineglass.fill', 'birthday.cake.fill', 'fork.knife', 'fork.knife.circle.fill', 'carrot.fill', 'leaf.fill', 'fish.fill', 'flame.fill']
 };
 
-const lucideIconCategories = {
-  'Common': ['Home', 'Heart', 'Star', 'User', 'Settings', 'Search', 'Menu', 'X', 'Check', 'ChevronRight', 'ChevronLeft', 'ChevronUp', 'ChevronDown', 'Plus', 'Minus', 'Circle', 'Square', 'Triangle', 'Info', 'AlertCircle', 'AlertTriangle', 'HelpCircle', 'Bell', 'BellOff'],
-  'Weather': ['Sun', 'Moon', 'Cloud', 'CloudRain', 'CloudSnow', 'CloudLightning', 'CloudDrizzle', 'CloudFog', 'Wind', 'Snowflake', 'Droplet', 'Sunrise', 'Sunset', 'Thermometer', 'ThermometerSun', 'ThermometerSnowflake'],
-  'Navigation': ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowUpCircle', 'ArrowDownCircle', 'ArrowLeftCircle', 'ArrowRightCircle', 'Navigation', 'Compass', 'Map', 'MapPin', 'Navigation2', 'Locate', 'LocateFixed'],
-  'Communication': ['Mail', 'Send', 'MessageCircle', 'MessageSquare', 'Phone', 'PhoneCall', 'PhoneIncoming', 'PhoneOutgoing', 'Video', 'VideoOff', 'Mic', 'MicOff', 'Inbox', 'Archive'],
-  'Media': ['Play', 'Pause', 'Stop', 'SkipForward', 'SkipBack', 'FastForward', 'Rewind', 'Volume', 'Volume1', 'Volume2', 'VolumeX', 'Music', 'Headphones', 'Camera', 'CameraOff', 'Image', 'Film', 'Youtube'],
-  'Files': ['File', 'FileText', 'Folder', 'FolderOpen', 'FolderPlus', 'Download', 'Upload', 'Save', 'Copy', 'Clipboard', 'Paperclip', 'Link', 'ExternalLink', 'Trash', 'Trash2'],
-  'Edit': ['Edit', 'Edit2', 'Edit3', 'Pen', 'PenTool', 'Type', 'Bold', 'Italic', 'Underline', 'AlignLeft', 'AlignCenter', 'AlignRight', 'AlignJustify', 'Scissors', 'Eraser'],
-  'Time': ['Clock', 'Calendar', 'CalendarDays', 'Timer', 'Hourglass', 'Watch', 'Alarm', 'AlarmClock'],
-  'Devices': ['Laptop', 'Monitor', 'Smartphone', 'Tablet', 'Watch', 'Tv', 'Speaker', 'Headphones', 'Wifi', 'WifiOff', 'Bluetooth', 'Battery', 'BatteryCharging', 'BatteryLow', 'Power', 'PowerOff'],
-  'Shopping': ['ShoppingCart', 'ShoppingBag', 'CreditCard', 'DollarSign', 'Tag', 'Gift', 'Package', 'Percent', 'TrendingUp', 'TrendingDown', 'BarChart', 'PieChart', 'Activity'],
-  'Social': ['ThumbsUp', 'ThumbsDown', 'Share', 'Share2', 'Eye', 'EyeOff', 'Users', 'UserPlus', 'UserMinus', 'UserCheck', 'UserX', 'Flag', 'Bookmark'],
-  'Actions': ['Lock', 'Unlock', 'Key', 'LogIn', 'LogOut', 'Refresh', 'RotateCw', 'RotateCcw', 'Repeat', 'Shuffle', 'Filter', 'Maximize', 'Minimize', 'ZoomIn', 'ZoomOut']
-};
-
-export default function IconsTab({ iconColor, setIconColor, iconLibrary, setIconLibrary }) {
-  const iconCategories = iconLibrary === 'sf' ? sfIconCategories : lucideIconCategories;
-  const iconPrefix = iconLibrary === 'sf' ? 'sf:' : 'lucide:';
+export default function IconsTab({ iconColor, setIconColor }) {
+  const iconPrefix = 'sf:';
 
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 20 }}>
@@ -105,45 +89,8 @@ export default function IconsTab({ iconColor, setIconColor, iconLibrary, setIcon
         >
           Restore Default
         </button>
-        <div style={{ display: 'flex', gap: 0, marginLeft: 'auto' }}>
-          <button
-            onClick={() => setIconLibrary('sf')}
-            style={{
-              padding: '8px 16px',
-              fontSize: 13,
-              fontWeight: 500,
-              backgroundColor: iconLibrary === 'sf' ? '#007AFF' : '#2c2c2e',
-              color: iconLibrary === 'sf' ? 'white' : '#8e8e93',
-              border: '1px solid #3a3a3c',
-              borderRight: 'none',
-              borderTopLeftRadius: 6,
-              borderBottomLeftRadius: 6,
-              cursor: 'pointer',
-              transition: 'all 0.2s ease'
-            }}
-          >
-            SF Symbols
-          </button>
-          <button
-            onClick={() => setIconLibrary('lucide')}
-            style={{
-              padding: '8px 16px',
-              fontSize: 13,
-              fontWeight: 500,
-              backgroundColor: iconLibrary === 'lucide' ? '#007AFF' : '#2c2c2e',
-              color: iconLibrary === 'lucide' ? 'white' : '#8e8e93',
-              border: '1px solid #3a3a3c',
-              borderTopRightRadius: 6,
-              borderBottomRightRadius: 6,
-              cursor: 'pointer',
-              transition: 'all 0.2s ease'
-            }}
-          >
-            Lucide
-          </button>
-        </div>
       </div>
-      {Object.entries(iconCategories).map(([category, icons]) => (
+      {Object.entries(sfIconCategories).map(([category, icons]) => (
         <div key={category} style={{ backgroundColor: '#2c2c2e', borderRadius: 12, padding: 24, marginBottom: 16 }}>
           <h3 style={{ fontSize: 18, color: '#f5f5f7', fontWeight: 600, marginBottom: 16 }}>
             {category}

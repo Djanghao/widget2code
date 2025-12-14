@@ -24,8 +24,6 @@ export default function PreviewPanel({
   selectedExample,
   generatedJSX,
   frameSize,
-  downloadScale,
-  setDownloadScale,
 }) {
   const {
     setFinalSize,
@@ -294,43 +292,6 @@ export default function PreviewPanel({
           >
             Restore
           </button>
-          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-            <label
-              style={{
-                fontSize: 11,
-                color: "#8e8e93",
-                fontWeight: 600,
-                textTransform: "uppercase",
-                letterSpacing: "0.5px",
-              }}
-            >
-              Scale:
-            </label>
-            <select
-              value={downloadScale || 2}
-              onChange={(e) =>
-                setDownloadScale && setDownloadScale(Number(e.target.value))
-              }
-              style={{
-                padding: "6px 8px",
-                fontSize: 12,
-                fontWeight: 500,
-                backgroundColor: "#2c2c2e",
-                color: "#f5f5f7",
-                border: "1px solid #3a3a3c",
-                borderRadius: 6,
-                cursor: "pointer",
-                minWidth: 60,
-              }}
-              title="Download resolution scale"
-            >
-              <option value={1}>1x</option>
-              <option value={2}>2x</option>
-              <option value={3}>3x</option>
-              <option value={4}>4x</option>
-              <option value={5}>5x</option>
-            </select>
-          </div>
           <DownloadButton
             onClick={handleDownloadWidget}
             isDisabled={isLocked}

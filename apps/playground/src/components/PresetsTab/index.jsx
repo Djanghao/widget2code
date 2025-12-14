@@ -33,8 +33,6 @@ export default function PresetsTab({
   selectedPath,
   handleSelectNode,
   treeContainerRef,
-  downloadScale,
-  setDownloadScale,
 }) {
   const isLocked = operationMode !== "idle";
   const isCompiling = operationMode === "compiling";
@@ -247,8 +245,6 @@ export default function PresetsTab({
         selectedExample={selectedExample}
         generatedJSX={generatedJSX}
         frameSize={frameSize}
-        downloadScale={downloadScale}
-        setDownloadScale={setDownloadScale}
       />
 
       <TreePanel
