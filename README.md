@@ -8,20 +8,19 @@
 
 ## Overview
 
-**Widget Factory** is an end-to-end infrastructure with a widget-specific DSL, a multi-target compiler, and an adaptive rendering module for geometry-consistent widget reconstruction from screenshot image.
+**Widget2Code** is a baseline framework that strengthens both perceptual understanding and system-level generation for transforming visual widgets into UI code. 
 
 ## Key Capabilities
 
 ### 1. Widget Generation
-Automatically generate WidgetDSL specifications from screenshots using advanced vision-language models with:
-- Icon detection and intelligent retrieval from 57,000+ icons
-- Multi-chart recognition (LineChart, BarChart, StackedBarChart, RadarChart, PieChart, etc.)
+Automatically generate WidgetDSL from screenshots using advanced vision-language models with:
+- Icon detection and retrieval from 57,000+ icons
+- Chart recognition (LineChart, BarChart, StackedBarChart, RadarChart, PieChart, etc.)
 - Layout and composition analysis
 - Color extraction and preservation
-- Batch processing with configurable concurrency (supports 100+ concurrent workers)
 
 ### 2. Component Library
-19 production-ready UI components plus extensive icon support:
+19 UI components and icon support:
 - **Layout**: WidgetShell
 - **Text**: Text, Button, AppLogo
 - **Visual**: Icon, Image, MapImage, Divider, Indicator
@@ -29,22 +28,7 @@ Automatically generate WidgetDSL specifications from screenshots using advanced 
 - **Charts**: LineChart, BarChart, StackedBarChart, RadarChart, PieChart, ProgressBar, ProgressRing, Sparkline
 
 ### 3. Interactive Playground
-Web-based interface for widget creation and editing:
-- Preset templates gallery
-- Image upload and DSL generation
-- Natural language widget generation
-- Real-time JSON editing with syntax highlighting
-- Tree-based widget structure visualization
-- PNG export with dimension control
-- Responsive design preview
-
-### 4. Flexible Architecture
-Modular, composable design enabling multiple workflows:
-- Standalone generation (Python)
-- Server-based rendering (FastAPI + Playwright)
-- Programmatic API (JavaScript/TypeScript)
-- Command-line tools (Node.js)
-The platform leverages Vision-Language Models (By default, Qwen) for intelligent image analysis and includes a comprehensive component library with 6,950+ SF Symbols and 57,000+ additional icons with AI-powered retrieval.
+Web-based interface for widget creation
 
 ## Getting Started
 
@@ -67,21 +51,42 @@ cp .env.example .env
 
 ### Quick Start
 
-**Generate widgets from images**:
+**Step 1: Start API Service**
 ```bash
-# Single image
-./scripts/generation/generate-widget.sh mockup.png output/widget.json
-
-# Batch processing (5 concurrent workers)
-./scripts/generation/generate-batch.sh ./mockups ./output 5
+# Start API backend (required for batch processing)
+npm run api
 ```
 
-**Start interactive playground**:
+**Step 2: Generate Widgets (Batch)**
 ```bash
-# Frontend server only (port 3060)
-npm run dev
+# Batch generation with 5 concurrent workers
+./scripts/generation/generate-batch.sh ./mockups ./output 5
 
-# Frontend + API backend
+# Force regenerate all images
+./scripts/generation/generate-batch.sh ./mockups ./output 5 --force
+```
+
+**Step 3: Render Widgets (Batch)**
+```bash
+# Batch rendering with 5 concurrent workers
+./scripts/rendering/render-batch.sh ./output 5
+
+# Force rerender all widgets
+./scripts/rendering/render-batch.sh ./output 5 --force
+```
+
+**Step 4: Evaluate Results**
+```bash
+# Evaluate generated widgets against ground truth
+./scripts/evaluation/run_evaluation.sh ./output -g ./ground_truth
+
+# Use GPU and more workers for faster evaluation
+./scripts/evaluation/run_evaluation.sh ./output -g ./ground_truth --cuda -w 16
+```
+
+**Interactive Playground (Optional)**
+```bash
+# Start full stack (API + Frontend on ports 8010 + 3060)
 npm run dev:full
 ```
 
