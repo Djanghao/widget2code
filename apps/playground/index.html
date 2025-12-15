@@ -39,10 +39,52 @@
       *::-webkit-scrollbar-corner {
         background: #1c1c1e;
       }
+
+      /* Loading spinner animation */
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinner-rotate {
+        animation: spin 1s linear infinite;
+        transform-origin: center;
+      }
     </style>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Loading Spinner -->
+    <div id="app-loading" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1c1c1e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    ">
+      <svg width="64" height="64" viewBox="0 0 24 24" role="img" class="spinner-rotate">
+        <circle cx="12" cy="12" r="10" stroke="#3a3a3c" stroke-width="2" fill="none" opacity="0.25" />
+        <path d="M12 2 a10 10 0 0 1 0 20" stroke="#007AFF" stroke-width="2" stroke-linecap="round" fill="none" />
+      </svg>
+      <p style="
+        margin-top: 24px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 14px;
+        color: #8e8e93;
+      ">Loading Widget Playground...</p>
+    </div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
