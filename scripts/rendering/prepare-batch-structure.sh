@@ -42,7 +42,7 @@ SOURCE_DIR=$1
 OUTPUT_DIR=$2
 
 if [ ! -d "$SOURCE_DIR" ]; then
-    echo "Error: Source directory '$SOURCE_DIR' does not exist"
+    echo "ERROR: Source directory '$SOURCE_DIR' does not exist"
     exit 1
 fi
 
@@ -57,10 +57,10 @@ echo "Output: $OUTPUT_DIR"
 echo ""
 
 count=0
+shopt -s nullglob
 for json_file in "$SOURCE_DIR"/*.json; do
     if [ ! -f "$json_file" ]; then
-        echo "No JSON files found in $SOURCE_DIR"
-        exit 1
+        continue
     fi
 
     filename=$(basename "$json_file")
@@ -75,13 +75,19 @@ for json_file in "$SOURCE_DIR"/*.json; do
 
     cp "$json_file" "$target_file"
 
-    echo "✓ $widget_id"
+    echo "SUCCESS: $widget_id"
     count=$((count + 1))
 done
+shopt -u nullglob
+
+if [ $count -eq 0 ]; then
+    echo "ERROR: No JSON files found in $SOURCE_DIR"
+    exit 1
+fi
 
 echo ""
 echo "=========================================="
-echo "Complete!"
+echo "Complete"
 echo "=========================================="
 echo "Processed: $count widget(s)"
 echo ""
