@@ -45,7 +45,7 @@ export default function PreviewPanel({
       <div style={{
         display: 'flex',
         alignItems: 'center',
-        gap: 8,
+        gap: 16,
         marginBottom: 8,
         flexShrink: 0,
         minWidth: 0,
@@ -70,27 +70,28 @@ export default function PreviewPanel({
           </h2>
         </div>
         <div style={{ flex: 1, minWidth: 0 }} />
-        <input
-          value={ratioInput}
-          onChange={(e) => setRatioInput(e.target.value)}
-          placeholder="16:9 or 1.777"
-          style={{
-            flex: '0 1 120px',
-            minWidth: 80,
-            maxWidth: 120,
-            height: 28,
-            fontSize: 12,
-            color: '#f5f5f7',
-            backgroundColor: '#2c2c2e',
-            border: '1px solid #3a3a3c',
-            borderRadius: 6,
-            padding: '0 8px',
-            outline: 'none',
-            boxSizing: 'border-box'
-          }}
-          onFocus={(e) => (e.currentTarget.style.borderColor = '#007AFF')}
-          onBlur={(e) => (e.currentTarget.style.borderColor = '#3a3a3c')}
-        />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 6, flex: '0 0 auto' }}>
+          <span style={{ fontSize: 12, color: '#d1d1d6', whiteSpace: 'nowrap' }}>Ratio:</span>
+          <input
+            value={ratioInput}
+            onChange={(e) => setRatioInput(e.target.value)}
+            placeholder="16:9"
+            style={{
+              width: 80,
+              height: 28,
+              fontSize: 12,
+              color: '#f5f5f7',
+              backgroundColor: '#2c2c2e',
+              border: '1px solid #3a3a3c',
+              borderRadius: 6,
+              padding: '0 8px',
+              outline: 'none',
+              boxSizing: 'border-box'
+            }}
+            onFocus={(e) => (e.currentTarget.style.borderColor = '#007AFF')}
+            onBlur={(e) => (e.currentTarget.style.borderColor = '#3a3a3c')}
+          />
+        </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, flex: '0 0 auto' }}>
           <span style={{ fontSize: 12, color: '#d1d1d6', whiteSpace: 'nowrap' }}>AutoResize</span>
           <button
@@ -98,8 +99,8 @@ export default function PreviewPanel({
             aria-pressed={enableAutoResize}
             title="Toggle AutoResize"
             style={{
-              width: 44,
-              height: 24,
+              width: 48,
+              height: 28,
               borderRadius: 9999,
               border: '1px solid #3a3a3c',
               backgroundColor: enableAutoResize ? '#34C759' : '#2c2c2e',
@@ -107,16 +108,17 @@ export default function PreviewPanel({
               cursor: 'pointer',
               outline: 'none',
               padding: 0,
-              flexShrink: 0
+              flexShrink: 0,
+              boxSizing: 'border-box'
             }}
           >
             <span
               style={{
                 position: 'absolute',
-                top: 2,
-                left: enableAutoResize ? 22 : 2,
-                width: 20,
-                height: 20,
+                top: 3,
+                left: enableAutoResize ? 24 : 3,
+                width: 22,
+                height: 22,
                 borderRadius: '50%',
                 backgroundColor: '#fff',
                 transition: 'left 0.15s ease'
@@ -129,7 +131,8 @@ export default function PreviewPanel({
           disabled={autoSizing}
           style={{
             flex: '0 0 auto',
-            padding: '6px 10px',
+            height: 28,
+            padding: '0 10px',
             fontSize: 12,
             fontWeight: 500,
             backgroundColor: autoSizing ? '#3a3a3c' : '#2c2c2e',
@@ -139,7 +142,9 @@ export default function PreviewPanel({
             cursor: autoSizing ? 'default' : 'pointer',
             transition: 'all 0.2s ease',
             whiteSpace: 'nowrap',
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
+            display: 'flex',
+            alignItems: 'center'
           }}
           onMouseEnter={(e) => {
             if (!autoSizing) e.currentTarget.style.backgroundColor = '#3a3a3c';

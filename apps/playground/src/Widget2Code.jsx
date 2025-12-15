@@ -132,6 +132,14 @@ function Widget2Code() {
       formData.append('image', image);
 
       const response = await fetch('/api/generate-widget-full', { method: 'POST', body: formData });
+
+      // Check if response is JSON
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        const text = await response.text();
+        throw new Error(`Server error (${response.status}): ${text.substring(0, 200)}`);
+      }
+
       const data = await response.json();
 
       if (!response.ok || !data.success) {
@@ -142,6 +150,7 @@ function Widget2Code() {
       setPipelineData(data);
       await startCompiling(data.widgetDSL, widgetFrameRef);
     } catch (err) {
+      console.error('Generation error:', err);
       setError(err.message);
     } finally {
       setIsGenerating(false);
@@ -406,6 +415,40 @@ function Widget2Code() {
           <DSLEditor
             value={previewSpec ? JSON.stringify(previewSpec, null, 2) : ''}
             readOnly
+            actions={
+              <button
+                onClick={() => {
+                  setPreviewSpec(null);
+                  setGeneratedCode('');
+                  setTreeRoot(null);
+                  setPipelineData(null);
+                }}
+                disabled={!previewSpec}
+                style={{
+                  height: 28,
+                  padding: '0 10px',
+                  fontSize: 12,
+                  fontWeight: 500,
+                  backgroundColor: !previewSpec ? '#3a3a3c' : '#2c2c2e',
+                  color: !previewSpec ? '#8e8e93' : '#f5f5f7',
+                  border: '1px solid #3a3a3c',
+                  borderRadius: 6,
+                  cursor: !previewSpec ? 'not-allowed' : 'pointer',
+                  transition: 'all 0.2s ease',
+                  boxSizing: 'border-box',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+                onMouseEnter={(e) => {
+                  if (previewSpec) e.currentTarget.style.backgroundColor = '#3a3a3c';
+                }}
+                onMouseLeave={(e) => {
+                  if (previewSpec) e.currentTarget.style.backgroundColor = '#2c2c2e';
+                }}
+              >
+                Reset
+              </button>
+            }
           />
         </div>
 

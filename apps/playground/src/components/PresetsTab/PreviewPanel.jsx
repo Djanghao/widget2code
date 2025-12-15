@@ -146,37 +146,38 @@ export default function PreviewPanel({
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 8,
+            gap: 16,
             marginLeft: "auto",
             flexWrap: "wrap",
             rowGap: 8,
           }}
         >
-          <input
-            value={ratioInput}
-            onChange={(e) => setRatioInput(e.target.value)}
-            placeholder="16:9 or 1.777"
-            disabled={isLocked}
-            style={{
-              flex: "0 1 120px",
-              minWidth: 80,
-              maxWidth: 120,
-              height: 28,
-              fontSize: 12,
-              color: isLocked ? "#8e8e93" : "#f5f5f7",
-              backgroundColor: isLocked ? "#1c1c1e" : "#2c2c2e",
-              border: "1px solid #3a3a3c",
-              borderRadius: 6,
-              padding: "0 8px",
-              outline: "none",
-              cursor: isLocked ? "not-allowed" : "text",
-              boxSizing: "border-box",
-            }}
-            onFocus={(e) =>
-              !isLocked && (e.currentTarget.style.borderColor = "#007AFF")
-            }
-            onBlur={(e) => (e.currentTarget.style.borderColor = "#3a3a3c")}
-          />
+          <div style={{ display: "flex", alignItems: "center", gap: 6, flex: "0 0 auto" }}>
+            <span style={{ fontSize: 12, color: isLocked ? "#8e8e93" : "#d1d1d6", whiteSpace: "nowrap" }}>Ratio:</span>
+            <input
+              value={ratioInput}
+              onChange={(e) => setRatioInput(e.target.value)}
+              placeholder="16:9"
+              disabled={isLocked}
+              style={{
+                width: 80,
+                height: 28,
+                fontSize: 12,
+                color: isLocked ? "#8e8e93" : "#f5f5f7",
+                backgroundColor: isLocked ? "#1c1c1e" : "#2c2c2e",
+                border: "1px solid #3a3a3c",
+                borderRadius: 6,
+                padding: "0 8px",
+                outline: "none",
+                cursor: isLocked ? "not-allowed" : "text",
+                boxSizing: "border-box",
+              }}
+              onFocus={(e) =>
+                !isLocked && (e.currentTarget.style.borderColor = "#007AFF")
+              }
+              onBlur={(e) => (e.currentTarget.style.borderColor = "#3a3a3c")}
+            />
+          </div>
           <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
             <span
               style={{ fontSize: 12, color: isLocked ? "#8e8e93" : "#d1d1d6" }}
@@ -213,8 +214,8 @@ export default function PreviewPanel({
               disabled={isLocked}
               title={isLocked ? "Locked during operation" : "Toggle AutoResize"}
               style={{
-                width: 44,
-                height: 24,
+                width: 48,
+                height: 28,
                 borderRadius: 9999,
                 border: "1px solid #3a3a3c",
                 backgroundColor: enableAutoResize ? "#34C759" : "#2c2c2e",
@@ -223,15 +224,16 @@ export default function PreviewPanel({
                 outline: "none",
                 padding: 0,
                 opacity: isLocked ? 0.5 : 1,
+                boxSizing: "border-box",
               }}
             >
               <span
                 style={{
                   position: "absolute",
-                  top: 2,
-                  left: enableAutoResize ? 22 : 2,
-                  width: 20,
-                  height: 20,
+                  top: 3,
+                  left: enableAutoResize ? 24 : 3,
+                  width: 22,
+                  height: 22,
                   borderRadius: "50%",
                   backgroundColor: "#fff",
                   transition: "left 0.15s ease",
@@ -243,7 +245,8 @@ export default function PreviewPanel({
             onClick={() => handleAutoResizeByRatio()}
             disabled={isLocked}
             style={{
-              padding: "6px 10px",
+              height: 28,
+              padding: "0 10px",
               fontSize: 12,
               fontWeight: 500,
               backgroundColor: isLocked ? "#3a3a3c" : "#2c2c2e",
@@ -252,6 +255,9 @@ export default function PreviewPanel({
               borderRadius: 6,
               cursor: isLocked ? "not-allowed" : "pointer",
               transition: "all 0.2s ease",
+              boxSizing: "border-box",
+              display: "flex",
+              alignItems: "center",
             }}
             onMouseEnter={(e) => {
               if (!isLocked) e.currentTarget.style.backgroundColor = "#3a3a3c";
@@ -272,7 +278,8 @@ export default function PreviewPanel({
             }}
             disabled={isLocked}
             style={{
-              padding: "6px 10px",
+              height: 28,
+              padding: "0 10px",
               fontSize: 12,
               fontWeight: 500,
               backgroundColor: isLocked ? "#3a3a3c" : "#2c2c2e",
@@ -281,6 +288,9 @@ export default function PreviewPanel({
               borderRadius: 6,
               cursor: isLocked ? "not-allowed" : "pointer",
               transition: "all 0.2s ease",
+              boxSizing: "border-box",
+              display: "flex",
+              alignItems: "center",
             }}
             onMouseEnter={(e) =>
               !isLocked && (e.currentTarget.style.backgroundColor = "#3a3a3c")

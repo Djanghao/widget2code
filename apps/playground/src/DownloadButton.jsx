@@ -17,7 +17,8 @@ export default function DownloadButton({
       onClick={onClick}
       disabled={disabled}
       style={{
-        padding: "6px 10px",
+        height: 28,
+        padding: "0 10px",
         fontSize: 12,
         fontWeight: 500,
         backgroundColor: isDisabled ? "#3a3a3c" : "#2c2c2e",
@@ -29,6 +30,7 @@ export default function DownloadButton({
         display: "flex",
         alignItems: "center",
         gap: 6,
+        boxSizing: "border-box",
       }}
       onMouseEnter={(e) => {
         if (!isDisabled && !isLoading)

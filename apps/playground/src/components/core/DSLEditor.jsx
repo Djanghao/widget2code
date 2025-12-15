@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function DSLEditor({ value, onChange, readOnly = false, title = 'WidgetDSL' }) {
+export default function DSLEditor({ value, onChange, readOnly = false, title = 'WidgetDSL', actions = null }) {
   return (
     <div style={{ minWidth: 0, minHeight: 0, display: 'flex', flexDirection: 'column', height: '100%' }}>
       <h2 style={{
@@ -20,6 +20,7 @@ export default function DSLEditor({ value, onChange, readOnly = false, title = '
           backgroundColor: '#34C759'
         }} />
         {title}
+        {actions && <div style={{ marginLeft: 'auto', display: 'flex', gap: 8 }}>{actions}</div>}
       </h2>
       <div style={{ position: 'relative', flex: 1, minHeight: 0 }}>
         <textarea
