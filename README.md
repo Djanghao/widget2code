@@ -36,7 +36,10 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
 
 ## 🎥 Demo
 <div align="center">
-  <video src="./assets/playground.mp4" width="80%" controls></video>
+  <video src="https://github.com/user-attachments/assets/883112b1-6d78-4576-a356-2a7061f31751" width="80%" controls></video>
+
+
+
 </div>
 
 ## 📑 Open-source Plan
