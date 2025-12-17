@@ -200,7 +200,7 @@ Widget2Code has been evaluated on 13 benchmark datasets:
 8. LatCoder
 9. UICopilot
 10. WebSight-VLM-8B
-11. Screencoder
+11. ScreenCoder
 12. UI-UG
 13. Widget2Code
 
@@ -208,7 +208,7 @@ Widget2Code has been evaluated on 13 benchmark datasets:
 
 The evaluation results on multiple benchmarks are available for download:
 
-**Download Link**: [Benchmarks Dataset (1.5GB)](https://drive.google.com/file/d/1TFLrW5lBLFX_hK7U9nQLRLiYn_hDOiT_/view?usp=sharing)
+**Download Link**: [Benchmarks Dataset (465MB)](https://drive.google.com/file/d/1LAYReu4fUES1IE0qM7h-zNGvyUgYnqwz/view?usp=sharing)
 
 This archive contains evaluation results across all 13 benchmark datasets.
 
@@ -217,14 +217,13 @@ To use the benchmarks:
 # Install gdown (if not already installed)
 pip install gdown
 
-# Download using gdown (1.5GB)
-gdown --fuzzy "https://drive.google.com/file/d/1TFLrW5lBLFX_hK7U9nQLRLiYn_hDOiT_/view?usp=sharing"
+# Download using gdown (465MB)
+gdown --fuzzy "https://drive.google.com/file/d/1LAYReu4fUES1IE0qM7h-zNGvyUgYnqwz/view?usp=sharing"
 
 # If download fails, manually download from the link above
 
-# Extract to data/ directory
-mkdir -p data
-unzip benchmarks_backup_20251213.zip -d data/
+# Extract to project root directory
+unzip benchmarks_backup_20251216.zip
 
 # Run evaluation on all benchmarks
 ./scripts/evaluation/run_all_benchmarks.sh
