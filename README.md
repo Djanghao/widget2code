@@ -12,11 +12,11 @@
 </div>
 
 
-Widget2Code is a baseline framework that strengthens both perceptual understanding and system-level generation for transforming visual widgets into UI code. It leverages advanced vision-language models to automatically generate production-ready WidgetDSL from screenshots, featuring icon detection across 57,000+ icons, chart recognition for 8 chart types, and sophisticated layout analysis. This repository provides the implementation and tools needed to generate high-fidelity UI code.
+Widget2Code is a baseline framework that strengthens both perceptual understanding and system-level generation for transforming visual widgets into UI code. It leverages advanced vision-language models to automatically generate production-ready WidgetDSL from screenshots, featuring icon detection across 57,000+ icons, layout analysis, component recognition and generation. This repository provides the implementation and tools needed to generate high-fidelity widget code.
 
 
 <div align="center">
-  <a href="https://arxiv.org/abs/PLACEHOLDER" target="_blank"><img src=https://img.shields.io/badge/Report-b5212f.svg?logo=arxiv height=22px></a>
+  <a href="https://arxiv.org/abs/PLACEHOLDER" target="_blank"><img src=https://img.shields.io/badge/paper-arxiv-red.svg height=22px></a>
   <a href=https://djanghao.github.io/widget2code/ target="_blank"><img src= https://img.shields.io/badge/Project-Page-bb8a2e.svg?logo=github height=22px></a>
   <a href=https://github.com/Djanghao/widget2code target="_blank"><img src=https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github height=22px></a>
   <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src=https://img.shields.io/badge/license-Apache%202.0-blue.svg height=22px></a>
@@ -29,25 +29,14 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
 📊 <a href="#-benchmarks--evaluation">Benchmarks</a>&nbsp&nbsp
 </p>
 
-## 🔥🔥🔥 News
-* 🚀 Dec 16, 2025: We release the complete Widget2Code framework including inference code, interactive playground, batch processing scripts, and evaluation tools.
-
-
-## 🎥 Demo
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/883112b1-6d78-4576-a356-2a7061f31751" width="60%" controls></video>
-</div>
-
 ## 📋 Table of Contents
 - [🎨 Widget2Code: From Visual Widgets to UI Code via Multimodal LLMs](#-widget2code-from-visual-widgets-to-ui-code-via-multimodal-llms)
+  - [📋 Table of Contents](#-table-of-contents)
   - [🔥🔥🔥 News](#-news)
   - [🎥 Demo](#-demo)
-  - [📋 Table of Contents](#-table-of-contents)
   - [📖 Overview](#-overview)
-  - [✨ Key Features](#-key-features)
-    - [1. Widget Generation](#1-widget-generation)
-    - [2. Component Library](#2-component-library)
-    - [3. Interactive Playground](#3-interactive-playground)
+  - [🏗️ Architecture](#️-architecture)
+    - [Generation Pipeline](#generation-pipeline)
   - [📜 System Requirements](#-system-requirements)
     - [Hardware Requirements](#hardware-requirements)
     - [Software Requirements](#software-requirements)
@@ -64,52 +53,52 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
     - [Performance Comparison](#performance-comparison)
     - [Evaluation Datasets](#evaluation-datasets)
     - [Download Benchmarks](#download-benchmarks)
-  - [🏗️ Architecture](#️-architecture)
-    - [Generation Pipeline](#generation-pipeline)
   - [📚 Citation](#-citation)
 
+
+## 🔥🔥🔥 News
+* 🚀 Dec 16, 2025: We release the complete Widget2Code framework including inference code, interactive playground, batch processing scripts, and evaluation tools.
+
+
+## 🎥 Demo
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/883112b1-6d78-4576-a356-2a7061f31751" width="60%" controls></video>
+</div>
 
 ## 📖 Overview
 
 **Widget2Code** is a baseline framework that strengthens both perceptual understanding and system-level generation for transforming visual widgets into UI code.
 
-## ✨ Key Features
+## 🏗️ Architecture
 
-### 1. Widget Generation
-Automatically generate WidgetDSL from screenshots using advanced vision-language models with:
-- **Icon Detection and Retrieval**: FAISS-based similarity search across 57,000+ icons from multiple libraries (Lucide, SF Symbols, Heroicons, Feather, Material Design, and more)
-- **Chart Recognition**: Specialized detection for 8 chart types (LineChart, BarChart, StackedBarChart, RadarChart, PieChart, ProgressBar, ProgressRing, Sparkline)
-- **Layout Analysis**: Multi-stage layout detection with intelligent retry mechanism for robust component positioning
-- **Color Extraction**: Sophisticated palette and gradient extraction with color preservation
-- **Multi-Domain Support**: Optimized prompts for 15+ application domains (weather, utilities, communication, health & fitness, productivity, etc.)
+Widget2Code employs a sophisticated multi-stage generation pipeline:
 
-### 2. Component Library
-19 production-ready UI components with full icon support:
-- **Layout**: WidgetShell (container with padding and background support)
-- **Text**: Text, Button, AppLogo
-- **Visual**: Icon, Image, MapImage, Divider, Indicator
-- **Input**: Checkbox, Slider, Switch
-- **Charts**: LineChart, BarChart, StackedBarChart, RadarChart, PieChart, ProgressBar, ProgressRing, Sparkline
+### Generation Pipeline
 
-### 3. Interactive Playground
-Web-based interface for widget creation and experimentation:
-- Real-time DSL editing and preview
-- Component library browser
-- Export to React JSX or HTML
-- 50+ built-in examples
+1. **Image Preprocessing**: Resolution normalization, format conversion, and quality analysis
+2. **Layout Detection**: Multi-stage layout analysis with intelligent retry mechanism for robust component positioning
+3. **Icon Retrieval**: FAISS-based similarity search across 57,000+ icons with dual-encoder (text + image) matching
+4. **Chart Recognition**: Specialized detection and classification for 8 chart types using vision models
+5. **Color Extraction**: Advanced palette and gradient analysis with perceptual color matching
+6. **DSL Generation**: LLM-based structured output generation with domain-specific prompts
+7. **Validation**: Schema validation, constraint checking, and error correction
+8. **Compilation**: DSL to React JSX/HTML transformation with optimization
+9. **Rendering**: Render from code to png in headless browser
+
+<div align="center">
+  <img src="./assets/framework.jpeg" alt="Widget2Code Architecture" width="100%">
+</div>
 
 ## 📜 System Requirements
 
 ### Hardware Requirements
 - **GPU**: NVIDIA GPU with CUDA support (recommended for icon retrieval acceleration)
 - **Memory**: Minimum 8GB RAM, 16GB+ recommended for batch processing
-- **Storage**: ~2GB for model embeddings and icon database
 
 ### Software Requirements
 - **Operating System**: Linux, macOS, or Windows (WSL2)
 - **Node.js**: 18.x or higher
 - **Python**: 3.10 or higher
-- **CUDA**: Compatible CUDA version for PyTorch (if using GPU acceleration)
 
 ## 🛠️ Dependencies and Installation
 
@@ -228,26 +217,6 @@ unzip benchmarks_backup_20251216.zip
 # Run evaluation on all benchmarks
 ./scripts/evaluation/run_all_benchmarks.sh
 ```
-
-## 🏗️ Architecture
-
-Widget2Code employs a sophisticated multi-stage generation pipeline:
-
-### Generation Pipeline
-
-1. **Image Preprocessing**: Resolution normalization, format conversion, and quality analysis
-2. **Layout Detection**: Multi-stage layout analysis with intelligent retry mechanism for robust component positioning
-3. **Icon Retrieval**: FAISS-based similarity search across 57,000+ icons with dual-encoder (text + image) matching
-4. **Chart Recognition**: Specialized detection and classification for 8 chart types using vision models
-5. **Color Extraction**: Advanced palette and gradient analysis with perceptual color matching
-6. **DSL Generation**: LLM-based structured output generation with domain-specific prompts
-7. **Validation**: Schema validation, constraint checking, and error correction
-8. **Compilation**: DSL to React JSX/HTML transformation with optimization
-9. **Rendering**: Render from code to png in headless browser
-
-<div align="center">
-  <img src="./assets/framework.jpeg" alt="Widget2Code Architecture" width="100%">
-</div>
 
 ## 📚 Citation
 

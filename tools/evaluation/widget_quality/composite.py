@@ -66,9 +66,9 @@ def handling_legibility(legibility):
 
 
 def handling_perceptual(perceptual):
-    # Keep the same transformation logic (0-1 -> 0-100)
-    ssim = 100 * np.clip(perceptual.get("SSIM", 0), 0, 1)
-    lp = 100 * np.clip(perceptual.get("LPIPS", 0), 0, 1)   # LPIPS may slightly exceed 1
+    # Keep values in 0-1 range (no multiplication by 100)
+    ssim = np.clip(perceptual.get("SSIM", 0), 0, 1)
+    lp = np.clip(perceptual.get("LPIPS", 0), 0, 1)   # LPIPS may slightly exceed 1
 
     # No longer calculate EdgeF1 and perceptual_score composite
 
