@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Widget2Code</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/fff5b27ec1.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="From Visual Widgets to UI Code via Multimodal LLMs">
+    <meta name="keywords" content="Widget2Code, UI2Code, Multimodal LLMs, Widget Design, Code Generation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Widget2Code: From Visual Widgets to UI Code via Multimodal LLMs</title>
+
+    <link rel="icon" href="./static/images/icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <script src="https://kit.fontawesome.com/fff5b27ec1.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title is-bold">
+                <span class="mmmu" style="vertical-align: middle">Widget2Code</span>
+              </h1>
+              <h2 class="subtitle is-3 publication-subtitle">
+                From Visual Widgets to UI Code via Multimodal LLMs
+              </h2>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Houston H. Zhang, TAO ZHANG, Baoze Lin, Yuanqi Xue, Yincheng Zhu, Huan Liu, Li Gu, Linfeng Ye, Ziqiang Wang, Xinxin Zuo, Yang Wang, YUANHAO YU, Zhixiang Chi</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="#" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper (Coming Soon)</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://github.com/Djanghao/widget2code" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="#dataset" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon has-text-white">
+                        <i class="fa-solid fa-database"></i>
+                      </span>
+                      <span>Dataset</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon has-text-white">
+                        <i class="fa-solid fa-trophy"></i>
+                      </span>
+                      <span>Leaderboard</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding: 2rem 1rem;">
+      <div class="container" style="max-width: 1200px;">
+        <img src="static/images/overview.jpeg" alt="Widget2Code Overview" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="margin-bottom: 2vh; max-width: 95%; padding-left: 0.5rem; padding-right: 0.5rem;">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                User interface to code (UI2Code) aims to generate executable code that can faithfully reconstruct a given input UI. Prior work focuses largely on web pages and mobile screens, leaving app widgets underexplored. Unlike web or mobile UIs with rich hierarchical context, widgets are compact, context-free micro-interfaces that summarize key information through dense layouts and iconography under strict spatial constraints. Moreover, while (image, code) pairs are widely available for web or mobile UIs, widget designs are proprietary and lack accessible markup.
+              </p>
+              <p>
+                We formalize this setting as the <b>Widget-to-Code (Widget2Code)</b> and introduce an image-only widget benchmark with fine-grained, multi-dimensional evaluation metrics. Benchmarking shows that although generalized multimodal large language models (MLLMs) outperform specialized UI2Code methods, they still produce unreliable and visually inconsistent code.
+              </p>
+              <p>
+                To address these limitations, we develop a baseline that jointly advances perceptual understanding and structured code generation. At the perceptual level, we follow widget design principles to assemble atomic components into complete layouts, equipped with icon retrieval and reusable visualization modules. At the system level, we design an end-to-end infrastructure, <b>WidgetFactory</b>, which includes a framework-agnostic widget-tailored domain-specific language (WidgetDSL) and a compiler that translates it into multiple front-end implementations (e.g., React, HTML/CSS). An adaptive rendering module further refines spatial dimensions to satisfy compactness constraints. Together, these contributions substantially enhance visual fidelity, establishing a strong baseline and unified infrastructure for future Widget2Code research.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 mmmu">
+          <span class="mmmu">Overview</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 95%; padding-left: 0.5rem; padding-right: 0.5rem;">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Framework Architecture</h2>
+            <div class="content has-text-justified">
+              <p>
+                Our Widget2Code framework consists of three key components: (1) <b>Data Curation</b>, which collects and processes widget images to construct our benchmark; (2) the <b>Perceptual Agent</b>, which decomposes the input into atomic components and extracts visual, semantic, and stylistic cues; and (3) <b>WidgetFactory</b>, an end-to-end infrastructure that generates, compiles, and adaptively renders WidgetDSL to reconstruct the input widget.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <img src="static/images/paper/overview.png" alt="framework overview" width="100%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-light is-small" id="dataset">
+      <div class="hero-body has-text-centered" style="padding: 1.5rem 1.5rem;">
+        <h1 class="title is-1 mmmu">Dataset & Benchmark</h1>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 1.5rem;">
+      <div class="container" style="max-width: 95%; padding-left: 0.5rem; padding-right: 0.5rem;">
+        <div class="columns is-centered m-4">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">Widget2Code Benchmark</h2>
+            <div class="content has-text-justified">
+              <p>
+                We introduce <b>Widget2Code</b>, the first image-only benchmark specifically designed to evaluate widget-to-code generation. Unlike existing UI2Code datasets that focus on web pages or mobile screens with accessible markup, widgets are compact, context-free micro-interfaces with dense layouts and strict spatial constraints, making code-paired data nearly impossible to collect. Our benchmark comprises <b>2,825 high-quality widgets</b> curated from design platforms (Figma, Dribbble, Refero) and real device screenshots, with <b>1,000 samples reserved for rigorous testing</b>.
+              </p>
+              <p>
+                To enable fine-grained evaluation beyond coarse global similarity metrics, we propose a suite of <b>visual-only metrics</b> inspired by Apple's Human Interface Guidelines. These metrics assess three critical dimensions: <b>Layout</b> (margin symmetry, content aspect ratio, area ratio), <b>Legibility</b> (text overlap, contrast consistency), and <b>Style</b> (palette fidelity, vibrancy, polarity). Our benchmark reveals that while generalized MLLMs (GPT-4o, Gemini-2.5) outperform specialized UI2Code models, all methods struggle with structural consistency, color accuracy, and dimension preservation—highlighting the unique challenges of widget reconstruction.
+              </p>
+            </div>
+
+            <div class="content has-text-centered" style="margin-top: 2rem;">
+              <div class="benchmark-comparison-container">
+                <div class="benchmark-img-wrapper">
+                  <img src="static/images/paper/web.png" alt="Web UI example" class="benchmark-img">
+                  <p class="benchmark-label"><b>(a)</b> Web UI</p>
+                </div>
+                <div class="benchmark-img-wrapper">
+                  <img src="static/images/paper/rico_2.png" alt="Mobile UI example" class="benchmark-img">
+                  <p class="benchmark-label"><b>(b)</b> Mobile UI</p>
+                </div>
+                <div class="benchmark-img-wrapper">
+                  <img src="static/images/paper/widget_9.png" alt="Widget example 1" class="benchmark-img">
+                  <p class="benchmark-label"><b>(c)</b> Widget 1</p>
+                </div>
+                <div class="benchmark-img-wrapper">
+                  <img src="static/images/paper/widget_10.png" alt="Widget example 2" class="benchmark-img">
+                  <p class="benchmark-label"><b>(d)</b> Widget 2</p>
+                </div>
+              </div>
+              <p class="has-text-justified" style="margin-top: 1rem;">
+                <b>Comparison across interface modalities.</b> Web and mobile UIs provide rich structural and textual context that supports rule-based code mapping, whereas widgets employ dense iconography, embedded graphs, and vivid color schemes within highly constrained layouts. These stylistic and structural compactness factors pose substantial challenges for UI-to-Code reconstruction.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="hero is-light is-small" id="benchmark">
+      <div class="hero-body has-text-centered" style="padding: 1.5rem 1.5rem;">
+        <h1 class="title is-1 mmmu">Benchmark Results</h1>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 1.5rem;">
+      <div class="container" style="max-width: 95%; padding-left: 0.5rem; padding-right: 0.5rem;">
+        <div class="columns is-centered m-4">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">Main Results</h2>
+            <div class="content has-text-justified">
+              <p>
+                We benchmark two groups of works: (1) generalized MLLMs like GPT-4o, Gemini2.5-Pro, Seed1.6-Thinking, Qwen3-VL and Qwen3-VL-235b; (2) specialized UI2Code methods built based upon MLLMs, e.g., ScreenCoder, UI-UG, DCGen, UICopilot, LatCoder, Design2Code, and WebSight-VLM-8B.
+              </p>
+              <p>
+                <b>Key Findings:</b> Specialized UI2Code models, although effective on web and mobile datasets, exhibit pronounced performance degradation on widgets. In contrast, general-purpose MLLMs such as GPT-4o and Gemini achieve higher visual fidelity, suggesting better perceptual grounding, yet they still struggle to preserve structural consistency and stylistic accuracy. Moreover, all methods fail to reproduce the exact widget dimensions, even when explicitly <i>prompted to match the input size</i>.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <img src="static/images/paper/model_comparison.png" alt="model comparison" width="30%">
+              <p><b>Style score comparison on our widget benchmark.</b> Generalized MLLMs outperform specialized UI2Code models, which are tuned for other UI formats instead of widgets.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered m-4">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3" id="leaderboard">Leaderboard</h2>
+            <div class="content has-text-justified">
+              <p>
+                Detailed quantitative results on our Widget2Code benchmark. The table shows performance across all evaluation metrics: Layout (Margin, Content, Area), Legibility (Text, Contrast, LocCon), Style (Palette, Vibrancy, Polarity), Perceptual (SSIM, LPIPS, CLIP), and Geometry. The best-performing model in each metric is <b>in-bold</b>, and the second best is <u>underlined</u>. Note that for LPIPS, lower values are better.
+              </p>
+            </div>
+            <div class="model-labels-container">
+              <span class="leaderboard-label our_method">Our Method</span>
+              <span class="leaderboard-label generalized">Generalized MLLM</span>
+              <span class="leaderboard-label specialized">Specialized UI2Code</span>
+            </div>
+            <br>
+            <div class="leaderboard-container">
+              <div class="table-wrapper">
+                <table id="mmmu-table">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" style="text-align: center; min-width: 80px;"></th>
+                      <th rowspan="2" style="text-align: center;">Methods</th>
+                      <th colspan="3" style="text-align: center;">Layout</th>
+                      <th colspan="3" style="text-align: center;">Legibility</th>
+                      <th colspan="3" style="text-align: center;">Style</th>
+                      <th colspan="3" style="text-align: center;">Perceptual</th>
+                      <th rowspan="2" style="text-align: center;">Geometry</th>
+                    </tr>
+                    <tr>
+                      <th style="text-align: center;">Margin</th>
+                      <th style="text-align: center;">Content</th>
+                      <th style="text-align: center;">Area</th>
+                      <th style="text-align: center;">Text</th>
+                      <th style="text-align: center;">Contrast</th>
+                      <th style="text-align: center;">LocCon</th>
+                      <th style="text-align: center;">Palette</th>
+                      <th style="text-align: center;">Vibrancy</th>
+                      <th style="text-align: center;">Polarity</th>
+                      <th style="text-align: center;">SSIM</th>
+                      <th style="text-align: center;">LPIPS↓</th>
+                      <th style="text-align: center;">CLIP</th>
+                    </tr>
+                  </thead>
+                  <tbody id="leaderboard-body">
+                    <!-- Table body will be populated dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="hero is-light is-small" id="qualitative">
+      <div class="hero-body has-text-centered" style="padding: 1.5rem 1.5rem;">
+        <h1 class="title is-1 mmmu">Qualitative Comparison</h1>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 1.5rem;">
+      <div class="container" style="max-width: 95%; padding-left: 0.5rem; padding-right: 0.5rem;">
+        <div class="columns is-centered m-4">
+          <div class="column is-full has-text-centered content">
+            <div class="content has-text-justified">
+              <p>
+                We present qualitative comparisons between our method (Widget2Code) and baseline approaches across diverse widget designs. Each example shows the input widget alongside outputs from generalized MLLMs (Gemini-2.5-Pro, GPT-4o, Qwen3-VL), specialized UI2Code models (ScreenCoder, UI-UG), and our method. Our approach demonstrates superior visual fidelity, structural consistency, and accurate color reproduction across various widget types.
+              </p>
+            </div>
+
+            <!-- Comparison Viewer -->
+            <div class="comparison-viewer-wrapper" style="margin-top: 2rem;">
+              <!-- Navigation Controls -->
+              <div class="comparison-nav">
+                <button class="nav-btn prev-btn" id="prevSample">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="sample-counter">
+                  <span id="currentSample">1</span> / <span id="totalSamples">5</span>
+                </div>
+                <button class="nav-btn next-btn" id="nextSample">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+
+              <!-- Samples Container -->
+              <div id="samplesContainer" class="samples-container">
+
+                <!-- Example 1: 0048 -->
+                <div class="sample-item active" data-sample="1">
+                  <div class="comparison-card">
+                    <!-- Target / Input Column -->
+                    <div class="target-view">
+                      <div class="card-header">
+                        <span class="icon"><i class="fa-solid fa-bullseye"></i></span>
+                        <span class="header-text">Target Design</span>
+                      </div>
+                      <div class="img-container input-container">
+                        <img src="static/images/comparison/0048/0048.png" alt="Ground Truth">
+                      </div>
+                    </div>
+
+                    <!-- Predictions Grid Column -->
+                    <div class="predictions-view">
+                      <div class="card-header">
+                        <span class="icon"><i class="fa-solid fa-robot"></i></span>
+                        <span class="header-text">Model Generations</span>
+                      </div>
+                      <div class="predictions-grid">
+                        <!-- Ours (Highlighted) -->
+                        <div class="prediction-item ours-item">
+                          <div class="prediction-img-wrapper">
+                            <span class="badge-ours">Ours</span>
+                            <img src="static/images/comparison/0048/0048_W2C-v1.8.2(qwen3vl-flash)-rerun_pred.png" alt="Widget2Code">
+                          </div>
+                          <p class="model-name">Widget2Code</p>
+                        </div>
+
+                        <!-- Others -->
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0048/0048_GPT_size_pred.png" alt="GPT-4o">
+                          </div>
+                          <p class="model-name">GPT-4o</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0048/0048_Gemini_size_pred.png" alt="Gemini 1.5 Pro">
+                          </div>
+                          <p class="model-name">Gemini 1.5 Pro</p>
+                        </div>
+
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0048/0048_Qwen3VL_size_pred.png" alt="Qwen3-VL">
+                          </div>
+                          <p class="model-name">Qwen3-VL</p>
+                        </div>
+
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0048/0048_Screencoder_pred.png" alt="ScreenCoder">
+                          </div>
+                          <p class="model-name">ScreenCoder</p>
+                        </div>
+
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0048/0048_UIUG_pred.png" alt="UI-UG">
+                          </div>
+                          <p class="model-name">UI-UG</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Example 2: 0550 -->
+                <div class="sample-item" data-sample="2">
+                  <div class="comparison-card">
+                    <div class="target-view">
+                      <div class="card-header">
+                        <span class="icon"><i class="fa-solid fa-bullseye"></i></span>
+                        <span class="header-text">Target Design</span>
+                      </div>
+                      <div class="img-container input-container">
+                        <img src="static/images/comparison/0550/0550.png" alt="Ground Truth">
+                      </div>
+                    </div>
+                    <div class="predictions-view">
+                      <div class="card-header">
+                        <span class="icon"><i class="fa-solid fa-robot"></i></span>
+                        <span class="header-text">Model Generations</span>
+                      </div>
+                      <div class="predictions-grid">
+                        <div class="prediction-item ours-item">
+                          <div class="prediction-img-wrapper">
+                            <span class="badge-ours">Ours</span>
+                            <img src="static/images/comparison/0550/0550_W2C-v1.8.2(qwen3vl-flash)-rerun_pred.png" alt="Widget2Code">
+                          </div>
+                          <p class="model-name">Widget2Code</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0550/0550_GPT_size_pred.png" alt="GPT-4o">
+                          </div>
+                          <p class="model-name">GPT-4o</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0550/0550_Gemini_size_pred.png" alt="Gemini 1.5 Pro">
+                          </div>
+                          <p class="model-name">Gemini 1.5 Pro</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0550/0550_Qwen3VL_size_pred.png" alt="Qwen3-VL">
+                          </div>
+                          <p class="model-name">Qwen3-VL</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0550/0550_Screencoder_pred.png" alt="ScreenCoder">
+                          </div>
+                          <p class="model-name">ScreenCoder</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0550/0550_UIUG_pred.png" alt="UI-UG">
+                          </div>
+                          <p class="model-name">UI-UG</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Example 3: 0783 -->
+                <div class="sample-item" data-sample="3">
+                  <div class="comparison-card">
+                    <div class="target-view">
+                      <div class="card-header">
+                        <span class="icon"><i class="fa-solid fa-bullseye"></i></span>
+                        <span class="header-text">Target Design</span>
+                      </div>
+                      <div class="img-container input-container">
+                        <img src="static/images/comparison/0783/0783.png" alt="Ground Truth">
+                      </div>
+                    </div>
+                    <div class="predictions-view">
+                      <div class="card-header">
+                        <span class="icon"><i class="fa-solid fa-robot"></i></span>
+                        <span class="header-text">Model Generations</span>
+                      </div>
+                      <div class="predictions-grid">
+                        <div class="prediction-item ours-item">
+                          <div class="prediction-img-wrapper">
+                            <span class="badge-ours">Ours</span>
+                            <img src="static/images/comparison/0783/0783_W2C-v1.8.2(qwen3vl-flash)-rerun_pred.png" alt="Widget2Code">
+                          </div>
+                          <p class="model-name">Widget2Code</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0783/0783_GPT_size_pred.png" alt="GPT-4o">
+                          </div>
+                          <p class="model-name">GPT-4o</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0783/0783_Gemini_size_pred.png" alt="Gemini 1.5 Pro">
+                          </div>
+                          <p class="model-name">Gemini 1.5 Pro</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0783/0783_Qwen3VL_size_pred.png" alt="Qwen3-VL">
+                          </div>
+                          <p class="model-name">Qwen3-VL</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0783/0783_Screencoder_pred.png" alt="ScreenCoder">
+                          </div>
+                          <p class="model-name">ScreenCoder</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0783/0783_UIUG_pred.png" alt="UI-UG">
+                          </div>
+                          <p class="model-name">UI-UG</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Example 4: 0946 -->
+                <div class="sample-item" data-sample="4">
+                  <div class="comparison-card">
+                    <div class="target-view">
+                      <div class="card-header">
+                        <span class="icon"><i class="fa-solid fa-bullseye"></i></span>
+                        <span class="header-text">Target Design</span>
+                      </div>
+                      <div class="img-container input-container">
+                        <img src="static/images/comparison/0946/0946.png" alt="Ground Truth">
+                      </div>
+                    </div>
+                    <div class="predictions-view">
+                      <div class="card-header">
+                        <span class="icon"><i class="fa-solid fa-robot"></i></span>
+                        <span class="header-text">Model Generations</span>
+                      </div>
+                      <div class="predictions-grid">
+                        <div class="prediction-item ours-item">
+                          <div class="prediction-img-wrapper">
+                            <span class="badge-ours">Ours</span>
+                            <img src="static/images/comparison/0946/0946_W2C-v1.8.2(qwen3vl-flash)-rerun_pred.png" alt="Widget2Code">
+                          </div>
+                          <p class="model-name">Widget2Code</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0946/0946_GPT_size_pred.png" alt="GPT-4o">
+                          </div>
+                          <p class="model-name">GPT-4o</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0946/0946_Gemini_size_pred.png" alt="Gemini 1.5 Pro">
+                          </div>
+                          <p class="model-name">Gemini 1.5 Pro</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0946/0946_Qwen3VL_size_pred.png" alt="Qwen3-VL">
+                          </div>
+                          <p class="model-name">Qwen3-VL</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0946/0946_Screencoder_pred.png" alt="ScreenCoder">
+                          </div>
+                          <p class="model-name">ScreenCoder</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/0946/0946_UIUG_pred.png" alt="UI-UG">
+                          </div>
+                          <p class="model-name">UI-UG</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Example 5: 1870 -->
+                <div class="sample-item" data-sample="5">
+                  <div class="comparison-card">
+                    <div class="target-view">
+                      <div class="card-header">
+                        <span class="icon"><i class="fa-solid fa-bullseye"></i></span>
+                        <span class="header-text">Target Design</span>
+                      </div>
+                      <div class="img-container input-container">
+                        <img src="static/images/comparison/1870/1870.png" alt="Ground Truth">
+                      </div>
+                    </div>
+                    <div class="predictions-view">
+                      <div class="card-header">
+                        <span class="icon"><i class="fa-solid fa-robot"></i></span>
+                        <span class="header-text">Model Generations</span>
+                      </div>
+                      <div class="predictions-grid">
+                        <div class="prediction-item ours-item">
+                          <div class="prediction-img-wrapper">
+                            <span class="badge-ours">Ours</span>
+                            <img src="static/images/comparison/1870/1870_W2C-v1.8.2(qwen3vl-flash)-rerun_pred.png" alt="Widget2Code">
+                          </div>
+                          <p class="model-name">Widget2Code</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/1870/1870_GPT_size_pred.png" alt="GPT-4o">
+                          </div>
+                          <p class="model-name">GPT-4o</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/1870/1870_Gemini_size_pred.png" alt="Gemini 1.5 Pro">
+                          </div>
+                          <p class="model-name">Gemini 1.5 Pro</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/1870/1870_Qwen3VL_size_pred.png" alt="Qwen3-VL">
+                          </div>
+                          <p class="model-name">Qwen3-VL</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/1870/1870_Screencoder_pred.png" alt="ScreenCoder">
+                          </div>
+                          <p class="model-name">ScreenCoder</p>
+                        </div>
+                        <div class="prediction-item">
+                          <div class="prediction-img-wrapper">
+                            <img src="static/images/comparison/1870/1870_UIUG_pred.png" alt="UI-UG">
+                          </div>
+                          <p class="model-name">UI-UG</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <p class="has-text-justified" style="margin-top: 2rem;">
+              <b>Qualitative comparison across methods.</b> For each example, we compare outputs from generalized MLLMs (Gemini-2.5-Pro, GPT-4o, Qwen3-VL), specialized UI2Code models (ScreenCoder, UI-UG), our method (Widget2Code), and the ground truth input. Our method consistently produces widgets with better visual fidelity, accurate color schemes, and proper structural layout compared to baseline approaches.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="hero is-light is-small" id="method">
+      <div class="hero-body has-text-centered" style="padding: 1.5rem 1.5rem;">
+        <h1 class="title is-1 mmmu">WidgetFactory: Baseline Framework</h1>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 1.5rem;">
+      <div class="container" style="max-width: 95%; padding-left: 0.5rem; padding-right: 0.5rem;">
+        <div class="columns is-centered m-4">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">Overview</h2>
+            <div class="content has-text-justified">
+              <p>
+                To address the limitations exposed by our benchmark, we develop <b>WidgetFactory</b>, an end-to-end infrastructure that bridges perceptual understanding and executable code generation. At the <b>perceptual level</b>, we design a modular agent that follows widget design principles to decompose input images into atomic components—integrating icon retrieval from a 50k SVG library, reusable component templates for charts and buttons, and automated color palette extraction. This structured analysis prevents hallucination and ensures semantic consistency.
+              </p>
+              <p>
+                At the <b>system level</b>, WidgetFactory introduces <b>WidgetDSL</b>, a compact domain-specific language that encodes layouts, styles, and hierarchies in a framework-agnostic format. A deterministic compiler translates WidgetDSL into multiple front-end implementations (React, HTML/CSS), while an <b>adaptive rendering module</b> uses feedback-guided binary search to optimize dimensions, prevent overflow, and satisfy compactness constraints. This unified pipeline substantially enhances visual fidelity, achieving perfect geometry scores and establishing a strong baseline for future Widget2Code research.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered m-4">
+          <div class="column is-full has-text-centered content">
+            <h2 class="title is-3">Component Library & Usage Examples</h2>
+            <div class="content has-text-justified">
+              <p>
+                For non-icon components, we define a library of reusable templates written in our DSL format. Each template encodes the structural and functional logic of common widget components such as buttons, charts, and text blocks, exposing configurable parameters for style, data binding, and runtime behavior. Given an extracted component, the system retrieves the corresponding component template and prompts the MLLM to refine or populate the template, producing a customized DSL instance that preserves the predefined component structure while adapting its visual style and data semantics to the input widget.
+              </p>
+              <p style="margin-top: 1rem;">
+                Below we showcase <b>usage examples</b> from our component library: BarChart, LineChart, PieChart, RadarChart, StackedBar, Sparkline, Button, Icon, ProgressBar, AppLogo, Text, and Checkbox. Each component type is demonstrated through multiple instantiations with varying visual styles and data configurations, illustrating how the same reusable template can be adapted to different design requirements.
+              </p>
+            </div>
+            <!-- Component Gallery Grid -->
+            <div style="margin-top: 2rem;">
+              <!-- Row 1: BarChart + LineChart -->
+              <div class="component-row">
+                <div class="component-row-container">
+                  <!-- BarChart Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">BarChart</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/BarChart/image_1.png" alt="BarChart 1" class="component-img">
+                      <img src="static/images/reusable-components/BarChart/image_2.png" alt="BarChart 2" class="component-img">
+                      <img src="static/images/reusable-components/BarChart/image_3.png" alt="BarChart 3" class="component-img">
+                      <img src="static/images/reusable-components/BarChart/image_4.png" alt="BarChart 4" class="component-img">
+                    </div>
+                  </div>
+                  <!-- LineChart Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">LineChart</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/LineChart/image_1.png" alt="LineChart 1" class="component-img">
+                      <img src="static/images/reusable-components/LineChart/image_2.png" alt="LineChart 2" class="component-img">
+                      <img src="static/images/reusable-components/LineChart/image_3.png" alt="LineChart 3" class="component-img">
+                      <img src="static/images/reusable-components/LineChart/image_4.png" alt="LineChart 4" class="component-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 2: PieChart + RadarChart -->
+              <div class="component-row">
+                <div class="component-row-container">
+                  <!-- PieChart Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">PieChart</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/PieChart/image_1.png" alt="PieChart 1" class="component-img">
+                      <img src="static/images/reusable-components/PieChart/image_2.png" alt="PieChart 2" class="component-img">
+                      <img src="static/images/reusable-components/PieChart/image_3.png" alt="PieChart 3" class="component-img">
+                      <img src="static/images/reusable-components/PieChart/image_4.png" alt="PieChart 4" class="component-img">
+                    </div>
+                  </div>
+                  <!-- RadarChart Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">RadarChart</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/RadarChart/image_1.png" alt="RadarChart 1" class="component-img">
+                      <img src="static/images/reusable-components/RadarChart/image_2.png" alt="RadarChart 2" class="component-img">
+                      <img src="static/images/reusable-components/RadarChart/image_3.png" alt="RadarChart 3" class="component-img">
+                      <img src="static/images/reusable-components/RadarChart/image_4.png" alt="RadarChart 4" class="component-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 3: StackedBar + Sparkline -->
+              <div class="component-row">
+                <div class="component-row-container">
+                  <!-- StackedBar Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">StackedBar</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/StackedBar/image_1.png" alt="StackedBar 1" class="component-img">
+                      <img src="static/images/reusable-components/StackedBar/image_2.png" alt="StackedBar 2" class="component-img">
+                      <img src="static/images/reusable-components/StackedBar/image_3.png" alt="StackedBar 3" class="component-img">
+                      <img src="static/images/reusable-components/StackedBar/image_4.png" alt="StackedBar 4" class="component-img">
+                    </div>
+                  </div>
+                  <!-- Sparkline Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">Sparkline</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/Sparkline/image_1.png" alt="Sparkline 1" class="component-img">
+                      <img src="static/images/reusable-components/Sparkline/image_2.png" alt="Sparkline 2" class="component-img">
+                      <img src="static/images/reusable-components/Sparkline/image_3.png" alt="Sparkline 3" class="component-img">
+                      <img src="static/images/reusable-components/Sparkline/image_4.png" alt="Sparkline 4" class="component-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 4: Button + Icon -->
+              <div class="component-row">
+                <div class="component-row-container">
+                  <!-- Button Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">Button</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/Button/image_1.png" alt="Button 1" class="component-img">
+                      <img src="static/images/reusable-components/Button/image_2.png" alt="Button 2" class="component-img">
+                      <img src="static/images/reusable-components/Button/image_3.png" alt="Button 3" class="component-img">
+                      <img src="static/images/reusable-components/Button/image_4.png" alt="Button 4" class="component-img">
+                    </div>
+                  </div>
+                  <!-- Icon Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">Icon</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/Icon/image_1.png" alt="Icon 1" class="component-img">
+                      <img src="static/images/reusable-components/Icon/image_2.png" alt="Icon 2" class="component-img">
+                      <img src="static/images/reusable-components/Icon/image_3.png" alt="Icon 3" class="component-img">
+                      <img src="static/images/reusable-components/Icon/image_4.png" alt="Icon 4" class="component-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 5: ProgressBar + AppLogo -->
+              <div class="component-row">
+                <div class="component-row-container">
+                  <!-- ProgressBar Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">ProgressBar</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/ProgressBar/image_1.png" alt="ProgressBar 1" class="component-img">
+                      <img src="static/images/reusable-components/ProgressBar/image_2.png" alt="ProgressBar 2" class="component-img">
+                      <img src="static/images/reusable-components/ProgressBar/image_3.png" alt="ProgressBar 3" class="component-img">
+                      <img src="static/images/reusable-components/ProgressBar/image_4.png" alt="ProgressBar 4" class="component-img">
+                    </div>
+                  </div>
+                  <!-- AppLogo Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">AppLogo</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/AppLogo/image_1.png" alt="AppLogo 1" class="component-img">
+                      <img src="static/images/reusable-components/AppLogo/image_2.png" alt="AppLogo 2" class="component-img">
+                      <img src="static/images/reusable-components/AppLogo/image_3.png" alt="AppLogo 3" class="component-img">
+                      <img src="static/images/reusable-components/AppLogo/image_4.png" alt="AppLogo 4" class="component-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 6: Text + Checkbox -->
+              <div class="component-row">
+                <div class="component-row-container">
+                  <!-- Text Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">Text</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/Text/image_1.png" alt="Text 1" class="component-img">
+                      <img src="static/images/reusable-components/Text/image_2.png" alt="Text 2" class="component-img">
+                      <img src="static/images/reusable-components/Text/image_3.png" alt="Text 3" class="component-img">
+                      <img src="static/images/reusable-components/Text/image_4.png" alt="Text 4" class="component-img">
+                    </div>
+                  </div>
+                  <!-- Checkbox Group -->
+                  <div class="component-group">
+                    <h3 class="title is-5" style="margin-bottom: 1rem; color: #363636; text-align: center;">Checkbox</h3>
+                    <div class="component-images">
+                      <img src="static/images/reusable-components/Checkbox/image_1.png" alt="Checkbox 1" class="component-img">
+                      <img src="static/images/reusable-components/Checkbox/image_2.png" alt="Checkbox 2" class="component-img">
+                      <img src="static/images/reusable-components/Checkbox/image_3.png" alt="Checkbox 3" class="component-img">
+                      <img src="static/images/reusable-components/Checkbox/image_4.png" alt="Checkbox 4" class="component-img">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="has-text-justified" style="margin-top: 2rem;"><b>Component library usage examples.</b> The figure above demonstrates how each reusable component template (BarChart, LineChart, PieChart, RadarChart, StackedBar, Sparkline, Button, Icon, ProgressBar, AppLogo, Text, and Checkbox) can be instantiated with different visual styles, color schemes, and data configurations while maintaining structural consistency.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>@article{widget2code2025,
+  title={Widget2Code: From Visual Widgets to UI Code via Multimodal LLMs},
+  author={Anonymous},
+  journal={arXiv preprint},
+  year={2025}
+}</code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is adapted from <a href="https://opening-benchmark.github.io/">OpenING</a>, <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
