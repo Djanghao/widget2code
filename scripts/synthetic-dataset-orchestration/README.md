@@ -2,6 +2,23 @@
 
 Automated 4-stage pipeline that generates synthetic widget datasets: from text descriptions to rendered images with VQA annotations.
 
+## Prerequisites
+
+**Stage 1 (Synthesis)** requires the backend API server:
+```bash
+cd libs/python/generator && python main.py
+```
+- Runs on `localhost:8010` by default (configurable via `BACKEND_PORT` in `.env`)
+- Requires `DASHSCOPE_API_KEY` in `.env` for LLM API access
+
+**Stage 3 (Rendering)** requires the frontend dev server:
+```bash
+cd apps/playground && npm run dev
+```
+- Runs on `localhost:3060` by default (configurable via `FRONTEND_PORT` in `.env`)
+
+To skip stages with server dependencies, use `--from-stage=2` (skips synthesis) or `--skip-stage=3` (skips rendering).
+
 ## Quick Start
 
 Test run (5 widgets, ~5 minutes):
