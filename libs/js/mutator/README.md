@@ -93,10 +93,10 @@ await mutator.generateReport();
 
 ## Output
 
-Generated DSLs are saved to `libs/js/mutator/results/[RUN-ID]/` with unique batch files and full tracking:
+Generated DSLs are saved to `output/2-mutator/batch-generated/[RUN-ID]/` with unique batch files and full tracking:
 
 ```
-libs/js/mutator/results/
+output/2-mutator/batch-generated/
 └── run-2025-10-30T20-35-30-abc123/    # Unique run ID (timestamp + random)
     ├── generation-report.json            # Statistics and metadata
     ├── run-2025-10-30T20-35-30-abc123-batch-001.json  # First 100 DSLs
@@ -146,7 +146,7 @@ Each generated DSL now includes:
 
 ## Algorithm (Mutate-and-Validate)
 
-1. **Load** existing valid DSLs as seed data from `apps/playground/src/examples/`
+1. **Load** existing valid DSLs as seed data from `output/2-mutator/seeds/`
 2. **Pick** a random seed DSL
 3. **Apply Transformations** (if using controlled/hybrid mode):
    - Apply theme transformations (colors, backgrounds, accents)
@@ -227,7 +227,7 @@ await mutator.generate(100);
 await initializeRenderer();
 
 // Load and render generated DSLs
-const batchPath = './libs/js/mutator/results/[RUN-ID]/batch-001.json';
+const batchPath = './output/2-mutator/batch-generated/[RUN-ID]/[RUN-ID]-batch-001.json';
 const batch = JSON.parse(fs.readFileSync(batchPath, 'utf8'));
 
 for (const item of batch) {
@@ -243,18 +243,18 @@ await closeRenderer();
 ### For ML Training
 
 ```javascript
-// Load generated DSLs
 import fs from 'fs';
 import path from 'path';
 
-const batchFiles = fs.readdirSync('./.artifacts/synthetic-dsls')
-  .filter(f => f.startsWith('batch-') && f.endsWith('.json'));
+const runDir = './output/2-mutator/batch-generated/[RUN-ID]';
+const batchFiles = fs.readdirSync(runDir)
+  .filter(f => f.includes('-batch-') && f.endsWith('.json'));
 
 const allDSLs = [];
 for (const file of batchFiles) {
-  const content = fs.readFileSync(path.join('./.artifacts/synthetic-dsls', file), 'utf8');
+  const content = fs.readFileSync(path.join(runDir, file), 'utf8');
   const batch = JSON.parse(content);
-  allDSLs.push(...batch.map(item => item.dsl));
+  allDSLs.push(...batch.map(item => item.resultDSL));
 }
 
 console.log(`Loaded ${allDSLs.length} DSL examples for training`);
@@ -263,7 +263,7 @@ console.log(`Loaded ${allDSLs.length} DSL examples for training`);
 ### For Validation Testing
 
 ```javascript
-import { compileWidgetDSLToJSX } from './libs/packages/compiler/src/compiler.js';
+import { compileWidgetDSLToJSX } from './libs/js/compiler/src/compiler.js';
 
 let successCount = 0;
 for (const dsl of allDSLs.slice(0, 100)) {

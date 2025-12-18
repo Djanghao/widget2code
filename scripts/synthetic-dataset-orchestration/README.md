@@ -40,10 +40,14 @@ Compile DSL to JSX and render PNG with bounding boxes
   - `artifacts/6-rendering/6.4-bounding-boxes.json`
 
 ### 4. VQA
-Generate Visual Question Answering dataset
+Generate Visual Question Answering dataset with train/val/test split (7:1:2)
 - Input: `output/3-rendering/widgets/`
-- Output: `output/4-vqa/combined.json`
-- Types: referring (box→text), grounding (text→box), layout
+- Output: `output/4-vqa/`
+  - `combined_{train,val,test}.json` - All tasks combined (60% general, 10% category, 20% referring, 10% layout)
+  - `general_grounding_{train,val,test}.json` - Detect all UI elements by type
+  - `category_grounding_{train,val,test}.json` - Find elements of specific types
+  - `referring_{train,val,test}.json` - Describe element at bounding box (box→text)
+  - `layout_{train,val,test}.json` - Generate layout code (image→code)
 
 ## Usage Options
 
@@ -67,7 +71,12 @@ output/
 ├── 1-synthesis/render-ready/          # Stage 1: DSL from descriptions
 ├── 2-mutator/flat/                    # Stage 2: Theme variations
 ├── 3-rendering/widgets/{id}/          # Stage 3: PNG + bboxes + artifacts
-├── 4-vqa/combined.json                # Stage 4: VQA dataset
+├── 4-vqa/                             # Stage 4: VQA dataset
+│   ├── combined_{train,val,test}.json
+│   ├── general_grounding_{train,val,test}.json
+│   ├── category_grounding_{train,val,test}.json
+│   ├── referring_{train,val,test}.json
+│   └── layout_{train,val,test}.json
 └── pipeline-logs/run-{timestamp}.log  # Execution logs
 ```
 
