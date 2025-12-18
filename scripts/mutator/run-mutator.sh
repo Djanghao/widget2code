@@ -8,10 +8,9 @@ PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 COUNT=100
 
 echo "Stage 2: Mutator"
-echo "  Count: $COUNT base DSLs"
-echo "  Mode: controlled (theme transformations only)"
-echo "  Themes: all (5 theme variants)"
-echo "  Total output: ~$((COUNT * 5)) DSLs"
+echo "  Base count: $COUNT DSLs"
+echo "  Vary: themes (5 variants)"
+echo "  Total output: $((COUNT * 5)) DSLs"
 echo ""
 
 # Validate Stage 1 output exists
@@ -31,7 +30,7 @@ fi
 echo ""
 echo "[2/3] Running mutator batch generation..."
 cd "$PROJECT_ROOT/libs/js/mutator"
-if ! node generate-dsl-diversity.js --count=$COUNT --mode=controlled --all-themes; then
+if ! node generate-dsl-diversity.js $COUNT --vary themes; then
   echo "ERROR: Mutator batch generation failed"
   exit 1
 fi

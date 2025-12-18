@@ -183,14 +183,14 @@ const result = validateRenderedWidget(widgetObject);
 ## Example: DSL Mutator Integration
 
 ```javascript
-import DSLDiversityGenerator from './libs/js/mutator/dsl-generator.js';
+import { DSLMutator } from '@widget-factory/mutator';
 import { validate, batchValidate } from '@widget-factory/validator';
 
-const generator = new DSLDiversityGenerator();
-await generator.initialize();
+const mutator = new DSLMutator();
+await mutator.initialize();
 
-// The generator now uses validateWidgetDSL internally
-await generator.generate(1000);
+// The mutator uses validate internally
+await mutator.generate(1000);
 
 // You can also validate generated DSLs manually
 const generatedDSLs = /* get from generator results */;
