@@ -35,15 +35,16 @@ Focus on extracting these elements:
 - **Background**: Chart background color
 - **Theme**: "light" or "dark"
 - **Grid lines**: Color, style (solid/dashed), visibility
-- **Bar styling**: Width, border radius, spacing between bars
+- **Bar styling**: Width, border radius (uniform or separate top/bottom), spacing between bars
 - **Value labels**: Whether values are displayed on/above bars
 
 ## Axis Label Customization (Advanced)
-- **Label colors**: `xAxisLabelColor`, `yAxisLabelColor` - Custom colors for axis labels
+- **Label colors**: `xAxisLabelColor`, `yAxisLabelColor` - Custom colors for axis labels (overrides theme)
 - **Label sizes**: `xAxisLabelFontSize`, `yAxisLabelFontSize` - Font size in pixels (default: 11)
-- **Label rotation**: `xAxisLabelRotate`, `yAxisLabelRotate` - Rotation angle in degrees (0 = horizontal)
+- **Label rotation**: `xAxisLabelRotate`, `yAxisLabelRotate` - Rotation angle in degrees (0 = horizontal, 45 = diagonal)
 - **Label suffixes**: `xAxisLabelSuffix`, `yAxisLabelSuffix` - Add suffix to axis values (e.g., "m" for minutes, "%" for percentages)
-- **Custom formatters**: For special number formatting (use sparingly)
+- **Label formatters**: `xAxisLabelFormatter`, `yAxisLabelFormatter` - Custom function for formatting labels (use for complex formatting)
+- **Label color override**: `labelColor` - Override color for all axis labels (both X and Y)
 
 ## Return WidgetDSL specification:
 ```json
@@ -72,7 +73,14 @@ Focus on extracting these elements:
     "yAxisLabelPosition": "left",
     "showValues": false,
     "barBorderRadius": 0,
-    "barWidth": 40
+    "barBorderRadiusTop": 8,  // Override top corners only
+    "barBorderRadiusBottom": 0,  // Override bottom corners only
+    "xAxisLabelColor": "#666666",
+    "yAxisLabelColor": "#666666",
+    "xAxisLabelFontSize": 11,
+    "yAxisLabelFontSize": 11,
+    "xAxisLabelRotate": 0,
+    "yAxisLabelRotate": 0
   }
 }
 ```
@@ -92,10 +100,18 @@ Focus on extracting these elements:
 - **yAxisLabelPosition**: "left" (labels left of axis)
 - **showValues**: false (don't show values on bars)
 - **barBorderRadius**: 0 (square corners)
-- **barWidth**: "auto" (auto-calculate width)
+- **barBorderRadiusTop**: null (uses barBorderRadius if not set)
+- **barBorderRadiusBottom**: null (uses barBorderRadius if not set)
 - **tickLineColor**: "#E0E0E0" (light gray grid lines)
 - **tickLineStyle**: "solid" (solid lines)
 - **backgroundColor**: "#FFFFFF" (white background)
+- **xAxisLabelColor**: null (uses theme color)
+- **yAxisLabelColor**: null (uses theme color)
+- **xAxisLabelFontSize**: 11 (default font size)
+- **yAxisLabelFontSize**: 11 (default font size)
+- **xAxisLabelRotate**: 0 (no rotation)
+- **yAxisLabelRotate**: 0 (no rotation)
+- **labelColor**: null (uses theme color for all labels)
 
 For gradient bars:
 ```json
@@ -127,6 +143,32 @@ For multiple series:
   ],
   "seriesNames": ["Series 1", "Series 2"],
   "colors": ["#3B82F6", "#EF4444"]
+}
+```
+
+For rounded top corners only (pill-shaped bars):
+```json
+{
+  "barBorderRadiusTop": 8,
+  "barBorderRadiusBottom": 0
+}
+```
+
+For custom label formatting:
+```json
+{
+  "xAxisLabelSuffix": "%",  // Add % to all X-axis labels
+  "yAxisLabelColor": "#FF6B6B",  // Red Y-axis labels
+  "xAxisLabelRotate": 45,  // Diagonal X-axis labels
+  "xAxisLabelFontSize": 10  // Smaller X-axis labels
+}
+```
+
+For per-bar color highlighting (single series):
+```json
+{
+  "data": [10, 20, 15, 30],
+  "colors": ["#666666", "#666666", "#FF6B6B", "#666666"]  // Highlight 3rd bar
 }
 ```
 

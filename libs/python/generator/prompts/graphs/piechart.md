@@ -19,12 +19,14 @@ Focus on extracting these elements:
 - **Order**: Maintain clockwise or counter-clockwise segment order
 
 ## Visual Styling
-- **Segment borders**: Border width and color between segments
+- **Segment borders**: Border width and color around segments
+- **Sector lines**: Lines between segments (showSectorLines, color, width, style)
 - **Segment separation**: Whether segments are pulled apart (exploded)
-- **Labels**: Position (inside/outside/center), font size, color
-- **Legend**: Position, labels, color indicators (if present)
-- **Center hole**: Inner radius percentage for donut charts (60-75 typical)
-- **Outer size**: Outer radius percentage (80-90 typical)
+- **Rounded segments**: Border radius for segment corners
+- **Labels**: Position (inside/outside/center), font size, color, values/percentages
+- **Legend**: Visibility, position, orientation (horizontal/vertical)
+- **Center hole**: Inner radius percentage for donut charts (40-75 typical)
+- **Outer size**: Outer radius percentage (smart auto-adjustment based on layout)
 
 ## Center Content Props (for donut/ring only):
 **IMPORTANT**: You can combine these props flexibly. Choose ONE of these patterns:
@@ -109,15 +111,19 @@ Choose appropriate icons based on semantic meaning:
     "showValues": true,
     "showPercentages": true,
     "labelPosition": "outside",
-    "animated": false,
-    "startAngle": -90,
+    "startAngle": 90,
     "clockwise": true,
-    "borderWidth": 2,
-    "borderColor": "#FFFFFF",
+    "borderWidth": 0,
+    "borderColor": "#ffffff",
     "roundedSegments": false,
-    "segmentBorderRadius": 0,
+    "segmentBorderRadius": 10,
+    "showSectorLines": true,
+    "sectorLineColor": "#333333",
+    "sectorLineWidth": 1,
+    "sectorLineStyle": "solid",
     "showLegend": false,
-    "legendPosition": "right"
+    "legendPosition": "right",
+    "legendOrientation": "vertical"
   }
 }
 ```
@@ -125,33 +131,39 @@ Choose appropriate icons based on semantic meaning:
 ## Default Behavior (when not visible in image):
 - **showTitle**: false (no title shown)
 - **variant**: "pie" (solid pie chart, not donut)
-- **innerRadius**: 0 (no center hole for pie chart)
-- **outerRadius**: 80 (default outer size)
-- **theme**: "light" (light background)
-- **showLabels**: true (show segment labels)
+- **innerRadius**: undefined (auto: 0 for pie, 40% for donut/ring)
+- **outerRadius**: undefined (auto-calculated based on legend/labels, typically 30-75%)
+- **theme**: "dark" (dark theme)
+- **backgroundColor**: "transparent" (transparent background)
+- **showLabels**: false (no segment labels)
 - **showValues**: false (don't show raw values on segments)
-- **showPercentages**: true (show percentages on segments)
+- **showPercentages**: false (don't show percentages on segments)
 - **labelPosition**: "outside" (labels outside the pie)
-- **startAngle**: -90 (start from top)
+- **startAngle**: 90 (start from top)
 - **clockwise**: true (progress clockwise)
-- **borderWidth**: 0 (no borders between segments)
-- **borderColor**: "#FFFFFF" (white borders if present)
+- **borderWidth**: 0 (no segment borders)
+- **borderColor**: "#ffffff" (white borders if present)
 - **roundedSegments**: false (sharp segment edges)
-- **segmentBorderRadius**: 0 (no corner rounding)
-- **showLegend**: true (show legend for multiple segments)
+- **segmentBorderRadius**: 10 (corner rounding if roundedSegments enabled)
+- **showSectorLines**: false (no lines between segments)
+- **sectorLineColor**: undefined (uses theme border color)
+- **sectorLineWidth**: 1 (thin lines)
+- **sectorLineStyle**: "solid" (solid lines)
+- **showLegend**: false (no legend)
 - **legendPosition**: "right" (legend on right side)
-- **animated**: false (no animation)
-- **backgroundColor**: "#FFFFFF" (white background)
-- **centerIconName**: null (no icon in center)
+- **legendOrientation**: "vertical" (vertical legend layout)
+- **centerIconName**: undefined (no icon in center)
 - **centerIconSize**: 32 (default icon size if used)
-- **centerIconColor**: null (uses theme text color if not specified)
-- **centerContent**: null (no custom content)
-- **centerText**: null (no label text)
-- **centerValue**: null (no value display)
+- **centerIconColor**: undefined (uses theme text color if not specified)
+- **centerContent**: undefined (no custom content)
+- **centerText**: "" (empty text)
+- **centerValue**: "" (empty value)
 - **centerValueStyle**: {} (default: fontSize 24px, bold, theme text color)
 - **centerTextStyle**: {} (default: fontSize 12px, normal, theme text color, 0.8 opacity)
 - **centerTextGap**: 4 (gap in pixels between centerValue and centerText)
-- **useCenterGraphic**: true (uses native rendering for center content)
+- **useCenterGraphic**: true (uses HTML overlay for center content)
+- **min**: undefined (no minimum value clamping)
+- **max**: undefined (no maximum value clamping)
 
 ## Common Patterns:
 
@@ -172,7 +184,7 @@ Choose appropriate icons based on semantic meaning:
 {
   "variant": "donut",
   "innerRadius": 65,
-  "centerIconName": "check-circle",
+  "centerIconName": "lu:LuCheckCircle",
   "centerIconSize": 36,
   "centerIconColor": "#10B981",
   "centerValue": "100%"
@@ -204,6 +216,35 @@ Choose appropriate icons based on semantic meaning:
   "variant": "ring",
   "innerRadius": 70,
   "centerValue": "85%"
+}
+```
+
+**Pie with sector divider lines**:
+```json
+{
+  "variant": "pie",
+  "showSectorLines": true,
+  "sectorLineColor": "#FFFFFF",
+  "sectorLineWidth": 2,
+  "sectorLineStyle": "solid"
+}
+```
+
+**Donut with rounded segments**:
+```json
+{
+  "variant": "donut",
+  "roundedSegments": true,
+  "segmentBorderRadius": 8
+}
+```
+
+**Pie with legend**:
+```json
+{
+  "showLegend": true,
+  "legendPosition": "bottom",
+  "legendOrientation": "horizontal"
 }
 ```
 
