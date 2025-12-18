@@ -1,5 +1,5 @@
 {
-  "name": "@widget-factory/vqa-generator",
+  "name": "@widget-factory/vqa-constructor",
   "version": "0.0.0",
   "type": "module",
   "main": "./src/index.js",
@@ -7,7 +7,7 @@
     ".": "./src/index.js",
     "./index.js": "./src/index.js"
   },
-  "description": "VQA dataset generator for UI understanding and grounding tasks",
+  "description": "VQA dataset constructor for UI understanding and grounding tasks",
   "keywords": [
     "vqa",
     "dataset",

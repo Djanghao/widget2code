@@ -1,23 +1,22 @@
-# @widget-factory/vqa-generator
+# @widget-factory/vqa-constructor
 
-VQA (Visual Question Answering) dataset generator for UI understanding tasks.
+VQA (Visual Question Answering) dataset constructor for UI understanding tasks.
 
 Following the methodology from **UI-UG: Unified MLLM for UI Understanding and Generation** (arXiv:2509.24361).
 
 ## Features
 
-- ✅ **UI Referring**: Describe elements within bounding boxes
-- ✅ **UI Grounding**: Find all instances of component types
-- ✅ **10 Question Templates** per task for diversity
-- ✅ **Normalized Coordinates**: 0-1000 range following UI-UG conventions
-- ✅ **Special Token Wrapping**: `<box_start>...<box_end>` format
-- ✅ **Spatial Ordering**: Reading order (top-to-bottom, left-to-right)
-- ✅ **JSON Structured Answers**: Easy parsing and validation
+- UI Referring: Describe elements within bounding boxes
+- UI Grounding: Find all instances of component types
+- 10 Question Templates per task for diversity
+- Normalized Coordinates: 0-1000 range following UI-UG conventions
+- Spatial Ordering: Reading order (top-to-bottom, left-to-right)
+- JSON Structured Answers: Easy parsing and validation
+- Train/Val/Test Split: 7:1:2 ratio
 
 ## Installation
 
 ```bash
-# Installed as part of widget-factory workspace
 npm install
 ```
 
@@ -26,19 +25,18 @@ npm install
 ### CLI Command
 
 ```bash
-# Generate VQA dataset for all widgets
-widget-factory batch-generate-vqa <widget-directory>
+widget-factory batch-generate-vqa-split <widget-directory>
 
-# With options
-widget-factory batch-generate-vqa ./widgets \
+widget-factory batch-generate-vqa-split ./widgets \
   --output-dir ./vqa-data \
-  --dataset-root ./my-dataset
+  --dataset-root ./my-dataset \
+  --seed 42
 ```
 
 ### Programmatic API
 
 ```javascript
-import { generateAllVQA } from '@widget-factory/vqa-generator';
+import { generateAllVQA } from '@widget-factory/vqa-constructor';
 
 const vqaData = generateAllVQA({
   boundingBoxData: { scale: 2, elements: {...} },

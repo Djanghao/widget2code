@@ -77,6 +77,9 @@ export function fillTemplate(template, values) {
  * @returns {Array<string>} Array of question variations
  */
 export function getReferringQuestions(formattedBox, isText = false) {
+  if (!Array.isArray(formattedBox) || formattedBox.length !== 4) {
+    throw new Error('formattedBox must be an array of 4 numbers [x1, y1, x2, y2]');
+  }
   const templates = isText ? REFERRING_TEXT_TEMPLATES : REFERRING_TEMPLATES;
   const boxStr = JSON.stringify(formattedBox);
   return templates.map(template => fillTemplate(template, { box: boxStr }));
@@ -88,5 +91,8 @@ export function getReferringQuestions(formattedBox, isText = false) {
  * @returns {Array<string>} Array of question variations
  */
 export function getGroundingQuestions(description) {
+  if (!description || typeof description !== 'string' || !description.trim()) {
+    throw new Error('description must be a non-empty string');
+  }
   return GROUNDING_TEMPLATES.map(template => fillTemplate(template, { description }));
 }

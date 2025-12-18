@@ -10,16 +10,21 @@
  * @returns {Object|null} Element data or null if not found
  */
 export function findElementInDSL(elementPath, dsl) {
+  if (!elementPath || typeof elementPath !== 'string') {
+    return null;
+  }
+  if (!dsl || typeof dsl !== 'object') {
+    return null;
+  }
+
   const parts = elementPath.split('.');
 
-  // Start from root
   let current = dsl.widget?.root;
   if (!current) return null;
 
-  // Navigate to the element
   for (let i = 1; i < parts.length; i++) {
-    const index = parseInt(parts[i]);
-    if (isNaN(index) || !current.children || !current.children[index]) {
+    const index = parseInt(parts[i], 10);
+    if (isNaN(index) || index < 0 || !current.children || index >= current.children.length) {
       return null;
     }
     current = current.children[index];
@@ -42,8 +47,7 @@ export function generateReferringAnswer(bbox, elementPath, dsl) {
   let description = `This is a ${bbox.component} element`;
   
   if (element) {
-    // Add content for Text and Button components
-    if (element.content) {
+    if (element.content && typeof element.content === 'string' && element.content.trim()) {
       description += ` with the text "${element.content}"`;
     }
     
@@ -87,11 +91,17 @@ export function generateReferringAnswer(bbox, elementPath, dsl) {
 
 /**
  * Generate answer for grounding task (Text-to-Box: locate an element)
- * @param {Array<number>} formattedBox - Formatted bounding box array [y1, x1, y2, x2]
+ * @param {Array<number>} formattedBox - Formatted bounding box array [x1, y1, x2, y2]
  * @param {string} description - Element description
  * @returns {string} Answer with bounding box in JSON format
  */
 export function generateGroundingAnswer(formattedBox, description) {
+  if (!Array.isArray(formattedBox) || formattedBox.length !== 4) {
+    throw new Error('formattedBox must be an array of 4 numbers [x1, y1, x2, y2]');
+  }
+  if (!description || typeof description !== 'string') {
+    throw new Error('description must be a non-empty string');
+  }
   return `Here is the bounding box for the ${description}:\n${JSON.stringify({ bbox_2d: formattedBox })}`;
 }
 

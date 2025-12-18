@@ -69,16 +69,17 @@ async function findWidgetsWithData(inputPath, options = {}) {
       continue;
     }
 
-    // Check for required files
     const dslFile = path.join(widgetDir, 'artifacts', '4-dsl', 'widget.json');
     const bboxFile = path.join(widgetDir, 'artifacts', '6-rendering', '6.4-bounding-boxes.json');
     const imageFile = path.join(widgetDir, 'output.png');
     const layoutFile = path.join(widgetDir, 'artifacts', '5-compilation', 'layout.jsx');
 
-    const dslExists = await fs.access(dslFile).then(() => true).catch(() => false);
-    const bboxExists = await fs.access(bboxFile).then(() => true).catch(() => false);
-    const imageExists = await fs.access(imageFile).then(() => true).catch(() => false);
-    const layoutExists = await fs.access(layoutFile).then(() => true).catch(() => false);
+    const [dslExists, bboxExists, imageExists, layoutExists] = await Promise.all([
+      fs.access(dslFile).then(() => true).catch(() => false),
+      fs.access(bboxFile).then(() => true).catch(() => false),
+      fs.access(imageFile).then(() => true).catch(() => false),
+      fs.access(layoutFile).then(() => true).catch(() => false)
+    ]);
 
     if (dslExists && bboxExists && imageExists) {
       // Calculate relative image path from dataset root
@@ -105,26 +106,30 @@ async function findWidgetsWithData(inputPath, options = {}) {
  * Load widget data (DSL, bounding boxes, layout code, image dimensions)
  */
 async function loadWidgetData(widget) {
+  if (!widget || typeof widget !== 'object') {
+    throw new Error('widget object is required');
+  }
+
   const dsl = JSON.parse(await fs.readFile(widget.dslFile, 'utf-8'));
   const boundingBoxData = JSON.parse(await fs.readFile(widget.bboxFile, 'utf-8'));
 
-  // Load layout.jsx if it exists
   let layoutCode = null;
   if (widget.layoutFile) {
     try {
       layoutCode = await fs.readFile(widget.layoutFile, 'utf-8');
     } catch (error) {
-      // Layout file missing or unreadable
       layoutCode = null;
     }
   }
 
-  // Get image dimensions from DSL
-  const imageWidth = dsl.widget.width;
-  const imageHeight = dsl.widget.height;
+  const imageWidth = dsl.widget?.width;
+  const imageHeight = dsl.widget?.height;
 
-  if (!imageWidth || !imageHeight) {
-    throw new Error(`Widget ${widget.widgetId}: Missing width/height in DSL`);
+  if (!Number.isFinite(imageWidth) || !Number.isFinite(imageHeight) ||
+      imageWidth <= 0 || imageHeight <= 0) {
+    throw new Error(
+      `Widget ${widget.widgetId}: Invalid dimensions in DSL (width: ${imageWidth}, height: ${imageHeight})`
+    );
   }
 
   return {
@@ -176,7 +181,17 @@ function seedRandom(seed) {
  * Write VQA pairs to JSON array file
  */
 async function writeJSON(filePath, vqaPairs) {
-  await fs.writeFile(filePath, JSON.stringify(vqaPairs, null, 2), 'utf-8');
+  if (!filePath || typeof filePath !== 'string') {
+    throw new Error('filePath must be a non-empty string');
+  }
+  if (!Array.isArray(vqaPairs)) {
+    throw new Error(`Expected array for writeJSON, got ${typeof vqaPairs}`);
+  }
+  try {
+    await fs.writeFile(filePath, JSON.stringify(vqaPairs, null, 2), 'utf-8');
+  } catch (error) {
+    throw new Error(`Failed to write JSON to ${filePath}: ${error.message}`);
+  }
 }
 
 /**
@@ -195,8 +210,8 @@ function addMetadata(pairs, taskType, widgetId) {
  * Target: 60% general grounding, 10% category grounding, 20% referring, 10% layout
  */
 function sampleWithDistribution(generalGrounding, categoryGrounding, referring, layout) {
-  // Shuffle arrays
   const shuffle = (array) => {
+    if (!Array.isArray(array)) return [];
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -205,13 +220,22 @@ function sampleWithDistribution(generalGrounding, categoryGrounding, referring, 
     return shuffled;
   };
 
-  // Calculate limiting factor based on target ratios
-  // If we want 60% general, 10% category, 20% referring, 10% layout
-  // Total = 100%, so if we have G general grounding pairs:
-  // - general: G pairs (60%)
-  // - category: G * (10/60) pairs (10%)
-  // - referring: G * (20/60) pairs (20%)
-  // - layout: G * (10/60) pairs (10%)
+  if (generalGrounding.length === 0 && categoryGrounding.length === 0 &&
+      referring.length === 0 && layout.length === 0) {
+    console.warn('All input arrays are empty, returning empty result');
+    return [];
+  }
+
+  if (generalGrounding.length === 0 || categoryGrounding.length === 0 || referring.length === 0) {
+    console.warn('One or more required categories are empty, returning all available pairs without ratio sampling');
+    const combined = [
+      ...shuffle(generalGrounding),
+      ...shuffle(categoryGrounding),
+      ...shuffle(referring),
+      ...shuffle(layout)
+    ];
+    return shuffle(combined);
+  }
 
   const generalLimit = generalGrounding.length;
   const categoryLimit = categoryGrounding.length / (10/60);
@@ -220,21 +244,29 @@ function sampleWithDistribution(generalGrounding, categoryGrounding, referring, 
 
   const limitingFactor = Math.min(generalLimit, categoryLimit, referringLimit, layoutLimit);
 
-  // Calculate counts for each type
+  if (!Number.isFinite(limitingFactor) || limitingFactor <= 0) {
+    console.warn('Insufficient data for ratio-based sampling, returning all pairs');
+    const combined = [
+      ...shuffle(generalGrounding),
+      ...shuffle(categoryGrounding),
+      ...shuffle(referring),
+      ...shuffle(layout)
+    ];
+    return shuffle(combined);
+  }
+
   const generalCount = Math.floor(limitingFactor);
   const categoryCount = Math.floor(limitingFactor * (10/60));
   const referringCount = Math.floor(limitingFactor * (20/60));
   const layoutCount = layout.length > 0 ? Math.floor(limitingFactor * (10/60)) : 0;
 
-  // Sample from each array
   const sampledGeneral = shuffle(generalGrounding).slice(0, generalCount);
   const sampledCategory = shuffle(categoryGrounding).slice(0, categoryCount);
   const sampledReferring = shuffle(referring).slice(0, referringCount);
   const sampledLayout = shuffle(layout).slice(0, layoutCount);
 
-  console.log(`📊 Sampled: ${generalCount} general + ${categoryCount} category + ${referringCount} referring + ${layoutCount} layout`);
+  console.log(`Sampled: ${generalCount} general + ${categoryCount} category + ${referringCount} referring + ${layoutCount} layout`);
 
-  // Combine and shuffle
   const combined = [...sampledGeneral, ...sampledCategory, ...sampledReferring, ...sampledLayout];
   return shuffle(combined);
 }
