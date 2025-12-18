@@ -2,10 +2,12 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { getRandomIcon } from "../data/descriptions/icons/getRandomIcon.js";
-import { getRandomMegalithImage } from "../data/descriptions/image-urls/getRandomMonolithImage.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+const DEFAULT_IMAGE_URLS_DIR = path.join(__dirname, "../data/descriptions/image-urls");
+const IMAGE_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
 
 // Load .env file
 function loadEnv() {
@@ -178,7 +180,17 @@ function isValidUrl(string) {
 }
 
 /**
- * Load image URLs from text file
+ * Check if string is a valid image path (local file or URL)
+ */
+function isValidImagePath(string) {
+  if (!string) return false;
+  if (isValidUrl(string)) return true;
+  const ext = path.extname(string).toLowerCase();
+  return IMAGE_EXTENSIONS.includes(ext);
+}
+
+/**
+ * Load image paths from text file (supports URLs and local paths)
  */
 function loadImageUrls(urlsFilePath) {
   if (!fs.existsSync(urlsFilePath)) {
@@ -186,14 +198,20 @@ function loadImageUrls(urlsFilePath) {
   }
 
   try {
+    const baseDir = path.dirname(urlsFilePath);
     return fs
       .readFileSync(urlsFilePath, "utf-8")
       .split("\n")
       .map((line) => line.trim())
-      .filter((line) => line && !line.startsWith("#") && isValidUrl(line));
+      .filter((line) => line && !line.startsWith("#") && isValidImagePath(line))
+      .map((line) => {
+        if (isValidUrl(line)) return line;
+        if (path.isAbsolute(line)) return line;
+        return path.resolve(baseDir, line);
+      });
   } catch (error) {
     console.error(
-      `  ❌ Error loading image URLs from ${urlsFilePath}:`,
+      `  ❌ Error loading image paths from ${urlsFilePath}:`,
       error.message
     );
     return [];
@@ -318,12 +336,18 @@ async function generateWidget(systemPrompt, userPrompt, port = null) {
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      throw new Error(
-        `API error (${response.status}): ${
-          error.error || error.detail || "Unknown error"
-        }`
-      );
+      let errorMessage = "Unknown error";
+      try {
+        const error = await response.json();
+        errorMessage = error.error || error.detail || error.message || "Unknown error";
+      } catch {
+        try {
+          errorMessage = await response.text();
+        } catch {
+          errorMessage = "Unknown error";
+        }
+      }
+      throw new Error(`API error (${response.status}): ${errorMessage}`);
     }
 
     return await response.json();
@@ -375,12 +399,18 @@ async function generateWidgetWithReference(
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      throw new Error(
-        `API error (${response.status}): ${
-          error.error || error.detail || "Unknown error"
-        }`
-      );
+      let errorMessage = "Unknown error";
+      try {
+        const error = await response.json();
+        errorMessage = error.error || error.detail || error.message || "Unknown error";
+      } catch {
+        try {
+          errorMessage = await response.text();
+        } catch {
+          errorMessage = "Unknown error";
+        }
+      }
+      throw new Error(`API error (${response.status}): ${errorMessage}`);
     }
 
     return await response.json();
@@ -398,12 +428,11 @@ function loadReferenceImages(referenceImagesDir) {
     return [];
   }
 
-  const imageExtensions = [".png", ".jpg", ".jpeg", ".webp"];
   const files = fs.readdirSync(referenceImagesDir);
 
   return files
     .filter((file) =>
-      imageExtensions.includes(path.extname(file).toLowerCase())
+      IMAGE_EXTENSIONS.includes(path.extname(file).toLowerCase())
     )
     .map((file) => path.join(referenceImagesDir, file));
 }
@@ -612,33 +641,15 @@ async function generateWidgetsForDomain(domain, options = {}) {
         let selectedImageUrl = null;
         const aspectRatio = desc.aspectRatio || null;
 
-        // Inject image URL if description requires it
-        if (desc.requiresImage) {
-          try {
-            selectedImageUrl = await getRandomMegalithImage();
-            if (selectedImageUrl) {
-              userPrompt = enhancePromptWithImage(
-                userPrompt,
-                selectedImageUrl,
-                desc.imagePlacement,
-                aspectRatio
-              );
-            } else {
-              console.warn(`   ⚠️  Failed to get image from Megalith for ${desc.id}`);
-            }
-          } catch (error) {
-            console.warn(`   ⚠️  Error fetching Megalith image for ${desc.id}: ${error.message}`);
-            if (imageUrls.length > 0) {
-              selectedImageUrl = selectImageUrl(imageUrls, usedUrls);
-              if (selectedImageUrl) {
-                userPrompt = enhancePromptWithImage(
-                  userPrompt,
-                  selectedImageUrl,
-                  desc.imagePlacement,
-                  aspectRatio
-                );
-              }
-            }
+        if (desc.requiresImage && imageUrls.length > 0) {
+          selectedImageUrl = selectImageUrl(imageUrls, usedUrls);
+          if (selectedImageUrl) {
+            userPrompt = enhancePromptWithImage(
+              userPrompt,
+              selectedImageUrl,
+              desc.imagePlacement,
+              aspectRatio
+            );
           }
         } else if (aspectRatio) {
           userPrompt = enhancePromptWithImage(userPrompt, null, null, aspectRatio);
@@ -664,18 +675,21 @@ async function generateWidgetsForDomain(domain, options = {}) {
         }
 
         // Transform widget: replace icons, fix image properties, normalize padding
-        if (widget.widgetDSL && widget.widgetDSL.widget) {
-          widget.widgetDSL.widget = transformGeneratedWidget(widget.widgetDSL.widget);
-          widget.widgetDSL.widget = normalizePadding(widget.widgetDSL.widget);
+        if (widget.widgetDSL?.widget) {
+          const transformed = transformGeneratedWidget(widget.widgetDSL.widget);
+          if (transformed) {
+            widget.widgetDSL.widget = normalizePadding(transformed);
+          }
 
-          if (aspectRatio && widget.widgetDSL.metadata) {
+          if (aspectRatio) {
+            widget.widgetDSL.metadata = widget.widgetDSL.metadata || {};
             widget.widgetDSL.metadata.aspectRatio = aspectRatio;
-          } else if (aspectRatio) {
-            widget.widgetDSL.metadata = { aspectRatio };
           }
         } else if (widget.widget) {
-          widget.widget = transformGeneratedWidget(widget.widget);
-          widget.widget = normalizePadding(widget.widget);
+          const transformed = transformGeneratedWidget(widget.widget);
+          if (transformed) {
+            widget.widget = normalizePadding(transformed);
+          }
         }
 
         // Save widget with metadata
@@ -829,7 +843,7 @@ function parseArgs() {
     useLLM: false,
     limit: null,
     referenceImagesDir: null,
-    imageUrlsDir: null,
+    imageUrlsDir: DEFAULT_IMAGE_URLS_DIR,
     referencesPerDescription: 1, // Number of reference variants per description
     promptPreset: null,
     port: null,
@@ -866,9 +880,6 @@ function parseArgs() {
     }
     if (arg.startsWith("--reference-images-dir=")) {
       options.referenceImagesDir = arg.split("=")[1];
-    }
-    if (arg.startsWith("--image-urls-dir=")) {
-      options.imageUrlsDir = arg.split("=")[1];
     }
     if (arg.startsWith("--references-per-description=")) {
       options.referencesPerDescription = parseInt(arg.split("=")[1]);
