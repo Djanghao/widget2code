@@ -50,6 +50,16 @@ const PRESETS_FILE = path.join(__dirname, "../config/prompt-presets.json");
  */
 
 const DEFAULT_DOMAINS = [
+  // Only generating utilities for testing
+  "utilities",
+
+  // Other domains disabled
+  // "sports",
+  // "travel",
+  // "food",
+  // "shopping",
+  // "social",
+
   // Completed domains commented out - resume from incomplete only
   // "health",
   // "finance",
@@ -59,12 +69,6 @@ const DEFAULT_DOMAINS = [
   // "communication",
   // "smart-home",
   // "navigation",
-  "utilities",
-  "sports",
-  "travel",
-  "food",
-  "shopping",
-  "social",
 ];
 
 /**

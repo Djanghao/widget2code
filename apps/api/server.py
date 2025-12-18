@@ -205,6 +205,9 @@ async def generate_widget_text(
     # Fallback to config default model if not provided
     model_to_use = model or gen_config.default_model
 
+    if not api_key_to_use:
+        raise HTTPException(status_code=400, detail="API key is required. Set DASHSCOPE_API_KEY in .env or provide api_key in request")
+
     return await generator.generate_widget_text(
         system_prompt, user_prompt, model_to_use, api_key_to_use, gen_config
     )

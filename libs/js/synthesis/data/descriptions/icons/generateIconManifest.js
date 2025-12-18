@@ -11,7 +11,7 @@ const require = createRequire(import.meta.url);
 // --- CONFIGURATION ---
 const PATHS = {
   localIcons: path.resolve(__dirname, "../src/assets/icons"), // Check this path relative to where you run the script!
-  output: path.resolve(__dirname, "../dist/icon-manifest.json"),
+  output: path.resolve(__dirname, "../manifest/icon-manifest.json"),
 };
 
 const IGNORED_DIRS = ["lib", "all", "plugin", "icons", "bin"];
