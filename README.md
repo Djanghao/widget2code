@@ -16,7 +16,7 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
 
 
 <div align="center">
-  <a href="https://arxiv.org/abs/PLACEHOLDER" target="_blank"><img src=https://img.shields.io/badge/paper-arxiv-red.svg height=22px></a>
+  <a href="https://arxiv.org/abs/2512.19918" target="_blank"><img src=https://img.shields.io/badge/paper-arxiv-red.svg height=22px></a>
   <a href=https://djanghao.github.io/widget2code/ target="_blank"><img src= https://img.shields.io/badge/Project-Page-bb8a2e.svg?logo=github height=22px></a>
   <a href=https://github.com/Djanghao/widget2code target="_blank"><img src=https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github height=22px></a>
   <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src=https://img.shields.io/badge/license-Apache%202.0-blue.svg height=22px></a>
