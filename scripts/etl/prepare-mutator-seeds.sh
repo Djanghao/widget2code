@@ -28,39 +28,39 @@ EXAMPLES_COUNT=0
 
 echo "[1/2] Copying synthesis render-ready output..."
 if [ -d "$SYNTHESIS_OUTPUT" ]; then
+  shopt -s nullglob
   for file in "$SYNTHESIS_OUTPUT"/*.json; do
-    if [ -f "$file" ]; then
-      basename=$(basename "$file")
-      cp "$file" "$OUTPUT_DIR/synthesis-$basename"
-      SYNTHESIS_COUNT=$((SYNTHESIS_COUNT + 1))
-    fi
+    basename=$(basename "$file")
+    cp "$file" "$OUTPUT_DIR/synthesis-$basename"
+    SYNTHESIS_COUNT=$((SYNTHESIS_COUNT + 1))
   done
-  echo "  ✓ Copied $SYNTHESIS_COUNT synthesis widgets"
+  shopt -u nullglob
+  echo "  SUCCESS: Copied $SYNTHESIS_COUNT synthesis widgets"
 else
-  echo "  ⚠ Synthesis output directory not found, skipping..."
+  echo "  WARNING: Synthesis output directory not found, skipping..."
 fi
 
 echo ""
 echo "[2/2] Copying 76 example widgets..."
 if [ -d "$EXAMPLES_DIR" ]; then
+  shopt -s nullglob
   for file in "$EXAMPLES_DIR"/*.json; do
-    if [ -f "$file" ]; then
-      basename=$(basename "$file")
-      cp "$file" "$OUTPUT_DIR/example-$basename"
-      EXAMPLES_COUNT=$((EXAMPLES_COUNT + 1))
-    fi
+    basename=$(basename "$file")
+    cp "$file" "$OUTPUT_DIR/example-$basename"
+    EXAMPLES_COUNT=$((EXAMPLES_COUNT + 1))
   done
-  echo "  ✓ Copied $EXAMPLES_COUNT example widgets"
+  shopt -u nullglob
+  echo "  SUCCESS: Copied $EXAMPLES_COUNT example widgets"
 else
-  echo "  ✗ Examples directory not found!"
-  exit 1
+  echo "  WARNING: Examples directory not found!"
+  echo "  Note: Mutator diversity will be limited without example seeds"
 fi
 
 TOTAL_COUNT=$((SYNTHESIS_COUNT + EXAMPLES_COUNT))
 
 echo ""
 echo "=========================================="
-echo "Seed Preparation Complete!"
+echo "Seed Preparation Complete"
 echo "=========================================="
 echo "Total seeds: $TOTAL_COUNT"
 echo "  - Synthesis: $SYNTHESIS_COUNT"

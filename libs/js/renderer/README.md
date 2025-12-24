@@ -180,7 +180,7 @@ await closeRenderer();
 ## Example: Using with DSL Mutator
 
 ```javascript
-import DSLDiversityGenerator from './libs/js/mutator/dsl-generator.js';
+import { DSLMutator } from '@widget-factory/mutator';
 import {
   initializeRenderer,
   renderWidget,
@@ -189,9 +189,9 @@ import {
 } from '@widget-factory/renderer';
 
 // Generate DSLs
-const generator = new DSLDiversityGenerator();
-await generator.initialize();
-await generator.generate(100);
+const mutator = new DSLMutator();
+await mutator.initialize();
+await mutator.generate(100);
 
 // Render some of them
 await initializeRenderer();

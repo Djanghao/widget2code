@@ -68,7 +68,8 @@ async def generate_widget_text(
             max_tokens=2000,
             timeout=config.default_timeout,
             system_prompt=system_prompt,
-            api_key=api_key
+            api_key=api_key,
+            base_url=config.default_base_url
         )
 
         messages = [ChatMessage(
@@ -138,7 +139,8 @@ async def generate_widget_text_with_reference(
             max_tokens=2000,
             timeout=config.default_timeout,
             system_prompt=system_prompt_final,
-            api_key=api_key
+            api_key=api_key,
+            base_url=config.default_base_url
         )
 
         # Build message with reference image first, then text prompt

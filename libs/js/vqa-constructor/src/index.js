@@ -40,9 +40,5 @@ export {
 } from './vqa-generator.js';
 
 export {
-  batchGenerateVQA
-} from './batch-generator.js';
-
-export {
   batchGenerateVQAWithSplit
 } from './batch-generator-split.js';

@@ -7,7 +7,7 @@
  * @date 2025-11-20
  */
 
-import { batchGenerateVQAWithSplit } from '@widget-factory/vqa-generator';
+import { batchGenerateVQAWithSplit } from '@widget-factory/vqa-constructor';
 
 /**
  * Re-export the batch generation function for CLI usage

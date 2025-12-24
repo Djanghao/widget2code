@@ -48,27 +48,27 @@ libs/js/synthesis/
 
 ```bash
 cd scripts/synthesis
-node run-synthesis.js --test
+./run-synthesis.sh --test
 ```
 
 ### Option 2: Run All Phases
 
 ```bash
 cd scripts/synthesis
-node run-synthesis.js
+./run-synthesis.sh
 ```
 
 ### Option 3: Run Individual Phases
 
 ```bash
 # Phase 1: Setup
-node run-synthesis.js --setup-only
+./run-synthesis.sh --setup-only
 
 # Phase 2: Generate
-node run-synthesis.js --generate-only
+./run-synthesis.sh --generate-only
 
 # Phase 3: Post-process
-node run-synthesis.js --postprocess-only
+./run-synthesis.sh --postprocess-only
 ```
 
 ## Detailed Workflow

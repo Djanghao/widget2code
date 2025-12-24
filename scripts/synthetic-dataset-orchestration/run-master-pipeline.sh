@@ -8,8 +8,16 @@ LOG_DIR="$PROJECT_ROOT/output/pipeline-logs"
 TIMESTAMP=$(date +"%Y-%m-%dT%H-%M-%S")
 LOG_FILE="$LOG_DIR/run-$TIMESTAMP.log"
 
+# Create log directory BEFORE redirect
+mkdir -p "$LOG_DIR"
+
+# Now set up logging
 exec > >(tee -a "$LOG_FILE")
 exec 2>&1
+
+# Track execution times
+PIPELINE_START_TIME=$(date +%s)
+declare -A STAGE_TIMES
 
 echo "=========================================="
 echo "Synthetic Dataset Orchestration Pipeline"
@@ -18,8 +26,6 @@ echo ""
 echo "Run ID: $TIMESTAMP"
 echo "Log: $LOG_FILE"
 echo ""
-
-mkdir -p "$LOG_DIR"
 
 FROM_STAGE=1
 TO_STAGE=4
@@ -118,9 +124,9 @@ for arg in "$@"; do
 done
 
 if [ "$QUICK_TEST" = true ]; then
-  echo "⚡ QUICK TEST MODE"
+  echo "INFO: QUICK TEST MODE"
   echo "  - Synthesis: 5 widgets"
-  echo "  - Mutator: 5 base DSLs (×5 themes = 25 total)"
+  echo "  - Mutator: 5 base DSLs (x5 themes = 25 total)"
   echo "  - Concurrency: 3"
   echo ""
 fi
@@ -142,6 +148,7 @@ should_run_stage() {
 }
 
 log_stage() {
+  STAGE_START_TIME=$(date +%s)
   echo ""
   echo "=========================================="
   echo "STAGE $1: $2"
@@ -151,15 +158,20 @@ log_stage() {
 }
 
 log_stage_complete() {
+  local stage_num=$1
+  STAGE_END_TIME=$(date +%s)
+  STAGE_DURATION=$((STAGE_END_TIME - STAGE_START_TIME))
+  STAGE_TIMES[$stage_num]=$STAGE_DURATION
+  
   echo ""
-  echo "✓ Stage $1 completed successfully"
+  echo "SUCCESS: Stage $stage_num completed successfully (${STAGE_DURATION}s)"
   echo "Finished: $(date)"
   echo ""
 }
 
 log_stage_skipped() {
   echo ""
-  echo "⊘ Stage $1: $2 - SKIPPED"
+  echo "INFO: Stage $1: $2 - SKIPPED"
   echo ""
 }
 
@@ -219,27 +231,51 @@ else
   log_stage_skipped 4 "VQA Generation"
 fi
 
+
+# Calculate total execution time
+PIPELINE_END_TIME=$(date +%s)
+TOTAL_DURATION=$((PIPELINE_END_TIME - PIPELINE_START_TIME))
+
 echo ""
 echo "=========================================="
-echo "Pipeline Execution Complete!"
+echo "Pipeline Execution Complete"
 echo "=========================================="
 echo ""
 echo "Summary:"
 echo "  Run ID: $TIMESTAMP"
 echo "  Log: $LOG_FILE"
 echo ""
+
+# Show timing information
+echo "Execution Times:"
+if should_run_stage 1 && [ ! -z "${STAGE_TIMES[1]}" ]; then
+  echo "  Stage 1 (Synthesis):  ${STAGE_TIMES[1]}s"
+fi
+if should_run_stage 2 && [ ! -z "${STAGE_TIMES[2]}" ]; then
+  echo "  Stage 2 (Mutator):    ${STAGE_TIMES[2]}s"
+fi
+if should_run_stage 3 && [ ! -z "${STAGE_TIMES[3]}" ]; then
+  echo "  Stage 3 (Rendering):  ${STAGE_TIMES[3]}s"
+fi
+if should_run_stage 4 && [ ! -z "${STAGE_TIMES[4]}" ]; then
+  echo "  Stage 4 (VQA):        ${STAGE_TIMES[4]}s"
+fi
+echo "  ---"
+echo "  Total:                ${TOTAL_DURATION}s ($((TOTAL_DURATION / 60))m $((TOTAL_DURATION % 60))s)"
+echo ""
+
 echo "Output Structure:"
 if should_run_stage 1; then
-  echo "  ✓ Stage 1: output/1-synthesis/render-ready/"
+  echo "  Stage 1: output/1-synthesis/render-ready/"
 fi
 if should_run_stage 2; then
-  echo "  ✓ Stage 2: output/2-mutator/flat/"
+  echo "  Stage 2: output/2-mutator/flat/"
 fi
 if should_run_stage 3; then
-  echo "  ✓ Stage 3: output/3-rendering/widgets/"
+  echo "  Stage 3: output/3-rendering/widgets/"
 fi
 if should_run_stage 4; then
-  echo "  ✓ Stage 4: output/4-vqa/"
+  echo "  Stage 4: output/4-vqa/"
 fi
 echo ""
 echo "Next Steps:"

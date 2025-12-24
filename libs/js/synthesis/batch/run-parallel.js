@@ -152,12 +152,10 @@ function spawnRunner(runner, globalOptions) {
 
     const startTime = Date.now();
 
-    // Quote the script path to handle spaces in Windows paths
-    const quotedScriptPath = `"${scriptPath}"`;
-
-    const child = spawn("node", [quotedScriptPath, ...args], {
+    const child = spawn("node", [scriptPath, ...args], {
       stdio: ["inherit", "pipe", "pipe"],
-      shell: true,
+      shell: false,
+      windowsHide: true,
     });
 
     let stdout = "";

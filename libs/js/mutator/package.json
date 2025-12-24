@@ -1,0 +1,28 @@
+{
+  "name": "@widget-factory/mutator",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./index.js": "./src/index.js",
+    "./mutators": "./src/mutators/index.js",
+    "./utils": "./src/utils/index.js",
+    "./config": "./src/config/index.js",
+    "./persistence": "./src/persistence/index.js"
+  },
+  "bin": {
+    "generate-dsl-diversity": "./generate-dsl-diversity.js"
+  },
+  "description": "DSL mutation utilities for generating synthetic widget variations",
+  "keywords": [
+    "widget",
+    "mutator",
+    "dsl",
+    "synthetic-data"
+  ],
+  "dependencies": {
+    "@widget-factory/validator": "*"
+  },
+  "private": true
+}

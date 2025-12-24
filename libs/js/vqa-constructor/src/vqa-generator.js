@@ -25,37 +25,56 @@ import {
  * @returns {Array} Array of VQA conversation pairs in Qwen3-VL format
  */
 export function generateReferringVQA(options) {
+  if (!options || typeof options !== 'object') {
+    throw new Error('options object is required');
+  }
   const { boundingBoxData, dsl, imageWidth, imageHeight, imagePath } = options;
+
+  if (!boundingBoxData || typeof boundingBoxData !== 'object') {
+    throw new Error('boundingBoxData is required and must be an object');
+  }
+  if (!dsl || typeof dsl !== 'object') {
+    throw new Error('dsl is required and must be an object');
+  }
+  if (!Number.isFinite(imageWidth) || imageWidth <= 0) {
+    throw new Error(`imageWidth must be a positive number, got ${imageWidth}`);
+  }
+  if (!Number.isFinite(imageHeight) || imageHeight <= 0) {
+    throw new Error(`imageHeight must be a positive number, got ${imageHeight}`);
+  }
+  if (!imagePath || typeof imagePath !== 'string') {
+    throw new Error('imagePath is required and must be a string');
+  }
+
   const elements = boundingBoxData.elements || {};
   const vqaPairs = [];
 
   for (const [path, bbox] of Object.entries(elements)) {
-    // Only generate for leaf components (skip containers)
     if (bbox.type !== 'leaf' || !bbox.component) {
       continue;
     }
 
-    // Process bounding box to normalized format [x1, y1, x2, y2]
-    const formattedBox = processBoundingBox(bbox, imageWidth, imageHeight);
+    try {
+      const formattedBox = processBoundingBox(bbox, imageWidth, imageHeight);
+      const isText = bbox.component === 'Text';
+      const questions = getReferringQuestions(formattedBox, isText);
 
-    // Determine if this is a Text component for specialized templates
-    const isText = bbox.component === 'Text';
+      if (!questions || questions.length === 0) {
+        continue;
+      }
+      const question = questions[Math.floor(Math.random() * questions.length)];
+      const answer = generateReferringAnswer(bbox, path, dsl);
 
-    // Get questions and randomly select one (1 referring per bounding box)
-    const questions = getReferringQuestions(formattedBox, isText);
-    const question = questions[Math.floor(Math.random() * questions.length)];
-
-    // Generate answer (natural language description)
-    const answer = generateReferringAnswer(bbox, path, dsl);
-
-    // Create single VQA pair for this bounding box
-    vqaPairs.push({
-      messages: [
-        { role: 'user', content: `<image>\n${question}` },
-        { role: 'assistant', content: answer }
-      ],
-      images: [imagePath]
-    });
+      vqaPairs.push({
+        messages: [
+          { role: 'user', content: `<image>\n${question}` },
+          { role: 'assistant', content: answer }
+        ],
+        images: [imagePath]
+      });
+    } catch (error) {
+      console.warn(`Skipping element ${path}: ${error.message}`);
+    }
   }
 
   return vqaPairs;
@@ -73,57 +92,72 @@ export function generateReferringVQA(options) {
  * @returns {Array} Array of VQA conversation pairs in Qwen3-VL format
  */
 export function generateGroundingVQA(options) {
+  if (!options || typeof options !== 'object') {
+    throw new Error('options object is required');
+  }
   const { boundingBoxData, dsl, imageWidth, imageHeight, imagePath } = options;
+
+  if (!boundingBoxData || typeof boundingBoxData !== 'object') {
+    throw new Error('boundingBoxData is required and must be an object');
+  }
+  if (!dsl || typeof dsl !== 'object') {
+    throw new Error('dsl is required and must be an object');
+  }
+  if (!Number.isFinite(imageWidth) || imageWidth <= 0) {
+    throw new Error(`imageWidth must be a positive number, got ${imageWidth}`);
+  }
+  if (!Number.isFinite(imageHeight) || imageHeight <= 0) {
+    throw new Error(`imageHeight must be a positive number, got ${imageHeight}`);
+  }
+  if (!imagePath || typeof imagePath !== 'string') {
+    throw new Error('imagePath is required and must be a string');
+  }
+
   const elements = boundingBoxData.elements || {};
   const vqaPairs = [];
 
-  // Process each element individually for grounding tasks
   for (const [path, bbox] of Object.entries(elements)) {
-    // Only process leaf components
     if (bbox.type !== 'leaf' || !bbox.component) {
       continue;
     }
 
-    // Process bounding box to normalized format [x1, y1, x2, y2]
-    const formattedBox = processBoundingBox(bbox, imageWidth, imageHeight);
+    try {
+      const formattedBox = processBoundingBox(bbox, imageWidth, imageHeight);
+      const element = findElementInDSL(path, dsl);
 
-    // Get element details for description
-    const element = findElementInDSL(path, dsl);
+      let description = bbox.component.toLowerCase();
 
-    // Create a description for this specific element
-    let description = bbox.component.toLowerCase();
-
-    // Add distinguishing features for better grounding
-    if (element) {
-      if (element.content) {
-        // For Text and Button, include the content
-        description = `${bbox.component.toLowerCase()} with text "${element.content}"`;
-      } else if (element.props) {
-        // Add distinctive visual properties
-        const props = element.props;
-        if (props.color && bbox.component === 'Text') {
-          description = `${props.color} ${description}`;
-        } else if (props.backgroundColor && bbox.component === 'Button') {
-          description = `${bbox.component.toLowerCase()} with ${props.backgroundColor} background`;
+      if (element) {
+        if (element.content && typeof element.content === 'string' && element.content.trim()) {
+          description = `${bbox.component.toLowerCase()} with text "${element.content}"`;
+        } else if (element.props) {
+          const props = element.props;
+          if (props.color && bbox.component === 'Text') {
+            description = `${props.color} ${description}`;
+          } else if (props.backgroundColor && bbox.component === 'Button') {
+            description = `${bbox.component.toLowerCase()} with ${props.backgroundColor} background`;
+          }
         }
       }
+
+      const answer = generateGroundingAnswer(formattedBox, description);
+      const questions = getGroundingQuestions(description);
+
+      if (!questions || questions.length === 0) {
+        continue;
+      }
+      const question = questions[Math.floor(Math.random() * questions.length)];
+
+      vqaPairs.push({
+        messages: [
+          { role: 'user', content: `<image>\n${question}` },
+          { role: 'assistant', content: answer }
+        ],
+        images: [imagePath]
+      });
+    } catch (error) {
+      console.warn(`Skipping element ${path}: ${error.message}`);
     }
-
-    // Generate answer with bounding box
-    const answer = generateGroundingAnswer(formattedBox, description);
-
-    // Get questions and randomly select one (1 grounding per bounding box)
-    const questions = getGroundingQuestions(description);
-    const question = questions[Math.floor(Math.random() * questions.length)];
-
-    // Create single VQA pair for this bounding box
-    vqaPairs.push({
-      messages: [
-        { role: 'user', content: `<image>\n${question}` },
-        { role: 'assistant', content: answer }
-      ],
-      images: [imagePath]
-    });
   }
 
   return vqaPairs;
@@ -140,40 +174,55 @@ export function generateGroundingVQA(options) {
  * @returns {Array} Array with a single VQA conversation pair
  */
 export function generateGeneralGroundingVQA(options) {
+  if (!options || typeof options !== 'object') {
+    throw new Error('options object is required');
+  }
   const { boundingBoxData, imageWidth, imageHeight, imagePath } = options;
-  const elements = boundingBoxData.elements || {};
 
-  // Group elements by component type (excluding containers)
+  if (!boundingBoxData || typeof boundingBoxData !== 'object') {
+    throw new Error('boundingBoxData is required and must be an object');
+  }
+  if (!Number.isFinite(imageWidth) || imageWidth <= 0) {
+    throw new Error(`imageWidth must be a positive number, got ${imageWidth}`);
+  }
+  if (!Number.isFinite(imageHeight) || imageHeight <= 0) {
+    throw new Error(`imageHeight must be a positive number, got ${imageHeight}`);
+  }
+  if (!imagePath || typeof imagePath !== 'string') {
+    throw new Error('imagePath is required and must be a string');
+  }
+
+  const elements = boundingBoxData.elements || {};
   const componentGroups = {};
 
   for (const [path, bbox] of Object.entries(elements)) {
-    // Only process leaf components (skip containers)
     if (bbox.type !== 'leaf' || !bbox.component) {
       continue;
     }
 
-    const componentType = bbox.component;
-    if (!componentGroups[componentType]) {
-      componentGroups[componentType] = [];
-    }
+    try {
+      const componentType = bbox.component;
+      if (!componentGroups[componentType]) {
+        componentGroups[componentType] = [];
+      }
 
-    const formattedBox = processBoundingBox(bbox, imageWidth, imageHeight);
-    componentGroups[componentType].push({
-      type: componentType,
-      bbox: formattedBox
-    });
+      const formattedBox = processBoundingBox(bbox, imageWidth, imageHeight);
+      componentGroups[componentType].push({
+        type: componentType,
+        bbox: formattedBox
+      });
+    } catch (error) {
+      console.warn(`Skipping element ${path}: ${error.message}`);
+    }
   }
 
-  // Sort component types alphabetically
   const sortedTypes = Object.keys(componentGroups).sort();
 
-  // Build the answer with all bounding boxes grouped by type
   const result = {};
   for (const type of sortedTypes) {
     result[type] = componentGroups[type].map(item => ({ bbox_2d: item.bbox }));
   }
 
-  // Questions for general grounding (use first 3 variations)
   const questions = [
     "Detect all UI elements in this image.",
     "List all the UI components with their types and bounding boxes.",
@@ -203,29 +252,46 @@ export function generateGeneralGroundingVQA(options) {
  * @returns {Array} Array of VQA conversation pairs (one per component type)
  */
 export function generateCategoryGroundingVQA(options) {
+  if (!options || typeof options !== 'object') {
+    throw new Error('options object is required');
+  }
   const { boundingBoxData, imageWidth, imageHeight, imagePath } = options;
+
+  if (!boundingBoxData || typeof boundingBoxData !== 'object') {
+    throw new Error('boundingBoxData is required and must be an object');
+  }
+  if (!Number.isFinite(imageWidth) || imageWidth <= 0) {
+    throw new Error(`imageWidth must be a positive number, got ${imageWidth}`);
+  }
+  if (!Number.isFinite(imageHeight) || imageHeight <= 0) {
+    throw new Error(`imageHeight must be a positive number, got ${imageHeight}`);
+  }
+  if (!imagePath || typeof imagePath !== 'string') {
+    throw new Error('imagePath is required and must be a string');
+  }
+
   const elements = boundingBoxData.elements || {};
   const vqaPairs = [];
-
-  // Group elements by component type (excluding containers)
   const componentGroups = {};
 
   for (const [path, bbox] of Object.entries(elements)) {
-    // Only process leaf components (skip containers)
     if (bbox.type !== 'leaf' || !bbox.component) {
       continue;
     }
 
-    const componentType = bbox.component;
-    if (!componentGroups[componentType]) {
-      componentGroups[componentType] = [];
-    }
+    try {
+      const componentType = bbox.component;
+      if (!componentGroups[componentType]) {
+        componentGroups[componentType] = [];
+      }
 
-    const formattedBox = processBoundingBox(bbox, imageWidth, imageHeight);
-    componentGroups[componentType].push(formattedBox);
+      const formattedBox = processBoundingBox(bbox, imageWidth, imageHeight);
+      componentGroups[componentType].push(formattedBox);
+    } catch (error) {
+      console.warn(`Skipping element ${path}: ${error.message}`);
+    }
   }
 
-  // Question templates for category-specific grounding
   const questionTemplates = [
     "List all the {category} elements in the image.",
     "Find all {category} components and provide their bounding boxes.",
@@ -233,13 +299,10 @@ export function generateCategoryGroundingVQA(options) {
     "What are the bounding boxes for all {category} elements?"
   ];
 
-  // Generate one VQA pair per component type
   for (const [componentType, bboxes] of Object.entries(componentGroups)) {
-    // Pick a random question template
     const template = questionTemplates[Math.floor(Math.random() * questionTemplates.length)];
     const question = template.replace('{category}', componentType);
 
-    // Format answer as array of bounding boxes
     const answer = JSON.stringify({
       [componentType]: bboxes.map(bbox => ({ bbox_2d: bbox }))
     }, null, 2);
@@ -265,9 +328,16 @@ export function generateCategoryGroundingVQA(options) {
  * @returns {Array} Array of VQA conversation pairs in Qwen3-VL format
  */
 export function generateLayoutVQA(options) {
+  if (!options || typeof options !== 'object') {
+    throw new Error('options object is required');
+  }
   const { layoutCode, imagePath } = options;
-  
-  if (!layoutCode || !layoutCode.trim()) {
+
+  if (!imagePath || typeof imagePath !== 'string') {
+    throw new Error('imagePath is required and must be a string');
+  }
+
+  if (!layoutCode || typeof layoutCode !== 'string' || !layoutCode.trim()) {
     return [];
   }
 
@@ -313,9 +383,13 @@ export function generateAllVQA(options) {
  * @returns {Object} Statistics
  */
 export function getVQAStatistics(vqaPairs) {
+  if (!Array.isArray(vqaPairs)) {
+    throw new Error('vqaPairs must be an array');
+  }
+
   const stats = {
     totalPairs: vqaPairs.length,
-    uniqueImages: new Set(vqaPairs.map(p => p.image)).size,
+    uniqueImages: new Set(vqaPairs.flatMap(p => p.images || [])).size,
     avgPairsPerImage: 0
   };
 

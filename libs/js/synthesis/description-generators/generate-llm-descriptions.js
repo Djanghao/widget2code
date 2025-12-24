@@ -201,8 +201,18 @@ Return ONLY a valid JSON array, no additional text.`;
     );
 
     if (!response.ok) {
-      const error = await response.json();
-      throw new Error(`API error: ${error.error || error.detail}`);
+      let errorMessage = "Unknown error";
+      try {
+        const error = await response.json();
+        errorMessage = error.error || error.detail || error.message || "Unknown error";
+      } catch {
+        try {
+          errorMessage = await response.text();
+        } catch {
+          errorMessage = "Unknown error";
+        }
+      }
+      throw new Error(`API error: ${errorMessage}`);
     }
 
     const result = await response.json();
@@ -212,15 +222,16 @@ Return ONLY a valid JSON array, no additional text.`;
 
     if (typeof content === 'string') {
       const jsonMatch = content.match(/\[[\s\S]*\]/);
-      if (jsonMatch) {
-        descriptions = JSON.parse(jsonMatch[0]);
-      } else {
-        descriptions = JSON.parse(content);
+      try {
+        descriptions = jsonMatch ? JSON.parse(jsonMatch[0]) : JSON.parse(content);
+      } catch (parseError) {
+        const preview = content.substring(0, 200);
+        throw new Error(`Failed to parse LLM response as JSON: ${parseError.message}. Content preview: ${preview}`);
       }
     } else if (Array.isArray(content)) {
       descriptions = content;
     } else {
-      throw new Error("Unexpected response format from LLM");
+      throw new Error(`Unexpected response format from LLM: ${typeof content}. Expected string or array.`);
     }
 
     if (!Array.isArray(descriptions)) {

@@ -10,7 +10,6 @@
 import { compileToJSX } from "./commands/compile.js";
 import { render } from "./commands/render.js";
 import { batchRender } from "@widget-factory/renderer";
-import { batchGenerateVQA } from "./commands/batch-generate-vqa.js";
 import { batchGenerateVQAWithSplit } from "./commands/batch-generate-vqa-split.js";
 
 function printHelp() {
@@ -33,17 +32,6 @@ Commands:
     Batch render widgets from DSL specs in-place
     Directory must contain widget subdirectories with DSL files
     Options: --concurrency N, --force
-
-  batch-generate-vqa <directory> [options]
-    Generate VQA dataset for UI understanding tasks
-    Requires widgets with DSL, bounding boxes, and rendered images
-    Options:
-      --output-dir <path>       Output directory (default: <directory>/vqa-dataset)
-      --dataset-root <path>     Root path for image references (default: <directory>)
-      --continue-from <widget>  Continue from specific widget ID
-      --avoid <file>            Path to existing combined.json to avoid duplicates
-      --target-size <number>    Target size for combined dataset
-      --widget-list <file>      Process only widgets listed in file (one per line)
 
   batch-generate-vqa-split <directory> [options]
     Generate VQA dataset with train/val/test split (7:1:2)
@@ -138,65 +126,6 @@ async function main() {
           devServerUrl,
         });
         process.exit(failedCount > 0 ? 1 : 0);
-        break;
-
-      case "batch-generate-vqa":
-        if (commandArgs.length < 1) {
-          console.error(
-            "Error: batch-generate-vqa requires <directory> [options]"
-          );
-          process.exit(1);
-        }
-        // Parse batch-generate-vqa options
-        let vqaOutputDir = null;
-        let vqaDatasetRoot = null;
-        let vqaContinueFrom = null;
-        let vqaAvoidFile = null;
-        let vqaTargetSize = null;
-        let vqaWidgetList = null;
-        const vqaDirectory = commandArgs[0];
-
-        for (let i = 1; i < commandArgs.length; i++) {
-          if (commandArgs[i] === "--output-dir" && commandArgs[i + 1]) {
-            vqaOutputDir = commandArgs[i + 1];
-            i++;
-          } else if (
-            commandArgs[i] === "--dataset-root" &&
-            commandArgs[i + 1]
-          ) {
-            vqaDatasetRoot = commandArgs[i + 1];
-            i++;
-          } else if (
-            commandArgs[i] === "--continue-from" &&
-            commandArgs[i + 1]
-          ) {
-            vqaContinueFrom = commandArgs[i + 1];
-            i++;
-          } else if (commandArgs[i] === "--avoid" && commandArgs[i + 1]) {
-            vqaAvoidFile = commandArgs[i + 1];
-            i++;
-          } else if (commandArgs[i] === "--target-size" && commandArgs[i + 1]) {
-            vqaTargetSize = parseInt(commandArgs[i + 1]);
-            i++;
-          } else if (commandArgs[i] === "--widget-list" && commandArgs[i + 1]) {
-            vqaWidgetList = commandArgs[i + 1];
-            i++;
-          }
-        }
-
-        const vqaOptions = {};
-        if (vqaOutputDir) vqaOptions.outputDir = vqaOutputDir;
-        if (vqaDatasetRoot) vqaOptions.datasetRoot = vqaDatasetRoot;
-        if (vqaContinueFrom) vqaOptions.continueFrom = vqaContinueFrom;
-        if (vqaAvoidFile) vqaOptions.avoidFile = vqaAvoidFile;
-        if (vqaTargetSize) vqaOptions.targetSize = vqaTargetSize;
-        if (vqaWidgetList) vqaOptions.widgetListPath = vqaWidgetList;
-
-        const { failedCount: vqaFailedCount } = await batchGenerateVQA(
-          vqaDirectory,
-          vqaOptions
-        );
-        process.exit(vqaFailedCount > 0 ? 1 : 0);
         break;
 
       case "batch-generate-vqa-split":

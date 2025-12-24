@@ -768,26 +768,41 @@ const variationTemplates = {
 };
 
 /**
+ * Safely pick a random element from an array
+ */
+function randomPick(array) {
+  if (!array || array.length === 0) return null;
+  return array[Math.floor(Math.random() * array.length)];
+}
+
+/**
  * Generate variations for a domain
  */
 function generateVariations(domainTemplate, count = 100) {
   const variations = [];
   const { domain, metrics, visualizations, layouts, modifiers, multiMetricCombinations } = domainTemplate;
 
+  if (!layouts?.length || !metrics?.length) {
+    console.warn(`Skipping ${domain}: missing layouts or metrics`);
+    return variations;
+  }
+
   let id = 1;
 
   // Single metric variations
   for (let i = 0; i < Math.min(count / 2, metrics.length * 3); i++) {
-    const layout = layouts[Math.floor(Math.random() * layouts.length)];
-    const metric = metrics[Math.floor(Math.random() * metrics.length)];
+    const layout = randomPick(layouts);
+    const metric = randomPick(metrics);
+
+    if (!layout || !metric) continue;
 
     // 50% chance to add visualization
     const addVisualization = Math.random() > 0.5;
-    const visualization = addVisualization ? visualizations[Math.floor(Math.random() * visualizations.length)] : '';
+    const visualization = addVisualization ? randomPick(visualizations) : '';
 
     // 30% chance to add modifier
     const addModifier = Math.random() > 0.7;
-    const modifier = addModifier ? modifiers[Math.floor(Math.random() * modifiers.length)] : '';
+    const modifier = addModifier ? randomPick(modifiers) : '';
 
     let prompt = `${layout} showing ${metric}`;
     if (visualization) prompt += ` ${visualization}`;
@@ -806,11 +821,13 @@ function generateVariations(domainTemplate, count = 100) {
   // Multi-metric combinations
   if (multiMetricCombinations) {
     for (const combination of multiMetricCombinations) {
-      const layout = layouts[Math.floor(Math.random() * layouts.length)];
-      const metricsText = combination.join(', ').replace(/, ([^,]*)$/, ' and $1'); // Join with "and" for last item
+      const layout = randomPick(layouts);
+      if (!layout) continue;
+
+      const metricsText = combination.join(', ').replace(/, ([^,]*)$/, ' and $1');
 
       const addVisualization = Math.random() > 0.5;
-      const visualization = addVisualization ? visualizations[Math.floor(Math.random() * visualizations.length)] : '';
+      const visualization = addVisualization ? randomPick(visualizations) : '';
 
       let prompt = `${layout} showing ${metricsText}`;
       if (visualization) prompt += ` ${visualization}`;
@@ -827,10 +844,10 @@ function generateVariations(domainTemplate, count = 100) {
   // Domain-specific variations
   if (domain === 'finance' && domainTemplate.stockSymbols) {
     for (const symbol of domainTemplate.stockSymbols.slice(0, 3)) {
-      const viz = visualizations[Math.floor(Math.random() * visualizations.length)];
+      const viz = randomPick(visualizations) || '';
       variations.push({
         id: `${domain}-dynamic-${String(id++).padStart(3, '0')}`,
-        prompt: `A stock widget showing ${symbol} ${viz}`,
+        prompt: `A stock widget showing ${symbol} ${viz}`.trim(),
         complexity: 'medium',
         generated: true,
       });

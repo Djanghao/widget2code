@@ -4,10 +4,28 @@ This directory contains the DSL Diversity Mutator system for creating synthetic 
 
 ## Files Overview
 
-- **`dsl-generator.js`** - Main mutator class with mutation logic and validation
-- **`generate-dsl-diversity.js`** - CLI script for running the mutator
-- **`dsl-mutation-palette.json`** - Palette of valid values for mutations (colors, sizes, components, etc.)
-- **`dsl-validation-rulebook.json`** - Fast validation rules for ensuring DSL validity
+```
+libs/js/mutator/
+  src/
+    index.js                     # Public API exports
+    orchestrator.js              # DSLMutator class (main coordinator)
+    mutators/
+      random-mutator.js          # Random mutations (40+ methods)
+      theme-mutator.js           # Theme/size transformations
+    config/
+      index.js                   # Config loader
+    utils/
+      helpers.js                 # selectFromArray, adjustColor, hashDSL
+      tree-traversal.js          # traverseDSL, collect* methods
+      node-finders.js            # find* target methods
+      node-generators.js         # generate* methods
+    persistence/
+      batch-writer.js            # saveDSL, generateReport
+  config/
+    dsl-mutation-palette.json    # Palette of valid values for mutations
+    dsl-validation-rulebook.json # Fast validation rules
+  generate-dsl-diversity.js      # CLI script for running the mutator
+```
 
 ## Quick Start
 
@@ -15,113 +33,70 @@ This directory contains the DSL Diversity Mutator system for creating synthetic 
 # Generate 10,000 random DSL variations (default)
 node libs/js/mutator/generate-dsl-diversity.js
 
-# Generate 1,000 DSLs
-node libs/js/mutator/generate-dsl-diversity.js -n 1000
+# Generate 100 random DSLs
+node libs/js/mutator/generate-dsl-diversity.js 100
 
-# Show all options
+# Generate 100 DSLs with all 5 theme variants (500 total)
+node libs/js/mutator/generate-dsl-diversity.js 100 --vary themes
+
+# Show help
 node libs/js/mutator/generate-dsl-diversity.js --help
 ```
 
 ## Usage
 
-### Command Line Options
-
-```bash
-# Basic generation
-node libs/js/mutator/generate-dsl-diversity.js --count 1000
-
-# Theme transformations
-node libs/js/mutator/generate-dsl-diversity.js -n 100 --theme dark --mode controlled
-
-# Size transformations
-node libs/js/mutator/generate-dsl-diversity.js -n 100 --size compact --mode controlled
-
-# Combined transformations
-node libs/js/mutator/generate-dsl-diversity.js -n 100 --theme dark --size large --mode hybrid
-
-# Generate all theme variants (100 × 5 themes = 500 total)
-node libs/js/mutator/generate-dsl-diversity.js -n 100 --all-themes --mode hybrid
-
-# Matrix mode: all theme × size combinations (100 × 5 × 3 = 1,500 total)
-node libs/js/mutator/generate-dsl-diversity.js -n 100 --matrix
 ```
+Usage: node generate-dsl-diversity.js [count] [options]
 
-### Available Options
+Arguments:
+  count                    Number of base DSLs to generate (default: 10000)
 
-| Option | Description | Values |
-|--------|-------------|---------|
-| `-n, --count` | Number of DSLs to generate | Number (default: 10000) |
-| `--theme` | Apply theme transformation | `light`, `dark`, `colorful`, `glassmorphism`, `minimal` |
-| `--size` | Apply size variant | `compact`, `medium`, `large` |
-| `--mode` | Mutation mode | `random`, `controlled`, `hybrid` |
-| `--matrix` | Generate all theme × size combinations | Flag |
-| `--all-themes` | Generate all theme variants | Flag |
-| `--all-sizes` | Generate all size variants | Flag |
-| `-h, --help` | Show help message | Flag |
-
-### Mutation Modes
-
-**`random`** (default)
-- Only random mutations
-- Maximum diversity
-- Use for training data
-
-**`controlled`**
-- Only theme/size transformations
-- No random mutations
-- Use for testing consistency
-
-**`hybrid`**
-- Theme/size transformations + random mutations
-- Best of both worlds
-- Use for themed diversity
+Options:
+  --vary [type]            Generate theme/size variants
+                           themes  - 5 theme variants per DSL
+                           sizes   - 3 size variants per DSL
+                           all     - 15 variants (5 themes x 3 sizes) per DSL
+  -n, --count <number>     Alias for count argument
+  -h, --help               Show this help message
+```
 
 ### Examples
 
 ```bash
-# Generate 10,000 random DSLs
-node libs/js/mutator/generate-dsl-diversity.js
-
-# Generate 100 dark mode variants (controlled)
-node libs/js/mutator/generate-dsl-diversity.js --count 100 --theme dark --mode controlled
-
-# Generate 100 dark + large with random mutations (hybrid)
-node libs/js/mutator/generate-dsl-diversity.js --count 100 --theme dark --size large --mode hybrid
-
-# Generate all theme variants (5 themes × 100 = 500 DSLs)
-node libs/js/mutator/generate-dsl-diversity.js --count 100 --all-themes --mode hybrid
-
-# Matrix generation: all combinations (5 themes × 3 sizes × 100 = 1,500 DSLs)
-node libs/js/mutator/generate-dsl-diversity.js --count 100 --matrix
+node generate-dsl-diversity.js 100                 # 100 random DSLs
+node generate-dsl-diversity.js 100 --vary themes   # 500 DSLs (100 x 5 themes)
+node generate-dsl-diversity.js 100 --vary sizes    # 300 DSLs (100 x 3 sizes)
+node generate-dsl-diversity.js 100 --vary all      # 1500 DSLs (100 x 5 x 3)
+node generate-dsl-diversity.js 100 --vary          # same as --vary all
 ```
 
 ### Programmatic Usage
 
 ```javascript
-import DSLDiversityGenerator from './libs/js/mutator/dsl-generator.js';
+import { DSLMutator } from '@widget-factory/mutator';
 
-const generator = new DSLDiversityGenerator();
-await generator.initialize();
+const mutator = new DSLMutator();
+await mutator.initialize();
 
 // Random generation
-await generator.generate(5000);
+await mutator.generate(5000);
 
 // Controlled generation with theme/size
-await generator.generateWithControlled(100, {
+await mutator.generateWithControlled(100, {
   themes: ['dark', 'light'],
   sizes: ['compact', 'large'],
   mode: 'hybrid'
 });
 
-await generator.generateReport();
+await mutator.generateReport();
 ```
 
 ## Output
 
-Generated DSLs are saved to `libs/js/mutator/results/[RUN-ID]/` with unique batch files and full tracking:
+Generated DSLs are saved to `output/2-mutator/batch-generated/[RUN-ID]/` with unique batch files and full tracking:
 
 ```
-libs/js/mutator/results/
+output/2-mutator/batch-generated/
 └── run-2025-10-30T20-35-30-abc123/    # Unique run ID (timestamp + random)
     ├── generation-report.json            # Statistics and metadata
     ├── run-2025-10-30T20-35-30-abc123-batch-001.json  # First 100 DSLs
@@ -171,7 +146,7 @@ Each generated DSL now includes:
 
 ## Algorithm (Mutate-and-Validate)
 
-1. **Load** existing valid DSLs as seed data from `apps/playground/src/examples/`
+1. **Load** existing valid DSLs as seed data from `output/2-mutator/seeds/`
 2. **Pick** a random seed DSL
 3. **Apply Transformations** (if using controlled/hybrid mode):
    - Apply theme transformations (colors, backgrounds, accents)
@@ -235,7 +210,7 @@ isValid(dsl) {
 ### With Renderer
 
 ```javascript
-import DSLDiversityGenerator from './libs/js/mutator/dsl-generator.js';
+import { DSLMutator } from '@widget-factory/mutator';
 import {
   initializeRenderer,
   renderWidget,
@@ -244,15 +219,15 @@ import {
 } from '@widget-factory/renderer';
 
 // Generate DSLs
-const generator = new DSLDiversityGenerator();
-await generator.initialize();
-await generator.generate(100);
+const mutator = new DSLMutator();
+await mutator.initialize();
+await mutator.generate(100);
 
 // Render them
 await initializeRenderer();
 
 // Load and render generated DSLs
-const batchPath = './libs/js/mutator/results/[RUN-ID]/batch-001.json';
+const batchPath = './output/2-mutator/batch-generated/[RUN-ID]/[RUN-ID]-batch-001.json';
 const batch = JSON.parse(fs.readFileSync(batchPath, 'utf8'));
 
 for (const item of batch) {
@@ -268,18 +243,18 @@ await closeRenderer();
 ### For ML Training
 
 ```javascript
-// Load generated DSLs
 import fs from 'fs';
 import path from 'path';
 
-const batchFiles = fs.readdirSync('./.artifacts/synthetic-dsls')
-  .filter(f => f.startsWith('batch-') && f.endsWith('.json'));
+const runDir = './output/2-mutator/batch-generated/[RUN-ID]';
+const batchFiles = fs.readdirSync(runDir)
+  .filter(f => f.includes('-batch-') && f.endsWith('.json'));
 
 const allDSLs = [];
 for (const file of batchFiles) {
-  const content = fs.readFileSync(path.join('./.artifacts/synthetic-dsls', file), 'utf8');
+  const content = fs.readFileSync(path.join(runDir, file), 'utf8');
   const batch = JSON.parse(content);
-  allDSLs.push(...batch.map(item => item.dsl));
+  allDSLs.push(...batch.map(item => item.resultDSL));
 }
 
 console.log(`Loaded ${allDSLs.length} DSL examples for training`);
@@ -288,7 +263,7 @@ console.log(`Loaded ${allDSLs.length} DSL examples for training`);
 ### For Validation Testing
 
 ```javascript
-import { compileWidgetDSLToJSX } from './libs/packages/compiler/src/compiler.js';
+import { compileWidgetDSLToJSX } from './libs/js/compiler/src/compiler.js';
 
 let successCount = 0;
 for (const dsl of allDSLs.slice(0, 100)) {
@@ -316,7 +291,7 @@ console.log(`Compilation success rate: ${successCount}/${100}`);
 Add logging to see detailed mutation process:
 
 ```javascript
-// In dsl-generator.js, modify mutate() method:
+// In src/mutators/random-mutator.js, modify mutate() method:
 console.log(`Applying ${numMutations} mutations to DSL...`);
 for (let i = 0; i < numMutations; i++) {
   const mutation = this.selectMutation();
@@ -329,16 +304,30 @@ for (let i = 0; i < numMutations; i++) {
 
 ```
 libs/js/mutator/
-├── dsl-generator.js              # Core mutator class
+├── src/
+│   ├── index.js                  # Public API exports
+│   ├── orchestrator.js           # DSLMutator class (main coordinator)
+│   ├── mutators/
+│   │   ├── random-mutator.js     # Random mutations (40+ methods)
+│   │   └── theme-mutator.js      # Theme/size transformations
+│   ├── config/
+│   │   └── index.js              # Config loader
+│   ├── utils/
+│   │   ├── helpers.js            # selectFromArray, adjustColor, hashDSL
+│   │   ├── tree-traversal.js     # traverseDSL, collect* methods
+│   │   ├── node-finders.js       # find* target methods
+│   │   └── node-generators.js    # generate* methods
+│   └── persistence/
+│       └── batch-writer.js       # saveDSL, generateReport
+├── config/
+│   ├── dsl-mutation-palette.json # Mutation values
+│   └── dsl-validation-rulebook.json # Validation rules
 ├── generate-dsl-diversity.js     # CLI interface
-├── dsl-mutation-palette.json     # Mutation values
-├── dsl-validation-rulebook.json  # Validation rules
 └── README.md                     # This file
 
 Input:
-├── apps/playground/src/examples/ # Seed DSL examples
-└── .artifacts/                  # Configuration files
+├── output/2-mutator/seeds/       # Seed DSL examples
 
 Output:
-└── libs/js/mutator/results/      # Generated DSL batches
+└── output/2-mutator/batch-generated/ # Generated DSL batches
 ```

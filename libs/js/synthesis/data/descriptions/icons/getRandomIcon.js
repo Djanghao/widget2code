@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 // Adjust this path relative to where you save this file
 // If this file is in 'lib/', then '../dist' is correct.
-const MANIFEST_PATH = path.resolve(__dirname, "../dist/icon-manifest.json");
+const MANIFEST_PATH = path.resolve(__dirname, "../manifest/icon-manifest.json");
 
 // 2. Cache variable to prevent re-reading file 1000 times
 let iconCache = null;

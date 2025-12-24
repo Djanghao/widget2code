@@ -10,6 +10,12 @@
  * @returns {number} Normalized coordinate in 0-1000 range
  */
 export function normalizeCoordinate(value, dimension) {
+  if (!Number.isFinite(dimension) || dimension <= 0) {
+    throw new Error(`Invalid dimension: must be positive finite number, got ${dimension}`);
+  }
+  if (!Number.isFinite(value)) {
+    throw new Error(`Invalid value: must be finite number, got ${value}`);
+  }
   return Math.round((value / dimension) * 1000);
 }
 
@@ -22,10 +28,40 @@ export function normalizeCoordinate(value, dimension) {
  * @returns {Object} Normalized bounding box {xmin, ymin, xmax, ymax}
  */
 export function normalizeBoundingBox(bbox, imageWidth, imageHeight) {
-  const xmin = normalizeCoordinate(bbox.x, imageWidth);
-  const ymin = normalizeCoordinate(bbox.y, imageHeight);
-  const xmax = normalizeCoordinate(bbox.x + bbox.width, imageWidth);
-  const ymax = normalizeCoordinate(bbox.y + bbox.height, imageHeight);
+  if (!bbox || typeof bbox !== 'object') {
+    throw new Error('Invalid bbox: expected object');
+  }
+  if (bbox.x === undefined || bbox.y === undefined ||
+      bbox.width === undefined || bbox.height === undefined) {
+    throw new Error('Invalid bbox: missing required properties (x, y, width, height)');
+  }
+  if (bbox.width <= 0 || bbox.height <= 0) {
+    throw new Error(
+      `Invalid bbox: width and height must be positive (width: ${bbox.width}, height: ${bbox.height})`
+    );
+  }
+
+  const x1 = bbox.x;
+  const y1 = bbox.y;
+  const x2 = bbox.x + bbox.width;
+  const y2 = bbox.y + bbox.height;
+
+  if (x1 < 0 || y1 < 0 || x2 > imageWidth || y2 > imageHeight) {
+    throw new Error(
+      `Bbox out of bounds: [${x1}, ${y1}, ${x2}, ${y2}] exceeds image dimensions [${imageWidth}, ${imageHeight}]`
+    );
+  }
+
+  const xmin = normalizeCoordinate(x1, imageWidth);
+  const ymin = normalizeCoordinate(y1, imageHeight);
+  const xmax = normalizeCoordinate(x2, imageWidth);
+  const ymax = normalizeCoordinate(y2, imageHeight);
+
+  if (xmin >= xmax || ymin >= ymax) {
+    throw new Error(
+      `Invalid normalized bbox: x1 must be < x2, y1 must be < y2 (got [${xmin}, ${ymin}, ${xmax}, ${ymax}])`
+    );
+  }
 
   return { xmin, ymin, xmax, ymax };
 }
@@ -49,6 +85,12 @@ export function formatBoundingBox(normalizedBox) {
  * @returns {Array<number>} Formatted bounding box array [x1, y1, x2, y2]
  */
 export function processBoundingBox(bbox, imageWidth, imageHeight) {
+  if (!Number.isFinite(imageWidth) || imageWidth <= 0 ||
+      !Number.isFinite(imageHeight) || imageHeight <= 0) {
+    throw new Error(
+      `Invalid image dimensions: must be positive finite numbers (width: ${imageWidth}, height: ${imageHeight})`
+    );
+  }
   const normalized = normalizeBoundingBox(bbox, imageWidth, imageHeight);
   return formatBoundingBox(normalized);
 }
@@ -60,12 +102,16 @@ export function processBoundingBox(bbox, imageWidth, imageHeight) {
  * @returns {Array} Sorted bounding boxes
  */
 export function sortBoundingBoxesByPosition(bboxes) {
+  if (!Array.isArray(bboxes)) {
+    throw new Error('bboxes must be an array');
+  }
+  if (bboxes.length === 0) {
+    return [];
+  }
   return [...bboxes].sort((a, b) => {
-    // Sort by y first (top to bottom)
     if (Math.abs(a.y - b.y) > 5) {
       return a.y - b.y;
     }
-    // Then by x (left to right) if y is similar
     return a.x - b.x;
   });
 }
