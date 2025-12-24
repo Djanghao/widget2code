@@ -16,7 +16,7 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
 
 
 <div align="center">
-  <a href="https://arxiv.org/abs/PLACEHOLDER" target="_blank"><img src=https://img.shields.io/badge/paper-arxiv-red.svg height=22px></a>
+  <a href="https://arxiv.org/abs/2512.19918" target="_blank"><img src=https://img.shields.io/badge/paper-arxiv-red.svg height=22px></a>
   <a href=https://djanghao.github.io/widget2code/ target="_blank"><img src= https://img.shields.io/badge/Project-Page-bb8a2e.svg?logo=github height=22px></a>
   <a href=https://github.com/Djanghao/widget2code target="_blank"><img src=https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github height=22px></a>
   <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src=https://img.shields.io/badge/license-Apache%202.0-blue.svg height=22px></a>
@@ -62,7 +62,7 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
 
 ## 🎥 Demo
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/883112b1-6d78-4576-a356-2a7061f31751" width="60%" controls></video>
+  <video src="https://github.com/user-attachments/assets/c3cee1b7-7d03-4988-979b-2ffcec04749b" width="60%" controls></video>
 </div>
 
 ## 📖 Overview
@@ -225,7 +225,7 @@ If you find Widget2Code useful for your research or projects, please cite our wo
 ```bibtex
 @article{widget2code2025,
   title={Widget2Code: From Visual Widgets to UI Code via Multimodal LLMs},
-  author={Anonymous},
+  author={Houston H. Zhang, Tao Zhang, Baoze Lin, Yuanqi Xue, Yincheng Zhu, Huan Liu, Li Gu, Linfeng Ye, Ziqiang Wang, Xinxin Zuo, Yang Wang, Yuanhao Yu, Zhixiang Chi},
   journal={arXiv preprint},
   year={2025}
 }
