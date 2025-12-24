@@ -225,7 +225,7 @@ If you find Widget2Code useful for your research or projects, please cite our wo
 ```bibtex
 @article{widget2code2025,
   title={Widget2Code: From Visual Widgets to UI Code via Multimodal LLMs},
-  author={Anonymous},
+  author={Houston H. Zhang, Tao Zhang, Baoze Lin, Yuanqi Xue, Yincheng Zhu, Huan Liu, Li Gu, Linfeng Ye, Ziqiang Wang, Xinxin Zuo, Yang Wang, Yuanhao Yu, Zhixiang Chi},
   journal={arXiv preprint},
   year={2025}
 }
