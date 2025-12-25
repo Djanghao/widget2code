@@ -57,6 +57,8 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
 
 
 ## 🔥🔥🔥 News
+* 📦 Dec 22, 2025: Benchmark dataset uploaded to Hugging Face
+* 📄 Dec 22, 2025: Paper uploaded to arXiv
 * 🚀 Dec 16, 2025: We release the complete Widget2Code framework including inference code, interactive playground, batch processing scripts, and evaluation tools.
 
 
