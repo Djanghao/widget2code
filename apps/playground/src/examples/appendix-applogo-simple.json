@@ -1,0 +1,72 @@
+{
+  "widget": {
+    "backgroundColor": "#F2F2F7",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "AppLogo",
+              "props": {
+                "name": "si:SiHuawei",
+                "size": 48,
+                "color": "#000000",
+                "style": { "backgroundColor": "#FFFFFF", "padding": 8, "borderRadius": 12, "boxShadow": "0 2px 8px rgba(0,0,0,0.1)" }
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "AppLogo",
+              "props": {
+                "name": "si:SiApple",
+                "size": 48,
+                "color": "#000000",
+                "style": { "backgroundColor": "#FFFFFF", "padding": 8, "borderRadius": 12, "boxShadow": "0 2px 8px rgba(0,0,0,0.1)" }
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "AppLogo",
+              "props": {
+                "name": "si:SiReact",
+                "size": 48,
+                "color": "#61DAFB",
+                "style": { "backgroundColor": "#20232A", "padding": 8, "borderRadius": 12, "boxShadow": "0 2px 8px rgba(0,0,0,0.1)" }
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "AppLogo",
+              "props": {
+                "name": "si:SiTypescript",
+                "size": 48,
+                "color": "#3178C6",
+                "style": { "backgroundColor": "#FFFFFF", "padding": 8, "borderRadius": 12, "boxShadow": "0 2px 8px rgba(0,0,0,0.1)" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

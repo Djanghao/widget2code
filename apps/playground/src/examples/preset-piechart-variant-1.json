@@ -1,0 +1,52 @@
+{
+  "widget": {
+    "backgroundColor": "#0A0E27",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 24, "fontWeight": 800, "color": "#00F0FF" },
+          "content": "CYBER SPLIT"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 600, "color": "#FF00EA" },
+          "content": "Pie with sector lines"
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 1,
+          "props": {
+            "data": [35, 25, 20, 15, 5],
+            "labels": ["Neural", "Quantum", "Cyber", "Matrix", "Void"],
+            "colors": ["#00F0FF", "#FF00EA", "#FFD600", "#00FF9F", "#BD00FF"],
+            "variant": "pie",
+            "backgroundColor": "transparent",
+            "showLabels": true,
+            "showPercentages": true,
+            "labelPosition": "outside",
+            "showSectorLines": true,
+            "sectorLineColor": "rgba(0, 240, 255, 0.3)",
+            "sectorLineWidth": 2,
+            "sectorLineStyle": "solid",
+            "outerRadius": 75,
+            "startAngle": 90,
+            "clockwise": true,
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

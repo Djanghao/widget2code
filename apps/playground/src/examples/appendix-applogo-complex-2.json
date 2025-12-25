@@ -1,0 +1,149 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 32,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 22, "fontWeight": 700, "color": "#000000" }, "content": "Top Charts" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "Free Apps" }
+              ]
+            },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#007AFF" }, "content": "See All" }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 16,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 16,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#000000", "width": 20 }, "content": "1" },
+                    {
+                      "type": "leaf",
+                      "component": "AppLogo",
+                      "props": {
+                        "name": "si:SiTiktok",
+                        "size": 48,
+                        "color": "#000000",
+                        "style": { "backgroundColor": "#FFFFFF", "padding": 8, "borderRadius": 12, "boxShadow": "0 2px 8px rgba(0,0,0,0.1)" }
+                      }
+                    },
+                    {
+                      "type": "container",
+                      "direction": "col",
+                      "children": [
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#000000" }, "content": "TikTok" },
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93" }, "content": "Entertainment" }
+                      ]
+                    }
+                  ]
+                },
+                { "type": "leaf", "component": "Button", "props": { "content": "OPEN", "backgroundColor": "#E5E5EA", "color": "#007AFF", "height": 28, "borderRadius": 14, "paddingX": 16, "fontSize": 12, "fontWeight": 700 } }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 16,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#000000", "width": 20 }, "content": "2" },
+                    {
+                      "type": "leaf",
+                      "component": "AppLogo",
+                      "props": {
+                        "name": "si:SiInstagram",
+                        "size": 48,
+                        "color": "#E1306C",
+                        "style": { "backgroundColor": "#FFFFFF", "padding": 8, "borderRadius": 12, "boxShadow": "0 2px 8px rgba(0,0,0,0.1)" }
+                      }
+                    },
+                    {
+                      "type": "container",
+                      "direction": "col",
+                      "children": [
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#000000" }, "content": "Instagram" },
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93" }, "content": "Photo & Video" }
+                      ]
+                    }
+                  ]
+                },
+                { "type": "leaf", "component": "Button", "props": { "content": "GET", "backgroundColor": "#E5E5EA", "color": "#007AFF", "height": 28, "borderRadius": 14, "paddingX": 16, "fontSize": 12, "fontWeight": 700 } }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 16,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#000000", "width": 20 }, "content": "3" },
+                    {
+                      "type": "leaf",
+                      "component": "AppLogo",
+                      "props": {
+                        "name": "si:SiYoutube",
+                        "size": 48,
+                        "color": "#FF0000",
+                        "style": { "backgroundColor": "#FFFFFF", "padding": 8, "borderRadius": 12, "boxShadow": "0 2px 8px rgba(0,0,0,0.1)" }
+                      }
+                    },
+                    {
+                      "type": "container",
+                      "direction": "col",
+                      "children": [
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#000000" }, "content": "YouTube" },
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93" }, "content": "Video" }
+                      ]
+                    }
+                  ]
+                },
+                { "type": "leaf", "component": "Button", "props": { "content": "OPEN", "backgroundColor": "#E5E5EA", "color": "#007AFF", "height": 28, "borderRadius": 14, "paddingX": 16, "fontSize": 12, "fontWeight": 700 } }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

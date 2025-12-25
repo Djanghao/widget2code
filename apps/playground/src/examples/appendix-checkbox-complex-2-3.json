@@ -1,0 +1,99 @@
+{
+  "widget": {
+    "backgroundColor": "#FBAB7E",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 24,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.4)", "backdropFilter": "blur(20px)", "borderRadius": 32, "border": "1px solid rgba(255, 255, 255, 0.5)" } },
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignMain": "between",
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#FFFFFF" }, "content": "Groceries" },
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:cart.fill", "size": 20, "color": "#FFFFFF" } }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Checkbox",
+                      "props": {
+                        "checked": true,
+                        "color": "#FFFFFF",
+                        "size": 24,
+                        "style": { "borderRadius": 12, "border": "2px solid #FFFFFF" }
+                      }
+                    },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "color": "#FFFFFF" }, "content": "Milk" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Checkbox",
+                      "props": {
+                        "checked": false,
+                        "color": "#FFFFFF",
+                        "size": 24,
+                        "style": { "borderRadius": 12, "border": "2px solid #FFFFFF" }
+                      }
+                    },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "color": "#FFFFFF" }, "content": "Eggs" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Checkbox",
+                      "props": {
+                        "checked": false,
+                        "color": "#FFFFFF",
+                        "size": 24,
+                        "style": { "borderRadius": 12, "border": "2px solid #FFFFFF" }
+                      }
+                    },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "color": "#FFFFFF" }, "content": "Bread" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

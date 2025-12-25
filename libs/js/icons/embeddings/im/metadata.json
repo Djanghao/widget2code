@@ -1,0 +1,4684 @@
+{
+  "im/Im500Px.svg": {
+    "component_id": "im:Im500Px",
+    "aliases": [
+      "im",
+      "500",
+      "px"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the number 5 in it"
+  },
+  "im/ImAccessibility.svg": {
+    "component_id": "im:ImAccessibility",
+    "aliases": [
+      "im",
+      "accessibility"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with arms outstretched"
+  },
+  "im/ImAddressBook.svg": {
+    "component_id": "im:ImAddressBook",
+    "aliases": [
+      "im",
+      "address",
+      "book"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person in a book"
+  },
+  "im/ImAidKit.svg": {
+    "component_id": "im:ImAidKit",
+    "aliases": [
+      "im",
+      "aid",
+      "kit"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a first aid case"
+  },
+  "im/ImAirplane.svg": {
+    "component_id": "im:ImAirplane",
+    "aliases": [
+      "im",
+      "airplane"
+    ],
+    "colors": [],
+    "caption": "an airplane icon is shown on a white background"
+  },
+  "im/ImAlarm.svg": {
+    "component_id": "im:ImAlarm",
+    "aliases": [
+      "im",
+      "alarm"
+    ],
+    "colors": [],
+    "caption": "an alarm clock icon on a white background"
+  },
+  "im/ImAmazon.svg": {
+    "component_id": "im:ImAmazon",
+    "aliases": [
+      "im",
+      "amazon"
+    ],
+    "colors": [],
+    "caption": "the amazon logo is shown on a white background"
+  },
+  "im/ImAndroid.svg": {
+    "component_id": "im:ImAndroid",
+    "aliases": [
+      "im",
+      "android"
+    ],
+    "colors": [],
+    "caption": "a black android icon on a white background"
+  },
+  "im/ImAngry.svg": {
+    "component_id": "im:ImAngry",
+    "aliases": [
+      "im",
+      "angry"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an angry face"
+  },
+  "im/ImAngry2.svg": {
+    "component_id": "im:ImAngry2",
+    "aliases": [
+      "im",
+      "angry",
+      "2"
+    ],
+    "colors": [],
+    "caption": "an angry face in a black and white circle"
+  },
+  "im/ImAppleinc.svg": {
+    "component_id": "im:ImAppleinc",
+    "aliases": [
+      "im",
+      "appleinc"
+    ],
+    "colors": [],
+    "caption": "an apple logo is shown on a white background"
+  },
+  "im/ImArrowDown.svg": {
+    "component_id": "im:ImArrowDown",
+    "aliases": [
+      "im",
+      "arrow",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "im/ImArrowDown2.svg": {
+    "component_id": "im:ImArrowDown2",
+    "aliases": [
+      "im",
+      "arrow",
+      "down",
+      "2"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "im/ImArrowDownLeft.svg": {
+    "component_id": "im:ImArrowDownLeft",
+    "aliases": [
+      "im",
+      "arrow",
+      "down",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "im/ImArrowDownLeft2.svg": {
+    "component_id": "im:ImArrowDownLeft2",
+    "aliases": [
+      "im",
+      "arrow",
+      "down",
+      "left",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "im/ImArrowDownRight.svg": {
+    "component_id": "im:ImArrowDownRight",
+    "aliases": [
+      "im",
+      "arrow",
+      "down",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "im/ImArrowDownRight2.svg": {
+    "component_id": "im:ImArrowDownRight2",
+    "aliases": [
+      "im",
+      "arrow",
+      "down",
+      "right",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImArrowLeft.svg": {
+    "component_id": "im:ImArrowLeft",
+    "aliases": [
+      "im",
+      "arrow",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImArrowLeft2.svg": {
+    "component_id": "im:ImArrowLeft2",
+    "aliases": [
+      "im",
+      "arrow",
+      "left",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImArrowRight.svg": {
+    "component_id": "im:ImArrowRight",
+    "aliases": [
+      "im",
+      "arrow",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImArrowRight2.svg": {
+    "component_id": "im:ImArrowRight2",
+    "aliases": [
+      "im",
+      "arrow",
+      "right",
+      "2"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "im/ImArrowUp.svg": {
+    "component_id": "im:ImArrowUp",
+    "aliases": [
+      "im",
+      "arrow",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "im/ImArrowUp2.svg": {
+    "component_id": "im:ImArrowUp2",
+    "aliases": [
+      "im",
+      "arrow",
+      "up",
+      "2"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "im/ImArrowUpLeft.svg": {
+    "component_id": "im:ImArrowUpLeft",
+    "aliases": [
+      "im",
+      "arrow",
+      "up",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "im/ImArrowUpLeft2.svg": {
+    "component_id": "im:ImArrowUpLeft2",
+    "aliases": [
+      "im",
+      "arrow",
+      "up",
+      "left",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImArrowUpRight.svg": {
+    "component_id": "im:ImArrowUpRight",
+    "aliases": [
+      "im",
+      "arrow",
+      "up",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImArrowUpRight2.svg": {
+    "component_id": "im:ImArrowUpRight2",
+    "aliases": [
+      "im",
+      "arrow",
+      "up",
+      "right",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImAttachment.svg": {
+    "component_id": "im:ImAttachment",
+    "aliases": [
+      "im",
+      "attachment"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a paper clip"
+  },
+  "im/ImBackward.svg": {
+    "component_id": "im:ImBackward",
+    "aliases": [
+      "im",
+      "backward"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a play button"
+  },
+  "im/ImBackward2.svg": {
+    "component_id": "im:ImBackward2",
+    "aliases": [
+      "im",
+      "backward",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing in the same direction"
+  },
+  "im/ImBaffled.svg": {
+    "component_id": "im:ImBaffled",
+    "aliases": [
+      "im",
+      "baffled"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a face with two eyes"
+  },
+  "im/ImBaffled2.svg": {
+    "component_id": "im:ImBaffled2",
+    "aliases": [
+      "im",
+      "baffled",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a face with eyes"
+  },
+  "im/ImBarcode.svg": {
+    "component_id": "im:ImBarcode",
+    "aliases": [
+      "im",
+      "barcode"
+    ],
+    "colors": [],
+    "caption": "a barcode is shown on a white background"
+  },
+  "im/ImBasecamp.svg": {
+    "component_id": "im:ImBasecamp",
+    "aliases": [
+      "im",
+      "basecamp"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a mountain"
+  },
+  "im/ImBehance.svg": {
+    "component_id": "im:ImBehance",
+    "aliases": [
+      "im",
+      "behance"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word be"
+  },
+  "im/ImBehance2.svg": {
+    "component_id": "im:ImBehance2",
+    "aliases": [
+      "im",
+      "behance",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the word be on it"
+  },
+  "im/ImBell.svg": {
+    "component_id": "im:ImBell",
+    "aliases": [
+      "im",
+      "bell"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "im/ImBin.svg": {
+    "component_id": "im:ImBin",
+    "aliases": [
+      "im",
+      "bin"
+    ],
+    "colors": [],
+    "caption": "a trash can icon on a white background"
+  },
+  "im/ImBin2.svg": {
+    "component_id": "im:ImBin2",
+    "aliases": [
+      "im",
+      "bin",
+      "2"
+    ],
+    "colors": [],
+    "caption": "trash bin icon vector illustration"
+  },
+  "im/ImBinoculars.svg": {
+    "component_id": "im:ImBinoculars",
+    "aliases": [
+      "im",
+      "binoculars"
+    ],
+    "colors": [],
+    "caption": "binoculars icon isolated on white background"
+  },
+  "im/ImBlocked.svg": {
+    "component_id": "im:ImBlocked",
+    "aliases": [
+      "im",
+      "blocked"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no entry sign"
+  },
+  "im/ImBlog.svg": {
+    "component_id": "im:ImBlog",
+    "aliases": [
+      "im",
+      "blog"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pen with a wifi symbol"
+  },
+  "im/ImBlogger.svg": {
+    "component_id": "im:ImBlogger",
+    "aliases": [
+      "im",
+      "blogger"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a letter b"
+  },
+  "im/ImBlogger2.svg": {
+    "component_id": "im:ImBlogger2",
+    "aliases": [
+      "im",
+      "blogger",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the letter b in it"
+  },
+  "im/ImBold.svg": {
+    "component_id": "im:ImBold",
+    "aliases": [
+      "im",
+      "bold"
+    ],
+    "colors": [],
+    "caption": "a black letter b on a white background"
+  },
+  "im/ImBook.svg": {
+    "component_id": "im:ImBook",
+    "aliases": [
+      "im",
+      "book"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "im/ImBookmark.svg": {
+    "component_id": "im:ImBookmark",
+    "aliases": [
+      "im",
+      "bookmark"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white ribbon"
+  },
+  "im/ImBookmarks.svg": {
+    "component_id": "im:ImBookmarks",
+    "aliases": [
+      "im",
+      "bookmarks"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "im/ImBooks.svg": {
+    "component_id": "im:ImBooks",
+    "aliases": [
+      "im",
+      "books"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of three books"
+  },
+  "im/ImBoxAdd.svg": {
+    "component_id": "im:ImBoxAdd",
+    "aliases": [
+      "im",
+      "box",
+      "add"
+    ],
+    "colors": [],
+    "caption": "an icon of a box with an arrow pointing down"
+  },
+  "im/ImBoxRemove.svg": {
+    "component_id": "im:ImBoxRemove",
+    "aliases": [
+      "im",
+      "box",
+      "remove"
+    ],
+    "colors": [],
+    "caption": "an icon of a box with an arrow pointing up"
+  },
+  "im/ImBriefcase.svg": {
+    "component_id": "im:ImBriefcase",
+    "aliases": [
+      "im",
+      "briefcase"
+    ],
+    "colors": [],
+    "caption": "a briefcase icon on a white background"
+  },
+  "im/ImBrightnessContrast.svg": {
+    "component_id": "im:ImBrightnessContrast",
+    "aliases": [
+      "im",
+      "brightness",
+      "contrast"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun"
+  },
+  "im/ImBubble.svg": {
+    "component_id": "im:ImBubble",
+    "aliases": [
+      "im",
+      "bubble"
+    ],
+    "colors": [],
+    "caption": "a black speech bubble on a white background"
+  },
+  "im/ImBubble2.svg": {
+    "component_id": "im:ImBubble2",
+    "aliases": [
+      "im",
+      "bubble",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black speech bubble icon on a white background"
+  },
+  "im/ImBubbles.svg": {
+    "component_id": "im:ImBubbles",
+    "aliases": [
+      "im",
+      "bubbles"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles on a white background"
+  },
+  "im/ImBubbles2.svg": {
+    "component_id": "im:ImBubbles2",
+    "aliases": [
+      "im",
+      "bubbles",
+      "2"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles on a white background"
+  },
+  "im/ImBubbles3.svg": {
+    "component_id": "im:ImBubbles3",
+    "aliases": [
+      "im",
+      "bubbles",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two speech bubbles"
+  },
+  "im/ImBubbles4.svg": {
+    "component_id": "im:ImBubbles4",
+    "aliases": [
+      "im",
+      "bubbles",
+      "4"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles on a white background"
+  },
+  "im/ImBug.svg": {
+    "component_id": "im:ImBug",
+    "aliases": [
+      "im",
+      "bug"
+    ],
+    "colors": [],
+    "caption": "a black spider icon on a white background"
+  },
+  "im/ImBullhorn.svg": {
+    "component_id": "im:ImBullhorn",
+    "aliases": [
+      "im",
+      "bullhorn"
+    ],
+    "colors": [],
+    "caption": "a megaphone icon on a white background"
+  },
+  "im/ImCalculator.svg": {
+    "component_id": "im:ImCalculator",
+    "aliases": [
+      "im",
+      "calculator"
+    ],
+    "colors": [],
+    "caption": "a black and white calculator icon on a white background"
+  },
+  "im/ImCalendar.svg": {
+    "component_id": "im:ImCalendar",
+    "aliases": [
+      "im",
+      "calendar"
+    ],
+    "colors": [],
+    "caption": "a calendar icon on a white background"
+  },
+  "im/ImCamera.svg": {
+    "component_id": "im:ImCamera",
+    "aliases": [
+      "im",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "a camera icon on a white background"
+  },
+  "im/ImCancelCircle.svg": {
+    "component_id": "im:ImCancelCircle",
+    "aliases": [
+      "im",
+      "cancel",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x in a circle"
+  },
+  "im/ImCart.svg": {
+    "component_id": "im:ImCart",
+    "aliases": [
+      "im",
+      "cart"
+    ],
+    "colors": [],
+    "caption": "a shopping cart icon on a white background"
+  },
+  "im/ImCheckboxChecked.svg": {
+    "component_id": "im:ImCheckboxChecked",
+    "aliases": [
+      "im",
+      "checkbox",
+      "checked"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "im/ImCheckboxUnchecked.svg": {
+    "component_id": "im:ImCheckboxUnchecked",
+    "aliases": [
+      "im",
+      "checkbox",
+      "unchecked"
+    ],
+    "colors": [],
+    "caption": "a square black and white icon on a white background"
+  },
+  "im/ImCheckmark.svg": {
+    "component_id": "im:ImCheckmark",
+    "aliases": [
+      "im",
+      "checkmark"
+    ],
+    "colors": [],
+    "caption": "a black check mark icon on a white background"
+  },
+  "im/ImCheckmark2.svg": {
+    "component_id": "im:ImCheckmark2",
+    "aliases": [
+      "im",
+      "checkmark",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "im/ImChrome.svg": {
+    "component_id": "im:ImChrome",
+    "aliases": [
+      "im",
+      "chrome"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter q"
+  },
+  "im/ImCircleDown.svg": {
+    "component_id": "im:ImCircleDown",
+    "aliases": [
+      "im",
+      "circle",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a check mark in a circle"
+  },
+  "im/ImCircleLeft.svg": {
+    "component_id": "im:ImCircleLeft",
+    "aliases": [
+      "im",
+      "circle",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow in a circle"
+  },
+  "im/ImCircleRight.svg": {
+    "component_id": "im:ImCircleRight",
+    "aliases": [
+      "im",
+      "circle",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "im/ImCircleUp.svg": {
+    "component_id": "im:ImCircleUp",
+    "aliases": [
+      "im",
+      "circle",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black arrow in a circle on a white background"
+  },
+  "im/ImClearFormatting.svg": {
+    "component_id": "im:ImClearFormatting",
+    "aliases": [
+      "im",
+      "clear",
+      "formatting"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter x"
+  },
+  "im/ImClipboard.svg": {
+    "component_id": "im:ImClipboard",
+    "aliases": [
+      "im",
+      "clipboard"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a clipboard"
+  },
+  "im/ImClock.svg": {
+    "component_id": "im:ImClock",
+    "aliases": [
+      "im",
+      "clock"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "im/ImClock2.svg": {
+    "component_id": "im:ImClock2",
+    "aliases": [
+      "im",
+      "clock",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white clock with a white arrow"
+  },
+  "im/ImCloud.svg": {
+    "component_id": "im:ImCloud",
+    "aliases": [
+      "im",
+      "cloud"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "im/ImCloudCheck.svg": {
+    "component_id": "im:ImCloudCheck",
+    "aliases": [
+      "im",
+      "cloud",
+      "check"
+    ],
+    "colors": [],
+    "caption": "a cloud with a check mark on it"
+  },
+  "im/ImCloudDownload.svg": {
+    "component_id": "im:ImCloudDownload",
+    "aliases": [
+      "im",
+      "cloud",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with a down arrow"
+  },
+  "im/ImCloudUpload.svg": {
+    "component_id": "im:ImCloudUpload",
+    "aliases": [
+      "im",
+      "cloud",
+      "upload"
+    ],
+    "colors": [],
+    "caption": "a cloud with an arrow pointing up"
+  },
+  "im/ImClubs.svg": {
+    "component_id": "im:ImClubs",
+    "aliases": [
+      "im",
+      "clubs"
+    ],
+    "colors": [],
+    "caption": "a four leaf clover symbol on a white background"
+  },
+  "im/ImCodepen.svg": {
+    "component_id": "im:ImCodepen",
+    "aliases": [
+      "im",
+      "codepen"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cube"
+  },
+  "im/ImCog.svg": {
+    "component_id": "im:ImCog",
+    "aliases": [
+      "im",
+      "cog"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a gearwheel"
+  },
+  "im/ImCogs.svg": {
+    "component_id": "im:ImCogs",
+    "aliases": [
+      "im",
+      "cogs"
+    ],
+    "colors": [],
+    "caption": "two gears are shown on a white background"
+  },
+  "im/ImCoinDollar.svg": {
+    "component_id": "im:ImCoinDollar",
+    "aliases": [
+      "im",
+      "coin",
+      "dollar"
+    ],
+    "colors": [],
+    "caption": "a black dollar sign in a circle on a white background"
+  },
+  "im/ImCoinEuro.svg": {
+    "component_id": "im:ImCoinEuro",
+    "aliases": [
+      "im",
+      "coin",
+      "euro"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a euro sign"
+  },
+  "im/ImCoinPound.svg": {
+    "component_id": "im:ImCoinPound",
+    "aliases": [
+      "im",
+      "coin",
+      "pound"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a pound sign"
+  },
+  "im/ImCoinYen.svg": {
+    "component_id": "im:ImCoinYen",
+    "aliases": [
+      "im",
+      "coin",
+      "yen"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a currency symbol"
+  },
+  "im/ImCommand.svg": {
+    "component_id": "im:ImCommand",
+    "aliases": [
+      "im",
+      "command"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cross symbol"
+  },
+  "im/ImCompass.svg": {
+    "component_id": "im:ImCompass",
+    "aliases": [
+      "im",
+      "compass"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "im/ImCompass2.svg": {
+    "component_id": "im:ImCompass2",
+    "aliases": [
+      "im",
+      "compass",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a compass"
+  },
+  "im/ImConfused.svg": {
+    "component_id": "im:ImConfused",
+    "aliases": [
+      "im",
+      "confused"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImConfused2.svg": {
+    "component_id": "im:ImConfused2",
+    "aliases": [
+      "im",
+      "confused",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImConnection.svg": {
+    "component_id": "im:ImConnection",
+    "aliases": [
+      "im",
+      "connection"
+    ],
+    "colors": [],
+    "caption": "a black wifi symbol on a white background"
+  },
+  "im/ImContrast.svg": {
+    "component_id": "im:ImContrast",
+    "aliases": [
+      "im",
+      "contrast"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with a half moon in it"
+  },
+  "im/ImCool.svg": {
+    "component_id": "im:ImCool",
+    "aliases": [
+      "im",
+      "cool"
+    ],
+    "colors": [],
+    "caption": "a black and white smiley face with sunglasses"
+  },
+  "im/ImCool2.svg": {
+    "component_id": "im:ImCool2",
+    "aliases": [
+      "im",
+      "cool",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white smiley face with glasses"
+  },
+  "im/ImCopy.svg": {
+    "component_id": "im:ImCopy",
+    "aliases": [
+      "im",
+      "copy"
+    ],
+    "colors": [],
+    "caption": "two documents are shown on a white background"
+  },
+  "im/ImCreditCard.svg": {
+    "component_id": "im:ImCreditCard",
+    "aliases": [
+      "im",
+      "credit",
+      "card"
+    ],
+    "colors": [],
+    "caption": "a credit card icon on a white background"
+  },
+  "im/ImCrop.svg": {
+    "component_id": "im:ImCrop",
+    "aliases": [
+      "im",
+      "crop"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number four"
+  },
+  "im/ImCross.svg": {
+    "component_id": "im:ImCross",
+    "aliases": [
+      "im",
+      "cross"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x sign"
+  },
+  "im/ImCrying.svg": {
+    "component_id": "im:ImCrying",
+    "aliases": [
+      "im",
+      "crying"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sad face"
+  },
+  "im/ImCrying2.svg": {
+    "component_id": "im:ImCrying2",
+    "aliases": [
+      "im",
+      "crying",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a sad face"
+  },
+  "im/ImCss3.svg": {
+    "component_id": "im:ImCss3",
+    "aliases": [
+      "im",
+      "css",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter e"
+  },
+  "im/ImCtrl.svg": {
+    "component_id": "im:ImCtrl",
+    "aliases": [
+      "im",
+      "ctrl"
+    ],
+    "colors": [],
+    "caption": "a black triangle is shown on a white background"
+  },
+  "im/ImDatabase.svg": {
+    "component_id": "im:ImDatabase",
+    "aliases": [
+      "im",
+      "database"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a database"
+  },
+  "im/ImDelicious.svg": {
+    "component_id": "im:ImDelicious",
+    "aliases": [
+      "im",
+      "delicious"
+    ],
+    "colors": [],
+    "caption": "a black and white square with two squares in it"
+  },
+  "im/ImDeviantart.svg": {
+    "component_id": "im:ImDeviantart",
+    "aliases": [
+      "im",
+      "deviantart"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a letter z"
+  },
+  "im/ImDiamonds.svg": {
+    "component_id": "im:ImDiamonds",
+    "aliases": [
+      "im",
+      "diamonds"
+    ],
+    "colors": [],
+    "caption": "a black diamond on a white background"
+  },
+  "im/ImDice.svg": {
+    "component_id": "im:ImDice",
+    "aliases": [
+      "im",
+      "dice"
+    ],
+    "colors": [],
+    "caption": "a black and white dice icon on a white background"
+  },
+  "im/ImDisplay.svg": {
+    "component_id": "im:ImDisplay",
+    "aliases": [
+      "im",
+      "display"
+    ],
+    "colors": [],
+    "caption": "a computer monitor icon on a white background"
+  },
+  "im/ImDownload.svg": {
+    "component_id": "im:ImDownload",
+    "aliases": [
+      "im",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "im/ImDownload2.svg": {
+    "component_id": "im:ImDownload2",
+    "aliases": [
+      "im",
+      "download",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book with an arrow"
+  },
+  "im/ImDownload3.svg": {
+    "component_id": "im:ImDownload3",
+    "aliases": [
+      "im",
+      "download",
+      "3"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white icon with an arrow"
+  },
+  "im/ImDrawer.svg": {
+    "component_id": "im:ImDrawer",
+    "aliases": [
+      "im",
+      "drawer"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an envelope"
+  },
+  "im/ImDrawer2.svg": {
+    "component_id": "im:ImDrawer2",
+    "aliases": [
+      "im",
+      "drawer",
+      "2"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "im/ImDribbble.svg": {
+    "component_id": "im:ImDribbble",
+    "aliases": [
+      "im",
+      "dribbble"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a basketball ball"
+  },
+  "im/ImDrive.svg": {
+    "component_id": "im:ImDrive",
+    "aliases": [
+      "im",
+      "drive"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer on a white background"
+  },
+  "im/ImDropbox.svg": {
+    "component_id": "im:ImDropbox",
+    "aliases": [
+      "im",
+      "dropbox"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white dropbox logo"
+  },
+  "im/ImDroplet.svg": {
+    "component_id": "im:ImDroplet",
+    "aliases": [
+      "im",
+      "droplet"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a drop of water"
+  },
+  "im/ImEarth.svg": {
+    "component_id": "im:ImEarth",
+    "aliases": [
+      "im",
+      "earth"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a dog in a circle"
+  },
+  "im/ImEdge.svg": {
+    "component_id": "im:ImEdge",
+    "aliases": [
+      "im",
+      "edge"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter e"
+  },
+  "im/ImEject.svg": {
+    "component_id": "im:ImEject",
+    "aliases": [
+      "im",
+      "eject"
+    ],
+    "colors": [],
+    "caption": "a triangle is shown on a white background"
+  },
+  "im/ImEllo.svg": {
+    "component_id": "im:ImEllo",
+    "aliases": [
+      "im",
+      "ello"
+    ],
+    "colors": [],
+    "caption": "a black and white smiley face icon"
+  },
+  "im/ImEmbed.svg": {
+    "component_id": "im:ImEmbed",
+    "aliases": [
+      "im",
+      "embed"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing in the same direction"
+  },
+  "im/ImEmbed2.svg": {
+    "component_id": "im:ImEmbed2",
+    "aliases": [
+      "im",
+      "embed",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing to each other"
+  },
+  "im/ImEnlarge.svg": {
+    "component_id": "im:ImEnlarge",
+    "aliases": [
+      "im",
+      "enlarge"
+    ],
+    "colors": [],
+    "caption": "a black and white square with four arrows"
+  },
+  "im/ImEnlarge2.svg": {
+    "component_id": "im:ImEnlarge2",
+    "aliases": [
+      "im",
+      "enlarge",
+      "2"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "im/ImEnter.svg": {
+    "component_id": "im:ImEnter",
+    "aliases": [
+      "im",
+      "enter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a door with an arrow"
+  },
+  "im/ImEnvelop.svg": {
+    "component_id": "im:ImEnvelop",
+    "aliases": [
+      "im",
+      "envelop"
+    ],
+    "colors": [],
+    "caption": "an email icon on a white background"
+  },
+  "im/ImEqualizer.svg": {
+    "component_id": "im:ImEqualizer",
+    "aliases": [
+      "im",
+      "equalizer"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a belt"
+  },
+  "im/ImEqualizer2.svg": {
+    "component_id": "im:ImEqualizer2",
+    "aliases": [
+      "im",
+      "equalizer",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three lines"
+  },
+  "im/ImEvil.svg": {
+    "component_id": "im:ImEvil",
+    "aliases": [
+      "im",
+      "evil"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face with devil horns"
+  },
+  "im/ImEvil2.svg": {
+    "component_id": "im:ImEvil2",
+    "aliases": [
+      "im",
+      "evil",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white devil face icon"
+  },
+  "im/ImExit.svg": {
+    "component_id": "im:ImExit",
+    "aliases": [
+      "im",
+      "exit"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a door with an arrow"
+  },
+  "im/ImEye.svg": {
+    "component_id": "im:ImEye",
+    "aliases": [
+      "im",
+      "eye"
+    ],
+    "colors": [],
+    "caption": "an eye icon on a white background"
+  },
+  "im/ImEyeBlocked.svg": {
+    "component_id": "im:ImEyeBlocked",
+    "aliases": [
+      "im",
+      "eye",
+      "blocked"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no eye symbol"
+  },
+  "im/ImEyeMinus.svg": {
+    "component_id": "im:ImEyeMinus",
+    "aliases": [
+      "im",
+      "eye",
+      "minus"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an eye with an arrow"
+  },
+  "im/ImEyePlus.svg": {
+    "component_id": "im:ImEyePlus",
+    "aliases": [
+      "im",
+      "eye",
+      "plus"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an eye with a cross"
+  },
+  "im/ImEyedropper.svg": {
+    "component_id": "im:ImEyedropper",
+    "aliases": [
+      "im",
+      "eyedropper"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a knife"
+  },
+  "im/ImFacebook.svg": {
+    "component_id": "im:ImFacebook",
+    "aliases": [
+      "im",
+      "facebook"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a facebook logo"
+  },
+  "im/ImFacebook2.svg": {
+    "component_id": "im:ImFacebook2",
+    "aliases": [
+      "im",
+      "facebook",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the facebook logo"
+  },
+  "im/ImFeed.svg": {
+    "component_id": "im:ImFeed",
+    "aliases": [
+      "im",
+      "feed"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular symbol"
+  },
+  "im/ImFileEmpty.svg": {
+    "component_id": "im:ImFileEmpty",
+    "aliases": [
+      "im",
+      "file",
+      "empty"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "im/ImFileExcel.svg": {
+    "component_id": "im:ImFileExcel",
+    "aliases": [
+      "im",
+      "file",
+      "excel"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the letter x"
+  },
+  "im/ImFileMusic.svg": {
+    "component_id": "im:ImFileMusic",
+    "aliases": [
+      "im",
+      "file",
+      "music"
+    ],
+    "colors": [],
+    "caption": "a music note icon on a white background"
+  },
+  "im/ImFileOpenoffice.svg": {
+    "component_id": "im:ImFileOpenoffice",
+    "aliases": [
+      "im",
+      "file",
+      "openoffice"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document with a bird"
+  },
+  "im/ImFilePdf.svg": {
+    "component_id": "im:ImFilePdf",
+    "aliases": [
+      "im",
+      "file",
+      "pdf"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a document"
+  },
+  "im/ImFilePicture.svg": {
+    "component_id": "im:ImFilePicture",
+    "aliases": [
+      "im",
+      "file",
+      "picture"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a document"
+  },
+  "im/ImFilePlay.svg": {
+    "component_id": "im:ImFilePlay",
+    "aliases": [
+      "im",
+      "file",
+      "play"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a video player"
+  },
+  "im/ImFileText.svg": {
+    "component_id": "im:ImFileText",
+    "aliases": [
+      "im",
+      "file",
+      "text"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "im/ImFileText2.svg": {
+    "component_id": "im:ImFileText2",
+    "aliases": [
+      "im",
+      "file",
+      "text",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "im/ImFileVideo.svg": {
+    "component_id": "im:ImFileVideo",
+    "aliases": [
+      "im",
+      "file",
+      "video"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a video file"
+  },
+  "im/ImFileWord.svg": {
+    "component_id": "im:ImFileWord",
+    "aliases": [
+      "im",
+      "file",
+      "word"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the word w"
+  },
+  "im/ImFileZip.svg": {
+    "component_id": "im:ImFileZip",
+    "aliases": [
+      "im",
+      "file",
+      "zip"
+    ],
+    "colors": [],
+    "caption": "a file folder icon on a white background"
+  },
+  "im/ImFilesEmpty.svg": {
+    "component_id": "im:ImFilesEmpty",
+    "aliases": [
+      "im",
+      "files",
+      "empty"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "im/ImFilm.svg": {
+    "component_id": "im:ImFilm",
+    "aliases": [
+      "im",
+      "film"
+    ],
+    "colors": [],
+    "caption": "a video player icon on a white background"
+  },
+  "im/ImFilter.svg": {
+    "component_id": "im:ImFilter",
+    "aliases": [
+      "im",
+      "filter"
+    ],
+    "colors": [],
+    "caption": "a funnel icon on a white background"
+  },
+  "im/ImFinder.svg": {
+    "component_id": "im:ImFinder",
+    "aliases": [
+      "im",
+      "finder"
+    ],
+    "colors": [],
+    "caption": "a black and white square with a smiling face"
+  },
+  "im/ImFire.svg": {
+    "component_id": "im:ImFire",
+    "aliases": [
+      "im",
+      "fire"
+    ],
+    "colors": [],
+    "caption": "a black and white fire icon on a white background"
+  },
+  "im/ImFirefox.svg": {
+    "component_id": "im:ImFirefox",
+    "aliases": [
+      "im",
+      "firefox"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a fox in the shape of a circle"
+  },
+  "im/ImFirst.svg": {
+    "component_id": "im:ImFirst",
+    "aliases": [
+      "im",
+      "first"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter k"
+  },
+  "im/ImFlag.svg": {
+    "component_id": "im:ImFlag",
+    "aliases": [
+      "im",
+      "flag"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a flag"
+  },
+  "im/ImFlattr.svg": {
+    "component_id": "im:ImFlattr",
+    "aliases": [
+      "im",
+      "flattr"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter h in it"
+  },
+  "im/ImFlickr.svg": {
+    "component_id": "im:ImFlickr",
+    "aliases": [
+      "im",
+      "flickr"
+    ],
+    "colors": [],
+    "caption": "two black circles are shown on a white background"
+  },
+  "im/ImFlickr2.svg": {
+    "component_id": "im:ImFlickr2",
+    "aliases": [
+      "im",
+      "flickr",
+      "2"
+    ],
+    "colors": [],
+    "caption": "two circles are shown on a white background"
+  },
+  "im/ImFlickr3.svg": {
+    "component_id": "im:ImFlickr3",
+    "aliases": [
+      "im",
+      "flickr",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with two circles on it"
+  },
+  "im/ImFlickr4.svg": {
+    "component_id": "im:ImFlickr4",
+    "aliases": [
+      "im",
+      "flickr",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circle with two eyes"
+  },
+  "im/ImFloppyDisk.svg": {
+    "component_id": "im:ImFloppyDisk",
+    "aliases": [
+      "im",
+      "floppy",
+      "disk"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a floppy disk"
+  },
+  "im/ImFolder.svg": {
+    "component_id": "im:ImFolder",
+    "aliases": [
+      "im",
+      "folder"
+    ],
+    "colors": [],
+    "caption": "a black folder icon on a white background"
+  },
+  "im/ImFolderDownload.svg": {
+    "component_id": "im:ImFolderDownload",
+    "aliases": [
+      "im",
+      "folder",
+      "download"
+    ],
+    "colors": [],
+    "caption": "an image of a black folder with a white arrow"
+  },
+  "im/ImFolderMinus.svg": {
+    "component_id": "im:ImFolderMinus",
+    "aliases": [
+      "im",
+      "folder",
+      "minus"
+    ],
+    "colors": [],
+    "caption": "a black folder icon on a white background"
+  },
+  "im/ImFolderOpen.svg": {
+    "component_id": "im:ImFolderOpen",
+    "aliases": [
+      "im",
+      "folder",
+      "open"
+    ],
+    "colors": [],
+    "caption": "a black folder icon on a white background"
+  },
+  "im/ImFolderPlus.svg": {
+    "component_id": "im:ImFolderPlus",
+    "aliases": [
+      "im",
+      "folder",
+      "plus"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a medical cross"
+  },
+  "im/ImFolderUpload.svg": {
+    "component_id": "im:ImFolderUpload",
+    "aliases": [
+      "im",
+      "folder",
+      "upload"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a folder with an arrow pointing up"
+  },
+  "im/ImFont.svg": {
+    "component_id": "im:ImFont",
+    "aliases": [
+      "im",
+      "font"
+    ],
+    "colors": [],
+    "caption": "a black and white letter f on a white background"
+  },
+  "im/ImFontSize.svg": {
+    "component_id": "im:ImFontSize",
+    "aliases": [
+      "im",
+      "font",
+      "size"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "im/ImForward.svg": {
+    "component_id": "im:ImForward",
+    "aliases": [
+      "im",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImForward2.svg": {
+    "component_id": "im:ImForward2",
+    "aliases": [
+      "im",
+      "forward",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a play button"
+  },
+  "im/ImForward3.svg": {
+    "component_id": "im:ImForward3",
+    "aliases": [
+      "im",
+      "forward",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing in the direction of the arrow"
+  },
+  "im/ImFoursquare.svg": {
+    "component_id": "im:ImFoursquare",
+    "aliases": [
+      "im",
+      "foursquare"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter f"
+  },
+  "im/ImFrustrated.svg": {
+    "component_id": "im:ImFrustrated",
+    "aliases": [
+      "im",
+      "frustrated"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an angry face"
+  },
+  "im/ImFrustrated2.svg": {
+    "component_id": "im:ImFrustrated2",
+    "aliases": [
+      "im",
+      "frustrated",
+      "2"
+    ],
+    "colors": [],
+    "caption": "an angry face icon in black and white"
+  },
+  "im/ImGift.svg": {
+    "component_id": "im:ImGift",
+    "aliases": [
+      "im",
+      "gift"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a gift with a bow"
+  },
+  "im/ImGit.svg": {
+    "component_id": "im:ImGit",
+    "aliases": [
+      "im",
+      "git"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three circles"
+  },
+  "im/ImGithub.svg": {
+    "component_id": "im:ImGithub",
+    "aliases": [
+      "im",
+      "github"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cat in a circle"
+  },
+  "im/ImGlass.svg": {
+    "component_id": "im:ImGlass",
+    "aliases": [
+      "im",
+      "glass"
+    ],
+    "colors": [],
+    "caption": "a wine glass icon on a white background"
+  },
+  "im/ImGlass2.svg": {
+    "component_id": "im:ImGlass2",
+    "aliases": [
+      "im",
+      "glass",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a martini glass icon on a white background"
+  },
+  "im/ImGoogle.svg": {
+    "component_id": "im:ImGoogle",
+    "aliases": [
+      "im",
+      "google"
+    ],
+    "colors": [],
+    "caption": "a black and white letter g on a white background"
+  },
+  "im/ImGoogle2.svg": {
+    "component_id": "im:ImGoogle2",
+    "aliases": [
+      "im",
+      "google",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the letter g on it"
+  },
+  "im/ImGoogle3.svg": {
+    "component_id": "im:ImGoogle3",
+    "aliases": [
+      "im",
+      "google",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter g in it"
+  },
+  "im/ImGoogleDrive.svg": {
+    "component_id": "im:ImGoogleDrive",
+    "aliases": [
+      "im",
+      "google",
+      "drive"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a triangle"
+  },
+  "im/ImGooglePlus.svg": {
+    "component_id": "im:ImGooglePlus",
+    "aliases": [
+      "im",
+      "google",
+      "plus"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the google plus logo"
+  },
+  "im/ImGooglePlus2.svg": {
+    "component_id": "im:ImGooglePlus2",
+    "aliases": [
+      "im",
+      "google",
+      "plus",
+      "2"
+    ],
+    "colors": [],
+    "caption": "the google plus logo on a black square"
+  },
+  "im/ImGooglePlus3.svg": {
+    "component_id": "im:ImGooglePlus3",
+    "aliases": [
+      "im",
+      "google",
+      "plus",
+      "3"
+    ],
+    "colors": [],
+    "caption": "the google plus logo is shown in black and white"
+  },
+  "im/ImGrin.svg": {
+    "component_id": "im:ImGrin",
+    "aliases": [
+      "im",
+      "grin"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImGrin2.svg": {
+    "component_id": "im:ImGrin2",
+    "aliases": [
+      "im",
+      "grin",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImHackernews.svg": {
+    "component_id": "im:ImHackernews",
+    "aliases": [
+      "im",
+      "hackernews"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the letter y on it"
+  },
+  "im/ImHammer.svg": {
+    "component_id": "im:ImHammer",
+    "aliases": [
+      "im",
+      "hammer"
+    ],
+    "colors": [],
+    "caption": "a hammer icon on a white background"
+  },
+  "im/ImHammer2.svg": {
+    "component_id": "im:ImHammer2",
+    "aliases": [
+      "im",
+      "hammer",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black hammer on a white background"
+  },
+  "im/ImHangouts.svg": {
+    "component_id": "im:ImHangouts",
+    "aliases": [
+      "im",
+      "hangouts"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble with two speech bubbles"
+  },
+  "im/ImHappy.svg": {
+    "component_id": "im:ImHappy",
+    "aliases": [
+      "im",
+      "happy"
+    ],
+    "colors": [],
+    "caption": "a black and white smiley face on a white background"
+  },
+  "im/ImHappy2.svg": {
+    "component_id": "im:ImHappy2",
+    "aliases": [
+      "im",
+      "happy",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white smiley face on a white background"
+  },
+  "im/ImHeadphones.svg": {
+    "component_id": "im:ImHeadphones",
+    "aliases": [
+      "im",
+      "headphones"
+    ],
+    "colors": [],
+    "caption": "headphones icon isolated on white background"
+  },
+  "im/ImHeart.svg": {
+    "component_id": "im:ImHeart",
+    "aliases": [
+      "im",
+      "heart"
+    ],
+    "colors": [],
+    "caption": "a black heart icon on a white background"
+  },
+  "im/ImHeartBroken.svg": {
+    "component_id": "im:ImHeartBroken",
+    "aliases": [
+      "im",
+      "heart",
+      "broken"
+    ],
+    "colors": [],
+    "caption": "a broken heart icon on a white background"
+  },
+  "im/ImHipster.svg": {
+    "component_id": "im:ImHipster",
+    "aliases": [
+      "im",
+      "hipster"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face with a mustache"
+  },
+  "im/ImHipster2.svg": {
+    "component_id": "im:ImHipster2",
+    "aliases": [
+      "im",
+      "hipster",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face with a mustache"
+  },
+  "im/ImHistory.svg": {
+    "component_id": "im:ImHistory",
+    "aliases": [
+      "im",
+      "history"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a clock with an arrow"
+  },
+  "im/ImHome.svg": {
+    "component_id": "im:ImHome",
+    "aliases": [
+      "im",
+      "home"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a house"
+  },
+  "im/ImHome2.svg": {
+    "component_id": "im:ImHome2",
+    "aliases": [
+      "im",
+      "home",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a house"
+  },
+  "im/ImHome3.svg": {
+    "component_id": "im:ImHome3",
+    "aliases": [
+      "im",
+      "home",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black house icon on a white background"
+  },
+  "im/ImHourGlass.svg": {
+    "component_id": "im:ImHourGlass",
+    "aliases": [
+      "im",
+      "hour",
+      "glass"
+    ],
+    "colors": [],
+    "caption": "an hourglass icon on a white background"
+  },
+  "im/ImHtmlFive.svg": {
+    "component_id": "im:ImHtmlFive",
+    "aliases": [
+      "im",
+      "html",
+      "five"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter h in it"
+  },
+  "im/ImHtmlFive2.svg": {
+    "component_id": "im:ImHtmlFive2",
+    "aliases": [
+      "im",
+      "html",
+      "five",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter h in it"
+  },
+  "im/ImIcoMoon.svg": {
+    "component_id": "im:ImIcoMoon",
+    "aliases": [
+      "im",
+      "ico",
+      "moon"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an eye in a circle"
+  },
+  "im/ImIe.svg": {
+    "component_id": "im:ImIe",
+    "aliases": [
+      "im",
+      "ie"
+    ],
+    "colors": [],
+    "caption": "the internet explorer logo is shown on a white background"
+  },
+  "im/ImImage.svg": {
+    "component_id": "im:ImImage",
+    "aliases": [
+      "im",
+      "image"
+    ],
+    "colors": [],
+    "caption": "a black and white photo icon with a mountain"
+  },
+  "im/ImImages.svg": {
+    "component_id": "im:ImImages",
+    "aliases": [
+      "im",
+      "images"
+    ],
+    "colors": [],
+    "caption": "a black and white photo icon with a mountain"
+  },
+  "im/ImIndentDecrease.svg": {
+    "component_id": "im:ImIndentDecrease",
+    "aliases": [
+      "im",
+      "indent",
+      "decrease"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "im/ImIndentIncrease.svg": {
+    "component_id": "im:ImIndentIncrease",
+    "aliases": [
+      "im",
+      "indent",
+      "increase"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a flag with an arrow"
+  },
+  "im/ImInfinite.svg": {
+    "component_id": "im:ImInfinite",
+    "aliases": [
+      "im",
+      "infinite"
+    ],
+    "colors": [],
+    "caption": "a black infinity symbol on a white background"
+  },
+  "im/ImInfo.svg": {
+    "component_id": "im:ImInfo",
+    "aliases": [
+      "im",
+      "info"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the word i in it"
+  },
+  "im/ImInsertTemplate.svg": {
+    "component_id": "im:ImInsertTemplate",
+    "aliases": [
+      "im",
+      "insert",
+      "template"
+    ],
+    "colors": [],
+    "caption": "a black and white square with two lines in it"
+  },
+  "im/ImInstagram.svg": {
+    "component_id": "im:ImInstagram",
+    "aliases": [
+      "im",
+      "instagram"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an instagram icon"
+  },
+  "im/ImItalic.svg": {
+    "component_id": "im:ImItalic",
+    "aliases": [
+      "im",
+      "italic"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter i"
+  },
+  "im/ImJoomla.svg": {
+    "component_id": "im:ImJoomla",
+    "aliases": [
+      "im",
+      "joomla"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white symbol"
+  },
+  "im/ImKey.svg": {
+    "component_id": "im:ImKey",
+    "aliases": [
+      "im",
+      "key"
+    ],
+    "colors": [],
+    "caption": "a key icon on a white background"
+  },
+  "im/ImKey2.svg": {
+    "component_id": "im:ImKey2",
+    "aliases": [
+      "im",
+      "key",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a key icon on a white background"
+  },
+  "im/ImKeyboard.svg": {
+    "component_id": "im:ImKeyboard",
+    "aliases": [
+      "im",
+      "keyboard"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a keyboard"
+  },
+  "im/ImLab.svg": {
+    "component_id": "im:ImLab",
+    "aliases": [
+      "im",
+      "lab"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a test tube"
+  },
+  "im/ImLanyrd.svg": {
+    "component_id": "im:ImLanyrd",
+    "aliases": [
+      "im",
+      "lanyrd"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the letter l on it"
+  },
+  "im/ImLaptop.svg": {
+    "component_id": "im:ImLaptop",
+    "aliases": [
+      "im",
+      "laptop"
+    ],
+    "colors": [],
+    "caption": "a laptop computer icon on a white background"
+  },
+  "im/ImLast.svg": {
+    "component_id": "im:ImLast",
+    "aliases": [
+      "im",
+      "last"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "im/ImLastfm.svg": {
+    "component_id": "im:ImLastfm",
+    "aliases": [
+      "im",
+      "lastfm"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word cs"
+  },
+  "im/ImLastfm2.svg": {
+    "component_id": "im:ImLastfm2",
+    "aliases": [
+      "im",
+      "lastfm",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the letter s on it"
+  },
+  "im/ImLeaf.svg": {
+    "component_id": "im:ImLeaf",
+    "aliases": [
+      "im",
+      "leaf"
+    ],
+    "colors": [],
+    "caption": "a leaf icon on a white background"
+  },
+  "im/ImLibrary.svg": {
+    "component_id": "im:ImLibrary",
+    "aliases": [
+      "im",
+      "library"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a building with pillars"
+  },
+  "im/ImLibreoffice.svg": {
+    "component_id": "im:ImLibreoffice",
+    "aliases": [
+      "im",
+      "libreoffice"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "im/ImLifebuoy.svg": {
+    "component_id": "im:ImLifebuoy",
+    "aliases": [
+      "im",
+      "lifebuoy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a life preserver"
+  },
+  "im/ImLigature.svg": {
+    "component_id": "im:ImLigature",
+    "aliases": [
+      "im",
+      "ligature"
+    ],
+    "colors": [],
+    "caption": "a black and white letter f on a white background"
+  },
+  "im/ImLigature2.svg": {
+    "component_id": "im:ImLigature2",
+    "aliases": [
+      "im",
+      "ligature",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter f"
+  },
+  "im/ImLink.svg": {
+    "component_id": "im:ImLink",
+    "aliases": [
+      "im",
+      "link"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a link"
+  },
+  "im/ImLinkedin.svg": {
+    "component_id": "im:ImLinkedin",
+    "aliases": [
+      "im",
+      "linkedin"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the linked logo"
+  },
+  "im/ImLinkedin2.svg": {
+    "component_id": "im:ImLinkedin2",
+    "aliases": [
+      "im",
+      "linkedin",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the linked logo"
+  },
+  "im/ImList.svg": {
+    "component_id": "im:ImList",
+    "aliases": [
+      "im",
+      "list"
+    ],
+    "colors": [],
+    "caption": "three black squares on a white background"
+  },
+  "im/ImList2.svg": {
+    "component_id": "im:ImList2",
+    "aliases": [
+      "im",
+      "list",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a check list with three circles on it"
+  },
+  "im/ImListNumbered.svg": {
+    "component_id": "im:ImListNumbered",
+    "aliases": [
+      "im",
+      "list",
+      "numbered"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the number 12 on it"
+  },
+  "im/ImLocation.svg": {
+    "component_id": "im:ImLocation",
+    "aliases": [
+      "im",
+      "location"
+    ],
+    "colors": [],
+    "caption": "a black and white pin icon on a white background"
+  },
+  "im/ImLocation2.svg": {
+    "component_id": "im:ImLocation2",
+    "aliases": [
+      "im",
+      "location",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a location pin"
+  },
+  "im/ImLock.svg": {
+    "component_id": "im:ImLock",
+    "aliases": [
+      "im",
+      "lock"
+    ],
+    "colors": [],
+    "caption": "a black lock icon on a white background"
+  },
+  "im/ImLoop.svg": {
+    "component_id": "im:ImLoop",
+    "aliases": [
+      "im",
+      "loop"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "im/ImLoop2.svg": {
+    "component_id": "im:ImLoop2",
+    "aliases": [
+      "im",
+      "loop",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "im/ImLtr.svg": {
+    "component_id": "im:ImLtr",
+    "aliases": [
+      "im",
+      "ltr"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word tp"
+  },
+  "im/ImMagicWand.svg": {
+    "component_id": "im:ImMagicWand",
+    "aliases": [
+      "im",
+      "magic",
+      "wand"
+    ],
+    "colors": [],
+    "caption": "a flashlight icon on a white background"
+  },
+  "im/ImMagnet.svg": {
+    "component_id": "im:ImMagnet",
+    "aliases": [
+      "im",
+      "magnet"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a magnet with the letter u"
+  },
+  "im/ImMail.svg": {
+    "component_id": "im:ImMail",
+    "aliases": [
+      "im",
+      "mail"
+    ],
+    "colors": [],
+    "caption": "an email icon on a white background"
+  },
+  "im/ImMail2.svg": {
+    "component_id": "im:ImMail2",
+    "aliases": [
+      "im",
+      "mail",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an email icon"
+  },
+  "im/ImMail3.svg": {
+    "component_id": "im:ImMail3",
+    "aliases": [
+      "im",
+      "mail",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the letter m on it"
+  },
+  "im/ImMail4.svg": {
+    "component_id": "im:ImMail4",
+    "aliases": [
+      "im",
+      "mail",
+      "4"
+    ],
+    "colors": [],
+    "caption": "an email icon in a circle on a white background"
+  },
+  "im/ImMakeGroup.svg": {
+    "component_id": "im:ImMakeGroup",
+    "aliases": [
+      "im",
+      "make",
+      "group"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two squares"
+  },
+  "im/ImMan.svg": {
+    "component_id": "im:ImMan",
+    "aliases": [
+      "im",
+      "man"
+    ],
+    "colors": [],
+    "caption": "a black man standing in front of a white background"
+  },
+  "im/ImManWoman.svg": {
+    "component_id": "im:ImManWoman",
+    "aliases": [
+      "im",
+      "man",
+      "woman"
+    ],
+    "colors": [],
+    "caption": "a black and white toilet sign with a man and a woman"
+  },
+  "im/ImMap.svg": {
+    "component_id": "im:ImMap",
+    "aliases": [
+      "im",
+      "map"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with three black rectangles"
+  },
+  "im/ImMap2.svg": {
+    "component_id": "im:ImMap2",
+    "aliases": [
+      "im",
+      "map",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a map"
+  },
+  "im/ImMenu.svg": {
+    "component_id": "im:ImMenu",
+    "aliases": [
+      "im",
+      "menu"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "im/ImMenu2.svg": {
+    "component_id": "im:ImMenu2",
+    "aliases": [
+      "im",
+      "menu",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "im/ImMenu3.svg": {
+    "component_id": "im:ImMenu3",
+    "aliases": [
+      "im",
+      "menu",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "im/ImMenu4.svg": {
+    "component_id": "im:ImMenu4",
+    "aliases": [
+      "im",
+      "menu",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "im/ImMeter.svg": {
+    "component_id": "im:ImMeter",
+    "aliases": [
+      "im",
+      "meter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speedometer"
+  },
+  "im/ImMeter2.svg": {
+    "component_id": "im:ImMeter2",
+    "aliases": [
+      "im",
+      "meter",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speedometer"
+  },
+  "im/ImMic.svg": {
+    "component_id": "im:ImMic",
+    "aliases": [
+      "im",
+      "mic"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "im/ImMinus.svg": {
+    "component_id": "im:ImMinus",
+    "aliases": [
+      "im",
+      "minus"
+    ],
+    "colors": [],
+    "caption": "a black rectangle with a white background"
+  },
+  "im/ImMobile.svg": {
+    "component_id": "im:ImMobile",
+    "aliases": [
+      "im",
+      "mobile"
+    ],
+    "colors": [],
+    "caption": "an icon of a cell phone on a white background"
+  },
+  "im/ImMobile2.svg": {
+    "component_id": "im:ImMobile2",
+    "aliases": [
+      "im",
+      "mobile",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cell phone"
+  },
+  "im/ImMoveDown.svg": {
+    "component_id": "im:ImMoveDown",
+    "aliases": [
+      "im",
+      "move",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow and a square"
+  },
+  "im/ImMoveUp.svg": {
+    "component_id": "im:ImMoveUp",
+    "aliases": [
+      "im",
+      "move",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow and a square"
+  },
+  "im/ImMug.svg": {
+    "component_id": "im:ImMug",
+    "aliases": [
+      "im",
+      "mug"
+    ],
+    "colors": [],
+    "caption": "a black coffee cup icon on a white background"
+  },
+  "im/ImMusic.svg": {
+    "component_id": "im:ImMusic",
+    "aliases": [
+      "im",
+      "music"
+    ],
+    "colors": [],
+    "caption": "a music note icon on a white background"
+  },
+  "im/ImNeutral.svg": {
+    "component_id": "im:ImNeutral",
+    "aliases": [
+      "im",
+      "neutral"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImNeutral2.svg": {
+    "component_id": "im:ImNeutral2",
+    "aliases": [
+      "im",
+      "neutral",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImNewTab.svg": {
+    "component_id": "im:ImNewTab",
+    "aliases": [
+      "im",
+      "new",
+      "tab"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "im/ImNewspaper.svg": {
+    "component_id": "im:ImNewspaper",
+    "aliases": [
+      "im",
+      "newspaper"
+    ],
+    "colors": [],
+    "caption": "a newspaper icon on a white background"
+  },
+  "im/ImNext.svg": {
+    "component_id": "im:ImNext",
+    "aliases": [
+      "im",
+      "next"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a play button"
+  },
+  "im/ImNext2.svg": {
+    "component_id": "im:ImNext2",
+    "aliases": [
+      "im",
+      "next",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter k"
+  },
+  "im/ImNotification.svg": {
+    "component_id": "im:ImNotification",
+    "aliases": [
+      "im",
+      "notification"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an exclamation sign"
+  },
+  "im/ImNpm.svg": {
+    "component_id": "im:ImNpm",
+    "aliases": [
+      "im",
+      "npm"
+    ],
+    "colors": [],
+    "caption": "a black and white square with a white square in the middle"
+  },
+  "im/ImOffice.svg": {
+    "component_id": "im:ImOffice",
+    "aliases": [
+      "im",
+      "office"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a building"
+  },
+  "im/ImOmega.svg": {
+    "component_id": "im:ImOmega",
+    "aliases": [
+      "im",
+      "omega"
+    ],
+    "colors": [],
+    "caption": "the omega symbol is shown in black on a white background"
+  },
+  "im/ImOnedrive.svg": {
+    "component_id": "im:ImOnedrive",
+    "aliases": [
+      "im",
+      "onedrive"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "im/ImOpera.svg": {
+    "component_id": "im:ImOpera",
+    "aliases": [
+      "im",
+      "opera"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter o"
+  },
+  "im/ImOpt.svg": {
+    "component_id": "im:ImOpt",
+    "aliases": [
+      "im",
+      "opt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter z"
+  },
+  "im/ImPacman.svg": {
+    "component_id": "im:ImPacman",
+    "aliases": [
+      "im",
+      "pacman"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pac - man"
+  },
+  "im/ImPageBreak.svg": {
+    "component_id": "im:ImPageBreak",
+    "aliases": [
+      "im",
+      "page",
+      "break"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a car with two lines"
+  },
+  "im/ImPagebreak.svg": {
+    "component_id": "im:ImPagebreak",
+    "aliases": [
+      "im",
+      "pagebreak"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a video camera"
+  },
+  "im/ImPaintFormat.svg": {
+    "component_id": "im:ImPaintFormat",
+    "aliases": [
+      "im",
+      "paint",
+      "format"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a paint roller"
+  },
+  "im/ImParagraphCenter.svg": {
+    "component_id": "im:ImParagraphCenter",
+    "aliases": [
+      "im",
+      "paragraph",
+      "center"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white symbol"
+  },
+  "im/ImParagraphJustify.svg": {
+    "component_id": "im:ImParagraphJustify",
+    "aliases": [
+      "im",
+      "paragraph",
+      "justify"
+    ],
+    "colors": [],
+    "caption": "black and white stripes on a white background"
+  },
+  "im/ImParagraphLeft.svg": {
+    "component_id": "im:ImParagraphLeft",
+    "aliases": [
+      "im",
+      "paragraph",
+      "left"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white logo with the letter e"
+  },
+  "im/ImParagraphRight.svg": {
+    "component_id": "im:ImParagraphRight",
+    "aliases": [
+      "im",
+      "paragraph",
+      "right"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white logo with three lines"
+  },
+  "im/ImPaste.svg": {
+    "component_id": "im:ImPaste",
+    "aliases": [
+      "im",
+      "paste"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a clipboard and paper"
+  },
+  "im/ImPause.svg": {
+    "component_id": "im:ImPause",
+    "aliases": [
+      "im",
+      "pause"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two black lines in a circle"
+  },
+  "im/ImPause2.svg": {
+    "component_id": "im:ImPause2",
+    "aliases": [
+      "im",
+      "pause",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two black and white squares"
+  },
+  "im/ImPaypal.svg": {
+    "component_id": "im:ImPaypal",
+    "aliases": [
+      "im",
+      "paypal"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter p"
+  },
+  "im/ImPen.svg": {
+    "component_id": "im:ImPen",
+    "aliases": [
+      "im",
+      "pen"
+    ],
+    "colors": [],
+    "caption": "a fountain pen icon on a white background"
+  },
+  "im/ImPencil.svg": {
+    "component_id": "im:ImPencil",
+    "aliases": [
+      "im",
+      "pencil"
+    ],
+    "colors": [],
+    "caption": "a black pen icon on a white background"
+  },
+  "im/ImPencil2.svg": {
+    "component_id": "im:ImPencil2",
+    "aliases": [
+      "im",
+      "pencil",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a pencil"
+  },
+  "im/ImPhone.svg": {
+    "component_id": "im:ImPhone",
+    "aliases": [
+      "im",
+      "phone"
+    ],
+    "colors": [],
+    "caption": "a black telephone icon on a white background"
+  },
+  "im/ImPhoneHangUp.svg": {
+    "component_id": "im:ImPhoneHangUp",
+    "aliases": [
+      "im",
+      "phone",
+      "hang",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a telephone on a white background"
+  },
+  "im/ImPieChart.svg": {
+    "component_id": "im:ImPieChart",
+    "aliases": [
+      "im",
+      "pie",
+      "chart"
+    ],
+    "colors": [],
+    "caption": "a pie chart icon on a white background"
+  },
+  "im/ImPilcrow.svg": {
+    "component_id": "im:ImPilcrow",
+    "aliases": [
+      "im",
+      "pilcrow"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letters tp"
+  },
+  "im/ImPinterest.svg": {
+    "component_id": "im:ImPinterest",
+    "aliases": [
+      "im",
+      "pinterest"
+    ],
+    "colors": [],
+    "caption": "the pinterest logo is shown in black and white"
+  },
+  "im/ImPinterest2.svg": {
+    "component_id": "im:ImPinterest2",
+    "aliases": [
+      "im",
+      "pinterest",
+      "2"
+    ],
+    "colors": [],
+    "caption": "the pinterest logo is shown in black and white"
+  },
+  "im/ImPlay.svg": {
+    "component_id": "im:ImPlay",
+    "aliases": [
+      "im",
+      "play"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a play button"
+  },
+  "im/ImPlay2.svg": {
+    "component_id": "im:ImPlay2",
+    "aliases": [
+      "im",
+      "play",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white play button icon"
+  },
+  "im/ImPlay3.svg": {
+    "component_id": "im:ImPlay3",
+    "aliases": [
+      "im",
+      "play",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImPlus.svg": {
+    "component_id": "im:ImPlus",
+    "aliases": [
+      "im",
+      "plus"
+    ],
+    "colors": [],
+    "caption": "a black plus sign on a white background"
+  },
+  "im/ImPodcast.svg": {
+    "component_id": "im:ImPodcast",
+    "aliases": [
+      "im",
+      "podcast"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a radio antenna"
+  },
+  "im/ImPointDown.svg": {
+    "component_id": "im:ImPointDown",
+    "aliases": [
+      "im",
+      "point",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a pointing finger"
+  },
+  "im/ImPointLeft.svg": {
+    "component_id": "im:ImPointLeft",
+    "aliases": [
+      "im",
+      "point",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a hand pointing"
+  },
+  "im/ImPointRight.svg": {
+    "component_id": "im:ImPointRight",
+    "aliases": [
+      "im",
+      "point",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a hand pointing"
+  },
+  "im/ImPointUp.svg": {
+    "component_id": "im:ImPointUp",
+    "aliases": [
+      "im",
+      "point",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a hand pointing up"
+  },
+  "im/ImPower.svg": {
+    "component_id": "im:ImPower",
+    "aliases": [
+      "im",
+      "power"
+    ],
+    "colors": [],
+    "caption": "a black lightning bolt icon on a white background"
+  },
+  "im/ImPowerCord.svg": {
+    "component_id": "im:ImPowerCord",
+    "aliases": [
+      "im",
+      "power",
+      "cord"
+    ],
+    "colors": [],
+    "caption": "an electrical plug icon on a white background"
+  },
+  "im/ImPrevious.svg": {
+    "component_id": "im:ImPrevious",
+    "aliases": [
+      "im",
+      "previous"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a play button"
+  },
+  "im/ImPrevious2.svg": {
+    "component_id": "im:ImPrevious2",
+    "aliases": [
+      "im",
+      "previous",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter k"
+  },
+  "im/ImPriceTag.svg": {
+    "component_id": "im:ImPriceTag",
+    "aliases": [
+      "im",
+      "price",
+      "tag"
+    ],
+    "colors": [],
+    "caption": "a black price tag icon on a white background"
+  },
+  "im/ImPriceTags.svg": {
+    "component_id": "im:ImPriceTags",
+    "aliases": [
+      "im",
+      "price",
+      "tags"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shopping bag"
+  },
+  "im/ImPrinter.svg": {
+    "component_id": "im:ImPrinter",
+    "aliases": [
+      "im",
+      "printer"
+    ],
+    "colors": [],
+    "caption": "a printer icon on a white background"
+  },
+  "im/ImProfile.svg": {
+    "component_id": "im:ImProfile",
+    "aliases": [
+      "im",
+      "profile"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with a profile"
+  },
+  "im/ImPushpin.svg": {
+    "component_id": "im:ImPushpin",
+    "aliases": [
+      "im",
+      "pushpin"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a needle"
+  },
+  "im/ImQrcode.svg": {
+    "component_id": "im:ImQrcode",
+    "aliases": [
+      "im",
+      "qrcode"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a qr code"
+  },
+  "im/ImQuestion.svg": {
+    "component_id": "im:ImQuestion",
+    "aliases": [
+      "im",
+      "question"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a question mark in a circle"
+  },
+  "im/ImQuill.svg": {
+    "component_id": "im:ImQuill",
+    "aliases": [
+      "im",
+      "quill"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a leaf"
+  },
+  "im/ImQuotesLeft.svg": {
+    "component_id": "im:ImQuotesLeft",
+    "aliases": [
+      "im",
+      "quotes",
+      "left"
+    ],
+    "colors": [],
+    "caption": "the number six is shown in black and white"
+  },
+  "im/ImQuotesRight.svg": {
+    "component_id": "im:ImQuotesRight",
+    "aliases": [
+      "im",
+      "quotes",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number 99"
+  },
+  "im/ImRadioChecked.svg": {
+    "component_id": "im:ImRadioChecked",
+    "aliases": [
+      "im",
+      "radio",
+      "checked"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular target"
+  },
+  "im/ImRadioChecked2.svg": {
+    "component_id": "im:ImRadioChecked2",
+    "aliases": [
+      "im",
+      "radio",
+      "checked",
+      "2"
+    ],
+    "colors": [],
+    "caption": "an image of a black circle on a white background"
+  },
+  "im/ImRadioUnchecked.svg": {
+    "component_id": "im:ImRadioUnchecked",
+    "aliases": [
+      "im",
+      "radio",
+      "unchecked"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "im/ImReddit.svg": {
+    "component_id": "im:ImReddit",
+    "aliases": [
+      "im",
+      "reddit"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiling bear"
+  },
+  "im/ImRedo.svg": {
+    "component_id": "im:ImRedo",
+    "aliases": [
+      "im",
+      "redo"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImRedo2.svg": {
+    "component_id": "im:ImRedo2",
+    "aliases": [
+      "im",
+      "redo",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImRenren.svg": {
+    "component_id": "im:ImRenren",
+    "aliases": [
+      "im",
+      "renren"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with a circle in the middle"
+  },
+  "im/ImReply.svg": {
+    "component_id": "im:ImReply",
+    "aliases": [
+      "im",
+      "reply"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImRoad.svg": {
+    "component_id": "im:ImRoad",
+    "aliases": [
+      "im",
+      "road"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter h"
+  },
+  "im/ImRocket.svg": {
+    "component_id": "im:ImRocket",
+    "aliases": [
+      "im",
+      "rocket"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a rocket on a white background"
+  },
+  "im/ImRss.svg": {
+    "component_id": "im:ImRss",
+    "aliases": [
+      "im",
+      "rss"
+    ],
+    "colors": [],
+    "caption": "a black and white rss icon on a white background"
+  },
+  "im/ImRss2.svg": {
+    "component_id": "im:ImRss2",
+    "aliases": [
+      "im",
+      "rss",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white rss icon"
+  },
+  "im/ImRtl.svg": {
+    "component_id": "im:ImRtl",
+    "aliases": [
+      "im",
+      "rtl"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with an arrow pointing to the right"
+  },
+  "im/ImSad.svg": {
+    "component_id": "im:ImSad",
+    "aliases": [
+      "im",
+      "sad"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a sad face"
+  },
+  "im/ImSad2.svg": {
+    "component_id": "im:ImSad2",
+    "aliases": [
+      "im",
+      "sad",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a sad face"
+  },
+  "im/ImSafari.svg": {
+    "component_id": "im:ImSafari",
+    "aliases": [
+      "im",
+      "safari"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a compass"
+  },
+  "im/ImScissors.svg": {
+    "component_id": "im:ImScissors",
+    "aliases": [
+      "im",
+      "scissors"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a pair of scissors"
+  },
+  "im/ImSearch.svg": {
+    "component_id": "im:ImSearch",
+    "aliases": [
+      "im",
+      "search"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "im/ImSection.svg": {
+    "component_id": "im:ImSection",
+    "aliases": [
+      "im",
+      "section"
+    ],
+    "colors": [],
+    "caption": "a black and white symbol of the letter s"
+  },
+  "im/ImShare.svg": {
+    "component_id": "im:ImShare",
+    "aliases": [
+      "im",
+      "share"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "im/ImShare2.svg": {
+    "component_id": "im:ImShare2",
+    "aliases": [
+      "im",
+      "share",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two circles"
+  },
+  "im/ImShield.svg": {
+    "component_id": "im:ImShield",
+    "aliases": [
+      "im",
+      "shield"
+    ],
+    "colors": [],
+    "caption": "a black and white shield icon on a white background"
+  },
+  "im/ImShift.svg": {
+    "component_id": "im:ImShift",
+    "aliases": [
+      "im",
+      "shift"
+    ],
+    "colors": [],
+    "caption": "an up arrow icon on a white background"
+  },
+  "im/ImShocked.svg": {
+    "component_id": "im:ImShocked",
+    "aliases": [
+      "im",
+      "shocked"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImShocked2.svg": {
+    "component_id": "im:ImShocked2",
+    "aliases": [
+      "im",
+      "shocked",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImShrink.svg": {
+    "component_id": "im:ImShrink",
+    "aliases": [
+      "im",
+      "shrink"
+    ],
+    "colors": [],
+    "caption": "four arrows pointing in different directions on a white background"
+  },
+  "im/ImShrink2.svg": {
+    "component_id": "im:ImShrink2",
+    "aliases": [
+      "im",
+      "shrink",
+      "2"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "im/ImShuffle.svg": {
+    "component_id": "im:ImShuffle",
+    "aliases": [
+      "im",
+      "shuffle"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "im/ImSigma.svg": {
+    "component_id": "im:ImSigma",
+    "aliases": [
+      "im",
+      "sigma"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter z"
+  },
+  "im/ImSinaWeibo.svg": {
+    "component_id": "im:ImSinaWeibo",
+    "aliases": [
+      "im",
+      "sina",
+      "weibo"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an eye with an antenna"
+  },
+  "im/ImSkype.svg": {
+    "component_id": "im:ImSkype",
+    "aliases": [
+      "im",
+      "skype"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter s"
+  },
+  "im/ImSleepy.svg": {
+    "component_id": "im:ImSleepy",
+    "aliases": [
+      "im",
+      "sleepy"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face with an open mouth"
+  },
+  "im/ImSleepy2.svg": {
+    "component_id": "im:ImSleepy2",
+    "aliases": [
+      "im",
+      "sleepy",
+      "2"
+    ],
+    "colors": [],
+    "caption": "an emoticon with an open mouth on a white background"
+  },
+  "im/ImSmile.svg": {
+    "component_id": "im:ImSmile",
+    "aliases": [
+      "im",
+      "smile"
+    ],
+    "colors": [],
+    "caption": "a black and white smiley face on a white background"
+  },
+  "im/ImSmile2.svg": {
+    "component_id": "im:ImSmile2",
+    "aliases": [
+      "im",
+      "smile",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a smiley face icon on a white background"
+  },
+  "im/ImSortAlphaAsc.svg": {
+    "component_id": "im:ImSortAlphaAsc",
+    "aliases": [
+      "im",
+      "sort",
+      "alpha",
+      "asc"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "im/ImSortAlphaDesc.svg": {
+    "component_id": "im:ImSortAlphaDesc",
+    "aliases": [
+      "im",
+      "sort",
+      "alpha",
+      "desc"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "im/ImSortAmountAsc.svg": {
+    "component_id": "im:ImSortAmountAsc",
+    "aliases": [
+      "im",
+      "sort",
+      "amount",
+      "asc"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a downward arrow"
+  },
+  "im/ImSortAmountDesc.svg": {
+    "component_id": "im:ImSortAmountDesc",
+    "aliases": [
+      "im",
+      "sort",
+      "amount",
+      "desc"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "im/ImSortNumbericDesc.svg": {
+    "component_id": "im:ImSortNumbericDesc",
+    "aliases": [
+      "im",
+      "sort",
+      "numberic",
+      "desc"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "im/ImSortNumericAsc.svg": {
+    "component_id": "im:ImSortNumericAsc",
+    "aliases": [
+      "im",
+      "sort",
+      "numeric",
+      "asc"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "im/ImSoundcloud.svg": {
+    "component_id": "im:ImSoundcloud",
+    "aliases": [
+      "im",
+      "soundcloud"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the soundcloud logo"
+  },
+  "im/ImSoundcloud2.svg": {
+    "component_id": "im:ImSoundcloud2",
+    "aliases": [
+      "im",
+      "soundcloud",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a cloud"
+  },
+  "im/ImSpades.svg": {
+    "component_id": "im:ImSpades",
+    "aliases": [
+      "im",
+      "spades"
+    ],
+    "colors": [],
+    "caption": "a black spade symbol on a white background"
+  },
+  "im/ImSpellCheck.svg": {
+    "component_id": "im:ImSpellCheck",
+    "aliases": [
+      "im",
+      "spell",
+      "check"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word abc"
+  },
+  "im/ImSphere.svg": {
+    "component_id": "im:ImSphere",
+    "aliases": [
+      "im",
+      "sphere"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a globe"
+  },
+  "im/ImSpinner.svg": {
+    "component_id": "im:ImSpinner",
+    "aliases": [
+      "im",
+      "spinner"
+    ],
+    "colors": [],
+    "caption": "an image of a circle with black dots on it"
+  },
+  "im/ImSpinner10.svg": {
+    "component_id": "im:ImSpinner10",
+    "aliases": [
+      "im",
+      "spinner",
+      "10"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with three circles in it"
+  },
+  "im/ImSpinner11.svg": {
+    "component_id": "im:ImSpinner11",
+    "aliases": [
+      "im",
+      "spinner",
+      "11"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "im/ImSpinner2.svg": {
+    "component_id": "im:ImSpinner2",
+    "aliases": [
+      "im",
+      "spinner",
+      "2"
+    ],
+    "colors": [],
+    "caption": "an image of a circle with a black dot in it"
+  },
+  "im/ImSpinner3.svg": {
+    "component_id": "im:ImSpinner3",
+    "aliases": [
+      "im",
+      "spinner",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a sun symbol"
+  },
+  "im/ImSpinner4.svg": {
+    "component_id": "im:ImSpinner4",
+    "aliases": [
+      "im",
+      "spinner",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a life preserver"
+  },
+  "im/ImSpinner5.svg": {
+    "component_id": "im:ImSpinner5",
+    "aliases": [
+      "im",
+      "spinner",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white circular icon with a circle in the middle"
+  },
+  "im/ImSpinner6.svg": {
+    "component_id": "im:ImSpinner6",
+    "aliases": [
+      "im",
+      "spinner",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a circle of black dots on a white background"
+  },
+  "im/ImSpinner7.svg": {
+    "component_id": "im:ImSpinner7",
+    "aliases": [
+      "im",
+      "spinner",
+      "7"
+    ],
+    "colors": [],
+    "caption": "an image of a circle with black dots"
+  },
+  "im/ImSpinner8.svg": {
+    "component_id": "im:ImSpinner8",
+    "aliases": [
+      "im",
+      "spinner",
+      "8"
+    ],
+    "colors": [],
+    "caption": "an image of a black circle with a circle in the middle"
+  },
+  "im/ImSpinner9.svg": {
+    "component_id": "im:ImSpinner9",
+    "aliases": [
+      "im",
+      "spinner",
+      "9"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circle"
+  },
+  "im/ImSpoonKnife.svg": {
+    "component_id": "im:ImSpoonKnife",
+    "aliases": [
+      "im",
+      "spoon",
+      "knife"
+    ],
+    "colors": [],
+    "caption": "a fork and spoon icon on a white background"
+  },
+  "im/ImSpotify.svg": {
+    "component_id": "im:ImSpotify",
+    "aliases": [
+      "im",
+      "spotify"
+    ],
+    "colors": [],
+    "caption": "a black and white spotify logo"
+  },
+  "im/ImStack.svg": {
+    "component_id": "im:ImStack",
+    "aliases": [
+      "im",
+      "stack"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with three squares"
+  },
+  "im/ImStackoverflow.svg": {
+    "component_id": "im:ImStackoverflow",
+    "aliases": [
+      "im",
+      "stackoverflow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "im/ImStarEmpty.svg": {
+    "component_id": "im:ImStarEmpty",
+    "aliases": [
+      "im",
+      "star",
+      "empty"
+    ],
+    "colors": [],
+    "caption": "a black star icon on a white background"
+  },
+  "im/ImStarFull.svg": {
+    "component_id": "im:ImStarFull",
+    "aliases": [
+      "im",
+      "star",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a black star on a white background"
+  },
+  "im/ImStarHalf.svg": {
+    "component_id": "im:ImStarHalf",
+    "aliases": [
+      "im",
+      "star",
+      "half"
+    ],
+    "colors": [],
+    "caption": "a black and white star icon on a white background"
+  },
+  "im/ImStatsBars.svg": {
+    "component_id": "im:ImStatsBars",
+    "aliases": [
+      "im",
+      "stats",
+      "bars"
+    ],
+    "colors": [],
+    "caption": "a bar graph icon on a white background"
+  },
+  "im/ImStatsBars2.svg": {
+    "component_id": "im:ImStatsBars2",
+    "aliases": [
+      "im",
+      "stats",
+      "bars",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a bar graph icon on a white background"
+  },
+  "im/ImStatsDots.svg": {
+    "component_id": "im:ImStatsDots",
+    "aliases": [
+      "im",
+      "stats",
+      "dots"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a graph"
+  },
+  "im/ImSteam.svg": {
+    "component_id": "im:ImSteam",
+    "aliases": [
+      "im",
+      "steam"
+    ],
+    "colors": [],
+    "caption": "the steam logo is shown on a white background"
+  },
+  "im/ImSteam2.svg": {
+    "component_id": "im:ImSteam2",
+    "aliases": [
+      "im",
+      "steam",
+      "2"
+    ],
+    "colors": [],
+    "caption": "the steam logo is shown in black and white"
+  },
+  "im/ImStop.svg": {
+    "component_id": "im:ImStop",
+    "aliases": [
+      "im",
+      "stop"
+    ],
+    "colors": [],
+    "caption": "a black square in a circle on a white background"
+  },
+  "im/ImStop2.svg": {
+    "component_id": "im:ImStop2",
+    "aliases": [
+      "im",
+      "stop",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black square with a white background"
+  },
+  "im/ImStopwatch.svg": {
+    "component_id": "im:ImStopwatch",
+    "aliases": [
+      "im",
+      "stopwatch"
+    ],
+    "colors": [],
+    "caption": "a stopwatch icon on a white background"
+  },
+  "im/ImStrikethrough.svg": {
+    "component_id": "im:ImStrikethrough",
+    "aliases": [
+      "im",
+      "strikethrough"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter s"
+  },
+  "im/ImStumbleupon.svg": {
+    "component_id": "im:ImStumbleupon",
+    "aliases": [
+      "im",
+      "stumbleupon"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter j in it"
+  },
+  "im/ImStumbleupon2.svg": {
+    "component_id": "im:ImStumbleupon2",
+    "aliases": [
+      "im",
+      "stumbleupon",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white square logo with the letter j"
+  },
+  "im/ImSubscript.svg": {
+    "component_id": "im:ImSubscript",
+    "aliases": [
+      "im",
+      "subscript"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter x"
+  },
+  "im/ImSubscript2.svg": {
+    "component_id": "im:ImSubscript2",
+    "aliases": [
+      "im",
+      "subscript",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letters a and s"
+  },
+  "im/ImSun.svg": {
+    "component_id": "im:ImSun",
+    "aliases": [
+      "im",
+      "sun"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun"
+  },
+  "im/ImSuperscript.svg": {
+    "component_id": "im:ImSuperscript",
+    "aliases": [
+      "im",
+      "superscript"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter x"
+  },
+  "im/ImSuperscript2.svg": {
+    "component_id": "im:ImSuperscript2",
+    "aliases": [
+      "im",
+      "superscript",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letters a and s"
+  },
+  "im/ImSvg.svg": {
+    "component_id": "im:ImSvg",
+    "aliases": [
+      "im",
+      "svg"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a snowflake"
+  },
+  "im/ImSwitch.svg": {
+    "component_id": "im:ImSwitch",
+    "aliases": [
+      "im",
+      "switch"
+    ],
+    "colors": [],
+    "caption": "a black power symbol on a white background"
+  },
+  "im/ImTab.svg": {
+    "component_id": "im:ImTab",
+    "aliases": [
+      "im",
+      "tab"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "im/ImTable.svg": {
+    "component_id": "im:ImTable",
+    "aliases": [
+      "im",
+      "table"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a grid"
+  },
+  "im/ImTable2.svg": {
+    "component_id": "im:ImTable2",
+    "aliases": [
+      "im",
+      "table",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white calendar icon on a white background"
+  },
+  "im/ImTablet.svg": {
+    "component_id": "im:ImTablet",
+    "aliases": [
+      "im",
+      "tablet"
+    ],
+    "colors": [],
+    "caption": "a tablet computer icon on a white background"
+  },
+  "im/ImTarget.svg": {
+    "component_id": "im:ImTarget",
+    "aliases": [
+      "im",
+      "target"
+    ],
+    "colors": [],
+    "caption": "a crosshairs symbol on a white background"
+  },
+  "im/ImTelegram.svg": {
+    "component_id": "im:ImTelegram",
+    "aliases": [
+      "im",
+      "telegram"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a telegram logo"
+  },
+  "im/ImTerminal.svg": {
+    "component_id": "im:ImTerminal",
+    "aliases": [
+      "im",
+      "terminal"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer screen"
+  },
+  "im/ImTextColor.svg": {
+    "component_id": "im:ImTextColor",
+    "aliases": [
+      "im",
+      "text",
+      "color"
+    ],
+    "colors": [],
+    "caption": "a black letter a on a white background"
+  },
+  "im/ImTextHeight.svg": {
+    "component_id": "im:ImTextHeight",
+    "aliases": [
+      "im",
+      "text",
+      "height"
+    ],
+    "colors": [],
+    "caption": "the letter t with arrows pointing up and down"
+  },
+  "im/ImTextWidth.svg": {
+    "component_id": "im:ImTextWidth",
+    "aliases": [
+      "im",
+      "text",
+      "width"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "im/ImTicket.svg": {
+    "component_id": "im:ImTicket",
+    "aliases": [
+      "im",
+      "ticket"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a ticket"
+  },
+  "im/ImTongue.svg": {
+    "component_id": "im:ImTongue",
+    "aliases": [
+      "im",
+      "tongue"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face with a tongue sticking out"
+  },
+  "im/ImTongue2.svg": {
+    "component_id": "im:ImTongue2",
+    "aliases": [
+      "im",
+      "tongue",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face with a tongue sticking out"
+  },
+  "im/ImTree.svg": {
+    "component_id": "im:ImTree",
+    "aliases": [
+      "im",
+      "tree"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with four squares"
+  },
+  "im/ImTrello.svg": {
+    "component_id": "im:ImTrello",
+    "aliases": [
+      "im",
+      "trello"
+    ],
+    "colors": [],
+    "caption": "a black and white square icon with two windows"
+  },
+  "im/ImTrophy.svg": {
+    "component_id": "im:ImTrophy",
+    "aliases": [
+      "im",
+      "trophy"
+    ],
+    "colors": [],
+    "caption": "a trophy icon on a white background"
+  },
+  "im/ImTruck.svg": {
+    "component_id": "im:ImTruck",
+    "aliases": [
+      "im",
+      "truck"
+    ],
+    "colors": [],
+    "caption": "delivery truck icon isolated on white background"
+  },
+  "im/ImTumblr.svg": {
+    "component_id": "im:ImTumblr",
+    "aliases": [
+      "im",
+      "tumblr"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "im/ImTumblr2.svg": {
+    "component_id": "im:ImTumblr2",
+    "aliases": [
+      "im",
+      "tumblr",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the letter t on it"
+  },
+  "im/ImTux.svg": {
+    "component_id": "im:ImTux",
+    "aliases": [
+      "im",
+      "tux"
+    ],
+    "colors": [],
+    "caption": "a black and white logo of a penguin"
+  },
+  "im/ImTv.svg": {
+    "component_id": "im:ImTv",
+    "aliases": [
+      "im",
+      "tv"
+    ],
+    "colors": [],
+    "caption": "an icon of a television on a white background"
+  },
+  "im/ImTwitch.svg": {
+    "component_id": "im:ImTwitch",
+    "aliases": [
+      "im",
+      "twitch"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "im/ImTwitter.svg": {
+    "component_id": "im:ImTwitter",
+    "aliases": [
+      "im",
+      "twitter"
+    ],
+    "colors": [],
+    "caption": "a black twitter logo on a white background"
+  },
+  "im/ImUnderline.svg": {
+    "component_id": "im:ImUnderline",
+    "aliases": [
+      "im",
+      "underline"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter u in it"
+  },
+  "im/ImUndo.svg": {
+    "component_id": "im:ImUndo",
+    "aliases": [
+      "im",
+      "undo"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImUndo2.svg": {
+    "component_id": "im:ImUndo2",
+    "aliases": [
+      "im",
+      "undo",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "im/ImUngroup.svg": {
+    "component_id": "im:ImUngroup",
+    "aliases": [
+      "im",
+      "ungroup"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square with an x in it"
+  },
+  "im/ImUnlocked.svg": {
+    "component_id": "im:ImUnlocked",
+    "aliases": [
+      "im",
+      "unlocked"
+    ],
+    "colors": [],
+    "caption": "a black padlock icon on a white background"
+  },
+  "im/ImUpload.svg": {
+    "component_id": "im:ImUpload",
+    "aliases": [
+      "im",
+      "upload"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box with an arrow pointing up"
+  },
+  "im/ImUpload2.svg": {
+    "component_id": "im:ImUpload2",
+    "aliases": [
+      "im",
+      "upload",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of an upward arrow"
+  },
+  "im/ImUpload3.svg": {
+    "component_id": "im:ImUpload3",
+    "aliases": [
+      "im",
+      "upload",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing up"
+  },
+  "im/ImUser.svg": {
+    "component_id": "im:ImUser",
+    "aliases": [
+      "im",
+      "user"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a person's head on a white background"
+  },
+  "im/ImUserCheck.svg": {
+    "component_id": "im:ImUserCheck",
+    "aliases": [
+      "im",
+      "user",
+      "check"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a person with a check mark"
+  },
+  "im/ImUserMinus.svg": {
+    "component_id": "im:ImUserMinus",
+    "aliases": [
+      "im",
+      "user",
+      "minus"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a person with a no sign"
+  },
+  "im/ImUserPlus.svg": {
+    "component_id": "im:ImUserPlus",
+    "aliases": [
+      "im",
+      "user",
+      "plus"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a person with a plus sign"
+  },
+  "im/ImUserTie.svg": {
+    "component_id": "im:ImUserTie",
+    "aliases": [
+      "im",
+      "user",
+      "tie"
+    ],
+    "colors": [],
+    "caption": "a man in a suit icon on a white background"
+  },
+  "im/ImUsers.svg": {
+    "component_id": "im:ImUsers",
+    "aliases": [
+      "im",
+      "users"
+    ],
+    "colors": [],
+    "caption": "two people are shown in silhouette on a white background"
+  },
+  "im/ImVideoCamera.svg": {
+    "component_id": "im:ImVideoCamera",
+    "aliases": [
+      "im",
+      "video",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "a video camera icon on a white background"
+  },
+  "im/ImVimeo.svg": {
+    "component_id": "im:ImVimeo",
+    "aliases": [
+      "im",
+      "vimeo"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a letter v"
+  },
+  "im/ImVimeo2.svg": {
+    "component_id": "im:ImVimeo2",
+    "aliases": [
+      "im",
+      "vimeo",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the word v on it"
+  },
+  "im/ImVine.svg": {
+    "component_id": "im:ImVine",
+    "aliases": [
+      "im",
+      "vine"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter v"
+  },
+  "im/ImVk.svg": {
+    "component_id": "im:ImVk",
+    "aliases": [
+      "im",
+      "vk"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the word k on it"
+  },
+  "im/ImVolumeDecrease.svg": {
+    "component_id": "im:ImVolumeDecrease",
+    "aliases": [
+      "im",
+      "volume",
+      "decrease"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker"
+  },
+  "im/ImVolumeHigh.svg": {
+    "component_id": "im:ImVolumeHigh",
+    "aliases": [
+      "im",
+      "volume",
+      "high"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "im/ImVolumeIncrease.svg": {
+    "component_id": "im:ImVolumeIncrease",
+    "aliases": [
+      "im",
+      "volume",
+      "increase"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker and plus sign"
+  },
+  "im/ImVolumeLow.svg": {
+    "component_id": "im:ImVolumeLow",
+    "aliases": [
+      "im",
+      "volume",
+      "low"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "im/ImVolumeMedium.svg": {
+    "component_id": "im:ImVolumeMedium",
+    "aliases": [
+      "im",
+      "volume",
+      "medium"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "im/ImVolumeMute.svg": {
+    "component_id": "im:ImVolumeMute",
+    "aliases": [
+      "im",
+      "volume",
+      "mute"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker"
+  },
+  "im/ImVolumeMute2.svg": {
+    "component_id": "im:ImVolumeMute2",
+    "aliases": [
+      "im",
+      "volume",
+      "mute",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speaker with an x and a minus sign"
+  },
+  "im/ImWarning.svg": {
+    "component_id": "im:ImWarning",
+    "aliases": [
+      "im",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black and white warning sign with an exclamation mark"
+  },
+  "im/ImWhatsapp.svg": {
+    "component_id": "im:ImWhatsapp",
+    "aliases": [
+      "im",
+      "whatsapp"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a whatsapp icon"
+  },
+  "im/ImWikipedia.svg": {
+    "component_id": "im:ImWikipedia",
+    "aliases": [
+      "im",
+      "wikipedia"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter w"
+  },
+  "im/ImWindows.svg": {
+    "component_id": "im:ImWindows",
+    "aliases": [
+      "im",
+      "windows"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the windows logo"
+  },
+  "im/ImWindows8.svg": {
+    "component_id": "im:ImWindows8",
+    "aliases": [
+      "im",
+      "windows",
+      "8"
+    ],
+    "colors": [],
+    "caption": "the windows logo is shown in black and white"
+  },
+  "im/ImWink.svg": {
+    "component_id": "im:ImWink",
+    "aliases": [
+      "im",
+      "wink"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImWink2.svg": {
+    "component_id": "im:ImWink2",
+    "aliases": [
+      "im",
+      "wink",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white smiley face on a white background"
+  },
+  "im/ImWoman.svg": {
+    "component_id": "im:ImWoman",
+    "aliases": [
+      "im",
+      "woman"
+    ],
+    "colors": [],
+    "caption": "a woman's silhouette on a white background"
+  },
+  "im/ImWondering.svg": {
+    "component_id": "im:ImWondering",
+    "aliases": [
+      "im",
+      "wondering"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImWondering2.svg": {
+    "component_id": "im:ImWondering2",
+    "aliases": [
+      "im",
+      "wondering",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "im/ImWordpress.svg": {
+    "component_id": "im:ImWordpress",
+    "aliases": [
+      "im",
+      "wordpress"
+    ],
+    "colors": [],
+    "caption": "the wordpress logo is shown in black and white"
+  },
+  "im/ImWrench.svg": {
+    "component_id": "im:ImWrench",
+    "aliases": [
+      "im",
+      "wrench"
+    ],
+    "colors": [],
+    "caption": "a wrench icon on a white background"
+  },
+  "im/ImXing.svg": {
+    "component_id": "im:ImXing",
+    "aliases": [
+      "im",
+      "xing"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the letter k on it"
+  },
+  "im/ImXing2.svg": {
+    "component_id": "im:ImXing2",
+    "aliases": [
+      "im",
+      "xing",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter k"
+  },
+  "im/ImYahoo.svg": {
+    "component_id": "im:ImYahoo",
+    "aliases": [
+      "im",
+      "yahoo"
+    ],
+    "colors": [],
+    "caption": "a black and white letter y on a white background"
+  },
+  "im/ImYahoo2.svg": {
+    "component_id": "im:ImYahoo2",
+    "aliases": [
+      "im",
+      "yahoo",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter y"
+  },
+  "im/ImYelp.svg": {
+    "component_id": "im:ImYelp",
+    "aliases": [
+      "im",
+      "yelp"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white star"
+  },
+  "im/ImYoutube.svg": {
+    "component_id": "im:ImYoutube",
+    "aliases": [
+      "im",
+      "youtube"
+    ],
+    "colors": [],
+    "caption": "a black and white youtube logo with a white play button"
+  },
+  "im/ImYoutube2.svg": {
+    "component_id": "im:ImYoutube2",
+    "aliases": [
+      "im",
+      "youtube",
+      "2"
+    ],
+    "colors": [],
+    "caption": "the youtube logo is shown in black and white"
+  },
+  "im/ImZoomIn.svg": {
+    "component_id": "im:ImZoomIn",
+    "aliases": [
+      "im",
+      "zoom",
+      "in"
+    ],
+    "colors": [],
+    "caption": "a magnifying cross icon on a white background"
+  },
+  "im/ImZoomOut.svg": {
+    "component_id": "im:ImZoomOut",
+    "aliases": [
+      "im",
+      "zoom",
+      "out"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  }
+}

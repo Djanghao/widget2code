@@ -1,0 +1,211 @@
+{
+  "domain": "productivity",
+  "total": 34,
+  "generated": "2025-11-05T16:03:06.292Z",
+  "variations": [
+    {
+      "id": "productivity-dynamic-001",
+      "prompt": "A productivity widget showing completed tasks with weekly summary",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-002",
+      "prompt": "A summary widget showing tasks",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-003",
+      "prompt": "A summary widget showing notes with time breakdown",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-004",
+      "prompt": "A calendar widget showing reminders and due dates",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-005",
+      "prompt": "A calendar widget showing overdue items with progress bar and priority indicators",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-006",
+      "prompt": "A calendar widget showing completed tasks",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-007",
+      "prompt": "A task widget showing focus time with calendar view",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-008",
+      "prompt": "A productivity widget showing notes and time estimates",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-009",
+      "prompt": "A task widget showing reminders",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-010",
+      "prompt": "A task widget showing tasks with time breakdown",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-011",
+      "prompt": "A calendar widget showing focus time with progress bar",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-012",
+      "prompt": "A calendar widget showing overdue items",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-013",
+      "prompt": "A productivity widget showing calendar events",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-014",
+      "prompt": "A calendar widget showing completed tasks",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-015",
+      "prompt": "A summary widget showing reminders with time breakdown",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-016",
+      "prompt": "A calendar widget showing calendar events",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-017",
+      "prompt": "A task widget showing pomodoro sessions with time breakdown",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-018",
+      "prompt": "A calendar widget showing focus time",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-019",
+      "prompt": "A summary widget showing calendar events and priority indicators",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-020",
+      "prompt": "A productivity widget showing calendar events",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-021",
+      "prompt": "A task widget showing tasks and due dates",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-022",
+      "prompt": "A calendar widget showing overdue items",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-023",
+      "prompt": "A summary widget showing reminders with progress bar and priority indicators",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-024",
+      "prompt": "A summary widget showing focus time",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-025",
+      "prompt": "A productivity widget showing upcoming deadlines with completion percentage and time estimates",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-026",
+      "prompt": "A task widget showing completed tasks with progress bar and due dates",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-027",
+      "prompt": "A task widget showing calendar events with time breakdown",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-028",
+      "prompt": "A productivity widget showing notes with completion percentage and completion status",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-029",
+      "prompt": "A summary widget showing tasks with weekly summary",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-030",
+      "prompt": "A calendar widget showing reminders with progress bar",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-031",
+      "prompt": "A task widget showing tasks and calendar events",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-032",
+      "prompt": "A task widget showing focus time and completed tasks with progress bar",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-033",
+      "prompt": "A summary widget showing tasks and reminders with progress bar",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "productivity-dynamic-034",
+      "prompt": "A calendar widget showing calendar events and upcoming deadlines",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

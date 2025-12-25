@@ -1,0 +1,91 @@
+{
+  "widget": {
+    "backgroundColor": "#f2f2f7",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 10,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "Activity"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 18,
+                "color": "#FF3B30",
+                "name": "sf:flame.fill"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 10, "color": "#FF3B30", "name": "sf:circle.fill" } },
+                { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 14, "color": "#000000" }, "content": "Move" },
+                { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 14, "color": "#000000", "fontWeight": 600 }, "content": "534 CAL" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 10, "color": "#34C759", "name": "sf:circle.fill" } },
+                { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 14, "color": "#000000" }, "content": "Exercise" },
+                { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 14, "color": "#000000", "fontWeight": 600 }, "content": "18 MIN" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 10, "color": "#5856D6", "name": "sf:circle.fill" } },
+                { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 14, "color": "#000000" }, "content": "Stand" },
+                { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 14, "color": "#000000", "fontWeight": 600 }, "content": "10 HRS" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

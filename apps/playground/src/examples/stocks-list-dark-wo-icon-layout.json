@@ -1,0 +1,546 @@
+{
+  "widget": {
+    "backgroundColor": "#1e1e1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 0.9548022598870056,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "name": "sf:SfCaretUp",
+                "size": 14,
+                "color": "#3B82F6"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#3B82F6",
+                "fontWeight": 600
+              },
+              "content": "AAPL"
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 120,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  230, 180, 195, 198, 200, 202, 201, 203, 205, 206, 208, 207, 209, 210, 212, 215, 218, 220, 225, 229
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 200,
+                "min": 100,
+                "max": 300,
+                "lineWidth": 2
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": 0,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "229.00"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#3B82F6",
+                    "fontWeight": 600
+                  },
+                  "content": "+2.82"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "orientation": "horizontal",
+            "color": "#e5e5ea",
+            "thickness": 0.5
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "name": "sf:SfCaretUp",
+                "size": 14,
+                "color": "#3B82F6"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#3B82F6",
+                "fontWeight": 600
+              },
+              "content": "MSFT"
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 120,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  420, 350, 370, 360, 375, 385, 390, 388, 392, 395, 396, 394, 393, 392, 391, 390, 389, 388, 387, 386
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 380,
+                "min": 300,
+                "max": 450,
+                "lineWidth": 2
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": 0,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "417.14"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#3B82F6",
+                    "fontWeight": 600
+                  },
+                  "content": "+0.86"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "orientation": "horizontal",
+            "color": "#e5e5ea",
+            "thickness": 0.5
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "name": "sf:SfCaretUp",
+                "size": 14,
+                "color": "#3B82F6"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#3B82F6",
+                "fontWeight": 600
+              },
+              "content": "TSLA"
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 120,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  90, 110, 130, 150, 170, 190, 210, 230, 250, 265, 275, 280, 275, 270, 265, 258, 250, 240, 230, 220
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 180,
+                "min": 50,
+                "max": 300,
+                "lineWidth": 2
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": 0,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "213.97"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#3B82F6",
+                    "fontWeight": 600
+                  },
+                  "content": "+6.45"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "orientation": "horizontal",
+            "color": "#e5e5ea",
+            "thickness": 0.5
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "name": "sf:SfCaretDown",
+                "size": 14,
+                "color": "#EF4444"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#EF4444",
+                "fontWeight": 600
+              },
+              "content": "NVDA"
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 120,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  200, 140, 130, 125, 120, 118, 115, 113, 112, 110, 109, 108, 107, 106, 105, 106, 107, 108, 109, 110
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 150,
+                "min": 100,
+                "max": 250,
+                "lineWidth": 2
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": 0,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "119.37"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#EF4444",
+                    "fontWeight": 600
+                  },
+                  "content": "-4.43"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "orientation": "horizontal",
+            "color": "#e5e5ea",
+            "thickness": 0.5
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "name": "sf:SfCaretDown",
+                "size": 14,
+                "color": "#EF4444"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#EF4444",
+                "fontWeight": 600
+              },
+              "content": "QCOM"
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 120,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  190, 175, 165, 180, 195, 185, 178, 180, 182, 183, 184, 185, 185, 185, 186, 186, 185, 185, 185, 185
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 190,
+                "min": 150,
+                "max": 250,
+                "lineWidth": 2
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": 0,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "175.30"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#EF4444",
+                    "fontWeight": 600
+                  },
+                  "content": "-0.21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "orientation": "horizontal",
+            "color": "#e5e5ea",
+            "thickness": 0.5
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "name": "sf:SfCaretDown",
+                "size": 14,
+                "color": "#EF4444"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#EF4444",
+                "fontWeight": 600
+              },
+              "content": "T"
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 120,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  22, 15, 14, 16, 18, 19, 21, 22, 23, 24, 24, 23, 22, 22.5, 23, 23.5, 24, 24.5, 24.0, 23.8
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 20,
+                "min": 10,
+                "max": 30,
+                "lineWidth": 2
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": 0,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "19.90"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#EF4444",
+                    "fontWeight": 600
+                  },
+                  "content": "-0.60"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

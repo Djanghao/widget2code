@@ -1,0 +1,51 @@
+{
+  "widget": {
+    "backgroundColor": "#f2f2f7",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 20, "color": "#000000", "fontWeight": 700 }, "content": "Mon 24" },
+            { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 20, "color": "#8e8e93", "name": "sf:calendar" } }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 10,
+          "flex": 1,
+          "children": [
+            { "type": "container", "direction": "row", "gap": 8, "flex": 0, "alignCross": "center", "children": [
+              { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 8, "color": "#007AFF", "name": "sf:circle.fill" } },
+              { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 14, "color": "#000000" }, "content": "Design sync" },
+              { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 13, "color": "#6c6c70" }, "content": "10:00" }
+            ] },
+            { "type": "container", "direction": "row", "gap": 8, "flex": 0, "alignCross": "center", "children": [
+              { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 8, "color": "#34C759", "name": "sf:circle.fill" } },
+              { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 14, "color": "#000000" }, "content": "Lunch with Sam" },
+              { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 13, "color": "#6c6c70" }, "content": "12:30" }
+            ] },
+            { "type": "container", "direction": "row", "gap": 8, "flex": 0, "alignCross": "center", "children": [
+              { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 8, "color": "#FF9500", "name": "sf:circle.fill" } },
+              { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 14, "color": "#000000" }, "content": "iOS standup" },
+              { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 13, "color": "#6c6c70" }, "content": "15:00" }
+            ] }
+          ]
+        }
+      ]
+    }
+  }
+}

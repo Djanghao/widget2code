@@ -1,0 +1,121 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 32,
+    "padding": 0,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "flex": 2,
+          "props": { "style": { "position": "relative" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "MapImage",
+              "props": {
+                "src": "light-google-map",
+                "width": "100%",
+                "height": "100%",
+                "style": { "borderRadius": "32px 32px 0 0" }
+              }
+            },
+            {
+              "type": "container",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "top": "40%",
+                  "left": "60%",
+                  "transform": "translate(-50%, -50%)",
+                  "backgroundColor": "#000000",
+                  "padding": 8,
+                  "borderRadius": 20,
+                  "boxShadow": "0 4px 12px rgba(0,0,0,0.2)"
+                }
+              },
+              "children": [
+                { "type": "leaf", "component": "Icon", "props": { "name": "sf:car.fill", "size": 20, "color": "#FFFFFF" } }
+              ]
+            },
+            {
+              "type": "container",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "top": 24,
+                  "left": 24,
+                  "backgroundColor": "#FFFFFF",
+                  "paddingY": 8,
+                  "paddingX": 16,
+                  "borderRadius": 12,
+                  "boxShadow": "0 2px 8px rgba(0,0,0,0.1)"
+                }
+              },
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 700, "color": "#000000" }, "content": "4 min away" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 24,
+          "direction": "col",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 4,
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#000000" }, "content": "Tesla Model 3" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "White • 8X234" }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Image",
+                  "props": {
+                    "src": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80",
+                    "width": 48,
+                    "height": 48,
+                    "borderRadius": 24
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "props": { "content": "Contact", "backgroundColor": "#E5E5EA", "color": "#000000", "flex": 1, "height": 44, "borderRadius": 12, "fontWeight": 600, "icon": "sf:message.fill" }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "props": { "content": "Cancel", "backgroundColor": "#FF3B30", "color": "#FFFFFF", "width": 44, "height": 44, "borderRadius": 12, "icon": "sf:xmark" }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

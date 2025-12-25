@@ -1,0 +1,246 @@
+{
+  "domain": "utilities",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "utilities-img-001",
+      "prompt": "A battery widget with battery icon, charge percentage, time remaining, and power mode",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "battery icon or indicator",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "utilities-img-002",
+      "prompt": "A calculator widget with calculator display, calculation, and number pad",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "calculator display",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-003",
+      "prompt": "A flashlight widget with flashlight beam, on/off toggle, and brightness slider",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "flashlight beam or torch",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-004",
+      "prompt": "A unit converter widget with conversion icons, input/output values, and units",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "conversion symbols",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "utilities-img-005",
+      "prompt": "A QR code scanner widget with scanner frame, scanned code result, and history",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "QR code scan frame",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-006",
+      "prompt": "A compass widget with compass needle, direction degrees, location, and calibration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "compass needle design",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-007",
+      "prompt": "A magnifier widget with magnified view, zoom level, and light toggle",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "magnifying glass view",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-008",
+      "prompt": "A ruler widget with measurement scale, units, object being measured",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "ruler measurement scale",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-009",
+      "prompt": "A level tool widget with bubble level, angle degrees, and calibration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "spirit level bubble",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-010",
+      "prompt": "A screen time widget with app icons, usage hours, most used apps, and limits",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "app icons grid",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "utilities-img-011",
+      "prompt": "A color picker widget with color palette, hex code, RGB values, and swatches",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "color palette or wheel",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-012",
+      "prompt": "A decibel meter widget with sound wave visual, dB level, and noise category",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sound wave visualization",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-013",
+      "prompt": "A currency note identifier widget with banknote photo, currency, value, and country",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "currency banknote",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "utilities-img-014",
+      "prompt": "A clipboard manager widget with clipboard history, copied items, and paste options",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "clipboard icon with items",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "utilities-img-015",
+      "prompt": "A password generator widget with generated password, strength indicator, and options",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "password or lock icon",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-016",
+      "prompt": "A stopwatch widget with timer display, lap times, and control buttons",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "stopwatch display",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-017",
+      "prompt": "A metronome widget with tempo BPM, beat indicator, and sound wave",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "metronome pendulum or beats",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-018",
+      "prompt": "A vibration tool widget with vibration pattern, intensity, and duration controls",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "vibration wave pattern",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-019",
+      "prompt": "A tip calculator widget with bill amount, tip percentage, split options, and total",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "calculator or receipt",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "utilities-img-020",
+      "prompt": "A world clock widget with multiple city clocks, time zones, and time differences",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "world map with clocks",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "utilities-img-021",
+      "prompt": "A file manager widget with folder icon, recent files, storage used, and quick access",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "folder and file icons",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "utilities-img-022",
+      "prompt": "A Wi-Fi analyzer widget with network signal graph, speed test, and connected devices",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "Wi-Fi signal visualization",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "utilities-img-023",
+      "prompt": "A age calculator widget with birthdate input, age in years/months/days, and countdown",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "calendar or birthday icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "utilities-img-024",
+      "prompt": "A random number generator widget with generated number, range, and generation count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "dice or random number",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-025",
+      "prompt": "A mirror widget with front camera mirror view, zoom, and freeze frame",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "mirror reflection view",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-026",
+      "prompt": "A translator widget with language flags, translated text, and audio playback",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "language flags or globe",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "utilities-img-027",
+      "prompt": "A altitude meter widget with mountain icon, elevation, atmospheric pressure, and GPS",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "mountain or altitude icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "utilities-img-028",
+      "prompt": "A timezone converter widget with city photos, times, and date line",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "world cities photos",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "utilities-img-029",
+      "prompt": "A moon phase widget with moon image, current phase, illumination percentage, and date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "moon phase visual",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "utilities-img-030",
+      "prompt": "A barcode scanner widget with barcode scan, product info, price comparison, and reviews",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "barcode scan frame",
+      "imagePlacement": "background"
+    }
+  ]
+}

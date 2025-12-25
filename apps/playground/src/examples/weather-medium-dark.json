@@ -1,0 +1,339 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 6,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "Tiburon"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 12,
+                    "color": "#ffffff",
+                    "name": "sf:paperplane.fill"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": 0,
+              "alignCross": "end",
+              "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#ffffff"
+                  },
+                  "content": "Clear"
+                },
+            {
+              "type": "leaf",
+              "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#999999"
+                  },
+                  "content": "H:72° L:55°"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 40,
+            "color": "#ffffff",
+            "fontWeight": 200
+          },
+          "content": "65°"
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#999999"
+                  },
+                  "content": "9PM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 20,
+                    "color": "#E5E5EA",
+                    "name": "sf:moon.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#ffffff"
+                  },
+                  "content": "65°"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#999999"
+                  },
+                  "content": "10PM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 20,
+                    "color": "#E5E5EA",
+                    "name": "sf:moon.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#ffffff"
+                  },
+                  "content": "63°"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#999999"
+                  },
+                  "content": "11PM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 20,
+                    "color": "#E5E5EA",
+                    "name": "sf:moon.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#ffffff"
+                  },
+                  "content": "62°"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#999999"
+                  },
+                  "content": "12AM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 20,
+                    "color": "#E5E5EA",
+                    "name": "sf:moon.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#ffffff"
+                  },
+                  "content": "59°"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#999999"
+                  },
+                  "content": "1AM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 20,
+                    "color": "#E5E5EA",
+                    "name": "sf:moon.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#ffffff"
+                  },
+                  "content": "57°"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#999999"
+                  },
+                  "content": "2AM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 20,
+                    "color": "#E5E5EA",
+                    "name": "sf:moon.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#ffffff"
+                  },
+                  "content": "55°"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

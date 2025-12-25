@@ -1,0 +1,45 @@
+{
+  "widget": {
+    "backgroundColor": "#050505",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "radial-gradient(circle at center, #1a1a1a 0%, #000000 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "padding": 24,
+          "props": { "style": { "backgroundColor": "rgba(0, 0, 0, 0.5)", "borderRadius": 20, "border": "1px solid #333", "boxShadow": "0 0 20px rgba(0, 255, 157, 0.1)" } },
+          "children": [
+            {
+              "type": "container",
+              "padding": 20,
+              "props": { "style": { "backgroundColor": "#000", "borderRadius": 16, "border": "1px solid #00FF9D", "boxShadow": "0 0 15px rgba(0, 255, 157, 0.3)" } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "AppLogo",
+                  "props": {
+                    "name": "si:SiGithub",
+                    "size": 80,
+                    "color": "#00FF9D",
+                    "style": { "borderRadius": 12 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        { "type": "leaf", "component": "Text", "props": { "fontSize": 20, "fontWeight": 700, "color": "#00FF9D", "textAlign": "center", "fontFamily": "monospace", "style": { "textShadow": "0 0 10px rgba(0, 255, 157, 0.5)" } }, "content": "GITHUB_REPO" }
+      ]
+    }
+  }
+}

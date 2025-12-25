@@ -1,0 +1,56 @@
+{
+  "widget": {
+    "backgroundColor": "#7C3AED",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 26, "fontWeight": 900, "color": "#FDE047" },
+          "content": "NEON STATS"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 13, "fontWeight": 700, "color": "#A78BFA" },
+          "content": "DONUT WITH BORDERS"
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 1,
+          "props": {
+            "data": [40, 30, 20, 10],
+            "labels": ["A", "B", "C", "D"],
+            "colors": ["#FDE047", "#F472B6", "#A78BFA", "#34D399"],
+            "variant": "donut",
+            "innerRadius": 45,
+            "outerRadius": 80,
+            "centerText": "TOTAL",
+            "centerValue": "100",
+            "backgroundColor": "transparent",
+            "showLabels": false,
+            "roundedSegments": true,
+            "segmentBorderRadius": 12,
+            "borderWidth": 4,
+            "borderColor": "#7C3AED",
+            "showSectorLines": true,
+            "sectorLineColor": "#7C3AED",
+            "sectorLineWidth": 4,
+            "sectorLineStyle": "solid",
+            "startAngle": 90,
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

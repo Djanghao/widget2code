@@ -1,0 +1,39 @@
+// SF Symbols (custom implementation)
+export {
+  metadata as sfMetadata,
+} from "../custom/sf-symbols/src/index.jsx";
+
+// All react-icons libraries consolidated in one place
+export {
+  lucideIconsMap,
+  antDesignIconsMap,
+  boxiconsIconsMap,
+  bootstrapIconsMap,
+  circumIconsMap,
+  cssGgIconsMap,
+  deviconsIconsMap,
+  fa5IconsMap,
+  fa6IconsMap,
+  featherIconsMap,
+  flatColorIconsMap,
+  gameIconsIconsMap,
+  githubOcticonsIconsMap,
+  grommetIconsMap,
+  heroiconsIconsMap,
+  heroicons2IconsMap,
+  icomoonFreeIconsMap,
+  ionicons4IconsMap,
+  ionicons5IconsMap,
+  lineAwesomeIconsMap,
+  materialDesignIconsMap,
+  phosphorIconsMap,
+  radixIconsMap,
+  remixIconsMap,
+  simpleIconsMap,
+  simpleLineIconsMap,
+  tablerIconsMap,
+  themifyIconsMap,
+  typiconsIconsMap,
+  vscodeIconsMap,
+  weatherIconsIconsMap,
+} from "./maps.js";

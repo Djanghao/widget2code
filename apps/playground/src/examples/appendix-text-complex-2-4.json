@@ -1,0 +1,29 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "linear-gradient(180deg, #000 0%, #1a1a1a 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "padding": 24,
+          "props": { "style": { "border": "1px solid #333", "borderRadius": 16, "background": "#050505", "boxShadow": "inset 0 0 20px rgba(0,0,0,0.8)" } },
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 24, "fontWeight": 700, "color": "#00FF00", "textAlign": "center", "fontFamily": "monospace", "style": { "textShadow": "0 0 10px #00FF00" } }, "content": "SYSTEM_READY" },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#008800", "textAlign": "center", "fontFamily": "monospace", "style": { "marginTop": "8px" } }, "content": "> Awaiting input..." }
+          ]
+        }
+      ]
+    }
+  }
+}

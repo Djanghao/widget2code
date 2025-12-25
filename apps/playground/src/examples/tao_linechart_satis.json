@@ -1,0 +1,201 @@
+{
+  "widget": {
+    "backgroundColor": "#FEF3C7",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 0.893,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 3,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 12,
+                "fontWeight": 700,
+                "color": "#92400E",
+                "letterSpacing": 1.3
+              },
+              "content": "SATISFACTION"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 26,
+                "fontWeight": 800,
+                "color": "#D97706"
+              },
+              "content": "4.8 / 5.0"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 11,
+                "color": "#B45309"
+              },
+              "content": "Customer CSAT Score"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "LineChart",
+          "flex": 1,
+          "props": {
+            "data": [[3.5, 4.1, 3.9, 4.4, 4.2, 4.6, 4.5, 4.8, 4.6, 4.9, 4.7, 4.8], [3.2, 3.9, 3.6, 4.2, 4.0, 4.5, 4.3, 4.7, 4.5, 4.8, 4.6, 4.8]],
+            "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "colors": ["#D97706", "#F59E0B"],
+            "seriesNames": ["Overall", "Product"],
+            "theme": "light",
+            "smooth": true,
+            "showArea": false,
+            "gradientIntensity": 0.3,
+            "gradientStartColor": "#FED7AA",
+            "gradientEndColor": "#FEF3C7",
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showXAxisTicks": true,
+            "showYAxisTicks": true,
+            "tickLineColor": "rgba(217, 119, 6, 0.08)",
+            "tickLineStyle": "dotted",
+            "tickLineWidth": 0.7,
+            "showMarkers": true,
+            "markerStyle": "circle",
+            "markerSize": 4.5,
+            "markerColor": "#D97706",
+            "markerBorderColor": "#FEF3C7",
+            "markerBorderWidth": 2,
+            "height": 140
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 10,
+          "flex": 0,
+          "alignCross": "stretch",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "backgroundColor": "rgba(217, 119, 6, 0.2)",
+              "borderRadius": 10,
+              "padding": 12,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 9,
+                    "color": "#92400E",
+                    "fontWeight": 700
+                  },
+                  "content": "RESPONSES"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "fontWeight": 800,
+                    "color": "#D97706"
+                  },
+                  "content": "8.2K"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "backgroundColor": "rgba(217, 119, 6, 0.2)",
+              "borderRadius": 10,
+              "padding": 12,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 9,
+                    "color": "#92400E",
+                    "fontWeight": 700
+                  },
+                  "content": "TREND"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "fontWeight": 800,
+                    "color": "#D97706"
+                  },
+                  "content": "↑ 26%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "backgroundColor": "rgba(217, 119, 6, 0.2)",
+              "borderRadius": 10,
+              "padding": 12,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 9,
+                    "color": "#92400E",
+                    "fontWeight": 700
+                  },
+                  "content": "STATUS"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "fontWeight": 800,
+                    "color": "#D97706"
+                  },
+                  "content": "Excellent"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

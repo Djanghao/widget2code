@@ -1,0 +1,219 @@
+{
+  "widget": {
+    "backgroundColor": "#f2f2f7",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#007AFF",
+                "name": "sf:lightbulb.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "Tip of the Day"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "flex-start",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "color": "#007AFF",
+                    "name": "sf:camera.fill"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 4,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 15,
+                        "color": "#000000",
+                        "fontWeight": 500
+                      },
+                      "content": "Quick Camera Access"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 13,
+                        "color": "#6c6c70",
+                        "lineHeight": 1.4
+                      },
+                      "content": "Swipe left on the Lock Screen to quickly open Camera."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "solid",
+                "color": "#d1d1d6"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "flex-start",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "color": "#34C759",
+                    "name": "sf:leaf.fill"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 4,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 15,
+                        "color": "#000000",
+                        "fontWeight": 500
+                      },
+                      "content": "Screen Time Insights"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 13,
+                        "color": "#6c6c70",
+                        "lineHeight": 1.4
+                      },
+                      "content": "Check your app usage patterns in Settings to build healthier digital habits."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "solid",
+                "color": "#d1d1d6"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "flex-start",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "color": "#FF9500",
+                    "name": "sf:speaker.wave.2.fill"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 4,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 15,
+                        "color": "#000000",
+                        "fontWeight": 500
+                      },
+                      "content": "Sound Recognition"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 13,
+                        "color": "#6c6c70",
+                        "lineHeight": 1.4
+                      },
+                      "content": "Enable Sound Recognition to get notified when your device detects important sounds."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

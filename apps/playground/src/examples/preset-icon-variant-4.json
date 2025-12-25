@@ -1,0 +1,125 @@
+{
+  "widget": {
+    "backgroundColor": "#FFEAA7",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "props": {
+        "style": {
+          "background": "linear-gradient(135deg, #FFEAA7 0%, #FF6B6B 50%, #6C5CE7 100%)"
+        }
+      },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "wi:WiDaySunny",
+                "size": 42,
+                "color": "#FFFFFF"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "fa6:FaFire",
+                "size": 42,
+                "color": "#FFFFFF"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "fa6:FaBolt",
+                "size": 42,
+                "color": "#FFFFFF"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "pi:PiHeartFill",
+                "size": 42,
+                "color": "rgba(255, 255, 255, 0.9)"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "ri:RiStarFill",
+                "size": 42,
+                "color": "rgba(255, 255, 255, 0.9)"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "bi:BiGift",
+                "size": 42,
+                "color": "rgba(255, 255, 255, 0.9)"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "gi:GiSparkles",
+                "size": 42,
+                "color": "rgba(255, 255, 255, 0.8)"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "io5:IoWaterSharp",
+                "size": 42,
+                "color": "rgba(255, 255, 255, 0.8)"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "wi:WiStrongWind",
+                "size": 42,
+                "color": "rgba(255, 255, 255, 0.8)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

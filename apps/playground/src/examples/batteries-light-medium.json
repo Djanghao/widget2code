@@ -1,0 +1,166 @@
+{
+  "widget": {
+    "backgroundColor": "#f2f2f7",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.136,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignMain": "around",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "ProgressRing",
+                  "flex": "none",
+                  "props": {
+                    "size": 80,
+                    "percentage": 100,
+                    "color": "#34C759",
+                    "backgroundColor": "#d1d1d6",
+                    "strokeWidth": 6,
+                    "iconName": "sf:iphone",
+                    "iconSize": 40,
+                    "iconColor": "#000000"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "100%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "ProgressRing",
+                  "flex": "none",
+                  "props": {
+                    "size": 80,
+                    "percentage": 80,
+                    "color": "#34C759",
+                    "backgroundColor": "#d1d1d6",
+                    "strokeWidth": 6,
+                    "iconName": "sf:applewatch",
+                    "iconSize": 40,
+                    "iconColor": "#000000"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "80%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "ProgressRing",
+                  "flex": "none",
+                  "props": {
+                    "size": 80,
+                    "percentage": 60,
+                    "color": "#34C759",
+                    "backgroundColor": "#d1d1d6",
+                    "strokeWidth": 6,
+                    "iconName": "sf:airpods",
+                    "iconSize": 40,
+                    "iconColor": "#000000"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "60%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "ProgressRing",
+                  "flex": "none",
+                  "props": {
+                    "size": 80,
+                    "percentage": 25,
+                    "color": "#34C759",
+                    "backgroundColor": "#d1d1d6",
+                    "strokeWidth": 6,
+                    "iconName": "sf:airpods.pro.chargingcase.wireless.fill",
+                    "iconSize": 40,
+                    "iconColor": "#000000"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "25%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

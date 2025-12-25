@@ -1,0 +1,49 @@
+{
+  "widget": {
+    "backgroundColor": "#F0EBE3",
+    "borderRadius": 20,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "#2D6A4F" },
+          "content": "Daily Activity"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 400, "color": "#52796F" },
+          "content": "Simple pie with legend"
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 1,
+          "props": {
+            "data": [38, 28, 18, 10, 6],
+            "labels": ["Work", "Exercise", "Rest", "Meals", "Commute"],
+            "colors": ["#40916C", "#52B788", "#74C69D", "#95D5B2", "#B7E4C7"],
+            "variant": "pie",
+            "backgroundColor": "transparent",
+            "showLabels": false,
+            "showLegend": true,
+            "legendPosition": "left",
+            "legendOrientation": "vertical",
+            "outerRadius": 70,
+            "startAngle": 135,
+            "clockwise": false,
+            "height": "100%",
+            "theme": "light"
+          }
+        }
+      ]
+    }
+  }
+}

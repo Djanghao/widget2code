@@ -1,0 +1,101 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 0,
+      "flex": 1,
+      "alignMain": "start",
+      "alignCross": "stretch",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 22,
+            "fontWeight": 700,
+            "color": "#000000",
+            "style": { "marginBottom": 16 }
+          },
+          "content": "Reminders"
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "alignCross": "center",
+          "props": { "style": { "padding": "12px 0", "borderBottom": "1px solid #E5E5EA" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Checkbox",
+              "props": {
+                "checked": false,
+                "color": "#007AFF",
+                "size": 22
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 17, "color": "#000000" },
+              "content": "Buy groceries"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "alignCross": "center",
+          "props": { "style": { "padding": "12px 0", "borderBottom": "1px solid #E5E5EA" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Checkbox",
+              "props": {
+                "checked": true,
+                "color": "#007AFF",
+                "size": 22
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 17, "color": "#8E8E93", "style": { "textDecoration": "line-through" } },
+              "content": "Call Mom"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "alignCross": "center",
+          "props": { "style": { "padding": "12px 0" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Checkbox",
+              "props": {
+                "checked": false,
+                "color": "#FF3B30",
+                "size": 22
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 17, "color": "#000000" },
+              "content": "Pay bills"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

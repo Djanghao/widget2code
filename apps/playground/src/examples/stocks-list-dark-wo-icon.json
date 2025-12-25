@@ -1,0 +1,713 @@
+{
+  "widget": {
+    "backgroundColor": "#1e1e1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 0.9548022598870056,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 0,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "padding": 16,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 2,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "name": "sf:sf.arrow.up",
+                        "size": 15,
+                        "color": "#FFFFFF"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 18,
+                        "color": "#5daec4",
+                        "fontWeight": 600
+                      },
+                      "content": "AAPL"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#808080",
+                    "fontWeight": 400
+                  },
+                  "content": "Apple Inc."
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 100,
+              "height": 50,
+              "flex": 1,
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  230, 170, 190, 195, 198, 197, 199, 200, 202, 203, 205, 204, 206, 207, 209, 210, 212, 215, 220, 229
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 200,
+                "min": 150,
+                "max": 250,
+                "lineWidth": 3
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#E0E0E0",
+                    "fontWeight": 600
+                  },
+                  "content": "229.00"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#E0E0E0",
+                    "fontWeight": 500
+                  },
+                  "content": "+2.82"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "orientation": "horizontal",
+            "type": "solid",
+            "color": "#2d2d2d",
+            "thickness": 0.5
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "padding": 16,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 2,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "name": "sf:sf.arrow.up",
+                        "size": 15,
+                        "color": "#FFFFFF"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 18,
+                        "color": "#5daec4",
+                        "fontWeight": 600
+                      },
+                      "content": "MSFT"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#808080",
+                    "fontWeight": 400
+                  },
+                  "content": "Microsoft Corporation"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 100,
+              "height": 50,
+              "flex": 1,
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  420, 335, 360, 370, 365, 375, 380, 382, 385, 387, 388, 389, 388, 387, 386, 386, 387, 388, 389, 388
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 400,
+                "min": 300,
+                "max": 450,
+                "lineWidth": 3
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#E0E0E0",
+                    "fontWeight": 600
+                  },
+                  "content": "417.14"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#E0E0E0",
+                    "fontWeight": 500
+                  },
+                  "content": "+0.86"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "orientation": "horizontal",
+            "type": "solid",
+            "color": "#2d2d2d",
+            "thickness": 0.5
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "padding": 16,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 2,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "name": "sf:sf.arrow.up",
+                        "size": 15,
+                        "color": "#FFFFFF"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 18,
+                        "color": "#5daec4",
+                        "fontWeight": 600
+                      },
+                      "content": "TSLA"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#808080",
+                    "fontWeight": 400
+                  },
+                  "content": "Tesla, Inc."
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 100,
+              "height": 50,
+              "flex": 1,
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  100, 120, 140, 165, 190, 220, 240, 255, 265, 272, 276, 274, 270, 268, 266, 262, 255, 248, 240, 234
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 240,
+                "min": 100,
+                "max": 320,
+                "lineWidth": 3
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#E0E0E0",
+                    "fontWeight": 600
+                  },
+                  "content": "213.97"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#E0E0E0",
+                    "fontWeight": 500
+                  },
+                  "content": "+6.45"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "orientation": "horizontal",
+            "type": "solid",
+            "color": "#2d2d2d",
+            "thickness": 0.5
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "padding": 16,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 2,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "name": "sf:sf.arrow.down",
+                        "size": 15,
+                        "color": "#FFFFFF"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 18,
+                        "color": "#5daec4",
+                        "fontWeight": 600
+                      },
+                      "content": "NVDA"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#808080",
+                    "fontWeight": 400
+                  },
+                  "content": "NVIDIA Corporation"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 100,
+              "height": 50,
+              "flex": 1,
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  200, 120, 140, 135, 130, 128, 125, 122, 120, 118, 117, 116, 115, 114, 113, 112, 112, 113, 114, 115
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 150,
+                "min": 100,
+                "max": 200,
+                "lineWidth": 3
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#E0E0E0",
+                    "fontWeight": 600
+                  },
+                  "content": "119.37"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#E0E0E0",
+                    "fontWeight": 500
+                  },
+                  "content": "-4.43"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "orientation": "horizontal",
+            "type": "solid",
+            "color": "#2d2d2d",
+            "thickness": 0.5
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "padding": 16,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 2,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "name": "sf:sf.arrow.down",
+                        "size": 15,
+                        "color": "#FFFFFF"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 18,
+                        "color": "#5daec4",
+                        "fontWeight": 600
+                      },
+                      "content": "QCOM"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#808080",
+                    "fontWeight": 400
+                  },
+                  "content": "QUALCOMM Incorporated"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 100,
+              "height": 50,
+              "flex": 1,
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  190, 170, 160, 175, 185, 178, 172, 174, 176, 177, 177, 176, 176, 176, 176, 176, 176, 176, 176, 175
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 185,
+                "min": 160,
+                "max": 210,
+                "lineWidth": 3
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#E0E0E0",
+                    "fontWeight": 600
+                  },
+                  "content": "175.30"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#E0E0E0",
+                    "fontWeight": 500
+                  },
+                  "content": "-0.21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "orientation": "horizontal",
+            "type": "solid",
+            "color": "#2d2d2d",
+            "thickness": 0.5
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "padding": 16,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 2,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "name": "sf:sf.arrow.down",
+                        "size": 15,
+                        "color": "#FFFFFF"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 18,
+                        "color": "#5daec4",
+                        "fontWeight": 600
+                      },
+                      "content": "T"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#808080",
+                    "fontWeight": 400
+                  },
+                  "content": "AT&T Inc."
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "width": 100,
+              "height": 50,
+              "flex": 1,
+              "props": {
+                "color": "#5daec4",
+                "data": [
+                  22, 14, 13.5, 15.5, 17, 18.5, 19.8, 20.5, 21.2, 21.8, 22.1, 22.3, 22.0, 21.8, 21.6, 21.9, 22.2, 22.0, 21.8, 21.6
+                ],
+                "showArea": true,
+                "gradientIntensity": 0.6,
+                "baseline": 20,
+                "min": 10,
+                "max": 25,
+                "lineWidth": 3
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#E0E0E0",
+                    "fontWeight": 600
+                  },
+                  "content": "19.90"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#E0E0E0",
+                    "fontWeight": 500
+                  },
+                  "content": "-0.60"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

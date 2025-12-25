@@ -1,0 +1,213 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 0,
+    "aspectRatio": 0.955,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 0,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "padding": 16,
+          "alignCross": "center",
+          "backgroundColor": "#FFCC00",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 28,
+                "color": "#ffffff",
+                "name": "sf:folder.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 22,
+                "color": "#ffffff",
+                "fontWeight": 700
+              },
+              "content": "Notes"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "dashed",
+            "color": "#d1d1d6",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 16,
+          "flex": 1,
+          "padding": 16,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "Voting information"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#8e8e93"
+                  },
+                  "content": "02:50 PM No additional text"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "solid",
+                "color": "#e5e5ea",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "Psychologist 2nd session"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#8e8e93"
+                  },
+                  "content": "11:00 AM No additional text"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "solid",
+                "color": "#e5e5ea",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "Shopping list"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#8e8e93"
+                  },
+                  "content": "09:30 AM No additional text"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "solid",
+                "color": "#e5e5ea",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "Meeting Note"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#8e8e93"
+                  },
+                  "content": "02:30 PM No additional text"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

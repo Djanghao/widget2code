@@ -1,0 +1,227 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#007AFF",
+                "name": "sf:chart.bar.xaxis"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 14,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "Project Progress"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 10,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#8E8E93",
+                        "fontWeight": 600
+                      },
+                      "content": "DEVELOPMENT"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#007AFF"
+                      },
+                      "content": "75%"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "ProgressBar",
+                  "width": "100%",
+                  "height": 6,
+                  "flex": "none",
+                  "props": {
+                    "percentage": 75,
+                    "color": "#007AFF",
+                    "backgroundColor": "#f0f0f0",
+                    "borderRadius": 3
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#8E8E93",
+                        "fontWeight": 600
+                      },
+                      "content": "DESIGN"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#34C759"
+                      },
+                      "content": "90%"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "ProgressBar",
+                  "width": "100%",
+                  "height": 6,
+                  "flex": "none",
+                  "props": {
+                    "percentage": 90,
+                    "color": "#34C759",
+                    "backgroundColor": "#f0f0f0",
+                    "borderRadius": 3
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#8E8E93",
+                        "fontWeight": 600
+                      },
+                      "content": "TESTING"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#FF9500"
+                      },
+                      "content": "45%"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "ProgressBar",
+                  "width": "100%",
+                  "height": 6,
+                  "flex": "none",
+                  "props": {
+                    "percentage": 45,
+                    "color": "#FF9500",
+                    "backgroundColor": "#f0f0f0",
+                    "borderRadius": 3
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "ProgressRing",
+          "width": 60,
+          "height": 60,
+          "flex": "none",
+          "alignSelf": "center",
+          "props": {
+            "percentage": 68,
+            "color": "#007AFF",
+            "backgroundColor": "#f0f0f0",
+            "size": 60,
+            "strokeWidth": 6,
+            "content": "68%",
+            "textColor": "#000000",
+            "fontSize": 16,
+            "fontWeight": 700
+          }
+        }
+      ]
+    }
+  }
+}

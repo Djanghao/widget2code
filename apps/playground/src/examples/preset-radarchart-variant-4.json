@@ -1,0 +1,57 @@
+{
+  "widget": {
+    "backgroundColor": "#1A1A2E",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" },
+          "content": "Team Analysis"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 600, "color": "rgba(255, 255, 255, 0.7)" },
+          "content": "Triple comparison"
+        },
+        {
+          "type": "leaf",
+          "component": "RadarChart",
+          "flex": 1,
+          "props": {
+            "data": [
+              [85, 78, 92, 88, 75],
+              [72, 88, 76, 82, 90],
+              [90, 82, 85, 78, 88]
+            ],
+            "labels": ["Communication", "Productivity", "Innovation", "Quality", "Teamwork"],
+            "colors": ["#FF6B6B", "#4ECDC4", "#FFD93D"],
+            "seriesNames": ["Team A", "Team B", "Team C"],
+            "radarShape": "circle",
+            "splitNumber": 4,
+            "backgroundColor": "transparent",
+            "areaOpacity": 0.35,
+            "lineWidth": 2,
+            "showPoints": true,
+            "pointSize": 5,
+            "showLegend": true,
+            "legendPosition": "top",
+            "gridColor": "rgba(255, 255, 255, 0.1)",
+            "splitLineStyle": "dotted",
+            "axisLineStyle": "solid",
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

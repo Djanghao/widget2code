@@ -1,0 +1,103 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "alignMain": "between",
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 13,
+                "fontWeight": 700,
+                "color": "#0A84FF",
+                "textTransform": "uppercase",
+                "letterSpacing": 0.5
+              },
+              "content": "Breaking News"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 28,
+                "fontWeight": 700,
+                "color": "#FFFFFF",
+                "lineHeight": 1.2
+              },
+              "content": "The Future of AI is Here"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 17,
+                "color": "#8E8E93",
+                "lineHeight": 1.4
+              },
+              "content": "Discover how new technologies are reshaping our world."
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignCross": "center",
+          "gap": 12,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:clock.fill",
+                "size": 14,
+                "color": "#8E8E93"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 13,
+                "fontWeight": 500,
+                "color": "#8E8E93"
+              },
+              "content": "2 hours ago"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 13,
+                "fontWeight": 500,
+                "color": "#3A3A3C"
+              },
+              "content": "•"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 13,
+                "fontWeight": 500,
+                "color": "#FFFFFF"
+              },
+              "content": "Technology"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

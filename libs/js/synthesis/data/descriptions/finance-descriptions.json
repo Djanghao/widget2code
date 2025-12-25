@@ -1,0 +1,276 @@
+{
+  "domain": "finance",
+  "descriptions": [
+    {
+      "id": "finance-001",
+      "prompt": "A widget showing a single stock price",
+      "complexity": "simple",
+      "metrics": [
+        "stock"
+      ]
+    },
+    {
+      "id": "finance-002",
+      "prompt": "A widget showing stock price with company name",
+      "complexity": "simple",
+      "metrics": [
+        "stock"
+      ]
+    },
+    {
+      "id": "finance-003",
+      "prompt": "A widget displaying stock price with percent change",
+      "complexity": "medium",
+      "metrics": [
+        "stock"
+      ]
+    },
+    {
+      "id": "finance-004",
+      "prompt": "A widget showing stock price with trend sparkline",
+      "complexity": "medium",
+      "metrics": [
+        "stock"
+      ],
+      "visualization": [
+        "sparkline"
+      ]
+    },
+    {
+      "id": "finance-005",
+      "prompt": "A widget displaying stock with daily chart",
+      "complexity": "medium",
+      "metrics": [
+        "stock"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "finance-006",
+      "prompt": "A widget showing stock price, change, and volume",
+      "complexity": "complex",
+      "metrics": [
+        "stock",
+        "volume"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "finance-007",
+      "prompt": "A widget showing three stock tickers",
+      "complexity": "medium",
+      "metrics": [
+        "stocks"
+      ]
+    },
+    {
+      "id": "finance-008",
+      "prompt": "A widget displaying watchlist with 5 stocks",
+      "complexity": "complex",
+      "metrics": [
+        "stocks"
+      ]
+    },
+    {
+      "id": "finance-009",
+      "prompt": "A widget showing stock comparison between two companies",
+      "complexity": "complex",
+      "metrics": [
+        "stocks"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "finance-010",
+      "prompt": "A widget showing total portfolio value",
+      "complexity": "simple",
+      "metrics": [
+        "portfolio"
+      ]
+    },
+    {
+      "id": "finance-011",
+      "prompt": "A widget displaying portfolio value with daily change",
+      "complexity": "medium",
+      "metrics": [
+        "portfolio"
+      ]
+    },
+    {
+      "id": "finance-012",
+      "prompt": "A widget showing portfolio value with performance chart",
+      "complexity": "medium",
+      "metrics": [
+        "portfolio"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "finance-013",
+      "prompt": "A widget displaying portfolio allocation pie chart",
+      "complexity": "medium",
+      "metrics": [
+        "portfolio"
+      ],
+      "visualization": [
+        "pie-chart"
+      ]
+    },
+    {
+      "id": "finance-014",
+      "prompt": "A widget showing portfolio summary with top holdings",
+      "complexity": "complex",
+      "metrics": [
+        "portfolio"
+      ]
+    },
+    {
+      "id": "finance-015",
+      "prompt": "A widget showing Bitcoin price",
+      "complexity": "simple",
+      "metrics": [
+        "crypto"
+      ]
+    },
+    {
+      "id": "finance-016",
+      "prompt": "A widget displaying Bitcoin with 24h change",
+      "complexity": "medium",
+      "metrics": [
+        "crypto"
+      ]
+    },
+    {
+      "id": "finance-017",
+      "prompt": "A widget showing Bitcoin price with trend chart",
+      "complexity": "medium",
+      "metrics": [
+        "crypto"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "finance-018",
+      "prompt": "A widget displaying multiple crypto prices",
+      "complexity": "complex",
+      "metrics": [
+        "crypto"
+      ]
+    },
+    {
+      "id": "finance-019",
+      "prompt": "A widget showing S&P 500 index",
+      "complexity": "simple",
+      "metrics": [
+        "index"
+      ]
+    },
+    {
+      "id": "finance-020",
+      "prompt": "A widget displaying major market indices",
+      "complexity": "medium",
+      "metrics": [
+        "indices"
+      ]
+    },
+    {
+      "id": "finance-021",
+      "prompt": "A widget showing Dow Jones with trend",
+      "complexity": "medium",
+      "metrics": [
+        "index"
+      ],
+      "visualization": [
+        "sparkline"
+      ]
+    },
+    {
+      "id": "finance-022",
+      "prompt": "A widget showing recent transactions",
+      "complexity": "medium",
+      "metrics": [
+        "transactions"
+      ]
+    },
+    {
+      "id": "finance-023",
+      "prompt": "A widget displaying monthly spending",
+      "complexity": "medium",
+      "metrics": [
+        "spending"
+      ]
+    },
+    {
+      "id": "finance-024",
+      "prompt": "A widget showing budget vs actual spending",
+      "complexity": "complex",
+      "metrics": [
+        "budget"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "finance-025",
+      "prompt": "A widget displaying spending by category",
+      "complexity": "complex",
+      "metrics": [
+        "spending"
+      ],
+      "visualization": [
+        "pie-chart"
+      ]
+    },
+    {
+      "id": "finance-026",
+      "prompt": "A widget showing account balance",
+      "complexity": "simple",
+      "metrics": [
+        "balance"
+      ]
+    },
+    {
+      "id": "finance-027",
+      "prompt": "A widget displaying checking and savings balances",
+      "complexity": "medium",
+      "metrics": [
+        "balance"
+      ]
+    },
+    {
+      "id": "finance-028",
+      "prompt": "A widget showing total net worth",
+      "complexity": "simple",
+      "metrics": [
+        "net-worth"
+      ]
+    },
+    {
+      "id": "finance-029",
+      "prompt": "A widget showing currency exchange rate",
+      "complexity": "simple",
+      "metrics": [
+        "currency"
+      ]
+    },
+    {
+      "id": "finance-030",
+      "prompt": "A widget displaying USD to EUR conversion",
+      "complexity": "medium",
+      "metrics": [
+        "currency"
+      ]
+    }
+  ]
+}

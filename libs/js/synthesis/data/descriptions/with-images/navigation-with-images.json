@@ -1,0 +1,246 @@
+{
+  "domain": "navigation",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "navigation-img-001",
+      "prompt": "A route widget with map view, destination, estimated time, and traffic conditions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "route map",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-002",
+      "prompt": "A traffic widget with road photo, traffic level, congestion areas, and alternate routes",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "traffic or highway photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-003",
+      "prompt": "A parking widget with parking lot photo, availability, rates, and distance",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "parking lot or garage",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-004",
+      "prompt": "A compass widget with compass visual, current direction, coordinates, and altitude",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "compass design",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "navigation-img-005",
+      "prompt": "A nearby places widget with place photo, name, distance, and category",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "nearby place photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-006",
+      "prompt": "A public transit widget with transit map, next arrival, line number, and platform",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "transit map or vehicle",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-007",
+      "prompt": "A saved location widget with location photo, name, address, and quick directions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "saved location photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-008",
+      "prompt": "A gas station widget with station photo, fuel prices, distance, and amenities",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "gas station photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-009",
+      "prompt": "A turn-by-turn widget with next turn arrow, street name, distance, and lane guidance",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "navigation arrow or road sign",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "navigation-img-010",
+      "prompt": "A speed limit widget with speed sign, current speed, limit, and camera alert",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "speed limit sign",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-011",
+      "prompt": "A EV charging widget with charging station photo, availability, power level, and cost",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "EV charging station",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-012",
+      "prompt": "A offline map widget with map region, downloaded area, size, and update date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "map area preview",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-013",
+      "prompt": "A rest area widget with rest stop photo, facilities, distance ahead, and amenities",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "rest area or facilities photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-014",
+      "prompt": "A location sharing widget with shared location map, sharer photo, and update time",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "map with location pin",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-015",
+      "prompt": "A toll calculator widget with highway photo, toll amount, payment method, and route",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "toll booth or highway",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-016",
+      "prompt": "A landmark widget with landmark photo, name, history snippet, and visiting hours",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "famous landmark photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-017",
+      "prompt": "A bike route widget with bike path map, distance, elevation, and surface type",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "bike path or trail map",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-018",
+      "prompt": "A ferry schedule widget with ferry photo, departure times, route, and ticket info",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "ferry boat photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-019",
+      "prompt": "A road condition widget with road photo, condition status, hazards, and weather impact",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "road conditions photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-020",
+      "prompt": "A carpool widget with carpooler photo, pickup point, time, and cost sharing",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "carpooler profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-021",
+      "prompt": "A border crossing widget with border checkpoint photo, wait time, and documents needed",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "border checkpoint or sign",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-022",
+      "prompt": "A hiking trail widget with trail photo, difficulty, length, and elevation gain",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "hiking trail or mountain path",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-023",
+      "prompt": "A indoor navigation widget with building floor plan, current location, and destination",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "indoor floor plan map",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "navigation-img-024",
+      "prompt": "A street view widget with panoramic street photo, location name, and navigation controls",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "street panorama view",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "navigation-img-025",
+      "prompt": "A ride share widget with driver photo, vehicle info, ETA, and fare estimate",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "driver profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "navigation-img-026",
+      "prompt": "A waypoint widget with waypoint photos, stops along route, and total trip time",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "multiple waypoint locations",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-027",
+      "prompt": "A marine navigation widget with nautical chart, water depth, tide info, and hazards",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "nautical chart or water",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "navigation-img-028",
+      "prompt": "A airport terminal widget with terminal map, gate location, amenities, and walking time",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "airport terminal map",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-029",
+      "prompt": "A geo-fence widget with map boundary, area name, entry/exit alerts, and radius",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "map with geo-fence boundary",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "navigation-img-030",
+      "prompt": "A elevation profile widget with terrain elevation chart, altitude changes, and gradient",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "elevation profile chart",
+      "imagePlacement": "top-large"
+    }
+  ]
+}

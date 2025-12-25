@@ -1,0 +1,59 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "linear-gradient(45deg, #000 25%, #0a0a0a 25%, #0a0a0a 50%, #000 50%, #000 75%, #0a0a0a 75%, #0a0a0a 100%)", "backgroundSize": "20px 20px" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "ACTIONS" },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:command", "size": 20, "color": "#00FF9D" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "direction": "col",
+          "gap": 16,
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "content": "INITIATE_SEQ",
+                "backgroundColor": "transparent",
+                "color": "#00FF9D",
+                "width": "100%",
+                "height": 48,
+                "style": { "border": "1px solid #00FF9D", "borderRadius": 0, "fontFamily": "monospace", "letterSpacing": "1px" }
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "content": "ABORT_MISSION",
+                "backgroundColor": "#FF0055",
+                "color": "#000000",
+                "width": "100%",
+                "height": 48,
+                "style": { "border": "1px solid #FF0055", "borderRadius": 0, "fontFamily": "monospace", "letterSpacing": "1px", "fontWeight": "bold" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

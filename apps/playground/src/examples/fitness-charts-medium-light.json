@@ -1,0 +1,191 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#FF3B30",
+                "name": "sf:heart.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "Fitness Stats"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93",
+                    "fontWeight": 600
+                  },
+                  "content": "WEEKLY STEPS"
+                },
+                {
+                  "type": "leaf",
+                  "component": "BarChart",
+                  "width": 120,
+                  "height": 80,
+                  "flex": "none",
+                  "props": {
+                    "data": [8000, 12000, 9500, 15000, 11000, 13500, 10234],
+                    "color": "#34C759",
+                    "backgroundColor": "#f0f0f0",
+                    "barWidth": 12,
+                    "showLabels": false,
+                    "showGrid": false
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "10,234 today"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93",
+                    "fontWeight": 600
+                  },
+                  "content": "HEART RATE"
+                },
+                {
+                  "type": "leaf",
+                  "component": "LineChart",
+                  "width": 120,
+                  "height": 80,
+                  "flex": "none",
+                  "props": {
+                    "data": [72, 75, 82, 145, 132, 98, 85, 76, 78],
+                    "color": "#FF3B30",
+                    "lineWidth": 2,
+                    "showPoints": false,
+                    "showGrid": false,
+                    "fill": false,
+                    "smooth": true
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "72 BPM"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93",
+                    "fontWeight": 600
+                  },
+                  "content": "CALORIES"
+                },
+                {
+                  "type": "leaf",
+                  "component": "PieChart",
+                  "width": 80,
+                  "height": 80,
+                  "flex": "none",
+                  "props": {
+                    "data": [
+                      { "value": 450, "color": "#FF3B30", "label": "Active" },
+                      { "value": 1200, "color": "#f0f0f0", "label": "Resting" }
+                    ],
+                    "showLabels": false,
+                    "showLegend": false,
+                    "innerRadius": 25
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "1,650 kcal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

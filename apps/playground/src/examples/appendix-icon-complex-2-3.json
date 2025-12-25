@@ -1,0 +1,36 @@
+{
+  "widget": {
+    "backgroundColor": "#0093E9",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "padding": 24,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.4)", "backdropFilter": "blur(20px)", "borderRadius": 32, "border": "1px solid rgba(255, 255, 255, 0.5)" } },
+          "children": [
+            {
+              "type": "container",
+              "padding": 32,
+              "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.5)", "borderRadius": "50%", "boxShadow": "0 8px 32px 0 rgba(31, 38, 135, 0.1)" } },
+              "children": [
+                { "type": "leaf", "component": "Icon", "props": { "name": "sf:cloud.sun.fill", "size": 80, "color": "#FFFFFF" } }
+              ]
+            }
+          ]
+        },
+        { "type": "leaf", "component": "Text", "props": { "fontSize": 20, "fontWeight": 700, "color": "#FFFFFF", "textAlign": "center", "style": { "textShadow": "0 2px 4px rgba(0,0,0,0.1)" } }, "content": "Partly Cloudy" }
+      ]
+    }
+  }
+}

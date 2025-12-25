@@ -1,0 +1,95 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" }, "content": "Activity" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#FF2D55" }, "content": "Today" }
+              ]
+            },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "Oct 24" }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "alignCross": "center",
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "props": { "style": { "position": "relative", "width": 120, "height": 120 } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "ProgressRing",
+                  "props": { "percentage": 75, "color": "#FF2D55", "backgroundColor": "rgba(255, 45, 85, 0.2)", "size": 120, "strokeWidth": 12, "style": { "position": "absolute", "top": 0, "left": 0 } }
+                },
+                {
+                  "type": "leaf",
+                  "component": "ProgressRing",
+                  "props": { "percentage": 50, "color": "#34C759", "backgroundColor": "rgba(52, 199, 89, 0.2)", "size": 92, "strokeWidth": 12, "style": { "position": "absolute", "top": 14, "left": 14 } }
+                },
+                {
+                  "type": "leaf",
+                  "component": "ProgressRing",
+                  "props": { "percentage": 90, "color": "#007AFF", "backgroundColor": "rgba(0, 122, 255, 0.2)", "size": 64, "strokeWidth": 12, "style": { "position": "absolute", "top": 28, "left": 28 } }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 12,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#FF2D55", "fontWeight": 600 }, "content": "MOVE" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "color": "#FFFFFF", "fontWeight": 700, "fontFamily": "monospace" }, "content": "450/600" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#34C759", "fontWeight": 600 }, "content": "EXERCISE" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "color": "#FFFFFF", "fontWeight": 700, "fontFamily": "monospace" }, "content": "15/30" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#007AFF", "fontWeight": 600 }, "content": "STAND" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "color": "#FFFFFF", "fontWeight": 700, "fontFamily": "monospace" }, "content": "11/12" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

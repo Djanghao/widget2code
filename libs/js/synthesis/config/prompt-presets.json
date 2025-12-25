@@ -1,0 +1,39 @@
+{
+  "presets": {
+    "default": {
+      "name": "Default",
+      "description": "Standard widget generation with balanced complexity",
+      "systemPromptModifier": ""
+    },
+    "more-components": {
+      "name": "More Components",
+      "description": "Encourages use of more UI components and richer layouts",
+      "systemPromptModifier": "\n\n**Additional Guidelines - Component Richness:**\n- Aim to use 5-8 different UI components per widget\n- Include interactive elements like buttons, toggles, and sliders where appropriate\n- Use varied layout structures (cards, lists, grids, tabs)\n- Include visual elements like icons, badges, and progress indicators\n- Create layered, information-dense interfaces that still maintain good UX"
+    },
+    "apple-style": {
+      "name": "Apple/iOS Style",
+      "description": "Generates widgets with Apple's design aesthetic and iOS conventions",
+      "systemPromptModifier": "\n\n**Additional Guidelines - Apple/iOS Style:**\n- Use SF Symbols style icons (simple, rounded, monochromatic)\n- Prefer rounded corners (8-16px border radius)\n- Use iOS system fonts: San Francisco (SF Pro)\n- Follow Apple's Human Interface Guidelines color usage\n- Use subtle shadows and depth (avoid heavy drop shadows)\n- Prefer light backgrounds with subtle gradients\n- Use iOS-style buttons (rounded, filled or outlined)\n- Include iOS-style blur effects for overlays\n- Use generous whitespace and breathing room\n- Follow iOS spacing conventions (8pt grid system)\n- Use iOS-style segmented controls and pickers\n- Implement iOS-style cards with subtle shadows"
+    },
+    "android-style": {
+      "name": "Android/Material Design Style",
+      "description": "Generates widgets following Material Design principles",
+      "systemPromptModifier": "\n\n**Additional Guidelines - Android/Material Design Style:**\n- Use Material Design icons (sharp, geometric)\n- Follow Material Design 3 principles\n- Use elevation and shadows for depth (0dp, 1dp, 2dp, 3dp, 4dp, 6dp, 8dp)\n- Implement Material Design color system (primary, secondary, tertiary)\n- Use Roboto font family\n- Include Material Design buttons (text, outlined, contained, FABs)\n- Use Material Design cards with appropriate elevation\n- Implement ripple effects on interactive elements\n- Use Material Design bottom sheets and dialogs\n- Follow 4dp/8dp grid system for spacing\n- Use Material Design chips and badges\n- Implement dynamic color theming where appropriate\n- Use distinctive Material Design motion patterns"
+    },
+    "minimalist": {
+      "name": "Minimalist",
+      "description": "Clean, simple designs with minimal components",
+      "systemPromptModifier": "\n\n**Additional Guidelines - Minimalist Style:**\n- Use 2-4 UI components maximum\n- Prefer monochromatic or limited color palettes\n- Emphasize whitespace and negative space\n- Use simple typography with clear hierarchy\n- Avoid decorative elements unless essential\n- Focus on core functionality only\n- Use subtle, thin borders if needed\n- Prefer flat design over shadows and gradients\n- Keep layouts simple and linear"
+    },
+    "data-rich": {
+      "name": "Data-Rich/Dashboard",
+      "description": "Information-dense widgets with charts and metrics",
+      "systemPromptModifier": "\n\n**Additional Guidelines - Data-Rich Style:**\n- Include multiple data points and metrics\n- Use charts, graphs, and data visualizations\n- Implement sparklines and mini charts\n- Show trends with arrows and percentage changes\n- Use progress bars and gauges\n- Include comparison data (vs previous period)\n- Use data tables when appropriate\n- Implement color coding for data states (positive/negative)\n- Use badges and labels for categorization\n- Include timestamps and data freshness indicators"
+    },
+    "playful": {
+      "name": "Playful/Casual",
+      "description": "Fun, colorful designs with personality",
+      "systemPromptModifier": "\n\n**Additional Guidelines - Playful Style:**\n- Use vibrant, bold color combinations\n- Include emoji or playful icons\n- Use rounded, friendly shapes\n- Implement fun micro-interactions\n- Use casual, friendly copy tone\n- Include decorative elements and illustrations\n- Use gradient backgrounds and colorful accents\n- Implement playful animations (bounces, wobbles)\n- Use non-standard layouts and creative positioning"
+    }
+  }
+}

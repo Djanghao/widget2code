@@ -1,0 +1,58 @@
+{
+  "widget": {
+    "backgroundColor": "#1A1A2E",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 18,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 44,
+            "fontWeight": 900,
+            "color": "#FF006E"
+          },
+          "content": "NEON"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 44,
+            "fontWeight": 900,
+            "color": "#8338EC"
+          },
+          "content": "GLOW"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 15,
+            "fontWeight": 700,
+            "color": "#3A86FF"
+          },
+          "content": "ELECTRIC DREAMS"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 12,
+            "fontWeight": 500,
+            "color": "#FB5607"
+          },
+          "content": "Light up the night"
+        }
+      ]
+    }
+  }
+}

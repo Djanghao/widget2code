@@ -1,0 +1,109 @@
+{
+  "domain": "communication",
+  "descriptions": [
+    {
+      "id": "communication-001",
+      "prompt": "A widget showing recent messages",
+      "complexity": "medium",
+      "metrics": [
+        "messages"
+      ]
+    },
+    {
+      "id": "communication-002",
+      "prompt": "A widget displaying unread message count",
+      "complexity": "simple",
+      "metrics": [
+        "messages"
+      ]
+    },
+    {
+      "id": "communication-003",
+      "prompt": "A widget showing last message preview",
+      "complexity": "medium",
+      "metrics": [
+        "messages"
+      ]
+    },
+    {
+      "id": "communication-004",
+      "prompt": "A widget displaying message list with avatars",
+      "complexity": "complex",
+      "metrics": [
+        "messages"
+      ]
+    },
+    {
+      "id": "communication-005",
+      "prompt": "A widget showing recent calls",
+      "complexity": "medium",
+      "metrics": [
+        "calls"
+      ]
+    },
+    {
+      "id": "communication-006",
+      "prompt": "A widget displaying missed calls",
+      "complexity": "medium",
+      "metrics": [
+        "calls"
+      ]
+    },
+    {
+      "id": "communication-007",
+      "prompt": "A widget showing unread emails",
+      "complexity": "simple",
+      "metrics": [
+        "email"
+      ]
+    },
+    {
+      "id": "communication-008",
+      "prompt": "A widget displaying inbox preview",
+      "complexity": "medium",
+      "metrics": [
+        "email"
+      ]
+    },
+    {
+      "id": "communication-009",
+      "prompt": "A widget showing recent emails with subjects",
+      "complexity": "complex",
+      "metrics": [
+        "email"
+      ]
+    },
+    {
+      "id": "communication-010",
+      "prompt": "A widget showing favorite contacts",
+      "complexity": "medium",
+      "metrics": [
+        "contacts"
+      ]
+    },
+    {
+      "id": "communication-011",
+      "prompt": "A widget displaying quick dial contacts",
+      "complexity": "medium",
+      "metrics": [
+        "contacts"
+      ]
+    },
+    {
+      "id": "communication-012",
+      "prompt": "A widget showing notification count",
+      "complexity": "simple",
+      "metrics": [
+        "notifications"
+      ]
+    },
+    {
+      "id": "communication-013",
+      "prompt": "A widget displaying recent notifications",
+      "complexity": "medium",
+      "metrics": [
+        "notifications"
+      ]
+    }
+  ]
+}

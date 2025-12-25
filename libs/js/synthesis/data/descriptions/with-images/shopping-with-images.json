@@ -1,0 +1,246 @@
+{
+  "domain": "shopping",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "shopping-img-001",
+      "prompt": "A product widget with product photo, name, price, and rating",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "product photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-002",
+      "prompt": "A fashion item widget showing clothing photo with brand, price, and size",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "clothing or fashion item",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "shopping-img-003",
+      "prompt": "An order tracking widget with product image, order status, and delivery date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "ordered product",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-004",
+      "prompt": "A wishlist widget showing item photo, name, price, and availability",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "wishlist product",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-005",
+      "prompt": "A deal widget with product image, original price, discount, and timer",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "product on sale",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "shopping-img-006",
+      "prompt": "A new arrival widget with product photo, brand, launch date, and pre-order button",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "new product",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-007",
+      "prompt": "A flash sale widget with product image, countdown timer, stock level, and discount badge",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sale product",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "shopping-img-008",
+      "prompt": "A review widget with product image, reviewer photo, rating, and review snippet",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "product and reviewer photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-009",
+      "prompt": "A gift recommendation widget with gift image, occasion, price range, and recipient type",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "gift product photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-010",
+      "prompt": "A cart summary widget with product thumbnails, item count, and total price",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "product thumbnails grid",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "shopping-img-011",
+      "prompt": "A trending product widget with product image, trend indicator, and purchase count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "trending product",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-012",
+      "prompt": "A bundle deal widget with multiple product images, bundle price, and savings amount",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "product bundle images",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "shopping-img-013",
+      "prompt": "A size guide widget with clothing image, size chart preview, and fit recommendations",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "clothing item",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-014",
+      "prompt": "A comparison widget with two product images side-by-side, specs, and prices",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "two product photos",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "shopping-img-015",
+      "prompt": "A loyalty points widget with reward badge, points balance, and next reward preview",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "reward badge or product reward",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-016",
+      "prompt": "A brand showcase widget with brand logo, featured product, and exclusive discount",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "brand logo and product",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "shopping-img-017",
+      "prompt": "A restocked item widget with product photo, back in stock badge, and notify count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "restocked product",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-018",
+      "prompt": "A price drop widget with product image, old price, new price, and percentage saved",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "product photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-019",
+      "prompt": "A coupon widget with brand image, discount code, expiry date, and terms",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "brand or coupon visual",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-020",
+      "prompt": "A virtual try-on widget with model photo, product overlay, and color options",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "model photo with product",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "shopping-img-021",
+      "prompt": "A seller profile widget with seller photo, rating, response time, and product count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "seller profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-022",
+      "prompt": "A limited edition widget with product image, edition number, rarity indicator, and price",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "limited edition product",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "shopping-img-023",
+      "prompt": "A gift card widget with card design, amount options, and personalization preview",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "gift card design",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-024",
+      "prompt": "A subscription box widget with box image, monthly theme, price, and items preview",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "subscription box photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "shopping-img-025",
+      "prompt": "A clearance widget with product photo, clearance badge, final price, and limited stock warning",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "clearance product",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-026",
+      "prompt": "A sponsored product widget with product image, sponsored badge, brand, and CTA",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sponsored product photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-027",
+      "prompt": "A delivery estimate widget with product image, shipping method, and estimated delivery date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "product photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-028",
+      "prompt": "A eco-friendly badge widget with product photo, sustainability certifications, and impact stats",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "eco-friendly product",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "shopping-img-029",
+      "prompt": "A outfit suggestion widget with complete outfit photo, total price, and individual items",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "outfit styling photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "shopping-img-030",
+      "prompt": "A local pickup widget with product image, store photo, availability, and hours",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "product and store photos",
+      "imagePlacement": "left-thumbnail"
+    }
+  ]
+}

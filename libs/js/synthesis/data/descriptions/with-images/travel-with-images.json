@@ -1,0 +1,246 @@
+{
+  "domain": "travel",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "travel-img-001",
+      "prompt": "A flight widget with airplane photo, flight number, departure/arrival times, and gate",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "airplane or airline logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-002",
+      "prompt": "A hotel booking widget with hotel photo, name, check-in date, and nightly rate",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "hotel exterior or room photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-003",
+      "prompt": "A destination widget with landmark photo, city name, temperature, and highlights",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "destination landmark or cityscape",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-004",
+      "prompt": "A travel itinerary widget with location photos, daily schedule, and activities",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "travel collage or itinerary visual",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-005",
+      "prompt": "A boarding pass widget with QR code, passenger name, seat, and boarding time",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "boarding pass design",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "travel-img-006",
+      "prompt": "A luggage tracker widget with suitcase icon, location, battery level, and distance",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "luggage or suitcase icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-007",
+      "prompt": "A currency converter widget with currency symbols, exchange rate, and amount",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "currency notes or symbols",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-008",
+      "prompt": "A travel guide widget with guidebook cover, destination, top tips, and ratings",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "travel guidebook or destination photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-009",
+      "prompt": "A car rental widget with car photo, model, rental period, and daily rate",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "rental car photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-010",
+      "prompt": "A tourist attraction widget with attraction photo, name, hours, and ticket price",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "tourist attraction or monument",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-011",
+      "prompt": "A travel insurance widget with policy document, coverage details, and emergency contact",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "insurance document or travel icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-012",
+      "prompt": "A local transport widget with transit vehicle photo, route, schedule, and fare",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "bus, train, or metro photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-013",
+      "prompt": "A travel checklist widget with passport photo, items to pack, and completion status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "passport or travel essentials",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-014",
+      "prompt": "A beach widget with beach photo, location, water temperature, and amenities",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "beach or coastline photo",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "travel-img-015",
+      "prompt": "A cruise widget with cruise ship photo, itinerary, cabin type, and sailing date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "cruise ship exterior",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-016",
+      "prompt": "A camping widget with campsite photo, location, availability, and amenities",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "campsite or tent photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-017",
+      "prompt": "A visa status widget with passport photo, visa type, application status, and validity",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "passport or visa stamp",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-018",
+      "prompt": "A points and miles widget with loyalty logo, points balance, and redemption options",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "loyalty program logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-019",
+      "prompt": "A travel photo widget with vacation photo, location tag, date, and caption",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "travel vacation photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-020",
+      "prompt": "A road trip widget with map route, waypoints, driving time, and distance",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "road map or highway photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-021",
+      "prompt": "A hostel widget with hostel photo, dorm/private room, price, and social rating",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "hostel interior or exterior",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-022",
+      "prompt": "A airport lounge widget with lounge photo, access type, amenities, and location",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "airport lounge interior",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-023",
+      "prompt": "A travel deal widget with destination photo, discount percentage, dates, and booking link",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "travel deal destination photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-024",
+      "prompt": "A local experience widget with activity photo, host, duration, and group size",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "local activity or experience photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-025",
+      "prompt": "A national park widget with park photo, trails, wildlife, and visitor center info",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "national park landscape",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "travel-img-026",
+      "prompt": "A travel buddy widget with traveler photo, destination match, travel dates, and interests",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "traveler profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-027",
+      "prompt": "A souvenir widget with souvenir photo, item name, price, and cultural significance",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "souvenir or handicraft photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "travel-img-028",
+      "prompt": "A travel blog widget with blog post image, title, author, and read time",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "travel blog featured image",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-029",
+      "prompt": "A bucket list widget with destination photos, places to visit, and completion status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "bucket list destinations collage",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "travel-img-030",
+      "prompt": "A travel safety widget with alert icon, safety level, travel advisories, and tips",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "safety or alert icon",
+      "imagePlacement": "left-thumbnail"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#FF9500",
+                "name": "sf:creditcard.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 14,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "Wallet"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Image",
+              "width": 64,
+              "height": 40,
+              "flex": "none",
+              "props": {
+                "borderRadius": 8,
+                "url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 11,
+                "color": "#8E8E93"
+              },
+              "content": "Apple Card"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignMain": "space-between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "$2,847.50"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Balance"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "flex": "none",
+              "props": {
+                "icon": "sf:plus",
+                "backgroundColor": "#007AFF",
+                "color": "#ffffff",
+                "borderRadius": 16,
+                "size": 32
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

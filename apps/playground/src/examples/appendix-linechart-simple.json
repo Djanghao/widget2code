@@ -1,0 +1,80 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 8,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "start",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" },
+                  "content": "HUAWEI"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 13, "fontWeight": 600, "color": "#8E8E93" },
+                  "content": "Huawei Technologies"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 20, "fontWeight": 600, "color": "#FFFFFF" },
+                  "content": "185.92"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 13, "fontWeight": 600, "color": "#34C759" },
+                  "content": "+1.25%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "LineChart",
+          "props": {
+            "data": [182.0, 186.5, 179.8, 188.2, 181.3, 189.7, 183.1],
+            "color": "#34C759",
+            "backgroundColor": "transparent",
+            "showArea": true,
+            "gradientIntensity": 0.3,
+            "smooth": true,
+            "showXAxisLabels": false,
+            "showYAxisLabels": false,
+            "showXAxisTicks": false,
+            "showYAxisTicks": false,
+            "height": "100%",
+            "theme": "dark",
+            "min": 180
+          }
+        }
+      ]
+    }
+  }
+}

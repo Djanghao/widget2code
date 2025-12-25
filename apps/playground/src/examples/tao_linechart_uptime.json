@@ -1,0 +1,237 @@
+{
+  "widget": {
+    "backgroundColor": "#1A1F2E",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1.314,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "color": "#A0AEC0"
+                  },
+                  "content": "SYSTEM RELIABILITY"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 18,
+                    "fontWeight": 700,
+                    "color": "#818CF8"
+                  },
+                  "content": "Server Uptime Monitoring"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 0,
+              "backgroundColor": "rgba(129, 140, 248, 0.1)",
+              "borderRadius": 12,
+              "padding": 12,
+              "border": "1px solid rgba(129, 140, 248, 0.3)",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 10,
+                    "fontWeight": 600,
+                    "color": "#818CF8"
+                  },
+                  "content": "STATUS"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 16,
+                    "fontWeight": 700,
+                    "color": "#4ECDC4"
+                  },
+                  "content": "HEALTHY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "LineChart",
+          "flex": 1,
+          "props": {
+            "data": [[98.5, 99.8, 99.1, 99.9, 98.9, 99.5, 99.2, 99.8, 99.4, 99.9, 99.1, 100], [97.8, 99.2, 98.9, 99.5, 99.1, 99.6, 99.3, 99.8, 99.5, 99.7, 99.4, 99.9]],
+            "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "colors": ["#818CF8", "#A5F3FC"],
+            "seriesNames": ["Primary Server", "Backup Server"],
+            "theme": "dark",
+            "smooth": true,
+            "showArea": true,
+            "gradientIntensity": 0.8,
+            "gradientStartColor": "#C4B5FD",
+            "gradientEndColor": "#1A1F2E",
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showXAxisTicks": true,
+            "showYAxisTicks": true,
+            "tickLineColor": "rgba(129, 140, 248, 0.1)",
+            "tickLineStyle": "dashed",
+            "tickLineWidth": 0.7,
+            "showMarkers": true,
+            "markerStyle": "diamond",
+            "markerSize": 6,
+            "markerColor": "#818CF8",
+            "markerBorderColor": "#1A1F2E",
+            "markerBorderWidth": 2,
+            "showXTrendline": true,
+            "xTrendlineColor": "#4ECDC4",
+            "xTrendlineStyle": "dotted",
+            "xTrendlineWidth": 1.5,
+            "xTrendlineLabel": "SLA: 99.8%",
+            "height": 140
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 10,
+          "flex": 0,
+          "alignCross": "stretch",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "backgroundColor": "rgba(129, 140, 248, 0.12)",
+              "borderRadius": 10,
+              "padding": 12,
+              "border": "1px solid rgba(129, 140, 248, 0.3)",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 9,
+                    "color": "#818CF8",
+                    "fontWeight": 600
+                  },
+                  "content": "PRIMARY UPTIME"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "fontWeight": 700,
+                    "color": "#C4B5FD"
+                  },
+                  "content": "100%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "backgroundColor": "rgba(165, 243, 252, 0.12)",
+              "borderRadius": 10,
+              "padding": 12,
+              "border": "1px solid rgba(165, 243, 252, 0.3)",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 9,
+                    "color": "#A5F3FC",
+                    "fontWeight": 600
+                  },
+                  "content": "BACKUP UPTIME"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "fontWeight": 700,
+                    "color": "#A5F3FC"
+                  },
+                  "content": "99.9%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "backgroundColor": "rgba(78, 205, 196, 0.12)",
+              "borderRadius": 10,
+              "padding": 12,
+              "border": "1px solid rgba(78, 205, 196, 0.3)",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 9,
+                    "color": "#4ECDC4",
+                    "fontWeight": 600
+                  },
+                  "content": "DOWNTIME YTD"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 14,
+                    "fontWeight": 700,
+                    "color": "#4ECDC4"
+                  },
+                  "content": "17.5 hrs"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

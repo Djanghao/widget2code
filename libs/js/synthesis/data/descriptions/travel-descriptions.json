@@ -1,0 +1,440 @@
+{
+  "domain": "travel",
+  "descriptions": [
+    {
+      "id": "travel-001",
+      "prompt": "A widget showing next flight details",
+      "complexity": "medium",
+      "metrics": [
+        "flight"
+      ]
+    },
+    {
+      "id": "travel-002",
+      "prompt": "A widget displaying flight number and gate",
+      "complexity": "simple",
+      "metrics": [
+        "flight"
+      ]
+    },
+    {
+      "id": "travel-003",
+      "prompt": "A widget showing departure time and destination",
+      "complexity": "medium",
+      "metrics": [
+        "flight"
+      ]
+    },
+    {
+      "id": "travel-004",
+      "prompt": "A widget displaying boarding pass information",
+      "complexity": "complex",
+      "metrics": [
+        "flight"
+      ],
+      "visualization": [
+        "barcode"
+      ]
+    },
+    {
+      "id": "travel-005",
+      "prompt": "A widget showing flight status",
+      "complexity": "simple",
+      "metrics": [
+        "flight"
+      ]
+    },
+    {
+      "id": "travel-006",
+      "prompt": "A widget displaying seat number and gate",
+      "complexity": "simple",
+      "metrics": [
+        "flight"
+      ]
+    },
+    {
+      "id": "travel-007",
+      "prompt": "A widget showing flight route with departure and arrival",
+      "complexity": "medium",
+      "metrics": [
+        "flight"
+      ]
+    },
+    {
+      "id": "travel-008",
+      "prompt": "A widget displaying boarding time countdown",
+      "complexity": "medium",
+      "metrics": [
+        "flight"
+      ],
+      "visualization": [
+        "countdown"
+      ]
+    },
+    {
+      "id": "travel-009",
+      "prompt": "A widget showing upcoming flights list",
+      "complexity": "complex",
+      "metrics": [
+        "flights"
+      ]
+    },
+    {
+      "id": "travel-010",
+      "prompt": "A widget displaying flight tracking with progress",
+      "complexity": "complex",
+      "metrics": [
+        "flight"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "travel-011",
+      "prompt": "A widget showing flight timeline with connections",
+      "complexity": "complex",
+      "metrics": [
+        "flight"
+      ],
+      "visualization": [
+        "timeline"
+      ]
+    },
+    {
+      "id": "travel-012",
+      "prompt": "A widget showing hotel reservation",
+      "complexity": "medium",
+      "metrics": [
+        "hotel"
+      ]
+    },
+    {
+      "id": "travel-013",
+      "prompt": "A widget displaying check-in and check-out times",
+      "complexity": "simple",
+      "metrics": [
+        "hotel"
+      ]
+    },
+    {
+      "id": "travel-014",
+      "prompt": "A widget showing hotel details with photo",
+      "complexity": "medium",
+      "metrics": [
+        "hotel"
+      ]
+    },
+    {
+      "id": "travel-015",
+      "prompt": "A widget displaying hotel address and directions button",
+      "complexity": "medium",
+      "metrics": [
+        "hotel"
+      ]
+    },
+    {
+      "id": "travel-016",
+      "prompt": "A widget showing hotel confirmation number",
+      "complexity": "simple",
+      "metrics": [
+        "hotel"
+      ]
+    },
+    {
+      "id": "travel-017",
+      "prompt": "A widget displaying hotel amenities and rating",
+      "complexity": "medium",
+      "metrics": [
+        "hotel"
+      ]
+    },
+    {
+      "id": "travel-018",
+      "prompt": "A widget showing nights count and total cost",
+      "complexity": "simple",
+      "metrics": [
+        "hotel"
+      ]
+    },
+    {
+      "id": "travel-019",
+      "prompt": "A widget showing trip itinerary for the day",
+      "complexity": "complex",
+      "metrics": [
+        "itinerary"
+      ]
+    },
+    {
+      "id": "travel-020",
+      "prompt": "A widget displaying trip countdown",
+      "complexity": "simple",
+      "metrics": [
+        "trip"
+      ]
+    },
+    {
+      "id": "travel-021",
+      "prompt": "A widget showing trip summary with dates",
+      "complexity": "medium",
+      "metrics": [
+        "trip"
+      ]
+    },
+    {
+      "id": "travel-022",
+      "prompt": "A widget displaying packing list progress",
+      "complexity": "medium",
+      "metrics": [
+        "packing"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "travel-023",
+      "prompt": "A widget showing trip budget and expenses",
+      "complexity": "complex",
+      "metrics": [
+        "budget"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "travel-024",
+      "prompt": "A widget displaying travel documents checklist",
+      "complexity": "medium",
+      "metrics": [
+        "checklist"
+      ]
+    },
+    {
+      "id": "travel-025",
+      "prompt": "A widget showing destination weather",
+      "complexity": "medium",
+      "metrics": [
+        "weather"
+      ]
+    },
+    {
+      "id": "travel-026",
+      "prompt": "A widget displaying destination time and timezone",
+      "complexity": "simple",
+      "metrics": [
+        "time"
+      ]
+    },
+    {
+      "id": "travel-027",
+      "prompt": "A widget showing destination photo with name",
+      "complexity": "simple",
+      "metrics": [
+        "destination"
+      ]
+    },
+    {
+      "id": "travel-028",
+      "prompt": "A widget displaying local currency and exchange rate",
+      "complexity": "medium",
+      "metrics": [
+        "currency"
+      ]
+    },
+    {
+      "id": "travel-029",
+      "prompt": "A widget showing destination attractions",
+      "complexity": "medium",
+      "metrics": [
+        "attractions"
+      ]
+    },
+    {
+      "id": "travel-030",
+      "prompt": "A widget displaying travel tips for destination",
+      "complexity": "medium",
+      "metrics": [
+        "tips"
+      ]
+    },
+    {
+      "id": "travel-031",
+      "prompt": "A widget showing rental car reservation",
+      "complexity": "medium",
+      "metrics": [
+        "car"
+      ]
+    },
+    {
+      "id": "travel-032",
+      "prompt": "A widget displaying train ticket details",
+      "complexity": "medium",
+      "metrics": [
+        "train"
+      ]
+    },
+    {
+      "id": "travel-033",
+      "prompt": "A widget showing bus schedule",
+      "complexity": "medium",
+      "metrics": [
+        "bus"
+      ]
+    },
+    {
+      "id": "travel-034",
+      "prompt": "A widget displaying ride share pickup info",
+      "complexity": "medium",
+      "metrics": [
+        "rideshare"
+      ]
+    },
+    {
+      "id": "travel-035",
+      "prompt": "A widget showing flight and hotel together",
+      "complexity": "complex",
+      "metrics": [
+        "flight",
+        "hotel"
+      ]
+    },
+    {
+      "id": "travel-036",
+      "prompt": "A widget displaying trip overview with all bookings",
+      "complexity": "complex",
+      "metrics": [
+        "trip",
+        "bookings"
+      ]
+    },
+    {
+      "id": "travel-037",
+      "prompt": "A widget showing next trip with countdown and details",
+      "complexity": "complex",
+      "metrics": [
+        "trip"
+      ],
+      "visualization": [
+        "countdown"
+      ]
+    },
+    {
+      "id": "travel-038",
+      "prompt": "A widget displaying travel timeline for multi-city trip",
+      "complexity": "complex",
+      "metrics": [
+        "trip"
+      ],
+      "visualization": [
+        "timeline"
+      ]
+    },
+    {
+      "id": "travel-039",
+      "prompt": "A widget showing trip expenses breakdown",
+      "complexity": "complex",
+      "metrics": [
+        "expenses"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "travel-040",
+      "prompt": "A widget displaying loyalty points and status",
+      "complexity": "medium",
+      "metrics": [
+        "loyalty"
+      ]
+    },
+    {
+      "id": "travel-041",
+      "prompt": "A widget showing booked activities",
+      "complexity": "medium",
+      "metrics": [
+        "activities"
+      ]
+    },
+    {
+      "id": "travel-042",
+      "prompt": "A widget displaying tour reservation",
+      "complexity": "medium",
+      "metrics": [
+        "tour"
+      ]
+    },
+    {
+      "id": "travel-043",
+      "prompt": "A widget showing restaurant reservation",
+      "complexity": "simple",
+      "metrics": [
+        "dining"
+      ]
+    },
+    {
+      "id": "travel-044",
+      "prompt": "A widget displaying event tickets",
+      "complexity": "medium",
+      "metrics": [
+        "events"
+      ]
+    },
+    {
+      "id": "travel-045",
+      "prompt": "A widget showing luggage tracking",
+      "complexity": "medium",
+      "metrics": [
+        "luggage"
+      ],
+      "visualization": [
+        "tracking"
+      ]
+    },
+    {
+      "id": "travel-046",
+      "prompt": "A widget displaying trip status updates",
+      "complexity": "medium",
+      "metrics": [
+        "status"
+      ]
+    },
+    {
+      "id": "travel-047",
+      "prompt": "A widget showing airport terminal map",
+      "complexity": "complex",
+      "metrics": [
+        "map"
+      ],
+      "visualization": [
+        "map"
+      ]
+    },
+    {
+      "id": "travel-048",
+      "prompt": "A widget displaying security wait times",
+      "complexity": "simple",
+      "metrics": [
+        "airport"
+      ]
+    },
+    {
+      "id": "travel-049",
+      "prompt": "A widget showing passport and visa info",
+      "complexity": "medium",
+      "metrics": [
+        "documents"
+      ]
+    },
+    {
+      "id": "travel-050",
+      "prompt": "A widget displaying travel insurance details",
+      "complexity": "medium",
+      "metrics": [
+        "insurance"
+      ]
+    }
+  ]
+}

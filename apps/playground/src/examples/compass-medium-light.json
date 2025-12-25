@@ -1,0 +1,204 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#FF3B30",
+                "name": "sf:safari.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "Compass"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "flex": 1,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 48,
+                    "color": "#FF3B30",
+                    "name": "sf:location.north.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 32,
+                    "color": "#000000",
+                    "fontWeight": 200
+                  },
+                  "content": "N"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "12°"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 12,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 24,
+                        "color": "#000000",
+                        "fontWeight": 600
+                      },
+                      "content": "37.7749°"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 14,
+                        "color": "#8E8E93"
+                      },
+                      "content": "N"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 24,
+                        "color": "#000000",
+                        "fontWeight": 600
+                      },
+                      "content": "122.4194°"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 14,
+                        "color": "#8E8E93"
+                      },
+                      "content": "W"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "San Francisco, CA"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignMain": "space-between",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 12,
+                "color": "#8E8E93"
+              },
+              "content": "Elevation: 52 ft"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 12,
+                "color": "#8E8E93"
+              },
+              "content": "Accuracy: ±5 ft"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

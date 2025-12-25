@@ -1,0 +1,131 @@
+{
+  "domain": "smart-home",
+  "descriptions": [
+    {
+      "id": "smart-home-001",
+      "prompt": "A widget showing thermostat temperature",
+      "complexity": "simple",
+      "metrics": [
+        "thermostat"
+      ]
+    },
+    {
+      "id": "smart-home-002",
+      "prompt": "A widget displaying thermostat with controls",
+      "complexity": "medium",
+      "metrics": [
+        "thermostat"
+      ]
+    },
+    {
+      "id": "smart-home-003",
+      "prompt": "A widget showing indoor and outdoor temperature",
+      "complexity": "medium",
+      "metrics": [
+        "temperature"
+      ]
+    },
+    {
+      "id": "smart-home-004",
+      "prompt": "A widget showing light status",
+      "complexity": "simple",
+      "metrics": [
+        "lights"
+      ]
+    },
+    {
+      "id": "smart-home-005",
+      "prompt": "A widget displaying room lights with on/off toggle",
+      "complexity": "medium",
+      "metrics": [
+        "lights"
+      ]
+    },
+    {
+      "id": "smart-home-006",
+      "prompt": "A widget showing multiple lights status",
+      "complexity": "complex",
+      "metrics": [
+        "lights"
+      ]
+    },
+    {
+      "id": "smart-home-007",
+      "prompt": "A widget displaying light brightness control",
+      "complexity": "medium",
+      "metrics": [
+        "lights"
+      ],
+      "visualization": [
+        "slider"
+      ]
+    },
+    {
+      "id": "smart-home-008",
+      "prompt": "A widget showing security system status",
+      "complexity": "simple",
+      "metrics": [
+        "security"
+      ]
+    },
+    {
+      "id": "smart-home-009",
+      "prompt": "A widget displaying camera feeds",
+      "complexity": "complex",
+      "metrics": [
+        "cameras"
+      ]
+    },
+    {
+      "id": "smart-home-010",
+      "prompt": "A widget showing door lock status",
+      "complexity": "medium",
+      "metrics": [
+        "locks"
+      ]
+    },
+    {
+      "id": "smart-home-011",
+      "prompt": "A widget showing current energy usage",
+      "complexity": "simple",
+      "metrics": [
+        "energy"
+      ]
+    },
+    {
+      "id": "smart-home-012",
+      "prompt": "A widget displaying energy usage chart",
+      "complexity": "medium",
+      "metrics": [
+        "energy"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "smart-home-013",
+      "prompt": "A widget showing smart home device status",
+      "complexity": "medium",
+      "metrics": [
+        "devices"
+      ]
+    },
+    {
+      "id": "smart-home-014",
+      "prompt": "A widget displaying room overview",
+      "complexity": "complex",
+      "metrics": [
+        "room"
+      ]
+    },
+    {
+      "id": "smart-home-015",
+      "prompt": "A widget showing scenes and automation",
+      "complexity": "medium",
+      "metrics": [
+        "scenes"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "widget": {
+    "backgroundColor": "#F5F7FA",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.010,
+    "root": {
+      "type": "container",
+      "direction": "row",
+      "gap": 16,
+      "flex": 1,
+      "alignCross": "stretch",
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 0,
+          "width": 100,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 16,
+                "fontWeight": 700,
+                "color": "#1F2937"
+              },
+              "content": "Views"
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 10,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 4,
+                  "flex": 0,
+                  "backgroundColor": "#DBEAFE",
+                  "borderRadius": 10,
+                  "padding": 8,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 9,
+                        "color": "#1E40AF",
+                        "fontWeight": 600
+                      },
+                      "content": "TOTAL"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 15,
+                        "fontWeight": 700,
+                        "color": "#0369A1"
+                      },
+                      "content": "13.6K"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 4,
+                  "flex": 0,
+                  "backgroundColor": "#DCFCE7",
+                  "borderRadius": 10,
+                  "padding": 8,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 9,
+                        "color": "#15803D",
+                        "fontWeight": 600
+                      },
+                      "content": "GROWTH"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 15,
+                        "fontWeight": 700,
+                        "color": "#059669"
+                      },
+                      "content": "+23.5%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 1,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 17,
+                "fontWeight": 700,
+                "color": "#1F2937"
+              },
+              "content": "Website Analytics"
+            },
+            {
+              "type": "leaf",
+              "component": "BarChart",
+              "flex": 1,
+              "props": {
+                "data": [[2945, 1256, 3110, 1420, 2890, 2590, 1800],
+ [1900, 2305, 1720, 3030, 2250, 2900, 1500],
+ [2500, 1340, 2710, 2950, 1930, 1540, 1320],
+ [3120, 2080, 1450, 2880, 1700, 1200, 1960],
+ [1550, 2490, 1990, 3020, 1880, 2780, 2600],
+ [2130, 1920, 2440, 1300, 1650, 1700, 2840],
+ [1910, 2980, 1270, 1820, 2460, 3100, 2550]],
+                "labels": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                "colors": ["#3B82F6", "#10B981"],
+                "seriesNames": ["Mobile", "Desktop"],
+                "theme": "light",
+                "showXAxisLabels": true,
+                "showYAxisLabels": false,
+                "showXAxisTicks": false,
+                "showYAxisTicks": false,
+                "barBorderRadius": 8,
+                "height": 140
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

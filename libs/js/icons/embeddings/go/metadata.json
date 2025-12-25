@@ -1,0 +1,2523 @@
+{
+  "go/GoAlert.svg": {
+    "component_id": "go:GoAlert",
+    "aliases": [
+      "go",
+      "alert"
+    ],
+    "colors": [],
+    "caption": "a black and white warning sign on a white background"
+  },
+  "go/GoAlertFill.svg": {
+    "component_id": "go:GoAlertFill",
+    "aliases": [
+      "go",
+      "alert",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a warning sign"
+  },
+  "go/GoArchive.svg": {
+    "component_id": "go:GoArchive",
+    "aliases": [
+      "go",
+      "archive"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box"
+  },
+  "go/GoArrowBoth.svg": {
+    "component_id": "go:GoArrowBoth",
+    "aliases": [
+      "go",
+      "arrow",
+      "both"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "go/GoArrowDown.svg": {
+    "component_id": "go:GoArrowDown",
+    "aliases": [
+      "go",
+      "arrow",
+      "down"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "go/GoArrowDownLeft.svg": {
+    "component_id": "go:GoArrowDownLeft",
+    "aliases": [
+      "go",
+      "arrow",
+      "down",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "go/GoArrowDownRight.svg": {
+    "component_id": "go:GoArrowDownRight",
+    "aliases": [
+      "go",
+      "arrow",
+      "down",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "go/GoArrowLeft.svg": {
+    "component_id": "go:GoArrowLeft",
+    "aliases": [
+      "go",
+      "arrow",
+      "left"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "go/GoArrowRight.svg": {
+    "component_id": "go:GoArrowRight",
+    "aliases": [
+      "go",
+      "arrow",
+      "right"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "go/GoArrowSwitch.svg": {
+    "component_id": "go:GoArrowSwitch",
+    "aliases": [
+      "go",
+      "arrow",
+      "switch"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "go/GoArrowUp.svg": {
+    "component_id": "go:GoArrowUp",
+    "aliases": [
+      "go",
+      "arrow",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "go/GoArrowUpLeft.svg": {
+    "component_id": "go:GoArrowUpLeft",
+    "aliases": [
+      "go",
+      "arrow",
+      "up",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "go/GoArrowUpRight.svg": {
+    "component_id": "go:GoArrowUpRight",
+    "aliases": [
+      "go",
+      "arrow",
+      "up",
+      "right"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "go/GoBeaker.svg": {
+    "component_id": "go:GoBeaker",
+    "aliases": [
+      "go",
+      "beaker"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a beaker"
+  },
+  "go/GoBell.svg": {
+    "component_id": "go:GoBell",
+    "aliases": [
+      "go",
+      "bell"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "go/GoBellFill.svg": {
+    "component_id": "go:GoBellFill",
+    "aliases": [
+      "go",
+      "bell",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "go/GoBellSlash.svg": {
+    "component_id": "go:GoBellSlash",
+    "aliases": [
+      "go",
+      "bell",
+      "slash"
+    ],
+    "colors": [],
+    "caption": "a no bell icon on a white background"
+  },
+  "go/GoBlocked.svg": {
+    "component_id": "go:GoBlocked",
+    "aliases": [
+      "go",
+      "blocked"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a stop sign"
+  },
+  "go/GoBold.svg": {
+    "component_id": "go:GoBold",
+    "aliases": [
+      "go",
+      "bold"
+    ],
+    "colors": [],
+    "caption": "a black letter b on a white background"
+  },
+  "go/GoBook.svg": {
+    "component_id": "go:GoBook",
+    "aliases": [
+      "go",
+      "book"
+    ],
+    "colors": [],
+    "caption": "an open book icon on a white background"
+  },
+  "go/GoBookmark.svg": {
+    "component_id": "go:GoBookmark",
+    "aliases": [
+      "go",
+      "bookmark"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "go/GoBookmarkFill.svg": {
+    "component_id": "go:GoBookmarkFill",
+    "aliases": [
+      "go",
+      "bookmark",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black bookmark icon on a white background"
+  },
+  "go/GoBookmarkSlash.svg": {
+    "component_id": "go:GoBookmarkSlash",
+    "aliases": [
+      "go",
+      "bookmark",
+      "slash"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a no sign"
+  },
+  "go/GoBookmarkSlashFill.svg": {
+    "component_id": "go:GoBookmarkSlashFill",
+    "aliases": [
+      "go",
+      "bookmark",
+      "slash",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a black and white ribbon"
+  },
+  "go/GoBriefcase.svg": {
+    "component_id": "go:GoBriefcase",
+    "aliases": [
+      "go",
+      "briefcase"
+    ],
+    "colors": [],
+    "caption": "a briefcase icon on a white background"
+  },
+  "go/GoBroadcast.svg": {
+    "component_id": "go:GoBroadcast",
+    "aliases": [
+      "go",
+      "broadcast"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a wifi symbol"
+  },
+  "go/GoBrowser.svg": {
+    "component_id": "go:GoBrowser",
+    "aliases": [
+      "go",
+      "browser"
+    ],
+    "colors": [],
+    "caption": "a web browser icon on a white background"
+  },
+  "go/GoBug.svg": {
+    "component_id": "go:GoBug",
+    "aliases": [
+      "go",
+      "bug"
+    ],
+    "colors": [],
+    "caption": "a bug icon on a white background"
+  },
+  "go/GoCalendar.svg": {
+    "component_id": "go:GoCalendar",
+    "aliases": [
+      "go",
+      "calendar"
+    ],
+    "colors": [],
+    "caption": "a calendar icon on a white background"
+  },
+  "go/GoCheck.svg": {
+    "component_id": "go:GoCheck",
+    "aliases": [
+      "go",
+      "check"
+    ],
+    "colors": [],
+    "caption": "a black check mark icon on a white background"
+  },
+  "go/GoCheckCircle.svg": {
+    "component_id": "go:GoCheckCircle",
+    "aliases": [
+      "go",
+      "check",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a check mark"
+  },
+  "go/GoCheckCircleFill.svg": {
+    "component_id": "go:GoCheckCircleFill",
+    "aliases": [
+      "go",
+      "check",
+      "circle",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon in a circle"
+  },
+  "go/GoCheckbox.svg": {
+    "component_id": "go:GoCheckbox",
+    "aliases": [
+      "go",
+      "checkbox"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a white background"
+  },
+  "go/GoChecklist.svg": {
+    "component_id": "go:GoChecklist",
+    "aliases": [
+      "go",
+      "checklist"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document with an arrow"
+  },
+  "go/GoChevronDown.svg": {
+    "component_id": "go:GoChevronDown",
+    "aliases": [
+      "go",
+      "chevron",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter v"
+  },
+  "go/GoChevronLeft.svg": {
+    "component_id": "go:GoChevronLeft",
+    "aliases": [
+      "go",
+      "chevron",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "go/GoChevronRight.svg": {
+    "component_id": "go:GoChevronRight",
+    "aliases": [
+      "go",
+      "chevron",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "go/GoChevronUp.svg": {
+    "component_id": "go:GoChevronUp",
+    "aliases": [
+      "go",
+      "chevron",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a triangle"
+  },
+  "go/GoCircle.svg": {
+    "component_id": "go:GoCircle",
+    "aliases": [
+      "go",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "go/GoCircleSlash.svg": {
+    "component_id": "go:GoCircleSlash",
+    "aliases": [
+      "go",
+      "circle",
+      "slash"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no entry sign"
+  },
+  "go/GoClock.svg": {
+    "component_id": "go:GoClock",
+    "aliases": [
+      "go",
+      "clock"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "go/GoClockFill.svg": {
+    "component_id": "go:GoClockFill",
+    "aliases": [
+      "go",
+      "clock",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "go/GoCloud.svg": {
+    "component_id": "go:GoCloud",
+    "aliases": [
+      "go",
+      "cloud"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "go/GoCloudOffline.svg": {
+    "component_id": "go:GoCloudOffline",
+    "aliases": [
+      "go",
+      "cloud",
+      "offline"
+    ],
+    "colors": [],
+    "caption": "a no cloud icon on a white background"
+  },
+  "go/GoCode.svg": {
+    "component_id": "go:GoCode",
+    "aliases": [
+      "go",
+      "code"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in the same direction on a white background"
+  },
+  "go/GoCodeOfConduct.svg": {
+    "component_id": "go:GoCodeOfConduct",
+    "aliases": [
+      "go",
+      "code",
+      "of",
+      "conduct"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a heart with two hands"
+  },
+  "go/GoCodeReview.svg": {
+    "component_id": "go:GoCodeReview",
+    "aliases": [
+      "go",
+      "code",
+      "review"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speech bubble"
+  },
+  "go/GoCodeSquare.svg": {
+    "component_id": "go:GoCodeSquare",
+    "aliases": [
+      "go",
+      "code",
+      "square"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with two arrows pointing to each other"
+  },
+  "go/GoCodescan.svg": {
+    "component_id": "go:GoCodescan",
+    "aliases": [
+      "go",
+      "codescan"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon with the word code in it"
+  },
+  "go/GoCodescanCheckmark.svg": {
+    "component_id": "go:GoCodescanCheckmark",
+    "aliases": [
+      "go",
+      "codescan",
+      "checkmark"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a magnifying glass with a check mark"
+  },
+  "go/GoCodespaces.svg": {
+    "component_id": "go:GoCodespaces",
+    "aliases": [
+      "go",
+      "codespaces"
+    ],
+    "colors": [],
+    "caption": "a computer icon on a white background"
+  },
+  "go/GoColumns.svg": {
+    "component_id": "go:GoColumns",
+    "aliases": [
+      "go",
+      "columns"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two black rectangles"
+  },
+  "go/GoCommandPalette.svg": {
+    "component_id": "go:GoCommandPalette",
+    "aliases": [
+      "go",
+      "command",
+      "palette"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "go/GoComment.svg": {
+    "component_id": "go:GoComment",
+    "aliases": [
+      "go",
+      "comment"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "go/GoCommentDiscussion.svg": {
+    "component_id": "go:GoCommentDiscussion",
+    "aliases": [
+      "go",
+      "comment",
+      "discussion"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles on a white background"
+  },
+  "go/GoCommit.svg": {
+    "component_id": "go:GoCommit",
+    "aliases": [
+      "go",
+      "commit"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an electrical symbol"
+  },
+  "go/GoContainer.svg": {
+    "component_id": "go:GoContainer",
+    "aliases": [
+      "go",
+      "container"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box"
+  },
+  "go/GoCopilot.svg": {
+    "component_id": "go:GoCopilot",
+    "aliases": [
+      "go",
+      "copilot"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a helmet with goggles"
+  },
+  "go/GoCopy.svg": {
+    "component_id": "go:GoCopy",
+    "aliases": [
+      "go",
+      "copy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two squares"
+  },
+  "go/GoCpu.svg": {
+    "component_id": "go:GoCpu",
+    "aliases": [
+      "go",
+      "cpu"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer chip"
+  },
+  "go/GoCreditCard.svg": {
+    "component_id": "go:GoCreditCard",
+    "aliases": [
+      "go",
+      "credit",
+      "card"
+    ],
+    "colors": [],
+    "caption": "a credit card icon on a white background"
+  },
+  "go/GoCrossReference.svg": {
+    "component_id": "go:GoCrossReference",
+    "aliases": [
+      "go",
+      "cross",
+      "reference"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speech bubble with an arrow"
+  },
+  "go/GoDash.svg": {
+    "component_id": "go:GoDash",
+    "aliases": [
+      "go",
+      "dash"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "go/GoDatabase.svg": {
+    "component_id": "go:GoDatabase",
+    "aliases": [
+      "go",
+      "database"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a database"
+  },
+  "go/GoDependabot.svg": {
+    "component_id": "go:GoDependabot",
+    "aliases": [
+      "go",
+      "dependabot"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a robot"
+  },
+  "go/GoDesktopDownload.svg": {
+    "component_id": "go:GoDesktopDownload",
+    "aliases": [
+      "go",
+      "desktop",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer with a down arrow"
+  },
+  "go/GoDeviceCameraVideo.svg": {
+    "component_id": "go:GoDeviceCameraVideo",
+    "aliases": [
+      "go",
+      "device",
+      "camera",
+      "video"
+    ],
+    "colors": [],
+    "caption": "a video camera icon on a white background"
+  },
+  "go/GoDeviceDesktop.svg": {
+    "component_id": "go:GoDeviceDesktop",
+    "aliases": [
+      "go",
+      "device",
+      "desktop"
+    ],
+    "colors": [],
+    "caption": "a computer monitor icon on a white background"
+  },
+  "go/GoDeviceMobile.svg": {
+    "component_id": "go:GoDeviceMobile",
+    "aliases": [
+      "go",
+      "device",
+      "mobile"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a phone"
+  },
+  "go/GoDiamond.svg": {
+    "component_id": "go:GoDiamond",
+    "aliases": [
+      "go",
+      "diamond"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a diamond symbol"
+  },
+  "go/GoDiff.svg": {
+    "component_id": "go:GoDiff",
+    "aliases": [
+      "go",
+      "diff"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a plus sign"
+  },
+  "go/GoDiscussionClosed.svg": {
+    "component_id": "go:GoDiscussionClosed",
+    "aliases": [
+      "go",
+      "discussion",
+      "closed"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two check boxes"
+  },
+  "go/GoDiscussionDuplicate.svg": {
+    "component_id": "go:GoDiscussionDuplicate",
+    "aliases": [
+      "go",
+      "discussion",
+      "duplicate"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two speech bubbles"
+  },
+  "go/GoDiscussionOutdated.svg": {
+    "component_id": "go:GoDiscussionOutdated",
+    "aliases": [
+      "go",
+      "discussion",
+      "outdated"
+    ],
+    "colors": [],
+    "caption": "two speech bubbles with a clock icon on a white background"
+  },
+  "go/GoDot.svg": {
+    "component_id": "go:GoDot",
+    "aliases": [
+      "go",
+      "dot"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "go/GoDotFill.svg": {
+    "component_id": "go:GoDotFill",
+    "aliases": [
+      "go",
+      "dot",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "go/GoDownload.svg": {
+    "component_id": "go:GoDownload",
+    "aliases": [
+      "go",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a down arrow"
+  },
+  "go/GoDuplicate.svg": {
+    "component_id": "go:GoDuplicate",
+    "aliases": [
+      "go",
+      "duplicate"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a plus sign"
+  },
+  "go/GoEye.svg": {
+    "component_id": "go:GoEye",
+    "aliases": [
+      "go",
+      "eye"
+    ],
+    "colors": [],
+    "caption": "an eye icon on a white background"
+  },
+  "go/GoEyeClosed.svg": {
+    "component_id": "go:GoEyeClosed",
+    "aliases": [
+      "go",
+      "eye",
+      "closed"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an eye with a line through it"
+  },
+  "go/GoFile.svg": {
+    "component_id": "go:GoFile",
+    "aliases": [
+      "go",
+      "file"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "go/GoFileBinary.svg": {
+    "component_id": "go:GoFileBinary",
+    "aliases": [
+      "go",
+      "file",
+      "binary"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the number 10 on it"
+  },
+  "go/GoFileCode.svg": {
+    "component_id": "go:GoFileCode",
+    "aliases": [
+      "go",
+      "file",
+      "code"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a file"
+  },
+  "go/GoFileDiff.svg": {
+    "component_id": "go:GoFileDiff",
+    "aliases": [
+      "go",
+      "file",
+      "diff"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a document with a plus sign"
+  },
+  "go/GoFileDirectory.svg": {
+    "component_id": "go:GoFileDirectory",
+    "aliases": [
+      "go",
+      "file",
+      "directory"
+    ],
+    "colors": [],
+    "caption": "a black folder icon on a white background"
+  },
+  "go/GoFileDirectoryFill.svg": {
+    "component_id": "go:GoFileDirectoryFill",
+    "aliases": [
+      "go",
+      "file",
+      "directory",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black folder icon on a white background"
+  },
+  "go/GoFileMedia.svg": {
+    "component_id": "go:GoFileMedia",
+    "aliases": [
+      "go",
+      "file",
+      "media"
+    ],
+    "colors": [],
+    "caption": "a black and white photo icon"
+  },
+  "go/GoFileSubmodule.svg": {
+    "component_id": "go:GoFileSubmodule",
+    "aliases": [
+      "go",
+      "file",
+      "submodule"
+    ],
+    "colors": [],
+    "caption": "a black folder icon with an arrow pointing to the right"
+  },
+  "go/GoFileSymlinkFile.svg": {
+    "component_id": "go:GoFileSymlink",
+    "aliases": [
+      "go",
+      "file",
+      "symlink"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a document with an arrow"
+  },
+  "go/GoFileZip.svg": {
+    "component_id": "go:GoFileZip",
+    "aliases": [
+      "go",
+      "file",
+      "zip"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a file cabinet"
+  },
+  "go/GoFilter.svg": {
+    "component_id": "go:GoFilter",
+    "aliases": [
+      "go",
+      "filter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "go/GoFlame.svg": {
+    "component_id": "go:GoFlame",
+    "aliases": [
+      "go",
+      "flame"
+    ],
+    "colors": [],
+    "caption": "a flame icon on a white background"
+  },
+  "go/GoFold.svg": {
+    "component_id": "go:GoFold",
+    "aliases": [
+      "go",
+      "fold"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in different directions on a white background"
+  },
+  "go/GoFoldDown.svg": {
+    "component_id": "go:GoFoldDown",
+    "aliases": [
+      "go",
+      "fold",
+      "down"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "go/GoFoldUp.svg": {
+    "component_id": "go:GoFoldUp",
+    "aliases": [
+      "go",
+      "fold",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "go/GoGear.svg": {
+    "component_id": "go:GoGear",
+    "aliases": [
+      "go",
+      "gear"
+    ],
+    "colors": [],
+    "caption": "a gear wheel icon on a white background"
+  },
+  "go/GoGift.svg": {
+    "component_id": "go:GoGift",
+    "aliases": [
+      "go",
+      "gift"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a gift with a bow"
+  },
+  "go/GoGitBranch.svg": {
+    "component_id": "go:GoGitBranch",
+    "aliases": [
+      "go",
+      "git",
+      "branch"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with two circles"
+  },
+  "go/GoGitCommit.svg": {
+    "component_id": "go:GoGitCommit",
+    "aliases": [
+      "go",
+      "git",
+      "commit"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an electrical symbol"
+  },
+  "go/GoGitCompare.svg": {
+    "component_id": "go:GoGitCompare",
+    "aliases": [
+      "go",
+      "git",
+      "compare"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "go/GoGitMerge.svg": {
+    "component_id": "go:GoGitMerge",
+    "aliases": [
+      "go",
+      "git",
+      "merge"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two circles"
+  },
+  "go/GoGitMergeQueue.svg": {
+    "component_id": "go:GoGitMergeQueue",
+    "aliases": [
+      "go",
+      "git",
+      "merge",
+      "queue"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three circles"
+  },
+  "go/GoGitPullRequest.svg": {
+    "component_id": "go:GoGitPullRequest",
+    "aliases": [
+      "go",
+      "git",
+      "pull",
+      "request"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in different directions on a white background"
+  },
+  "go/GoGitPullRequestClosed.svg": {
+    "component_id": "go:GoGitPullRequestClosed",
+    "aliases": [
+      "go",
+      "git",
+      "pull",
+      "request",
+      "closed"
+    ],
+    "colors": [],
+    "caption": "two black and white icons with arrows pointing to each other"
+  },
+  "go/GoGitPullRequestDraft.svg": {
+    "component_id": "go:GoGitPullRequestDraft",
+    "aliases": [
+      "go",
+      "git",
+      "pull",
+      "request",
+      "draft"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two circles"
+  },
+  "go/GoGlobe.svg": {
+    "component_id": "go:GoGlobe",
+    "aliases": [
+      "go",
+      "globe"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a globe"
+  },
+  "go/GoGoal.svg": {
+    "component_id": "go:GoGoal",
+    "aliases": [
+      "go",
+      "goal"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a dart in a target"
+  },
+  "go/GoGrabber.svg": {
+    "component_id": "go:GoGrabber",
+    "aliases": [
+      "go",
+      "grabber"
+    ],
+    "colors": [],
+    "caption": "four black dots on a white background"
+  },
+  "go/GoGraph.svg": {
+    "component_id": "go:GoGraph",
+    "aliases": [
+      "go",
+      "graph"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a graph"
+  },
+  "go/GoHash.svg": {
+    "component_id": "go:GoHash",
+    "aliases": [
+      "go",
+      "hash"
+    ],
+    "colors": [],
+    "caption": "hashtag symbol in black and white on a white background"
+  },
+  "go/GoHeading.svg": {
+    "component_id": "go:GoHeading",
+    "aliases": [
+      "go",
+      "heading"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter h"
+  },
+  "go/GoHeart.svg": {
+    "component_id": "go:GoHeart",
+    "aliases": [
+      "go",
+      "heart"
+    ],
+    "colors": [],
+    "caption": "a black and white heart icon on a white background"
+  },
+  "go/GoHeartFill.svg": {
+    "component_id": "go:GoHeartFill",
+    "aliases": [
+      "go",
+      "heart",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black heart icon on a white background"
+  },
+  "go/GoHistory.svg": {
+    "component_id": "go:GoHistory",
+    "aliases": [
+      "go",
+      "history"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a clock with an arrow"
+  },
+  "go/GoHome.svg": {
+    "component_id": "go:GoHome",
+    "aliases": [
+      "go",
+      "home"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a house"
+  },
+  "go/GoHomeFill.svg": {
+    "component_id": "go:GoHomeFill",
+    "aliases": [
+      "go",
+      "home",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black house icon on a white background"
+  },
+  "go/GoHorizontalRule.svg": {
+    "component_id": "go:GoHorizontalRule",
+    "aliases": [
+      "go",
+      "horizontal",
+      "rule"
+    ],
+    "colors": [],
+    "caption": "an image of a black line on a white background"
+  },
+  "go/GoHourglass.svg": {
+    "component_id": "go:GoHourglass",
+    "aliases": [
+      "go",
+      "hourglass"
+    ],
+    "colors": [],
+    "caption": "an hourglass icon on a white background"
+  },
+  "go/GoHubot.svg": {
+    "component_id": "go:GoHubot",
+    "aliases": [
+      "go",
+      "hubot"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a man wearing a helmet"
+  },
+  "go/GoImage.svg": {
+    "component_id": "go:GoImage",
+    "aliases": [
+      "go",
+      "image"
+    ],
+    "colors": [],
+    "caption": "a black and white photo icon"
+  },
+  "go/GoInbox.svg": {
+    "component_id": "go:GoInbox",
+    "aliases": [
+      "go",
+      "inbox"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "go/GoInfinity.svg": {
+    "component_id": "go:GoInfinity",
+    "aliases": [
+      "go",
+      "infinity"
+    ],
+    "colors": [],
+    "caption": "an infinity symbol is shown on a white background"
+  },
+  "go/GoInfo.svg": {
+    "component_id": "go:GoInfo",
+    "aliases": [
+      "go",
+      "info"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the word i in it"
+  },
+  "go/GoIssueClosed.svg": {
+    "component_id": "go:GoIssueClosed",
+    "aliases": [
+      "go",
+      "issue",
+      "closed"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a check mark"
+  },
+  "go/GoIssueDraft.svg": {
+    "component_id": "go:GoIssueDraft",
+    "aliases": [
+      "go",
+      "issue",
+      "draft"
+    ],
+    "colors": [],
+    "caption": "a circle with black lines on it"
+  },
+  "go/GoIssueOpened.svg": {
+    "component_id": "go:GoIssueOpened",
+    "aliases": [
+      "go",
+      "issue",
+      "opened"
+    ],
+    "colors": [],
+    "caption": "a circle with a black dot in the center"
+  },
+  "go/GoIssueReopened.svg": {
+    "component_id": "go:GoIssueReopened",
+    "aliases": [
+      "go",
+      "issue",
+      "reopened"
+    ],
+    "colors": [],
+    "caption": "a circular icon with arrows pointing in different directions"
+  },
+  "go/GoIssueTrackedBy.svg": {
+    "component_id": "go:GoIssueTrackedBy",
+    "aliases": [
+      "go",
+      "issue",
+      "tracked",
+      "by"
+    ],
+    "colors": [],
+    "caption": "a circular icon with an arrow pointing to the right"
+  },
+  "go/GoIssueTracks.svg": {
+    "component_id": "go:GoIssueTracks",
+    "aliases": [
+      "go",
+      "issue",
+      "tracks"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a circular shape"
+  },
+  "go/GoItalic.svg": {
+    "component_id": "go:GoItalic",
+    "aliases": [
+      "go",
+      "italic"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter z"
+  },
+  "go/GoIterations.svg": {
+    "component_id": "go:GoIterations",
+    "aliases": [
+      "go",
+      "iterations"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "go/GoKebabHorizontal.svg": {
+    "component_id": "go:GoKebabHorizontal",
+    "aliases": [
+      "go",
+      "kebab",
+      "horizontal"
+    ],
+    "colors": [],
+    "caption": "four black dots are shown on a white background"
+  },
+  "go/GoKey.svg": {
+    "component_id": "go:GoKey",
+    "aliases": [
+      "go",
+      "key"
+    ],
+    "colors": [],
+    "caption": "a key icon on a white background"
+  },
+  "go/GoLaw.svg": {
+    "component_id": "go:GoLaw",
+    "aliases": [
+      "go",
+      "law"
+    ],
+    "colors": [],
+    "caption": "the scales of justice icon is shown on a white background"
+  },
+  "go/GoLightBulb.svg": {
+    "component_id": "go:GoLightBulb",
+    "aliases": [
+      "go",
+      "light",
+      "bulb"
+    ],
+    "colors": [],
+    "caption": "a light bulb icon on a white background"
+  },
+  "go/GoLink.svg": {
+    "component_id": "go:GoLink",
+    "aliases": [
+      "go",
+      "link"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a link"
+  },
+  "go/GoLinkExternal.svg": {
+    "component_id": "go:GoLinkExternal",
+    "aliases": [
+      "go",
+      "link",
+      "external"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing up"
+  },
+  "go/GoListOrdered.svg": {
+    "component_id": "go:GoListOrdered",
+    "aliases": [
+      "go",
+      "list",
+      "ordered"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two numbers on a white background"
+  },
+  "go/GoListUnordered.svg": {
+    "component_id": "go:GoListUnordered",
+    "aliases": [
+      "go",
+      "list",
+      "unordered"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three dots"
+  },
+  "go/GoLocation.svg": {
+    "component_id": "go:GoLocation",
+    "aliases": [
+      "go",
+      "location"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a location marker"
+  },
+  "go/GoLock.svg": {
+    "component_id": "go:GoLock",
+    "aliases": [
+      "go",
+      "lock"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a padlock"
+  },
+  "go/GoLog.svg": {
+    "component_id": "go:GoLog",
+    "aliases": [
+      "go",
+      "log"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a scroll"
+  },
+  "go/GoMail.svg": {
+    "component_id": "go:GoMail",
+    "aliases": [
+      "go",
+      "mail"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "go/GoMegaphone.svg": {
+    "component_id": "go:GoMegaphone",
+    "aliases": [
+      "go",
+      "megaphone"
+    ],
+    "colors": [],
+    "caption": "a megaphone icon on a white background"
+  },
+  "go/GoMention.svg": {
+    "component_id": "go:GoMention",
+    "aliases": [
+      "go",
+      "mention"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an email icon"
+  },
+  "go/GoMilestone.svg": {
+    "component_id": "go:GoMilestone",
+    "aliases": [
+      "go",
+      "milestone"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "go/GoMirror.svg": {
+    "component_id": "go:GoMirror",
+    "aliases": [
+      "go",
+      "mirror"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "go/GoMoon.svg": {
+    "component_id": "go:GoMoon",
+    "aliases": [
+      "go",
+      "moon"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a crescent"
+  },
+  "go/GoMortarBoard.svg": {
+    "component_id": "go:GoMortarBoard",
+    "aliases": [
+      "go",
+      "mortar",
+      "board"
+    ],
+    "colors": [],
+    "caption": "a graduation cap icon on a white background"
+  },
+  "go/GoMoveToBottom.svg": {
+    "component_id": "go:GoMoveToBottom",
+    "aliases": [
+      "go",
+      "move",
+      "to",
+      "bottom"
+    ],
+    "colors": [],
+    "caption": "a down arrow icon on a white background"
+  },
+  "go/GoMoveToEnd.svg": {
+    "component_id": "go:GoMoveToEnd",
+    "aliases": [
+      "go",
+      "move",
+      "to",
+      "end"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "go/GoMoveToStart.svg": {
+    "component_id": "go:GoMoveToStart",
+    "aliases": [
+      "go",
+      "move",
+      "to",
+      "start"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "go/GoMoveToTop.svg": {
+    "component_id": "go:GoMoveToTop",
+    "aliases": [
+      "go",
+      "move",
+      "to",
+      "top"
+    ],
+    "colors": [],
+    "caption": "an up arrow icon on a white background"
+  },
+  "go/GoMultiSelect.svg": {
+    "component_id": "go:GoMultiSelect",
+    "aliases": [
+      "go",
+      "multi",
+      "select"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with arrows pointing in different directions"
+  },
+  "go/GoMute.svg": {
+    "component_id": "go:GoMute",
+    "aliases": [
+      "go",
+      "mute"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speaker with an x and a plus sign"
+  },
+  "go/GoNoEntry.svg": {
+    "component_id": "go:GoNoEntry",
+    "aliases": [
+      "go",
+      "no",
+      "entry"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an empty circle"
+  },
+  "go/GoNorthStar.svg": {
+    "component_id": "go:GoNorthStar",
+    "aliases": [
+      "go",
+      "north",
+      "star"
+    ],
+    "colors": [],
+    "caption": "a black and white star symbol on a white background"
+  },
+  "go/GoNote.svg": {
+    "component_id": "go:GoNote",
+    "aliases": [
+      "go",
+      "note"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an email icon"
+  },
+  "go/GoNumber.svg": {
+    "component_id": "go:GoNumber",
+    "aliases": [
+      "go",
+      "number"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number three"
+  },
+  "go/GoOrganization.svg": {
+    "component_id": "go:GoOrganization",
+    "aliases": [
+      "go",
+      "organization"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a gas station"
+  },
+  "go/GoPackage.svg": {
+    "component_id": "go:GoPackage",
+    "aliases": [
+      "go",
+      "package"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cube"
+  },
+  "go/GoPackageDependencies.svg": {
+    "component_id": "go:GoPackageDependencies",
+    "aliases": [
+      "go",
+      "package",
+      "dependencies"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cube with an arrow pointing up"
+  },
+  "go/GoPackageDependents.svg": {
+    "component_id": "go:GoPackageDependents",
+    "aliases": [
+      "go",
+      "package",
+      "dependents"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cube with an arrow"
+  },
+  "go/GoPaperAirplane.svg": {
+    "component_id": "go:GoPaperAirplane",
+    "aliases": [
+      "go",
+      "paper",
+      "airplane"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "go/GoPaperclip.svg": {
+    "component_id": "go:GoPaperclip",
+    "aliases": [
+      "go",
+      "paperclip"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a paper clip"
+  },
+  "go/GoPasskeyFill.svg": {
+    "component_id": "go:GoPasskeyFill",
+    "aliases": [
+      "go",
+      "passkey",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a person with a key icon on a white background"
+  },
+  "go/GoPaste.svg": {
+    "component_id": "go:GoPaste",
+    "aliases": [
+      "go",
+      "paste"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a clipboard on a white background"
+  },
+  "go/GoPencil.svg": {
+    "component_id": "go:GoPencil",
+    "aliases": [
+      "go",
+      "pencil"
+    ],
+    "colors": [],
+    "caption": "a pencil icon on a white background"
+  },
+  "go/GoPeople.svg": {
+    "component_id": "go:GoPeople",
+    "aliases": [
+      "go",
+      "people"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two people"
+  },
+  "go/GoPerson.svg": {
+    "component_id": "go:GoPerson",
+    "aliases": [
+      "go",
+      "person"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person"
+  },
+  "go/GoPersonAdd.svg": {
+    "component_id": "go:GoPersonAdd",
+    "aliases": [
+      "go",
+      "person",
+      "add"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with a plus sign"
+  },
+  "go/GoPersonFill.svg": {
+    "component_id": "go:GoPersonFill",
+    "aliases": [
+      "go",
+      "person",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a person on a white background"
+  },
+  "go/GoPin.svg": {
+    "component_id": "go:GoPin",
+    "aliases": [
+      "go",
+      "pin"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a lollipop"
+  },
+  "go/GoPlay.svg": {
+    "component_id": "go:GoPlay",
+    "aliases": [
+      "go",
+      "play"
+    ],
+    "colors": [],
+    "caption": "a black and white play button on a white background"
+  },
+  "go/GoPlug.svg": {
+    "component_id": "go:GoPlug",
+    "aliases": [
+      "go",
+      "plug"
+    ],
+    "colors": [],
+    "caption": "an electrical plug icon on a white background"
+  },
+  "go/GoPlus.svg": {
+    "component_id": "go:GoPlus",
+    "aliases": [
+      "go",
+      "plus"
+    ],
+    "colors": [],
+    "caption": "a black plus symbol on a white background"
+  },
+  "go/GoPlusCircle.svg": {
+    "component_id": "go:GoPlusCircle",
+    "aliases": [
+      "go",
+      "plus",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a plus sign in a circle on a white background"
+  },
+  "go/GoProject.svg": {
+    "component_id": "go:GoProject",
+    "aliases": [
+      "go",
+      "project"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a square"
+  },
+  "go/GoProjectRoadmap.svg": {
+    "component_id": "go:GoProjectRoadmap",
+    "aliases": [
+      "go",
+      "project",
+      "roadmap"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "go/GoProjectSymlink.svg": {
+    "component_id": "go:GoProjectSymlink",
+    "aliases": [
+      "go",
+      "project",
+      "symlink"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a web browser"
+  },
+  "go/GoProjectTemplate.svg": {
+    "component_id": "go:GoProjectTemplate",
+    "aliases": [
+      "go",
+      "project",
+      "template"
+    ],
+    "colors": [],
+    "caption": "a black and white square with a cross in the middle"
+  },
+  "go/GoPulse.svg": {
+    "component_id": "go:GoPulse",
+    "aliases": [
+      "go",
+      "pulse"
+    ],
+    "colors": [],
+    "caption": "an image of an electrical wave on a white background"
+  },
+  "go/GoQuestion.svg": {
+    "component_id": "go:GoQuestion",
+    "aliases": [
+      "go",
+      "question"
+    ],
+    "colors": [],
+    "caption": "a question mark in a circle on a white background"
+  },
+  "go/GoQuote.svg": {
+    "component_id": "go:GoQuote",
+    "aliases": [
+      "go",
+      "quote"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with two lines"
+  },
+  "go/GoRead.svg": {
+    "component_id": "go:GoRead",
+    "aliases": [
+      "go",
+      "read"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "go/GoRelFilePath.svg": {
+    "component_id": "go:GoRelFilePath",
+    "aliases": [
+      "go",
+      "rel",
+      "file",
+      "path"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white symbol"
+  },
+  "go/GoReply.svg": {
+    "component_id": "go:GoReply",
+    "aliases": [
+      "go",
+      "reply"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "go/GoRepo.svg": {
+    "component_id": "go:GoRepo",
+    "aliases": [
+      "go",
+      "repo"
+    ],
+    "colors": [],
+    "caption": "a book icon on a white background"
+  },
+  "go/GoRepoForked.svg": {
+    "component_id": "go:GoRepoForked",
+    "aliases": [
+      "go",
+      "repo",
+      "forked"
+    ],
+    "colors": [],
+    "caption": "a black and white symbol with three circles"
+  },
+  "go/GoRepoLocked.svg": {
+    "component_id": "go:GoRepoLocked",
+    "aliases": [
+      "go",
+      "repo",
+      "locked"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "go/GoRepoPush.svg": {
+    "component_id": "go:GoRepoPush",
+    "aliases": [
+      "go",
+      "repo",
+      "push"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book with an arrow pointing up"
+  },
+  "go/GoRepoTemplate.svg": {
+    "component_id": "go:GoRepoTemplate",
+    "aliases": [
+      "go",
+      "repo",
+      "template"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "go/GoReport.svg": {
+    "component_id": "go:GoReport",
+    "aliases": [
+      "go",
+      "report"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble with an exclamation sign"
+  },
+  "go/GoRocket.svg": {
+    "component_id": "go:GoRocket",
+    "aliases": [
+      "go",
+      "rocket"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a rocket"
+  },
+  "go/GoRows.svg": {
+    "component_id": "go:GoRows",
+    "aliases": [
+      "go",
+      "rows"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two rectangles"
+  },
+  "go/GoRss.svg": {
+    "component_id": "go:GoRss",
+    "aliases": [
+      "go",
+      "rss"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a rss icon"
+  },
+  "go/GoRuby.svg": {
+    "component_id": "go:GoRuby",
+    "aliases": [
+      "go",
+      "ruby"
+    ],
+    "colors": [],
+    "caption": "a black diamond icon on a white background"
+  },
+  "go/GoScreenFull.svg": {
+    "component_id": "go:GoScreenFull",
+    "aliases": [
+      "go",
+      "screen",
+      "full"
+    ],
+    "colors": [],
+    "caption": "an image of a square with two black rectangles"
+  },
+  "go/GoScreenNormal.svg": {
+    "component_id": "go:GoScreenNormal",
+    "aliases": [
+      "go",
+      "screen",
+      "normal"
+    ],
+    "colors": [],
+    "caption": "a black and white image of four arrows pointing in different directions"
+  },
+  "go/GoSearch.svg": {
+    "component_id": "go:GoSearch",
+    "aliases": [
+      "go",
+      "search"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "go/GoServer.svg": {
+    "component_id": "go:GoServer",
+    "aliases": [
+      "go",
+      "server"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a server on a white background"
+  },
+  "go/GoShare.svg": {
+    "component_id": "go:GoShare",
+    "aliases": [
+      "go",
+      "share"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing up"
+  },
+  "go/GoShareAndroid.svg": {
+    "component_id": "go:GoShareAndroid",
+    "aliases": [
+      "go",
+      "share",
+      "android"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two circles"
+  },
+  "go/GoShield.svg": {
+    "component_id": "go:GoShield",
+    "aliases": [
+      "go",
+      "shield"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shield with an exclamation mark"
+  },
+  "go/GoShieldCheck.svg": {
+    "component_id": "go:GoShieldCheck",
+    "aliases": [
+      "go",
+      "shield",
+      "check"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shield with a check mark"
+  },
+  "go/GoShieldLock.svg": {
+    "component_id": "go:GoShieldLock",
+    "aliases": [
+      "go",
+      "shield",
+      "lock"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a shield with a keyhole"
+  },
+  "go/GoShieldSlash.svg": {
+    "component_id": "go:GoShieldSlash",
+    "aliases": [
+      "go",
+      "shield",
+      "slash"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no entry sign"
+  },
+  "go/GoShieldX.svg": {
+    "component_id": "go:GoShieldX",
+    "aliases": [
+      "go",
+      "shield",
+      "x"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shield with an x"
+  },
+  "go/GoSidebarCollapse.svg": {
+    "component_id": "go:GoSidebarCollapse",
+    "aliases": [
+      "go",
+      "sidebar",
+      "collapse"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book with an arrow"
+  },
+  "go/GoSidebarExpand.svg": {
+    "component_id": "go:GoSidebarExpand",
+    "aliases": [
+      "go",
+      "sidebar",
+      "expand"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing to the right"
+  },
+  "go/GoSignIn.svg": {
+    "component_id": "go:GoSignIn",
+    "aliases": [
+      "go",
+      "sign",
+      "in"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "go/GoSignOut.svg": {
+    "component_id": "go:GoSignOut",
+    "aliases": [
+      "go",
+      "sign",
+      "out"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "go/GoSingleSelect.svg": {
+    "component_id": "go:GoSingleSelect",
+    "aliases": [
+      "go",
+      "single",
+      "select"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a down arrow"
+  },
+  "go/GoSkip.svg": {
+    "component_id": "go:GoSkip",
+    "aliases": [
+      "go",
+      "skip"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no entry sign"
+  },
+  "go/GoSkipFill.svg": {
+    "component_id": "go:GoSkipFill",
+    "aliases": [
+      "go",
+      "skip",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no sign"
+  },
+  "go/GoSmiley.svg": {
+    "component_id": "go:GoSmiley",
+    "aliases": [
+      "go",
+      "smiley"
+    ],
+    "colors": [],
+    "caption": "a smiley face icon on a white background"
+  },
+  "go/GoSortAsc.svg": {
+    "component_id": "go:GoSortAsc",
+    "aliases": [
+      "go",
+      "sort",
+      "asc"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up and down on a white background"
+  },
+  "go/GoSortDesc.svg": {
+    "component_id": "go:GoSortDesc",
+    "aliases": [
+      "go",
+      "sort",
+      "desc"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "go/GoSponsorTiers.svg": {
+    "component_id": "go:GoSponsorTiers",
+    "aliases": [
+      "go",
+      "sponsor",
+      "tiers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a heart with a ribbon"
+  },
+  "go/GoSquare.svg": {
+    "component_id": "go:GoSquare",
+    "aliases": [
+      "go",
+      "square"
+    ],
+    "colors": [],
+    "caption": "a square black and white icon on a white background"
+  },
+  "go/GoSquareFill.svg": {
+    "component_id": "go:GoSquareFill",
+    "aliases": [
+      "go",
+      "square",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a square black button with a white background"
+  },
+  "go/GoSquirrel.svg": {
+    "component_id": "go:GoSquirrel",
+    "aliases": [
+      "go",
+      "squirrel"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a squirrel"
+  },
+  "go/GoStack.svg": {
+    "component_id": "go:GoStack",
+    "aliases": [
+      "go",
+      "stack"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a stack of books"
+  },
+  "go/GoStar.svg": {
+    "component_id": "go:GoStar",
+    "aliases": [
+      "go",
+      "star"
+    ],
+    "colors": [],
+    "caption": "a star icon on a white background"
+  },
+  "go/GoStarFill.svg": {
+    "component_id": "go:GoStarFill",
+    "aliases": [
+      "go",
+      "star",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black star icon on a white background"
+  },
+  "go/GoStop.svg": {
+    "component_id": "go:GoStop",
+    "aliases": [
+      "go",
+      "stop"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a stop sign with an exclamation mark"
+  },
+  "go/GoStopwatch.svg": {
+    "component_id": "go:GoStopwatch",
+    "aliases": [
+      "go",
+      "stopwatch"
+    ],
+    "colors": [],
+    "caption": "a stopwatch icon on a white background"
+  },
+  "go/GoStrikethrough.svg": {
+    "component_id": "go:GoStrikethrough",
+    "aliases": [
+      "go",
+      "strikethrough"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter s"
+  },
+  "go/GoSun.svg": {
+    "component_id": "go:GoSun",
+    "aliases": [
+      "go",
+      "sun"
+    ],
+    "colors": [],
+    "caption": "a sun icon on a white background"
+  },
+  "go/GoSync.svg": {
+    "component_id": "go:GoSync",
+    "aliases": [
+      "go",
+      "sync"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "go/GoTab.svg": {
+    "component_id": "go:GoTab",
+    "aliases": [
+      "go",
+      "tab"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "go/GoTable.svg": {
+    "component_id": "go:GoTable",
+    "aliases": [
+      "go",
+      "table"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a window"
+  },
+  "go/GoTag.svg": {
+    "component_id": "go:GoTag",
+    "aliases": [
+      "go",
+      "tag"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a price tag"
+  },
+  "go/GoTasklist.svg": {
+    "component_id": "go:GoTasklist",
+    "aliases": [
+      "go",
+      "tasklist"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a white background"
+  },
+  "go/GoTelescope.svg": {
+    "component_id": "go:GoTelescope",
+    "aliases": [
+      "go",
+      "telescope"
+    ],
+    "colors": [],
+    "caption": "a telescope icon on a white background"
+  },
+  "go/GoTelescopeFill.svg": {
+    "component_id": "go:GoTelescopeFill",
+    "aliases": [
+      "go",
+      "telescope",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a telescope icon on a white background"
+  },
+  "go/GoTerminal.svg": {
+    "component_id": "go:GoTerminal",
+    "aliases": [
+      "go",
+      "terminal"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer"
+  },
+  "go/GoThumbsdown.svg": {
+    "component_id": "go:GoThumbsdown",
+    "aliases": [
+      "go",
+      "thumbsdown"
+    ],
+    "colors": [],
+    "caption": "a thumb down icon on a white background"
+  },
+  "go/GoThumbsup.svg": {
+    "component_id": "go:GoThumbsup",
+    "aliases": [
+      "go",
+      "thumbsup"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a thumb up"
+  },
+  "go/GoTools.svg": {
+    "component_id": "go:GoTools",
+    "aliases": [
+      "go",
+      "tools"
+    ],
+    "colors": [],
+    "caption": "a wrench icon on a white background"
+  },
+  "go/GoTrash.svg": {
+    "component_id": "go:GoTrash",
+    "aliases": [
+      "go",
+      "trash"
+    ],
+    "colors": [],
+    "caption": "a trash can icon on a white background"
+  },
+  "go/GoTriangleDown.svg": {
+    "component_id": "go:GoTriangleDown",
+    "aliases": [
+      "go",
+      "triangle",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "go/GoTriangleLeft.svg": {
+    "component_id": "go:GoTriangleLeft",
+    "aliases": [
+      "go",
+      "triangle",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "go/GoTriangleRight.svg": {
+    "component_id": "go:GoTriangleRight",
+    "aliases": [
+      "go",
+      "triangle",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "go/GoTriangleUp.svg": {
+    "component_id": "go:GoTriangleUp",
+    "aliases": [
+      "go",
+      "triangle",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a triangle icon on a white background"
+  },
+  "go/GoTrophy.svg": {
+    "component_id": "go:GoTrophy",
+    "aliases": [
+      "go",
+      "trophy"
+    ],
+    "colors": [],
+    "caption": "a trophy icon on a white background"
+  },
+  "go/GoTypography.svg": {
+    "component_id": "go:GoTypography",
+    "aliases": [
+      "go",
+      "typography"
+    ],
+    "colors": [],
+    "caption": "a black and white letter a on a white background"
+  },
+  "go/GoUnfold.svg": {
+    "component_id": "go:GoUnfold",
+    "aliases": [
+      "go",
+      "unfold"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in different directions on a white background"
+  },
+  "go/GoUnlink.svg": {
+    "component_id": "go:GoUnlink",
+    "aliases": [
+      "go",
+      "unlink"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no sign"
+  },
+  "go/GoUnlock.svg": {
+    "component_id": "go:GoUnlock",
+    "aliases": [
+      "go",
+      "unlock"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "go/GoUnmute.svg": {
+    "component_id": "go:GoUnmute",
+    "aliases": [
+      "go",
+      "unmute"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "go/GoUnread.svg": {
+    "component_id": "go:GoUnread",
+    "aliases": [
+      "go",
+      "unread"
+    ],
+    "colors": [],
+    "caption": "an email icon on a white background"
+  },
+  "go/GoUnverified.svg": {
+    "component_id": "go:GoUnverified",
+    "aliases": [
+      "go",
+      "unverified"
+    ],
+    "colors": [],
+    "caption": "a question mark icon on a white background"
+  },
+  "go/GoUpload.svg": {
+    "component_id": "go:GoUpload",
+    "aliases": [
+      "go",
+      "upload"
+    ],
+    "colors": [],
+    "caption": "an image of a black arrow pointing up"
+  },
+  "go/GoVerified.svg": {
+    "component_id": "go:GoVerified",
+    "aliases": [
+      "go",
+      "verified"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a white background"
+  },
+  "go/GoVersions.svg": {
+    "component_id": "go:GoVersions",
+    "aliases": [
+      "go",
+      "versions"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a tablet"
+  },
+  "go/GoVideo.svg": {
+    "component_id": "go:GoVideo",
+    "aliases": [
+      "go",
+      "video"
+    ],
+    "colors": [],
+    "caption": "a video player icon on a white background"
+  },
+  "go/GoWorkflow.svg": {
+    "component_id": "go:GoWorkflow",
+    "aliases": [
+      "go",
+      "workflow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two squares"
+  },
+  "go/GoX.svg": {
+    "component_id": "go:GoX",
+    "aliases": [
+      "go",
+      "x"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a crossed x"
+  },
+  "go/GoXCircle.svg": {
+    "component_id": "go:GoXcircle",
+    "aliases": [
+      "go",
+      "xcircle"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x in a circle"
+  },
+  "go/GoXCircleFill.svg": {
+    "component_id": "go:GoXcircleFill",
+    "aliases": [
+      "go",
+      "xcircle",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with an x symbol"
+  },
+  "go/GoZap.svg": {
+    "component_id": "go:GoZap",
+    "aliases": [
+      "go",
+      "zap"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a lightning bolt"
+  },
+  "go/GoZoomIn.svg": {
+    "component_id": "go:GoZoomIn",
+    "aliases": [
+      "go",
+      "zoom",
+      "in"
+    ],
+    "colors": [],
+    "caption": "a magnifying icon with a plus sign"
+  },
+  "go/GoZoomOut.svg": {
+    "component_id": "go:GoZoomOut",
+    "aliases": [
+      "go",
+      "zoom",
+      "out"
+    ],
+    "colors": [],
+    "caption": "a magnifying icon on a white background"
+  }
+}

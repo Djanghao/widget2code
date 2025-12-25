@@ -1,0 +1,31 @@
+# Widget Quality Evaluation Dependencies
+
+# Core dependencies
+numpy>=1.24.0
+opencv-python>=4.8.0
+Pillow>=10.0.0
+pandas>=2.0.0
+scipy>=1.11.0
+
+# Image processing and metrics
+scikit-image>=0.21.0
+lpips>=0.1.4
+torch>=2.0.0
+
+# OCR
+pytesseract>=0.3.10
+easyocr>=1.7.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Data export
+openpyxl>=3.1.0
+
+# Notes:
+# - pytesseract requires tesseract-ocr to be installed on system:
+#   Ubuntu/Debian: sudo apt-get install tesseract-ocr
+#   macOS: brew install tesseract
+#   Or skip OCR functionality if not needed
+# - torch can be installed with CUDA support if needed:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu118

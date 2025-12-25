@@ -1,0 +1,107 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "border": "2px solid #FF0055" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 20, "fontWeight": 700, "color": "#FF0055", "fontFamily": "monospace" }, "content": "UPLOAD_STATUS" },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:arrow.up.circle.fill", "size": 24, "color": "#FF0055" } }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#FF0055", "fontFamily": "monospace" }, "content": "PACKET_01" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#FF0055", "fontFamily": "monospace" }, "content": "92%" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressBar",
+              "props": {
+                "value": 92,
+                "color": "#FF0055",
+                "backgroundColor": "#330011",
+                "height": 12,
+                "style": { "borderRadius": 0 }
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "PACKET_02" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "45%" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressBar",
+              "props": {
+                "value": 45,
+                "color": "#00FF9D",
+                "backgroundColor": "#003322",
+                "height": 12,
+                "style": { "borderRadius": 0 }
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#00E5FF", "fontFamily": "monospace" }, "content": "PACKET_03" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#00E5FF", "fontFamily": "monospace" }, "content": "12%" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressBar",
+              "props": {
+                "value": 12,
+                "color": "#00E5FF",
+                "backgroundColor": "#002233",
+                "height": 12,
+                "style": { "borderRadius": 0 }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

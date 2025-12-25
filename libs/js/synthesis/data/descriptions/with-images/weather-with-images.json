@@ -1,0 +1,246 @@
+{
+  "domain": "weather",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "weather-img-001",
+      "prompt": "A current weather widget with weather icon, temperature, condition, and feels like",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "weather condition icon or photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-002",
+      "prompt": "A forecast widget with daily weather icons, high/low temps, and precipitation chance",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "weather icons row",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-003",
+      "prompt": "A radar widget with weather radar map, storm tracking, and precipitation intensity",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "weather radar map",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "weather-img-004",
+      "prompt": "A severe weather alert widget with warning icon, alert type, affected areas, and safety tips",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "weather warning icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-005",
+      "prompt": "A sunrise sunset widget with sun image, sunrise/sunset times, and golden hour",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sunrise or sunset photo",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "weather-img-006",
+      "prompt": "A UV index widget with sun icon, UV level, protection needed, and hourly forecast",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sun or UV icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-007",
+      "prompt": "A air quality widget with AQI indicator, pollution level, and health recommendations",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "air quality icon or map",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-008",
+      "prompt": "A hourly forecast widget with timeline, temps, conditions, and precipitation bars",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "hourly weather timeline",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "weather-img-009",
+      "prompt": "A wind widget with wind rose, speed, direction, and gust information",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "wind direction compass",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "weather-img-010",
+      "prompt": "A precipitation widget with rain clouds, rainfall amount, hourly chance, and radar",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "rain clouds or raindrops",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-011",
+      "prompt": "A humidity widget with water drop icon, humidity percentage, and dew point",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "water droplet icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-012",
+      "prompt": "A moon phase weather widget with moon image, phase, rise/set times, and tide info",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "moon phase image",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "weather-img-013",
+      "prompt": "A weather comparison widget with two location photos, temps, and conditions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "two location weather photos",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "weather-img-014",
+      "prompt": "A feels like widget with thermometer, actual temp, feels like temp, and factors",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "thermometer icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-015",
+      "prompt": "A snow report widget with mountain photo, snowfall, snow depth, and ski conditions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "snowy mountain photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "weather-img-016",
+      "prompt": "A beach weather widget with beach photo, water temp, wave height, and tide times",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "beach or ocean photo",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "weather-img-017",
+      "prompt": "A lightning tracker widget with storm photo, strikes nearby, distance, and safety",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "lightning storm photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "weather-img-018",
+      "prompt": "A pollen widget with flower icon, pollen count, allergen types, and forecast",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "flower or pollen icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-019",
+      "prompt": "A visibility widget with fog photo, visibility distance, and driving conditions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "fog or mist photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "weather-img-020",
+      "prompt": "A historical weather widget with archive photo, past date weather, and comparison",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "historical weather photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-021",
+      "prompt": "A weather map widget with satellite image, cloud cover, and storm systems",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "satellite weather map",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "weather-img-022",
+      "prompt": "A barometric pressure widget with pressure gauge, trend, and weather prediction",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "barometer gauge",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-023",
+      "prompt": "A season widget with seasonal scene photo, season, days until next season",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "seasonal landscape photo",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "weather-img-024",
+      "prompt": "A weather camera widget with live webcam view, location, and current conditions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "weather webcam view",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "weather-img-025",
+      "prompt": "A agricultural weather widget with farm photo, growing conditions, frost risk, and rainfall",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "farm or crop field photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "weather-img-026",
+      "prompt": "A weather history widget with temperature graph, historical averages, and records",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "weather temperature graph",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-027",
+      "prompt": "A hurricane tracker widget with hurricane satellite image, path, category, and wind speed",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "hurricane satellite view",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "weather-img-028",
+      "prompt": "A weather clothing widget with outfit suggestion photo, temp, and clothing recommendations",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "weather-appropriate clothing",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-029",
+      "prompt": "A frost alert widget with ice crystal image, frost risk, affected plants, and protection tips",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "frost or ice crystals",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "weather-img-030",
+      "prompt": "A weather timelapse widget with sky photo sequence, day progression, and cloud movement",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sky timelapse sequence",
+      "imagePlacement": "background"
+    }
+  ]
+}

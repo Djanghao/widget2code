@@ -1,0 +1,39 @@
+{
+  "name": "widget-factory-playground",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "concurrently \"vite preview --host 0.0.0.0\" \"npm run api\"",
+    "api": "cd ../api && .venv/bin/python server.py",
+    "dev:full": "concurrently \"npm run dev\" \"npm run api\"",
+    "render": "widget-factory batch-render"
+  },
+  "dependencies": {
+    "@babel/standalone": "^7.28.4",
+    "@widget-factory/cli": "*",
+    "@widget-factory/compiler": "*",
+    "@widget-factory/dsl": "*",
+    "@widget-factory/exporter": "*",
+    "@widget-factory/icons": "*",
+    "@widget-factory/primitives": "*",
+    "@widget-factory/renderer": "*",
+    "@widget-factory/validator": "*",
+    "html2canvas": "^1.4.1",
+    "mermaid": "^11.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "react-icons": "^5.0.1",
+    "react-syntax-highlighter": "^15.6.6",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.6.1",
+    "playwright": "^1.40.0",
+    "vite": "^5.0.0"
+  }
+}

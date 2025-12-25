@@ -1,0 +1,175 @@
+{
+  "$schema": "./runner-config.schema.json",
+  "description": "Full production config - generates all domains with multiple presets, no limits",
+  "runners": [
+    {
+      "name": "apple-style-completed",
+      "port": 8011,
+      "promptPreset": "apple-style",
+      "domains": [
+        "health"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": true,
+        "useDynamic": false,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "apple-style-incomplete",
+      "port": 8012,
+      "promptPreset": "apple-style",
+      "domains": [
+        "utilities"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "android-style-completed",
+      "port": 8013,
+      "promptPreset": "android-style",
+      "domains": [
+        "finance",
+        "media"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": false,
+        "useDynamic": true,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "android-style-incomplete",
+      "port": 8014,
+      "promptPreset": "android-style",
+      "domains": [
+        "sports"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "more-components-completed",
+      "port": 8015,
+      "promptPreset": "more-components",
+      "domains": [
+        "weather"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": false,
+        "useDynamic": false,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "more-components-incomplete",
+      "port": 8016,
+      "promptPreset": "more-components",
+      "domains": [
+        "travel"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "minimalist-completed",
+      "port": 8017,
+      "promptPreset": "minimalist",
+      "domains": [
+        "productivity"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": true,
+        "useDynamic": false,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "minimalist-incomplete",
+      "port": 8018,
+      "promptPreset": "minimalist",
+      "domains": [
+        "food"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "data-rich-completed",
+      "port": 8019,
+      "promptPreset": "data-rich",
+      "domains": [
+        "communication"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": false,
+        "useDynamic": true,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "data-rich-incomplete",
+      "port": 8020,
+      "promptPreset": "data-rich",
+      "domains": [
+        "shopping"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "playful-completed",
+      "port": 8021,
+      "promptPreset": "playful",
+      "domains": [
+        "smart-home",
+        "navigation"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": false,
+        "useDynamic": false,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "playful-incomplete",
+      "port": 8022,
+      "promptPreset": "playful",
+      "domains": [
+        "social"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    }
+  ],
+  "globalOptions": {
+    "referenceImagesDir": null,
+    "imageUrlsDir": "./scripts/synthesis/descriptions/image-urls",
+    "referencesPerDescription": 2
+  }
+}

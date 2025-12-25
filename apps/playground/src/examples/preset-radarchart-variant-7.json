@@ -1,0 +1,51 @@
+{
+  "widget": {
+    "backgroundColor": "#F0EBE3",
+    "borderRadius": 20,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "#2D6A4F" },
+          "content": "Wellness Score"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 400, "color": "#52796F" },
+          "content": "Custom axis styling"
+        },
+        {
+          "type": "leaf",
+          "component": "RadarChart",
+          "flex": 1,
+          "props": {
+            "data": [72, 85, 68, 90, 78, 82],
+            "labels": ["Sleep", "Exercise", "Nutrition", "Mindfulness", "Hydration", "Energy"],
+            "radarShape": "circle",
+            "splitNumber": 5,
+            "smooth": true,
+            "color": "#40916C",
+            "backgroundColor": "transparent",
+            "areaOpacity": 0.28,
+            "lineWidth": 3,
+            "showPoints": true,
+            "pointSize": 6,
+            "gridColor": "rgba(45, 106, 79, 0.2)",
+            "splitLineStyle": "solid",
+            "axisLineStyle": "dashed",
+            "height": "100%",
+            "theme": "light"
+          }
+        }
+      ]
+    }
+  }
+}

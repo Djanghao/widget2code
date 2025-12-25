@@ -1,0 +1,210 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#007AFF",
+                "name": "sf:globe"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "World Clock"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 24,
+                    "color": "#000000",
+                    "fontWeight": 300
+                  },
+                  "content": "3:47 PM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "San Francisco"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Yesterday, 8:47 PM"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 24,
+                    "color": "#000000",
+                    "fontWeight": 300
+                  },
+                  "content": "6:47 PM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "New York"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Yesterday, 11:47 PM"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 24,
+                    "color": "#000000",
+                    "fontWeight": 300
+                  },
+                  "content": "11:47 PM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "London"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Today, 4:47 AM"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 24,
+                    "color": "#000000",
+                    "fontWeight": 300
+                  },
+                  "content": "8:47 AM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Tokyo"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Today, 1:47 PM"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

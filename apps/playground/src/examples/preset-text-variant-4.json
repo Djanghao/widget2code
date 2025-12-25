@@ -1,0 +1,53 @@
+{
+  "widget": {
+    "backgroundColor": "#FF6B6B",
+    "borderRadius": 20,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "start",
+      "props": {
+        "style": {
+          "background": "linear-gradient(135deg, #FF6B6B 0%, #FFE66D 50%, #4ECDC4 100%)"
+        }
+      },
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 42,
+            "fontWeight": 800,
+            "color": "#FFFFFF"
+          },
+          "content": "Vibrant"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 42,
+            "fontWeight": 800,
+            "color": "#FFFFFF"
+          },
+          "content": "Gradient"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 15,
+            "fontWeight": 600,
+            "color": "rgba(255, 255, 255, 0.9)"
+          },
+          "content": "Colors that pop"
+        }
+      ]
+    }
+  }
+}

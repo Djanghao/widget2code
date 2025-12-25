@@ -1,0 +1,246 @@
+{
+  "domain": "finance",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "finance-img-001",
+      "prompt": "A bank account widget with bank logo, account balance, and recent transactions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "bank logo or card",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-002",
+      "prompt": "A stock widget with company logo, stock price, change percentage, and chart",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "company logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-003",
+      "prompt": "A budget widget with pie chart, spending categories, and remaining budget",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "pie chart or budget visual",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-004",
+      "prompt": "A credit card widget with card design, balance, due date, and minimum payment",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "credit card design",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "finance-img-005",
+      "prompt": "A cryptocurrency widget with coin logo, current price, 24h change, and market cap",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "cryptocurrency coin logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-006",
+      "prompt": "A savings goal widget with goal image, target amount, saved amount, and progress bar",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "savings goal visualization",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-007",
+      "prompt": "A investment portfolio widget with asset allocation chart, total value, and returns",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "investment chart or graph",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-008",
+      "prompt": "A bill reminder widget with service logo, bill amount, due date, and payment status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "utility or service logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-009",
+      "prompt": "A expense tracking widget with receipt photo, merchant, amount, and category",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "receipt or purchase photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-010",
+      "prompt": "A loan widget with loan type icon, principal, interest rate, and monthly payment",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "loan or mortgage icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-011",
+      "prompt": "A forex widget with currency flags, exchange rate, and conversion calculator",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "currency flags or symbols",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-012",
+      "prompt": "A retirement planner widget with retirement scene, target age, savings needed, and progress",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "retirement or beach scene",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "finance-img-013",
+      "prompt": "A dividend tracker widget with stock logo, dividend amount, payment date, and yield",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "dividend stock logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-014",
+      "prompt": "A tax calculator widget with tax form, estimated tax, deductions, and filing date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "tax form or calculator",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-015",
+      "prompt": "A financial news widget with article image, headline, source, and market impact",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "financial news image",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-016",
+      "prompt": "A net worth widget with assets/liabilities chart, total net worth, and growth trend",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "net worth chart",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-017",
+      "prompt": "A subscription tracker widget with service logo, monthly cost, renewal date, and cancel option",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "subscription service logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-018",
+      "prompt": "A reward points widget with rewards card, points balance, and redemption options",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "rewards card design",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-019",
+      "prompt": "A insurance policy widget with policy document, coverage amount, premium, and renewal",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "insurance policy or shield icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-020",
+      "prompt": "A mortgage widget with house photo, loan balance, monthly payment, and interest saved",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "house or property photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-021",
+      "prompt": "A credit score widget with score gauge, score number, factors, and improvement tips",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "credit score gauge",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-022",
+      "prompt": "A commodity widget with commodity photo, current price, unit, and price trend",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "commodity like gold or oil",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-023",
+      "prompt": "A P2P payment widget with recipient photo, amount, payment method, and status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "recipient profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-024",
+      "prompt": "A financial advisor widget with advisor photo, credentials, specialty, and consultation link",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "financial advisor photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-025",
+      "prompt": "A emergency fund widget with safety icon, fund balance, months covered, and goal",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "emergency or safety icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-026",
+      "prompt": "A cashback widget with shopping bag, cashback amount, eligible purchases, and expiry",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "cashback or shopping icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-027",
+      "prompt": "A bond widget with bond certificate, face value, coupon rate, and maturity date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "bond certificate or treasury icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-028",
+      "prompt": "A spending alert widget with warning icon, overspending amount, category, and advice",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "alert or warning icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-029",
+      "prompt": "A donation widget with charity logo, donation amount, cause, and tax receipt",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "charity or nonprofit logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "finance-img-030",
+      "prompt": "A financial milestone widget with milestone badge, achievement, date reached, and celebration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "achievement badge or trophy",
+      "imagePlacement": "left-thumbnail"
+    }
+  ]
+}

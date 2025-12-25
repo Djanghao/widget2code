@@ -1,0 +1,120 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:sun.max.fill",
+                "size": 32,
+                "color": "#FFD60A"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:cloud.rain.fill",
+                "size": 32,
+                "color": "#64D2FF"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:bolt.fill",
+                "size": 32,
+                "color": "#FFD60A"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:moon.stars.fill",
+                "size": 32,
+                "color": "#BF5AF2"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:sparkles",
+                "size": 32,
+                "color": "#FF9F0A"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:leaf.fill",
+                "size": 32,
+                "color": "#30D158"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:music.note",
+                "size": 32,
+                "color": "#FF375F"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:mic.fill",
+                "size": 32,
+                "color": "#0A84FF"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:video.fill",
+                "size": 32,
+                "color": "#AC8E68"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

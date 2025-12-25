@@ -1,0 +1,77 @@
+{
+  "widget": {
+    "backgroundColor": "#E3F2FD",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 700, "color": "#1565C0" },
+          "content": "Blur Background"
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "props": {
+            "style": {
+              "position": "relative",
+              "borderRadius": 16,
+              "overflow": "hidden"
+            }
+          },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Image",
+              "props": {
+                "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                "width": "100%",
+                "height": "100%",
+                "style": {
+                  "objectFit": "cover",
+                  "filter": "blur(8px) brightness(0.7)"
+                }
+              }
+            },
+            {
+              "type": "container",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "top": "50%",
+                  "left": "50%",
+                  "transform": "translate(-50%, -50%)",
+                  "backgroundColor": "rgba(255,255,255,0.95)",
+                  "padding": 20,
+                  "borderRadius": 12,
+                  "backdropFilter": "blur(10px)"
+                }
+              },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 16, "fontWeight": 700, "color": "#1565C0", "textAlign": "center" },
+                  "content": "Focus Mode"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 600, "color": "#1976D2" },
+          "content": "BLUR FILTER • OVERLAY CONTENT"
+        }
+      ]
+    }
+  }
+}

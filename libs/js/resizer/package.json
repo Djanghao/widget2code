@@ -1,0 +1,19 @@
+{
+  "name": "@widget-factory/resizer",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "description": "Widget auto-resize utilities based on aspect ratio and overflow detection",
+  "keywords": [
+    "widget",
+    "resize",
+    "autoresize",
+    "aspect-ratio",
+    "layout"
+  ],
+  "dependencies": {},
+  "private": true
+}

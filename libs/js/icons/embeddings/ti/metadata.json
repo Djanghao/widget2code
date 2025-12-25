@@ -1,0 +1,3339 @@
+{
+  "ti/TiAdjustBrightness.svg": {
+    "component_id": "ti:TiAdjustBrightness",
+    "aliases": [
+      "ti",
+      "adjust",
+      "brightness"
+    ],
+    "colors": [],
+    "caption": "a black and white sun icon on a white background"
+  },
+  "ti/TiAdjustContrast.svg": {
+    "component_id": "ti:TiAdjustContrast",
+    "aliases": [
+      "ti",
+      "adjust",
+      "contrast"
+    ],
+    "colors": [],
+    "caption": "a black and white circular icon with a circle in the middle"
+  },
+  "ti/TiAnchor.svg": {
+    "component_id": "ti:TiAnchor",
+    "aliases": [
+      "ti",
+      "anchor"
+    ],
+    "colors": [],
+    "caption": "an anchor icon on a white background"
+  },
+  "ti/TiAnchorOutline.svg": {
+    "component_id": "ti:TiAnchorOutline",
+    "aliases": [
+      "ti",
+      "anchor",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "an anchor icon on a white background"
+  },
+  "ti/TiArchive.svg": {
+    "component_id": "ti:TiArchive",
+    "aliases": [
+      "ti",
+      "archive"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box with a lid"
+  },
+  "ti/TiArrowBack.svg": {
+    "component_id": "ti:TiArrowBack",
+    "aliases": [
+      "ti",
+      "arrow",
+      "back"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "ti/TiArrowBackOutline.svg": {
+    "component_id": "ti:TiArrowBackOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "back",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "ti/TiArrowDown.svg": {
+    "component_id": "ti:TiArrowDown",
+    "aliases": [
+      "ti",
+      "arrow",
+      "down"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "ti/TiArrowDownOutline.svg": {
+    "component_id": "ti:TiArrowDownOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "down",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "ti/TiArrowDownThick.svg": {
+    "component_id": "ti:TiArrowDownThick",
+    "aliases": [
+      "ti",
+      "arrow",
+      "down",
+      "thick"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "ti/TiArrowForward.svg": {
+    "component_id": "ti:TiArrowForward",
+    "aliases": [
+      "ti",
+      "arrow",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "ti/TiArrowForwardOutline.svg": {
+    "component_id": "ti:TiArrowForwardOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "forward",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "ti/TiArrowLeft.svg": {
+    "component_id": "ti:TiArrowLeft",
+    "aliases": [
+      "ti",
+      "arrow",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "ti/TiArrowLeftOutline.svg": {
+    "component_id": "ti:TiArrowLeftOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "left",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "ti/TiArrowLeftThick.svg": {
+    "component_id": "ti:TiArrowLeftThick",
+    "aliases": [
+      "ti",
+      "arrow",
+      "left",
+      "thick"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "ti/TiArrowLoop.svg": {
+    "component_id": "ti:TiArrowLoop",
+    "aliases": [
+      "ti",
+      "arrow",
+      "loop"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "ti/TiArrowLoopOutline.svg": {
+    "component_id": "ti:TiArrowLoopOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "loop",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with an arrow"
+  },
+  "ti/TiArrowMaximise.svg": {
+    "component_id": "ti:TiArrowMaximise",
+    "aliases": [
+      "ti",
+      "arrow",
+      "maximise"
+    ],
+    "colors": [],
+    "caption": "three arrows pointing in different directions on a white background"
+  },
+  "ti/TiArrowMaximiseOutline.svg": {
+    "component_id": "ti:TiArrowMaximiseOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "maximise",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing in different directions"
+  },
+  "ti/TiArrowMinimise.svg": {
+    "component_id": "ti:TiArrowMinimise",
+    "aliases": [
+      "ti",
+      "arrow",
+      "minimise"
+    ],
+    "colors": [],
+    "caption": "three arrows pointing in different directions on a white background"
+  },
+  "ti/TiArrowMinimiseOutline.svg": {
+    "component_id": "ti:TiArrowMinimiseOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "minimise",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with two arrows pointing in different directions"
+  },
+  "ti/TiArrowMove.svg": {
+    "component_id": "ti:TiArrowMove",
+    "aliases": [
+      "ti",
+      "arrow",
+      "move"
+    ],
+    "colors": [],
+    "caption": "three arrows pointing in different directions on a white background"
+  },
+  "ti/TiArrowMoveOutline.svg": {
+    "component_id": "ti:TiArrowMoveOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "move",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cross in a square shape"
+  },
+  "ti/TiArrowRepeat.svg": {
+    "component_id": "ti:TiArrowRepeat",
+    "aliases": [
+      "ti",
+      "arrow",
+      "repeat"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "ti/TiArrowRepeatOutline.svg": {
+    "component_id": "ti:TiArrowRepeatOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "repeat",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with two arrows"
+  },
+  "ti/TiArrowRight.svg": {
+    "component_id": "ti:TiArrowRight",
+    "aliases": [
+      "ti",
+      "arrow",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "ti/TiArrowRightOutline.svg": {
+    "component_id": "ti:TiArrowRightOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "right",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "ti/TiArrowRightThick.svg": {
+    "component_id": "ti:TiArrowRightThick",
+    "aliases": [
+      "ti",
+      "arrow",
+      "right",
+      "thick"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "ti/TiArrowShuffle.svg": {
+    "component_id": "ti:TiArrowShuffle",
+    "aliases": [
+      "ti",
+      "arrow",
+      "shuffle"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "ti/TiArrowSortedDown.svg": {
+    "component_id": "ti:TiArrowSortedDown",
+    "aliases": [
+      "ti",
+      "arrow",
+      "sorted",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "ti/TiArrowSortedUp.svg": {
+    "component_id": "ti:TiArrowSortedUp",
+    "aliases": [
+      "ti",
+      "arrow",
+      "sorted",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a triangle is shown in black on a white background"
+  },
+  "ti/TiArrowSync.svg": {
+    "component_id": "ti:TiArrowSync",
+    "aliases": [
+      "ti",
+      "arrow",
+      "sync"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "ti/TiArrowSyncOutline.svg": {
+    "component_id": "ti:TiArrowSyncOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "sync",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "ti/TiArrowUnsorted.svg": {
+    "component_id": "ti:TiArrowUnsorted",
+    "aliases": [
+      "ti",
+      "arrow",
+      "unsorted"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "ti/TiArrowUp.svg": {
+    "component_id": "ti:TiArrowUp",
+    "aliases": [
+      "ti",
+      "arrow",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "ti/TiArrowUpOutline.svg": {
+    "component_id": "ti:TiArrowUpOutline",
+    "aliases": [
+      "ti",
+      "arrow",
+      "up",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing up in the middle of a white background"
+  },
+  "ti/TiArrowUpThick.svg": {
+    "component_id": "ti:TiArrowUpThick",
+    "aliases": [
+      "ti",
+      "arrow",
+      "up",
+      "thick"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing up on a white background"
+  },
+  "ti/TiAt.svg": {
+    "component_id": "ti:TiAt",
+    "aliases": [
+      "ti",
+      "at"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an email symbol"
+  },
+  "ti/TiAttachment.svg": {
+    "component_id": "ti:TiAttachment",
+    "aliases": [
+      "ti",
+      "attachment"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a link"
+  },
+  "ti/TiAttachmentOutline.svg": {
+    "component_id": "ti:TiAttachmentOutline",
+    "aliases": [
+      "ti",
+      "attachment",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a paper clip"
+  },
+  "ti/TiBackspace.svg": {
+    "component_id": "ti:TiBackspace",
+    "aliases": [
+      "ti",
+      "backspace"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white icon with an x"
+  },
+  "ti/TiBackspaceOutline.svg": {
+    "component_id": "ti:TiBackspaceOutline",
+    "aliases": [
+      "ti",
+      "backspace",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an x in it"
+  },
+  "ti/TiBatteryCharge.svg": {
+    "component_id": "ti:TiBatteryCharge",
+    "aliases": [
+      "ti",
+      "battery",
+      "charge"
+    ],
+    "colors": [],
+    "caption": "an icon of a battery on a white background"
+  },
+  "ti/TiBatteryFull.svg": {
+    "component_id": "ti:TiBatteryFull",
+    "aliases": [
+      "ti",
+      "battery",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a battery icon on a white background"
+  },
+  "ti/TiBatteryHigh.svg": {
+    "component_id": "ti:TiBatteryHigh",
+    "aliases": [
+      "ti",
+      "battery",
+      "high"
+    ],
+    "colors": [],
+    "caption": "a battery icon on a white background"
+  },
+  "ti/TiBatteryLow.svg": {
+    "component_id": "ti:TiBatteryLow",
+    "aliases": [
+      "ti",
+      "battery",
+      "low"
+    ],
+    "colors": [],
+    "caption": "a battery icon on a white background"
+  },
+  "ti/TiBatteryMid.svg": {
+    "component_id": "ti:TiBatteryMid",
+    "aliases": [
+      "ti",
+      "battery",
+      "mid"
+    ],
+    "colors": [],
+    "caption": "a battery icon on a white background"
+  },
+  "ti/TiBeaker.svg": {
+    "component_id": "ti:TiBeaker",
+    "aliases": [
+      "ti",
+      "beaker"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a stool"
+  },
+  "ti/TiBeer.svg": {
+    "component_id": "ti:TiBeer",
+    "aliases": [
+      "ti",
+      "beer"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a glass of beer"
+  },
+  "ti/TiBell.svg": {
+    "component_id": "ti:TiBell",
+    "aliases": [
+      "ti",
+      "bell"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "ti/TiBook.svg": {
+    "component_id": "ti:TiBook",
+    "aliases": [
+      "ti",
+      "book"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "ti/TiBookmark.svg": {
+    "component_id": "ti:TiBookmark",
+    "aliases": [
+      "ti",
+      "bookmark"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "ti/TiBriefcase.svg": {
+    "component_id": "ti:TiBriefcase",
+    "aliases": [
+      "ti",
+      "briefcase"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a briefcase"
+  },
+  "ti/TiBrush.svg": {
+    "component_id": "ti:TiBrush",
+    "aliases": [
+      "ti",
+      "brush"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a paint brush"
+  },
+  "ti/TiBusinessCard.svg": {
+    "component_id": "ti:TiBusinessCard",
+    "aliases": [
+      "ti",
+      "business",
+      "card"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an id card"
+  },
+  "ti/TiCalculator.svg": {
+    "component_id": "ti:TiCalculator",
+    "aliases": [
+      "ti",
+      "calculator"
+    ],
+    "colors": [],
+    "caption": "a calculator icon on a white background"
+  },
+  "ti/TiCalendar.svg": {
+    "component_id": "ti:TiCalendar",
+    "aliases": [
+      "ti",
+      "calendar"
+    ],
+    "colors": [],
+    "caption": "a calendar icon on a white background"
+  },
+  "ti/TiCalendarOutline.svg": {
+    "component_id": "ti:TiCalendarOutline",
+    "aliases": [
+      "ti",
+      "calendar",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a calendar icon on a white background"
+  },
+  "ti/TiCamera.svg": {
+    "component_id": "ti:TiCamera",
+    "aliases": [
+      "ti",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "a black camera icon on a white background"
+  },
+  "ti/TiCameraOutline.svg": {
+    "component_id": "ti:TiCameraOutline",
+    "aliases": [
+      "ti",
+      "camera",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a camera icon on a white background"
+  },
+  "ti/TiCancel.svg": {
+    "component_id": "ti:TiCancel",
+    "aliases": [
+      "ti",
+      "cancel"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no entry sign"
+  },
+  "ti/TiCancelOutline.svg": {
+    "component_id": "ti:TiCancelOutline",
+    "aliases": [
+      "ti",
+      "cancel",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no sign"
+  },
+  "ti/TiChartArea.svg": {
+    "component_id": "ti:TiChartArea",
+    "aliases": [
+      "ti",
+      "chart",
+      "area"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a hat on top of a mountain"
+  },
+  "ti/TiChartAreaOutline.svg": {
+    "component_id": "ti:TiChartAreaOutline",
+    "aliases": [
+      "ti",
+      "chart",
+      "area",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a graph"
+  },
+  "ti/TiChartBar.svg": {
+    "component_id": "ti:TiChartBar",
+    "aliases": [
+      "ti",
+      "chart",
+      "bar"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a hand pointing up"
+  },
+  "ti/TiChartBarOutline.svg": {
+    "component_id": "ti:TiChartBarOutline",
+    "aliases": [
+      "ti",
+      "chart",
+      "bar",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a hand pointing up"
+  },
+  "ti/TiChartLine.svg": {
+    "component_id": "ti:TiChartLine",
+    "aliases": [
+      "ti",
+      "chart",
+      "line"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a check mark"
+  },
+  "ti/TiChartLineOutline.svg": {
+    "component_id": "ti:TiChartLineOutline",
+    "aliases": [
+      "ti",
+      "chart",
+      "line",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a graph"
+  },
+  "ti/TiChartPie.svg": {
+    "component_id": "ti:TiChartPie",
+    "aliases": [
+      "ti",
+      "chart",
+      "pie"
+    ],
+    "colors": [],
+    "caption": "a black and white pie chart with the letter k"
+  },
+  "ti/TiChartPieOutline.svg": {
+    "component_id": "ti:TiChartPieOutline",
+    "aliases": [
+      "ti",
+      "chart",
+      "pie",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a pie icon in black and white on a white background"
+  },
+  "ti/TiChevronLeft.svg": {
+    "component_id": "ti:TiChevronLeft",
+    "aliases": [
+      "ti",
+      "chevron",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "ti/TiChevronLeftOutline.svg": {
+    "component_id": "ti:TiChevronLeftOutline",
+    "aliases": [
+      "ti",
+      "chevron",
+      "left",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "ti/TiChevronRight.svg": {
+    "component_id": "ti:TiChevronRight",
+    "aliases": [
+      "ti",
+      "chevron",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "ti/TiChevronRightOutline.svg": {
+    "component_id": "ti:TiChevronRightOutline",
+    "aliases": [
+      "ti",
+      "chevron",
+      "right",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "ti/TiClipboard.svg": {
+    "component_id": "ti:TiClipboard",
+    "aliases": [
+      "ti",
+      "clipboard"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a clipboard on a white background"
+  },
+  "ti/TiCloudStorage.svg": {
+    "component_id": "ti:TiCloudStorage",
+    "aliases": [
+      "ti",
+      "cloud",
+      "storage"
+    ],
+    "colors": [],
+    "caption": "a cloud with an arrow pointing up"
+  },
+  "ti/TiCloudStorageOutline.svg": {
+    "component_id": "ti:TiCloudStorageOutline",
+    "aliases": [
+      "ti",
+      "cloud",
+      "storage",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black cloud with an arrow pointing up"
+  },
+  "ti/TiCode.svg": {
+    "component_id": "ti:TiCode",
+    "aliases": [
+      "ti",
+      "code"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "ti/TiCodeOutline.svg": {
+    "component_id": "ti:TiCodeOutline",
+    "aliases": [
+      "ti",
+      "code",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "ti/TiCoffee.svg": {
+    "component_id": "ti:TiCoffee",
+    "aliases": [
+      "ti",
+      "coffee"
+    ],
+    "colors": [],
+    "caption": "a coffee cup icon on a white background"
+  },
+  "ti/TiCog.svg": {
+    "component_id": "ti:TiCog",
+    "aliases": [
+      "ti",
+      "cog"
+    ],
+    "colors": [],
+    "caption": "a gearwheel icon on a white background"
+  },
+  "ti/TiCogOutline.svg": {
+    "component_id": "ti:TiCogOutline",
+    "aliases": [
+      "ti",
+      "cog",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a gearwheel"
+  },
+  "ti/TiCompass.svg": {
+    "component_id": "ti:TiCompass",
+    "aliases": [
+      "ti",
+      "compass"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a triangle in a circle"
+  },
+  "ti/TiContacts.svg": {
+    "component_id": "ti:TiContacts",
+    "aliases": [
+      "ti",
+      "contacts"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a notebook with a person in it"
+  },
+  "ti/TiCreditCard.svg": {
+    "component_id": "ti:TiCreditCard",
+    "aliases": [
+      "ti",
+      "credit",
+      "card"
+    ],
+    "colors": [],
+    "caption": "a credit card icon on a white background"
+  },
+  "ti/TiCss3.svg": {
+    "component_id": "ti:TiCss3",
+    "aliases": [
+      "ti",
+      "css",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter e"
+  },
+  "ti/TiDatabase.svg": {
+    "component_id": "ti:TiDatabase",
+    "aliases": [
+      "ti",
+      "database"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a circle in the middle"
+  },
+  "ti/TiDelete.svg": {
+    "component_id": "ti:TiDelete",
+    "aliases": [
+      "ti",
+      "delete"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x symbol"
+  },
+  "ti/TiDeleteOutline.svg": {
+    "component_id": "ti:TiDeleteOutline",
+    "aliases": [
+      "ti",
+      "delete",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x symbol"
+  },
+  "ti/TiDeviceDesktop.svg": {
+    "component_id": "ti:TiDeviceDesktop",
+    "aliases": [
+      "ti",
+      "device",
+      "desktop"
+    ],
+    "colors": [],
+    "caption": "a computer monitor icon on a white background"
+  },
+  "ti/TiDeviceLaptop.svg": {
+    "component_id": "ti:TiDeviceLaptop",
+    "aliases": [
+      "ti",
+      "device",
+      "laptop"
+    ],
+    "colors": [],
+    "caption": "a laptop icon on a white background"
+  },
+  "ti/TiDevicePhone.svg": {
+    "component_id": "ti:TiDevicePhone",
+    "aliases": [
+      "ti",
+      "device",
+      "phone"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cell phone"
+  },
+  "ti/TiDeviceTablet.svg": {
+    "component_id": "ti:TiDeviceTablet",
+    "aliases": [
+      "ti",
+      "device",
+      "tablet"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a tablet computer"
+  },
+  "ti/TiDirections.svg": {
+    "component_id": "ti:TiDirections",
+    "aliases": [
+      "ti",
+      "directions"
+    ],
+    "colors": [],
+    "caption": "a black and white sign with arrows pointing in different directions"
+  },
+  "ti/TiDivide.svg": {
+    "component_id": "ti:TiDivide",
+    "aliases": [
+      "ti",
+      "divide"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white symbol with two circles"
+  },
+  "ti/TiDivideOutline.svg": {
+    "component_id": "ti:TiDivideOutline",
+    "aliases": [
+      "ti",
+      "divide",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a symbol with two circles"
+  },
+  "ti/TiDocument.svg": {
+    "component_id": "ti:TiDocument",
+    "aliases": [
+      "ti",
+      "document"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "ti/TiDocumentAdd.svg": {
+    "component_id": "ti:TiDocumentAdd",
+    "aliases": [
+      "ti",
+      "document",
+      "add"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a plus sign"
+  },
+  "ti/TiDocumentDelete.svg": {
+    "component_id": "ti:TiDocumentDelete",
+    "aliases": [
+      "ti",
+      "document",
+      "delete"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document with an arrow"
+  },
+  "ti/TiDocumentText.svg": {
+    "component_id": "ti:TiDocumentText",
+    "aliases": [
+      "ti",
+      "document",
+      "text"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "ti/TiDownload.svg": {
+    "component_id": "ti:TiDownload",
+    "aliases": [
+      "ti",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box with an arrow"
+  },
+  "ti/TiDownloadOutline.svg": {
+    "component_id": "ti:TiDownloadOutline",
+    "aliases": [
+      "ti",
+      "download",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box with a down arrow"
+  },
+  "ti/TiDropbox.svg": {
+    "component_id": "ti:TiDropbox",
+    "aliases": [
+      "ti",
+      "dropbox"
+    ],
+    "colors": [],
+    "caption": "the dropbox logo is shown in black and white"
+  },
+  "ti/TiEdit.svg": {
+    "component_id": "ti:TiEdit",
+    "aliases": [
+      "ti",
+      "edit"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pen and paper"
+  },
+  "ti/TiEject.svg": {
+    "component_id": "ti:TiEject",
+    "aliases": [
+      "ti",
+      "eject"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "ti/TiEjectOutline.svg": {
+    "component_id": "ti:TiEjectOutline",
+    "aliases": [
+      "ti",
+      "eject",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "ti/TiEquals.svg": {
+    "component_id": "ti:TiEquals",
+    "aliases": [
+      "ti",
+      "equals"
+    ],
+    "colors": [],
+    "caption": "a black and white equal sign on a white background"
+  },
+  "ti/TiEqualsOutline.svg": {
+    "component_id": "ti:TiEqualsOutline",
+    "aliases": [
+      "ti",
+      "equals",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two black lines"
+  },
+  "ti/TiExport.svg": {
+    "component_id": "ti:TiExport",
+    "aliases": [
+      "ti",
+      "export"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow in a square"
+  },
+  "ti/TiExportOutline.svg": {
+    "component_id": "ti:TiExportOutline",
+    "aliases": [
+      "ti",
+      "export",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "ti/TiEye.svg": {
+    "component_id": "ti:TiEye",
+    "aliases": [
+      "ti",
+      "eye"
+    ],
+    "colors": [],
+    "caption": "an eye icon on a white background"
+  },
+  "ti/TiEyeOutline.svg": {
+    "component_id": "ti:TiEyeOutline",
+    "aliases": [
+      "ti",
+      "eye",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "an eye icon on a white background"
+  },
+  "ti/TiFeather.svg": {
+    "component_id": "ti:TiFeather",
+    "aliases": [
+      "ti",
+      "feather"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a leaf"
+  },
+  "ti/TiFilm.svg": {
+    "component_id": "ti:TiFilm",
+    "aliases": [
+      "ti",
+      "film"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer chip"
+  },
+  "ti/TiFilter.svg": {
+    "component_id": "ti:TiFilter",
+    "aliases": [
+      "ti",
+      "filter"
+    ],
+    "colors": [],
+    "caption": "a funnel icon on a white background"
+  },
+  "ti/TiFlag.svg": {
+    "component_id": "ti:TiFlag",
+    "aliases": [
+      "ti",
+      "flag"
+    ],
+    "colors": [],
+    "caption": "a black flag icon on a white background"
+  },
+  "ti/TiFlagOutline.svg": {
+    "component_id": "ti:TiFlagOutline",
+    "aliases": [
+      "ti",
+      "flag",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a flag"
+  },
+  "ti/TiFlash.svg": {
+    "component_id": "ti:TiFlash",
+    "aliases": [
+      "ti",
+      "flash"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a lightning bolt"
+  },
+  "ti/TiFlashOutline.svg": {
+    "component_id": "ti:TiFlashOutline",
+    "aliases": [
+      "ti",
+      "flash",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a lightning bolt"
+  },
+  "ti/TiFlowChildren.svg": {
+    "component_id": "ti:TiFlowChildren",
+    "aliases": [
+      "ti",
+      "flow",
+      "children"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with two circles"
+  },
+  "ti/TiFlowMerge.svg": {
+    "component_id": "ti:TiFlowMerge",
+    "aliases": [
+      "ti",
+      "flow",
+      "merge"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three circles"
+  },
+  "ti/TiFlowParallel.svg": {
+    "component_id": "ti:TiFlowParallel",
+    "aliases": [
+      "ti",
+      "flow",
+      "parallel"
+    ],
+    "colors": [],
+    "caption": "two black and white icons with two circles"
+  },
+  "ti/TiFlowSwitch.svg": {
+    "component_id": "ti:TiFlowSwitch",
+    "aliases": [
+      "ti",
+      "flow",
+      "switch"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with two circles"
+  },
+  "ti/TiFolder.svg": {
+    "component_id": "ti:TiFolder",
+    "aliases": [
+      "ti",
+      "folder"
+    ],
+    "colors": [],
+    "caption": "a folder icon on a white background"
+  },
+  "ti/TiFolderAdd.svg": {
+    "component_id": "ti:TiFolderAdd",
+    "aliases": [
+      "ti",
+      "folder",
+      "add"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a folder with a plus sign"
+  },
+  "ti/TiFolderDelete.svg": {
+    "component_id": "ti:TiFolderDelete",
+    "aliases": [
+      "ti",
+      "folder",
+      "delete"
+    ],
+    "colors": [],
+    "caption": "folder icon isolated on white background"
+  },
+  "ti/TiFolderOpen.svg": {
+    "component_id": "ti:TiFolderOpen",
+    "aliases": [
+      "ti",
+      "folder",
+      "open"
+    ],
+    "colors": [],
+    "caption": "a folder icon on a white background"
+  },
+  "ti/TiGift.svg": {
+    "component_id": "ti:TiGift",
+    "aliases": [
+      "ti",
+      "gift"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a gift box"
+  },
+  "ti/TiGlobe.svg": {
+    "component_id": "ti:TiGlobe",
+    "aliases": [
+      "ti",
+      "globe"
+    ],
+    "colors": [],
+    "caption": "a globe icon on a white background"
+  },
+  "ti/TiGlobeOutline.svg": {
+    "component_id": "ti:TiGlobeOutline",
+    "aliases": [
+      "ti",
+      "globe",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a camera icon on a white background"
+  },
+  "ti/TiGroup.svg": {
+    "component_id": "ti:TiGroup",
+    "aliases": [
+      "ti",
+      "group"
+    ],
+    "colors": [],
+    "caption": "a group of people in a circle icon on a white background"
+  },
+  "ti/TiGroupOutline.svg": {
+    "component_id": "ti:TiGroupOutline",
+    "aliases": [
+      "ti",
+      "group",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a group of people"
+  },
+  "ti/TiHeadphones.svg": {
+    "component_id": "ti:TiHeadphones",
+    "aliases": [
+      "ti",
+      "headphones"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pair of headphones"
+  },
+  "ti/TiHeart.svg": {
+    "component_id": "ti:TiHeart",
+    "aliases": [
+      "ti",
+      "heart"
+    ],
+    "colors": [],
+    "caption": "a black heart is shown on a white background"
+  },
+  "ti/TiHeartFullOutline.svg": {
+    "component_id": "ti:TiHeartFullOutline",
+    "aliases": [
+      "ti",
+      "heart",
+      "full",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black heart icon on a white background"
+  },
+  "ti/TiHeartHalfOutline.svg": {
+    "component_id": "ti:TiHeartHalfOutline",
+    "aliases": [
+      "ti",
+      "heart",
+      "half",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white heart with a hole in it"
+  },
+  "ti/TiHeartOutline.svg": {
+    "component_id": "ti:TiHeartOutline",
+    "aliases": [
+      "ti",
+      "heart",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white heart icon on a white background"
+  },
+  "ti/TiHome.svg": {
+    "component_id": "ti:TiHome",
+    "aliases": [
+      "ti",
+      "home"
+    ],
+    "colors": [],
+    "caption": "a black house icon on a white background"
+  },
+  "ti/TiHomeOutline.svg": {
+    "component_id": "ti:TiHomeOutline",
+    "aliases": [
+      "ti",
+      "home",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a house icon on a white background"
+  },
+  "ti/TiHtml5.svg": {
+    "component_id": "ti:TiHtml5",
+    "aliases": [
+      "ti",
+      "html",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word html5"
+  },
+  "ti/TiImage.svg": {
+    "component_id": "ti:TiImage",
+    "aliases": [
+      "ti",
+      "image"
+    ],
+    "colors": [],
+    "caption": "a black and white photo icon with a person in it"
+  },
+  "ti/TiImageOutline.svg": {
+    "component_id": "ti:TiImageOutline",
+    "aliases": [
+      "ti",
+      "image",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a person in a photo"
+  },
+  "ti/TiInfinity.svg": {
+    "component_id": "ti:TiInfinity",
+    "aliases": [
+      "ti",
+      "infinity"
+    ],
+    "colors": [],
+    "caption": "a black infinity symbol on a white background"
+  },
+  "ti/TiInfinityOutline.svg": {
+    "component_id": "ti:TiInfinityOutline",
+    "aliases": [
+      "ti",
+      "infinity",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "an infinity symbol is shown on a white background"
+  },
+  "ti/TiInfo.svg": {
+    "component_id": "ti:TiInfo",
+    "aliases": [
+      "ti",
+      "info"
+    ],
+    "colors": [],
+    "caption": "a black triangle with the letter i in it"
+  },
+  "ti/TiInfoLarge.svg": {
+    "component_id": "ti:TiInfoLarge",
+    "aliases": [
+      "ti",
+      "info",
+      "large"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the letter i"
+  },
+  "ti/TiInfoLargeOutline.svg": {
+    "component_id": "ti:TiInfoLargeOutline",
+    "aliases": [
+      "ti",
+      "info",
+      "large",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter i"
+  },
+  "ti/TiInfoOutline.svg": {
+    "component_id": "ti:TiInfoOutline",
+    "aliases": [
+      "ti",
+      "info",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white triangle with the letter i in it"
+  },
+  "ti/TiInputChecked.svg": {
+    "component_id": "ti:TiInputChecked",
+    "aliases": [
+      "ti",
+      "input",
+      "checked"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a white background"
+  },
+  "ti/TiInputCheckedOutline.svg": {
+    "component_id": "ti:TiInputCheckedOutline",
+    "aliases": [
+      "ti",
+      "input",
+      "checked",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a white background"
+  },
+  "ti/TiKey.svg": {
+    "component_id": "ti:TiKey",
+    "aliases": [
+      "ti",
+      "key"
+    ],
+    "colors": [],
+    "caption": "a black and white key icon on a white background"
+  },
+  "ti/TiKeyOutline.svg": {
+    "component_id": "ti:TiKeyOutline",
+    "aliases": [
+      "ti",
+      "key",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a key"
+  },
+  "ti/TiKeyboard.svg": {
+    "component_id": "ti:TiKeyboard",
+    "aliases": [
+      "ti",
+      "keyboard"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer keyboard"
+  },
+  "ti/TiLeaf.svg": {
+    "component_id": "ti:TiLeaf",
+    "aliases": [
+      "ti",
+      "leaf"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a tree"
+  },
+  "ti/TiLightbulb.svg": {
+    "component_id": "ti:TiLightbulb",
+    "aliases": [
+      "ti",
+      "lightbulb"
+    ],
+    "colors": [],
+    "caption": "a light bulb icon on a white background"
+  },
+  "ti/TiLink.svg": {
+    "component_id": "ti:TiLink",
+    "aliases": [
+      "ti",
+      "link"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a link"
+  },
+  "ti/TiLinkOutline.svg": {
+    "component_id": "ti:TiLinkOutline",
+    "aliases": [
+      "ti",
+      "link",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a chain"
+  },
+  "ti/TiLocation.svg": {
+    "component_id": "ti:TiLocation",
+    "aliases": [
+      "ti",
+      "location"
+    ],
+    "colors": [],
+    "caption": "a black and white map pin icon"
+  },
+  "ti/TiLocationArrow.svg": {
+    "component_id": "ti:TiLocationArrow",
+    "aliases": [
+      "ti",
+      "location",
+      "arrow"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "ti/TiLocationArrowOutline.svg": {
+    "component_id": "ti:TiLocationArrowOutline",
+    "aliases": [
+      "ti",
+      "location",
+      "arrow",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "ti/TiLocationOutline.svg": {
+    "component_id": "ti:TiLocationOutline",
+    "aliases": [
+      "ti",
+      "location",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a location pin"
+  },
+  "ti/TiLockClosed.svg": {
+    "component_id": "ti:TiLockClosed",
+    "aliases": [
+      "ti",
+      "lock",
+      "closed"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a padlock"
+  },
+  "ti/TiLockClosedOutline.svg": {
+    "component_id": "ti:TiLockClosedOutline",
+    "aliases": [
+      "ti",
+      "lock",
+      "closed",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a padlock"
+  },
+  "ti/TiLockOpen.svg": {
+    "component_id": "ti:TiLockOpen",
+    "aliases": [
+      "ti",
+      "lock",
+      "open"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a padlock"
+  },
+  "ti/TiLockOpenOutline.svg": {
+    "component_id": "ti:TiLockOpenOutline",
+    "aliases": [
+      "ti",
+      "lock",
+      "open",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a padlock"
+  },
+  "ti/TiMail.svg": {
+    "component_id": "ti:TiMail",
+    "aliases": [
+      "ti",
+      "mail"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "ti/TiMap.svg": {
+    "component_id": "ti:TiMap",
+    "aliases": [
+      "ti",
+      "map"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter m"
+  },
+  "ti/TiMediaEject.svg": {
+    "component_id": "ti:TiMediaEject",
+    "aliases": [
+      "ti",
+      "media",
+      "eject"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "ti/TiMediaEjectOutline.svg": {
+    "component_id": "ti:TiMediaEjectOutline",
+    "aliases": [
+      "ti",
+      "media",
+      "eject",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a triangle"
+  },
+  "ti/TiMediaFastForward.svg": {
+    "component_id": "ti:TiMediaFastForward",
+    "aliases": [
+      "ti",
+      "media",
+      "fast",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "ti/TiMediaFastForwardOutline.svg": {
+    "component_id": "ti:TiMediaFastForwardOutline",
+    "aliases": [
+      "ti",
+      "media",
+      "fast",
+      "forward",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing in different directions"
+  },
+  "ti/TiMediaPause.svg": {
+    "component_id": "ti:TiMediaPause",
+    "aliases": [
+      "ti",
+      "media",
+      "pause"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two black circles"
+  },
+  "ti/TiMediaPauseOutline.svg": {
+    "component_id": "ti:TiMediaPauseOutline",
+    "aliases": [
+      "ti",
+      "media",
+      "pause",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white number zero on a white background"
+  },
+  "ti/TiMediaPlay.svg": {
+    "component_id": "ti:TiMediaPlay",
+    "aliases": [
+      "ti",
+      "media",
+      "play"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a play button"
+  },
+  "ti/TiMediaPlayOutline.svg": {
+    "component_id": "ti:TiMediaPlayOutline",
+    "aliases": [
+      "ti",
+      "media",
+      "play",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a play button"
+  },
+  "ti/TiMediaPlayReverse.svg": {
+    "component_id": "ti:TiMediaPlayReverse",
+    "aliases": [
+      "ti",
+      "media",
+      "play",
+      "reverse"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "ti/TiMediaPlayReverseOutline.svg": {
+    "component_id": "ti:TiMediaPlayReverseOutline",
+    "aliases": [
+      "ti",
+      "media",
+      "play",
+      "reverse",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "ti/TiMediaRecord.svg": {
+    "component_id": "ti:TiMediaRecord",
+    "aliases": [
+      "ti",
+      "media",
+      "record"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "ti/TiMediaRecordOutline.svg": {
+    "component_id": "ti:TiMediaRecordOutline",
+    "aliases": [
+      "ti",
+      "media",
+      "record",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "ti/TiMediaRewind.svg": {
+    "component_id": "ti:TiMediaRewind",
+    "aliases": [
+      "ti",
+      "media",
+      "rewind"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "ti/TiMediaRewindOutline.svg": {
+    "component_id": "ti:TiMediaRewindOutline",
+    "aliases": [
+      "ti",
+      "media",
+      "rewind",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing to each other"
+  },
+  "ti/TiMediaStop.svg": {
+    "component_id": "ti:TiMediaStop",
+    "aliases": [
+      "ti",
+      "media",
+      "stop"
+    ],
+    "colors": [],
+    "caption": "a black square button with a white background"
+  },
+  "ti/TiMediaStopOutline.svg": {
+    "component_id": "ti:TiMediaStopOutline",
+    "aliases": [
+      "ti",
+      "media",
+      "stop",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a square black and white icon on a white background"
+  },
+  "ti/TiMessage.svg": {
+    "component_id": "ti:TiMessage",
+    "aliases": [
+      "ti",
+      "message"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "ti/TiMessageTyping.svg": {
+    "component_id": "ti:TiMessageTyping",
+    "aliases": [
+      "ti",
+      "message",
+      "typing"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble with three circles"
+  },
+  "ti/TiMessages.svg": {
+    "component_id": "ti:TiMessages",
+    "aliases": [
+      "ti",
+      "messages"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles on a white background"
+  },
+  "ti/TiMicrophone.svg": {
+    "component_id": "ti:TiMicrophone",
+    "aliases": [
+      "ti",
+      "microphone"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "ti/TiMicrophoneOutline.svg": {
+    "component_id": "ti:TiMicrophoneOutline",
+    "aliases": [
+      "ti",
+      "microphone",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "ti/TiMinus.svg": {
+    "component_id": "ti:TiMinus",
+    "aliases": [
+      "ti",
+      "minus"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white button"
+  },
+  "ti/TiMinusOutline.svg": {
+    "component_id": "ti:TiMinusOutline",
+    "aliases": [
+      "ti",
+      "minus",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "ti/TiMortarBoard.svg": {
+    "component_id": "ti:TiMortarBoard",
+    "aliases": [
+      "ti",
+      "mortar",
+      "board"
+    ],
+    "colors": [],
+    "caption": "a graduation cap icon on a white background"
+  },
+  "ti/TiNews.svg": {
+    "component_id": "ti:TiNews",
+    "aliases": [
+      "ti",
+      "news"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an open book"
+  },
+  "ti/TiNotes.svg": {
+    "component_id": "ti:TiNotes",
+    "aliases": [
+      "ti",
+      "notes"
+    ],
+    "colors": [],
+    "caption": "a music note icon on a white background"
+  },
+  "ti/TiNotesOutline.svg": {
+    "component_id": "ti:TiNotesOutline",
+    "aliases": [
+      "ti",
+      "notes",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a music note icon on a white background"
+  },
+  "ti/TiPen.svg": {
+    "component_id": "ti:TiPen",
+    "aliases": [
+      "ti",
+      "pen"
+    ],
+    "colors": [],
+    "caption": "a pencil icon on a white background"
+  },
+  "ti/TiPencil.svg": {
+    "component_id": "ti:TiPencil",
+    "aliases": [
+      "ti",
+      "pencil"
+    ],
+    "colors": [],
+    "caption": "a pencil icon on a white background"
+  },
+  "ti/TiPhone.svg": {
+    "component_id": "ti:TiPhone",
+    "aliases": [
+      "ti",
+      "phone"
+    ],
+    "colors": [],
+    "caption": "a black telephone icon on a white background"
+  },
+  "ti/TiPhoneOutline.svg": {
+    "component_id": "ti:TiPhoneOutline",
+    "aliases": [
+      "ti",
+      "phone",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white telephone icon on a white background"
+  },
+  "ti/TiPi.svg": {
+    "component_id": "ti:TiPi",
+    "aliases": [
+      "ti",
+      "pi"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "ti/TiPiOutline.svg": {
+    "component_id": "ti:TiPiOutline",
+    "aliases": [
+      "ti",
+      "pi",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter t"
+  },
+  "ti/TiPin.svg": {
+    "component_id": "ti:TiPin",
+    "aliases": [
+      "ti",
+      "pin"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white arrow"
+  },
+  "ti/TiPinOutline.svg": {
+    "component_id": "ti:TiPinOutline",
+    "aliases": [
+      "ti",
+      "pin",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker"
+  },
+  "ti/TiPipette.svg": {
+    "component_id": "ti:TiPipette",
+    "aliases": [
+      "ti",
+      "pipette"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pacifier"
+  },
+  "ti/TiPlane.svg": {
+    "component_id": "ti:TiPlane",
+    "aliases": [
+      "ti",
+      "plane"
+    ],
+    "colors": [],
+    "caption": "an airplane icon is shown on a white background"
+  },
+  "ti/TiPlaneOutline.svg": {
+    "component_id": "ti:TiPlaneOutline",
+    "aliases": [
+      "ti",
+      "plane",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an airplane"
+  },
+  "ti/TiPlug.svg": {
+    "component_id": "ti:TiPlug",
+    "aliases": [
+      "ti",
+      "plug"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a plug"
+  },
+  "ti/TiPlus.svg": {
+    "component_id": "ti:TiPlus",
+    "aliases": [
+      "ti",
+      "plus"
+    ],
+    "colors": [],
+    "caption": "a black plus symbol on a white background"
+  },
+  "ti/TiPlusOutline.svg": {
+    "component_id": "ti:TiPlusOutline",
+    "aliases": [
+      "ti",
+      "plus",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black plus sign with a white background"
+  },
+  "ti/TiPointOfInterest.svg": {
+    "component_id": "ti:TiPointOfInterest",
+    "aliases": [
+      "ti",
+      "point",
+      "of",
+      "interest"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a symbol"
+  },
+  "ti/TiPointOfInterestOutline.svg": {
+    "component_id": "ti:TiPointOfInterestOutline",
+    "aliases": [
+      "ti",
+      "point",
+      "of",
+      "interest",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with two circles"
+  },
+  "ti/TiPower.svg": {
+    "component_id": "ti:TiPower",
+    "aliases": [
+      "ti",
+      "power"
+    ],
+    "colors": [],
+    "caption": "a black power symbol on a white background"
+  },
+  "ti/TiPowerOutline.svg": {
+    "component_id": "ti:TiPowerOutline",
+    "aliases": [
+      "ti",
+      "power",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a power button"
+  },
+  "ti/TiPrinter.svg": {
+    "component_id": "ti:TiPrinter",
+    "aliases": [
+      "ti",
+      "printer"
+    ],
+    "colors": [],
+    "caption": "a printer icon on a white background"
+  },
+  "ti/TiPuzzle.svg": {
+    "component_id": "ti:TiPuzzle",
+    "aliases": [
+      "ti",
+      "puzzle"
+    ],
+    "colors": [],
+    "caption": "a black puzzle piece icon on a white background"
+  },
+  "ti/TiPuzzleOutline.svg": {
+    "component_id": "ti:TiPuzzleOutline",
+    "aliases": [
+      "ti",
+      "puzzle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a puzzle piece"
+  },
+  "ti/TiRadar.svg": {
+    "component_id": "ti:TiRadar",
+    "aliases": [
+      "ti",
+      "radar"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cross in a circle"
+  },
+  "ti/TiRadarOutline.svg": {
+    "component_id": "ti:TiRadarOutline",
+    "aliases": [
+      "ti",
+      "radar",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular symbol"
+  },
+  "ti/TiRefresh.svg": {
+    "component_id": "ti:TiRefresh",
+    "aliases": [
+      "ti",
+      "refresh"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "ti/TiRefreshOutline.svg": {
+    "component_id": "ti:TiRefreshOutline",
+    "aliases": [
+      "ti",
+      "refresh",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white circular logo with the letter c"
+  },
+  "ti/TiRss.svg": {
+    "component_id": "ti:TiRss",
+    "aliases": [
+      "ti",
+      "rss"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a rss icon"
+  },
+  "ti/TiRssOutline.svg": {
+    "component_id": "ti:TiRssOutline",
+    "aliases": [
+      "ti",
+      "rss",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a rss icon"
+  },
+  "ti/TiScissors.svg": {
+    "component_id": "ti:TiScissors",
+    "aliases": [
+      "ti",
+      "scissors"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of two scissors"
+  },
+  "ti/TiScissorsOutline.svg": {
+    "component_id": "ti:TiScissorsOutline",
+    "aliases": [
+      "ti",
+      "scissors",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of scissors"
+  },
+  "ti/TiShoppingBag.svg": {
+    "component_id": "ti:TiShoppingBag",
+    "aliases": [
+      "ti",
+      "shopping",
+      "bag"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an envelope"
+  },
+  "ti/TiShoppingCart.svg": {
+    "component_id": "ti:TiShoppingCart",
+    "aliases": [
+      "ti",
+      "shopping",
+      "cart"
+    ],
+    "colors": [],
+    "caption": "a shopping cart icon on a white background"
+  },
+  "ti/TiSocialAtCircular.svg": {
+    "component_id": "ti:TiSocialAtCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "at",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "an email symbol in a circle on a white background"
+  },
+  "ti/TiSocialDribbble.svg": {
+    "component_id": "ti:TiSocialDribbble",
+    "aliases": [
+      "ti",
+      "social",
+      "dribbble"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a basketball ball"
+  },
+  "ti/TiSocialDribbbleCircular.svg": {
+    "component_id": "ti:TiSocialDribbbleCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "dribbble",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a basketball ball in a circle"
+  },
+  "ti/TiSocialFacebook.svg": {
+    "component_id": "ti:TiSocialFacebook",
+    "aliases": [
+      "ti",
+      "social",
+      "facebook"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a facebook logo"
+  },
+  "ti/TiSocialFacebookCircular.svg": {
+    "component_id": "ti:TiSocialFacebookCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "facebook",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a facebook logo"
+  },
+  "ti/TiSocialFlickr.svg": {
+    "component_id": "ti:TiSocialFlickr",
+    "aliases": [
+      "ti",
+      "social",
+      "flickr"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two circles"
+  },
+  "ti/TiSocialFlickrCircular.svg": {
+    "component_id": "ti:TiSocialFlickrCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "flickr",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with two circles in it"
+  },
+  "ti/TiSocialGithub.svg": {
+    "component_id": "ti:TiSocialGithub",
+    "aliases": [
+      "ti",
+      "social",
+      "github"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cat's face"
+  },
+  "ti/TiSocialGithubCircular.svg": {
+    "component_id": "ti:TiSocialGithubCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "github",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with a cat in the center"
+  },
+  "ti/TiSocialGooglePlus.svg": {
+    "component_id": "ti:TiSocialGooglePlus",
+    "aliases": [
+      "ti",
+      "social",
+      "google",
+      "plus"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the google plus logo"
+  },
+  "ti/TiSocialGooglePlusCircular.svg": {
+    "component_id": "ti:TiSocialGooglePlusCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "google",
+      "plus",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a google plus logo"
+  },
+  "ti/TiSocialInstagram.svg": {
+    "component_id": "ti:TiSocialInstagram",
+    "aliases": [
+      "ti",
+      "social",
+      "instagram"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an instagram icon"
+  },
+  "ti/TiSocialInstagramCircular.svg": {
+    "component_id": "ti:TiSocialInstagramCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "instagram",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a poke ball"
+  },
+  "ti/TiSocialLastFm.svg": {
+    "component_id": "ti:TiSocialLastFm",
+    "aliases": [
+      "ti",
+      "social",
+      "last",
+      "fm"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word cs"
+  },
+  "ti/TiSocialLastFmCircular.svg": {
+    "component_id": "ti:TiSocialLastFmCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "last",
+      "fm",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter a in it"
+  },
+  "ti/TiSocialLinkedin.svg": {
+    "component_id": "ti:TiSocialLinkedin",
+    "aliases": [
+      "ti",
+      "social",
+      "linkedin"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the linked logo"
+  },
+  "ti/TiSocialLinkedinCircular.svg": {
+    "component_id": "ti:TiSocialLinkedinCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "linkedin",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the linked logo"
+  },
+  "ti/TiSocialPinterest.svg": {
+    "component_id": "ti:TiSocialPinterest",
+    "aliases": [
+      "ti",
+      "social",
+      "pinterest"
+    ],
+    "colors": [],
+    "caption": "the pinterest logo is shown in black and white"
+  },
+  "ti/TiSocialPinterestCircular.svg": {
+    "component_id": "ti:TiSocialPinterestCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "pinterest",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a pin in a circle"
+  },
+  "ti/TiSocialSkype.svg": {
+    "component_id": "ti:TiSocialSkype",
+    "aliases": [
+      "ti",
+      "social",
+      "skype"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter s in it"
+  },
+  "ti/TiSocialSkypeOutline.svg": {
+    "component_id": "ti:TiSocialSkypeOutline",
+    "aliases": [
+      "ti",
+      "social",
+      "skype",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter s"
+  },
+  "ti/TiSocialTumbler.svg": {
+    "component_id": "ti:TiSocialTumbler",
+    "aliases": [
+      "ti",
+      "social",
+      "tumbler"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "ti/TiSocialTumblerCircular.svg": {
+    "component_id": "ti:TiSocialTumblerCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "tumbler",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter t in it"
+  },
+  "ti/TiSocialTwitter.svg": {
+    "component_id": "ti:TiSocialTwitter",
+    "aliases": [
+      "ti",
+      "social",
+      "twitter"
+    ],
+    "colors": [],
+    "caption": "a black twitter logo on a white background"
+  },
+  "ti/TiSocialTwitterCircular.svg": {
+    "component_id": "ti:TiSocialTwitterCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "twitter",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white twitter logo in a circle"
+  },
+  "ti/TiSocialVimeo.svg": {
+    "component_id": "ti:TiSocialVimeo",
+    "aliases": [
+      "ti",
+      "social",
+      "vimeo"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter v"
+  },
+  "ti/TiSocialVimeoCircular.svg": {
+    "component_id": "ti:TiSocialVimeoCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "vimeo",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter v in it"
+  },
+  "ti/TiSocialYoutube.svg": {
+    "component_id": "ti:TiSocialYoutube",
+    "aliases": [
+      "ti",
+      "social",
+      "youtube"
+    ],
+    "colors": [],
+    "caption": "a black and white youtube icon with a white play button"
+  },
+  "ti/TiSocialYoutubeCircular.svg": {
+    "component_id": "ti:TiSocialYoutubeCircular",
+    "aliases": [
+      "ti",
+      "social",
+      "youtube",
+      "circular"
+    ],
+    "colors": [],
+    "caption": "the youtube logo is shown in black and white"
+  },
+  "ti/TiSortAlphabetically.svg": {
+    "component_id": "ti:TiSortAlphabetically",
+    "aliases": [
+      "ti",
+      "sort",
+      "alphabetically"
+    ],
+    "colors": [],
+    "caption": "the a - z logo is shown on a white background"
+  },
+  "ti/TiSortAlphabeticallyOutline.svg": {
+    "component_id": "ti:TiSortAlphabeticallyOutline",
+    "aliases": [
+      "ti",
+      "sort",
+      "alphabetically",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "the a - z logo is shown in black and white"
+  },
+  "ti/TiSortNumerically.svg": {
+    "component_id": "ti:TiSortNumerically",
+    "aliases": [
+      "ti",
+      "sort",
+      "numerically"
+    ],
+    "colors": [],
+    "caption": "the number 123 is shown in black on a white background"
+  },
+  "ti/TiSortNumericallyOutline.svg": {
+    "component_id": "ti:TiSortNumericallyOutline",
+    "aliases": [
+      "ti",
+      "sort",
+      "numerically",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number 123"
+  },
+  "ti/TiSpanner.svg": {
+    "component_id": "ti:TiSpanner",
+    "aliases": [
+      "ti",
+      "spanner"
+    ],
+    "colors": [],
+    "caption": "a wrench icon on a white background"
+  },
+  "ti/TiSpannerOutline.svg": {
+    "component_id": "ti:TiSpannerOutline",
+    "aliases": [
+      "ti",
+      "spanner",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a wrench"
+  },
+  "ti/TiSpiral.svg": {
+    "component_id": "ti:TiSpiral",
+    "aliases": [
+      "ti",
+      "spiral"
+    ],
+    "colors": [],
+    "caption": "a black and white spiral symbol on a white background"
+  },
+  "ti/TiStar.svg": {
+    "component_id": "ti:TiStar",
+    "aliases": [
+      "ti",
+      "star"
+    ],
+    "colors": [],
+    "caption": "a black star icon on a white background"
+  },
+  "ti/TiStarFullOutline.svg": {
+    "component_id": "ti:TiStarFullOutline",
+    "aliases": [
+      "ti",
+      "star",
+      "full",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black star icon on a white background"
+  },
+  "ti/TiStarHalf.svg": {
+    "component_id": "ti:TiStarHalf",
+    "aliases": [
+      "ti",
+      "star",
+      "half"
+    ],
+    "colors": [],
+    "caption": "a black star icon on a white background"
+  },
+  "ti/TiStarHalfOutline.svg": {
+    "component_id": "ti:TiStarHalfOutline",
+    "aliases": [
+      "ti",
+      "star",
+      "half",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a star icon on a white background"
+  },
+  "ti/TiStarOutline.svg": {
+    "component_id": "ti:TiStarOutline",
+    "aliases": [
+      "ti",
+      "star",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black star icon on a white background"
+  },
+  "ti/TiStarburst.svg": {
+    "component_id": "ti:TiStarburst",
+    "aliases": [
+      "ti",
+      "starburst"
+    ],
+    "colors": [],
+    "caption": "a black star on a white background"
+  },
+  "ti/TiStarburstOutline.svg": {
+    "component_id": "ti:TiStarburstOutline",
+    "aliases": [
+      "ti",
+      "starburst",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black starburst icon on a white background"
+  },
+  "ti/TiStopwatch.svg": {
+    "component_id": "ti:TiStopwatch",
+    "aliases": [
+      "ti",
+      "stopwatch"
+    ],
+    "colors": [],
+    "caption": "a stopwatch icon on a white background"
+  },
+  "ti/TiSupport.svg": {
+    "component_id": "ti:TiSupport",
+    "aliases": [
+      "ti",
+      "support"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular wheel"
+  },
+  "ti/TiTabsOutline.svg": {
+    "component_id": "ti:TiTabsOutline",
+    "aliases": [
+      "ti",
+      "tabs",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black square icon with a white background"
+  },
+  "ti/TiTag.svg": {
+    "component_id": "ti:TiTag",
+    "aliases": [
+      "ti",
+      "tag"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a tag on a white background"
+  },
+  "ti/TiTags.svg": {
+    "component_id": "ti:TiTags",
+    "aliases": [
+      "ti",
+      "tags"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a padlock"
+  },
+  "ti/TiThLarge.svg": {
+    "component_id": "ti:TiThLarge",
+    "aliases": [
+      "ti",
+      "th",
+      "large"
+    ],
+    "colors": [],
+    "caption": "four black squares on a white background"
+  },
+  "ti/TiThLargeOutline.svg": {
+    "component_id": "ti:TiThLargeOutline",
+    "aliases": [
+      "ti",
+      "th",
+      "large",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "four square black rectangles on a white background"
+  },
+  "ti/TiThList.svg": {
+    "component_id": "ti:TiThList",
+    "aliases": [
+      "ti",
+      "th",
+      "list"
+    ],
+    "colors": [],
+    "caption": "four black circles on a white background"
+  },
+  "ti/TiThListOutline.svg": {
+    "component_id": "ti:TiThListOutline",
+    "aliases": [
+      "ti",
+      "th",
+      "list",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three numbers"
+  },
+  "ti/TiThMenu.svg": {
+    "component_id": "ti:TiThMenu",
+    "aliases": [
+      "ti",
+      "th",
+      "menu"
+    ],
+    "colors": [],
+    "caption": "three black lines on a white background"
+  },
+  "ti/TiThMenuOutline.svg": {
+    "component_id": "ti:TiThMenuOutline",
+    "aliases": [
+      "ti",
+      "th",
+      "menu",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three lines"
+  },
+  "ti/TiThSmall.svg": {
+    "component_id": "ti:TiThSmall",
+    "aliases": [
+      "ti",
+      "th",
+      "small"
+    ],
+    "colors": [],
+    "caption": "black dots on a white background with one in the middle"
+  },
+  "ti/TiThSmallOutline.svg": {
+    "component_id": "ti:TiThSmallOutline",
+    "aliases": [
+      "ti",
+      "th",
+      "small",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square pattern"
+  },
+  "ti/TiThermometer.svg": {
+    "component_id": "ti:TiThermometer",
+    "aliases": [
+      "ti",
+      "thermometer"
+    ],
+    "colors": [],
+    "caption": "thermometer thermometer icon thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer"
+  },
+  "ti/TiThumbsDown.svg": {
+    "component_id": "ti:TiThumbsDown",
+    "aliases": [
+      "ti",
+      "thumbs",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a thumbs up"
+  },
+  "ti/TiThumbsOk.svg": {
+    "component_id": "ti:TiThumbsOk",
+    "aliases": [
+      "ti",
+      "thumbs",
+      "ok"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a hand pointing up"
+  },
+  "ti/TiThumbsUp.svg": {
+    "component_id": "ti:TiThumbsUp",
+    "aliases": [
+      "ti",
+      "thumbs",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a thumb up"
+  },
+  "ti/TiTick.svg": {
+    "component_id": "ti:TiTick",
+    "aliases": [
+      "ti",
+      "tick"
+    ],
+    "colors": [],
+    "caption": "a black check mark icon on a white background"
+  },
+  "ti/TiTickOutline.svg": {
+    "component_id": "ti:TiTickOutline",
+    "aliases": [
+      "ti",
+      "tick",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "ti/TiTicket.svg": {
+    "component_id": "ti:TiTicket",
+    "aliases": [
+      "ti",
+      "ticket"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a rectangle"
+  },
+  "ti/TiTime.svg": {
+    "component_id": "ti:TiTime",
+    "aliases": [
+      "ti",
+      "time"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "ti/TiTimes.svg": {
+    "component_id": "ti:TiTimes",
+    "aliases": [
+      "ti",
+      "times"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an x"
+  },
+  "ti/TiTimesOutline.svg": {
+    "component_id": "ti:TiTimesOutline",
+    "aliases": [
+      "ti",
+      "times",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x symbol"
+  },
+  "ti/TiTrash.svg": {
+    "component_id": "ti:TiTrash",
+    "aliases": [
+      "ti",
+      "trash"
+    ],
+    "colors": [],
+    "caption": "a trash can icon on a white background"
+  },
+  "ti/TiTree.svg": {
+    "component_id": "ti:TiTree",
+    "aliases": [
+      "ti",
+      "tree"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a tree"
+  },
+  "ti/TiUpload.svg": {
+    "component_id": "ti:TiUpload",
+    "aliases": [
+      "ti",
+      "upload"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box with an arrow pointing up"
+  },
+  "ti/TiUploadOutline.svg": {
+    "component_id": "ti:TiUploadOutline",
+    "aliases": [
+      "ti",
+      "upload",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box with an arrow pointing up"
+  },
+  "ti/TiUser.svg": {
+    "component_id": "ti:TiUser",
+    "aliases": [
+      "ti",
+      "user"
+    ],
+    "colors": [],
+    "caption": "an icon of a person in black and white"
+  },
+  "ti/TiUserAdd.svg": {
+    "component_id": "ti:TiUserAdd",
+    "aliases": [
+      "ti",
+      "user",
+      "add"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with a plus sign"
+  },
+  "ti/TiUserAddOutline.svg": {
+    "component_id": "ti:TiUserAddOutline",
+    "aliases": [
+      "ti",
+      "user",
+      "add",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a plus sign"
+  },
+  "ti/TiUserDelete.svg": {
+    "component_id": "ti:TiUserDelete",
+    "aliases": [
+      "ti",
+      "user",
+      "delete"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with a microphone"
+  },
+  "ti/TiUserDeleteOutline.svg": {
+    "component_id": "ti:TiUserDeleteOutline",
+    "aliases": [
+      "ti",
+      "user",
+      "delete",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a person looking at something"
+  },
+  "ti/TiUserOutline.svg": {
+    "component_id": "ti:TiUserOutline",
+    "aliases": [
+      "ti",
+      "user",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a person sitting in a chair"
+  },
+  "ti/TiVendorAndroid.svg": {
+    "component_id": "ti:TiVendorAndroid",
+    "aliases": [
+      "ti",
+      "vendor",
+      "android"
+    ],
+    "colors": [],
+    "caption": "a black android icon on a white background"
+  },
+  "ti/TiVendorApple.svg": {
+    "component_id": "ti:TiVendorApple",
+    "aliases": [
+      "ti",
+      "vendor",
+      "apple"
+    ],
+    "colors": [],
+    "caption": "an apple logo is shown on a white background"
+  },
+  "ti/TiVendorMicrosoft.svg": {
+    "component_id": "ti:TiVendorMicrosoft",
+    "aliases": [
+      "ti",
+      "vendor",
+      "microsoft"
+    ],
+    "colors": [],
+    "caption": "the windows logo is shown on a white background"
+  },
+  "ti/TiVideo.svg": {
+    "component_id": "ti:TiVideo",
+    "aliases": [
+      "ti",
+      "video"
+    ],
+    "colors": [],
+    "caption": "a video camera icon on a white background"
+  },
+  "ti/TiVideoOutline.svg": {
+    "component_id": "ti:TiVideoOutline",
+    "aliases": [
+      "ti",
+      "video",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a camera icon on a white background"
+  },
+  "ti/TiVolume.svg": {
+    "component_id": "ti:TiVolume",
+    "aliases": [
+      "ti",
+      "volume"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a megaphone"
+  },
+  "ti/TiVolumeDown.svg": {
+    "component_id": "ti:TiVolumeDown",
+    "aliases": [
+      "ti",
+      "volume",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker"
+  },
+  "ti/TiVolumeMute.svg": {
+    "component_id": "ti:TiVolumeMute",
+    "aliases": [
+      "ti",
+      "volume",
+      "mute"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a noisemaker"
+  },
+  "ti/TiVolumeUp.svg": {
+    "component_id": "ti:TiVolumeUp",
+    "aliases": [
+      "ti",
+      "volume",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "ti/TiWarning.svg": {
+    "component_id": "ti:TiWarning",
+    "aliases": [
+      "ti",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black triangle with an exclamation mark on it"
+  },
+  "ti/TiWarningOutline.svg": {
+    "component_id": "ti:TiWarningOutline",
+    "aliases": [
+      "ti",
+      "warning",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a warning sign"
+  },
+  "ti/TiWatch.svg": {
+    "component_id": "ti:TiWatch",
+    "aliases": [
+      "ti",
+      "watch"
+    ],
+    "colors": [],
+    "caption": "an icon of a watch on a white background"
+  },
+  "ti/TiWaves.svg": {
+    "component_id": "ti:TiWaves",
+    "aliases": [
+      "ti",
+      "waves"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a wave"
+  },
+  "ti/TiWavesOutline.svg": {
+    "component_id": "ti:TiWavesOutline",
+    "aliases": [
+      "ti",
+      "waves",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with waves on it"
+  },
+  "ti/TiWeatherCloudy.svg": {
+    "component_id": "ti:TiWeatherCloudy",
+    "aliases": [
+      "ti",
+      "weather",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "ti/TiWeatherDownpour.svg": {
+    "component_id": "ti:TiWeatherDownpour",
+    "aliases": [
+      "ti",
+      "weather",
+      "downpour"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud"
+  },
+  "ti/TiWeatherNight.svg": {
+    "component_id": "ti:TiWeatherNight",
+    "aliases": [
+      "ti",
+      "weather",
+      "night"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter d"
+  },
+  "ti/TiWeatherPartlySunny.svg": {
+    "component_id": "ti:TiWeatherPartlySunny",
+    "aliases": [
+      "ti",
+      "weather",
+      "partly",
+      "sunny"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun and cloud"
+  },
+  "ti/TiWeatherShower.svg": {
+    "component_id": "ti:TiWeatherShower",
+    "aliases": [
+      "ti",
+      "weather",
+      "shower"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with rain drops"
+  },
+  "ti/TiWeatherSnow.svg": {
+    "component_id": "ti:TiWeatherSnow",
+    "aliases": [
+      "ti",
+      "weather",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a snowflake icon on a white background"
+  },
+  "ti/TiWeatherStormy.svg": {
+    "component_id": "ti:TiWeatherStormy",
+    "aliases": [
+      "ti",
+      "weather",
+      "stormy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with a lightning bolt"
+  },
+  "ti/TiWeatherSunny.svg": {
+    "component_id": "ti:TiWeatherSunny",
+    "aliases": [
+      "ti",
+      "weather",
+      "sunny"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun"
+  },
+  "ti/TiWeatherWindy.svg": {
+    "component_id": "ti:TiWeatherWindy",
+    "aliases": [
+      "ti",
+      "weather",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a curved line"
+  },
+  "ti/TiWeatherWindyCloudy.svg": {
+    "component_id": "ti:TiWeatherWindyCloudy",
+    "aliases": [
+      "ti",
+      "weather",
+      "windy",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with smoke coming out of it"
+  },
+  "ti/TiWiFi.svg": {
+    "component_id": "ti:TiWiFi",
+    "aliases": [
+      "ti",
+      "wi",
+      "fi"
+    ],
+    "colors": [],
+    "caption": "a black wifi symbol on a white background"
+  },
+  "ti/TiWiFiOutline.svg": {
+    "component_id": "ti:TiWiFiOutline",
+    "aliases": [
+      "ti",
+      "wi",
+      "fi",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a wifi symbol"
+  },
+  "ti/TiWine.svg": {
+    "component_id": "ti:TiWine",
+    "aliases": [
+      "ti",
+      "wine"
+    ],
+    "colors": [],
+    "caption": "a wine glass icon on a white background"
+  },
+  "ti/TiWorld.svg": {
+    "component_id": "ti:TiWorld",
+    "aliases": [
+      "ti",
+      "world"
+    ],
+    "colors": [],
+    "caption": "a black and white circular logo with a silhouette of a person"
+  },
+  "ti/TiWorldOutline.svg": {
+    "component_id": "ti:TiWorldOutline",
+    "aliases": [
+      "ti",
+      "world",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no smoking sign"
+  },
+  "ti/TiZoom.svg": {
+    "component_id": "ti:TiZoom",
+    "aliases": [
+      "ti",
+      "zoom"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "ti/TiZoomIn.svg": {
+    "component_id": "ti:TiZoomIn",
+    "aliases": [
+      "ti",
+      "zoom",
+      "in"
+    ],
+    "colors": [],
+    "caption": "a magnifying icon with a plus sign"
+  },
+  "ti/TiZoomInOutline.svg": {
+    "component_id": "ti:TiZoomInOutline",
+    "aliases": [
+      "ti",
+      "zoom",
+      "in",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a magnifying icon with a plus sign"
+  },
+  "ti/TiZoomOut.svg": {
+    "component_id": "ti:TiZoomOut",
+    "aliases": [
+      "ti",
+      "zoom",
+      "out"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "ti/TiZoomOutOutline.svg": {
+    "component_id": "ti:TiZoomOutOutline",
+    "aliases": [
+      "ti",
+      "zoom",
+      "out",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a magnifying icon on a white background"
+  },
+  "ti/TiZoomOutline.svg": {
+    "component_id": "ti:TiZoomOutline",
+    "aliases": [
+      "ti",
+      "zoom",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  }
+}

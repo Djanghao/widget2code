@@ -1,0 +1,121 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" },
+                  "content": "Living Room"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 14, "color": "#8E8E93" },
+                  "content": "3 devices active"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": { "name": "sf:sofa.fill", "size": 24, "color": "#FFFFFF", "style": { "backgroundColor": "#2C2C2E", "padding": 8, "borderRadius": 12 } }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "padding": 16,
+              "backgroundColor": "#2C2C2E",
+              "props": { "style": { "borderRadius": 16 } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 12,
+                  "children": [
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:lightbulb.fill", "size": 20, "color": "#FFD60A" } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#FFFFFF" }, "content": "Main Lights" }
+                  ]
+                },
+                { "type": "leaf", "component": "Switch", "props": { "on": true, "onColor": "#FFD60A" } }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "padding": 16,
+              "backgroundColor": "#2C2C2E",
+              "props": { "style": { "borderRadius": 16 } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 12,
+                  "children": [
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:fanblades.fill", "size": 20, "color": "#30D158" } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#FFFFFF" }, "content": "AC Unit" }
+                  ]
+                },
+                { "type": "leaf", "component": "Switch", "props": { "on": true, "onColor": "#30D158" } }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "padding": 16,
+              "backgroundColor": "#2C2C2E",
+              "props": { "style": { "borderRadius": 16 } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 12,
+                  "children": [
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:tv.fill", "size": 20, "color": "#8E8E93" } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#FFFFFF" }, "content": "Huawei Vision" }
+                  ]
+                },
+                { "type": "leaf", "component": "Switch", "props": { "on": false } }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

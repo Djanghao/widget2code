@@ -1,0 +1,58 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 32,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 32,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 32, "fontWeight": 800, "color": "#000000" }, "content": "Login" },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#888888", "fontWeight": 600 }, "content": "WELCOME BACK" }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "direction": "col",
+          "gap": 16,
+          "alignMain": "end",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "content": "Sign In",
+                "backgroundColor": "#000000",
+                "color": "#FFFFFF",
+                "width": "100%",
+                "height": 56,
+                "style": { "borderRadius": 0, "fontSize": "16px", "fontWeight": "600" }
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "content": "Create Account",
+                "backgroundColor": "#F0F0F0",
+                "color": "#000000",
+                "width": "100%",
+                "height": 56,
+                "style": { "borderRadius": 0, "fontSize": "16px", "fontWeight": "600" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "widget": {
+    "backgroundColor": "#FFEAA7",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "stretch",
+      "props": {
+        "style": {
+          "background": "linear-gradient(135deg, #FFEAA7 0%, #FF6B6B 50%, #6C5CE7 100%)"
+        }
+      },
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "Create New",
+            "icon": "sf:plus.circle.fill",
+            "backgroundColor": "#FFFFFF",
+            "color": "#FF6B6B",
+            "borderRadius": 14,
+            "paddingY": 16,
+            "paddingX": 28,
+            "fontSize": 17,
+            "fontWeight": 700,
+            "width": "100%"
+          }
+        },
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "Explore",
+            "icon": "sf:safari.fill",
+            "backgroundColor": "rgba(255, 255, 255, 0.3)",
+            "color": "#FFFFFF",
+            "borderRadius": 14,
+            "paddingY": 16,
+            "paddingX": 28,
+            "fontSize": 17,
+            "fontWeight": 700,
+            "width": "100%"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:camera.fill",
+                "backgroundColor": "#FFFFFF",
+                "color": "#6C5CE7",
+                "borderRadius": 14,
+                "width": 52,
+                "height": 52,
+                "padding": 0
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:photo.fill",
+                "backgroundColor": "#FFFFFF",
+                "color": "#FF6B6B",
+                "borderRadius": 14,
+                "width": 52,
+                "height": 52,
+                "padding": 0
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:video.fill",
+                "backgroundColor": "#FFFFFF",
+                "color": "#00B894",
+                "borderRadius": 14,
+                "width": 52,
+                "height": 52,
+                "padding": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

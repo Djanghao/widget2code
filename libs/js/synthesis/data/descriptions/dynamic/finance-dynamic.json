@@ -1,0 +1,271 @@
+{
+  "domain": "finance",
+  "total": 44,
+  "generated": "2025-11-05T16:03:06.289Z",
+  "variations": [
+    {
+      "id": "finance-dynamic-001",
+      "prompt": "A minimal widget showing net worth with trend sparkline and P/E ratio",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-002",
+      "prompt": "A compact widget showing stock price",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-003",
+      "prompt": "A compact widget showing Bitcoin price and YTD performance",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-004",
+      "prompt": "A watchlist widget showing budget with bar graph",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-005",
+      "prompt": "A portfolio widget showing account balance",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-006",
+      "prompt": "A minimal widget showing Ethereum price and dividend yield",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-007",
+      "prompt": "A minimal widget showing net worth with percent change",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-008",
+      "prompt": "A compact widget showing stock price",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-009",
+      "prompt": "A watchlist widget showing savings with bar graph and dividend yield",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-010",
+      "prompt": "A detailed widget showing dividend income with percent change and YTD performance",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-011",
+      "prompt": "A watchlist widget showing spending and P/E ratio",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-012",
+      "prompt": "A portfolio widget showing stock price",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-013",
+      "prompt": "A portfolio widget showing spending",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-014",
+      "prompt": "A watchlist widget showing portfolio value",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-015",
+      "prompt": "A minimal widget showing portfolio value with bar graph and dividend yield",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-016",
+      "prompt": "A compact widget showing transaction history with pie chart breakdown and dividend yield",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-017",
+      "prompt": "A portfolio widget showing stock price",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-018",
+      "prompt": "A compact widget showing stock price",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-019",
+      "prompt": "A minimal widget showing investment returns with volume bars",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-020",
+      "prompt": "A minimal widget showing Ethereum price",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-021",
+      "prompt": "A detailed widget showing Ethereum price and market cap",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-022",
+      "prompt": "A minimal widget showing dividend income and YTD performance",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-023",
+      "prompt": "A watchlist widget showing savings",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-024",
+      "prompt": "A compact widget showing savings and vs target",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-025",
+      "prompt": "A compact widget showing account balance with trend sparkline and 24h change",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-026",
+      "prompt": "A detailed widget showing transaction history with bar graph and vs target",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-027",
+      "prompt": "A portfolio widget showing stock price with trend sparkline",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-028",
+      "prompt": "A detailed widget showing budget and P/E ratio",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-029",
+      "prompt": "A watchlist widget showing Ethereum price",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-030",
+      "prompt": "A minimal widget showing Bitcoin price with daily performance",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-031",
+      "prompt": "A detailed widget showing transaction history and dividend yield",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-032",
+      "prompt": "A watchlist widget showing investment returns with bar graph and P/E ratio",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-033",
+      "prompt": "A compact widget showing investment returns with percent change and dividend yield",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-034",
+      "prompt": "A compact widget showing dividend income with volume bars",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-035",
+      "prompt": "A minimal widget showing Ethereum price",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-036",
+      "prompt": "A minimal widget showing portfolio value",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-037",
+      "prompt": "A compact widget showing stock price and volume with price chart",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-038",
+      "prompt": "A detailed widget showing Bitcoin price and Ethereum price",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-039",
+      "prompt": "A portfolio widget showing portfolio value and daily change with volume bars",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-040",
+      "prompt": "A minimal widget showing spending and budget with volume bars",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-041",
+      "prompt": "A detailed widget showing account balance and recent transactions",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-042",
+      "prompt": "A stock widget showing AAPL with bar graph",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-043",
+      "prompt": "A stock widget showing GOOGL with candlestick chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "finance-dynamic-044",
+      "prompt": "A stock widget showing MSFT with price chart",
+      "complexity": "medium",
+      "generated": true
+    }
+  ]
+}

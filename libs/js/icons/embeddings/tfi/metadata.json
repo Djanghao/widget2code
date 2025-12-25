@@ -1,0 +1,3451 @@
+{
+  "tfi/TfiAgenda.svg": {
+    "component_id": "tfi:TfiAgenda",
+    "aliases": [
+      "tfi",
+      "agenda"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "tfi/TfiAlarmClock.svg": {
+    "component_id": "tfi:TfiAlarmClock",
+    "aliases": [
+      "tfi",
+      "alarm",
+      "clock"
+    ],
+    "colors": [],
+    "caption": "an alarm clock icon on a white background"
+  },
+  "tfi/TfiAlert.svg": {
+    "component_id": "tfi:TfiAlert",
+    "aliases": [
+      "tfi",
+      "alert"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a warning sign"
+  },
+  "tfi/TfiAlignCenter.svg": {
+    "component_id": "tfi:TfiAlignCenter",
+    "aliases": [
+      "tfi",
+      "align",
+      "center"
+    ],
+    "colors": [],
+    "caption": "a black and white image of four lines"
+  },
+  "tfi/TfiAlignJustify.svg": {
+    "component_id": "tfi:TfiAlignJustify",
+    "aliases": [
+      "tfi",
+      "align",
+      "justify"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "tfi/TfiAlignLeft.svg": {
+    "component_id": "tfi:TfiAlignLeft",
+    "aliases": [
+      "tfi",
+      "align",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three lines"
+  },
+  "tfi/TfiAlignRight.svg": {
+    "component_id": "tfi:TfiAlignRight",
+    "aliases": [
+      "tfi",
+      "align",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three lines"
+  },
+  "tfi/TfiAnchor.svg": {
+    "component_id": "tfi:TfiAnchor",
+    "aliases": [
+      "tfi",
+      "anchor"
+    ],
+    "colors": [],
+    "caption": "an anchor icon on a white background"
+  },
+  "tfi/TfiAndroid.svg": {
+    "component_id": "tfi:TfiAndroid",
+    "aliases": [
+      "tfi",
+      "android"
+    ],
+    "colors": [],
+    "caption": "a black android icon on a white background"
+  },
+  "tfi/TfiAngleDoubleDown.svg": {
+    "component_id": "tfi:TfiAngleDoubleDown",
+    "aliases": [
+      "tfi",
+      "angle",
+      "double",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a check mark"
+  },
+  "tfi/TfiAngleDoubleLeft.svg": {
+    "component_id": "tfi:TfiAngleDoubleLeft",
+    "aliases": [
+      "tfi",
+      "angle",
+      "double",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow symbol with two lines"
+  },
+  "tfi/TfiAngleDoubleRight.svg": {
+    "component_id": "tfi:TfiAngleDoubleRight",
+    "aliases": [
+      "tfi",
+      "angle",
+      "double",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "tfi/TfiAngleDoubleUp.svg": {
+    "component_id": "tfi:TfiAngleDoubleUp",
+    "aliases": [
+      "tfi",
+      "angle",
+      "double",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "tfi/TfiAngleDown.svg": {
+    "component_id": "tfi:TfiAngleDown",
+    "aliases": [
+      "tfi",
+      "angle",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter v"
+  },
+  "tfi/TfiAngleLeft.svg": {
+    "component_id": "tfi:TfiAngleLeft",
+    "aliases": [
+      "tfi",
+      "angle",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter k"
+  },
+  "tfi/TfiAngleRight.svg": {
+    "component_id": "tfi:TfiAngleRight",
+    "aliases": [
+      "tfi",
+      "angle",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "tfi/TfiAngleUp.svg": {
+    "component_id": "tfi:TfiAngleUp",
+    "aliases": [
+      "tfi",
+      "angle",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a triangle"
+  },
+  "tfi/TfiAnnouncement.svg": {
+    "component_id": "tfi:TfiAnnouncement",
+    "aliases": [
+      "tfi",
+      "announcement"
+    ],
+    "colors": [],
+    "caption": "a megaphone icon on a white background"
+  },
+  "tfi/TfiApple.svg": {
+    "component_id": "tfi:TfiApple",
+    "aliases": [
+      "tfi",
+      "apple"
+    ],
+    "colors": [],
+    "caption": "an apple logo is shown on a white background"
+  },
+  "tfi/TfiArchive.svg": {
+    "component_id": "tfi:TfiArchive",
+    "aliases": [
+      "tfi",
+      "archive"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box"
+  },
+  "tfi/TfiArrow.svg": {
+    "component_id": "tfi:TfiArrow",
+    "aliases": [
+      "tfi",
+      "arrow"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three arrows pointing in different directions"
+  },
+  "tfi/TfiArrowCircleDown.svg": {
+    "component_id": "tfi:TfiArrowCircleDown",
+    "aliases": [
+      "tfi",
+      "arrow",
+      "circle",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a clock with an arrow"
+  },
+  "tfi/TfiArrowCircleLeft.svg": {
+    "component_id": "tfi:TfiArrowCircleLeft",
+    "aliases": [
+      "tfi",
+      "arrow",
+      "circle",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow in a circle"
+  },
+  "tfi/TfiArrowCircleRight.svg": {
+    "component_id": "tfi:TfiArrowCircleRight",
+    "aliases": [
+      "tfi",
+      "arrow",
+      "circle",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow in a circle on a white background"
+  },
+  "tfi/TfiArrowCircleUp.svg": {
+    "component_id": "tfi:TfiArrowCircleUp",
+    "aliases": [
+      "tfi",
+      "arrow",
+      "circle",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with an arrow pointing up"
+  },
+  "tfi/TfiArrowDown.svg": {
+    "component_id": "tfi:TfiArrowDown",
+    "aliases": [
+      "tfi",
+      "arrow",
+      "down"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "tfi/TfiArrowLeft.svg": {
+    "component_id": "tfi:TfiArrowLeft",
+    "aliases": [
+      "tfi",
+      "arrow",
+      "left"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "tfi/TfiArrowRight.svg": {
+    "component_id": "tfi:TfiArrowRight",
+    "aliases": [
+      "tfi",
+      "arrow",
+      "right"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "tfi/TfiArrowTopLeft.svg": {
+    "component_id": "tfi:TfiArrowTopLeft",
+    "aliases": [
+      "tfi",
+      "arrow",
+      "top",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right side of a white background"
+  },
+  "tfi/TfiArrowTopRight.svg": {
+    "component_id": "tfi:TfiArrowTopRight",
+    "aliases": [
+      "tfi",
+      "arrow",
+      "top",
+      "right"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "tfi/TfiArrowUp.svg": {
+    "component_id": "tfi:TfiArrowUp",
+    "aliases": [
+      "tfi",
+      "arrow",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up in a black and white image"
+  },
+  "tfi/TfiArrowsCorner.svg": {
+    "component_id": "tfi:TfiArrowsCorner",
+    "aliases": [
+      "tfi",
+      "arrows",
+      "corner"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing in the direction of the arrow"
+  },
+  "tfi/TfiArrowsHorizontal.svg": {
+    "component_id": "tfi:TfiArrowsHorizontal",
+    "aliases": [
+      "tfi",
+      "arrows",
+      "horizontal"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "tfi/TfiArrowsVertical.svg": {
+    "component_id": "tfi:TfiArrowsVertical",
+    "aliases": [
+      "tfi",
+      "arrows",
+      "vertical"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing up in the middle of a white background"
+  },
+  "tfi/TfiBackLeft.svg": {
+    "component_id": "tfi:TfiBackLeft",
+    "aliases": [
+      "tfi",
+      "back",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a letter r"
+  },
+  "tfi/TfiBackRight.svg": {
+    "component_id": "tfi:TfiBackRight",
+    "aliases": [
+      "tfi",
+      "back",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "tfi/TfiBag.svg": {
+    "component_id": "tfi:TfiBag",
+    "aliases": [
+      "tfi",
+      "bag"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shopping bag"
+  },
+  "tfi/TfiBarChart.svg": {
+    "component_id": "tfi:TfiBarChart",
+    "aliases": [
+      "tfi",
+      "bar",
+      "chart"
+    ],
+    "colors": [],
+    "caption": "a bar graph icon on a white background"
+  },
+  "tfi/TfiBarChartAlt.svg": {
+    "component_id": "tfi:TfiBarChartAlt",
+    "aliases": [
+      "tfi",
+      "bar",
+      "chart",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a bar graph icon on a white background"
+  },
+  "tfi/TfiBasketball.svg": {
+    "component_id": "tfi:TfiBasketball",
+    "aliases": [
+      "tfi",
+      "basketball"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a basketball ball"
+  },
+  "tfi/TfiBell.svg": {
+    "component_id": "tfi:TfiBell",
+    "aliases": [
+      "tfi",
+      "bell"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "tfi/TfiBlackboard.svg": {
+    "component_id": "tfi:TfiBlackboard",
+    "aliases": [
+      "tfi",
+      "blackboard"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an easel on a tripod"
+  },
+  "tfi/TfiBolt.svg": {
+    "component_id": "tfi:TfiBolt",
+    "aliases": [
+      "tfi",
+      "bolt"
+    ],
+    "colors": [],
+    "caption": "a lightning bolt icon on a white background"
+  },
+  "tfi/TfiBoltAlt.svg": {
+    "component_id": "tfi:TfiBoltAlt",
+    "aliases": [
+      "tfi",
+      "bolt",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a lightning bolt"
+  },
+  "tfi/TfiBook.svg": {
+    "component_id": "tfi:TfiBook",
+    "aliases": [
+      "tfi",
+      "book"
+    ],
+    "colors": [],
+    "caption": "an open book icon on a white background"
+  },
+  "tfi/TfiBookmark.svg": {
+    "component_id": "tfi:TfiBookmark",
+    "aliases": [
+      "tfi",
+      "bookmark"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a ribbon"
+  },
+  "tfi/TfiBookmarkAlt.svg": {
+    "component_id": "tfi:TfiBookmarkAlt",
+    "aliases": [
+      "tfi",
+      "bookmark",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book with a ribbon"
+  },
+  "tfi/TfiBriefcase.svg": {
+    "component_id": "tfi:TfiBriefcase",
+    "aliases": [
+      "tfi",
+      "briefcase"
+    ],
+    "colors": [],
+    "caption": "a briefcase icon on a white background"
+  },
+  "tfi/TfiBrush.svg": {
+    "component_id": "tfi:TfiBrush",
+    "aliases": [
+      "tfi",
+      "brush"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a shovel"
+  },
+  "tfi/TfiBrushAlt.svg": {
+    "component_id": "tfi:TfiBrushAlt",
+    "aliases": [
+      "tfi",
+      "brush",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a brush icon on a white background"
+  },
+  "tfi/TfiCalendar.svg": {
+    "component_id": "tfi:TfiCalendar",
+    "aliases": [
+      "tfi",
+      "calendar"
+    ],
+    "colors": [],
+    "caption": "a calendar icon on a white background"
+  },
+  "tfi/TfiCamera.svg": {
+    "component_id": "tfi:TfiCamera",
+    "aliases": [
+      "tfi",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "a camera icon on a white background"
+  },
+  "tfi/TfiCar.svg": {
+    "component_id": "tfi:TfiCar",
+    "aliases": [
+      "tfi",
+      "car"
+    ],
+    "colors": [],
+    "caption": "a car icon on a white background"
+  },
+  "tfi/TfiCheck.svg": {
+    "component_id": "tfi:TfiCheck",
+    "aliases": [
+      "tfi",
+      "check"
+    ],
+    "colors": [],
+    "caption": "a black check mark on a white background"
+  },
+  "tfi/TfiCheckBox.svg": {
+    "component_id": "tfi:TfiCheckBox",
+    "aliases": [
+      "tfi",
+      "check",
+      "box"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a white background"
+  },
+  "tfi/TfiClip.svg": {
+    "component_id": "tfi:TfiClip",
+    "aliases": [
+      "tfi",
+      "clip"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a paper clip"
+  },
+  "tfi/TfiClipboard.svg": {
+    "component_id": "tfi:TfiClipboard",
+    "aliases": [
+      "tfi",
+      "clipboard"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a clipboard on a white background"
+  },
+  "tfi/TfiClose.svg": {
+    "component_id": "tfi:TfiClose",
+    "aliases": [
+      "tfi",
+      "close"
+    ],
+    "colors": [],
+    "caption": "a black and white cross on a white background"
+  },
+  "tfi/TfiCloud.svg": {
+    "component_id": "tfi:TfiCloud",
+    "aliases": [
+      "tfi",
+      "cloud"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "tfi/TfiCloudDown.svg": {
+    "component_id": "tfi:TfiCloudDown",
+    "aliases": [
+      "tfi",
+      "cloud",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a cloud icon with an arrow pointing down"
+  },
+  "tfi/TfiCloudUp.svg": {
+    "component_id": "tfi:TfiCloudUp",
+    "aliases": [
+      "tfi",
+      "cloud",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a cloud with an arrow pointing up"
+  },
+  "tfi/TfiComment.svg": {
+    "component_id": "tfi:TfiComment",
+    "aliases": [
+      "tfi",
+      "comment"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "tfi/TfiCommentAlt.svg": {
+    "component_id": "tfi:TfiCommentAlt",
+    "aliases": [
+      "tfi",
+      "comment",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "tfi/TfiComments.svg": {
+    "component_id": "tfi:TfiComments",
+    "aliases": [
+      "tfi",
+      "comments"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two speech bubbles"
+  },
+  "tfi/TfiCommentsSmiley.svg": {
+    "component_id": "tfi:TfiCommentsSmiley",
+    "aliases": [
+      "tfi",
+      "comments",
+      "smiley"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "tfi/TfiControlBackward.svg": {
+    "component_id": "tfi:TfiControlBackward",
+    "aliases": [
+      "tfi",
+      "control",
+      "backward"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "tfi/TfiControlEject.svg": {
+    "component_id": "tfi:TfiControlEject",
+    "aliases": [
+      "tfi",
+      "control",
+      "eject"
+    ],
+    "colors": [],
+    "caption": "an image of a triangle with a line through it"
+  },
+  "tfi/TfiControlForward.svg": {
+    "component_id": "tfi:TfiControlForward",
+    "aliases": [
+      "tfi",
+      "control",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right in black and white"
+  },
+  "tfi/TfiControlPause.svg": {
+    "component_id": "tfi:TfiControlPause",
+    "aliases": [
+      "tfi",
+      "control",
+      "pause"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two black rectangles"
+  },
+  "tfi/TfiControlPlay.svg": {
+    "component_id": "tfi:TfiControlPlay",
+    "aliases": [
+      "tfi",
+      "control",
+      "play"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a triangle"
+  },
+  "tfi/TfiControlRecord.svg": {
+    "component_id": "tfi:TfiControlRecord",
+    "aliases": [
+      "tfi",
+      "control",
+      "record"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "tfi/TfiControlShuffle.svg": {
+    "component_id": "tfi:TfiControlShuffle",
+    "aliases": [
+      "tfi",
+      "control",
+      "shuffle"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "tfi/TfiControlSkipBackward.svg": {
+    "component_id": "tfi:TfiControlSkipBackward",
+    "aliases": [
+      "tfi",
+      "control",
+      "skip",
+      "backward"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter k"
+  },
+  "tfi/TfiControlSkipForward.svg": {
+    "component_id": "tfi:TfiControlSkipForward",
+    "aliases": [
+      "tfi",
+      "control",
+      "skip",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "tfi/TfiControlStop.svg": {
+    "component_id": "tfi:TfiControlStop",
+    "aliases": [
+      "tfi",
+      "control",
+      "stop"
+    ],
+    "colors": [],
+    "caption": "a square black and white image on a white background"
+  },
+  "tfi/TfiCreditCard.svg": {
+    "component_id": "tfi:TfiCreditCard",
+    "aliases": [
+      "tfi",
+      "credit",
+      "card"
+    ],
+    "colors": [],
+    "caption": "a credit card icon on a white background"
+  },
+  "tfi/TfiCrown.svg": {
+    "component_id": "tfi:TfiCrown",
+    "aliases": [
+      "tfi",
+      "crown"
+    ],
+    "colors": [],
+    "caption": "a crown icon on a white background"
+  },
+  "tfi/TfiCss3.svg": {
+    "component_id": "tfi:TfiCss3",
+    "aliases": [
+      "tfi",
+      "css",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter e"
+  },
+  "tfi/TfiCup.svg": {
+    "component_id": "tfi:TfiCup",
+    "aliases": [
+      "tfi",
+      "cup"
+    ],
+    "colors": [],
+    "caption": "a trophy icon on a white background"
+  },
+  "tfi/TfiCut.svg": {
+    "component_id": "tfi:TfiCut",
+    "aliases": [
+      "tfi",
+      "cut"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two scissors"
+  },
+  "tfi/TfiDashboard.svg": {
+    "component_id": "tfi:TfiDashboard",
+    "aliases": [
+      "tfi",
+      "dashboard"
+    ],
+    "colors": [],
+    "caption": "a speedometer icon on a white background"
+  },
+  "tfi/TfiDesktop.svg": {
+    "component_id": "tfi:TfiDesktop",
+    "aliases": [
+      "tfi",
+      "desktop"
+    ],
+    "colors": [],
+    "caption": "a computer monitor icon on a white background"
+  },
+  "tfi/TfiDirection.svg": {
+    "component_id": "tfi:TfiDirection",
+    "aliases": [
+      "tfi",
+      "direction"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "tfi/TfiDirectionAlt.svg": {
+    "component_id": "tfi:TfiDirectionAlt",
+    "aliases": [
+      "tfi",
+      "direction",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white sign with two arrows pointing in different directions"
+  },
+  "tfi/TfiDownload.svg": {
+    "component_id": "tfi:TfiDownload",
+    "aliases": [
+      "tfi",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "tfi/TfiDribbble.svg": {
+    "component_id": "tfi:TfiDribbble",
+    "aliases": [
+      "tfi",
+      "dribbble"
+    ],
+    "colors": [],
+    "caption": "a black and white basketball ball on a white background"
+  },
+  "tfi/TfiDropbox.svg": {
+    "component_id": "tfi:TfiDropbox",
+    "aliases": [
+      "tfi",
+      "dropbox"
+    ],
+    "colors": [],
+    "caption": "the dropbox logo is shown on a white background"
+  },
+  "tfi/TfiDropboxAlt.svg": {
+    "component_id": "tfi:TfiDropboxAlt",
+    "aliases": [
+      "tfi",
+      "dropbox",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "the dropbox logo is shown in black and white"
+  },
+  "tfi/TfiDrupal.svg": {
+    "component_id": "tfi:TfiDrupal",
+    "aliases": [
+      "tfi",
+      "drupal"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white logo"
+  },
+  "tfi/TfiEmail.svg": {
+    "component_id": "tfi:TfiEmail",
+    "aliases": [
+      "tfi",
+      "email"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "tfi/TfiEnvelope.svg": {
+    "component_id": "tfi:TfiEnvelope",
+    "aliases": [
+      "tfi",
+      "envelope"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a square box"
+  },
+  "tfi/TfiEraser.svg": {
+    "component_id": "tfi:TfiEraser",
+    "aliases": [
+      "tfi",
+      "eraser"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a broken phone"
+  },
+  "tfi/TfiExchangeVertical.svg": {
+    "component_id": "tfi:TfiExchangeVertical",
+    "aliases": [
+      "tfi",
+      "exchange",
+      "vertical"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "tfi/TfiExport.svg": {
+    "component_id": "tfi:TfiExport",
+    "aliases": [
+      "tfi",
+      "export"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of an up arrow"
+  },
+  "tfi/TfiEye.svg": {
+    "component_id": "tfi:TfiEye",
+    "aliases": [
+      "tfi",
+      "eye"
+    ],
+    "colors": [],
+    "caption": "an eye icon on a white background"
+  },
+  "tfi/TfiFaceSad.svg": {
+    "component_id": "tfi:TfiFaceSad",
+    "aliases": [
+      "tfi",
+      "face",
+      "sad"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a sad face"
+  },
+  "tfi/TfiFaceSmile.svg": {
+    "component_id": "tfi:TfiFaceSmile",
+    "aliases": [
+      "tfi",
+      "face",
+      "smile"
+    ],
+    "colors": [],
+    "caption": "a smiley face icon on a white background"
+  },
+  "tfi/TfiFacebook.svg": {
+    "component_id": "tfi:TfiFacebook",
+    "aliases": [
+      "tfi",
+      "facebook"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a facebook logo"
+  },
+  "tfi/TfiFile.svg": {
+    "component_id": "tfi:TfiFile",
+    "aliases": [
+      "tfi",
+      "file"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a document"
+  },
+  "tfi/TfiFiles.svg": {
+    "component_id": "tfi:TfiFiles",
+    "aliases": [
+      "tfi",
+      "files"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two documents"
+  },
+  "tfi/TfiFilter.svg": {
+    "component_id": "tfi:TfiFilter",
+    "aliases": [
+      "tfi",
+      "filter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a martini glass"
+  },
+  "tfi/TfiFlag.svg": {
+    "component_id": "tfi:TfiFlag",
+    "aliases": [
+      "tfi",
+      "flag"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a flag"
+  },
+  "tfi/TfiFlagAlt.svg": {
+    "component_id": "tfi:TfiFlagAlt",
+    "aliases": [
+      "tfi",
+      "flag",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a flag"
+  },
+  "tfi/TfiFlagAlt2.svg": {
+    "component_id": "tfi:TfiFlagAlt2",
+    "aliases": [
+      "tfi",
+      "flag",
+      "alt",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a square and a rectangle"
+  },
+  "tfi/TfiFlickr.svg": {
+    "component_id": "tfi:TfiFlickr",
+    "aliases": [
+      "tfi",
+      "flickr"
+    ],
+    "colors": [],
+    "caption": "two circles are shown on a white background"
+  },
+  "tfi/TfiFlickrAlt.svg": {
+    "component_id": "tfi:TfiFlickrAlt",
+    "aliases": [
+      "tfi",
+      "flickr",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black circle with two eyes in it"
+  },
+  "tfi/TfiFolder.svg": {
+    "component_id": "tfi:TfiFolder",
+    "aliases": [
+      "tfi",
+      "folder"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a folder"
+  },
+  "tfi/TfiFullscreen.svg": {
+    "component_id": "tfi:TfiFullscreen",
+    "aliases": [
+      "tfi",
+      "fullscreen"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "tfi/TfiGallery.svg": {
+    "component_id": "tfi:TfiGallery",
+    "aliases": [
+      "tfi",
+      "gallery"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a mountain"
+  },
+  "tfi/TfiGame.svg": {
+    "component_id": "tfi:TfiGame",
+    "aliases": [
+      "tfi",
+      "game"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a video game controller"
+  },
+  "tfi/TfiGift.svg": {
+    "component_id": "tfi:TfiGift",
+    "aliases": [
+      "tfi",
+      "gift"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a gift with a bow"
+  },
+  "tfi/TfiGithub.svg": {
+    "component_id": "tfi:TfiGithub",
+    "aliases": [
+      "tfi",
+      "github"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cat"
+  },
+  "tfi/TfiGoogle.svg": {
+    "component_id": "tfi:TfiGoogle",
+    "aliases": [
+      "tfi",
+      "google"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a google plus logo"
+  },
+  "tfi/TfiHandDrag.svg": {
+    "component_id": "tfi:TfiHandDrag",
+    "aliases": [
+      "tfi",
+      "hand",
+      "drag"
+    ],
+    "colors": [],
+    "caption": "a hand icon on a white background"
+  },
+  "tfi/TfiHandOpen.svg": {
+    "component_id": "tfi:TfiHandOpen",
+    "aliases": [
+      "tfi",
+      "hand",
+      "open"
+    ],
+    "colors": [],
+    "caption": "a hand icon on a white background"
+  },
+  "tfi/TfiHandPointDown.svg": {
+    "component_id": "tfi:TfiHandPointDown",
+    "aliases": [
+      "tfi",
+      "hand",
+      "point",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a hand pointing"
+  },
+  "tfi/TfiHandPointLeft.svg": {
+    "component_id": "tfi:TfiHandPointLeft",
+    "aliases": [
+      "tfi",
+      "hand",
+      "point",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a hand pointing"
+  },
+  "tfi/TfiHandPointRight.svg": {
+    "component_id": "tfi:TfiHandPointRight",
+    "aliases": [
+      "tfi",
+      "hand",
+      "point",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a hand pointing"
+  },
+  "tfi/TfiHandPointUp.svg": {
+    "component_id": "tfi:TfiHandPointUp",
+    "aliases": [
+      "tfi",
+      "hand",
+      "point",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a hand pointing up"
+  },
+  "tfi/TfiHandStop.svg": {
+    "component_id": "tfi:TfiHandStop",
+    "aliases": [
+      "tfi",
+      "hand",
+      "stop"
+    ],
+    "colors": [],
+    "caption": "a hand icon on a white background"
+  },
+  "tfi/TfiHarddrive.svg": {
+    "component_id": "tfi:TfiHarddrive",
+    "aliases": [
+      "tfi",
+      "harddrive"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer on a white background"
+  },
+  "tfi/TfiHarddrives.svg": {
+    "component_id": "tfi:TfiHarddrives",
+    "aliases": [
+      "tfi",
+      "harddrives"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a server"
+  },
+  "tfi/TfiHeadphone.svg": {
+    "component_id": "tfi:TfiHeadphone",
+    "aliases": [
+      "tfi",
+      "headphone"
+    ],
+    "colors": [],
+    "caption": "headphones icon isolated on white background"
+  },
+  "tfi/TfiHeadphoneAlt.svg": {
+    "component_id": "tfi:TfiHeadphoneAlt",
+    "aliases": [
+      "tfi",
+      "headphone",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a headset icon on a white background"
+  },
+  "tfi/TfiHeart.svg": {
+    "component_id": "tfi:TfiHeart",
+    "aliases": [
+      "tfi",
+      "heart"
+    ],
+    "colors": [],
+    "caption": "a black and white heart icon on a white background"
+  },
+  "tfi/TfiHeartBroken.svg": {
+    "component_id": "tfi:TfiHeartBroken",
+    "aliases": [
+      "tfi",
+      "heart",
+      "broken"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a heart with waves"
+  },
+  "tfi/TfiHelp.svg": {
+    "component_id": "tfi:TfiHelp",
+    "aliases": [
+      "tfi",
+      "help"
+    ],
+    "colors": [],
+    "caption": "a question mark icon on a white background"
+  },
+  "tfi/TfiHelpAlt.svg": {
+    "component_id": "tfi:TfiHelpAlt",
+    "aliases": [
+      "tfi",
+      "help",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a question mark in a circle on a white background"
+  },
+  "tfi/TfiHome.svg": {
+    "component_id": "tfi:TfiHome",
+    "aliases": [
+      "tfi",
+      "home"
+    ],
+    "colors": [],
+    "caption": "a house icon on a white background"
+  },
+  "tfi/TfiHtml5.svg": {
+    "component_id": "tfi:TfiHtml5",
+    "aliases": [
+      "tfi",
+      "html",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the number 5 in it"
+  },
+  "tfi/TfiHummer.svg": {
+    "component_id": "tfi:TfiHummer",
+    "aliases": [
+      "tfi",
+      "hummer"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a hammer"
+  },
+  "tfi/TfiIdBadge.svg": {
+    "component_id": "tfi:TfiIdBadge",
+    "aliases": [
+      "tfi",
+      "id",
+      "badge"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a person's face"
+  },
+  "tfi/TfiImage.svg": {
+    "component_id": "tfi:TfiImage",
+    "aliases": [
+      "tfi",
+      "image"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a mountain"
+  },
+  "tfi/TfiImport.svg": {
+    "component_id": "tfi:TfiImport",
+    "aliases": [
+      "tfi",
+      "import"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a down arrow"
+  },
+  "tfi/TfiInfinite.svg": {
+    "component_id": "tfi:TfiInfinite",
+    "aliases": [
+      "tfi",
+      "infinite"
+    ],
+    "colors": [],
+    "caption": "a black infinity symbol on a white background"
+  },
+  "tfi/TfiInfo.svg": {
+    "component_id": "tfi:TfiInfo",
+    "aliases": [
+      "tfi",
+      "info"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number one"
+  },
+  "tfi/TfiInfoAlt.svg": {
+    "component_id": "tfi:TfiInfoAlt",
+    "aliases": [
+      "tfi",
+      "info",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an i in a circle"
+  },
+  "tfi/TfiInkPen.svg": {
+    "component_id": "tfi:TfiInkPen",
+    "aliases": [
+      "tfi",
+      "ink",
+      "pen"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a map pin"
+  },
+  "tfi/TfiInstagram.svg": {
+    "component_id": "tfi:TfiInstagram",
+    "aliases": [
+      "tfi",
+      "instagram"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an instagram icon"
+  },
+  "tfi/TfiItalic.svg": {
+    "component_id": "tfi:TfiItalic",
+    "aliases": [
+      "tfi",
+      "italic"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter n"
+  },
+  "tfi/TfiJoomla.svg": {
+    "component_id": "tfi:TfiJoomla",
+    "aliases": [
+      "tfi",
+      "joomla"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white image of a black and white"
+  },
+  "tfi/TfiJsfiddle.svg": {
+    "component_id": "tfi:TfiJsfiddle",
+    "aliases": [
+      "tfi",
+      "jsfiddle"
+    ],
+    "colors": [],
+    "caption": "a cloud with an infinity symbol on it"
+  },
+  "tfi/TfiKey.svg": {
+    "component_id": "tfi:TfiKey",
+    "aliases": [
+      "tfi",
+      "key"
+    ],
+    "colors": [],
+    "caption": "a black and white key icon on a white background"
+  },
+  "tfi/TfiLayers.svg": {
+    "component_id": "tfi:TfiLayers",
+    "aliases": [
+      "tfi",
+      "layers"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two squares"
+  },
+  "tfi/TfiLayersAlt.svg": {
+    "component_id": "tfi:TfiLayersAlt",
+    "aliases": [
+      "tfi",
+      "layers",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer screen"
+  },
+  "tfi/TfiLayout.svg": {
+    "component_id": "tfi:TfiLayout",
+    "aliases": [
+      "tfi",
+      "layout"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a rectangle"
+  },
+  "tfi/TfiLayoutAccordionList.svg": {
+    "component_id": "tfi:TfiLayoutAccordionList",
+    "aliases": [
+      "tfi",
+      "layout",
+      "accordion",
+      "list"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer screen"
+  },
+  "tfi/TfiLayoutAccordionMerged.svg": {
+    "component_id": "tfi:TfiLayoutAccordionMerged",
+    "aliases": [
+      "tfi",
+      "layout",
+      "accordion",
+      "merged"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a rectangle"
+  },
+  "tfi/TfiLayoutAccordionSeparated.svg": {
+    "component_id": "tfi:TfiLayoutAccordionSeparated",
+    "aliases": [
+      "tfi",
+      "layout",
+      "accordion",
+      "separated"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white rectangle"
+  },
+  "tfi/TfiLayoutColumn2.svg": {
+    "component_id": "tfi:TfiLayoutColumn2",
+    "aliases": [
+      "tfi",
+      "layout",
+      "column",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two doors"
+  },
+  "tfi/TfiLayoutColumn2Alt.svg": {
+    "component_id": "tfi:TfiLayoutColumn2Alt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "column",
+      "2",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two doors"
+  },
+  "tfi/TfiLayoutColumn3.svg": {
+    "component_id": "tfi:TfiLayoutColumn3",
+    "aliases": [
+      "tfi",
+      "layout",
+      "column",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three black rectangles"
+  },
+  "tfi/TfiLayoutColumn3Alt.svg": {
+    "component_id": "tfi:TfiLayoutColumn3Alt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "column",
+      "3",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three vertical lines"
+  },
+  "tfi/TfiLayoutColumn4.svg": {
+    "component_id": "tfi:TfiLayoutColumn4",
+    "aliases": [
+      "tfi",
+      "layout",
+      "column",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of four bars"
+  },
+  "tfi/TfiLayoutColumn4Alt.svg": {
+    "component_id": "tfi:TfiLayoutColumn4Alt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "column",
+      "4",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of four bars"
+  },
+  "tfi/TfiLayoutCtaBtnLeft.svg": {
+    "component_id": "tfi:TfiLayoutCtaBtnLeft",
+    "aliases": [
+      "tfi",
+      "layout",
+      "cta",
+      "btn",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an envelope"
+  },
+  "tfi/TfiLayoutCtaBtnRight.svg": {
+    "component_id": "tfi:TfiLayoutCtaBtnRight",
+    "aliases": [
+      "tfi",
+      "layout",
+      "cta",
+      "btn",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an envelope"
+  },
+  "tfi/TfiLayoutCtaCenter.svg": {
+    "component_id": "tfi:TfiLayoutCtaCenter",
+    "aliases": [
+      "tfi",
+      "layout",
+      "cta",
+      "center"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an empty box"
+  },
+  "tfi/TfiLayoutCtaLeft.svg": {
+    "component_id": "tfi:TfiLayoutCtaLeft",
+    "aliases": [
+      "tfi",
+      "layout",
+      "cta",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an envelope"
+  },
+  "tfi/TfiLayoutCtaRight.svg": {
+    "component_id": "tfi:TfiLayoutCtaRight",
+    "aliases": [
+      "tfi",
+      "layout",
+      "cta",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an envelope"
+  },
+  "tfi/TfiLayoutGrid2.svg": {
+    "component_id": "tfi:TfiLayoutGrid2",
+    "aliases": [
+      "tfi",
+      "layout",
+      "grid",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a square with four black squares on it"
+  },
+  "tfi/TfiLayoutGrid2Alt.svg": {
+    "component_id": "tfi:TfiLayoutGrid2Alt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "grid",
+      "2",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white square with four squares"
+  },
+  "tfi/TfiLayoutGrid2Thumb.svg": {
+    "component_id": "tfi:TfiLayoutGrid2Thumb",
+    "aliases": [
+      "tfi",
+      "layout",
+      "grid",
+      "2",
+      "thumb"
+    ],
+    "colors": [],
+    "caption": "a black and white image of four squares"
+  },
+  "tfi/TfiLayoutGrid3.svg": {
+    "component_id": "tfi:TfiLayoutGrid3",
+    "aliases": [
+      "tfi",
+      "layout",
+      "grid",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white square with nine squares in it"
+  },
+  "tfi/TfiLayoutGrid3Alt.svg": {
+    "component_id": "tfi:TfiLayoutGrid3Alt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "grid",
+      "3",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white square with squares in it"
+  },
+  "tfi/TfiLayoutGrid4.svg": {
+    "component_id": "tfi:TfiLayoutGrid4",
+    "aliases": [
+      "tfi",
+      "layout",
+      "grid",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square pattern"
+  },
+  "tfi/TfiLayoutGrid4Alt.svg": {
+    "component_id": "tfi:TfiLayoutGrid4Alt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "grid",
+      "4",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white square with squares in it"
+  },
+  "tfi/TfiLayoutLineSolid.svg": {
+    "component_id": "tfi:TfiLayoutLineSolid",
+    "aliases": [
+      "tfi",
+      "layout",
+      "line",
+      "solid"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "tfi/TfiLayoutListLargeImage.svg": {
+    "component_id": "tfi:TfiLayoutListLargeImage",
+    "aliases": [
+      "tfi",
+      "layout",
+      "list",
+      "large",
+      "image"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a television"
+  },
+  "tfi/TfiLayoutListPost.svg": {
+    "component_id": "tfi:TfiLayoutListPost",
+    "aliases": [
+      "tfi",
+      "layout",
+      "list",
+      "post"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter e"
+  },
+  "tfi/TfiLayoutListThumb.svg": {
+    "component_id": "tfi:TfiLayoutListThumb",
+    "aliases": [
+      "tfi",
+      "layout",
+      "list",
+      "thumb"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a white background"
+  },
+  "tfi/TfiLayoutListThumbAlt.svg": {
+    "component_id": "tfi:TfiLayoutListThumbAlt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "list",
+      "thumb",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two black and white squares"
+  },
+  "tfi/TfiLayoutMediaCenter.svg": {
+    "component_id": "tfi:TfiLayoutMediaCenter",
+    "aliases": [
+      "tfi",
+      "layout",
+      "media",
+      "center"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer screen"
+  },
+  "tfi/TfiLayoutMediaCenterAlt.svg": {
+    "component_id": "tfi:TfiLayoutMediaCenterAlt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "media",
+      "center",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a flat icon of a computer monitor on a white background"
+  },
+  "tfi/TfiLayoutMediaLeft.svg": {
+    "component_id": "tfi:TfiLayoutMediaLeft",
+    "aliases": [
+      "tfi",
+      "layout",
+      "media",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square box"
+  },
+  "tfi/TfiLayoutMediaLeftAlt.svg": {
+    "component_id": "tfi:TfiLayoutMediaLeftAlt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "media",
+      "left",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a television screen"
+  },
+  "tfi/TfiLayoutMediaOverlay.svg": {
+    "component_id": "tfi:TfiLayoutMediaOverlay",
+    "aliases": [
+      "tfi",
+      "layout",
+      "media",
+      "overlay"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer screen"
+  },
+  "tfi/TfiLayoutMediaOverlayAlt.svg": {
+    "component_id": "tfi:TfiLayoutMediaOverlayAlt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "media",
+      "overlay",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white photo of an empty frame"
+  },
+  "tfi/TfiLayoutMediaOverlayAlt2.svg": {
+    "component_id": "tfi:TfiLayoutMediaOverlayAlt2",
+    "aliases": [
+      "tfi",
+      "layout",
+      "media",
+      "overlay",
+      "alt",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a rectangle with two lines"
+  },
+  "tfi/TfiLayoutMediaRight.svg": {
+    "component_id": "tfi:TfiLayoutMediaRight",
+    "aliases": [
+      "tfi",
+      "layout",
+      "media",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square box"
+  },
+  "tfi/TfiLayoutMediaRightAlt.svg": {
+    "component_id": "tfi:TfiLayoutMediaRightAlt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "media",
+      "right",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a flat icon of a television screen on a white background"
+  },
+  "tfi/TfiLayoutMenu.svg": {
+    "component_id": "tfi:TfiLayoutMenu",
+    "aliases": [
+      "tfi",
+      "layout",
+      "menu"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three lines"
+  },
+  "tfi/TfiLayoutMenuFull.svg": {
+    "component_id": "tfi:TfiLayoutMenuFull",
+    "aliases": [
+      "tfi",
+      "layout",
+      "menu",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a train"
+  },
+  "tfi/TfiLayoutMenuSeparated.svg": {
+    "component_id": "tfi:TfiLayoutMenuSeparated",
+    "aliases": [
+      "tfi",
+      "layout",
+      "menu",
+      "separated"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three black squares"
+  },
+  "tfi/TfiLayoutMenuV.svg": {
+    "component_id": "tfi:TfiLayoutMenuV",
+    "aliases": [
+      "tfi",
+      "layout",
+      "menu",
+      "v"
+    ],
+    "colors": [],
+    "caption": "a black and white image of four lines"
+  },
+  "tfi/TfiLayoutPlaceholder.svg": {
+    "component_id": "tfi:TfiLayoutPlaceholder",
+    "aliases": [
+      "tfi",
+      "layout",
+      "placeholder"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an envelope"
+  },
+  "tfi/TfiLayoutSidebar2.svg": {
+    "component_id": "tfi:TfiLayoutSidebar2",
+    "aliases": [
+      "tfi",
+      "layout",
+      "sidebar",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a film strip"
+  },
+  "tfi/TfiLayoutSidebarLeft.svg": {
+    "component_id": "tfi:TfiLayoutSidebarLeft",
+    "aliases": [
+      "tfi",
+      "layout",
+      "sidebar",
+      "left"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white square"
+  },
+  "tfi/TfiLayoutSidebarNone.svg": {
+    "component_id": "tfi:TfiLayoutSidebarNone",
+    "aliases": [
+      "tfi",
+      "layout",
+      "sidebar",
+      "none"
+    ],
+    "colors": [],
+    "caption": "a square black and white pattern on a white background"
+  },
+  "tfi/TfiLayoutSidebarRight.svg": {
+    "component_id": "tfi:TfiLayoutSidebarRight",
+    "aliases": [
+      "tfi",
+      "layout",
+      "sidebar",
+      "right"
+    ],
+    "colors": [],
+    "caption": "an image of a square with black and white lines"
+  },
+  "tfi/TfiLayoutSlider.svg": {
+    "component_id": "tfi:TfiLayoutSlider",
+    "aliases": [
+      "tfi",
+      "layout",
+      "slider"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a rectangle with two arrows"
+  },
+  "tfi/TfiLayoutSliderAlt.svg": {
+    "component_id": "tfi:TfiLayoutSliderAlt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "slider",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a rectangle with two lines"
+  },
+  "tfi/TfiLayoutTab.svg": {
+    "component_id": "tfi:TfiLayoutTab",
+    "aliases": [
+      "tfi",
+      "layout",
+      "tab"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a folder"
+  },
+  "tfi/TfiLayoutTabMin.svg": {
+    "component_id": "tfi:TfiLayoutTabMin",
+    "aliases": [
+      "tfi",
+      "layout",
+      "tab",
+      "min"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letters nd"
+  },
+  "tfi/TfiLayoutTabV.svg": {
+    "component_id": "tfi:TfiLayoutTabV",
+    "aliases": [
+      "tfi",
+      "layout",
+      "tab",
+      "v"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a book"
+  },
+  "tfi/TfiLayoutTabWindow.svg": {
+    "component_id": "tfi:TfiLayoutTabWindow",
+    "aliases": [
+      "tfi",
+      "layout",
+      "tab",
+      "window"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer screen"
+  },
+  "tfi/TfiLayoutWidthDefault.svg": {
+    "component_id": "tfi:TfiLayoutWidthDefault",
+    "aliases": [
+      "tfi",
+      "layout",
+      "width",
+      "default"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a film strip on a white background"
+  },
+  "tfi/TfiLayoutWidthDefaultAlt.svg": {
+    "component_id": "tfi:TfiLayoutWidthDefaultAlt",
+    "aliases": [
+      "tfi",
+      "layout",
+      "width",
+      "default",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "an image of a square frame with black and white squares"
+  },
+  "tfi/TfiLayoutWidthFull.svg": {
+    "component_id": "tfi:TfiLayoutWidthFull",
+    "aliases": [
+      "tfi",
+      "layout",
+      "width",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a black square with a white border on a white background"
+  },
+  "tfi/TfiLightBulb.svg": {
+    "component_id": "tfi:TfiLightBulb",
+    "aliases": [
+      "tfi",
+      "light",
+      "bulb"
+    ],
+    "colors": [],
+    "caption": "a light bulb icon on a white background"
+  },
+  "tfi/TfiLineDashed.svg": {
+    "component_id": "tfi:TfiLineDashed",
+    "aliases": [
+      "tfi",
+      "line",
+      "dashed"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three lines"
+  },
+  "tfi/TfiLineDotted.svg": {
+    "component_id": "tfi:TfiLineDotted",
+    "aliases": [
+      "tfi",
+      "line",
+      "dotted"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a line of squares"
+  },
+  "tfi/TfiLineDouble.svg": {
+    "component_id": "tfi:TfiLineDouble",
+    "aliases": [
+      "tfi",
+      "line",
+      "double"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "tfi/TfiLink.svg": {
+    "component_id": "tfi:TfiLink",
+    "aliases": [
+      "tfi",
+      "link"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a link"
+  },
+  "tfi/TfiLinkedin.svg": {
+    "component_id": "tfi:TfiLinkedin",
+    "aliases": [
+      "tfi",
+      "linkedin"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the linked logo"
+  },
+  "tfi/TfiLinux.svg": {
+    "component_id": "tfi:TfiLinux",
+    "aliases": [
+      "tfi",
+      "linux"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a penguin"
+  },
+  "tfi/TfiList.svg": {
+    "component_id": "tfi:TfiList",
+    "aliases": [
+      "tfi",
+      "list"
+    ],
+    "colors": [],
+    "caption": "a black and white check list with three circles"
+  },
+  "tfi/TfiListOl.svg": {
+    "component_id": "tfi:TfiListOl",
+    "aliases": [
+      "tfi",
+      "list",
+      "ol"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number three"
+  },
+  "tfi/TfiLocationArrow.svg": {
+    "component_id": "tfi:TfiLocationArrow",
+    "aliases": [
+      "tfi",
+      "location",
+      "arrow"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "tfi/TfiLocationPin.svg": {
+    "component_id": "tfi:TfiLocationPin",
+    "aliases": [
+      "tfi",
+      "location",
+      "pin"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a location pin"
+  },
+  "tfi/TfiLock.svg": {
+    "component_id": "tfi:TfiLock",
+    "aliases": [
+      "tfi",
+      "lock"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "tfi/TfiLoop.svg": {
+    "component_id": "tfi:TfiLoop",
+    "aliases": [
+      "tfi",
+      "loop"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "tfi/TfiMagnet.svg": {
+    "component_id": "tfi:TfiMagnet",
+    "aliases": [
+      "tfi",
+      "magnet"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of the letter u"
+  },
+  "tfi/TfiMap.svg": {
+    "component_id": "tfi:TfiMap",
+    "aliases": [
+      "tfi",
+      "map"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an open book"
+  },
+  "tfi/TfiMapAlt.svg": {
+    "component_id": "tfi:TfiMapAlt",
+    "aliases": [
+      "tfi",
+      "map",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a map with a pin"
+  },
+  "tfi/TfiMarker.svg": {
+    "component_id": "tfi:TfiMarker",
+    "aliases": [
+      "tfi",
+      "marker"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pen"
+  },
+  "tfi/TfiMarkerAlt.svg": {
+    "component_id": "tfi:TfiMarkerAlt",
+    "aliases": [
+      "tfi",
+      "marker",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a pen on a white background"
+  },
+  "tfi/TfiMedall.svg": {
+    "component_id": "tfi:TfiMedall",
+    "aliases": [
+      "tfi",
+      "medall"
+    ],
+    "colors": [],
+    "caption": "a black and white badge with a star in the middle"
+  },
+  "tfi/TfiMedallAlt.svg": {
+    "component_id": "tfi:TfiMedallAlt",
+    "aliases": [
+      "tfi",
+      "medall",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an award"
+  },
+  "tfi/TfiMenu.svg": {
+    "component_id": "tfi:TfiMenu",
+    "aliases": [
+      "tfi",
+      "menu"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white striped flag"
+  },
+  "tfi/TfiMenuAlt.svg": {
+    "component_id": "tfi:TfiMenuAlt",
+    "aliases": [
+      "tfi",
+      "menu",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white check list with three dots"
+  },
+  "tfi/TfiMicrophone.svg": {
+    "component_id": "tfi:TfiMicrophone",
+    "aliases": [
+      "tfi",
+      "microphone"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "tfi/TfiMicrophoneAlt.svg": {
+    "component_id": "tfi:TfiMicrophoneAlt",
+    "aliases": [
+      "tfi",
+      "microphone",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a microphone"
+  },
+  "tfi/TfiMicrosoft.svg": {
+    "component_id": "tfi:TfiMicrosoft",
+    "aliases": [
+      "tfi",
+      "microsoft"
+    ],
+    "colors": [],
+    "caption": "the windows logo is shown in black and white"
+  },
+  "tfi/TfiMicrosoftAlt.svg": {
+    "component_id": "tfi:TfiMicrosoftAlt",
+    "aliases": [
+      "tfi",
+      "microsoft",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "the windows logo is shown in black and white"
+  },
+  "tfi/TfiMinus.svg": {
+    "component_id": "tfi:TfiMinus",
+    "aliases": [
+      "tfi",
+      "minus"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "tfi/TfiMobile.svg": {
+    "component_id": "tfi:TfiMobile",
+    "aliases": [
+      "tfi",
+      "mobile"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a phone on a white background"
+  },
+  "tfi/TfiMoney.svg": {
+    "component_id": "tfi:TfiMoney",
+    "aliases": [
+      "tfi",
+      "money"
+    ],
+    "colors": [],
+    "caption": "a dollar sign icon on a white background"
+  },
+  "tfi/TfiMore.svg": {
+    "component_id": "tfi:TfiMore",
+    "aliases": [
+      "tfi",
+      "more"
+    ],
+    "colors": [],
+    "caption": "four black circles are shown on a white background"
+  },
+  "tfi/TfiMoreAlt.svg": {
+    "component_id": "tfi:TfiMoreAlt",
+    "aliases": [
+      "tfi",
+      "more",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "four black dots are shown on a white background"
+  },
+  "tfi/TfiMouse.svg": {
+    "component_id": "tfi:TfiMouse",
+    "aliases": [
+      "tfi",
+      "mouse"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer mouse"
+  },
+  "tfi/TfiMouseAlt.svg": {
+    "component_id": "tfi:TfiMouseAlt",
+    "aliases": [
+      "tfi",
+      "mouse",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer mouse"
+  },
+  "tfi/TfiMusic.svg": {
+    "component_id": "tfi:TfiMusic",
+    "aliases": [
+      "tfi",
+      "music"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a musical note"
+  },
+  "tfi/TfiMusicAlt.svg": {
+    "component_id": "tfi:TfiMusicAlt",
+    "aliases": [
+      "tfi",
+      "music",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a music note icon on a white background"
+  },
+  "tfi/TfiNa.svg": {
+    "component_id": "tfi:TfiNa",
+    "aliases": [
+      "tfi",
+      "na"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no entry sign"
+  },
+  "tfi/TfiNewWindow.svg": {
+    "component_id": "tfi:TfiNewWindow",
+    "aliases": [
+      "tfi",
+      "new",
+      "window"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "tfi/TfiNotepad.svg": {
+    "component_id": "tfi:TfiNotepad",
+    "aliases": [
+      "tfi",
+      "notepad"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a notebook"
+  },
+  "tfi/TfiPackage.svg": {
+    "component_id": "tfi:TfiPackage",
+    "aliases": [
+      "tfi",
+      "package"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a box"
+  },
+  "tfi/TfiPaintBucket.svg": {
+    "component_id": "tfi:TfiPaintBucket",
+    "aliases": [
+      "tfi",
+      "paint",
+      "bucket"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a water bottle with a drop of water"
+  },
+  "tfi/TfiPaintRoller.svg": {
+    "component_id": "tfi:TfiPaintRoller",
+    "aliases": [
+      "tfi",
+      "paint",
+      "roller"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a paint roller"
+  },
+  "tfi/TfiPalette.svg": {
+    "component_id": "tfi:TfiPalette",
+    "aliases": [
+      "tfi",
+      "palette"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a circle and two dots"
+  },
+  "tfi/TfiPanel.svg": {
+    "component_id": "tfi:TfiPanel",
+    "aliases": [
+      "tfi",
+      "panel"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three circles"
+  },
+  "tfi/TfiParagraph.svg": {
+    "component_id": "tfi:TfiParagraph",
+    "aliases": [
+      "tfi",
+      "paragraph"
+    ],
+    "colors": [],
+    "caption": "a black and white logo that says tp"
+  },
+  "tfi/TfiPencil.svg": {
+    "component_id": "tfi:TfiPencil",
+    "aliases": [
+      "tfi",
+      "pencil"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a pencil"
+  },
+  "tfi/TfiPencilAlt.svg": {
+    "component_id": "tfi:TfiPencilAlt",
+    "aliases": [
+      "tfi",
+      "pencil",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pencil in a box"
+  },
+  "tfi/TfiPencilAlt2.svg": {
+    "component_id": "tfi:TfiPencilAlt2",
+    "aliases": [
+      "tfi",
+      "pencil",
+      "alt",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a pencil icon on a white background"
+  },
+  "tfi/TfiPieChart.svg": {
+    "component_id": "tfi:TfiPieChart",
+    "aliases": [
+      "tfi",
+      "pie",
+      "chart"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a pie chart"
+  },
+  "tfi/TfiPin.svg": {
+    "component_id": "tfi:TfiPin",
+    "aliases": [
+      "tfi",
+      "pin"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a stop sign"
+  },
+  "tfi/TfiPin2.svg": {
+    "component_id": "tfi:TfiPin2",
+    "aliases": [
+      "tfi",
+      "pin",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a lamp on a stand"
+  },
+  "tfi/TfiPinAlt.svg": {
+    "component_id": "tfi:TfiPinAlt",
+    "aliases": [
+      "tfi",
+      "pin",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a spoon"
+  },
+  "tfi/TfiPinterest.svg": {
+    "component_id": "tfi:TfiPinterest",
+    "aliases": [
+      "tfi",
+      "pinterest"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the pinterest logo"
+  },
+  "tfi/TfiPinterestAlt.svg": {
+    "component_id": "tfi:TfiPinterestAlt",
+    "aliases": [
+      "tfi",
+      "pinterest",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "the pinterest logo is shown in black and white"
+  },
+  "tfi/TfiPlug.svg": {
+    "component_id": "tfi:TfiPlug",
+    "aliases": [
+      "tfi",
+      "plug"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a power plug"
+  },
+  "tfi/TfiPlus.svg": {
+    "component_id": "tfi:TfiPlus",
+    "aliases": [
+      "tfi",
+      "plus"
+    ],
+    "colors": [],
+    "caption": "a black cross is shown on a white background"
+  },
+  "tfi/TfiPowerOff.svg": {
+    "component_id": "tfi:TfiPowerOff",
+    "aliases": [
+      "tfi",
+      "power",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a power button"
+  },
+  "tfi/TfiPrinter.svg": {
+    "component_id": "tfi:TfiPrinter",
+    "aliases": [
+      "tfi",
+      "printer"
+    ],
+    "colors": [],
+    "caption": "a printer icon on a white background"
+  },
+  "tfi/TfiPulse.svg": {
+    "component_id": "tfi:TfiPulse",
+    "aliases": [
+      "tfi",
+      "pulse"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a heartbeat symbol"
+  },
+  "tfi/TfiQuoteLeft.svg": {
+    "component_id": "tfi:TfiQuoteLeft",
+    "aliases": [
+      "tfi",
+      "quote",
+      "left"
+    ],
+    "colors": [],
+    "caption": "the number six is shown in black and white"
+  },
+  "tfi/TfiQuoteRight.svg": {
+    "component_id": "tfi:TfiQuoteRight",
+    "aliases": [
+      "tfi",
+      "quote",
+      "right"
+    ],
+    "colors": [],
+    "caption": "the number nine is shown in black and white"
+  },
+  "tfi/TfiReceipt.svg": {
+    "component_id": "tfi:TfiReceipt",
+    "aliases": [
+      "tfi",
+      "receipt"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "tfi/TfiReddit.svg": {
+    "component_id": "tfi:TfiReddit",
+    "aliases": [
+      "tfi",
+      "reddit"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a smiling face"
+  },
+  "tfi/TfiReload.svg": {
+    "component_id": "tfi:TfiReload",
+    "aliases": [
+      "tfi",
+      "reload"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "tfi/TfiRocket.svg": {
+    "component_id": "tfi:TfiRocket",
+    "aliases": [
+      "tfi",
+      "rocket"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a rocket"
+  },
+  "tfi/TfiRss.svg": {
+    "component_id": "tfi:TfiRss",
+    "aliases": [
+      "tfi",
+      "rss"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a rss icon"
+  },
+  "tfi/TfiRssAlt.svg": {
+    "component_id": "tfi:TfiRssAlt",
+    "aliases": [
+      "tfi",
+      "rss",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a circle"
+  },
+  "tfi/TfiRuler.svg": {
+    "component_id": "tfi:TfiRuler",
+    "aliases": [
+      "tfi",
+      "ruler"
+    ],
+    "colors": [],
+    "caption": "a ruler icon on a white background"
+  },
+  "tfi/TfiRulerAlt.svg": {
+    "component_id": "tfi:TfiRulerAlt",
+    "aliases": [
+      "tfi",
+      "ruler",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a ruler icon on a white background"
+  },
+  "tfi/TfiRulerAlt2.svg": {
+    "component_id": "tfi:TfiRulerAlt2",
+    "aliases": [
+      "tfi",
+      "ruler",
+      "alt",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a triangle"
+  },
+  "tfi/TfiRulerPencil.svg": {
+    "component_id": "tfi:TfiRulerPencil",
+    "aliases": [
+      "tfi",
+      "ruler",
+      "pencil"
+    ],
+    "colors": [],
+    "caption": "a pencil and ruler icon on a white background"
+  },
+  "tfi/TfiSave.svg": {
+    "component_id": "tfi:TfiSave",
+    "aliases": [
+      "tfi",
+      "save"
+    ],
+    "colors": [],
+    "caption": "an icon of a floppy disk on a white background"
+  },
+  "tfi/TfiSaveAlt.svg": {
+    "component_id": "tfi:TfiSaveAlt",
+    "aliases": [
+      "tfi",
+      "save",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "an icon of a floppy disk on a white background"
+  },
+  "tfi/TfiSearch.svg": {
+    "component_id": "tfi:TfiSearch",
+    "aliases": [
+      "tfi",
+      "search"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "tfi/TfiServer.svg": {
+    "component_id": "tfi:TfiServer",
+    "aliases": [
+      "tfi",
+      "server"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a stack of data"
+  },
+  "tfi/TfiSettings.svg": {
+    "component_id": "tfi:TfiSettings",
+    "aliases": [
+      "tfi",
+      "settings"
+    ],
+    "colors": [],
+    "caption": "a gear wheel icon on a white background"
+  },
+  "tfi/TfiShare.svg": {
+    "component_id": "tfi:TfiShare",
+    "aliases": [
+      "tfi",
+      "share"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow in a box"
+  },
+  "tfi/TfiShareAlt.svg": {
+    "component_id": "tfi:TfiShareAlt",
+    "aliases": [
+      "tfi",
+      "share",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow in a box"
+  },
+  "tfi/TfiSharethis.svg": {
+    "component_id": "tfi:TfiSharethis",
+    "aliases": [
+      "tfi",
+      "sharethis"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two circles"
+  },
+  "tfi/TfiSharethisAlt.svg": {
+    "component_id": "tfi:TfiSharethisAlt",
+    "aliases": [
+      "tfi",
+      "sharethis",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with two circles"
+  },
+  "tfi/TfiShield.svg": {
+    "component_id": "tfi:TfiShield",
+    "aliases": [
+      "tfi",
+      "shield"
+    ],
+    "colors": [],
+    "caption": "the shield logo is black and white"
+  },
+  "tfi/TfiShiftLeft.svg": {
+    "component_id": "tfi:TfiShiftLeft",
+    "aliases": [
+      "tfi",
+      "shift",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing in the direction of the arrow"
+  },
+  "tfi/TfiShiftLeftAlt.svg": {
+    "component_id": "tfi:TfiShiftLeftAlt",
+    "aliases": [
+      "tfi",
+      "shift",
+      "left",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "tfi/TfiShiftRight.svg": {
+    "component_id": "tfi:TfiShiftRight",
+    "aliases": [
+      "tfi",
+      "shift",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "tfi/TfiShiftRightAlt.svg": {
+    "component_id": "tfi:TfiShiftRightAlt",
+    "aliases": [
+      "tfi",
+      "shift",
+      "right",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "tfi/TfiShine.svg": {
+    "component_id": "tfi:TfiShine",
+    "aliases": [
+      "tfi",
+      "shine"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun"
+  },
+  "tfi/TfiShoppingCart.svg": {
+    "component_id": "tfi:TfiShoppingCart",
+    "aliases": [
+      "tfi",
+      "shopping",
+      "cart"
+    ],
+    "colors": [],
+    "caption": "a shopping cart icon on a white background"
+  },
+  "tfi/TfiShoppingCartFull.svg": {
+    "component_id": "tfi:TfiShoppingCartFull",
+    "aliases": [
+      "tfi",
+      "shopping",
+      "cart",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a shopping cart icon on a white background"
+  },
+  "tfi/TfiShortcode.svg": {
+    "component_id": "tfi:TfiShortcode",
+    "aliases": [
+      "tfi",
+      "shortcode"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter s in it"
+  },
+  "tfi/TfiSignal.svg": {
+    "component_id": "tfi:TfiSignal",
+    "aliases": [
+      "tfi",
+      "signal"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a wifi symbol"
+  },
+  "tfi/TfiSkype.svg": {
+    "component_id": "tfi:TfiSkype",
+    "aliases": [
+      "tfi",
+      "skype"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter s"
+  },
+  "tfi/TfiSlice.svg": {
+    "component_id": "tfi:TfiSlice",
+    "aliases": [
+      "tfi",
+      "slice"
+    ],
+    "colors": [],
+    "caption": "a knife icon on a white background"
+  },
+  "tfi/TfiSmallcap.svg": {
+    "component_id": "tfi:TfiSmallcap",
+    "aliases": [
+      "tfi",
+      "smallcap"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "tfi/TfiSoundcloud.svg": {
+    "component_id": "tfi:TfiSoundcloud",
+    "aliases": [
+      "tfi",
+      "soundcloud"
+    ],
+    "colors": [],
+    "caption": "the soundcloud logo is shown on a white background"
+  },
+  "tfi/TfiSplitH.svg": {
+    "component_id": "tfi:TfiSplitH",
+    "aliases": [
+      "tfi",
+      "split",
+      "h"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "tfi/TfiSplitV.svg": {
+    "component_id": "tfi:TfiSplitV",
+    "aliases": [
+      "tfi",
+      "split",
+      "v"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "tfi/TfiSplitVAlt.svg": {
+    "component_id": "tfi:TfiSplitValt",
+    "aliases": [
+      "tfi",
+      "split",
+      "valt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a computer symbol"
+  },
+  "tfi/TfiSpray.svg": {
+    "component_id": "tfi:TfiSpray",
+    "aliases": [
+      "tfi",
+      "spray"
+    ],
+    "colors": [],
+    "caption": "a spray can icon on a white background"
+  },
+  "tfi/TfiStackOverflow.svg": {
+    "component_id": "tfi:TfiStackOverflow",
+    "aliases": [
+      "tfi",
+      "stack",
+      "overflow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a staircase"
+  },
+  "tfi/TfiStamp.svg": {
+    "component_id": "tfi:TfiStamp",
+    "aliases": [
+      "tfi",
+      "stamp"
+    ],
+    "colors": [],
+    "caption": "a stamp icon on a white background"
+  },
+  "tfi/TfiStar.svg": {
+    "component_id": "tfi:TfiStar",
+    "aliases": [
+      "tfi",
+      "star"
+    ],
+    "colors": [],
+    "caption": "a black star on a white background"
+  },
+  "tfi/TfiStatsDown.svg": {
+    "component_id": "tfi:TfiStatsDown",
+    "aliases": [
+      "tfi",
+      "stats",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a downward arrow"
+  },
+  "tfi/TfiStatsUp.svg": {
+    "component_id": "tfi:TfiStatsUp",
+    "aliases": [
+      "tfi",
+      "stats",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a graph is shown on a white background"
+  },
+  "tfi/TfiSupport.svg": {
+    "component_id": "tfi:TfiSupport",
+    "aliases": [
+      "tfi",
+      "support"
+    ],
+    "colors": [],
+    "caption": "a medical bag icon on a white background"
+  },
+  "tfi/TfiTablet.svg": {
+    "component_id": "tfi:TfiTablet",
+    "aliases": [
+      "tfi",
+      "tablet"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a tablet computer"
+  },
+  "tfi/TfiTag.svg": {
+    "component_id": "tfi:TfiTag",
+    "aliases": [
+      "tfi",
+      "tag"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a bookmark"
+  },
+  "tfi/TfiTarget.svg": {
+    "component_id": "tfi:TfiTarget",
+    "aliases": [
+      "tfi",
+      "target"
+    ],
+    "colors": [],
+    "caption": "a crosshairs symbol on a white background"
+  },
+  "tfi/TfiText.svg": {
+    "component_id": "tfi:TfiText",
+    "aliases": [
+      "tfi",
+      "text"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "tfi/TfiThemifyFavicon.svg": {
+    "component_id": "tfi:TfiThemifyFavicon",
+    "aliases": [
+      "tfi",
+      "themify",
+      "favicon"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face in a speech bubble"
+  },
+  "tfi/TfiThemifyFaviconAlt.svg": {
+    "component_id": "tfi:TfiThemifyFaviconAlt",
+    "aliases": [
+      "tfi",
+      "themify",
+      "favicon",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face in a speech bubble"
+  },
+  "tfi/TfiThemifyLogo.svg": {
+    "component_id": "tfi:TfiThemifyLogo",
+    "aliases": [
+      "tfi",
+      "themify",
+      "logo"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word themify written on it"
+  },
+  "tfi/TfiThought.svg": {
+    "component_id": "tfi:TfiThought",
+    "aliases": [
+      "tfi",
+      "thought"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a thought bubble"
+  },
+  "tfi/TfiThumbDown.svg": {
+    "component_id": "tfi:TfiThumbDown",
+    "aliases": [
+      "tfi",
+      "thumb",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a thumb down"
+  },
+  "tfi/TfiThumbUp.svg": {
+    "component_id": "tfi:TfiThumbUp",
+    "aliases": [
+      "tfi",
+      "thumb",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a thumb up"
+  },
+  "tfi/TfiTicket.svg": {
+    "component_id": "tfi:TfiTicket",
+    "aliases": [
+      "tfi",
+      "ticket"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a ticket on a white background"
+  },
+  "tfi/TfiTime.svg": {
+    "component_id": "tfi:TfiTime",
+    "aliases": [
+      "tfi",
+      "time"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "tfi/TfiTimer.svg": {
+    "component_id": "tfi:TfiTimer",
+    "aliases": [
+      "tfi",
+      "timer"
+    ],
+    "colors": [],
+    "caption": "a stopwatch icon on a white background"
+  },
+  "tfi/TfiTrash.svg": {
+    "component_id": "tfi:TfiTrash",
+    "aliases": [
+      "tfi",
+      "trash"
+    ],
+    "colors": [],
+    "caption": "a trash can icon on a white background"
+  },
+  "tfi/TfiTrello.svg": {
+    "component_id": "tfi:TfiTrello",
+    "aliases": [
+      "tfi",
+      "trello"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a door with two windows"
+  },
+  "tfi/TfiTruck.svg": {
+    "component_id": "tfi:TfiTruck",
+    "aliases": [
+      "tfi",
+      "truck"
+    ],
+    "colors": [],
+    "caption": "a truck icon on a white background"
+  },
+  "tfi/TfiTumblr.svg": {
+    "component_id": "tfi:TfiTumblr",
+    "aliases": [
+      "tfi",
+      "tumblr"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "tfi/TfiTumblrAlt.svg": {
+    "component_id": "tfi:TfiTumblrAlt",
+    "aliases": [
+      "tfi",
+      "tumblr",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "tfi/TfiTwitter.svg": {
+    "component_id": "tfi:TfiTwitter",
+    "aliases": [
+      "tfi",
+      "twitter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a twitter bird"
+  },
+  "tfi/TfiTwitterAlt.svg": {
+    "component_id": "tfi:TfiTwitterAlt",
+    "aliases": [
+      "tfi",
+      "twitter",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black twitter logo on a white background"
+  },
+  "tfi/TfiUnderline.svg": {
+    "component_id": "tfi:TfiUnderline",
+    "aliases": [
+      "tfi",
+      "underline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter u"
+  },
+  "tfi/TfiUnlink.svg": {
+    "component_id": "tfi:TfiUnlink",
+    "aliases": [
+      "tfi",
+      "unlink"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the letter s"
+  },
+  "tfi/TfiUnlock.svg": {
+    "component_id": "tfi:TfiUnlock",
+    "aliases": [
+      "tfi",
+      "unlock"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "tfi/TfiUpload.svg": {
+    "component_id": "tfi:TfiUpload",
+    "aliases": [
+      "tfi",
+      "upload"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "tfi/TfiUppercase.svg": {
+    "component_id": "tfi:TfiUppercase",
+    "aliases": [
+      "tfi",
+      "uppercase"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "tfi/TfiUser.svg": {
+    "component_id": "tfi:TfiUser",
+    "aliases": [
+      "tfi",
+      "user"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a man's head on a white background"
+  },
+  "tfi/TfiVector.svg": {
+    "component_id": "tfi:TfiVector",
+    "aliases": [
+      "tfi",
+      "vector"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a connector"
+  },
+  "tfi/TfiVideoCamera.svg": {
+    "component_id": "tfi:TfiVideoCamera",
+    "aliases": [
+      "tfi",
+      "video",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a camera"
+  },
+  "tfi/TfiVideoClapper.svg": {
+    "component_id": "tfi:TfiVideoClapper",
+    "aliases": [
+      "tfi",
+      "video",
+      "clapper"
+    ],
+    "colors": [],
+    "caption": "a movie clapper icon on a white background"
+  },
+  "tfi/TfiViewGrid.svg": {
+    "component_id": "tfi:TfiViewGrid",
+    "aliases": [
+      "tfi",
+      "view",
+      "grid"
+    ],
+    "colors": [],
+    "caption": "a square with four black squares on it"
+  },
+  "tfi/TfiViewList.svg": {
+    "component_id": "tfi:TfiViewList",
+    "aliases": [
+      "tfi",
+      "view",
+      "list"
+    ],
+    "colors": [],
+    "caption": "a black and white image of four lines"
+  },
+  "tfi/TfiViewListAlt.svg": {
+    "component_id": "tfi:TfiViewListAlt",
+    "aliases": [
+      "tfi",
+      "view",
+      "list",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white check list icon"
+  },
+  "tfi/TfiVimeo.svg": {
+    "component_id": "tfi:TfiVimeo",
+    "aliases": [
+      "tfi",
+      "vimeo"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a letter v"
+  },
+  "tfi/TfiVimeoAlt.svg": {
+    "component_id": "tfi:TfiVimeoAlt",
+    "aliases": [
+      "tfi",
+      "vimeo",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a letter v"
+  },
+  "tfi/TfiVolume.svg": {
+    "component_id": "tfi:TfiVolume",
+    "aliases": [
+      "tfi",
+      "volume"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "tfi/TfiWallet.svg": {
+    "component_id": "tfi:TfiWallet",
+    "aliases": [
+      "tfi",
+      "wallet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a wallet"
+  },
+  "tfi/TfiWand.svg": {
+    "component_id": "tfi:TfiWand",
+    "aliases": [
+      "tfi",
+      "wand"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a wand"
+  },
+  "tfi/TfiWheelchair.svg": {
+    "component_id": "tfi:TfiWheelchair",
+    "aliases": [
+      "tfi",
+      "wheelchair"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a person in a wheelchair"
+  },
+  "tfi/TfiWidget.svg": {
+    "component_id": "tfi:TfiWidget",
+    "aliases": [
+      "tfi",
+      "widget"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a gear wheel"
+  },
+  "tfi/TfiWidgetAlt.svg": {
+    "component_id": "tfi:TfiWidgetAlt",
+    "aliases": [
+      "tfi",
+      "widget",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white square with a check mark"
+  },
+  "tfi/TfiWidgetized.svg": {
+    "component_id": "tfi:TfiWidgetized",
+    "aliases": [
+      "tfi",
+      "widgetized"
+    ],
+    "colors": [],
+    "caption": "an image of a square with black squares on it"
+  },
+  "tfi/TfiWindow.svg": {
+    "component_id": "tfi:TfiWindow",
+    "aliases": [
+      "tfi",
+      "window"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a web browser"
+  },
+  "tfi/TfiWordpress.svg": {
+    "component_id": "tfi:TfiWordpress",
+    "aliases": [
+      "tfi",
+      "wordpress"
+    ],
+    "colors": [],
+    "caption": "the wordpress logo is shown in black and white"
+  },
+  "tfi/TfiWorld.svg": {
+    "component_id": "tfi:TfiWorld",
+    "aliases": [
+      "tfi",
+      "world"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a globe"
+  },
+  "tfi/TfiWrite.svg": {
+    "component_id": "tfi:TfiWrite",
+    "aliases": [
+      "tfi",
+      "write"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pen and paper"
+  },
+  "tfi/TfiYahoo.svg": {
+    "component_id": "tfi:TfiYahoo",
+    "aliases": [
+      "tfi",
+      "yahoo"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter y"
+  },
+  "tfi/TfiYoutube.svg": {
+    "component_id": "tfi:TfiYoutube",
+    "aliases": [
+      "tfi",
+      "youtube"
+    ],
+    "colors": [],
+    "caption": "the youtube logo is shown in black and white"
+  },
+  "tfi/TfiZip.svg": {
+    "component_id": "tfi:TfiZip",
+    "aliases": [
+      "tfi",
+      "zip"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a file folder"
+  },
+  "tfi/TfiZoomIn.svg": {
+    "component_id": "tfi:TfiZoomIn",
+    "aliases": [
+      "tfi",
+      "zoom",
+      "in"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon with a plus sign"
+  },
+  "tfi/TfiZoomOut.svg": {
+    "component_id": "tfi:TfiZoomOut",
+    "aliases": [
+      "tfi",
+      "zoom",
+      "out"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  }
+}

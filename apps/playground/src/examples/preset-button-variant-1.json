@@ -1,0 +1,99 @@
+{
+  "widget": {
+    "backgroundColor": "#0F0F23",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "stretch",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "ACTIVATE",
+            "icon": "sf:bolt.fill",
+            "backgroundColor": "#00F5FF",
+            "color": "#0F0F23",
+            "borderRadius": 8,
+            "paddingY": 16,
+            "paddingX": 28,
+            "fontSize": 16,
+            "fontWeight": 800,
+            "width": "100%"
+          }
+        },
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "CONNECT",
+            "icon": "sf:link",
+            "backgroundColor": "transparent",
+            "color": "#FF00EA",
+            "borderRadius": 8,
+            "paddingY": 16,
+            "paddingX": 28,
+            "fontSize": 16,
+            "fontWeight": 800,
+            "width": "100%",
+            "style": {
+              "border": "2px solid #FF00EA"
+            }
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:heart.fill",
+                "backgroundColor": "#FF0066",
+                "color": "#FFFFFF",
+                "borderRadius": 8,
+                "width": 52,
+                "height": 52,
+                "padding": 0
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:star.fill",
+                "backgroundColor": "#FFD600",
+                "color": "#0F0F23",
+                "borderRadius": 8,
+                "width": 52,
+                "height": 52,
+                "padding": 0
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:paperplane.fill",
+                "backgroundColor": "#00F5FF",
+                "color": "#0F0F23",
+                "borderRadius": 8,
+                "width": 52,
+                "height": 52,
+                "padding": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

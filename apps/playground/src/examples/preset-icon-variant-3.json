@@ -1,0 +1,125 @@
+{
+  "widget": {
+    "backgroundColor": "rgba(30, 30, 46, 0.8)",
+    "borderRadius": 24,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 22,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "props": {
+        "style": {
+          "backdropFilter": "blur(20px)"
+        }
+      },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 22,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "wi:WiDaySunny",
+                "size": 38,
+                "color": "#FBBF24"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "ri:RiMoonFill",
+                "size": 38,
+                "color": "#A78BFA"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "hi:HiSparkles",
+                "size": 38,
+                "color": "#F472B6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 22,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "pi:PiMusicNoteFill",
+                "size": 38,
+                "color": "#EC4899"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "bs:BsPlayCircleFill",
+                "size": 38,
+                "color": "#34D399"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "ri:RiHeadphoneFill",
+                "size": 38,
+                "color": "#60A5FA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 22,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "pi:PiCameraFill",
+                "size": 38,
+                "color": "#F59E0B"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "bi:BiImageAlt",
+                "size": 38,
+                "color": "#10B981"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "md:MdVideocam",
+                "size": 38,
+                "color": "#EF4444"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

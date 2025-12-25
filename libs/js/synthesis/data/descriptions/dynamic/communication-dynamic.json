@@ -1,0 +1,169 @@
+{
+  "domain": "communication",
+  "total": 27,
+  "generated": "2025-11-05T16:03:06.294Z",
+  "variations": [
+    {
+      "id": "communication-dynamic-001",
+      "prompt": "An email widget showing missed calls with message preview",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-002",
+      "prompt": "An email widget showing messages",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-003",
+      "prompt": "A messages widget showing voicemails",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-004",
+      "prompt": "A notifications widget showing voicemails with contact photos",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-005",
+      "prompt": "An email widget showing missed calls",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-006",
+      "prompt": "An email widget showing calls with contact photos",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-007",
+      "prompt": "A messages widget showing contacts with contact photos and reply button",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-008",
+      "prompt": "A messages widget showing contacts",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-009",
+      "prompt": "An email widget showing unread count with message preview",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-010",
+      "prompt": "A calls widget showing voicemails with badge counts",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-011",
+      "prompt": "A calls widget showing calls with badge counts",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-012",
+      "prompt": "An email widget showing missed calls",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-013",
+      "prompt": "A calls widget showing emails with badge counts",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-014",
+      "prompt": "A calls widget showing contacts and sender names",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-015",
+      "prompt": "A calls widget showing contacts",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-016",
+      "prompt": "A messages widget showing messages with contact photos",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-017",
+      "prompt": "A calls widget showing messages with timestamp and reply button",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-018",
+      "prompt": "An email widget showing unread count",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-019",
+      "prompt": "An email widget showing contacts",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-020",
+      "prompt": "An email widget showing messages",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-021",
+      "prompt": "A calls widget showing notifications with badge counts and sender names",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-022",
+      "prompt": "A messages widget showing messages with timestamp and reply button",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-023",
+      "prompt": "An email widget showing contacts with badge counts and reply button",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-024",
+      "prompt": "A notifications widget showing unread count",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-025",
+      "prompt": "A notifications widget showing messages and calls",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-026",
+      "prompt": "A messages widget showing emails and notifications with message preview",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "communication-dynamic-027",
+      "prompt": "A notifications widget showing messages and unread count",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

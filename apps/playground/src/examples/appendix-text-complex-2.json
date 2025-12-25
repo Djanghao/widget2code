@@ -1,0 +1,105 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 32,
+    "padding": 0,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "flex": 3,
+          "props": { "style": { "position": "relative" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Image",
+              "props": {
+                "src": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                "width": "100%",
+                "height": "100%",
+                "style": { "borderRadius": "32px 32px 0 0", "objectFit": "cover" }
+              }
+            },
+            {
+              "type": "container",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "top": 24,
+                  "left": 24,
+                  "backgroundColor": "#FFFFFF",
+                  "paddingY": 8,
+                  "paddingX": 16,
+                  "borderRadius": 100,
+                  "boxShadow": "0 4px 12px rgba(0,0,0,0.1)"
+                }
+              },
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "fontWeight": 700, "color": "#000000", "textTransform": "uppercase", "letterSpacing": 1 }, "content": "Architecture" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 2,
+          "padding": 24,
+          "direction": "col",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93", "fontWeight": 600 }, "content": "SEPTEMBER 24 • 5 MIN READ" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 24, "fontWeight": 800, "color": "#000000", "lineHeight": 1.1 }, "content": "The Future of Sustainable Office Spaces" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "color": "#3C3C43", "lineHeight": 1.4 }, "content": "How modern design is reshaping the way we work and interact with our environment." }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Image",
+                      "props": {
+                        "src": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80",
+                        "width": 32,
+                        "height": 32,
+                        "borderRadius": 16
+                      }
+                    },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "By Alex Morgan" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 16,
+                  "children": [
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:bookmark", "size": 20, "color": "#000000" } },
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:square.and.arrow.up", "size": 20, "color": "#000000" } }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

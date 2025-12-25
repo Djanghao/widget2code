@@ -1,0 +1,105 @@
+{
+  "widget": {
+    "backgroundColor": "#4A90E2",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 8,
+      "flex": 1,
+      "alignMain": "between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 6,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 16,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "Cupertino"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 14,
+                "color": "#ffffff",
+                "name": "sf:paperplane.fill"
+              }
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 64,
+            "color": "#ffffff",
+            "fontWeight": 200
+          },
+          "content": "70°"
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 4,
+          "flex": 0,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "color": "#FFD60A",
+                    "name": "sf:sun.max.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff"
+                  },
+                  "content": "Sunny"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 14,
+                "color": "#ffffff"
+              },
+              "content": "H:75° L:59°"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
