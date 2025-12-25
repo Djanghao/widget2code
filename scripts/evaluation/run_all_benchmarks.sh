@@ -1,11 +1,52 @@
 #!/bin/bash
 # Run evaluation for all benchmark datasets
-# Usage: ./scripts/evaluation/run_all_benchmarks.sh
+# Usage: ./scripts/evaluation/run_all_benchmarks.sh [OPTIONS]
 
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 EVAL_SCRIPT="$SCRIPT_DIR/run_evaluation.sh"
+
+# Default values
+GT_DIR=""
+WORKERS=10
+USE_CUDA=false
+
+# Parse arguments
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -g|--gt_dir)
+            GT_DIR="$2"
+            shift 2
+            ;;
+        -w|--workers)
+            WORKERS="$2"
+            shift 2
+            ;;
+        --cuda)
+            USE_CUDA=true
+            shift
+            ;;
+        -h|--help)
+            echo "Usage: $0 [OPTIONS]"
+            echo ""
+            echo "Options:"
+            echo "  -g, --gt_dir PATH     Path to ground truth directory (optional, uses .env GT_DIR if not set)"
+            echo "  -w, --workers NUM     Number of worker threads (default: 10)"
+            echo "  --cuda                Use CUDA/GPU for computation (default: CPU)"
+            echo "  -h, --help            Show this help message"
+            echo ""
+            echo "Example:"
+            echo "  $0 -g ./data/widget2code-benchmark/test --cuda -w 16"
+            exit 0
+            ;;
+        *)
+            echo "Error: Unknown option $1"
+            echo "Run '$0 --help' for usage information"
+            exit 1
+            ;;
+    esac
+done
 
 # Check if evaluation script exists
 if [ ! -f "$EVAL_SCRIPT" ]; then
@@ -58,7 +99,20 @@ for DATASET in "${DATASETS[@]}"; do
     # Run evaluation
     OUTPUT_DIR="$DATASET/.analysis"
 
-    if "$EVAL_SCRIPT" "$DATASET" "$OUTPUT_DIR" --cuda -w 10; then
+    # Build command with optional parameters
+    EVAL_CMD="$EVAL_SCRIPT $DATASET $OUTPUT_DIR"
+
+    if [ -n "$GT_DIR" ]; then
+        EVAL_CMD="$EVAL_CMD -g $GT_DIR"
+    fi
+
+    EVAL_CMD="$EVAL_CMD -w $WORKERS"
+
+    if [ "$USE_CUDA" = true ]; then
+        EVAL_CMD="$EVAL_CMD --cuda"
+    fi
+
+    if eval "$EVAL_CMD"; then
         echo "✅ Completed: $DATASET"
     else
         echo "❌ Failed: $DATASET"

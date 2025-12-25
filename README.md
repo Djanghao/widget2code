@@ -19,15 +19,9 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
   <a href="https://arxiv.org/abs/2512.19918" target="_blank"><img src=https://img.shields.io/badge/paper-arxiv-red.svg height=22px></a>
   <a href=https://djanghao.github.io/widget2code/ target="_blank"><img src= https://img.shields.io/badge/Project-Page-bb8a2e.svg?logo=github height=22px></a>
   <a href=https://github.com/Djanghao/widget2code target="_blank"><img src=https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github height=22px></a>
+  <a href="https://huggingface.co/datasets/Djanghao/widget2code-benchmark" target="_blank"><img src=https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Datasets-yellow height=22px></a>
   <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank"><img src=https://img.shields.io/badge/license-Apache%202.0-blue.svg height=22px></a>
-
 </div>
-
-
-<p align="center">
-    💻 <a href="./apps/playground">Interactive Playground</a> |
-📊 <a href="#-benchmarks--evaluation">Benchmarks</a>&nbsp&nbsp
-</p>
 
 ## 📋 Table of Contents
 - [🎨 Widget2Code: From Visual Widgets to UI Code via Multimodal LLMs](#-widget2code-from-visual-widgets-to-ui-code-via-multimodal-llms)
@@ -115,11 +109,13 @@ Installs all dependencies including Node.js packages and isolated Python environ
 
 ## ⚙️ Configuration
 
-Create `.env` file with API credentials:
+Create `.env` file with API credentials and ground truth directory:
 
 ```bash
 cp .env.example .env
-# Edit .env and add your API configuration
+# Edit .env and configure:
+# - API credentials
+# - GT_DIR: Path to ground truth directory for evaluation (e.g., ./data/widget2code-benchmark/test)
 ```
 
 ## 🚀 Quick Start
@@ -155,10 +151,14 @@ npm run api
 
 ```bash
 # Evaluate generated widgets against ground truth
-./scripts/evaluation/run_evaluation.sh ./output -g ./ground_truth
+# If GT_DIR is set in .env, -g flag is optional
+./scripts/evaluation/run_evaluation.sh ./output
+
+# Or specify ground truth directory explicitly
+./scripts/evaluation/run_evaluation.sh ./output -g ./data/widget2code-benchmark/test
 
 # Use GPU and more workers for faster evaluation
-./scripts/evaluation/run_evaluation.sh ./output -g ./ground_truth --cuda -w 16
+./scripts/evaluation/run_evaluation.sh ./output -g ./data/widget2code-benchmark/test --cuda -w 16
 ```
 
 ### Interactive Playground (Optional)
@@ -197,13 +197,13 @@ Widget2Code has been evaluated on 13 benchmark datasets:
 
 ### Download Benchmarks
 
-The evaluation results on multiple benchmarks are available for download:
+Download the [Widget2Code Benchmark Dataset](https://huggingface.co/datasets/Djanghao/widget2code-benchmark) to the `./data/` folder.
 
-**Download Link**: [Benchmarks Dataset (465MB)](https://drive.google.com/file/d/1LAYReu4fUES1IE0qM7h-zNGvyUgYnqwz/view?usp=sharing)
+After downloading, set `GT_DIR=./data/widget2code-benchmark/test` in your `.env` file, or use the `-g` flag when running evaluation scripts. The **test split** (`./data/widget2code-benchmark/test`) should be used as ground truth for evaluation.
 
-This archive contains evaluation results across all 13 benchmark datasets.
+**Benchmark Results**: [All Methods Results (465MB)](https://drive.google.com/file/d/1LAYReu4fUES1IE0qM7h-zNGvyUgYnqwz/view?usp=sharing) - Download evaluation results across all 13 benchmark datasets and methods from Google Drive.
 
-To use the benchmarks:
+To use the benchmark results:
 ```bash
 # Install gdown (if not already installed)
 pip install gdown
@@ -216,8 +216,8 @@ gdown --fuzzy "https://drive.google.com/file/d/1LAYReu4fUES1IE0qM7h-zNGvyUgYnqwz
 # Extract to project root directory
 unzip benchmarks_backup_20251216.zip
 
-# Run evaluation on all benchmarks
-./scripts/evaluation/run_all_benchmarks.sh
+# Run evaluation on all benchmarks (using test split as ground truth)
+./scripts/evaluation/run_all_benchmarks.sh -g ./data/widget2code-benchmark/test --cuda -w 16
 ```
 
 ## 📚 Citation
