@@ -1,0 +1,132 @@
+{
+  "widget": {
+    "backgroundColor": "#F8FAFC",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.460,
+    "root": {
+      "type": "container",
+      "direction": "row",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 0,
+          "width": 105,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 12,
+                "fontWeight": 700,
+                "color": "#475569"
+              },
+              "content": "Channel Perf"
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 1,
+                  "flex": 0,
+                  "backgroundColor": "#E2E8F0",
+                  "borderRadius": 6,
+                  "padding": 6,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 7,
+                        "color": "#334155",
+                        "fontWeight": 600
+                      },
+                      "content": "BEST ROI"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 10,
+                        "fontWeight": 700,
+                        "color": "#475569"
+                      },
+                      "content": "Organic"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 1,
+                  "flex": 0,
+                  "backgroundColor": "#E2E8F0",
+                  "borderRadius": 6,
+                  "padding": 6,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 7,
+                        "color": "#334155",
+                        "fontWeight": 600
+                      },
+                      "content": "TOTAL CONV"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 10,
+                        "fontWeight": 700,
+                        "color": "#475569"
+                      },
+                      "content": "2,847"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "StackedBarChart",
+          "flex": 1,
+          "props": {
+            "data": [
+              [38, 32, 20, 10],
+              [42, 28, 18, 12],
+              [35, 35, 22, 8],
+              [47, 30, 19, 11]
+            ],
+            "labels": ["Organic", "Paid", "Direct", "Social"],
+            "colors": ["#475569", "#64748B", "#94A3B8", "#CBD5E1"],
+            "theme": "light",
+            "barBorderRadius": 4,
+            "height": 140,
+            "showXAxisLabels": true,
+            "showYAxisLabels": true
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,3101 @@
+[
+  {
+    "src_svg": "ci/CiAirportSign1.svg",
+    "component_id": "ci:CiAirportSign1",
+    "aliases": [
+      "ci",
+      "airport",
+      "sign",
+      "1"
+    ],
+    "caption": "an airplane icon in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiAlarmOff.svg",
+    "component_id": "ci:CiAlarmOff",
+    "aliases": [
+      "ci",
+      "alarm",
+      "off"
+    ],
+    "caption": "a black and white line drawing of a no sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiAlarmOn.svg",
+    "component_id": "ci:CiAlarmOn",
+    "aliases": [
+      "ci",
+      "alarm",
+      "on"
+    ],
+    "caption": "an alarm clock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiAlignBottom.svg",
+    "component_id": "ci:CiAlignBottom",
+    "aliases": [
+      "ci",
+      "align",
+      "bottom"
+    ],
+    "caption": "a bar graph icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiAlignCenterH.svg",
+    "component_id": "ci:CiAlignCenterH",
+    "aliases": [
+      "ci",
+      "align",
+      "center",
+      "h"
+    ],
+    "caption": "a black and white image of a symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiAlignCenterV.svg",
+    "component_id": "ci:CiAlignCenterV",
+    "aliases": [
+      "ci",
+      "align",
+      "center",
+      "v"
+    ],
+    "caption": "a black and white icon of two pills",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiAlignLeft.svg",
+    "component_id": "ci:CiAlignLeft",
+    "aliases": [
+      "ci",
+      "align",
+      "left"
+    ],
+    "caption": "a black and white image of a black and white sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiAlignRight.svg",
+    "component_id": "ci:CiAlignRight",
+    "aliases": [
+      "ci",
+      "align",
+      "right"
+    ],
+    "caption": "a black and white line drawing of a door",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiAlignTop.svg",
+    "component_id": "ci:CiAlignTop",
+    "aliases": [
+      "ci",
+      "align",
+      "top"
+    ],
+    "caption": "a black and white icon of a door with two windows",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiApple.svg",
+    "component_id": "ci:CiApple",
+    "aliases": [
+      "ci",
+      "apple"
+    ],
+    "caption": "an apple icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiAt.svg",
+    "component_id": "ci:CiAt",
+    "aliases": [
+      "ci",
+      "at"
+    ],
+    "caption": "a black and white image of an email symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiAvocado.svg",
+    "component_id": "ci:CiAvocado",
+    "aliases": [
+      "ci",
+      "avocado"
+    ],
+    "caption": "an avocado icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBacon.svg",
+    "component_id": "ci:CiBacon",
+    "aliases": [
+      "ci",
+      "bacon"
+    ],
+    "caption": "a black and white icon of bacon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBadgeDollar.svg",
+    "component_id": "ci:CiBadgeDollar",
+    "aliases": [
+      "ci",
+      "badge",
+      "dollar"
+    ],
+    "caption": "a dollar sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBag1.svg",
+    "component_id": "ci:CiBag1",
+    "aliases": [
+      "ci",
+      "bag",
+      "1"
+    ],
+    "caption": "a bag of money icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBandage.svg",
+    "component_id": "ci:CiBandage",
+    "aliases": [
+      "ci",
+      "bandage"
+    ],
+    "caption": "a black and white illustration of a pill with dots",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBank.svg",
+    "component_id": "ci:CiBank",
+    "aliases": [
+      "ci",
+      "bank"
+    ],
+    "caption": "a black and white icon of a bank building",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBarcode.svg",
+    "component_id": "ci:CiBarcode",
+    "aliases": [
+      "ci",
+      "barcode"
+    ],
+    "caption": "a black and white image of a camera",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBaseball.svg",
+    "component_id": "ci:CiBaseball",
+    "aliases": [
+      "ci",
+      "baseball"
+    ],
+    "caption": "a black and white illustration of a baseball ball",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBasketball.svg",
+    "component_id": "ci:CiBasketball",
+    "aliases": [
+      "ci",
+      "basketball"
+    ],
+    "caption": "a black and white line drawing of a tennis ball",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBatteryCharging.svg",
+    "component_id": "ci:CiBatteryCharging",
+    "aliases": [
+      "ci",
+      "battery",
+      "charging"
+    ],
+    "caption": "an icon of a battery with a lightning bolt",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBatteryEmpty.svg",
+    "component_id": "ci:CiBatteryEmpty",
+    "aliases": [
+      "ci",
+      "battery",
+      "empty"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBatteryFull.svg",
+    "component_id": "ci:CiBatteryFull",
+    "aliases": [
+      "ci",
+      "battery",
+      "full"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBeaker1.svg",
+    "component_id": "ci:CiBeaker1",
+    "aliases": [
+      "ci",
+      "beaker",
+      "1"
+    ],
+    "caption": "a black and white illustration of a test tube",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBeerMugFull.svg",
+    "component_id": "ci:CiBeerMugFull",
+    "aliases": [
+      "ci",
+      "beer",
+      "mug",
+      "full"
+    ],
+    "caption": "a beer mug icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBellOff.svg",
+    "component_id": "ci:CiBellOff",
+    "aliases": [
+      "ci",
+      "bell",
+      "off"
+    ],
+    "caption": "a no bell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBellOn.svg",
+    "component_id": "ci:CiBellOn",
+    "aliases": [
+      "ci",
+      "bell",
+      "on"
+    ],
+    "caption": "a bell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBezier.svg",
+    "component_id": "ci:CiBezier",
+    "aliases": [
+      "ci",
+      "bezier"
+    ],
+    "caption": "a black and white icon of a bridge",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBitcoin.svg",
+    "component_id": "ci:CiBitcoin",
+    "aliases": [
+      "ci",
+      "bitcoin"
+    ],
+    "caption": "a black and white image of a bitcoin symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBluetooth.svg",
+    "component_id": "ci:CiBluetooth",
+    "aliases": [
+      "ci",
+      "bluetooth"
+    ],
+    "caption": "a black and white symbol of an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBookmark.svg",
+    "component_id": "ci:CiBookmark",
+    "aliases": [
+      "ci",
+      "bookmark"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBookmarkCheck.svg",
+    "component_id": "ci:CiBookmarkCheck",
+    "aliases": [
+      "ci",
+      "bookmark",
+      "check"
+    ],
+    "caption": "a black and white icon of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBookmarkMinus.svg",
+    "component_id": "ci:CiBookmarkMinus",
+    "aliases": [
+      "ci",
+      "bookmark",
+      "minus"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBookmarkPlus.svg",
+    "component_id": "ci:CiBookmarkPlus",
+    "aliases": [
+      "ci",
+      "bookmark",
+      "plus"
+    ],
+    "caption": "a black and white icon of a book with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBookmarkRemove.svg",
+    "component_id": "ci:CiBookmarkRemove",
+    "aliases": [
+      "ci",
+      "bookmark",
+      "remove"
+    ],
+    "caption": "a black and white icon of a bookmark with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBowlNoodles.svg",
+    "component_id": "ci:CiBowlNoodles",
+    "aliases": [
+      "ci",
+      "bowl",
+      "noodles"
+    ],
+    "caption": "a black and white icon of chopsticks in a bowl",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBoxList.svg",
+    "component_id": "ci:CiBoxList",
+    "aliases": [
+      "ci",
+      "box",
+      "list"
+    ],
+    "caption": "a check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBoxes.svg",
+    "component_id": "ci:CiBoxes",
+    "aliases": [
+      "ci",
+      "boxes"
+    ],
+    "caption": "a black and white icon of a stack of boxes",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBrightnessDown.svg",
+    "component_id": "ci:CiBrightnessDown",
+    "aliases": [
+      "ci",
+      "brightness",
+      "down"
+    ],
+    "caption": "a black and white image of a circle with dots",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBrightnessUp.svg",
+    "component_id": "ci:CiBrightnessUp",
+    "aliases": [
+      "ci",
+      "brightness",
+      "up"
+    ],
+    "caption": "a black and white icon of a circle with dots",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBullhorn.svg",
+    "component_id": "ci:CiBullhorn",
+    "aliases": [
+      "ci",
+      "bullhorn"
+    ],
+    "caption": "a megaphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiBurger.svg",
+    "component_id": "ci:CiBurger",
+    "aliases": [
+      "ci",
+      "burger"
+    ],
+    "caption": "a hamburger icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCalculator1.svg",
+    "component_id": "ci:CiCalculator1",
+    "aliases": [
+      "ci",
+      "calculator",
+      "1"
+    ],
+    "caption": "a calculator icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCalculator2.svg",
+    "component_id": "ci:CiCalculator2",
+    "aliases": [
+      "ci",
+      "calculator",
+      "2"
+    ],
+    "caption": "an image of a black and white math symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCalendar.svg",
+    "component_id": "ci:CiCalendar",
+    "aliases": [
+      "ci",
+      "calendar"
+    ],
+    "caption": "a calendar icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCalendarDate.svg",
+    "component_id": "ci:CiCalendarDate",
+    "aliases": [
+      "ci",
+      "calendar",
+      "date"
+    ],
+    "caption": "a calendar icon with the number one on it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCamera.svg",
+    "component_id": "ci:CiCamera",
+    "aliases": [
+      "ci",
+      "camera"
+    ],
+    "caption": "a camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiChat1.svg",
+    "component_id": "ci:CiChat1",
+    "aliases": [
+      "ci",
+      "chat",
+      "1"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiChat2.svg",
+    "component_id": "ci:CiChat2",
+    "aliases": [
+      "ci",
+      "chat",
+      "2"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleAlert.svg",
+    "component_id": "ci:CiCircleAlert",
+    "aliases": [
+      "ci",
+      "circle",
+      "alert"
+    ],
+    "caption": "a black and white image of an exclamation sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleCheck.svg",
+    "component_id": "ci:CiCircleCheck",
+    "aliases": [
+      "ci",
+      "circle",
+      "check"
+    ],
+    "caption": "a black and white image of a check mark in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleChevDown.svg",
+    "component_id": "ci:CiCircleChevDown",
+    "aliases": [
+      "ci",
+      "circle",
+      "chev",
+      "down"
+    ],
+    "caption": "a black and white image of a clock",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleChevLeft.svg",
+    "component_id": "ci:CiCircleChevLeft",
+    "aliases": [
+      "ci",
+      "circle",
+      "chev",
+      "left"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleChevRight.svg",
+    "component_id": "ci:CiCircleChevRight",
+    "aliases": [
+      "ci",
+      "circle",
+      "chev",
+      "right"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleChevUp.svg",
+    "component_id": "ci:CiCircleChevUp",
+    "aliases": [
+      "ci",
+      "circle",
+      "chev",
+      "up"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleInfo.svg",
+    "component_id": "ci:CiCircleInfo",
+    "aliases": [
+      "ci",
+      "circle",
+      "info"
+    ],
+    "caption": "a black and white image of an i in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleList.svg",
+    "component_id": "ci:CiCircleList",
+    "aliases": [
+      "ci",
+      "circle",
+      "list"
+    ],
+    "caption": "a check list with three circles on it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleMinus.svg",
+    "component_id": "ci:CiCircleMinus",
+    "aliases": [
+      "ci",
+      "circle",
+      "minus"
+    ],
+    "caption": "a black and white image of an empty circle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleMore.svg",
+    "component_id": "ci:CiCircleMore",
+    "aliases": [
+      "ci",
+      "circle",
+      "more"
+    ],
+    "caption": "a black and white icon with three dots in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCirclePlus.svg",
+    "component_id": "ci:CiCirclePlus",
+    "aliases": [
+      "ci",
+      "circle",
+      "plus"
+    ],
+    "caption": "a plus sign in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleQuestion.svg",
+    "component_id": "ci:CiCircleQuestion",
+    "aliases": [
+      "ci",
+      "circle",
+      "question"
+    ],
+    "caption": "a question mark in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCircleRemove.svg",
+    "component_id": "ci:CiCircleRemove",
+    "aliases": [
+      "ci",
+      "circle",
+      "remove"
+    ],
+    "caption": "a black and white image of an x in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiClock1.svg",
+    "component_id": "ci:CiClock1",
+    "aliases": [
+      "ci",
+      "clock",
+      "1"
+    ],
+    "caption": "a black and white clock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiClock2.svg",
+    "component_id": "ci:CiClock2",
+    "aliases": [
+      "ci",
+      "clock",
+      "2"
+    ],
+    "caption": "a black and white clock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCloud.svg",
+    "component_id": "ci:CiCloud",
+    "aliases": [
+      "ci",
+      "cloud"
+    ],
+    "caption": "a cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCloudDrizzle.svg",
+    "component_id": "ci:CiCloudDrizzle",
+    "aliases": [
+      "ci",
+      "cloud",
+      "drizzle"
+    ],
+    "caption": "a black and white icon of a cloud with rain drops",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCloudMoon.svg",
+    "component_id": "ci:CiCloudMoon",
+    "aliases": [
+      "ci",
+      "cloud",
+      "moon"
+    ],
+    "caption": "a black and white line drawing of a cloud and moon",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCloudOff.svg",
+    "component_id": "ci:CiCloudOff",
+    "aliases": [
+      "ci",
+      "cloud",
+      "off"
+    ],
+    "caption": "a black and white icon with a cloud in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCloudOn.svg",
+    "component_id": "ci:CiCloudOn",
+    "aliases": [
+      "ci",
+      "cloud",
+      "on"
+    ],
+    "caption": "a cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCloudRainbow.svg",
+    "component_id": "ci:CiCloudRainbow",
+    "aliases": [
+      "ci",
+      "cloud",
+      "rainbow"
+    ],
+    "caption": "a cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCloudSun.svg",
+    "component_id": "ci:CiCloudSun",
+    "aliases": [
+      "ci",
+      "cloud",
+      "sun"
+    ],
+    "caption": "a sun and cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCoffeeBean.svg",
+    "component_id": "ci:CiCoffeeBean",
+    "aliases": [
+      "ci",
+      "coffee",
+      "bean"
+    ],
+    "caption": "a black and white line drawing of a coffee bean",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCoffeeCup.svg",
+    "component_id": "ci:CiCoffeeCup",
+    "aliases": [
+      "ci",
+      "coffee",
+      "cup"
+    ],
+    "caption": "a coffee cup icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCoinInsert.svg",
+    "component_id": "ci:CiCoinInsert",
+    "aliases": [
+      "ci",
+      "coin",
+      "insert"
+    ],
+    "caption": "a dollar sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCoins1.svg",
+    "component_id": "ci:CiCoins1",
+    "aliases": [
+      "ci",
+      "coins",
+      "1"
+    ],
+    "caption": "a black and white icon of a stack of books",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCompass1.svg",
+    "component_id": "ci:CiCompass1",
+    "aliases": [
+      "ci",
+      "compass",
+      "1"
+    ],
+    "caption": "a black and white icon with a dot in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCreditCard1.svg",
+    "component_id": "ci:CiCreditCard1",
+    "aliases": [
+      "ci",
+      "credit",
+      "card",
+      "1"
+    ],
+    "caption": "a credit card icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCreditCard2.svg",
+    "component_id": "ci:CiCreditCard2",
+    "aliases": [
+      "ci",
+      "credit",
+      "card",
+      "2"
+    ],
+    "caption": "a credit card icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCreditCardOff.svg",
+    "component_id": "ci:CiCreditCardOff",
+    "aliases": [
+      "ci",
+      "credit",
+      "card",
+      "off"
+    ],
+    "caption": "a no credit card icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiCrop.svg",
+    "component_id": "ci:CiCrop",
+    "aliases": [
+      "ci",
+      "crop"
+    ],
+    "caption": "a black square with two lines in it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiDark.svg",
+    "component_id": "ci:CiDark",
+    "aliases": [
+      "ci",
+      "dark"
+    ],
+    "caption": "a black and white line drawing of a crescent",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiDatabase.svg",
+    "component_id": "ci:CiDatabase",
+    "aliases": [
+      "ci",
+      "database"
+    ],
+    "caption": "a black and white illustration of a stack of data",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiDeliveryTruck.svg",
+    "component_id": "ci:CiDeliveryTruck",
+    "aliases": [
+      "ci",
+      "delivery",
+      "truck"
+    ],
+    "caption": "a truck icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiDesktop.svg",
+    "component_id": "ci:CiDesktop",
+    "aliases": [
+      "ci",
+      "desktop"
+    ],
+    "caption": "a computer monitor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiDesktopMouse1.svg",
+    "component_id": "ci:CiDesktopMouse1",
+    "aliases": [
+      "ci",
+      "desktop",
+      "mouse",
+      "1"
+    ],
+    "caption": "a computer mouse icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiDesktopMouse2.svg",
+    "component_id": "ci:CiDesktopMouse2",
+    "aliases": [
+      "ci",
+      "desktop",
+      "mouse",
+      "2"
+    ],
+    "caption": "a black and white image of a computer mouse",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiDiscount1.svg",
+    "component_id": "ci:CiDiscount1",
+    "aliases": [
+      "ci",
+      "discount",
+      "1"
+    ],
+    "caption": "a black and white icon of a percentage sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiDollar.svg",
+    "component_id": "ci:CiDollar",
+    "aliases": [
+      "ci",
+      "dollar"
+    ],
+    "caption": "a dollar sign in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiDroplet.svg",
+    "component_id": "ci:CiDroplet",
+    "aliases": [
+      "ci",
+      "droplet"
+    ],
+    "caption": "a black and white drawing of a water drop",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiDumbbell.svg",
+    "component_id": "ci:CiDumbbell",
+    "aliases": [
+      "ci",
+      "dumbbell"
+    ],
+    "caption": "a black barbell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiEdit.svg",
+    "component_id": "ci:CiEdit",
+    "aliases": [
+      "ci",
+      "edit"
+    ],
+    "caption": "a black and white drawing of a pen on a paper",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiEraser.svg",
+    "component_id": "ci:CiEraser",
+    "aliases": [
+      "ci",
+      "eraser"
+    ],
+    "caption": "a pill icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiExport.svg",
+    "component_id": "ci:CiExport",
+    "aliases": [
+      "ci",
+      "export"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFaceFrown.svg",
+    "component_id": "ci:CiFaceFrown",
+    "aliases": [
+      "ci",
+      "face",
+      "frown"
+    ],
+    "caption": "a black and white image of a sad face",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFaceMeh.svg",
+    "component_id": "ci:CiFaceMeh",
+    "aliases": [
+      "ci",
+      "face",
+      "meh"
+    ],
+    "caption": "a black and white image of a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFaceSmile.svg",
+    "component_id": "ci:CiFaceSmile",
+    "aliases": [
+      "ci",
+      "face",
+      "smile"
+    ],
+    "caption": "a smiley face icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFacebook.svg",
+    "component_id": "ci:CiFacebook",
+    "aliases": [
+      "ci",
+      "facebook"
+    ],
+    "caption": "a black and white image of the letter f in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFileOff.svg",
+    "component_id": "ci:CiFileOff",
+    "aliases": [
+      "ci",
+      "file",
+      "off"
+    ],
+    "caption": "a black and white image of a document with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFileOn.svg",
+    "component_id": "ci:CiFileOn",
+    "aliases": [
+      "ci",
+      "file",
+      "on"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFilter.svg",
+    "component_id": "ci:CiFilter",
+    "aliases": [
+      "ci",
+      "filter"
+    ],
+    "caption": "a black and white icon of a funnel",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFlag1.svg",
+    "component_id": "ci:CiFlag1",
+    "aliases": [
+      "ci",
+      "flag",
+      "1"
+    ],
+    "caption": "a black and white flag icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFloppyDisk.svg",
+    "component_id": "ci:CiFloppyDisk",
+    "aliases": [
+      "ci",
+      "floppy",
+      "disk"
+    ],
+    "caption": "a black and white icon of a folder",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFolderOff.svg",
+    "component_id": "ci:CiFolderOff",
+    "aliases": [
+      "ci",
+      "folder",
+      "off"
+    ],
+    "caption": "a black and white icon of a folder with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFolderOn.svg",
+    "component_id": "ci:CiFolderOn",
+    "aliases": [
+      "ci",
+      "folder",
+      "on"
+    ],
+    "caption": "a black folder icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFootball.svg",
+    "component_id": "ci:CiFootball",
+    "aliases": [
+      "ci",
+      "football"
+    ],
+    "caption": "an american football ball icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiForkAndKnife.svg",
+    "component_id": "ci:CiForkAndKnife",
+    "aliases": [
+      "ci",
+      "fork",
+      "and",
+      "knife"
+    ],
+    "caption": "a fork and knife icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiFries.svg",
+    "component_id": "ci:CiFries",
+    "aliases": [
+      "ci",
+      "fries"
+    ],
+    "caption": "french fries icon vector illustration ilustrace",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiGift.svg",
+    "component_id": "ci:CiGift",
+    "aliases": [
+      "ci",
+      "gift"
+    ],
+    "caption": "a black and white icon of a present with a bow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiGlass.svg",
+    "component_id": "ci:CiGlass",
+    "aliases": [
+      "ci",
+      "glass"
+    ],
+    "caption": "a glass of water on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiGlobe.svg",
+    "component_id": "ci:CiGlobe",
+    "aliases": [
+      "ci",
+      "globe"
+    ],
+    "caption": "a black and white icon of a globe",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiGps.svg",
+    "component_id": "ci:CiGps",
+    "aliases": [
+      "ci",
+      "gps"
+    ],
+    "caption": "a crosshairs icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiGrid2H.svg",
+    "component_id": "ci:CiGrid2H",
+    "aliases": [
+      "ci",
+      "grid",
+      "2",
+      "h"
+    ],
+    "caption": "a black and white image of two black rectangles",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiGrid2V.svg",
+    "component_id": "ci:CiGrid2V",
+    "aliases": [
+      "ci",
+      "grid",
+      "2",
+      "v"
+    ],
+    "caption": "a black and white image of two black rectangles",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiGrid31.svg",
+    "component_id": "ci:CiGrid31",
+    "aliases": [
+      "ci",
+      "grid",
+      "31"
+    ],
+    "caption": "a black and white image of a calculator",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiGrid32.svg",
+    "component_id": "ci:CiGrid32",
+    "aliases": [
+      "ci",
+      "grid",
+      "32"
+    ],
+    "caption": "a black and white line drawing of three different shapes",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiGrid41.svg",
+    "component_id": "ci:CiGrid41",
+    "aliases": [
+      "ci",
+      "grid",
+      "41"
+    ],
+    "caption": "four square icons on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiGrid42.svg",
+    "component_id": "ci:CiGrid42",
+    "aliases": [
+      "ci",
+      "grid",
+      "42"
+    ],
+    "caption": "a black and white image of three black rectangles",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiHardDrive.svg",
+    "component_id": "ci:CiHardDrive",
+    "aliases": [
+      "ci",
+      "hard",
+      "drive"
+    ],
+    "caption": "an icon of a hard drive on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiHashtag.svg",
+    "component_id": "ci:CiHashtag",
+    "aliases": [
+      "ci",
+      "hashtag"
+    ],
+    "caption": "a hash symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiHeadphones.svg",
+    "component_id": "ci:CiHeadphones",
+    "aliases": [
+      "ci",
+      "headphones"
+    ],
+    "caption": "a black and white line drawing of headphones",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiHeart.svg",
+    "component_id": "ci:CiHeart",
+    "aliases": [
+      "ci",
+      "heart"
+    ],
+    "caption": "a black and white line drawing of a heart",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiHome.svg",
+    "component_id": "ci:CiHome",
+    "aliases": [
+      "ci",
+      "home"
+    ],
+    "caption": "a house icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiHospital1.svg",
+    "component_id": "ci:CiHospital1",
+    "aliases": [
+      "ci",
+      "hospital",
+      "1"
+    ],
+    "caption": "a church icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiHotdog.svg",
+    "component_id": "ci:CiHotdog",
+    "aliases": [
+      "ci",
+      "hotdog"
+    ],
+    "caption": "a black and white line drawing of a hot dog",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiIceCream.svg",
+    "component_id": "ci:CiIceCream",
+    "aliases": [
+      "ci",
+      "ice",
+      "cream"
+    ],
+    "caption": "an ice cream cone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiImageOff.svg",
+    "component_id": "ci:CiImageOff",
+    "aliases": [
+      "ci",
+      "image",
+      "off"
+    ],
+    "caption": "a black and white image of a square with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiImageOn.svg",
+    "component_id": "ci:CiImageOn",
+    "aliases": [
+      "ci",
+      "image",
+      "on"
+    ],
+    "caption": "a black and white photo icon with the sun and mountains",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiImport.svg",
+    "component_id": "ci:CiImport",
+    "aliases": [
+      "ci",
+      "import"
+    ],
+    "caption": "a black and white icon of a down arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiInboxIn.svg",
+    "component_id": "ci:CiInboxIn",
+    "aliases": [
+      "ci",
+      "inbox",
+      "in"
+    ],
+    "caption": "a black and white icon of a folder with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiInboxOut.svg",
+    "component_id": "ci:CiInboxOut",
+    "aliases": [
+      "ci",
+      "inbox",
+      "out"
+    ],
+    "caption": "a black and white icon of a folder with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiIndent.svg",
+    "component_id": "ci:CiIndent",
+    "aliases": [
+      "ci",
+      "indent"
+    ],
+    "caption": "a black and white image of an arrow pointing in one direction",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiInstagram.svg",
+    "component_id": "ci:CiInstagram",
+    "aliases": [
+      "ci",
+      "instagram"
+    ],
+    "caption": "a black and white image of an instagram",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiKeyboard.svg",
+    "component_id": "ci:CiKeyboard",
+    "aliases": [
+      "ci",
+      "keyboard"
+    ],
+    "caption": "a black and white icon with dots on it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLaptop.svg",
+    "component_id": "ci:CiLaptop",
+    "aliases": [
+      "ci",
+      "laptop"
+    ],
+    "caption": "a laptop computer icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLemon.svg",
+    "component_id": "ci:CiLemon",
+    "aliases": [
+      "ci",
+      "lemon"
+    ],
+    "caption": "a black and white line drawing of a lemon",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLight.svg",
+    "component_id": "ci:CiLight",
+    "aliases": [
+      "ci",
+      "light"
+    ],
+    "caption": "a sun icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLineHeight.svg",
+    "component_id": "ci:CiLineHeight",
+    "aliases": [
+      "ci",
+      "line",
+      "height"
+    ],
+    "caption": "an arrow pointing up and down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLink.svg",
+    "component_id": "ci:CiLink",
+    "aliases": [
+      "ci",
+      "link"
+    ],
+    "caption": "a black and white image of a link",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLinkedin.svg",
+    "component_id": "ci:CiLinkedin",
+    "aliases": [
+      "ci",
+      "linkedin"
+    ],
+    "caption": "a black and white image of the linked logo",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLocationArrow1.svg",
+    "component_id": "ci:CiLocationArrow1",
+    "aliases": [
+      "ci",
+      "location",
+      "arrow",
+      "1"
+    ],
+    "caption": "a black and white line drawing of a triangle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLocationOff.svg",
+    "component_id": "ci:CiLocationOff",
+    "aliases": [
+      "ci",
+      "location",
+      "off"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLocationOn.svg",
+    "component_id": "ci:CiLocationOn",
+    "aliases": [
+      "ci",
+      "location",
+      "on"
+    ],
+    "caption": "a black and white map pin icon",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLock.svg",
+    "component_id": "ci:CiLock",
+    "aliases": [
+      "ci",
+      "lock"
+    ],
+    "caption": "a padlock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLogin.svg",
+    "component_id": "ci:CiLogin",
+    "aliases": [
+      "ci",
+      "login"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLogout.svg",
+    "component_id": "ci:CiLogout",
+    "aliases": [
+      "ci",
+      "logout"
+    ],
+    "caption": "a black arrow pointing in the direction of an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiLollipop.svg",
+    "component_id": "ci:CiLollipop",
+    "aliases": [
+      "ci",
+      "lollipop"
+    ],
+    "caption": "a black and white icon of a lollipop on a stick",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMail.svg",
+    "component_id": "ci:CiMail",
+    "aliases": [
+      "ci",
+      "mail"
+    ],
+    "caption": "an envelope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMap.svg",
+    "component_id": "ci:CiMap",
+    "aliases": [
+      "ci",
+      "map"
+    ],
+    "caption": "a black and white image of an open book",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMapPin.svg",
+    "component_id": "ci:CiMapPin",
+    "aliases": [
+      "ci",
+      "map",
+      "pin"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMaximize1.svg",
+    "component_id": "ci:CiMaximize1",
+    "aliases": [
+      "ci",
+      "maximize",
+      "1"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMaximize2.svg",
+    "component_id": "ci:CiMaximize2",
+    "aliases": [
+      "ci",
+      "maximize",
+      "2"
+    ],
+    "caption": "an image of a square with two black lines",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMedal.svg",
+    "component_id": "ci:CiMedal",
+    "aliases": [
+      "ci",
+      "medal"
+    ],
+    "caption": "a medal icon with a star in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMedicalCase.svg",
+    "component_id": "ci:CiMedicalCase",
+    "aliases": [
+      "ci",
+      "medical",
+      "case"
+    ],
+    "caption": "a black and white icon of a first aid kit",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMedicalClipboard.svg",
+    "component_id": "ci:CiMedicalClipboard",
+    "aliases": [
+      "ci",
+      "medical",
+      "clipboard"
+    ],
+    "caption": "a clipboard with a plus sign on it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMedicalCross.svg",
+    "component_id": "ci:CiMedicalCross",
+    "aliases": [
+      "ci",
+      "medical",
+      "cross"
+    ],
+    "caption": "a black plus sign on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMedicalMask.svg",
+    "component_id": "ci:CiMedicalMask",
+    "aliases": [
+      "ci",
+      "medical",
+      "mask"
+    ],
+    "caption": "a medical mask icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMemoPad.svg",
+    "component_id": "ci:CiMemoPad",
+    "aliases": [
+      "ci",
+      "memo",
+      "pad"
+    ],
+    "caption": "a black and white icon of a document on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMenuBurger.svg",
+    "component_id": "ci:CiMenuBurger",
+    "aliases": [
+      "ci",
+      "menu",
+      "burger"
+    ],
+    "caption": "two black lines on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMenuFries.svg",
+    "component_id": "ci:CiMenuFries",
+    "aliases": [
+      "ci",
+      "menu",
+      "fries"
+    ],
+    "caption": "a black and white image of the letter e",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMenuKebab.svg",
+    "component_id": "ci:CiMenuKebab",
+    "aliases": [
+      "ci",
+      "menu",
+      "kebab"
+    ],
+    "caption": "four black circles on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMicrochip.svg",
+    "component_id": "ci:CiMicrochip",
+    "aliases": [
+      "ci",
+      "microchip"
+    ],
+    "caption": "an image of a computer chip on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMicrophoneOff.svg",
+    "component_id": "ci:CiMicrophoneOff",
+    "aliases": [
+      "ci",
+      "microphone",
+      "off"
+    ],
+    "caption": "a microphone icon with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMicrophoneOn.svg",
+    "component_id": "ci:CiMicrophoneOn",
+    "aliases": [
+      "ci",
+      "microphone",
+      "on"
+    ],
+    "caption": "a microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMinimize1.svg",
+    "component_id": "ci:CiMinimize1",
+    "aliases": [
+      "ci",
+      "minimize",
+      "1"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMinimize2.svg",
+    "component_id": "ci:CiMinimize2",
+    "aliases": [
+      "ci",
+      "minimize",
+      "2"
+    ],
+    "caption": "a black and white image of a cross",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMobile1.svg",
+    "component_id": "ci:CiMobile1",
+    "aliases": [
+      "ci",
+      "mobile",
+      "1"
+    ],
+    "caption": "a cell phone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMobile2.svg",
+    "component_id": "ci:CiMobile2",
+    "aliases": [
+      "ci",
+      "mobile",
+      "2"
+    ],
+    "caption": "a black and white image of a cell phone",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMobile3.svg",
+    "component_id": "ci:CiMobile3",
+    "aliases": [
+      "ci",
+      "mobile",
+      "3"
+    ],
+    "caption": "an icon of a smartphone on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMobile4.svg",
+    "component_id": "ci:CiMobile4",
+    "aliases": [
+      "ci",
+      "mobile",
+      "4"
+    ],
+    "caption": "a black and white image of a cell phone",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMoneyBill.svg",
+    "component_id": "ci:CiMoneyBill",
+    "aliases": [
+      "ci",
+      "money",
+      "bill"
+    ],
+    "caption": "a black and white icon of a dollar bill",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMoneyCheck1.svg",
+    "component_id": "ci:CiMoneyCheck1",
+    "aliases": [
+      "ci",
+      "money",
+      "check",
+      "1"
+    ],
+    "caption": "an envelope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMonitor.svg",
+    "component_id": "ci:CiMonitor",
+    "aliases": [
+      "ci",
+      "monitor"
+    ],
+    "caption": "a computer monitor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMountain1.svg",
+    "component_id": "ci:CiMountain1",
+    "aliases": [
+      "ci",
+      "mountain",
+      "1"
+    ],
+    "caption": "a black and white line drawing of a mountain",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMug1.svg",
+    "component_id": "ci:CiMug1",
+    "aliases": [
+      "ci",
+      "mug",
+      "1"
+    ],
+    "caption": "coffee cup icon isolated on white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiMusicNote1.svg",
+    "component_id": "ci:CiMusicNote1",
+    "aliases": [
+      "ci",
+      "music",
+      "note",
+      "1"
+    ],
+    "caption": "a music note icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiNoWaitingSign.svg",
+    "component_id": "ci:CiNoWaitingSign",
+    "aliases": [
+      "ci",
+      "no",
+      "waiting",
+      "sign"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPalette.svg",
+    "component_id": "ci:CiPalette",
+    "aliases": [
+      "ci",
+      "palette"
+    ],
+    "caption": "a black and white icon of the letter k",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPaperplane.svg",
+    "component_id": "ci:CiPaperplane",
+    "aliases": [
+      "ci",
+      "paperplane"
+    ],
+    "caption": "a black and white icon of a paper airplane",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiParking1.svg",
+    "component_id": "ci:CiParking1",
+    "aliases": [
+      "ci",
+      "parking",
+      "1"
+    ],
+    "caption": "a black and white circle with the letter p in it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPassport1.svg",
+    "component_id": "ci:CiPassport1",
+    "aliases": [
+      "ci",
+      "passport",
+      "1"
+    ],
+    "caption": "a black and white icon of a doorbell",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPause1.svg",
+    "component_id": "ci:CiPause1",
+    "aliases": [
+      "ci",
+      "pause",
+      "1"
+    ],
+    "caption": "a black and white line drawing of two numbers",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPen.svg",
+    "component_id": "ci:CiPen",
+    "aliases": [
+      "ci",
+      "pen"
+    ],
+    "caption": "a black and white icon of a pen",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPenpot.svg",
+    "component_id": "ci:CiPenpot",
+    "aliases": [
+      "ci",
+      "penpot"
+    ],
+    "caption": "a black and white icon of pencils in a box",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPercent.svg",
+    "component_id": "ci:CiPercent",
+    "aliases": [
+      "ci",
+      "percent"
+    ],
+    "caption": "a black and white image of a percentage sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPhone.svg",
+    "component_id": "ci:CiPhone",
+    "aliases": [
+      "ci",
+      "phone"
+    ],
+    "caption": "a black and white telephone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPickerEmpty.svg",
+    "component_id": "ci:CiPickerEmpty",
+    "aliases": [
+      "ci",
+      "picker",
+      "empty"
+    ],
+    "caption": "a knife icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPickerHalf.svg",
+    "component_id": "ci:CiPickerHalf",
+    "aliases": [
+      "ci",
+      "picker",
+      "half"
+    ],
+    "caption": "a black and white illustration of a syringe",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPill.svg",
+    "component_id": "ci:CiPill",
+    "aliases": [
+      "ci",
+      "pill"
+    ],
+    "caption": "a pill icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPillsBottle1.svg",
+    "component_id": "ci:CiPillsBottle1",
+    "aliases": [
+      "ci",
+      "pills",
+      "bottle",
+      "1"
+    ],
+    "caption": "a black and white illustration of a medicine bottle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPizza.svg",
+    "component_id": "ci:CiPizza",
+    "aliases": [
+      "ci",
+      "pizza"
+    ],
+    "caption": "a black and white icon of a slice of pizza",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPlane.svg",
+    "component_id": "ci:CiPlane",
+    "aliases": [
+      "ci",
+      "plane"
+    ],
+    "caption": "an airplane icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPlay1.svg",
+    "component_id": "ci:CiPlay1",
+    "aliases": [
+      "ci",
+      "play",
+      "1"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPlug1.svg",
+    "component_id": "ci:CiPlug1",
+    "aliases": [
+      "ci",
+      "plug",
+      "1"
+    ],
+    "caption": "a black and white icon of a plug",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiPower.svg",
+    "component_id": "ci:CiPower",
+    "aliases": [
+      "ci",
+      "power"
+    ],
+    "caption": "a black and white image of a power button",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiRainbow.svg",
+    "component_id": "ci:CiRainbow",
+    "aliases": [
+      "ci",
+      "rainbow"
+    ],
+    "caption": "a black and white icon of a rainbow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiRead.svg",
+    "component_id": "ci:CiRead",
+    "aliases": [
+      "ci",
+      "read"
+    ],
+    "caption": "a black and white icon of an eye",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiReceipt.svg",
+    "component_id": "ci:CiReceipt",
+    "aliases": [
+      "ci",
+      "receipt"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiRedo.svg",
+    "component_id": "ci:CiRedo",
+    "aliases": [
+      "ci",
+      "redo"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiRepeat.svg",
+    "component_id": "ci:CiRepeat",
+    "aliases": [
+      "ci",
+      "repeat"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiRollingSuitcase.svg",
+    "component_id": "ci:CiRollingSuitcase",
+    "aliases": [
+      "ci",
+      "rolling",
+      "suitcase"
+    ],
+    "caption": "suitcase icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiRoute.svg",
+    "component_id": "ci:CiRoute",
+    "aliases": [
+      "ci",
+      "route"
+    ],
+    "caption": "a black and white arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiRouter.svg",
+    "component_id": "ci:CiRouter",
+    "aliases": [
+      "ci",
+      "router"
+    ],
+    "caption": "a black and white icon of a router",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiRuler.svg",
+    "component_id": "ci:CiRuler",
+    "aliases": [
+      "ci",
+      "ruler"
+    ],
+    "caption": "a ruler icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSatellite1.svg",
+    "component_id": "ci:CiSatellite1",
+    "aliases": [
+      "ci",
+      "satellite",
+      "1"
+    ],
+    "caption": "a black and white icon of a rocket",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSaveDown1.svg",
+    "component_id": "ci:CiSaveDown1",
+    "aliases": [
+      "ci",
+      "save",
+      "down",
+      "1"
+    ],
+    "caption": "a black and white image of a power button",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSaveDown2.svg",
+    "component_id": "ci:CiSaveDown2",
+    "aliases": [
+      "ci",
+      "save",
+      "down",
+      "2"
+    ],
+    "caption": "a black and white icon of a down arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSaveUp1.svg",
+    "component_id": "ci:CiSaveUp1",
+    "aliases": [
+      "ci",
+      "save",
+      "up",
+      "1"
+    ],
+    "caption": "a black and white image of a power button with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSaveUp2.svg",
+    "component_id": "ci:CiSaveUp2",
+    "aliases": [
+      "ci",
+      "save",
+      "up",
+      "2"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSearch.svg",
+    "component_id": "ci:CiSearch",
+    "aliases": [
+      "ci",
+      "search"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiServer.svg",
+    "component_id": "ci:CiServer",
+    "aliases": [
+      "ci",
+      "server"
+    ],
+    "caption": "two server icons on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSettings.svg",
+    "component_id": "ci:CiSettings",
+    "aliases": [
+      "ci",
+      "settings"
+    ],
+    "caption": "a gear wheel icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiShare1.svg",
+    "component_id": "ci:CiShare1",
+    "aliases": [
+      "ci",
+      "share",
+      "1"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiShare2.svg",
+    "component_id": "ci:CiShare2",
+    "aliases": [
+      "ci",
+      "share",
+      "2"
+    ],
+    "caption": "a black and white icon of two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiShirt.svg",
+    "component_id": "ci:CiShirt",
+    "aliases": [
+      "ci",
+      "shirt"
+    ],
+    "caption": "a plastic bag with the number one on it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiShop.svg",
+    "component_id": "ci:CiShop",
+    "aliases": [
+      "ci",
+      "shop"
+    ],
+    "caption": "a black and white icon of a store",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiShoppingBasket.svg",
+    "component_id": "ci:CiShoppingBasket",
+    "aliases": [
+      "ci",
+      "shopping",
+      "basket"
+    ],
+    "caption": "a black and white icon of a shopping basket",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiShoppingCart.svg",
+    "component_id": "ci:CiShoppingCart",
+    "aliases": [
+      "ci",
+      "shopping",
+      "cart"
+    ],
+    "caption": "a shopping cart icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiShoppingTag.svg",
+    "component_id": "ci:CiShoppingTag",
+    "aliases": [
+      "ci",
+      "shopping",
+      "tag"
+    ],
+    "caption": "a black and white icon of a tag on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiShuffle.svg",
+    "component_id": "ci:CiShuffle",
+    "aliases": [
+      "ci",
+      "shuffle"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSignpostDuo1.svg",
+    "component_id": "ci:CiSignpostDuo1",
+    "aliases": [
+      "ci",
+      "signpost",
+      "duo",
+      "1"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSignpostL1.svg",
+    "component_id": "ci:CiSignpostL1",
+    "aliases": [
+      "ci",
+      "signpost",
+      "l",
+      "1"
+    ],
+    "caption": "a black and white line drawing of an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSignpostR1.svg",
+    "component_id": "ci:CiSignpostR1",
+    "aliases": [
+      "ci",
+      "signpost",
+      "r",
+      "1"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSliderHorizontal.svg",
+    "component_id": "ci:CiSliderHorizontal",
+    "aliases": [
+      "ci",
+      "slider",
+      "horizontal"
+    ],
+    "caption": "two black and white lines that are connected to each other",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSliderVertical.svg",
+    "component_id": "ci:CiSliderVertical",
+    "aliases": [
+      "ci",
+      "slider",
+      "vertical"
+    ],
+    "caption": "two black and white electrical symbols on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSpeaker.svg",
+    "component_id": "ci:CiSpeaker",
+    "aliases": [
+      "ci",
+      "speaker"
+    ],
+    "caption": "a speaker icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareAlert.svg",
+    "component_id": "ci:CiSquareAlert",
+    "aliases": [
+      "ci",
+      "square",
+      "alert"
+    ],
+    "caption": "a black and white square button with the letter i",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareCheck.svg",
+    "component_id": "ci:CiSquareCheck",
+    "aliases": [
+      "ci",
+      "square",
+      "check"
+    ],
+    "caption": "a check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareChevDown.svg",
+    "component_id": "ci:CiSquareChevDown",
+    "aliases": [
+      "ci",
+      "square",
+      "chev",
+      "down"
+    ],
+    "caption": "a black and white square icon with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareChevLeft.svg",
+    "component_id": "ci:CiSquareChevLeft",
+    "aliases": [
+      "ci",
+      "square",
+      "chev",
+      "left"
+    ],
+    "caption": "a black and white square button with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareChevRight.svg",
+    "component_id": "ci:CiSquareChevRight",
+    "aliases": [
+      "ci",
+      "square",
+      "chev",
+      "right"
+    ],
+    "caption": "a black and white square button with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareChevUp.svg",
+    "component_id": "ci:CiSquareChevUp",
+    "aliases": [
+      "ci",
+      "square",
+      "chev",
+      "up"
+    ],
+    "caption": "a black square button with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareInfo.svg",
+    "component_id": "ci:CiSquareInfo",
+    "aliases": [
+      "ci",
+      "square",
+      "info"
+    ],
+    "caption": "a black and white image of an exclamation sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareMinus.svg",
+    "component_id": "ci:CiSquareMinus",
+    "aliases": [
+      "ci",
+      "square",
+      "minus"
+    ],
+    "caption": "a square icon with a black line on it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareMore.svg",
+    "component_id": "ci:CiSquareMore",
+    "aliases": [
+      "ci",
+      "square",
+      "more"
+    ],
+    "caption": "a square button with three dots on it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquarePlus.svg",
+    "component_id": "ci:CiSquarePlus",
+    "aliases": [
+      "ci",
+      "square",
+      "plus"
+    ],
+    "caption": "a plus sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareQuestion.svg",
+    "component_id": "ci:CiSquareQuestion",
+    "aliases": [
+      "ci",
+      "square",
+      "question"
+    ],
+    "caption": "a question mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSquareRemove.svg",
+    "component_id": "ci:CiSquareRemove",
+    "aliases": [
+      "ci",
+      "square",
+      "remove"
+    ],
+    "caption": "a black and white square button with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiStar.svg",
+    "component_id": "ci:CiStar",
+    "aliases": [
+      "ci",
+      "star"
+    ],
+    "caption": "a star icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiStethoscope.svg",
+    "component_id": "ci:CiStethoscope",
+    "aliases": [
+      "ci",
+      "stethoscope"
+    ],
+    "caption": "a stethoscope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiStickyNote.svg",
+    "component_id": "ci:CiStickyNote",
+    "aliases": [
+      "ci",
+      "sticky",
+      "note"
+    ],
+    "caption": "a black and white image of a square piece of paper",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiStop1.svg",
+    "component_id": "ci:CiStop1",
+    "aliases": [
+      "ci",
+      "stop",
+      "1"
+    ],
+    "caption": "a square black and white icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiStopSign1.svg",
+    "component_id": "ci:CiStopSign1",
+    "aliases": [
+      "ci",
+      "stop",
+      "sign",
+      "1"
+    ],
+    "caption": "a black and white image of a stop sign with the letter s",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiStopwatch.svg",
+    "component_id": "ci:CiStopwatch",
+    "aliases": [
+      "ci",
+      "stopwatch"
+    ],
+    "caption": "a stopwatch icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiStreamOff.svg",
+    "component_id": "ci:CiStreamOff",
+    "aliases": [
+      "ci",
+      "stream",
+      "off"
+    ],
+    "caption": "a black and white image of a no signal icon",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiStreamOn.svg",
+    "component_id": "ci:CiStreamOn",
+    "aliases": [
+      "ci",
+      "stream",
+      "on"
+    ],
+    "caption": "a black and white image of a wireless symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiSun.svg",
+    "component_id": "ci:CiSun",
+    "aliases": [
+      "ci",
+      "sun"
+    ],
+    "caption": "a black and white icon of a sun",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTablets1.svg",
+    "component_id": "ci:CiTablets1",
+    "aliases": [
+      "ci",
+      "tablets",
+      "1"
+    ],
+    "caption": "a black and white image of a no symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTempHigh.svg",
+    "component_id": "ci:CiTempHigh",
+    "aliases": [
+      "ci",
+      "temp",
+      "high"
+    ],
+    "caption": "thermometer thermometer icon thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiText.svg",
+    "component_id": "ci:CiText",
+    "aliases": [
+      "ci",
+      "text"
+    ],
+    "caption": "a black and white image of the letter t",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTextAlignCenter.svg",
+    "component_id": "ci:CiTextAlignCenter",
+    "aliases": [
+      "ci",
+      "text",
+      "align",
+      "center"
+    ],
+    "caption": "a black and white line drawing of four lines",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTextAlignJustify.svg",
+    "component_id": "ci:CiTextAlignJustify",
+    "aliases": [
+      "ci",
+      "text",
+      "align",
+      "justify"
+    ],
+    "caption": "a black and white image of a line of black and white lines",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTextAlignLeft.svg",
+    "component_id": "ci:CiTextAlignLeft",
+    "aliases": [
+      "ci",
+      "text",
+      "align",
+      "left"
+    ],
+    "caption": "a black and white image of a line of text",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTextAlignRight.svg",
+    "component_id": "ci:CiTextAlignRight",
+    "aliases": [
+      "ci",
+      "text",
+      "align",
+      "right"
+    ],
+    "caption": "a black and white image of a line of text",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTimer.svg",
+    "component_id": "ci:CiTimer",
+    "aliases": [
+      "ci",
+      "timer"
+    ],
+    "caption": "a black and white icon of a clock",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTrash.svg",
+    "component_id": "ci:CiTrash",
+    "aliases": [
+      "ci",
+      "trash"
+    ],
+    "caption": "trash bin icon vector illustration",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTrophy.svg",
+    "component_id": "ci:CiTrophy",
+    "aliases": [
+      "ci",
+      "trophy"
+    ],
+    "caption": "a trophy icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTurnL1.svg",
+    "component_id": "ci:CiTurnL1",
+    "aliases": [
+      "ci",
+      "turn",
+      "l",
+      "1"
+    ],
+    "caption": "a black and white arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTurnR1.svg",
+    "component_id": "ci:CiTurnR1",
+    "aliases": [
+      "ci",
+      "turn",
+      "r",
+      "1"
+    ],
+    "caption": "a black arrow pointing to the right side of the road",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiTwitter.svg",
+    "component_id": "ci:CiTwitter",
+    "aliases": [
+      "ci",
+      "twitter"
+    ],
+    "caption": "a black and white image of a twitter bird",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiUmbrella.svg",
+    "component_id": "ci:CiUmbrella",
+    "aliases": [
+      "ci",
+      "umbrella"
+    ],
+    "caption": "a black and white icon of an umbrella",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiUndo.svg",
+    "component_id": "ci:CiUndo",
+    "aliases": [
+      "ci",
+      "undo"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiUnlock.svg",
+    "component_id": "ci:CiUnlock",
+    "aliases": [
+      "ci",
+      "unlock"
+    ],
+    "caption": "a padlock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiUnread.svg",
+    "component_id": "ci:CiUnread",
+    "aliases": [
+      "ci",
+      "unread"
+    ],
+    "caption": "a black and white icon of an eye with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiUsb.svg",
+    "component_id": "ci:CiUsb",
+    "aliases": [
+      "ci",
+      "usb"
+    ],
+    "caption": "a black and white icon of a usb drive",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiUser.svg",
+    "component_id": "ci:CiUser",
+    "aliases": [
+      "ci",
+      "user"
+    ],
+    "caption": "a person icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiVault.svg",
+    "component_id": "ci:CiVault",
+    "aliases": [
+      "ci",
+      "vault"
+    ],
+    "caption": "a black and white icon of a safe box",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiVial.svg",
+    "component_id": "ci:CiVial",
+    "aliases": [
+      "ci",
+      "vial"
+    ],
+    "caption": "a black and white illustration of a test tube",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiVideoOff.svg",
+    "component_id": "ci:CiVideoOff",
+    "aliases": [
+      "ci",
+      "video",
+      "off"
+    ],
+    "caption": "a black and white image of a no sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiVideoOn.svg",
+    "component_id": "ci:CiVideoOn",
+    "aliases": [
+      "ci",
+      "video",
+      "on"
+    ],
+    "caption": "a video camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiViewBoard.svg",
+    "component_id": "ci:CiViewBoard",
+    "aliases": [
+      "ci",
+      "view",
+      "board"
+    ],
+    "caption": "a black and white icon of a square",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiViewColumn.svg",
+    "component_id": "ci:CiViewColumn",
+    "aliases": [
+      "ci",
+      "view",
+      "column"
+    ],
+    "caption": "a black and white image of a credit card",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiViewList.svg",
+    "component_id": "ci:CiViewList",
+    "aliases": [
+      "ci",
+      "view",
+      "list"
+    ],
+    "caption": "a black and white icon of a checklist",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiViewTable.svg",
+    "component_id": "ci:CiViewTable",
+    "aliases": [
+      "ci",
+      "view",
+      "table"
+    ],
+    "caption": "a black and white icon of a calendar",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiViewTimeline.svg",
+    "component_id": "ci:CiViewTimeline",
+    "aliases": [
+      "ci",
+      "view",
+      "timeline"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiVirus.svg",
+    "component_id": "ci:CiVirus",
+    "aliases": [
+      "ci",
+      "virus"
+    ],
+    "caption": "a black and white illustration of a coronavirus",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiVoicemail.svg",
+    "component_id": "ci:CiVoicemail",
+    "aliases": [
+      "ci",
+      "voicemail"
+    ],
+    "caption": "a black and white image of two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiVolume.svg",
+    "component_id": "ci:CiVolume",
+    "aliases": [
+      "ci",
+      "volume"
+    ],
+    "caption": "a black and white line drawing of a speaker",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiVolumeHigh.svg",
+    "component_id": "ci:CiVolumeHigh",
+    "aliases": [
+      "ci",
+      "volume",
+      "high"
+    ],
+    "caption": "a speaker icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiVolumeMute.svg",
+    "component_id": "ci:CiVolumeMute",
+    "aliases": [
+      "ci",
+      "volume",
+      "mute"
+    ],
+    "caption": "a black and white image of a speaker icon",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiWallet.svg",
+    "component_id": "ci:CiWallet",
+    "aliases": [
+      "ci",
+      "wallet"
+    ],
+    "caption": "a black and white icon of a wallet",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiWarning.svg",
+    "component_id": "ci:CiWarning",
+    "aliases": [
+      "ci",
+      "warning"
+    ],
+    "caption": "a black and white image of a warning sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiWavePulse1.svg",
+    "component_id": "ci:CiWavePulse1",
+    "aliases": [
+      "ci",
+      "wave",
+      "pulse",
+      "1"
+    ],
+    "caption": "an image of an electrical wave on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiWheat.svg",
+    "component_id": "ci:CiWheat",
+    "aliases": [
+      "ci",
+      "wheat"
+    ],
+    "caption": "wheat icon isolated on white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiWifiOff.svg",
+    "component_id": "ci:CiWifiOff",
+    "aliases": [
+      "ci",
+      "wifi",
+      "off"
+    ],
+    "caption": "a black and white image of a wifi symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiWifiOn.svg",
+    "component_id": "ci:CiWifiOn",
+    "aliases": [
+      "ci",
+      "wifi",
+      "on"
+    ],
+    "caption": "an icon of a wifi symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiYoutube.svg",
+    "component_id": "ci:CiYoutube",
+    "aliases": [
+      "ci",
+      "youtube"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiZoomIn.svg",
+    "component_id": "ci:CiZoomIn",
+    "aliases": [
+      "ci",
+      "zoom",
+      "in"
+    ],
+    "caption": "a magnifying icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "ci/CiZoomOut.svg",
+    "component_id": "ci:CiZoomOut",
+    "aliases": [
+      "ci",
+      "zoom",
+      "out"
+    ],
+    "caption": "a magnifying icon on a white background",
+    "colors": []
+  }
+]

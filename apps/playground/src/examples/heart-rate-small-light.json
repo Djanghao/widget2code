@@ -1,0 +1,109 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#FF3B30",
+                "name": "sf:heart.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 13,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "Heart Rate"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 1,
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "LineChart",
+              "props": {
+                "data": [65, 68, 72, 70, 75, 73, 78],
+                "width": 130,
+                "height": 50,
+                "strokeWidth": 2,
+                "color": "#FF3B30",
+                "showDots": false,
+                "showGrid": false
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 4,
+              "flex": 0,
+              "alignMain": "center",
+              "alignCross": "baseline",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 32,
+                    "color": "#000000",
+                    "fontWeight": 300
+                  },
+                  "content": "72"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#8E8E93"
+                  },
+                  "content": "BPM"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 11,
+            "color": "#8E8E93",
+            "textAlign": "center"
+          },
+          "content": "Last updated 2m ago"
+        }
+      ]
+    }
+  }
+}

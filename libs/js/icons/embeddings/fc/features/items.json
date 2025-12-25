@@ -1,0 +1,4762 @@
+[
+  {
+    "src_svg": "fc/FcAbout.svg",
+    "component_id": "fc:FcAbout",
+    "aliases": [
+      "fc",
+      "about"
+    ],
+    "caption": "a blue speech bubble with the word i in it",
+    "colors": [
+      "#2196f3",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAcceptDatabase.svg",
+    "component_id": "fc:FcAcceptDatabase",
+    "aliases": [
+      "fc",
+      "accept",
+      "database"
+    ],
+    "caption": "an image of a check mark next to a stack of files",
+    "colors": [
+      "#d1c4e9",
+      "#43a047",
+      "#dcedc8"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAddColumn.svg",
+    "component_id": "fc:FcAddColumn",
+    "aliases": [
+      "fc",
+      "add",
+      "column"
+    ],
+    "caption": "an image of a green plus sign next to a cell phone",
+    "colors": [
+      "#90caf9",
+      "#43a047",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAddDatabase.svg",
+    "component_id": "fc:FcAddDatabase",
+    "aliases": [
+      "fc",
+      "add",
+      "database"
+    ],
+    "caption": "an image of a green plus sign next to a file folder",
+    "colors": [
+      "#d1c4e9",
+      "#43a047",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAddImage.svg",
+    "component_id": "fc:FcAddImage",
+    "aliases": [
+      "fc",
+      "add",
+      "image"
+    ],
+    "caption": "a green plus sign next to an image of a photo",
+    "colors": [
+      "#8cbcd6",
+      "#b3ddf5",
+      "#9ac9e3",
+      "#43a047",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAddRow.svg",
+    "component_id": "fc:FcAddRow",
+    "aliases": [
+      "fc",
+      "add",
+      "row"
+    ],
+    "caption": "an image of a green plus sign next to a blue box",
+    "colors": [
+      "#90caf9",
+      "#43a047",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAddressBook.svg",
+    "component_id": "fc:FcAddressBook",
+    "aliases": [
+      "fc",
+      "address",
+      "book"
+    ],
+    "caption": "an email icon on a purple background",
+    "colors": [
+      "#673ab7",
+      "#311b92",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAdvance.svg",
+    "component_id": "fc:FcAdvance",
+    "aliases": [
+      "fc",
+      "advance"
+    ],
+    "caption": "a blue arrow pointing to the right on a white background",
+    "colors": [
+      "#1565c0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAdvertising.svg",
+    "component_id": "fc:FcAdvertising",
+    "aliases": [
+      "fc",
+      "advertising"
+    ],
+    "caption": "a blue megaphone icon on a white background",
+    "colors": [
+      "#90caf9",
+      "#283593",
+      "#3f51b5",
+      "#42a5f5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAlarmClock.svg",
+    "component_id": "fc:FcAlarmClock",
+    "aliases": [
+      "fc",
+      "alarm",
+      "clock"
+    ],
+    "caption": "an alarm clock icon on a white background",
+    "colors": [
+      "#37474f",
+      "#c62828",
+      "#eeeeee",
+      "#e53935"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAlphabeticalSortingAz.svg",
+    "component_id": "fc:FcAlphabeticalSortingAz",
+    "aliases": [
+      "fc",
+      "alphabetical",
+      "sorting",
+      "az"
+    ],
+    "caption": "a blue arrow pointing down and an arrow pointing up",
+    "colors": [
+      "#546e7a",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAlphabeticalSortingZa.svg",
+    "component_id": "fc:FcAlphabeticalSortingZa",
+    "aliases": [
+      "fc",
+      "alphabetical",
+      "sorting",
+      "za"
+    ],
+    "caption": "the za logo with an arrow pointing down",
+    "colors": [
+      "#2196f3",
+      "#546e7a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAndroidOs.svg",
+    "component_id": "fc:FcAndroidOs",
+    "aliases": [
+      "fc",
+      "android",
+      "os"
+    ],
+    "caption": "a green android logo on a white background",
+    "colors": [
+      "#7cb342"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAnswers.svg",
+    "component_id": "fc:FcAnswers",
+    "aliases": [
+      "fc",
+      "answers"
+    ],
+    "caption": "a blue folder with an exclamation mark on it",
+    "colors": [
+      "#42a5f5",
+      "#90caf9",
+      "#e1f5fe",
+      "#1976d2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcApproval.svg",
+    "component_id": "fc:FcApproval",
+    "aliases": [
+      "fc",
+      "approval"
+    ],
+    "caption": "a green check mark icon on a white background",
+    "colors": [
+      "#8bc34a",
+      "#ccff90"
+    ]
+  },
+  {
+    "src_svg": "fc/FcApprove.svg",
+    "component_id": "fc:FcApprove",
+    "aliases": [
+      "fc",
+      "approve"
+    ],
+    "caption": "an icon of a person with a green check mark",
+    "colors": [
+      "#ffcc80",
+      "#4caf50"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAreaChart.svg",
+    "component_id": "fc:FcAreaChart",
+    "aliases": [
+      "fc",
+      "area",
+      "chart"
+    ],
+    "caption": "a blue and purple bar graph on a white background",
+    "colors": [
+      "#3f51b5",
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAssistant.svg",
+    "component_id": "fc:FcAssistant",
+    "aliases": [
+      "fc",
+      "assistant"
+    ],
+    "caption": "an icon of a person with a headset on their head",
+    "colors": [
+      "#ffa726",
+      "#ffb74d",
+      "#ff5722",
+      "#784719",
+      "#757575",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAudioFile.svg",
+    "component_id": "fc:FcAudioFile",
+    "aliases": [
+      "fc",
+      "audio",
+      "file"
+    ],
+    "caption": "an image of a music note in a blue folder",
+    "colors": [
+      "#90caf9",
+      "#e1f5fe",
+      "#1976d2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAutomatic.svg",
+    "component_id": "fc:FcAutomatic",
+    "aliases": [
+      "fc",
+      "automatic"
+    ],
+    "caption": "a blue gear icon on a square button",
+    "colors": [
+      "#3f51b5",
+      "#b3e5fc"
+    ]
+  },
+  {
+    "src_svg": "fc/FcAutomotive.svg",
+    "component_id": "fc:FcAutomotive",
+    "aliases": [
+      "fc",
+      "automotive"
+    ],
+    "caption": "an icon of a car with a chain attached to it",
+    "colors": [
+      "#37474f",
+      "#f44336",
+      "#546e7a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBadDecision.svg",
+    "component_id": "fc:FcBadDecision",
+    "aliases": [
+      "fc",
+      "bad",
+      "decision"
+    ],
+    "caption": "an image of a bald man with a red line on his head",
+    "colors": [
+      "#ffcc80",
+      "#f44336"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBarChart.svg",
+    "component_id": "fc:FcBarChart",
+    "aliases": [
+      "fc",
+      "bar",
+      "chart"
+    ],
+    "caption": "a blue bar graph with a blue line in the middle",
+    "colors": [
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBbc.svg",
+    "component_id": "fc:FcBbc",
+    "aliases": [
+      "fc",
+      "bbc"
+    ],
+    "caption": "the bbc logo on a white background",
+    "colors": [
+      "#37474f",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBearish.svg",
+    "component_id": "fc:FcBearish",
+    "aliases": [
+      "fc",
+      "bearish"
+    ],
+    "caption": "a red arrow pointing downward on a graph",
+    "colors": [
+      "#f44336",
+      "#d32f2f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBinoculars.svg",
+    "component_id": "fc:FcBinoculars",
+    "aliases": [
+      "fc",
+      "binoculars"
+    ],
+    "caption": "a purple binoculars icon on a white background",
+    "colors": [
+      "#37474f",
+      "#546e7a",
+      "#aa00ff",
+      "#ce93d8"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBiohazard.svg",
+    "component_id": "fc:FcBiohazard",
+    "aliases": [
+      "fc",
+      "biohazard"
+    ],
+    "caption": "a biohazard symbol on a white background",
+    "colors": [
+      "#00a344",
+      "#00c853"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBiomass.svg",
+    "component_id": "fc:FcBiomass",
+    "aliases": [
+      "fc",
+      "biomass"
+    ],
+    "caption": "an illustration of a test tube with a green leaf",
+    "colors": [
+      "#9ccc65",
+      "#8bc34a",
+      "#2e7d32",
+      "#388e3c",
+      "#43a047"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBiotech.svg",
+    "component_id": "fc:FcBiotech",
+    "aliases": [
+      "fc",
+      "biotech"
+    ],
+    "caption": "a pink and purple dna symbol on a white background",
+    "colors": [
+      "#ad1457",
+      "#e91e63"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBookmark.svg",
+    "component_id": "fc:FcBookmark",
+    "aliases": [
+      "fc",
+      "bookmark"
+    ],
+    "caption": "a red book icon on a white background",
+    "colors": [
+      "#f44336"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBriefcase.svg",
+    "component_id": "fc:FcBriefcase",
+    "aliases": [
+      "fc",
+      "briefcase"
+    ],
+    "caption": "an orange briefcase icon on a white background",
+    "colors": [
+      "#424242",
+      "#e65100",
+      "#ff6e40",
+      "#fff3e0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBrokenLink.svg",
+    "component_id": "fc:FcBrokenLink",
+    "aliases": [
+      "fc",
+      "broken",
+      "link"
+    ],
+    "caption": "a blue and white logo with the word c on it",
+    "colors": [
+      "#1976d2",
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBullish.svg",
+    "component_id": "fc:FcBullish",
+    "aliases": [
+      "fc",
+      "bullish"
+    ],
+    "caption": "a green arrow pointing up to a graph",
+    "colors": [
+      "#4caf50",
+      "#388e3c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBusiness.svg",
+    "component_id": "fc:FcBusiness",
+    "aliases": [
+      "fc",
+      "business"
+    ],
+    "caption": "suitcase icon on a white background",
+    "colors": [
+      "#263238",
+      "#37474f",
+      "#78909c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBusinessContact.svg",
+    "component_id": "fc:FcBusinessContact",
+    "aliases": [
+      "fc",
+      "business",
+      "contact"
+    ],
+    "caption": "an image of a purple folder with a person on it",
+    "colors": [
+      "#673ab7",
+      "#d1c4e9"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBusinessman.svg",
+    "component_id": "fc:FcBusinessman",
+    "aliases": [
+      "fc",
+      "businessman"
+    ],
+    "caption": "an avatar of a man in a suit and tie",
+    "colors": [
+      "#ff9800",
+      "#ffa726",
+      "#ffb74d",
+      "#424242",
+      "#784719",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcBusinesswoman.svg",
+    "component_id": "fc:FcBusinesswoman",
+    "aliases": [
+      "fc",
+      "businesswoman"
+    ],
+    "caption": "an avatar of a woman with red hair",
+    "colors": [
+      "#bf360c",
+      "#78909c",
+      "#ff9800",
+      "#ffb74d",
+      "#ff5722",
+      "#784719"
+    ]
+  },
+  {
+    "src_svg": "fc/FcButtingIn.svg",
+    "component_id": "fc:FcButtingIn",
+    "aliases": [
+      "fc",
+      "butting",
+      "in"
+    ],
+    "caption": "an icon of a man's head with orange hair",
+    "colors": [
+      "#cfd8dc",
+      "#37474f",
+      "#ffb74d",
+      "#784719",
+      "#ff5722",
+      "#ff9800"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCableRelease.svg",
+    "component_id": "fc:FcCableRelease",
+    "aliases": [
+      "fc",
+      "cable",
+      "release"
+    ],
+    "caption": "a blue and black pill with the letter s on it",
+    "colors": [
+      "#37474f",
+      "#0277bd",
+      "#b3e5fc"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCalculator.svg",
+    "component_id": "fc:FcCalculator",
+    "aliases": [
+      "fc",
+      "calculator"
+    ],
+    "caption": "a calculator icon on a white background",
+    "colors": [
+      "#616161",
+      "#424242",
+      "#9ccc65",
+      "#33691e",
+      "#ff5252",
+      "#e0e0e0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCalendar.svg",
+    "component_id": "fc:FcCalendar",
+    "aliases": [
+      "fc",
+      "calendar"
+    ],
+    "caption": "an icon of a calendar on a white background",
+    "colors": [
+      "#cfd8dc",
+      "#f44336",
+      "#b71c1c",
+      "#b0bec5",
+      "#90a4ae"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCallTransfer.svg",
+    "component_id": "fc:FcCallTransfer",
+    "aliases": [
+      "fc",
+      "call",
+      "transfer"
+    ],
+    "caption": "a phone icon with a blue arrow pointing to it",
+    "colors": [
+      "#009688",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCallback.svg",
+    "component_id": "fc:FcCallback",
+    "aliases": [
+      "fc",
+      "callback"
+    ],
+    "caption": "a blue phone icon with an arrow pointing to the right",
+    "colors": [
+      "#2196f3",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCamcorder.svg",
+    "component_id": "fc:FcCamcorder",
+    "aliases": [
+      "fc",
+      "camcorder"
+    ],
+    "caption": "an icon of a video camera on a white background",
+    "colors": [
+      "#607d8b",
+      "#455a64",
+      "#42a5f5",
+      "#90caf9",
+      "#03a9f4",
+      "#4fc3f7"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCamcorderPro.svg",
+    "component_id": "fc:FcCamcorderPro",
+    "aliases": [
+      "fc",
+      "camcorder",
+      "pro"
+    ],
+    "caption": "a video camera icon on a white background",
+    "colors": [
+      "#37474f",
+      "#607d8b",
+      "#546e7a",
+      "#455a64",
+      "#263238",
+      "#03a9f4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCamera.svg",
+    "component_id": "fc:FcCamera",
+    "aliases": [
+      "fc",
+      "camera"
+    ],
+    "caption": "a purple camera icon on a white background",
+    "colors": [
+      "#512da8",
+      "#8667c4",
+      "#5e35b1",
+      "#b388ff",
+      "#c7a7ff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCameraAddon.svg",
+    "component_id": "fc:FcCameraAddon",
+    "aliases": [
+      "fc",
+      "camera",
+      "addon"
+    ],
+    "caption": "an image of a purple camera with a puzzle piece",
+    "colors": [
+      "#512da8",
+      "#8667c4",
+      "#5e35b1",
+      "#b388ff",
+      "#c7a7ff",
+      "#8bc34a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCameraIdentification.svg",
+    "component_id": "fc:FcCameraIdentification",
+    "aliases": [
+      "fc",
+      "camera",
+      "identification"
+    ],
+    "caption": "a purple camera with a magnifying lens on it",
+    "colors": [
+      "#512da8",
+      "#8667c4",
+      "#5e35b1",
+      "#b388ff",
+      "#616161",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCancel.svg",
+    "component_id": "fc:FcCancel",
+    "aliases": [
+      "fc",
+      "cancel"
+    ],
+    "caption": "a red no entry sign on a white background",
+    "colors": [
+      "#d50000"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCandleSticks.svg",
+    "component_id": "fc:FcCandleSticks",
+    "aliases": [
+      "fc",
+      "candle",
+      "sticks"
+    ],
+    "caption": "a set of green and red candlesticks on a white background",
+    "colors": [
+      "#546e7a",
+      "#4caf50",
+      "#f44336"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCapacitor.svg",
+    "component_id": "fc:FcCapacitor",
+    "aliases": [
+      "fc",
+      "capacitor"
+    ],
+    "caption": "an icon of a blue and orange plug on a white background",
+    "colors": [
+      "#ff9800",
+      "#3f51b5",
+      "#303f9f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCdLogo.svg",
+    "component_id": "fc:FcCdLogo",
+    "aliases": [
+      "fc",
+      "cd",
+      "logo"
+    ],
+    "caption": "compact disc logo",
+    "colors": [
+      "#2196f3",
+      "#0d47a1"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCellPhone.svg",
+    "component_id": "fc:FcCellPhone",
+    "aliases": [
+      "fc",
+      "cell",
+      "phone"
+    ],
+    "caption": "a cell phone icon on a white background",
+    "colors": [
+      "#546e7a",
+      "#4fc3f7",
+      "#b3e5fc",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcChargeBattery.svg",
+    "component_id": "fc:FcChargeBattery",
+    "aliases": [
+      "fc",
+      "charge",
+      "battery"
+    ],
+    "caption": "a green battery icon with a yellow lightning bolt",
+    "colors": [
+      "#8bc34a",
+      "#ffeb3b"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCheckmark.svg",
+    "component_id": "fc:FcCheckmark",
+    "aliases": [
+      "fc",
+      "checkmark"
+    ],
+    "caption": "a green check mark on a white background",
+    "colors": [
+      "#43a047"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCircuit.svg",
+    "component_id": "fc:FcCircuit",
+    "aliases": [
+      "fc",
+      "circuit"
+    ],
+    "caption": "a green and yellow square icon with three circles",
+    "colors": [
+      "#4caf50",
+      "#ffc107"
+    ]
+  },
+  {
+    "src_svg": "fc/FcClapperboard.svg",
+    "component_id": "fc:FcClapperboard",
+    "aliases": [
+      "fc",
+      "clapperboard"
+    ],
+    "caption": "a movie clapper icon on a white background",
+    "colors": [
+      "#3f51b5",
+      "#9fa8da"
+    ]
+  },
+  {
+    "src_svg": "fc/FcClearFilters.svg",
+    "component_id": "fc:FcClearFilters",
+    "aliases": [
+      "fc",
+      "clear",
+      "filters"
+    ],
+    "caption": "an image of a funnel with a no sign",
+    "colors": [
+      "#f57c00",
+      "#ff9800",
+      "#f44336",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcClock.svg",
+    "component_id": "fc:FcClock",
+    "aliases": [
+      "fc",
+      "clock"
+    ],
+    "caption": "a blue and white clock with black hands",
+    "colors": [
+      "#00acc1",
+      "#eeeeee"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCloseUpMode.svg",
+    "component_id": "fc:FcCloseUpMode",
+    "aliases": [
+      "fc",
+      "close",
+      "up",
+      "mode"
+    ],
+    "caption": "a red tulip with green leaves on a white background",
+    "colors": [
+      "#2e7d32",
+      "#388e3c",
+      "#c62828",
+      "#e53935",
+      "#f44336",
+      "#4caf50"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCloth.svg",
+    "component_id": "fc:FcCloth",
+    "aliases": [
+      "fc",
+      "cloth"
+    ],
+    "caption": "an orange and brown square pattern on a white background",
+    "colors": [
+      "#ff5722",
+      "#bf360c",
+      "#ff8a65"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCollaboration.svg",
+    "component_id": "fc:FcCollaboration",
+    "aliases": [
+      "fc",
+      "collaboration"
+    ],
+    "caption": "two people with speech bubbles in front of them",
+    "colors": [
+      "#1565c0",
+      "#2196f3",
+      "#ffa726",
+      "#607d8b"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCollapse.svg",
+    "component_id": "fc:FcCollapse",
+    "aliases": [
+      "fc",
+      "collapse"
+    ],
+    "caption": "a blue arrow pointing up on a white background",
+    "colors": [
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCollect.svg",
+    "component_id": "fc:FcCollect",
+    "aliases": [
+      "fc",
+      "collect"
+    ],
+    "caption": "a green arrow with an arrow pointing to the right",
+    "colors": [
+      "#009688",
+      "#f44336"
+    ]
+  },
+  {
+    "src_svg": "fc/FcComboChart.svg",
+    "component_id": "fc:FcComboChart",
+    "aliases": [
+      "fc",
+      "combo",
+      "chart"
+    ],
+    "caption": "a bar graph with a blue arrow pointing to it",
+    "colors": [
+      "#00bcd4",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCommandLine.svg",
+    "component_id": "fc:FcCommandLine",
+    "aliases": [
+      "fc",
+      "command",
+      "line"
+    ],
+    "caption": "a computer screen with the word c on it",
+    "colors": [
+      "#cfd8dc",
+      "#263238",
+      "#76ff03",
+      "#90a4ae"
+    ]
+  },
+  {
+    "src_svg": "fc/FcComments.svg",
+    "component_id": "fc:FcComments",
+    "aliases": [
+      "fc",
+      "comments"
+    ],
+    "caption": "a green speech bubble icon on a white background",
+    "colors": [
+      "#8bc34a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCompactCamera.svg",
+    "component_id": "fc:FcCompactCamera",
+    "aliases": [
+      "fc",
+      "compact",
+      "camera"
+    ],
+    "caption": "a camera icon on a white background",
+    "colors": [
+      "#607d8b",
+      "#455a64",
+      "#42a5f5",
+      "#90caf9",
+      "#add8fb"
+    ]
+  },
+  {
+    "src_svg": "fc/FcConferenceCall.svg",
+    "component_id": "fc:FcConferenceCall",
+    "aliases": [
+      "fc",
+      "conference",
+      "call"
+    ],
+    "caption": "a group of people with orange and yellow circles",
+    "colors": [
+      "#ffa726",
+      "#455a64",
+      "#ffb74d",
+      "#607d8b"
+    ]
+  },
+  {
+    "src_svg": "fc/FcContacts.svg",
+    "component_id": "fc:FcContacts",
+    "aliases": [
+      "fc",
+      "contacts"
+    ],
+    "caption": "an orange book with a person icon on it",
+    "colors": [
+      "#ff7043",
+      "#bf360c",
+      "#ab300b"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCopyleft.svg",
+    "component_id": "fc:FcCopyleft",
+    "aliases": [
+      "fc",
+      "copyleft"
+    ],
+    "caption": "a purple circle with the letter c in it",
+    "colors": [
+      "#9c27b0",
+      "#e1bee7"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCopyright.svg",
+    "component_id": "fc:FcCopyright",
+    "aliases": [
+      "fc",
+      "copyright"
+    ],
+    "caption": "a purple circle with the letter c in it",
+    "colors": [
+      "#9c27b0",
+      "#e1bee7"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCrystalOscillator.svg",
+    "component_id": "fc:FcCrystalOscillator",
+    "aliases": [
+      "fc",
+      "crystal",
+      "oscillator"
+    ],
+    "caption": "a blue and orange plug icon on a white background",
+    "colors": [
+      "#ff9800",
+      "#2196f3",
+      "#64b5f6"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCurrencyExchange.svg",
+    "component_id": "fc:FcCurrencyExchange",
+    "aliases": [
+      "fc",
+      "currency",
+      "exchange"
+    ],
+    "caption": "a dollar and euro sign on a green circle",
+    "colors": [
+      "#3f51b5",
+      "#fff59d",
+      "#4caf50",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCursor.svg",
+    "component_id": "fc:FcCursor",
+    "aliases": [
+      "fc",
+      "cursor"
+    ],
+    "caption": "a black and white arrow pointing down on a white background",
+    "colors": [
+      "#e0e0e0",
+      "#212121"
+    ]
+  },
+  {
+    "src_svg": "fc/FcCustomerSupport.svg",
+    "component_id": "fc:FcCustomerSupport",
+    "aliases": [
+      "fc",
+      "customer",
+      "support"
+    ],
+    "caption": "an icon of a man with a headset on his head",
+    "colors": [
+      "#ffb74d",
+      "#ff9800",
+      "#784719",
+      "#ff5722",
+      "#546e7a",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDam.svg",
+    "component_id": "fc:FcDam",
+    "aliases": [
+      "fc",
+      "dam"
+    ],
+    "caption": "an illustration of a wave crashing into a cliff",
+    "colors": [
+      "#81d4fa",
+      "#1976d2",
+      "#455a64"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDataBackup.svg",
+    "component_id": "fc:FcDataBackup",
+    "aliases": [
+      "fc",
+      "data",
+      "backup"
+    ],
+    "caption": "a blue arrow pointing to a folder icon",
+    "colors": [
+      "#d1c4e9",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDataConfiguration.svg",
+    "component_id": "fc:FcDataConfiguration",
+    "aliases": [
+      "fc",
+      "data",
+      "configuration"
+    ],
+    "caption": "an icon of a gear with a purple background",
+    "colors": [
+      "#d1c4e9",
+      "#607d8b",
+      "#455a64"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDataEncryption.svg",
+    "component_id": "fc:FcDataEncryption",
+    "aliases": [
+      "fc",
+      "data",
+      "encryption"
+    ],
+    "caption": "an illustration of a key and a stack of documents",
+    "colors": [
+      "#d1c4e9",
+      "#ffa000",
+      "#d68600"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDataProtection.svg",
+    "component_id": "fc:FcDataProtection",
+    "aliases": [
+      "fc",
+      "data",
+      "protection"
+    ],
+    "caption": "the icon of a folder with a green arrow pointing to it",
+    "colors": [
+      "#d1c4e9",
+      "#009688"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDataRecovery.svg",
+    "component_id": "fc:FcDataRecovery",
+    "aliases": [
+      "fc",
+      "data",
+      "recovery"
+    ],
+    "caption": "an icon with a red cross over it",
+    "colors": [
+      "#d1c4e9",
+      "#f44336"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDataSheet.svg",
+    "component_id": "fc:FcDataSheet",
+    "aliases": [
+      "fc",
+      "data",
+      "sheet"
+    ],
+    "caption": "a square with blue and white squares on it",
+    "colors": [
+      "#90caf9",
+      "#00bcd4",
+      "#0097a7"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDatabase.svg",
+    "component_id": "fc:FcDatabase",
+    "aliases": [
+      "fc",
+      "database"
+    ],
+    "caption": "a purple bar with three lines on it",
+    "colors": [
+      "#d1c4e9"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDebian.svg",
+    "component_id": "fc:FcDebian",
+    "aliases": [
+      "fc",
+      "debian"
+    ],
+    "caption": "a pink spiral on a white background",
+    "colors": [
+      "#e91e63"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDebt.svg",
+    "component_id": "fc:FcDebt",
+    "aliases": [
+      "fc",
+      "debt"
+    ],
+    "caption": "an image of a man with a dollar sign in front of him",
+    "colors": [
+      "#ffb74d",
+      "#607d8b",
+      "#263238",
+      "#4caf50",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDecision.svg",
+    "component_id": "fc:FcDecision",
+    "aliases": [
+      "fc",
+      "decision"
+    ],
+    "caption": "an icon of a person with a question mark on their head",
+    "colors": [
+      "#ffcc80",
+      "#0277bd"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDeleteColumn.svg",
+    "component_id": "fc:FcDeleteColumn",
+    "aliases": [
+      "fc",
+      "delete",
+      "column"
+    ],
+    "caption": "an image of a cell phone with an x in the middle",
+    "colors": [
+      "#90caf9",
+      "#f44336",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDeleteDatabase.svg",
+    "component_id": "fc:FcDeleteDatabase",
+    "aliases": [
+      "fc",
+      "delete",
+      "database"
+    ],
+    "caption": "an image of an icon with a red cross",
+    "colors": [
+      "#d1c4e9",
+      "#f44336",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDeleteRow.svg",
+    "component_id": "fc:FcDeleteRow",
+    "aliases": [
+      "fc",
+      "delete",
+      "row"
+    ],
+    "caption": "an image of an icon with an x in it",
+    "colors": [
+      "#90caf9",
+      "#f44336",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDepartment.svg",
+    "component_id": "fc:FcDepartment",
+    "aliases": [
+      "fc",
+      "department"
+    ],
+    "caption": "an illustration of an office building with a red door",
+    "colors": [
+      "#c5cae9",
+      "#9fa8da",
+      "#bf360c",
+      "#1565c0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDeployment.svg",
+    "component_id": "fc:FcDeployment",
+    "aliases": [
+      "fc",
+      "deployment"
+    ],
+    "caption": "an orange and white icon of a tank on a flat surface",
+    "colors": [
+      "#b0bec5",
+      "#37474f",
+      "#ff9800",
+      "#8a5100",
+      "#607d8b"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDiploma1.svg",
+    "component_id": "fc:FcDiploma1",
+    "aliases": [
+      "fc",
+      "diploma",
+      "1"
+    ],
+    "caption": "a certificate icon with a blue ribbon",
+    "colors": [
+      "#e8eaf6",
+      "#5c6bc0",
+      "#9fa8da"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDiploma2.svg",
+    "component_id": "fc:FcDiploma2",
+    "aliases": [
+      "fc",
+      "diploma",
+      "2"
+    ],
+    "caption": "an orange certificate with a ribbon on it",
+    "colors": [
+      "#fbe9e7",
+      "#f4511e",
+      "#ff8a65"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDisapprove.svg",
+    "component_id": "fc:FcDisapprove",
+    "aliases": [
+      "fc",
+      "disapprove"
+    ],
+    "caption": "an image of a man with an x mark on his head",
+    "colors": [
+      "#ffcc80",
+      "#f44336"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDisclaimer.svg",
+    "component_id": "fc:FcDisclaimer",
+    "aliases": [
+      "fc",
+      "disclaimer"
+    ],
+    "caption": "an icon of a hand with an x mark on it",
+    "colors": [
+      "#ffcc80",
+      "#f44336"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDislike.svg",
+    "component_id": "fc:FcDislike",
+    "aliases": [
+      "fc",
+      "dislike"
+    ],
+    "caption": "a red heart with a black line through it",
+    "colors": [
+      "#f44336",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDisplay.svg",
+    "component_id": "fc:FcDisplay",
+    "aliases": [
+      "fc",
+      "display"
+    ],
+    "caption": "an image of a digital clock with blue numbers",
+    "colors": [
+      "#80deea",
+      "#2962ff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDoNotInhale.svg",
+    "component_id": "fc:FcDoNotInhale",
+    "aliases": [
+      "fc",
+      "do",
+      "not",
+      "inhale"
+    ],
+    "caption": "a no nose sign with arrows pointing down",
+    "colors": [
+      "#ffa726",
+      "#ffb74d",
+      "#cc861e",
+      "#37474f",
+      "#ff5722"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDoNotInsert.svg",
+    "component_id": "fc:FcDoNotInsert",
+    "aliases": [
+      "fc",
+      "do",
+      "not",
+      "insert"
+    ],
+    "caption": "a green and white icon that says no down arrow",
+    "colors": [
+      "#7cb342",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDoNotMix.svg",
+    "component_id": "fc:FcDoNotMix",
+    "aliases": [
+      "fc",
+      "do",
+      "not",
+      "mix"
+    ],
+    "caption": "a blue arrow pointing to the right and a blue arrow pointing to the left",
+    "colors": [
+      "#00bcd4",
+      "#2196f3",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDocument.svg",
+    "component_id": "fc:FcDocument",
+    "aliases": [
+      "fc",
+      "document"
+    ],
+    "caption": "an image of a blue document with a line through it",
+    "colors": [
+      "#90caf9",
+      "#e1f5fe",
+      "#1976d2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDonate.svg",
+    "component_id": "fc:FcDonate",
+    "aliases": [
+      "fc",
+      "donate"
+    ],
+    "caption": "a hand holding a coin on a white background",
+    "colors": [
+      "#e69329",
+      "#546e7a",
+      "#90a4ae",
+      "#ffb74d",
+      "#ffcdd2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDoughnutChart.svg",
+    "component_id": "fc:FcDoughnutChart",
+    "aliases": [
+      "fc",
+      "doughnut",
+      "chart"
+    ],
+    "caption": "a pie chart with blue, green and purple colors",
+    "colors": [
+      "#00bcd4",
+      "#448aff",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDown.svg",
+    "component_id": "fc:FcDown",
+    "aliases": [
+      "fc",
+      "down"
+    ],
+    "caption": "a blue arrow pointing down on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDownLeft.svg",
+    "component_id": "fc:FcDownLeft",
+    "aliases": [
+      "fc",
+      "down",
+      "left"
+    ],
+    "caption": "a blue arrow pointing down on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDownRight.svg",
+    "component_id": "fc:FcDownRight",
+    "aliases": [
+      "fc",
+      "down",
+      "right"
+    ],
+    "caption": "a blue arrow pointing down on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDownload.svg",
+    "component_id": "fc:FcDownload",
+    "aliases": [
+      "fc",
+      "download"
+    ],
+    "caption": "a blue arrow pointing down on a white background",
+    "colors": [
+      "#1565c0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDribbble.svg",
+    "component_id": "fc:FcDribbble",
+    "aliases": [
+      "fc",
+      "dribbble"
+    ],
+    "caption": "a pink square with the letter d on it",
+    "colors": [
+      "#ff4081",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcDvdLogo.svg",
+    "component_id": "fc:FcDvdLogo",
+    "aliases": [
+      "fc",
+      "dvd",
+      "logo"
+    ],
+    "caption": "a dvd logo with the word dvd on it",
+    "colors": [
+      "#42a5f5",
+      "#1565c0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcEditImage.svg",
+    "component_id": "fc:FcEditImage",
+    "aliases": [
+      "fc",
+      "edit",
+      "image"
+    ],
+    "caption": "an icon with a pencil and a mountain in the background",
+    "colors": [
+      "#8cbcd6",
+      "#b3ddf5",
+      "#9ac9e3",
+      "#e57373",
+      "#ff9800",
+      "#b0bec5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcElectricalSensor.svg",
+    "component_id": "fc:FcElectricalSensor",
+    "aliases": [
+      "fc",
+      "electrical",
+      "sensor"
+    ],
+    "caption": "a blue heartbeat icon with a blue circle in the middle",
+    "colors": [
+      "#b2ebf2",
+      "#4dd0e1",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcElectricalThreshold.svg",
+    "component_id": "fc:FcElectricalThreshold",
+    "aliases": [
+      "fc",
+      "electrical",
+      "threshold"
+    ],
+    "caption": "a blue and white logo with the word w on it",
+    "colors": [
+      "#80deea",
+      "#03a9f4",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcElectricity.svg",
+    "component_id": "fc:FcElectricity",
+    "aliases": [
+      "fc",
+      "electricity"
+    ],
+    "caption": "a blue lightning bolt icon on a white background",
+    "colors": [
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcElectroDevices.svg",
+    "component_id": "fc:FcElectroDevices",
+    "aliases": [
+      "fc",
+      "electro",
+      "devices"
+    ],
+    "caption": "a blue square with a lightning bolt on it",
+    "colors": [
+      "#3f51b5",
+      "#80deea"
+    ]
+  },
+  {
+    "src_svg": "fc/FcElectronics.svg",
+    "component_id": "fc:FcElectronics",
+    "aliases": [
+      "fc",
+      "electronics"
+    ],
+    "caption": "an image of a computer chip on a white background",
+    "colors": [
+      "#ff9800",
+      "#4caf50",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcEmptyBattery.svg",
+    "component_id": "fc:FcEmptyBattery",
+    "aliases": [
+      "fc",
+      "empty",
+      "battery"
+    ],
+    "caption": "an empty battery on a white background",
+    "colors": [
+      "#cfd8dc"
+    ]
+  },
+  {
+    "src_svg": "fc/FcEmptyFilter.svg",
+    "component_id": "fc:FcEmptyFilter",
+    "aliases": [
+      "fc",
+      "empty",
+      "filter"
+    ],
+    "caption": "a funnel icon on a white background",
+    "colors": [
+      "#ffcc80"
+    ]
+  },
+  {
+    "src_svg": "fc/FcEmptyTrash.svg",
+    "component_id": "fc:FcEmptyTrash",
+    "aliases": [
+      "fc",
+      "empty",
+      "trash"
+    ],
+    "caption": "a purple trash can icon on a white background",
+    "colors": [
+      "#b39ddb",
+      "#7e57c2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcEndCall.svg",
+    "component_id": "fc:FcEndCall",
+    "aliases": [
+      "fc",
+      "end",
+      "call"
+    ],
+    "caption": "a red phone icon with an arrow pointing down",
+    "colors": [
+      "#f44336",
+      "#b71c1c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcEngineering.svg",
+    "component_id": "fc:FcEngineering",
+    "aliases": [
+      "fc",
+      "engineering"
+    ],
+    "caption": "an orange gearwheel icon on a white background",
+    "colors": [
+      "#ef6c00",
+      "#ff9800"
+    ]
+  },
+  {
+    "src_svg": "fc/FcEnteringHeavenAlive.svg",
+    "component_id": "fc:FcEnteringHeavenAlive",
+    "aliases": [
+      "fc",
+      "entering",
+      "heaven",
+      "alive"
+    ],
+    "caption": "a blue cloud icon with stairs leading up to it",
+    "colors": [
+      "#039be5",
+      "#81d4fa"
+    ]
+  },
+  {
+    "src_svg": "fc/FcExpand.svg",
+    "component_id": "fc:FcExpand",
+    "aliases": [
+      "fc",
+      "expand"
+    ],
+    "caption": "a blue v symbol on a white background",
+    "colors": [
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcExpired.svg",
+    "component_id": "fc:FcExpired",
+    "aliases": [
+      "fc",
+      "expired"
+    ],
+    "caption": "an image of a clock and a warning sign",
+    "colors": [
+      "#00acc1",
+      "#eeeeee",
+      "#ffc107",
+      "#263238"
+    ]
+  },
+  {
+    "src_svg": "fc/FcExport.svg",
+    "component_id": "fc:FcExport",
+    "aliases": [
+      "fc",
+      "export"
+    ],
+    "caption": "an orange arrow pointing to the right on a white background",
+    "colors": [
+      "#ffccbc",
+      "#ff5722"
+    ]
+  },
+  {
+    "src_svg": "fc/FcExternal.svg",
+    "component_id": "fc:FcExternal",
+    "aliases": [
+      "fc",
+      "external"
+    ],
+    "caption": "an arrow pointing up in the middle of a circle",
+    "colors": [
+      "#b2dfdb",
+      "#009688"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFactory.svg",
+    "component_id": "fc:FcFactory",
+    "aliases": [
+      "fc",
+      "factory"
+    ],
+    "caption": "a factory icon with orange and yellow buildings",
+    "colors": [
+      "#bf360c",
+      "#e64a19",
+      "#ffc107"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFactoryBreakdown.svg",
+    "component_id": "fc:FcFactoryBreakdown",
+    "aliases": [
+      "fc",
+      "factory",
+      "breakdown"
+    ],
+    "caption": "an orange factory building with a red roof",
+    "colors": [
+      "#e64a19",
+      "#992b0a",
+      "#bf360c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFaq.svg",
+    "component_id": "fc:FcFaq",
+    "aliases": [
+      "fc",
+      "faq"
+    ],
+    "caption": "two green speech bubbles with the words q and a",
+    "colors": [
+      "#558b2f",
+      "#1b5e20",
+      "#8bc34a",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFeedIn.svg",
+    "component_id": "fc:FcFeedIn",
+    "aliases": [
+      "fc",
+      "feed",
+      "in"
+    ],
+    "caption": "a blue and white icon with two arrows pointing down",
+    "colors": [
+      "#2196f3",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFeedback.svg",
+    "component_id": "fc:FcFeedback",
+    "aliases": [
+      "fc",
+      "feedback"
+    ],
+    "caption": "an envelope with a purple arrow in it",
+    "colors": [
+      "#78909c",
+      "#ffffff",
+      "#9c27b0",
+      "#cfd8dc"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFile.svg",
+    "component_id": "fc:FcFile",
+    "aliases": [
+      "fc",
+      "file"
+    ],
+    "caption": "an image of a blue folder on a white background",
+    "colors": [
+      "#90caf9",
+      "#e1f5fe"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFilingCabinet.svg",
+    "component_id": "fc:FcFilingCabinet",
+    "aliases": [
+      "fc",
+      "filing",
+      "cabinet"
+    ],
+    "caption": "three drawers icon vector illustration",
+    "colors": [
+      "#263238",
+      "#607d8b",
+      "#b0bec5",
+      "#546e7a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFilledFilter.svg",
+    "component_id": "fc:FcFilledFilter",
+    "aliases": [
+      "fc",
+      "filled",
+      "filter"
+    ],
+    "caption": "an orange funnel icon on a white background",
+    "colors": [
+      "#f57c00",
+      "#ff9800"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFilm.svg",
+    "component_id": "fc:FcFilm",
+    "aliases": [
+      "fc",
+      "film"
+    ],
+    "caption": "an image of a film strip on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFilmReel.svg",
+    "component_id": "fc:FcFilmReel",
+    "aliases": [
+      "fc",
+      "film",
+      "reel"
+    ],
+    "caption": "an icon of a movie reel with blue lines",
+    "colors": [
+      "#3f51b5",
+      "#90a4ae",
+      "#37474f",
+      "#253278"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFinePrint.svg",
+    "component_id": "fc:FcFinePrint",
+    "aliases": [
+      "fc",
+      "fine",
+      "print"
+    ],
+    "caption": "an image of a magnifying document with a magnifying lens",
+    "colors": [
+      "#90caf9",
+      "#e1f5fe",
+      "#616161",
+      "#37474f",
+      "#1976d2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFlashAuto.svg",
+    "component_id": "fc:FcFlashAuto",
+    "aliases": [
+      "fc",
+      "flash",
+      "auto"
+    ],
+    "caption": "a lightning bolt with the letter a on it",
+    "colors": [
+      "#ffc107",
+      "#f44336"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFlashOff.svg",
+    "component_id": "fc:FcFlashOff",
+    "aliases": [
+      "fc",
+      "flash",
+      "off"
+    ],
+    "caption": "no lightning icon vector illustration",
+    "colors": [
+      "#ffc107",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFlashOn.svg",
+    "component_id": "fc:FcFlashOn",
+    "aliases": [
+      "fc",
+      "flash",
+      "on"
+    ],
+    "caption": "a yellow lightning bolt icon on a white background",
+    "colors": [
+      "#ffc107"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFlowChart.svg",
+    "component_id": "fc:FcFlowChart",
+    "aliases": [
+      "fc",
+      "flow",
+      "chart"
+    ],
+    "caption": "a blue and white icon of an organizational chart",
+    "colors": [
+      "#cfd8dc",
+      "#3f51b5",
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFolder.svg",
+    "component_id": "fc:FcFolder",
+    "aliases": [
+      "fc",
+      "folder"
+    ],
+    "caption": "a yellow folder icon on a white background",
+    "colors": [
+      "#ffa000",
+      "#ffca28"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFrame.svg",
+    "component_id": "fc:FcFrame",
+    "aliases": [
+      "fc",
+      "frame"
+    ],
+    "caption": "an empty blue frame on a white background",
+    "colors": [
+      "#3949ab",
+      "#bbdefb"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFullBattery.svg",
+    "component_id": "fc:FcFullBattery",
+    "aliases": [
+      "fc",
+      "full",
+      "battery"
+    ],
+    "caption": "a green battery icon on a white background",
+    "colors": [
+      "#8bc34a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcFullTrash.svg",
+    "component_id": "fc:FcFullTrash",
+    "aliases": [
+      "fc",
+      "full",
+      "trash"
+    ],
+    "caption": "a purple trash can with orange paper in it",
+    "colors": [
+      "#ff8a65",
+      "#ffab91",
+      "#b39ddb",
+      "#7e57c2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcGallery.svg",
+    "component_id": "fc:FcGallery",
+    "aliases": [
+      "fc",
+      "gallery"
+    ],
+    "caption": "an orange square with mountains in the background",
+    "colors": [
+      "#e65100",
+      "#f57c00",
+      "#fff9c4",
+      "#942a09",
+      "#bf360c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcGenealogy.svg",
+    "component_id": "fc:FcGenealogy",
+    "aliases": [
+      "fc",
+      "genealogy"
+    ],
+    "caption": "an image of a diagram with blue squares",
+    "colors": [
+      "#cfd8dc",
+      "#00bcd4",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcGenericSortingAsc.svg",
+    "component_id": "fc:FcGenericSortingAsc",
+    "aliases": [
+      "fc",
+      "generic",
+      "sorting",
+      "asc"
+    ],
+    "caption": "an image of a bar graph with blue lines",
+    "colors": [
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcGenericSortingDesc.svg",
+    "component_id": "fc:FcGenericSortingDesc",
+    "aliases": [
+      "fc",
+      "generic",
+      "sorting",
+      "desc"
+    ],
+    "caption": "a bar chart showing the number of people who have visited the website",
+    "colors": [
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcGlobe.svg",
+    "component_id": "fc:FcGlobe",
+    "aliases": [
+      "fc",
+      "globe"
+    ],
+    "caption": "a blue and green globe with a white background",
+    "colors": [
+      "#7cb342",
+      "#0277bd"
+    ]
+  },
+  {
+    "src_svg": "fc/FcGoodDecision.svg",
+    "component_id": "fc:FcGoodDecision",
+    "aliases": [
+      "fc",
+      "good",
+      "decision"
+    ],
+    "caption": "an icon of a person's head with a green cross",
+    "colors": [
+      "#ffcc80",
+      "#4caf50"
+    ]
+  },
+  {
+    "src_svg": "fc/FcGoogle.svg",
+    "component_id": "fc:FcGoogle",
+    "aliases": [
+      "fc",
+      "google"
+    ],
+    "caption": "the google logo is shown in red, green and blue",
+    "colors": [
+      "#ffc107",
+      "#ff3d00",
+      "#4caf50",
+      "#1976d2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcGraduationCap.svg",
+    "component_id": "fc:FcGraduationCap",
+    "aliases": [
+      "fc",
+      "graduation",
+      "cap"
+    ],
+    "caption": "a graduation cap icon on a white background",
+    "colors": [
+      "#37474f",
+      "#78909c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcGrid.svg",
+    "component_id": "fc:FcGrid",
+    "aliases": [
+      "fc",
+      "grid"
+    ],
+    "caption": "a square grid with squares in blue and white",
+    "colors": [
+      "#90caf9"
+    ]
+  },
+  {
+    "src_svg": "fc/FcHeadset.svg",
+    "component_id": "fc:FcHeadset",
+    "aliases": [
+      "fc",
+      "headset"
+    ],
+    "caption": "headphones icon on a white background",
+    "colors": [
+      "#0097a7",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcHeatMap.svg",
+    "component_id": "fc:FcHeatMap",
+    "aliases": [
+      "fc",
+      "heat",
+      "map"
+    ],
+    "caption": "an image of a square with blue dots",
+    "colors": [
+      "#cfd8dc",
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcHighBattery.svg",
+    "component_id": "fc:FcHighBattery",
+    "aliases": [
+      "fc",
+      "high",
+      "battery"
+    ],
+    "caption": "a green battery icon on a white background",
+    "colors": [
+      "#cfd8dc",
+      "#8bc34a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcHighPriority.svg",
+    "component_id": "fc:FcHighPriority",
+    "aliases": [
+      "fc",
+      "high",
+      "priority"
+    ],
+    "caption": "a red warning sign with an exclamation mark",
+    "colors": [
+      "#f44336",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcHome.svg",
+    "component_id": "fc:FcHome",
+    "aliases": [
+      "fc",
+      "home"
+    ],
+    "caption": "an illustration of a house with a blue door",
+    "colors": [
+      "#e8eaf6",
+      "#c5cae9",
+      "#b71c1c",
+      "#d84315",
+      "#01579b",
+      "#ff8a65"
+    ]
+  },
+  {
+    "src_svg": "fc/FcIcons8Cup.svg",
+    "component_id": "fc:Fc8Cup",
+    "aliases": [
+      "fc",
+      "8",
+      "cup"
+    ],
+    "caption": "a green trash can with the number eight on it",
+    "colors": [
+      "#4caf50",
+      "#81c784",
+      "#e8f5e9"
+    ]
+  },
+  {
+    "src_svg": "fc/FcIdea.svg",
+    "component_id": "fc:FcIdea",
+    "aliases": [
+      "fc",
+      "idea"
+    ],
+    "caption": "a yellow light bulb with an arrow in it",
+    "colors": [
+      "#fff59d",
+      "#fbc02d",
+      "#5c6bc0",
+      "#9fa8da"
+    ]
+  },
+  {
+    "src_svg": "fc/FcImageFile.svg",
+    "component_id": "fc:FcImageFile",
+    "aliases": [
+      "fc",
+      "image",
+      "file"
+    ],
+    "caption": "an image of a blue folder with mountains on it",
+    "colors": [
+      "#90caf9",
+      "#e1f5fe",
+      "#1565c0",
+      "#1976d2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcImport.svg",
+    "component_id": "fc:FcImport",
+    "aliases": [
+      "fc",
+      "import"
+    ],
+    "caption": "a pink square with an arrow pointing to the right",
+    "colors": [
+      "#f8bbd0",
+      "#e91e63"
+    ]
+  },
+  {
+    "src_svg": "fc/FcInTransit.svg",
+    "component_id": "fc:FcInTransit",
+    "aliases": [
+      "fc",
+      "in",
+      "transit"
+    ],
+    "caption": "a purple and yellow delivery truck icon",
+    "colors": [
+      "#ffc107",
+      "#9575cd",
+      "#7e57c2",
+      "#37474f",
+      "#78909c",
+      "#455a64"
+    ]
+  },
+  {
+    "src_svg": "fc/FcInfo.svg",
+    "component_id": "fc:FcInfo",
+    "aliases": [
+      "fc",
+      "info"
+    ],
+    "caption": "a blue button with the word i on it",
+    "colors": [
+      "#2196f3",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcInspection.svg",
+    "component_id": "fc:FcInspection",
+    "aliases": [
+      "fc",
+      "inspection"
+    ],
+    "caption": "a clipboard with a green check mark on it",
+    "colors": [
+      "#455a64",
+      "#ffffff",
+      "#90a4ae",
+      "#4caf50"
+    ]
+  },
+  {
+    "src_svg": "fc/FcIntegratedWebcam.svg",
+    "component_id": "fc:FcIntegratedWebcam",
+    "aliases": [
+      "fc",
+      "integrated",
+      "webcam"
+    ],
+    "caption": "an icon of a blue button on a white background",
+    "colors": [
+      "#607d8b",
+      "#455a64",
+      "#42a5f5",
+      "#90caf9"
+    ]
+  },
+  {
+    "src_svg": "fc/FcInternal.svg",
+    "component_id": "fc:FcInternal",
+    "aliases": [
+      "fc",
+      "internal"
+    ],
+    "caption": "an arrow pointing down in a blue circle",
+    "colors": [
+      "#b3e5fc",
+      "#1565c0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcInvite.svg",
+    "component_id": "fc:FcInvite",
+    "aliases": [
+      "fc",
+      "invite"
+    ],
+    "caption": "an envelope with a green cross in it",
+    "colors": [
+      "#78909c",
+      "#ffffff",
+      "#cfd8dc",
+      "#4caf50"
+    ]
+  },
+  {
+    "src_svg": "fc/FcIpad.svg",
+    "component_id": "fc:FcIpad",
+    "aliases": [
+      "fc",
+      "ipad"
+    ],
+    "caption": "an orange tablet with a white background",
+    "colors": [
+      "#e38939",
+      "#fff3e0",
+      "#a6642a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcIphone.svg",
+    "component_id": "fc:FcIphone",
+    "aliases": [
+      "fc",
+      "iphone"
+    ],
+    "caption": "an orange cell phone with a blank screen",
+    "colors": [
+      "#e38939",
+      "#fff3e0",
+      "#a6642a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcKey.svg",
+    "component_id": "fc:FcKey",
+    "aliases": [
+      "fc",
+      "key"
+    ],
+    "caption": "an orange key icon on a white background",
+    "colors": [
+      "#ffa000",
+      "#d68600"
+    ]
+  },
+  {
+    "src_svg": "fc/FcKindle.svg",
+    "component_id": "fc:FcKindle",
+    "aliases": [
+      "fc",
+      "kindle"
+    ],
+    "caption": "an icon of a tablet with a document on it",
+    "colors": [
+      "#37474f",
+      "#eeeeee",
+      "#546e7a",
+      "#a1a1a1"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLandscape.svg",
+    "component_id": "fc:FcLandscape",
+    "aliases": [
+      "fc",
+      "landscape"
+    ],
+    "caption": "a green mountain with a sun in the background",
+    "colors": [
+      "#ff9800",
+      "#ffeb3b",
+      "#2e7d32",
+      "#4caf50"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLeave.svg",
+    "component_id": "fc:FcLeave",
+    "aliases": [
+      "fc",
+      "leave"
+    ],
+    "caption": "a calendar with an exclamation mark on it",
+    "colors": [
+      "#ffcdd2",
+      "#f44336",
+      "#b71c1c",
+      "#bdbdbd"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLeft.svg",
+    "component_id": "fc:FcLeft",
+    "aliases": [
+      "fc",
+      "left"
+    ],
+    "caption": "a blue arrow pointing to the right on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLeftDown.svg",
+    "component_id": "fc:FcLeftDown",
+    "aliases": [
+      "fc",
+      "left",
+      "down"
+    ],
+    "caption": "a blue arrow pointing down on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLeftDown2.svg",
+    "component_id": "fc:FcLeftDown2",
+    "aliases": [
+      "fc",
+      "left",
+      "down",
+      "2"
+    ],
+    "caption": "a blue arrow pointing down on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLeftUp.svg",
+    "component_id": "fc:FcLeftUp",
+    "aliases": [
+      "fc",
+      "left",
+      "up"
+    ],
+    "caption": "a blue arrow pointing down on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLeftUp2.svg",
+    "component_id": "fc:FcLeftUp2",
+    "aliases": [
+      "fc",
+      "left",
+      "up",
+      "2"
+    ],
+    "caption": "a blue arrow pointing up in the shape of a u",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLibrary.svg",
+    "component_id": "fc:FcLibrary",
+    "aliases": [
+      "fc",
+      "library"
+    ],
+    "caption": "an orange icon of a building with three columns",
+    "colors": [
+      "#ff9800",
+      "#ef6c00"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLightAtTheEndOfTunnel.svg",
+    "component_id": "fc:FcLightAtTheEndOfTunnel",
+    "aliases": [
+      "fc",
+      "light",
+      "at",
+      "the",
+      "end",
+      "of",
+      "tunnel"
+    ],
+    "caption": "a blue square icon with a star in the middle",
+    "colors": [
+      "#3f51b5",
+      "#ccf2f6"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLike.svg",
+    "component_id": "fc:FcLike",
+    "aliases": [
+      "fc",
+      "like"
+    ],
+    "caption": "a red heart icon on a white background",
+    "colors": [
+      "#f44336"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLikePlaceholder.svg",
+    "component_id": "fc:FcLikePlaceholder",
+    "aliases": [
+      "fc",
+      "like",
+      "placeholder"
+    ],
+    "caption": "a pink heart on a white background",
+    "colors": [
+      "#ffcdd2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLineChart.svg",
+    "component_id": "fc:FcLineChart",
+    "aliases": [
+      "fc",
+      "line",
+      "chart"
+    ],
+    "caption": "two blue and purple bar graphs on a white background",
+    "colors": [
+      "#3f51b5",
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLink.svg",
+    "component_id": "fc:FcLink",
+    "aliases": [
+      "fc",
+      "link"
+    ],
+    "caption": "an image of a blue and white link",
+    "colors": [
+      "#1976d2",
+      "#42a5f5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLinux.svg",
+    "component_id": "fc:FcLinux",
+    "aliases": [
+      "fc",
+      "linux"
+    ],
+    "caption": "a cartoon penguin sitting on a white background",
+    "colors": [
+      "#eceff1",
+      "#263238",
+      "#212121",
+      "#ffc107",
+      "#634703",
+      "#455a64"
+    ]
+  },
+  {
+    "src_svg": "fc/FcList.svg",
+    "component_id": "fc:FcList",
+    "aliases": [
+      "fc",
+      "list"
+    ],
+    "caption": "a blue and white icon of a list of items",
+    "colors": [
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLock.svg",
+    "component_id": "fc:FcLock",
+    "aliases": [
+      "fc",
+      "lock"
+    ],
+    "caption": "an orange padlock icon on a white background",
+    "colors": [
+      "#424242",
+      "#fb8c00",
+      "#c76e00"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLockLandscape.svg",
+    "component_id": "fc:FcLockLandscape",
+    "aliases": [
+      "fc",
+      "lock",
+      "landscape"
+    ],
+    "caption": "an icon of a padlock on a computer screen",
+    "colors": [
+      "#37474f",
+      "#bbdefb",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLockPortrait.svg",
+    "component_id": "fc:FcLockPortrait",
+    "aliases": [
+      "fc",
+      "lock",
+      "portrait"
+    ],
+    "caption": "an illustration of a phone with a padlock on it",
+    "colors": [
+      "#37474f",
+      "#bbdefb",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLowBattery.svg",
+    "component_id": "fc:FcLowBattery",
+    "aliases": [
+      "fc",
+      "low",
+      "battery"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": [
+      "#cfd8dc",
+      "#8bc34a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcLowPriority.svg",
+    "component_id": "fc:FcLowPriority",
+    "aliases": [
+      "fc",
+      "low",
+      "priority"
+    ],
+    "caption": "an arrow pointing down on a green road sign",
+    "colors": [
+      "#4caf50",
+      "#ffeb3b"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMakeDecision.svg",
+    "component_id": "fc:FcMakeDecision",
+    "aliases": [
+      "fc",
+      "make",
+      "decision"
+    ],
+    "caption": "an orange icon of a man's head with an arrow pointing up",
+    "colors": [
+      "#ffcc80",
+      "#ff5722"
+    ]
+  },
+  {
+    "src_svg": "fc/FcManager.svg",
+    "component_id": "fc:FcManager",
+    "aliases": [
+      "fc",
+      "manager"
+    ],
+    "caption": "an avatar of a man wearing a tie",
+    "colors": [
+      "#ff9800",
+      "#ffa726",
+      "#ffb74d",
+      "#ff5722",
+      "#784719",
+      "#cfd8dc"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMediumPriority.svg",
+    "component_id": "fc:FcMediumPriority",
+    "aliases": [
+      "fc",
+      "medium",
+      "priority"
+    ],
+    "caption": "a yellow road sign with three dots on it",
+    "colors": [
+      "#ffc107",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMenu.svg",
+    "component_id": "fc:FcMenu",
+    "aliases": [
+      "fc",
+      "menu"
+    ],
+    "caption": "an image of a blue and white striped flag",
+    "colors": [
+      "#607d8b"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMiddleBattery.svg",
+    "component_id": "fc:FcMiddleBattery",
+    "aliases": [
+      "fc",
+      "middle",
+      "battery"
+    ],
+    "caption": "an icon of a battery with green and gray sides",
+    "colors": [
+      "#cfd8dc",
+      "#8bc34a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMindMap.svg",
+    "component_id": "fc:FcMindMap",
+    "aliases": [
+      "fc",
+      "mind",
+      "map"
+    ],
+    "caption": "an image of a blue circle with blue circles around it",
+    "colors": [
+      "#cfd8dc",
+      "#3f51b5",
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMinus.svg",
+    "component_id": "fc:FcMinus",
+    "aliases": [
+      "fc",
+      "minus"
+    ],
+    "caption": "an image of a blue and white logo",
+    "colors": [
+      "#5c6bc0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMissedCall.svg",
+    "component_id": "fc:FcMissedCall",
+    "aliases": [
+      "fc",
+      "missed",
+      "call"
+    ],
+    "caption": "a phone icon with an arrow pointing up",
+    "colors": [
+      "#f44336",
+      "#009688"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMms.svg",
+    "component_id": "fc:FcMms",
+    "aliases": [
+      "fc",
+      "mms"
+    ],
+    "caption": "a pink speech bubble with a mountain in the middle",
+    "colors": [
+      "#e91e63",
+      "#f48fb1",
+      "#f8bbd0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMoneyTransfer.svg",
+    "component_id": "fc:FcMoneyTransfer",
+    "aliases": [
+      "fc",
+      "money",
+      "transfer"
+    ],
+    "caption": "an envelope icon with money in it",
+    "colors": [
+      "#78909c",
+      "#aed581",
+      "#558b2f",
+      "#cfd8dc"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMultipleCameras.svg",
+    "component_id": "fc:FcMultipleCameras",
+    "aliases": [
+      "fc",
+      "multiple",
+      "cameras"
+    ],
+    "caption": "a camera icon on a white background",
+    "colors": [
+      "#455a64",
+      "#78909c",
+      "#42a5f5",
+      "#90caf9",
+      "#add8fb"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMultipleDevices.svg",
+    "component_id": "fc:FcMultipleDevices",
+    "aliases": [
+      "fc",
+      "multiple",
+      "devices"
+    ],
+    "caption": "an illustration of a laptop and a cell phone",
+    "colors": [
+      "#546e7a",
+      "#bbdefb",
+      "#37474f",
+      "#e38939",
+      "#fff3e0",
+      "#a6642a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMultipleInputs.svg",
+    "component_id": "fc:FcMultipleInputs",
+    "aliases": [
+      "fc",
+      "multiple",
+      "inputs"
+    ],
+    "caption": "a blue arrow pointing up and down on a white background",
+    "colors": [
+      "#90a4ae",
+      "#1565c0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMultipleSmartphones.svg",
+    "component_id": "fc:FcMultipleSmartphones",
+    "aliases": [
+      "fc",
+      "multiple",
+      "smartphones"
+    ],
+    "caption": "three cell phones with different colors on them",
+    "colors": [
+      "#455a64",
+      "#bbdefb",
+      "#37474f",
+      "#546e7a",
+      "#e38939",
+      "#fff3e0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcMusic.svg",
+    "component_id": "fc:FcMusic",
+    "aliases": [
+      "fc",
+      "music"
+    ],
+    "caption": "a pink music note on a white background",
+    "colors": [
+      "#e91e63"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNegativeDynamic.svg",
+    "component_id": "fc:FcNegativeDynamic",
+    "aliases": [
+      "fc",
+      "negative",
+      "dynamic"
+    ],
+    "caption": "a blue arrow pointing up to a bar graph",
+    "colors": [
+      "#00bcd4",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNeutralDecision.svg",
+    "component_id": "fc:FcNeutralDecision",
+    "aliases": [
+      "fc",
+      "neutral",
+      "decision"
+    ],
+    "caption": "an icon of a bald head with dots on it",
+    "colors": [
+      "#ffcc80",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNeutralTrading.svg",
+    "component_id": "fc:FcNeutralTrading",
+    "aliases": [
+      "fc",
+      "neutral",
+      "trading"
+    ],
+    "caption": "a blue and white arrow pointing to the right",
+    "colors": [
+      "#1565c0",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNews.svg",
+    "component_id": "fc:FcNews",
+    "aliases": [
+      "fc",
+      "news"
+    ],
+    "caption": "an orange and white icon of a document",
+    "colors": [
+      "#ff5722",
+      "#ffccbc"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNext.svg",
+    "component_id": "fc:FcNext",
+    "aliases": [
+      "fc",
+      "next"
+    ],
+    "caption": "a blue arrow on a white background",
+    "colors": [
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNfcSign.svg",
+    "component_id": "fc:FcNfcSign",
+    "aliases": [
+      "fc",
+      "nfc",
+      "sign"
+    ],
+    "caption": "a blue and white logo with the word n on it",
+    "colors": [
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNightLandscape.svg",
+    "component_id": "fc:FcNightLandscape",
+    "aliases": [
+      "fc",
+      "night",
+      "landscape"
+    ],
+    "caption": "a purple and blue mountain with a moon in the background",
+    "colors": [
+      "#673ab7",
+      "#9575cd",
+      "#40c4ff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNightPortrait.svg",
+    "component_id": "fc:FcNightPortrait",
+    "aliases": [
+      "fc",
+      "night",
+      "portrait"
+    ],
+    "caption": "an illustration of a man with a moon on his head",
+    "colors": [
+      "#40c4ff",
+      "#b39ddb",
+      "#d1c4e9",
+      "#673ab7"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNoIdea.svg",
+    "component_id": "fc:FcNoIdea",
+    "aliases": [
+      "fc",
+      "no",
+      "idea"
+    ],
+    "caption": "a no light bulb icon on a white background",
+    "colors": [
+      "#fbc02d",
+      "#fff59d",
+      "#5c6bc0",
+      "#9fa8da",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNoVideo.svg",
+    "component_id": "fc:FcNoVideo",
+    "aliases": [
+      "fc",
+      "no",
+      "video"
+    ],
+    "caption": "a green and black no video sign on a white background",
+    "colors": [
+      "#4caf50",
+      "#388e3c",
+      "#212121"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNook.svg",
+    "component_id": "fc:FcNook",
+    "aliases": [
+      "fc",
+      "nook"
+    ],
+    "caption": "an icon of a tablet with a document on it",
+    "colors": [
+      "#90a4ae",
+      "#eceff1",
+      "#b0bec5",
+      "#eeeeee"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNumericalSorting12.svg",
+    "component_id": "fc:FcNumericalSorting12",
+    "aliases": [
+      "fc",
+      "numerical",
+      "sorting",
+      "12"
+    ],
+    "caption": "two arrows pointing up and down on a blue background",
+    "colors": [
+      "#546e7a",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcNumericalSorting21.svg",
+    "component_id": "fc:FcNumericalSorting21",
+    "aliases": [
+      "fc",
+      "numerical",
+      "sorting",
+      "21"
+    ],
+    "caption": "a blue arrow pointing to the number 1 and the number 2",
+    "colors": [
+      "#546e7a",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcOk.svg",
+    "component_id": "fc:FcOk",
+    "aliases": [
+      "fc",
+      "ok"
+    ],
+    "caption": "a green check mark icon in a circle",
+    "colors": [
+      "#4caf50",
+      "#ccff90"
+    ]
+  },
+  {
+    "src_svg": "fc/FcOldTimeCamera.svg",
+    "component_id": "fc:FcOldTimeCamera",
+    "aliases": [
+      "fc",
+      "old",
+      "time",
+      "camera"
+    ],
+    "caption": "a purple camera icon on a white background",
+    "colors": [
+      "#546e7a",
+      "#5e35b1",
+      "#42257a",
+      "#78909c",
+      "#455a64",
+      "#b388ff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcOnlineSupport.svg",
+    "component_id": "fc:FcOnlineSupport",
+    "aliases": [
+      "fc",
+      "online",
+      "support"
+    ],
+    "caption": "an icon of a woman with a headset",
+    "colors": [
+      "#bf360c",
+      "#ffa726",
+      "#ffb74d",
+      "#784719",
+      "#ff5722",
+      "#757575"
+    ]
+  },
+  {
+    "src_svg": "fc/FcOpenedFolder.svg",
+    "component_id": "fc:FcOpenedFolder",
+    "aliases": [
+      "fc",
+      "opened",
+      "folder"
+    ],
+    "caption": "an orange folder icon on a white background",
+    "colors": [
+      "#ffa000",
+      "#ffca28"
+    ]
+  },
+  {
+    "src_svg": "fc/FcOrgUnit.svg",
+    "component_id": "fc:FcOrgUnit",
+    "aliases": [
+      "fc",
+      "org",
+      "unit"
+    ],
+    "caption": "a blue and pink square with a blue and pink square in the middle",
+    "colors": [
+      "#90caf9",
+      "#d81b60",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcOrganization.svg",
+    "component_id": "fc:FcOrganization",
+    "aliases": [
+      "fc",
+      "organization"
+    ],
+    "caption": "an icon of a building with blue squares",
+    "colors": [
+      "#90caf9",
+      "#64b5f6",
+      "#1565c0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcOvertime.svg",
+    "component_id": "fc:FcOvertime",
+    "aliases": [
+      "fc",
+      "overtime"
+    ],
+    "caption": "an icon of a calendar with a clock on it",
+    "colors": [
+      "#cfd8dc",
+      "#78909c",
+      "#37474f",
+      "#b0bec5",
+      "#90a4ae",
+      "#f44336"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPackage.svg",
+    "component_id": "fc:FcPackage",
+    "aliases": [
+      "fc",
+      "package"
+    ],
+    "caption": "an orange square icon with a brown handle",
+    "colors": [
+      "#ff9800",
+      "#8a5100"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPaid.svg",
+    "component_id": "fc:FcPaid",
+    "aliases": [
+      "fc",
+      "paid"
+    ],
+    "caption": "a green shopping basket with a check mark",
+    "colors": [
+      "#2e7d32",
+      "#1b5e20",
+      "#388e3c",
+      "#4caf50",
+      "#dcedc8"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPanorama.svg",
+    "component_id": "fc:FcPanorama",
+    "aliases": [
+      "fc",
+      "panorama"
+    ],
+    "caption": "an orange and white logo with mountains in the background",
+    "colors": [
+      "#f57c00",
+      "#942a09",
+      "#bf360c",
+      "#e65100",
+      "#fff9c4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcParallelTasks.svg",
+    "component_id": "fc:FcParallelTasks",
+    "aliases": [
+      "fc",
+      "parallel",
+      "tasks"
+    ],
+    "caption": "a blue and pink square with a blue and pink square in the middle",
+    "colors": [
+      "#90caf9",
+      "#d81b60",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPhone.svg",
+    "component_id": "fc:FcPhone",
+    "aliases": [
+      "fc",
+      "phone"
+    ],
+    "caption": "a green phone icon on a white background",
+    "colors": [
+      "#009688"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPhoneAndroid.svg",
+    "component_id": "fc:FcPhoneAndroid",
+    "aliases": [
+      "fc",
+      "phone",
+      "android"
+    ],
+    "caption": "an illustration of a cell phone on a white background",
+    "colors": [
+      "#37474f",
+      "#bbdefb",
+      "#78909c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPhotoReel.svg",
+    "component_id": "fc:FcPhotoReel",
+    "aliases": [
+      "fc",
+      "photo",
+      "reel"
+    ],
+    "caption": "an orange and purple icon with a film strip",
+    "colors": [
+      "#673ab7",
+      "#311b92",
+      "#d84315",
+      "#ff5722"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPicture.svg",
+    "component_id": "fc:FcPicture",
+    "aliases": [
+      "fc",
+      "picture"
+    ],
+    "caption": "an orange square with a mountain and sun in the background",
+    "colors": [
+      "#f57c00",
+      "#fff9c4",
+      "#942a09",
+      "#bf360c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPieChart.svg",
+    "component_id": "fc:FcPieChart",
+    "aliases": [
+      "fc",
+      "pie",
+      "chart"
+    ],
+    "caption": "a pie chart with blue, green and purple colors",
+    "colors": [
+      "#00bcd4",
+      "#448aff",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPlanner.svg",
+    "component_id": "fc:FcPlanner",
+    "aliases": [
+      "fc",
+      "planner"
+    ],
+    "caption": "an icon of a calendar on a white background",
+    "colors": [
+      "#cfd8dc",
+      "#f44336",
+      "#b71c1c",
+      "#b0bec5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPlus.svg",
+    "component_id": "fc:FcPlus",
+    "aliases": [
+      "fc",
+      "plus"
+    ],
+    "caption": "a green circle with a white cross in it",
+    "colors": [
+      "#4caf50",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPodiumWithAudience.svg",
+    "component_id": "fc:FcPodiumWithAudience",
+    "aliases": [
+      "fc",
+      "podium",
+      "with",
+      "audience"
+    ],
+    "caption": "an icon of a bucket with orange balls in it",
+    "colors": [
+      "#b0bec5",
+      "#78909c",
+      "#ffb74d"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPodiumWithSpeaker.svg",
+    "component_id": "fc:FcPodiumWithSpeaker",
+    "aliases": [
+      "fc",
+      "podium",
+      "with",
+      "speaker"
+    ],
+    "caption": "an icon of a person sitting in a box",
+    "colors": [
+      "#ffb74d",
+      "#607d8b",
+      "#b0bec5",
+      "#78909c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPodiumWithoutSpeaker.svg",
+    "component_id": "fc:FcPodiumWithoutSpeaker",
+    "aliases": [
+      "fc",
+      "podium",
+      "without",
+      "speaker"
+    ],
+    "caption": "a flat icon of a box with a lid",
+    "colors": [
+      "#b0bec5",
+      "#78909c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPortraitMode.svg",
+    "component_id": "fc:FcPortraitMode",
+    "aliases": [
+      "fc",
+      "portrait",
+      "mode"
+    ],
+    "caption": "a man with a sun icon on his head",
+    "colors": [
+      "#ff9800",
+      "#ffa726",
+      "#ffb74d",
+      "#424242",
+      "#784719",
+      "#009688"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPositiveDynamic.svg",
+    "component_id": "fc:FcPositiveDynamic",
+    "aliases": [
+      "fc",
+      "positive",
+      "dynamic"
+    ],
+    "caption": "a blue arrow pointing up to a bar graph",
+    "colors": [
+      "#00bcd4",
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPrevious.svg",
+    "component_id": "fc:FcPrevious",
+    "aliases": [
+      "fc",
+      "previous"
+    ],
+    "caption": "a blue arrow on a white background",
+    "colors": [
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPrint.svg",
+    "component_id": "fc:FcPrint",
+    "aliases": [
+      "fc",
+      "print"
+    ],
+    "caption": "a printer icon on a white background",
+    "colors": [
+      "#424242",
+      "#616161",
+      "#00e676",
+      "#90caf9",
+      "#242424",
+      "#42a5f5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPrivacy.svg",
+    "component_id": "fc:FcPrivacy",
+    "aliases": [
+      "fc",
+      "privacy"
+    ],
+    "caption": "an orange padlock with a blue eye on it",
+    "colors": [
+      "#424242",
+      "#fb8c00",
+      "#efebe9",
+      "#1e88e5",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcProcess.svg",
+    "component_id": "fc:FcProcess",
+    "aliases": [
+      "fc",
+      "process"
+    ],
+    "caption": "a purple circle with three arrows pointing in different directions",
+    "colors": [
+      "#9c27b0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcPuzzle.svg",
+    "component_id": "fc:FcPuzzle",
+    "aliases": [
+      "fc",
+      "puzzle"
+    ],
+    "caption": "a green piece of puzzle with a hole in it",
+    "colors": [
+      "#8bc34a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcQuestions.svg",
+    "component_id": "fc:FcQuestions",
+    "aliases": [
+      "fc",
+      "questions"
+    ],
+    "caption": "a blue folder with a question mark on it",
+    "colors": [
+      "#42a5f5",
+      "#90caf9",
+      "#e1f5fe",
+      "#1976d2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRadarPlot.svg",
+    "component_id": "fc:FcRadarPlot",
+    "aliases": [
+      "fc",
+      "radar",
+      "plot"
+    ],
+    "caption": "an illustration of a network with blue circles",
+    "colors": [
+      "#cfd8dc",
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRating.svg",
+    "component_id": "fc:FcRating",
+    "aliases": [
+      "fc",
+      "rating"
+    ],
+    "caption": "a red and yellow star in the center of a circle",
+    "colors": [
+      "#f44336",
+      "#ffca28"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRatings.svg",
+    "component_id": "fc:FcRatings",
+    "aliases": [
+      "fc",
+      "ratings"
+    ],
+    "caption": "an image of a blue folder with an arrow pointing up",
+    "colors": [
+      "#42a5f5",
+      "#90caf9",
+      "#e1f5fe",
+      "#1976d2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcReading.svg",
+    "component_id": "fc:FcReading",
+    "aliases": [
+      "fc",
+      "reading"
+    ],
+    "caption": "an icon of a person reading a book",
+    "colors": [
+      "#5c6bc0",
+      "#7986cb",
+      "#ffb74d"
+    ]
+  },
+  {
+    "src_svg": "fc/FcReadingEbook.svg",
+    "component_id": "fc:FcReadingEbook",
+    "aliases": [
+      "fc",
+      "reading",
+      "ebook"
+    ],
+    "caption": "an icon of a person holding a tablet",
+    "colors": [
+      "#2196f3",
+      "#546e7a",
+      "#b0bec5",
+      "#ffb74d"
+    ]
+  },
+  {
+    "src_svg": "fc/FcReddit.svg",
+    "component_id": "fc:FcReddit",
+    "aliases": [
+      "fc",
+      "reddit"
+    ],
+    "caption": "the logo for a social media site with an orange face",
+    "colors": [
+      "#ffffff",
+      "#d84315",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRedo.svg",
+    "component_id": "fc:FcRedo",
+    "aliases": [
+      "fc",
+      "redo"
+    ],
+    "caption": "a blue arrow pointing to the right on a white background",
+    "colors": [
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRefresh.svg",
+    "component_id": "fc:FcRefresh",
+    "aliases": [
+      "fc",
+      "refresh"
+    ],
+    "caption": "a blue circular arrow with two arrows pointing in opposite directions",
+    "colors": [
+      "#1565c0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRegisteredTrademark.svg",
+    "component_id": "fc:FcRegisteredTrademark",
+    "aliases": [
+      "fc",
+      "registered",
+      "trademark"
+    ],
+    "caption": "a purple circle with the letter r in it",
+    "colors": [
+      "#9c27b0",
+      "#e1bee7"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRemoveImage.svg",
+    "component_id": "fc:FcRemoveImage",
+    "aliases": [
+      "fc",
+      "remove",
+      "image"
+    ],
+    "caption": "an image of a photo with a red cross on it",
+    "colors": [
+      "#8cbcd6",
+      "#b3ddf5",
+      "#9ac9e3",
+      "#f44336",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcReuse.svg",
+    "component_id": "fc:FcReuse",
+    "aliases": [
+      "fc",
+      "reuse"
+    ],
+    "caption": "an icon of a person pushing a trash can",
+    "colors": [
+      "#455a64",
+      "#ffb74d",
+      "#607d8b",
+      "#b39ddb",
+      "#7e57c2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRight.svg",
+    "component_id": "fc:FcRight",
+    "aliases": [
+      "fc",
+      "right"
+    ],
+    "caption": "a blue arrow pointing to the right on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRightDown.svg",
+    "component_id": "fc:FcRightDown",
+    "aliases": [
+      "fc",
+      "right",
+      "down"
+    ],
+    "caption": "a blue arrow pointing down on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRightDown2.svg",
+    "component_id": "fc:FcRightDown2",
+    "aliases": [
+      "fc",
+      "right",
+      "down",
+      "2"
+    ],
+    "caption": "a blue arrow pointing down on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRightUp.svg",
+    "component_id": "fc:FcRightUp",
+    "aliases": [
+      "fc",
+      "right",
+      "up"
+    ],
+    "caption": "a blue arrow pointing up on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRightUp2.svg",
+    "component_id": "fc:FcRightUp2",
+    "aliases": [
+      "fc",
+      "right",
+      "up",
+      "2"
+    ],
+    "caption": "a blue arrow pointing up in the shape of a u",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRotateCamera.svg",
+    "component_id": "fc:FcRotateCamera",
+    "aliases": [
+      "fc",
+      "rotate",
+      "camera"
+    ],
+    "caption": "an image of a camera with an arrow in the middle",
+    "colors": [
+      "#5e35b1",
+      "#e8eaf6"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRotateToLandscape.svg",
+    "component_id": "fc:FcRotateToLandscape",
+    "aliases": [
+      "fc",
+      "rotate",
+      "to",
+      "landscape"
+    ],
+    "caption": "a purple arrow icon on a cell phone",
+    "colors": [
+      "#37474f",
+      "#f3e5f5",
+      "#9c27b0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRotateToPortrait.svg",
+    "component_id": "fc:FcRotateToPortrait",
+    "aliases": [
+      "fc",
+      "rotate",
+      "to",
+      "portrait"
+    ],
+    "caption": "a purple arrow pointing up on a tablet",
+    "colors": [
+      "#37474f",
+      "#f3e5f5",
+      "#9c27b0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRuler.svg",
+    "component_id": "fc:FcRuler",
+    "aliases": [
+      "fc",
+      "ruler"
+    ],
+    "caption": "an orange ruler on a white background",
+    "colors": [
+      "#ffa000",
+      "#9e6400"
+    ]
+  },
+  {
+    "src_svg": "fc/FcRules.svg",
+    "component_id": "fc:FcRules",
+    "aliases": [
+      "fc",
+      "rules"
+    ],
+    "caption": "an icon of a blue folder with a list of items",
+    "colors": [
+      "#42a5f5",
+      "#90caf9",
+      "#1976d2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSafe.svg",
+    "component_id": "fc:FcSafe",
+    "aliases": [
+      "fc",
+      "safe"
+    ],
+    "caption": "an icon of a safe box on a white background",
+    "colors": [
+      "#455a64",
+      "#78909c",
+      "#90a4ae",
+      "#37474f",
+      "#b0bec5",
+      "#cfd8dc"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSalesPerformance.svg",
+    "component_id": "fc:FcSalesPerformance",
+    "aliases": [
+      "fc",
+      "sales",
+      "performance"
+    ],
+    "caption": "a stack of gold coins on a white background",
+    "colors": [
+      "#ffa000",
+      "#ffc107"
+    ]
+  },
+  {
+    "src_svg": "fc/FcScatterPlot.svg",
+    "component_id": "fc:FcScatterPlot",
+    "aliases": [
+      "fc",
+      "scatter",
+      "plot"
+    ],
+    "caption": "a graph with blue dots on it",
+    "colors": [
+      "#cfd8dc",
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSearch.svg",
+    "component_id": "fc:FcSearch",
+    "aliases": [
+      "fc",
+      "search"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": [
+      "#616161",
+      "#37474f",
+      "#64b5f6",
+      "#bbdefb"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSelfServiceKiosk.svg",
+    "component_id": "fc:FcSelfServiceKiosk",
+    "aliases": [
+      "fc",
+      "self",
+      "service",
+      "kiosk"
+    ],
+    "caption": "a flat icon of a television with a blue screen",
+    "colors": [
+      "#546e7a",
+      "#64b5f6",
+      "#78909c",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSelfie.svg",
+    "component_id": "fc:FcSelfie",
+    "aliases": [
+      "fc",
+      "selfie"
+    ],
+    "caption": "an illustration of a woman holding a phone with her face on it",
+    "colors": [
+      "#ffb74d",
+      "#37474f",
+      "#bbdefb",
+      "#78909c",
+      "#bf360c",
+      "#ff9800"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSerialTasks.svg",
+    "component_id": "fc:FcSerialTasks",
+    "aliases": [
+      "fc",
+      "serial",
+      "tasks"
+    ],
+    "caption": "a blue and pink square with a blue and pink line",
+    "colors": [
+      "#90caf9",
+      "#d81b60",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcServiceMark.svg",
+    "component_id": "fc:FcServiceMark",
+    "aliases": [
+      "fc",
+      "service",
+      "mark"
+    ],
+    "caption": "the sm logo in purple on a white background",
+    "colors": [
+      "#9c27b0",
+      "#e1bee7"
+    ]
+  },
+  {
+    "src_svg": "fc/FcServices.svg",
+    "component_id": "fc:FcServices",
+    "aliases": [
+      "fc",
+      "services"
+    ],
+    "caption": "two orange and yellow gears on a white background",
+    "colors": [
+      "#e65100",
+      "#ffa000"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSettings.svg",
+    "component_id": "fc:FcSettings",
+    "aliases": [
+      "fc",
+      "settings"
+    ],
+    "caption": "a gear wheel icon on a white background",
+    "colors": [
+      "#607d8b",
+      "#455a64"
+    ]
+  },
+  {
+    "src_svg": "fc/FcShare.svg",
+    "component_id": "fc:FcShare",
+    "aliases": [
+      "fc",
+      "share"
+    ],
+    "caption": "a blue and white icon of two circles",
+    "colors": [
+      "#1976d2",
+      "#1e88e5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcShipped.svg",
+    "component_id": "fc:FcShipped",
+    "aliases": [
+      "fc",
+      "shipped"
+    ],
+    "caption": "a green truck with a check mark on it",
+    "colors": [
+      "#8bc34a",
+      "#388e3c",
+      "#37474f",
+      "#78909c",
+      "#dcedc8"
+    ]
+  },
+  {
+    "src_svg": "fc/FcShop.svg",
+    "component_id": "fc:FcShop",
+    "aliases": [
+      "fc",
+      "shop"
+    ],
+    "caption": "an icon of a store with a yellow awning",
+    "colors": [
+      "#cfd8dc",
+      "#b0bec5",
+      "#455a64",
+      "#e3f2fd",
+      "#1e88e5",
+      "#90a4ae"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSignature.svg",
+    "component_id": "fc:FcSignature",
+    "aliases": [
+      "fc",
+      "signature"
+    ],
+    "caption": "a blue and white logo with the word cay on it",
+    "colors": [
+      "#1565c0",
+      "#90a4ae"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSimCard.svg",
+    "component_id": "fc:FcSimCard",
+    "aliases": [
+      "fc",
+      "sim",
+      "card"
+    ],
+    "caption": "a sim card icon on a white background",
+    "colors": [
+      "#009688",
+      "#ff9800",
+      "#ffd54f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSimCardChip.svg",
+    "component_id": "fc:FcSimCardChip",
+    "aliases": [
+      "fc",
+      "sim",
+      "card",
+      "chip"
+    ],
+    "caption": "an orange and white icon of a credit card",
+    "colors": [
+      "#ff9800",
+      "#ffd54f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSlrBackSide.svg",
+    "component_id": "fc:FcSlrBackSide",
+    "aliases": [
+      "fc",
+      "slr",
+      "back",
+      "side"
+    ],
+    "caption": "a purple camera with mountains in the background",
+    "colors": [
+      "#5e35b1",
+      "#f57c00",
+      "#942a09",
+      "#fff9c4",
+      "#bf360c",
+      "#8667c4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSmartphoneTablet.svg",
+    "component_id": "fc:FcSmartphoneTablet",
+    "aliases": [
+      "fc",
+      "smartphone",
+      "tablet"
+    ],
+    "caption": "an illustration of two cell phones on a white background",
+    "colors": [
+      "#37474f",
+      "#bbdefb",
+      "#78909c",
+      "#e38939",
+      "#fff3e0",
+      "#a6642a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSms.svg",
+    "component_id": "fc:FcSms",
+    "aliases": [
+      "fc",
+      "sms"
+    ],
+    "caption": "a green speech bubble with three dots in it",
+    "colors": [
+      "#009688",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSoundRecordingCopyright.svg",
+    "component_id": "fc:FcSoundRecordingCopyright",
+    "aliases": [
+      "fc",
+      "sound",
+      "recording",
+      "copyright"
+    ],
+    "caption": "a purple circle with the letter p in it",
+    "colors": [
+      "#9c27b0",
+      "#e1bee7"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSpeaker.svg",
+    "component_id": "fc:FcSpeaker",
+    "aliases": [
+      "fc",
+      "speaker"
+    ],
+    "caption": "a speaker icon with blue and white waves",
+    "colors": [
+      "#81d4fa",
+      "#546e7a",
+      "#78909c",
+      "#03a9f4",
+      "#4fc3f7"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSportsMode.svg",
+    "component_id": "fc:FcSportsMode",
+    "aliases": [
+      "fc",
+      "sports",
+      "mode"
+    ],
+    "caption": "a green and orange icon of a person running",
+    "colors": [
+      "#ff9800",
+      "#00796b",
+      "#009688"
+    ]
+  },
+  {
+    "src_svg": "fc/FcStackOfPhotos.svg",
+    "component_id": "fc:FcStackOfPhotos",
+    "aliases": [
+      "fc",
+      "stack",
+      "of",
+      "photos"
+    ],
+    "caption": "an image of a flower on top of a green square",
+    "colors": [
+      "#64b5f6",
+      "#1e88e5",
+      "#90caf9",
+      "#42a5f5",
+      "#bbdefb",
+      "#4caf50"
+    ]
+  },
+  {
+    "src_svg": "fc/FcStart.svg",
+    "component_id": "fc:FcStart",
+    "aliases": [
+      "fc",
+      "start"
+    ],
+    "caption": "a red square with a white play button",
+    "colors": [
+      "#f44336",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcStatistics.svg",
+    "component_id": "fc:FcStatistics",
+    "aliases": [
+      "fc",
+      "statistics"
+    ],
+    "caption": "an image of a projector with a graph on it",
+    "colors": [
+      "#37474f",
+      "#cfd8dc",
+      "#607d8b",
+      "#c51162"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSteam.svg",
+    "component_id": "fc:FcSteam",
+    "aliases": [
+      "fc",
+      "steam"
+    ],
+    "caption": "the steam logo on a white background",
+    "colors": [
+      "#ffffff",
+      "#455a64"
+    ]
+  },
+  {
+    "src_svg": "fc/FcStumbleupon.svg",
+    "component_id": "fc:FcStumbleupon",
+    "aliases": [
+      "fc",
+      "stumbleupon"
+    ],
+    "caption": "a white and orange logo with the letter u in it",
+    "colors": [
+      "#e64a19",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSupport.svg",
+    "component_id": "fc:FcSupport",
+    "aliases": [
+      "fc",
+      "support"
+    ],
+    "caption": "a wrench icon on a white background",
+    "colors": [
+      "#607d8b"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSurvey.svg",
+    "component_id": "fc:FcSurvey",
+    "aliases": [
+      "fc",
+      "survey"
+    ],
+    "caption": "a clipboard icon with a blue check mark",
+    "colors": [
+      "#455a64",
+      "#ffffff",
+      "#90a4ae",
+      "#cfd8dc",
+      "#03a9f4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSwitchCamera.svg",
+    "component_id": "fc:FcSwitchCamera",
+    "aliases": [
+      "fc",
+      "switch",
+      "camera"
+    ],
+    "caption": "a purple camera with an arrow in the middle",
+    "colors": [
+      "#5e35b1",
+      "#e8eaf6"
+    ]
+  },
+  {
+    "src_svg": "fc/FcSynchronize.svg",
+    "component_id": "fc:FcSynchronize",
+    "aliases": [
+      "fc",
+      "synchronize"
+    ],
+    "caption": "an orange circle with two arrows in it",
+    "colors": [
+      "#ff6f00",
+      "#ff6f02"
+    ]
+  },
+  {
+    "src_svg": "fc/FcTabletAndroid.svg",
+    "component_id": "fc:FcTabletAndroid",
+    "aliases": [
+      "fc",
+      "tablet",
+      "android"
+    ],
+    "caption": "an illustration of a tablet computer on a white background",
+    "colors": [
+      "#37474f",
+      "#bbdefb",
+      "#78909c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcTemplate.svg",
+    "component_id": "fc:FcTemplate",
+    "aliases": [
+      "fc",
+      "template"
+    ],
+    "caption": "a blue rectangle with a blue square in the middle",
+    "colors": [
+      "#bbdefb",
+      "#3f51b5",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcTimeline.svg",
+    "component_id": "fc:FcTimeline",
+    "aliases": [
+      "fc",
+      "timeline"
+    ],
+    "caption": "three arrows pointing in different directions on a white background",
+    "colors": [
+      "#3f51b5",
+      "#cfd8dc",
+      "#90a4ae",
+      "#448aff",
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcTodoList.svg",
+    "component_id": "fc:FcTodoList",
+    "aliases": [
+      "fc",
+      "todo",
+      "list"
+    ],
+    "caption": "a checklist with blue check marks on it",
+    "colors": [
+      "#3f51b5",
+      "#90caf9"
+    ]
+  },
+  {
+    "src_svg": "fc/FcTouchscreenSmartphone.svg",
+    "component_id": "fc:FcTouchscreenSmartphone",
+    "aliases": [
+      "fc",
+      "touchscreen",
+      "smartphone"
+    ],
+    "caption": "a cell phone with a pink circle on it",
+    "colors": [
+      "#e38939",
+      "#fff3e0",
+      "#a6642a",
+      "#e91e63",
+      "#f48fb1",
+      "#f8bbd0"
+    ]
+  },
+  {
+    "src_svg": "fc/FcTrademark.svg",
+    "component_id": "fc:FcTrademark",
+    "aliases": [
+      "fc",
+      "trademark"
+    ],
+    "caption": "a purple circle with the word tm on it",
+    "colors": [
+      "#9c27b0",
+      "#e1bee7"
+    ]
+  },
+  {
+    "src_svg": "fc/FcTreeStructure.svg",
+    "component_id": "fc:FcTreeStructure",
+    "aliases": [
+      "fc",
+      "tree",
+      "structure"
+    ],
+    "caption": "two blue and pink squares on a white background",
+    "colors": [
+      "#90caf9",
+      "#d81b60",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcTwoSmartphones.svg",
+    "component_id": "fc:FcTwoSmartphones",
+    "aliases": [
+      "fc",
+      "two",
+      "smartphones"
+    ],
+    "caption": "two cell phones are shown on a white background",
+    "colors": [
+      "#37474f",
+      "#bbdefb",
+      "#78909c",
+      "#e38939",
+      "#fff3e0",
+      "#a6642a"
+    ]
+  },
+  {
+    "src_svg": "fc/FcUndo.svg",
+    "component_id": "fc:FcUndo",
+    "aliases": [
+      "fc",
+      "undo"
+    ],
+    "caption": "a blue arrow pointing to the right on a white background",
+    "colors": [
+      "#00bcd4"
+    ]
+  },
+  {
+    "src_svg": "fc/FcUnlock.svg",
+    "component_id": "fc:FcUnlock",
+    "aliases": [
+      "fc",
+      "unlock"
+    ],
+    "caption": "an orange padlock icon on a white background",
+    "colors": [
+      "#424242",
+      "#fb8c00",
+      "#c76e00"
+    ]
+  },
+  {
+    "src_svg": "fc/FcUp.svg",
+    "component_id": "fc:FcUp",
+    "aliases": [
+      "fc",
+      "up"
+    ],
+    "caption": "a blue arrow pointing up on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcUpLeft.svg",
+    "component_id": "fc:FcUpLeft",
+    "aliases": [
+      "fc",
+      "up",
+      "left"
+    ],
+    "caption": "a blue arrow pointing to the right on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcUpRight.svg",
+    "component_id": "fc:FcUpRight",
+    "aliases": [
+      "fc",
+      "up",
+      "right"
+    ],
+    "caption": "a blue arrow pointing to the right on a white background",
+    "colors": [
+      "#3f51b5"
+    ]
+  },
+  {
+    "src_svg": "fc/FcUpload.svg",
+    "component_id": "fc:FcUpload",
+    "aliases": [
+      "fc",
+      "upload"
+    ],
+    "caption": "a green arrow pointing up on a white background",
+    "colors": [
+      "#009688"
+    ]
+  },
+  {
+    "src_svg": "fc/FcUsb.svg",
+    "component_id": "fc:FcUsb",
+    "aliases": [
+      "fc",
+      "usb"
+    ],
+    "caption": "the usb logo on a white background",
+    "colors": [
+      "#1565c0",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcVideoCall.svg",
+    "component_id": "fc:FcVideoCall",
+    "aliases": [
+      "fc",
+      "video",
+      "call"
+    ],
+    "caption": "a green video camera icon on a white background",
+    "colors": [
+      "#4caf50",
+      "#388e3c"
+    ]
+  },
+  {
+    "src_svg": "fc/FcVideoFile.svg",
+    "component_id": "fc:FcVideoFile",
+    "aliases": [
+      "fc",
+      "video",
+      "file"
+    ],
+    "caption": "an image of a blue play button on a white background",
+    "colors": [
+      "#90caf9",
+      "#e1f5fe",
+      "#1976d2"
+    ]
+  },
+  {
+    "src_svg": "fc/FcVideoProjector.svg",
+    "component_id": "fc:FcVideoProjector",
+    "aliases": [
+      "fc",
+      "video",
+      "projector"
+    ],
+    "caption": "a projector icon on a white background",
+    "colors": [
+      "#546e7a",
+      "#78909c",
+      "#37474f",
+      "#aa00ff",
+      "#ea80fc"
+    ]
+  },
+  {
+    "src_svg": "fc/FcViewDetails.svg",
+    "component_id": "fc:FcViewDetails",
+    "aliases": [
+      "fc",
+      "view",
+      "details"
+    ],
+    "caption": "a blue check list icon on a white background",
+    "colors": [
+      "#bbdefb",
+      "#2196f3"
+    ]
+  },
+  {
+    "src_svg": "fc/FcVip.svg",
+    "component_id": "fc:FcVip",
+    "aliases": [
+      "fc",
+      "vip"
+    ],
+    "caption": "the vip logo on a purple and yellow square",
+    "colors": [
+      "#880e4f",
+      "#ffd54f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcVlc.svg",
+    "component_id": "fc:FcVlc",
+    "aliases": [
+      "fc",
+      "vlc"
+    ],
+    "caption": "an orange and white cone on a white background",
+    "colors": [
+      "#f57c00",
+      "#e0e0e0",
+      "#ff9800"
+    ]
+  },
+  {
+    "src_svg": "fc/FcVoicePresentation.svg",
+    "component_id": "fc:FcVoicePresentation",
+    "aliases": [
+      "fc",
+      "voice",
+      "presentation"
+    ],
+    "caption": "an icon of a person with a speech bubble",
+    "colors": [
+      "#2196f3",
+      "#ffa726",
+      "#607d8b"
+    ]
+  },
+  {
+    "src_svg": "fc/FcVoicemail.svg",
+    "component_id": "fc:FcVoicemail",
+    "aliases": [
+      "fc",
+      "voicemail"
+    ],
+    "caption": "a green and white logo with two circles",
+    "colors": [
+      "#4caf50"
+    ]
+  },
+  {
+    "src_svg": "fc/FcWebcam.svg",
+    "component_id": "fc:FcWebcam",
+    "aliases": [
+      "fc",
+      "webcam"
+    ],
+    "caption": "an icon of a blue camera on a white background",
+    "colors": [
+      "#455a64",
+      "#78909c",
+      "#42a5f5",
+      "#90caf9"
+    ]
+  },
+  {
+    "src_svg": "fc/FcWiFiLogo.svg",
+    "component_id": "fc:FcWiFiLogo",
+    "aliases": [
+      "fc",
+      "wi",
+      "fi",
+      "logo"
+    ],
+    "caption": "the wifi logo is shown on a white background",
+    "colors": [
+      "#3f51b5",
+      "#ffffff"
+    ]
+  },
+  {
+    "src_svg": "fc/FcWikipedia.svg",
+    "component_id": "fc:FcWikipedia",
+    "aliases": [
+      "fc",
+      "wikipedia"
+    ],
+    "caption": "the w logo on a square button",
+    "colors": [
+      "#cfd8dc",
+      "#37474f"
+    ]
+  },
+  {
+    "src_svg": "fc/FcWorkflow.svg",
+    "component_id": "fc:FcWorkflow",
+    "aliases": [
+      "fc",
+      "workflow"
+    ],
+    "caption": "a diagram showing how to create a flowchart",
+    "colors": [
+      "#00bcd4",
+      "#3f51b5",
+      "#448aff",
+      "#90a4ae"
+    ]
+  }
+]

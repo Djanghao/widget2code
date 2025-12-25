@@ -1,0 +1,424 @@
+{
+  "domain": "shopping",
+  "descriptions": [
+    {
+      "id": "shopping-001",
+      "prompt": "A widget showing shopping cart summary",
+      "complexity": "medium",
+      "metrics": [
+        "cart"
+      ]
+    },
+    {
+      "id": "shopping-002",
+      "prompt": "A widget displaying cart item count",
+      "complexity": "simple",
+      "metrics": [
+        "cart"
+      ]
+    },
+    {
+      "id": "shopping-003",
+      "prompt": "A widget showing cart total price",
+      "complexity": "simple",
+      "metrics": [
+        "cart"
+      ]
+    },
+    {
+      "id": "shopping-004",
+      "prompt": "A widget displaying cart items with images",
+      "complexity": "complex",
+      "metrics": [
+        "cart"
+      ]
+    },
+    {
+      "id": "shopping-005",
+      "prompt": "A widget showing cart with checkout button",
+      "complexity": "medium",
+      "metrics": [
+        "cart"
+      ]
+    },
+    {
+      "id": "shopping-006",
+      "prompt": "A widget displaying saved items in cart",
+      "complexity": "medium",
+      "metrics": [
+        "cart"
+      ]
+    },
+    {
+      "id": "shopping-007",
+      "prompt": "A widget showing product of the day",
+      "complexity": "medium",
+      "metrics": [
+        "product"
+      ]
+    },
+    {
+      "id": "shopping-008",
+      "prompt": "A widget displaying product with price and rating",
+      "complexity": "medium",
+      "metrics": [
+        "product"
+      ]
+    },
+    {
+      "id": "shopping-009",
+      "prompt": "A widget showing product details",
+      "complexity": "complex",
+      "metrics": [
+        "product"
+      ]
+    },
+    {
+      "id": "shopping-010",
+      "prompt": "A widget displaying product image and name",
+      "complexity": "simple",
+      "metrics": [
+        "product"
+      ]
+    },
+    {
+      "id": "shopping-011",
+      "prompt": "A widget showing product reviews",
+      "complexity": "medium",
+      "metrics": [
+        "product"
+      ]
+    },
+    {
+      "id": "shopping-012",
+      "prompt": "A widget displaying product stock status",
+      "complexity": "simple",
+      "metrics": [
+        "product"
+      ]
+    },
+    {
+      "id": "shopping-013",
+      "prompt": "A widget showing product with add to cart button",
+      "complexity": "medium",
+      "metrics": [
+        "product"
+      ]
+    },
+    {
+      "id": "shopping-014",
+      "prompt": "A widget showing recommended products",
+      "complexity": "complex",
+      "metrics": [
+        "products"
+      ]
+    },
+    {
+      "id": "shopping-015",
+      "prompt": "A widget displaying recently viewed items",
+      "complexity": "medium",
+      "metrics": [
+        "products"
+      ]
+    },
+    {
+      "id": "shopping-016",
+      "prompt": "A widget showing trending products",
+      "complexity": "complex",
+      "metrics": [
+        "products"
+      ]
+    },
+    {
+      "id": "shopping-017",
+      "prompt": "A widget displaying new arrivals",
+      "complexity": "medium",
+      "metrics": [
+        "products"
+      ]
+    },
+    {
+      "id": "shopping-018",
+      "prompt": "A widget showing best sellers",
+      "complexity": "complex",
+      "metrics": [
+        "products"
+      ]
+    },
+    {
+      "id": "shopping-019",
+      "prompt": "A widget showing daily deals",
+      "complexity": "medium",
+      "metrics": [
+        "deals"
+      ]
+    },
+    {
+      "id": "shopping-020",
+      "prompt": "A widget displaying flash sale countdown",
+      "complexity": "medium",
+      "metrics": [
+        "sale"
+      ],
+      "visualization": [
+        "countdown"
+      ]
+    },
+    {
+      "id": "shopping-021",
+      "prompt": "A widget showing price drop alerts",
+      "complexity": "medium",
+      "metrics": [
+        "deals"
+      ]
+    },
+    {
+      "id": "shopping-022",
+      "prompt": "A widget displaying discount coupons",
+      "complexity": "medium",
+      "metrics": [
+        "coupons"
+      ]
+    },
+    {
+      "id": "shopping-023",
+      "prompt": "A widget showing total savings",
+      "complexity": "simple",
+      "metrics": [
+        "savings"
+      ]
+    },
+    {
+      "id": "shopping-024",
+      "prompt": "A widget displaying clearance items",
+      "complexity": "complex",
+      "metrics": [
+        "products",
+        "sale"
+      ]
+    },
+    {
+      "id": "shopping-025",
+      "prompt": "A widget showing recent orders",
+      "complexity": "complex",
+      "metrics": [
+        "orders"
+      ]
+    },
+    {
+      "id": "shopping-026",
+      "prompt": "A widget displaying order status",
+      "complexity": "medium",
+      "metrics": [
+        "order"
+      ]
+    },
+    {
+      "id": "shopping-027",
+      "prompt": "A widget showing package tracking",
+      "complexity": "complex",
+      "metrics": [
+        "tracking"
+      ],
+      "visualization": [
+        "tracking"
+      ]
+    },
+    {
+      "id": "shopping-028",
+      "prompt": "A widget displaying delivery ETA",
+      "complexity": "simple",
+      "metrics": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "shopping-029",
+      "prompt": "A widget showing order history",
+      "complexity": "complex",
+      "metrics": [
+        "orders"
+      ]
+    },
+    {
+      "id": "shopping-030",
+      "prompt": "A widget displaying order details",
+      "complexity": "medium",
+      "metrics": [
+        "order"
+      ]
+    },
+    {
+      "id": "shopping-031",
+      "prompt": "A widget showing wishlist items",
+      "complexity": "complex",
+      "metrics": [
+        "wishlist"
+      ]
+    },
+    {
+      "id": "shopping-032",
+      "prompt": "A widget displaying saved for later",
+      "complexity": "medium",
+      "metrics": [
+        "saved"
+      ]
+    },
+    {
+      "id": "shopping-033",
+      "prompt": "A widget showing favorites",
+      "complexity": "medium",
+      "metrics": [
+        "favorites"
+      ]
+    },
+    {
+      "id": "shopping-034",
+      "prompt": "A widget displaying wishlist price changes",
+      "complexity": "medium",
+      "metrics": [
+        "wishlist"
+      ]
+    },
+    {
+      "id": "shopping-035",
+      "prompt": "A widget showing monthly spending",
+      "complexity": "medium",
+      "metrics": [
+        "spending"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "shopping-036",
+      "prompt": "A widget displaying shopping budget",
+      "complexity": "medium",
+      "metrics": [
+        "budget"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "shopping-037",
+      "prompt": "A widget showing spending by category",
+      "complexity": "complex",
+      "metrics": [
+        "spending"
+      ],
+      "visualization": [
+        "pie-chart"
+      ]
+    },
+    {
+      "id": "shopping-038",
+      "prompt": "A widget displaying total spent this month",
+      "complexity": "simple",
+      "metrics": [
+        "spending"
+      ]
+    },
+    {
+      "id": "shopping-039",
+      "prompt": "A widget showing rewards points",
+      "complexity": "simple",
+      "metrics": [
+        "rewards"
+      ]
+    },
+    {
+      "id": "shopping-040",
+      "prompt": "A widget displaying loyalty status",
+      "complexity": "medium",
+      "metrics": [
+        "loyalty"
+      ]
+    },
+    {
+      "id": "shopping-041",
+      "prompt": "A widget showing cashback earned",
+      "complexity": "simple",
+      "metrics": [
+        "cashback"
+      ]
+    },
+    {
+      "id": "shopping-042",
+      "prompt": "A widget displaying membership benefits",
+      "complexity": "medium",
+      "metrics": [
+        "membership"
+      ]
+    },
+    {
+      "id": "shopping-043",
+      "prompt": "A widget showing price comparison",
+      "complexity": "medium",
+      "metrics": [
+        "prices"
+      ]
+    },
+    {
+      "id": "shopping-044",
+      "prompt": "A widget displaying price history",
+      "complexity": "complex",
+      "metrics": [
+        "price"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "shopping-045",
+      "prompt": "A widget showing lowest price alert",
+      "complexity": "simple",
+      "metrics": [
+        "price"
+      ]
+    },
+    {
+      "id": "shopping-046",
+      "prompt": "A widget showing shopping lists",
+      "complexity": "medium",
+      "metrics": [
+        "lists"
+      ]
+    },
+    {
+      "id": "shopping-047",
+      "prompt": "A widget displaying gift ideas list",
+      "complexity": "medium",
+      "metrics": [
+        "gifts"
+      ]
+    },
+    {
+      "id": "shopping-048",
+      "prompt": "A widget showing purchase reminders",
+      "complexity": "medium",
+      "metrics": [
+        "reminders"
+      ]
+    },
+    {
+      "id": "shopping-049",
+      "prompt": "A widget showing size guide",
+      "complexity": "medium",
+      "metrics": [
+        "guide"
+      ]
+    },
+    {
+      "id": "shopping-050",
+      "prompt": "A widget displaying return window",
+      "complexity": "simple",
+      "metrics": [
+        "returns"
+      ]
+    }
+  ]
+}

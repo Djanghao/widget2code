@@ -1,0 +1,149 @@
+{
+  "widget": {
+    "backgroundColor": "rgba(0, 0, 0, 0.5)",
+    "borderRadius": 40,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "props": { "style": { "backdropFilter": "blur(60px)", "backgroundColor": "rgba(30, 30, 30, 0.6)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "flex": 1,
+              "alignMain": "center",
+              "alignCross": "center",
+              "props": { "style": { "position": "relative", "width": "100%" } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Switch",
+                  "props": {
+                    "on": true,
+                    "width": 140,
+                    "height": 64,
+                    "thumbSize": 56,
+                    "onColor": "#007AFF",
+                    "style": { "borderRadius": 32 }
+                  }
+                },
+                {
+                   "type": "container",
+                   "props": { "style": { "position": "absolute", "left": 12, "top": "50%", "transform": "translateY(-50%)", "pointerEvents": "none" } },
+                   "children": [
+                     { "type": "leaf", "component": "Icon", "props": { "name": "sf:wifi", "size": 24, "color": "#FFFFFF" } }
+                   ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "flex": 1,
+              "alignMain": "center",
+              "alignCross": "center",
+              "props": { "style": { "position": "relative", "width": "100%" } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Switch",
+                  "props": {
+                    "on": true,
+                    "width": 140,
+                    "height": 64,
+                    "thumbSize": 56,
+                    "onColor": "#007AFF",
+                    "style": { "borderRadius": 32 }
+                  }
+                },
+                {
+                   "type": "container",
+                   "props": { "style": { "position": "absolute", "left": 12, "top": "50%", "transform": "translateY(-50%)", "pointerEvents": "none" } },
+                   "children": [
+                     { "type": "leaf", "component": "Icon", "props": { "name": "md:MdBluetooth", "size": 24, "color": "#FFFFFF" } }
+                   ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "flex": 1,
+              "alignMain": "center",
+              "alignCross": "center",
+              "props": { "style": { "position": "relative", "width": "100%" } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Switch",
+                  "props": {
+                    "on": false,
+                    "width": 140,
+                    "height": 64,
+                    "thumbSize": 56,
+                    "onColor": "#FF9500",
+                    "offColor": "rgba(255, 255, 255, 0.2)",
+                    "style": { "borderRadius": 32 }
+                  }
+                },
+                {
+                   "type": "container",
+                   "props": { "style": { "position": "absolute", "left": 12, "top": "50%", "transform": "translateY(-50%)", "pointerEvents": "none" } },
+                   "children": [
+                     { "type": "leaf", "component": "Icon", "props": { "name": "sf:airplane", "size": 24, "color": "#FFFFFF" } }
+                   ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "flex": 1,
+              "alignMain": "center",
+              "alignCross": "center",
+              "props": { "style": { "position": "relative", "width": "100%" } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Switch",
+                  "props": {
+                    "on": false,
+                    "width": 140,
+                    "height": 64,
+                    "thumbSize": 56,
+                    "onColor": "#34C759",
+                    "offColor": "rgba(255, 255, 255, 0.2)",
+                    "style": { "borderRadius": 32 }
+                  }
+                },
+                {
+                   "type": "container",
+                   "props": { "style": { "position": "absolute", "left": 12, "top": "50%", "transform": "translateY(-50%)", "pointerEvents": "none" } },
+                   "children": [
+                     { "type": "leaf", "component": "Icon", "props": { "name": "sf:antenna.radiowaves.left.and.right", "size": 24, "color": "#FFFFFF" } }
+                   ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

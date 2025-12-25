@@ -1,0 +1,246 @@
+{
+  "domain": "smart-home",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "smart-home-img-001",
+      "prompt": "A smart light widget with bulb icon, on/off status, brightness level, and color",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "smart light bulb",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-002",
+      "prompt": "A thermostat widget with temperature display, current temp, target temp, and mode",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "thermostat display",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "smart-home-img-003",
+      "prompt": "A security camera widget with camera feed, motion detection, and recording status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "security camera feed",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "smart-home-img-004",
+      "prompt": "A smart lock widget with lock icon, locked status, entry log, and remote control",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "smart lock or door",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-005",
+      "prompt": "A doorbell widget with doorbell camera view, visitor photo, and two-way talk",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "doorbell camera view",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "smart-home-img-006",
+      "prompt": "A smart plug widget with plug icon, power status, energy usage, and schedule",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "smart plug icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-007",
+      "prompt": "A garage door widget with door photo, open/closed status, and remote button",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "garage door",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "smart-home-img-008",
+      "prompt": "A room scene widget with room photo, scene name, active devices, and activate button",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "room interior photo",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "smart-home-img-009",
+      "prompt": "A air quality widget with air quality icon, PM2.5 level, status, and filter life",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "air quality or purifier icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-010",
+      "prompt": "A smart speaker widget with speaker photo, playing status, volume, and playlist",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "smart speaker device",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-011",
+      "prompt": "A energy monitor widget with power meter, daily usage, cost, and comparison",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "energy meter or graph",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-012",
+      "prompt": "A window blind widget with window photo, position level, schedule, and control",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "window with blinds",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-013",
+      "prompt": "A irrigation widget with sprinkler photo, watering schedule, zones, and weather adjust",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sprinkler or garden",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "smart-home-img-014",
+      "prompt": "A smoke detector widget with detector icon, battery level, test date, and status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "smoke detector icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-015",
+      "prompt": "A robot vacuum widget with vacuum photo, cleaning status, battery, and scheduled runs",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "robot vacuum device",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-016",
+      "prompt": "A smart TV widget with TV screen preview, current channel/app, and remote control",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "TV screen preview",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "smart-home-img-017",
+      "prompt": "A water sensor widget with water drop icon, leak status, location, and alert history",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "water drop or sensor icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-018",
+      "prompt": "A smart fridge widget with fridge photo, inside temperature, inventory, and expiry alerts",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "smart refrigerator",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-019",
+      "prompt": "A motion sensor widget with sensor icon, activity detected, battery, and sensitivity",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "motion sensor icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-020",
+      "prompt": "A pet camera widget with pet view, activity monitoring, treat dispenser, and recording",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "pet camera view",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "smart-home-img-021",
+      "prompt": "A humidifier widget with device photo, humidity level, target humidity, and mode",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "humidifier device",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-022",
+      "prompt": "A smart mirror widget with mirror display, weather, calendar, and personalized info",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "smart mirror display",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "smart-home-img-023",
+      "prompt": "A baby monitor widget with nursery camera view, sound level, temperature, and lullaby",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "baby monitor camera view",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "smart-home-img-024",
+      "prompt": "A home security system widget with security panel, armed status, zones, and alerts",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "security system panel",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "smart-home-img-025",
+      "prompt": "A smart oven widget with oven photo, temperature, timer, and recipe sync",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "smart oven or cooking",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-026",
+      "prompt": "A smart doorbell widget with visitor log photos, package delivery, and missed visitors",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "doorbell visitor photos",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "smart-home-img-027",
+      "prompt": "A leak detector widget with water icon, leak status, valve control, and location",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "water leak icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-028",
+      "prompt": "A climate control widget with home illustration, room temps, and comfort settings",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "home climate illustration",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "smart-home-img-029",
+      "prompt": "A smart scale widget with scale display, weight, BMI, trend graph, and user profile",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "smart scale display",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "smart-home-img-030",
+      "prompt": "A home automation routine widget with routine icon, scheduled actions, trigger, and status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "automation routine icon",
+      "imagePlacement": "left-thumbnail"
+    }
+  ]
+}

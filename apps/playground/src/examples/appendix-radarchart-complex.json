@@ -1,0 +1,90 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" }, "content": "Comparison" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "Model S vs Taycan" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 6,
+                  "children": [
+                    { "type": "container", "props": { "style": { "width": 8, "height": 8, "borderRadius": 4, "backgroundColor": "#FF3B30" } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93", "fontWeight": 600 }, "content": "Tesla" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 6,
+                  "children": [
+                    { "type": "container", "props": { "style": { "width": 8, "height": 8, "borderRadius": 4, "backgroundColor": "#0A84FF" } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93", "fontWeight": 600 }, "content": "Porsche" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "RadarChart",
+              "props": {
+                "indicators": [
+                  { "name": "Range", "max": 100 },
+                  { "name": "Speed", "max": 100 },
+                  { "name": "Accel", "max": 100 },
+                  { "name": "Comfort", "max": 100 },
+                  { "name": "Tech", "max": 100 },
+                  { "name": "Price", "max": 100 }
+                ],
+                "data": [
+                  [95, 90, 98, 80, 95, 85],
+                  [80, 92, 90, 95, 85, 70]
+                ],
+                "colors": ["#FF3B30", "#0A84FF"],
+                "seriesNames": ["Tesla", "Porsche"],
+                "areaOpacity": 0.3,
+                "theme": "dark",
+                "height": "100%",
+                "showValues": false,
+                "radarShape": "polygon"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

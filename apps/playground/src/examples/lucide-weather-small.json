@@ -1,0 +1,161 @@
+{
+  "widget": {
+    "backgroundColor": "#1E293B",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 14,
+                "color": "#FFFFFF",
+                "name": "lu:LuMapPin"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 14,
+                "color": "#94A3B8",
+                "fontWeight": 500
+              },
+              "content": "San Francisco"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 32,
+                "color": "#FFFFFF",
+                "name": "lu:LuSun"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 48,
+                    "color": "#F8FAFC",
+                    "fontWeight": 300
+                  },
+                  "content": "72°"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#94A3B8"
+                  },
+                  "content": "Sunny"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 6,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 14,
+                    "color": "#FFFFFF",
+                    "name": "lu:LuWind"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#CBD5E1"
+                  },
+                  "content": "12 mph"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 6,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 14,
+                    "color": "#FFFFFF",
+                    "name": "lu:LuDroplet"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#CBD5E1"
+                  },
+                  "content": "45%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

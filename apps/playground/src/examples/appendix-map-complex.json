@@ -1,0 +1,108 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 24,
+    "padding": 0,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "flex": 2,
+          "props": { "style": { "position": "relative" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "MapImage",
+              "props": {
+                "src": "light-google-map",
+                "width": "100%",
+                "height": "100%",
+                "style": { "borderRadius": "24px 24px 0 0" }
+              }
+            },
+            {
+              "type": "container",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "top": "50%",
+                  "left": "50%",
+                  "transform": "translate(-50%, -50%)",
+                  "backgroundColor": "#FF3B30",
+                  "padding": 8,
+                  "borderRadius": 20,
+                  "boxShadow": "0 4px 12px rgba(255, 59, 48, 0.4)"
+                }
+              },
+              "children": [
+                { "type": "leaf", "component": "Icon", "props": { "name": "sf:fork.knife", "size": 20, "color": "#FFFFFF" } }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 20,
+          "direction": "col",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "start",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 4,
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#000000" }, "content": "Peking Duck House" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "Chinese • $$$ • 0.2 km" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 4,
+                  "padding": 8,
+                  "paddingX": 8,
+                  "paddingY": 4,
+                  "backgroundColor": "#F2F2F7",
+                  "props": { "style": { "borderRadius": 8 } },
+                  "children": [
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:star.fill", "size": 12, "color": "#FF9500" } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "fontWeight": 600, "color": "#000000" }, "content": "4.8" }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "props": { "content": "Directions", "backgroundColor": "#007AFF", "color": "#FFFFFF", "flex": 1, "height": 40, "borderRadius": 12, "fontWeight": 600, "icon": "sf:arrow.triangle.turn.up.right.fill" }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "props": { "backgroundColor": "#F2F2F7", "color": "#007AFF", "width": 40, "height": 40, "borderRadius": 12, "icon": "sf:phone.fill" }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

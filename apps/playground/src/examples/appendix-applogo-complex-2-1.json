@@ -1,0 +1,57 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "repeating-linear-gradient(0deg, transparent, transparent 19px, #111 20px)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "APP_ID" },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:qrcode", "size": 20, "color": "#00FF9D" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "padding": 4,
+              "props": { "style": { "border": "2px solid #00FF9D", "boxShadow": "0 0 15px rgba(0, 255, 157, 0.5)" } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "AppLogo",
+                  "props": {
+                    "name": "si:SiReact",
+                    "size": 80,
+                    "color": "#00FF9D",
+                    "style": { "borderRadius": 0 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 14, "color": "#00FF9D", "fontFamily": "monospace", "textAlign": "center" },
+          "content": "V.2.0.45"
+        }
+      ]
+    }
+  }
+}

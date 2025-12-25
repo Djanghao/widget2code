@@ -1,0 +1,45 @@
+{
+  "widget": {
+    "backgroundColor": "#4A90E2",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 0.955,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        { "type": "container", "direction": "row", "gap": 8, "flex": 0, "alignCross": "center", "children": [
+          { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 18, "color": "#ffffff", "fontWeight": 600 }, "content": "San Francisco" },
+          { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 16, "color": "#ffffff", "name": "sf:paperplane.fill" } }
+        ] },
+        { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 68, "color": "#ffffff", "fontWeight": 200 }, "content": "68°" },
+        { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 16, "color": "#ffffff" }, "content": "H:72°  L:56°  Sunny" },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 1,
+          "children": [
+            { "type": "container", "direction": "row", "gap": 10, "flex": 0, "alignCross": "center", "children": [
+              { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 14, "color": "#ffffff" }, "content": "Tue" },
+              { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 18, "color": "#FFD60A", "name": "sf:sun.max.fill" } },
+              { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 14, "color": "#ffffff" }, "content": "70° / 58°" }
+            ] },
+            { "type": "container", "direction": "row", "gap": 10, "flex": 0, "alignCross": "center", "children": [
+              { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 14, "color": "#ffffff" }, "content": "Wed" },
+              { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 18, "color": "#ffffff", "name": "sf:cloud.fill" } },
+              { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 14, "color": "#ffffff" }, "content": "66° / 55°" }
+            ] },
+            { "type": "container", "direction": "row", "gap": 10, "flex": 0, "alignCross": "center", "children": [
+              { "type": "leaf", "component": "Text", "flex": 1, "props": { "fontSize": 14, "color": "#ffffff" }, "content": "Thu" },
+              { "type": "leaf", "component": "Icon", "flex": "none", "props": { "size": 18, "color": "#9CDCFE", "name": "sf:cloud.rain.fill" } },
+              { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 14, "color": "#ffffff" }, "content": "63° / 52°" }
+            ] }
+          ]
+        }
+      ]
+    }
+  }
+}

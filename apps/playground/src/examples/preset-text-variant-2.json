@@ -1,0 +1,48 @@
+{
+  "widget": {
+    "backgroundColor": "#FAFAFA",
+    "borderRadius": 20,
+    "padding": 32,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 48,
+            "fontWeight": 200,
+            "color": "#1A1A1A"
+          },
+          "content": "Minimal"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 16,
+            "fontWeight": 300,
+            "color": "#6B6B6B"
+          },
+          "content": "Less is more"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 13,
+            "fontWeight": 400,
+            "color": "#9E9E9E"
+          },
+          "content": "Clean. Simple. Beautiful."
+        }
+      ]
+    }
+  }
+}

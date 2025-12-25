@@ -1,0 +1,49 @@
+{
+  "widget": {
+    "backgroundColor": "#0D1117",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "#C9D1D9" },
+          "content": "Language Usage"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 400, "color": "#8B949E" },
+          "content": "Labels with values and %"
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 1,
+          "props": {
+            "data": [48, 26, 14, 8, 4],
+            "labels": ["JavaScript", "Python", "TypeScript", "Go", "Rust"],
+            "colors": ["#F1E05A", "#3572A5", "#2B7489", "#00ADD8", "#DEA584"],
+            "variant": "pie",
+            "backgroundColor": "transparent",
+            "showLabels": true,
+            "showValues": true,
+            "showPercentages": true,
+            "labelPosition": "outside",
+            "outerRadius": 65,
+            "startAngle": 45,
+            "clockwise": true,
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

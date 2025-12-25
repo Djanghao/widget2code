@@ -1,0 +1,54 @@
+{
+  "widget": {
+    "backgroundColor": "#0A0E27",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 24, "fontWeight": 800, "color": "#00F0FF" },
+          "content": "CYBER STATS"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 600, "color": "#FF00EA" },
+          "content": "Polygon with gradient"
+        },
+        {
+          "type": "leaf",
+          "component": "RadarChart",
+          "flex": 1,
+          "props": {
+            "data": [85, 92, 78, 95, 88, 76],
+            "labels": ["Speed", "Power", "Defense", "Agility", "Intelligence", "Stamina"],
+            "radarShape": "polygon",
+            "splitNumber": 5,
+            "color": "#00F0FF",
+            "gradient": true,
+            "gradientIntensity": 0.8,
+            "gradientStartColor": "#00F0FF",
+            "gradientEndColor": "#FF00EA",
+            "backgroundColor": "transparent",
+            "areaOpacity": 0.4,
+            "lineWidth": 3,
+            "showPoints": true,
+            "pointSize": 8,
+            "gridColor": "rgba(0, 240, 255, 0.15)",
+            "splitLineStyle": "solid",
+            "axisLineStyle": "solid",
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

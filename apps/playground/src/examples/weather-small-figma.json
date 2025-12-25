@@ -1,0 +1,137 @@
+{
+  "widget": {
+    "backgroundColor": "#4A90E2",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 20,
+            "color": "#ffffff",
+            "fontWeight": 700
+          },
+          "content": "Dallas"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 17,
+            "color": "#ffffff",
+            "fontWeight": 400
+          },
+          "content": "Partly Cloud"
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 1,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 80,
+                "color": "#FFD60A",
+                "name": "sf:cloud.sun.fill"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 0,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 56,
+                    "color": "#ffffff",
+                    "fontWeight": 300
+                  },
+                  "content": "16°"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#ffffff"
+                  },
+                  "content": "Feels 14°"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#ffffff",
+                "name": "sf:arrow.up"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 17,
+                "color": "#ffffff"
+              },
+              "content": "18°"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#ffffff",
+                "name": "sf:arrow.down"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 17,
+                "color": "#ffffff"
+              },
+              "content": "2°"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

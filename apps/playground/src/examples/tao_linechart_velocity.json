@@ -1,0 +1,240 @@
+{
+  "widget": {
+    "backgroundColor": "#F0FDF4",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 0.788,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignCross": "flex-start",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 12,
+                    "fontWeight": 700,
+                    "color": "#15803D",
+                    "letterSpacing": 1.3
+                  },
+                  "content": "APP ECOSYSTEM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 24,
+                    "fontWeight": 800,
+                    "color": "#047857"
+                  },
+                  "content": "Download Velocity"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 6,
+              "flex": 0,
+              "width": 110,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 0,
+                  "backgroundColor": "#DBEAFE",
+                  "borderRadius": 12,
+                  "padding": 10,
+                  "borderLeft": "4px solid #0EA5E9",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 8,
+                        "color": "#0C4A6E",
+                        "fontWeight": 700
+                      },
+                      "content": "CURRENT"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 15,
+                        "fontWeight": 800,
+                        "color": "#0284C7"
+                      },
+                      "content": "3.6K"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 0,
+                  "backgroundColor": "#D1FAE5",
+                  "borderRadius": 12,
+                  "padding": 10,
+                  "borderLeft": "4px solid #10B981",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 8,
+                        "color": "#065F46",
+                        "fontWeight": 700
+                      },
+                      "content": "GROWTH"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 15,
+                        "fontWeight": 800,
+                        "color": "#059669"
+                      },
+                      "content": "↑ 350%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "LineChart",
+          "flex": 1,
+          "props": {
+            "data": [[800, 1100, 1050, 1600, 1550, 2300, 2250, 3000, 2900, 3600], [600, 950, 850, 1450, 1350, 2000, 1950, 2600, 2500, 3200]],
+            "labels": ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W10"],
+            "colors": ["#0284C7", "#059669"],
+            "seriesNames": ["Total DL", "New Users"],
+            "theme": "light",
+            "smooth": false,
+            "showArea": true,
+            "gradientIntensity": 0.35,
+            "gradientStartColor": "#38BDF8",
+            "gradientEndColor": "#F0FDF4",
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showXAxisTicks": true,
+            "showYAxisTicks": true,
+            "tickLineColor": "rgba(2, 132, 199, 0.1)",
+            "tickLineStyle": "dashed",
+            "tickLineWidth": 0.7,
+            "showMarkers": true,
+            "markerStyle": "circle",
+            "markerSize": 8,
+            "markerColor": "#0284C7",
+            "markerBorderColor": "#FFFFFF",
+            "markerBorderWidth": 2,
+            "yAxisLabelPosition": "right",
+            "height": 140
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 10,
+          "flex": 0,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "backgroundColor": "rgba(2, 132, 199, 0.1)",
+              "borderRadius": 10,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 9,
+                    "color": "#0C4A6E",
+                    "fontWeight": 700
+                  },
+                  "content": "NEW INSTALLS"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 13,
+                    "fontWeight": 800,
+                    "color": "#0284C7"
+                  },
+                  "content": "+2.8K"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "backgroundColor": "rgba(5, 150, 105, 0.1)",
+              "borderRadius": 10,
+              "padding": 12,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 9,
+                    "color": "#065F46",
+                    "fontWeight": 700
+                  },
+                  "content": "AVG DAILY"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 13,
+                    "fontWeight": 800,
+                    "color": "#059669"
+                  },
+                  "content": "360/day"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

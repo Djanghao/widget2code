@@ -1,0 +1,57 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 0,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 0,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "MapImage",
+          "flex": "none",
+          "props": {
+            "height": 158,
+            "url": "https://images.unsplash.com/photo-1524661135-423995f22d0b"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "padding": 16,
+          "alignCross": "center",
+          "alignMain": "start",
+          "backgroundColor": "rgba(0,0,0,0.6)",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 44,
+                "color": "#8E8E93",
+                "name": "sf:magnifyingglass"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 44,
+                "color": "#FF9500",
+                "name": "sf:fork.knife"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

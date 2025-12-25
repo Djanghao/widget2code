@@ -1,0 +1,96 @@
+{
+  "widget": {
+    "backgroundColor": "#1E3A5F",
+    "borderRadius": 20,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "stretch",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "Approve",
+            "icon": "sf:checkmark.circle.fill",
+            "backgroundColor": "#3B82F6",
+            "color": "#FFFFFF",
+            "borderRadius": 10,
+            "paddingY": 15,
+            "paddingX": 26,
+            "fontSize": 16,
+            "fontWeight": 600,
+            "width": "100%"
+          }
+        },
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "Review",
+            "icon": "sf:doc.text.fill",
+            "backgroundColor": "#60A5FA",
+            "color": "#FFFFFF",
+            "borderRadius": 10,
+            "paddingY": 15,
+            "paddingX": 26,
+            "fontSize": 16,
+            "fontWeight": 600,
+            "width": "100%"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:chart.bar.fill",
+                "backgroundColor": "#93C5FD",
+                "color": "#1E3A5F",
+                "borderRadius": 10,
+                "width": 50,
+                "height": 50,
+                "padding": 0
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:calendar",
+                "backgroundColor": "#93C5FD",
+                "color": "#1E3A5F",
+                "borderRadius": 10,
+                "width": 50,
+                "height": 50,
+                "padding": 0
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:briefcase.fill",
+                "backgroundColor": "#93C5FD",
+                "color": "#1E3A5F",
+                "borderRadius": 10,
+                "width": 50,
+                "height": 50,
+                "padding": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

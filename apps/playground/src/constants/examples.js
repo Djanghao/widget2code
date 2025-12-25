@@ -1,0 +1,546 @@
+import weatherSmallLight from "../examples/weather-small-light.json";
+import weatherMediumDark from "../examples/weather-medium-dark.json";
+import calendarSmallLight from "../examples/calendar-small-light.json";
+import calendarSmallDark from "../examples/calendar-small-dark.json";
+import notesSmallLight from "../examples/notes-small-light.json";
+import notesSmallDark from "../examples/notes-small-dark.json";
+import stockMediumDark from "../examples/stock-medium-dark.json";
+import stockMediumDarkRed from "../examples/stock-medium-dark-red.json";
+import remindersLargeLight from "../examples/reminders-large-light.json";
+import photoMediumLight from "../examples/photo-medium-light.json";
+import mapMediumDark from "../examples/map-medium-dark.json";
+import lucideWeatherSmall from "../examples/lucide-weather-small.json";
+import lucideTasksMedium from "../examples/lucide-tasks-medium.json";
+import lucideMusicSmall from "../examples/lucide-music-small.json";
+import batterySmallDark from "../examples/battery-small-dark.json";
+import fitnessSmallLight from "../examples/fitness-small-light.json";
+import musicMediumLight from "../examples/music-medium-light.json";
+import newsMediumDark from "../examples/news-medium-dark.json";
+import calendarMediumLight from "../examples/calendar-medium-light.json";
+import photosSmallLight from "../examples/photos-small-light.json";
+import healthSmallDark from "../examples/health-small-dark.json";
+import batteryMediumLight from "../examples/battery-medium-light.json";
+import stocksMediumLight from "../examples/stocks-medium-light.json";
+import stocksListDark from "../examples/stocks-list-dark.json";
+import stocksListDarkWoIcon from "../examples/stocks-list-dark-wo-icon.json";
+import stocksListDarkWoIconLayout from "../examples/stocks-list-dark-wo-icon-layout.json";
+import stocksListDarkWoIconLayoutColor from "../examples/stocks-list-dark-wo-icon-layout-color.json";
+import stocksListDarkWoIconLayoutColorGraph from "../examples/stocks-list-dark-wo-icon-layout-color-graph.json";
+import weatherLargeLight from "../examples/weather-large-light.json";
+import stockLargeDark from "../examples/stock-large-dark.json";
+import batteriesFigma from "../examples/batteries-figma.json";
+import notesLargeFigma from "../examples/notes-large-figma.json";
+import noteSmallFigma from "../examples/note-small-figma.json";
+import ringtoneSmallFigma from "../examples/ringtone-small-figma.json";
+import weatherSmallFigma from "../examples/weather-small-figma.json";
+import weatherMediumFigma from "../examples/weather-medium-figma.json";
+import batteriesLightMedium from "../examples/batteries-light-medium.json";
+
+// Graph Test Widgets
+import marketingChannelsDark from "../examples/marketing-channels-dark.json";
+import screenTimeDark from "../examples/screen-time-dark.json";
+import focusFitnessLight from "../examples/focus-fitness-light.json";
+import screenTimeSimpleDark from "../examples/screen-time-simple-dark.json";
+import productActivityDark from "../examples/product-activity-dark.json";
+import salesOverviewLight from "../examples/sales-overview-light.json";
+import taoBarchartExpense from "../examples/tao_barchart_expense.json";
+import taoBarchartProductivity from "../examples/tao_barchart_productivity.json";
+import taoBarchartRevenue from "../examples/tao_barchart_revenue.json";
+import taoBarchartTraffic from "../examples/tao_barchart_traffic.json";
+import taoBarchartWebsite from "../examples/tao_barchart_website.json";
+import taoLinechartConversion from "../examples/tao_linechart_conversion.json";
+import taoLinechartSatis from "../examples/tao_linechart_satis.json";
+import taoLinechartUptime from "../examples/tao_linechart_uptime.json";
+import taoLinechartUser from "../examples/tao_linechart_user.json";
+import taoLinechartVelocity from "../examples/tao_linechart_velocity.json";
+import taoPiechartCustomer from "../examples/tao_piechart_customer.json";
+import taoPiechartMarket from "../examples/tao_piechart_market.json";
+import taoPiechartRefer from "../examples/tao_piechart_refer.json";
+import taoPiechartRevenue from "../examples/tao_piechart_revenue.json";
+import taoPiechartTypes from "../examples/tao_piechart_types.json";
+import taoStackedbarBrowser from "../examples/tao_stackedbar_browser.json";
+import taoStackedbarChannel from "../examples/tao_stackedbar_channel.json";
+import taoStackedbarEnvironment from "../examples/tao_stackedbar_environment.json";
+import taoStackedbarPlatform from "../examples/tao_stackedbar_platform.json";
+import taoStackedbarRevenue from "../examples/tao_stackedbar_revenue.json";
+
+// Icon Tests
+import iconsVariantsShowcase from "../examples/icons-variants-showcase.json";
+import iconsUltimateTest from "../examples/icons-ultimate-test.json";
+
+// Component Showcases
+import buttonShowcase from "../examples/button-showcase.json";
+import progressringShowcase from "../examples/progressring-showcase.json";
+import fitnessActivityRings from "../examples/fitness-activity-rings.json";
+import circularContainersShowcase from "../examples/circular-containers-showcase.json";
+import piechartDonutShowcase from "../examples/piechart-donut-showcase.json";
+import piechartDonutIconExample from "../examples/piechart-donut-icon-example.json";
+
+// Appendix - iOS Style Widgets
+// Appendix - iOS Style Widgets (Simple)
+import appendixTextSimple from "../examples/appendix-text-simple.json";
+import appendixButtonSimple from "../examples/appendix-button-simple.json";
+import appendixIconSimple from "../examples/appendix-icon-simple.json";
+import appendixImageSimple from "../examples/appendix-image-simple.json";
+import appendixCheckboxSimple from "../examples/appendix-checkbox-simple.json";
+import appendixSwitchSimple from "../examples/appendix-switch-simple.json";
+import appendixSliderSimple from "../examples/appendix-slider-simple.json";
+import appendixProgressbarSimple from "../examples/appendix-progressbar-simple.json";
+import appendixProgressringSimple from "../examples/appendix-progressring-simple.json";
+import appendixMapSimple from "../examples/appendix-map-simple.json";
+import appendixBarchartSimple from "../examples/appendix-barchart-simple.json";
+import appendixLinechartSimple from "../examples/appendix-linechart-simple.json";
+import appendixPiechartSimple from "../examples/appendix-piechart-simple.json";
+import appendixRadarchartSimple from "../examples/appendix-radarchart-simple.json";
+import appendixSparklineSimple from "../examples/appendix-sparkline-simple.json";
+import appendixApplogoSimple from "../examples/appendix-applogo-simple.json";
+
+// Appendix - iOS Style Widgets (Complex)
+import appendixTextComplex from "../examples/appendix-text-complex.json";
+import appendixButtonComplex from "../examples/appendix-button-complex.json";
+import appendixIconComplex from "../examples/appendix-icon-complex.json";
+import appendixImageComplex from "../examples/appendix-image-complex.json";
+import appendixCheckboxComplex from "../examples/appendix-checkbox-complex.json";
+import appendixSwitchComplex from "../examples/appendix-switch-complex.json";
+import appendixSliderComplex from "../examples/appendix-slider-complex.json";
+import appendixProgressbarComplex from "../examples/appendix-progressbar-complex.json";
+import appendixProgressringComplex from "../examples/appendix-progressring-complex.json";
+import appendixMapComplex from "../examples/appendix-map-complex.json";
+import appendixBarchartComplex from "../examples/appendix-barchart-complex.json";
+import appendixLinechartComplex from "../examples/appendix-linechart-complex.json";
+import appendixPiechartComplex from "../examples/appendix-piechart-complex.json";
+import appendixRadarchartComplex from "../examples/appendix-radarchart-complex.json";
+import appendixSparklineComplex from "../examples/appendix-sparkline-complex.json";
+import appendixApplogoComplex from "../examples/appendix-applogo-complex.json";
+
+// Appendix - iOS Style Widgets (Complex-2)
+import appendixTextComplex2 from "../examples/appendix-text-complex-2.json";
+import appendixButtonComplex2 from "../examples/appendix-button-complex-2.json";
+import appendixIconComplex2 from "../examples/appendix-icon-complex-2.json";
+import appendixImageComplex2 from "../examples/appendix-image-complex-2.json";
+import appendixCheckboxComplex2 from "../examples/appendix-checkbox-complex-2.json";
+import appendixSwitchComplex2 from "../examples/appendix-switch-complex-2.json";
+import appendixSliderComplex2 from "../examples/appendix-slider-complex-2.json";
+import appendixProgressbarComplex2 from "../examples/appendix-progressbar-complex-2.json";
+import appendixProgressringComplex2 from "../examples/appendix-progressring-complex-2.json";
+import appendixMapComplex2 from "../examples/appendix-map-complex-2.json";
+import appendixBarchartComplex2 from "../examples/appendix-barchart-complex-2.json";
+import appendixLinechartComplex2 from "../examples/appendix-linechart-complex-2.json";
+import appendixPiechartComplex2 from "../examples/appendix-piechart-complex-2.json";
+import appendixRadarchartComplex2 from "../examples/appendix-radarchart-complex-2.json";
+import appendixSparklineComplex2 from "../examples/appendix-sparkline-complex-2.json";
+import appendixApplogoComplex2 from "../examples/appendix-applogo-complex-2.json";
+
+// Appendix - iOS Style Widgets (Complex-2 Variants)
+import appendixTextComplex2_1 from "../examples/appendix-text-complex-2-1.json";
+import appendixTextComplex2_2 from "../examples/appendix-text-complex-2-2.json";
+import appendixTextComplex2_3 from "../examples/appendix-text-complex-2-3.json";
+import appendixButtonComplex2_1 from "../examples/appendix-button-complex-2-1.json";
+import appendixButtonComplex2_2 from "../examples/appendix-button-complex-2-2.json";
+import appendixButtonComplex2_3 from "../examples/appendix-button-complex-2-3.json";
+import appendixIconComplex2_1 from "../examples/appendix-icon-complex-2-1.json";
+import appendixIconComplex2_2 from "../examples/appendix-icon-complex-2-2.json";
+import appendixIconComplex2_3 from "../examples/appendix-icon-complex-2-3.json";
+import appendixImageComplex2_1 from "../examples/appendix-image-complex-2-1.json";
+import appendixImageComplex2_2 from "../examples/appendix-image-complex-2-2.json";
+import appendixImageComplex2_3 from "../examples/appendix-image-complex-2-3.json";
+import appendixCheckboxComplex2_1 from "../examples/appendix-checkbox-complex-2-1.json";
+import appendixCheckboxComplex2_2 from "../examples/appendix-checkbox-complex-2-2.json";
+import appendixCheckboxComplex2_3 from "../examples/appendix-checkbox-complex-2-3.json";
+
+
+import appendixProgressbarComplex2_1 from "../examples/appendix-progressbar-complex-2-1.json";
+import appendixProgressbarComplex2_2 from "../examples/appendix-progressbar-complex-2-2.json";
+import appendixProgressbarComplex2_3 from "../examples/appendix-progressbar-complex-2-3.json";
+
+
+import appendixBarchartComplex2_1 from "../examples/appendix-barchart-complex-2-1.json";
+import appendixBarchartComplex2_2 from "../examples/appendix-barchart-complex-2-2.json";
+import appendixBarchartComplex2_3 from "../examples/appendix-barchart-complex-2-3.json";
+import appendixLinechartComplex2_1 from "../examples/appendix-linechart-complex-2-1.json";
+import appendixLinechartComplex2_2 from "../examples/appendix-linechart-complex-2-2.json";
+import appendixLinechartComplex2_3 from "../examples/appendix-linechart-complex-2-3.json";
+
+import appendixPiechartComplex2_1 from "../examples/appendix-piechart-complex-2-1.json";
+import appendixPiechartComplex2_2 from "../examples/appendix-piechart-complex-2-2.json";
+import appendixPiechartComplex2_3 from "../examples/appendix-piechart-complex-2-3.json";
+import appendixPiechartComplex2_4 from "../examples/appendix-piechart-complex-2-4.json";
+
+import appendixRadarchartComplex2_1 from "../examples/appendix-radarchart-complex-2-1.json";
+import appendixRadarchartComplex2_2 from "../examples/appendix-radarchart-complex-2-2.json";
+import appendixRadarchartComplex2_3 from "../examples/appendix-radarchart-complex-2-3.json";
+import appendixSparklineComplex2_1 from "../examples/appendix-sparkline-complex-2-1.json";
+import appendixSparklineComplex2_2 from "../examples/appendix-sparkline-complex-2-2.json";
+import appendixSparklineComplex2_3 from "../examples/appendix-sparkline-complex-2-3.json";
+import appendixApplogoComplex2_1 from "../examples/appendix-applogo-complex-2-1.json";
+import appendixApplogoComplex2_2 from "../examples/appendix-applogo-complex-2-2.json";
+import appendixApplogoComplex2_3 from "../examples/appendix-applogo-complex-2-3.json";
+import appendixStackedbarchartComplex2_1 from "../examples/appendix-stackedbarchart-complex-2-1.json";
+import appendixStackedbarchartComplex2_2 from "../examples/appendix-stackedbarchart-complex-2-2.json";
+import appendixStackedbarchartComplex2_3 from "../examples/appendix-stackedbarchart-complex-2-3.json";
+import appendixStackedbarchartComplex2_4 from "../examples/appendix-stackedbarchart-complex-2-4.json";
+
+import appendixTextComplex2_4 from "../examples/appendix-text-complex-2-4.json";
+import appendixButtonComplex2_4 from "../examples/appendix-button-complex-2-4.json";
+import appendixIconComplex2_4 from "../examples/appendix-icon-complex-2-4.json";
+import appendixImageComplex2_4 from "../examples/appendix-image-complex-2-4.json";
+import appendixCheckboxComplex2_4 from "../examples/appendix-checkbox-complex-2-4.json";
+import appendixProgressbarComplex2_4 from "../examples/appendix-progressbar-complex-2-4.json";
+import appendixBarchartComplex2_4 from "../examples/appendix-barchart-complex-2-4.json";
+import appendixLinechartComplex2_4 from "../examples/appendix-linechart-complex-2-4.json";
+import appendixRadarchartComplex2_4 from "../examples/appendix-radarchart-complex-2-4.json";
+import appendixSparklineComplex2_4 from "../examples/appendix-sparkline-complex-2-4.json";
+import appendixApplogoComplex2_4 from "../examples/appendix-applogo-complex-2-4.json";
+
+// Preset Variants - Text
+import presetTextVariant1 from "../examples/preset-text-variant-1.json";
+import presetTextVariant2 from "../examples/preset-text-variant-2.json";
+import presetTextVariant3 from "../examples/preset-text-variant-3.json";
+import presetTextVariant4 from "../examples/preset-text-variant-4.json";
+import presetTextVariant5 from "../examples/preset-text-variant-5.json";
+import presetTextVariant6 from "../examples/preset-text-variant-6.json";
+import presetTextVariant7 from "../examples/preset-text-variant-7.json";
+import presetTextVariant8 from "../examples/preset-text-variant-8.json";
+
+// Preset Variants - Button
+import presetButtonVariant1 from "../examples/preset-button-variant-1.json";
+import presetButtonVariant2 from "../examples/preset-button-variant-2.json";
+import presetButtonVariant3 from "../examples/preset-button-variant-3.json";
+import presetButtonVariant4 from "../examples/preset-button-variant-4.json";
+import presetButtonVariant5 from "../examples/preset-button-variant-5.json";
+import presetButtonVariant6 from "../examples/preset-button-variant-6.json";
+import presetButtonVariant7 from "../examples/preset-button-variant-7.json";
+import presetButtonVariant8 from "../examples/preset-button-variant-8.json";
+
+// Preset Variants - Icon
+import presetIconVariant1 from "../examples/preset-icon-variant-1.json";
+import presetIconVariant2 from "../examples/preset-icon-variant-2.json";
+import presetIconVariant3 from "../examples/preset-icon-variant-3.json";
+import presetIconVariant4 from "../examples/preset-icon-variant-4.json";
+import presetIconVariant5 from "../examples/preset-icon-variant-5.json";
+import presetIconVariant6 from "../examples/preset-icon-variant-6.json";
+import presetIconVariant7 from "../examples/preset-icon-variant-7.json";
+import presetIconVariant8 from "../examples/preset-icon-variant-8.json";
+
+// Preset Variants - BarChart
+import presetBarchartVariant1 from "../examples/preset-barchart-variant-1.json";
+import presetBarchartVariant2 from "../examples/preset-barchart-variant-2.json";
+import presetBarchartVariant3 from "../examples/preset-barchart-variant-3.json";
+import presetBarchartVariant4 from "../examples/preset-barchart-variant-4.json";
+import presetBarchartVariant5 from "../examples/preset-barchart-variant-5.json";
+import presetBarchartVariant6 from "../examples/preset-barchart-variant-6.json";
+import presetBarchartVariant7 from "../examples/preset-barchart-variant-7.json";
+import presetBarchartVariant8 from "../examples/preset-barchart-variant-8.json";
+
+// Preset Variants - RadarChart
+import presetRadarchartVariant1 from "../examples/preset-radarchart-variant-1.json";
+import presetRadarchartVariant2 from "../examples/preset-radarchart-variant-2.json";
+import presetRadarchartVariant3 from "../examples/preset-radarchart-variant-3.json";
+import presetRadarchartVariant4 from "../examples/preset-radarchart-variant-4.json";
+import presetRadarchartVariant5 from "../examples/preset-radarchart-variant-5.json";
+import presetRadarchartVariant6 from "../examples/preset-radarchart-variant-6.json";
+import presetRadarchartVariant7 from "../examples/preset-radarchart-variant-7.json";
+import presetRadarchartVariant8 from "../examples/preset-radarchart-variant-8.json";
+
+export const examples = {
+  weatherSmallLight: { name: "Weather S-Light", spec: weatherSmallLight },
+  weatherMediumDark: { name: "Weather M-Dark", spec: weatherMediumDark },
+  calendarSmallLight: { name: "Calendar S-Light", spec: calendarSmallLight },
+  calendarSmallDark: { name: "Calendar S-Dark", spec: calendarSmallDark },
+  notesSmallLight: { name: "Notes S-Light", spec: notesSmallLight },
+  notesSmallDark: { name: "Notes S-Dark", spec: notesSmallDark },
+  stockMediumDark: { name: "Stock M-Dark", spec: stockMediumDark },
+  stockMediumDarkRed: { name: "Stock M-Dark-Red", spec: stockMediumDarkRed },
+  remindersLargeLight: { name: "Reminders L-Light", spec: remindersLargeLight },
+  photoMediumLight: { name: "Photo M-Light", spec: photoMediumLight },
+  mapMediumDark: { name: "Map M-Dark", spec: mapMediumDark },
+  lucideWeatherSmall: { name: "Lucide Weather", spec: lucideWeatherSmall },
+  lucideTasksMedium: { name: "Lucide Tasks", spec: lucideTasksMedium },
+  lucideMusicSmall: { name: "Lucide Music", spec: lucideMusicSmall },
+  batterySmallDark: { name: "Battery S-Dark", spec: batterySmallDark },
+  fitnessSmallLight: { name: "Activity S-Light", spec: fitnessSmallLight },
+  musicMediumLight: { name: "Music M-Light", spec: musicMediumLight },
+  newsMediumDark: { name: "News M-Dark", spec: newsMediumDark },
+  calendarMediumLight: { name: "Calendar M-Light", spec: calendarMediumLight },
+  photosSmallLight: { name: "Photos S-Light", spec: photosSmallLight },
+  healthSmallDark: { name: "Health S-Dark", spec: healthSmallDark },
+  batteryMediumLight: { name: "Battery M-Light", spec: batteryMediumLight },
+  stocksMediumLight: { name: "Stocks M-Light", spec: stocksMediumLight },
+  stocksListDark: { name: "Stocks List - Dark", spec: stocksListDark },
+  stocksListDarkWoIcon: {
+    name: "Stocks List - Dark (No Icon)",
+    spec: stocksListDarkWoIcon,
+  },
+  stocksListDarkWoIconLayout: {
+    name: "Stocks List - Dark (Layout)",
+    spec: stocksListDarkWoIconLayout,
+  },
+  stocksListDarkWoIconLayoutColor: {
+    name: "Stocks List - Dark (Layout+Color)",
+    spec: stocksListDarkWoIconLayoutColor,
+  },
+  stocksListDarkWoIconLayoutColorGraph: {
+    name: "Stocks List - Dark (Layout+Color+Graph)",
+    spec: stocksListDarkWoIconLayoutColorGraph,
+  },
+  weatherLargeLight: { name: "Weather L-Light", spec: weatherLargeLight },
+  stockLargeDark: { name: "Stock L-Dark", spec: stockLargeDark },
+  batteriesFigma: { name: "Batteries (Figma)", spec: batteriesFigma },
+  notesLargeFigma: { name: "Notes L (Figma)", spec: notesLargeFigma },
+  noteSmallFigma: { name: "Note S (Figma)", spec: noteSmallFigma },
+  ringtoneSmallFigma: { name: "Ringtone S (Figma)", spec: ringtoneSmallFigma },
+  weatherSmallFigma: { name: "Weather S (Figma)", spec: weatherSmallFigma },
+  weatherMediumFigma: { name: "Weather M (Figma)", spec: weatherMediumFigma },
+  batteriesLightMedium: {
+    name: "Batteries - Light - Medium",
+    spec: batteriesLightMedium,
+  },
+
+  // Graph Test Widgets
+  marketingChannelsDark: {
+    name: "📊 Marketing Channels - Dark",
+    spec: marketingChannelsDark,
+  },
+  screenTimeDark: {
+    name: "📊 Screen Time - Dark",
+    spec: screenTimeDark,
+  },
+  focusFitnessLight: {
+    name: "📊 Focus Fitness - Light",
+    spec: focusFitnessLight,
+  },
+  screenTimeSimpleDark: {
+    name: "📊 Screen Time Simple - Dark",
+    spec: screenTimeSimpleDark,
+  },
+  productActivityDark: {
+    name: "📊 Product Activity - Dark",
+    spec: productActivityDark,
+  },
+  salesOverviewLight: {
+    name: "📊 Sales Overview - Light",
+    spec: salesOverviewLight,
+  },
+  taoBarchartExpense: { name: "📊 TAO BarChart - Expense", spec: taoBarchartExpense },
+  taoBarchartProductivity: { name: "📊 TAO BarChart - Productivity", spec: taoBarchartProductivity },
+  taoBarchartRevenue: { name: "📊 TAO BarChart - Revenue", spec: taoBarchartRevenue },
+  taoBarchartTraffic: { name: "📊 TAO BarChart - Traffic", spec: taoBarchartTraffic },
+  taoBarchartWebsite: { name: "📊 TAO BarChart - Website", spec: taoBarchartWebsite },
+  taoLinechartConversion: { name: "📊 TAO LineChart - Conversion", spec: taoLinechartConversion },
+  taoLinechartSatis: { name: "📊 TAO LineChart - Satisfaction", spec: taoLinechartSatis },
+  taoLinechartUptime: { name: "📊 TAO LineChart - Uptime", spec: taoLinechartUptime },
+  taoLinechartUser: { name: "📊 TAO LineChart - User", spec: taoLinechartUser },
+  taoLinechartVelocity: { name: "📊 TAO LineChart - Velocity", spec: taoLinechartVelocity },
+  taoPiechartCustomer: { name: "📊 TAO PieChart - Customer", spec: taoPiechartCustomer },
+  taoPiechartMarket: { name: "📊 TAO PieChart - Market", spec: taoPiechartMarket },
+  taoPiechartRefer: { name: "📊 TAO PieChart - Refer", spec: taoPiechartRefer },
+  taoPiechartRevenue: { name: "📊 TAO PieChart - Revenue", spec: taoPiechartRevenue },
+  taoPiechartTypes: { name: "📊 TAO PieChart - Types", spec: taoPiechartTypes },
+  taoStackedbarBrowser: { name: "📊 TAO StackedBar - Browser", spec: taoStackedbarBrowser },
+  taoStackedbarChannel: { name: "📊 TAO StackedBar - Channel", spec: taoStackedbarChannel },
+  taoStackedbarEnvironment: { name: "📊 TAO StackedBar - Environment", spec: taoStackedbarEnvironment },
+  taoStackedbarPlatform: { name: "📊 TAO StackedBar - Platform", spec: taoStackedbarPlatform },
+  taoStackedbarRevenue: { name: "📊 TAO StackedBar - Revenue", spec: taoStackedbarRevenue },
+
+  // Icon Tests
+  iconsVariantsShowcase: {
+    name: "🎨 Icon Variants (Pi/Ri)",
+    spec: iconsVariantsShowcase,
+  },
+  iconsUltimateTest: {
+    name: "✨ Ultimate Icon Test",
+    spec: iconsUltimateTest,
+  },
+
+  // Component Showcases
+  buttonShowcase: {
+    name: "🔘 Button Showcase",
+    spec: buttonShowcase,
+  },
+  progressringShowcase: {
+    name: "🔄 ProgressRing Showcase",
+    spec: progressringShowcase,
+  },
+  fitnessActivityRings: {
+    name: "💪 Fitness Activity Rings",
+    spec: fitnessActivityRings,
+  },
+  circularContainersShowcase: {
+    name: "⭕ Circular Containers",
+    spec: circularContainersShowcase,
+  },
+  piechartDonutShowcase: {
+    name: "🥧 PieChart Donut Showcase",
+    spec: piechartDonutShowcase,
+  },
+  piechartDonutIconExample: {
+    name: "🥧 PieChart Donut + Icon",
+    spec: piechartDonutIconExample,
+  },
+
+  // Appendix - iOS Style Widgets
+  // Appendix - iOS Style Widgets (Simple)
+  appendixTextSimple: { name: "📱 iOS Text (Simple)", spec: appendixTextSimple },
+  appendixButtonSimple: { name: "📱 iOS Button (Simple)", spec: appendixButtonSimple },
+  appendixIconSimple: { name: "📱 iOS Icon (Simple)", spec: appendixIconSimple },
+  appendixImageSimple: { name: "📱 iOS Image (Simple)", spec: appendixImageSimple },
+  appendixCheckboxSimple: { name: "📱 iOS Checkbox (Simple)", spec: appendixCheckboxSimple },
+  appendixSwitchSimple: { name: "📱 iOS Switch (Simple)", spec: appendixSwitchSimple },
+  appendixSliderSimple: { name: "📱 iOS Slider (Simple)", spec: appendixSliderSimple },
+  appendixProgressbarSimple: { name: "📱 iOS ProgressBar (Simple)", spec: appendixProgressbarSimple },
+  appendixProgressringSimple: { name: "📱 iOS ProgressRing (Simple)", spec: appendixProgressringSimple },
+  appendixMapSimple: { name: "📱 iOS Map (Simple)", spec: appendixMapSimple },
+  appendixBarchartSimple: { name: "📱 iOS BarChart (Simple)", spec: appendixBarchartSimple },
+  appendixLinechartSimple: { name: "📱 iOS LineChart (Simple)", spec: appendixLinechartSimple },
+  appendixPiechartSimple: { name: "📱 iOS PieChart (Simple)", spec: appendixPiechartSimple },
+  appendixRadarchartSimple: { name: "📱 iOS RadarChart (Simple)", spec: appendixRadarchartSimple },
+  appendixSparklineSimple: { name: "📱 iOS Sparkline (Simple)", spec: appendixSparklineSimple },
+  appendixApplogoSimple: { name: "📱 iOS AppLogo (Simple)", spec: appendixApplogoSimple },
+
+  // Appendix - iOS Style Widgets (Complex)
+  appendixTextComplex: { name: "✨ iOS Text (Complex)", spec: appendixTextComplex },
+  appendixButtonComplex: { name: "✨ iOS Button (Complex)", spec: appendixButtonComplex },
+  appendixIconComplex: { name: "✨ iOS Icon (Complex)", spec: appendixIconComplex },
+  appendixImageComplex: { name: "✨ iOS Image (Complex)", spec: appendixImageComplex },
+  appendixCheckboxComplex: { name: "✨ iOS Checkbox (Complex)", spec: appendixCheckboxComplex },
+  appendixSwitchComplex: { name: "✨ iOS Switch (Complex)", spec: appendixSwitchComplex },
+  appendixSliderComplex: { name: "✨ iOS Slider (Complex)", spec: appendixSliderComplex },
+  appendixProgressbarComplex: { name: "✨ iOS ProgressBar (Complex)", spec: appendixProgressbarComplex },
+  appendixProgressringComplex: { name: "✨ iOS ProgressRing (Complex)", spec: appendixProgressringComplex },
+  appendixMapComplex: { name: "✨ iOS Map (Complex)", spec: appendixMapComplex },
+  appendixBarchartComplex: { name: "✨ iOS BarChart (Complex)", spec: appendixBarchartComplex },
+  appendixLinechartComplex: { name: "✨ iOS LineChart (Complex)", spec: appendixLinechartComplex },
+  appendixPiechartComplex: { name: "✨ iOS PieChart (Complex)", spec: appendixPiechartComplex },
+  appendixRadarchartComplex: { name: "✨ iOS RadarChart (Complex)", spec: appendixRadarchartComplex },
+  appendixSparklineComplex: { name: "✨ iOS Sparkline (Complex)", spec: appendixSparklineComplex },
+  appendixApplogoComplex: { name: "✨ iOS AppLogo (Complex)", spec: appendixApplogoComplex },
+
+  // Appendix - iOS Style Widgets (Complex-2)
+  appendixTextComplex2: { name: "🚀 iOS Text (Complex-2)", spec: appendixTextComplex2 },
+  appendixButtonComplex2: { name: "🚀 iOS Button (Complex-2)", spec: appendixButtonComplex2 },
+  appendixIconComplex2: { name: "🚀 iOS Icon (Complex-2)", spec: appendixIconComplex2 },
+  appendixImageComplex2: { name: "🚀 iOS Image (Complex-2)", spec: appendixImageComplex2 },
+  appendixCheckboxComplex2: { name: "🚀 iOS Checkbox (Complex-2)", spec: appendixCheckboxComplex2 },
+  appendixSwitchComplex2: { name: "🚀 iOS Switch (Complex-2)", spec: appendixSwitchComplex2 },
+  appendixSliderComplex2: { name: "🚀 iOS Slider (Complex-2)", spec: appendixSliderComplex2 },
+  appendixProgressbarComplex2: { name: "🚀 iOS ProgressBar (Complex-2)", spec: appendixProgressbarComplex2 },
+  appendixProgressringComplex2: { name: "🚀 iOS ProgressRing (Complex-2)", spec: appendixProgressringComplex2 },
+  appendixMapComplex2: { name: "🚀 iOS Map (Complex-2)", spec: appendixMapComplex2 },
+  appendixBarchartComplex2: { name: "🚀 iOS BarChart (Complex-2)", spec: appendixBarchartComplex2 },
+  appendixLinechartComplex2: { name: "🚀 iOS LineChart (Complex-2)", spec: appendixLinechartComplex2 },
+  appendixPiechartComplex2: { name: "🚀 iOS PieChart (Complex-2)", spec: appendixPiechartComplex2 },
+  appendixRadarchartComplex2: { name: "🚀 iOS RadarChart (Complex-2)", spec: appendixRadarchartComplex2 },
+  appendixSparklineComplex2: { name: "🚀 iOS Sparkline (Complex-2)", spec: appendixSparklineComplex2 },
+  appendixApplogoComplex2: { name: "🚀 iOS AppLogo (Complex-2)", spec: appendixApplogoComplex2 },
+
+  // Appendix - iOS Style Widgets (Complex-2 Variants)
+  appendixTextComplex2_1: { name: "🚀 Text (Cyberpunk)", spec: appendixTextComplex2_1 },
+  appendixTextComplex2_2: { name: "🚀 Text (Minimalist)", spec: appendixTextComplex2_2 },
+  appendixTextComplex2_3: { name: "🚀 Text (Glass)", spec: appendixTextComplex2_3 },
+  appendixButtonComplex2_1: { name: "🚀 Button (Cyberpunk)", spec: appendixButtonComplex2_1 },
+  appendixButtonComplex2_2: { name: "🚀 Button (Minimalist)", spec: appendixButtonComplex2_2 },
+  appendixButtonComplex2_3: { name: "🚀 Button (Glass)", spec: appendixButtonComplex2_3 },
+  appendixIconComplex2_1: { name: "🚀 Icon (Cyberpunk)", spec: appendixIconComplex2_1 },
+  appendixIconComplex2_2: { name: "🚀 Icon (Minimalist)", spec: appendixIconComplex2_2 },
+  appendixIconComplex2_3: { name: "🚀 Icon (Glass)", spec: appendixIconComplex2_3 },
+  appendixImageComplex2_1: { name: "🚀 Image (Cyberpunk)", spec: appendixImageComplex2_1 },
+  appendixImageComplex2_2: { name: "🚀 Image (Minimalist)", spec: appendixImageComplex2_2 },
+  appendixImageComplex2_3: { name: "🚀 Image (Glass)", spec: appendixImageComplex2_3 },
+  appendixCheckboxComplex2_1: { name: "🚀 Checkbox (Cyberpunk)", spec: appendixCheckboxComplex2_1 },
+  appendixCheckboxComplex2_2: { name: "🚀 Checkbox (Minimalist)", spec: appendixCheckboxComplex2_2 },
+  appendixCheckboxComplex2_3: { name: "🚀 Checkbox (Glass)", spec: appendixCheckboxComplex2_3 },
+
+
+  appendixProgressbarComplex2_1: { name: "🚀 ProgressBar (Cyberpunk)", spec: appendixProgressbarComplex2_1 },
+  appendixProgressbarComplex2_2: { name: "🚀 ProgressBar (Minimalist)", spec: appendixProgressbarComplex2_2 },
+  appendixProgressbarComplex2_3: { name: "🚀 ProgressBar (Glass)", spec: appendixProgressbarComplex2_3 },
+
+
+  appendixBarchartComplex2_1: { name: "🚀 BarChart (Cyberpunk)", spec: appendixBarchartComplex2_1 },
+  appendixBarchartComplex2_2: { name: "🚀 BarChart (Minimalist)", spec: appendixBarchartComplex2_2 },
+  appendixBarchartComplex2_3: { name: "🚀 BarChart (Glass)", spec: appendixBarchartComplex2_3 },
+  appendixStackedbarchartComplex2_1: { name: "🚀 StackedBarChart (Cyberpunk)", spec: appendixStackedbarchartComplex2_1 },
+  appendixStackedbarchartComplex2_2: { name: "🚀 StackedBarChart (Minimalist)", spec: appendixStackedbarchartComplex2_2 },
+  appendixStackedbarchartComplex2_3: { name: "🚀 StackedBarChart (Glass)", spec: appendixStackedbarchartComplex2_3 },
+  appendixStackedbarchartComplex2_4: { name: "🚀 StackedBarChart (Brutalist)", spec: appendixStackedbarchartComplex2_4 },
+  appendixLinechartComplex2_1: { name: "🚀 LineChart (Cyberpunk)", spec: appendixLinechartComplex2_1 },
+  appendixLinechartComplex2_2: { name: "🚀 LineChart (Minimalist)", spec: appendixLinechartComplex2_2 },
+  appendixLinechartComplex2_3: { name: "🚀 LineChart (Glass)", spec: appendixLinechartComplex2_3 },
+
+  appendixPiechartComplex2_1: { name: "🚀 PieChart (Cyberpunk)", spec: appendixPiechartComplex2_1 },
+  appendixPiechartComplex2_2: { name: "🚀 PieChart (Minimalist)", spec: appendixPiechartComplex2_2 },
+  appendixPiechartComplex2_3: { name: "🚀 PieChart (Glass)", spec: appendixPiechartComplex2_3 },
+  appendixPiechartComplex2_4: { name: "🚀 PieChart (Neo-Brutalism)", spec: appendixPiechartComplex2_4 },
+
+  appendixRadarchartComplex2_1: { name: "🚀 RadarChart (Cyberpunk)", spec: appendixRadarchartComplex2_1 },
+  appendixRadarchartComplex2_2: { name: "🚀 RadarChart (Minimalist)", spec: appendixRadarchartComplex2_2 },
+  appendixRadarchartComplex2_3: { name: "🚀 RadarChart (Glass)", spec: appendixRadarchartComplex2_3 },
+  appendixSparklineComplex2_1: { name: "🚀 Sparkline (Cyberpunk)", spec: appendixSparklineComplex2_1 },
+  appendixSparklineComplex2_2: { name: "🚀 Sparkline (Minimalist)", spec: appendixSparklineComplex2_2 },
+  appendixSparklineComplex2_3: { name: "🚀 Sparkline (Glass)", spec: appendixSparklineComplex2_3 },
+  appendixApplogoComplex2_1: { name: "🚀 AppLogo (Cyberpunk)", spec: appendixApplogoComplex2_1 },
+  appendixApplogoComplex2_2: { name: "🚀 AppLogo (Minimalist)", spec: appendixApplogoComplex2_2 },
+  appendixApplogoComplex2_3: { name: "🚀 AppLogo (Glass)", spec: appendixApplogoComplex2_3 },
+
+  appendixTextComplex2_4: { name: "🚀 Text (Cyberpunk)", spec: appendixTextComplex2_4 },
+  appendixButtonComplex2_4: { name: "🚀 Button (Cyberpunk)", spec: appendixButtonComplex2_4 },
+  appendixIconComplex2_4: { name: "🚀 Icon (Cyberpunk)", spec: appendixIconComplex2_4 },
+  appendixImageComplex2_4: { name: "🚀 Image (Cyberpunk)", spec: appendixImageComplex2_4 },
+  appendixCheckboxComplex2_4: { name: "🚀 Checkbox (Cyberpunk)", spec: appendixCheckboxComplex2_4 },
+  appendixProgressbarComplex2_4: { name: "🚀 ProgressBar (Cyberpunk)", spec: appendixProgressbarComplex2_4 },
+  appendixBarchartComplex2_4: { name: "🚀 BarChart (Cyberpunk)", spec: appendixBarchartComplex2_4 },
+  appendixLinechartComplex2_4: { name: "🚀 LineChart (Cyberpunk)", spec: appendixLinechartComplex2_4 },
+  appendixRadarchartComplex2_4: { name: "🚀 RadarChart (Cyberpunk)", spec: appendixRadarchartComplex2_4 },
+  appendixSparklineComplex2_4: { name: "🚀 Sparkline (Cyberpunk)", spec: appendixSparklineComplex2_4 },
+  appendixApplogoComplex2_4: { name: "🚀 AppLogo (Cyberpunk)", spec: appendixApplogoComplex2_4 },
+
+  // Preset Variants - Text
+  presetTextVariant1: { name: "🎨 Text (Cyberpunk)", spec: presetTextVariant1 },
+  presetTextVariant2: { name: "🎨 Text (Minimal)", spec: presetTextVariant2 },
+  presetTextVariant3: { name: "🎨 Text (Glass)", spec: presetTextVariant3 },
+  presetTextVariant4: { name: "🎨 Text (Gradient)", spec: presetTextVariant4 },
+  presetTextVariant5: { name: "🎨 Text (Dark Mode)", spec: presetTextVariant5 },
+  presetTextVariant6: { name: "🎨 Text (Neon)", spec: presetTextVariant6 },
+  presetTextVariant7: { name: "🎨 Text (Natural)", spec: presetTextVariant7 },
+  presetTextVariant8: { name: "🎨 Text (Business)", spec: presetTextVariant8 },
+
+  // Preset Variants - Button
+  presetButtonVariant1: { name: "🎨 Button (Cyberpunk)", spec: presetButtonVariant1 },
+  presetButtonVariant2: { name: "🎨 Button (Minimal)", spec: presetButtonVariant2 },
+  presetButtonVariant3: { name: "🎨 Button (Glass)", spec: presetButtonVariant3 },
+  presetButtonVariant4: { name: "🎨 Button (Gradient)", spec: presetButtonVariant4 },
+  presetButtonVariant5: { name: "🎨 Button (Dark Mode)", spec: presetButtonVariant5 },
+  presetButtonVariant6: { name: "🎨 Button (Neon)", spec: presetButtonVariant6 },
+  presetButtonVariant7: { name: "🎨 Button (Natural)", spec: presetButtonVariant7 },
+  presetButtonVariant8: { name: "🎨 Button (Business)", spec: presetButtonVariant8 },
+
+  // Preset Variants - Icon
+  presetIconVariant1: { name: "🎨 Icon (Cyberpunk)", spec: presetIconVariant1 },
+  presetIconVariant2: { name: "🎨 Icon (Minimal)", spec: presetIconVariant2 },
+  presetIconVariant3: { name: "🎨 Icon (Glass)", spec: presetIconVariant3 },
+  presetIconVariant4: { name: "🎨 Icon (Gradient)", spec: presetIconVariant4 },
+  presetIconVariant5: { name: "🎨 Icon (Dark Mode)", spec: presetIconVariant5 },
+  presetIconVariant6: { name: "🎨 Icon (Neon)", spec: presetIconVariant6 },
+  presetIconVariant7: { name: "🎨 Icon (Natural)", spec: presetIconVariant7 },
+  presetIconVariant8: { name: "🎨 Icon (Business)", spec: presetIconVariant8 },
+
+  // Preset Variants - BarChart
+  presetBarchartVariant1: { name: "🎨 BarChart (Cyberpunk)", spec: presetBarchartVariant1 },
+  presetBarchartVariant2: { name: "🎨 BarChart (Minimal)", spec: presetBarchartVariant2 },
+  presetBarchartVariant3: { name: "🎨 BarChart (Glass)", spec: presetBarchartVariant3 },
+  presetBarchartVariant4: { name: "🎨 BarChart (Gradient)", spec: presetBarchartVariant4 },
+  presetBarchartVariant5: { name: "🎨 BarChart (Dark Mode)", spec: presetBarchartVariant5 },
+  presetBarchartVariant6: { name: "🎨 BarChart (Neon)", spec: presetBarchartVariant6 },
+  presetBarchartVariant7: { name: "🎨 BarChart (Natural)", spec: presetBarchartVariant7 },
+  presetBarchartVariant8: { name: "🎨 BarChart (Business)", spec: presetBarchartVariant8 },
+
+  // Preset Variants - RadarChart
+  presetRadarchartVariant1: { name: "🎨 RadarChart (Cyberpunk)", spec: presetRadarchartVariant1 },
+  presetRadarchartVariant2: { name: "🎨 RadarChart (Minimal)", spec: presetRadarchartVariant2 },
+  presetRadarchartVariant3: { name: "🎨 RadarChart (Glass)", spec: presetRadarchartVariant3 },
+  presetRadarchartVariant4: { name: "🎨 RadarChart (Colorful)", spec: presetRadarchartVariant4 },
+  presetRadarchartVariant5: { name: "🎨 RadarChart (Dark Mode)", spec: presetRadarchartVariant5 },
+  presetRadarchartVariant6: { name: "🎨 RadarChart (Neon)", spec: presetRadarchartVariant6 },
+  presetRadarchartVariant7: { name: "🎨 RadarChart (Natural)", spec: presetRadarchartVariant7 },
+  presetRadarchartVariant8: { name: "🎨 RadarChart (Business)", spec: presetRadarchartVariant8 },
+};

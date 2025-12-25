@@ -1,0 +1,257 @@
+{
+  "widget": {
+    "backgroundColor": "#1A1625",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1.901,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 2,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 10,
+                "fontWeight": 700,
+                "color": "#EC4899",
+                "letterSpacing": 1.2
+              },
+              "content": "COMPETITIVE ANALYSIS"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 22,
+                "fontWeight": 800,
+                "color": "#FCE7F3"
+              },
+              "content": "Market Position"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 14,
+          "flex": 1,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 20,
+              "flex": 1,
+              "alignMain": "space-around",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 12,
+                      "height": 12,
+                      "backgroundColor": "#EC4899",
+                      "borderRadius": 3,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#FCE7F3"
+                      },
+                      "content": "Company A"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "color": "#EC4899"
+                      },
+                      "content": "32%"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 12,
+                      "height": 12,
+                      "backgroundColor": "#F472B6",
+                      "borderRadius": 3,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#FCE7F3"
+                      },
+                      "content": "Company B"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "color": "#F472B6"
+                      },
+                      "content": "25%"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "flex": 0,
+              "props": {
+                "data": [32, 25, 22, 21],
+                "labels": ["Company A", "Company B", "Company C", "Others"],
+                "colors": ["#EC4899", "#F472B6", "#F9A8D4", "#FBD7E8"],
+                "theme": "dark",
+                "variant": "donut",
+                "innerRadius": 0.58,
+                "outerRadius": 80,
+                "showLabels": false,
+                "borderWidth": 2,
+                "borderColor": "#1A1625",
+                "roundedSegments": false,
+                "segmentBorderRadius": 0,
+                "startAngle": 270,
+                "clockwise": false,
+                "animated": true,
+                "animationDuration": 1400,
+                "emphasisScale": 1.08,
+                "height": 140,
+                "width": 140
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 20,
+              "flex": 1,
+              "alignMain": "space-around",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 12,
+                      "height": 12,
+                      "backgroundColor": "#F9A8D4",
+                      "borderRadius": 3,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#FCE7F3"
+                      },
+                      "content": "Company C"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "color": "#F9A8D4"
+                      },
+                      "content": "22%"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 12,
+                      "height": 12,
+                      "backgroundColor": "#FBD7E8",
+                      "borderRadius": 3,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#FCE7F3"
+                      },
+                      "content": "Others"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "color": "#FBD7E8"
+                      },
+                      "content": "21%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

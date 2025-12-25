@@ -1,0 +1,117 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#32D74B",
+                "name": "sf:figure.walk"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 13,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "Steps"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 1,
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 4,
+              "flex": 0,
+              "alignMain": "center",
+              "alignCross": "baseline",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 36,
+                    "color": "#ffffff",
+                    "fontWeight": 300
+                  },
+                  "content": "8,247"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "BarChart",
+              "props": {
+                "data": [6200, 7800, 9100, 5400, 8900, 7200, 8247],
+                "width": 120,
+                "height": 40,
+                "barColor": "#32D74B",
+                "backgroundColor": "#2C2C2E",
+                "gap": 3,
+                "borderRadius": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 4,
+          "flex": 0,
+          "alignMain": "space-between",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 11,
+                "color": "#98989F"
+              },
+              "content": "Goal: 10,000"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 11,
+                "color": "#32D74B",
+                "fontWeight": 600
+              },
+              "content": "82%"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

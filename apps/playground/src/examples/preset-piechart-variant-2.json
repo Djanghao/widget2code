@@ -1,0 +1,53 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "#1A1A1A" },
+          "content": "Market Share"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 11, "fontWeight": 400, "color": "#666666" },
+          "content": "Donut with center text"
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 1,
+          "props": {
+            "data": [42, 28, 18, 12],
+            "labels": ["Product A", "Product B", "Product C", "Product D"],
+            "colors": ["#4F46E5", "#06B6D4", "#10B981", "#F59E0B"],
+            "variant": "donut",
+            "innerRadius": 50,
+            "outerRadius": 80,
+            "centerText": "Total",
+            "centerValue": "100%",
+            "backgroundColor": "transparent",
+            "showLabels": false,
+            "showLegend": true,
+            "legendPosition": "bottom",
+            "legendOrientation": "horizontal",
+            "borderWidth": 3,
+            "borderColor": "#FFFFFF",
+            "startAngle": 0,
+            "height": "100%",
+            "theme": "light"
+          }
+        }
+      ]
+    }
+  }
+}

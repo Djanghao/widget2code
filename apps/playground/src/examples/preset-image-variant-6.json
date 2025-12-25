@@ -1,0 +1,76 @@
+{
+  "widget": {
+    "backgroundColor": "#1A1A2E",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 700, "color": "#FFBE0B" },
+          "content": "Grid Gallery"
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "direction": "row",
+          "gap": 10,
+          "children": [
+            {
+              "type": "container",
+              "flex": 1,
+              "direction": "col",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Image",
+                  "props": {
+                    "src": "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                    "width": "100%",
+                    "flex": 1,
+                    "borderRadius": 8,
+                    "style": { "objectFit": "cover" }
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Image",
+                  "props": {
+                    "src": "https://images.unsplash.com/photo-1682687982501-1e58ab814714?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                    "width": "100%",
+                    "flex": 1,
+                    "borderRadius": 8,
+                    "style": { "objectFit": "cover" }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Image",
+              "props": {
+                "src": "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                "flex": 1,
+                "borderRadius": 8,
+                "style": { "objectFit": "cover" }
+              }
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 600, "color": "#FB5607" },
+          "content": "MULTIPLE IMAGES • GRID LAYOUT"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" },
+              "content": "Watchlist"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": { "name": "sf:plus.circle.fill", "size": 24, "color": "#34C759" }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 16,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "padding": 12,
+              "backgroundColor": "#1C1C1E",
+              "props": { "style": { "borderRadius": 16 } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "leaf", "component": "Icon", "props": { "name": "si:SiBitcoin", "size": 32, "color": "#F7931A" } },
+                    {
+                      "type": "container",
+                      "direction": "col",
+                      "children": [
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#FFFFFF" }, "content": "BTC" },
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93" }, "content": "$42,350" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Sparkline",
+                      "props": { "data": [41000, 41500, 41200, 42000, 41800, 42350], "color": "#34C759", "width": 60, "height": 24, "smooth": true }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": { "fontSize": 14, "fontWeight": 600, "color": "#34C759", "width": 50, "style": { "textAlign": "right" } },
+                      "content": "+3.2%"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "padding": 12,
+              "backgroundColor": "#1C1C1E",
+              "props": { "style": { "borderRadius": 16 } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "leaf", "component": "Icon", "props": { "name": "si:SiEthereum", "size": 32, "color": "#627EEA" } },
+                    {
+                      "type": "container",
+                      "direction": "col",
+                      "children": [
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#FFFFFF" }, "content": "ETH" },
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93" }, "content": "$2,240" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Sparkline",
+                      "props": { "data": [2300, 2280, 2260, 2250, 2245, 2240], "color": "#FF3B30", "width": 60, "height": 24, "smooth": true }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": { "fontSize": 14, "fontWeight": 600, "color": "#FF3B30", "width": 50, "style": { "textAlign": "right" } },
+                      "content": "-2.1%"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "padding": 12,
+              "backgroundColor": "#1C1C1E",
+              "props": { "style": { "borderRadius": 16 } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "leaf", "component": "Icon", "props": { "name": "si:SiSolana", "size": 32, "color": "#14F195" } },
+                    {
+                      "type": "container",
+                      "direction": "col",
+                      "children": [
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#FFFFFF" }, "content": "SOL" },
+                        { "type": "leaf", "component": "Text", "props": { "fontSize": 13, "color": "#8E8E93" }, "content": "$98.50" }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 12,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Sparkline",
+                      "props": { "data": [90, 92, 94, 93, 96, 98.5], "color": "#34C759", "width": 60, "height": 24, "smooth": true }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": { "fontSize": 14, "fontWeight": 600, "color": "#34C759", "width": 50, "style": { "textAlign": "right" } },
+                      "content": "+8.5%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

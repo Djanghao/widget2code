@@ -1,0 +1,57 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 0,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 0,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Image",
+          "flex": "none",
+          "props": {
+            "height": 120,
+            "url": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+            "borderRadius": 0
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "padding": 12,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000",
+                "fontWeight": 700
+              },
+              "content": "ON THIS DAY"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 15,
+                "color": "#666666"
+              },
+              "content": "June 7, 2020"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

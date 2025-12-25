@@ -1,0 +1,134 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 16,
+            "color": "#ffffff",
+            "fontWeight": 600
+          },
+          "content": "Shortcuts"
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignMain": "space-between",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 32,
+                    "color": "#007AFF",
+                    "name": "sf:house.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 32,
+                    "color": "#FF3B30",
+                    "name": "sf:heart.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 32,
+                    "color": "#34C759",
+                    "name": "sf:bubble.left.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 32,
+                    "color": "#FF9500",
+                    "name": "sf:gamecontroller.fill"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignMain": "space-between",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 32,
+                    "color": "#AF52DE",
+                    "name": "sf:music.note"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 32,
+                    "color": "#5AC8FA",
+                    "name": "sf:cloud.sun.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 32,
+                    "color": "#FFCC00",
+                    "name": "sf:bolt.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 32,
+                    "color": "#8E8E93",
+                    "name": "sf:ellipsis"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

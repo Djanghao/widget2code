@@ -1,0 +1,206 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 16,
+            "color": "#000000",
+            "fontWeight": 600,
+            "align": "center"
+          },
+          "content": "Circular Containers"
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": "none",
+              "width": 60,
+              "height": 60,
+              "borderRadius": 30,
+              "backgroundColor": "#FF3B30",
+              "alignMain": "center",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "name": "sf:heart.fill",
+                    "size": 28,
+                    "color": "#ffffff"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": "none",
+              "width": 60,
+              "height": 60,
+              "borderRadius": 30,
+              "backgroundColor": "#34C759",
+              "alignMain": "center",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "name": "sf:star.fill",
+                    "size": 28,
+                    "color": "#ffffff"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": "none",
+              "width": 60,
+              "height": 60,
+              "borderRadius": 30,
+              "backgroundColor": "#007AFF",
+              "alignMain": "center",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "name": "sf:bolt.fill",
+                    "size": 28,
+                    "color": "#ffffff"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": "none",
+              "width": 50,
+              "height": 50,
+              "borderRadius": 25,
+              "backgroundColor": "#FF9500",
+              "alignMain": "center",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#ffffff",
+                    "fontWeight": 700
+                  },
+                  "content": "A"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": "none",
+              "width": 50,
+              "height": 50,
+              "borderRadius": 25,
+              "backgroundColor": "#AF52DE",
+              "alignMain": "center",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#ffffff",
+                    "fontWeight": 700
+                  },
+                  "content": "B"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": "none",
+              "width": 50,
+              "height": 50,
+              "borderRadius": 25,
+              "backgroundColor": "#FF2D55",
+              "alignMain": "center",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#ffffff",
+                    "fontWeight": 700
+                  },
+                  "content": "C"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 12,
+            "color": "#8E8E93",
+            "align": "center"
+          },
+          "content": "Using borderRadius for circles"
+        }
+      ]
+    }
+  }
+}

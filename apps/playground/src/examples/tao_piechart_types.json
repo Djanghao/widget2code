@@ -1,0 +1,248 @@
+{
+  "widget": {
+    "backgroundColor": "#0F172A",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1.578,
+    "root": {
+      "type": "container",
+      "direction": "row",
+      "gap": 12,
+      "flex": 1,
+      "alignCross": "stretch",
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "justifyContent": "space-between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 10,
+                    "fontWeight": 700,
+                    "color": "#06B6D4",
+                    "letterSpacing": 1.2
+                  },
+                  "content": "MEDIA PORTFOLIO"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 20,
+                    "fontWeight": 800,
+                    "color": "#E0F2FE"
+                  },
+                  "content": "Content Mix"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 6,
+              "flex": 1,
+              "justifyContent": "flex-start",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 8,
+                      "height": 8,
+                      "backgroundColor": "#06B6D4",
+                      "borderRadius": 1,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#CFFAFE"
+                      },
+                      "content": "Videos"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#06B6D4"
+                      },
+                      "content": "35%"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 8,
+                      "height": 8,
+                      "backgroundColor": "#0EA5E9",
+                      "borderRadius": 1,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#CFFAFE"
+                      },
+                      "content": "Articles"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#0EA5E9"
+                      },
+                      "content": "28%"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 8,
+                      "height": 8,
+                      "backgroundColor": "#3B82F6",
+                      "borderRadius": 1,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#CFFAFE"
+                      },
+                      "content": "Podcasts"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#3B82F6"
+                      },
+                      "content": "22%"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 8,
+                      "height": 8,
+                      "backgroundColor": "#60A5FA",
+                      "borderRadius": 1,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#CFFAFE"
+                      },
+                      "content": "Webinars"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#60A5FA"
+                      },
+                      "content": "15%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 0,
+          "props": {
+            "data": [35, 28, 22, 15],
+            "labels": ["Videos", "Articles", "Podcasts", "Webinars"],
+            "colors": ["#06B6D4", "#0EA5E9", "#3B82F6", "#60A5FA"],
+            "theme": "dark",
+            "variant": "ring",
+            "innerRadius": 0.62,
+            "outerRadius": 82,
+            "showLabels": false,
+            "roundedSegments": false,
+            "segmentBorderRadius": 0,
+            "borderWidth": 4,
+            "borderColor": "#0F172A",
+            "startAngle": 120,
+            "clockwise": true,
+            "animated": true,
+            "animationDuration": 1200,
+            "emphasisScale": 1.05,
+            "height": 140,
+            "width": 140
+          }
+        }
+      ]
+    }
+  }
+}

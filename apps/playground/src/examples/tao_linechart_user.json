@@ -1,0 +1,244 @@
+{
+  "widget": {
+    "backgroundColor": "#F3F4F6",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1.432,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 0,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "flex-start",
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#7C3AED",
+                        "letterSpacing": 1.4
+                      },
+                      "content": "USER METRICS"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 22,
+                        "fontWeight": 800,
+                        "color": "#5B21B6"
+                      },
+                      "content": "Growth Acceleration"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 0,
+                  "backgroundColor": "#EDE9FE",
+                  "borderRadius": 10,
+                  "padding": 12,
+                  "width": 95,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 8,
+                        "color": "#6B21B6",
+                        "fontWeight": 700
+                      },
+                      "content": "PEAK"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 16,
+                        "fontWeight": 800,
+                        "color": "#7C3AED"
+                      },
+                      "content": "22.4K"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 1,
+                  "backgroundColor": "rgba(168, 85, 247, 0.1)",
+                  "borderRadius": 10,
+                  "padding": 10,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 8,
+                        "color": "#6B21B6",
+                        "fontWeight": 700
+                      },
+                      "content": "ACTIVE"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 13,
+                        "fontWeight": 800,
+                        "color": "#7C3AED"
+                      },
+                      "content": "18.2K"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 1,
+                  "backgroundColor": "rgba(168, 85, 247, 0.1)",
+                  "borderRadius": 10,
+                  "padding": 10,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 8,
+                        "color": "#6B21B6",
+                        "fontWeight": 700
+                      },
+                      "content": "PREMIUM"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 13,
+                        "fontWeight": 800,
+                        "color": "#7C3AED"
+                      },
+                      "content": "4.2K"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 1,
+                  "backgroundColor": "rgba(168, 85, 247, 0.1)",
+                  "borderRadius": 10,
+                  "padding": 10,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 8,
+                        "color": "#6B21B6",
+                        "fontWeight": 700
+                      },
+                      "content": "RETENTION"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 13,
+                        "fontWeight": 800,
+                        "color": "#7C3AED"
+                      },
+                      "content": "94%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "LineChart",
+          "flex": 1,
+          "props": {
+            "data": [[2400, 3800, 3500, 5600, 6200, 9100, 9800, 11500, 15200, 16800, 20500, 22400], [1800, 3100, 2900, 4500, 4800, 7200, 7800, 9500, 11500, 13800, 16200, 18200]],
+            "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "colors": ["#7C3AED", "#A78BFA"],
+            "seriesNames": ["Active Users", "Premium Users"],
+            "theme": "light",
+            "smooth": true,
+            "showArea": true,
+            "gradientIntensity": 0.30,
+            "gradientStartColor": "#C4B5FD",
+            "gradientEndColor": "#F3F4F6",
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showXAxisTicks": true,
+            "showYAxisTicks": true,
+            "tickLineColor": "rgba(124, 58, 237, 0.1)",
+            "tickLineStyle": "solid",
+            "tickLineWidth": 0.6,
+            "showMarkers": true,
+            "markerStyle": "triangle",
+            "markerSize": 6,
+            "markerColor": "#7C3AED",
+            "markerBorderColor": "#FFFFFF",
+            "markerBorderWidth": 0,
+            "showYTrendline": true,
+            "yTrendlinePosition": 0.75,
+            "yTrendlineColor": "#EC4899",
+            "yTrendlineStyle": "dotted",
+            "yTrendlineWidth": 1.5,
+            "yTrendlineLabel": "Current",
+            "yAxisLabelPosition": "right",
+            "height": 140
+          }
+        }
+      ]
+    }
+  }
+}

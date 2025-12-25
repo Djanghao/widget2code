@@ -1,0 +1,65 @@
+{
+  "$schema": "./runner-config.schema.json",
+  "description": "Batch 2 of 3 - More Components and Minimalist styles",
+  "runners": [
+    {
+      "name": "more-components-completed",
+      "port": 8015,
+      "promptPreset": "more-components",
+      "domains": [
+        "weather"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": false,
+        "useDynamic": false,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "more-components-incomplete",
+      "port": 8016,
+      "promptPreset": "more-components",
+      "domains": [
+        "travel"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "minimalist-completed",
+      "port": 8017,
+      "promptPreset": "minimalist",
+      "domains": [
+        "productivity"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": true,
+        "useDynamic": false,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "minimalist-incomplete",
+      "port": 8018,
+      "promptPreset": "minimalist",
+      "domains": [
+        "food"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    }
+  ],
+  "globalOptions": {
+    "referenceImagesDir": null,
+    "imageUrlsDir": "./scripts/synthesis/descriptions/image-urls",
+    "referencesPerDescription": 2
+  }
+}

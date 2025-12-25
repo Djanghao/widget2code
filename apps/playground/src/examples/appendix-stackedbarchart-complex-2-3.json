@@ -1,0 +1,53 @@
+{
+  "widget": {
+    "backgroundColor": "#21D4FD",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 20,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.4)", "backdropFilter": "blur(18px)", "borderRadius": 20, "border": "1px solid rgba(255, 255, 255, 0.5)" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "StackedBarChart",
+              "flex": 1,
+              "props": {
+                "data": [
+                  [50, 40, 35],
+                  [30, 25, 20],
+                  [15, 12, 10]
+                ],
+                "labels": ["iOS", "Android", "Web"],
+                "colors": ["rgba(255,255,255,1)", "rgba(255,255,255,0.7)", "rgba(255,255,255,0.4)"],
+                "theme": "light",
+                "orientation": "horizontal",
+                "barBorderRadius": 0,
+                "showXAxisLabels": false,
+                "showYAxisLabels": true,
+                "height": 160
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "center",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#FFFFFF", "textAlign": "center", "style": { "textShadow": "0 2px 4px rgba(0,0,0,0.15)" } }, "content": "Platform Mix" }
+          ]
+        }
+      ]
+    }
+  }
+}

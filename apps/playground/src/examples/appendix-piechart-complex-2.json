@@ -1,0 +1,138 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 32,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 22, "fontWeight": 700, "color": "#000000" }, "content": "Portfolio" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "Asset Allocation" }
+              ]
+            },
+            {
+              "type": "container",
+              "padding": 8,
+              "backgroundColor": "#F2F2F7",
+              "props": { "style": { "borderRadius": 12 } },
+              "children": [
+                { "type": "leaf", "component": "Icon", "props": { "name": "sf:chart.pie.fill", "size": 20, "color": "#007AFF" } }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "props": {
+                "data": [45, 25, 15, 10, 5],
+                "colors": ["#007AFF", "#34C759", "#FF9500", "#FF3B30", "#AF52DE"],
+                "innerRadius": 0.6,
+                "padAngle": 2,
+                "cornerRadius": 4,
+                "height": "100%"
+              }
+            },
+            {
+              "type": "container",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "top": "50%",
+                  "left": "50%",
+                  "transform": "translate(-50%, -50%)",
+                  "textAlign": "center"
+                }
+              },
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 24, "fontWeight": 700, "color": "#000000" }, "content": "$124k" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93" }, "content": "Total Value" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "container", "width": 8, "height": 8, "backgroundColor": "#007AFF", "props": { "style": { "borderRadius": 4 } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "Stocks" }
+                  ]
+                },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "45%" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "container", "width": 8, "height": 8, "backgroundColor": "#34C759", "props": { "style": { "borderRadius": 4 } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "Crypto" }
+                  ]
+                },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "25%" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 8,
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "container", "width": 8, "height": 8, "backgroundColor": "#FF9500", "props": { "style": { "borderRadius": 4 } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "Real Estate" }
+                  ]
+                },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "15%" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

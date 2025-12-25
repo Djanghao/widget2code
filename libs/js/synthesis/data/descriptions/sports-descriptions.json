@@ -1,0 +1,109 @@
+{
+  "domain": "sports",
+  "descriptions": [
+    {
+      "id": "sports-001",
+      "prompt": "A widget showing live game score",
+      "complexity": "medium",
+      "metrics": [
+        "score"
+      ]
+    },
+    {
+      "id": "sports-002",
+      "prompt": "A widget displaying recent game results",
+      "complexity": "medium",
+      "metrics": [
+        "scores"
+      ]
+    },
+    {
+      "id": "sports-003",
+      "prompt": "A widget showing upcoming games",
+      "complexity": "medium",
+      "metrics": [
+        "schedule"
+      ]
+    },
+    {
+      "id": "sports-004",
+      "prompt": "A widget showing team standings",
+      "complexity": "complex",
+      "metrics": [
+        "standings"
+      ]
+    },
+    {
+      "id": "sports-005",
+      "prompt": "A widget displaying league table",
+      "complexity": "complex",
+      "metrics": [
+        "league"
+      ]
+    },
+    {
+      "id": "sports-006",
+      "prompt": "A widget showing team stats",
+      "complexity": "complex",
+      "metrics": [
+        "stats"
+      ]
+    },
+    {
+      "id": "sports-007",
+      "prompt": "A widget showing player statistics",
+      "complexity": "medium",
+      "metrics": [
+        "player"
+      ]
+    },
+    {
+      "id": "sports-008",
+      "prompt": "A widget displaying fantasy points",
+      "complexity": "medium",
+      "metrics": [
+        "fantasy"
+      ]
+    },
+    {
+      "id": "sports-009",
+      "prompt": "A widget showing live match updates",
+      "complexity": "complex",
+      "metrics": [
+        "live"
+      ]
+    },
+    {
+      "id": "sports-010",
+      "prompt": "A widget displaying game clock and score",
+      "complexity": "medium",
+      "metrics": [
+        "live"
+      ]
+    },
+    {
+      "id": "sports-011",
+      "prompt": "A widget showing workout stats",
+      "complexity": "medium",
+      "metrics": [
+        "workout"
+      ]
+    },
+    {
+      "id": "sports-012",
+      "prompt": "A widget displaying running distance and pace",
+      "complexity": "medium",
+      "metrics": [
+        "running"
+      ]
+    },
+    {
+      "id": "sports-013",
+      "prompt": "A widget showing cycling stats",
+      "complexity": "medium",
+      "metrics": [
+        "cycling"
+      ]
+    }
+  ]
+}

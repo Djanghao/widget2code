@@ -1,0 +1,57 @@
+{
+  "widget": {
+    "backgroundColor": "rgba(255, 255, 255, 0.1)",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 22, "fontWeight": 700, "color": "rgba(255, 255, 255, 0.95)" },
+          "content": "Skills Matrix"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 500, "color": "rgba(255, 255, 255, 0.7)" },
+          "content": "Multi-series comparison"
+        },
+        {
+          "type": "leaf",
+          "component": "RadarChart",
+          "flex": 1,
+          "props": {
+            "data": [
+              [82, 75, 88, 91, 78, 85],
+              [68, 92, 75, 82, 88, 79]
+            ],
+            "labels": ["React", "Node", "Python", "Design", "Testing", "DevOps"],
+            "colors": ["rgba(139, 92, 246, 0.8)", "rgba(236, 72, 153, 0.8)"],
+            "seriesNames": ["Frontend", "Backend"],
+            "radarShape": "polygon",
+            "splitNumber": 5,
+            "smooth": true,
+            "backgroundColor": "transparent",
+            "areaOpacity": 0.3,
+            "lineWidth": 2.5,
+            "showPoints": true,
+            "pointSize": 6,
+            "showLegend": true,
+            "legendPosition": "bottom",
+            "gridColor": "rgba(255, 255, 255, 0.12)",
+            "splitLineStyle": "solid",
+            "axisLineStyle": "dashed",
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

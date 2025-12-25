@@ -1,0 +1,92 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "linear-gradient(to right, #000000, #0f0f0f)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "MODULES" },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:cpu", "size": 20, "color": "#00FF9D" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "direction": "col",
+          "gap": 16,
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "props": {
+                    "checked": true,
+                    "color": "#00FF9D",
+                    "size": 24,
+                    "style": { "borderRadius": 0, "border": "1px solid #00FF9D" }
+                  }
+                },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "NEURAL_LINK" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "props": {
+                    "checked": false,
+                    "color": "#FF0055",
+                    "size": 24,
+                    "style": { "borderRadius": 0, "border": "1px solid #FF0055" }
+                  }
+                },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#FF0055", "fontFamily": "monospace" }, "content": "FIREWALL" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "props": {
+                    "checked": true,
+                    "color": "#00E5FF",
+                    "size": 24,
+                    "style": { "borderRadius": 0, "border": "1px solid #00E5FF" }
+                  }
+                },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#00E5FF", "fontFamily": "monospace" }, "content": "DATA_SYNC" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

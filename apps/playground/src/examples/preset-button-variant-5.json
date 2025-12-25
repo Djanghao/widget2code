@@ -1,0 +1,94 @@
+{
+  "widget": {
+    "backgroundColor": "#16171D",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "stretch",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "Submit",
+            "backgroundColor": "#3B82F6",
+            "color": "#FFFFFF",
+            "borderRadius": 10,
+            "paddingY": 14,
+            "paddingX": 24,
+            "fontSize": 16,
+            "fontWeight": 600,
+            "width": "100%"
+          }
+        },
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "Reset",
+            "backgroundColor": "#2E3039",
+            "color": "#A0A0AB",
+            "borderRadius": 10,
+            "paddingY": 14,
+            "paddingX": 24,
+            "fontSize": 16,
+            "fontWeight": 600,
+            "width": "100%"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:gear",
+                "backgroundColor": "#2E3039",
+                "color": "#A0A0AB",
+                "borderRadius": 10,
+                "width": 48,
+                "height": 48,
+                "padding": 0
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:bell",
+                "backgroundColor": "#2E3039",
+                "color": "#A0A0AB",
+                "borderRadius": 10,
+                "width": 48,
+                "height": 48,
+                "padding": 0
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:person",
+                "backgroundColor": "#2E3039",
+                "color": "#A0A0AB",
+                "borderRadius": 10,
+                "width": 48,
+                "height": 48,
+                "padding": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

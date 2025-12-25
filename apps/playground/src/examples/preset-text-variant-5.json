@@ -1,0 +1,48 @@
+{
+  "widget": {
+    "backgroundColor": "#0D1117",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "start",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 38,
+            "fontWeight": 700,
+            "color": "#C9D1D9"
+          },
+          "content": "Dark Mode"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 17,
+            "fontWeight": 500,
+            "color": "#8B949E"
+          },
+          "content": "Easy on the eyes"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "#6E7681"
+          },
+          "content": "Perfect for night coding sessions"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "Primary Action",
+            "backgroundColor": "#007AFF",
+            "color": "#FFFFFF",
+            "borderRadius": 12,
+            "paddingY": 12,
+            "paddingX": 24,
+            "fontSize": 17,
+            "fontWeight": 600,
+            "width": "100%"
+          }
+        },
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "Secondary",
+            "backgroundColor": "#E5E5EA",
+            "color": "#007AFF",
+            "borderRadius": 12,
+            "paddingY": 12,
+            "paddingX": 24,
+            "fontSize": 17,
+            "fontWeight": 500,
+            "width": "100%"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:heart.fill",
+                "backgroundColor": "#FF2D55",
+                "color": "#FFFFFF",
+                "borderRadius": 22,
+                "width": 44,
+                "height": 44,
+                "padding": 0
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:square.and.arrow.up",
+                "backgroundColor": "#E5E5EA",
+                "color": "#007AFF",
+                "borderRadius": 22,
+                "width": 44,
+                "height": 44,
+                "padding": 0
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

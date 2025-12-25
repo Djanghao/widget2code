@@ -1,0 +1,55 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 18, "fontWeight": 600, "color": "#1C1C1E" },
+              "content": "Gallery"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": { "name": "pi:PiHeart", "size": 24, "color": "#FF3B30" }
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Image",
+          "props": {
+            "src": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            "width": "100%",
+            "height": "auto",
+            "aspectRatio": 1.5,
+            "borderRadius": 12,
+            "style": {
+              "objectFit": "cover",
+              "boxShadow": "0 4px 16px rgba(0,0,0,0.12)"
+            }
+          }
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 500, "color": "#8E8E93" },
+          "content": "CONTAIN • ROUNDED • SHADOW"
+        }
+      ]
+    }
+  }
+}

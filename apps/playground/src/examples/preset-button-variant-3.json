@@ -1,0 +1,102 @@
+{
+  "widget": {
+    "backgroundColor": "rgba(30, 30, 46, 0.8)",
+    "borderRadius": 24,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "stretch",
+      "props": {
+        "style": {
+          "backdropFilter": "blur(20px)"
+        }
+      },
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "Start",
+            "icon": "sf:play.fill",
+            "backgroundColor": "rgba(255, 255, 255, 0.15)",
+            "color": "#FFFFFF",
+            "borderRadius": 16,
+            "paddingY": 15,
+            "paddingX": 26,
+            "fontSize": 16,
+            "fontWeight": 600,
+            "width": "100%",
+            "style": {
+              "backdropFilter": "blur(10px)",
+              "border": "1px solid rgba(255, 255, 255, 0.2)"
+            }
+          }
+        },
+        {
+          "type": "leaf",
+          "component": "Button",
+          "props": {
+            "content": "Pause",
+            "icon": "sf:pause.fill",
+            "backgroundColor": "rgba(255, 255, 255, 0.1)",
+            "color": "rgba(255, 255, 255, 0.9)",
+            "borderRadius": 16,
+            "paddingY": 15,
+            "paddingX": 26,
+            "fontSize": 16,
+            "fontWeight": 600,
+            "width": "100%",
+            "style": {
+              "backdropFilter": "blur(10px)",
+              "border": "1px solid rgba(255, 255, 255, 0.15)"
+            }
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:backward.fill",
+                "backgroundColor": "rgba(255, 255, 255, 0.12)",
+                "color": "#FFFFFF",
+                "borderRadius": 14,
+                "width": 50,
+                "height": 50,
+                "padding": 0,
+                "style": {
+                  "backdropFilter": "blur(10px)"
+                }
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:forward.fill",
+                "backgroundColor": "rgba(255, 255, 255, 0.12)",
+                "color": "#FFFFFF",
+                "borderRadius": 14,
+                "width": 50,
+                "height": 50,
+                "padding": 0,
+                "style": {
+                  "backdropFilter": "blur(10px)"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@widget-factory/validator",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./index.js": "./src/index.js"
+  },
+  "description": "Widget validation utilities",
+  "keywords": [
+    "widget",
+    "validator",
+    "validation"
+  ],
+  "dependencies": {
+    "@widget-factory/resizer": "*",
+    "@widget-factory/primitives": "*"
+  },
+  "private": true
+}

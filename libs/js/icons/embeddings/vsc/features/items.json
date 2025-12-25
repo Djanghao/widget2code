@@ -1,0 +1,5037 @@
+[
+  {
+    "src_svg": "vsc/VscAccount.svg",
+    "component_id": "vsc:VscAccount",
+    "aliases": [
+      "vsc",
+      "account"
+    ],
+    "caption": "a black and white image of a person in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscActivateBreakpoints.svg",
+    "component_id": "vsc:VscActivateBreakpoints",
+    "aliases": [
+      "vsc",
+      "activate",
+      "breakpoints"
+    ],
+    "caption": "a black and white icon of a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscAdd.svg",
+    "component_id": "vsc:VscAdd",
+    "aliases": [
+      "vsc",
+      "add"
+    ],
+    "caption": "a black cross is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArchive.svg",
+    "component_id": "vsc:VscArchive",
+    "aliases": [
+      "vsc",
+      "archive"
+    ],
+    "caption": "a black and white icon of a box on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowBoth.svg",
+    "component_id": "vsc:VscArrowBoth",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "both"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowCircleDown.svg",
+    "component_id": "vsc:VscArrowCircleDown",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "circle",
+      "down"
+    ],
+    "caption": "a black and white image of a down arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowCircleLeft.svg",
+    "component_id": "vsc:VscArrowCircleLeft",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "circle",
+      "left"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowCircleRight.svg",
+    "component_id": "vsc:VscArrowCircleRight",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "circle",
+      "right"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowCircleUp.svg",
+    "component_id": "vsc:VscArrowCircleUp",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "circle",
+      "up"
+    ],
+    "caption": "a black and white arrow pointing up in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowDown.svg",
+    "component_id": "vsc:VscArrowDown",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "down"
+    ],
+    "caption": "an arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowLeft.svg",
+    "component_id": "vsc:VscArrowLeft",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "left"
+    ],
+    "caption": "an arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowRight.svg",
+    "component_id": "vsc:VscArrowRight",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "right"
+    ],
+    "caption": "an arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowSmallDown.svg",
+    "component_id": "vsc:VscArrowSmallDown",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "small",
+      "down"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowSmallLeft.svg",
+    "component_id": "vsc:VscArrowSmallLeft",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "small",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowSmallRight.svg",
+    "component_id": "vsc:VscArrowSmallRight",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "small",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowSmallUp.svg",
+    "component_id": "vsc:VscArrowSmallUp",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "small",
+      "up"
+    ],
+    "caption": "a black arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowSwap.svg",
+    "component_id": "vsc:VscArrowSwap",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "swap"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscArrowUp.svg",
+    "component_id": "vsc:VscArrowUp",
+    "aliases": [
+      "vsc",
+      "arrow",
+      "up"
+    ],
+    "caption": "an arrow pointing up is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscAttach.svg",
+    "component_id": "vsc:VscAttach",
+    "aliases": [
+      "vsc",
+      "attach"
+    ],
+    "caption": "a black and white image of a paper clip",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscAzure.svg",
+    "component_id": "vsc:VscAzure",
+    "aliases": [
+      "vsc",
+      "azure"
+    ],
+    "caption": "a black and white logo with the letter a",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscAzureDevops.svg",
+    "component_id": "vsc:VscAzureDevops",
+    "aliases": [
+      "vsc",
+      "azure",
+      "devops"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBeaker.svg",
+    "component_id": "vsc:VscBeaker",
+    "aliases": [
+      "vsc",
+      "beaker"
+    ],
+    "caption": "a black and white illustration of a test tube",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBeakerStop.svg",
+    "component_id": "vsc:VscBeakerStop",
+    "aliases": [
+      "vsc",
+      "beaker",
+      "stop"
+    ],
+    "caption": "a black and white image of a test tube with a sign saying no",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBell.svg",
+    "component_id": "vsc:VscBell",
+    "aliases": [
+      "vsc",
+      "bell"
+    ],
+    "caption": "a bell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBellDot.svg",
+    "component_id": "vsc:VscBellDot",
+    "aliases": [
+      "vsc",
+      "bell",
+      "dot"
+    ],
+    "caption": "a bell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBellSlash.svg",
+    "component_id": "vsc:VscBellSlash",
+    "aliases": [
+      "vsc",
+      "bell",
+      "slash"
+    ],
+    "caption": "a no bell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBellSlashDot.svg",
+    "component_id": "vsc:VscBellSlashDot",
+    "aliases": [
+      "vsc",
+      "bell",
+      "slash",
+      "dot"
+    ],
+    "caption": "a black and white icon of a bell and a spoon",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBlank.svg",
+    "component_id": "vsc:VscBlank",
+    "aliases": [
+      "vsc",
+      "blank"
+    ],
+    "caption": "read the full script on line",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBold.svg",
+    "component_id": "vsc:VscBold",
+    "aliases": [
+      "vsc",
+      "bold"
+    ],
+    "caption": "a black letter b on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBook.svg",
+    "component_id": "vsc:VscBook",
+    "aliases": [
+      "vsc",
+      "book"
+    ],
+    "caption": "an open book icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBookmark.svg",
+    "component_id": "vsc:VscBookmark",
+    "aliases": [
+      "vsc",
+      "bookmark"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBracketDot.svg",
+    "component_id": "vsc:VscBracketDot",
+    "aliases": [
+      "vsc",
+      "bracket",
+      "dot"
+    ],
+    "caption": "a black and white icon of a ball and a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBracketError.svg",
+    "component_id": "vsc:VscBracketError",
+    "aliases": [
+      "vsc",
+      "bracket",
+      "error"
+    ],
+    "caption": "an image of a black and white icon with an x in it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBriefcase.svg",
+    "component_id": "vsc:VscBriefcase",
+    "aliases": [
+      "vsc",
+      "briefcase"
+    ],
+    "caption": "a briefcase icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBroadcast.svg",
+    "component_id": "vsc:VscBroadcast",
+    "aliases": [
+      "vsc",
+      "broadcast"
+    ],
+    "caption": "a black and white icon of a person with a microphone",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBrowser.svg",
+    "component_id": "vsc:VscBrowser",
+    "aliases": [
+      "vsc",
+      "browser"
+    ],
+    "caption": "a black and white icon of a web browser",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscBug.svg",
+    "component_id": "vsc:VscBug",
+    "aliases": [
+      "vsc",
+      "bug"
+    ],
+    "caption": "a black and white icon of a bug with a lock",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCalendar.svg",
+    "component_id": "vsc:VscCalendar",
+    "aliases": [
+      "vsc",
+      "calendar"
+    ],
+    "caption": "a calendar icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCallIncoming.svg",
+    "component_id": "vsc:VscCallIncoming",
+    "aliases": [
+      "vsc",
+      "call",
+      "incoming"
+    ],
+    "caption": "a phone icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCallOutgoing.svg",
+    "component_id": "vsc:VscCallOutgoing",
+    "aliases": [
+      "vsc",
+      "call",
+      "outgoing"
+    ],
+    "caption": "a phone icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCaseSensitive.svg",
+    "component_id": "vsc:VscCaseSensitive",
+    "aliases": [
+      "vsc",
+      "case",
+      "sensitive"
+    ],
+    "caption": "a black and white image of the letter a",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCheck.svg",
+    "component_id": "vsc:VscCheck",
+    "aliases": [
+      "vsc",
+      "check"
+    ],
+    "caption": "a black check mark on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCheckAll.svg",
+    "component_id": "vsc:VscCheckAll",
+    "aliases": [
+      "vsc",
+      "check",
+      "all"
+    ],
+    "caption": "a black and white image of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscChecklist.svg",
+    "component_id": "vsc:VscChecklist",
+    "aliases": [
+      "vsc",
+      "checklist"
+    ],
+    "caption": "checklist icon vector illustration ilustração",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscChevronDown.svg",
+    "component_id": "vsc:VscChevronDown",
+    "aliases": [
+      "vsc",
+      "chevron",
+      "down"
+    ],
+    "caption": "a black and white image of the letter v",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscChevronLeft.svg",
+    "component_id": "vsc:VscChevronLeft",
+    "aliases": [
+      "vsc",
+      "chevron",
+      "left"
+    ],
+    "caption": "a black and white image of the letter k",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscChevronRight.svg",
+    "component_id": "vsc:VscChevronRight",
+    "aliases": [
+      "vsc",
+      "chevron",
+      "right"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscChevronUp.svg",
+    "component_id": "vsc:VscChevronUp",
+    "aliases": [
+      "vsc",
+      "chevron",
+      "up"
+    ],
+    "caption": "a black and white image of a triangle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscChip.svg",
+    "component_id": "vsc:VscChip",
+    "aliases": [
+      "vsc",
+      "chip"
+    ],
+    "caption": "an image of a computer chip on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscChromeClose.svg",
+    "component_id": "vsc:VscChromeClose",
+    "aliases": [
+      "vsc",
+      "chrome",
+      "close"
+    ],
+    "caption": "a black and white cross on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscChromeMaximize.svg",
+    "component_id": "vsc:VscChromeMaximize",
+    "aliases": [
+      "vsc",
+      "chrome",
+      "maximize"
+    ],
+    "caption": "a black square on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscChromeMinimize.svg",
+    "component_id": "vsc:VscChromeMinimize",
+    "aliases": [
+      "vsc",
+      "chrome",
+      "minimize"
+    ],
+    "caption": "a black and white image of a black and white line",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscChromeRestore.svg",
+    "component_id": "vsc:VscChromeRestore",
+    "aliases": [
+      "vsc",
+      "chrome",
+      "restore"
+    ],
+    "caption": "two square black rectangles on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCircle.svg",
+    "component_id": "vsc:VscCircle",
+    "aliases": [
+      "vsc",
+      "circle"
+    ],
+    "caption": "a black circle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCircleFilled.svg",
+    "component_id": "vsc:VscCircleFilled",
+    "aliases": [
+      "vsc",
+      "circle",
+      "filled"
+    ],
+    "caption": "a black circle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCircleLarge.svg",
+    "component_id": "vsc:VscCircleLarge",
+    "aliases": [
+      "vsc",
+      "circle",
+      "large"
+    ],
+    "caption": "a black circle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCircleLargeFilled.svg",
+    "component_id": "vsc:VscCircleLargeFilled",
+    "aliases": [
+      "vsc",
+      "circle",
+      "large",
+      "filled"
+    ],
+    "caption": "a black circle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCircleSlash.svg",
+    "component_id": "vsc:VscCircleSlash",
+    "aliases": [
+      "vsc",
+      "circle",
+      "slash"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCircleSmall.svg",
+    "component_id": "vsc:VscCircleSmall",
+    "aliases": [
+      "vsc",
+      "circle",
+      "small"
+    ],
+    "caption": "a black circle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCircleSmallFilled.svg",
+    "component_id": "vsc:VscCircleSmallFilled",
+    "aliases": [
+      "vsc",
+      "circle",
+      "small",
+      "filled"
+    ],
+    "caption": "a black circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCircuitBoard.svg",
+    "component_id": "vsc:VscCircuitBoard",
+    "aliases": [
+      "vsc",
+      "circuit",
+      "board"
+    ],
+    "caption": "a black and white icon with two circles in it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscClearAll.svg",
+    "component_id": "vsc:VscClearAll",
+    "aliases": [
+      "vsc",
+      "clear",
+      "all"
+    ],
+    "caption": "a black and white image of an x and a cross",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscClippy.svg",
+    "component_id": "vsc:VscClippy",
+    "aliases": [
+      "vsc",
+      "clippy"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscClose.svg",
+    "component_id": "vsc:VscClose",
+    "aliases": [
+      "vsc",
+      "close"
+    ],
+    "caption": "a black and white cross on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCloseAll.svg",
+    "component_id": "vsc:VscCloseAll",
+    "aliases": [
+      "vsc",
+      "close",
+      "all"
+    ],
+    "caption": "a black and white icon with an x and a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCloud.svg",
+    "component_id": "vsc:VscCloud",
+    "aliases": [
+      "vsc",
+      "cloud"
+    ],
+    "caption": "a black cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCloudDownload.svg",
+    "component_id": "vsc:VscCloudDownload",
+    "aliases": [
+      "vsc",
+      "cloud",
+      "download"
+    ],
+    "caption": "a black cloud with an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCloudUpload.svg",
+    "component_id": "vsc:VscCloudUpload",
+    "aliases": [
+      "vsc",
+      "cloud",
+      "upload"
+    ],
+    "caption": "a black cloud with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCode.svg",
+    "component_id": "vsc:VscCode",
+    "aliases": [
+      "vsc",
+      "code"
+    ],
+    "caption": "a black and white image of a code symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCodeOss.svg",
+    "component_id": "vsc:VscCodeOss",
+    "aliases": [
+      "vsc",
+      "code",
+      "oss"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCodeReview.svg",
+    "component_id": "vsc:VscCodeReview",
+    "aliases": [
+      "vsc",
+      "code",
+      "review"
+    ],
+    "caption": "a black and white icon of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCoffee.svg",
+    "component_id": "vsc:VscCoffee",
+    "aliases": [
+      "vsc",
+      "coffee"
+    ],
+    "caption": "a black and white icon of a cup of coffee",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCollapseAll.svg",
+    "component_id": "vsc:VscCollapseAll",
+    "aliases": [
+      "vsc",
+      "collapse",
+      "all"
+    ],
+    "caption": "a black and white icon of two squares",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscColorMode.svg",
+    "component_id": "vsc:VscColorMode",
+    "aliases": [
+      "vsc",
+      "color",
+      "mode"
+    ],
+    "caption": "a black and white circle with a half moon in it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCombine.svg",
+    "component_id": "vsc:VscCombine",
+    "aliases": [
+      "vsc",
+      "combine"
+    ],
+    "caption": "a black and white image of an arrow pointing to two numbers",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscComment.svg",
+    "component_id": "vsc:VscComment",
+    "aliases": [
+      "vsc",
+      "comment"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCommentDiscussion.svg",
+    "component_id": "vsc:VscCommentDiscussion",
+    "aliases": [
+      "vsc",
+      "comment",
+      "discussion"
+    ],
+    "caption": "a black and white image of two speech bubbles",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCommentDraft.svg",
+    "component_id": "vsc:VscCommentDraft",
+    "aliases": [
+      "vsc",
+      "comment",
+      "draft"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCommentUnresolved.svg",
+    "component_id": "vsc:VscCommentUnresolved",
+    "aliases": [
+      "vsc",
+      "comment",
+      "unresolved"
+    ],
+    "caption": "a black and white icon of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCompass.svg",
+    "component_id": "vsc:VscCompass",
+    "aliases": [
+      "vsc",
+      "compass"
+    ],
+    "caption": "a compass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCompassActive.svg",
+    "component_id": "vsc:VscCompassActive",
+    "aliases": [
+      "vsc",
+      "compass",
+      "active"
+    ],
+    "caption": "a black and white image of a compass with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCompassDot.svg",
+    "component_id": "vsc:VscCompassDot",
+    "aliases": [
+      "vsc",
+      "compass",
+      "dot"
+    ],
+    "caption": "a black and white icon of a compass and ball",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCopilot.svg",
+    "component_id": "vsc:VscCopilot",
+    "aliases": [
+      "vsc",
+      "copilot"
+    ],
+    "caption": "a black and white icon of a pig wearing goggles",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCopilotWarning.svg",
+    "component_id": "vsc:VscCopilotWarning",
+    "aliases": [
+      "vsc",
+      "copilot",
+      "warning"
+    ],
+    "caption": "a black and white image of a person with an exclamation sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCopy.svg",
+    "component_id": "vsc:VscCopy",
+    "aliases": [
+      "vsc",
+      "copy"
+    ],
+    "caption": "a file icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCoverage.svg",
+    "component_id": "vsc:VscCoverage",
+    "aliases": [
+      "vsc",
+      "coverage"
+    ],
+    "caption": "a black and white check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscCreditCard.svg",
+    "component_id": "vsc:VscCreditCard",
+    "aliases": [
+      "vsc",
+      "credit",
+      "card"
+    ],
+    "caption": "a credit card icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDash.svg",
+    "component_id": "vsc:VscDash",
+    "aliases": [
+      "vsc",
+      "dash"
+    ],
+    "caption": "a black and white photo of a person standing in front of a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDashboard.svg",
+    "component_id": "vsc:VscDashboard",
+    "aliases": [
+      "vsc",
+      "dashboard"
+    ],
+    "caption": "a black and white image of a speedometer",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDatabase.svg",
+    "component_id": "vsc:VscDatabase",
+    "aliases": [
+      "vsc",
+      "database"
+    ],
+    "caption": "a black and white icon of a can",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebug.svg",
+    "component_id": "vsc:VscDebug",
+    "aliases": [
+      "vsc",
+      "debug"
+    ],
+    "caption": "a black and white icon of a padlock with a cross",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugAll.svg",
+    "component_id": "vsc:VscDebugAll",
+    "aliases": [
+      "vsc",
+      "debug",
+      "all"
+    ],
+    "caption": "a black and white icon of a spider and arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugAlt.svg",
+    "component_id": "vsc:VscDebugAlt",
+    "aliases": [
+      "vsc",
+      "debug",
+      "alt"
+    ],
+    "caption": "a black and white icon of a spider and a arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugAltSmall.svg",
+    "component_id": "vsc:VscDebugAltSmall",
+    "aliases": [
+      "vsc",
+      "debug",
+      "alt",
+      "small"
+    ],
+    "caption": "a black and white icon of a spider and an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugBreakpointConditional.svg",
+    "component_id": "vsc:VscDebugBreakpointConditional",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "conditional"
+    ],
+    "caption": "a black and white equal sign in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugBreakpointConditionalUnverified.svg",
+    "component_id": "vsc:VscDebugBreakpointConditionalUnverified",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "conditional",
+      "unverified"
+    ],
+    "caption": "a black and white equal sign in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugBreakpointData.svg",
+    "component_id": "vsc:VscDebugBreakpointData",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "data"
+    ],
+    "caption": "a black hexagon is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugBreakpointDataUnverified.svg",
+    "component_id": "vsc:VscDebugBreakpointDataUnverified",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "data",
+      "unverified"
+    ],
+    "caption": "a black hexagon is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugBreakpointFunction.svg",
+    "component_id": "vsc:VscDebugBreakpointFunction",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "function"
+    ],
+    "caption": "a black triangle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugBreakpointFunctionUnverified.svg",
+    "component_id": "vsc:VscDebugBreakpointFunctionUnverified",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "function",
+      "unverified"
+    ],
+    "caption": "a triangle is shown in black on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugBreakpointLog.svg",
+    "component_id": "vsc:VscDebugBreakpointLog",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "log"
+    ],
+    "caption": "a black square is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugBreakpointLogUnverified.svg",
+    "component_id": "vsc:VscDebugBreakpointLogUnverified",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "log",
+      "unverified"
+    ],
+    "caption": "a black and white square with a diamond in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugBreakpointUnsupported.svg",
+    "component_id": "vsc:VscDebugBreakpointUnsupported",
+    "aliases": [
+      "vsc",
+      "debug",
+      "breakpoint",
+      "unsupported"
+    ],
+    "caption": "a black and white image of an exclamation sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugConsole.svg",
+    "component_id": "vsc:VscDebugConsole",
+    "aliases": [
+      "vsc",
+      "debug",
+      "console"
+    ],
+    "caption": "a black and white icon of a computer and a spider",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugContinue.svg",
+    "component_id": "vsc:VscDebugContinue",
+    "aliases": [
+      "vsc",
+      "debug",
+      "continue"
+    ],
+    "caption": "a black and white image of the letter d",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugContinueSmall.svg",
+    "component_id": "vsc:VscDebugContinueSmall",
+    "aliases": [
+      "vsc",
+      "debug",
+      "continue",
+      "small"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugCoverage.svg",
+    "component_id": "vsc:VscDebugCoverage",
+    "aliases": [
+      "vsc",
+      "debug",
+      "coverage"
+    ],
+    "caption": "an arrow pointing to a light bulb icon",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugDisconnect.svg",
+    "component_id": "vsc:VscDebugDisconnect",
+    "aliases": [
+      "vsc",
+      "debug",
+      "disconnect"
+    ],
+    "caption": "a black and white icon of a pair of scissors",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugLineByLine.svg",
+    "component_id": "vsc:VscDebugLineBy",
+    "aliases": [
+      "vsc",
+      "debug",
+      "line",
+      "by"
+    ],
+    "caption": "a black and white icon of a video player",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugPause.svg",
+    "component_id": "vsc:VscDebugPause",
+    "aliases": [
+      "vsc",
+      "debug",
+      "pause"
+    ],
+    "caption": "a black and white image of the letter h",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugRerun.svg",
+    "component_id": "vsc:VscDebugRerun",
+    "aliases": [
+      "vsc",
+      "debug",
+      "rerun"
+    ],
+    "caption": "a black arrow pointing in the direction of the arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugRestart.svg",
+    "component_id": "vsc:VscDebugRestart",
+    "aliases": [
+      "vsc",
+      "debug",
+      "restart"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugRestartFrame.svg",
+    "component_id": "vsc:VscDebugRestartFrame",
+    "aliases": [
+      "vsc",
+      "debug",
+      "restart",
+      "frame"
+    ],
+    "caption": "a black and white logo with an arrow in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugReverseContinue.svg",
+    "component_id": "vsc:VscDebugReverseContinue",
+    "aliases": [
+      "vsc",
+      "debug",
+      "reverse",
+      "continue"
+    ],
+    "caption": "a black and white image of a black and white symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugStackframe.svg",
+    "component_id": "vsc:VscDebugStackframe",
+    "aliases": [
+      "vsc",
+      "debug",
+      "stackframe"
+    ],
+    "caption": "a black and white drawing of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugStackframeActive.svg",
+    "component_id": "vsc:VscDebugStackframeActive",
+    "aliases": [
+      "vsc",
+      "debug",
+      "stackframe",
+      "active"
+    ],
+    "caption": "a black and white logo with a dot in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugStart.svg",
+    "component_id": "vsc:VscDebugStart",
+    "aliases": [
+      "vsc",
+      "debug",
+      "start"
+    ],
+    "caption": "a black and white image of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugStepBack.svg",
+    "component_id": "vsc:VscDebugStepBack",
+    "aliases": [
+      "vsc",
+      "debug",
+      "step",
+      "back"
+    ],
+    "caption": "a black and white image of a black and white arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugStepInto.svg",
+    "component_id": "vsc:VscDebugStepInto",
+    "aliases": [
+      "vsc",
+      "debug",
+      "step",
+      "into"
+    ],
+    "caption": "an arrow pointing down with a black dot in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugStepOut.svg",
+    "component_id": "vsc:VscDebugStepOut",
+    "aliases": [
+      "vsc",
+      "debug",
+      "step",
+      "out"
+    ],
+    "caption": "an arrow pointing up with a black dot in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugStepOver.svg",
+    "component_id": "vsc:VscDebugStepOver",
+    "aliases": [
+      "vsc",
+      "debug",
+      "step",
+      "over"
+    ],
+    "caption": "a black and white image of a question mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDebugStop.svg",
+    "component_id": "vsc:VscDebugStop",
+    "aliases": [
+      "vsc",
+      "debug",
+      "stop"
+    ],
+    "caption": "a black square with a white border on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDesktopDownload.svg",
+    "component_id": "vsc:VscDesktopDownload",
+    "aliases": [
+      "vsc",
+      "desktop",
+      "download"
+    ],
+    "caption": "a black and white icon of a computer with a down arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDeviceCamera.svg",
+    "component_id": "vsc:VscDeviceCamera",
+    "aliases": [
+      "vsc",
+      "device",
+      "camera"
+    ],
+    "caption": "a camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDeviceCameraVideo.svg",
+    "component_id": "vsc:VscDeviceCameraVideo",
+    "aliases": [
+      "vsc",
+      "device",
+      "camera",
+      "video"
+    ],
+    "caption": "a video camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDeviceMobile.svg",
+    "component_id": "vsc:VscDeviceMobile",
+    "aliases": [
+      "vsc",
+      "device",
+      "mobile"
+    ],
+    "caption": "a cell phone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDiff.svg",
+    "component_id": "vsc:VscDiff",
+    "aliases": [
+      "vsc",
+      "diff"
+    ],
+    "caption": "a black and white image of two cell phones",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDiffAdded.svg",
+    "component_id": "vsc:VscDiffAdded",
+    "aliases": [
+      "vsc",
+      "diff",
+      "added"
+    ],
+    "caption": "a black and white icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDiffIgnored.svg",
+    "component_id": "vsc:VscDiffIgnored",
+    "aliases": [
+      "vsc",
+      "diff",
+      "ignored"
+    ],
+    "caption": "a black and white square with an arrow in it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDiffModified.svg",
+    "component_id": "vsc:VscDiffModified",
+    "aliases": [
+      "vsc",
+      "diff",
+      "modified"
+    ],
+    "caption": "a black and white square with a circle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDiffMultiple.svg",
+    "component_id": "vsc:VscDiffMultiple",
+    "aliases": [
+      "vsc",
+      "diff",
+      "multiple"
+    ],
+    "caption": "a black and white icon of a book with a cross",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDiffRemoved.svg",
+    "component_id": "vsc:VscDiffRemoved",
+    "aliases": [
+      "vsc",
+      "diff",
+      "removed"
+    ],
+    "caption": "a square icon with a black line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDiffRenamed.svg",
+    "component_id": "vsc:VscDiffRenamed",
+    "aliases": [
+      "vsc",
+      "diff",
+      "renamed"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDiffSingle.svg",
+    "component_id": "vsc:VscDiffSingle",
+    "aliases": [
+      "vsc",
+      "diff",
+      "single"
+    ],
+    "caption": "a black and white icon of a document with a cross",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscDiscard.svg",
+    "component_id": "vsc:VscDiscard",
+    "aliases": [
+      "vsc",
+      "discard"
+    ],
+    "caption": "a black arrow pointing to the right in a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscEdit.svg",
+    "component_id": "vsc:VscEdit",
+    "aliases": [
+      "vsc",
+      "edit"
+    ],
+    "caption": "a black and white drawing of a pencil",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscEditSession.svg",
+    "component_id": "vsc:VscEditSession",
+    "aliases": [
+      "vsc",
+      "edit",
+      "session"
+    ],
+    "caption": "a black and white image of a calculator with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscEditorLayout.svg",
+    "component_id": "vsc:VscEditorLayout",
+    "aliases": [
+      "vsc",
+      "editor",
+      "layout"
+    ],
+    "caption": "a black and white icon of a phone and tablet",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscEllipsis.svg",
+    "component_id": "vsc:VscEllipsis",
+    "aliases": [
+      "vsc",
+      "ellipsis"
+    ],
+    "caption": "four black dots on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscEmptyWindow.svg",
+    "component_id": "vsc:VscEmptyWindow",
+    "aliases": [
+      "vsc",
+      "empty",
+      "window"
+    ],
+    "caption": "a black and white icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscError.svg",
+    "component_id": "vsc:VscError",
+    "aliases": [
+      "vsc",
+      "error"
+    ],
+    "caption": "a black and white image of an x in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscErrorSmall.svg",
+    "component_id": "vsc:VscErrorSmall",
+    "aliases": [
+      "vsc",
+      "error",
+      "small"
+    ],
+    "caption": "a black and white image of an x in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscExclude.svg",
+    "component_id": "vsc:VscExclude",
+    "aliases": [
+      "vsc",
+      "exclude"
+    ],
+    "caption": "a black and white image of a gear wheel with a no symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscExpandAll.svg",
+    "component_id": "vsc:VscExpandAll",
+    "aliases": [
+      "vsc",
+      "expand",
+      "all"
+    ],
+    "caption": "a black and white icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscExport.svg",
+    "component_id": "vsc:VscExport",
+    "aliases": [
+      "vsc",
+      "export"
+    ],
+    "caption": "an arrow pointing in the direction of the arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscExtensions.svg",
+    "component_id": "vsc:VscExtensions",
+    "aliases": [
+      "vsc",
+      "extensions"
+    ],
+    "caption": "a black and white image of three squares",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscEye.svg",
+    "component_id": "vsc:VscEye",
+    "aliases": [
+      "vsc",
+      "eye"
+    ],
+    "caption": "a black and white icon of an eye",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscEyeClosed.svg",
+    "component_id": "vsc:VscEyeClosed",
+    "aliases": [
+      "vsc",
+      "eye",
+      "closed"
+    ],
+    "caption": "a black and white image of a no sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFeedback.svg",
+    "component_id": "vsc:VscFeedback",
+    "aliases": [
+      "vsc",
+      "feedback"
+    ],
+    "caption": "a black and white icon of a person with a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFile.svg",
+    "component_id": "vsc:VscFile",
+    "aliases": [
+      "vsc",
+      "file"
+    ],
+    "caption": "a black and white image of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFileBinary.svg",
+    "component_id": "vsc:VscFileBinary",
+    "aliases": [
+      "vsc",
+      "file",
+      "binary"
+    ],
+    "caption": "a black and white image of a file with the number 10",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFileCode.svg",
+    "component_id": "vsc:VscFileCode",
+    "aliases": [
+      "vsc",
+      "file",
+      "code"
+    ],
+    "caption": "a black and white icon of a file with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFileMedia.svg",
+    "component_id": "vsc:VscFileMedia",
+    "aliases": [
+      "vsc",
+      "file",
+      "media"
+    ],
+    "caption": "a black and white icon with a picture of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFilePdf.svg",
+    "component_id": "vsc:VscFilePdf",
+    "aliases": [
+      "vsc",
+      "file",
+      "pdf"
+    ],
+    "caption": "a black and white image of a pdf file",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFileSubmodule.svg",
+    "component_id": "vsc:VscFileSubmodule",
+    "aliases": [
+      "vsc",
+      "file",
+      "submodule"
+    ],
+    "caption": "a folder icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFileSymlinkDirectory.svg",
+    "component_id": "vsc:VscFileSymlinkDirectory",
+    "aliases": [
+      "vsc",
+      "file",
+      "symlink",
+      "directory"
+    ],
+    "caption": "a folder icon with an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFileSymlinkFile.svg",
+    "component_id": "vsc:VscFileSymlink",
+    "aliases": [
+      "vsc",
+      "file",
+      "symlink"
+    ],
+    "caption": "a black and white icon of a folder with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFileZip.svg",
+    "component_id": "vsc:VscFileZip",
+    "aliases": [
+      "vsc",
+      "file",
+      "zip"
+    ],
+    "caption": "a black and white icon of a zipper",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFiles.svg",
+    "component_id": "vsc:VscFiles",
+    "aliases": [
+      "vsc",
+      "files"
+    ],
+    "caption": "a black and white icon of two documents",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFilter.svg",
+    "component_id": "vsc:VscFilter",
+    "aliases": [
+      "vsc",
+      "filter"
+    ],
+    "caption": "a black and white image of a funnel",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFilterFilled.svg",
+    "component_id": "vsc:VscFilterFilled",
+    "aliases": [
+      "vsc",
+      "filter",
+      "filled"
+    ],
+    "caption": "a black and white image of the letter y",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFlame.svg",
+    "component_id": "vsc:VscFlame",
+    "aliases": [
+      "vsc",
+      "flame"
+    ],
+    "caption": "a black and white fire icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFold.svg",
+    "component_id": "vsc:VscFold",
+    "aliases": [
+      "vsc",
+      "fold"
+    ],
+    "caption": "a black and white image of the letter x",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFoldDown.svg",
+    "component_id": "vsc:VscFoldDown",
+    "aliases": [
+      "vsc",
+      "fold",
+      "down"
+    ],
+    "caption": "a black and white image of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFoldUp.svg",
+    "component_id": "vsc:VscFoldUp",
+    "aliases": [
+      "vsc",
+      "fold",
+      "up"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFolder.svg",
+    "component_id": "vsc:VscFolder",
+    "aliases": [
+      "vsc",
+      "folder"
+    ],
+    "caption": "a black and white icon of a folder",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFolderActive.svg",
+    "component_id": "vsc:VscFolderActive",
+    "aliases": [
+      "vsc",
+      "folder",
+      "active"
+    ],
+    "caption": "a black and white icon of a folder with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFolderLibrary.svg",
+    "component_id": "vsc:VscFolderLibrary",
+    "aliases": [
+      "vsc",
+      "folder",
+      "library"
+    ],
+    "caption": "a black and white image of a wine bottle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscFolderOpened.svg",
+    "component_id": "vsc:VscFolderOpened",
+    "aliases": [
+      "vsc",
+      "folder",
+      "opened"
+    ],
+    "caption": "a folder icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGame.svg",
+    "component_id": "vsc:VscGame",
+    "aliases": [
+      "vsc",
+      "game"
+    ],
+    "caption": "a black and white icon of a game controller",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGear.svg",
+    "component_id": "vsc:VscGear",
+    "aliases": [
+      "vsc",
+      "gear"
+    ],
+    "caption": "a black and white image of a gear wheel",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGift.svg",
+    "component_id": "vsc:VscGift",
+    "aliases": [
+      "vsc",
+      "gift"
+    ],
+    "caption": "a black and white icon of a gift box",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGist.svg",
+    "component_id": "vsc:VscGist",
+    "aliases": [
+      "vsc",
+      "gist"
+    ],
+    "caption": "a black and white icon of a file with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGistSecret.svg",
+    "component_id": "vsc:VscGistSecret",
+    "aliases": [
+      "vsc",
+      "gist",
+      "secret"
+    ],
+    "caption": "a black and white icon with a padlock",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitCommit.svg",
+    "component_id": "vsc:VscGitCommit",
+    "aliases": [
+      "vsc",
+      "git",
+      "commit"
+    ],
+    "caption": "an image of a black and white symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitCompare.svg",
+    "component_id": "vsc:VscGitCompare",
+    "aliases": [
+      "vsc",
+      "git",
+      "compare"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitFetch.svg",
+    "component_id": "vsc:VscGitFetch",
+    "aliases": [
+      "vsc",
+      "git",
+      "fetch"
+    ],
+    "caption": "a black arrow pointing down with two arrows pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitMerge.svg",
+    "component_id": "vsc:VscGitMerge",
+    "aliases": [
+      "vsc",
+      "git",
+      "merge"
+    ],
+    "caption": "a black and white icon with three circles",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitPullRequest.svg",
+    "component_id": "vsc:VscGitPullRequest",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request"
+    ],
+    "caption": "two arrows pointing in different directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitPullRequestClosed.svg",
+    "component_id": "vsc:VscGitPullRequestClosed",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request",
+      "closed"
+    ],
+    "caption": "a black and white image of two cross symbols",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitPullRequestCreate.svg",
+    "component_id": "vsc:VscGitPullRequestCreate",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request",
+      "create"
+    ],
+    "caption": "a black and white image of a male and female symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitPullRequestDraft.svg",
+    "component_id": "vsc:VscGitPullRequestDraft",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request",
+      "draft"
+    ],
+    "caption": "a black and white image of two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitPullRequestGoToChanges.svg",
+    "component_id": "vsc:VscGitPullRequestGoToChanges",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request",
+      "go",
+      "to",
+      "changes"
+    ],
+    "caption": "a black and white icon of a file with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitPullRequestNewChanges.svg",
+    "component_id": "vsc:VscGitPullRequestNewChanges",
+    "aliases": [
+      "vsc",
+      "git",
+      "pull",
+      "request",
+      "new",
+      "changes"
+    ],
+    "caption": "a black and white icon of a medical document",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitStash.svg",
+    "component_id": "vsc:VscGitStash",
+    "aliases": [
+      "vsc",
+      "git",
+      "stash"
+    ],
+    "caption": "a black and white icon with a downward arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitStashApply.svg",
+    "component_id": "vsc:VscGitStashApply",
+    "aliases": [
+      "vsc",
+      "git",
+      "stash",
+      "apply"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGitStashPop.svg",
+    "component_id": "vsc:VscGitStashPop",
+    "aliases": [
+      "vsc",
+      "git",
+      "stash",
+      "pop"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGithub.svg",
+    "component_id": "vsc:VscGithub",
+    "aliases": [
+      "vsc",
+      "github"
+    ],
+    "caption": "a black and white silhouette of a cat in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGithubAction.svg",
+    "component_id": "vsc:VscGithubAction",
+    "aliases": [
+      "vsc",
+      "github",
+      "action"
+    ],
+    "caption": "a black and white icon of a lightning bolt",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGithubAlt.svg",
+    "component_id": "vsc:VscGithubAlt",
+    "aliases": [
+      "vsc",
+      "github",
+      "alt"
+    ],
+    "caption": "a black and white line drawing of a cat",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGithubInverted.svg",
+    "component_id": "vsc:VscGithubInverted",
+    "aliases": [
+      "vsc",
+      "github",
+      "inverted"
+    ],
+    "caption": "a black and white image of a cat in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGithubProject.svg",
+    "component_id": "vsc:VscGithubProject",
+    "aliases": [
+      "vsc",
+      "github",
+      "project"
+    ],
+    "caption": "a black and white square with a cross in it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGlobe.svg",
+    "component_id": "vsc:VscGlobe",
+    "aliases": [
+      "vsc",
+      "globe"
+    ],
+    "caption": "a black and white icon of a globe",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGoToEditingSession.svg",
+    "component_id": "vsc:VscGoToEditingSession",
+    "aliases": [
+      "vsc",
+      "go",
+      "to",
+      "editing",
+      "session"
+    ],
+    "caption": "a black and white icon of a calculator with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGoToFile.svg",
+    "component_id": "vsc:VscGoToFile",
+    "aliases": [
+      "vsc",
+      "go",
+      "to",
+      "file"
+    ],
+    "caption": "a black and white image of a document with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGoToSearch.svg",
+    "component_id": "vsc:VscGoToSearch",
+    "aliases": [
+      "vsc",
+      "go",
+      "to",
+      "search"
+    ],
+    "caption": "a black and white image of a magnifying glass with an arrow pointing to it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGrabber.svg",
+    "component_id": "vsc:VscGrabber",
+    "aliases": [
+      "vsc",
+      "grabber"
+    ],
+    "caption": "a black and white image of a black and white line",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGraph.svg",
+    "component_id": "vsc:VscGraph",
+    "aliases": [
+      "vsc",
+      "graph"
+    ],
+    "caption": "a black and white icon of a bar graph",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGraphLeft.svg",
+    "component_id": "vsc:VscGraphLeft",
+    "aliases": [
+      "vsc",
+      "graph",
+      "left"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGraphLine.svg",
+    "component_id": "vsc:VscGraphLine",
+    "aliases": [
+      "vsc",
+      "graph",
+      "line"
+    ],
+    "caption": "a black and white icon of a graph",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGraphScatter.svg",
+    "component_id": "vsc:VscGraphScatter",
+    "aliases": [
+      "vsc",
+      "graph",
+      "scatter"
+    ],
+    "caption": "a black and white square with squares on it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGripper.svg",
+    "component_id": "vsc:VscGripper",
+    "aliases": [
+      "vsc",
+      "gripper"
+    ],
+    "caption": "four black squares on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscGroupByRefType.svg",
+    "component_id": "vsc:VscGroupByRefType",
+    "aliases": [
+      "vsc",
+      "group",
+      "by",
+      "ref",
+      "type"
+    ],
+    "caption": "a black and white icon with two lines",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscHeart.svg",
+    "component_id": "vsc:VscHeart",
+    "aliases": [
+      "vsc",
+      "heart"
+    ],
+    "caption": "a black and white heart icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscHeartFilled.svg",
+    "component_id": "vsc:VscHeartFilled",
+    "aliases": [
+      "vsc",
+      "heart",
+      "filled"
+    ],
+    "caption": "a black heart icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscHistory.svg",
+    "component_id": "vsc:VscHistory",
+    "aliases": [
+      "vsc",
+      "history"
+    ],
+    "caption": "a black and white image of a clock with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscHome.svg",
+    "component_id": "vsc:VscHome",
+    "aliases": [
+      "vsc",
+      "home"
+    ],
+    "caption": "a black and white icon of a house",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscHorizontalRule.svg",
+    "component_id": "vsc:VscHorizontalRule",
+    "aliases": [
+      "vsc",
+      "horizontal",
+      "rule"
+    ],
+    "caption": "a black and white logo that says hr",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscHubot.svg",
+    "component_id": "vsc:VscHubot",
+    "aliases": [
+      "vsc",
+      "hubot"
+    ],
+    "caption": "a black and white image of a robot with a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscInbox.svg",
+    "component_id": "vsc:VscInbox",
+    "aliases": [
+      "vsc",
+      "inbox"
+    ],
+    "caption": "a black and white icon of a box",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscIndent.svg",
+    "component_id": "vsc:VscIndent",
+    "aliases": [
+      "vsc",
+      "indent"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscInfo.svg",
+    "component_id": "vsc:VscInfo",
+    "aliases": [
+      "vsc",
+      "info"
+    ],
+    "caption": "a black and white image of an i in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscInsert.svg",
+    "component_id": "vsc:VscInsert",
+    "aliases": [
+      "vsc",
+      "insert"
+    ],
+    "caption": "a black and white image of a number sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscInspect.svg",
+    "component_id": "vsc:VscInspect",
+    "aliases": [
+      "vsc",
+      "inspect"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscIssueDraft.svg",
+    "component_id": "vsc:VscIssueDraft",
+    "aliases": [
+      "vsc",
+      "issue",
+      "draft"
+    ],
+    "caption": "a black and white circular icon with a circle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscIssueReopened.svg",
+    "component_id": "vsc:VscIssueReopened",
+    "aliases": [
+      "vsc",
+      "issue",
+      "reopened"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscIssues.svg",
+    "component_id": "vsc:VscIssues",
+    "aliases": [
+      "vsc",
+      "issues"
+    ],
+    "caption": "a circle with a black dot in the center",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscItalic.svg",
+    "component_id": "vsc:VscItalic",
+    "aliases": [
+      "vsc",
+      "italic"
+    ],
+    "caption": "a black and white image of the letter i",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscJersey.svg",
+    "component_id": "vsc:VscJersey",
+    "aliases": [
+      "vsc",
+      "jersey"
+    ],
+    "caption": "a t - shirt icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscJson.svg",
+    "component_id": "vsc:VscJson",
+    "aliases": [
+      "vsc",
+      "json"
+    ],
+    "caption": "a black and white image of two curved lines",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscKebabVertical.svg",
+    "component_id": "vsc:VscKebabVertical",
+    "aliases": [
+      "vsc",
+      "kebab",
+      "vertical"
+    ],
+    "caption": "four black dots on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscKey.svg",
+    "component_id": "vsc:VscKey",
+    "aliases": [
+      "vsc",
+      "key"
+    ],
+    "caption": "a key icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLaw.svg",
+    "component_id": "vsc:VscLaw",
+    "aliases": [
+      "vsc",
+      "law"
+    ],
+    "caption": "a black and white image of a scale of justice",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayers.svg",
+    "component_id": "vsc:VscLayers",
+    "aliases": [
+      "vsc",
+      "layers"
+    ],
+    "caption": "a black and white logo with three arrows",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayersActive.svg",
+    "component_id": "vsc:VscLayersActive",
+    "aliases": [
+      "vsc",
+      "layers",
+      "active"
+    ],
+    "caption": "a black and white icon with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayersDot.svg",
+    "component_id": "vsc:VscLayersDot",
+    "aliases": [
+      "vsc",
+      "layers",
+      "dot"
+    ],
+    "caption": "a black and white icon with a ball in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayout.svg",
+    "component_id": "vsc:VscLayout",
+    "aliases": [
+      "vsc",
+      "layout"
+    ],
+    "caption": "a black and white image of a clock with three numbers",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutActivitybarLeft.svg",
+    "component_id": "vsc:VscLayoutActivitybarLeft",
+    "aliases": [
+      "vsc",
+      "layout",
+      "activitybar",
+      "left"
+    ],
+    "caption": "a black square icon with a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutActivitybarRight.svg",
+    "component_id": "vsc:VscLayoutActivitybarRight",
+    "aliases": [
+      "vsc",
+      "layout",
+      "activitybar",
+      "right"
+    ],
+    "caption": "a square black and white icon with a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutCentered.svg",
+    "component_id": "vsc:VscLayoutCentered",
+    "aliases": [
+      "vsc",
+      "layout",
+      "centered"
+    ],
+    "caption": "a black and white icon of a square",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutMenubar.svg",
+    "component_id": "vsc:VscLayoutMenubar",
+    "aliases": [
+      "vsc",
+      "layout",
+      "menubar"
+    ],
+    "caption": "a black and white icon of a computer screen",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutPanel.svg",
+    "component_id": "vsc:VscLayoutPanel",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel"
+    ],
+    "caption": "a black and white photo frame icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutPanelCenter.svg",
+    "component_id": "vsc:VscLayoutPanelCenter",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel",
+      "center"
+    ],
+    "caption": "an icon of a floppy disk on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutPanelJustify.svg",
+    "component_id": "vsc:VscLayoutPanelJustify",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel",
+      "justify"
+    ],
+    "caption": "a black and white icon of a floppy disk",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutPanelLeft.svg",
+    "component_id": "vsc:VscLayoutPanelLeft",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel",
+      "left"
+    ],
+    "caption": "an icon of a floppy disk on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutPanelOff.svg",
+    "component_id": "vsc:VscLayoutPanelOff",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel",
+      "off"
+    ],
+    "caption": "a black and white icon with a square shape",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutPanelRight.svg",
+    "component_id": "vsc:VscLayoutPanelRight",
+    "aliases": [
+      "vsc",
+      "layout",
+      "panel",
+      "right"
+    ],
+    "caption": "a black and white icon with a square shape",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutSidebarLeft.svg",
+    "component_id": "vsc:VscLayoutSidebarLeft",
+    "aliases": [
+      "vsc",
+      "layout",
+      "sidebar",
+      "left"
+    ],
+    "caption": "a black and white square icon with a white square",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutSidebarLeftOff.svg",
+    "component_id": "vsc:VscLayoutSidebarLeftOff",
+    "aliases": [
+      "vsc",
+      "layout",
+      "sidebar",
+      "left",
+      "off"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutSidebarRight.svg",
+    "component_id": "vsc:VscLayoutSidebarRight",
+    "aliases": [
+      "vsc",
+      "layout",
+      "sidebar",
+      "right"
+    ],
+    "caption": "a black and white square icon with a white square",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutSidebarRightOff.svg",
+    "component_id": "vsc:VscLayoutSidebarRightOff",
+    "aliases": [
+      "vsc",
+      "layout",
+      "sidebar",
+      "right",
+      "off"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLayoutStatusbar.svg",
+    "component_id": "vsc:VscLayoutStatusbar",
+    "aliases": [
+      "vsc",
+      "layout",
+      "statusbar"
+    ],
+    "caption": "a black square on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLibrary.svg",
+    "component_id": "vsc:VscLibrary",
+    "aliases": [
+      "vsc",
+      "library"
+    ],
+    "caption": "a black and white illustration of three books",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLightbulb.svg",
+    "component_id": "vsc:VscLightbulb",
+    "aliases": [
+      "vsc",
+      "lightbulb"
+    ],
+    "caption": "a black light bulb icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLightbulbAutofix.svg",
+    "component_id": "vsc:VscLightbulbAutofix",
+    "aliases": [
+      "vsc",
+      "lightbulb",
+      "autofix"
+    ],
+    "caption": "a black and white icon of a light bulb with a star",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLightbulbSparkle.svg",
+    "component_id": "vsc:VscLightbulbSparkle",
+    "aliases": [
+      "vsc",
+      "lightbulb",
+      "sparkle"
+    ],
+    "caption": "a black and white icon of a light bulb with stars",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLink.svg",
+    "component_id": "vsc:VscLink",
+    "aliases": [
+      "vsc",
+      "link"
+    ],
+    "caption": "a black and white image of two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLinkExternal.svg",
+    "component_id": "vsc:VscLinkExternal",
+    "aliases": [
+      "vsc",
+      "link",
+      "external"
+    ],
+    "caption": "a black and white square with an arrow in it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscListFilter.svg",
+    "component_id": "vsc:VscListFilter",
+    "aliases": [
+      "vsc",
+      "list",
+      "filter"
+    ],
+    "caption": "a black and white image of the letter f",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscListFlat.svg",
+    "component_id": "vsc:VscListFlat",
+    "aliases": [
+      "vsc",
+      "list",
+      "flat"
+    ],
+    "caption": "a black and white image of four lines",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscListOrdered.svg",
+    "component_id": "vsc:VscListOrdered",
+    "aliases": [
+      "vsc",
+      "list",
+      "ordered"
+    ],
+    "caption": "a black and white image of three numbers on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscListSelection.svg",
+    "component_id": "vsc:VscListSelection",
+    "aliases": [
+      "vsc",
+      "list",
+      "selection"
+    ],
+    "caption": "a black and white image of the letter e",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscListTree.svg",
+    "component_id": "vsc:VscListTree",
+    "aliases": [
+      "vsc",
+      "list",
+      "tree"
+    ],
+    "caption": "a black and white image of the letter e",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscListUnordered.svg",
+    "component_id": "vsc:VscListUnordered",
+    "aliases": [
+      "vsc",
+      "list",
+      "unordered"
+    ],
+    "caption": "a black and white icon with four lines",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLiveShare.svg",
+    "component_id": "vsc:VscLiveShare",
+    "aliases": [
+      "vsc",
+      "live",
+      "share"
+    ],
+    "caption": "a black and white arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLoading.svg",
+    "component_id": "vsc:VscLoading",
+    "aliases": [
+      "vsc",
+      "loading"
+    ],
+    "caption": "a black and white drawing of a curved line",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLocation.svg",
+    "component_id": "vsc:VscLocation",
+    "aliases": [
+      "vsc",
+      "location"
+    ],
+    "caption": "a black and white image of a location pin",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLock.svg",
+    "component_id": "vsc:VscLock",
+    "aliases": [
+      "vsc",
+      "lock"
+    ],
+    "caption": "a black and white icon of a padlock",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscLockSmall.svg",
+    "component_id": "vsc:VscLockSmall",
+    "aliases": [
+      "vsc",
+      "lock",
+      "small"
+    ],
+    "caption": "a padlock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMagnet.svg",
+    "component_id": "vsc:VscMagnet",
+    "aliases": [
+      "vsc",
+      "magnet"
+    ],
+    "caption": "a black and white icon of a magnet",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMail.svg",
+    "component_id": "vsc:VscMail",
+    "aliases": [
+      "vsc",
+      "mail"
+    ],
+    "caption": "an envelope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMailRead.svg",
+    "component_id": "vsc:VscMailRead",
+    "aliases": [
+      "vsc",
+      "mail",
+      "read"
+    ],
+    "caption": "an envelope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMap.svg",
+    "component_id": "vsc:VscMap",
+    "aliases": [
+      "vsc",
+      "map"
+    ],
+    "caption": "a black and white logo with the letter m in it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMapFilled.svg",
+    "component_id": "vsc:VscMapFilled",
+    "aliases": [
+      "vsc",
+      "map",
+      "filled"
+    ],
+    "caption": "a black and white logo with the letter m",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMapVertical.svg",
+    "component_id": "vsc:VscMapVertical",
+    "aliases": [
+      "vsc",
+      "map",
+      "vertical"
+    ],
+    "caption": "a black and white image of the letter s",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMapVerticalFilled.svg",
+    "component_id": "vsc:VscMapVerticalFilled",
+    "aliases": [
+      "vsc",
+      "map",
+      "vertical",
+      "filled"
+    ],
+    "caption": "a black and white logo with the letter s",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMarkdown.svg",
+    "component_id": "vsc:VscMarkdown",
+    "aliases": [
+      "vsc",
+      "markdown"
+    ],
+    "caption": "a black and white image of the letter m",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMegaphone.svg",
+    "component_id": "vsc:VscMegaphone",
+    "aliases": [
+      "vsc",
+      "megaphone"
+    ],
+    "caption": "a megaphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMention.svg",
+    "component_id": "vsc:VscMention",
+    "aliases": [
+      "vsc",
+      "mention"
+    ],
+    "caption": "a black and white image of an email symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMenu.svg",
+    "component_id": "vsc:VscMenu",
+    "aliases": [
+      "vsc",
+      "menu"
+    ],
+    "caption": "a black and white image of two lines",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMerge.svg",
+    "component_id": "vsc:VscMerge",
+    "aliases": [
+      "vsc",
+      "merge"
+    ],
+    "caption": "a black arrow pointing up in the middle of a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMic.svg",
+    "component_id": "vsc:VscMic",
+    "aliases": [
+      "vsc",
+      "mic"
+    ],
+    "caption": "a microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMicFilled.svg",
+    "component_id": "vsc:VscMicFilled",
+    "aliases": [
+      "vsc",
+      "mic",
+      "filled"
+    ],
+    "caption": "a microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMilestone.svg",
+    "component_id": "vsc:VscMilestone",
+    "aliases": [
+      "vsc",
+      "milestone"
+    ],
+    "caption": "a black and white arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMirror.svg",
+    "component_id": "vsc:VscMirror",
+    "aliases": [
+      "vsc",
+      "mirror"
+    ],
+    "caption": "a black and white logo with an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMortarBoard.svg",
+    "component_id": "vsc:VscMortarBoard",
+    "aliases": [
+      "vsc",
+      "mortar",
+      "board"
+    ],
+    "caption": "a graduation cap icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMove.svg",
+    "component_id": "vsc:VscMove",
+    "aliases": [
+      "vsc",
+      "move"
+    ],
+    "caption": "a black and white image of an arrow pointing in different directions",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMultipleWindows.svg",
+    "component_id": "vsc:VscMultipleWindows",
+    "aliases": [
+      "vsc",
+      "multiple",
+      "windows"
+    ],
+    "caption": "a black and white icon of two black rectangles",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMusic.svg",
+    "component_id": "vsc:VscMusic",
+    "aliases": [
+      "vsc",
+      "music"
+    ],
+    "caption": "a music note icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscMute.svg",
+    "component_id": "vsc:VscMute",
+    "aliases": [
+      "vsc",
+      "mute"
+    ],
+    "caption": "a black and white icon of a speaker with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscNewFile.svg",
+    "component_id": "vsc:VscNewFile",
+    "aliases": [
+      "vsc",
+      "new",
+      "file"
+    ],
+    "caption": "a black and white icon of a file and a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscNewFolder.svg",
+    "component_id": "vsc:VscNewFolder",
+    "aliases": [
+      "vsc",
+      "new",
+      "folder"
+    ],
+    "caption": "a black and white icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscNewline.svg",
+    "component_id": "vsc:VscNewline",
+    "aliases": [
+      "vsc",
+      "newline"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscNoNewline.svg",
+    "component_id": "vsc:VscNoNewline",
+    "aliases": [
+      "vsc",
+      "no",
+      "newline"
+    ],
+    "caption": "a black and white image of a no sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscNote.svg",
+    "component_id": "vsc:VscNote",
+    "aliases": [
+      "vsc",
+      "note"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscNotebook.svg",
+    "component_id": "vsc:VscNotebook",
+    "aliases": [
+      "vsc",
+      "notebook"
+    ],
+    "caption": "a black and white icon of a book on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscNotebookTemplate.svg",
+    "component_id": "vsc:VscNotebookTemplate",
+    "aliases": [
+      "vsc",
+      "notebook",
+      "template"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscOctoface.svg",
+    "component_id": "vsc:VscOctoface",
+    "aliases": [
+      "vsc",
+      "octoface"
+    ],
+    "caption": "a black and white icon of a cat's face",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscOpenPreview.svg",
+    "component_id": "vsc:VscOpenPreview",
+    "aliases": [
+      "vsc",
+      "open",
+      "preview"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscOrganization.svg",
+    "component_id": "vsc:VscOrganization",
+    "aliases": [
+      "vsc",
+      "organization"
+    ],
+    "caption": "a black and white icon of a group of people",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscOutput.svg",
+    "component_id": "vsc:VscOutput",
+    "aliases": [
+      "vsc",
+      "output"
+    ],
+    "caption": "a black and white icon of a notepad",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPackage.svg",
+    "component_id": "vsc:VscPackage",
+    "aliases": [
+      "vsc",
+      "package"
+    ],
+    "caption": "a black and white icon of a box",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPaintcan.svg",
+    "component_id": "vsc:VscPaintcan",
+    "aliases": [
+      "vsc",
+      "paintcan"
+    ],
+    "caption": "a black and white icon of a bucket with a drop of water",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPass.svg",
+    "component_id": "vsc:VscPass",
+    "aliases": [
+      "vsc",
+      "pass"
+    ],
+    "caption": "a black and white image of a check mark in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPassFilled.svg",
+    "component_id": "vsc:VscPassFilled",
+    "aliases": [
+      "vsc",
+      "pass",
+      "filled"
+    ],
+    "caption": "a black and white check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPercentage.svg",
+    "component_id": "vsc:VscPercentage",
+    "aliases": [
+      "vsc",
+      "percentage"
+    ],
+    "caption": "a black and white image of a percentage sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPerson.svg",
+    "component_id": "vsc:VscPerson",
+    "aliases": [
+      "vsc",
+      "person"
+    ],
+    "caption": "a black and white icon of a person",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPersonAdd.svg",
+    "component_id": "vsc:VscPersonAdd",
+    "aliases": [
+      "vsc",
+      "person",
+      "add"
+    ],
+    "caption": "a black and white icon of a man holding a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPiano.svg",
+    "component_id": "vsc:VscPiano",
+    "aliases": [
+      "vsc",
+      "piano"
+    ],
+    "caption": "a black and white image of a piano keyboard",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPieChart.svg",
+    "component_id": "vsc:VscPieChart",
+    "aliases": [
+      "vsc",
+      "pie",
+      "chart"
+    ],
+    "caption": "a black and white logo with the letter g in it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPin.svg",
+    "component_id": "vsc:VscPin",
+    "aliases": [
+      "vsc",
+      "pin"
+    ],
+    "caption": "a black and white icon of a knife",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPinned.svg",
+    "component_id": "vsc:VscPinned",
+    "aliases": [
+      "vsc",
+      "pinned"
+    ],
+    "caption": "a black and white image of a pin on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPinnedDirty.svg",
+    "component_id": "vsc:VscPinnedDirty",
+    "aliases": [
+      "vsc",
+      "pinned",
+      "dirty"
+    ],
+    "caption": "a black and white illustration of a pin and a ball",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPlay.svg",
+    "component_id": "vsc:VscPlay",
+    "aliases": [
+      "vsc",
+      "play"
+    ],
+    "caption": "a black and white image of a triangle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPlayCircle.svg",
+    "component_id": "vsc:VscPlayCircle",
+    "aliases": [
+      "vsc",
+      "play",
+      "circle"
+    ],
+    "caption": "a black and white image of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPlug.svg",
+    "component_id": "vsc:VscPlug",
+    "aliases": [
+      "vsc",
+      "plug"
+    ],
+    "caption": "a black and white icon of a plug",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPreserveCase.svg",
+    "component_id": "vsc:VscPreserveCase",
+    "aliases": [
+      "vsc",
+      "preserve",
+      "case"
+    ],
+    "caption": "a black and white logo with the letters ab",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPreview.svg",
+    "component_id": "vsc:VscPreview",
+    "aliases": [
+      "vsc",
+      "preview"
+    ],
+    "caption": "a black and white icon of a black and white square",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPrimitiveSquare.svg",
+    "component_id": "vsc:VscPrimitiveSquare",
+    "aliases": [
+      "vsc",
+      "primitive",
+      "square"
+    ],
+    "caption": "a square black and white icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscProject.svg",
+    "component_id": "vsc:VscProject",
+    "aliases": [
+      "vsc",
+      "project"
+    ],
+    "caption": "a black and white icon of a piano",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscPulse.svg",
+    "component_id": "vsc:VscPulse",
+    "aliases": [
+      "vsc",
+      "pulse"
+    ],
+    "caption": "a black and white image of an ekg symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscQuestion.svg",
+    "component_id": "vsc:VscQuestion",
+    "aliases": [
+      "vsc",
+      "question"
+    ],
+    "caption": "a question mark in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscQuote.svg",
+    "component_id": "vsc:VscQuote",
+    "aliases": [
+      "vsc",
+      "quote"
+    ],
+    "caption": "two black quotes on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRadioTower.svg",
+    "component_id": "vsc:VscRadioTower",
+    "aliases": [
+      "vsc",
+      "radio",
+      "tower"
+    ],
+    "caption": "a black and white image of a radio antenna",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscReactions.svg",
+    "component_id": "vsc:VscReactions",
+    "aliases": [
+      "vsc",
+      "reactions"
+    ],
+    "caption": "a black and white smiley face with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRecord.svg",
+    "component_id": "vsc:VscRecord",
+    "aliases": [
+      "vsc",
+      "record"
+    ],
+    "caption": "a black and white image of an eye in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRecordKeys.svg",
+    "component_id": "vsc:VscRecordKeys",
+    "aliases": [
+      "vsc",
+      "record",
+      "keys"
+    ],
+    "caption": "a black and white icon of a keyboard",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRecordSmall.svg",
+    "component_id": "vsc:VscRecordSmall",
+    "aliases": [
+      "vsc",
+      "record",
+      "small"
+    ],
+    "caption": "a black and white image of an eye in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRedo.svg",
+    "component_id": "vsc:VscRedo",
+    "aliases": [
+      "vsc",
+      "redo"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscReferences.svg",
+    "component_id": "vsc:VscReferences",
+    "aliases": [
+      "vsc",
+      "references"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRefresh.svg",
+    "component_id": "vsc:VscRefresh",
+    "aliases": [
+      "vsc",
+      "refresh"
+    ],
+    "caption": "an image of a black arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRegex.svg",
+    "component_id": "vsc:VscRegex",
+    "aliases": [
+      "vsc",
+      "regex"
+    ],
+    "caption": "a black square with a star in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRemote.svg",
+    "component_id": "vsc:VscRemote",
+    "aliases": [
+      "vsc",
+      "remote"
+    ],
+    "caption": "a black and white image of two arrows pointing in the same direction",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRemoteExplorer.svg",
+    "component_id": "vsc:VscRemoteExplorer",
+    "aliases": [
+      "vsc",
+      "remote",
+      "explorer"
+    ],
+    "caption": "a black and white icon of a computer with an error symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRemove.svg",
+    "component_id": "vsc:VscRemove",
+    "aliases": [
+      "vsc",
+      "remove"
+    ],
+    "caption": "a black and white image of a black and white line",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscReplace.svg",
+    "component_id": "vsc:VscReplace",
+    "aliases": [
+      "vsc",
+      "replace"
+    ],
+    "caption": "a black and white logo with the letters b and c",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscReplaceAll.svg",
+    "component_id": "vsc:VscReplaceAll",
+    "aliases": [
+      "vsc",
+      "replace",
+      "all"
+    ],
+    "caption": "a black and white icon with the word abc",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscReply.svg",
+    "component_id": "vsc:VscReply",
+    "aliases": [
+      "vsc",
+      "reply"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRepo.svg",
+    "component_id": "vsc:VscRepo",
+    "aliases": [
+      "vsc",
+      "repo"
+    ],
+    "caption": "a book icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRepoClone.svg",
+    "component_id": "vsc:VscRepoClone",
+    "aliases": [
+      "vsc",
+      "repo",
+      "clone"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRepoFetch.svg",
+    "component_id": "vsc:VscRepoFetch",
+    "aliases": [
+      "vsc",
+      "repo",
+      "fetch"
+    ],
+    "caption": "a black and white image of a symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRepoForcePush.svg",
+    "component_id": "vsc:VscRepoForcePush",
+    "aliases": [
+      "vsc",
+      "repo",
+      "force",
+      "push"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRepoForked.svg",
+    "component_id": "vsc:VscRepoForked",
+    "aliases": [
+      "vsc",
+      "repo",
+      "forked"
+    ],
+    "caption": "a black and white icon with three circles",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRepoPull.svg",
+    "component_id": "vsc:VscRepoPull",
+    "aliases": [
+      "vsc",
+      "repo",
+      "pull"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRepoPush.svg",
+    "component_id": "vsc:VscRepoPush",
+    "aliases": [
+      "vsc",
+      "repo",
+      "push"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscReport.svg",
+    "component_id": "vsc:VscReport",
+    "aliases": [
+      "vsc",
+      "report"
+    ],
+    "caption": "a black and white image of a speech bubble with an exclamation mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRequestChanges.svg",
+    "component_id": "vsc:VscRequestChanges",
+    "aliases": [
+      "vsc",
+      "request",
+      "changes"
+    ],
+    "caption": "a black and white icon of a document with a cross",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRobot.svg",
+    "component_id": "vsc:VscRobot",
+    "aliases": [
+      "vsc",
+      "robot"
+    ],
+    "caption": "a black and white icon of a smiling robot",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRocket.svg",
+    "component_id": "vsc:VscRocket",
+    "aliases": [
+      "vsc",
+      "rocket"
+    ],
+    "caption": "a black and white icon of a rocket",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRootFolder.svg",
+    "component_id": "vsc:VscRootFolder",
+    "aliases": [
+      "vsc",
+      "root",
+      "folder"
+    ],
+    "caption": "a camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRootFolderOpened.svg",
+    "component_id": "vsc:VscRootFolderOpened",
+    "aliases": [
+      "vsc",
+      "root",
+      "folder",
+      "opened"
+    ],
+    "caption": "a black and white icon of a camera",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRss.svg",
+    "component_id": "vsc:VscRss",
+    "aliases": [
+      "vsc",
+      "rss"
+    ],
+    "caption": "a black and white image of a rss symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRuby.svg",
+    "component_id": "vsc:VscRuby",
+    "aliases": [
+      "vsc",
+      "ruby"
+    ],
+    "caption": "a black and white diamond icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRunAbove.svg",
+    "component_id": "vsc:VscRunAbove",
+    "aliases": [
+      "vsc",
+      "run",
+      "above"
+    ],
+    "caption": "an arrow pointing up in a black and white icon",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRunAll.svg",
+    "component_id": "vsc:VscRunAll",
+    "aliases": [
+      "vsc",
+      "run",
+      "all"
+    ],
+    "caption": "a black and white image of an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRunAllCoverage.svg",
+    "component_id": "vsc:VscRunAllCoverage",
+    "aliases": [
+      "vsc",
+      "run",
+      "all",
+      "coverage"
+    ],
+    "caption": "a black and white icon with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRunBelow.svg",
+    "component_id": "vsc:VscRunBelow",
+    "aliases": [
+      "vsc",
+      "run",
+      "below"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRunCoverage.svg",
+    "component_id": "vsc:VscRunCoverage",
+    "aliases": [
+      "vsc",
+      "run",
+      "coverage"
+    ],
+    "caption": "a black and white icon of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscRunErrors.svg",
+    "component_id": "vsc:VscRunErrors",
+    "aliases": [
+      "vsc",
+      "run",
+      "errors"
+    ],
+    "caption": "a black and white icon with an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSave.svg",
+    "component_id": "vsc:VscSave",
+    "aliases": [
+      "vsc",
+      "save"
+    ],
+    "caption": "an icon of a floppy disk on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSaveAll.svg",
+    "component_id": "vsc:VscSaveAll",
+    "aliases": [
+      "vsc",
+      "save",
+      "all"
+    ],
+    "caption": "an icon of a floppy disk on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSaveAs.svg",
+    "component_id": "vsc:VscSaveAs",
+    "aliases": [
+      "vsc",
+      "save",
+      "as"
+    ],
+    "caption": "a black and white icon of a pen and a floppy disk",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscScreenFull.svg",
+    "component_id": "vsc:VscScreenFull",
+    "aliases": [
+      "vsc",
+      "screen",
+      "full"
+    ],
+    "caption": "an image of a black square on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscScreenNormal.svg",
+    "component_id": "vsc:VscScreenNormal",
+    "aliases": [
+      "vsc",
+      "screen",
+      "normal"
+    ],
+    "caption": "a black and white image of a square symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSearch.svg",
+    "component_id": "vsc:VscSearch",
+    "aliases": [
+      "vsc",
+      "search"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSearchFuzzy.svg",
+    "component_id": "vsc:VscSearchFuzzy",
+    "aliases": [
+      "vsc",
+      "search",
+      "fuzzy"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSearchStop.svg",
+    "component_id": "vsc:VscSearchStop",
+    "aliases": [
+      "vsc",
+      "search",
+      "stop"
+    ],
+    "caption": "a black and white image of a magnifying glass",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSend.svg",
+    "component_id": "vsc:VscSend",
+    "aliases": [
+      "vsc",
+      "send"
+    ],
+    "caption": "a black and white arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscServer.svg",
+    "component_id": "vsc:VscServer",
+    "aliases": [
+      "vsc",
+      "server"
+    ],
+    "caption": "a black and white image of four keys on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscServerEnvironment.svg",
+    "component_id": "vsc:VscServerEnvironment",
+    "aliases": [
+      "vsc",
+      "server",
+      "environment"
+    ],
+    "caption": "a black and white icon of a phone on top of a pedestal",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscServerProcess.svg",
+    "component_id": "vsc:VscServerProcess",
+    "aliases": [
+      "vsc",
+      "server",
+      "process"
+    ],
+    "caption": "a black and white icon of a computer with gears",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSettings.svg",
+    "component_id": "vsc:VscSettings",
+    "aliases": [
+      "vsc",
+      "settings"
+    ],
+    "caption": "two black and white icons that show two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSettingsGear.svg",
+    "component_id": "vsc:VscSettingsGear",
+    "aliases": [
+      "vsc",
+      "settings",
+      "gear"
+    ],
+    "caption": "a black and white image of a gear wheel",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscShare.svg",
+    "component_id": "vsc:VscShare",
+    "aliases": [
+      "vsc",
+      "share"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscShield.svg",
+    "component_id": "vsc:VscShield",
+    "aliases": [
+      "vsc",
+      "shield"
+    ],
+    "caption": "a black and white image of a shield with a keyhole",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSignIn.svg",
+    "component_id": "vsc:VscSignIn",
+    "aliases": [
+      "vsc",
+      "sign",
+      "in"
+    ],
+    "caption": "a black and white icon of an open door",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSignOut.svg",
+    "component_id": "vsc:VscSignOut",
+    "aliases": [
+      "vsc",
+      "sign",
+      "out"
+    ],
+    "caption": "a black and white icon of an open door",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSmiley.svg",
+    "component_id": "vsc:VscSmiley",
+    "aliases": [
+      "vsc",
+      "smiley"
+    ],
+    "caption": "a smiley face icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSnake.svg",
+    "component_id": "vsc:VscSnake",
+    "aliases": [
+      "vsc",
+      "snake"
+    ],
+    "caption": "a black and white icon of a snake",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSortPrecedence.svg",
+    "component_id": "vsc:VscSortPrecedence",
+    "aliases": [
+      "vsc",
+      "sort",
+      "precedence"
+    ],
+    "caption": "a black and white icon with a black arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSourceControl.svg",
+    "component_id": "vsc:VscSourceControl",
+    "aliases": [
+      "vsc",
+      "source",
+      "control"
+    ],
+    "caption": "a black and white icon with three circles",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSparkle.svg",
+    "component_id": "vsc:VscSparkle",
+    "aliases": [
+      "vsc",
+      "sparkle"
+    ],
+    "caption": "a black and white icon of two stars",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSparkleFilled.svg",
+    "component_id": "vsc:VscSparkleFilled",
+    "aliases": [
+      "vsc",
+      "sparkle",
+      "filled"
+    ],
+    "caption": "a black and white image of two stars",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSplitHorizontal.svg",
+    "component_id": "vsc:VscSplitHorizontal",
+    "aliases": [
+      "vsc",
+      "split",
+      "horizontal"
+    ],
+    "caption": "a black and white icon of a door",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSplitVertical.svg",
+    "component_id": "vsc:VscSplitVertical",
+    "aliases": [
+      "vsc",
+      "split",
+      "vertical"
+    ],
+    "caption": "a black and white image of a square with two lines",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSquirrel.svg",
+    "component_id": "vsc:VscSquirrel",
+    "aliases": [
+      "vsc",
+      "squirrel"
+    ],
+    "caption": "a black and white image of a squirrel",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscStarEmpty.svg",
+    "component_id": "vsc:VscStarEmpty",
+    "aliases": [
+      "vsc",
+      "star",
+      "empty"
+    ],
+    "caption": "a black star on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscStarFull.svg",
+    "component_id": "vsc:VscStarFull",
+    "aliases": [
+      "vsc",
+      "star",
+      "full"
+    ],
+    "caption": "a black star on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscStarHalf.svg",
+    "component_id": "vsc:VscStarHalf",
+    "aliases": [
+      "vsc",
+      "star",
+      "half"
+    ],
+    "caption": "a black star icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscStopCircle.svg",
+    "component_id": "vsc:VscStopCircle",
+    "aliases": [
+      "vsc",
+      "stop",
+      "circle"
+    ],
+    "caption": "a black square in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSurroundWith.svg",
+    "component_id": "vsc:VscSurroundWith",
+    "aliases": [
+      "vsc",
+      "surround",
+      "with"
+    ],
+    "caption": "a black and white icon with three dots",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolArray.svg",
+    "component_id": "vsc:VscSymbolArray",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "array"
+    ],
+    "caption": "a black and white image of a square with two lines",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolBoolean.svg",
+    "component_id": "vsc:VscSymbolBoolean",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "boolean"
+    ],
+    "caption": "two arrows pointing in opposite directions on a black and white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolClass.svg",
+    "component_id": "vsc:VscSymbolClass",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "class"
+    ],
+    "caption": "a black and white icon of a computer",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolColor.svg",
+    "component_id": "vsc:VscSymbolColor",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "color"
+    ],
+    "caption": "a black and white icon of a paint palette",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolConstant.svg",
+    "component_id": "vsc:VscSymbolConstant",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "constant"
+    ],
+    "caption": "a black and white image of an equal sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolEnum.svg",
+    "component_id": "vsc:VscSymbolEnum",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "enum"
+    ],
+    "caption": "a black and white icon of two squares",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolEnumMember.svg",
+    "component_id": "vsc:VscSymbolEnumMember",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "enum",
+      "member"
+    ],
+    "caption": "a black and white icon of two squares",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolEvent.svg",
+    "component_id": "vsc:VscSymbolEvent",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "event"
+    ],
+    "caption": "a lightning bolt icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolField.svg",
+    "component_id": "vsc:VscSymbolField",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "field"
+    ],
+    "caption": "a black and white icon of a cube",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolFile.svg",
+    "component_id": "vsc:VscSymbolFile",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "file"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolInterface.svg",
+    "component_id": "vsc:VscSymbolInterface",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "interface"
+    ],
+    "caption": "an image of a black and white icon with a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolKey.svg",
+    "component_id": "vsc:VscSymbolKey",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "key"
+    ],
+    "caption": "a black and white logo with the word abc",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolKeyword.svg",
+    "component_id": "vsc:VscSymbolKeyword",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "keyword"
+    ],
+    "caption": "a black and white image of a black and white line",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolMethod.svg",
+    "component_id": "vsc:VscSymbolMethod",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "method"
+    ],
+    "caption": "a black and white icon of a cube",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolMisc.svg",
+    "component_id": "vsc:VscSymbolMisc",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "misc"
+    ],
+    "caption": "a black and white image of a triangle and a square",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolNamespace.svg",
+    "component_id": "vsc:VscSymbolNamespace",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "namespace"
+    ],
+    "caption": "a black and white image of two curved lines",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolNumeric.svg",
+    "component_id": "vsc:VscSymbolNumeric",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "numeric"
+    ],
+    "caption": "a black and white image of a tic - tac - toe board",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolOperator.svg",
+    "component_id": "vsc:VscSymbolOperator",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "operator"
+    ],
+    "caption": "a black and white image of a percentage sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolParameter.svg",
+    "component_id": "vsc:VscSymbolParameter",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "parameter"
+    ],
+    "caption": "a black and white logo with the letter t",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolProperty.svg",
+    "component_id": "vsc:VscSymbolProperty",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "property"
+    ],
+    "caption": "a wrench icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolRuler.svg",
+    "component_id": "vsc:VscSymbolRuler",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "ruler"
+    ],
+    "caption": "a ruler icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolSnippet.svg",
+    "component_id": "vsc:VscSymbolSnippet",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "snippet"
+    ],
+    "caption": "a black and white image of a film strip",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolString.svg",
+    "component_id": "vsc:VscSymbolString",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "string"
+    ],
+    "caption": "a black and white square with the word abc",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolStructure.svg",
+    "component_id": "vsc:VscSymbolStructure",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "structure"
+    ],
+    "caption": "a black and white image of a calculator",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSymbolVariable.svg",
+    "component_id": "vsc:VscSymbolVariable",
+    "aliases": [
+      "vsc",
+      "symbol",
+      "variable"
+    ],
+    "caption": "a black and white icon of a box",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSync.svg",
+    "component_id": "vsc:VscSync",
+    "aliases": [
+      "vsc",
+      "sync"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscSyncIgnored.svg",
+    "component_id": "vsc:VscSyncIgnored",
+    "aliases": [
+      "vsc",
+      "sync",
+      "ignored"
+    ],
+    "caption": "a black and white image of two arrows pointing in opposite directions",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTable.svg",
+    "component_id": "vsc:VscTable",
+    "aliases": [
+      "vsc",
+      "table"
+    ],
+    "caption": "a black and white calendar icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTag.svg",
+    "component_id": "vsc:VscTag",
+    "aliases": [
+      "vsc",
+      "tag"
+    ],
+    "caption": "a black and white icon of a price tag",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTarget.svg",
+    "component_id": "vsc:VscTarget",
+    "aliases": [
+      "vsc",
+      "target"
+    ],
+    "caption": "a black and white image of a target",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTasklist.svg",
+    "component_id": "vsc:VscTasklist",
+    "aliases": [
+      "vsc",
+      "tasklist"
+    ],
+    "caption": "a check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTelescope.svg",
+    "component_id": "vsc:VscTelescope",
+    "aliases": [
+      "vsc",
+      "telescope"
+    ],
+    "caption": "a black and white image of a telescope on a tripod",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTerminal.svg",
+    "component_id": "vsc:VscTerminal",
+    "aliases": [
+      "vsc",
+      "terminal"
+    ],
+    "caption": "a black and white image of a computer icon",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTerminalBash.svg",
+    "component_id": "vsc:VscTerminalBash",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "bash"
+    ],
+    "caption": "a dollar sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTerminalCmd.svg",
+    "component_id": "vsc:VscTerminalCmd",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "cmd"
+    ],
+    "caption": "a black and white icon with the word c",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTerminalDebian.svg",
+    "component_id": "vsc:VscTerminalDebian",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "debian"
+    ],
+    "caption": "a black and white drawing of a spiral",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTerminalLinux.svg",
+    "component_id": "vsc:VscTerminalLinux",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "linux"
+    ],
+    "caption": "a black and white drawing of a penguin",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTerminalPowershell.svg",
+    "component_id": "vsc:VscTerminalPowershell",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "powershell"
+    ],
+    "caption": "a black and white image of a computer icon",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTerminalTmux.svg",
+    "component_id": "vsc:VscTerminalTmux",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "tmux"
+    ],
+    "caption": "a black and white icon of a window",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTerminalUbuntu.svg",
+    "component_id": "vsc:VscTerminalUbuntu",
+    "aliases": [
+      "vsc",
+      "terminal",
+      "ubuntu"
+    ],
+    "caption": "a black and white circle with three people in it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTextSize.svg",
+    "component_id": "vsc:VscTextSize",
+    "aliases": [
+      "vsc",
+      "text",
+      "size"
+    ],
+    "caption": "a black and white letter a on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscThreeBars.svg",
+    "component_id": "vsc:VscThreeBars",
+    "aliases": [
+      "vsc",
+      "three",
+      "bars"
+    ],
+    "caption": "a black and white striped symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscThumbsdown.svg",
+    "component_id": "vsc:VscThumbsdown",
+    "aliases": [
+      "vsc",
+      "thumbsdown"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscThumbsdownFilled.svg",
+    "component_id": "vsc:VscThumbsdownFilled",
+    "aliases": [
+      "vsc",
+      "thumbsdown",
+      "filled"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscThumbsup.svg",
+    "component_id": "vsc:VscThumbsup",
+    "aliases": [
+      "vsc",
+      "thumbsup"
+    ],
+    "caption": "a black and white icon of a thumb up",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscThumbsupFilled.svg",
+    "component_id": "vsc:VscThumbsupFilled",
+    "aliases": [
+      "vsc",
+      "thumbsup",
+      "filled"
+    ],
+    "caption": "a black thumb up icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTools.svg",
+    "component_id": "vsc:VscTools",
+    "aliases": [
+      "vsc",
+      "tools"
+    ],
+    "caption": "a black and white icon of a wrench and a screwdriver",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTrash.svg",
+    "component_id": "vsc:VscTrash",
+    "aliases": [
+      "vsc",
+      "trash"
+    ],
+    "caption": "a black and white icon of a trash can",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTriangleDown.svg",
+    "component_id": "vsc:VscTriangleDown",
+    "aliases": [
+      "vsc",
+      "triangle",
+      "down"
+    ],
+    "caption": "a black triangle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTriangleLeft.svg",
+    "component_id": "vsc:VscTriangleLeft",
+    "aliases": [
+      "vsc",
+      "triangle",
+      "left"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTriangleRight.svg",
+    "component_id": "vsc:VscTriangleRight",
+    "aliases": [
+      "vsc",
+      "triangle",
+      "right"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTriangleUp.svg",
+    "component_id": "vsc:VscTriangleUp",
+    "aliases": [
+      "vsc",
+      "triangle",
+      "up"
+    ],
+    "caption": "a black triangle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTwitter.svg",
+    "component_id": "vsc:VscTwitter",
+    "aliases": [
+      "vsc",
+      "twitter"
+    ],
+    "caption": "a black twitter logo on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTypeHierarchy.svg",
+    "component_id": "vsc:VscTypeHierarchy",
+    "aliases": [
+      "vsc",
+      "type",
+      "hierarchy"
+    ],
+    "caption": "a black and white icon of a molecule",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTypeHierarchySub.svg",
+    "component_id": "vsc:VscTypeHierarchySub",
+    "aliases": [
+      "vsc",
+      "type",
+      "hierarchy",
+      "sub"
+    ],
+    "caption": "a black and white image of a diagram with three squares",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscTypeHierarchySuper.svg",
+    "component_id": "vsc:VscTypeHierarchySuper",
+    "aliases": [
+      "vsc",
+      "type",
+      "hierarchy",
+      "super"
+    ],
+    "caption": "a black and white image of a network symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscUnfold.svg",
+    "component_id": "vsc:VscUnfold",
+    "aliases": [
+      "vsc",
+      "unfold"
+    ],
+    "caption": "a black and white image of a symbol with arrows",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscUngroupByRefType.svg",
+    "component_id": "vsc:VscUngroupByRefType",
+    "aliases": [
+      "vsc",
+      "ungroup",
+      "by",
+      "ref",
+      "type"
+    ],
+    "caption": "two arrows pointing in different directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscUnlock.svg",
+    "component_id": "vsc:VscUnlock",
+    "aliases": [
+      "vsc",
+      "unlock"
+    ],
+    "caption": "a padlock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscUnmute.svg",
+    "component_id": "vsc:VscUnmute",
+    "aliases": [
+      "vsc",
+      "unmute"
+    ],
+    "caption": "a speaker icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscUnverified.svg",
+    "component_id": "vsc:VscUnverified",
+    "aliases": [
+      "vsc",
+      "unverified"
+    ],
+    "caption": "a black and white icon with a question mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVariableGroup.svg",
+    "component_id": "vsc:VscVariableGroup",
+    "aliases": [
+      "vsc",
+      "variable",
+      "group"
+    ],
+    "caption": "a black and white icon of a computer screen",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVerified.svg",
+    "component_id": "vsc:VscVerified",
+    "aliases": [
+      "vsc",
+      "verified"
+    ],
+    "caption": "a black and white icon of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVerifiedFilled.svg",
+    "component_id": "vsc:VscVerifiedFilled",
+    "aliases": [
+      "vsc",
+      "verified",
+      "filled"
+    ],
+    "caption": "a black and white icon with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVersions.svg",
+    "component_id": "vsc:VscVersions",
+    "aliases": [
+      "vsc",
+      "versions"
+    ],
+    "caption": "a black and white image of a cell phone",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVm.svg",
+    "component_id": "vsc:VscVm",
+    "aliases": [
+      "vsc",
+      "vm"
+    ],
+    "caption": "a computer monitor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVmActive.svg",
+    "component_id": "vsc:VscVmActive",
+    "aliases": [
+      "vsc",
+      "vm",
+      "active"
+    ],
+    "caption": "a black and white image of a computer with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVmConnect.svg",
+    "component_id": "vsc:VscVmConnect",
+    "aliases": [
+      "vsc",
+      "vm",
+      "connect"
+    ],
+    "caption": "a black and white icon of a computer with an error symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVmOutline.svg",
+    "component_id": "vsc:VscVmOutline",
+    "aliases": [
+      "vsc",
+      "vm",
+      "outline"
+    ],
+    "caption": "a black and white icon of a computer monitor",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVmRunning.svg",
+    "component_id": "vsc:VscVmRunning",
+    "aliases": [
+      "vsc",
+      "vm",
+      "running"
+    ],
+    "caption": "a black and white video icon with a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVr.svg",
+    "component_id": "vsc:VscVr",
+    "aliases": [
+      "vsc",
+      "vr"
+    ],
+    "caption": "a black and white image of a virtual mask",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVscode.svg",
+    "component_id": "vsc:VscVscode",
+    "aliases": [
+      "vsc",
+      "vscode"
+    ],
+    "caption": "a black and white image of an x symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscVscodeInsiders.svg",
+    "component_id": "vsc:VscVscodeInsiders",
+    "aliases": [
+      "vsc",
+      "vscode",
+      "insiders"
+    ],
+    "caption": "a black and white logo with the letter x",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscWand.svg",
+    "component_id": "vsc:VscWand",
+    "aliases": [
+      "vsc",
+      "wand"
+    ],
+    "caption": "a black and white image of a thermometer with two plus signs",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscWarning.svg",
+    "component_id": "vsc:VscWarning",
+    "aliases": [
+      "vsc",
+      "warning"
+    ],
+    "caption": "a black and white warning sign with an exclamation mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscWatch.svg",
+    "component_id": "vsc:VscWatch",
+    "aliases": [
+      "vsc",
+      "watch"
+    ],
+    "caption": "an icon of a watch with a clock on it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscWhitespace.svg",
+    "component_id": "vsc:VscWhitespace",
+    "aliases": [
+      "vsc",
+      "whitespace"
+    ],
+    "caption": "a black and white image of the letter p",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscWholeWord.svg",
+    "component_id": "vsc:VscWholeWord",
+    "aliases": [
+      "vsc",
+      "whole",
+      "word"
+    ],
+    "caption": "a black and white image of the letter ab",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscWindow.svg",
+    "component_id": "vsc:VscWindow",
+    "aliases": [
+      "vsc",
+      "window"
+    ],
+    "caption": "a black and white icon of a web browser",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscWordWrap.svg",
+    "component_id": "vsc:VscWordWrap",
+    "aliases": [
+      "vsc",
+      "word",
+      "wrap"
+    ],
+    "caption": "a black and white image of an arrow pointing to the word abc",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscWorkspaceTrusted.svg",
+    "component_id": "vsc:VscWorkspaceTrusted",
+    "aliases": [
+      "vsc",
+      "workspace",
+      "trusted"
+    ],
+    "caption": "a black and white icon of a shield with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscWorkspaceUnknown.svg",
+    "component_id": "vsc:VscWorkspaceUnknown",
+    "aliases": [
+      "vsc",
+      "workspace",
+      "unknown"
+    ],
+    "caption": "a shield with a question mark on it",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscWorkspaceUntrusted.svg",
+    "component_id": "vsc:VscWorkspaceUntrusted",
+    "aliases": [
+      "vsc",
+      "workspace",
+      "untrusted"
+    ],
+    "caption": "a black and white icon of a shield with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscZoomIn.svg",
+    "component_id": "vsc:VscZoomIn",
+    "aliases": [
+      "vsc",
+      "zoom",
+      "in"
+    ],
+    "caption": "a magnifying glass icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "vsc/VscZoomOut.svg",
+    "component_id": "vsc:VscZoomOut",
+    "aliases": [
+      "vsc",
+      "zoom",
+      "out"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  }
+]

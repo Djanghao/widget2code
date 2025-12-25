@@ -1,0 +1,247 @@
+{
+  "widget": {
+    "backgroundColor": "#FEF2F2",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1.117,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 2,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 10,
+                "fontWeight": 700,
+                "color": "#DC2626",
+                "letterSpacing": 1.2
+              },
+              "content": "CUSTOMER INSIGHTS"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 22,
+                "fontWeight": 800,
+                "color": "#7F1D1D"
+              },
+              "content": "Segment Distribution"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 1,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "flex": 0,
+              "props": {
+                "data": [40, 32, 18, 10],
+                "labels": ["Enterprise", "Mid-Market", "SMB", "Startup"],
+                "colors": ["#DC2626", "#EF4444", "#F87171", "#FCA5A5"],
+                "theme": "light",
+                "variant": "ring",
+                "innerRadius": 0.63,
+                "outerRadius": 80,
+                "showLabels": false,
+                "roundedSegments": true,
+                "segmentBorderRadius": 8,
+                "borderWidth": 2,
+                "borderColor": "#FECACA",
+                "startAngle": 180,
+                "clockwise": false,
+                "animated": true,
+                "animationDuration": 1100,
+                "emphasisScale": 1.06,
+                "height": 140,
+                "width": 140
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 6,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 10,
+                      "height": 10,
+                      "backgroundColor": "#DC2626",
+                      "borderRadius": 2,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#7F1D1D"
+                      },
+                      "content": "Enterprise"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#DC2626"
+                      },
+                      "content": "3.3K"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 10,
+                      "height": 10,
+                      "backgroundColor": "#EF4444",
+                      "borderRadius": 2,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#7F1D1D"
+                      },
+                      "content": "Mid-Market"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#EF4444"
+                      },
+                      "content": "2.6K"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 10,
+                      "height": 10,
+                      "backgroundColor": "#F87171",
+                      "borderRadius": 2,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#7F1D1D"
+                      },
+                      "content": "SMB"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#F87171"
+                      },
+                      "content": "1.5K"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 10,
+                      "height": 10,
+                      "backgroundColor": "#FCA5A5",
+                      "borderRadius": 2,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#7F1D1D"
+                      },
+                      "content": "Startup"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#FCA5A5"
+                      },
+                      "content": "0.8K"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

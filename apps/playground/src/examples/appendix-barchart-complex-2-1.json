@@ -1,0 +1,51 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "repeating-linear-gradient(45deg, #000 0, #000 10px, #050505 10px, #050505 20px)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "ENERGY_OUTPUT" },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:bolt.fill", "size": 20, "color": "#00FF9D" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "props": { "style": { "border": "1px solid #333", "backgroundColor": "rgba(0,0,0,0.8)" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "BarChart",
+              "props": {
+                "data": [
+                  [45, 80, 60, 90, 50, 70, 85]
+                ],
+                "colors": ["#00FF9D"],
+                "seriesNames": ["Output"],
+                "backgroundColor": "transparent",
+                "showGrid": true,
+                "gridColor": "#333",
+                "barWidth": 12,
+                "height": "100%",
+                "labels": ["M", "T", "W", "T", "F", "S", "S"],
+                "theme": "dark"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

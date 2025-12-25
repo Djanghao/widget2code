@@ -1,0 +1,332 @@
+{
+  "widget": {
+    "backgroundColor": "#f2f2f7",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 0.955,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 32,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "20"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 17,
+                    "color": "#FF3B30",
+                    "fontWeight": 600
+                  },
+                  "content": "Reminders"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 40,
+                "color": "#FFCCCB",
+                "name": "sf:circle.fill"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "checked": true,
+                    "color": "#FF3B30"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000"
+                  },
+                  "content": "Pick up parts & crafts supplies"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "checked": false,
+                    "color": "#FF3B30"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000"
+                  },
+                  "content": "Send cookie recipe to Rigo"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "checked": true,
+                    "color": "#FF3B30"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000"
+                  },
+                  "content": "Book club prep"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "checked": false,
+                    "color": "#FF3B30"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000"
+                  },
+                  "content": "Hike with Darla"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "checked": false,
+                    "color": "#FF3B30"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000"
+                  },
+                  "content": "Schedule car maintenance"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "checked": false,
+                    "color": "#FF3B30"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000"
+                  },
+                  "content": "Cancel membership"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Divider",
+              "flex": "none",
+              "props": {
+                "type": "dashed",
+                "color": "#d1d1d6"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "size": 24,
+                    "checked": false,
+                    "color": "#FF3B30"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000"
+                  },
+                  "content": "Check spare tire"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "alignMain": "between",
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:list.bullet",
+                "backgroundColor": "rgba(255,255,255,0.1)",
+                "color": "#FFFFFF",
+                "width": 44,
+                "height": 44,
+                "borderRadius": 22
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 13,
+                "fontWeight": 600,
+                "color": "#8E8E93",
+                "textTransform": "uppercase"
+              },
+              "content": "Now Playing"
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:ellipsis",
+                "backgroundColor": "rgba(255,255,255,0.1)",
+                "color": "#FFFFFF",
+                "width": 44,
+                "height": 44,
+                "borderRadius": 22
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "alignCross": "center",
+          "gap": 8,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 20,
+                "fontWeight": 700,
+                "color": "#FFFFFF"
+              },
+              "content": "Midnight City"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 15,
+                "color": "#FF2D55"
+              },
+              "content": "M83"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "center",
+          "alignCross": "center",
+          "gap": 24,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:backward.fill",
+                "backgroundColor": "transparent",
+                "color": "#FFFFFF",
+                "width": 44,
+                "height": 44,
+                "fontSize": 24
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:play.fill",
+                "backgroundColor": "#FFFFFF",
+                "color": "#000000",
+                "width": 64,
+                "height": 64,
+                "borderRadius": 32,
+                "fontSize": 28
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "icon": "sf:forward.fill",
+                "backgroundColor": "transparent",
+                "color": "#FFFFFF",
+                "width": 44,
+                "height": 44,
+                "fontSize": 24
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

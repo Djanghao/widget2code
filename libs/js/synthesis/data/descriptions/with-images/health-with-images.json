@@ -1,0 +1,246 @@
+{
+  "domain": "health",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "health-img-001",
+      "prompt": "A heart rate widget with heart icon, current BPM, and trend graph",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "heart or health icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-002",
+      "prompt": "A step counter widget with walking figure, steps count, and daily goal progress",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "walking or running figure",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-003",
+      "prompt": "A workout widget with exercise photo, workout name, duration, and calories burned",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "exercise or workout photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "health-img-004",
+      "prompt": "A sleep tracker widget with moon icon, sleep duration, sleep quality score",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "moon or sleep visual",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-005",
+      "prompt": "A water intake widget with water glass image, cups consumed, and daily goal",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "water glass or hydration icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-006",
+      "prompt": "A meditation widget with zen scene, session duration, and streak count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "meditation or zen scene",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "health-img-007",
+      "prompt": "A calorie tracker widget with food photo, calories consumed, and remaining budget",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "healthy food photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-008",
+      "prompt": "A yoga pose widget with pose illustration, name, difficulty, and benefits",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "yoga pose illustration or photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "health-img-009",
+      "prompt": "A blood pressure widget with medical icon, systolic/diastolic readings, and status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "blood pressure or medical icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-010",
+      "prompt": "A medication reminder widget with pill image, medication name, dosage, and time",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "pill or medication photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-011",
+      "prompt": "A BMI widget with body silhouette, BMI value, category, and healthy range",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "body silhouette icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-012",
+      "prompt": "A running widget with runner photo, distance, pace, and route map",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "runner photo and map",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "health-img-013",
+      "prompt": "A nutrition widget with food photo, macros breakdown, and meal type",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "meal or food photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-014",
+      "prompt": "A doctor appointment widget with doctor photo, specialty, appointment time, and location",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "doctor profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-015",
+      "prompt": "A weight tracker widget with scale icon, current weight, change indicator, and goal",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "scale or weight icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-016",
+      "prompt": "A cycling widget with bike photo, distance, speed, and elevation gain",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "cycling photo or bike",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "health-img-017",
+      "prompt": "A mental health widget with calming image, mood rating, and journal prompt",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "calming or mindful scene",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "health-img-018",
+      "prompt": "A gym session widget with equipment photo, exercises, sets, and rest timer",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "gym equipment photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-019",
+      "prompt": "A pregnancy tracker widget with baby illustration, weeks pregnant, and milestone",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "baby or pregnancy illustration",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-020",
+      "prompt": "A blood sugar widget with glucose meter image, reading, status, and log time",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "glucose meter or medical device",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-021",
+      "prompt": "A breathing exercise widget with lung visual, breaths per minute, and pattern guide",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "lung or breathing visualization",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "health-img-022",
+      "prompt": "A stretching widget with stretch illustration, body part, duration, and instructions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "stretching pose illustration",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "health-img-023",
+      "prompt": "A allergy tracker widget with allergen image, symptom level, and trigger log",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "allergen or pollen image",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-024",
+      "prompt": "A vaccination record widget with vaccine vial image, vaccine name, and next due date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "vaccine vial or syringe",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-025",
+      "prompt": "A wellness challenge widget with challenge badge, participants, and progress bar",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "wellness badge or trophy",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-026",
+      "prompt": "A first aid widget with medical cross, emergency type, and step-by-step guide",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "first aid or medical cross",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-027",
+      "prompt": "A posture reminder widget with posture illustration, time sitting, and correction tips",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "posture illustration",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-028",
+      "prompt": "A vitamin tracker widget with supplement photo, dosage, time, and reminder",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "vitamin or supplement photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-029",
+      "prompt": "A fitness achievement widget with trophy image, achievement name, and date earned",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "trophy or medal image",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "health-img-030",
+      "prompt": "A health insurance widget with insurance card image, coverage details, and claim status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "insurance card",
+      "imagePlacement": "left-thumbnail"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 22, "fontWeight": 700, "color": "#000000" },
+                  "content": "Daily Goals"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 14, "color": "#8E8E93" },
+                  "content": "3 of 5 completed"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "props": {
+                "percentage": 60,
+                "size": 44,
+                "strokeWidth": 4,
+                "color": "#34C759",
+                "backgroundColor": "#E5E5EA",
+                "iconName": "sf:star.fill",
+                "iconSize": 16,
+                "iconColor": "#34C759"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 12,
+              "padding": 12,
+              "backgroundColor": "#F2F2F7",
+              "props": { "style": { "borderRadius": 12 } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "props": { "checked": true, "color": "#34C759", "size": 24 }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 16, "fontWeight": 500, "color": "#000000", "style": { "textDecoration": "line-through", "opacity": 0.6 } },
+                  "content": "Morning Workout"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 12,
+              "padding": 12,
+              "backgroundColor": "#F2F2F7",
+              "props": { "style": { "borderRadius": 12 } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "props": { "checked": true, "color": "#34C759", "size": 24 }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 16, "fontWeight": 500, "color": "#000000", "style": { "textDecoration": "line-through", "opacity": 0.6 } },
+                  "content": "Read 30 mins"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 12,
+              "padding": 12,
+              "backgroundColor": "#FFFFFF",
+              "props": { "style": { "borderRadius": 12, "border": "1px solid #E5E5EA" } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "props": { "checked": false, "color": "#34C759", "size": 24 }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 16, "fontWeight": 500, "color": "#000000" },
+                  "content": "Drink Water"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

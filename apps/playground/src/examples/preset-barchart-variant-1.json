@@ -1,0 +1,48 @@
+{
+  "widget": {
+    "backgroundColor": "#0A0E27",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 22, "fontWeight": 700, "color": "#00F0FF" },
+          "content": "Cyber Stats"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 13, "fontWeight": 500, "color": "#FF00EA" },
+          "content": "NETWORK ACTIVITY"
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "props": {
+            "data": [8500, 12000, 9800, 15000, 11200, 13500, 16800],
+            "labels": ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
+            "colors": ["#00F0FF", "#00F0FF", "#00F0FF", "#FF00EA", "#00F0FF", "#00F0FF", "#FFD600"],
+            "backgroundColor": "transparent",
+            "barBorderRadius": 6,
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showValues": true,
+            "height": "100%",
+            "theme": "dark",
+            "showXAxisTicks": false,
+            "showYAxisTicks": true,
+            "tickLineStyle": "solid",
+            "tickLineColor": "rgba(0, 240, 255, 0.15)"
+          }
+        }
+      ]
+    }
+  }
+}

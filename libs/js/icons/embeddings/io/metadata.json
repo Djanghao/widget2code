@@ -1,0 +1,7206 @@
+{
+  "io/IoIosAdd.svg": {
+    "component_id": "io:IoIosAdd",
+    "aliases": [
+      "io",
+      "ios",
+      "add"
+    ],
+    "colors": [],
+    "caption": "a black plus symbol on a white background"
+  },
+  "io/IoIosAddCircle.svg": {
+    "component_id": "io:IoIosAddCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "add",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a plus sign in a black circle on a white background"
+  },
+  "io/IoIosAddCircleOutline.svg": {
+    "component_id": "io:IoIosAddCircleOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "add",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a plus sign in a circle on a white background"
+  },
+  "io/IoIosAirplane.svg": {
+    "component_id": "io:IoIosAirplane",
+    "aliases": [
+      "io",
+      "ios",
+      "airplane"
+    ],
+    "colors": [],
+    "caption": "an airplane icon is shown on a white background"
+  },
+  "io/IoIosAlarm.svg": {
+    "component_id": "io:IoIosAlarm",
+    "aliases": [
+      "io",
+      "ios",
+      "alarm"
+    ],
+    "colors": [],
+    "caption": "an alarm clock icon on a white background"
+  },
+  "io/IoIosAlbums.svg": {
+    "component_id": "io:IoIosAlbums",
+    "aliases": [
+      "io",
+      "ios",
+      "albums"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book on a white background"
+  },
+  "io/IoIosAlert.svg": {
+    "component_id": "io:IoIosAlert",
+    "aliases": [
+      "io",
+      "ios",
+      "alert"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an exclamation sign"
+  },
+  "io/IoIosAmericanFootball.svg": {
+    "component_id": "io:IoIosAmericanFootball",
+    "aliases": [
+      "io",
+      "ios",
+      "american",
+      "football"
+    ],
+    "colors": [],
+    "caption": "an american football ball icon on a white background"
+  },
+  "io/IoIosAnalytics.svg": {
+    "component_id": "io:IoIosAnalytics",
+    "aliases": [
+      "io",
+      "ios",
+      "analytics"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with waves in it"
+  },
+  "io/IoIosAperture.svg": {
+    "component_id": "io:IoIosAperture",
+    "aliases": [
+      "io",
+      "ios",
+      "aperture"
+    ],
+    "colors": [],
+    "caption": "a black and white photo camera lens logo"
+  },
+  "io/IoIosApps.svg": {
+    "component_id": "io:IoIosApps",
+    "aliases": [
+      "io",
+      "ios",
+      "apps"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a stack of squares"
+  },
+  "io/IoIosAppstore.svg": {
+    "component_id": "io:IoIosAppstore",
+    "aliases": [
+      "io",
+      "ios",
+      "appstore"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with the word apple on it"
+  },
+  "io/IoIosArchive.svg": {
+    "component_id": "io:IoIosArchive",
+    "aliases": [
+      "io",
+      "ios",
+      "archive"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a file cabinet"
+  },
+  "io/IoIosArrowBack.svg": {
+    "component_id": "io:IoIosArrowBack",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "back"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "io/IoIosArrowDown.svg": {
+    "component_id": "io:IoIosArrowDown",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter v"
+  },
+  "io/IoIosArrowDropdown.svg": {
+    "component_id": "io:IoIosArrowDropdown",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "dropdown"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow in a circle"
+  },
+  "io/IoIosArrowDropdownCircle.svg": {
+    "component_id": "io:IoIosArrowDropdownCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "dropdown",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white circular button with a white arrow"
+  },
+  "io/IoIosArrowDropleft.svg": {
+    "component_id": "io:IoIosArrowDropleft",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "dropleft"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "io/IoIosArrowDropleftCircle.svg": {
+    "component_id": "io:IoIosArrowDropleftCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "dropleft",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "io/IoIosArrowDropright.svg": {
+    "component_id": "io:IoIosArrowDropright",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "dropright"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "io/IoIosArrowDroprightCircle.svg": {
+    "component_id": "io:IoIosArrowDroprightCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "dropright",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "io/IoIosArrowDropup.svg": {
+    "component_id": "io:IoIosArrowDropup",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "dropup"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "io/IoIosArrowDropupCircle.svg": {
+    "component_id": "io:IoIosArrowDropupCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "dropup",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white button with an arrow pointing up"
+  },
+  "io/IoIosArrowForward.svg": {
+    "component_id": "io:IoIosArrowForward",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "io/IoIosArrowRoundBack.svg": {
+    "component_id": "io:IoIosArrowRoundBack",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "round",
+      "back"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "io/IoIosArrowRoundDown.svg": {
+    "component_id": "io:IoIosArrowRoundDown",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "round",
+      "down"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "io/IoIosArrowRoundForward.svg": {
+    "component_id": "io:IoIosArrowRoundForward",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "round",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "io/IoIosArrowRoundUp.svg": {
+    "component_id": "io:IoIosArrowRoundUp",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "round",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "io/IoIosArrowUp.svg": {
+    "component_id": "io:IoIosArrowUp",
+    "aliases": [
+      "io",
+      "ios",
+      "arrow",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a triangle"
+  },
+  "io/IoIosAt.svg": {
+    "component_id": "io:IoIosAt",
+    "aliases": [
+      "io",
+      "ios",
+      "at"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an email symbol"
+  },
+  "io/IoIosAttach.svg": {
+    "component_id": "io:IoIosAttach",
+    "aliases": [
+      "io",
+      "ios",
+      "attach"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a paper clip"
+  },
+  "io/IoIosBackspace.svg": {
+    "component_id": "io:IoIosBackspace",
+    "aliases": [
+      "io",
+      "ios",
+      "backspace"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white icon with a cross"
+  },
+  "io/IoIosBarcode.svg": {
+    "component_id": "io:IoIosBarcode",
+    "aliases": [
+      "io",
+      "ios",
+      "barcode"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a door"
+  },
+  "io/IoIosBaseball.svg": {
+    "component_id": "io:IoIosBaseball",
+    "aliases": [
+      "io",
+      "ios",
+      "baseball"
+    ],
+    "colors": [],
+    "caption": "baseball icon in black and white on a white background"
+  },
+  "io/IoIosBasket.svg": {
+    "component_id": "io:IoIosBasket",
+    "aliases": [
+      "io",
+      "ios",
+      "basket"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shopping basket"
+  },
+  "io/IoIosBasketball.svg": {
+    "component_id": "io:IoIosBasketball",
+    "aliases": [
+      "io",
+      "ios",
+      "basketball"
+    ],
+    "colors": [],
+    "caption": "a black and white basketball icon on a white background"
+  },
+  "io/IoIosBatteryCharging.svg": {
+    "component_id": "io:IoIosBatteryCharging",
+    "aliases": [
+      "io",
+      "ios",
+      "battery",
+      "charging"
+    ],
+    "colors": [],
+    "caption": "a battery icon on a white background"
+  },
+  "io/IoIosBatteryDead.svg": {
+    "component_id": "io:IoIosBatteryDead",
+    "aliases": [
+      "io",
+      "ios",
+      "battery",
+      "dead"
+    ],
+    "colors": [],
+    "caption": "a battery icon on a white background"
+  },
+  "io/IoIosBatteryFull.svg": {
+    "component_id": "io:IoIosBatteryFull",
+    "aliases": [
+      "io",
+      "ios",
+      "battery",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a battery icon on a white background"
+  },
+  "io/IoIosBeaker.svg": {
+    "component_id": "io:IoIosBeaker",
+    "aliases": [
+      "io",
+      "ios",
+      "beaker"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a beaker"
+  },
+  "io/IoIosBed.svg": {
+    "component_id": "io:IoIosBed",
+    "aliases": [
+      "io",
+      "ios",
+      "bed"
+    ],
+    "colors": [],
+    "caption": "an icon of a bed with two pillows"
+  },
+  "io/IoIosBeer.svg": {
+    "component_id": "io:IoIosBeer",
+    "aliases": [
+      "io",
+      "ios",
+      "beer"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a mug of beer on a white background"
+  },
+  "io/IoIosBicycle.svg": {
+    "component_id": "io:IoIosBicycle",
+    "aliases": [
+      "io",
+      "ios",
+      "bicycle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person riding a bike"
+  },
+  "io/IoIosBluetooth.svg": {
+    "component_id": "io:IoIosBluetooth",
+    "aliases": [
+      "io",
+      "ios",
+      "bluetooth"
+    ],
+    "colors": [],
+    "caption": "a bluetooth symbol on a white background"
+  },
+  "io/IoIosBoat.svg": {
+    "component_id": "io:IoIosBoat",
+    "aliases": [
+      "io",
+      "ios",
+      "boat"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a boat"
+  },
+  "io/IoIosBody.svg": {
+    "component_id": "io:IoIosBody",
+    "aliases": [
+      "io",
+      "ios",
+      "body"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with arms outstretched"
+  },
+  "io/IoIosBonfire.svg": {
+    "component_id": "io:IoIosBonfire",
+    "aliases": [
+      "io",
+      "ios",
+      "bonfire"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a flame"
+  },
+  "io/IoIosBook.svg": {
+    "component_id": "io:IoIosBook",
+    "aliases": [
+      "io",
+      "ios",
+      "book"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an open book"
+  },
+  "io/IoIosBookmark.svg": {
+    "component_id": "io:IoIosBookmark",
+    "aliases": [
+      "io",
+      "ios",
+      "bookmark"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a bookmark"
+  },
+  "io/IoIosBookmarks.svg": {
+    "component_id": "io:IoIosBookmarks",
+    "aliases": [
+      "io",
+      "ios",
+      "bookmarks"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book with a bookmark"
+  },
+  "io/IoIosBowtie.svg": {
+    "component_id": "io:IoIosBowtie",
+    "aliases": [
+      "io",
+      "ios",
+      "bowtie"
+    ],
+    "colors": [],
+    "caption": "a black bow tie icon on a white background"
+  },
+  "io/IoIosBriefcase.svg": {
+    "component_id": "io:IoIosBriefcase",
+    "aliases": [
+      "io",
+      "ios",
+      "briefcase"
+    ],
+    "colors": [],
+    "caption": "a briefcase icon on a white background"
+  },
+  "io/IoIosBrowsers.svg": {
+    "component_id": "io:IoIosBrowsers",
+    "aliases": [
+      "io",
+      "ios",
+      "browsers"
+    ],
+    "colors": [],
+    "caption": "a black square icon on a white background"
+  },
+  "io/IoIosBrush.svg": {
+    "component_id": "io:IoIosBrush",
+    "aliases": [
+      "io",
+      "ios",
+      "brush"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a paint brush"
+  },
+  "io/IoIosBug.svg": {
+    "component_id": "io:IoIosBug",
+    "aliases": [
+      "io",
+      "ios",
+      "bug"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a bug on a white background"
+  },
+  "io/IoIosBuild.svg": {
+    "component_id": "io:IoIosBuild",
+    "aliases": [
+      "io",
+      "ios",
+      "build"
+    ],
+    "colors": [],
+    "caption": "a wrench icon on a white background"
+  },
+  "io/IoIosBulb.svg": {
+    "component_id": "io:IoIosBulb",
+    "aliases": [
+      "io",
+      "ios",
+      "bulb"
+    ],
+    "colors": [],
+    "caption": "a black light bulb icon on a white background"
+  },
+  "io/IoIosBus.svg": {
+    "component_id": "io:IoIosBus",
+    "aliases": [
+      "io",
+      "ios",
+      "bus"
+    ],
+    "colors": [],
+    "caption": "a black and white bus icon on a white background"
+  },
+  "io/IoIosBusiness.svg": {
+    "component_id": "io:IoIosBusiness",
+    "aliases": [
+      "io",
+      "ios",
+      "business"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a building"
+  },
+  "io/IoIosCafe.svg": {
+    "component_id": "io:IoIosCafe",
+    "aliases": [
+      "io",
+      "ios",
+      "cafe"
+    ],
+    "colors": [],
+    "caption": "a black coffee cup icon on a white background"
+  },
+  "io/IoIosCalculator.svg": {
+    "component_id": "io:IoIosCalculator",
+    "aliases": [
+      "io",
+      "ios",
+      "calculator"
+    ],
+    "colors": [],
+    "caption": "a calculator icon on a white background"
+  },
+  "io/IoIosCalendar.svg": {
+    "component_id": "io:IoIosCalendar",
+    "aliases": [
+      "io",
+      "ios",
+      "calendar"
+    ],
+    "colors": [],
+    "caption": "a calendar icon on a white background"
+  },
+  "io/IoIosCall.svg": {
+    "component_id": "io:IoIosCall",
+    "aliases": [
+      "io",
+      "ios",
+      "call"
+    ],
+    "colors": [],
+    "caption": "a black telephone icon on a white background"
+  },
+  "io/IoIosCamera.svg": {
+    "component_id": "io:IoIosCamera",
+    "aliases": [
+      "io",
+      "ios",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "a camera icon on a white background"
+  },
+  "io/IoIosCar.svg": {
+    "component_id": "io:IoIosCar",
+    "aliases": [
+      "io",
+      "ios",
+      "car"
+    ],
+    "colors": [],
+    "caption": "a black car icon on a white background"
+  },
+  "io/IoIosCard.svg": {
+    "component_id": "io:IoIosCard",
+    "aliases": [
+      "io",
+      "ios",
+      "card"
+    ],
+    "colors": [],
+    "caption": "a credit card icon on a white background"
+  },
+  "io/IoIosCart.svg": {
+    "component_id": "io:IoIosCart",
+    "aliases": [
+      "io",
+      "ios",
+      "cart"
+    ],
+    "colors": [],
+    "caption": "a shopping cart icon on a white background"
+  },
+  "io/IoIosCash.svg": {
+    "component_id": "io:IoIosCash",
+    "aliases": [
+      "io",
+      "ios",
+      "cash"
+    ],
+    "colors": [],
+    "caption": "a money icon on a white background"
+  },
+  "io/IoIosCellular.svg": {
+    "component_id": "io:IoIosCellular",
+    "aliases": [
+      "io",
+      "ios",
+      "cellular"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a radio antenna"
+  },
+  "io/IoIosChatboxes.svg": {
+    "component_id": "io:IoIosChatboxes",
+    "aliases": [
+      "io",
+      "ios",
+      "chatboxes"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles on a white background"
+  },
+  "io/IoIosChatbubbles.svg": {
+    "component_id": "io:IoIosChatbubbles",
+    "aliases": [
+      "io",
+      "ios",
+      "chatbubbles"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles on a white background"
+  },
+  "io/IoIosCheckbox.svg": {
+    "component_id": "io:IoIosCheckbox",
+    "aliases": [
+      "io",
+      "ios",
+      "checkbox"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "io/IoIosCheckboxOutline.svg": {
+    "component_id": "io:IoIosCheckboxOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "checkbox",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a white background"
+  },
+  "io/IoIosCheckmark.svg": {
+    "component_id": "io:IoIosCheckmark",
+    "aliases": [
+      "io",
+      "ios",
+      "checkmark"
+    ],
+    "colors": [],
+    "caption": "a black check mark icon on a white background"
+  },
+  "io/IoIosCheckmarkCircle.svg": {
+    "component_id": "io:IoIosCheckmarkCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "checkmark",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "io/IoIosCheckmarkCircleOutline.svg": {
+    "component_id": "io:IoIosCheckmarkCircleOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "checkmark",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "io/IoIosClipboard.svg": {
+    "component_id": "io:IoIosClipboard",
+    "aliases": [
+      "io",
+      "ios",
+      "clipboard"
+    ],
+    "colors": [],
+    "caption": "a clipboard icon on a white background"
+  },
+  "io/IoIosClock.svg": {
+    "component_id": "io:IoIosClock",
+    "aliases": [
+      "io",
+      "ios",
+      "clock"
+    ],
+    "colors": [],
+    "caption": "a black and white clock on a white background"
+  },
+  "io/IoIosClose.svg": {
+    "component_id": "io:IoIosClose",
+    "aliases": [
+      "io",
+      "ios",
+      "close"
+    ],
+    "colors": [],
+    "caption": "a black and white cross is shown on a white background"
+  },
+  "io/IoIosCloseCircle.svg": {
+    "component_id": "io:IoIosCloseCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "close",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with an x symbol"
+  },
+  "io/IoIosCloseCircleOutline.svg": {
+    "component_id": "io:IoIosCloseCircleOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "close",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x in a circle"
+  },
+  "io/IoIosCloud.svg": {
+    "component_id": "io:IoIosCloud",
+    "aliases": [
+      "io",
+      "ios",
+      "cloud"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "io/IoIosCloudCircle.svg": {
+    "component_id": "io:IoIosCloudCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "cloud",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a cloud icon in a black circle on a white background"
+  },
+  "io/IoIosCloudDone.svg": {
+    "component_id": "io:IoIosCloudDone",
+    "aliases": [
+      "io",
+      "ios",
+      "cloud",
+      "done"
+    ],
+    "colors": [],
+    "caption": "a cloud with a check mark on it"
+  },
+  "io/IoIosCloudDownload.svg": {
+    "component_id": "io:IoIosCloudDownload",
+    "aliases": [
+      "io",
+      "ios",
+      "cloud",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon with an arrow pointing down"
+  },
+  "io/IoIosCloudOutline.svg": {
+    "component_id": "io:IoIosCloudOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "cloud",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "io/IoIosCloudUpload.svg": {
+    "component_id": "io:IoIosCloudUpload",
+    "aliases": [
+      "io",
+      "ios",
+      "cloud",
+      "upload"
+    ],
+    "colors": [],
+    "caption": "cloud icon with arrow pointing up"
+  },
+  "io/IoIosCloudy.svg": {
+    "component_id": "io:IoIosCloudy",
+    "aliases": [
+      "io",
+      "ios",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "io/IoIosCloudyNight.svg": {
+    "component_id": "io:IoIosCloudyNight",
+    "aliases": [
+      "io",
+      "ios",
+      "cloudy",
+      "night"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the moon and cloud"
+  },
+  "io/IoIosCode.svg": {
+    "component_id": "io:IoIosCode",
+    "aliases": [
+      "io",
+      "ios",
+      "code"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in the same direction on a white background"
+  },
+  "io/IoIosCodeDownload.svg": {
+    "component_id": "io:IoIosCodeDownload",
+    "aliases": [
+      "io",
+      "ios",
+      "code",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "io/IoIosCodeWorking.svg": {
+    "component_id": "io:IoIosCodeWorking",
+    "aliases": [
+      "io",
+      "ios",
+      "code",
+      "working"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three dots"
+  },
+  "io/IoIosCog.svg": {
+    "component_id": "io:IoIosCog",
+    "aliases": [
+      "io",
+      "ios",
+      "cog"
+    ],
+    "colors": [],
+    "caption": "a gearwheel icon on a white background"
+  },
+  "io/IoIosColorFill.svg": {
+    "component_id": "io:IoIosColorFill",
+    "aliases": [
+      "io",
+      "ios",
+      "color",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a jug with a drop of water"
+  },
+  "io/IoIosColorFilter.svg": {
+    "component_id": "io:IoIosColorFilter",
+    "aliases": [
+      "io",
+      "ios",
+      "color",
+      "filter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three circles"
+  },
+  "io/IoIosColorPalette.svg": {
+    "component_id": "io:IoIosColorPalette",
+    "aliases": [
+      "io",
+      "ios",
+      "color",
+      "palette"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a paint palette"
+  },
+  "io/IoIosColorWand.svg": {
+    "component_id": "io:IoIosColorWand",
+    "aliases": [
+      "io",
+      "ios",
+      "color",
+      "wand"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a light bulb"
+  },
+  "io/IoIosCompass.svg": {
+    "component_id": "io:IoIosCompass",
+    "aliases": [
+      "io",
+      "ios",
+      "compass"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a white arrow"
+  },
+  "io/IoIosConstruct.svg": {
+    "component_id": "io:IoIosConstruct",
+    "aliases": [
+      "io",
+      "ios",
+      "construct"
+    ],
+    "colors": [],
+    "caption": "a hammer and wrench icon on a white background"
+  },
+  "io/IoIosContact.svg": {
+    "component_id": "io:IoIosContact",
+    "aliases": [
+      "io",
+      "ios",
+      "contact"
+    ],
+    "colors": [],
+    "caption": "a silhouette of a person in a circle on a white background"
+  },
+  "io/IoIosContacts.svg": {
+    "component_id": "io:IoIosContacts",
+    "aliases": [
+      "io",
+      "ios",
+      "contacts"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of two people in a circle"
+  },
+  "io/IoIosContract.svg": {
+    "component_id": "io:IoIosContract",
+    "aliases": [
+      "io",
+      "ios",
+      "contract"
+    ],
+    "colors": [],
+    "caption": "three arrows pointing in different directions on a white background"
+  },
+  "io/IoIosContrast.svg": {
+    "component_id": "io:IoIosContrast",
+    "aliases": [
+      "io",
+      "ios",
+      "contrast"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "io/IoIosCopy.svg": {
+    "component_id": "io:IoIosCopy",
+    "aliases": [
+      "io",
+      "ios",
+      "copy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a file folder"
+  },
+  "io/IoIosCreate.svg": {
+    "component_id": "io:IoIosCreate",
+    "aliases": [
+      "io",
+      "ios",
+      "create"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pen and paper"
+  },
+  "io/IoIosCrop.svg": {
+    "component_id": "io:IoIosCrop",
+    "aliases": [
+      "io",
+      "ios",
+      "crop"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square with two lines"
+  },
+  "io/IoIosCube.svg": {
+    "component_id": "io:IoIosCube",
+    "aliases": [
+      "io",
+      "ios",
+      "cube"
+    ],
+    "colors": [],
+    "caption": "a black cube icon on a white background"
+  },
+  "io/IoIosCut.svg": {
+    "component_id": "io:IoIosCut",
+    "aliases": [
+      "io",
+      "ios",
+      "cut"
+    ],
+    "colors": [],
+    "caption": "a pair of scissors icon on a white background"
+  },
+  "io/IoIosDesktop.svg": {
+    "component_id": "io:IoIosDesktop",
+    "aliases": [
+      "io",
+      "ios",
+      "desktop"
+    ],
+    "colors": [],
+    "caption": "a computer monitor icon on a white background"
+  },
+  "io/IoIosDisc.svg": {
+    "component_id": "io:IoIosDisc",
+    "aliases": [
+      "io",
+      "ios",
+      "disc"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular object"
+  },
+  "io/IoIosDocument.svg": {
+    "component_id": "io:IoIosDocument",
+    "aliases": [
+      "io",
+      "ios",
+      "document"
+    ],
+    "colors": [],
+    "caption": "a black and white file icon on a white background"
+  },
+  "io/IoIosDoneAll.svg": {
+    "component_id": "io:IoIosDoneAll",
+    "aliases": [
+      "io",
+      "ios",
+      "done",
+      "all"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "io/IoIosDownload.svg": {
+    "component_id": "io:IoIosDownload",
+    "aliases": [
+      "io",
+      "ios",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a down arrow"
+  },
+  "io/IoIosEasel.svg": {
+    "component_id": "io:IoIosEasel",
+    "aliases": [
+      "io",
+      "ios",
+      "easel"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an easel on a white background"
+  },
+  "io/IoIosEgg.svg": {
+    "component_id": "io:IoIosEgg",
+    "aliases": [
+      "io",
+      "ios",
+      "egg"
+    ],
+    "colors": [],
+    "caption": "an egg is shown in black on a white background"
+  },
+  "io/IoIosExit.svg": {
+    "component_id": "io:IoIosExit",
+    "aliases": [
+      "io",
+      "ios",
+      "exit"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "io/IoIosExpand.svg": {
+    "component_id": "io:IoIosExpand",
+    "aliases": [
+      "io",
+      "ios",
+      "expand"
+    ],
+    "colors": [],
+    "caption": "three arrows pointing in different directions on a white background"
+  },
+  "io/IoIosEye.svg": {
+    "component_id": "io:IoIosEye",
+    "aliases": [
+      "io",
+      "ios",
+      "eye"
+    ],
+    "colors": [],
+    "caption": "an eye icon on a white background"
+  },
+  "io/IoIosEyeOff.svg": {
+    "component_id": "io:IoIosEyeOff",
+    "aliases": [
+      "io",
+      "ios",
+      "eye",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no eye symbol"
+  },
+  "io/IoIosFastforward.svg": {
+    "component_id": "io:IoIosFastforward",
+    "aliases": [
+      "io",
+      "ios",
+      "fastforward"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoIosFemale.svg": {
+    "component_id": "io:IoIosFemale",
+    "aliases": [
+      "io",
+      "ios",
+      "female"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "io/IoIosFiling.svg": {
+    "component_id": "io:IoIosFiling",
+    "aliases": [
+      "io",
+      "ios",
+      "filing"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a folder on a white background"
+  },
+  "io/IoIosFilm.svg": {
+    "component_id": "io:IoIosFilm",
+    "aliases": [
+      "io",
+      "ios",
+      "film"
+    ],
+    "colors": [],
+    "caption": "a film strip icon on a white background"
+  },
+  "io/IoIosFingerPrint.svg": {
+    "component_id": "io:IoIosFingerPrint",
+    "aliases": [
+      "io",
+      "ios",
+      "finger",
+      "print"
+    ],
+    "colors": [],
+    "caption": "a fingerprint icon on a white background"
+  },
+  "io/IoIosFitness.svg": {
+    "component_id": "io:IoIosFitness",
+    "aliases": [
+      "io",
+      "ios",
+      "fitness"
+    ],
+    "colors": [],
+    "caption": "a dumbbell icon on a white background"
+  },
+  "io/IoIosFlag.svg": {
+    "component_id": "io:IoIosFlag",
+    "aliases": [
+      "io",
+      "ios",
+      "flag"
+    ],
+    "colors": [],
+    "caption": "a black flag icon on a white background"
+  },
+  "io/IoIosFlame.svg": {
+    "component_id": "io:IoIosFlame",
+    "aliases": [
+      "io",
+      "ios",
+      "flame"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a water drop"
+  },
+  "io/IoIosFlash.svg": {
+    "component_id": "io:IoIosFlash",
+    "aliases": [
+      "io",
+      "ios",
+      "flash"
+    ],
+    "colors": [],
+    "caption": "a black lightning bolt icon on a white background"
+  },
+  "io/IoIosFlashOff.svg": {
+    "component_id": "io:IoIosFlashOff",
+    "aliases": [
+      "io",
+      "ios",
+      "flash",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a lightning bolt"
+  },
+  "io/IoIosFlashlight.svg": {
+    "component_id": "io:IoIosFlashlight",
+    "aliases": [
+      "io",
+      "ios",
+      "flashlight"
+    ],
+    "colors": [],
+    "caption": "a flashlight icon on a white background"
+  },
+  "io/IoIosFlask.svg": {
+    "component_id": "io:IoIosFlask",
+    "aliases": [
+      "io",
+      "ios",
+      "flask"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a test tube"
+  },
+  "io/IoIosFlower.svg": {
+    "component_id": "io:IoIosFlower",
+    "aliases": [
+      "io",
+      "ios",
+      "flower"
+    ],
+    "colors": [],
+    "caption": "a black and white flower icon on a white background"
+  },
+  "io/IoIosFolder.svg": {
+    "component_id": "io:IoIosFolder",
+    "aliases": [
+      "io",
+      "ios",
+      "folder"
+    ],
+    "colors": [],
+    "caption": "a folder icon on a white background"
+  },
+  "io/IoIosFolderOpen.svg": {
+    "component_id": "io:IoIosFolderOpen",
+    "aliases": [
+      "io",
+      "ios",
+      "folder",
+      "open"
+    ],
+    "colors": [],
+    "caption": "a folder icon on a white background"
+  },
+  "io/IoIosFootball.svg": {
+    "component_id": "io:IoIosFootball",
+    "aliases": [
+      "io",
+      "ios",
+      "football"
+    ],
+    "colors": [],
+    "caption": "a soccer ball icon on a white background"
+  },
+  "io/IoIosFunnel.svg": {
+    "component_id": "io:IoIosFunnel",
+    "aliases": [
+      "io",
+      "ios",
+      "funnel"
+    ],
+    "colors": [],
+    "caption": "a funnel icon on a white background"
+  },
+  "io/IoIosGift.svg": {
+    "component_id": "io:IoIosGift",
+    "aliases": [
+      "io",
+      "ios",
+      "gift"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a gift with a bow"
+  },
+  "io/IoIosGitBranch.svg": {
+    "component_id": "io:IoIosGitBranch",
+    "aliases": [
+      "io",
+      "ios",
+      "git",
+      "branch"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two circles"
+  },
+  "io/IoIosGitCommit.svg": {
+    "component_id": "io:IoIosGitCommit",
+    "aliases": [
+      "io",
+      "ios",
+      "git",
+      "commit"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an electrical symbol"
+  },
+  "io/IoIosGitCompare.svg": {
+    "component_id": "io:IoIosGitCompare",
+    "aliases": [
+      "io",
+      "ios",
+      "git",
+      "compare"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoIosGitMerge.svg": {
+    "component_id": "io:IoIosGitMerge",
+    "aliases": [
+      "io",
+      "ios",
+      "git",
+      "merge"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a link"
+  },
+  "io/IoIosGitNetwork.svg": {
+    "component_id": "io:IoIosGitNetwork",
+    "aliases": [
+      "io",
+      "ios",
+      "git",
+      "network"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three circles"
+  },
+  "io/IoIosGitPullRequest.svg": {
+    "component_id": "io:IoIosGitPullRequest",
+    "aliases": [
+      "io",
+      "ios",
+      "git",
+      "pull",
+      "request"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with two arrows pointing to each other"
+  },
+  "io/IoIosGlasses.svg": {
+    "component_id": "io:IoIosGlasses",
+    "aliases": [
+      "io",
+      "ios",
+      "glasses"
+    ],
+    "colors": [],
+    "caption": "sunglasses icon on a white background"
+  },
+  "io/IoIosGlobe.svg": {
+    "component_id": "io:IoIosGlobe",
+    "aliases": [
+      "io",
+      "ios",
+      "globe"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a globe"
+  },
+  "io/IoIosGrid.svg": {
+    "component_id": "io:IoIosGrid",
+    "aliases": [
+      "io",
+      "ios",
+      "grid"
+    ],
+    "colors": [],
+    "caption": "a black and white square icon with four squares"
+  },
+  "io/IoIosHammer.svg": {
+    "component_id": "io:IoIosHammer",
+    "aliases": [
+      "io",
+      "ios",
+      "hammer"
+    ],
+    "colors": [],
+    "caption": "a hammer icon on a white background"
+  },
+  "io/IoIosHand.svg": {
+    "component_id": "io:IoIosHand",
+    "aliases": [
+      "io",
+      "ios",
+      "hand"
+    ],
+    "colors": [],
+    "caption": "a black hand icon on a white background"
+  },
+  "io/IoIosHappy.svg": {
+    "component_id": "io:IoIosHappy",
+    "aliases": [
+      "io",
+      "ios",
+      "happy"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "io/IoIosHeadset.svg": {
+    "component_id": "io:IoIosHeadset",
+    "aliases": [
+      "io",
+      "ios",
+      "headset"
+    ],
+    "colors": [],
+    "caption": "headphones icon isolated on white background"
+  },
+  "io/IoIosHeart.svg": {
+    "component_id": "io:IoIosHeart",
+    "aliases": [
+      "io",
+      "ios",
+      "heart"
+    ],
+    "colors": [],
+    "caption": "a black heart icon on a white background"
+  },
+  "io/IoIosHeartDislike.svg": {
+    "component_id": "io:IoIosHeartDislike",
+    "aliases": [
+      "io",
+      "ios",
+      "heart",
+      "dislike"
+    ],
+    "colors": [],
+    "caption": "a black and white heart with a black line through it"
+  },
+  "io/IoIosHeartEmpty.svg": {
+    "component_id": "io:IoIosHeartEmpty",
+    "aliases": [
+      "io",
+      "ios",
+      "heart",
+      "empty"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a heart"
+  },
+  "io/IoIosHeartHalf.svg": {
+    "component_id": "io:IoIosHeartHalf",
+    "aliases": [
+      "io",
+      "ios",
+      "heart",
+      "half"
+    ],
+    "colors": [],
+    "caption": "a black and white heart icon on a white background"
+  },
+  "io/IoIosHelp.svg": {
+    "component_id": "io:IoIosHelp",
+    "aliases": [
+      "io",
+      "ios",
+      "help"
+    ],
+    "colors": [],
+    "caption": "a black question mark on a white background"
+  },
+  "io/IoIosHelpBuoy.svg": {
+    "component_id": "io:IoIosHelpBuoy",
+    "aliases": [
+      "io",
+      "ios",
+      "help",
+      "buoy"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a life ring"
+  },
+  "io/IoIosHelpCircle.svg": {
+    "component_id": "io:IoIosHelpCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "help",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with a question mark"
+  },
+  "io/IoIosHelpCircleOutline.svg": {
+    "component_id": "io:IoIosHelpCircleOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "help",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a question mark icon in a circle on a white background"
+  },
+  "io/IoIosHome.svg": {
+    "component_id": "io:IoIosHome",
+    "aliases": [
+      "io",
+      "ios",
+      "home"
+    ],
+    "colors": [],
+    "caption": "a house icon on a white background"
+  },
+  "io/IoIosHourglass.svg": {
+    "component_id": "io:IoIosHourglass",
+    "aliases": [
+      "io",
+      "ios",
+      "hourglass"
+    ],
+    "colors": [],
+    "caption": "an hourglass icon on a white background"
+  },
+  "io/IoIosIceCream.svg": {
+    "component_id": "io:IoIosIceCream",
+    "aliases": [
+      "io",
+      "ios",
+      "ice",
+      "cream"
+    ],
+    "colors": [],
+    "caption": "an ice cream cone icon on a white background"
+  },
+  "io/IoIosImage.svg": {
+    "component_id": "io:IoIosImage",
+    "aliases": [
+      "io",
+      "ios",
+      "image"
+    ],
+    "colors": [],
+    "caption": "a black and white photo icon with a triangle"
+  },
+  "io/IoIosImages.svg": {
+    "component_id": "io:IoIosImages",
+    "aliases": [
+      "io",
+      "ios",
+      "images"
+    ],
+    "colors": [],
+    "caption": "a black and white photo icon on a white background"
+  },
+  "io/IoIosInfinite.svg": {
+    "component_id": "io:IoIosInfinite",
+    "aliases": [
+      "io",
+      "ios",
+      "infinite"
+    ],
+    "colors": [],
+    "caption": "a black infinity symbol on a white background"
+  },
+  "io/IoIosInformation.svg": {
+    "component_id": "io:IoIosInformation",
+    "aliases": [
+      "io",
+      "ios",
+      "information"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the letter i"
+  },
+  "io/IoIosInformationCircle.svg": {
+    "component_id": "io:IoIosInformationCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "information",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the letter i"
+  },
+  "io/IoIosInformationCircleOutline.svg": {
+    "component_id": "io:IoIosInformationCircleOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "information",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an i in a circle"
+  },
+  "io/IoIosJet.svg": {
+    "component_id": "io:IoIosJet",
+    "aliases": [
+      "io",
+      "ios",
+      "jet"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a fighter jet on a white background"
+  },
+  "io/IoIosJournal.svg": {
+    "component_id": "io:IoIosJournal",
+    "aliases": [
+      "io",
+      "ios",
+      "journal"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "io/IoIosKey.svg": {
+    "component_id": "io:IoIosKey",
+    "aliases": [
+      "io",
+      "ios",
+      "key"
+    ],
+    "colors": [],
+    "caption": "a key icon on a white background"
+  },
+  "io/IoIosKeypad.svg": {
+    "component_id": "io:IoIosKeypad",
+    "aliases": [
+      "io",
+      "ios",
+      "keypad"
+    ],
+    "colors": [],
+    "caption": "an image of black dots on a white background"
+  },
+  "io/IoIosLaptop.svg": {
+    "component_id": "io:IoIosLaptop",
+    "aliases": [
+      "io",
+      "ios",
+      "laptop"
+    ],
+    "colors": [],
+    "caption": "a laptop computer icon on a white background"
+  },
+  "io/IoIosLeaf.svg": {
+    "component_id": "io:IoIosLeaf",
+    "aliases": [
+      "io",
+      "ios",
+      "leaf"
+    ],
+    "colors": [],
+    "caption": "a black leaf icon on a white background"
+  },
+  "io/IoIosLink.svg": {
+    "component_id": "io:IoIosLink",
+    "aliases": [
+      "io",
+      "ios",
+      "link"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a link"
+  },
+  "io/IoIosList.svg": {
+    "component_id": "io:IoIosList",
+    "aliases": [
+      "io",
+      "ios",
+      "list"
+    ],
+    "colors": [],
+    "caption": "a black and white check list with three dots"
+  },
+  "io/IoIosListBox.svg": {
+    "component_id": "io:IoIosListBox",
+    "aliases": [
+      "io",
+      "ios",
+      "list",
+      "box"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three check boxes"
+  },
+  "io/IoIosLocate.svg": {
+    "component_id": "io:IoIosLocate",
+    "aliases": [
+      "io",
+      "ios",
+      "locate"
+    ],
+    "colors": [],
+    "caption": "a black circle with a hole in it on a white background"
+  },
+  "io/IoIosLock.svg": {
+    "component_id": "io:IoIosLock",
+    "aliases": [
+      "io",
+      "ios",
+      "lock"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "io/IoIosLogIn.svg": {
+    "component_id": "io:IoIosLogIn",
+    "aliases": [
+      "io",
+      "ios",
+      "log",
+      "in"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "io/IoIosLogOut.svg": {
+    "component_id": "io:IoIosLogOut",
+    "aliases": [
+      "io",
+      "ios",
+      "log",
+      "out"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing in the direction of an arrow"
+  },
+  "io/IoIosMagnet.svg": {
+    "component_id": "io:IoIosMagnet",
+    "aliases": [
+      "io",
+      "ios",
+      "magnet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a magnet"
+  },
+  "io/IoIosMail.svg": {
+    "component_id": "io:IoIosMail",
+    "aliases": [
+      "io",
+      "ios",
+      "mail"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "io/IoIosMailOpen.svg": {
+    "component_id": "io:IoIosMailOpen",
+    "aliases": [
+      "io",
+      "ios",
+      "mail",
+      "open"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an envelope"
+  },
+  "io/IoIosMailUnread.svg": {
+    "component_id": "io:IoIosMailUnread",
+    "aliases": [
+      "io",
+      "ios",
+      "mail",
+      "unread"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an envelope with an arrow"
+  },
+  "io/IoIosMale.svg": {
+    "component_id": "io:IoIosMale",
+    "aliases": [
+      "io",
+      "ios",
+      "male"
+    ],
+    "colors": [],
+    "caption": "the male symbol is shown on a white background"
+  },
+  "io/IoIosMan.svg": {
+    "component_id": "io:IoIosMan",
+    "aliases": [
+      "io",
+      "ios",
+      "man"
+    ],
+    "colors": [],
+    "caption": "a man is shown in black and white on a white background"
+  },
+  "io/IoIosMap.svg": {
+    "component_id": "io:IoIosMap",
+    "aliases": [
+      "io",
+      "ios",
+      "map"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with three lines"
+  },
+  "io/IoIosMedal.svg": {
+    "component_id": "io:IoIosMedal",
+    "aliases": [
+      "io",
+      "ios",
+      "medal"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a camera on a white background"
+  },
+  "io/IoIosMedical.svg": {
+    "component_id": "io:IoIosMedical",
+    "aliases": [
+      "io",
+      "ios",
+      "medical"
+    ],
+    "colors": [],
+    "caption": "a black star symbol on a white background"
+  },
+  "io/IoIosMedkit.svg": {
+    "component_id": "io:IoIosMedkit",
+    "aliases": [
+      "io",
+      "ios",
+      "medkit"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a first aid kit"
+  },
+  "io/IoIosMegaphone.svg": {
+    "component_id": "io:IoIosMegaphone",
+    "aliases": [
+      "io",
+      "ios",
+      "megaphone"
+    ],
+    "colors": [],
+    "caption": "a black megaphone icon on a white background"
+  },
+  "io/IoIosMenu.svg": {
+    "component_id": "io:IoIosMenu",
+    "aliases": [
+      "io",
+      "ios",
+      "menu"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three lines on a white background"
+  },
+  "io/IoIosMic.svg": {
+    "component_id": "io:IoIosMic",
+    "aliases": [
+      "io",
+      "ios",
+      "mic"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "io/IoIosMicOff.svg": {
+    "component_id": "io:IoIosMicOff",
+    "aliases": [
+      "io",
+      "ios",
+      "mic",
+      "off"
+    ],
+    "colors": [],
+    "caption": "no microphone icon on white background"
+  },
+  "io/IoIosMicrophone.svg": {
+    "component_id": "io:IoIosMicrophone",
+    "aliases": [
+      "io",
+      "ios",
+      "microphone"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "io/IoIosMoon.svg": {
+    "component_id": "io:IoIosMoon",
+    "aliases": [
+      "io",
+      "ios",
+      "moon"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a crescent on a white background"
+  },
+  "io/IoIosMore.svg": {
+    "component_id": "io:IoIosMore",
+    "aliases": [
+      "io",
+      "ios",
+      "more"
+    ],
+    "colors": [],
+    "caption": "four black dots are shown on a white background"
+  },
+  "io/IoIosMove.svg": {
+    "component_id": "io:IoIosMove",
+    "aliases": [
+      "io",
+      "ios",
+      "move"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with arrows pointing in different directions"
+  },
+  "io/IoIosMusicalNote.svg": {
+    "component_id": "io:IoIosMusicalNote",
+    "aliases": [
+      "io",
+      "ios",
+      "musical",
+      "note"
+    ],
+    "colors": [],
+    "caption": "a music note icon on a white background"
+  },
+  "io/IoIosMusicalNotes.svg": {
+    "component_id": "io:IoIosMusicalNotes",
+    "aliases": [
+      "io",
+      "ios",
+      "musical",
+      "notes"
+    ],
+    "colors": [],
+    "caption": "a music note icon on a white background"
+  },
+  "io/IoIosNavigate.svg": {
+    "component_id": "io:IoIosNavigate",
+    "aliases": [
+      "io",
+      "ios",
+      "navigate"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "io/IoIosNotifications.svg": {
+    "component_id": "io:IoIosNotifications",
+    "aliases": [
+      "io",
+      "ios",
+      "notifications"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "io/IoIosNotificationsOff.svg": {
+    "component_id": "io:IoIosNotificationsOff",
+    "aliases": [
+      "io",
+      "ios",
+      "notifications",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a no bell icon on a white background"
+  },
+  "io/IoIosNotificationsOutline.svg": {
+    "component_id": "io:IoIosNotificationsOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "notifications",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "io/IoIosNuclear.svg": {
+    "component_id": "io:IoIosNuclear",
+    "aliases": [
+      "io",
+      "ios",
+      "nuclear"
+    ],
+    "colors": [],
+    "caption": "a black and white radioactive symbol on a white background"
+  },
+  "io/IoIosNutrition.svg": {
+    "component_id": "io:IoIosNutrition",
+    "aliases": [
+      "io",
+      "ios",
+      "nutrition"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a carrot"
+  },
+  "io/IoIosOpen.svg": {
+    "component_id": "io:IoIosOpen",
+    "aliases": [
+      "io",
+      "ios",
+      "open"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing up"
+  },
+  "io/IoIosOptions.svg": {
+    "component_id": "io:IoIosOptions",
+    "aliases": [
+      "io",
+      "ios",
+      "options"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of three circles"
+  },
+  "io/IoIosOutlet.svg": {
+    "component_id": "io:IoIosOutlet",
+    "aliases": [
+      "io",
+      "ios",
+      "outlet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a power outlet"
+  },
+  "io/IoIosPaper.svg": {
+    "component_id": "io:IoIosPaper",
+    "aliases": [
+      "io",
+      "ios",
+      "paper"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "io/IoIosPaperPlane.svg": {
+    "component_id": "io:IoIosPaperPlane",
+    "aliases": [
+      "io",
+      "ios",
+      "paper",
+      "plane"
+    ],
+    "colors": [],
+    "caption": "a paper airplane icon on a white background"
+  },
+  "io/IoIosPartlySunny.svg": {
+    "component_id": "io:IoIosPartlySunny",
+    "aliases": [
+      "io",
+      "ios",
+      "partly",
+      "sunny"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "io/IoIosPause.svg": {
+    "component_id": "io:IoIosPause",
+    "aliases": [
+      "io",
+      "ios",
+      "pause"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter h"
+  },
+  "io/IoIosPaw.svg": {
+    "component_id": "io:IoIosPaw",
+    "aliases": [
+      "io",
+      "ios",
+      "paw"
+    ],
+    "colors": [],
+    "caption": "a black paw print on a white background"
+  },
+  "io/IoIosPeople.svg": {
+    "component_id": "io:IoIosPeople",
+    "aliases": [
+      "io",
+      "ios",
+      "people"
+    ],
+    "colors": [],
+    "caption": "a group of three people in silhouette on a white background"
+  },
+  "io/IoIosPerson.svg": {
+    "component_id": "io:IoIosPerson",
+    "aliases": [
+      "io",
+      "ios",
+      "person"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a person's head on a white background"
+  },
+  "io/IoIosPersonAdd.svg": {
+    "component_id": "io:IoIosPersonAdd",
+    "aliases": [
+      "io",
+      "ios",
+      "person",
+      "add"
+    ],
+    "colors": [],
+    "caption": "an image of a person with a plus sign"
+  },
+  "io/IoIosPhoneLandscape.svg": {
+    "component_id": "io:IoIosPhoneLandscape",
+    "aliases": [
+      "io",
+      "ios",
+      "phone",
+      "landscape"
+    ],
+    "colors": [],
+    "caption": "an illustration of a smartphone on a white background"
+  },
+  "io/IoIosPhonePortrait.svg": {
+    "component_id": "io:IoIosPhonePortrait",
+    "aliases": [
+      "io",
+      "ios",
+      "phone",
+      "portrait"
+    ],
+    "colors": [],
+    "caption": "an illustration of an iphone on a white background"
+  },
+  "io/IoIosPhotos.svg": {
+    "component_id": "io:IoIosPhotos",
+    "aliases": [
+      "io",
+      "ios",
+      "photos"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two black folders"
+  },
+  "io/IoIosPie.svg": {
+    "component_id": "io:IoIosPie",
+    "aliases": [
+      "io",
+      "ios",
+      "pie"
+    ],
+    "colors": [],
+    "caption": "a pie chart icon on a white background"
+  },
+  "io/IoIosPin.svg": {
+    "component_id": "io:IoIosPin",
+    "aliases": [
+      "io",
+      "ios",
+      "pin"
+    ],
+    "colors": [],
+    "caption": "a black and white map pin icon on a white background"
+  },
+  "io/IoIosPint.svg": {
+    "component_id": "io:IoIosPint",
+    "aliases": [
+      "io",
+      "ios",
+      "pint"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a beer glass on a white background"
+  },
+  "io/IoIosPizza.svg": {
+    "component_id": "io:IoIosPizza",
+    "aliases": [
+      "io",
+      "ios",
+      "pizza"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a slice of pizza"
+  },
+  "io/IoIosPlanet.svg": {
+    "component_id": "io:IoIosPlanet",
+    "aliases": [
+      "io",
+      "ios",
+      "planet"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the planet saturn"
+  },
+  "io/IoIosPlay.svg": {
+    "component_id": "io:IoIosPlay",
+    "aliases": [
+      "io",
+      "ios",
+      "play"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a play button"
+  },
+  "io/IoIosPlayCircle.svg": {
+    "component_id": "io:IoIosPlayCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "play",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white play button on a white background"
+  },
+  "io/IoIosPodium.svg": {
+    "component_id": "io:IoIosPodium",
+    "aliases": [
+      "io",
+      "ios",
+      "podium"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a bar graph"
+  },
+  "io/IoIosPower.svg": {
+    "component_id": "io:IoIosPower",
+    "aliases": [
+      "io",
+      "ios",
+      "power"
+    ],
+    "colors": [],
+    "caption": "a power symbol on a white background"
+  },
+  "io/IoIosPricetag.svg": {
+    "component_id": "io:IoIosPricetag",
+    "aliases": [
+      "io",
+      "ios",
+      "pricetag"
+    ],
+    "colors": [],
+    "caption": "a black price tag icon on a white background"
+  },
+  "io/IoIosPricetags.svg": {
+    "component_id": "io:IoIosPricetags",
+    "aliases": [
+      "io",
+      "ios",
+      "pricetags"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a price tag"
+  },
+  "io/IoIosPrint.svg": {
+    "component_id": "io:IoIosPrint",
+    "aliases": [
+      "io",
+      "ios",
+      "print"
+    ],
+    "colors": [],
+    "caption": "an icon of a printer on a white background"
+  },
+  "io/IoIosPulse.svg": {
+    "component_id": "io:IoIosPulse",
+    "aliases": [
+      "io",
+      "ios",
+      "pulse"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a heartbeat"
+  },
+  "io/IoIosQrScanner.svg": {
+    "component_id": "io:IoIosQrScanner",
+    "aliases": [
+      "io",
+      "ios",
+      "qr",
+      "scanner"
+    ],
+    "colors": [],
+    "caption": "an image of a black square with two black lines"
+  },
+  "io/IoIosQuote.svg": {
+    "component_id": "io:IoIosQuote",
+    "aliases": [
+      "io",
+      "ios",
+      "quote"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles on a white background"
+  },
+  "io/IoIosRadio.svg": {
+    "component_id": "io:IoIosRadio",
+    "aliases": [
+      "io",
+      "ios",
+      "radio"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a wireless symbol"
+  },
+  "io/IoIosRadioButtonOff.svg": {
+    "component_id": "io:IoIosRadioButtonOff",
+    "aliases": [
+      "io",
+      "ios",
+      "radio",
+      "button",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "io/IoIosRadioButtonOn.svg": {
+    "component_id": "io:IoIosRadioButtonOn",
+    "aliases": [
+      "io",
+      "ios",
+      "radio",
+      "button",
+      "on"
+    ],
+    "colors": [],
+    "caption": "a black circle with a white circle in the middle"
+  },
+  "io/IoIosRainy.svg": {
+    "component_id": "io:IoIosRainy",
+    "aliases": [
+      "io",
+      "ios",
+      "rainy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "io/IoIosRecording.svg": {
+    "component_id": "io:IoIosRecording",
+    "aliases": [
+      "io",
+      "ios",
+      "recording"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two glasses"
+  },
+  "io/IoIosRedo.svg": {
+    "component_id": "io:IoIosRedo",
+    "aliases": [
+      "io",
+      "ios",
+      "redo"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoIosRefresh.svg": {
+    "component_id": "io:IoIosRefresh",
+    "aliases": [
+      "io",
+      "ios",
+      "refresh"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "io/IoIosRefreshCircle.svg": {
+    "component_id": "io:IoIosRefreshCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "refresh",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white circular icon with an arrow pointing up"
+  },
+  "io/IoIosRemove.svg": {
+    "component_id": "io:IoIosRemove",
+    "aliases": [
+      "io",
+      "ios",
+      "remove"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white line on a white background"
+  },
+  "io/IoIosRemoveCircle.svg": {
+    "component_id": "io:IoIosRemoveCircle",
+    "aliases": [
+      "io",
+      "ios",
+      "remove",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "an image of a black circle with an empty line"
+  },
+  "io/IoIosRemoveCircleOutline.svg": {
+    "component_id": "io:IoIosRemoveCircleOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "remove",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an empty circle"
+  },
+  "io/IoIosReorder.svg": {
+    "component_id": "io:IoIosReorder",
+    "aliases": [
+      "io",
+      "ios",
+      "reorder"
+    ],
+    "colors": [],
+    "caption": "a black and white image of three lines"
+  },
+  "io/IoIosRepeat.svg": {
+    "component_id": "io:IoIosRepeat",
+    "aliases": [
+      "io",
+      "ios",
+      "repeat"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoIosResize.svg": {
+    "component_id": "io:IoIosResize",
+    "aliases": [
+      "io",
+      "ios",
+      "resize"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "io/IoIosRestaurant.svg": {
+    "component_id": "io:IoIosRestaurant",
+    "aliases": [
+      "io",
+      "ios",
+      "restaurant"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a knife, fork and spoon"
+  },
+  "io/IoIosReturnLeft.svg": {
+    "component_id": "io:IoIosReturnLeft",
+    "aliases": [
+      "io",
+      "ios",
+      "return",
+      "left"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "io/IoIosReturnRight.svg": {
+    "component_id": "io:IoIosReturnRight",
+    "aliases": [
+      "io",
+      "ios",
+      "return",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoIosReverseCamera.svg": {
+    "component_id": "io:IoIosReverseCamera",
+    "aliases": [
+      "io",
+      "ios",
+      "reverse",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "an image of a camera with a circular arrow"
+  },
+  "io/IoIosRewind.svg": {
+    "component_id": "io:IoIosRewind",
+    "aliases": [
+      "io",
+      "ios",
+      "rewind"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoIosRibbon.svg": {
+    "component_id": "io:IoIosRibbon",
+    "aliases": [
+      "io",
+      "ios",
+      "ribbon"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a ribbon"
+  },
+  "io/IoIosRocket.svg": {
+    "component_id": "io:IoIosRocket",
+    "aliases": [
+      "io",
+      "ios",
+      "rocket"
+    ],
+    "colors": [],
+    "caption": "a black and white rocket icon on a white background"
+  },
+  "io/IoIosRose.svg": {
+    "component_id": "io:IoIosRose",
+    "aliases": [
+      "io",
+      "ios",
+      "rose"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a rose"
+  },
+  "io/IoIosSad.svg": {
+    "component_id": "io:IoIosSad",
+    "aliases": [
+      "io",
+      "ios",
+      "sad"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a sad face"
+  },
+  "io/IoIosSave.svg": {
+    "component_id": "io:IoIosSave",
+    "aliases": [
+      "io",
+      "ios",
+      "save"
+    ],
+    "colors": [],
+    "caption": "an icon of a floppy disk on a white background"
+  },
+  "io/IoIosSchool.svg": {
+    "component_id": "io:IoIosSchool",
+    "aliases": [
+      "io",
+      "ios",
+      "school"
+    ],
+    "colors": [],
+    "caption": "a graduation cap icon on a white background"
+  },
+  "io/IoIosSearch.svg": {
+    "component_id": "io:IoIosSearch",
+    "aliases": [
+      "io",
+      "ios",
+      "search"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "io/IoIosSend.svg": {
+    "component_id": "io:IoIosSend",
+    "aliases": [
+      "io",
+      "ios",
+      "send"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a paper airplane"
+  },
+  "io/IoIosSettings.svg": {
+    "component_id": "io:IoIosSettings",
+    "aliases": [
+      "io",
+      "ios",
+      "settings"
+    ],
+    "colors": [],
+    "caption": "a gear wheel icon on a white background"
+  },
+  "io/IoIosShare.svg": {
+    "component_id": "io:IoIosShare",
+    "aliases": [
+      "io",
+      "ios",
+      "share"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with an arrow pointing up"
+  },
+  "io/IoIosShareAlt.svg": {
+    "component_id": "io:IoIosShareAlt",
+    "aliases": [
+      "io",
+      "ios",
+      "share",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoIosShirt.svg": {
+    "component_id": "io:IoIosShirt",
+    "aliases": [
+      "io",
+      "ios",
+      "shirt"
+    ],
+    "colors": [],
+    "caption": "a black t - shirt icon on a white background"
+  },
+  "io/IoIosShuffle.svg": {
+    "component_id": "io:IoIosShuffle",
+    "aliases": [
+      "io",
+      "ios",
+      "shuffle"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoIosSkipBackward.svg": {
+    "component_id": "io:IoIosSkipBackward",
+    "aliases": [
+      "io",
+      "ios",
+      "skip",
+      "backward"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter k"
+  },
+  "io/IoIosSkipForward.svg": {
+    "component_id": "io:IoIosSkipForward",
+    "aliases": [
+      "io",
+      "ios",
+      "skip",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white arrow"
+  },
+  "io/IoIosSnow.svg": {
+    "component_id": "io:IoIosSnow",
+    "aliases": [
+      "io",
+      "ios",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a snowflake icon on a white background"
+  },
+  "io/IoIosSpeedometer.svg": {
+    "component_id": "io:IoIosSpeedometer",
+    "aliases": [
+      "io",
+      "ios",
+      "speedometer"
+    ],
+    "colors": [],
+    "caption": "a speedometer icon on a white background"
+  },
+  "io/IoIosSquare.svg": {
+    "component_id": "io:IoIosSquare",
+    "aliases": [
+      "io",
+      "ios",
+      "square"
+    ],
+    "colors": [],
+    "caption": "a square black button on a white background"
+  },
+  "io/IoIosSquareOutline.svg": {
+    "component_id": "io:IoIosSquareOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "square",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a square black and white icon on a white background"
+  },
+  "io/IoIosStar.svg": {
+    "component_id": "io:IoIosStar",
+    "aliases": [
+      "io",
+      "ios",
+      "star"
+    ],
+    "colors": [],
+    "caption": "a black star icon on a white background"
+  },
+  "io/IoIosStarHalf.svg": {
+    "component_id": "io:IoIosStarHalf",
+    "aliases": [
+      "io",
+      "ios",
+      "star",
+      "half"
+    ],
+    "colors": [],
+    "caption": "a black star icon on a white background"
+  },
+  "io/IoIosStarOutline.svg": {
+    "component_id": "io:IoIosStarOutline",
+    "aliases": [
+      "io",
+      "ios",
+      "star",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black star icon on a white background"
+  },
+  "io/IoIosStats.svg": {
+    "component_id": "io:IoIosStats",
+    "aliases": [
+      "io",
+      "ios",
+      "stats"
+    ],
+    "colors": [],
+    "caption": "a bar graph icon on a white background"
+  },
+  "io/IoIosStopwatch.svg": {
+    "component_id": "io:IoIosStopwatch",
+    "aliases": [
+      "io",
+      "ios",
+      "stopwatch"
+    ],
+    "colors": [],
+    "caption": "a stopwatch icon on a white background"
+  },
+  "io/IoIosSubway.svg": {
+    "component_id": "io:IoIosSubway",
+    "aliases": [
+      "io",
+      "ios",
+      "subway"
+    ],
+    "colors": [],
+    "caption": "a train icon on a white background"
+  },
+  "io/IoIosSunny.svg": {
+    "component_id": "io:IoIosSunny",
+    "aliases": [
+      "io",
+      "ios",
+      "sunny"
+    ],
+    "colors": [],
+    "caption": "a black sun icon on a white background"
+  },
+  "io/IoIosSwap.svg": {
+    "component_id": "io:IoIosSwap",
+    "aliases": [
+      "io",
+      "ios",
+      "swap"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoIosSwitch.svg": {
+    "component_id": "io:IoIosSwitch",
+    "aliases": [
+      "io",
+      "ios",
+      "switch"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two circles"
+  },
+  "io/IoIosSync.svg": {
+    "component_id": "io:IoIosSync",
+    "aliases": [
+      "io",
+      "ios",
+      "sync"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow in a circle"
+  },
+  "io/IoIosTabletLandscape.svg": {
+    "component_id": "io:IoIosTabletLandscape",
+    "aliases": [
+      "io",
+      "ios",
+      "tablet",
+      "landscape"
+    ],
+    "colors": [],
+    "caption": "tablet icon isolated on a white background"
+  },
+  "io/IoIosTabletPortrait.svg": {
+    "component_id": "io:IoIosTabletPortrait",
+    "aliases": [
+      "io",
+      "ios",
+      "tablet",
+      "portrait"
+    ],
+    "colors": [],
+    "caption": "ipad tablet icon vector illustration"
+  },
+  "io/IoIosTennisball.svg": {
+    "component_id": "io:IoIosTennisball",
+    "aliases": [
+      "io",
+      "ios",
+      "tennisball"
+    ],
+    "colors": [],
+    "caption": "a black and white tennis ball icon"
+  },
+  "io/IoIosText.svg": {
+    "component_id": "io:IoIosText",
+    "aliases": [
+      "io",
+      "ios",
+      "text"
+    ],
+    "colors": [],
+    "caption": "a black speech bubble on a white background"
+  },
+  "io/IoIosThermometer.svg": {
+    "component_id": "io:IoIosThermometer",
+    "aliases": [
+      "io",
+      "ios",
+      "thermometer"
+    ],
+    "colors": [],
+    "caption": "a thermometer icon on a white background"
+  },
+  "io/IoIosThumbsDown.svg": {
+    "component_id": "io:IoIosThumbsDown",
+    "aliases": [
+      "io",
+      "ios",
+      "thumbs",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a thumb down icon on a white background"
+  },
+  "io/IoIosThumbsUp.svg": {
+    "component_id": "io:IoIosThumbsUp",
+    "aliases": [
+      "io",
+      "ios",
+      "thumbs",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black thumb up icon on a white background"
+  },
+  "io/IoIosThunderstorm.svg": {
+    "component_id": "io:IoIosThunderstorm",
+    "aliases": [
+      "io",
+      "ios",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black cloud with a lightning bolt on it"
+  },
+  "io/IoIosTime.svg": {
+    "component_id": "io:IoIosTime",
+    "aliases": [
+      "io",
+      "ios",
+      "time"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "io/IoIosTimer.svg": {
+    "component_id": "io:IoIosTimer",
+    "aliases": [
+      "io",
+      "ios",
+      "timer"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speedometer"
+  },
+  "io/IoIosToday.svg": {
+    "component_id": "io:IoIosToday",
+    "aliases": [
+      "io",
+      "ios",
+      "today"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a microwave oven"
+  },
+  "io/IoIosTrain.svg": {
+    "component_id": "io:IoIosTrain",
+    "aliases": [
+      "io",
+      "ios",
+      "train"
+    ],
+    "colors": [],
+    "caption": "a train icon on a white background"
+  },
+  "io/IoIosTransgender.svg": {
+    "component_id": "io:IoIosTransgender",
+    "aliases": [
+      "io",
+      "ios",
+      "transgender"
+    ],
+    "colors": [],
+    "caption": "a male and female symbol on a white background"
+  },
+  "io/IoIosTrash.svg": {
+    "component_id": "io:IoIosTrash",
+    "aliases": [
+      "io",
+      "ios",
+      "trash"
+    ],
+    "colors": [],
+    "caption": "trash bin icon on white background"
+  },
+  "io/IoIosTrendingDown.svg": {
+    "component_id": "io:IoIosTrendingDown",
+    "aliases": [
+      "io",
+      "ios",
+      "trending",
+      "down"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "io/IoIosTrendingUp.svg": {
+    "component_id": "io:IoIosTrendingUp",
+    "aliases": [
+      "io",
+      "ios",
+      "trending",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing up on a white background"
+  },
+  "io/IoIosTrophy.svg": {
+    "component_id": "io:IoIosTrophy",
+    "aliases": [
+      "io",
+      "ios",
+      "trophy"
+    ],
+    "colors": [],
+    "caption": "a trophy icon on a white background"
+  },
+  "io/IoIosTv.svg": {
+    "component_id": "io:IoIosTv",
+    "aliases": [
+      "io",
+      "ios",
+      "tv"
+    ],
+    "colors": [],
+    "caption": "a flat icon of a television on a white background"
+  },
+  "io/IoIosUmbrella.svg": {
+    "component_id": "io:IoIosUmbrella",
+    "aliases": [
+      "io",
+      "ios",
+      "umbrella"
+    ],
+    "colors": [],
+    "caption": "an umbrella icon on a white background"
+  },
+  "io/IoIosUndo.svg": {
+    "component_id": "io:IoIosUndo",
+    "aliases": [
+      "io",
+      "ios",
+      "undo"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoIosUnlock.svg": {
+    "component_id": "io:IoIosUnlock",
+    "aliases": [
+      "io",
+      "ios",
+      "unlock"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "io/IoIosVideocam.svg": {
+    "component_id": "io:IoIosVideocam",
+    "aliases": [
+      "io",
+      "ios",
+      "videocam"
+    ],
+    "colors": [],
+    "caption": "a video camera icon on a white background"
+  },
+  "io/IoIosVolumeHigh.svg": {
+    "component_id": "io:IoIosVolumeHigh",
+    "aliases": [
+      "io",
+      "ios",
+      "volume",
+      "high"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "io/IoIosVolumeLow.svg": {
+    "component_id": "io:IoIosVolumeLow",
+    "aliases": [
+      "io",
+      "ios",
+      "volume",
+      "low"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "io/IoIosVolumeMute.svg": {
+    "component_id": "io:IoIosVolumeMute",
+    "aliases": [
+      "io",
+      "ios",
+      "volume",
+      "mute"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker"
+  },
+  "io/IoIosVolumeOff.svg": {
+    "component_id": "io:IoIosVolumeOff",
+    "aliases": [
+      "io",
+      "ios",
+      "volume",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker with no sound"
+  },
+  "io/IoIosWalk.svg": {
+    "component_id": "io:IoIosWalk",
+    "aliases": [
+      "io",
+      "ios",
+      "walk"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a man walking"
+  },
+  "io/IoIosWallet.svg": {
+    "component_id": "io:IoIosWallet",
+    "aliases": [
+      "io",
+      "ios",
+      "wallet"
+    ],
+    "colors": [],
+    "caption": "a black wallet icon on a white background"
+  },
+  "io/IoIosWarning.svg": {
+    "component_id": "io:IoIosWarning",
+    "aliases": [
+      "io",
+      "ios",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black and white warning sign with an exclamation mark"
+  },
+  "io/IoIosWatch.svg": {
+    "component_id": "io:IoIosWatch",
+    "aliases": [
+      "io",
+      "ios",
+      "watch"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a ring on a chain"
+  },
+  "io/IoIosWater.svg": {
+    "component_id": "io:IoIosWater",
+    "aliases": [
+      "io",
+      "ios",
+      "water"
+    ],
+    "colors": [],
+    "caption": "a black drop icon on a white background"
+  },
+  "io/IoIosWifi.svg": {
+    "component_id": "io:IoIosWifi",
+    "aliases": [
+      "io",
+      "ios",
+      "wifi"
+    ],
+    "colors": [],
+    "caption": "a black wifi symbol on a white background"
+  },
+  "io/IoIosWine.svg": {
+    "component_id": "io:IoIosWine",
+    "aliases": [
+      "io",
+      "ios",
+      "wine"
+    ],
+    "colors": [],
+    "caption": "a wine glass icon on a white background"
+  },
+  "io/IoIosWoman.svg": {
+    "component_id": "io:IoIosWoman",
+    "aliases": [
+      "io",
+      "ios",
+      "woman"
+    ],
+    "colors": [],
+    "caption": "a woman's silhouette on a white background"
+  },
+  "io/IoLogoAndroid.svg": {
+    "component_id": "io:IoLogoAndroid",
+    "aliases": [
+      "io",
+      "logo",
+      "android"
+    ],
+    "colors": [],
+    "caption": "a black android icon on a white background"
+  },
+  "io/IoLogoAngular.svg": {
+    "component_id": "io:IoLogoAngular",
+    "aliases": [
+      "io",
+      "logo",
+      "angular"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter a in it"
+  },
+  "io/IoLogoApple.svg": {
+    "component_id": "io:IoLogoApple",
+    "aliases": [
+      "io",
+      "logo",
+      "apple"
+    ],
+    "colors": [],
+    "caption": "an apple logo is shown on a white background"
+  },
+  "io/IoLogoBitbucket.svg": {
+    "component_id": "io:IoLogoBitbucket",
+    "aliases": [
+      "io",
+      "logo",
+      "bitbucket"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter g in it"
+  },
+  "io/IoLogoBitcoin.svg": {
+    "component_id": "io:IoLogoBitcoin",
+    "aliases": [
+      "io",
+      "logo",
+      "bitcoin"
+    ],
+    "colors": [],
+    "caption": "a black bitcoin symbol on a white background"
+  },
+  "io/IoLogoBuffer.svg": {
+    "component_id": "io:IoLogoBuffer",
+    "aliases": [
+      "io",
+      "logo",
+      "buffer"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a stack of squares"
+  },
+  "io/IoLogoChrome.svg": {
+    "component_id": "io:IoLogoChrome",
+    "aliases": [
+      "io",
+      "logo",
+      "chrome"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the chrome logo"
+  },
+  "io/IoLogoClosedCaptioning.svg": {
+    "component_id": "io:IoLogoClosedCaptioning",
+    "aliases": [
+      "io",
+      "logo",
+      "closed",
+      "captioning"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word c on it"
+  },
+  "io/IoLogoCodepen.svg": {
+    "component_id": "io:IoLogoCodepen",
+    "aliases": [
+      "io",
+      "logo",
+      "codepen"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a white cube in the center"
+  },
+  "io/IoLogoCss3.svg": {
+    "component_id": "io:IoLogoCss3",
+    "aliases": [
+      "io",
+      "logo",
+      "css",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter e"
+  },
+  "io/IoLogoDesignernews.svg": {
+    "component_id": "io:IoLogoDesignernews",
+    "aliases": [
+      "io",
+      "logo",
+      "designernews"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word dn on it"
+  },
+  "io/IoLogoDribbble.svg": {
+    "component_id": "io:IoLogoDribbble",
+    "aliases": [
+      "io",
+      "logo",
+      "dribbble"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a basketball ball"
+  },
+  "io/IoLogoDropbox.svg": {
+    "component_id": "io:IoLogoDropbox",
+    "aliases": [
+      "io",
+      "logo",
+      "dropbox"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white dropbox logo"
+  },
+  "io/IoLogoEuro.svg": {
+    "component_id": "io:IoLogoEuro",
+    "aliases": [
+      "io",
+      "logo",
+      "euro"
+    ],
+    "colors": [],
+    "caption": "the euro symbol is shown in black and white"
+  },
+  "io/IoLogoFacebook.svg": {
+    "component_id": "io:IoLogoFacebook",
+    "aliases": [
+      "io",
+      "logo",
+      "facebook"
+    ],
+    "colors": [],
+    "caption": "the facebook logo is shown in black and white"
+  },
+  "io/IoLogoFlickr.svg": {
+    "component_id": "io:IoLogoFlickr",
+    "aliases": [
+      "io",
+      "logo",
+      "flickr"
+    ],
+    "colors": [],
+    "caption": "a black square icon with two circles in it"
+  },
+  "io/IoLogoFoursquare.svg": {
+    "component_id": "io:IoLogoFoursquare",
+    "aliases": [
+      "io",
+      "logo",
+      "foursquare"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter f"
+  },
+  "io/IoLogoFreebsdDevil.svg": {
+    "component_id": "io:IoLogoFreebsdDevil",
+    "aliases": [
+      "io",
+      "logo",
+      "freebsd",
+      "devil"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a devil holding a pitchfork"
+  },
+  "io/IoLogoGameControllerA.svg": {
+    "component_id": "io:IoLogoGameControllerA",
+    "aliases": [
+      "io",
+      "logo",
+      "game",
+      "controller",
+      "a"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a video game controller"
+  },
+  "io/IoLogoGameControllerB.svg": {
+    "component_id": "io:IoLogoGameControllerB",
+    "aliases": [
+      "io",
+      "logo",
+      "game",
+      "controller",
+      "b"
+    ],
+    "colors": [],
+    "caption": "a video game controller icon on a white background"
+  },
+  "io/IoLogoGithub.svg": {
+    "component_id": "io:IoLogoGithub",
+    "aliases": [
+      "io",
+      "logo",
+      "github"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cat in a circle"
+  },
+  "io/IoLogoGoogle.svg": {
+    "component_id": "io:IoLogoGoogle",
+    "aliases": [
+      "io",
+      "logo",
+      "google"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter g"
+  },
+  "io/IoLogoGoogleplus.svg": {
+    "component_id": "io:IoLogoGoogleplus",
+    "aliases": [
+      "io",
+      "logo",
+      "googleplus"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the google plus logo"
+  },
+  "io/IoLogoHackernews.svg": {
+    "component_id": "io:IoLogoHackernews",
+    "aliases": [
+      "io",
+      "logo",
+      "hackernews"
+    ],
+    "colors": [],
+    "caption": "a black and white square with the letter y"
+  },
+  "io/IoLogoHtml5.svg": {
+    "component_id": "io:IoLogoHtml5",
+    "aliases": [
+      "io",
+      "logo",
+      "html",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the number 5 in it"
+  },
+  "io/IoLogoInstagram.svg": {
+    "component_id": "io:IoLogoInstagram",
+    "aliases": [
+      "io",
+      "logo",
+      "instagram"
+    ],
+    "colors": [],
+    "caption": "a black and white instagram icon"
+  },
+  "io/IoLogoIonic.svg": {
+    "component_id": "io:IoLogoIonic",
+    "aliases": [
+      "io",
+      "logo",
+      "ionic"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with a dot in the center"
+  },
+  "io/IoLogoIonitron.svg": {
+    "component_id": "io:IoLogoIonitron",
+    "aliases": [
+      "io",
+      "logo",
+      "ionitron"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a robot on a white background"
+  },
+  "io/IoLogoJavascript.svg": {
+    "component_id": "io:IoLogoJavascript",
+    "aliases": [
+      "io",
+      "logo",
+      "javascript"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the word js"
+  },
+  "io/IoLogoLinkedin.svg": {
+    "component_id": "io:IoLogoLinkedin",
+    "aliases": [
+      "io",
+      "logo",
+      "linkedin"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the linked logo"
+  },
+  "io/IoLogoMarkdown.svg": {
+    "component_id": "io:IoLogoMarkdown",
+    "aliases": [
+      "io",
+      "logo",
+      "markdown"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the letter m"
+  },
+  "io/IoLogoModelS.svg": {
+    "component_id": "io:IoLogoModelS",
+    "aliases": [
+      "io",
+      "logo",
+      "model",
+      "s"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a car on a white background"
+  },
+  "io/IoLogoNoSmoking.svg": {
+    "component_id": "io:IoLogoNoSmoking",
+    "aliases": [
+      "io",
+      "logo",
+      "no",
+      "smoking"
+    ],
+    "colors": [],
+    "caption": "a no smoking sign on a white background"
+  },
+  "io/IoLogoNodejs.svg": {
+    "component_id": "io:IoLogoNodejs",
+    "aliases": [
+      "io",
+      "logo",
+      "nodejs"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word js in it"
+  },
+  "io/IoLogoNpm.svg": {
+    "component_id": "io:IoLogoNpm",
+    "aliases": [
+      "io",
+      "logo",
+      "npm"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word nmp on it"
+  },
+  "io/IoLogoOctocat.svg": {
+    "component_id": "io:IoLogoOctocat",
+    "aliases": [
+      "io",
+      "logo",
+      "octocat"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cat's face"
+  },
+  "io/IoLogoPinterest.svg": {
+    "component_id": "io:IoLogoPinterest",
+    "aliases": [
+      "io",
+      "logo",
+      "pinterest"
+    ],
+    "colors": [],
+    "caption": "the pinterest logo is shown in black and white"
+  },
+  "io/IoLogoPlaystation.svg": {
+    "component_id": "io:IoLogoPlaystation",
+    "aliases": [
+      "io",
+      "logo",
+      "playstation"
+    ],
+    "colors": [],
+    "caption": "the playstation logo is shown on a white background"
+  },
+  "io/IoLogoPolymer.svg": {
+    "component_id": "io:IoLogoPolymer",
+    "aliases": [
+      "io",
+      "logo",
+      "polymer"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter n"
+  },
+  "io/IoLogoPython.svg": {
+    "component_id": "io:IoLogoPython",
+    "aliases": [
+      "io",
+      "logo",
+      "python"
+    ],
+    "colors": [],
+    "caption": "a black and white python logo on a white background"
+  },
+  "io/IoLogoReddit.svg": {
+    "component_id": "io:IoLogoReddit",
+    "aliases": [
+      "io",
+      "logo",
+      "reddit"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiling face"
+  },
+  "io/IoLogoRss.svg": {
+    "component_id": "io:IoLogoRss",
+    "aliases": [
+      "io",
+      "logo",
+      "rss"
+    ],
+    "colors": [],
+    "caption": "a black and white rss icon on a white background"
+  },
+  "io/IoLogoSass.svg": {
+    "component_id": "io:IoLogoSass",
+    "aliases": [
+      "io",
+      "logo",
+      "sass"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the word sass"
+  },
+  "io/IoLogoSkype.svg": {
+    "component_id": "io:IoLogoSkype",
+    "aliases": [
+      "io",
+      "logo",
+      "skype"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter s"
+  },
+  "io/IoLogoSlack.svg": {
+    "component_id": "io:IoLogoSlack",
+    "aliases": [
+      "io",
+      "logo",
+      "slack"
+    ],
+    "colors": [],
+    "caption": "a black and white hash symbol on a white background"
+  },
+  "io/IoLogoSnapchat.svg": {
+    "component_id": "io:IoLogoSnapchat",
+    "aliases": [
+      "io",
+      "logo",
+      "snapchat"
+    ],
+    "colors": [],
+    "caption": "a black and white snapchat logo with a smiley face"
+  },
+  "io/IoLogoSteam.svg": {
+    "component_id": "io:IoLogoSteam",
+    "aliases": [
+      "io",
+      "logo",
+      "steam"
+    ],
+    "colors": [],
+    "caption": "the steam logo is shown on a white background"
+  },
+  "io/IoLogoTumblr.svg": {
+    "component_id": "io:IoLogoTumblr",
+    "aliases": [
+      "io",
+      "logo",
+      "tumblr"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "io/IoLogoTux.svg": {
+    "component_id": "io:IoLogoTux",
+    "aliases": [
+      "io",
+      "logo",
+      "tux"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a penguin sitting on a white background"
+  },
+  "io/IoLogoTwitch.svg": {
+    "component_id": "io:IoLogoTwitch",
+    "aliases": [
+      "io",
+      "logo",
+      "twitch"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "io/IoLogoTwitter.svg": {
+    "component_id": "io:IoLogoTwitter",
+    "aliases": [
+      "io",
+      "logo",
+      "twitter"
+    ],
+    "colors": [],
+    "caption": "a black twitter logo on a white background"
+  },
+  "io/IoLogoUsd.svg": {
+    "component_id": "io:IoLogoUsd",
+    "aliases": [
+      "io",
+      "logo",
+      "usd"
+    ],
+    "colors": [],
+    "caption": "a black dollar sign on a white background"
+  },
+  "io/IoLogoVimeo.svg": {
+    "component_id": "io:IoLogoVimeo",
+    "aliases": [
+      "io",
+      "logo",
+      "vimeo"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a letter v"
+  },
+  "io/IoLogoVk.svg": {
+    "component_id": "io:IoLogoVk",
+    "aliases": [
+      "io",
+      "logo",
+      "vk"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter k"
+  },
+  "io/IoLogoWhatsapp.svg": {
+    "component_id": "io:IoLogoWhatsapp",
+    "aliases": [
+      "io",
+      "logo",
+      "whatsapp"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a phone icon"
+  },
+  "io/IoLogoWindows.svg": {
+    "component_id": "io:IoLogoWindows",
+    "aliases": [
+      "io",
+      "logo",
+      "windows"
+    ],
+    "colors": [],
+    "caption": "the windows logo is shown on a white background"
+  },
+  "io/IoLogoWordpress.svg": {
+    "component_id": "io:IoLogoWordpress",
+    "aliases": [
+      "io",
+      "logo",
+      "wordpress"
+    ],
+    "colors": [],
+    "caption": "the wordpress logo in black and white"
+  },
+  "io/IoLogoXbox.svg": {
+    "component_id": "io:IoLogoXbox",
+    "aliases": [
+      "io",
+      "logo",
+      "xbox"
+    ],
+    "colors": [],
+    "caption": "the xbox logo is shown in black and white"
+  },
+  "io/IoLogoXing.svg": {
+    "component_id": "io:IoLogoXing",
+    "aliases": [
+      "io",
+      "logo",
+      "xing"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter x"
+  },
+  "io/IoLogoYahoo.svg": {
+    "component_id": "io:IoLogoYahoo",
+    "aliases": [
+      "io",
+      "logo",
+      "yahoo"
+    ],
+    "colors": [],
+    "caption": "a black and white letter y on a white background"
+  },
+  "io/IoLogoYen.svg": {
+    "component_id": "io:IoLogoYen",
+    "aliases": [
+      "io",
+      "logo",
+      "yen"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a yen symbol"
+  },
+  "io/IoLogoYoutube.svg": {
+    "component_id": "io:IoLogoYoutube",
+    "aliases": [
+      "io",
+      "logo",
+      "youtube"
+    ],
+    "colors": [],
+    "caption": "a black and white play button on a white background"
+  },
+  "io/IoMdAdd.svg": {
+    "component_id": "io:IoMdAdd",
+    "aliases": [
+      "io",
+      "md",
+      "add"
+    ],
+    "colors": [],
+    "caption": "a black cross on a white background"
+  },
+  "io/IoMdAddCircle.svg": {
+    "component_id": "io:IoMdAddCircle",
+    "aliases": [
+      "io",
+      "md",
+      "add",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white plus sign in a circle"
+  },
+  "io/IoMdAddCircleOutline.svg": {
+    "component_id": "io:IoMdAddCircleOutline",
+    "aliases": [
+      "io",
+      "md",
+      "add",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black plus sign in a circle on a white background"
+  },
+  "io/IoMdAirplane.svg": {
+    "component_id": "io:IoMdAirplane",
+    "aliases": [
+      "io",
+      "md",
+      "airplane"
+    ],
+    "colors": [],
+    "caption": "an airplane icon on a white background"
+  },
+  "io/IoMdAlarm.svg": {
+    "component_id": "io:IoMdAlarm",
+    "aliases": [
+      "io",
+      "md",
+      "alarm"
+    ],
+    "colors": [],
+    "caption": "an alarm clock icon on a white background"
+  },
+  "io/IoMdAlbums.svg": {
+    "component_id": "io:IoMdAlbums",
+    "aliases": [
+      "io",
+      "md",
+      "albums"
+    ],
+    "colors": [],
+    "caption": "a black square icon on a white background"
+  },
+  "io/IoMdAlert.svg": {
+    "component_id": "io:IoMdAlert",
+    "aliases": [
+      "io",
+      "md",
+      "alert"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an exclamation sign"
+  },
+  "io/IoMdAmericanFootball.svg": {
+    "component_id": "io:IoMdAmericanFootball",
+    "aliases": [
+      "io",
+      "md",
+      "american",
+      "football"
+    ],
+    "colors": [],
+    "caption": "an american football ball icon on a white background"
+  },
+  "io/IoMdAnalytics.svg": {
+    "component_id": "io:IoMdAnalytics",
+    "aliases": [
+      "io",
+      "md",
+      "analytics"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a graph"
+  },
+  "io/IoMdAperture.svg": {
+    "component_id": "io:IoMdAperture",
+    "aliases": [
+      "io",
+      "md",
+      "aperture"
+    ],
+    "colors": [],
+    "caption": "a black and white circular logo with an image of a camera lens"
+  },
+  "io/IoMdApps.svg": {
+    "component_id": "io:IoMdApps",
+    "aliases": [
+      "io",
+      "md",
+      "apps"
+    ],
+    "colors": [],
+    "caption": "a black and white square with squares in it"
+  },
+  "io/IoMdAppstore.svg": {
+    "component_id": "io:IoMdAppstore",
+    "aliases": [
+      "io",
+      "md",
+      "appstore"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shopping bag with a play button"
+  },
+  "io/IoMdArchive.svg": {
+    "component_id": "io:IoMdArchive",
+    "aliases": [
+      "io",
+      "md",
+      "archive"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a down arrow"
+  },
+  "io/IoMdArrowBack.svg": {
+    "component_id": "io:IoMdArrowBack",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "back"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoMdArrowDown.svg": {
+    "component_id": "io:IoMdArrowDown",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "io/IoMdArrowDropdown.svg": {
+    "component_id": "io:IoMdArrowDropdown",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "dropdown"
+    ],
+    "colors": [],
+    "caption": "a black triangle is shown on a white background"
+  },
+  "io/IoMdArrowDropdownCircle.svg": {
+    "component_id": "io:IoMdArrowDropdownCircle",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "dropdown",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black circle with a white arrow pointing down"
+  },
+  "io/IoMdArrowDropleft.svg": {
+    "component_id": "io:IoMdArrowDropleft",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "dropleft"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "io/IoMdArrowDropleftCircle.svg": {
+    "component_id": "io:IoMdArrowDropleftCircle",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "dropleft",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white play button"
+  },
+  "io/IoMdArrowDropright.svg": {
+    "component_id": "io:IoMdArrowDropright",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "dropright"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "io/IoMdArrowDroprightCircle.svg": {
+    "component_id": "io:IoMdArrowDroprightCircle",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "dropright",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white play button icon"
+  },
+  "io/IoMdArrowDropup.svg": {
+    "component_id": "io:IoMdArrowDropup",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "dropup"
+    ],
+    "colors": [],
+    "caption": "a black triangle is shown on a white background"
+  },
+  "io/IoMdArrowDropupCircle.svg": {
+    "component_id": "io:IoMdArrowDropupCircle",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "dropup",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black circle with an arrow pointing up"
+  },
+  "io/IoMdArrowForward.svg": {
+    "component_id": "io:IoMdArrowForward",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing to the right on a white background"
+  },
+  "io/IoMdArrowRoundBack.svg": {
+    "component_id": "io:IoMdArrowRoundBack",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "round",
+      "back"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoMdArrowRoundDown.svg": {
+    "component_id": "io:IoMdArrowRoundDown",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "round",
+      "down"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "io/IoMdArrowRoundForward.svg": {
+    "component_id": "io:IoMdArrowRoundForward",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "round",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoMdArrowRoundUp.svg": {
+    "component_id": "io:IoMdArrowRoundUp",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "round",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "io/IoMdArrowUp.svg": {
+    "component_id": "io:IoMdArrowUp",
+    "aliases": [
+      "io",
+      "md",
+      "arrow",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "io/IoMdAt.svg": {
+    "component_id": "io:IoMdAt",
+    "aliases": [
+      "io",
+      "md",
+      "at"
+    ],
+    "colors": [],
+    "caption": "an email icon in a black and white circle"
+  },
+  "io/IoMdAttach.svg": {
+    "component_id": "io:IoMdAttach",
+    "aliases": [
+      "io",
+      "md",
+      "attach"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a paper clip"
+  },
+  "io/IoMdBackspace.svg": {
+    "component_id": "io:IoMdBackspace",
+    "aliases": [
+      "io",
+      "md",
+      "backspace"
+    ],
+    "colors": [],
+    "caption": "an image of a black and white icon with an x"
+  },
+  "io/IoMdBarcode.svg": {
+    "component_id": "io:IoMdBarcode",
+    "aliases": [
+      "io",
+      "md",
+      "barcode"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with four bars"
+  },
+  "io/IoMdBaseball.svg": {
+    "component_id": "io:IoMdBaseball",
+    "aliases": [
+      "io",
+      "md",
+      "baseball"
+    ],
+    "colors": [],
+    "caption": "baseball icon in black and white on a white background"
+  },
+  "io/IoMdBasket.svg": {
+    "component_id": "io:IoMdBasket",
+    "aliases": [
+      "io",
+      "md",
+      "basket"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shopping basket"
+  },
+  "io/IoMdBasketball.svg": {
+    "component_id": "io:IoMdBasketball",
+    "aliases": [
+      "io",
+      "md",
+      "basketball"
+    ],
+    "colors": [],
+    "caption": "a black and white basketball icon on a white background"
+  },
+  "io/IoMdBatteryCharging.svg": {
+    "component_id": "io:IoMdBatteryCharging",
+    "aliases": [
+      "io",
+      "md",
+      "battery",
+      "charging"
+    ],
+    "colors": [],
+    "caption": "a battery icon with a lightning bolt on it"
+  },
+  "io/IoMdBatteryDead.svg": {
+    "component_id": "io:IoMdBatteryDead",
+    "aliases": [
+      "io",
+      "md",
+      "battery",
+      "dead"
+    ],
+    "colors": [],
+    "caption": "a battery icon on a white background"
+  },
+  "io/IoMdBatteryFull.svg": {
+    "component_id": "io:IoMdBatteryFull",
+    "aliases": [
+      "io",
+      "md",
+      "battery",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a black battery icon on a white background"
+  },
+  "io/IoMdBeaker.svg": {
+    "component_id": "io:IoMdBeaker",
+    "aliases": [
+      "io",
+      "md",
+      "beaker"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a test tube"
+  },
+  "io/IoMdBed.svg": {
+    "component_id": "io:IoMdBed",
+    "aliases": [
+      "io",
+      "md",
+      "bed"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a bed"
+  },
+  "io/IoMdBeer.svg": {
+    "component_id": "io:IoMdBeer",
+    "aliases": [
+      "io",
+      "md",
+      "beer"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a mug of beer"
+  },
+  "io/IoMdBicycle.svg": {
+    "component_id": "io:IoMdBicycle",
+    "aliases": [
+      "io",
+      "md",
+      "bicycle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person riding a bike"
+  },
+  "io/IoMdBluetooth.svg": {
+    "component_id": "io:IoMdBluetooth",
+    "aliases": [
+      "io",
+      "md",
+      "bluetooth"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a bluetooth symbol"
+  },
+  "io/IoMdBoat.svg": {
+    "component_id": "io:IoMdBoat",
+    "aliases": [
+      "io",
+      "md",
+      "boat"
+    ],
+    "colors": [],
+    "caption": "a boat icon on a white background"
+  },
+  "io/IoMdBody.svg": {
+    "component_id": "io:IoMdBody",
+    "aliases": [
+      "io",
+      "md",
+      "body"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a man with arms outstretched"
+  },
+  "io/IoMdBonfire.svg": {
+    "component_id": "io:IoMdBonfire",
+    "aliases": [
+      "io",
+      "md",
+      "bonfire"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a flame"
+  },
+  "io/IoMdBook.svg": {
+    "component_id": "io:IoMdBook",
+    "aliases": [
+      "io",
+      "md",
+      "book"
+    ],
+    "colors": [],
+    "caption": "an open book icon on a white background"
+  },
+  "io/IoMdBookmark.svg": {
+    "component_id": "io:IoMdBookmark",
+    "aliases": [
+      "io",
+      "md",
+      "bookmark"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a bookmark"
+  },
+  "io/IoMdBookmarks.svg": {
+    "component_id": "io:IoMdBookmarks",
+    "aliases": [
+      "io",
+      "md",
+      "bookmarks"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book with a ribbon"
+  },
+  "io/IoMdBowtie.svg": {
+    "component_id": "io:IoMdBowtie",
+    "aliases": [
+      "io",
+      "md",
+      "bowtie"
+    ],
+    "colors": [],
+    "caption": "a black bow tie icon on a white background"
+  },
+  "io/IoMdBriefcase.svg": {
+    "component_id": "io:IoMdBriefcase",
+    "aliases": [
+      "io",
+      "md",
+      "briefcase"
+    ],
+    "colors": [],
+    "caption": "a black briefcase icon on a white background"
+  },
+  "io/IoMdBrowsers.svg": {
+    "component_id": "io:IoMdBrowsers",
+    "aliases": [
+      "io",
+      "md",
+      "browsers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a computer screen"
+  },
+  "io/IoMdBrush.svg": {
+    "component_id": "io:IoMdBrush",
+    "aliases": [
+      "io",
+      "md",
+      "brush"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a brush"
+  },
+  "io/IoMdBug.svg": {
+    "component_id": "io:IoMdBug",
+    "aliases": [
+      "io",
+      "md",
+      "bug"
+    ],
+    "colors": [],
+    "caption": "a black bug icon on a white background"
+  },
+  "io/IoMdBuild.svg": {
+    "component_id": "io:IoMdBuild",
+    "aliases": [
+      "io",
+      "md",
+      "build"
+    ],
+    "colors": [],
+    "caption": "a wrench icon on a white background"
+  },
+  "io/IoMdBulb.svg": {
+    "component_id": "io:IoMdBulb",
+    "aliases": [
+      "io",
+      "md",
+      "bulb"
+    ],
+    "colors": [],
+    "caption": "a black light bulb icon on a white background"
+  },
+  "io/IoMdBus.svg": {
+    "component_id": "io:IoMdBus",
+    "aliases": [
+      "io",
+      "md",
+      "bus"
+    ],
+    "colors": [],
+    "caption": "a bus icon on a white background"
+  },
+  "io/IoMdBusiness.svg": {
+    "component_id": "io:IoMdBusiness",
+    "aliases": [
+      "io",
+      "md",
+      "business"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a building"
+  },
+  "io/IoMdCafe.svg": {
+    "component_id": "io:IoMdCafe",
+    "aliases": [
+      "io",
+      "md",
+      "cafe"
+    ],
+    "colors": [],
+    "caption": "a black coffee cup icon on a white background"
+  },
+  "io/IoMdCalculator.svg": {
+    "component_id": "io:IoMdCalculator",
+    "aliases": [
+      "io",
+      "md",
+      "calculator"
+    ],
+    "colors": [],
+    "caption": "a calculator icon on a white background"
+  },
+  "io/IoMdCalendar.svg": {
+    "component_id": "io:IoMdCalendar",
+    "aliases": [
+      "io",
+      "md",
+      "calendar"
+    ],
+    "colors": [],
+    "caption": "a calendar icon on a white background"
+  },
+  "io/IoMdCall.svg": {
+    "component_id": "io:IoMdCall",
+    "aliases": [
+      "io",
+      "md",
+      "call"
+    ],
+    "colors": [],
+    "caption": "a black telephone icon on a white background"
+  },
+  "io/IoMdCamera.svg": {
+    "component_id": "io:IoMdCamera",
+    "aliases": [
+      "io",
+      "md",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "a camera icon on a white background"
+  },
+  "io/IoMdCar.svg": {
+    "component_id": "io:IoMdCar",
+    "aliases": [
+      "io",
+      "md",
+      "car"
+    ],
+    "colors": [],
+    "caption": "a car icon on a white background"
+  },
+  "io/IoMdCard.svg": {
+    "component_id": "io:IoMdCard",
+    "aliases": [
+      "io",
+      "md",
+      "card"
+    ],
+    "colors": [],
+    "caption": "a credit card icon on a white background"
+  },
+  "io/IoMdCart.svg": {
+    "component_id": "io:IoMdCart",
+    "aliases": [
+      "io",
+      "md",
+      "cart"
+    ],
+    "colors": [],
+    "caption": "a shopping cart icon on a white background"
+  },
+  "io/IoMdCash.svg": {
+    "component_id": "io:IoMdCash",
+    "aliases": [
+      "io",
+      "md",
+      "cash"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a dollar bill"
+  },
+  "io/IoMdCellular.svg": {
+    "component_id": "io:IoMdCellular",
+    "aliases": [
+      "io",
+      "md",
+      "cellular"
+    ],
+    "colors": [],
+    "caption": "an image of a black triangle with a white background"
+  },
+  "io/IoMdChatboxes.svg": {
+    "component_id": "io:IoMdChatboxes",
+    "aliases": [
+      "io",
+      "md",
+      "chatboxes"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles on a white background"
+  },
+  "io/IoMdChatbubbles.svg": {
+    "component_id": "io:IoMdChatbubbles",
+    "aliases": [
+      "io",
+      "md",
+      "chatbubbles"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles on a white background"
+  },
+  "io/IoMdCheckbox.svg": {
+    "component_id": "io:IoMdCheckbox",
+    "aliases": [
+      "io",
+      "md",
+      "checkbox"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "io/IoMdCheckboxOutline.svg": {
+    "component_id": "io:IoMdCheckboxOutline",
+    "aliases": [
+      "io",
+      "md",
+      "checkbox",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a check mark icon on a white background"
+  },
+  "io/IoMdCheckmark.svg": {
+    "component_id": "io:IoMdCheckmark",
+    "aliases": [
+      "io",
+      "md",
+      "checkmark"
+    ],
+    "colors": [],
+    "caption": "a black check mark icon on a white background"
+  },
+  "io/IoMdCheckmarkCircle.svg": {
+    "component_id": "io:IoMdCheckmarkCircle",
+    "aliases": [
+      "io",
+      "md",
+      "checkmark",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "io/IoMdCheckmarkCircleOutline.svg": {
+    "component_id": "io:IoMdCheckmarkCircleOutline",
+    "aliases": [
+      "io",
+      "md",
+      "checkmark",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "io/IoMdClipboard.svg": {
+    "component_id": "io:IoMdClipboard",
+    "aliases": [
+      "io",
+      "md",
+      "clipboard"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a clipboard on a white background"
+  },
+  "io/IoMdClock.svg": {
+    "component_id": "io:IoMdClock",
+    "aliases": [
+      "io",
+      "md",
+      "clock"
+    ],
+    "colors": [],
+    "caption": "a black and white clock with a dot in the middle"
+  },
+  "io/IoMdClose.svg": {
+    "component_id": "io:IoMdClose",
+    "aliases": [
+      "io",
+      "md",
+      "close"
+    ],
+    "colors": [],
+    "caption": "a black and white cross on a white background"
+  },
+  "io/IoMdCloseCircle.svg": {
+    "component_id": "io:IoMdCloseCircle",
+    "aliases": [
+      "io",
+      "md",
+      "close",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with an x in it"
+  },
+  "io/IoMdCloseCircleOutline.svg": {
+    "component_id": "io:IoMdCloseCircleOutline",
+    "aliases": [
+      "io",
+      "md",
+      "close",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x symbol"
+  },
+  "io/IoMdCloud.svg": {
+    "component_id": "io:IoMdCloud",
+    "aliases": [
+      "io",
+      "md",
+      "cloud"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "io/IoMdCloudCircle.svg": {
+    "component_id": "io:IoMdCloudCircle",
+    "aliases": [
+      "io",
+      "md",
+      "cloud",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a cloud icon in a black circle on a white background"
+  },
+  "io/IoMdCloudDone.svg": {
+    "component_id": "io:IoMdCloudDone",
+    "aliases": [
+      "io",
+      "md",
+      "cloud",
+      "done"
+    ],
+    "colors": [],
+    "caption": "cloud icon with check mark on white background"
+  },
+  "io/IoMdCloudDownload.svg": {
+    "component_id": "io:IoMdCloudDownload",
+    "aliases": [
+      "io",
+      "md",
+      "cloud",
+      "download"
+    ],
+    "colors": [],
+    "caption": "an image of a cloud with an arrow pointing down"
+  },
+  "io/IoMdCloudOutline.svg": {
+    "component_id": "io:IoMdCloudOutline",
+    "aliases": [
+      "io",
+      "md",
+      "cloud",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "io/IoMdCloudUpload.svg": {
+    "component_id": "io:IoMdCloudUpload",
+    "aliases": [
+      "io",
+      "md",
+      "cloud",
+      "upload"
+    ],
+    "colors": [],
+    "caption": "a black cloud with an arrow pointing up"
+  },
+  "io/IoMdCloudy.svg": {
+    "component_id": "io:IoMdCloudy",
+    "aliases": [
+      "io",
+      "md",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "io/IoMdCloudyNight.svg": {
+    "component_id": "io:IoMdCloudyNight",
+    "aliases": [
+      "io",
+      "md",
+      "cloudy",
+      "night"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with a shark's head"
+  },
+  "io/IoMdCode.svg": {
+    "component_id": "io:IoMdCode",
+    "aliases": [
+      "io",
+      "md",
+      "code"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing in the same direction"
+  },
+  "io/IoMdCodeDownload.svg": {
+    "component_id": "io:IoMdCodeDownload",
+    "aliases": [
+      "io",
+      "md",
+      "code",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down with a white background"
+  },
+  "io/IoMdCodeWorking.svg": {
+    "component_id": "io:IoMdCodeWorking",
+    "aliases": [
+      "io",
+      "md",
+      "code",
+      "working"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing to each other"
+  },
+  "io/IoMdCog.svg": {
+    "component_id": "io:IoMdCog",
+    "aliases": [
+      "io",
+      "md",
+      "cog"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a gear wheel"
+  },
+  "io/IoMdColorFill.svg": {
+    "component_id": "io:IoMdColorFill",
+    "aliases": [
+      "io",
+      "md",
+      "color",
+      "fill"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a drop of liquid"
+  },
+  "io/IoMdColorFilter.svg": {
+    "component_id": "io:IoMdColorFilter",
+    "aliases": [
+      "io",
+      "md",
+      "color",
+      "filter"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a pen"
+  },
+  "io/IoMdColorPalette.svg": {
+    "component_id": "io:IoMdColorPalette",
+    "aliases": [
+      "io",
+      "md",
+      "color",
+      "palette"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a paw"
+  },
+  "io/IoMdColorWand.svg": {
+    "component_id": "io:IoMdColorWand",
+    "aliases": [
+      "io",
+      "md",
+      "color",
+      "wand"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white symbol"
+  },
+  "io/IoMdCompass.svg": {
+    "component_id": "io:IoMdCompass",
+    "aliases": [
+      "io",
+      "md",
+      "compass"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a compass"
+  },
+  "io/IoMdConstruct.svg": {
+    "component_id": "io:IoMdConstruct",
+    "aliases": [
+      "io",
+      "md",
+      "construct"
+    ],
+    "colors": [],
+    "caption": "a hammer and wrench icon on a white background"
+  },
+  "io/IoMdContact.svg": {
+    "component_id": "io:IoMdContact",
+    "aliases": [
+      "io",
+      "md",
+      "contact"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a person in a circle"
+  },
+  "io/IoMdContacts.svg": {
+    "component_id": "io:IoMdContacts",
+    "aliases": [
+      "io",
+      "md",
+      "contacts"
+    ],
+    "colors": [],
+    "caption": "two people are shown in a black and white icon"
+  },
+  "io/IoMdContract.svg": {
+    "component_id": "io:IoMdContract",
+    "aliases": [
+      "io",
+      "md",
+      "contract"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cross with four arrows"
+  },
+  "io/IoMdContrast.svg": {
+    "component_id": "io:IoMdContrast",
+    "aliases": [
+      "io",
+      "md",
+      "contrast"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with a half moon in it"
+  },
+  "io/IoMdCopy.svg": {
+    "component_id": "io:IoMdCopy",
+    "aliases": [
+      "io",
+      "md",
+      "copy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a document"
+  },
+  "io/IoMdCreate.svg": {
+    "component_id": "io:IoMdCreate",
+    "aliases": [
+      "io",
+      "md",
+      "create"
+    ],
+    "colors": [],
+    "caption": "a black and white pencil icon on a white background"
+  },
+  "io/IoMdCrop.svg": {
+    "component_id": "io:IoMdCrop",
+    "aliases": [
+      "io",
+      "md",
+      "crop"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square with a cross in the middle"
+  },
+  "io/IoMdCube.svg": {
+    "component_id": "io:IoMdCube",
+    "aliases": [
+      "io",
+      "md",
+      "cube"
+    ],
+    "colors": [],
+    "caption": "a black cube icon on a white background"
+  },
+  "io/IoMdCut.svg": {
+    "component_id": "io:IoMdCut",
+    "aliases": [
+      "io",
+      "md",
+      "cut"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two scissors"
+  },
+  "io/IoMdDesktop.svg": {
+    "component_id": "io:IoMdDesktop",
+    "aliases": [
+      "io",
+      "md",
+      "desktop"
+    ],
+    "colors": [],
+    "caption": "a computer monitor icon on a white background"
+  },
+  "io/IoMdDisc.svg": {
+    "component_id": "io:IoMdDisc",
+    "aliases": [
+      "io",
+      "md",
+      "disc"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a record"
+  },
+  "io/IoMdDocument.svg": {
+    "component_id": "io:IoMdDocument",
+    "aliases": [
+      "io",
+      "md",
+      "document"
+    ],
+    "colors": [],
+    "caption": "a black file icon on a white background"
+  },
+  "io/IoMdDoneAll.svg": {
+    "component_id": "io:IoMdDoneAll",
+    "aliases": [
+      "io",
+      "md",
+      "done",
+      "all"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a check mark"
+  },
+  "io/IoMdDownload.svg": {
+    "component_id": "io:IoMdDownload",
+    "aliases": [
+      "io",
+      "md",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "io/IoMdEasel.svg": {
+    "component_id": "io:IoMdEasel",
+    "aliases": [
+      "io",
+      "md",
+      "easel"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an easel on a white background"
+  },
+  "io/IoMdEgg.svg": {
+    "component_id": "io:IoMdEgg",
+    "aliases": [
+      "io",
+      "md",
+      "egg"
+    ],
+    "colors": [],
+    "caption": "a black egg on a white background"
+  },
+  "io/IoMdExit.svg": {
+    "component_id": "io:IoMdExit",
+    "aliases": [
+      "io",
+      "md",
+      "exit"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "io/IoMdExpand.svg": {
+    "component_id": "io:IoMdExpand",
+    "aliases": [
+      "io",
+      "md",
+      "expand"
+    ],
+    "colors": [],
+    "caption": "an image of a square with four black squares"
+  },
+  "io/IoMdEye.svg": {
+    "component_id": "io:IoMdEye",
+    "aliases": [
+      "io",
+      "md",
+      "eye"
+    ],
+    "colors": [],
+    "caption": "an eye icon on a white background"
+  },
+  "io/IoMdEyeOff.svg": {
+    "component_id": "io:IoMdEyeOff",
+    "aliases": [
+      "io",
+      "md",
+      "eye",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no eye symbol"
+  },
+  "io/IoMdFastforward.svg": {
+    "component_id": "io:IoMdFastforward",
+    "aliases": [
+      "io",
+      "md",
+      "fastforward"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoMdFemale.svg": {
+    "component_id": "io:IoMdFemale",
+    "aliases": [
+      "io",
+      "md",
+      "female"
+    ],
+    "colors": [],
+    "caption": "the female symbol is shown on a white background"
+  },
+  "io/IoMdFiling.svg": {
+    "component_id": "io:IoMdFiling",
+    "aliases": [
+      "io",
+      "md",
+      "filing"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a stack of books"
+  },
+  "io/IoMdFilm.svg": {
+    "component_id": "io:IoMdFilm",
+    "aliases": [
+      "io",
+      "md",
+      "film"
+    ],
+    "colors": [],
+    "caption": "a film strip icon on a white background"
+  },
+  "io/IoMdFingerPrint.svg": {
+    "component_id": "io:IoMdFingerPrint",
+    "aliases": [
+      "io",
+      "md",
+      "finger",
+      "print"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a fingerprint"
+  },
+  "io/IoMdFitness.svg": {
+    "component_id": "io:IoMdFitness",
+    "aliases": [
+      "io",
+      "md",
+      "fitness"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a dumbbell"
+  },
+  "io/IoMdFlag.svg": {
+    "component_id": "io:IoMdFlag",
+    "aliases": [
+      "io",
+      "md",
+      "flag"
+    ],
+    "colors": [],
+    "caption": "a black flag on a white background"
+  },
+  "io/IoMdFlame.svg": {
+    "component_id": "io:IoMdFlame",
+    "aliases": [
+      "io",
+      "md",
+      "flame"
+    ],
+    "colors": [],
+    "caption": "a black flame icon on a white background"
+  },
+  "io/IoMdFlash.svg": {
+    "component_id": "io:IoMdFlash",
+    "aliases": [
+      "io",
+      "md",
+      "flash"
+    ],
+    "colors": [],
+    "caption": "a black lightning bolt icon on a white background"
+  },
+  "io/IoMdFlashOff.svg": {
+    "component_id": "io:IoMdFlashOff",
+    "aliases": [
+      "io",
+      "md",
+      "flash",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a lightning bolt"
+  },
+  "io/IoMdFlashlight.svg": {
+    "component_id": "io:IoMdFlashlight",
+    "aliases": [
+      "io",
+      "md",
+      "flashlight"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a light bulb"
+  },
+  "io/IoMdFlask.svg": {
+    "component_id": "io:IoMdFlask",
+    "aliases": [
+      "io",
+      "md",
+      "flask"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a test tube"
+  },
+  "io/IoMdFlower.svg": {
+    "component_id": "io:IoMdFlower",
+    "aliases": [
+      "io",
+      "md",
+      "flower"
+    ],
+    "colors": [],
+    "caption": "a black and white flower icon on a white background"
+  },
+  "io/IoMdFolder.svg": {
+    "component_id": "io:IoMdFolder",
+    "aliases": [
+      "io",
+      "md",
+      "folder"
+    ],
+    "colors": [],
+    "caption": "a black folder icon on a white background"
+  },
+  "io/IoMdFolderOpen.svg": {
+    "component_id": "io:IoMdFolderOpen",
+    "aliases": [
+      "io",
+      "md",
+      "folder",
+      "open"
+    ],
+    "colors": [],
+    "caption": "a folder icon on a white background"
+  },
+  "io/IoMdFootball.svg": {
+    "component_id": "io:IoMdFootball",
+    "aliases": [
+      "io",
+      "md",
+      "football"
+    ],
+    "colors": [],
+    "caption": "a black and white soccer ball icon on a white background"
+  },
+  "io/IoMdFunnel.svg": {
+    "component_id": "io:IoMdFunnel",
+    "aliases": [
+      "io",
+      "md",
+      "funnel"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white symbol"
+  },
+  "io/IoMdGift.svg": {
+    "component_id": "io:IoMdGift",
+    "aliases": [
+      "io",
+      "md",
+      "gift"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a gift with a bow"
+  },
+  "io/IoMdGitBranch.svg": {
+    "component_id": "io:IoMdGitBranch",
+    "aliases": [
+      "io",
+      "md",
+      "git",
+      "branch"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white symbol"
+  },
+  "io/IoMdGitCommit.svg": {
+    "component_id": "io:IoMdGitCommit",
+    "aliases": [
+      "io",
+      "md",
+      "git",
+      "commit"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a train station"
+  },
+  "io/IoMdGitCompare.svg": {
+    "component_id": "io:IoMdGitCompare",
+    "aliases": [
+      "io",
+      "md",
+      "git",
+      "compare"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoMdGitMerge.svg": {
+    "component_id": "io:IoMdGitMerge",
+    "aliases": [
+      "io",
+      "md",
+      "git",
+      "merge"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white icon"
+  },
+  "io/IoMdGitNetwork.svg": {
+    "component_id": "io:IoMdGitNetwork",
+    "aliases": [
+      "io",
+      "md",
+      "git",
+      "network"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white symbol"
+  },
+  "io/IoMdGitPullRequest.svg": {
+    "component_id": "io:IoMdGitPullRequest",
+    "aliases": [
+      "io",
+      "md",
+      "git",
+      "pull",
+      "request"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoMdGlasses.svg": {
+    "component_id": "io:IoMdGlasses",
+    "aliases": [
+      "io",
+      "md",
+      "glasses"
+    ],
+    "colors": [],
+    "caption": "sunglasses icon on a white background"
+  },
+  "io/IoMdGlobe.svg": {
+    "component_id": "io:IoMdGlobe",
+    "aliases": [
+      "io",
+      "md",
+      "globe"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the earth"
+  },
+  "io/IoMdGrid.svg": {
+    "component_id": "io:IoMdGrid",
+    "aliases": [
+      "io",
+      "md",
+      "grid"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with squares on it"
+  },
+  "io/IoMdHammer.svg": {
+    "component_id": "io:IoMdHammer",
+    "aliases": [
+      "io",
+      "md",
+      "hammer"
+    ],
+    "colors": [],
+    "caption": "a hammer icon on a white background"
+  },
+  "io/IoMdHand.svg": {
+    "component_id": "io:IoMdHand",
+    "aliases": [
+      "io",
+      "md",
+      "hand"
+    ],
+    "colors": [],
+    "caption": "a black hand icon on a white background"
+  },
+  "io/IoMdHappy.svg": {
+    "component_id": "io:IoMdHappy",
+    "aliases": [
+      "io",
+      "md",
+      "happy"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiley face"
+  },
+  "io/IoMdHeadset.svg": {
+    "component_id": "io:IoMdHeadset",
+    "aliases": [
+      "io",
+      "md",
+      "headset"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a headphone"
+  },
+  "io/IoMdHeart.svg": {
+    "component_id": "io:IoMdHeart",
+    "aliases": [
+      "io",
+      "md",
+      "heart"
+    ],
+    "colors": [],
+    "caption": "a black heart icon on a white background"
+  },
+  "io/IoMdHeartDislike.svg": {
+    "component_id": "io:IoMdHeartDislike",
+    "aliases": [
+      "io",
+      "md",
+      "heart",
+      "dislike"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a heart with a broken arrow"
+  },
+  "io/IoMdHeartEmpty.svg": {
+    "component_id": "io:IoMdHeartEmpty",
+    "aliases": [
+      "io",
+      "md",
+      "heart",
+      "empty"
+    ],
+    "colors": [],
+    "caption": "a black and white heart icon on a white background"
+  },
+  "io/IoMdHeartHalf.svg": {
+    "component_id": "io:IoMdHeartHalf",
+    "aliases": [
+      "io",
+      "md",
+      "heart",
+      "half"
+    ],
+    "colors": [],
+    "caption": "a black and white heart icon on a white background"
+  },
+  "io/IoMdHelp.svg": {
+    "component_id": "io:IoMdHelp",
+    "aliases": [
+      "io",
+      "md",
+      "help"
+    ],
+    "colors": [],
+    "caption": "a question mark icon on a white background"
+  },
+  "io/IoMdHelpBuoy.svg": {
+    "component_id": "io:IoMdHelpBuoy",
+    "aliases": [
+      "io",
+      "md",
+      "help",
+      "buoy"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular object"
+  },
+  "io/IoMdHelpCircle.svg": {
+    "component_id": "io:IoMdHelpCircle",
+    "aliases": [
+      "io",
+      "md",
+      "help",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a question mark icon in a black circle"
+  },
+  "io/IoMdHelpCircleOutline.svg": {
+    "component_id": "io:IoMdHelpCircleOutline",
+    "aliases": [
+      "io",
+      "md",
+      "help",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a question mark in a circle on a white background"
+  },
+  "io/IoMdHome.svg": {
+    "component_id": "io:IoMdHome",
+    "aliases": [
+      "io",
+      "md",
+      "home"
+    ],
+    "colors": [],
+    "caption": "a black house icon on a white background"
+  },
+  "io/IoMdHourglass.svg": {
+    "component_id": "io:IoMdHourglass",
+    "aliases": [
+      "io",
+      "md",
+      "hourglass"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an hourglass"
+  },
+  "io/IoMdIceCream.svg": {
+    "component_id": "io:IoMdIceCream",
+    "aliases": [
+      "io",
+      "md",
+      "ice",
+      "cream"
+    ],
+    "colors": [],
+    "caption": "an ice cream cone icon on a white background"
+  },
+  "io/IoMdImage.svg": {
+    "component_id": "io:IoMdImage",
+    "aliases": [
+      "io",
+      "md",
+      "image"
+    ],
+    "colors": [],
+    "caption": "a black and white square icon with a mountain on it"
+  },
+  "io/IoMdImages.svg": {
+    "component_id": "io:IoMdImages",
+    "aliases": [
+      "io",
+      "md",
+      "images"
+    ],
+    "colors": [],
+    "caption": "a black and white photo icon with mountains"
+  },
+  "io/IoMdInfinite.svg": {
+    "component_id": "io:IoMdInfinite",
+    "aliases": [
+      "io",
+      "md",
+      "infinite"
+    ],
+    "colors": [],
+    "caption": "a black infinity symbol on a white background"
+  },
+  "io/IoMdInformation.svg": {
+    "component_id": "io:IoMdInformation",
+    "aliases": [
+      "io",
+      "md",
+      "information"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter i"
+  },
+  "io/IoMdInformationCircle.svg": {
+    "component_id": "io:IoMdInformationCircle",
+    "aliases": [
+      "io",
+      "md",
+      "information",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with the letter i in it"
+  },
+  "io/IoMdInformationCircleOutline.svg": {
+    "component_id": "io:IoMdInformationCircleOutline",
+    "aliases": [
+      "io",
+      "md",
+      "information",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an i in a circle"
+  },
+  "io/IoMdJet.svg": {
+    "component_id": "io:IoMdJet",
+    "aliases": [
+      "io",
+      "md",
+      "jet"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a fighter jet on a white background"
+  },
+  "io/IoMdJournal.svg": {
+    "component_id": "io:IoMdJournal",
+    "aliases": [
+      "io",
+      "md",
+      "journal"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a book"
+  },
+  "io/IoMdKey.svg": {
+    "component_id": "io:IoMdKey",
+    "aliases": [
+      "io",
+      "md",
+      "key"
+    ],
+    "colors": [],
+    "caption": "a black and white key icon on a white background"
+  },
+  "io/IoMdKeypad.svg": {
+    "component_id": "io:IoMdKeypad",
+    "aliases": [
+      "io",
+      "md",
+      "keypad"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black dot on a white background"
+  },
+  "io/IoMdLaptop.svg": {
+    "component_id": "io:IoMdLaptop",
+    "aliases": [
+      "io",
+      "md",
+      "laptop"
+    ],
+    "colors": [],
+    "caption": "a laptop computer icon on a white background"
+  },
+  "io/IoMdLeaf.svg": {
+    "component_id": "io:IoMdLeaf",
+    "aliases": [
+      "io",
+      "md",
+      "leaf"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a leaf on a white background"
+  },
+  "io/IoMdLink.svg": {
+    "component_id": "io:IoMdLink",
+    "aliases": [
+      "io",
+      "md",
+      "link"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter g"
+  },
+  "io/IoMdList.svg": {
+    "component_id": "io:IoMdList",
+    "aliases": [
+      "io",
+      "md",
+      "list"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "io/IoMdListBox.svg": {
+    "component_id": "io:IoMdListBox",
+    "aliases": [
+      "io",
+      "md",
+      "list",
+      "box"
+    ],
+    "colors": [],
+    "caption": "a black and white square icon with three lines"
+  },
+  "io/IoMdLocate.svg": {
+    "component_id": "io:IoMdLocate",
+    "aliases": [
+      "io",
+      "md",
+      "locate"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crosshairs"
+  },
+  "io/IoMdLock.svg": {
+    "component_id": "io:IoMdLock",
+    "aliases": [
+      "io",
+      "md",
+      "lock"
+    ],
+    "colors": [],
+    "caption": "a black lock icon on a white background"
+  },
+  "io/IoMdLogIn.svg": {
+    "component_id": "io:IoMdLogIn",
+    "aliases": [
+      "io",
+      "md",
+      "log",
+      "in"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "io/IoMdLogOut.svg": {
+    "component_id": "io:IoMdLogOut",
+    "aliases": [
+      "io",
+      "md",
+      "log",
+      "out"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing in the direction of the letter g"
+  },
+  "io/IoMdMagnet.svg": {
+    "component_id": "io:IoMdMagnet",
+    "aliases": [
+      "io",
+      "md",
+      "magnet"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a horseshoe"
+  },
+  "io/IoMdMail.svg": {
+    "component_id": "io:IoMdMail",
+    "aliases": [
+      "io",
+      "md",
+      "mail"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an envelope"
+  },
+  "io/IoMdMailOpen.svg": {
+    "component_id": "io:IoMdMailOpen",
+    "aliases": [
+      "io",
+      "md",
+      "mail",
+      "open"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "io/IoMdMailUnread.svg": {
+    "component_id": "io:IoMdMailUnread",
+    "aliases": [
+      "io",
+      "md",
+      "mail",
+      "unread"
+    ],
+    "colors": [],
+    "caption": "an email icon on a white background"
+  },
+  "io/IoMdMale.svg": {
+    "component_id": "io:IoMdMale",
+    "aliases": [
+      "io",
+      "md",
+      "male"
+    ],
+    "colors": [],
+    "caption": "a male symbol is shown on a white background"
+  },
+  "io/IoMdMan.svg": {
+    "component_id": "io:IoMdMan",
+    "aliases": [
+      "io",
+      "md",
+      "man"
+    ],
+    "colors": [],
+    "caption": "a man is standing in front of a white background"
+  },
+  "io/IoMdMap.svg": {
+    "component_id": "io:IoMdMap",
+    "aliases": [
+      "io",
+      "md",
+      "map"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter n in it"
+  },
+  "io/IoMdMedal.svg": {
+    "component_id": "io:IoMdMedal",
+    "aliases": [
+      "io",
+      "md",
+      "medal"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a black and white ball"
+  },
+  "io/IoMdMedical.svg": {
+    "component_id": "io:IoMdMedical",
+    "aliases": [
+      "io",
+      "md",
+      "medical"
+    ],
+    "colors": [],
+    "caption": "a black star of life symbol on a white background"
+  },
+  "io/IoMdMedkit.svg": {
+    "component_id": "io:IoMdMedkit",
+    "aliases": [
+      "io",
+      "md",
+      "medkit"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a first aid bag"
+  },
+  "io/IoMdMegaphone.svg": {
+    "component_id": "io:IoMdMegaphone",
+    "aliases": [
+      "io",
+      "md",
+      "megaphone"
+    ],
+    "colors": [],
+    "caption": "a megaphone icon on a white background"
+  },
+  "io/IoMdMenu.svg": {
+    "component_id": "io:IoMdMenu",
+    "aliases": [
+      "io",
+      "md",
+      "menu"
+    ],
+    "colors": [],
+    "caption": "a black and white striped line on a white background"
+  },
+  "io/IoMdMic.svg": {
+    "component_id": "io:IoMdMic",
+    "aliases": [
+      "io",
+      "md",
+      "mic"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "io/IoMdMicOff.svg": {
+    "component_id": "io:IoMdMicOff",
+    "aliases": [
+      "io",
+      "md",
+      "mic",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a microphone with no sound"
+  },
+  "io/IoMdMicrophone.svg": {
+    "component_id": "io:IoMdMicrophone",
+    "aliases": [
+      "io",
+      "md",
+      "microphone"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "io/IoMdMoon.svg": {
+    "component_id": "io:IoMdMoon",
+    "aliases": [
+      "io",
+      "md",
+      "moon"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a crescent moon"
+  },
+  "io/IoMdMore.svg": {
+    "component_id": "io:IoMdMore",
+    "aliases": [
+      "io",
+      "md",
+      "more"
+    ],
+    "colors": [],
+    "caption": "four black dots on a white background"
+  },
+  "io/IoMdMove.svg": {
+    "component_id": "io:IoMdMove",
+    "aliases": [
+      "io",
+      "md",
+      "move"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cross with four arrows"
+  },
+  "io/IoMdMusicalNote.svg": {
+    "component_id": "io:IoMdMusicalNote",
+    "aliases": [
+      "io",
+      "md",
+      "musical",
+      "note"
+    ],
+    "colors": [],
+    "caption": "music note icon isolated on white background"
+  },
+  "io/IoMdMusicalNotes.svg": {
+    "component_id": "io:IoMdMusicalNotes",
+    "aliases": [
+      "io",
+      "md",
+      "musical",
+      "notes"
+    ],
+    "colors": [],
+    "caption": "a music note icon on a white background"
+  },
+  "io/IoMdNavigate.svg": {
+    "component_id": "io:IoMdNavigate",
+    "aliases": [
+      "io",
+      "md",
+      "navigate"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "io/IoMdNotifications.svg": {
+    "component_id": "io:IoMdNotifications",
+    "aliases": [
+      "io",
+      "md",
+      "notifications"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "io/IoMdNotificationsOff.svg": {
+    "component_id": "io:IoMdNotificationsOff",
+    "aliases": [
+      "io",
+      "md",
+      "notifications",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a no bell icon on a white background"
+  },
+  "io/IoMdNotificationsOutline.svg": {
+    "component_id": "io:IoMdNotificationsOutline",
+    "aliases": [
+      "io",
+      "md",
+      "notifications",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "io/IoMdNuclear.svg": {
+    "component_id": "io:IoMdNuclear",
+    "aliases": [
+      "io",
+      "md",
+      "nuclear"
+    ],
+    "colors": [],
+    "caption": "a black and white radiation symbol on a white background"
+  },
+  "io/IoMdNutrition.svg": {
+    "component_id": "io:IoMdNutrition",
+    "aliases": [
+      "io",
+      "md",
+      "nutrition"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a carrot"
+  },
+  "io/IoMdOpen.svg": {
+    "component_id": "io:IoMdOpen",
+    "aliases": [
+      "io",
+      "md",
+      "open"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square with an arrow"
+  },
+  "io/IoMdOptions.svg": {
+    "component_id": "io:IoMdOptions",
+    "aliases": [
+      "io",
+      "md",
+      "options"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a barbell"
+  },
+  "io/IoMdOutlet.svg": {
+    "component_id": "io:IoMdOutlet",
+    "aliases": [
+      "io",
+      "md",
+      "outlet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a power outlet"
+  },
+  "io/IoMdPaper.svg": {
+    "component_id": "io:IoMdPaper",
+    "aliases": [
+      "io",
+      "md",
+      "paper"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a newspaper"
+  },
+  "io/IoMdPaperPlane.svg": {
+    "component_id": "io:IoMdPaperPlane",
+    "aliases": [
+      "io",
+      "md",
+      "paper",
+      "plane"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a paper airplane"
+  },
+  "io/IoMdPartlySunny.svg": {
+    "component_id": "io:IoMdPartlySunny",
+    "aliases": [
+      "io",
+      "md",
+      "partly",
+      "sunny"
+    ],
+    "colors": [],
+    "caption": "a weather icon with sun and clouds"
+  },
+  "io/IoMdPause.svg": {
+    "component_id": "io:IoMdPause",
+    "aliases": [
+      "io",
+      "md",
+      "pause"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter h"
+  },
+  "io/IoMdPaw.svg": {
+    "component_id": "io:IoMdPaw",
+    "aliases": [
+      "io",
+      "md",
+      "paw"
+    ],
+    "colors": [],
+    "caption": "a black paw print icon on a white background"
+  },
+  "io/IoMdPeople.svg": {
+    "component_id": "io:IoMdPeople",
+    "aliases": [
+      "io",
+      "md",
+      "people"
+    ],
+    "colors": [],
+    "caption": "two people are shown in a black and white icon"
+  },
+  "io/IoMdPerson.svg": {
+    "component_id": "io:IoMdPerson",
+    "aliases": [
+      "io",
+      "md",
+      "person"
+    ],
+    "colors": [],
+    "caption": "an image of a person icon on a white background"
+  },
+  "io/IoMdPersonAdd.svg": {
+    "component_id": "io:IoMdPersonAdd",
+    "aliases": [
+      "io",
+      "md",
+      "person",
+      "add"
+    ],
+    "colors": [],
+    "caption": "an icon of a person with a plus sign"
+  },
+  "io/IoMdPhoneLandscape.svg": {
+    "component_id": "io:IoMdPhoneLandscape",
+    "aliases": [
+      "io",
+      "md",
+      "phone",
+      "landscape"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a television screen"
+  },
+  "io/IoMdPhonePortrait.svg": {
+    "component_id": "io:IoMdPhonePortrait",
+    "aliases": [
+      "io",
+      "md",
+      "phone",
+      "portrait"
+    ],
+    "colors": [],
+    "caption": "an icon of a smartphone on a white background"
+  },
+  "io/IoMdPhotos.svg": {
+    "component_id": "io:IoMdPhotos",
+    "aliases": [
+      "io",
+      "md",
+      "photos"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a mountain on it"
+  },
+  "io/IoMdPie.svg": {
+    "component_id": "io:IoMdPie",
+    "aliases": [
+      "io",
+      "md",
+      "pie"
+    ],
+    "colors": [],
+    "caption": "a black and white pie chart icon"
+  },
+  "io/IoMdPin.svg": {
+    "component_id": "io:IoMdPin",
+    "aliases": [
+      "io",
+      "md",
+      "pin"
+    ],
+    "colors": [],
+    "caption": "a black and white map pointer icon"
+  },
+  "io/IoMdPint.svg": {
+    "component_id": "io:IoMdPint",
+    "aliases": [
+      "io",
+      "md",
+      "pint"
+    ],
+    "colors": [],
+    "caption": "a black trash can icon on a white background"
+  },
+  "io/IoMdPizza.svg": {
+    "component_id": "io:IoMdPizza",
+    "aliases": [
+      "io",
+      "md",
+      "pizza"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a slice of pizza"
+  },
+  "io/IoMdPlanet.svg": {
+    "component_id": "io:IoMdPlanet",
+    "aliases": [
+      "io",
+      "md",
+      "planet"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the planet saturn"
+  },
+  "io/IoMdPlay.svg": {
+    "component_id": "io:IoMdPlay",
+    "aliases": [
+      "io",
+      "md",
+      "play"
+    ],
+    "colors": [],
+    "caption": "a black triangle is shown on a white background"
+  },
+  "io/IoMdPlayCircle.svg": {
+    "component_id": "io:IoMdPlayCircle",
+    "aliases": [
+      "io",
+      "md",
+      "play",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white play button on a white background"
+  },
+  "io/IoMdPodium.svg": {
+    "component_id": "io:IoMdPodium",
+    "aliases": [
+      "io",
+      "md",
+      "podium"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a bar graph"
+  },
+  "io/IoMdPower.svg": {
+    "component_id": "io:IoMdPower",
+    "aliases": [
+      "io",
+      "md",
+      "power"
+    ],
+    "colors": [],
+    "caption": "a black power symbol on a white background"
+  },
+  "io/IoMdPricetag.svg": {
+    "component_id": "io:IoMdPricetag",
+    "aliases": [
+      "io",
+      "md",
+      "pricetag"
+    ],
+    "colors": [],
+    "caption": "a black price tag icon on a white background"
+  },
+  "io/IoMdPricetags.svg": {
+    "component_id": "io:IoMdPricetags",
+    "aliases": [
+      "io",
+      "md",
+      "pricetags"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a tag on a white background"
+  },
+  "io/IoMdPrint.svg": {
+    "component_id": "io:IoMdPrint",
+    "aliases": [
+      "io",
+      "md",
+      "print"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a printer"
+  },
+  "io/IoMdPulse.svg": {
+    "component_id": "io:IoMdPulse",
+    "aliases": [
+      "io",
+      "md",
+      "pulse"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a heartbeat"
+  },
+  "io/IoMdQrScanner.svg": {
+    "component_id": "io:IoMdQrScanner",
+    "aliases": [
+      "io",
+      "md",
+      "qr",
+      "scanner"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a camera lens"
+  },
+  "io/IoMdQuote.svg": {
+    "component_id": "io:IoMdQuote",
+    "aliases": [
+      "io",
+      "md",
+      "quote"
+    ],
+    "colors": [],
+    "caption": "two black speech bubbles with a white background"
+  },
+  "io/IoMdRadio.svg": {
+    "component_id": "io:IoMdRadio",
+    "aliases": [
+      "io",
+      "md",
+      "radio"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a radio on a white background"
+  },
+  "io/IoMdRadioButtonOff.svg": {
+    "component_id": "io:IoMdRadioButtonOff",
+    "aliases": [
+      "io",
+      "md",
+      "radio",
+      "button",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "io/IoMdRadioButtonOn.svg": {
+    "component_id": "io:IoMdRadioButtonOn",
+    "aliases": [
+      "io",
+      "md",
+      "radio",
+      "button",
+      "on"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circle"
+  },
+  "io/IoMdRainy.svg": {
+    "component_id": "io:IoMdRainy",
+    "aliases": [
+      "io",
+      "md",
+      "rainy"
+    ],
+    "colors": [],
+    "caption": "a black cloud with rain drops on it"
+  },
+  "io/IoMdRecording.svg": {
+    "component_id": "io:IoMdRecording",
+    "aliases": [
+      "io",
+      "md",
+      "recording"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with two circles"
+  },
+  "io/IoMdRedo.svg": {
+    "component_id": "io:IoMdRedo",
+    "aliases": [
+      "io",
+      "md",
+      "redo"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoMdRefresh.svg": {
+    "component_id": "io:IoMdRefresh",
+    "aliases": [
+      "io",
+      "md",
+      "refresh"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "io/IoMdRefreshCircle.svg": {
+    "component_id": "io:IoMdRefreshCircle",
+    "aliases": [
+      "io",
+      "md",
+      "refresh",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with an arrow in it"
+  },
+  "io/IoMdRemove.svg": {
+    "component_id": "io:IoMdRemove",
+    "aliases": [
+      "io",
+      "md",
+      "remove"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "io/IoMdRemoveCircle.svg": {
+    "component_id": "io:IoMdRemoveCircle",
+    "aliases": [
+      "io",
+      "md",
+      "remove",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an empty sign"
+  },
+  "io/IoMdRemoveCircleOutline.svg": {
+    "component_id": "io:IoMdRemoveCircleOutline",
+    "aliases": [
+      "io",
+      "md",
+      "remove",
+      "circle",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an empty sign"
+  },
+  "io/IoMdReorder.svg": {
+    "component_id": "io:IoMdReorder",
+    "aliases": [
+      "io",
+      "md",
+      "reorder"
+    ],
+    "colors": [],
+    "caption": "black and white stripes on a white background"
+  },
+  "io/IoMdRepeat.svg": {
+    "component_id": "io:IoMdRepeat",
+    "aliases": [
+      "io",
+      "md",
+      "repeat"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoMdResize.svg": {
+    "component_id": "io:IoMdResize",
+    "aliases": [
+      "io",
+      "md",
+      "resize"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoMdRestaurant.svg": {
+    "component_id": "io:IoMdRestaurant",
+    "aliases": [
+      "io",
+      "md",
+      "restaurant"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a knife and fork"
+  },
+  "io/IoMdReturnLeft.svg": {
+    "component_id": "io:IoMdReturnLeft",
+    "aliases": [
+      "io",
+      "md",
+      "return",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoMdReturnRight.svg": {
+    "component_id": "io:IoMdReturnRight",
+    "aliases": [
+      "io",
+      "md",
+      "return",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoMdReverseCamera.svg": {
+    "component_id": "io:IoMdReverseCamera",
+    "aliases": [
+      "io",
+      "md",
+      "reverse",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a camera with a circular arrow"
+  },
+  "io/IoMdRewind.svg": {
+    "component_id": "io:IoMdRewind",
+    "aliases": [
+      "io",
+      "md",
+      "rewind"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoMdRibbon.svg": {
+    "component_id": "io:IoMdRibbon",
+    "aliases": [
+      "io",
+      "md",
+      "ribbon"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a ribbon"
+  },
+  "io/IoMdRocket.svg": {
+    "component_id": "io:IoMdRocket",
+    "aliases": [
+      "io",
+      "md",
+      "rocket"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a rocket"
+  },
+  "io/IoMdRose.svg": {
+    "component_id": "io:IoMdRose",
+    "aliases": [
+      "io",
+      "md",
+      "rose"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a flower"
+  },
+  "io/IoMdSad.svg": {
+    "component_id": "io:IoMdSad",
+    "aliases": [
+      "io",
+      "md",
+      "sad"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a sad face"
+  },
+  "io/IoMdSave.svg": {
+    "component_id": "io:IoMdSave",
+    "aliases": [
+      "io",
+      "md",
+      "save"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an mp3 player"
+  },
+  "io/IoMdSchool.svg": {
+    "component_id": "io:IoMdSchool",
+    "aliases": [
+      "io",
+      "md",
+      "school"
+    ],
+    "colors": [],
+    "caption": "a graduation cap icon on a white background"
+  },
+  "io/IoMdSearch.svg": {
+    "component_id": "io:IoMdSearch",
+    "aliases": [
+      "io",
+      "md",
+      "search"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "io/IoMdSend.svg": {
+    "component_id": "io:IoMdSend",
+    "aliases": [
+      "io",
+      "md",
+      "send"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoMdSettings.svg": {
+    "component_id": "io:IoMdSettings",
+    "aliases": [
+      "io",
+      "md",
+      "settings"
+    ],
+    "colors": [],
+    "caption": "a gearwheel icon on a white background"
+  },
+  "io/IoMdShare.svg": {
+    "component_id": "io:IoMdShare",
+    "aliases": [
+      "io",
+      "md",
+      "share"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two circles"
+  },
+  "io/IoMdShareAlt.svg": {
+    "component_id": "io:IoMdShareAlt",
+    "aliases": [
+      "io",
+      "md",
+      "share",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoMdShirt.svg": {
+    "component_id": "io:IoMdShirt",
+    "aliases": [
+      "io",
+      "md",
+      "shirt"
+    ],
+    "colors": [],
+    "caption": "a black t - shirt on a white background"
+  },
+  "io/IoMdShuffle.svg": {
+    "component_id": "io:IoMdShuffle",
+    "aliases": [
+      "io",
+      "md",
+      "shuffle"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two arrows pointing in opposite directions"
+  },
+  "io/IoMdSkipBackward.svg": {
+    "component_id": "io:IoMdSkipBackward",
+    "aliases": [
+      "io",
+      "md",
+      "skip",
+      "backward"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "io/IoMdSkipForward.svg": {
+    "component_id": "io:IoMdSkipForward",
+    "aliases": [
+      "io",
+      "md",
+      "skip",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing down"
+  },
+  "io/IoMdSnow.svg": {
+    "component_id": "io:IoMdSnow",
+    "aliases": [
+      "io",
+      "md",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a snowflake icon on a white background"
+  },
+  "io/IoMdSpeedometer.svg": {
+    "component_id": "io:IoMdSpeedometer",
+    "aliases": [
+      "io",
+      "md",
+      "speedometer"
+    ],
+    "colors": [],
+    "caption": "a speedometer icon on a white background"
+  },
+  "io/IoMdSquare.svg": {
+    "component_id": "io:IoMdSquare",
+    "aliases": [
+      "io",
+      "md",
+      "square"
+    ],
+    "colors": [],
+    "caption": "a square black button on a white background"
+  },
+  "io/IoMdSquareOutline.svg": {
+    "component_id": "io:IoMdSquareOutline",
+    "aliases": [
+      "io",
+      "md",
+      "square",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a square black and white icon on a white background"
+  },
+  "io/IoMdStar.svg": {
+    "component_id": "io:IoMdStar",
+    "aliases": [
+      "io",
+      "md",
+      "star"
+    ],
+    "colors": [],
+    "caption": "a black star on a white background"
+  },
+  "io/IoMdStarHalf.svg": {
+    "component_id": "io:IoMdStarHalf",
+    "aliases": [
+      "io",
+      "md",
+      "star",
+      "half"
+    ],
+    "colors": [],
+    "caption": "a black and white star icon on a white background"
+  },
+  "io/IoMdStarOutline.svg": {
+    "component_id": "io:IoMdStarOutline",
+    "aliases": [
+      "io",
+      "md",
+      "star",
+      "outline"
+    ],
+    "colors": [],
+    "caption": "a black and white star on a white background"
+  },
+  "io/IoMdStats.svg": {
+    "component_id": "io:IoMdStats",
+    "aliases": [
+      "io",
+      "md",
+      "stats"
+    ],
+    "colors": [],
+    "caption": "a black and white bar graph icon"
+  },
+  "io/IoMdStopwatch.svg": {
+    "component_id": "io:IoMdStopwatch",
+    "aliases": [
+      "io",
+      "md",
+      "stopwatch"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a stopwatch"
+  },
+  "io/IoMdSubway.svg": {
+    "component_id": "io:IoMdSubway",
+    "aliases": [
+      "io",
+      "md",
+      "subway"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a train on a white background"
+  },
+  "io/IoMdSunny.svg": {
+    "component_id": "io:IoMdSunny",
+    "aliases": [
+      "io",
+      "md",
+      "sunny"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun"
+  },
+  "io/IoMdSwap.svg": {
+    "component_id": "io:IoMdSwap",
+    "aliases": [
+      "io",
+      "md",
+      "swap"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "io/IoMdSwitch.svg": {
+    "component_id": "io:IoMdSwitch",
+    "aliases": [
+      "io",
+      "md",
+      "switch"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two black circles"
+  },
+  "io/IoMdSync.svg": {
+    "component_id": "io:IoMdSync",
+    "aliases": [
+      "io",
+      "md",
+      "sync"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "io/IoMdTabletLandscape.svg": {
+    "component_id": "io:IoMdTabletLandscape",
+    "aliases": [
+      "io",
+      "md",
+      "tablet",
+      "landscape"
+    ],
+    "colors": [],
+    "caption": "a tablet computer icon on a white background"
+  },
+  "io/IoMdTabletPortrait.svg": {
+    "component_id": "io:IoMdTabletPortrait",
+    "aliases": [
+      "io",
+      "md",
+      "tablet",
+      "portrait"
+    ],
+    "colors": [],
+    "caption": "a tablet computer icon on a white background"
+  },
+  "io/IoMdTennisball.svg": {
+    "component_id": "io:IoMdTennisball",
+    "aliases": [
+      "io",
+      "md",
+      "tennisball"
+    ],
+    "colors": [],
+    "caption": "a tennis ball icon on a white background"
+  },
+  "io/IoMdText.svg": {
+    "component_id": "io:IoMdText",
+    "aliases": [
+      "io",
+      "md",
+      "text"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "io/IoMdThermometer.svg": {
+    "component_id": "io:IoMdThermometer",
+    "aliases": [
+      "io",
+      "md",
+      "thermometer"
+    ],
+    "colors": [],
+    "caption": "a thermometer icon on a white background"
+  },
+  "io/IoMdThumbsDown.svg": {
+    "component_id": "io:IoMdThumbsDown",
+    "aliases": [
+      "io",
+      "md",
+      "thumbs",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speech bubble"
+  },
+  "io/IoMdThumbsUp.svg": {
+    "component_id": "io:IoMdThumbsUp",
+    "aliases": [
+      "io",
+      "md",
+      "thumbs",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black thumb up icon on a white background"
+  },
+  "io/IoMdThunderstorm.svg": {
+    "component_id": "io:IoMdThunderstorm",
+    "aliases": [
+      "io",
+      "md",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a lightning bolt"
+  },
+  "io/IoMdTime.svg": {
+    "component_id": "io:IoMdTime",
+    "aliases": [
+      "io",
+      "md",
+      "time"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "io/IoMdTimer.svg": {
+    "component_id": "io:IoMdTimer",
+    "aliases": [
+      "io",
+      "md",
+      "timer"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "io/IoMdToday.svg": {
+    "component_id": "io:IoMdToday",
+    "aliases": [
+      "io",
+      "md",
+      "today"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a magazine"
+  },
+  "io/IoMdTrain.svg": {
+    "component_id": "io:IoMdTrain",
+    "aliases": [
+      "io",
+      "md",
+      "train"
+    ],
+    "colors": [],
+    "caption": "a train icon on a white background"
+  },
+  "io/IoMdTransgender.svg": {
+    "component_id": "io:IoMdTransgender",
+    "aliases": [
+      "io",
+      "md",
+      "transgender"
+    ],
+    "colors": [],
+    "caption": "a male and female symbol on a white background"
+  },
+  "io/IoMdTrash.svg": {
+    "component_id": "io:IoMdTrash",
+    "aliases": [
+      "io",
+      "md",
+      "trash"
+    ],
+    "colors": [],
+    "caption": "a black trash can icon on a white background"
+  },
+  "io/IoMdTrendingDown.svg": {
+    "component_id": "io:IoMdTrendingDown",
+    "aliases": [
+      "io",
+      "md",
+      "trending",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "io/IoMdTrendingUp.svg": {
+    "component_id": "io:IoMdTrendingUp",
+    "aliases": [
+      "io",
+      "md",
+      "trending",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing up on a white background"
+  },
+  "io/IoMdTrophy.svg": {
+    "component_id": "io:IoMdTrophy",
+    "aliases": [
+      "io",
+      "md",
+      "trophy"
+    ],
+    "colors": [],
+    "caption": "a trophy icon on a white background"
+  },
+  "io/IoMdTv.svg": {
+    "component_id": "io:IoMdTv",
+    "aliases": [
+      "io",
+      "md",
+      "tv"
+    ],
+    "colors": [],
+    "caption": "a flat icon of a computer monitor on a white background"
+  },
+  "io/IoMdUmbrella.svg": {
+    "component_id": "io:IoMdUmbrella",
+    "aliases": [
+      "io",
+      "md",
+      "umbrella"
+    ],
+    "colors": [],
+    "caption": "an umbrella icon on a white background"
+  },
+  "io/IoMdUndo.svg": {
+    "component_id": "io:IoMdUndo",
+    "aliases": [
+      "io",
+      "md",
+      "undo"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "io/IoMdUnlock.svg": {
+    "component_id": "io:IoMdUnlock",
+    "aliases": [
+      "io",
+      "md",
+      "unlock"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "io/IoMdVideocam.svg": {
+    "component_id": "io:IoMdVideocam",
+    "aliases": [
+      "io",
+      "md",
+      "videocam"
+    ],
+    "colors": [],
+    "caption": "a video camera icon on a white background"
+  },
+  "io/IoMdVolumeHigh.svg": {
+    "component_id": "io:IoMdVolumeHigh",
+    "aliases": [
+      "io",
+      "md",
+      "volume",
+      "high"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker"
+  },
+  "io/IoMdVolumeLow.svg": {
+    "component_id": "io:IoMdVolumeLow",
+    "aliases": [
+      "io",
+      "md",
+      "volume",
+      "low"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a speaker"
+  },
+  "io/IoMdVolumeMute.svg": {
+    "component_id": "io:IoMdVolumeMute",
+    "aliases": [
+      "io",
+      "md",
+      "volume",
+      "mute"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker"
+  },
+  "io/IoMdVolumeOff.svg": {
+    "component_id": "io:IoMdVolumeOff",
+    "aliases": [
+      "io",
+      "md",
+      "volume",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no sound symbol"
+  },
+  "io/IoMdWalk.svg": {
+    "component_id": "io:IoMdWalk",
+    "aliases": [
+      "io",
+      "md",
+      "walk"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a man walking"
+  },
+  "io/IoMdWallet.svg": {
+    "component_id": "io:IoMdWallet",
+    "aliases": [
+      "io",
+      "md",
+      "wallet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a square in the middle"
+  },
+  "io/IoMdWarning.svg": {
+    "component_id": "io:IoMdWarning",
+    "aliases": [
+      "io",
+      "md",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black triangle with an exclamation mark on it"
+  },
+  "io/IoMdWatch.svg": {
+    "component_id": "io:IoMdWatch",
+    "aliases": [
+      "io",
+      "md",
+      "watch"
+    ],
+    "colors": [],
+    "caption": "a black watch icon on a white background"
+  },
+  "io/IoMdWater.svg": {
+    "component_id": "io:IoMdWater",
+    "aliases": [
+      "io",
+      "md",
+      "water"
+    ],
+    "colors": [],
+    "caption": "a black drop icon on a white background"
+  },
+  "io/IoMdWifi.svg": {
+    "component_id": "io:IoMdWifi",
+    "aliases": [
+      "io",
+      "md",
+      "wifi"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a radio antenna"
+  },
+  "io/IoMdWine.svg": {
+    "component_id": "io:IoMdWine",
+    "aliases": [
+      "io",
+      "md",
+      "wine"
+    ],
+    "colors": [],
+    "caption": "a martini glass icon on a white background"
+  },
+  "io/IoMdWoman.svg": {
+    "component_id": "io:IoMdWoman",
+    "aliases": [
+      "io",
+      "md",
+      "woman"
+    ],
+    "colors": [],
+    "caption": "a woman's silhouette on a white background"
+  }
+}

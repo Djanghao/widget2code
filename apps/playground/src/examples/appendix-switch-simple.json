@@ -1,0 +1,135 @@
+{
+  "widget": {
+    "backgroundColor": "#F2F2F7",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "stretch",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "props": {
+            "style": {
+              "backgroundColor": "#FFFFFF",
+              "padding": 12,
+              "borderRadius": 12
+            }
+          },
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": { "name": "sf:airplane", "size": 20, "color": "#FFFFFF", "style": { "backgroundColor": "#FF9500", "padding": 4, "borderRadius": 6 } }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 17, "color": "#000000" },
+                  "content": "Airplane Mode"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Switch",
+              "props": { "on": false, "onColor": "#34C759" }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "props": {
+            "style": {
+              "backgroundColor": "#FFFFFF",
+              "padding": 12,
+              "borderRadius": 12
+            }
+          },
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": { "name": "sf:wifi", "size": 20, "color": "#FFFFFF", "style": { "backgroundColor": "#007AFF", "padding": 4, "borderRadius": 6 } }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 17, "color": "#000000" },
+                  "content": "Wi-Fi"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Switch",
+              "props": { "on": true, "onColor": "#34C759" }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "props": {
+            "style": {
+              "backgroundColor": "#FFFFFF",
+              "padding": 12,
+              "borderRadius": 12
+            }
+          },
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": { "name": "sf:bluetooth", "size": 20, "color": "#FFFFFF", "style": { "backgroundColor": "#007AFF", "padding": 4, "borderRadius": 6 } }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": { "fontSize": 17, "color": "#000000" },
+                  "content": "Bluetooth"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Switch",
+              "props": { "on": true, "onColor": "#34C759" }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

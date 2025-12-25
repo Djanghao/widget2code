@@ -1,0 +1,55 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "linear-gradient(45deg, #000 0%, #050505 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "TARGET_ID" },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:scope", "size": 20, "color": "#00FF9D" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "props": { "style": { "position": "relative", "border": "1px solid #00FF9D" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Image",
+              "props": {
+                "src": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                "width": "100%",
+                "height": "100%",
+                "style": { "objectFit": "cover", "filter": "grayscale(100%) contrast(120%)", "opacity": 0.8 }
+              }
+            },
+            {
+              "type": "container",
+              "props": { "style": { "position": "absolute", "top": 0, "left": 0, "width": "100%", "height": "100%", "border": "1px solid rgba(0, 255, 157, 0.3)", "background": "linear-gradient(rgba(0, 255, 157, 0.1) 1px, transparent 1px) 0 0 / 20px 20px" } },
+              "children": []
+            },
+            {
+              "type": "container",
+              "props": { "style": { "position": "absolute", "bottom": 8, "left": 8, "backgroundColor": "#000000", "padding": 4 } },
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#00FF9D", "fontFamily": "monospace" }, "content": "MATCH: 98%" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

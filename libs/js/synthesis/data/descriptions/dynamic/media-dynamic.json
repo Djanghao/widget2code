@@ -1,0 +1,169 @@
+{
+  "domain": "media",
+  "total": 27,
+  "generated": "2025-11-05T16:03:06.293Z",
+  "variations": [
+    {
+      "id": "media-dynamic-001",
+      "prompt": "A media player widget showing playlist and play/pause button",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-002",
+      "prompt": "A compact player widget showing playlist with scrubber",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-003",
+      "prompt": "A compact player widget showing current podcast with progress bar",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-004",
+      "prompt": "A compact player widget showing favorite artists with scrubber",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-005",
+      "prompt": "A music widget showing favorite artists",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-006",
+      "prompt": "A media player widget showing photos with volume control",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-007",
+      "prompt": "A music widget showing current podcast and play/pause button",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-008",
+      "prompt": "A podcast widget showing playlist",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-009",
+      "prompt": "A music widget showing album with progress bar",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-010",
+      "prompt": "A music widget showing recently played",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-011",
+      "prompt": "A media player widget showing album and artist info",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-012",
+      "prompt": "A media player widget showing recently played with playback controls",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-013",
+      "prompt": "A compact player widget showing favorite artists with volume control",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-014",
+      "prompt": "A music widget showing recently played",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-015",
+      "prompt": "A media player widget showing current podcast",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-016",
+      "prompt": "A music widget showing video with playback controls",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-017",
+      "prompt": "A podcast widget showing favorite artists and play/pause button",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-018",
+      "prompt": "A compact player widget showing video and artist info",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-019",
+      "prompt": "A media player widget showing photos with playback controls",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-020",
+      "prompt": "A podcast widget showing current podcast with progress bar and time remaining",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-021",
+      "prompt": "A media player widget showing now playing song",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-022",
+      "prompt": "A podcast widget showing album and time remaining",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-023",
+      "prompt": "A media player widget showing playlist",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-024",
+      "prompt": "A podcast widget showing favorite artists",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-025",
+      "prompt": "A media player widget showing now playing song and playlist",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-026",
+      "prompt": "A podcast widget showing current podcast and playback position",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "media-dynamic-027",
+      "prompt": "A compact player widget showing album and track list",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 32,
+    "padding": 24,
+    "aspectRatio": 1,
+    "width": 361,
+    "height": 350,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": {
+                    "name": "sf:bitcoinsign.circle.fill",
+                    "size": 32,
+                    "color": "#FF9500"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "color": "#FFFFFF"
+                      },
+                      "content": "Bitcoin"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 12,
+                        "color": "#8E8E93"
+                      },
+                      "content": "BTC"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 18,
+                    "fontWeight": 700,
+                    "color": "#FFFFFF"
+                  },
+                  "content": "$42,156.80"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 12,
+                    "fontWeight": 600,
+                    "color": "#30D158"
+                  },
+                  "content": "+5.24%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "LineChart",
+              "props": {
+                "data": [
+                  [103, 187, 121, 208, 96, 174, 142, 219, 131, 201, 88, 167, 195, 139, 214, 126, 205, 152, 98, 189],
+                  [62, 149, 88, 121, 74, 159, 97, 66, 143, 83, 128, 58, 165, 91, 137, 69, 156, 76, 145, 101]
+                ],
+                "colors": [
+                  "#FF9500",
+                  "#5E5CE6"
+                ],
+                "seriesNames": [
+                  "BTC",
+                  "ETH"
+                ],
+                "backgroundColor": "transparent",
+                "showArea": true,
+                "gradientIntensity": 0.1,
+                "smooth": true,
+                "showXAxisLabels": true,
+                "showYAxisLabels": false,
+                "showXAxisTicks": false,
+                "showYAxisTicks": true,
+                "tickLineStyle": "dashed",
+                "tickLineColor": "rgba(255,255,255,0.1)",
+                "height": "100%",
+                "theme": "dark",
+                "labels": [
+                  "1H",
+                  "2H",
+                  "3H",
+                  "4H",
+                  "5H",
+                  "6H",
+                  "7H"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "content": "Buy",
+                "backgroundColor": "#30D158",
+                "color": "#FFFFFF",
+                "flex": 1,
+                "height": 40,
+                "borderRadius": 12,
+                "fontWeight": 700
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "props": {
+                "content": "Sell",
+                "backgroundColor": "#FF3B30",
+                "color": "#FFFFFF",
+                "flex": 1,
+                "height": 40,
+                "borderRadius": 12,
+                "fontWeight": 700
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

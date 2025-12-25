@@ -1,0 +1,469 @@
+{
+  "domain": "social",
+  "descriptions": [
+    {
+      "id": "social-001",
+      "prompt": "A widget showing latest post",
+      "complexity": "medium",
+      "metrics": [
+        "post"
+      ]
+    },
+    {
+      "id": "social-002",
+      "prompt": "A widget displaying recent posts",
+      "complexity": "complex",
+      "metrics": [
+        "posts"
+      ]
+    },
+    {
+      "id": "social-003",
+      "prompt": "A widget showing post with photo",
+      "complexity": "medium",
+      "metrics": [
+        "post"
+      ]
+    },
+    {
+      "id": "social-004",
+      "prompt": "A widget displaying post engagement",
+      "complexity": "medium",
+      "metrics": [
+        "post",
+        "engagement"
+      ]
+    },
+    {
+      "id": "social-005",
+      "prompt": "A widget showing trending posts",
+      "complexity": "complex",
+      "metrics": [
+        "posts"
+      ]
+    },
+    {
+      "id": "social-006",
+      "prompt": "A widget displaying friend's recent post",
+      "complexity": "medium",
+      "metrics": [
+        "post"
+      ]
+    },
+    {
+      "id": "social-007",
+      "prompt": "A widget showing post likes count",
+      "complexity": "simple",
+      "metrics": [
+        "likes"
+      ]
+    },
+    {
+      "id": "social-008",
+      "prompt": "A widget displaying likes received today",
+      "complexity": "simple",
+      "metrics": [
+        "likes"
+      ]
+    },
+    {
+      "id": "social-009",
+      "prompt": "A widget showing most liked posts",
+      "complexity": "complex",
+      "metrics": [
+        "posts",
+        "likes"
+      ]
+    },
+    {
+      "id": "social-010",
+      "prompt": "A widget displaying total likes this week",
+      "complexity": "simple",
+      "metrics": [
+        "likes"
+      ]
+    },
+    {
+      "id": "social-011",
+      "prompt": "A widget showing recent comments",
+      "complexity": "medium",
+      "metrics": [
+        "comments"
+      ]
+    },
+    {
+      "id": "social-012",
+      "prompt": "A widget displaying comment count",
+      "complexity": "simple",
+      "metrics": [
+        "comments"
+      ]
+    },
+    {
+      "id": "social-013",
+      "prompt": "A widget showing unread comments",
+      "complexity": "medium",
+      "metrics": [
+        "comments"
+      ]
+    },
+    {
+      "id": "social-014",
+      "prompt": "A widget showing share count",
+      "complexity": "simple",
+      "metrics": [
+        "shares"
+      ]
+    },
+    {
+      "id": "social-015",
+      "prompt": "A widget displaying viral posts",
+      "complexity": "complex",
+      "metrics": [
+        "posts",
+        "shares"
+      ]
+    },
+    {
+      "id": "social-016",
+      "prompt": "A widget showing profile statistics",
+      "complexity": "medium",
+      "metrics": [
+        "profile"
+      ]
+    },
+    {
+      "id": "social-017",
+      "prompt": "A widget displaying followers count",
+      "complexity": "simple",
+      "metrics": [
+        "followers"
+      ]
+    },
+    {
+      "id": "social-018",
+      "prompt": "A widget showing following count",
+      "complexity": "simple",
+      "metrics": [
+        "following"
+      ]
+    },
+    {
+      "id": "social-019",
+      "prompt": "A widget displaying posts count",
+      "complexity": "simple",
+      "metrics": [
+        "posts"
+      ]
+    },
+    {
+      "id": "social-020",
+      "prompt": "A widget showing follower growth",
+      "complexity": "medium",
+      "metrics": [
+        "followers"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "social-021",
+      "prompt": "A widget displaying profile views",
+      "complexity": "simple",
+      "metrics": [
+        "views"
+      ]
+    },
+    {
+      "id": "social-022",
+      "prompt": "A widget showing engagement rate",
+      "complexity": "medium",
+      "metrics": [
+        "engagement"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "social-023",
+      "prompt": "A widget showing active stories",
+      "complexity": "medium",
+      "metrics": [
+        "stories"
+      ]
+    },
+    {
+      "id": "social-024",
+      "prompt": "A widget displaying story views",
+      "complexity": "simple",
+      "metrics": [
+        "story",
+        "views"
+      ]
+    },
+    {
+      "id": "social-025",
+      "prompt": "A widget showing friends with new stories",
+      "complexity": "complex",
+      "metrics": [
+        "stories"
+      ]
+    },
+    {
+      "id": "social-026",
+      "prompt": "A widget displaying story highlights",
+      "complexity": "medium",
+      "metrics": [
+        "stories"
+      ]
+    },
+    {
+      "id": "social-027",
+      "prompt": "A widget showing unread messages",
+      "complexity": "medium",
+      "metrics": [
+        "messages"
+      ]
+    },
+    {
+      "id": "social-028",
+      "prompt": "A widget displaying recent DM",
+      "complexity": "medium",
+      "metrics": [
+        "messages"
+      ]
+    },
+    {
+      "id": "social-029",
+      "prompt": "A widget showing message count",
+      "complexity": "simple",
+      "metrics": [
+        "messages"
+      ]
+    },
+    {
+      "id": "social-030",
+      "prompt": "A widget displaying chat preview",
+      "complexity": "medium",
+      "metrics": [
+        "messages"
+      ]
+    },
+    {
+      "id": "social-031",
+      "prompt": "A widget showing new followers",
+      "complexity": "medium",
+      "metrics": [
+        "followers"
+      ]
+    },
+    {
+      "id": "social-032",
+      "prompt": "A widget displaying suggested follows",
+      "complexity": "complex",
+      "metrics": [
+        "suggestions"
+      ]
+    },
+    {
+      "id": "social-033",
+      "prompt": "A widget showing mutual friends",
+      "complexity": "medium",
+      "metrics": [
+        "friends"
+      ]
+    },
+    {
+      "id": "social-034",
+      "prompt": "A widget displaying who to follow",
+      "complexity": "complex",
+      "metrics": [
+        "suggestions"
+      ]
+    },
+    {
+      "id": "social-035",
+      "prompt": "A widget showing follower milestones",
+      "complexity": "medium",
+      "metrics": [
+        "followers"
+      ]
+    },
+    {
+      "id": "social-036",
+      "prompt": "A widget showing notifications",
+      "complexity": "medium",
+      "metrics": [
+        "notifications"
+      ]
+    },
+    {
+      "id": "social-037",
+      "prompt": "A widget displaying unread notifications count",
+      "complexity": "simple",
+      "metrics": [
+        "notifications"
+      ]
+    },
+    {
+      "id": "social-038",
+      "prompt": "A widget showing recent activity",
+      "complexity": "complex",
+      "metrics": [
+        "activity"
+      ]
+    },
+    {
+      "id": "social-039",
+      "prompt": "A widget displaying mentions",
+      "complexity": "medium",
+      "metrics": [
+        "mentions"
+      ]
+    },
+    {
+      "id": "social-040",
+      "prompt": "A widget showing tagged posts",
+      "complexity": "complex",
+      "metrics": [
+        "tags"
+      ]
+    },
+    {
+      "id": "social-041",
+      "prompt": "A widget showing post performance",
+      "complexity": "complex",
+      "metrics": [
+        "post",
+        "analytics"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "social-042",
+      "prompt": "A widget displaying best time to post",
+      "complexity": "medium",
+      "metrics": [
+        "analytics"
+      ]
+    },
+    {
+      "id": "social-043",
+      "prompt": "A widget showing content calendar",
+      "complexity": "complex",
+      "metrics": [
+        "calendar"
+      ]
+    },
+    {
+      "id": "social-044",
+      "prompt": "A widget displaying post drafts",
+      "complexity": "medium",
+      "metrics": [
+        "drafts"
+      ]
+    },
+    {
+      "id": "social-045",
+      "prompt": "A widget showing weekly engagement",
+      "complexity": "complex",
+      "metrics": [
+        "engagement"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "social-046",
+      "prompt": "A widget displaying reach metrics",
+      "complexity": "medium",
+      "metrics": [
+        "reach"
+      ]
+    },
+    {
+      "id": "social-047",
+      "prompt": "A widget showing impressions",
+      "complexity": "simple",
+      "metrics": [
+        "impressions"
+      ]
+    },
+    {
+      "id": "social-048",
+      "prompt": "A widget displaying audience demographics",
+      "complexity": "complex",
+      "metrics": [
+        "audience"
+      ],
+      "visualization": [
+        "pie-chart"
+      ]
+    },
+    {
+      "id": "social-049",
+      "prompt": "A widget showing trending hashtags",
+      "complexity": "medium",
+      "metrics": [
+        "hashtags"
+      ]
+    },
+    {
+      "id": "social-050",
+      "prompt": "A widget displaying saved posts",
+      "complexity": "complex",
+      "metrics": [
+        "saved"
+      ]
+    },
+    {
+      "id": "social-051",
+      "prompt": "A widget showing collections",
+      "complexity": "medium",
+      "metrics": [
+        "collections"
+      ]
+    },
+    {
+      "id": "social-052",
+      "prompt": "A widget displaying profile completion",
+      "complexity": "medium",
+      "metrics": [
+        "profile"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "social-053",
+      "prompt": "A widget showing streak count",
+      "complexity": "simple",
+      "metrics": [
+        "streak"
+      ]
+    },
+    {
+      "id": "social-054",
+      "prompt": "A widget displaying verified badge status",
+      "complexity": "simple",
+      "metrics": [
+        "verified"
+      ]
+    },
+    {
+      "id": "social-055",
+      "prompt": "A widget showing friends online now",
+      "complexity": "medium",
+      "metrics": [
+        "friends",
+        "online"
+      ]
+    }
+  ]
+}

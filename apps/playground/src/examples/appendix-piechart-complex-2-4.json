@@ -1,0 +1,176 @@
+{
+  "widget": {
+    "backgroundColor": "#FFD700",
+    "borderRadius": 12,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": {
+        "style": {
+          "border": "3px solid #000",
+          "boxShadow": "8px 8px 0px #000",
+          "backgroundColor": "#FFF"
+        }
+      },
+      "children": [
+        {
+          "type": "container",
+          "padding": 12,
+          "props": {
+            "style": {
+              "borderBottom": "3px solid #000",
+              "backgroundColor": "#FFD700"
+            }
+          },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 20,
+                "fontWeight": 900,
+                "color": "#000",
+                "textAlign": "center",
+                "style": {
+                  "textTransform": "uppercase"
+                }
+              },
+              "content": "Market Share"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 12,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "props": {
+                "data": [
+                  50,
+                  30,
+                  20
+                ],
+                "colors": [
+                  "#000000",
+                  "#f59e0c",
+                  "#FFFFFF"
+                ],
+                "innerRadius": 0,
+                "padAngle": 0,
+                "cornerRadius": 0,
+                "height": "100%",
+                "borderWidth": 3,
+                "borderColor": "#000000"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "center",
+          "gap": 12,
+          "padding": 12,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "container",
+                  "width": 12,
+                  "height": 12,
+                  "backgroundColor": "#000",
+                  "props": {
+                    "style": {
+                      "border": "1px solid #000"
+                    }
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 14,
+                    "fontWeight": 700,
+                    "color": "#000"
+                  },
+                  "content": "A"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "container",
+                  "width": 12,
+                  "height": 12,
+                  "backgroundColor": "#f59e0c",
+                  "props": {
+                    "style": {
+                      "border": "1px solid #000"
+                    }
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 14,
+                    "fontWeight": 700,
+                    "color": "#000"
+                  },
+                  "content": "B"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "container",
+                  "width": 12,
+                  "height": 12,
+                  "backgroundColor": "#FFF",
+                  "props": {
+                    "style": {
+                      "border": "1px solid #000"
+                    }
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 14,
+                    "fontWeight": 700,
+                    "color": "#000"
+                  },
+                  "content": "C"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

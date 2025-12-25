@@ -1,0 +1,53 @@
+{
+  "widget": {
+    "backgroundColor": "#0D1117",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "#C9D1D9" },
+          "content": "Code Quality"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 400, "color": "#8B949E" },
+          "content": "With markers and custom split"
+        },
+        {
+          "type": "leaf",
+          "component": "RadarChart",
+          "flex": 1,
+          "props": {
+            "data": [88, 92, 76, 85, 79, 90, 82],
+            "labels": ["Coverage", "Performance", "Security", "Maintainability", "Documentation", "Testing", "CI/CD"],
+            "radarShape": "polygon",
+            "splitNumber": 6,
+            "color": "#56D364",
+            "backgroundColor": "transparent",
+            "areaOpacity": 0.3,
+            "lineWidth": 2.5,
+            "showPoints": true,
+            "pointSize": 7,
+            "showMarkers": true,
+            "markerSize": 8,
+            "markerStyle": "circle",
+            "gridColor": "rgba(139, 148, 158, 0.15)",
+            "splitLineStyle": "dashed",
+            "axisLineStyle": "solid",
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

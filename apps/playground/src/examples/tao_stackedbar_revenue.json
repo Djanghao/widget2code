@@ -1,0 +1,153 @@
+{
+  "widget": {
+    "backgroundColor": "#FEE2E2",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1.152,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": "none",
+          "props": {
+            "fontSize": 16,
+            "fontWeight": 700,
+            "color": "#991B1B"
+          },
+          "content": "Revenue by Region"
+        },
+        {
+          "type": "leaf",
+          "component": "StackedBarChart",
+          "flex": 1,
+          "props": {
+            "data": [
+              [42, 28, 20, 10],
+              [38, 32, 22, 8],
+              [45, 25, 18, 12],
+              [40, 30, 19, 11]
+            ],
+            "labels": ["North America", "Europe", "Asia-Pacific", "Other"],
+            "colors": ["#DC2626", "#EF4444", "#F87171", "#FCA5A5"],
+            "theme": "light",
+            "height": 140,
+"barBorderRadius": 2
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "stretch",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 3,
+              "flex": 1,
+              "backgroundColor": "#FECACA",
+              "borderRadius": 8,
+              "padding": 10,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 8,
+                    "color": "#7F1D1D",
+                    "fontWeight": 600
+                  },
+                  "content": "TOP REGION"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 11,
+                    "fontWeight": 700,
+                    "color": "#DC2626"
+                  },
+                  "content": "N. America"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 3,
+              "flex": 1,
+              "backgroundColor": "#FECACA",
+              "borderRadius": 8,
+              "padding": 10,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 8,
+                    "color": "#7F1D1D",
+                    "fontWeight": 600
+                  },
+                  "content": "TOTAL REVENUE"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 11,
+                    "fontWeight": 700,
+                    "color": "#DC2626"
+                  },
+                  "content": "$16.8M"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 3,
+              "flex": 1,
+              "backgroundColor": "#FECACA",
+              "borderRadius": 8,
+              "padding": 10,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 8,
+                    "color": "#7F1D1D",
+                    "fontWeight": 600
+                  },
+                  "content": "YOY GROWTH"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 11,
+                    "fontWeight": 700,
+                    "color": "#DC2626"
+                  },
+                  "content": "↑ 12.3%"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

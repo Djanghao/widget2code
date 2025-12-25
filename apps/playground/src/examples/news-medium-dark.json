@@ -1,0 +1,30 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 0,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 0,
+      "flex": 1,
+      "children": [
+        { "type": "leaf", "component": "Image", "flex": "none", "props": { "height": 150, "url": "https://images.unsplash.com/photo-1504711434969-e33886168f5c" } },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 1,
+          "padding": 16,
+          "backgroundColor": "rgba(0,0,0,0.6)",
+          "children": [
+            { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 14, "color": "#8e8e93" }, "content": "Top Stories" },
+            { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 18, "color": "#ffffff", "fontWeight": 600, "lineHeight": 1.3 }, "content": "Tech stocks rally as markets close higher" },
+            { "type": "leaf", "component": "Text", "flex": 0, "props": { "fontSize": 13, "color": "#d1d1d6", "lineHeight": 1.4 }, "content": "Analysts point to strong earnings and consumer demand." }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "domain": "utilities",
+  "descriptions": [
+    {
+      "id": "utilities-001",
+      "prompt": "A widget showing battery percentage",
+      "complexity": "simple",
+      "metrics": [
+        "battery"
+      ]
+    },
+    {
+      "id": "utilities-002",
+      "prompt": "A widget displaying battery with time remaining",
+      "complexity": "medium",
+      "metrics": [
+        "battery"
+      ]
+    },
+    {
+      "id": "utilities-003",
+      "prompt": "A widget showing battery level with icon",
+      "complexity": "simple",
+      "metrics": [
+        "battery"
+      ]
+    },
+    {
+      "id": "utilities-004",
+      "prompt": "A widget displaying battery charge status",
+      "complexity": "medium",
+      "metrics": [
+        "battery"
+      ]
+    },
+    {
+      "id": "utilities-005",
+      "prompt": "A widget showing storage usage",
+      "complexity": "simple",
+      "metrics": [
+        "storage"
+      ]
+    },
+    {
+      "id": "utilities-006",
+      "prompt": "A widget displaying storage with progress bar",
+      "complexity": "medium",
+      "metrics": [
+        "storage"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "utilities-007",
+      "prompt": "A widget showing available storage space",
+      "complexity": "medium",
+      "metrics": [
+        "storage"
+      ]
+    },
+    {
+      "id": "utilities-008",
+      "prompt": "A widget showing WiFi status",
+      "complexity": "simple",
+      "metrics": [
+        "wifi"
+      ]
+    },
+    {
+      "id": "utilities-009",
+      "prompt": "A widget displaying network speed",
+      "complexity": "medium",
+      "metrics": [
+        "network"
+      ]
+    },
+    {
+      "id": "utilities-010",
+      "prompt": "A widget showing connection status",
+      "complexity": "simple",
+      "metrics": [
+        "connection"
+      ]
+    },
+    {
+      "id": "utilities-011",
+      "prompt": "A widget showing system info",
+      "complexity": "medium",
+      "metrics": [
+        "system"
+      ]
+    },
+    {
+      "id": "utilities-012",
+      "prompt": "A widget displaying CPU usage",
+      "complexity": "medium",
+      "metrics": [
+        "cpu"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "utilities-013",
+      "prompt": "A widget showing memory usage",
+      "complexity": "medium",
+      "metrics": [
+        "memory"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "utilities-014",
+      "prompt": "A widget with quick settings toggles",
+      "complexity": "medium",
+      "metrics": [
+        "settings"
+      ]
+    },
+    {
+      "id": "utilities-015",
+      "prompt": "A widget showing device controls",
+      "complexity": "complex",
+      "metrics": [
+        "controls"
+      ]
+    }
+  ]
+}

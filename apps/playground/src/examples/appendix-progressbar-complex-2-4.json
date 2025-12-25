@@ -1,0 +1,69 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "#000" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "direction": "col",
+          "alignMain": "center",
+          "padding": 24,
+          "gap": 24,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#FFFF00", "fontFamily": "monospace" }, "content": "ENERGY_LEVEL" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#FFFF00", "fontFamily": "monospace" }, "content": "92%" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressBar",
+              "props": {
+                "value": 92,
+                "color": "#FFFF00",
+                "backgroundColor": "#222",
+                "height": 12,
+                "style": { "borderRadius": 0, "boxShadow": "0 0 10px rgba(255, 255, 0, 0.3)" }
+              }
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "alignCross": "center",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#00FF00", "fontFamily": "monospace" }, "content": "SHIELD_INTEGRITY" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#00FF00", "fontFamily": "monospace" }, "content": "64%" }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressBar",
+              "props": {
+                "value": 64,
+                "color": "#00FF00",
+                "backgroundColor": "#222",
+                "height": 12,
+                "style": { "borderRadius": 0, "boxShadow": "0 0 10px rgba(0, 255, 0, 0.3)" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

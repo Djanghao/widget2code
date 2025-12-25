@@ -1,0 +1,211 @@
+{
+  "domain": "navigation",
+  "total": 34,
+  "generated": "2025-11-05T16:03:06.298Z",
+  "variations": [
+    {
+      "id": "navigation-dynamic-001",
+      "prompt": "A location widget showing saved locations",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-002",
+      "prompt": "A navigation widget showing ETA with route line",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-003",
+      "prompt": "A directions widget showing ETA with map view",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-004",
+      "prompt": "A traffic widget showing parking location with map view",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-005",
+      "prompt": "A location widget showing route overview and alternate routes",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-006",
+      "prompt": "A navigation widget showing route overview with route line",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-007",
+      "prompt": "A directions widget showing saved locations and alternate routes",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-008",
+      "prompt": "A directions widget showing nearby places and traffic delays",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-009",
+      "prompt": "A location widget showing current location and traffic delays",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-010",
+      "prompt": "A traffic widget showing current location with POI markers",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-011",
+      "prompt": "A traffic widget showing saved locations with route line",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-012",
+      "prompt": "A traffic widget showing nearby places with route line",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-013",
+      "prompt": "A location widget showing route overview and arrival time",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-014",
+      "prompt": "A navigation widget showing distance remaining",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-015",
+      "prompt": "A navigation widget showing distance remaining with traffic overlay",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-016",
+      "prompt": "A traffic widget showing route overview",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-017",
+      "prompt": "A directions widget showing next turn and traffic delays",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-018",
+      "prompt": "A directions widget showing speed with map view and arrival time",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-019",
+      "prompt": "A directions widget showing current location",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-020",
+      "prompt": "A navigation widget showing ETA",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-021",
+      "prompt": "A directions widget showing saved locations",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-022",
+      "prompt": "A traffic widget showing traffic conditions",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-023",
+      "prompt": "A traffic widget showing traffic conditions with POI markers",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-024",
+      "prompt": "A location widget showing speed and distance",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-025",
+      "prompt": "A navigation widget showing ETA and alternate routes",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-026",
+      "prompt": "A directions widget showing speed with map view",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-027",
+      "prompt": "A traffic widget showing next turn with POI markers",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-028",
+      "prompt": "A directions widget showing next turn with traffic overlay",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-029",
+      "prompt": "A directions widget showing saved locations with traffic overlay",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-030",
+      "prompt": "A directions widget showing nearby places and traffic delays",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-031",
+      "prompt": "A location widget showing next turn and ETA with turn-by-turn",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-032",
+      "prompt": "A location widget showing current location and parking location with traffic overlay",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-033",
+      "prompt": "A traffic widget showing ETA and traffic conditions",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "navigation-dynamic-034",
+      "prompt": "A directions widget showing distance remaining and arrival time with route line",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

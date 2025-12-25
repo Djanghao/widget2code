@@ -1,0 +1,99 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 32,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" }, "content": "Equalizer" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "Custom Preset" }
+              ]
+            },
+            {
+              "type": "container",
+              "padding": 8,
+              "backgroundColor": "#2C2C2E",
+              "props": { "style": { "borderRadius": 12 } },
+              "children": [
+                { "type": "leaf", "component": "Icon", "props": { "name": "sf:slider.vertical.3", "size": 20, "color": "#0A84FF" } }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "alignCross": "center",
+              "gap": 12,
+              "children": [
+                { "type": "leaf", "component": "Slider", "props": { "value": 80, "height": 8, "width": 180, "color": "#FF3B30", "thumbColor": "#FFFFFF", "style": { "transform": "rotate(-90deg)" } } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "fontWeight": 600, "color": "#8E8E93" }, "content": "60" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "alignCross": "center",
+              "gap": 12,
+              "children": [
+                { "type": "leaf", "component": "Slider", "props": { "value": 60, "height": 8, "width": 180, "color": "#FF9500", "thumbColor": "#FFFFFF", "style": { "transform": "rotate(-90deg)" } } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "fontWeight": 600, "color": "#8E8E93" }, "content": "230" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "alignCross": "center",
+              "gap": 12,
+              "children": [
+                { "type": "leaf", "component": "Slider", "props": { "value": 40, "height": 8, "width": 180, "color": "#FFD60A", "thumbColor": "#FFFFFF", "style": { "transform": "rotate(-90deg)" } } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "fontWeight": 600, "color": "#8E8E93" }, "content": "910" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "alignCross": "center",
+              "gap": 12,
+              "children": [
+                { "type": "leaf", "component": "Slider", "props": { "value": 70, "height": 8, "width": 180, "color": "#30D158", "thumbColor": "#FFFFFF", "style": { "transform": "rotate(-90deg)" } } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "fontWeight": 600, "color": "#8E8E93" }, "content": "4K" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "alignCross": "center",
+              "gap": 12,
+              "children": [
+                { "type": "leaf", "component": "Slider", "props": { "value": 90, "height": 8, "width": 180, "color": "#0A84FF", "thumbColor": "#FFFFFF", "style": { "transform": "rotate(-90deg)" } } },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "fontWeight": 600, "color": "#8E8E93" }, "content": "14K" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

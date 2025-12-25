@@ -1,0 +1,66 @@
+{
+  "$schema": "./runner-config.schema.json",
+  "description": "Batch 3 of 3 - Data Rich and Playful styles",
+  "runners": [
+    {
+      "name": "data-rich-completed",
+      "port": 8019,
+      "promptPreset": "data-rich",
+      "domains": [
+        "communication"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": false,
+        "useDynamic": true,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "data-rich-incomplete",
+      "port": 8020,
+      "promptPreset": "data-rich",
+      "domains": [
+        "shopping"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "playful-completed",
+      "port": 8021,
+      "promptPreset": "playful",
+      "domains": [
+        "smart-home",
+        "navigation"
+      ],
+      "options": {
+        "limit": 10,
+        "useStatic": false,
+        "useDynamic": false,
+        "useWithImages": true
+      }
+    },
+    {
+      "name": "playful-incomplete",
+      "port": 8022,
+      "promptPreset": "playful",
+      "domains": [
+        "social"
+      ],
+      "options": {
+        "useStatic": true,
+        "useDynamic": true,
+        "useWithImages": true
+      }
+    }
+  ],
+  "globalOptions": {
+    "referenceImagesDir": null,
+    "imageUrlsDir": "./scripts/synthesis/descriptions/image-urls",
+    "referencesPerDescription": 2
+  }
+}

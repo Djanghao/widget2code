@@ -1,0 +1,122 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 32,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Image",
+                  "props": {
+                    "src": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=100&h=100&q=80",
+                    "width": 40,
+                    "height": 40,
+                    "borderRadius": 20
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "fontWeight": 700, "color": "#000000" }, "content": "sarah_designs" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93" }, "content": "Shanghai, China" }
+                  ]
+                }
+              ]
+            },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:ellipsis", "size": 20, "color": "#000000" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "props": { "style": { "position": "relative" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Image",
+              "props": {
+                "src": "https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                "width": "100%",
+                "height": "100%",
+                "borderRadius": 16,
+                "style": { "objectFit": "cover" }
+              }
+            },
+            {
+              "type": "container",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "bottom": 16,
+                  "right": 16,
+                  "backgroundColor": "rgba(0,0,0,0.6)",
+                  "paddingY": 6,
+                  "paddingX": 12,
+                  "borderRadius": 100,
+                  "backdropFilter": "blur(10px)"
+                }
+              },
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "fontWeight": 600, "color": "#FFFFFF" }, "content": "1/4" }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignMain": "between",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 16,
+                  "children": [
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:heart.fill", "size": 24, "color": "#FF3B30" } },
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:message", "size": 24, "color": "#000000" } },
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:paperplane", "size": 24, "color": "#000000" } }
+                  ]
+                },
+                { "type": "leaf", "component": "Icon", "props": { "name": "sf:bookmark", "size": 24, "color": "#000000" } }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": "Liked by " },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 700, "color": "#000000" }, "content": "User" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#000000" }, "content": " and " },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 700, "color": "#000000" }, "content": "1,234 others" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

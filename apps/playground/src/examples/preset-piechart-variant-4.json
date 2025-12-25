@@ -1,0 +1,51 @@
+{
+  "widget": {
+    "backgroundColor": "#1A1A2E",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" },
+          "content": "Revenue Mix"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 600, "color": "rgba(255, 255, 255, 0.7)" },
+          "content": "Ring with legend"
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 1,
+          "props": {
+            "data": [32, 28, 22, 18],
+            "labels": ["Subscriptions", "Services", "Products", "Licenses"],
+            "colors": ["#FF6B6B", "#4ECDC4", "#FFD93D", "#95E1D3"],
+            "variant": "ring",
+            "innerRadius": 60,
+            "outerRadius": 85,
+            "backgroundColor": "transparent",
+            "showLabels": false,
+            "showLegend": true,
+            "legendPosition": "right",
+            "legendOrientation": "vertical",
+            "borderWidth": 2,
+            "borderColor": "#1A1A2E",
+            "startAngle": 270,
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

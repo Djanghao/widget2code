@@ -1,0 +1,120 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 28,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "pi:PiHouseFill",
+                "size": 36,
+                "color": "#FF6B6B"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "pi:PiHeartFill",
+                "size": 36,
+                "color": "#EF4444"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "pi:PiStarFill",
+                "size": 36,
+                "color": "#FBBF24"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "ri:RiBellFill",
+                "size": 36,
+                "color": "#F59E0B"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "ri:RiMailFill",
+                "size": 36,
+                "color": "#3B82F6"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "ri:RiSendPlaneFill",
+                "size": 36,
+                "color": "#06B6D4"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 24,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "pi:PiBookmarkFill",
+                "size": 36,
+                "color": "#8B5CF6"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "md:MdCalendarToday",
+                "size": 36,
+                "color": "#10B981"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "io5:IoTimeSharp",
+                "size": 36,
+                "color": "#EC4899"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

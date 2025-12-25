@@ -1,0 +1,230 @@
+{
+  "widget": {
+    "backgroundColor": "#FAF5FF",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "flex-start",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 3,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 11,
+                    "fontWeight": 700,
+                    "color": "#A855F7",
+                    "letterSpacing": 1.2
+                  },
+                  "content": "ACQUISITION CHANNELS"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 24,
+                    "fontWeight": 800,
+                    "color": "#6B21A8"
+                  },
+                  "content": "Referral Sources"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 0,
+              "backgroundColor": "#E9D5FF",
+              "borderRadius": 10,
+              "padding": 10,
+              "width": 100,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 8,
+                    "color": "#6B21A8",
+                    "fontWeight": 700
+                  },
+                  "content": "TOP SOURCE"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 15,
+                    "fontWeight": 800,
+                    "color": "#A855F7"
+                  },
+                  "content": "Referrals"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "flex": "none",
+              "props": {
+                "data": [42, 28, 20, 10],
+                "labels": ["Referrals", "Ads", "SEO", "Direct"],
+                "colors": ["#7C3AED", "#A855F7", "#D946EF", "#EC4899"],
+                "theme": "light",
+                "variant": "ring",
+                "innerRadius": 0.72,
+                "outerRadius": 55,
+                "showLabels": true,
+                "labelPosition": "outside",
+                "roundedSegments": true,
+                "segmentBorderRadius": 15,
+                "borderWidth": 0,
+                "startAngle": 45,
+                "clockwise": false,
+                "height": "100%",
+                "width": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 6,
+          "flex": 0,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 3,
+              "flex": 1,
+              "backgroundColor": "#C4B5FD",
+              "borderRadius": 10,
+              "padding": 10,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 8,
+                    "color": "#5B21B6",
+                    "fontWeight": 700
+                  },
+                  "content": "REFERRALS"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 13,
+                    "fontWeight": 800,
+                    "color": "#7C3AED"
+                  },
+                  "content": "17.6K"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 3,
+              "flex": 1,
+              "backgroundColor": "#E9D5FF",
+              "borderRadius": 10,
+              "padding": 10,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 8,
+                    "color": "#6B21A8",
+                    "fontWeight": 700
+                  },
+                  "content": "ADS"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 13,
+                    "fontWeight": 800,
+                    "color": "#A855F7"
+                  },
+                  "content": "11.8K"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 3,
+              "flex": 1,
+              "backgroundColor": "rgba(168, 85, 247, 0.1)",
+              "borderRadius": 10,
+              "padding": 10,
+              "border": "1.5px solid #D946EF",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 8,
+                    "color": "#A855F7",
+                    "fontWeight": 700
+                  },
+                  "content": "ORGANIC"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 13,
+                    "fontWeight": 800,
+                    "color": "#D946EF"
+                  },
+                  "content": "12.6K"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

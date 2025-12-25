@@ -1,0 +1,61 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "#000" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 4,
+          "props": { "style": { "backgroundColor": "#000", "borderRadius": 20, "border": "1px solid #F0F", "boxShadow": "0 0 15px rgba(255, 0, 255, 0.2)" } },
+          "children": [
+            {
+              "type": "container",
+              "flex": 1,
+              "props": { "style": { "borderRadius": 16, "overflow": "hidden" } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Image",
+                  "props": {
+                    "src": "https://images.unsplash.com/photo-1515630278258-407f66498911?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                    "width": "100%",
+                    "height": "100%",
+                    "style": { "objectFit": "cover", "filter": "contrast(1.2) saturate(1.2)" }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "padding": 16,
+          "props": { "style": { "border": "1px solid #333", "borderRadius": 12, "background": "#050505" } },
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#F0F", "fontFamily": "monospace" }, "content": "NEO_TOKYO" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#888", "fontFamily": "monospace" }, "content": "SECTOR_7" }
+              ]
+            },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:location.fill", "size": 20, "color": "#F0F" } }
+          ]
+        }
+      ]
+    }
+  }
+}

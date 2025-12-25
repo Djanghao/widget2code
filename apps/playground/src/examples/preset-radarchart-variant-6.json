@@ -1,0 +1,57 @@
+{
+  "widget": {
+    "backgroundColor": "#7C3AED",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 26, "fontWeight": 900, "color": "#FDE047" },
+          "content": "NEON PULSE"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 13, "fontWeight": 700, "color": "#A78BFA" },
+          "content": "CUSTOM POSITIONING"
+        },
+        {
+          "type": "leaf",
+          "component": "RadarChart",
+          "flex": 1,
+          "props": {
+            "data": [95, 88, 82, 90, 76, 92, 85, 88],
+            "labels": ["A", "B", "C", "D", "E", "F", "G", "H"],
+            "radarShape": "polygon",
+            "splitNumber": 5,
+            "color": "#FDE047",
+            "gradient": true,
+            "gradientIntensity": 0.9,
+            "gradientStartColor": "#FDE047",
+            "gradientEndColor": "#A78BFA",
+            "backgroundColor": "transparent",
+            "areaOpacity": 0.5,
+            "lineWidth": 4,
+            "showPoints": true,
+            "pointSize": 10,
+            "center": ["50%", "52%"],
+            "radius": "70%",
+            "startAngle": 45,
+            "gridColor": "rgba(253, 224, 71, 0.2)",
+            "splitLineStyle": "solid",
+            "axisLineStyle": "solid",
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

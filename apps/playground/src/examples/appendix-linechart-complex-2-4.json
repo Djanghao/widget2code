@@ -1,0 +1,65 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "#000" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "padding": 16,
+          "props": { "style": { "borderBottom": "1px solid #333" } },
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#888", "fontFamily": "monospace" }, "content": "NETWORK_TRAFFIC" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 24, "fontWeight": 700, "color": "#FF0055", "fontFamily": "monospace", "style": { "textShadow": "0 0 10px rgba(255,0,85,0.5)" } }, "content": "892 MB/s" }
+              ]
+            },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:waveform.path.ecg", "size": 24, "color": "#FF0055" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 16,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "LineChart",
+              "props": {
+                "data": [
+                  [20, 45, 30, 80, 55, 90, 70, 85, 60, 95]
+                ],
+                "colors": ["#FF0055"],
+                "seriesNames": ["Traffic"],
+                "backgroundColor": "transparent",
+                "showArea": true,
+                "gradientIntensity": 0.4,
+                "strokeWidth": 3,
+                "showGrid": true,
+                "gridColor": "#222",
+                "showDots": true,
+                "dotSize": 6,
+                "height": "100%",
+                "theme": "dark",
+                "smooth": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

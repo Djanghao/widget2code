@@ -1,0 +1,268 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 0.955,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "space-between",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 20,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "Podcasts"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#8E8E93",
+                "name": "sf:magnifyingglass"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 16,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Image",
+                  "width": 80,
+                  "height": 80,
+                  "flex": "none",
+                  "props": {
+                    "borderRadius": 12,
+                    "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 6,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 16,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "Daily Tech News"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 14,
+                        "color": "#8E8E93"
+                      },
+                      "content": "TechTalk Network"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 13,
+                        "color": "#8E8E93"
+                      },
+                      "content": "42 min • Episode 324"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "flex": "none",
+                  "props": {
+                    "icon": "sf:play.fill",
+                    "backgroundColor": "#007AFF",
+                    "color": "#ffffff",
+                    "borderRadius": 20,
+                    "size": 40
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Image",
+                  "width": 80,
+                  "height": 80,
+                  "flex": "none",
+                  "props": {
+                    "borderRadius": 12,
+                    "url": "https://images.unsplash.com/photo-1514326291840-2e0a9bf2a9ae"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 6,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 16,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "Mindful Moments"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 14,
+                        "color": "#8E8E93"
+                      },
+                      "content": "Wellness Today"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 13,
+                        "color": "#8E8E93"
+                      },
+                      "content": "28 min • Episode 187"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "flex": "none",
+                  "props": {
+                    "icon": "sf:play.fill",
+                    "backgroundColor": "#007AFF",
+                    "color": "#ffffff",
+                    "borderRadius": 20,
+                    "size": 40
+                  }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Image",
+                  "width": 80,
+                  "height": 80,
+                  "flex": "none",
+                  "props": {
+                    "borderRadius": 12,
+                    "url": "https://images.unsplash.com/photo-1592609931095-54a2168ae893"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 6,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 16,
+                        "color": "#ffffff",
+                        "fontWeight": 600
+                      },
+                      "content": "Startup Stories"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 14,
+                        "color": "#8E8E93"
+                      },
+                      "content": "Entrepreneur Weekly"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 13,
+                        "color": "#8E8E93"
+                      },
+                      "content": "55 min • Episode 92"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "flex": "none",
+                  "props": {
+                    "icon": "sf:play.fill",
+                    "backgroundColor": "#007AFF",
+                    "color": "#ffffff",
+                    "borderRadius": 20,
+                    "size": 40
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

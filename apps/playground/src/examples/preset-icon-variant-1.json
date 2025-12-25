@@ -1,0 +1,120 @@
+{
+  "widget": {
+    "backgroundColor": "#0A0E27",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "tb:TbCpu",
+                "size": 40,
+                "color": "#00F0FF"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "fa6:FaBolt",
+                "size": 40,
+                "color": "#FF00EA"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "bi:BiChip",
+                "size": 40,
+                "color": "#FFD600"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "md:MdWifi",
+                "size": 40,
+                "color": "#00FF9D"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "ri:RiShieldFill",
+                "size": 40,
+                "color": "#FF0066"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "pi:PiLockFill",
+                "size": 40,
+                "color": "#8B00FF"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "bs:BsTerminalFill",
+                "size": 40,
+                "color": "#00F0FF"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "io5:IoCodeSlash",
+                "size": 40,
+                "color": "#FF00EA"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "hi:HiChip",
+                "size": 40,
+                "color": "#FFD600"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

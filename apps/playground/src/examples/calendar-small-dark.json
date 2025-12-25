@@ -1,0 +1,143 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "between",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 11,
+            "color": "#FF453A",
+            "fontWeight": 700
+          },
+          "content": "MONDAY"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 64,
+            "color": "#ffffff",
+            "fontWeight": 300
+          },
+          "content": "7"
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 4,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 6,
+              "flex": 0,
+              "padding": 6,
+              "backgroundColor": "#4A5B00",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Indicator",
+                  "flex": "none",
+                  "props": {
+                    "color": "#FFCC00",
+                    "thickness": 3
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 0,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#FFCC00",
+                        "fontWeight": 600
+                      },
+                      "content": "Farmers Market"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 10,
+                        "color": "#FFCC00"
+                      },
+                      "content": "9:45-11:00AM"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 6,
+              "flex": 0,
+              "padding": 6,
+              "backgroundColor": "#1B4D1B",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Indicator",
+                  "flex": "none",
+                  "props": {
+                    "color": "#34C759",
+                    "thickness": 3
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 0,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#34C759",
+                        "fontWeight": 600
+                      },
+                      "content": "Weekly Prep"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 10,
+                        "color": "#34C759"
+                      },
+                      "content": "11:15-1:00PM"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,2343 @@
+{
+  "wi/WiAlien.svg": {
+    "component_id": "wi:WiAlien",
+    "aliases": [
+      "wi",
+      "alien"
+    ],
+    "colors": [],
+    "caption": "an alien head icon on a white background"
+  },
+  "wi/WiBarometer.svg": {
+    "component_id": "wi:WiBarometer",
+    "aliases": [
+      "wi",
+      "barometer"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a pressure gauge"
+  },
+  "wi/WiCelsius.svg": {
+    "component_id": "wi:WiCelsius",
+    "aliases": [
+      "wi",
+      "celsius"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter c"
+  },
+  "wi/WiCloud.svg": {
+    "component_id": "wi:WiCloud",
+    "aliases": [
+      "wi",
+      "cloud"
+    ],
+    "colors": [],
+    "caption": "a black cloud icon on a white background"
+  },
+  "wi/WiCloudDown.svg": {
+    "component_id": "wi:WiCloudDown",
+    "aliases": [
+      "wi",
+      "cloud",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a cloud icon with an arrow pointing down"
+  },
+  "wi/WiCloudRefresh.svg": {
+    "component_id": "wi:WiCloudRefresh",
+    "aliases": [
+      "wi",
+      "cloud",
+      "refresh"
+    ],
+    "colors": [],
+    "caption": "a black and white cloud with an arrow in the middle"
+  },
+  "wi/WiCloudUp.svg": {
+    "component_id": "wi:WiCloudUp",
+    "aliases": [
+      "wi",
+      "cloud",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black cloud with an arrow pointing up"
+  },
+  "wi/WiCloudy.svg": {
+    "component_id": "wi:WiCloudy",
+    "aliases": [
+      "wi",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "wi/WiCloudyGusts.svg": {
+    "component_id": "wi:WiCloudyGusts",
+    "aliases": [
+      "wi",
+      "cloudy",
+      "gusts"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud"
+  },
+  "wi/WiCloudyWindy.svg": {
+    "component_id": "wi:WiCloudyWindy",
+    "aliases": [
+      "wi",
+      "cloudy",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "wi/WiDayCloudy.svg": {
+    "component_id": "wi:WiDayCloudy",
+    "aliases": [
+      "wi",
+      "day",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "wi/WiDayCloudyGusts.svg": {
+    "component_id": "wi:WiDayCloudyGusts",
+    "aliases": [
+      "wi",
+      "day",
+      "cloudy",
+      "gusts"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "wi/WiDayCloudyHigh.svg": {
+    "component_id": "wi:WiDayCloudyHigh",
+    "aliases": [
+      "wi",
+      "day",
+      "cloudy",
+      "high"
+    ],
+    "colors": [],
+    "caption": "a cloud and sun icon on a white background"
+  },
+  "wi/WiDayCloudyWindy.svg": {
+    "component_id": "wi:WiDayCloudyWindy",
+    "aliases": [
+      "wi",
+      "day",
+      "cloudy",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "wi/WiDayFog.svg": {
+    "component_id": "wi:WiDayFog",
+    "aliases": [
+      "wi",
+      "day",
+      "fog"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the sun and clouds"
+  },
+  "wi/WiDayHail.svg": {
+    "component_id": "wi:WiDayHail",
+    "aliases": [
+      "wi",
+      "day",
+      "hail"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with sun and rain"
+  },
+  "wi/WiDayHaze.svg": {
+    "component_id": "wi:WiDayHaze",
+    "aliases": [
+      "wi",
+      "day",
+      "haze"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the sun rising"
+  },
+  "wi/WiDayLightWind.svg": {
+    "component_id": "wi:WiDayLightWind",
+    "aliases": [
+      "wi",
+      "day",
+      "light",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the sun"
+  },
+  "wi/WiDayLightning.svg": {
+    "component_id": "wi:WiDayLightning",
+    "aliases": [
+      "wi",
+      "day",
+      "lightning"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a lightning bolt"
+  },
+  "wi/WiDayRain.svg": {
+    "component_id": "wi:WiDayRain",
+    "aliases": [
+      "wi",
+      "day",
+      "rain"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "wi/WiDayRainMix.svg": {
+    "component_id": "wi:WiDayRainMix",
+    "aliases": [
+      "wi",
+      "day",
+      "rain",
+      "mix"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with sun and rain"
+  },
+  "wi/WiDayRainWind.svg": {
+    "component_id": "wi:WiDayRainWind",
+    "aliases": [
+      "wi",
+      "day",
+      "rain",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a cloud"
+  },
+  "wi/WiDayShowers.svg": {
+    "component_id": "wi:WiDayShowers",
+    "aliases": [
+      "wi",
+      "day",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with sun and rain"
+  },
+  "wi/WiDaySleet.svg": {
+    "component_id": "wi:WiDaySleet",
+    "aliases": [
+      "wi",
+      "day",
+      "sleet"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with sun and rain"
+  },
+  "wi/WiDaySleetStorm.svg": {
+    "component_id": "wi:WiDaySleetStorm",
+    "aliases": [
+      "wi",
+      "day",
+      "sleet",
+      "storm"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with a lightning bolt"
+  },
+  "wi/WiDaySnow.svg": {
+    "component_id": "wi:WiDaySnow",
+    "aliases": [
+      "wi",
+      "day",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and sun"
+  },
+  "wi/WiDaySnowThunderstorm.svg": {
+    "component_id": "wi:WiDaySnowThunderstorm",
+    "aliases": [
+      "wi",
+      "day",
+      "snow",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with a lightning bolt"
+  },
+  "wi/WiDaySnowWind.svg": {
+    "component_id": "wi:WiDaySnowWind",
+    "aliases": [
+      "wi",
+      "day",
+      "snow",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and sun"
+  },
+  "wi/WiDaySprinkle.svg": {
+    "component_id": "wi:WiDaySprinkle",
+    "aliases": [
+      "wi",
+      "day",
+      "sprinkle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "wi/WiDayStormShowers.svg": {
+    "component_id": "wi:WiDayStormShowers",
+    "aliases": [
+      "wi",
+      "day",
+      "storm",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white weather icon with a lightning bolt"
+  },
+  "wi/WiDaySunny.svg": {
+    "component_id": "wi:WiDaySunny",
+    "aliases": [
+      "wi",
+      "day",
+      "sunny"
+    ],
+    "colors": [],
+    "caption": "a sun icon on a white background"
+  },
+  "wi/WiDaySunnyOvercast.svg": {
+    "component_id": "wi:WiDaySunnyOvercast",
+    "aliases": [
+      "wi",
+      "day",
+      "sunny",
+      "overcast"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun and cloud"
+  },
+  "wi/WiDayThunderstorm.svg": {
+    "component_id": "wi:WiDayThunderstorm",
+    "aliases": [
+      "wi",
+      "day",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a weather icon with a sun and a lightning bolt"
+  },
+  "wi/WiDayWindy.svg": {
+    "component_id": "wi:WiDayWindy",
+    "aliases": [
+      "wi",
+      "day",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun and wind"
+  },
+  "wi/WiDegrees.svg": {
+    "component_id": "wi:WiDegrees",
+    "aliases": [
+      "wi",
+      "degrees"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiDirectionDown.svg": {
+    "component_id": "wi:WiDirectionDown",
+    "aliases": [
+      "wi",
+      "direction",
+      "down"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing down on a white background"
+  },
+  "wi/WiDirectionDownLeft.svg": {
+    "component_id": "wi:WiDirectionDownLeft",
+    "aliases": [
+      "wi",
+      "direction",
+      "down",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "wi/WiDirectionDownRight.svg": {
+    "component_id": "wi:WiDirectionDownRight",
+    "aliases": [
+      "wi",
+      "direction",
+      "down",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "wi/WiDirectionLeft.svg": {
+    "component_id": "wi:WiDirectionLeft",
+    "aliases": [
+      "wi",
+      "direction",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "wi/WiDirectionRight.svg": {
+    "component_id": "wi:WiDirectionRight",
+    "aliases": [
+      "wi",
+      "direction",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "wi/WiDirectionUp.svg": {
+    "component_id": "wi:WiDirectionUp",
+    "aliases": [
+      "wi",
+      "direction",
+      "up"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up on a white background"
+  },
+  "wi/WiDirectionUpLeft.svg": {
+    "component_id": "wi:WiDirectionUpLeft",
+    "aliases": [
+      "wi",
+      "direction",
+      "up",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "wi/WiDirectionUpRight.svg": {
+    "component_id": "wi:WiDirectionUpRight",
+    "aliases": [
+      "wi",
+      "direction",
+      "up",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "wi/WiDust.svg": {
+    "component_id": "wi:WiDust",
+    "aliases": [
+      "wi",
+      "dust"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  },
+  "wi/WiEarthquake.svg": {
+    "component_id": "wi:WiEarthquake",
+    "aliases": [
+      "wi",
+      "earthquake"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a heartbeat"
+  },
+  "wi/WiFahrenheit.svg": {
+    "component_id": "wi:WiFahrenheit",
+    "aliases": [
+      "wi",
+      "fahrenheit"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter f"
+  },
+  "wi/WiFire.svg": {
+    "component_id": "wi:WiFire",
+    "aliases": [
+      "wi",
+      "fire"
+    ],
+    "colors": [],
+    "caption": "a fire icon on a white background"
+  },
+  "wi/WiFlood.svg": {
+    "component_id": "wi:WiFlood",
+    "aliases": [
+      "wi",
+      "flood"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of an upward arrow"
+  },
+  "wi/WiFog.svg": {
+    "component_id": "wi:WiFog",
+    "aliases": [
+      "wi",
+      "fog"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "wi/WiGaleWarning.svg": {
+    "component_id": "wi:WiGaleWarning",
+    "aliases": [
+      "wi",
+      "gale",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a flag"
+  },
+  "wi/WiHail.svg": {
+    "component_id": "wi:WiHail",
+    "aliases": [
+      "wi",
+      "hail"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiHorizon.svg": {
+    "component_id": "wi:WiHorizon",
+    "aliases": [
+      "wi",
+      "horizon"
+    ],
+    "colors": [],
+    "caption": "a sun icon on a white background"
+  },
+  "wi/WiHorizonAlt.svg": {
+    "component_id": "wi:WiHorizonAlt",
+    "aliases": [
+      "wi",
+      "horizon",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a sun icon on a white background"
+  },
+  "wi/WiHot.svg": {
+    "component_id": "wi:WiHot",
+    "aliases": [
+      "wi",
+      "hot"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a sun"
+  },
+  "wi/WiHumidity.svg": {
+    "component_id": "wi:WiHumidity",
+    "aliases": [
+      "wi",
+      "humidity"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a drop with a percentage sign"
+  },
+  "wi/WiHurricane.svg": {
+    "component_id": "wi:WiHurricane",
+    "aliases": [
+      "wi",
+      "hurricane"
+    ],
+    "colors": [],
+    "caption": "the number six is shown in black on a white background"
+  },
+  "wi/WiHurricaneWarning.svg": {
+    "component_id": "wi:WiHurricaneWarning",
+    "aliases": [
+      "wi",
+      "hurricane",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter b"
+  },
+  "wi/WiLightning.svg": {
+    "component_id": "wi:WiLightning",
+    "aliases": [
+      "wi",
+      "lightning"
+    ],
+    "colors": [],
+    "caption": "two lightning bolts are shown on a white background"
+  },
+  "wi/WiLunarEclipse.svg": {
+    "component_id": "wi:WiLunarEclipse",
+    "aliases": [
+      "wi",
+      "lunar",
+      "eclipse"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "wi/WiMeteor.svg": {
+    "component_id": "wi:WiMeteor",
+    "aliases": [
+      "wi",
+      "meteor"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a rocket"
+  },
+  "wi/WiMoonAltFirstQuarter.svg": {
+    "component_id": "wi:WiMoonAltFirstQuarter",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "first",
+      "quarter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltFull.svg": {
+    "component_id": "wi:WiMoonAltFull",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a circle is shown on a white background"
+  },
+  "wi/WiMoonAltNew.svg": {
+    "component_id": "wi:WiMoonAltNew",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "new"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonAltThirdQuarter.svg": {
+    "component_id": "wi:WiMoonAltThirdQuarter",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "third",
+      "quarter"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with a half moon in it"
+  },
+  "wi/WiMoonAltWaningCrescent1.svg": {
+    "component_id": "wi:WiMoonAltWaningCrescent1",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaningCrescent2.svg": {
+    "component_id": "wi:WiMoonAltWaningCrescent2",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaningCrescent3.svg": {
+    "component_id": "wi:WiMoonAltWaningCrescent3",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaningCrescent4.svg": {
+    "component_id": "wi:WiMoonAltWaningCrescent4",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaningCrescent5.svg": {
+    "component_id": "wi:WiMoonAltWaningCrescent5",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaningCrescent6.svg": {
+    "component_id": "wi:WiMoonAltWaningCrescent6",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "crescent",
+      "6"
+    ],
+    "colors": [],
+    "caption": "the moon is shown in black and white on a white background"
+  },
+  "wi/WiMoonAltWaningGibbous1.svg": {
+    "component_id": "wi:WiMoonAltWaningGibbous1",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a circle"
+  },
+  "wi/WiMoonAltWaningGibbous2.svg": {
+    "component_id": "wi:WiMoonAltWaningGibbous2",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "wi/WiMoonAltWaningGibbous3.svg": {
+    "component_id": "wi:WiMoonAltWaningGibbous3",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaningGibbous4.svg": {
+    "component_id": "wi:WiMoonAltWaningGibbous4",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaningGibbous5.svg": {
+    "component_id": "wi:WiMoonAltWaningGibbous5",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaningGibbous6.svg": {
+    "component_id": "wi:WiMoonAltWaningGibbous6",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waning",
+      "gibbous",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaxingCrescent1.svg": {
+    "component_id": "wi:WiMoonAltWaxingCrescent1",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "wi/WiMoonAltWaxingCrescent2.svg": {
+    "component_id": "wi:WiMoonAltWaxingCrescent2",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "wi/WiMoonAltWaxingCrescent3.svg": {
+    "component_id": "wi:WiMoonAltWaxingCrescent3",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaxingCrescent4.svg": {
+    "component_id": "wi:WiMoonAltWaxingCrescent4",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaxingCrescent5.svg": {
+    "component_id": "wi:WiMoonAltWaxingCrescent5",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaxingCrescent6.svg": {
+    "component_id": "wi:WiMoonAltWaxingCrescent6",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "crescent",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaxingGibbous1.svg": {
+    "component_id": "wi:WiMoonAltWaxingGibbous1",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaxingGibbous2.svg": {
+    "component_id": "wi:WiMoonAltWaxingGibbous2",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaxingGibbous3.svg": {
+    "component_id": "wi:WiMoonAltWaxingGibbous3",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a half moon"
+  },
+  "wi/WiMoonAltWaxingGibbous4.svg": {
+    "component_id": "wi:WiMoonAltWaxingGibbous4",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "wi/WiMoonAltWaxingGibbous5.svg": {
+    "component_id": "wi:WiMoonAltWaxingGibbous5",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white circle with the letter o in it"
+  },
+  "wi/WiMoonAltWaxingGibbous6.svg": {
+    "component_id": "wi:WiMoonAltWaxingGibbous6",
+    "aliases": [
+      "wi",
+      "moon",
+      "alt",
+      "waxing",
+      "gibbous",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a circle"
+  },
+  "wi/WiMoonFirstQuarter.svg": {
+    "component_id": "wi:WiMoonFirstQuarter",
+    "aliases": [
+      "wi",
+      "moon",
+      "first",
+      "quarter"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter d"
+  },
+  "wi/WiMoonFull.svg": {
+    "component_id": "wi:WiMoonFull",
+    "aliases": [
+      "wi",
+      "moon",
+      "full"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonNew.svg": {
+    "component_id": "wi:WiMoonNew",
+    "aliases": [
+      "wi",
+      "moon",
+      "new"
+    ],
+    "colors": [],
+    "caption": "a circle is shown on a white background"
+  },
+  "wi/WiMoonThirdQuarter.svg": {
+    "component_id": "wi:WiMoonThirdQuarter",
+    "aliases": [
+      "wi",
+      "moon",
+      "third",
+      "quarter"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonWaningCrescent1.svg": {
+    "component_id": "wi:WiMoonWaningCrescent1",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a crescent moon"
+  },
+  "wi/WiMoonWaningCrescent2.svg": {
+    "component_id": "wi:WiMoonWaningCrescent2",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "wi/WiMoonWaningCrescent3.svg": {
+    "component_id": "wi:WiMoonWaningCrescent3",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "wi/WiMoonWaningCrescent4.svg": {
+    "component_id": "wi:WiMoonWaningCrescent4",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black crescent on a white background"
+  },
+  "wi/WiMoonWaningCrescent5.svg": {
+    "component_id": "wi:WiMoonWaningCrescent5",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black crescent on a white background"
+  },
+  "wi/WiMoonWaningCrescent6.svg": {
+    "component_id": "wi:WiMoonWaningCrescent6",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "crescent",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent"
+  },
+  "wi/WiMoonWaningGibbous1.svg": {
+    "component_id": "wi:WiMoonWaningGibbous1",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonWaningGibbous2.svg": {
+    "component_id": "wi:WiMoonWaningGibbous2",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonWaningGibbous3.svg": {
+    "component_id": "wi:WiMoonWaningGibbous3",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonWaningGibbous4.svg": {
+    "component_id": "wi:WiMoonWaningGibbous4",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of an egg"
+  },
+  "wi/WiMoonWaningGibbous5.svg": {
+    "component_id": "wi:WiMoonWaningGibbous5",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonWaningGibbous6.svg": {
+    "component_id": "wi:WiMoonWaningGibbous6",
+    "aliases": [
+      "wi",
+      "moon",
+      "waning",
+      "gibbous",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonWaxing6.svg": {
+    "component_id": "wi:WiMoonWaxing6",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a crescent moon"
+  },
+  "wi/WiMoonWaxingCrescent1.svg": {
+    "component_id": "wi:WiMoonWaxingCrescent1",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "crescent",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black crescent on a white background"
+  },
+  "wi/WiMoonWaxingCrescent2.svg": {
+    "component_id": "wi:WiMoonWaxingCrescent2",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "crescent",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black crescent on a white background"
+  },
+  "wi/WiMoonWaxingCrescent3.svg": {
+    "component_id": "wi:WiMoonWaxingCrescent3",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "crescent",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "wi/WiMoonWaxingCrescent4.svg": {
+    "component_id": "wi:WiMoonWaxingCrescent4",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "crescent",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a crescent moon"
+  },
+  "wi/WiMoonWaxingCrescent5.svg": {
+    "component_id": "wi:WiMoonWaxingCrescent5",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "crescent",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a crescent moon"
+  },
+  "wi/WiMoonWaxingGibbous1.svg": {
+    "component_id": "wi:WiMoonWaxingGibbous1",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonWaxingGibbous2.svg": {
+    "component_id": "wi:WiMoonWaxingGibbous2",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonWaxingGibbous3.svg": {
+    "component_id": "wi:WiMoonWaxingGibbous3",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter d"
+  },
+  "wi/WiMoonWaxingGibbous4.svg": {
+    "component_id": "wi:WiMoonWaxingGibbous4",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black circle is shown on a white background"
+  },
+  "wi/WiMoonWaxingGibbous5.svg": {
+    "component_id": "wi:WiMoonWaxingGibbous5",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of an egg"
+  },
+  "wi/WiMoonWaxingGibbous6.svg": {
+    "component_id": "wi:WiMoonWaxingGibbous6",
+    "aliases": [
+      "wi",
+      "moon",
+      "waxing",
+      "gibbous",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black circle on a white background"
+  },
+  "wi/WiMoonrise.svg": {
+    "component_id": "wi:WiMoonrise",
+    "aliases": [
+      "wi",
+      "moonrise"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with a curved arrow"
+  },
+  "wi/WiMoonset.svg": {
+    "component_id": "wi:WiMoonset",
+    "aliases": [
+      "wi",
+      "moonset"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a curved arrow"
+  },
+  "wi/WiNa.svg": {
+    "component_id": "wi:WiNa",
+    "aliases": [
+      "wi",
+      "na"
+    ],
+    "colors": [],
+    "caption": "a black and white logo that says n a"
+  },
+  "wi/WiNightAltCloudy.svg": {
+    "component_id": "wi:WiNightAltCloudy",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and sun"
+  },
+  "wi/WiNightAltCloudyGusts.svg": {
+    "component_id": "wi:WiNightAltCloudyGusts",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "cloudy",
+      "gusts"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and sun"
+  },
+  "wi/WiNightAltCloudyHigh.svg": {
+    "component_id": "wi:WiNightAltCloudyHigh",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "cloudy",
+      "high"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "wi/WiNightAltCloudyWindy.svg": {
+    "component_id": "wi:WiNightAltCloudyWindy",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "cloudy",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud"
+  },
+  "wi/WiNightAltHail.svg": {
+    "component_id": "wi:WiNightAltHail",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "hail"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightAltLightning.svg": {
+    "component_id": "wi:WiNightAltLightning",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "lightning"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with a lightning bolt"
+  },
+  "wi/WiNightAltPartlyCloudy.svg": {
+    "component_id": "wi:WiNightAltPartlyCloudy",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "partly",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and moon"
+  },
+  "wi/WiNightAltRain.svg": {
+    "component_id": "wi:WiNightAltRain",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "rain"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and sun"
+  },
+  "wi/WiNightAltRainMix.svg": {
+    "component_id": "wi:WiNightAltRainMix",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "rain",
+      "mix"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightAltRainWind.svg": {
+    "component_id": "wi:WiNightAltRainWind",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "rain",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightAltShowers.svg": {
+    "component_id": "wi:WiNightAltShowers",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightAltSleet.svg": {
+    "component_id": "wi:WiNightAltSleet",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "sleet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightAltSleetStorm.svg": {
+    "component_id": "wi:WiNightAltSleetStorm",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "sleet",
+      "storm"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with a lightning bolt"
+  },
+  "wi/WiNightAltSnow.svg": {
+    "component_id": "wi:WiNightAltSnow",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightAltSnowThunderstorm.svg": {
+    "component_id": "wi:WiNightAltSnowThunderstorm",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "snow",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with a lightning bolt"
+  },
+  "wi/WiNightAltSnowWind.svg": {
+    "component_id": "wi:WiNightAltSnowWind",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "snow",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with snow"
+  },
+  "wi/WiNightAltSprinkle.svg": {
+    "component_id": "wi:WiNightAltSprinkle",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "sprinkle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "wi/WiNightAltStormShowers.svg": {
+    "component_id": "wi:WiNightAltStormShowers",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "storm",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with a lightning bolt"
+  },
+  "wi/WiNightAltThunderstorm.svg": {
+    "component_id": "wi:WiNightAltThunderstorm",
+    "aliases": [
+      "wi",
+      "night",
+      "alt",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with a lightning bolt"
+  },
+  "wi/WiNightClear.svg": {
+    "component_id": "wi:WiNightClear",
+    "aliases": [
+      "wi",
+      "night",
+      "clear"
+    ],
+    "colors": [],
+    "caption": "a black and white logo of a crescent moon"
+  },
+  "wi/WiNightCloudy.svg": {
+    "component_id": "wi:WiNightCloudy",
+    "aliases": [
+      "wi",
+      "night",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a black and white cloud icon on a white background"
+  },
+  "wi/WiNightCloudyGusts.svg": {
+    "component_id": "wi:WiNightCloudyGusts",
+    "aliases": [
+      "wi",
+      "night",
+      "cloudy",
+      "gusts"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud"
+  },
+  "wi/WiNightCloudyHigh.svg": {
+    "component_id": "wi:WiNightCloudyHigh",
+    "aliases": [
+      "wi",
+      "night",
+      "cloudy",
+      "high"
+    ],
+    "colors": [],
+    "caption": "a cloud icon on a white background"
+  },
+  "wi/WiNightCloudyWindy.svg": {
+    "component_id": "wi:WiNightCloudyWindy",
+    "aliases": [
+      "wi",
+      "night",
+      "cloudy",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud"
+  },
+  "wi/WiNightFog.svg": {
+    "component_id": "wi:WiNightFog",
+    "aliases": [
+      "wi",
+      "night",
+      "fog"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the sun and clouds"
+  },
+  "wi/WiNightHail.svg": {
+    "component_id": "wi:WiNightHail",
+    "aliases": [
+      "wi",
+      "night",
+      "hail"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightLightning.svg": {
+    "component_id": "wi:WiNightLightning",
+    "aliases": [
+      "wi",
+      "night",
+      "lightning"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with a lightning bolt"
+  },
+  "wi/WiNightPartlyCloudy.svg": {
+    "component_id": "wi:WiNightPartlyCloudy",
+    "aliases": [
+      "wi",
+      "night",
+      "partly",
+      "cloudy"
+    ],
+    "colors": [],
+    "caption": "a cloud and sun icon on a white background"
+  },
+  "wi/WiNightRain.svg": {
+    "component_id": "wi:WiNightRain",
+    "aliases": [
+      "wi",
+      "night",
+      "rain"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud and rain"
+  },
+  "wi/WiNightRainMix.svg": {
+    "component_id": "wi:WiNightRainMix",
+    "aliases": [
+      "wi",
+      "night",
+      "rain",
+      "mix"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightRainWind.svg": {
+    "component_id": "wi:WiNightRainWind",
+    "aliases": [
+      "wi",
+      "night",
+      "rain",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightShowers.svg": {
+    "component_id": "wi:WiNightShowers",
+    "aliases": [
+      "wi",
+      "night",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightSleet.svg": {
+    "component_id": "wi:WiNightSleet",
+    "aliases": [
+      "wi",
+      "night",
+      "sleet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiNightSleetStorm.svg": {
+    "component_id": "wi:WiNightSleetStorm",
+    "aliases": [
+      "wi",
+      "night",
+      "sleet",
+      "storm"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with lightning"
+  },
+  "wi/WiNightSnow.svg": {
+    "component_id": "wi:WiNightSnow",
+    "aliases": [
+      "wi",
+      "night",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "wi/WiNightSnowThunderstorm.svg": {
+    "component_id": "wi:WiNightSnowThunderstorm",
+    "aliases": [
+      "wi",
+      "night",
+      "snow",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with a lightning bolt"
+  },
+  "wi/WiNightSnowWind.svg": {
+    "component_id": "wi:WiNightSnowWind",
+    "aliases": [
+      "wi",
+      "night",
+      "snow",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with snow"
+  },
+  "wi/WiNightSprinkle.svg": {
+    "component_id": "wi:WiNightSprinkle",
+    "aliases": [
+      "wi",
+      "night",
+      "sprinkle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "wi/WiNightStormShowers.svg": {
+    "component_id": "wi:WiNightStormShowers",
+    "aliases": [
+      "wi",
+      "night",
+      "storm",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with lightning"
+  },
+  "wi/WiNightThunderstorm.svg": {
+    "component_id": "wi:WiNightThunderstorm",
+    "aliases": [
+      "wi",
+      "night",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with lightning"
+  },
+  "wi/WiRain.svg": {
+    "component_id": "wi:WiRain",
+    "aliases": [
+      "wi",
+      "rain"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a rain cloud"
+  },
+  "wi/WiRainMix.svg": {
+    "component_id": "wi:WiRainMix",
+    "aliases": [
+      "wi",
+      "rain",
+      "mix"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "wi/WiRainWind.svg": {
+    "component_id": "wi:WiRainWind",
+    "aliases": [
+      "wi",
+      "rain",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a rain cloud"
+  },
+  "wi/WiRaindrop.svg": {
+    "component_id": "wi:WiRaindrop",
+    "aliases": [
+      "wi",
+      "raindrop"
+    ],
+    "colors": [],
+    "caption": "a black drop icon on a white background"
+  },
+  "wi/WiRaindrops.svg": {
+    "component_id": "wi:WiRaindrops",
+    "aliases": [
+      "wi",
+      "raindrops"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a drop of water"
+  },
+  "wi/WiRefresh.svg": {
+    "component_id": "wi:WiRefresh",
+    "aliases": [
+      "wi",
+      "refresh"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a circular arrow"
+  },
+  "wi/WiRefreshAlt.svg": {
+    "component_id": "wi:WiRefreshAlt",
+    "aliases": [
+      "wi",
+      "refresh",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "wi/WiSandstorm.svg": {
+    "component_id": "wi:WiSandstorm",
+    "aliases": [
+      "wi",
+      "sandstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with dots on it"
+  },
+  "wi/WiShowers.svg": {
+    "component_id": "wi:WiShowers",
+    "aliases": [
+      "wi",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiSleet.svg": {
+    "component_id": "wi:WiSleet",
+    "aliases": [
+      "wi",
+      "sleet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain"
+  },
+  "wi/WiSmallCraftAdvisory.svg": {
+    "component_id": "wi:WiSmallCraftAdvisory",
+    "aliases": [
+      "wi",
+      "small",
+      "craft",
+      "advisory"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a golf flag"
+  },
+  "wi/WiSmog.svg": {
+    "component_id": "wi:WiSmog",
+    "aliases": [
+      "wi",
+      "smog"
+    ],
+    "colors": [],
+    "caption": "a black silhouette of a cloud on a white background"
+  },
+  "wi/WiSmoke.svg": {
+    "component_id": "wi:WiSmoke",
+    "aliases": [
+      "wi",
+      "smoke"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with smoke coming out of it"
+  },
+  "wi/WiSnow.svg": {
+    "component_id": "wi:WiSnow",
+    "aliases": [
+      "wi",
+      "snow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "wi/WiSnowWind.svg": {
+    "component_id": "wi:WiSnowWind",
+    "aliases": [
+      "wi",
+      "snow",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with snow"
+  },
+  "wi/WiSnowflakeCold.svg": {
+    "component_id": "wi:WiSnowflakeCold",
+    "aliases": [
+      "wi",
+      "snowflake",
+      "cold"
+    ],
+    "colors": [],
+    "caption": "a snowflake icon on a white background"
+  },
+  "wi/WiSolarEclipse.svg": {
+    "component_id": "wi:WiSolarEclipse",
+    "aliases": [
+      "wi",
+      "solar",
+      "eclipse"
+    ],
+    "colors": [],
+    "caption": "a sun and moon icon on a white background"
+  },
+  "wi/WiSprinkle.svg": {
+    "component_id": "wi:WiSprinkle",
+    "aliases": [
+      "wi",
+      "sprinkle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with rain drops"
+  },
+  "wi/WiStars.svg": {
+    "component_id": "wi:WiStars",
+    "aliases": [
+      "wi",
+      "stars"
+    ],
+    "colors": [],
+    "caption": "four black stars are shown on a white background"
+  },
+  "wi/WiStormShowers.svg": {
+    "component_id": "wi:WiStormShowers",
+    "aliases": [
+      "wi",
+      "storm",
+      "showers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a cloud with lightning"
+  },
+  "wi/WiStormWarning.svg": {
+    "component_id": "wi:WiStormWarning",
+    "aliases": [
+      "wi",
+      "storm",
+      "warning"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white flag"
+  },
+  "wi/WiStrongWind.svg": {
+    "component_id": "wi:WiStrongWind",
+    "aliases": [
+      "wi",
+      "strong",
+      "wind"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two curved lines"
+  },
+  "wi/WiSunrise.svg": {
+    "component_id": "wi:WiSunrise",
+    "aliases": [
+      "wi",
+      "sunrise"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a sun with a line through it"
+  },
+  "wi/WiSunset.svg": {
+    "component_id": "wi:WiSunset",
+    "aliases": [
+      "wi",
+      "sunset"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with a arrow pointing down"
+  },
+  "wi/WiThermometer.svg": {
+    "component_id": "wi:WiThermometer",
+    "aliases": [
+      "wi",
+      "thermometer"
+    ],
+    "colors": [],
+    "caption": "thermometer thermometer icon thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer"
+  },
+  "wi/WiThermometerExterior.svg": {
+    "component_id": "wi:WiThermometerExterior",
+    "aliases": [
+      "wi",
+      "thermometer",
+      "exterior"
+    ],
+    "colors": [],
+    "caption": "a thermometer icon on a white background"
+  },
+  "wi/WiThermometerInternal.svg": {
+    "component_id": "wi:WiThermometerInternal",
+    "aliases": [
+      "wi",
+      "thermometer",
+      "internal"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a thermometer"
+  },
+  "wi/WiThunderstorm.svg": {
+    "component_id": "wi:WiThunderstorm",
+    "aliases": [
+      "wi",
+      "thunderstorm"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cloud with lightning"
+  },
+  "wi/WiTime1.svg": {
+    "component_id": "wi:WiTime1",
+    "aliases": [
+      "wi",
+      "time",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "wi/WiTime10.svg": {
+    "component_id": "wi:WiTime10",
+    "aliases": [
+      "wi",
+      "time",
+      "10"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "wi/WiTime11.svg": {
+    "component_id": "wi:WiTime11",
+    "aliases": [
+      "wi",
+      "time",
+      "11"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "wi/WiTime12.svg": {
+    "component_id": "wi:WiTime12",
+    "aliases": [
+      "wi",
+      "time",
+      "12"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a clock"
+  },
+  "wi/WiTime2.svg": {
+    "component_id": "wi:WiTime2",
+    "aliases": [
+      "wi",
+      "time",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "wi/WiTime3.svg": {
+    "component_id": "wi:WiTime3",
+    "aliases": [
+      "wi",
+      "time",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "wi/WiTime4.svg": {
+    "component_id": "wi:WiTime4",
+    "aliases": [
+      "wi",
+      "time",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "wi/WiTime5.svg": {
+    "component_id": "wi:WiTime5",
+    "aliases": [
+      "wi",
+      "time",
+      "5"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "wi/WiTime6.svg": {
+    "component_id": "wi:WiTime6",
+    "aliases": [
+      "wi",
+      "time",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an up button"
+  },
+  "wi/WiTime7.svg": {
+    "component_id": "wi:WiTime7",
+    "aliases": [
+      "wi",
+      "time",
+      "7"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "wi/WiTime8.svg": {
+    "component_id": "wi:WiTime8",
+    "aliases": [
+      "wi",
+      "time",
+      "8"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "wi/WiTime9.svg": {
+    "component_id": "wi:WiTime9",
+    "aliases": [
+      "wi",
+      "time",
+      "9"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "wi/WiTornado.svg": {
+    "component_id": "wi:WiTornado",
+    "aliases": [
+      "wi",
+      "tornado"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a tornado"
+  },
+  "wi/WiTrain.svg": {
+    "component_id": "wi:WiTrain",
+    "aliases": [
+      "wi",
+      "train"
+    ],
+    "colors": [],
+    "caption": "a black and white silhouette of a train on a white background"
+  },
+  "wi/WiTsunami.svg": {
+    "component_id": "wi:WiTsunami",
+    "aliases": [
+      "wi",
+      "tsunami"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a house and a wave"
+  },
+  "wi/WiUmbrella.svg": {
+    "component_id": "wi:WiUmbrella",
+    "aliases": [
+      "wi",
+      "umbrella"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an umbrella"
+  },
+  "wi/WiVolcano.svg": {
+    "component_id": "wi:WiVolcano",
+    "aliases": [
+      "wi",
+      "volcano"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a volcano with smoke coming out of it"
+  },
+  "wi/WiWindBeaufort0.svg": {
+    "component_id": "wi:WiWindBeaufort0",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "0"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter o"
+  },
+  "wi/WiWindBeaufort1.svg": {
+    "component_id": "wi:WiWindBeaufort1",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter i"
+  },
+  "wi/WiWindBeaufort10.svg": {
+    "component_id": "wi:WiWindBeaufort10",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "10"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the number 10"
+  },
+  "wi/WiWindBeaufort11.svg": {
+    "component_id": "wi:WiWindBeaufort11",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "11"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter w"
+  },
+  "wi/WiWindBeaufort12.svg": {
+    "component_id": "wi:WiWindBeaufort12",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "12"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the number 12"
+  },
+  "wi/WiWindBeaufort2.svg": {
+    "component_id": "wi:WiWindBeaufort2",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number 2"
+  },
+  "wi/WiWindBeaufort3.svg": {
+    "component_id": "wi:WiWindBeaufort3",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "3"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number three"
+  },
+  "wi/WiWindBeaufort4.svg": {
+    "component_id": "wi:WiWindBeaufort4",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "4"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number four"
+  },
+  "wi/WiWindBeaufort5.svg": {
+    "component_id": "wi:WiWindBeaufort5",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "5"
+    ],
+    "colors": [],
+    "caption": "the number five is shown in black and white"
+  },
+  "wi/WiWindBeaufort6.svg": {
+    "component_id": "wi:WiWindBeaufort6",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "6"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number six"
+  },
+  "wi/WiWindBeaufort7.svg": {
+    "component_id": "wi:WiWindBeaufort7",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "7"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number seven"
+  },
+  "wi/WiWindBeaufort8.svg": {
+    "component_id": "wi:WiWindBeaufort8",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "8"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the number eight"
+  },
+  "wi/WiWindBeaufort9.svg": {
+    "component_id": "wi:WiWindBeaufort9",
+    "aliases": [
+      "wi",
+      "wind",
+      "beaufort",
+      "9"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the number 9"
+  },
+  "wi/WiWindDeg.svg": {
+    "component_id": "wi:WiWindDeg",
+    "aliases": [
+      "wi",
+      "wind",
+      "deg"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing in a circle"
+  },
+  "wi/WiWindy.svg": {
+    "component_id": "wi:WiWindy",
+    "aliases": [
+      "wi",
+      "windy"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a black and white line"
+  }
+}

@@ -1,0 +1,186 @@
+{
+"widget": {
+  "backgroundColor": "#F3F0FF",
+  "borderRadius": 20,
+  "padding": 16,
+  "aspectRatio": 1.789,
+  "root": {
+    "type": "container",
+    "direction": "row",
+    "gap": 14,
+    "flex": 1,
+    "alignCross": "stretch",
+    "children": [
+      {
+        "type": "leaf",
+        "component": "StackedBarChart",
+        "flex": 1,
+        "props": {
+          "data": [
+            [55, 30, 15],
+            [58, 28, 14],
+            [52, 32, 16],
+            [60, 26, 14]
+          ],
+          "labels": ["Mobile", "Desktop", "Tablet"],
+          "colors": ["#7C3AED", "#A78BFA", "#C4B5FD"],
+          "theme": "light",
+          "barBorderRadius": 0,
+          "showXAxisLabels": true,
+          "showYAxisLabels": true,
+          "height": 180
+        }
+      },
+      {
+        "type": "container",
+        "direction": "col",
+        "gap": 10,
+        "flex": 0,
+        "width": 105,
+        "justifyContent": "space-between",
+        "children": [
+          {
+            "type": "container",
+            "direction": "col",
+            "gap": 2,
+            "flex": 0,
+            "children": [
+              {
+                "type": "leaf",
+                "component": "Text",
+                "flex": "none",
+                "props": {
+                  "fontSize": 10,
+                  "fontWeight": 700,
+                  "color": "#6B21B6",
+                  "letterSpacing": 1.2
+                },
+                "content": "PLATFORM"
+              },
+              {
+                "type": "leaf",
+                "component": "Text",
+                "flex": "none",
+                "props": {
+                  "fontSize": 13,
+                  "fontWeight": 800,
+                  "color": "#7C3AED"
+                },
+                "content": "Distribution"
+              }
+            ]
+          },
+          {
+            "type": "container",
+            "direction": "col",
+            "gap": 6,
+            "flex": 1,
+            "justifyContent": "flex-start",
+            "children": [
+              {
+                "type": "container",
+                "direction": "col",
+                "gap": 1,
+                "flex": 0,
+                "backgroundColor": "rgba(124, 58, 237, 0.12)",
+                "borderRadius": 8,
+                "padding": 8,
+                "children": [
+                  {
+                    "type": "leaf",
+                    "component": "Text",
+                    "flex": "none",
+                    "props": {
+                      "fontSize": 7,
+                      "color": "#6B21B6",
+                      "fontWeight": 700
+                    },
+                    "content": "DOMINANT"
+                  },
+                  {
+                    "type": "leaf",
+                    "component": "Text",
+                    "flex": "none",
+                    "props": {
+                      "fontSize": 11,
+                      "fontWeight": 700,
+                      "color": "#7C3AED"
+                    },
+                    "content": "Mobile"
+                  }
+                ]
+              },
+              {
+                "type": "container",
+                "direction": "col",
+                "gap": 1,
+                "flex": 0,
+                "backgroundColor": "rgba(124, 58, 237, 0.12)",
+                "borderRadius": 8,
+                "padding": 8,
+                "children": [
+                  {
+                    "type": "leaf",
+                    "component": "Text",
+                    "flex": "none",
+                    "props": {
+                      "fontSize": 7,
+                      "color": "#6B21B6",
+                      "fontWeight": 700
+                    },
+                    "content": "USERS"
+                  },
+                  {
+                    "type": "leaf",
+                    "component": "Text",
+                    "flex": "none",
+                    "props": {
+                      "fontSize": 11,
+                      "fontWeight": 700,
+                      "color": "#7C3AED"
+                    },
+                    "content": "1.8M"
+                  }
+                ]
+              },
+              {
+                "type": "container",
+                "direction": "col",
+                "gap": 1,
+                "flex": 0,
+                "backgroundColor": "rgba(124, 58, 237, 0.12)",
+                "borderRadius": 8,
+                "padding": 8,
+                "children": [
+                  {
+                    "type": "leaf",
+                    "component": "Text",
+                    "flex": "none",
+                    "props": {
+                      "fontSize": 7,
+                      "color": "#6B21B6",
+                      "fontWeight": 700
+                    },
+                    "content": "TREND"
+                  },
+                  {
+                    "type": "leaf",
+                    "component": "Text",
+                    "flex": "none",
+                    "props": {
+                      "fontSize": 11,
+                      "fontWeight": 700,
+                      "color": "#7C3AED"
+                    },
+                    "content": "↑ Mobile"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+}

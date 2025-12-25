@@ -1,0 +1,162 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 0.955,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "space-between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 16,
+                    "color": "#007AFF",
+                    "name": "sf:chart.line.uptrend.xyaxis"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 18,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "Portfolio"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 14,
+                "color": "#34C759"
+              },
+              "content": "+12.4%"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 36,
+                "color": "#ffffff",
+                "fontWeight": 300
+              },
+              "content": "$124,582.37"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 13,
+                "color": "#8E8E93"
+              },
+              "content": "Total Value"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "LineChart",
+          "width": "100%",
+          "height": 120,
+          "flex": "none",
+          "props": {
+            "data": [100000, 102000, 98000, 105000, 108000, 106000, 112000, 115000, 113000, 118000, 121000, 119000, 124582],
+            "color": "#007AFF",
+            "lineWidth": 3,
+            "showPoints": false,
+            "showGrid": true,
+            "fill": true,
+            "fillOpacity": 0.1,
+            "smooth": true,
+            "gridColor": "#2c2c2e"
+          }
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#2c2c2e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 14,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "Asset Allocation"
+            },
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "width": "100%",
+              "height": 140,
+              "flex": "none",
+              "props": {
+                "data": [
+                  { "value": 45000, "color": "#007AFF", "label": "Stocks" },
+                  { "value": 30000, "color": "#34C759", "label": "Bonds" },
+                  { "value": 25000, "color": "#FF9500", "label": "Real Estate" },
+                  { "value": 15000, "color": "#AF52DE", "label": "Crypto" },
+                  { "value": 9582, "color": "#FF3B30", "label": "Cash" }
+                ],
+                "showLabels": true,
+                "labelColor": "#ffffff",
+                "labelSize": 11,
+                "showLegend": false,
+                "innerRadius": 40
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

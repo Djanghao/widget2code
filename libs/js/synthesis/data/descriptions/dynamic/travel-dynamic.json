@@ -1,0 +1,307 @@
+{
+  "domain": "travel",
+  "total": 50,
+  "generated": "2025-11-05T16:03:06.303Z",
+  "variations": [
+    {
+      "id": "travel-dynamic-001",
+      "prompt": "A booking widget showing check-in time and loyalty points",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-002",
+      "prompt": "A hotel widget showing rental car with timeline and destination weather",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-003",
+      "prompt": "A travel widget showing hotel reservation with weather",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-004",
+      "prompt": "A trip widget showing train schedule with flight route",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-005",
+      "prompt": "A travel widget showing boarding pass and loyalty points",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-006",
+      "prompt": "A trip widget showing boarding pass",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-007",
+      "prompt": "A trip widget showing hotel reservation",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-008",
+      "prompt": "A travel widget showing airport terminal",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-009",
+      "prompt": "A compact travel widget showing boarding pass with timeline",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-010",
+      "prompt": "A flight widget showing attractions",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-011",
+      "prompt": "A flight widget showing rental car and confirmation number",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-012",
+      "prompt": "A travel widget showing booking confirmation with barcode",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-013",
+      "prompt": "A travel widget showing airport terminal and loyalty points",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-014",
+      "prompt": "A trip widget showing flight details and departure time",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-015",
+      "prompt": "A compact travel widget showing check-in time with booking details",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-016",
+      "prompt": "A travel widget showing rental car",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-017",
+      "prompt": "A compact travel widget showing booking confirmation with flight route and loyalty points",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-018",
+      "prompt": "A hotel widget showing trip itinerary",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-019",
+      "prompt": "A hotel widget showing airport terminal",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-020",
+      "prompt": "A booking widget showing flight details with map view",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-021",
+      "prompt": "A flight widget showing booking confirmation with directions and loyalty points",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-022",
+      "prompt": "A hotel widget showing luggage tracking with weather",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-023",
+      "prompt": "A flight widget showing attractions with weather",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-024",
+      "prompt": "A compact travel widget showing luggage tracking with weather and confirmation number",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-025",
+      "prompt": "A flight widget showing trip countdown with map view and confirmation number",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-026",
+      "prompt": "A trip widget showing airport terminal",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-027",
+      "prompt": "A booking widget showing train schedule with timeline",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-028",
+      "prompt": "A trip widget showing flight details with photo",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-029",
+      "prompt": "A travel widget showing airport terminal with directions",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-030",
+      "prompt": "A hotel widget showing rental car",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-031",
+      "prompt": "A flight widget showing travel expenses with expense chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-032",
+      "prompt": "A trip widget showing boarding pass with barcode and packing checklist",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-033",
+      "prompt": "A flight widget showing luggage tracking and packing checklist",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-034",
+      "prompt": "A trip widget showing flight details",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-035",
+      "prompt": "A compact travel widget showing trip countdown and destination weather",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-036",
+      "prompt": "A booking widget showing boarding pass with directions",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-037",
+      "prompt": "A compact travel widget showing luggage tracking with expense chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-038",
+      "prompt": "A hotel widget showing boarding pass",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-039",
+      "prompt": "A compact travel widget showing booking confirmation with weather",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-040",
+      "prompt": "A travel widget showing flight status",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-041",
+      "prompt": "A compact travel widget showing hotel reservation with timeline",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-042",
+      "prompt": "A hotel widget showing luggage tracking with timeline",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-043",
+      "prompt": "A travel widget showing airport terminal with countdown timer and departure time",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-044",
+      "prompt": "A flight widget showing flight status with flight route",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-045",
+      "prompt": "A booking widget showing train schedule",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-046",
+      "prompt": "A travel widget showing flight details and boarding pass",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-047",
+      "prompt": "A booking widget showing hotel reservation and check-in time with flight route",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-048",
+      "prompt": "A compact travel widget showing trip itinerary and travel expenses with expense chart",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-049",
+      "prompt": "A travel widget showing destination info and attractions",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "travel-dynamic-050",
+      "prompt": "A flight widget showing flight status and gate information",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

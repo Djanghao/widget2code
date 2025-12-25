@@ -1,0 +1,110 @@
+{
+  "widget": {
+    "backgroundColor": "#F2F2F7",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 22, "fontWeight": 700, "color": "#000000" },
+          "content": "Downloads"
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 16,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "padding": 16,
+              "backgroundColor": "#FFFFFF",
+              "props": { "style": { "borderRadius": 16, "boxShadow": "0 2px 8px rgba(0,0,0,0.05)" } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignMain": "between",
+                  "children": [
+                    {
+                      "type": "container",
+                      "direction": "row",
+                      "gap": 12,
+                      "alignCross": "center",
+                      "children": [
+                        { "type": "leaf", "component": "Icon", "props": { "name": "sf:doc.fill", "size": 24, "color": "#007AFF" } },
+                        {
+                          "type": "container",
+                          "direction": "col",
+                          "children": [
+                            { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" }, "content": "HarmonyOS Next.hap" },
+                            { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93" }, "content": "2.4 GB of 12.1 GB • 15 mins remaining" }
+                          ]
+                        }
+                      ]
+                    },
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:pause.circle.fill", "size": 24, "color": "#007AFF" } }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "ProgressBar",
+                  "props": { "progress": 0.2, "color": "#007AFF", "backgroundColor": "#E5E5EA", "height": 6, "borderRadius": 3 }
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "padding": 16,
+              "backgroundColor": "#FFFFFF",
+              "props": { "style": { "borderRadius": 16, "boxShadow": "0 2px 8px rgba(0,0,0,0.05)" } },
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignMain": "between",
+                  "children": [
+                    {
+                      "type": "container",
+                      "direction": "row",
+                      "gap": 12,
+                      "alignCross": "center",
+                      "children": [
+                        { "type": "leaf", "component": "Icon", "props": { "name": "sf:film.fill", "size": 24, "color": "#AF52DE" } },
+                        {
+                          "type": "container",
+                          "direction": "col",
+                          "children": [
+                            { "type": "leaf", "component": "Text", "props": { "fontSize": 15, "fontWeight": 600, "color": "#000000" }, "content": "Project_Demo_Final.mov" },
+                            { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93" }, "content": "850 MB • Completed" }
+                          ]
+                        }
+                      ]
+                    },
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:checkmark.circle.fill", "size": 24, "color": "#34C759" } }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "ProgressBar",
+                  "props": { "progress": 1.0, "color": "#34C759", "backgroundColor": "#E5E5EA", "height": 6, "borderRadius": 3 }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

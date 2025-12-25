@@ -1,0 +1,186 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 22,
+    "padding": 18,
+    "aspectRatio": 1.5,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 18,
+                "color": "#FF9500",
+                "name": "sf:book.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 15,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "Books"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 16,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "The Midnight Library"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 13,
+                "color": "#8E8E93"
+              },
+              "content": "Matt Haig"
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 6,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "ProgressBar",
+                  "props": {
+                    "progress": 0.68,
+                    "height": 6,
+                    "backgroundColor": "#E5E5EA",
+                    "progressColor": "#FF9500",
+                    "borderRadius": 3
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 4,
+                  "flex": 0,
+                  "alignMain": "space-between",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#8E8E93"
+                      },
+                      "content": "Page 204 of 300"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 11,
+                        "color": "#8E8E93",
+                        "fontWeight": 600
+                      },
+                      "content": "68%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignMain": "space-between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 20,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "47m"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "Today"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "flex-end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 20,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "5h 23m"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#8E8E93"
+                  },
+                  "content": "This Week"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

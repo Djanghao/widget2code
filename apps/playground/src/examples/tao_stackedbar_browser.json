@@ -1,0 +1,225 @@
+{
+  "widget": {
+    "backgroundColor": "#F0FDFA",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 0.74,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 0,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 10,
+                    "fontWeight": 700,
+                    "color": "#0F766E",
+                    "letterSpacing": 1.3
+                  },
+                  "content": "BROWSER MARKET"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 18,
+                    "fontWeight": 800,
+                    "color": "#0D9488"
+                  },
+                  "content": "Competitive Share"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 1,
+                  "flex": 1,
+                  "backgroundColor": "rgba(15, 118, 110, 0.12)",
+                  "borderRadius": 10,
+                  "padding": 10,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 7,
+                        "color": "#0F766E",
+                        "fontWeight": 700
+                      },
+                      "content": "LEADER"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 12,
+                        "fontWeight": 800,
+                        "color": "#0D9488"
+                      },
+                      "content": "Chrome"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 1,
+                  "flex": 1,
+                  "backgroundColor": "rgba(15, 118, 110, 0.12)",
+                  "borderRadius": 10,
+                  "padding": 10,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 7,
+                        "color": "#0F766E",
+                        "fontWeight": 700
+                      },
+                      "content": "AVG SHARE"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 12,
+                        "fontWeight": 800,
+                        "color": "#0D9488"
+                      },
+                      "content": "46.3%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "StackedBarChart",
+          "flex": 1,
+          "props": {
+            "data": [
+              [41, 27, 18, 9],
+              [48, 25, 20, 7],
+              [42, 32, 19, 7],
+              [52, 24, 18, 8]
+            ],
+            "labels": ["Chrome", "Firefox", "Safari", "Edge"],
+            "colors": ["#0F766E", "#0D9488", "#14B8A6", "#2DD4BF"],
+            "theme": "light",
+            "barBorderRadius": [0, 12, 12, 0],
+            "orientation": "horizontal",
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "height": 140
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "stretch",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 1,
+              "flex": 1,
+              "backgroundColor": "rgba(15, 118, 110, 0.1)",
+              "borderRadius": 8,
+              "padding": 10,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 7,
+                    "color": "#0F766E",
+                    "fontWeight": 700
+                  },
+                  "content": "GROWTH"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 11,
+                    "fontWeight": 700,
+                    "color": "#0D9488"
+                  },
+                  "content": "↑ 2.5%"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 1,
+              "flex": 1,
+              "backgroundColor": "rgba(15, 118, 110, 0.1)",
+              "borderRadius": 8,
+              "padding": 10,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 7,
+                    "color": "#0F766E",
+                    "fontWeight": 700
+                  },
+                  "content": "MOMENTUM"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 11,
+                    "fontWeight": 700,
+                    "color": "#0D9488"
+                  },
+                  "content": "Positive"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

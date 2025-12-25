@@ -1,0 +1,124 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 32,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "alignMain": "between",
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 24, "fontWeight": 700, "color": "#000000" }, "content": "Setup Guide" },
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "color": "#8E8E93" }, "content": "Complete these steps to activate your account." }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 16,
+          "flex": 1,
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 16,
+              "children": [
+                { "type": "leaf", "component": "Checkbox", "props": { "checked": true, "color": "#34C759", "size": 24 } },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#000000", "style": { "textDecoration": "line-through", "opacity": 0.5 } }, "content": "Create Account" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93" }, "content": "Completed just now" }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 16,
+              "children": [
+                { "type": "leaf", "component": "Checkbox", "props": { "checked": true, "color": "#34C759", "size": 24 } },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#000000", "style": { "textDecoration": "line-through", "opacity": 0.5 } }, "content": "Verify Email" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93" }, "content": "Verified automatically" }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 16,
+              "padding": 16,
+              "backgroundColor": "#F2F2F7",
+              "props": { "style": { "borderRadius": 16, "border": "2px solid #007AFF" } },
+              "children": [
+                { "type": "leaf", "component": "Checkbox", "props": { "checked": false, "color": "#007AFF", "size": 24 } },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#000000" }, "content": "Add Payment Method" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#007AFF", "fontWeight": 600 }, "content": "Recommended next step" }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "alignCross": "center",
+              "gap": 16,
+              "children": [
+                { "type": "leaf", "component": "Checkbox", "props": { "checked": false, "color": "#8E8E93", "size": 24 } },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 600, "color": "#8E8E93" }, "content": "Invite Team Members" },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93" }, "content": "Optional" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "fontWeight": 600, "color": "#8E8E93" }, "content": "2 of 4 completed" },
+            {
+              "type": "container",
+              "width": 100,
+              "height": 6,
+              "backgroundColor": "#E5E5EA",
+              "props": { "style": { "borderRadius": 3, "overflow": "hidden" } },
+              "children": [
+                { "type": "container", "width": "50%", "height": "100%", "backgroundColor": "#34C759" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

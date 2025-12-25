@@ -1,0 +1,266 @@
+{
+  "widget": {
+    "backgroundColor": "#f5f5f7",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 0.764,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 28,
+                "color": "#000000",
+                "fontWeight": 700
+              },
+              "content": "Sales Overview"
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "flex": "none",
+              "props": {
+                "icon": "sf:ellipsis",
+                "backgroundColor": "transparent",
+                "color": "#000000",
+                "borderRadius": 50,
+                "fontSize": 20,
+                "padding": 8
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "icon": "sf:crown.fill",
+                "size": 24,
+                "color": "#FF6B00"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 15,
+                "color": "#000000",
+                "fontWeight": 500
+              },
+              "content": "You're the top"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 15,
+                "color": "#FF6B00",
+                "fontWeight": 700
+              },
+              "content": "15%"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 15,
+                "color": "#000000",
+                "fontWeight": 500
+              },
+              "content": "of performers"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 1,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "flex": "none",
+              "props": {
+                "percentage": 67.2,
+                "color": "#FF6B00",
+                "backgroundColor": "#e5e5e7",
+                "size": 200,
+                "strokeWidth": 16,
+                "content": "67.2%",
+                "textColor": "#000000",
+                "fontSize": 36,
+                "fontWeight": 700
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 2,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 20,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "Sales Goals"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "alignCross": "start",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#666666",
+                    "fontWeight": 500
+                  },
+                  "content": "Number of Sales"
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 6,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 28,
+                        "color": "#000000",
+                        "fontWeight": 700
+                      },
+                      "content": "1,304"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Button",
+                      "flex": "none",
+                      "props": {
+                        "content": "3.5%",
+                        "icon": "sf:arrow.up",
+                        "backgroundColor": "#FF6B00",
+                        "color": "#ffffff",
+                        "borderRadius": 12,
+                        "fontSize": 11,
+                        "fontWeight": 600,
+                        "padding": 6
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "alignCross": "start",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#666666",
+                    "fontWeight": 500
+                  },
+                  "content": "Total Sales"
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 6,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 0,
+                      "props": {
+                        "fontSize": 28,
+                        "color": "#000000",
+                        "fontWeight": 700
+                      },
+                      "content": "$211K"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Button",
+                      "flex": "none",
+                      "props": {
+                        "content": "4.5%",
+                        "icon": "sf:arrow.down",
+                        "backgroundColor": "#000000",
+                        "color": "#ffffff",
+                        "borderRadius": 12,
+                        "fontSize": 11,
+                        "fontWeight": 600,
+                        "padding": 6
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

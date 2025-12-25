@@ -1,0 +1,48 @@
+{
+  "widget": {
+    "backgroundColor": "#F0EBE3",
+    "borderRadius": 20,
+    "padding": 28,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "start",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 40,
+            "fontWeight": 700,
+            "color": "#2D6A4F"
+          },
+          "content": "Natural"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 18,
+            "fontWeight": 500,
+            "color": "#52796F"
+          },
+          "content": "Organic vibes"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "#74A892"
+          },
+          "content": "Inspired by earth and nature"
+        }
+      ]
+    }
+  }
+}

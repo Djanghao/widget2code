@@ -1,0 +1,54 @@
+{
+  "widget": {
+    "backgroundColor": "#1A1A2E",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 24, "fontWeight": 900, "color": "#FF006E" },
+          "content": "POWER UP"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 13, "fontWeight": 700, "color": "#FFBE0B" },
+          "content": "MULTIPLE METRICS"
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "props": {
+            "data": [
+              [75, 92, 88, 98, 85],
+              [65, 78, 72, 88, 75],
+              [55, 68, 62, 78, 65]
+            ],
+            "labels": ["Week 1", "Week 2", "Week 3", "Week 4", "Week 5"],
+            "colors": ["#FF006E", "#FFBE0B", "#3A86FF"],
+            "seriesNames": ["Power", "Speed", "Endurance"],
+            "backgroundColor": "transparent",
+            "barBorderRadius": 8,
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showValues": false,
+            "height": "100%",
+            "theme": "dark",
+            "showXAxisTicks": false,
+            "showYAxisTicks": true,
+            "tickLineStyle": "solid",
+            "tickLineColor": "rgba(255, 0, 110, 0.15)",
+            "tickLineWidth": 2
+          }
+        }
+      ]
+    }
+  }
+}

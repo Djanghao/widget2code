@@ -1,0 +1,247 @@
+{
+  "widget": {
+    "backgroundColor": "#F7EE7F",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1.703,
+    "root": {
+      "type": "container",
+      "direction": "row",
+      "gap": 12,
+      "flex": 1,
+      "alignCross": "stretch",
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 10,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 0,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 10,
+                    "fontWeight": 700,
+                    "color": "#854D0E",
+                    "letterSpacing": 1.2
+                  },
+                  "content": "SALES ANALYSIS"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 20,
+                    "fontWeight": 800,
+                    "color": "#451A03"
+                  },
+                  "content": "Revenue Split"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 5,
+              "flex": 1,
+              "justifyContent": "flex-start",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 8,
+                      "height": 8,
+                      "backgroundColor": "#D97706",
+                      "borderRadius": 1,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#451A03"
+                      },
+                      "content": "Product A"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#D97706"
+                      },
+                      "content": "38%"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 8,
+                      "height": 8,
+                      "backgroundColor": "#F59E0B",
+                      "borderRadius": 1,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#451A03"
+                      },
+                      "content": "Product B"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#F59E0B"
+                      },
+                      "content": "28%"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 8,
+                      "height": 8,
+                      "backgroundColor": "#FBBF24",
+                      "borderRadius": 1,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#451A03"
+                      },
+                      "content": "Product C"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#FBBF24"
+                      },
+                      "content": "22%"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 10,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "container",
+                      "width": 8,
+                      "height": 8,
+                      "backgroundColor": "#FCD34D",
+                      "borderRadius": 1,
+                      "flex": "none"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": 1,
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 500,
+                        "color": "#451A03"
+                      },
+                      "content": "Services"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 11,
+                        "fontWeight": 700,
+                        "color": "#FCD34D"
+                      },
+                      "content": "12%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 0,
+          "props": {
+            "data": [38, 28, 22, 12],
+            "labels": ["Product A", "Product B", "Product C", "Services"],
+            "colors": ["#D97706", "#F59E0B", "#FBBF24", "#FCD34D"],
+            "theme": "light",
+            "variant": "pie",
+            "innerRadius": 0,
+            "outerRadius": 82,
+            "showLabels": false,
+            "borderWidth": 1,
+            "borderColor": "#FEFCE8",
+            "roundedSegments": true,
+            "segmentBorderRadius": 4,
+            "startAngle": 315,
+            "clockwise": true,
+            "animated": true,
+            "animationDuration": 1300,
+            "emphasisScale": 1.07,
+            "height": 140,
+            "width": 140
+          }
+        }
+      ]
+    }
+  }
+}

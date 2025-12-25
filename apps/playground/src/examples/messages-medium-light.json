@@ -1,0 +1,238 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 22,
+    "padding": 18,
+    "aspectRatio": 1.5,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "space-between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 18,
+                    "color": "#34C759",
+                    "name": "sf:message.fill"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#000000",
+                    "fontWeight": 600
+                  },
+                  "content": "Messages"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 24,
+                "color": "#FF3B30",
+                "fontWeight": 700
+              },
+              "content": "3"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 10,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 10,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": {
+                    "size": 32,
+                    "color": "#007AFF",
+                    "name": "sf:person.circle.fill"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 14,
+                        "color": "#000000",
+                        "fontWeight": 600
+                      },
+                      "content": "Sarah Johnson"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 13,
+                        "color": "#8E8E93"
+                      },
+                      "content": "See you at lunch!"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 12,
+                    "color": "#8E8E93"
+                  },
+                  "content": "now"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 10,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": {
+                    "size": 32,
+                    "color": "#FF9500",
+                    "name": "sf:person.circle.fill"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 14,
+                        "color": "#000000",
+                        "fontWeight": 600
+                      },
+                      "content": "Mike Chen"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 13,
+                        "color": "#8E8E93"
+                      },
+                      "content": "Thanks for the update"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 12,
+                    "color": "#8E8E93"
+                  },
+                  "content": "2m"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 10,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "props": {
+                    "size": 32,
+                    "color": "#5856D6",
+                    "name": "sf:person.circle.fill"
+                  }
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 2,
+                  "flex": 1,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 14,
+                        "color": "#000000",
+                        "fontWeight": 600
+                      },
+                      "content": "Emily Davis"
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 13,
+                        "color": "#8E8E93"
+                      },
+                      "content": "Are we still on for tonight?"
+                    }
+                  ]
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 12,
+                    "color": "#8E8E93"
+                  },
+                  "content": "5m"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

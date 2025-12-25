@@ -1,0 +1,473 @@
+{
+  "domain": "food",
+  "descriptions": [
+    {
+      "id": "food-001",
+      "prompt": "A widget showing recipe of the day",
+      "complexity": "medium",
+      "metrics": [
+        "recipe"
+      ]
+    },
+    {
+      "id": "food-002",
+      "prompt": "A widget displaying recipe with photo and time",
+      "complexity": "medium",
+      "metrics": [
+        "recipe"
+      ]
+    },
+    {
+      "id": "food-003",
+      "prompt": "A widget showing recipe name and rating",
+      "complexity": "simple",
+      "metrics": [
+        "recipe"
+      ]
+    },
+    {
+      "id": "food-004",
+      "prompt": "A widget displaying cooking instructions step-by-step",
+      "complexity": "complex",
+      "metrics": [
+        "recipe"
+      ]
+    },
+    {
+      "id": "food-005",
+      "prompt": "A widget showing recipe ingredients list",
+      "complexity": "medium",
+      "metrics": [
+        "recipe",
+        "ingredients"
+      ]
+    },
+    {
+      "id": "food-006",
+      "prompt": "A widget displaying recipe prep and cook time",
+      "complexity": "simple",
+      "metrics": [
+        "recipe"
+      ]
+    },
+    {
+      "id": "food-007",
+      "prompt": "A widget showing recipe nutrition facts",
+      "complexity": "medium",
+      "metrics": [
+        "recipe",
+        "nutrition"
+      ]
+    },
+    {
+      "id": "food-008",
+      "prompt": "A widget displaying recipe servings and difficulty",
+      "complexity": "simple",
+      "metrics": [
+        "recipe"
+      ]
+    },
+    {
+      "id": "food-009",
+      "prompt": "A widget showing saved recipes",
+      "complexity": "complex",
+      "metrics": [
+        "recipes"
+      ]
+    },
+    {
+      "id": "food-010",
+      "prompt": "A widget displaying recipe categories",
+      "complexity": "medium",
+      "metrics": [
+        "recipes"
+      ]
+    },
+    {
+      "id": "food-011",
+      "prompt": "A widget showing trending recipes",
+      "complexity": "complex",
+      "metrics": [
+        "recipes"
+      ]
+    },
+    {
+      "id": "food-012",
+      "prompt": "A widget displaying quick meal ideas",
+      "complexity": "medium",
+      "metrics": [
+        "recipes"
+      ]
+    },
+    {
+      "id": "food-013",
+      "prompt": "A widget showing restaurant recommendation",
+      "complexity": "medium",
+      "metrics": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "food-014",
+      "prompt": "A widget displaying restaurant with rating and price",
+      "complexity": "medium",
+      "metrics": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "food-015",
+      "prompt": "A widget showing restaurant hours and location",
+      "complexity": "medium",
+      "metrics": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "food-016",
+      "prompt": "A widget displaying restaurant reservation",
+      "complexity": "medium",
+      "metrics": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "food-017",
+      "prompt": "A widget showing restaurant menu highlights",
+      "complexity": "complex",
+      "metrics": [
+        "restaurant",
+        "menu"
+      ]
+    },
+    {
+      "id": "food-018",
+      "prompt": "A widget displaying restaurant reviews",
+      "complexity": "medium",
+      "metrics": [
+        "restaurant"
+      ]
+    },
+    {
+      "id": "food-019",
+      "prompt": "A widget showing nearby restaurants",
+      "complexity": "complex",
+      "metrics": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "food-020",
+      "prompt": "A widget displaying restaurants by cuisine",
+      "complexity": "medium",
+      "metrics": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "food-021",
+      "prompt": "A widget showing top rated restaurants",
+      "complexity": "complex",
+      "metrics": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "food-022",
+      "prompt": "A widget displaying restaurant deals",
+      "complexity": "medium",
+      "metrics": [
+        "restaurants",
+        "deals"
+      ]
+    },
+    {
+      "id": "food-023",
+      "prompt": "A widget showing daily calorie count",
+      "complexity": "simple",
+      "metrics": [
+        "calories"
+      ]
+    },
+    {
+      "id": "food-024",
+      "prompt": "A widget displaying calories with goal progress",
+      "complexity": "medium",
+      "metrics": [
+        "calories"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "food-025",
+      "prompt": "A widget showing macro nutrients breakdown",
+      "complexity": "medium",
+      "metrics": [
+        "macros"
+      ],
+      "visualization": [
+        "pie-chart"
+      ]
+    },
+    {
+      "id": "food-026",
+      "prompt": "A widget displaying protein intake",
+      "complexity": "simple",
+      "metrics": [
+        "protein"
+      ]
+    },
+    {
+      "id": "food-027",
+      "prompt": "A widget showing water intake tracker",
+      "complexity": "medium",
+      "metrics": [
+        "water"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "food-028",
+      "prompt": "A widget displaying nutrition goals",
+      "complexity": "medium",
+      "metrics": [
+        "nutrition"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "food-029",
+      "prompt": "A widget showing meal nutrition summary",
+      "complexity": "complex",
+      "metrics": [
+        "nutrition"
+      ]
+    },
+    {
+      "id": "food-030",
+      "prompt": "A widget showing today's meal plan",
+      "complexity": "complex",
+      "metrics": [
+        "meal-plan"
+      ]
+    },
+    {
+      "id": "food-031",
+      "prompt": "A widget displaying weekly meal prep",
+      "complexity": "complex",
+      "metrics": [
+        "meal-plan"
+      ]
+    },
+    {
+      "id": "food-032",
+      "prompt": "A widget showing breakfast suggestion",
+      "complexity": "medium",
+      "metrics": [
+        "meal"
+      ]
+    },
+    {
+      "id": "food-033",
+      "prompt": "A widget displaying lunch ideas",
+      "complexity": "medium",
+      "metrics": [
+        "meal"
+      ]
+    },
+    {
+      "id": "food-034",
+      "prompt": "A widget showing dinner plan",
+      "complexity": "medium",
+      "metrics": [
+        "meal"
+      ]
+    },
+    {
+      "id": "food-035",
+      "prompt": "A widget displaying meal prep checklist",
+      "complexity": "medium",
+      "metrics": [
+        "meal-plan"
+      ]
+    },
+    {
+      "id": "food-036",
+      "prompt": "A widget showing grocery list",
+      "complexity": "medium",
+      "metrics": [
+        "groceries"
+      ]
+    },
+    {
+      "id": "food-037",
+      "prompt": "A widget displaying shopping list with checkboxes",
+      "complexity": "medium",
+      "metrics": [
+        "groceries"
+      ]
+    },
+    {
+      "id": "food-038",
+      "prompt": "A widget showing pantry inventory",
+      "complexity": "complex",
+      "metrics": [
+        "pantry"
+      ]
+    },
+    {
+      "id": "food-039",
+      "prompt": "A widget displaying expiring ingredients",
+      "complexity": "medium",
+      "metrics": [
+        "pantry"
+      ]
+    },
+    {
+      "id": "food-040",
+      "prompt": "A widget showing active delivery order",
+      "complexity": "medium",
+      "metrics": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "food-041",
+      "prompt": "A widget displaying order tracking",
+      "complexity": "complex",
+      "metrics": [
+        "delivery"
+      ],
+      "visualization": [
+        "tracking"
+      ]
+    },
+    {
+      "id": "food-042",
+      "prompt": "A widget showing delivery ETA",
+      "complexity": "simple",
+      "metrics": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "food-043",
+      "prompt": "A widget displaying recent orders",
+      "complexity": "medium",
+      "metrics": [
+        "orders"
+      ]
+    },
+    {
+      "id": "food-044",
+      "prompt": "A widget showing favorite delivery restaurants",
+      "complexity": "complex",
+      "metrics": [
+        "restaurants"
+      ]
+    },
+    {
+      "id": "food-045",
+      "prompt": "A widget showing intermittent fasting timer",
+      "complexity": "medium",
+      "metrics": [
+        "fasting"
+      ],
+      "visualization": [
+        "timer"
+      ]
+    },
+    {
+      "id": "food-046",
+      "prompt": "A widget displaying diet streak",
+      "complexity": "simple",
+      "metrics": [
+        "diet"
+      ]
+    },
+    {
+      "id": "food-047",
+      "prompt": "A widget showing cheat meal allowance",
+      "complexity": "simple",
+      "metrics": [
+        "diet"
+      ]
+    },
+    {
+      "id": "food-048",
+      "prompt": "A widget displaying dietary restrictions",
+      "complexity": "simple",
+      "metrics": [
+        "diet"
+      ]
+    },
+    {
+      "id": "food-049",
+      "prompt": "A widget showing wine pairing suggestions",
+      "complexity": "medium",
+      "metrics": [
+        "pairing"
+      ]
+    },
+    {
+      "id": "food-050",
+      "prompt": "A widget displaying cooking timer",
+      "complexity": "simple",
+      "metrics": [
+        "timer"
+      ]
+    },
+    {
+      "id": "food-051",
+      "prompt": "A widget showing kitchen conversion tool",
+      "complexity": "medium",
+      "metrics": [
+        "tools"
+      ]
+    },
+    {
+      "id": "food-052",
+      "prompt": "A widget displaying meal cost tracker",
+      "complexity": "medium",
+      "metrics": [
+        "cost"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "food-053",
+      "prompt": "A widget showing food waste tracker",
+      "complexity": "medium",
+      "metrics": [
+        "waste"
+      ]
+    },
+    {
+      "id": "food-054",
+      "prompt": "A widget displaying seasonal ingredients",
+      "complexity": "medium",
+      "metrics": [
+        "ingredients"
+      ]
+    },
+    {
+      "id": "food-055",
+      "prompt": "A widget showing cooking progress for recipe",
+      "complexity": "medium",
+      "metrics": [
+        "cooking"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    }
+  ]
+}

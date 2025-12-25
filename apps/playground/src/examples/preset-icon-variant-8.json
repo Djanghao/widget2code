@@ -1,0 +1,120 @@
+{
+  "widget": {
+    "backgroundColor": "#1E3A8A",
+    "borderRadius": 20,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "md:MdBarChart",
+                "size": 40,
+                "color": "#34D399"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "ri:RiLineChartFill",
+                "size": 40,
+                "color": "#60A5FA"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "bi:BiPieChart",
+                "size": 40,
+                "color": "#FBBF24"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "pi:PiBriefcaseFill",
+                "size": 40,
+                "color": "#F472B6"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "md:MdBusiness",
+                "size": 40,
+                "color": "#A78BFA"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "io5:IoPeopleSharp",
+                "size": 40,
+                "color": "#FB923C"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "ri:RiFileTextFill",
+                "size": 40,
+                "color": "#93C5FD"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "bs:BsCheckCircleFill",
+                "size": 40,
+                "color": "#4ADE80"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "md:MdCalendarToday",
+                "size": 40,
+                "color": "#C4B5FD"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

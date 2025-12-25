@@ -1,0 +1,120 @@
+{
+  "widget": {
+    "backgroundColor": "#0D1117",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "bs:BsTerminalFill",
+                "size": 38,
+                "color": "#58A6FF"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "io5:IoCodeSlash",
+                "size": 38,
+                "color": "#79C0FF"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "md:MdDescription",
+                "size": 38,
+                "color": "#56D364"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "ri:RiFolderFill",
+                "size": 38,
+                "color": "#F778BA"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "pi:PiGearFill",
+                "size": 38,
+                "color": "#8B949E"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "bi:BiWrench",
+                "size": 38,
+                "color": "#FFA657"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 20,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "md:MdFileDownload",
+                "size": 38,
+                "color": "#A371F7"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "md:MdFileUpload",
+                "size": 38,
+                "color": "#FF7B72"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "tb:TbRefresh",
+                "size": 38,
+                "color": "#39D353"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1785 @@
+{
+  "sl/SlActionRedo.svg": {
+    "component_id": "sl:SlActionRedo",
+    "aliases": [
+      "sl",
+      "action",
+      "redo"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "sl/SlActionUndo.svg": {
+    "component_id": "sl:SlActionUndo",
+    "aliases": [
+      "sl",
+      "action",
+      "undo"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "sl/SlAnchor.svg": {
+    "component_id": "sl:SlAnchor",
+    "aliases": [
+      "sl",
+      "anchor"
+    ],
+    "colors": [],
+    "caption": "an anchor icon on a white background"
+  },
+  "sl/SlArrowDown.svg": {
+    "component_id": "sl:SlArrowDown",
+    "aliases": [
+      "sl",
+      "arrow",
+      "down"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a letter v"
+  },
+  "sl/SlArrowDownCircle.svg": {
+    "component_id": "sl:SlArrowDownCircle",
+    "aliases": [
+      "sl",
+      "arrow",
+      "down",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a down arrow in a circle"
+  },
+  "sl/SlArrowLeft.svg": {
+    "component_id": "sl:SlArrowLeft",
+    "aliases": [
+      "sl",
+      "arrow",
+      "left"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "sl/SlArrowLeftCircle.svg": {
+    "component_id": "sl:SlArrowLeftCircle",
+    "aliases": [
+      "sl",
+      "arrow",
+      "left",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "sl/SlArrowRight.svg": {
+    "component_id": "sl:SlArrowRight",
+    "aliases": [
+      "sl",
+      "arrow",
+      "right"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "sl/SlArrowRightCircle.svg": {
+    "component_id": "sl:SlArrowRightCircle",
+    "aliases": [
+      "sl",
+      "arrow",
+      "right",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "sl/SlArrowUp.svg": {
+    "component_id": "sl:SlArrowUp",
+    "aliases": [
+      "sl",
+      "arrow",
+      "up"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a triangle"
+  },
+  "sl/SlArrowUpCircle.svg": {
+    "component_id": "sl:SlArrowUpCircle",
+    "aliases": [
+      "sl",
+      "arrow",
+      "up",
+      "circle"
+    ],
+    "colors": [],
+    "caption": "an arrow pointing up in a circle on a white background"
+  },
+  "sl/SlBadge.svg": {
+    "component_id": "sl:SlBadge",
+    "aliases": [
+      "sl",
+      "badge"
+    ],
+    "colors": [],
+    "caption": "a black and white award ribbon icon"
+  },
+  "sl/SlBag.svg": {
+    "component_id": "sl:SlBag",
+    "aliases": [
+      "sl",
+      "bag"
+    ],
+    "colors": [],
+    "caption": "shopping bag icon vector illustration"
+  },
+  "sl/SlBan.svg": {
+    "component_id": "sl:SlBan",
+    "aliases": [
+      "sl",
+      "ban"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a no entry sign"
+  },
+  "sl/SlBasket.svg": {
+    "component_id": "sl:SlBasket",
+    "aliases": [
+      "sl",
+      "basket"
+    ],
+    "colors": [],
+    "caption": "a shopping cart icon on a white background"
+  },
+  "sl/SlBasketLoaded.svg": {
+    "component_id": "sl:SlBasketLoaded",
+    "aliases": [
+      "sl",
+      "basket",
+      "loaded"
+    ],
+    "colors": [],
+    "caption": "a shopping cart icon on a white background"
+  },
+  "sl/SlBell.svg": {
+    "component_id": "sl:SlBell",
+    "aliases": [
+      "sl",
+      "bell"
+    ],
+    "colors": [],
+    "caption": "a bell icon on a white background"
+  },
+  "sl/SlBookOpen.svg": {
+    "component_id": "sl:SlBookOpen",
+    "aliases": [
+      "sl",
+      "book",
+      "open"
+    ],
+    "colors": [],
+    "caption": "an open book icon on a white background"
+  },
+  "sl/SlBriefcase.svg": {
+    "component_id": "sl:SlBriefcase",
+    "aliases": [
+      "sl",
+      "briefcase"
+    ],
+    "colors": [],
+    "caption": "a briefcase icon on a white background"
+  },
+  "sl/SlBubble.svg": {
+    "component_id": "sl:SlBubble",
+    "aliases": [
+      "sl",
+      "bubble"
+    ],
+    "colors": [],
+    "caption": "a speech bubble icon on a white background"
+  },
+  "sl/SlBubbles.svg": {
+    "component_id": "sl:SlBubbles",
+    "aliases": [
+      "sl",
+      "bubbles"
+    ],
+    "colors": [],
+    "caption": "two speech bubbles on a white background"
+  },
+  "sl/SlBulb.svg": {
+    "component_id": "sl:SlBulb",
+    "aliases": [
+      "sl",
+      "bulb"
+    ],
+    "colors": [],
+    "caption": "a light bulb icon on a white background"
+  },
+  "sl/SlCalculator.svg": {
+    "component_id": "sl:SlCalculator",
+    "aliases": [
+      "sl",
+      "calculator"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a calculator"
+  },
+  "sl/SlCalender.svg": {
+    "component_id": "sl:SlCalender",
+    "aliases": [
+      "sl",
+      "calender"
+    ],
+    "colors": [],
+    "caption": "a calendar icon on a white background"
+  },
+  "sl/SlCallEnd.svg": {
+    "component_id": "sl:SlCallEnd",
+    "aliases": [
+      "sl",
+      "call",
+      "end"
+    ],
+    "colors": [],
+    "caption": "a telephone icon on a white background"
+  },
+  "sl/SlCallIn.svg": {
+    "component_id": "sl:SlCallIn",
+    "aliases": [
+      "sl",
+      "call",
+      "in"
+    ],
+    "colors": [],
+    "caption": "a phone icon with an arrow pointing up"
+  },
+  "sl/SlCallOut.svg": {
+    "component_id": "sl:SlCallOut",
+    "aliases": [
+      "sl",
+      "call",
+      "out"
+    ],
+    "colors": [],
+    "caption": "a phone icon with an arrow pointing up"
+  },
+  "sl/SlCamera.svg": {
+    "component_id": "sl:SlCamera",
+    "aliases": [
+      "sl",
+      "camera"
+    ],
+    "colors": [],
+    "caption": "a camera icon on a white background"
+  },
+  "sl/SlCamrecorder.svg": {
+    "component_id": "sl:SlCamrecorder",
+    "aliases": [
+      "sl",
+      "camrecorder"
+    ],
+    "colors": [],
+    "caption": "a video camera icon on a white background"
+  },
+  "sl/SlChart.svg": {
+    "component_id": "sl:SlChart",
+    "aliases": [
+      "sl",
+      "chart"
+    ],
+    "colors": [],
+    "caption": "a bar graph icon on a white background"
+  },
+  "sl/SlCheck.svg": {
+    "component_id": "sl:SlCheck",
+    "aliases": [
+      "sl",
+      "check"
+    ],
+    "colors": [],
+    "caption": "a black and white check mark icon on a white background"
+  },
+  "sl/SlChemistry.svg": {
+    "component_id": "sl:SlChemistry",
+    "aliases": [
+      "sl",
+      "chemistry"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a test tube with a ball"
+  },
+  "sl/SlClock.svg": {
+    "component_id": "sl:SlClock",
+    "aliases": [
+      "sl",
+      "clock"
+    ],
+    "colors": [],
+    "caption": "a black and white clock icon on a white background"
+  },
+  "sl/SlClose.svg": {
+    "component_id": "sl:SlClose",
+    "aliases": [
+      "sl",
+      "close"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an x in a circle"
+  },
+  "sl/SlCloudDownload.svg": {
+    "component_id": "sl:SlCloudDownload",
+    "aliases": [
+      "sl",
+      "cloud",
+      "download"
+    ],
+    "colors": [],
+    "caption": "a cloud icon with an arrow pointing down"
+  },
+  "sl/SlCloudUpload.svg": {
+    "component_id": "sl:SlCloudUpload",
+    "aliases": [
+      "sl",
+      "cloud",
+      "upload"
+    ],
+    "colors": [],
+    "caption": "a cloud icon with an arrow pointing up"
+  },
+  "sl/SlCompass.svg": {
+    "component_id": "sl:SlCompass",
+    "aliases": [
+      "sl",
+      "compass"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a triangle in a circle"
+  },
+  "sl/SlControlEnd.svg": {
+    "component_id": "sl:SlControlEnd",
+    "aliases": [
+      "sl",
+      "control",
+      "end"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a play button"
+  },
+  "sl/SlControlForward.svg": {
+    "component_id": "sl:SlControlForward",
+    "aliases": [
+      "sl",
+      "control",
+      "forward"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "sl/SlControlPause.svg": {
+    "component_id": "sl:SlControlPause",
+    "aliases": [
+      "sl",
+      "control",
+      "pause"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two black bars"
+  },
+  "sl/SlControlPlay.svg": {
+    "component_id": "sl:SlControlPlay",
+    "aliases": [
+      "sl",
+      "control",
+      "play"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a play button"
+  },
+  "sl/SlControlRewind.svg": {
+    "component_id": "sl:SlControlRewind",
+    "aliases": [
+      "sl",
+      "control",
+      "rewind"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing to the right on a white background"
+  },
+  "sl/SlControlStart.svg": {
+    "component_id": "sl:SlControlStart",
+    "aliases": [
+      "sl",
+      "control",
+      "start"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter k"
+  },
+  "sl/SlCreditCard.svg": {
+    "component_id": "sl:SlCreditCard",
+    "aliases": [
+      "sl",
+      "credit",
+      "card"
+    ],
+    "colors": [],
+    "caption": "a credit card icon on a white background"
+  },
+  "sl/SlCrop.svg": {
+    "component_id": "sl:SlCrop",
+    "aliases": [
+      "sl",
+      "crop"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a square with two lines"
+  },
+  "sl/SlCup.svg": {
+    "component_id": "sl:SlCup",
+    "aliases": [
+      "sl",
+      "cup"
+    ],
+    "colors": [],
+    "caption": "a coffee cup icon on a white background"
+  },
+  "sl/SlCursor.svg": {
+    "component_id": "sl:SlCursor",
+    "aliases": [
+      "sl",
+      "cursor"
+    ],
+    "colors": [],
+    "caption": "a black arrow pointing down on a white background"
+  },
+  "sl/SlCursorMove.svg": {
+    "component_id": "sl:SlCursorMove",
+    "aliases": [
+      "sl",
+      "cursor",
+      "move"
+    ],
+    "colors": [],
+    "caption": "three arrows pointing in different directions on a white background"
+  },
+  "sl/SlDiamond.svg": {
+    "component_id": "sl:SlDiamond",
+    "aliases": [
+      "sl",
+      "diamond"
+    ],
+    "colors": [],
+    "caption": "a diamond icon on a white background"
+  },
+  "sl/SlDirection.svg": {
+    "component_id": "sl:SlDirection",
+    "aliases": [
+      "sl",
+      "direction"
+    ],
+    "colors": [],
+    "caption": "a black and white arrow pointing to the right"
+  },
+  "sl/SlDirections.svg": {
+    "component_id": "sl:SlDirections",
+    "aliases": [
+      "sl",
+      "directions"
+    ],
+    "colors": [],
+    "caption": "two directional signs on a white background"
+  },
+  "sl/SlDisc.svg": {
+    "component_id": "sl:SlDisc",
+    "aliases": [
+      "sl",
+      "disc"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a circle"
+  },
+  "sl/SlDislike.svg": {
+    "component_id": "sl:SlDislike",
+    "aliases": [
+      "sl",
+      "dislike"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a thumb down"
+  },
+  "sl/SlDoc.svg": {
+    "component_id": "sl:SlDoc",
+    "aliases": [
+      "sl",
+      "doc"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a document"
+  },
+  "sl/SlDocs.svg": {
+    "component_id": "sl:SlDocs",
+    "aliases": [
+      "sl",
+      "docs"
+    ],
+    "colors": [],
+    "caption": "a black and white image of two documents"
+  },
+  "sl/SlDrawer.svg": {
+    "component_id": "sl:SlDrawer",
+    "aliases": [
+      "sl",
+      "drawer"
+    ],
+    "colors": [],
+    "caption": "an open envelope icon on a white background"
+  },
+  "sl/SlDrop.svg": {
+    "component_id": "sl:SlDrop",
+    "aliases": [
+      "sl",
+      "drop"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a water drop"
+  },
+  "sl/SlEarphones.svg": {
+    "component_id": "sl:SlEarphones",
+    "aliases": [
+      "sl",
+      "earphones"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of headphones"
+  },
+  "sl/SlEarphonesAlt.svg": {
+    "component_id": "sl:SlEarphonesAlt",
+    "aliases": [
+      "sl",
+      "earphones",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a headset icon on a white background"
+  },
+  "sl/SlEmotsmile.svg": {
+    "component_id": "sl:SlEmotsmile",
+    "aliases": [
+      "sl",
+      "emotsmile"
+    ],
+    "colors": [],
+    "caption": "a smiley face icon on a white background"
+  },
+  "sl/SlEnergy.svg": {
+    "component_id": "sl:SlEnergy",
+    "aliases": [
+      "sl",
+      "energy"
+    ],
+    "colors": [],
+    "caption": "a lightning bolt icon on a white background"
+  },
+  "sl/SlEnvelopeOpen.svg": {
+    "component_id": "sl:SlEnvelopeOpen",
+    "aliases": [
+      "sl",
+      "envelope",
+      "open"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "sl/SlEnvolope.svg": {
+    "component_id": "sl:SlEnvolope",
+    "aliases": [
+      "sl",
+      "envolope"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "sl/SlEnvolopeLetter.svg": {
+    "component_id": "sl:SlEnvolopeLetter",
+    "aliases": [
+      "sl",
+      "envolope",
+      "letter"
+    ],
+    "colors": [],
+    "caption": "an envelope icon on a white background"
+  },
+  "sl/SlEqualizer.svg": {
+    "component_id": "sl:SlEqualizer",
+    "aliases": [
+      "sl",
+      "equalizer"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of three black lines"
+  },
+  "sl/SlEvent.svg": {
+    "component_id": "sl:SlEvent",
+    "aliases": [
+      "sl",
+      "event"
+    ],
+    "colors": [],
+    "caption": "a calendar icon on a white background"
+  },
+  "sl/SlExclamation.svg": {
+    "component_id": "sl:SlExclamation",
+    "aliases": [
+      "sl",
+      "exclamation"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an exclamation sign"
+  },
+  "sl/SlEye.svg": {
+    "component_id": "sl:SlEye",
+    "aliases": [
+      "sl",
+      "eye"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an eye"
+  },
+  "sl/SlEyeglass.svg": {
+    "component_id": "sl:SlEyeglass",
+    "aliases": [
+      "sl",
+      "eyeglass"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a pair of glasses"
+  },
+  "sl/SlFeed.svg": {
+    "component_id": "sl:SlFeed",
+    "aliases": [
+      "sl",
+      "feed"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a wifi symbol"
+  },
+  "sl/SlFilm.svg": {
+    "component_id": "sl:SlFilm",
+    "aliases": [
+      "sl",
+      "film"
+    ],
+    "colors": [],
+    "caption": "an icon of a film strip on a white background"
+  },
+  "sl/SlFire.svg": {
+    "component_id": "sl:SlFire",
+    "aliases": [
+      "sl",
+      "fire"
+    ],
+    "colors": [],
+    "caption": "a black and white fire icon on a white background"
+  },
+  "sl/SlFlag.svg": {
+    "component_id": "sl:SlFlag",
+    "aliases": [
+      "sl",
+      "flag"
+    ],
+    "colors": [],
+    "caption": "a black and white flag icon on a white background"
+  },
+  "sl/SlFolder.svg": {
+    "component_id": "sl:SlFolder",
+    "aliases": [
+      "sl",
+      "folder"
+    ],
+    "colors": [],
+    "caption": "a black folder icon on a white background"
+  },
+  "sl/SlFolderAlt.svg": {
+    "component_id": "sl:SlFolderAlt",
+    "aliases": [
+      "sl",
+      "folder",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a folder icon on a white background"
+  },
+  "sl/SlFrame.svg": {
+    "component_id": "sl:SlFrame",
+    "aliases": [
+      "sl",
+      "frame"
+    ],
+    "colors": [],
+    "caption": "an image of two black squares on a white background"
+  },
+  "sl/SlGameController.svg": {
+    "component_id": "sl:SlGameController",
+    "aliases": [
+      "sl",
+      "game",
+      "controller"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a game controller"
+  },
+  "sl/SlGhost.svg": {
+    "component_id": "sl:SlGhost",
+    "aliases": [
+      "sl",
+      "ghost"
+    ],
+    "colors": [],
+    "caption": "ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost icon, ghost"
+  },
+  "sl/SlGlobe.svg": {
+    "component_id": "sl:SlGlobe",
+    "aliases": [
+      "sl",
+      "globe"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a globe"
+  },
+  "sl/SlGlobeAlt.svg": {
+    "component_id": "sl:SlGlobeAlt",
+    "aliases": [
+      "sl",
+      "globe",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a globe icon on a white background"
+  },
+  "sl/SlGraduation.svg": {
+    "component_id": "sl:SlGraduation",
+    "aliases": [
+      "sl",
+      "graduation"
+    ],
+    "colors": [],
+    "caption": "a graduation cap icon on a white background"
+  },
+  "sl/SlGraph.svg": {
+    "component_id": "sl:SlGraph",
+    "aliases": [
+      "sl",
+      "graph"
+    ],
+    "colors": [],
+    "caption": "a graph is shown on a white background"
+  },
+  "sl/SlGrid.svg": {
+    "component_id": "sl:SlGrid",
+    "aliases": [
+      "sl",
+      "grid"
+    ],
+    "colors": [],
+    "caption": "four square icons on a white background"
+  },
+  "sl/SlHandbag.svg": {
+    "component_id": "sl:SlHandbag",
+    "aliases": [
+      "sl",
+      "handbag"
+    ],
+    "colors": [],
+    "caption": "a bag icon on a white background"
+  },
+  "sl/SlHeart.svg": {
+    "component_id": "sl:SlHeart",
+    "aliases": [
+      "sl",
+      "heart"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a heart"
+  },
+  "sl/SlHome.svg": {
+    "component_id": "sl:SlHome",
+    "aliases": [
+      "sl",
+      "home"
+    ],
+    "colors": [],
+    "caption": "a house icon on a white background"
+  },
+  "sl/SlHourglass.svg": {
+    "component_id": "sl:SlHourglass",
+    "aliases": [
+      "sl",
+      "hourglass"
+    ],
+    "colors": [],
+    "caption": "an hourglass icon on a white background"
+  },
+  "sl/SlInfo.svg": {
+    "component_id": "sl:SlInfo",
+    "aliases": [
+      "sl",
+      "info"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an i in a circle"
+  },
+  "sl/SlKey.svg": {
+    "component_id": "sl:SlKey",
+    "aliases": [
+      "sl",
+      "key"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a key with a magnifying glass"
+  },
+  "sl/SlLayers.svg": {
+    "component_id": "sl:SlLayers",
+    "aliases": [
+      "sl",
+      "layers"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a stack of books"
+  },
+  "sl/SlLike.svg": {
+    "component_id": "sl:SlLike",
+    "aliases": [
+      "sl",
+      "like"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a thumb up"
+  },
+  "sl/SlLink.svg": {
+    "component_id": "sl:SlLink",
+    "aliases": [
+      "sl",
+      "link"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a link"
+  },
+  "sl/SlList.svg": {
+    "component_id": "sl:SlList",
+    "aliases": [
+      "sl",
+      "list"
+    ],
+    "colors": [],
+    "caption": "a black and white check list icon"
+  },
+  "sl/SlLocationPin.svg": {
+    "component_id": "sl:SlLocationPin",
+    "aliases": [
+      "sl",
+      "location",
+      "pin"
+    ],
+    "colors": [],
+    "caption": "a black and white map pin icon"
+  },
+  "sl/SlLock.svg": {
+    "component_id": "sl:SlLock",
+    "aliases": [
+      "sl",
+      "lock"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "sl/SlLockOpen.svg": {
+    "component_id": "sl:SlLockOpen",
+    "aliases": [
+      "sl",
+      "lock",
+      "open"
+    ],
+    "colors": [],
+    "caption": "a padlock icon on a white background"
+  },
+  "sl/SlLogin.svg": {
+    "component_id": "sl:SlLogin",
+    "aliases": [
+      "sl",
+      "login"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "sl/SlLogout.svg": {
+    "component_id": "sl:SlLogout",
+    "aliases": [
+      "sl",
+      "logout"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "sl/SlLoop.svg": {
+    "component_id": "sl:SlLoop",
+    "aliases": [
+      "sl",
+      "loop"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing to the right"
+  },
+  "sl/SlMagicWand.svg": {
+    "component_id": "sl:SlMagicWand",
+    "aliases": [
+      "sl",
+      "magic",
+      "wand"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a magic wand"
+  },
+  "sl/SlMagnet.svg": {
+    "component_id": "sl:SlMagnet",
+    "aliases": [
+      "sl",
+      "magnet"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of the letter u"
+  },
+  "sl/SlMagnifier.svg": {
+    "component_id": "sl:SlMagnifier",
+    "aliases": [
+      "sl",
+      "magnifier"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "sl/SlMagnifierAdd.svg": {
+    "component_id": "sl:SlMagnifierAdd",
+    "aliases": [
+      "sl",
+      "magnifier",
+      "add"
+    ],
+    "colors": [],
+    "caption": "a magnifying icon with a plus sign"
+  },
+  "sl/SlMagnifierRemove.svg": {
+    "component_id": "sl:SlMagnifierRemove",
+    "aliases": [
+      "sl",
+      "magnifier",
+      "remove"
+    ],
+    "colors": [],
+    "caption": "a magnifying glass icon on a white background"
+  },
+  "sl/SlMap.svg": {
+    "component_id": "sl:SlMap",
+    "aliases": [
+      "sl",
+      "map"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of an open book"
+  },
+  "sl/SlMenu.svg": {
+    "component_id": "sl:SlMenu",
+    "aliases": [
+      "sl",
+      "menu"
+    ],
+    "colors": [],
+    "caption": "three black lines on a white background"
+  },
+  "sl/SlMicrophone.svg": {
+    "component_id": "sl:SlMicrophone",
+    "aliases": [
+      "sl",
+      "microphone"
+    ],
+    "colors": [],
+    "caption": "a microphone icon on a white background"
+  },
+  "sl/SlMinus.svg": {
+    "component_id": "sl:SlMinus",
+    "aliases": [
+      "sl",
+      "minus"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an empty circle"
+  },
+  "sl/SlMouse.svg": {
+    "component_id": "sl:SlMouse",
+    "aliases": [
+      "sl",
+      "mouse"
+    ],
+    "colors": [],
+    "caption": "a computer mouse icon on a white background"
+  },
+  "sl/SlMusicTone.svg": {
+    "component_id": "sl:SlMusicTone",
+    "aliases": [
+      "sl",
+      "music",
+      "tone"
+    ],
+    "colors": [],
+    "caption": "a musical note icon on a white background"
+  },
+  "sl/SlMusicToneAlt.svg": {
+    "component_id": "sl:SlMusicToneAlt",
+    "aliases": [
+      "sl",
+      "music",
+      "tone",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a music note icon on a white background"
+  },
+  "sl/SlMustache.svg": {
+    "component_id": "sl:SlMustache",
+    "aliases": [
+      "sl",
+      "mustache"
+    ],
+    "colors": [],
+    "caption": "a black and white mustache icon on a white background"
+  },
+  "sl/SlNote.svg": {
+    "component_id": "sl:SlNote",
+    "aliases": [
+      "sl",
+      "note"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a pen and paper"
+  },
+  "sl/SlNotebook.svg": {
+    "component_id": "sl:SlNotebook",
+    "aliases": [
+      "sl",
+      "notebook"
+    ],
+    "colors": [],
+    "caption": "a notebook icon on a white background"
+  },
+  "sl/SlOptions.svg": {
+    "component_id": "sl:SlOptions",
+    "aliases": [
+      "sl",
+      "options"
+    ],
+    "colors": [],
+    "caption": "four black dots are shown on a white background"
+  },
+  "sl/SlOptionsVertical.svg": {
+    "component_id": "sl:SlOptionsVertical",
+    "aliases": [
+      "sl",
+      "options",
+      "vertical"
+    ],
+    "colors": [],
+    "caption": "four black dots on a white background"
+  },
+  "sl/SlOrganization.svg": {
+    "component_id": "sl:SlOrganization",
+    "aliases": [
+      "sl",
+      "organization"
+    ],
+    "colors": [],
+    "caption": "a black and white icon with three squares"
+  },
+  "sl/SlPaperClip.svg": {
+    "component_id": "sl:SlPaperClip",
+    "aliases": [
+      "sl",
+      "paper",
+      "clip"
+    ],
+    "colors": [],
+    "caption": "a paper clip icon on a white background"
+  },
+  "sl/SlPaperPlane.svg": {
+    "component_id": "sl:SlPaperPlane",
+    "aliases": [
+      "sl",
+      "paper",
+      "plane"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a paper airplane"
+  },
+  "sl/SlPaypal.svg": {
+    "component_id": "sl:SlPaypal",
+    "aliases": [
+      "sl",
+      "paypal"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter p"
+  },
+  "sl/SlPencil.svg": {
+    "component_id": "sl:SlPencil",
+    "aliases": [
+      "sl",
+      "pencil"
+    ],
+    "colors": [],
+    "caption": "a black and white line drawing of a pencil"
+  },
+  "sl/SlPeople.svg": {
+    "component_id": "sl:SlPeople",
+    "aliases": [
+      "sl",
+      "people"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two people"
+  },
+  "sl/SlPhone.svg": {
+    "component_id": "sl:SlPhone",
+    "aliases": [
+      "sl",
+      "phone"
+    ],
+    "colors": [],
+    "caption": "a black and white telephone icon on a white background"
+  },
+  "sl/SlPicture.svg": {
+    "component_id": "sl:SlPicture",
+    "aliases": [
+      "sl",
+      "picture"
+    ],
+    "colors": [],
+    "caption": "a black and white photo icon with a mountain"
+  },
+  "sl/SlPieChart.svg": {
+    "component_id": "sl:SlPieChart",
+    "aliases": [
+      "sl",
+      "pie",
+      "chart"
+    ],
+    "colors": [],
+    "caption": "a pie chart icon in black and white"
+  },
+  "sl/SlPin.svg": {
+    "component_id": "sl:SlPin",
+    "aliases": [
+      "sl",
+      "pin"
+    ],
+    "colors": [],
+    "caption": "a black and white illustration of a pin"
+  },
+  "sl/SlPlane.svg": {
+    "component_id": "sl:SlPlane",
+    "aliases": [
+      "sl",
+      "plane"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of an airplane"
+  },
+  "sl/SlPlaylist.svg": {
+    "component_id": "sl:SlPlaylist",
+    "aliases": [
+      "sl",
+      "playlist"
+    ],
+    "colors": [],
+    "caption": "a musical note icon on a white background"
+  },
+  "sl/SlPlus.svg": {
+    "component_id": "sl:SlPlus",
+    "aliases": [
+      "sl",
+      "plus"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a plus sign"
+  },
+  "sl/SlPower.svg": {
+    "component_id": "sl:SlPower",
+    "aliases": [
+      "sl",
+      "power"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a power button"
+  },
+  "sl/SlPresent.svg": {
+    "component_id": "sl:SlPresent",
+    "aliases": [
+      "sl",
+      "present"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a gift with a bow"
+  },
+  "sl/SlPrinter.svg": {
+    "component_id": "sl:SlPrinter",
+    "aliases": [
+      "sl",
+      "printer"
+    ],
+    "colors": [],
+    "caption": "printer icon isolated on white background"
+  },
+  "sl/SlPuzzle.svg": {
+    "component_id": "sl:SlPuzzle",
+    "aliases": [
+      "sl",
+      "puzzle"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a puzzle piece"
+  },
+  "sl/SlQuestion.svg": {
+    "component_id": "sl:SlQuestion",
+    "aliases": [
+      "sl",
+      "question"
+    ],
+    "colors": [],
+    "caption": "a question mark in a circle on a white background"
+  },
+  "sl/SlRefresh.svg": {
+    "component_id": "sl:SlRefresh",
+    "aliases": [
+      "sl",
+      "refresh"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow in a circle"
+  },
+  "sl/SlReload.svg": {
+    "component_id": "sl:SlReload",
+    "aliases": [
+      "sl",
+      "reload"
+    ],
+    "colors": [],
+    "caption": "a black and white circular arrow in the middle of a circle"
+  },
+  "sl/SlRocket.svg": {
+    "component_id": "sl:SlRocket",
+    "aliases": [
+      "sl",
+      "rocket"
+    ],
+    "colors": [],
+    "caption": "a rocket icon on a white background"
+  },
+  "sl/SlScreenDesktop.svg": {
+    "component_id": "sl:SlScreenDesktop",
+    "aliases": [
+      "sl",
+      "screen",
+      "desktop"
+    ],
+    "colors": [],
+    "caption": "a computer monitor icon on a white background"
+  },
+  "sl/SlScreenSmartphone.svg": {
+    "component_id": "sl:SlScreenSmartphone",
+    "aliases": [
+      "sl",
+      "screen",
+      "smartphone"
+    ],
+    "colors": [],
+    "caption": "an icon of a cell phone on a white background"
+  },
+  "sl/SlScreenTablet.svg": {
+    "component_id": "sl:SlScreenTablet",
+    "aliases": [
+      "sl",
+      "screen",
+      "tablet"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a cell phone"
+  },
+  "sl/SlSettings.svg": {
+    "component_id": "sl:SlSettings",
+    "aliases": [
+      "sl",
+      "settings"
+    ],
+    "colors": [],
+    "caption": "a gear wheel icon on a white background"
+  },
+  "sl/SlShare.svg": {
+    "component_id": "sl:SlShare",
+    "aliases": [
+      "sl",
+      "share"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of two circles"
+  },
+  "sl/SlShareAlt.svg": {
+    "component_id": "sl:SlShareAlt",
+    "aliases": [
+      "sl",
+      "share",
+      "alt"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an arrow pointing up"
+  },
+  "sl/SlShield.svg": {
+    "component_id": "sl:SlShield",
+    "aliases": [
+      "sl",
+      "shield"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a shield with an x"
+  },
+  "sl/SlShuffle.svg": {
+    "component_id": "sl:SlShuffle",
+    "aliases": [
+      "sl",
+      "shuffle"
+    ],
+    "colors": [],
+    "caption": "two arrows pointing in opposite directions on a white background"
+  },
+  "sl/SlSizeActual.svg": {
+    "component_id": "sl:SlSizeActual",
+    "aliases": [
+      "sl",
+      "size",
+      "actual"
+    ],
+    "colors": [],
+    "caption": "three arrows pointing in different directions on a white background"
+  },
+  "sl/SlSizeFullscreen.svg": {
+    "component_id": "sl:SlSizeFullscreen",
+    "aliases": [
+      "sl",
+      "size",
+      "fullscreen"
+    ],
+    "colors": [],
+    "caption": "three arrows pointing in different directions on a white background"
+  },
+  "sl/SlSocialBehance.svg": {
+    "component_id": "sl:SlSocialBehance",
+    "aliases": [
+      "sl",
+      "social",
+      "behance"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the word be"
+  },
+  "sl/SlSocialDribbble.svg": {
+    "component_id": "sl:SlSocialDribbble",
+    "aliases": [
+      "sl",
+      "social",
+      "dribbble"
+    ],
+    "colors": [],
+    "caption": "a black and white basketball ball on a white background"
+  },
+  "sl/SlSocialDropbox.svg": {
+    "component_id": "sl:SlSocialDropbox",
+    "aliases": [
+      "sl",
+      "social",
+      "dropbox"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a box"
+  },
+  "sl/SlSocialFacebook.svg": {
+    "component_id": "sl:SlSocialFacebook",
+    "aliases": [
+      "sl",
+      "social",
+      "facebook"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a facebook logo"
+  },
+  "sl/SlSocialFoursqare.svg": {
+    "component_id": "sl:SlSocialFoursqare",
+    "aliases": [
+      "sl",
+      "social",
+      "foursqare"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter f"
+  },
+  "sl/SlSocialGithub.svg": {
+    "component_id": "sl:SlSocialGithub",
+    "aliases": [
+      "sl",
+      "social",
+      "github"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a cat"
+  },
+  "sl/SlSocialGoogle.svg": {
+    "component_id": "sl:SlSocialGoogle",
+    "aliases": [
+      "sl",
+      "social",
+      "google"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter g"
+  },
+  "sl/SlSocialInstagram.svg": {
+    "component_id": "sl:SlSocialInstagram",
+    "aliases": [
+      "sl",
+      "social",
+      "instagram"
+    ],
+    "colors": [],
+    "caption": "a black and white image of an instagram icon"
+  },
+  "sl/SlSocialLinkedin.svg": {
+    "component_id": "sl:SlSocialLinkedin",
+    "aliases": [
+      "sl",
+      "social",
+      "linkedin"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the linked logo"
+  },
+  "sl/SlSocialPintarest.svg": {
+    "component_id": "sl:SlSocialPintarest",
+    "aliases": [
+      "sl",
+      "social",
+      "pintarest"
+    ],
+    "colors": [],
+    "caption": "the pinterest logo is shown in black and white"
+  },
+  "sl/SlSocialReddit.svg": {
+    "component_id": "sl:SlSocialReddit",
+    "aliases": [
+      "sl",
+      "social",
+      "reddit"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a smiling face"
+  },
+  "sl/SlSocialSkype.svg": {
+    "component_id": "sl:SlSocialSkype",
+    "aliases": [
+      "sl",
+      "social",
+      "skype"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter s"
+  },
+  "sl/SlSocialSoundcloud.svg": {
+    "component_id": "sl:SlSocialSoundcloud",
+    "aliases": [
+      "sl",
+      "social",
+      "soundcloud"
+    ],
+    "colors": [],
+    "caption": "the soundcloud logo is shown on a white background"
+  },
+  "sl/SlSocialSpotify.svg": {
+    "component_id": "sl:SlSocialSpotify",
+    "aliases": [
+      "sl",
+      "social",
+      "spotify"
+    ],
+    "colors": [],
+    "caption": "a black and white spotify logo"
+  },
+  "sl/SlSocialSteam.svg": {
+    "component_id": "sl:SlSocialSteam",
+    "aliases": [
+      "sl",
+      "social",
+      "steam"
+    ],
+    "colors": [],
+    "caption": "the steam logo is shown on a white background"
+  },
+  "sl/SlSocialStumbleupon.svg": {
+    "component_id": "sl:SlSocialStumbleupon",
+    "aliases": [
+      "sl",
+      "social",
+      "stumbleupon"
+    ],
+    "colors": [],
+    "caption": "a black and white logo with the letter s"
+  },
+  "sl/SlSocialTumblr.svg": {
+    "component_id": "sl:SlSocialTumblr",
+    "aliases": [
+      "sl",
+      "social",
+      "tumblr"
+    ],
+    "colors": [],
+    "caption": "a black and white image of the letter t"
+  },
+  "sl/SlSocialTwitter.svg": {
+    "component_id": "sl:SlSocialTwitter",
+    "aliases": [
+      "sl",
+      "social",
+      "twitter"
+    ],
+    "colors": [],
+    "caption": "a black and white twitter logo on a white background"
+  },
+  "sl/SlSocialVkontakte.svg": {
+    "component_id": "sl:SlSocialVkontakte",
+    "aliases": [
+      "sl",
+      "social",
+      "vkontakte"
+    ],
+    "colors": [],
+    "caption": "a black and white drawing of a letter k"
+  },
+  "sl/SlSocialYoutube.svg": {
+    "component_id": "sl:SlSocialYoutube",
+    "aliases": [
+      "sl",
+      "social",
+      "youtube"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a play button"
+  },
+  "sl/SlSpeech.svg": {
+    "component_id": "sl:SlSpeech",
+    "aliases": [
+      "sl",
+      "speech"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speech bubble"
+  },
+  "sl/SlSpeedometer.svg": {
+    "component_id": "sl:SlSpeedometer",
+    "aliases": [
+      "sl",
+      "speedometer"
+    ],
+    "colors": [],
+    "caption": "a speedometer icon on a white background"
+  },
+  "sl/SlStar.svg": {
+    "component_id": "sl:SlStar",
+    "aliases": [
+      "sl",
+      "star"
+    ],
+    "colors": [],
+    "caption": "a star icon on a white background"
+  },
+  "sl/SlSupport.svg": {
+    "component_id": "sl:SlSupport",
+    "aliases": [
+      "sl",
+      "support"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a life ring"
+  },
+  "sl/SlSymbleFemale.svg": {
+    "component_id": "sl:SlSymbleFemale",
+    "aliases": [
+      "sl",
+      "symble",
+      "female"
+    ],
+    "colors": [],
+    "caption": "a black and white image of a magnifying glass"
+  },
+  "sl/SlSymbolMale.svg": {
+    "component_id": "sl:SlSymbolMale",
+    "aliases": [
+      "sl",
+      "symbol",
+      "male"
+    ],
+    "colors": [],
+    "caption": "a male symbol is shown on a white background"
+  },
+  "sl/SlTag.svg": {
+    "component_id": "sl:SlTag",
+    "aliases": [
+      "sl",
+      "tag"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a price tag"
+  },
+  "sl/SlTarget.svg": {
+    "component_id": "sl:SlTarget",
+    "aliases": [
+      "sl",
+      "target"
+    ],
+    "colors": [],
+    "caption": "a cross symbol on a white background"
+  },
+  "sl/SlTrash.svg": {
+    "component_id": "sl:SlTrash",
+    "aliases": [
+      "sl",
+      "trash"
+    ],
+    "colors": [],
+    "caption": "a trash can icon on a white background"
+  },
+  "sl/SlTrophy.svg": {
+    "component_id": "sl:SlTrophy",
+    "aliases": [
+      "sl",
+      "trophy"
+    ],
+    "colors": [],
+    "caption": "a trophy icon on a white background"
+  },
+  "sl/SlUmbrella.svg": {
+    "component_id": "sl:SlUmbrella",
+    "aliases": [
+      "sl",
+      "umbrella"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of an umbrella"
+  },
+  "sl/SlUser.svg": {
+    "component_id": "sl:SlUser",
+    "aliases": [
+      "sl",
+      "user"
+    ],
+    "colors": [],
+    "caption": "an image of a person icon on a white background"
+  },
+  "sl/SlUserFemale.svg": {
+    "component_id": "sl:SlUserFemale",
+    "aliases": [
+      "sl",
+      "user",
+      "female"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person's head"
+  },
+  "sl/SlUserFollow.svg": {
+    "component_id": "sl:SlUserFollow",
+    "aliases": [
+      "sl",
+      "user",
+      "follow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with a plus sign"
+  },
+  "sl/SlUserFollowing.svg": {
+    "component_id": "sl:SlUserFollowing",
+    "aliases": [
+      "sl",
+      "user",
+      "following"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with a check mark"
+  },
+  "sl/SlUserUnfollow.svg": {
+    "component_id": "sl:SlUserUnfollow",
+    "aliases": [
+      "sl",
+      "user",
+      "unfollow"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a person with an x"
+  },
+  "sl/SlVector.svg": {
+    "component_id": "sl:SlVector",
+    "aliases": [
+      "sl",
+      "vector"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a bridge"
+  },
+  "sl/SlVolume1.svg": {
+    "component_id": "sl:SlVolume1",
+    "aliases": [
+      "sl",
+      "volume",
+      "1"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "sl/SlVolume2.svg": {
+    "component_id": "sl:SlVolume2",
+    "aliases": [
+      "sl",
+      "volume",
+      "2"
+    ],
+    "colors": [],
+    "caption": "a speaker icon on a white background"
+  },
+  "sl/SlVolumeOff.svg": {
+    "component_id": "sl:SlVolumeOff",
+    "aliases": [
+      "sl",
+      "volume",
+      "off"
+    ],
+    "colors": [],
+    "caption": "a black and white icon of a speaker with an x"
+  },
+  "sl/SlWallet.svg": {
+    "component_id": "sl:SlWallet",
+    "aliases": [
+      "sl",
+      "wallet"
+    ],
+    "colors": [],
+    "caption": "a wallet icon on a white background"
+  },
+  "sl/SlWrench.svg": {
+    "component_id": "sl:SlWrench",
+    "aliases": [
+      "sl",
+      "wrench"
+    ],
+    "colors": [],
+    "caption": "a wrench icon on a white background"
+  }
+}

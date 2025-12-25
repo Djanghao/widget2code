@@ -1,0 +1,53 @@
+{
+  "widget": {
+    "backgroundColor": "#1E3A8A",
+    "borderRadius": 20,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "#F8FAFC" },
+          "content": "Budget Allocation"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 500, "color": "#DBEAFE" },
+          "content": "Donut with top legend"
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "flex": 1,
+          "props": {
+            "data": [35, 25, 20, 12, 8],
+            "labels": ["Development", "Marketing", "Operations", "Research", "Admin"],
+            "colors": ["#60A5FA", "#34D399", "#FBBF24", "#F87171", "#A78BFA"],
+            "variant": "donut",
+            "innerRadius": 55,
+            "outerRadius": 78,
+            "centerText": "Budget",
+            "centerValue": "$2.5M",
+            "backgroundColor": "transparent",
+            "showLabels": false,
+            "showLegend": true,
+            "legendPosition": "top",
+            "legendOrientation": "horizontal",
+            "borderWidth": 2,
+            "borderColor": "#1E3A8A",
+            "startAngle": 0,
+            "height": "100%",
+            "theme": "dark"
+          }
+        }
+      ]
+    }
+  }
+}

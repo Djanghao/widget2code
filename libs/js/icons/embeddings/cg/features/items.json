@@ -1,0 +1,7701 @@
+[
+  {
+    "src_svg": "cg/CgAbstract.svg",
+    "component_id": "cg:CgAbstract",
+    "aliases": [
+      "cg",
+      "abstract"
+    ],
+    "caption": "a black and white logo with the number 10",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAdd.svg",
+    "component_id": "cg:CgAdd",
+    "aliases": [
+      "cg",
+      "add"
+    ],
+    "caption": "a plus sign in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAddR.svg",
+    "component_id": "cg:CgAddR",
+    "aliases": [
+      "cg",
+      "add",
+      "r"
+    ],
+    "caption": "a black and white icon of a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAdidas.svg",
+    "component_id": "cg:CgAdidas",
+    "aliases": [
+      "cg",
+      "adidas"
+    ],
+    "caption": "a black and white adidas logo on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAirplane.svg",
+    "component_id": "cg:CgAirplane",
+    "aliases": [
+      "cg",
+      "airplane"
+    ],
+    "caption": "an airplane icon is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAlarm.svg",
+    "component_id": "cg:CgAlarm",
+    "aliases": [
+      "cg",
+      "alarm"
+    ],
+    "caption": "a black and white clock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAlbum.svg",
+    "component_id": "cg:CgAlbum",
+    "aliases": [
+      "cg",
+      "album"
+    ],
+    "caption": "a black and white icon with the letter w",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAlignBottom.svg",
+    "component_id": "cg:CgAlignBottom",
+    "aliases": [
+      "cg",
+      "align",
+      "bottom"
+    ],
+    "caption": "a black and white image of the letter l",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAlignCenter.svg",
+    "component_id": "cg:CgAlignCenter",
+    "aliases": [
+      "cg",
+      "align",
+      "center"
+    ],
+    "caption": "a black and white image of a black and white square",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAlignLeft.svg",
+    "component_id": "cg:CgAlignLeft",
+    "aliases": [
+      "cg",
+      "align",
+      "left"
+    ],
+    "caption": "a black and white logo with the letter f",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAlignMiddle.svg",
+    "component_id": "cg:CgAlignMiddle",
+    "aliases": [
+      "cg",
+      "align",
+      "middle"
+    ],
+    "caption": "a black and white image of a square and a rectangle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAlignRight.svg",
+    "component_id": "cg:CgAlignRight",
+    "aliases": [
+      "cg",
+      "align",
+      "right"
+    ],
+    "caption": "a black and white image of the letter f",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAlignTop.svg",
+    "component_id": "cg:CgAlignTop",
+    "aliases": [
+      "cg",
+      "align",
+      "top"
+    ],
+    "caption": "a black and white image of the letter t",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAnchor.svg",
+    "component_id": "cg:CgAnchor",
+    "aliases": [
+      "cg",
+      "anchor"
+    ],
+    "caption": "an anchor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAppleWatch.svg",
+    "component_id": "cg:CgAppleWatch",
+    "aliases": [
+      "cg",
+      "apple",
+      "watch"
+    ],
+    "caption": "an icon of a watch on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrangeBack.svg",
+    "component_id": "cg:CgArrangeBack",
+    "aliases": [
+      "cg",
+      "arrange",
+      "back"
+    ],
+    "caption": "a black and white icon of two squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrangeFront.svg",
+    "component_id": "cg:CgArrangeFront",
+    "aliases": [
+      "cg",
+      "arrange",
+      "front"
+    ],
+    "caption": "a black and white square with a square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowAlignH.svg",
+    "component_id": "cg:CgArrowAlignH",
+    "aliases": [
+      "cg",
+      "arrow",
+      "align",
+      "h"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowAlignV.svg",
+    "component_id": "cg:CgArrowAlignV",
+    "aliases": [
+      "cg",
+      "arrow",
+      "align",
+      "v"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowBottomLeft.svg",
+    "component_id": "cg:CgArrowBottomLeft",
+    "aliases": [
+      "cg",
+      "arrow",
+      "bottom",
+      "left"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowBottomLeftO.svg",
+    "component_id": "cg:CgArrowBottomLeftO",
+    "aliases": [
+      "cg",
+      "arrow",
+      "bottom",
+      "left",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowBottomLeftR.svg",
+    "component_id": "cg:CgArrowBottomLeftR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "bottom",
+      "left",
+      "r"
+    ],
+    "caption": "an image of a black and white square with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowBottomRight.svg",
+    "component_id": "cg:CgArrowBottomRight",
+    "aliases": [
+      "cg",
+      "arrow",
+      "bottom",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowBottomRightO.svg",
+    "component_id": "cg:CgArrowBottomRightO",
+    "aliases": [
+      "cg",
+      "arrow",
+      "bottom",
+      "right",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowBottomRightR.svg",
+    "component_id": "cg:CgArrowBottomRightR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "bottom",
+      "right",
+      "r"
+    ],
+    "caption": "a black and white square with an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowDown.svg",
+    "component_id": "cg:CgArrowDown",
+    "aliases": [
+      "cg",
+      "arrow",
+      "down"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowDownO.svg",
+    "component_id": "cg:CgArrowDownO",
+    "aliases": [
+      "cg",
+      "arrow",
+      "down",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowDownR.svg",
+    "component_id": "cg:CgArrowDownR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "down",
+      "r"
+    ],
+    "caption": "a black and white image of a down arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLeft.svg",
+    "component_id": "cg:CgArrowLeft",
+    "aliases": [
+      "cg",
+      "arrow",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLeftO.svg",
+    "component_id": "cg:CgArrowLeftO",
+    "aliases": [
+      "cg",
+      "arrow",
+      "left",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLeftR.svg",
+    "component_id": "cg:CgArrowLeftR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "left",
+      "r"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongDown.svg",
+    "component_id": "cg:CgArrowLongDown",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "down"
+    ],
+    "caption": "an arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongDownC.svg",
+    "component_id": "cg:CgArrowLongDownC",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "down",
+      "c"
+    ],
+    "caption": "a black and white icon of an anchor",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongDownE.svg",
+    "component_id": "cg:CgArrowLongDownE",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "down",
+      "e"
+    ],
+    "caption": "an arrow pointing to the right in black and white",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongDownL.svg",
+    "component_id": "cg:CgArrowLongDownL",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "down",
+      "l"
+    ],
+    "caption": "an arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongDownR.svg",
+    "component_id": "cg:CgArrowLongDownR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "down",
+      "r"
+    ],
+    "caption": "a black and white arrow with an arrow in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongLeft.svg",
+    "component_id": "cg:CgArrowLongLeft",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongLeftC.svg",
+    "component_id": "cg:CgArrowLongLeftC",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "left",
+      "c"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongLeftE.svg",
+    "component_id": "cg:CgArrowLongLeftE",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "left",
+      "e"
+    ],
+    "caption": "an arrow pointing in the direction of a black square",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongLeftL.svg",
+    "component_id": "cg:CgArrowLongLeftL",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "left",
+      "l"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongLeftR.svg",
+    "component_id": "cg:CgArrowLongLeftR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "left",
+      "r"
+    ],
+    "caption": "an arrow pointing in the direction of the arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongRight.svg",
+    "component_id": "cg:CgArrowLongRight",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongRightC.svg",
+    "component_id": "cg:CgArrowLongRightC",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "right",
+      "c"
+    ],
+    "caption": "an arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongRightE.svg",
+    "component_id": "cg:CgArrowLongRightE",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "right",
+      "e"
+    ],
+    "caption": "an arrow pointing in the direction of a black square",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongRightL.svg",
+    "component_id": "cg:CgArrowLongRightL",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "right",
+      "l"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongRightR.svg",
+    "component_id": "cg:CgArrowLongRightR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "right",
+      "r"
+    ],
+    "caption": "a black arrow pointing in the direction of the arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongUp.svg",
+    "component_id": "cg:CgArrowLongUp",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "up"
+    ],
+    "caption": "an arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongUpC.svg",
+    "component_id": "cg:CgArrowLongUpC",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "up",
+      "c"
+    ],
+    "caption": "an arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongUpE.svg",
+    "component_id": "cg:CgArrowLongUpE",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "up",
+      "e"
+    ],
+    "caption": "a black arrow pointing up in the middle of a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongUpL.svg",
+    "component_id": "cg:CgArrowLongUpL",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "up",
+      "l"
+    ],
+    "caption": "an arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowLongUpR.svg",
+    "component_id": "cg:CgArrowLongUpR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "long",
+      "up",
+      "r"
+    ],
+    "caption": "the arrow symbol is shown in black and white",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowRight.svg",
+    "component_id": "cg:CgArrowRight",
+    "aliases": [
+      "cg",
+      "arrow",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowRightO.svg",
+    "component_id": "cg:CgArrowRightO",
+    "aliases": [
+      "cg",
+      "arrow",
+      "right",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowRightR.svg",
+    "component_id": "cg:CgArrowRightR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "right",
+      "r"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowTopLeft.svg",
+    "component_id": "cg:CgArrowTopLeft",
+    "aliases": [
+      "cg",
+      "arrow",
+      "top",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowTopLeftO.svg",
+    "component_id": "cg:CgArrowTopLeftO",
+    "aliases": [
+      "cg",
+      "arrow",
+      "top",
+      "left",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowTopLeftR.svg",
+    "component_id": "cg:CgArrowTopLeftR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "top",
+      "left",
+      "r"
+    ],
+    "caption": "a black and white square with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowTopRight.svg",
+    "component_id": "cg:CgArrowTopRight",
+    "aliases": [
+      "cg",
+      "arrow",
+      "top",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowTopRightO.svg",
+    "component_id": "cg:CgArrowTopRightO",
+    "aliases": [
+      "cg",
+      "arrow",
+      "top",
+      "right",
+      "o"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowTopRightR.svg",
+    "component_id": "cg:CgArrowTopRightR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "top",
+      "right",
+      "r"
+    ],
+    "caption": "a black and white icon of a right arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowUp.svg",
+    "component_id": "cg:CgArrowUp",
+    "aliases": [
+      "cg",
+      "arrow",
+      "up"
+    ],
+    "caption": "an arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowUpO.svg",
+    "component_id": "cg:CgArrowUpO",
+    "aliases": [
+      "cg",
+      "arrow",
+      "up",
+      "o"
+    ],
+    "caption": "an arrow pointing up in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowUpR.svg",
+    "component_id": "cg:CgArrowUpR",
+    "aliases": [
+      "cg",
+      "arrow",
+      "up",
+      "r"
+    ],
+    "caption": "a black and white image of an up arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsBreakeH.svg",
+    "component_id": "cg:CgArrowsBreakeH",
+    "aliases": [
+      "cg",
+      "arrows",
+      "breake",
+      "h"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsBreakeV.svg",
+    "component_id": "cg:CgArrowsBreakeV",
+    "aliases": [
+      "cg",
+      "arrows",
+      "breake",
+      "v"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExchange.svg",
+    "component_id": "cg:CgArrowsExchange",
+    "aliases": [
+      "cg",
+      "arrows",
+      "exchange"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExchangeAlt.svg",
+    "component_id": "cg:CgArrowsExchangeAlt",
+    "aliases": [
+      "cg",
+      "arrows",
+      "exchange",
+      "alt"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExchangeAltV.svg",
+    "component_id": "cg:CgArrowsExchangeAltV",
+    "aliases": [
+      "cg",
+      "arrows",
+      "exchange",
+      "alt",
+      "v"
+    ],
+    "caption": "a black and white image of two arrows pointing in different directions",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExchangeV.svg",
+    "component_id": "cg:CgArrowsExchangeV",
+    "aliases": [
+      "cg",
+      "arrows",
+      "exchange",
+      "v"
+    ],
+    "caption": "the number one is shown in black and white",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExpandDownLeft.svg",
+    "component_id": "cg:CgArrowsExpandDownLeft",
+    "aliases": [
+      "cg",
+      "arrows",
+      "expand",
+      "down",
+      "left"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExpandDownRight.svg",
+    "component_id": "cg:CgArrowsExpandDownRight",
+    "aliases": [
+      "cg",
+      "arrows",
+      "expand",
+      "down",
+      "right"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExpandLeft.svg",
+    "component_id": "cg:CgArrowsExpandLeft",
+    "aliases": [
+      "cg",
+      "arrows",
+      "expand",
+      "left"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExpandLeftAlt.svg",
+    "component_id": "cg:CgArrowsExpandLeftAlt",
+    "aliases": [
+      "cg",
+      "arrows",
+      "expand",
+      "left",
+      "alt"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExpandRight.svg",
+    "component_id": "cg:CgArrowsExpandRight",
+    "aliases": [
+      "cg",
+      "arrows",
+      "expand",
+      "right"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExpandRightAlt.svg",
+    "component_id": "cg:CgArrowsExpandRightAlt",
+    "aliases": [
+      "cg",
+      "arrows",
+      "expand",
+      "right",
+      "alt"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExpandUpLeft.svg",
+    "component_id": "cg:CgArrowsExpandUpLeft",
+    "aliases": [
+      "cg",
+      "arrows",
+      "expand",
+      "up",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsExpandUpRight.svg",
+    "component_id": "cg:CgArrowsExpandUpRight",
+    "aliases": [
+      "cg",
+      "arrows",
+      "expand",
+      "up",
+      "right"
+    ],
+    "caption": "a black and white male symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsH.svg",
+    "component_id": "cg:CgArrowsH",
+    "aliases": [
+      "cg",
+      "arrows",
+      "h"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsHAlt.svg",
+    "component_id": "cg:CgArrowsHalt",
+    "aliases": [
+      "cg",
+      "arrows",
+      "halt"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsMergeAltH.svg",
+    "component_id": "cg:CgArrowsMergeAltH",
+    "aliases": [
+      "cg",
+      "arrows",
+      "merge",
+      "alt",
+      "h"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsMergeAltV.svg",
+    "component_id": "cg:CgArrowsMergeAltV",
+    "aliases": [
+      "cg",
+      "arrows",
+      "merge",
+      "alt",
+      "v"
+    ],
+    "caption": "a black and white image of two arrows pointing in different directions",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsScrollH.svg",
+    "component_id": "cg:CgArrowsScrollH",
+    "aliases": [
+      "cg",
+      "arrows",
+      "scroll",
+      "h"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsScrollV.svg",
+    "component_id": "cg:CgArrowsScrollV",
+    "aliases": [
+      "cg",
+      "arrows",
+      "scroll",
+      "v"
+    ],
+    "caption": "a black and white image of an x symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsShrinkH.svg",
+    "component_id": "cg:CgArrowsShrinkH",
+    "aliases": [
+      "cg",
+      "arrows",
+      "shrink",
+      "h"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsShrinkV.svg",
+    "component_id": "cg:CgArrowsShrinkV",
+    "aliases": [
+      "cg",
+      "arrows",
+      "shrink",
+      "v"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsV.svg",
+    "component_id": "cg:CgArrowsV",
+    "aliases": [
+      "cg",
+      "arrows",
+      "v"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgArrowsVAlt.svg",
+    "component_id": "cg:CgArrowsValt",
+    "aliases": [
+      "cg",
+      "arrows",
+      "valt"
+    ],
+    "caption": "an arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAssign.svg",
+    "component_id": "cg:CgAssign",
+    "aliases": [
+      "cg",
+      "assign"
+    ],
+    "caption": "a black and white square with a circle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAsterisk.svg",
+    "component_id": "cg:CgAsterisk",
+    "aliases": [
+      "cg",
+      "asterisk"
+    ],
+    "caption": "a black and white image of an x symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAtlasian.svg",
+    "component_id": "cg:CgAtlasian",
+    "aliases": [
+      "cg",
+      "atlasian"
+    ],
+    "caption": "a black and white illustration of two black and white triangles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAttachment.svg",
+    "component_id": "cg:CgAttachment",
+    "aliases": [
+      "cg",
+      "attachment"
+    ],
+    "caption": "a black and white image of a paper clip",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAttribution.svg",
+    "component_id": "cg:CgAttribution",
+    "aliases": [
+      "cg",
+      "attribution"
+    ],
+    "caption": "a black and white image of the letter s",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgAwards.svg",
+    "component_id": "cg:CgAwards",
+    "aliases": [
+      "cg",
+      "awards"
+    ],
+    "caption": "a black and white icon of a ribbon",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBackspace.svg",
+    "component_id": "cg:CgBackspace",
+    "aliases": [
+      "cg",
+      "backspace"
+    ],
+    "caption": "a black and white image of an arrow with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBandAid.svg",
+    "component_id": "cg:CgBandAid",
+    "aliases": [
+      "cg",
+      "band",
+      "aid"
+    ],
+    "caption": "a black and white illustration of a pill with dots",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBattery.svg",
+    "component_id": "cg:CgBattery",
+    "aliases": [
+      "cg",
+      "battery"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBatteryEmpty.svg",
+    "component_id": "cg:CgBatteryEmpty",
+    "aliases": [
+      "cg",
+      "battery",
+      "empty"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBatteryFull.svg",
+    "component_id": "cg:CgBatteryFull",
+    "aliases": [
+      "cg",
+      "battery",
+      "full"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBee.svg",
+    "component_id": "cg:CgBee",
+    "aliases": [
+      "cg",
+      "bee"
+    ],
+    "caption": "a black and white icon of a bee",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBell.svg",
+    "component_id": "cg:CgBell",
+    "aliases": [
+      "cg",
+      "bell"
+    ],
+    "caption": "a bell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBitbucket.svg",
+    "component_id": "cg:CgBitbucket",
+    "aliases": [
+      "cg",
+      "bitbucket"
+    ],
+    "caption": "a black and white icon of a cup",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBlock.svg",
+    "component_id": "cg:CgBlock",
+    "aliases": [
+      "cg",
+      "block"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBmw.svg",
+    "component_id": "cg:CgBmw",
+    "aliases": [
+      "cg",
+      "bmw"
+    ],
+    "caption": "a black and white image of a circle with a cross in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBoard.svg",
+    "component_id": "cg:CgBoard",
+    "aliases": [
+      "cg",
+      "board"
+    ],
+    "caption": "a black and white icon with the letter d in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBolt.svg",
+    "component_id": "cg:CgBolt",
+    "aliases": [
+      "cg",
+      "bolt"
+    ],
+    "caption": "a black lightning bolt icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBookmark.svg",
+    "component_id": "cg:CgBookmark",
+    "aliases": [
+      "cg",
+      "bookmark"
+    ],
+    "caption": "a black and white logo with the letter w",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBorderAll.svg",
+    "component_id": "cg:CgBorderAll",
+    "aliases": [
+      "cg",
+      "border",
+      "all"
+    ],
+    "caption": "a black square on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBorderBottom.svg",
+    "component_id": "cg:CgBorderBottom",
+    "aliases": [
+      "cg",
+      "border",
+      "bottom"
+    ],
+    "caption": "a black and white image of a square with a square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBorderLeft.svg",
+    "component_id": "cg:CgBorderLeft",
+    "aliases": [
+      "cg",
+      "border",
+      "left"
+    ],
+    "caption": "a black and white square with the letter i in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBorderRight.svg",
+    "component_id": "cg:CgBorderRight",
+    "aliases": [
+      "cg",
+      "border",
+      "right"
+    ],
+    "caption": "a black and white logo with the letter c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBorderStyleDashed.svg",
+    "component_id": "cg:CgBorderStyleDashed",
+    "aliases": [
+      "cg",
+      "border",
+      "style",
+      "dashed"
+    ],
+    "caption": "three black squares on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBorderStyleDotted.svg",
+    "component_id": "cg:CgBorderStyleDotted",
+    "aliases": [
+      "cg",
+      "border",
+      "style",
+      "dotted"
+    ],
+    "caption": "a black and white image of a line of squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBorderStyleSolid.svg",
+    "component_id": "cg:CgBorderStyleSolid",
+    "aliases": [
+      "cg",
+      "border",
+      "style",
+      "solid"
+    ],
+    "caption": "a black and white image of a black and white line",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBorderTop.svg",
+    "component_id": "cg:CgBorderTop",
+    "aliases": [
+      "cg",
+      "border",
+      "top"
+    ],
+    "caption": "a black and white square with the letter t in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBot.svg",
+    "component_id": "cg:CgBot",
+    "aliases": [
+      "cg",
+      "bot"
+    ],
+    "caption": "a black and white image of a robot face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBowl.svg",
+    "component_id": "cg:CgBowl",
+    "aliases": [
+      "cg",
+      "bowl"
+    ],
+    "caption": "a black and white icon of a bowl with a spoon",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBox.svg",
+    "component_id": "cg:CgBox",
+    "aliases": [
+      "cg",
+      "box"
+    ],
+    "caption": "a black and white icon of a credit card",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBoy.svg",
+    "component_id": "cg:CgBoy",
+    "aliases": [
+      "cg",
+      "boy"
+    ],
+    "caption": "a black and white icon with a man's face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBrackets.svg",
+    "component_id": "cg:CgBrackets",
+    "aliases": [
+      "cg",
+      "brackets"
+    ],
+    "caption": "a square black and white icon with the letter c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBriefcase.svg",
+    "component_id": "cg:CgBriefcase",
+    "aliases": [
+      "cg",
+      "briefcase"
+    ],
+    "caption": "a black and white icon of a briefcase",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBrowse.svg",
+    "component_id": "cg:CgBrowse",
+    "aliases": [
+      "cg",
+      "browse"
+    ],
+    "caption": "a black and white icon of a magnifying glass",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBrowser.svg",
+    "component_id": "cg:CgBrowser",
+    "aliases": [
+      "cg",
+      "browser"
+    ],
+    "caption": "a black and white icon of a web browser",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBrush.svg",
+    "component_id": "cg:CgBrush",
+    "aliases": [
+      "cg",
+      "brush"
+    ],
+    "caption": "a black and white icon of a button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgBulb.svg",
+    "component_id": "cg:CgBulb",
+    "aliases": [
+      "cg",
+      "bulb"
+    ],
+    "caption": "a black and white image of a light bulb",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCPlusPlus.svg",
+    "component_id": "cg:CgCplusPlus",
+    "aliases": [
+      "cg",
+      "cplus",
+      "plus"
+    ],
+    "caption": "a black and white logo with the letters c and c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCalculator.svg",
+    "component_id": "cg:CgCalculator",
+    "aliases": [
+      "cg",
+      "calculator"
+    ],
+    "caption": "a calculator icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCalendar.svg",
+    "component_id": "cg:CgCalendar",
+    "aliases": [
+      "cg",
+      "calendar"
+    ],
+    "caption": "a black and white icon of a calendar",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCalendarDates.svg",
+    "component_id": "cg:CgCalendarDates",
+    "aliases": [
+      "cg",
+      "calendar",
+      "dates"
+    ],
+    "caption": "a calculator icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCalendarDue.svg",
+    "component_id": "cg:CgCalendarDue",
+    "aliases": [
+      "cg",
+      "calendar",
+      "due"
+    ],
+    "caption": "a black and white icon of a microwave",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCalendarNext.svg",
+    "component_id": "cg:CgCalendarNext",
+    "aliases": [
+      "cg",
+      "calendar",
+      "next"
+    ],
+    "caption": "a black and white icon with an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCalendarToday.svg",
+    "component_id": "cg:CgCalendarToday",
+    "aliases": [
+      "cg",
+      "calendar",
+      "today"
+    ],
+    "caption": "a black and white icon of a calendar",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCalendarTwo.svg",
+    "component_id": "cg:CgCalendarTwo",
+    "aliases": [
+      "cg",
+      "calendar",
+      "two"
+    ],
+    "caption": "a black and white icon with a square shape",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCalibrate.svg",
+    "component_id": "cg:CgCalibrate",
+    "aliases": [
+      "cg",
+      "calibrate"
+    ],
+    "caption": "a black and white image of a wifi symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCamera.svg",
+    "component_id": "cg:CgCamera",
+    "aliases": [
+      "cg",
+      "camera"
+    ],
+    "caption": "a video camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCap.svg",
+    "component_id": "cg:CgCap",
+    "aliases": [
+      "cg",
+      "cap"
+    ],
+    "caption": "a black and white icon of a hat on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCaptions.svg",
+    "component_id": "cg:CgCaptions",
+    "aliases": [
+      "cg",
+      "captions"
+    ],
+    "caption": "a black and white logo with the word c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCardClubs.svg",
+    "component_id": "cg:CgCardClubs",
+    "aliases": [
+      "cg",
+      "card",
+      "clubs"
+    ],
+    "caption": "a black and white icon with three circles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCardDiamonds.svg",
+    "component_id": "cg:CgCardDiamonds",
+    "aliases": [
+      "cg",
+      "card",
+      "diamonds"
+    ],
+    "caption": "a black and white image of a playing card",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCardHearts.svg",
+    "component_id": "cg:CgCardHearts",
+    "aliases": [
+      "cg",
+      "card",
+      "hearts"
+    ],
+    "caption": "a black and white image of a playing card with a heart",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCardSpades.svg",
+    "component_id": "cg:CgCardSpades",
+    "aliases": [
+      "cg",
+      "card",
+      "spades"
+    ],
+    "caption": "a black and white image of a playing card",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCarousel.svg",
+    "component_id": "cg:CgCarousel",
+    "aliases": [
+      "cg",
+      "carousel"
+    ],
+    "caption": "a black and white icon of a light bulb",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCast.svg",
+    "component_id": "cg:CgCast",
+    "aliases": [
+      "cg",
+      "cast"
+    ],
+    "caption": "a black and white icon of a tv with an antenna",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChanel.svg",
+    "component_id": "cg:CgChanel",
+    "aliases": [
+      "cg",
+      "chanel"
+    ],
+    "caption": "the chanel logo is shown in black and white",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChart.svg",
+    "component_id": "cg:CgChart",
+    "aliases": [
+      "cg",
+      "chart"
+    ],
+    "caption": "a black and white logo with the letter g",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCheck.svg",
+    "component_id": "cg:CgCheck",
+    "aliases": [
+      "cg",
+      "check"
+    ],
+    "caption": "a black check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCheckO.svg",
+    "component_id": "cg:CgCheckO",
+    "aliases": [
+      "cg",
+      "check",
+      "o"
+    ],
+    "caption": "a black and white check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCheckR.svg",
+    "component_id": "cg:CgCheckR",
+    "aliases": [
+      "cg",
+      "check",
+      "r"
+    ],
+    "caption": "a check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleDown.svg",
+    "component_id": "cg:CgChevronDoubleDown",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "down"
+    ],
+    "caption": "a black and white image of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleDownO.svg",
+    "component_id": "cg:CgChevronDoubleDownO",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "down",
+      "o"
+    ],
+    "caption": "a black and white image of a circle with an arrow in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleDownR.svg",
+    "component_id": "cg:CgChevronDoubleDownR",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "down",
+      "r"
+    ],
+    "caption": "a black and white square icon with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleLeft.svg",
+    "component_id": "cg:CgChevronDoubleLeft",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleLeftO.svg",
+    "component_id": "cg:CgChevronDoubleLeftO",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "left",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleLeftR.svg",
+    "component_id": "cg:CgChevronDoubleLeftR",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "left",
+      "r"
+    ],
+    "caption": "a black and white square icon with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleRight.svg",
+    "component_id": "cg:CgChevronDoubleRight",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "right"
+    ],
+    "caption": "two arrows pointing in the same direction on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleRightO.svg",
+    "component_id": "cg:CgChevronDoubleRightO",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "right",
+      "o"
+    ],
+    "caption": "a black and white arrow icon in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleRightR.svg",
+    "component_id": "cg:CgChevronDoubleRightR",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "right",
+      "r"
+    ],
+    "caption": "a black and white square button with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleUp.svg",
+    "component_id": "cg:CgChevronDoubleUp",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "up"
+    ],
+    "caption": "a black and white image of an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleUpO.svg",
+    "component_id": "cg:CgChevronDoubleUpO",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "up",
+      "o"
+    ],
+    "caption": "a black and white circular logo with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDoubleUpR.svg",
+    "component_id": "cg:CgChevronDoubleUpR",
+    "aliases": [
+      "cg",
+      "chevron",
+      "double",
+      "up",
+      "r"
+    ],
+    "caption": "a black and white square icon with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDown.svg",
+    "component_id": "cg:CgChevronDown",
+    "aliases": [
+      "cg",
+      "chevron",
+      "down"
+    ],
+    "caption": "a black and white image of the letter v",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDownO.svg",
+    "component_id": "cg:CgChevronDownO",
+    "aliases": [
+      "cg",
+      "chevron",
+      "down",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronDownR.svg",
+    "component_id": "cg:CgChevronDownR",
+    "aliases": [
+      "cg",
+      "chevron",
+      "down",
+      "r"
+    ],
+    "caption": "a black and white square with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronLeft.svg",
+    "component_id": "cg:CgChevronLeft",
+    "aliases": [
+      "cg",
+      "chevron",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronLeftO.svg",
+    "component_id": "cg:CgChevronLeftO",
+    "aliases": [
+      "cg",
+      "chevron",
+      "left",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronLeftR.svg",
+    "component_id": "cg:CgChevronLeftR",
+    "aliases": [
+      "cg",
+      "chevron",
+      "left",
+      "r"
+    ],
+    "caption": "a black and white square with an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronRight.svg",
+    "component_id": "cg:CgChevronRight",
+    "aliases": [
+      "cg",
+      "chevron",
+      "right"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronRightO.svg",
+    "component_id": "cg:CgChevronRightO",
+    "aliases": [
+      "cg",
+      "chevron",
+      "right",
+      "o"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronRightR.svg",
+    "component_id": "cg:CgChevronRightR",
+    "aliases": [
+      "cg",
+      "chevron",
+      "right",
+      "r"
+    ],
+    "caption": "a black and white square with an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronUp.svg",
+    "component_id": "cg:CgChevronUp",
+    "aliases": [
+      "cg",
+      "chevron",
+      "up"
+    ],
+    "caption": "a black and white image of a triangle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronUpO.svg",
+    "component_id": "cg:CgChevronUpO",
+    "aliases": [
+      "cg",
+      "chevron",
+      "up",
+      "o"
+    ],
+    "caption": "a black and white circle with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgChevronUpR.svg",
+    "component_id": "cg:CgChevronUpR",
+    "aliases": [
+      "cg",
+      "chevron",
+      "up",
+      "r"
+    ],
+    "caption": "a square button with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCircleci.svg",
+    "component_id": "cg:CgCircleci",
+    "aliases": [
+      "cg",
+      "circleci"
+    ],
+    "caption": "a black and white image of a circular logo",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgClapperBoard.svg",
+    "component_id": "cg:CgClapperBoard",
+    "aliases": [
+      "cg",
+      "clapper",
+      "board"
+    ],
+    "caption": "a movie clapper icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgClipboard.svg",
+    "component_id": "cg:CgClipboard",
+    "aliases": [
+      "cg",
+      "clipboard"
+    ],
+    "caption": "a black and white icon of a shopping bag",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgClose.svg",
+    "component_id": "cg:CgClose",
+    "aliases": [
+      "cg",
+      "close"
+    ],
+    "caption": "a black and white icon of a crossed x",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCloseO.svg",
+    "component_id": "cg:CgCloseO",
+    "aliases": [
+      "cg",
+      "close",
+      "o"
+    ],
+    "caption": "a black and white image of an x in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCloseR.svg",
+    "component_id": "cg:CgCloseR",
+    "aliases": [
+      "cg",
+      "close",
+      "r"
+    ],
+    "caption": "an image of a black and white square with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCloud.svg",
+    "component_id": "cg:CgCloud",
+    "aliases": [
+      "cg",
+      "cloud"
+    ],
+    "caption": "a black cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCode.svg",
+    "component_id": "cg:CgCode",
+    "aliases": [
+      "cg",
+      "code"
+    ],
+    "caption": "a black and white image of two arrows pointing in the same direction",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCodeClimate.svg",
+    "component_id": "cg:CgCodeClimate",
+    "aliases": [
+      "cg",
+      "code",
+      "climate"
+    ],
+    "caption": "a black and white logo of a mountain",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCodeSlash.svg",
+    "component_id": "cg:CgCodeSlash",
+    "aliases": [
+      "cg",
+      "code",
+      "slash"
+    ],
+    "caption": "a black and white image of a black and white symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCoffee.svg",
+    "component_id": "cg:CgCoffee",
+    "aliases": [
+      "cg",
+      "coffee"
+    ],
+    "caption": "a black and white icon of a cup of coffee",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCollage.svg",
+    "component_id": "cg:CgCollage",
+    "aliases": [
+      "cg",
+      "collage"
+    ],
+    "caption": "a black and white icon with a square shape",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgColorBucket.svg",
+    "component_id": "cg:CgColorBucket",
+    "aliases": [
+      "cg",
+      "color",
+      "bucket"
+    ],
+    "caption": "a black and white icon with a drop of water",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgColorPicker.svg",
+    "component_id": "cg:CgColorPicker",
+    "aliases": [
+      "cg",
+      "color",
+      "picker"
+    ],
+    "caption": "a black and white image of a syringe",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgComedyCentral.svg",
+    "component_id": "cg:CgComedyCentral",
+    "aliases": [
+      "cg",
+      "comedy",
+      "central"
+    ],
+    "caption": "a black and white logo with the letter c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgComment.svg",
+    "component_id": "cg:CgComment",
+    "aliases": [
+      "cg",
+      "comment"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCommunity.svg",
+    "component_id": "cg:CgCommunity",
+    "aliases": [
+      "cg",
+      "community"
+    ],
+    "caption": "a black and white image of two rings",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgComponents.svg",
+    "component_id": "cg:CgComponents",
+    "aliases": [
+      "cg",
+      "components"
+    ],
+    "caption": "a black and white logo with four squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCompress.svg",
+    "component_id": "cg:CgCompress",
+    "aliases": [
+      "cg",
+      "compress"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCompressLeft.svg",
+    "component_id": "cg:CgCompressLeft",
+    "aliases": [
+      "cg",
+      "compress",
+      "left"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCompressRight.svg",
+    "component_id": "cg:CgCompressRight",
+    "aliases": [
+      "cg",
+      "compress",
+      "right"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCompressV.svg",
+    "component_id": "cg:CgCompressV",
+    "aliases": [
+      "cg",
+      "compress",
+      "v"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgController.svg",
+    "component_id": "cg:CgController",
+    "aliases": [
+      "cg",
+      "controller"
+    ],
+    "caption": "a black and white logo with three arrows",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCopy.svg",
+    "component_id": "cg:CgCopy",
+    "aliases": [
+      "cg",
+      "copy"
+    ],
+    "caption": "a black and white icon of a stack of papers",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCopyright.svg",
+    "component_id": "cg:CgCopyright",
+    "aliases": [
+      "cg",
+      "copyright"
+    ],
+    "caption": "a black and white image of a copyright symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerDoubleDownLeft.svg",
+    "component_id": "cg:CgCornerDoubleDownLeft",
+    "aliases": [
+      "cg",
+      "corner",
+      "double",
+      "down",
+      "left"
+    ],
+    "caption": "a black arrow pointing in the direction of the arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerDoubleDownRight.svg",
+    "component_id": "cg:CgCornerDoubleDownRight",
+    "aliases": [
+      "cg",
+      "corner",
+      "double",
+      "down",
+      "right"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerDoubleLeftDown.svg",
+    "component_id": "cg:CgCornerDoubleLeftDown",
+    "aliases": [
+      "cg",
+      "corner",
+      "double",
+      "left",
+      "down"
+    ],
+    "caption": "a black arrow pointing in the opposite direction",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerDoubleLeftUp.svg",
+    "component_id": "cg:CgCornerDoubleLeftUp",
+    "aliases": [
+      "cg",
+      "corner",
+      "double",
+      "left",
+      "up"
+    ],
+    "caption": "a black arrow pointing up in the middle of a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerDoubleRightDown.svg",
+    "component_id": "cg:CgCornerDoubleRightDown",
+    "aliases": [
+      "cg",
+      "corner",
+      "double",
+      "right",
+      "down"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerDoubleRightUp.svg",
+    "component_id": "cg:CgCornerDoubleRightUp",
+    "aliases": [
+      "cg",
+      "corner",
+      "double",
+      "right",
+      "up"
+    ],
+    "caption": "a black arrow pointing up in the middle of a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerDoubleUpLeft.svg",
+    "component_id": "cg:CgCornerDoubleUpLeft",
+    "aliases": [
+      "cg",
+      "corner",
+      "double",
+      "up",
+      "left"
+    ],
+    "caption": "a black and white arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerDoubleUpRight.svg",
+    "component_id": "cg:CgCornerDoubleUpRight",
+    "aliases": [
+      "cg",
+      "corner",
+      "double",
+      "up",
+      "right"
+    ],
+    "caption": "a black and white arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerDownLeft.svg",
+    "component_id": "cg:CgCornerDownLeft",
+    "aliases": [
+      "cg",
+      "corner",
+      "down",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerDownRight.svg",
+    "component_id": "cg:CgCornerDownRight",
+    "aliases": [
+      "cg",
+      "corner",
+      "down",
+      "right"
+    ],
+    "caption": "a black and white arrow pointing to the left",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerLeftDown.svg",
+    "component_id": "cg:CgCornerLeftDown",
+    "aliases": [
+      "cg",
+      "corner",
+      "left",
+      "down"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerLeftUp.svg",
+    "component_id": "cg:CgCornerLeftUp",
+    "aliases": [
+      "cg",
+      "corner",
+      "left",
+      "up"
+    ],
+    "caption": "a black arrow pointing up in the middle of a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerRightDown.svg",
+    "component_id": "cg:CgCornerRightDown",
+    "aliases": [
+      "cg",
+      "corner",
+      "right",
+      "down"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerRightUp.svg",
+    "component_id": "cg:CgCornerRightUp",
+    "aliases": [
+      "cg",
+      "corner",
+      "right",
+      "up"
+    ],
+    "caption": "a black arrow pointing up in the middle of a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerUpLeft.svg",
+    "component_id": "cg:CgCornerUpLeft",
+    "aliases": [
+      "cg",
+      "corner",
+      "up",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCornerUpRight.svg",
+    "component_id": "cg:CgCornerUpRight",
+    "aliases": [
+      "cg",
+      "corner",
+      "up",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCreditCard.svg",
+    "component_id": "cg:CgCreditCard",
+    "aliases": [
+      "cg",
+      "credit",
+      "card"
+    ],
+    "caption": "a black and white icon of a credit card",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCrop.svg",
+    "component_id": "cg:CgCrop",
+    "aliases": [
+      "cg",
+      "crop"
+    ],
+    "caption": "a black and white image of a cross",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCross.svg",
+    "component_id": "cg:CgCross",
+    "aliases": [
+      "cg",
+      "cross"
+    ],
+    "caption": "a black cross on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCrowdfire.svg",
+    "component_id": "cg:CgCrowdfire",
+    "aliases": [
+      "cg",
+      "crowdfire"
+    ],
+    "caption": "a black and white circular logo with the letter g",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgCrown.svg",
+    "component_id": "cg:CgCrown",
+    "aliases": [
+      "cg",
+      "crown"
+    ],
+    "caption": "a black and white crown icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDanger.svg",
+    "component_id": "cg:CgDanger",
+    "aliases": [
+      "cg",
+      "danger"
+    ],
+    "caption": "a black and white image of an exclamation sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDarkMode.svg",
+    "component_id": "cg:CgDarkMode",
+    "aliases": [
+      "cg",
+      "dark",
+      "mode"
+    ],
+    "caption": "a black and white circular icon with a circle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgData.svg",
+    "component_id": "cg:CgData",
+    "aliases": [
+      "cg",
+      "data"
+    ],
+    "caption": "a black and white image of a wifi symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDatabase.svg",
+    "component_id": "cg:CgDatabase",
+    "aliases": [
+      "cg",
+      "database"
+    ],
+    "caption": "a black and white icon of a server",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDebug.svg",
+    "component_id": "cg:CgDebug",
+    "aliases": [
+      "cg",
+      "debug"
+    ],
+    "caption": "a black and white icon of a car battery",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDesignmodo.svg",
+    "component_id": "cg:CgDesignmodo",
+    "aliases": [
+      "cg",
+      "designmodo"
+    ],
+    "caption": "a black and white image of a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDesktop.svg",
+    "component_id": "cg:CgDesktop",
+    "aliases": [
+      "cg",
+      "desktop"
+    ],
+    "caption": "a black and white icon of a credit card",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDetailsLess.svg",
+    "component_id": "cg:CgDetailsLess",
+    "aliases": [
+      "cg",
+      "details",
+      "less"
+    ],
+    "caption": "a black and white image of a black and white line",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDetailsMore.svg",
+    "component_id": "cg:CgDetailsMore",
+    "aliases": [
+      "cg",
+      "details",
+      "more"
+    ],
+    "caption": "a black and white image of a black and white line",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDialpad.svg",
+    "component_id": "cg:CgDialpad",
+    "aliases": [
+      "cg",
+      "dialpad"
+    ],
+    "caption": "a black and white image of squares on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDice1.svg",
+    "component_id": "cg:CgDice1",
+    "aliases": [
+      "cg",
+      "dice",
+      "1"
+    ],
+    "caption": "a square icon with a black dot in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDice2.svg",
+    "component_id": "cg:CgDice2",
+    "aliases": [
+      "cg",
+      "dice",
+      "2"
+    ],
+    "caption": "a black and white icon of a dice on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDice3.svg",
+    "component_id": "cg:CgDice3",
+    "aliases": [
+      "cg",
+      "dice",
+      "3"
+    ],
+    "caption": "a black and white image of a dice on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDice4.svg",
+    "component_id": "cg:CgDice4",
+    "aliases": [
+      "cg",
+      "dice",
+      "4"
+    ],
+    "caption": "a black and white image of a dice on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDice5.svg",
+    "component_id": "cg:CgDice5",
+    "aliases": [
+      "cg",
+      "dice",
+      "5"
+    ],
+    "caption": "a black and white dice icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDice6.svg",
+    "component_id": "cg:CgDice6",
+    "aliases": [
+      "cg",
+      "dice",
+      "6"
+    ],
+    "caption": "dice icon isolated on white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDigitalocean.svg",
+    "component_id": "cg:CgDigitalocean",
+    "aliases": [
+      "cg",
+      "digitalocean"
+    ],
+    "caption": "a black and white logo with squares in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDisc.svg",
+    "component_id": "cg:CgDisc",
+    "aliases": [
+      "cg",
+      "disc"
+    ],
+    "caption": "a black and white image of a circular logo",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDisplayFlex.svg",
+    "component_id": "cg:CgDisplayFlex",
+    "aliases": [
+      "cg",
+      "display",
+      "flex"
+    ],
+    "caption": "a black and white square with two black rectangles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDisplayFullwidth.svg",
+    "component_id": "cg:CgDisplayFullwidth",
+    "aliases": [
+      "cg",
+      "display",
+      "fullwidth"
+    ],
+    "caption": "a black and white image of a black and white square",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDisplayGrid.svg",
+    "component_id": "cg:CgDisplayGrid",
+    "aliases": [
+      "cg",
+      "display",
+      "grid"
+    ],
+    "caption": "a black and white square with four squares in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDisplaySpacing.svg",
+    "component_id": "cg:CgDisplaySpacing",
+    "aliases": [
+      "cg",
+      "display",
+      "spacing"
+    ],
+    "caption": "a black and white image of the number 10",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDistributeHorizontal.svg",
+    "component_id": "cg:CgDistributeHorizontal",
+    "aliases": [
+      "cg",
+      "distribute",
+      "horizontal"
+    ],
+    "caption": "an image of a black and white square with a white square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDistributeVertical.svg",
+    "component_id": "cg:CgDistributeVertical",
+    "aliases": [
+      "cg",
+      "distribute",
+      "vertical"
+    ],
+    "caption": "a black and white square with a gray square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDockBottom.svg",
+    "component_id": "cg:CgDockBottom",
+    "aliases": [
+      "cg",
+      "dock",
+      "bottom"
+    ],
+    "caption": "a black and white square with a white frame",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDockLeft.svg",
+    "component_id": "cg:CgDockLeft",
+    "aliases": [
+      "cg",
+      "dock",
+      "left"
+    ],
+    "caption": "a square black and white image on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDockRight.svg",
+    "component_id": "cg:CgDockRight",
+    "aliases": [
+      "cg",
+      "dock",
+      "right"
+    ],
+    "caption": "a square black and white image on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDockWindow.svg",
+    "component_id": "cg:CgDockWindow",
+    "aliases": [
+      "cg",
+      "dock",
+      "window"
+    ],
+    "caption": "an empty square on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDolby.svg",
+    "component_id": "cg:CgDolby",
+    "aliases": [
+      "cg",
+      "dolby"
+    ],
+    "caption": "a black and white logo with two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDollar.svg",
+    "component_id": "cg:CgDollar",
+    "aliases": [
+      "cg",
+      "dollar"
+    ],
+    "caption": "a dollar sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDribbble.svg",
+    "component_id": "cg:CgDribbble",
+    "aliases": [
+      "cg",
+      "dribbble"
+    ],
+    "caption": "a black and white icon of a basketball ball",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDrive.svg",
+    "component_id": "cg:CgDrive",
+    "aliases": [
+      "cg",
+      "drive"
+    ],
+    "caption": "a black and white icon of a computer on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDrop.svg",
+    "component_id": "cg:CgDrop",
+    "aliases": [
+      "cg",
+      "drop"
+    ],
+    "caption": "a black and white image of a water drop",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDropInvert.svg",
+    "component_id": "cg:CgDropInvert",
+    "aliases": [
+      "cg",
+      "drop",
+      "invert"
+    ],
+    "caption": "a black and white image of a drop of water",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDropOpacity.svg",
+    "component_id": "cg:CgDropOpacity",
+    "aliases": [
+      "cg",
+      "drop",
+      "opacity"
+    ],
+    "caption": "a black and white icon of a drop of water",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgDuplicate.svg",
+    "component_id": "cg:CgDuplicate",
+    "aliases": [
+      "cg",
+      "duplicate"
+    ],
+    "caption": "a black and white icon with a cross in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditBlackPoint.svg",
+    "component_id": "cg:CgEditBlackPoint",
+    "aliases": [
+      "cg",
+      "edit",
+      "black",
+      "point"
+    ],
+    "caption": "a black and white image of a target",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditContrast.svg",
+    "component_id": "cg:CgEditContrast",
+    "aliases": [
+      "cg",
+      "edit",
+      "contrast"
+    ],
+    "caption": "a black and white circular icon with a circle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditExposure.svg",
+    "component_id": "cg:CgEditExposure",
+    "aliases": [
+      "cg",
+      "edit",
+      "exposure"
+    ],
+    "caption": "a black and white image of a cross in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditFade.svg",
+    "component_id": "cg:CgEditFade",
+    "aliases": [
+      "cg",
+      "edit",
+      "fade"
+    ],
+    "caption": "a black and white image of a circle with a black and white circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditFlipH.svg",
+    "component_id": "cg:CgEditFlipH",
+    "aliases": [
+      "cg",
+      "edit",
+      "flip",
+      "h"
+    ],
+    "caption": "a black and white logo with the letters d and c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditFlipV.svg",
+    "component_id": "cg:CgEditFlipV",
+    "aliases": [
+      "cg",
+      "edit",
+      "flip",
+      "v"
+    ],
+    "caption": "a black and white icon with the letter s",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditHighlight.svg",
+    "component_id": "cg:CgEditHighlight",
+    "aliases": [
+      "cg",
+      "edit",
+      "highlight"
+    ],
+    "caption": "a black and white circular logo with a circle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditMarkup.svg",
+    "component_id": "cg:CgEditMarkup",
+    "aliases": [
+      "cg",
+      "edit",
+      "markup"
+    ],
+    "caption": "a black and white logo with a triangle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditMask.svg",
+    "component_id": "cg:CgEditMask",
+    "aliases": [
+      "cg",
+      "edit",
+      "mask"
+    ],
+    "caption": "a black and white circle with five circles in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditNoise.svg",
+    "component_id": "cg:CgEditNoise",
+    "aliases": [
+      "cg",
+      "edit",
+      "noise"
+    ],
+    "caption": "a black and white image of a golf ball",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditShadows.svg",
+    "component_id": "cg:CgEditShadows",
+    "aliases": [
+      "cg",
+      "edit",
+      "shadows"
+    ],
+    "caption": "a black and white circle with the letter c in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditStraight.svg",
+    "component_id": "cg:CgEditStraight",
+    "aliases": [
+      "cg",
+      "edit",
+      "straight"
+    ],
+    "caption": "a black and white image of a circle with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEditUnmask.svg",
+    "component_id": "cg:CgEditUnmask",
+    "aliases": [
+      "cg",
+      "edit",
+      "unmask"
+    ],
+    "caption": "a black and white image of four circles on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEject.svg",
+    "component_id": "cg:CgEject",
+    "aliases": [
+      "cg",
+      "eject"
+    ],
+    "caption": "a black and white image of a triangle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEnter.svg",
+    "component_id": "cg:CgEnter",
+    "aliases": [
+      "cg",
+      "enter"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgErase.svg",
+    "component_id": "cg:CgErase",
+    "aliases": [
+      "cg",
+      "erase"
+    ],
+    "caption": "a black and white icon of a stylus",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEreader.svg",
+    "component_id": "cg:CgEreader",
+    "aliases": [
+      "cg",
+      "ereader"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEricsson.svg",
+    "component_id": "cg:CgEricsson",
+    "aliases": [
+      "cg",
+      "ericsson"
+    ],
+    "caption": "a black and white image of a black and white logo",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEthernet.svg",
+    "component_id": "cg:CgEthernet",
+    "aliases": [
+      "cg",
+      "ethernet"
+    ],
+    "caption": "a black and white image of the letter u",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEuro.svg",
+    "component_id": "cg:CgEuro",
+    "aliases": [
+      "cg",
+      "euro"
+    ],
+    "caption": "the euro symbol is shown in black and white",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEventbrite.svg",
+    "component_id": "cg:CgEventbrite",
+    "aliases": [
+      "cg",
+      "eventbrite"
+    ],
+    "caption": "a black and white logo with the letter e",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgExpand.svg",
+    "component_id": "cg:CgExpand",
+    "aliases": [
+      "cg",
+      "expand"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgExport.svg",
+    "component_id": "cg:CgExport",
+    "aliases": [
+      "cg",
+      "export"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgExtension.svg",
+    "component_id": "cg:CgExtension",
+    "aliases": [
+      "cg",
+      "extension"
+    ],
+    "caption": "a black and white image of a square with four squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgExtensionAdd.svg",
+    "component_id": "cg:CgExtensionAdd",
+    "aliases": [
+      "cg",
+      "extension",
+      "add"
+    ],
+    "caption": "a black and white logo with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgExtensionAlt.svg",
+    "component_id": "cg:CgExtensionAlt",
+    "aliases": [
+      "cg",
+      "extension",
+      "alt"
+    ],
+    "caption": "a black and white image of the letter p",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgExtensionRemove.svg",
+    "component_id": "cg:CgExtensionRemove",
+    "aliases": [
+      "cg",
+      "extension",
+      "remove"
+    ],
+    "caption": "a black and white logo with the letter b in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgExternal.svg",
+    "component_id": "cg:CgExternal",
+    "aliases": [
+      "cg",
+      "external"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEye.svg",
+    "component_id": "cg:CgEye",
+    "aliases": [
+      "cg",
+      "eye"
+    ],
+    "caption": "an eye icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgEyeAlt.svg",
+    "component_id": "cg:CgEyeAlt",
+    "aliases": [
+      "cg",
+      "eye",
+      "alt"
+    ],
+    "caption": "an eye icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFacebook.svg",
+    "component_id": "cg:CgFacebook",
+    "aliases": [
+      "cg",
+      "facebook"
+    ],
+    "caption": "a black and white image of the facebook logo",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFeed.svg",
+    "component_id": "cg:CgFeed",
+    "aliases": [
+      "cg",
+      "feed"
+    ],
+    "caption": "two black and gray icons with a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFigma.svg",
+    "component_id": "cg:CgFigma",
+    "aliases": [
+      "cg",
+      "figma"
+    ],
+    "caption": "a black and white logo with three circles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFile.svg",
+    "component_id": "cg:CgFile",
+    "aliases": [
+      "cg",
+      "file"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFileAdd.svg",
+    "component_id": "cg:CgFileAdd",
+    "aliases": [
+      "cg",
+      "file",
+      "add"
+    ],
+    "caption": "a black and white icon of a document with a cross",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFileDocument.svg",
+    "component_id": "cg:CgFileDocument",
+    "aliases": [
+      "cg",
+      "file",
+      "document"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFileRemove.svg",
+    "component_id": "cg:CgFileRemove",
+    "aliases": [
+      "cg",
+      "file",
+      "remove"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFilm.svg",
+    "component_id": "cg:CgFilm",
+    "aliases": [
+      "cg",
+      "film"
+    ],
+    "caption": "a black and white icon of a movie screen",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFilters.svg",
+    "component_id": "cg:CgFilters",
+    "aliases": [
+      "cg",
+      "filters"
+    ],
+    "caption": "a black and white image of two rings",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFlag.svg",
+    "component_id": "cg:CgFlag",
+    "aliases": [
+      "cg",
+      "flag"
+    ],
+    "caption": "a black and white image of a letter p",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFlagAlt.svg",
+    "component_id": "cg:CgFlagAlt",
+    "aliases": [
+      "cg",
+      "flag",
+      "alt"
+    ],
+    "caption": "a black and white image of a letter p",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFolder.svg",
+    "component_id": "cg:CgFolder",
+    "aliases": [
+      "cg",
+      "folder"
+    ],
+    "caption": "a folder icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFolderAdd.svg",
+    "component_id": "cg:CgFolderAdd",
+    "aliases": [
+      "cg",
+      "folder",
+      "add"
+    ],
+    "caption": "a first aid kit icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFolderRemove.svg",
+    "component_id": "cg:CgFolderRemove",
+    "aliases": [
+      "cg",
+      "folder",
+      "remove"
+    ],
+    "caption": "a black and white icon of a folder",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFontHeight.svg",
+    "component_id": "cg:CgFontHeight",
+    "aliases": [
+      "cg",
+      "font",
+      "height"
+    ],
+    "caption": "a black and white square with the letter a",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFontSpacing.svg",
+    "component_id": "cg:CgFontSpacing",
+    "aliases": [
+      "cg",
+      "font",
+      "spacing"
+    ],
+    "caption": "a black and white logo with the letter a",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatBold.svg",
+    "component_id": "cg:CgFormatBold",
+    "aliases": [
+      "cg",
+      "format",
+      "bold"
+    ],
+    "caption": "a black and white image of the letter b",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatCenter.svg",
+    "component_id": "cg:CgFormatCenter",
+    "aliases": [
+      "cg",
+      "format",
+      "center"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatColor.svg",
+    "component_id": "cg:CgFormatColor",
+    "aliases": [
+      "cg",
+      "format",
+      "color"
+    ],
+    "caption": "the letter a is shown in black and white",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatHeading.svg",
+    "component_id": "cg:CgFormatHeading",
+    "aliases": [
+      "cg",
+      "format",
+      "heading"
+    ],
+    "caption": "a black and white image of the letter h",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatIndentDecrease.svg",
+    "component_id": "cg:CgFormatIndentDecrease",
+    "aliases": [
+      "cg",
+      "format",
+      "indent",
+      "decrease"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatIndentIncrease.svg",
+    "component_id": "cg:CgFormatIndentIncrease",
+    "aliases": [
+      "cg",
+      "format",
+      "indent",
+      "increase"
+    ],
+    "caption": "a black and white flag with an arrow in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatItalic.svg",
+    "component_id": "cg:CgFormatItalic",
+    "aliases": [
+      "cg",
+      "format",
+      "italic"
+    ],
+    "caption": "a black and white image of the letter i",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatJustify.svg",
+    "component_id": "cg:CgFormatJustify",
+    "aliases": [
+      "cg",
+      "format",
+      "justify"
+    ],
+    "caption": "four black lines on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatLeft.svg",
+    "component_id": "cg:CgFormatLeft",
+    "aliases": [
+      "cg",
+      "format",
+      "left"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatLineHeight.svg",
+    "component_id": "cg:CgFormatLineHeight",
+    "aliases": [
+      "cg",
+      "format",
+      "line",
+      "height"
+    ],
+    "caption": "an arrow pointing up and down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatRight.svg",
+    "component_id": "cg:CgFormatRight",
+    "aliases": [
+      "cg",
+      "format",
+      "right"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatSeparator.svg",
+    "component_id": "cg:CgFormatSeparator",
+    "aliases": [
+      "cg",
+      "format",
+      "separator"
+    ],
+    "caption": "a black and white icon of a stack of books",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatSlash.svg",
+    "component_id": "cg:CgFormatSlash",
+    "aliases": [
+      "cg",
+      "format",
+      "slash"
+    ],
+    "caption": "a black and white image of a black and white pen",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatStrike.svg",
+    "component_id": "cg:CgFormatStrike",
+    "aliases": [
+      "cg",
+      "format",
+      "strike"
+    ],
+    "caption": "a black and white symbol with the letter t in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatText.svg",
+    "component_id": "cg:CgFormatText",
+    "aliases": [
+      "cg",
+      "format",
+      "text"
+    ],
+    "caption": "a black and white square with the letter t in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatUnderline.svg",
+    "component_id": "cg:CgFormatUnderline",
+    "aliases": [
+      "cg",
+      "format",
+      "underline"
+    ],
+    "caption": "a black and white image of the letter u",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFormatUppercase.svg",
+    "component_id": "cg:CgFormatUppercase",
+    "aliases": [
+      "cg",
+      "format",
+      "uppercase"
+    ],
+    "caption": "a black and white logo with the letter t",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgFramer.svg",
+    "component_id": "cg:CgFramer",
+    "aliases": [
+      "cg",
+      "framer"
+    ],
+    "caption": "a black and white logo with the letter f",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGames.svg",
+    "component_id": "cg:CgGames",
+    "aliases": [
+      "cg",
+      "games"
+    ],
+    "caption": "a black and white icon of a video game controller",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGenderFemale.svg",
+    "component_id": "cg:CgGenderFemale",
+    "aliases": [
+      "cg",
+      "gender",
+      "female"
+    ],
+    "caption": "the female symbol is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGenderMale.svg",
+    "component_id": "cg:CgGenderMale",
+    "aliases": [
+      "cg",
+      "gender",
+      "male"
+    ],
+    "caption": "a male symbol is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGhost.svg",
+    "component_id": "cg:CgGhost",
+    "aliases": [
+      "cg",
+      "ghost"
+    ],
+    "caption": "a black and white logo with four squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGhostCharacter.svg",
+    "component_id": "cg:CgGhostCharacter",
+    "aliases": [
+      "cg",
+      "ghost",
+      "character"
+    ],
+    "caption": "a black and white ghost icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGift.svg",
+    "component_id": "cg:CgGift",
+    "aliases": [
+      "cg",
+      "gift"
+    ],
+    "caption": "a black and white icon of a gift box",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGirl.svg",
+    "component_id": "cg:CgGirl",
+    "aliases": [
+      "cg",
+      "girl"
+    ],
+    "caption": "a black and white icon of a woman's face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGitBranch.svg",
+    "component_id": "cg:CgGitBranch",
+    "aliases": [
+      "cg",
+      "git",
+      "branch"
+    ],
+    "caption": "a black and white image of the letter j",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGitCommit.svg",
+    "component_id": "cg:CgGitCommit",
+    "aliases": [
+      "cg",
+      "git",
+      "commit"
+    ],
+    "caption": "a black and white icon of a clock",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGitFork.svg",
+    "component_id": "cg:CgGitFork",
+    "aliases": [
+      "cg",
+      "git",
+      "fork"
+    ],
+    "caption": "a black and white image of the letter j",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGitPull.svg",
+    "component_id": "cg:CgGitPull",
+    "aliases": [
+      "cg",
+      "git",
+      "pull"
+    ],
+    "caption": "a black and white image of a musical note",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGitter.svg",
+    "component_id": "cg:CgGitter",
+    "aliases": [
+      "cg",
+      "gitter"
+    ],
+    "caption": "a black and white logo with three vertical lines",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGlass.svg",
+    "component_id": "cg:CgGlass",
+    "aliases": [
+      "cg",
+      "glass"
+    ],
+    "caption": "a black and white image of a wine glass",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGlassAlt.svg",
+    "component_id": "cg:CgGlassAlt",
+    "aliases": [
+      "cg",
+      "glass",
+      "alt"
+    ],
+    "caption": "a black and white image of a glass of water",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGlobe.svg",
+    "component_id": "cg:CgGlobe",
+    "aliases": [
+      "cg",
+      "globe"
+    ],
+    "caption": "a microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGlobeAlt.svg",
+    "component_id": "cg:CgGlobeAlt",
+    "aliases": [
+      "cg",
+      "globe",
+      "alt"
+    ],
+    "caption": "a black and white icon of a globe",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGoogle.svg",
+    "component_id": "cg:CgGoogle",
+    "aliases": [
+      "cg",
+      "google"
+    ],
+    "caption": "a black and white image of the letter g",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGoogleTasks.svg",
+    "component_id": "cg:CgGoogleTasks",
+    "aliases": [
+      "cg",
+      "google",
+      "tasks"
+    ],
+    "caption": "a black and white icon of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgGym.svg",
+    "component_id": "cg:CgGym",
+    "aliases": [
+      "cg",
+      "gym"
+    ],
+    "caption": "a black barbell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgHashtag.svg",
+    "component_id": "cg:CgHashtag",
+    "aliases": [
+      "cg",
+      "hashtag"
+    ],
+    "caption": "a black hash symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgHeadset.svg",
+    "component_id": "cg:CgHeadset",
+    "aliases": [
+      "cg",
+      "headset"
+    ],
+    "caption": "a black and white icon of a pair of headphones",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgHeart.svg",
+    "component_id": "cg:CgHeart",
+    "aliases": [
+      "cg",
+      "heart"
+    ],
+    "caption": "a black and white heart icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgHello.svg",
+    "component_id": "cg:CgHello",
+    "aliases": [
+      "cg",
+      "hello"
+    ],
+    "caption": "a black and white logo with a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgHome.svg",
+    "component_id": "cg:CgHome",
+    "aliases": [
+      "cg",
+      "home"
+    ],
+    "caption": "a black and white icon of a house",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgHomeAlt.svg",
+    "component_id": "cg:CgHomeAlt",
+    "aliases": [
+      "cg",
+      "home",
+      "alt"
+    ],
+    "caption": "a black and white icon of a dog house",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgHomeScreen.svg",
+    "component_id": "cg:CgHomeScreen",
+    "aliases": [
+      "cg",
+      "home",
+      "screen"
+    ],
+    "caption": "a remote control icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgIcecream.svg",
+    "component_id": "cg:CgIcecream",
+    "aliases": [
+      "cg",
+      "icecream"
+    ],
+    "caption": "a black and white icon of an ice cream",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgIfDesign.svg",
+    "component_id": "cg:CgIfDesign",
+    "aliases": [
+      "cg",
+      "if",
+      "design"
+    ],
+    "caption": "a black and white logo with the word if",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgImage.svg",
+    "component_id": "cg:CgImage",
+    "aliases": [
+      "cg",
+      "image"
+    ],
+    "caption": "a black and white photo icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgImport.svg",
+    "component_id": "cg:CgImport",
+    "aliases": [
+      "cg",
+      "import"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInbox.svg",
+    "component_id": "cg:CgInbox",
+    "aliases": [
+      "cg",
+      "inbox"
+    ],
+    "caption": "a black and white icon of a computer screen",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgIndieHackers.svg",
+    "component_id": "cg:CgIndieHackers",
+    "aliases": [
+      "cg",
+      "indie",
+      "hackers"
+    ],
+    "caption": "a black and white logo with the word h",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInfinity.svg",
+    "component_id": "cg:CgInfinity",
+    "aliases": [
+      "cg",
+      "infinity"
+    ],
+    "caption": "a black infinity symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInfo.svg",
+    "component_id": "cg:CgInfo",
+    "aliases": [
+      "cg",
+      "info"
+    ],
+    "caption": "a black and white icon with the word i in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInpicture.svg",
+    "component_id": "cg:CgInpicture",
+    "aliases": [
+      "cg",
+      "inpicture"
+    ],
+    "caption": "a black and white image of a computer screen",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInsertAfter.svg",
+    "component_id": "cg:CgInsertAfter",
+    "aliases": [
+      "cg",
+      "insert",
+      "after"
+    ],
+    "caption": "a black and white icon of a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInsertAfterO.svg",
+    "component_id": "cg:CgInsertAfterO",
+    "aliases": [
+      "cg",
+      "insert",
+      "after",
+      "o"
+    ],
+    "caption": "a black and white icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInsertAfterR.svg",
+    "component_id": "cg:CgInsertAfterR",
+    "aliases": [
+      "cg",
+      "insert",
+      "after",
+      "r"
+    ],
+    "caption": "a black and white icon of a computer with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInsertBefore.svg",
+    "component_id": "cg:CgInsertBefore",
+    "aliases": [
+      "cg",
+      "insert",
+      "before"
+    ],
+    "caption": "a black and white image of a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInsertBeforeO.svg",
+    "component_id": "cg:CgInsertBeforeO",
+    "aliases": [
+      "cg",
+      "insert",
+      "before",
+      "o"
+    ],
+    "caption": "a black and white icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInsertBeforeR.svg",
+    "component_id": "cg:CgInsertBeforeR",
+    "aliases": [
+      "cg",
+      "insert",
+      "before",
+      "r"
+    ],
+    "caption": "a black and white icon of a medicine bottle with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInsights.svg",
+    "component_id": "cg:CgInsights",
+    "aliases": [
+      "cg",
+      "insights"
+    ],
+    "caption": "a black and white icon of a skyscraper",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInstagram.svg",
+    "component_id": "cg:CgInstagram",
+    "aliases": [
+      "cg",
+      "instagram"
+    ],
+    "caption": "a black and white image of an instagram icon",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgInternal.svg",
+    "component_id": "cg:CgInternal",
+    "aliases": [
+      "cg",
+      "internal"
+    ],
+    "caption": "a black and white image of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgKey.svg",
+    "component_id": "cg:CgKey",
+    "aliases": [
+      "cg",
+      "key"
+    ],
+    "caption": "a black and white image of a key on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgKeyboard.svg",
+    "component_id": "cg:CgKeyboard",
+    "aliases": [
+      "cg",
+      "keyboard"
+    ],
+    "caption": "a black and white icon with dots on it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgKeyhole.svg",
+    "component_id": "cg:CgKeyhole",
+    "aliases": [
+      "cg",
+      "keyhole"
+    ],
+    "caption": "a black and white image of a keyhole",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLaptop.svg",
+    "component_id": "cg:CgLaptop",
+    "aliases": [
+      "cg",
+      "laptop"
+    ],
+    "caption": "a laptop computer icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLastpass.svg",
+    "component_id": "cg:CgLastpass",
+    "aliases": [
+      "cg",
+      "lastpass"
+    ],
+    "caption": "a black and white icon with three dots",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLayoutGrid.svg",
+    "component_id": "cg:CgLayoutGrid",
+    "aliases": [
+      "cg",
+      "layout",
+      "grid"
+    ],
+    "caption": "a black and white square with four squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLayoutGridSmall.svg",
+    "component_id": "cg:CgLayoutGridSmall",
+    "aliases": [
+      "cg",
+      "layout",
+      "grid",
+      "small"
+    ],
+    "caption": "a black and white image of squares with black and white squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLayoutList.svg",
+    "component_id": "cg:CgLayoutList",
+    "aliases": [
+      "cg",
+      "layout",
+      "list"
+    ],
+    "caption": "a black and white image of the letter e",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLayoutPin.svg",
+    "component_id": "cg:CgLayoutPin",
+    "aliases": [
+      "cg",
+      "layout",
+      "pin"
+    ],
+    "caption": "a black and white icon with four circles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLinear.svg",
+    "component_id": "cg:CgLinear",
+    "aliases": [
+      "cg",
+      "linear"
+    ],
+    "caption": "a black and white circular logo with three stripes",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLink.svg",
+    "component_id": "cg:CgLink",
+    "aliases": [
+      "cg",
+      "link"
+    ],
+    "caption": "a black and white icon of a link",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgList.svg",
+    "component_id": "cg:CgList",
+    "aliases": [
+      "cg",
+      "list"
+    ],
+    "caption": "a black and white icon of a checklist",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgListTree.svg",
+    "component_id": "cg:CgListTree",
+    "aliases": [
+      "cg",
+      "list",
+      "tree"
+    ],
+    "caption": "a black and white icon of two squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLivePhoto.svg",
+    "component_id": "cg:CgLivePhoto",
+    "aliases": [
+      "cg",
+      "live",
+      "photo"
+    ],
+    "caption": "a black and white image of a circular object",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLoadbar.svg",
+    "component_id": "cg:CgLoadbar",
+    "aliases": [
+      "cg",
+      "loadbar"
+    ],
+    "caption": "a black and white image of a black and white button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLoadbarAlt.svg",
+    "component_id": "cg:CgLoadbarAlt",
+    "aliases": [
+      "cg",
+      "loadbar",
+      "alt"
+    ],
+    "caption": "an image of a black and grey button on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLoadbarDoc.svg",
+    "component_id": "cg:CgLoadbarDoc",
+    "aliases": [
+      "cg",
+      "loadbar",
+      "doc"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLoadbarSound.svg",
+    "component_id": "cg:CgLoadbarSound",
+    "aliases": [
+      "cg",
+      "loadbar",
+      "sound"
+    ],
+    "caption": "a black and white bar graph is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLock.svg",
+    "component_id": "cg:CgLock",
+    "aliases": [
+      "cg",
+      "lock"
+    ],
+    "caption": "a black and white icon of a padlock",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLockUnlock.svg",
+    "component_id": "cg:CgLockUnlock",
+    "aliases": [
+      "cg",
+      "lock",
+      "unlock"
+    ],
+    "caption": "a padlock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLogIn.svg",
+    "component_id": "cg:CgLogIn",
+    "aliases": [
+      "cg",
+      "log",
+      "in"
+    ],
+    "caption": "a black arrow pointing left on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLogOff.svg",
+    "component_id": "cg:CgLogOff",
+    "aliases": [
+      "cg",
+      "log",
+      "off"
+    ],
+    "caption": "a black power symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLogOut.svg",
+    "component_id": "cg:CgLogOut",
+    "aliases": [
+      "cg",
+      "log",
+      "out"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgLoupe.svg",
+    "component_id": "cg:CgLoupe",
+    "aliases": [
+      "cg",
+      "loupe"
+    ],
+    "caption": "a black and white icon of a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMagnet.svg",
+    "component_id": "cg:CgMagnet",
+    "aliases": [
+      "cg",
+      "magnet"
+    ],
+    "caption": "a black and white logo with the letter u",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMail.svg",
+    "component_id": "cg:CgMail",
+    "aliases": [
+      "cg",
+      "mail"
+    ],
+    "caption": "an email icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMailForward.svg",
+    "component_id": "cg:CgMailForward",
+    "aliases": [
+      "cg",
+      "mail",
+      "forward"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMailOpen.svg",
+    "component_id": "cg:CgMailOpen",
+    "aliases": [
+      "cg",
+      "mail",
+      "open"
+    ],
+    "caption": "an envelope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMailReply.svg",
+    "component_id": "cg:CgMailReply",
+    "aliases": [
+      "cg",
+      "mail",
+      "reply"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMathDivide.svg",
+    "component_id": "cg:CgMathDivide",
+    "aliases": [
+      "cg",
+      "math",
+      "divide"
+    ],
+    "caption": "a black and white image of a fraction symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMathEqual.svg",
+    "component_id": "cg:CgMathEqual",
+    "aliases": [
+      "cg",
+      "math",
+      "equal"
+    ],
+    "caption": "a black and white image of an equal sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMathMinus.svg",
+    "component_id": "cg:CgMathMinus",
+    "aliases": [
+      "cg",
+      "math",
+      "minus"
+    ],
+    "caption": "an image of a black and white line on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMathPercent.svg",
+    "component_id": "cg:CgMathPercent",
+    "aliases": [
+      "cg",
+      "math",
+      "percent"
+    ],
+    "caption": "a black and white image of a percentage sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMathPlus.svg",
+    "component_id": "cg:CgMathPlus",
+    "aliases": [
+      "cg",
+      "math",
+      "plus"
+    ],
+    "caption": "a black plus symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMaximize.svg",
+    "component_id": "cg:CgMaximize",
+    "aliases": [
+      "cg",
+      "maximize"
+    ],
+    "caption": "an image of a square with four black lines",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMaximizeAlt.svg",
+    "component_id": "cg:CgMaximizeAlt",
+    "aliases": [
+      "cg",
+      "maximize",
+      "alt"
+    ],
+    "caption": "a black and white image of two arrows pointing in different directions",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMaze.svg",
+    "component_id": "cg:CgMaze",
+    "aliases": [
+      "cg",
+      "maze"
+    ],
+    "caption": "a black and white logo with the letter m",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMediaLive.svg",
+    "component_id": "cg:CgMediaLive",
+    "aliases": [
+      "cg",
+      "media",
+      "live"
+    ],
+    "caption": "a black and white image of a target",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMediaPodcast.svg",
+    "component_id": "cg:CgMediaPodcast",
+    "aliases": [
+      "cg",
+      "media",
+      "podcast"
+    ],
+    "caption": "a black and white image of a radio antenna",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenu.svg",
+    "component_id": "cg:CgMenu",
+    "aliases": [
+      "cg",
+      "menu"
+    ],
+    "caption": "three black lines on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuBoxed.svg",
+    "component_id": "cg:CgMenuBoxed",
+    "aliases": [
+      "cg",
+      "menu",
+      "boxed"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuCake.svg",
+    "component_id": "cg:CgMenuCake",
+    "aliases": [
+      "cg",
+      "menu",
+      "cake"
+    ],
+    "caption": "a black and white icon with three circles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuCheese.svg",
+    "component_id": "cg:CgMenuCheese",
+    "aliases": [
+      "cg",
+      "menu",
+      "cheese"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuGridO.svg",
+    "component_id": "cg:CgMenuGridO",
+    "aliases": [
+      "cg",
+      "menu",
+      "grid",
+      "o"
+    ],
+    "caption": "black dots on a white background with one in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuGridR.svg",
+    "component_id": "cg:CgMenuGridR",
+    "aliases": [
+      "cg",
+      "menu",
+      "grid",
+      "r"
+    ],
+    "caption": "a black and white square with squares in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuHotdog.svg",
+    "component_id": "cg:CgMenuHotdog",
+    "aliases": [
+      "cg",
+      "menu",
+      "hotdog"
+    ],
+    "caption": "a hamburger icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuLeft.svg",
+    "component_id": "cg:CgMenuLeft",
+    "aliases": [
+      "cg",
+      "menu",
+      "left"
+    ],
+    "caption": "a black and white image of a black and white line",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuLeftAlt.svg",
+    "component_id": "cg:CgMenuLeftAlt",
+    "aliases": [
+      "cg",
+      "menu",
+      "left",
+      "alt"
+    ],
+    "caption": "a black and white image of the letter e",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuMotion.svg",
+    "component_id": "cg:CgMenuMotion",
+    "aliases": [
+      "cg",
+      "menu",
+      "motion"
+    ],
+    "caption": "a black and white image of a staircase",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuOreos.svg",
+    "component_id": "cg:CgMenuOreos",
+    "aliases": [
+      "cg",
+      "menu",
+      "oreos"
+    ],
+    "caption": "a black and white image of two hamburgers",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuRight.svg",
+    "component_id": "cg:CgMenuRight",
+    "aliases": [
+      "cg",
+      "menu",
+      "right"
+    ],
+    "caption": "a black and white image of a black and white line",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuRightAlt.svg",
+    "component_id": "cg:CgMenuRightAlt",
+    "aliases": [
+      "cg",
+      "menu",
+      "right",
+      "alt"
+    ],
+    "caption": "a black and white image of the letter e",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMenuRound.svg",
+    "component_id": "cg:CgMenuRound",
+    "aliases": [
+      "cg",
+      "menu",
+      "round"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMergeHorizontal.svg",
+    "component_id": "cg:CgMergeHorizontal",
+    "aliases": [
+      "cg",
+      "merge",
+      "horizontal"
+    ],
+    "caption": "an image of a black and white symbol with two arrows",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMergeVertical.svg",
+    "component_id": "cg:CgMergeVertical",
+    "aliases": [
+      "cg",
+      "merge",
+      "vertical"
+    ],
+    "caption": "a black and white image of two arrows pointing to each other",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMic.svg",
+    "component_id": "cg:CgMic",
+    "aliases": [
+      "cg",
+      "mic"
+    ],
+    "caption": "a microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMicrobit.svg",
+    "component_id": "cg:CgMicrobit",
+    "aliases": [
+      "cg",
+      "microbit"
+    ],
+    "caption": "a black and white image of a robot head",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMicrosoft.svg",
+    "component_id": "cg:CgMicrosoft",
+    "aliases": [
+      "cg",
+      "microsoft"
+    ],
+    "caption": "a black and white square with four squares in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMiniPlayer.svg",
+    "component_id": "cg:CgMiniPlayer",
+    "aliases": [
+      "cg",
+      "mini",
+      "player"
+    ],
+    "caption": "a square icon with a black square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMinimize.svg",
+    "component_id": "cg:CgMinimize",
+    "aliases": [
+      "cg",
+      "minimize"
+    ],
+    "caption": "a black and white image of a cross with four arrows",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMinimizeAlt.svg",
+    "component_id": "cg:CgMinimizeAlt",
+    "aliases": [
+      "cg",
+      "minimize",
+      "alt"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgModem.svg",
+    "component_id": "cg:CgModem",
+    "aliases": [
+      "cg",
+      "modem"
+    ],
+    "caption": "a black and white icon of a knife",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMonday.svg",
+    "component_id": "cg:CgMonday",
+    "aliases": [
+      "cg",
+      "monday"
+    ],
+    "caption": "a black and white logo with the letter m",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoon.svg",
+    "component_id": "cg:CgMoon",
+    "aliases": [
+      "cg",
+      "moon"
+    ],
+    "caption": "a black and white icon of a crescent moon",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMore.svg",
+    "component_id": "cg:CgMore",
+    "aliases": [
+      "cg",
+      "more"
+    ],
+    "caption": "three black circles on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoreAlt.svg",
+    "component_id": "cg:CgMoreAlt",
+    "aliases": [
+      "cg",
+      "more",
+      "alt"
+    ],
+    "caption": "four black dots are shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoreO.svg",
+    "component_id": "cg:CgMoreO",
+    "aliases": [
+      "cg",
+      "more",
+      "o"
+    ],
+    "caption": "a black and white image of a circle with three dots",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoreR.svg",
+    "component_id": "cg:CgMoreR",
+    "aliases": [
+      "cg",
+      "more",
+      "r"
+    ],
+    "caption": "a black and white icon with three dots",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoreVertical.svg",
+    "component_id": "cg:CgMoreVertical",
+    "aliases": [
+      "cg",
+      "more",
+      "vertical"
+    ],
+    "caption": "four black circles on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoreVerticalAlt.svg",
+    "component_id": "cg:CgMoreVerticalAlt",
+    "aliases": [
+      "cg",
+      "more",
+      "vertical",
+      "alt"
+    ],
+    "caption": "four black dots on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoreVerticalO.svg",
+    "component_id": "cg:CgMoreVerticalO",
+    "aliases": [
+      "cg",
+      "more",
+      "vertical",
+      "o"
+    ],
+    "caption": "a black and white icon with three dots",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoreVerticalR.svg",
+    "component_id": "cg:CgMoreVerticalR",
+    "aliases": [
+      "cg",
+      "more",
+      "vertical",
+      "r"
+    ],
+    "caption": "a black and white icon of a button with three dots",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMouse.svg",
+    "component_id": "cg:CgMouse",
+    "aliases": [
+      "cg",
+      "mouse"
+    ],
+    "caption": "a black and white image of a computer mouse",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoveDown.svg",
+    "component_id": "cg:CgMoveDown",
+    "aliases": [
+      "cg",
+      "move",
+      "down"
+    ],
+    "caption": "a black and white icon of a down arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoveLeft.svg",
+    "component_id": "cg:CgMoveLeft",
+    "aliases": [
+      "cg",
+      "move",
+      "left"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoveRight.svg",
+    "component_id": "cg:CgMoveRight",
+    "aliases": [
+      "cg",
+      "move",
+      "right"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoveTask.svg",
+    "component_id": "cg:CgMoveTask",
+    "aliases": [
+      "cg",
+      "move",
+      "task"
+    ],
+    "caption": "a black and white arrow pointing in the direction of the arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMoveUp.svg",
+    "component_id": "cg:CgMoveUp",
+    "aliases": [
+      "cg",
+      "move",
+      "up"
+    ],
+    "caption": "a black and white image of an upward arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMusic.svg",
+    "component_id": "cg:CgMusic",
+    "aliases": [
+      "cg",
+      "music"
+    ],
+    "caption": "a music note icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMusicNote.svg",
+    "component_id": "cg:CgMusicNote",
+    "aliases": [
+      "cg",
+      "music",
+      "note"
+    ],
+    "caption": "a black and white image of a music note",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgMusicSpeaker.svg",
+    "component_id": "cg:CgMusicSpeaker",
+    "aliases": [
+      "cg",
+      "music",
+      "speaker"
+    ],
+    "caption": "a speaker icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgNametag.svg",
+    "component_id": "cg:CgNametag",
+    "aliases": [
+      "cg",
+      "nametag"
+    ],
+    "caption": "an image of a square with black and white squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgNotes.svg",
+    "component_id": "cg:CgNotes",
+    "aliases": [
+      "cg",
+      "notes"
+    ],
+    "caption": "a document icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgNotifications.svg",
+    "component_id": "cg:CgNotifications",
+    "aliases": [
+      "cg",
+      "notifications"
+    ],
+    "caption": "a black and white image of a square with a dot in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgNpm.svg",
+    "component_id": "cg:CgNpm",
+    "aliases": [
+      "cg",
+      "npm"
+    ],
+    "caption": "a black and white square with the letter n in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgOculus.svg",
+    "component_id": "cg:CgOculus",
+    "aliases": [
+      "cg",
+      "oculus"
+    ],
+    "caption": "a black and white image of the letter o",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgOpenCollective.svg",
+    "component_id": "cg:CgOpenCollective",
+    "aliases": [
+      "cg",
+      "open",
+      "collective"
+    ],
+    "caption": "a black and white logo with the letter c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgOptions.svg",
+    "component_id": "cg:CgOptions",
+    "aliases": [
+      "cg",
+      "options"
+    ],
+    "caption": "a black and white image of two black circles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgOrganisation.svg",
+    "component_id": "cg:CgOrganisation",
+    "aliases": [
+      "cg",
+      "organisation"
+    ],
+    "caption": "a black and white icon of a building",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgOverflow.svg",
+    "component_id": "cg:CgOverflow",
+    "aliases": [
+      "cg",
+      "overflow"
+    ],
+    "caption": "an image of a black and white circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPacman.svg",
+    "component_id": "cg:CgPacman",
+    "aliases": [
+      "cg",
+      "pacman"
+    ],
+    "caption": "a black and white logo with the letter c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPassword.svg",
+    "component_id": "cg:CgPassword",
+    "aliases": [
+      "cg",
+      "password"
+    ],
+    "caption": "a black and white icon of a computer",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPathBack.svg",
+    "component_id": "cg:CgPathBack",
+    "aliases": [
+      "cg",
+      "path",
+      "back"
+    ],
+    "caption": "a black square with a white square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPathCrop.svg",
+    "component_id": "cg:CgPathCrop",
+    "aliases": [
+      "cg",
+      "path",
+      "crop"
+    ],
+    "caption": "a black and white square with a square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPathDivide.svg",
+    "component_id": "cg:CgPathDivide",
+    "aliases": [
+      "cg",
+      "path",
+      "divide"
+    ],
+    "caption": "a black square with a white square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPathExclude.svg",
+    "component_id": "cg:CgPathExclude",
+    "aliases": [
+      "cg",
+      "path",
+      "exclude"
+    ],
+    "caption": "a black square with a white square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPathFront.svg",
+    "component_id": "cg:CgPathFront",
+    "aliases": [
+      "cg",
+      "path",
+      "front"
+    ],
+    "caption": "a black square with a white square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPathIntersect.svg",
+    "component_id": "cg:CgPathIntersect",
+    "aliases": [
+      "cg",
+      "path",
+      "intersect"
+    ],
+    "caption": "a square black and white logo with a square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPathOutline.svg",
+    "component_id": "cg:CgPathOutline",
+    "aliases": [
+      "cg",
+      "path",
+      "outline"
+    ],
+    "caption": "a square black and white logo with a square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPathTrim.svg",
+    "component_id": "cg:CgPathTrim",
+    "aliases": [
+      "cg",
+      "path",
+      "trim"
+    ],
+    "caption": "an image of a black square with a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPathUnite.svg",
+    "component_id": "cg:CgPathUnite",
+    "aliases": [
+      "cg",
+      "path",
+      "unite"
+    ],
+    "caption": "a black square on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPatreon.svg",
+    "component_id": "cg:CgPatreon",
+    "aliases": [
+      "cg",
+      "patreon"
+    ],
+    "caption": "a black and white logo with a circle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPaypal.svg",
+    "component_id": "cg:CgPaypal",
+    "aliases": [
+      "cg",
+      "paypal"
+    ],
+    "caption": "a black and white logo with the letter p",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPen.svg",
+    "component_id": "cg:CgPen",
+    "aliases": [
+      "cg",
+      "pen"
+    ],
+    "caption": "a pencil icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPentagonBottomLeft.svg",
+    "component_id": "cg:CgPentagonBottomLeft",
+    "aliases": [
+      "cg",
+      "pentagon",
+      "bottom",
+      "left"
+    ],
+    "caption": "a black and white drawing of a letter",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPentagonBottomRight.svg",
+    "component_id": "cg:CgPentagonBottomRight",
+    "aliases": [
+      "cg",
+      "pentagon",
+      "bottom",
+      "right"
+    ],
+    "caption": "a black and white logo with the letter m",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPentagonDown.svg",
+    "component_id": "cg:CgPentagonDown",
+    "aliases": [
+      "cg",
+      "pentagon",
+      "down"
+    ],
+    "caption": "a black and white logo with the letter m",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPentagonLeft.svg",
+    "component_id": "cg:CgPentagonLeft",
+    "aliases": [
+      "cg",
+      "pentagon",
+      "left"
+    ],
+    "caption": "a black and white logo with the letter c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPentagonRight.svg",
+    "component_id": "cg:CgPentagonRight",
+    "aliases": [
+      "cg",
+      "pentagon",
+      "right"
+    ],
+    "caption": "a black and white logo with the letter d in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPentagonTopLeft.svg",
+    "component_id": "cg:CgPentagonTopLeft",
+    "aliases": [
+      "cg",
+      "pentagon",
+      "top",
+      "left"
+    ],
+    "caption": "a black and white logo with the letter q",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPentagonTopRight.svg",
+    "component_id": "cg:CgPentagonTopRight",
+    "aliases": [
+      "cg",
+      "pentagon",
+      "top",
+      "right"
+    ],
+    "caption": "a black and white logo with the letter q",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPentagonUp.svg",
+    "component_id": "cg:CgPentagonUp",
+    "aliases": [
+      "cg",
+      "pentagon",
+      "up"
+    ],
+    "caption": "a black and white logo with an arrow in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPerformance.svg",
+    "component_id": "cg:CgPerformance",
+    "aliases": [
+      "cg",
+      "performance"
+    ],
+    "caption": "a black and white image of a black and white symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPexels.svg",
+    "component_id": "cg:CgPexels",
+    "aliases": [
+      "cg",
+      "pexels"
+    ],
+    "caption": "a black and white logo with the letter p",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPhone.svg",
+    "component_id": "cg:CgPhone",
+    "aliases": [
+      "cg",
+      "phone"
+    ],
+    "caption": "a phone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPhotoscan.svg",
+    "component_id": "cg:CgPhotoscan",
+    "aliases": [
+      "cg",
+      "photoscan"
+    ],
+    "caption": "a black and white icon of a camera",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPiano.svg",
+    "component_id": "cg:CgPiano",
+    "aliases": [
+      "cg",
+      "piano"
+    ],
+    "caption": "a piano keyboard icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPill.svg",
+    "component_id": "cg:CgPill",
+    "aliases": [
+      "cg",
+      "pill"
+    ],
+    "caption": "a pill icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPin.svg",
+    "component_id": "cg:CgPin",
+    "aliases": [
+      "cg",
+      "pin"
+    ],
+    "caption": "a black and white image of a location pin",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPinAlt.svg",
+    "component_id": "cg:CgPinAlt",
+    "aliases": [
+      "cg",
+      "pin",
+      "alt"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPinBottom.svg",
+    "component_id": "cg:CgPinBottom",
+    "aliases": [
+      "cg",
+      "pin",
+      "bottom"
+    ],
+    "caption": "a camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPinTop.svg",
+    "component_id": "cg:CgPinTop",
+    "aliases": [
+      "cg",
+      "pin",
+      "top"
+    ],
+    "caption": "a black and white image of a circular object",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayBackwards.svg",
+    "component_id": "cg:CgPlayBackwards",
+    "aliases": [
+      "cg",
+      "play",
+      "backwards"
+    ],
+    "caption": "a black and white image of three arrows pointing in different directions",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayButton.svg",
+    "component_id": "cg:CgPlayButton",
+    "aliases": [
+      "cg",
+      "play",
+      "button"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayButtonO.svg",
+    "component_id": "cg:CgPlayButtonO",
+    "aliases": [
+      "cg",
+      "play",
+      "button",
+      "o"
+    ],
+    "caption": "a black and white play button on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayButtonR.svg",
+    "component_id": "cg:CgPlayButtonR",
+    "aliases": [
+      "cg",
+      "play",
+      "button",
+      "r"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayForwards.svg",
+    "component_id": "cg:CgPlayForwards",
+    "aliases": [
+      "cg",
+      "play",
+      "forwards"
+    ],
+    "caption": "a black and white image of three arrows pointing in different directions",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayList.svg",
+    "component_id": "cg:CgPlayList",
+    "aliases": [
+      "cg",
+      "play",
+      "list"
+    ],
+    "caption": "a black arrow pointing to the right side of a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayListAdd.svg",
+    "component_id": "cg:CgPlayListAdd",
+    "aliases": [
+      "cg",
+      "play",
+      "list",
+      "add"
+    ],
+    "caption": "a black and white image of a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayListCheck.svg",
+    "component_id": "cg:CgPlayListCheck",
+    "aliases": [
+      "cg",
+      "play",
+      "list",
+      "check"
+    ],
+    "caption": "a check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayListRemove.svg",
+    "component_id": "cg:CgPlayListRemove",
+    "aliases": [
+      "cg",
+      "play",
+      "list",
+      "remove"
+    ],
+    "caption": "a black and white image of an x sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayListSearch.svg",
+    "component_id": "cg:CgPlayListSearch",
+    "aliases": [
+      "cg",
+      "play",
+      "list",
+      "search"
+    ],
+    "caption": "a black and white icon with a magnifying glass",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayPause.svg",
+    "component_id": "cg:CgPlayPause",
+    "aliases": [
+      "cg",
+      "play",
+      "pause"
+    ],
+    "caption": "a black and white image of two black and white stripes",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayPauseO.svg",
+    "component_id": "cg:CgPlayPauseO",
+    "aliases": [
+      "cg",
+      "play",
+      "pause",
+      "o"
+    ],
+    "caption": "a black and white icon with two black lines",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayPauseR.svg",
+    "component_id": "cg:CgPlayPauseR",
+    "aliases": [
+      "cg",
+      "play",
+      "pause",
+      "r"
+    ],
+    "caption": "a black and white square icon with two black lines",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayStop.svg",
+    "component_id": "cg:CgPlayStop",
+    "aliases": [
+      "cg",
+      "play",
+      "stop"
+    ],
+    "caption": "a black square with a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayStopO.svg",
+    "component_id": "cg:CgPlayStopO",
+    "aliases": [
+      "cg",
+      "play",
+      "stop",
+      "o"
+    ],
+    "caption": "a black square in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayStopR.svg",
+    "component_id": "cg:CgPlayStopR",
+    "aliases": [
+      "cg",
+      "play",
+      "stop",
+      "r"
+    ],
+    "caption": "a black square with a white square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayTrackNext.svg",
+    "component_id": "cg:CgPlayTrackNext",
+    "aliases": [
+      "cg",
+      "play",
+      "track",
+      "next"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayTrackNextO.svg",
+    "component_id": "cg:CgPlayTrackNextO",
+    "aliases": [
+      "cg",
+      "play",
+      "track",
+      "next",
+      "o"
+    ],
+    "caption": "a black and white image of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayTrackNextR.svg",
+    "component_id": "cg:CgPlayTrackNextR",
+    "aliases": [
+      "cg",
+      "play",
+      "track",
+      "next",
+      "r"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayTrackPrev.svg",
+    "component_id": "cg:CgPlayTrackPrev",
+    "aliases": [
+      "cg",
+      "play",
+      "track",
+      "prev"
+    ],
+    "caption": "a black and white image of the letter k",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayTrackPrevO.svg",
+    "component_id": "cg:CgPlayTrackPrevO",
+    "aliases": [
+      "cg",
+      "play",
+      "track",
+      "prev",
+      "o"
+    ],
+    "caption": "a black and white image of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlayTrackPrevR.svg",
+    "component_id": "cg:CgPlayTrackPrevR",
+    "aliases": [
+      "cg",
+      "play",
+      "track",
+      "prev",
+      "r"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPlug.svg",
+    "component_id": "cg:CgPlug",
+    "aliases": [
+      "cg",
+      "plug"
+    ],
+    "caption": "a black and white icon of a plug",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPocket.svg",
+    "component_id": "cg:CgPocket",
+    "aliases": [
+      "cg",
+      "pocket"
+    ],
+    "caption": "a black and white icon of a shield with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPokemon.svg",
+    "component_id": "cg:CgPokemon",
+    "aliases": [
+      "cg",
+      "pokemon"
+    ],
+    "caption": "a black and white image of a poke ball",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPolaroid.svg",
+    "component_id": "cg:CgPolaroid",
+    "aliases": [
+      "cg",
+      "polaroid"
+    ],
+    "caption": "a black and white photo frame icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPoll.svg",
+    "component_id": "cg:CgPoll",
+    "aliases": [
+      "cg",
+      "poll"
+    ],
+    "caption": "a black and white icon with a bar graph",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPresentation.svg",
+    "component_id": "cg:CgPresentation",
+    "aliases": [
+      "cg",
+      "presentation"
+    ],
+    "caption": "a black and white circular logo with a circle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPrinter.svg",
+    "component_id": "cg:CgPrinter",
+    "aliases": [
+      "cg",
+      "printer"
+    ],
+    "caption": "a black and white icon of a computer",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgProductHunt.svg",
+    "component_id": "cg:CgProductHunt",
+    "aliases": [
+      "cg",
+      "product",
+      "hunt"
+    ],
+    "caption": "a black and white image of the letter p",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgProfile.svg",
+    "component_id": "cg:CgProfile",
+    "aliases": [
+      "cg",
+      "profile"
+    ],
+    "caption": "a black and white image of a person in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPullClear.svg",
+    "component_id": "cg:CgPullClear",
+    "aliases": [
+      "cg",
+      "pull",
+      "clear"
+    ],
+    "caption": "a black and white image of an equal sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronDown.svg",
+    "component_id": "cg:CgPushChevronDown",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "down"
+    ],
+    "caption": "a black and white image of the letter x",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronDownO.svg",
+    "component_id": "cg:CgPushChevronDownO",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "down",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronDownR.svg",
+    "component_id": "cg:CgPushChevronDownR",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "down",
+      "r"
+    ],
+    "caption": "a black and white icon of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronLeft.svg",
+    "component_id": "cg:CgPushChevronLeft",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "left"
+    ],
+    "caption": "a black and white image of the letter k",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronLeftO.svg",
+    "component_id": "cg:CgPushChevronLeftO",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "left",
+      "o"
+    ],
+    "caption": "a black and white image of the letter k",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronLeftR.svg",
+    "component_id": "cg:CgPushChevronLeftR",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "left",
+      "r"
+    ],
+    "caption": "a black and white square with the letter k in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronRight.svg",
+    "component_id": "cg:CgPushChevronRight",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "right"
+    ],
+    "caption": "a black and white image of the letter k",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronRightO.svg",
+    "component_id": "cg:CgPushChevronRightO",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "right",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronRightR.svg",
+    "component_id": "cg:CgPushChevronRightR",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "right",
+      "r"
+    ],
+    "caption": "a black and white image of a button with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronUp.svg",
+    "component_id": "cg:CgPushChevronUp",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "up"
+    ],
+    "caption": "a black and white image of a japanese symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronUpO.svg",
+    "component_id": "cg:CgPushChevronUpO",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "up",
+      "o"
+    ],
+    "caption": "a black and white image of an arrow in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushChevronUpR.svg",
+    "component_id": "cg:CgPushChevronUpR",
+    "aliases": [
+      "cg",
+      "push",
+      "chevron",
+      "up",
+      "r"
+    ],
+    "caption": "a black and white square with an arrow in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushDown.svg",
+    "component_id": "cg:CgPushDown",
+    "aliases": [
+      "cg",
+      "push",
+      "down"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushLeft.svg",
+    "component_id": "cg:CgPushLeft",
+    "aliases": [
+      "cg",
+      "push",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushRight.svg",
+    "component_id": "cg:CgPushRight",
+    "aliases": [
+      "cg",
+      "push",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgPushUp.svg",
+    "component_id": "cg:CgPushUp",
+    "aliases": [
+      "cg",
+      "push",
+      "up"
+    ],
+    "caption": "a black arrow pointing up in the middle of a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgQr.svg",
+    "component_id": "cg:CgQr",
+    "aliases": [
+      "cg",
+      "qr"
+    ],
+    "caption": "a black and white square with four squares in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgQuote.svg",
+    "component_id": "cg:CgQuote",
+    "aliases": [
+      "cg",
+      "quote"
+    ],
+    "caption": "a black and white image of a black and white logo",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgQuoteO.svg",
+    "component_id": "cg:CgQuoteO",
+    "aliases": [
+      "cg",
+      "quote",
+      "o"
+    ],
+    "caption": "a black and white square icon with a black and white square",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRadioCheck.svg",
+    "component_id": "cg:CgRadioCheck",
+    "aliases": [
+      "cg",
+      "radio",
+      "check"
+    ],
+    "caption": "a black circle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRadioChecked.svg",
+    "component_id": "cg:CgRadioChecked",
+    "aliases": [
+      "cg",
+      "radio",
+      "checked"
+    ],
+    "caption": "a black and white image of an eye in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRatio.svg",
+    "component_id": "cg:CgRatio",
+    "aliases": [
+      "cg",
+      "ratio"
+    ],
+    "caption": "a black and white icon with a square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRead.svg",
+    "component_id": "cg:CgRead",
+    "aliases": [
+      "cg",
+      "read"
+    ],
+    "caption": "a black and white image of a pair of glasses",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgReadme.svg",
+    "component_id": "cg:CgReadme",
+    "aliases": [
+      "cg",
+      "readme"
+    ],
+    "caption": "an open book icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRecord.svg",
+    "component_id": "cg:CgRecord",
+    "aliases": [
+      "cg",
+      "record"
+    ],
+    "caption": "a black and white image of an eye in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRedo.svg",
+    "component_id": "cg:CgRedo",
+    "aliases": [
+      "cg",
+      "redo"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRemote.svg",
+    "component_id": "cg:CgRemote",
+    "aliases": [
+      "cg",
+      "remote"
+    ],
+    "caption": "a black and white image of the letter x",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRemove.svg",
+    "component_id": "cg:CgRemove",
+    "aliases": [
+      "cg",
+      "remove"
+    ],
+    "caption": "a black and white image of an empty circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRemoveR.svg",
+    "component_id": "cg:CgRemoveR",
+    "aliases": [
+      "cg",
+      "remove",
+      "r"
+    ],
+    "caption": "a square icon with a black line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRename.svg",
+    "component_id": "cg:CgRename",
+    "aliases": [
+      "cg",
+      "rename"
+    ],
+    "caption": "a black and white logo with the letters c and p",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgReorder.svg",
+    "component_id": "cg:CgReorder",
+    "aliases": [
+      "cg",
+      "reorder"
+    ],
+    "caption": "a black and white icon of a key",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRepeat.svg",
+    "component_id": "cg:CgRepeat",
+    "aliases": [
+      "cg",
+      "repeat"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRing.svg",
+    "component_id": "cg:CgRing",
+    "aliases": [
+      "cg",
+      "ring"
+    ],
+    "caption": "a black and white circle with a diamond in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRowFirst.svg",
+    "component_id": "cg:CgRowFirst",
+    "aliases": [
+      "cg",
+      "row",
+      "first"
+    ],
+    "caption": "an image of a black and gray line on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRowLast.svg",
+    "component_id": "cg:CgRowLast",
+    "aliases": [
+      "cg",
+      "row",
+      "last"
+    ],
+    "caption": "an image of a black and gray button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgRuler.svg",
+    "component_id": "cg:CgRuler",
+    "aliases": [
+      "cg",
+      "ruler"
+    ],
+    "caption": "a black and white icon of a ruler",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSandClock.svg",
+    "component_id": "cg:CgSandClock",
+    "aliases": [
+      "cg",
+      "sand",
+      "clock"
+    ],
+    "caption": "a black and white image of an hourglass",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgScan.svg",
+    "component_id": "cg:CgScan",
+    "aliases": [
+      "cg",
+      "scan"
+    ],
+    "caption": "a black and white logo with the letter d in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgScreen.svg",
+    "component_id": "cg:CgScreen",
+    "aliases": [
+      "cg",
+      "screen"
+    ],
+    "caption": "a computer monitor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgScreenMirror.svg",
+    "component_id": "cg:CgScreenMirror",
+    "aliases": [
+      "cg",
+      "screen",
+      "mirror"
+    ],
+    "caption": "a black and white image of a triangle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgScreenShot.svg",
+    "component_id": "cg:CgScreenShot",
+    "aliases": [
+      "cg",
+      "screen",
+      "shot"
+    ],
+    "caption": "a black and white image of a rectangle with squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgScreenWide.svg",
+    "component_id": "cg:CgScreenWide",
+    "aliases": [
+      "cg",
+      "screen",
+      "wide"
+    ],
+    "caption": "a computer monitor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgScrollH.svg",
+    "component_id": "cg:CgScrollH",
+    "aliases": [
+      "cg",
+      "scroll",
+      "h"
+    ],
+    "caption": "a black and white logo with two arrows",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgScrollV.svg",
+    "component_id": "cg:CgScrollV",
+    "aliases": [
+      "cg",
+      "scroll",
+      "v"
+    ],
+    "caption": "a black and white logo with an arrow in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSearch.svg",
+    "component_id": "cg:CgSearch",
+    "aliases": [
+      "cg",
+      "search"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSearchFound.svg",
+    "component_id": "cg:CgSearchFound",
+    "aliases": [
+      "cg",
+      "search",
+      "found"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSearchLoading.svg",
+    "component_id": "cg:CgSearchLoading",
+    "aliases": [
+      "cg",
+      "search",
+      "loading"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSelect.svg",
+    "component_id": "cg:CgSelect",
+    "aliases": [
+      "cg",
+      "select"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSelectO.svg",
+    "component_id": "cg:CgSelectO",
+    "aliases": [
+      "cg",
+      "select",
+      "o"
+    ],
+    "caption": "a black and white circle with the letter c in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSelectR.svg",
+    "component_id": "cg:CgSelectR",
+    "aliases": [
+      "cg",
+      "select",
+      "r"
+    ],
+    "caption": "a black and white square with an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgServer.svg",
+    "component_id": "cg:CgServer",
+    "aliases": [
+      "cg",
+      "server"
+    ],
+    "caption": "an icon of a computer on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgServerless.svg",
+    "component_id": "cg:CgServerless",
+    "aliases": [
+      "cg",
+      "serverless"
+    ],
+    "caption": "a black and white image of a black and white symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShapeCircle.svg",
+    "component_id": "cg:CgShapeCircle",
+    "aliases": [
+      "cg",
+      "shape",
+      "circle"
+    ],
+    "caption": "a black circle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShapeHalfCircle.svg",
+    "component_id": "cg:CgShapeHalfCircle",
+    "aliases": [
+      "cg",
+      "shape",
+      "half",
+      "circle"
+    ],
+    "caption": "a black and white image of the letter c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShapeHexagon.svg",
+    "component_id": "cg:CgShapeHexagon",
+    "aliases": [
+      "cg",
+      "shape",
+      "hexagon"
+    ],
+    "caption": "a black and white hexagon is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShapeRhombus.svg",
+    "component_id": "cg:CgShapeRhombus",
+    "aliases": [
+      "cg",
+      "shape",
+      "rhombus"
+    ],
+    "caption": "a black and white square with a diamond in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShapeSquare.svg",
+    "component_id": "cg:CgShapeSquare",
+    "aliases": [
+      "cg",
+      "shape",
+      "square"
+    ],
+    "caption": "a black square on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShapeTriangle.svg",
+    "component_id": "cg:CgShapeTriangle",
+    "aliases": [
+      "cg",
+      "shape",
+      "triangle"
+    ],
+    "caption": "a triangle is shown in black on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShapeZigzag.svg",
+    "component_id": "cg:CgShapeZigzag",
+    "aliases": [
+      "cg",
+      "shape",
+      "zigzag"
+    ],
+    "caption": "a black and white logo with the letter w",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShare.svg",
+    "component_id": "cg:CgShare",
+    "aliases": [
+      "cg",
+      "share"
+    ],
+    "caption": "a black and white icon of two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShield.svg",
+    "component_id": "cg:CgShield",
+    "aliases": [
+      "cg",
+      "shield"
+    ],
+    "caption": "a black and white image of the letter d",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShoppingBag.svg",
+    "component_id": "cg:CgShoppingBag",
+    "aliases": [
+      "cg",
+      "shopping",
+      "bag"
+    ],
+    "caption": "a black and white icon of a shopping bag",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShoppingCart.svg",
+    "component_id": "cg:CgShoppingCart",
+    "aliases": [
+      "cg",
+      "shopping",
+      "cart"
+    ],
+    "caption": "a shopping cart icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShortcut.svg",
+    "component_id": "cg:CgShortcut",
+    "aliases": [
+      "cg",
+      "shortcut"
+    ],
+    "caption": "a black and white icon with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgShutterstock.svg",
+    "component_id": "cg:CgShutterstock",
+    "aliases": [
+      "cg",
+      "shutterstock"
+    ],
+    "caption": "a square black and white icon with a square shape",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSidebar.svg",
+    "component_id": "cg:CgSidebar",
+    "aliases": [
+      "cg",
+      "sidebar"
+    ],
+    "caption": "a black square with the letter i in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSidebarOpen.svg",
+    "component_id": "cg:CgSidebarOpen",
+    "aliases": [
+      "cg",
+      "sidebar",
+      "open"
+    ],
+    "caption": "a black square on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSidebarRight.svg",
+    "component_id": "cg:CgSidebarRight",
+    "aliases": [
+      "cg",
+      "sidebar",
+      "right"
+    ],
+    "caption": "a black square with the letter i in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSignal.svg",
+    "component_id": "cg:CgSignal",
+    "aliases": [
+      "cg",
+      "signal"
+    ],
+    "caption": "a bar graph icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSize.svg",
+    "component_id": "cg:CgSize",
+    "aliases": [
+      "cg",
+      "size"
+    ],
+    "caption": "a black and white icon with three squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSketch.svg",
+    "component_id": "cg:CgSketch",
+    "aliases": [
+      "cg",
+      "sketch"
+    ],
+    "caption": "a black and white logo with the letter e in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSlack.svg",
+    "component_id": "cg:CgSlack",
+    "aliases": [
+      "cg",
+      "slack"
+    ],
+    "caption": "a black and white logo with four circles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSleep.svg",
+    "component_id": "cg:CgSleep",
+    "aliases": [
+      "cg",
+      "sleep"
+    ],
+    "caption": "a black and white image of a circle with a line through it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmartHomeBoiler.svg",
+    "component_id": "cg:CgSmartHomeBoiler",
+    "aliases": [
+      "cg",
+      "smart",
+      "home",
+      "boiler"
+    ],
+    "caption": "a black and white icon of a refrigerator",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmartHomeCooker.svg",
+    "component_id": "cg:CgSmartHomeCooker",
+    "aliases": [
+      "cg",
+      "smart",
+      "home",
+      "cooker"
+    ],
+    "caption": "an icon of a camera on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmartHomeHeat.svg",
+    "component_id": "cg:CgSmartHomeHeat",
+    "aliases": [
+      "cg",
+      "smart",
+      "home",
+      "heat"
+    ],
+    "caption": "a black and white logo with the letter g in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmartHomeLight.svg",
+    "component_id": "cg:CgSmartHomeLight",
+    "aliases": [
+      "cg",
+      "smart",
+      "home",
+      "light"
+    ],
+    "caption": "a black and white icon with the letter o",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmartHomeRefrigerator.svg",
+    "component_id": "cg:CgSmartHomeRefrigerator",
+    "aliases": [
+      "cg",
+      "smart",
+      "home",
+      "refrigerator"
+    ],
+    "caption": "a black and white icon of a refrigerator",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmartHomeWashMachine.svg",
+    "component_id": "cg:CgSmartHomeWashMachine",
+    "aliases": [
+      "cg",
+      "smart",
+      "home",
+      "wash",
+      "machine"
+    ],
+    "caption": "a black and white icon of a washing machine",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmartphone.svg",
+    "component_id": "cg:CgSmartphone",
+    "aliases": [
+      "cg",
+      "smartphone"
+    ],
+    "caption": "a black and white image of a cell phone",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmartphoneChip.svg",
+    "component_id": "cg:CgSmartphoneChip",
+    "aliases": [
+      "cg",
+      "smartphone",
+      "chip"
+    ],
+    "caption": "a black and white image of a computer chip",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmartphoneRam.svg",
+    "component_id": "cg:CgSmartphoneRam",
+    "aliases": [
+      "cg",
+      "smartphone",
+      "ram"
+    ],
+    "caption": "a black and white image of a computer chip",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmartphoneShake.svg",
+    "component_id": "cg:CgSmartphoneShake",
+    "aliases": [
+      "cg",
+      "smartphone",
+      "shake"
+    ],
+    "caption": "a black and white icon of a speaker",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmile.svg",
+    "component_id": "cg:CgSmile",
+    "aliases": [
+      "cg",
+      "smile"
+    ],
+    "caption": "a black and white image of a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmileMouthOpen.svg",
+    "component_id": "cg:CgSmileMouthOpen",
+    "aliases": [
+      "cg",
+      "smile",
+      "mouth",
+      "open"
+    ],
+    "caption": "a black and white image of a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmileNeutral.svg",
+    "component_id": "cg:CgSmileNeutral",
+    "aliases": [
+      "cg",
+      "smile",
+      "neutral"
+    ],
+    "caption": "a black and white image of a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmileNoMouth.svg",
+    "component_id": "cg:CgSmileNoMouth",
+    "aliases": [
+      "cg",
+      "smile",
+      "no",
+      "mouth"
+    ],
+    "caption": "a black and white image of a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmileNone.svg",
+    "component_id": "cg:CgSmileNone",
+    "aliases": [
+      "cg",
+      "smile",
+      "none"
+    ],
+    "caption": "a black and white image of a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmileSad.svg",
+    "component_id": "cg:CgSmileSad",
+    "aliases": [
+      "cg",
+      "smile",
+      "sad"
+    ],
+    "caption": "a black and white image of a sad face",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSmileUpside.svg",
+    "component_id": "cg:CgSmileUpside",
+    "aliases": [
+      "cg",
+      "smile",
+      "upside"
+    ],
+    "caption": "a black and white image of a smiley face in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSoftwareDownload.svg",
+    "component_id": "cg:CgSoftwareDownload",
+    "aliases": [
+      "cg",
+      "software",
+      "download"
+    ],
+    "caption": "a black and white icon of a down arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSoftwareUpload.svg",
+    "component_id": "cg:CgSoftwareUpload",
+    "aliases": [
+      "cg",
+      "software",
+      "upload"
+    ],
+    "caption": "a black and white image of an up arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSortAz.svg",
+    "component_id": "cg:CgSortAz",
+    "aliases": [
+      "cg",
+      "sort",
+      "az"
+    ],
+    "caption": "a black and white image of a black and white icon",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSortZa.svg",
+    "component_id": "cg:CgSortZa",
+    "aliases": [
+      "cg",
+      "sort",
+      "za"
+    ],
+    "caption": "a black and white image of a pyramid",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSpaceBetween.svg",
+    "component_id": "cg:CgSpaceBetween",
+    "aliases": [
+      "cg",
+      "space",
+      "between"
+    ],
+    "caption": "a black and white image of the letter i",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSpaceBetweenV.svg",
+    "component_id": "cg:CgSpaceBetweenV",
+    "aliases": [
+      "cg",
+      "space",
+      "between",
+      "v"
+    ],
+    "caption": "a black and white symbol for the letter e",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSpectrum.svg",
+    "component_id": "cg:CgSpectrum",
+    "aliases": [
+      "cg",
+      "spectrum"
+    ],
+    "caption": "a black and white image of a curve",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSpinner.svg",
+    "component_id": "cg:CgSpinner",
+    "aliases": [
+      "cg",
+      "spinner"
+    ],
+    "caption": "an image of a black and white circle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSpinnerAlt.svg",
+    "component_id": "cg:CgSpinnerAlt",
+    "aliases": [
+      "cg",
+      "spinner",
+      "alt"
+    ],
+    "caption": "a black curved line on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSpinnerTwo.svg",
+    "component_id": "cg:CgSpinnerTwo",
+    "aliases": [
+      "cg",
+      "spinner",
+      "two"
+    ],
+    "caption": "a black and white circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSpinnerTwoAlt.svg",
+    "component_id": "cg:CgSpinnerTwoAlt",
+    "aliases": [
+      "cg",
+      "spinner",
+      "two",
+      "alt"
+    ],
+    "caption": "a black and white circle with the letter c in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSquare.svg",
+    "component_id": "cg:CgSquare",
+    "aliases": [
+      "cg",
+      "square"
+    ],
+    "caption": "a square black and white icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgStack.svg",
+    "component_id": "cg:CgStack",
+    "aliases": [
+      "cg",
+      "stack"
+    ],
+    "caption": "a black and white image of three squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgStark.svg",
+    "component_id": "cg:CgStark",
+    "aliases": [
+      "cg",
+      "stark"
+    ],
+    "caption": "a black and white logo with the letter d in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgStopwatch.svg",
+    "component_id": "cg:CgStopwatch",
+    "aliases": [
+      "cg",
+      "stopwatch"
+    ],
+    "caption": "a black and white icon of a stopwatch",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgStories.svg",
+    "component_id": "cg:CgStories",
+    "aliases": [
+      "cg",
+      "stories"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgStudio.svg",
+    "component_id": "cg:CgStudio",
+    "aliases": [
+      "cg",
+      "studio"
+    ],
+    "caption": "a square with a black square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgStyle.svg",
+    "component_id": "cg:CgStyle",
+    "aliases": [
+      "cg",
+      "style"
+    ],
+    "caption": "a black and white image of two squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSun.svg",
+    "component_id": "cg:CgSun",
+    "aliases": [
+      "cg",
+      "sun"
+    ],
+    "caption": "a black and white icon of a sun",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSupport.svg",
+    "component_id": "cg:CgSupport",
+    "aliases": [
+      "cg",
+      "support"
+    ],
+    "caption": "a black and white icon of a steering wheel",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSwap.svg",
+    "component_id": "cg:CgSwap",
+    "aliases": [
+      "cg",
+      "swap"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSwapVertical.svg",
+    "component_id": "cg:CgSwapVertical",
+    "aliases": [
+      "cg",
+      "swap",
+      "vertical"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSweden.svg",
+    "component_id": "cg:CgSweden",
+    "aliases": [
+      "cg",
+      "sweden"
+    ],
+    "caption": "the flag of denmark is shown in black and white",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSwiss.svg",
+    "component_id": "cg:CgSwiss",
+    "aliases": [
+      "cg",
+      "swiss"
+    ],
+    "caption": "a white cross is shown in a black and white square",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgSync.svg",
+    "component_id": "cg:CgSync",
+    "aliases": [
+      "cg",
+      "sync"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTab.svg",
+    "component_id": "cg:CgTab",
+    "aliases": [
+      "cg",
+      "tab"
+    ],
+    "caption": "a black folder icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTag.svg",
+    "component_id": "cg:CgTag",
+    "aliases": [
+      "cg",
+      "tag"
+    ],
+    "caption": "a black and white icon of a price tag",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTally.svg",
+    "component_id": "cg:CgTally",
+    "aliases": [
+      "cg",
+      "tally"
+    ],
+    "caption": "a black and white logo with the letter t",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTapDouble.svg",
+    "component_id": "cg:CgTapDouble",
+    "aliases": [
+      "cg",
+      "tap",
+      "double"
+    ],
+    "caption": "a black and white image of a wifi symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTapSingle.svg",
+    "component_id": "cg:CgTapSingle",
+    "aliases": [
+      "cg",
+      "tap",
+      "single"
+    ],
+    "caption": "a black and white image of the letter o",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTemplate.svg",
+    "component_id": "cg:CgTemplate",
+    "aliases": [
+      "cg",
+      "template"
+    ],
+    "caption": "a black and white image of a newspaper",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTennis.svg",
+    "component_id": "cg:CgTennis",
+    "aliases": [
+      "cg",
+      "tennis"
+    ],
+    "caption": "a black and white image of a tennis ball",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTerminal.svg",
+    "component_id": "cg:CgTerminal",
+    "aliases": [
+      "cg",
+      "terminal"
+    ],
+    "caption": "a black and white image of a computer screen",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTerrain.svg",
+    "component_id": "cg:CgTerrain",
+    "aliases": [
+      "cg",
+      "terrain"
+    ],
+    "caption": "a black and white image of a triangle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgThermometer.svg",
+    "component_id": "cg:CgThermometer",
+    "aliases": [
+      "cg",
+      "thermometer"
+    ],
+    "caption": "a black and white image of an ice cream stick",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgThermostat.svg",
+    "component_id": "cg:CgThermostat",
+    "aliases": [
+      "cg",
+      "thermostat"
+    ],
+    "caption": "thermometer icon, thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer thermometer therm",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTikcode.svg",
+    "component_id": "cg:CgTikcode",
+    "aliases": [
+      "cg",
+      "tikcode"
+    ],
+    "caption": "a black and white image of four squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTime.svg",
+    "component_id": "cg:CgTime",
+    "aliases": [
+      "cg",
+      "time"
+    ],
+    "caption": "a black and white clock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTimelapse.svg",
+    "component_id": "cg:CgTimelapse",
+    "aliases": [
+      "cg",
+      "timelapse"
+    ],
+    "caption": "a black and white image of a clock",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTimer.svg",
+    "component_id": "cg:CgTimer",
+    "aliases": [
+      "cg",
+      "timer"
+    ],
+    "caption": "a black and white icon of a power button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgToday.svg",
+    "component_id": "cg:CgToday",
+    "aliases": [
+      "cg",
+      "today"
+    ],
+    "caption": "a black and white icon of a refrigerator",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgToggleOff.svg",
+    "component_id": "cg:CgToggleOff",
+    "aliases": [
+      "cg",
+      "toggle",
+      "off"
+    ],
+    "caption": "a black and white icon of a button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgToggleOn.svg",
+    "component_id": "cg:CgToggleOn",
+    "aliases": [
+      "cg",
+      "toggle",
+      "on"
+    ],
+    "caption": "a black and white icon of a button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgToggleSquare.svg",
+    "component_id": "cg:CgToggleSquare",
+    "aliases": [
+      "cg",
+      "toggle",
+      "square"
+    ],
+    "caption": "a black and white icon with a square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgToggleSquareOff.svg",
+    "component_id": "cg:CgToggleSquareOff",
+    "aliases": [
+      "cg",
+      "toggle",
+      "square",
+      "off"
+    ],
+    "caption": "a black and white image of a credit card",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgToolbarBottom.svg",
+    "component_id": "cg:CgToolbarBottom",
+    "aliases": [
+      "cg",
+      "toolbar",
+      "bottom"
+    ],
+    "caption": "a black and white icon of a door",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgToolbarLeft.svg",
+    "component_id": "cg:CgToolbarLeft",
+    "aliases": [
+      "cg",
+      "toolbar",
+      "left"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgToolbarRight.svg",
+    "component_id": "cg:CgToolbarRight",
+    "aliases": [
+      "cg",
+      "toolbar",
+      "right"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgToolbarTop.svg",
+    "component_id": "cg:CgToolbarTop",
+    "aliases": [
+      "cg",
+      "toolbar",
+      "top"
+    ],
+    "caption": "a black and white icon of a credit card",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgToolbox.svg",
+    "component_id": "cg:CgToolbox",
+    "aliases": [
+      "cg",
+      "toolbox"
+    ],
+    "caption": "a briefcase icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTouchpad.svg",
+    "component_id": "cg:CgTouchpad",
+    "aliases": [
+      "cg",
+      "touchpad"
+    ],
+    "caption": "a black and white icon of a computer monitor",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTrack.svg",
+    "component_id": "cg:CgTrack",
+    "aliases": [
+      "cg",
+      "track"
+    ],
+    "caption": "a black and white image of a circular object",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTranscript.svg",
+    "component_id": "cg:CgTranscript",
+    "aliases": [
+      "cg",
+      "transcript"
+    ],
+    "caption": "a black and white icon of a credit card",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTrash.svg",
+    "component_id": "cg:CgTrash",
+    "aliases": [
+      "cg",
+      "trash"
+    ],
+    "caption": "a trash can icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTrashEmpty.svg",
+    "component_id": "cg:CgTrashEmpty",
+    "aliases": [
+      "cg",
+      "trash",
+      "empty"
+    ],
+    "caption": "a black and white icon of a trash can",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTree.svg",
+    "component_id": "cg:CgTree",
+    "aliases": [
+      "cg",
+      "tree"
+    ],
+    "caption": "a black and white image of a letter q",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTrees.svg",
+    "component_id": "cg:CgTrees",
+    "aliases": [
+      "cg",
+      "trees"
+    ],
+    "caption": "a black and white icon of two sticks",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTrello.svg",
+    "component_id": "cg:CgTrello",
+    "aliases": [
+      "cg",
+      "trello"
+    ],
+    "caption": "a black and white icon with two squares",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTrending.svg",
+    "component_id": "cg:CgTrending",
+    "aliases": [
+      "cg",
+      "trending"
+    ],
+    "caption": "a black and white image of an upward arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTrendingDown.svg",
+    "component_id": "cg:CgTrendingDown",
+    "aliases": [
+      "cg",
+      "trending",
+      "down"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTrophy.svg",
+    "component_id": "cg:CgTrophy",
+    "aliases": [
+      "cg",
+      "trophy"
+    ],
+    "caption": "a microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTv.svg",
+    "component_id": "cg:CgTv",
+    "aliases": [
+      "cg",
+      "tv"
+    ],
+    "caption": "an icon of a television on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTwilio.svg",
+    "component_id": "cg:CgTwilio",
+    "aliases": [
+      "cg",
+      "twilio"
+    ],
+    "caption": "a black and white icon of a button with four dots",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgTwitter.svg",
+    "component_id": "cg:CgTwitter",
+    "aliases": [
+      "cg",
+      "twitter"
+    ],
+    "caption": "a black and white image of the twitter logo",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUiKit.svg",
+    "component_id": "cg:CgUiKit",
+    "aliases": [
+      "cg",
+      "ui",
+      "kit"
+    ],
+    "caption": "a black and white image of a black and white icon",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUmbrella.svg",
+    "component_id": "cg:CgUmbrella",
+    "aliases": [
+      "cg",
+      "umbrella"
+    ],
+    "caption": "a black and white icon of an umbrella",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUnavailable.svg",
+    "component_id": "cg:CgUnavailable",
+    "aliases": [
+      "cg",
+      "unavailable"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUnblock.svg",
+    "component_id": "cg:CgUnblock",
+    "aliases": [
+      "cg",
+      "unblock"
+    ],
+    "caption": "a black and white image of a no symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUndo.svg",
+    "component_id": "cg:CgUndo",
+    "aliases": [
+      "cg",
+      "undo"
+    ],
+    "caption": "a black and white image of the letter c",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUnfold.svg",
+    "component_id": "cg:CgUnfold",
+    "aliases": [
+      "cg",
+      "unfold"
+    ],
+    "caption": "a black and white silhouette of a bowl on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUnsplash.svg",
+    "component_id": "cg:CgUnsplash",
+    "aliases": [
+      "cg",
+      "unsplash"
+    ],
+    "caption": "a black and white square with a black square in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUsb.svg",
+    "component_id": "cg:CgUsb",
+    "aliases": [
+      "cg",
+      "usb"
+    ],
+    "caption": "a black and white icon of a usb drive",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUsbC.svg",
+    "component_id": "cg:CgUsbC",
+    "aliases": [
+      "cg",
+      "usb",
+      "c"
+    ],
+    "caption": "a black and white image of a black and white logo",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUser.svg",
+    "component_id": "cg:CgUser",
+    "aliases": [
+      "cg",
+      "user"
+    ],
+    "caption": "a black and white icon of a person",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUserAdd.svg",
+    "component_id": "cg:CgUserAdd",
+    "aliases": [
+      "cg",
+      "user",
+      "add"
+    ],
+    "caption": "a black and white image of a person with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUserList.svg",
+    "component_id": "cg:CgUserList",
+    "aliases": [
+      "cg",
+      "user",
+      "list"
+    ],
+    "caption": "a black and white icon of a person",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUserRemove.svg",
+    "component_id": "cg:CgUserRemove",
+    "aliases": [
+      "cg",
+      "user",
+      "remove"
+    ],
+    "caption": "a black and white image of a person with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgUserlane.svg",
+    "component_id": "cg:CgUserlane",
+    "aliases": [
+      "cg",
+      "userlane"
+    ],
+    "caption": "a black and white logo with the letter u in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgVercel.svg",
+    "component_id": "cg:CgVercel",
+    "aliases": [
+      "cg",
+      "vercel"
+    ],
+    "caption": "a black triangle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgViewCols.svg",
+    "component_id": "cg:CgViewCols",
+    "aliases": [
+      "cg",
+      "view",
+      "cols"
+    ],
+    "caption": "a black and white image of a black and white icon",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgViewComfortable.svg",
+    "component_id": "cg:CgViewComfortable",
+    "aliases": [
+      "cg",
+      "view",
+      "comfortable"
+    ],
+    "caption": "a black and white icon of a credit card",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgViewDay.svg",
+    "component_id": "cg:CgViewDay",
+    "aliases": [
+      "cg",
+      "view",
+      "day"
+    ],
+    "caption": "a black and white icon of a window",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgViewGrid.svg",
+    "component_id": "cg:CgViewGrid",
+    "aliases": [
+      "cg",
+      "view",
+      "grid"
+    ],
+    "caption": "a black and white icon of a grid",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgViewList.svg",
+    "component_id": "cg:CgViewList",
+    "aliases": [
+      "cg",
+      "view",
+      "list"
+    ],
+    "caption": "a black and white icon of a checkbook",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgViewMonth.svg",
+    "component_id": "cg:CgViewMonth",
+    "aliases": [
+      "cg",
+      "view",
+      "month"
+    ],
+    "caption": "a black and white icon of a grid",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgViewSplit.svg",
+    "component_id": "cg:CgViewSplit",
+    "aliases": [
+      "cg",
+      "view",
+      "split"
+    ],
+    "caption": "a black and white icon of a door",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgVinyl.svg",
+    "component_id": "cg:CgVinyl",
+    "aliases": [
+      "cg",
+      "vinyl"
+    ],
+    "caption": "a black and white image of a record",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgVoicemail.svg",
+    "component_id": "cg:CgVoicemail",
+    "aliases": [
+      "cg",
+      "voicemail"
+    ],
+    "caption": "a black and white logo with two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgVoicemailO.svg",
+    "component_id": "cg:CgVoicemailO",
+    "aliases": [
+      "cg",
+      "voicemail",
+      "o"
+    ],
+    "caption": "a black and white logo with two eyes in it",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgVoicemailR.svg",
+    "component_id": "cg:CgVoicemailR",
+    "aliases": [
+      "cg",
+      "voicemail",
+      "r"
+    ],
+    "caption": "a black and white icon of a cassette",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgVolume.svg",
+    "component_id": "cg:CgVolume",
+    "aliases": [
+      "cg",
+      "volume"
+    ],
+    "caption": "a black and white icon of a speaker",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgWebcam.svg",
+    "component_id": "cg:CgWebcam",
+    "aliases": [
+      "cg",
+      "webcam"
+    ],
+    "caption": "a black and white image of a camera on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgWebsite.svg",
+    "component_id": "cg:CgWebsite",
+    "aliases": [
+      "cg",
+      "website"
+    ],
+    "caption": "a black and white icon of a calculator",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgWindows.svg",
+    "component_id": "cg:CgWindows",
+    "aliases": [
+      "cg",
+      "windows"
+    ],
+    "caption": "the windows logo is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgWorkAlt.svg",
+    "component_id": "cg:CgWorkAlt",
+    "aliases": [
+      "cg",
+      "work",
+      "alt"
+    ],
+    "caption": "a briefcase icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgYinyang.svg",
+    "component_id": "cg:CgYinyang",
+    "aliases": [
+      "cg",
+      "yinyang"
+    ],
+    "caption": "a black and white yin symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgYoutube.svg",
+    "component_id": "cg:CgYoutube",
+    "aliases": [
+      "cg",
+      "youtube"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgZoomIn.svg",
+    "component_id": "cg:CgZoomIn",
+    "aliases": [
+      "cg",
+      "zoom",
+      "in"
+    ],
+    "caption": "a magnifying icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "cg/CgZoomOut.svg",
+    "component_id": "cg:CgZoomOut",
+    "aliases": [
+      "cg",
+      "zoom",
+      "out"
+    ],
+    "caption": "a magnifying glass icon with an empty sign",
+    "colors": []
+  }
+]

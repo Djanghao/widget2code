@@ -1,0 +1,366 @@
+{
+  "widget": {
+    "backgroundColor": "#f2f2f7",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 48,
+                "color": "#000000",
+                "name": "sf:iphone"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000"
+              },
+              "content": "Dua's iPhone 11 Pro"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "50%"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 32,
+                "color": "#34C759",
+                "name": "sf:battery.50"
+              }
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#d1d1d6",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 48,
+                "color": "#000000",
+                "name": "sf:applewatch"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000"
+              },
+              "content": "Dua's Apple Watch"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "85%"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 32,
+                "color": "#34C759",
+                "name": "sf:battery.100"
+              }
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#d1d1d6",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 48,
+                "color": "#000000",
+                "name": "sf:airpods"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000"
+              },
+              "content": "Dua's AirPods"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "36%"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 32,
+                "color": "#34C759",
+                "name": "sf:battery.25"
+              }
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#d1d1d6",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 48,
+                "color": "#000000",
+                "name": "sf:ipad"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000"
+              },
+              "content": "Dua's iPad"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "100%"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 32,
+                "color": "#34C759",
+                "name": "sf:battery.100"
+              }
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#d1d1d6",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 48,
+                "color": "#000000",
+                "name": "sf:airpodspro"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000"
+              },
+              "content": "Dua's AirPods Case"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "87%"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 32,
+                "color": "#34C759",
+                "name": "sf:battery.75"
+              }
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#d1d1d6",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 48,
+                "color": "#000000",
+                "name": "sf:airpods.gen3"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000"
+              },
+              "content": "Dua's Airpods 2"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 17,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "14%"
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 32,
+                "color": "#FF3B30",
+                "name": "sf:battery.0"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

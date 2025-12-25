@@ -1,0 +1,63 @@
+{
+  "widget": {
+    "backgroundColor": "#8EC5FC",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "padding": 24,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.4)", "backdropFilter": "blur(20px)", "borderRadius": 32, "border": "1px solid rgba(255, 255, 255, 0.5)" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "PieChart",
+              "props": {
+                "data": [30, 25, 20, 15, 10],
+                "colors": ["#FFFFFF", "rgba(255,255,255,0.8)", "rgba(255,255,255,0.6)", "rgba(255,255,255,0.4)", "rgba(255,255,255,0.2)"],
+                "innerRadius": 0.5,
+                "padAngle": 2,
+                "cornerRadius": 6,
+                "height": "100%",
+                "borderWidth": 0
+              }
+            },
+            {
+              "type": "container",
+              "props": {
+                "style": {
+                  "position": "absolute",
+                  "top": "50%",
+                  "left": "50%",
+                  "transform": "translate(-50%, -50%)",
+                  "textAlign": "center"
+                }
+              },
+              "children": [
+                { "type": "leaf", "component": "Icon", "props": { "name": "sf:chart.pie", "size": 24, "color": "#FFFFFF" } }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "center",
+          "children": [
+            { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#FFFFFF", "style": { "textShadow": "0 2px 4px rgba(0,0,0,0.1)" } }, "content": "Distribution" }
+          ]
+        }
+      ]
+    }
+  }
+}

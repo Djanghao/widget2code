@@ -1,0 +1,189 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 22,
+    "padding": 18,
+    "aspectRatio": 1.5,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 18,
+                "color": "#BF5AF2",
+                "name": "sf:moon.stars.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 15,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "Focus"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "props": {
+                "progress": 0.45,
+                "size": 100,
+                "strokeWidth": 8,
+                "color": "#BF5AF2",
+                "backgroundColor": "#2C2C2E"
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 32,
+                    "color": "#ffffff",
+                    "fontWeight": 200
+                  },
+                  "content": "27:35"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#98989F"
+                  },
+                  "content": "Remaining"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignMain": "space-around",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 20,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "Work"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#98989F"
+                  },
+                  "content": "Mode"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 20,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "3/5"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#98989F"
+                  },
+                  "content": "Sessions"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 20,
+                    "color": "#ffffff",
+                    "fontWeight": 600
+                  },
+                  "content": "2h 12m"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "props": {
+                    "fontSize": 11,
+                    "color": "#98989F"
+                  },
+                  "content": "Today"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

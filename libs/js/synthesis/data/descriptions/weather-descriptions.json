@@ -1,0 +1,182 @@
+{
+  "domain": "weather",
+  "descriptions": [
+    {
+      "id": "weather-001",
+      "prompt": "A widget showing current temperature",
+      "complexity": "simple",
+      "metrics": [
+        "temperature"
+      ]
+    },
+    {
+      "id": "weather-002",
+      "prompt": "A widget showing current weather with condition icon",
+      "complexity": "simple",
+      "metrics": [
+        "temperature",
+        "condition"
+      ]
+    },
+    {
+      "id": "weather-003",
+      "prompt": "A widget displaying temperature and location",
+      "complexity": "simple",
+      "metrics": [
+        "temperature"
+      ]
+    },
+    {
+      "id": "weather-004",
+      "prompt": "A widget showing temperature, condition, and feels like",
+      "complexity": "medium",
+      "metrics": [
+        "temperature",
+        "condition"
+      ]
+    },
+    {
+      "id": "weather-005",
+      "prompt": "A widget displaying current weather with high and low temps",
+      "complexity": "medium",
+      "metrics": [
+        "temperature"
+      ]
+    },
+    {
+      "id": "weather-006",
+      "prompt": "A widget showing hourly forecast for next 6 hours",
+      "complexity": "medium",
+      "metrics": [
+        "hourly"
+      ]
+    },
+    {
+      "id": "weather-007",
+      "prompt": "A widget displaying hourly temperature chart",
+      "complexity": "medium",
+      "metrics": [
+        "hourly"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "weather-008",
+      "prompt": "A widget showing next 3 hours with icons",
+      "complexity": "medium",
+      "metrics": [
+        "hourly"
+      ]
+    },
+    {
+      "id": "weather-009",
+      "prompt": "A widget showing 5-day forecast",
+      "complexity": "medium",
+      "metrics": [
+        "daily"
+      ]
+    },
+    {
+      "id": "weather-010",
+      "prompt": "A widget displaying weekly weather overview",
+      "complexity": "complex",
+      "metrics": [
+        "daily"
+      ]
+    },
+    {
+      "id": "weather-011",
+      "prompt": "A widget showing 3-day forecast with high/low temps",
+      "complexity": "medium",
+      "metrics": [
+        "daily"
+      ]
+    },
+    {
+      "id": "weather-012",
+      "prompt": "A widget showing humidity and wind speed",
+      "complexity": "medium",
+      "metrics": [
+        "humidity",
+        "wind"
+      ]
+    },
+    {
+      "id": "weather-013",
+      "prompt": "A widget displaying UV index and air quality",
+      "complexity": "medium",
+      "metrics": [
+        "uv",
+        "air-quality"
+      ]
+    },
+    {
+      "id": "weather-014",
+      "prompt": "A widget showing precipitation chance",
+      "complexity": "simple",
+      "metrics": [
+        "precipitation"
+      ]
+    },
+    {
+      "id": "weather-015",
+      "prompt": "A widget displaying sunrise and sunset times",
+      "complexity": "medium",
+      "metrics": [
+        "sun"
+      ]
+    },
+    {
+      "id": "weather-016",
+      "prompt": "A comprehensive weather widget with temp, condition, and forecast",
+      "complexity": "complex",
+      "metrics": [
+        "temperature",
+        "condition",
+        "daily"
+      ]
+    },
+    {
+      "id": "weather-017",
+      "prompt": "A widget showing current weather and hourly forecast",
+      "complexity": "complex",
+      "metrics": [
+        "temperature",
+        "hourly"
+      ]
+    },
+    {
+      "id": "weather-018",
+      "prompt": "A widget displaying temperature, wind, and humidity",
+      "complexity": "complex",
+      "metrics": [
+        "temperature",
+        "wind",
+        "humidity"
+      ]
+    },
+    {
+      "id": "weather-019",
+      "prompt": "A widget showing weather with precipitation radar",
+      "complexity": "complex",
+      "metrics": [
+        "temperature",
+        "precipitation"
+      ],
+      "visualization": [
+        "map"
+      ]
+    },
+    {
+      "id": "weather-020",
+      "prompt": "A minimal weather widget with just temp and icon",
+      "complexity": "simple",
+      "metrics": [
+        "temperature",
+        "condition"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "widget": {
+    "backgroundColor": "#F0EBE3",
+    "borderRadius": 20,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 20, "fontWeight": 600, "color": "#2D6A4F" },
+          "content": "Water Intake"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 400, "color": "#52796F" },
+          "content": "Horizontal with min/max"
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "props": {
+            "data": [6, 8, 7, 9, 8, 10, 9],
+            "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+            "color": "#06B6D4",
+            "backgroundColor": "transparent",
+            "orientation": "horizontal",
+            "barBorderRadius": 10,
+            "showXAxisLabels": true,
+            "showYAxisLabels": true,
+            "showValues": true,
+            "min": 0,
+            "max": 12,
+            "height": "100%",
+            "theme": "light",
+            "showXAxisTicks": true,
+            "showYAxisTicks": false,
+            "tickLineStyle": "dashed",
+            "tickLineColor": "rgba(45, 106, 79, 0.15)",
+            "xAxisTickCount": 6
+          }
+        }
+      ]
+    }
+  }
+}

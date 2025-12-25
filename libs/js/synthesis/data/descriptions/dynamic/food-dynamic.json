@@ -1,0 +1,307 @@
+{
+  "domain": "food",
+  "total": 50,
+  "generated": "2025-11-05T16:03:06.305Z",
+  "variations": [
+    {
+      "id": "food-dynamic-001",
+      "prompt": "A restaurant widget showing nutrition facts",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-002",
+      "prompt": "A recipe widget showing cooking instructions",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-003",
+      "prompt": "A restaurant widget showing restaurant rating and dietary tags",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-004",
+      "prompt": "A recipe widget showing recipe rating with nutrition chart and price range",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-005",
+      "prompt": "A delivery widget showing water intake",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-006",
+      "prompt": "A food widget showing calories with ingredients list",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-007",
+      "prompt": "A food widget showing delivery order",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-008",
+      "prompt": "A food widget showing restaurant info and reviews",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-009",
+      "prompt": "A meal plan widget showing cooking time",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-010",
+      "prompt": "A delivery widget showing cooking instructions",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-011",
+      "prompt": "A restaurant widget showing water intake",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-012",
+      "prompt": "A nutrition widget showing recipe details with nutrition chart and price range",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-013",
+      "prompt": "A food widget showing grocery list and price range",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-014",
+      "prompt": "A delivery widget showing macro nutrients with nutrition chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-015",
+      "prompt": "A restaurant widget showing cooking instructions with step-by-step guide",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-016",
+      "prompt": "A nutrition widget showing macro nutrients with rating stars",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-017",
+      "prompt": "A delivery widget showing meal history with restaurant map and dietary tags",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-018",
+      "prompt": "A delivery widget showing calories",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-019",
+      "prompt": "A food widget showing delivery order with cooking timer",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-020",
+      "prompt": "A recipe widget showing calories",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-021",
+      "prompt": "A meal plan widget showing nutrition facts with macro breakdown and dietary tags",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-022",
+      "prompt": "A meal plan widget showing restaurant rating",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-023",
+      "prompt": "A recipe widget showing calories",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-024",
+      "prompt": "A food widget showing meal history",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-025",
+      "prompt": "A nutrition widget showing delivery order with recipe photo",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-026",
+      "prompt": "A restaurant widget showing grocery list",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-027",
+      "prompt": "A recipe widget showing restaurant rating with recipe photo",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-028",
+      "prompt": "A nutrition widget showing restaurant rating",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-029",
+      "prompt": "A restaurant widget showing nutrition facts and servings count",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-030",
+      "prompt": "A delivery widget showing ingredients with rating stars and prep time",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-031",
+      "prompt": "A nutrition widget showing meal plan and dietary tags",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-032",
+      "prompt": "A restaurant widget showing ingredients",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-033",
+      "prompt": "A restaurant widget showing cooking instructions and dietary tags",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-034",
+      "prompt": "A recipe widget showing cooking time with cooking timer",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-035",
+      "prompt": "A restaurant widget showing recipe rating with ingredients list",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-036",
+      "prompt": "A delivery widget showing delivery order",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-037",
+      "prompt": "A meal plan widget showing delivery order with restaurant map and delivery ETA",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-038",
+      "prompt": "A recipe widget showing calories with calorie progress and servings count",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-039",
+      "prompt": "A meal plan widget showing restaurant rating",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-040",
+      "prompt": "A food widget showing ingredients with ingredients list",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-041",
+      "prompt": "A restaurant widget showing recipe details",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-042",
+      "prompt": "A food widget showing macro nutrients with delivery tracking",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-043",
+      "prompt": "A food widget showing delivery order and reviews",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-044",
+      "prompt": "A restaurant widget showing cooking time with recipe photo",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-045",
+      "prompt": "A delivery widget showing restaurant rating with nutrition chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-046",
+      "prompt": "A restaurant widget showing recipe details and cooking time with delivery tracking",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-047",
+      "prompt": "A meal plan widget showing restaurant info and rating with cooking timer",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-048",
+      "prompt": "A meal plan widget showing nutrition facts and calories",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-049",
+      "prompt": "A recipe widget showing meal plan and grocery list",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "food-dynamic-050",
+      "prompt": "A nutrition widget showing delivery order and tracking with ingredients list",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

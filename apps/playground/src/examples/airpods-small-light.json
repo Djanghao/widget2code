@@ -1,0 +1,150 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "space-between",
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 16,
+                "color": "#007AFF",
+                "name": "sf:airpodspro"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 13,
+                "color": "#000000",
+                "fontWeight": 600
+              },
+              "content": "AirPods Pro"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 1,
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "flex": 0,
+              "alignMain": "center",
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 4,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "props": {
+                        "size": 24,
+                        "color": "#000000",
+                        "name": "sf:airpodpro.left"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 20,
+                        "color": "#000000",
+                        "fontWeight": 300
+                      },
+                      "content": "87%"
+                    }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "col",
+                  "gap": 4,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "props": {
+                        "size": 24,
+                        "color": "#000000",
+                        "name": "sf:airpodpro.right"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "props": {
+                        "fontSize": 20,
+                        "color": "#000000",
+                        "fontWeight": 300
+                      },
+                      "content": "85%"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 4,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "size": 20,
+                "color": "#34C759",
+                "name": "sf:case.fill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": {
+                "fontSize": 16,
+                "color": "#000000",
+                "fontWeight": 500
+              },
+              "content": "92%"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

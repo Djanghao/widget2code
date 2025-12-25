@@ -1,0 +1,56 @@
+{
+  "widget": {
+    "backgroundColor": "#FF9A9E",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "padding": 16,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.3)", "backdropFilter": "blur(20px)", "borderRadius": 24, "border": "1px solid rgba(255, 255, 255, 0.4)" } },
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#FFFFFF" }, "content": "Steps" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 24, "fontWeight": 700, "color": "#FFFFFF" }, "content": "8,432" }
+              ]
+            },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:figure.walk", "size": 24, "color": "#FFFFFF" } }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 16,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.3)", "backdropFilter": "blur(20px)", "borderRadius": 24, "border": "1px solid rgba(255, 255, 255, 0.4)" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Sparkline",
+              "props": {
+                "data": [200, 400, 300, 800, 500, 900, 600, 700, 500, 800, 400, 900, 300, 800, 500, 700, 600, 800, 500, 900, 400, 800, 300, 700],
+                "color": "#FFFFFF",
+                "height": 100,
+                "width": "100%",
+                "strokeWidth": 3,
+                "fillOpacity": 0.2
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

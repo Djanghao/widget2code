@@ -1,0 +1,31 @@
+{
+  "name": "@widget-factory/cli",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "bin": {
+    "widget-factory": "./src/index.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./commands/compile": "./src/commands/compile.js",
+    "./commands/render": "./src/commands/render.js",
+    "./commands/batch-render": "./src/commands/batch-render.js",
+    "./commands/batch-generate-vqa-split": "./src/commands/batch-generate-vqa-split.js"
+  },
+  "description": "CLI tools for Widget Factory",
+  "keywords": [
+    "widget-factory",
+    "cli",
+    "compiler",
+    "renderer"
+  ],
+  "dependencies": {
+    "@widget-factory/compiler": "*",
+    "@widget-factory/renderer": "*",
+    "@widget-factory/vqa-constructor": "*",
+    "playwright": "^1.40.0",
+    "sharp": "^0.33.5"
+  },
+  "private": true
+}

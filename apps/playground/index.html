@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Widget Factory MVP</title>
+    <style>
+      /* Custom Scrollbar Styles */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #3a3a3c #1c1c1e;
+      }
+
+      /* Webkit browsers (Chrome, Safari, Edge) */
+      *::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: #1c1c1e;
+        border-radius: 5px;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background: #3a3a3c;
+        border-radius: 5px;
+        border: 2px solid #1c1c1e;
+      }
+
+      *::-webkit-scrollbar-thumb:hover {
+        background: #4a4a4c;
+      }
+
+      *::-webkit-scrollbar-corner {
+        background: #1c1c1e;
+      }
+
+      /* Loading spinner animation */
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .spinner-rotate {
+        animation: spin 1s linear infinite;
+        transform-origin: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Loading Spinner -->
+    <div id="app-loading" style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #1c1c1e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    ">
+      <svg width="64" height="64" viewBox="0 0 24 24" role="img" class="spinner-rotate">
+        <circle cx="12" cy="12" r="10" stroke="#3a3a3c" stroke-width="2" fill="none" opacity="0.25" />
+        <path d="M12 2 a10 10 0 0 1 0 20" stroke="#007AFF" stroke-width="2" stroke-linecap="round" fill="none" />
+      </svg>
+      <p style="
+        margin-top: 24px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 14px;
+        color: #8e8e93;
+      ">Loading Widget Playground...</p>
+    </div>
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

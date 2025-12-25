@@ -1,0 +1,58 @@
+{
+  "widget": {
+    "backgroundColor": "#1E3A8A",
+    "borderRadius": 20,
+    "padding": 26,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "start",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 36,
+            "fontWeight": 700,
+            "color": "#F8FAFC"
+          },
+          "content": "Business"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 36,
+            "fontWeight": 700,
+            "color": "#DBEAFE"
+          },
+          "content": "Professional"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 15,
+            "fontWeight": 600,
+            "color": "#BFDBFE"
+          },
+          "content": "Corporate excellence"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": {
+            "fontSize": 13,
+            "fontWeight": 400,
+            "color": "#93C5FD"
+          },
+          "content": "Trust and reliability"
+        }
+      ]
+    }
+  }
+}

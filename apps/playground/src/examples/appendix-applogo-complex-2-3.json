@@ -1,0 +1,45 @@
+{
+  "widget": {
+    "backgroundColor": "#21D4FD",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "alignMain": "center",
+          "alignCross": "center",
+          "padding": 24,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.4)", "backdropFilter": "blur(20px)", "borderRadius": 32, "border": "1px solid rgba(255, 255, 255, 0.5)" } },
+          "children": [
+            {
+              "type": "container",
+              "padding": 20,
+              "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.6)", "borderRadius": 30, "boxShadow": "0 8px 32px 0 rgba(31, 38, 135, 0.1)" } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "AppLogo",
+                  "props": {
+                    "name": "si:SiInstagram",
+                    "size": 80,
+                    "color": "#FFFFFF",
+                    "style": { "borderRadius": 16 }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        { "type": "leaf", "component": "Text", "props": { "fontSize": 20, "fontWeight": 700, "color": "#FFFFFF", "textAlign": "center", "style": { "textShadow": "0 2px 4px rgba(0,0,0,0.1)" } }, "content": "instagram" }
+      ]
+    }
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "domain": "food",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "food-img-001",
+      "prompt": "A recipe widget with food photo, recipe name, cooking time, and difficulty",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "finished dish photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "food-img-002",
+      "prompt": "A restaurant widget with restaurant photo, name, cuisine type, and rating",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "restaurant exterior or logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-003",
+      "prompt": "A food delivery widget with meal photo, order status, estimated arrival, and driver location",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "food dish photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-004",
+      "prompt": "A meal plan widget with dish photos, daily meals, and nutritional summary",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "meal grid photos",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "food-img-005",
+      "prompt": "A cooking timer widget with dish image, timer countdown, and next step",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "cooking pot or dish",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-006",
+      "prompt": "A grocery list widget with food items photos, quantities, and store sections",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "grocery items",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-007",
+      "prompt": "A wine pairing widget with wine bottle photo, wine name, food pairing, and tasting notes",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "wine bottle and label",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-008",
+      "prompt": "A restaurant reservation widget with restaurant photo, date, time, and party size",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "restaurant interior or ambiance",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "food-img-009",
+      "prompt": "A food diary widget with meal photo, meal type, time, and calories",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "meal photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-010",
+      "prompt": "A chef profile widget with chef photo, specialty, signature dish, and rating",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "chef portrait photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-011",
+      "prompt": "A cooking class widget with class photo, instructor, cuisine type, and date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "cooking class or kitchen photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "food-img-012",
+      "prompt": "A menu item widget with dish photo, name, ingredients, price, and allergens",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "menu dish photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-013",
+      "prompt": "A food review widget with dish photo, reviewer, rating, and comment",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "reviewed dish photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-014",
+      "prompt": "A cocktail recipe widget with cocktail photo, name, ingredients, and garnish",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "cocktail or drink photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "food-img-015",
+      "prompt": "A farmers market widget with produce photo, market name, location, and hours",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "fresh produce or market stall",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-016",
+      "prompt": "A food truck widget with truck photo, menu highlight, location, and hours",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "food truck exterior",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "food-img-017",
+      "prompt": "A dietary preference widget with preference icon, restricted foods, and alternatives",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "dietary symbol or icon",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-018",
+      "prompt": "A coffee order widget with coffee photo, drink name, customizations, and pickup time",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "coffee drink photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-019",
+      "prompt": "A meal prep widget with container photo, meal name, prep date, and storage instructions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "meal prep containers",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-020",
+      "prompt": "A baking widget with baked goods photo, recipe, temperature, and timer",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "baked goods or pastries",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "food-img-021",
+      "prompt": "A spice guide widget with spice photo, name, flavor profile, and usage tips",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "spice or herb photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-022",
+      "prompt": "A food festival widget with festival banner, dates, vendors, and ticket info",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "food festival poster or scene",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "food-img-023",
+      "prompt": "A leftover tracker widget with food photo, storage date, expiry, and recipe ideas",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "leftover food in container",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-024",
+      "prompt": "A food subscription widget with box photo, items preview, delivery date, and plan",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "subscription box with food items",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "food-img-025",
+      "prompt": "A dining deals widget with restaurant photo, deal description, discount, and validity",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "restaurant or food deal photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-026",
+      "prompt": "A cookbook widget with book cover, cookbook name, author, and featured recipes",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "cookbook cover",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-027",
+      "prompt": "A kitchen gadget widget with gadget photo, name, purpose, and purchase link",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "kitchen tool or gadget photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-028",
+      "prompt": "A food photography widget with styled food photo, photographer, and likes",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "professionally styled food photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "food-img-029",
+      "prompt": "A seasonal produce widget with produce photo, season, nutritional info, and recipes",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "seasonal fruits or vegetables",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "food-img-030",
+      "prompt": "A food challenge widget with challenge photo, description, participants, and prize",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "food challenge or competition photo",
+      "imagePlacement": "top-large"
+    }
+  ]
+}

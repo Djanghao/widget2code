@@ -1,0 +1,49 @@
+{
+  "widget": {
+    "backgroundColor": "#1A1A2E",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 14,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" },
+          "content": "Colorful Bars"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 12, "fontWeight": 600, "color": "rgba(255, 255, 255, 0.7)" },
+          "content": "Per-bar highlighting"
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "flex": 1,
+          "props": {
+            "data": [65, 85, 72, 95, 88, 78, 92],
+            "labels": ["M", "T", "W", "T", "F", "S", "S"],
+            "colors": ["#FF6B6B", "#FFD93D", "#6BCB77", "#4D96FF", "#8B5CF6", "#EC4899", "#F97316"],
+            "backgroundColor": "transparent",
+            "barBorderRadius": 12,
+            "showXAxisLabels": true,
+            "showYAxisLabels": false,
+            "showValues": false,
+            "height": "100%",
+            "theme": "dark",
+            "showXAxisTicks": false,
+            "showYAxisTicks": true,
+            "tickLineStyle": "dashed",
+            "tickLineColor": "rgba(255, 255, 255, 0.1)"
+          }
+        }
+      ]
+    }
+  }
+}

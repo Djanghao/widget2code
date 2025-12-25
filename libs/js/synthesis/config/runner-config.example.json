@@ -1,0 +1,59 @@
+{
+  "$schema": "./runner-config.schema.json",
+  "description": "Configuration for running multiple batch-generate-widgets instances in parallel",
+  "runners": [
+    {
+      "name": "apple-style-runner",
+      "port": 8011,
+      "promptPreset": "apple-style",
+      "domains": ["utilities", "sports"],
+      "options": {
+        "limit": 5,
+        "useStatic": true,
+        "useDynamic": false,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "android-style-runner",
+      "port": 8012,
+      "promptPreset": "android-style",
+      "domains": ["travel", "food"],
+      "options": {
+        "limit": 5,
+        "useStatic": true,
+        "useDynamic": false,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "more-components-runner",
+      "port": 8013,
+      "promptPreset": "more-components",
+      "domains": ["shopping", "social"],
+      "options": {
+        "limit": 5,
+        "useStatic": true,
+        "useDynamic": false,
+        "useWithImages": false
+      }
+    },
+    {
+      "name": "minimalist-runner",
+      "port": 8014,
+      "promptPreset": "minimalist",
+      "domains": ["health", "finance"],
+      "options": {
+        "limit": 3,
+        "useStatic": true,
+        "useDynamic": false,
+        "useWithImages": false
+      }
+    }
+  ],
+  "globalOptions": {
+    "referenceImagesDir": null,
+    "imageUrlsDir": "./scripts/synthesis/descriptions/image-urls",
+    "referencesPerDescription": 1
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 18, "fontWeight": 600, "color": "#FFFFFF" },
+          "content": "Performance"
+        },
+        {
+          "type": "leaf",
+          "component": "RadarChart",
+          "props": {
+            "indicators": [
+              { "name": "Speed", "max": 100 },
+              { "name": "Power", "max": 100 },
+              { "name": "Endurance", "max": 100 },
+              { "name": "Agility", "max": 100 },
+              { "name": "Technique", "max": 100 }
+            ],
+            "data": [
+              [85, 90, 75, 95, 80]
+            ],
+            "color": "#0A84FF",
+            "areaOpacity": 0.4,
+            "theme": "dark",
+            "height": "100%",
+            "showValues": false
+          }
+        }
+      ]
+    }
+  }
+}

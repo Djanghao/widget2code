@@ -1,0 +1,459 @@
+{
+  "widget": {
+    "backgroundColor": "#0F172A",
+    "borderRadius": 24,
+    "padding": 24,
+    "width": 400,
+    "height": 400,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 22,
+            "color": "#F1F5F9",
+            "fontWeight": 700
+          },
+          "content": "Icon Library Test"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 12,
+            "color": "#94A3B8",
+            "fontWeight": 400
+          },
+          "content": "36 icons • 12 libraries"
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#F472B6",
+                "name": "lu:LuHeart"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#FBBF24",
+                "name": "ai:AiFillStar"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#34D399",
+                "name": "bi:BiRocket"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#60A5FA",
+                "name": "md:MdFavorite"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#A78BFA",
+                "name": "fa6:FaFire"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#FB923C",
+                "name": "fi:FiZap"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#10B981",
+                "name": "hi:HiSparkles"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#EC4899",
+                "name": "ri:RiMagicFill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#F59E0B",
+                "name": "bs:BsLightningFill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#EF4444",
+                "name": "gi:GiDiamondHard"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#8B5CF6",
+                "name": "wi:WiStars"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#06B6D4",
+                "name": "si:SiReact"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#F472B6",
+                "name": "pi:PiHeartFill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#A78BFA",
+                "name": "rx:RxRocket"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#34D399",
+                "name": "io5:IoFlashSharp"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#FBBF24",
+                "name": "tb:TbBrandTwitter"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#FB923C",
+                "name": "ci:CiBadgeDollar"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#10B981",
+                "name": "di:DiJavascript"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#60A5FA",
+                "name": "lu:LuSparkles"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#EC4899",
+                "name": "ai:AiFillThunderbolt"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#EF4444",
+                "name": "bi:BiSolidHeart"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#8B5CF6",
+                "name": "md:MdRocketLaunch"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#10B981",
+                "name": "fa6:FaBolt"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#F59E0B",
+                "name": "fi:FiStar"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#06B6D4",
+                "name": "hi:HiLightningBolt"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#FB923C",
+                "name": "ri:RiStarFill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#A78BFA",
+                "name": "bs:BsRocketTakeoffFill"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#34D399",
+                "name": "gi:GiSparkles"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#FBBF24",
+                "name": "wi:WiMoonAltNew"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#F472B6",
+                "name": "si:SiSpotify"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignMain": "center",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#EF4444",
+                "name": "pi:PiLightningBold"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#10B981",
+                "name": "rx:RxMagicWand"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#60A5FA",
+                "name": "io5:IoRocketSharp"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#EC4899",
+                "name": "tb:TbSparkles"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#8B5CF6",
+                "name": "ci:CiSun"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#F59E0B",
+                "name": "di:DiPython"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

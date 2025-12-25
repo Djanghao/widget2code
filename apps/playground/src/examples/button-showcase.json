@@ -1,0 +1,93 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "center",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 16,
+            "color": "#000000",
+            "fontWeight": 600,
+            "align": "center"
+          },
+          "content": "Button Showcase"
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Button",
+              "flex": 0,
+              "props": {
+                "icon": "sf:heart.fill",
+                "backgroundColor": "#FF3B30",
+                "color": "#ffffff",
+                "borderRadius": 12,
+                "fontSize": 16,
+                "fontWeight": 600,
+                "padding": 12
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "flex": 0,
+              "props": {
+                "content": "Text Button",
+                "backgroundColor": "#007AFF",
+                "color": "#ffffff",
+                "borderRadius": 12,
+                "fontSize": 14,
+                "fontWeight": 500,
+                "padding": 12
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "flex": 0,
+              "props": {
+                "icon": "sf:plus",
+                "backgroundColor": "#34C759",
+                "color": "#ffffff",
+                "borderRadius": 8,
+                "fontSize": 14,
+                "fontWeight": 500,
+                "padding": 10
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Button",
+              "flex": 0,
+              "props": {
+                "content": "Save",
+                "backgroundColor": "#FF9500",
+                "color": "#ffffff",
+                "borderRadius": 8,
+                "fontSize": 14,
+                "fontWeight": 600,
+                "padding": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

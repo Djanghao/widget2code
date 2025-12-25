@@ -1,0 +1,99 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "border": "1px solid #333", "background": "#000" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 24,
+          "props": { "style": { "border": "1px solid #222", "borderRadius": 16, "background": "#050505" } },
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 20,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignMain": "between",
+                  "alignCross": "center",
+                  "children": [
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 18, "fontWeight": 700, "color": "#F0F", "fontFamily": "monospace" }, "content": "PROTOCOLS" },
+                    { "type": "leaf", "component": "Icon", "props": { "name": "sf:lock.fill", "size": 20, "color": "#F0F" } }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Checkbox",
+                      "props": {
+                        "checked": true,
+                        "color": "#F0F",
+                        "size": 24,
+                        "style": { "borderRadius": 4, "border": "2px solid #F0F", "boxShadow": "0 0 8px #F0F" }
+                      }
+                    },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "color": "#FFF", "fontFamily": "monospace" }, "content": "Encryption" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Checkbox",
+                      "props": {
+                        "checked": true,
+                        "color": "#F0F",
+                        "size": 24,
+                        "style": { "borderRadius": 4, "border": "2px solid #F0F", "boxShadow": "0 0 8px #F0F" }
+                      }
+                    },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "color": "#FFF", "fontFamily": "monospace" }, "content": "Firewall" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Checkbox",
+                      "props": {
+                        "checked": false,
+                        "color": "#333",
+                        "size": 24,
+                        "style": { "borderRadius": 4, "border": "2px solid #333" }
+                      }
+                    },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "color": "#666", "fontFamily": "monospace" }, "content": "Stealth_Mode" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "domain": "media",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "media-img-001",
+      "prompt": "A music player widget showing album art with song title, artist, and playback controls",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "album cover or music artwork",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-002",
+      "prompt": "A podcast widget with show artwork, episode title, duration, and progress bar",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "podcast cover art",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-003",
+      "prompt": "A video widget showing thumbnail with video title, duration, and view count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "video thumbnail",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-004",
+      "prompt": "A photo memories widget with image, location name, date, and caption",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "personal photo or memory",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-005",
+      "prompt": "A streaming widget with movie poster, title, genre, and watch progress",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "movie poster",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-006",
+      "prompt": "A radio station widget with station logo, currently playing song, and listener count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "radio station logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-007",
+      "prompt": "A concert widget with artist photo, venue, date, and ticket availability",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "artist or band photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-008",
+      "prompt": "A playlist widget with cover art, playlist name, song count, and total duration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "playlist cover art",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-009",
+      "prompt": "A live stream widget with streamer photo, title, viewer count, and duration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "streamer profile or thumbnail",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "media-img-010",
+      "prompt": "An audiobook widget with book cover, title, narrator, and progress",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "audiobook cover",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-011",
+      "prompt": "A music chart widget with album art, chart position, artist, and trend indicator",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "album or single cover",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-012",
+      "prompt": "A karaoke widget with song background image, lyrics, and score",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "karaoke background or theme",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "media-img-013",
+      "prompt": "A TV show widget with episode thumbnail, show title, season/episode number, and air date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "episode thumbnail",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-014",
+      "prompt": "A documentary widget with cover image, title, duration, and category",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "documentary poster",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-015",
+      "prompt": "A music festival widget with event poster, lineup, dates, and location",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "festival poster",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-016",
+      "prompt": "A vinyl record widget with album art, artist, year, and rpm speed",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "vinyl record or album cover",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-017",
+      "prompt": "A remix widget with track artwork, original artist, remixer, and release date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "remix cover art",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-018",
+      "prompt": "A soundtrack widget with movie poster, composer, track listing preview",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "movie poster or soundtrack cover",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-019",
+      "prompt": "A music video widget with video thumbnail, artist, director, and views",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "music video thumbnail",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-020",
+      "prompt": "A concert replay widget with performance photo, artist, venue, and date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "concert performance photo",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "media-img-021",
+      "prompt": "A DJ mix widget with DJ photo, mix title, genre, and duration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "DJ photo or mix artwork",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-022",
+      "prompt": "A guitar lesson widget with instructor photo, lesson title, difficulty, and duration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "instructor photo or guitar image",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-023",
+      "prompt": "A music award widget with award image, winner name, category, and year",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "award trophy or ceremony photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-024",
+      "prompt": "A tour date widget with artist photo, city, venue, and ticket link",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "artist promotional photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-025",
+      "prompt": "A shorts video widget with vertical thumbnail, creator, views, and duration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "short-form video thumbnail",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-026",
+      "prompt": "A meditation audio widget with calming scene image, session title, and duration",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "meditation scene or nature photo",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "media-img-027",
+      "prompt": "A music instrument widget with instrument photo, name, price, and shop rating",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "musical instrument photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-028",
+      "prompt": "A lyrics widget with artist photo, song title, and scrolling lyrics snippet",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "artist photo or album art",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "media-img-029",
+      "prompt": "A music collaboration widget with both artists' photos, track title, and release countdown",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "collaborative artist photos",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "media-img-030",
+      "prompt": "A behind-the-scenes widget with studio photo, artist, recording details, and sneak peek",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "studio or recording session photo",
+      "imagePlacement": "top-large"
+    }
+  ]
+}

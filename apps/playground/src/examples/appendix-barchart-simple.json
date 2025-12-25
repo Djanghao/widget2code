@@ -1,0 +1,42 @@
+{
+  "widget": {
+    "backgroundColor": "#1C1C1E",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 18, "fontWeight": 600, "color": "#FFFFFF" },
+          "content": "Weekly Steps"
+        },
+        {
+          "type": "leaf",
+          "component": "BarChart",
+          "props": {
+            "data": [5000, 7500, 10000, 8200, 6000, 12000, 9500],
+            "labels": ["M", "T", "W", "T", "F", "S", "S"],
+            "color": "#34C759",
+            "backgroundColor": "transparent",
+            "barBorderRadius": 4,
+            "showXAxisLabels": true,
+            "showValues": false,
+            "height": "100%",
+            "theme": "dark",
+            "showYAxisLabels": false,
+            "showXAxisTicks": false,
+            "showYAxisTicks": true,
+            "tickLineStyle": "dashed",
+            "tickLineColor": "rgba(255,255,255,0.1)"
+          }
+        }
+      ]
+    }
+  }
+}

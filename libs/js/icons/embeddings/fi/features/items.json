@@ -1,0 +1,3019 @@
+[
+  {
+    "src_svg": "fi/FiActivity.svg",
+    "component_id": "fi:FiActivity",
+    "aliases": [
+      "fi",
+      "activity"
+    ],
+    "caption": "an image of a black and white wave symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAirplay.svg",
+    "component_id": "fi:FiAirplay",
+    "aliases": [
+      "fi",
+      "airplay"
+    ],
+    "caption": "a black and white icon with a triangle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAlertCircle.svg",
+    "component_id": "fi:FiAlertCircle",
+    "aliases": [
+      "fi",
+      "alert",
+      "circle"
+    ],
+    "caption": "a black and white image of an exclamation sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAlertOctagon.svg",
+    "component_id": "fi:FiAlertOctagon",
+    "aliases": [
+      "fi",
+      "alert",
+      "octagon"
+    ],
+    "caption": "a black and white image of a stop sign with an exclamation mark",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAlertTriangle.svg",
+    "component_id": "fi:FiAlertTriangle",
+    "aliases": [
+      "fi",
+      "alert",
+      "triangle"
+    ],
+    "caption": "a black and white image of a warning sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAlignCenter.svg",
+    "component_id": "fi:FiAlignCenter",
+    "aliases": [
+      "fi",
+      "align",
+      "center"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAlignJustify.svg",
+    "component_id": "fi:FiAlignJustify",
+    "aliases": [
+      "fi",
+      "align",
+      "justify"
+    ],
+    "caption": "a black and white icon with four lines",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAlignLeft.svg",
+    "component_id": "fi:FiAlignLeft",
+    "aliases": [
+      "fi",
+      "align",
+      "left"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAlignRight.svg",
+    "component_id": "fi:FiAlignRight",
+    "aliases": [
+      "fi",
+      "align",
+      "right"
+    ],
+    "caption": "a black and white icon with three lines",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAnchor.svg",
+    "component_id": "fi:FiAnchor",
+    "aliases": [
+      "fi",
+      "anchor"
+    ],
+    "caption": "an anchor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAperture.svg",
+    "component_id": "fi:FiAperture",
+    "aliases": [
+      "fi",
+      "aperture"
+    ],
+    "caption": "a black and white circular logo with an image of a camera lens",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArchive.svg",
+    "component_id": "fi:FiArchive",
+    "aliases": [
+      "fi",
+      "archive"
+    ],
+    "caption": "a black and white icon of a box on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowDown.svg",
+    "component_id": "fi:FiArrowDown",
+    "aliases": [
+      "fi",
+      "arrow",
+      "down"
+    ],
+    "caption": "an arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowDownCircle.svg",
+    "component_id": "fi:FiArrowDownCircle",
+    "aliases": [
+      "fi",
+      "arrow",
+      "down",
+      "circle"
+    ],
+    "caption": "a black and white image of a down arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowDownLeft.svg",
+    "component_id": "fi:FiArrowDownLeft",
+    "aliases": [
+      "fi",
+      "arrow",
+      "down",
+      "left"
+    ],
+    "caption": "a black and white image of the letter k",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowDownRight.svg",
+    "component_id": "fi:FiArrowDownRight",
+    "aliases": [
+      "fi",
+      "arrow",
+      "down",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowLeft.svg",
+    "component_id": "fi:FiArrowLeft",
+    "aliases": [
+      "fi",
+      "arrow",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowLeftCircle.svg",
+    "component_id": "fi:FiArrowLeftCircle",
+    "aliases": [
+      "fi",
+      "arrow",
+      "left",
+      "circle"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowRight.svg",
+    "component_id": "fi:FiArrowRight",
+    "aliases": [
+      "fi",
+      "arrow",
+      "right"
+    ],
+    "caption": "an arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowRightCircle.svg",
+    "component_id": "fi:FiArrowRightCircle",
+    "aliases": [
+      "fi",
+      "arrow",
+      "right",
+      "circle"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowUp.svg",
+    "component_id": "fi:FiArrowUp",
+    "aliases": [
+      "fi",
+      "arrow",
+      "up"
+    ],
+    "caption": "an arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowUpCircle.svg",
+    "component_id": "fi:FiArrowUpCircle",
+    "aliases": [
+      "fi",
+      "arrow",
+      "up",
+      "circle"
+    ],
+    "caption": "an up arrow icon in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowUpLeft.svg",
+    "component_id": "fi:FiArrowUpLeft",
+    "aliases": [
+      "fi",
+      "arrow",
+      "up",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiArrowUpRight.svg",
+    "component_id": "fi:FiArrowUpRight",
+    "aliases": [
+      "fi",
+      "arrow",
+      "up",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAtSign.svg",
+    "component_id": "fi:FiAtSign",
+    "aliases": [
+      "fi",
+      "at",
+      "sign"
+    ],
+    "caption": "a black and white image of an email symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiAward.svg",
+    "component_id": "fi:FiAward",
+    "aliases": [
+      "fi",
+      "award"
+    ],
+    "caption": "a black and white award icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBarChart.svg",
+    "component_id": "fi:FiBarChart",
+    "aliases": [
+      "fi",
+      "bar",
+      "chart"
+    ],
+    "caption": "a bar graph is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBarChart2.svg",
+    "component_id": "fi:FiBarChart2",
+    "aliases": [
+      "fi",
+      "bar",
+      "chart",
+      "2"
+    ],
+    "caption": "a black and white image of a bar graph",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBattery.svg",
+    "component_id": "fi:FiBattery",
+    "aliases": [
+      "fi",
+      "battery"
+    ],
+    "caption": "a battery icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBatteryCharging.svg",
+    "component_id": "fi:FiBatteryCharging",
+    "aliases": [
+      "fi",
+      "battery",
+      "charging"
+    ],
+    "caption": "a black and white image of a battery symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBell.svg",
+    "component_id": "fi:FiBell",
+    "aliases": [
+      "fi",
+      "bell"
+    ],
+    "caption": "a bell icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBellOff.svg",
+    "component_id": "fi:FiBellOff",
+    "aliases": [
+      "fi",
+      "bell",
+      "off"
+    ],
+    "caption": "a black and white image of a no bell icon",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBluetooth.svg",
+    "component_id": "fi:FiBluetooth",
+    "aliases": [
+      "fi",
+      "bluetooth"
+    ],
+    "caption": "a black and white image of a bluetooth symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBold.svg",
+    "component_id": "fi:FiBold",
+    "aliases": [
+      "fi",
+      "bold"
+    ],
+    "caption": "a black and white letter b on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBook.svg",
+    "component_id": "fi:FiBook",
+    "aliases": [
+      "fi",
+      "book"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBookOpen.svg",
+    "component_id": "fi:FiBookOpen",
+    "aliases": [
+      "fi",
+      "book",
+      "open"
+    ],
+    "caption": "an open book icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBookmark.svg",
+    "component_id": "fi:FiBookmark",
+    "aliases": [
+      "fi",
+      "bookmark"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBox.svg",
+    "component_id": "fi:FiBox",
+    "aliases": [
+      "fi",
+      "box"
+    ],
+    "caption": "a black cube icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiBriefcase.svg",
+    "component_id": "fi:FiBriefcase",
+    "aliases": [
+      "fi",
+      "briefcase"
+    ],
+    "caption": "a black and white icon of a suitcase",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCalendar.svg",
+    "component_id": "fi:FiCalendar",
+    "aliases": [
+      "fi",
+      "calendar"
+    ],
+    "caption": "a calendar icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCamera.svg",
+    "component_id": "fi:FiCamera",
+    "aliases": [
+      "fi",
+      "camera"
+    ],
+    "caption": "a camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCameraOff.svg",
+    "component_id": "fi:FiCameraOff",
+    "aliases": [
+      "fi",
+      "camera",
+      "off"
+    ],
+    "caption": "a no camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCast.svg",
+    "component_id": "fi:FiCast",
+    "aliases": [
+      "fi",
+      "cast"
+    ],
+    "caption": "a black and white icon of a wifi symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCheck.svg",
+    "component_id": "fi:FiCheck",
+    "aliases": [
+      "fi",
+      "check"
+    ],
+    "caption": "a black check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCheckCircle.svg",
+    "component_id": "fi:FiCheckCircle",
+    "aliases": [
+      "fi",
+      "check",
+      "circle"
+    ],
+    "caption": "a black and white icon of a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCheckSquare.svg",
+    "component_id": "fi:FiCheckSquare",
+    "aliases": [
+      "fi",
+      "check",
+      "square"
+    ],
+    "caption": "a check mark icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiChevronDown.svg",
+    "component_id": "fi:FiChevronDown",
+    "aliases": [
+      "fi",
+      "chevron",
+      "down"
+    ],
+    "caption": "a black and white image of the letter v",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiChevronLeft.svg",
+    "component_id": "fi:FiChevronLeft",
+    "aliases": [
+      "fi",
+      "chevron",
+      "left"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiChevronRight.svg",
+    "component_id": "fi:FiChevronRight",
+    "aliases": [
+      "fi",
+      "chevron",
+      "right"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiChevronUp.svg",
+    "component_id": "fi:FiChevronUp",
+    "aliases": [
+      "fi",
+      "chevron",
+      "up"
+    ],
+    "caption": "a black and white icon of a triangle",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiChevronsDown.svg",
+    "component_id": "fi:FiChevronsDown",
+    "aliases": [
+      "fi",
+      "chevrons",
+      "down"
+    ],
+    "caption": "a black and white image of two arrows pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiChevronsLeft.svg",
+    "component_id": "fi:FiChevronsLeft",
+    "aliases": [
+      "fi",
+      "chevrons",
+      "left"
+    ],
+    "caption": "two arrows pointing in the same direction on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiChevronsRight.svg",
+    "component_id": "fi:FiChevronsRight",
+    "aliases": [
+      "fi",
+      "chevrons",
+      "right"
+    ],
+    "caption": "two arrows pointing in the same direction on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiChevronsUp.svg",
+    "component_id": "fi:FiChevronsUp",
+    "aliases": [
+      "fi",
+      "chevrons",
+      "up"
+    ],
+    "caption": "a black and white arrow icon with two arrows pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiChrome.svg",
+    "component_id": "fi:FiChrome",
+    "aliases": [
+      "fi",
+      "chrome"
+    ],
+    "caption": "a black and white image of a circular logo",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCircle.svg",
+    "component_id": "fi:FiCircle",
+    "aliases": [
+      "fi",
+      "circle"
+    ],
+    "caption": "a black circle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiClipboard.svg",
+    "component_id": "fi:FiClipboard",
+    "aliases": [
+      "fi",
+      "clipboard"
+    ],
+    "caption": "a black and white image of a clipboard on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiClock.svg",
+    "component_id": "fi:FiClock",
+    "aliases": [
+      "fi",
+      "clock"
+    ],
+    "caption": "a black and white clock icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCloud.svg",
+    "component_id": "fi:FiCloud",
+    "aliases": [
+      "fi",
+      "cloud"
+    ],
+    "caption": "a black cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCloudDrizzle.svg",
+    "component_id": "fi:FiCloudDrizzle",
+    "aliases": [
+      "fi",
+      "cloud",
+      "drizzle"
+    ],
+    "caption": "a black and white icon of a rain cloud",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCloudLightning.svg",
+    "component_id": "fi:FiCloudLightning",
+    "aliases": [
+      "fi",
+      "cloud",
+      "lightning"
+    ],
+    "caption": "a black and white icon of a lightning bolt",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCloudOff.svg",
+    "component_id": "fi:FiCloudOff",
+    "aliases": [
+      "fi",
+      "cloud",
+      "off"
+    ],
+    "caption": "a no cloud icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCloudRain.svg",
+    "component_id": "fi:FiCloudRain",
+    "aliases": [
+      "fi",
+      "cloud",
+      "rain"
+    ],
+    "caption": "a black and white icon of a cloud",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCloudSnow.svg",
+    "component_id": "fi:FiCloudSnow",
+    "aliases": [
+      "fi",
+      "cloud",
+      "snow"
+    ],
+    "caption": "a black and white icon of a cloud with rain drops",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCode.svg",
+    "component_id": "fi:FiCode",
+    "aliases": [
+      "fi",
+      "code"
+    ],
+    "caption": "a black and white image of two arrows pointing in the same direction",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCodepen.svg",
+    "component_id": "fi:FiCodepen",
+    "aliases": [
+      "fi",
+      "codepen"
+    ],
+    "caption": "a black and white image of a cube",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCodesandbox.svg",
+    "component_id": "fi:FiCodesandbox",
+    "aliases": [
+      "fi",
+      "codesandbox"
+    ],
+    "caption": "a black and white logo of a cube",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCoffee.svg",
+    "component_id": "fi:FiCoffee",
+    "aliases": [
+      "fi",
+      "coffee"
+    ],
+    "caption": "a black and white icon of a cup of coffee",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiColumns.svg",
+    "component_id": "fi:FiColumns",
+    "aliases": [
+      "fi",
+      "columns"
+    ],
+    "caption": "a black and white icon of a door",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCommand.svg",
+    "component_id": "fi:FiCommand",
+    "aliases": [
+      "fi",
+      "command"
+    ],
+    "caption": "a black and white image of a black and white symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCompass.svg",
+    "component_id": "fi:FiCompass",
+    "aliases": [
+      "fi",
+      "compass"
+    ],
+    "caption": "a black and white image of a circle with a square in it",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCopy.svg",
+    "component_id": "fi:FiCopy",
+    "aliases": [
+      "fi",
+      "copy"
+    ],
+    "caption": "a black and white icon of two squares",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCornerDownLeft.svg",
+    "component_id": "fi:FiCornerDownLeft",
+    "aliases": [
+      "fi",
+      "corner",
+      "down",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCornerDownRight.svg",
+    "component_id": "fi:FiCornerDownRight",
+    "aliases": [
+      "fi",
+      "corner",
+      "down",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCornerLeftDown.svg",
+    "component_id": "fi:FiCornerLeftDown",
+    "aliases": [
+      "fi",
+      "corner",
+      "left",
+      "down"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCornerLeftUp.svg",
+    "component_id": "fi:FiCornerLeftUp",
+    "aliases": [
+      "fi",
+      "corner",
+      "left",
+      "up"
+    ],
+    "caption": "an arrow pointing up is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCornerRightDown.svg",
+    "component_id": "fi:FiCornerRightDown",
+    "aliases": [
+      "fi",
+      "corner",
+      "right",
+      "down"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCornerRightUp.svg",
+    "component_id": "fi:FiCornerRightUp",
+    "aliases": [
+      "fi",
+      "corner",
+      "right",
+      "up"
+    ],
+    "caption": "a black arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCornerUpLeft.svg",
+    "component_id": "fi:FiCornerUpLeft",
+    "aliases": [
+      "fi",
+      "corner",
+      "up",
+      "left"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCornerUpRight.svg",
+    "component_id": "fi:FiCornerUpRight",
+    "aliases": [
+      "fi",
+      "corner",
+      "up",
+      "right"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCpu.svg",
+    "component_id": "fi:FiCpu",
+    "aliases": [
+      "fi",
+      "cpu"
+    ],
+    "caption": "a black and white image of a computer chip",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCreditCard.svg",
+    "component_id": "fi:FiCreditCard",
+    "aliases": [
+      "fi",
+      "credit",
+      "card"
+    ],
+    "caption": "a black credit card icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCrop.svg",
+    "component_id": "fi:FiCrop",
+    "aliases": [
+      "fi",
+      "crop"
+    ],
+    "caption": "a black and white image of a square symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiCrosshair.svg",
+    "component_id": "fi:FiCrosshair",
+    "aliases": [
+      "fi",
+      "crosshair"
+    ],
+    "caption": "a black and white image of a crosshairs symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDatabase.svg",
+    "component_id": "fi:FiDatabase",
+    "aliases": [
+      "fi",
+      "database"
+    ],
+    "caption": "a black and white icon of a database",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDelete.svg",
+    "component_id": "fi:FiDelete",
+    "aliases": [
+      "fi",
+      "delete"
+    ],
+    "caption": "an image of a black and white icon with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDisc.svg",
+    "component_id": "fi:FiDisc",
+    "aliases": [
+      "fi",
+      "disc"
+    ],
+    "caption": "a black and white image of a circular object",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDivide.svg",
+    "component_id": "fi:FiDivide",
+    "aliases": [
+      "fi",
+      "divide"
+    ],
+    "caption": "an image of a black and white symbol with two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDivideCircle.svg",
+    "component_id": "fi:FiDivideCircle",
+    "aliases": [
+      "fi",
+      "divide",
+      "circle"
+    ],
+    "caption": "a black and white image of a circle with two dots",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDivideSquare.svg",
+    "component_id": "fi:FiDivideSquare",
+    "aliases": [
+      "fi",
+      "divide",
+      "square"
+    ],
+    "caption": "a black and white icon of a calculator",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDollarSign.svg",
+    "component_id": "fi:FiDollarSign",
+    "aliases": [
+      "fi",
+      "dollar",
+      "sign"
+    ],
+    "caption": "a dollar sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDownload.svg",
+    "component_id": "fi:FiDownload",
+    "aliases": [
+      "fi",
+      "download"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDownloadCloud.svg",
+    "component_id": "fi:FiDownloadCloud",
+    "aliases": [
+      "fi",
+      "download",
+      "cloud"
+    ],
+    "caption": "a cloud icon with an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDribbble.svg",
+    "component_id": "fi:FiDribbble",
+    "aliases": [
+      "fi",
+      "dribbble"
+    ],
+    "caption": "a black and white icon of a basketball ball",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiDroplet.svg",
+    "component_id": "fi:FiDroplet",
+    "aliases": [
+      "fi",
+      "droplet"
+    ],
+    "caption": "a black and white image of a water drop",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiEdit.svg",
+    "component_id": "fi:FiEdit",
+    "aliases": [
+      "fi",
+      "edit"
+    ],
+    "caption": "a black and white icon of a pen with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiEdit2.svg",
+    "component_id": "fi:FiEdit2",
+    "aliases": [
+      "fi",
+      "edit",
+      "2"
+    ],
+    "caption": "a black and white drawing of a pencil",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiEdit3.svg",
+    "component_id": "fi:FiEdit3",
+    "aliases": [
+      "fi",
+      "edit",
+      "3"
+    ],
+    "caption": "a black and white image of a pen and paper",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiExternalLink.svg",
+    "component_id": "fi:FiExternalLink",
+    "aliases": [
+      "fi",
+      "external",
+      "link"
+    ],
+    "caption": "a black and white icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiEye.svg",
+    "component_id": "fi:FiEye",
+    "aliases": [
+      "fi",
+      "eye"
+    ],
+    "caption": "a black and white icon of an eye",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiEyeOff.svg",
+    "component_id": "fi:FiEyeOff",
+    "aliases": [
+      "fi",
+      "eye",
+      "off"
+    ],
+    "caption": "a black and white image of a no eye symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFacebook.svg",
+    "component_id": "fi:FiFacebook",
+    "aliases": [
+      "fi",
+      "facebook"
+    ],
+    "caption": "a black and white image of a facebook logo",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFastForward.svg",
+    "component_id": "fi:FiFastForward",
+    "aliases": [
+      "fi",
+      "fast",
+      "forward"
+    ],
+    "caption": "a black and white image of two arrows pointing in different directions",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFeather.svg",
+    "component_id": "fi:FiFeather",
+    "aliases": [
+      "fi",
+      "feather"
+    ],
+    "caption": "a black and white icon of a feather",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFigma.svg",
+    "component_id": "fi:FiFigma",
+    "aliases": [
+      "fi",
+      "figma"
+    ],
+    "caption": "a black and white logo with the letter b",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFile.svg",
+    "component_id": "fi:FiFile",
+    "aliases": [
+      "fi",
+      "file"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFileMinus.svg",
+    "component_id": "fi:FiFileMinus",
+    "aliases": [
+      "fi",
+      "file",
+      "minus"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFilePlus.svg",
+    "component_id": "fi:FiFilePlus",
+    "aliases": [
+      "fi",
+      "file",
+      "plus"
+    ],
+    "caption": "a black and white icon of a document with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFileText.svg",
+    "component_id": "fi:FiFileText",
+    "aliases": [
+      "fi",
+      "file",
+      "text"
+    ],
+    "caption": "a black and white icon of a document",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFilm.svg",
+    "component_id": "fi:FiFilm",
+    "aliases": [
+      "fi",
+      "film"
+    ],
+    "caption": "a black and white film strip icon",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFilter.svg",
+    "component_id": "fi:FiFilter",
+    "aliases": [
+      "fi",
+      "filter"
+    ],
+    "caption": "a black and white icon of a funnel",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFlag.svg",
+    "component_id": "fi:FiFlag",
+    "aliases": [
+      "fi",
+      "flag"
+    ],
+    "caption": "a black and white icon of a flag",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFolder.svg",
+    "component_id": "fi:FiFolder",
+    "aliases": [
+      "fi",
+      "folder"
+    ],
+    "caption": "a black folder icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFolderMinus.svg",
+    "component_id": "fi:FiFolderMinus",
+    "aliases": [
+      "fi",
+      "folder",
+      "minus"
+    ],
+    "caption": "a black folder icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFolderPlus.svg",
+    "component_id": "fi:FiFolderPlus",
+    "aliases": [
+      "fi",
+      "folder",
+      "plus"
+    ],
+    "caption": "an icon of a folder with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFramer.svg",
+    "component_id": "fi:FiFramer",
+    "aliases": [
+      "fi",
+      "framer"
+    ],
+    "caption": "a black and white logo with the letter z",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiFrown.svg",
+    "component_id": "fi:FiFrown",
+    "aliases": [
+      "fi",
+      "frown"
+    ],
+    "caption": "a black and white image of a sad face",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiGift.svg",
+    "component_id": "fi:FiGift",
+    "aliases": [
+      "fi",
+      "gift"
+    ],
+    "caption": "a black and white icon of a gift with a bow",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiGitBranch.svg",
+    "component_id": "fi:FiGitBranch",
+    "aliases": [
+      "fi",
+      "git",
+      "branch"
+    ],
+    "caption": "a black and white icon with two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiGitCommit.svg",
+    "component_id": "fi:FiGitCommit",
+    "aliases": [
+      "fi",
+      "git",
+      "commit"
+    ],
+    "caption": "a black and white icon with a circle in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiGitMerge.svg",
+    "component_id": "fi:FiGitMerge",
+    "aliases": [
+      "fi",
+      "git",
+      "merge"
+    ],
+    "caption": "a black and white image of a black and white symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiGitPullRequest.svg",
+    "component_id": "fi:FiGitPullRequest",
+    "aliases": [
+      "fi",
+      "git",
+      "pull",
+      "request"
+    ],
+    "caption": "a black and white image of two black and white symbols",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiGithub.svg",
+    "component_id": "fi:FiGithub",
+    "aliases": [
+      "fi",
+      "github"
+    ],
+    "caption": "a black and white drawing of a cat",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiGitlab.svg",
+    "component_id": "fi:FiGitlab",
+    "aliases": [
+      "fi",
+      "gitlab"
+    ],
+    "caption": "a black and white icon of a wolf's head",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiGlobe.svg",
+    "component_id": "fi:FiGlobe",
+    "aliases": [
+      "fi",
+      "globe"
+    ],
+    "caption": "a black and white icon of a globe",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiGrid.svg",
+    "component_id": "fi:FiGrid",
+    "aliases": [
+      "fi",
+      "grid"
+    ],
+    "caption": "four squares are shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiHardDrive.svg",
+    "component_id": "fi:FiHardDrive",
+    "aliases": [
+      "fi",
+      "hard",
+      "drive"
+    ],
+    "caption": "an icon of a computer on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiHash.svg",
+    "component_id": "fi:FiHash",
+    "aliases": [
+      "fi",
+      "hash"
+    ],
+    "caption": "hashtag symbol in black and white on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiHeadphones.svg",
+    "component_id": "fi:FiHeadphones",
+    "aliases": [
+      "fi",
+      "headphones"
+    ],
+    "caption": "a black and white icon of a pair of headphones",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiHeart.svg",
+    "component_id": "fi:FiHeart",
+    "aliases": [
+      "fi",
+      "heart"
+    ],
+    "caption": "a black and white heart icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiHelpCircle.svg",
+    "component_id": "fi:FiHelpCircle",
+    "aliases": [
+      "fi",
+      "help",
+      "circle"
+    ],
+    "caption": "a question mark in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiHexagon.svg",
+    "component_id": "fi:FiHexagon",
+    "aliases": [
+      "fi",
+      "hexagon"
+    ],
+    "caption": "a black and white image of a hexagon",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiHome.svg",
+    "component_id": "fi:FiHome",
+    "aliases": [
+      "fi",
+      "home"
+    ],
+    "caption": "a black and white icon of a house",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiImage.svg",
+    "component_id": "fi:FiImage",
+    "aliases": [
+      "fi",
+      "image"
+    ],
+    "caption": "a black and white photo icon with a mountain in the center",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiInbox.svg",
+    "component_id": "fi:FiInbox",
+    "aliases": [
+      "fi",
+      "inbox"
+    ],
+    "caption": "an envelope icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiInfo.svg",
+    "component_id": "fi:FiInfo",
+    "aliases": [
+      "fi",
+      "info"
+    ],
+    "caption": "a black and white icon with the word i in it",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiInstagram.svg",
+    "component_id": "fi:FiInstagram",
+    "aliases": [
+      "fi",
+      "instagram"
+    ],
+    "caption": "a black and white image of an instagram icon",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiItalic.svg",
+    "component_id": "fi:FiItalic",
+    "aliases": [
+      "fi",
+      "italic"
+    ],
+    "caption": "a black and white image of the letter t",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiKey.svg",
+    "component_id": "fi:FiKey",
+    "aliases": [
+      "fi",
+      "key"
+    ],
+    "caption": "a black and white icon of a key",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiLayers.svg",
+    "component_id": "fi:FiLayers",
+    "aliases": [
+      "fi",
+      "layers"
+    ],
+    "caption": "a black and white icon of a stack of books",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiLayout.svg",
+    "component_id": "fi:FiLayout",
+    "aliases": [
+      "fi",
+      "layout"
+    ],
+    "caption": "a black and white icon of a rectangle",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiLifeBuoy.svg",
+    "component_id": "fi:FiLifeBuoy",
+    "aliases": [
+      "fi",
+      "life",
+      "buoy"
+    ],
+    "caption": "a black and white icon of a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiLink.svg",
+    "component_id": "fi:FiLink",
+    "aliases": [
+      "fi",
+      "link"
+    ],
+    "caption": "a black and white image of a link",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiLink2.svg",
+    "component_id": "fi:FiLink2",
+    "aliases": [
+      "fi",
+      "link",
+      "2"
+    ],
+    "caption": "a black and white image of the letter c",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiLinkedin.svg",
+    "component_id": "fi:FiLinkedin",
+    "aliases": [
+      "fi",
+      "linkedin"
+    ],
+    "caption": "a black and white image of the linked logo",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiList.svg",
+    "component_id": "fi:FiList",
+    "aliases": [
+      "fi",
+      "list"
+    ],
+    "caption": "three black dots on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiLoader.svg",
+    "component_id": "fi:FiLoader",
+    "aliases": [
+      "fi",
+      "loader"
+    ],
+    "caption": "a black and white icon of a starburst",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiLock.svg",
+    "component_id": "fi:FiLock",
+    "aliases": [
+      "fi",
+      "lock"
+    ],
+    "caption": "a black and white icon of a padlock",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiLogIn.svg",
+    "component_id": "fi:FiLogIn",
+    "aliases": [
+      "fi",
+      "log",
+      "in"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiLogOut.svg",
+    "component_id": "fi:FiLogOut",
+    "aliases": [
+      "fi",
+      "log",
+      "out"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMail.svg",
+    "component_id": "fi:FiMail",
+    "aliases": [
+      "fi",
+      "mail"
+    ],
+    "caption": "an email icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMap.svg",
+    "component_id": "fi:FiMap",
+    "aliases": [
+      "fi",
+      "map"
+    ],
+    "caption": "a black and white icon of a map",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMapPin.svg",
+    "component_id": "fi:FiMapPin",
+    "aliases": [
+      "fi",
+      "map",
+      "pin"
+    ],
+    "caption": "a black and white image of a location pin",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMaximize.svg",
+    "component_id": "fi:FiMaximize",
+    "aliases": [
+      "fi",
+      "maximize"
+    ],
+    "caption": "a black square with two black lines on it",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMaximize2.svg",
+    "component_id": "fi:FiMaximize2",
+    "aliases": [
+      "fi",
+      "maximize",
+      "2"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMeh.svg",
+    "component_id": "fi:FiMeh",
+    "aliases": [
+      "fi",
+      "meh"
+    ],
+    "caption": "a black and white image of a smiley face",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMenu.svg",
+    "component_id": "fi:FiMenu",
+    "aliases": [
+      "fi",
+      "menu"
+    ],
+    "caption": "three black lines on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMessageCircle.svg",
+    "component_id": "fi:FiMessageCircle",
+    "aliases": [
+      "fi",
+      "message",
+      "circle"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMessageSquare.svg",
+    "component_id": "fi:FiMessageSquare",
+    "aliases": [
+      "fi",
+      "message",
+      "square"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMic.svg",
+    "component_id": "fi:FiMic",
+    "aliases": [
+      "fi",
+      "mic"
+    ],
+    "caption": "a microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMicOff.svg",
+    "component_id": "fi:FiMicOff",
+    "aliases": [
+      "fi",
+      "mic",
+      "off"
+    ],
+    "caption": "a no microphone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMinimize.svg",
+    "component_id": "fi:FiMinimize",
+    "aliases": [
+      "fi",
+      "minimize"
+    ],
+    "caption": "a black and white image of four arrows",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMinimize2.svg",
+    "component_id": "fi:FiMinimize2",
+    "aliases": [
+      "fi",
+      "minimize",
+      "2"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMinus.svg",
+    "component_id": "fi:FiMinus",
+    "aliases": [
+      "fi",
+      "minus"
+    ],
+    "caption": "an image of a black and white line on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMinusCircle.svg",
+    "component_id": "fi:FiMinusCircle",
+    "aliases": [
+      "fi",
+      "minus",
+      "circle"
+    ],
+    "caption": "a black and white image of an empty circle",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMinusSquare.svg",
+    "component_id": "fi:FiMinusSquare",
+    "aliases": [
+      "fi",
+      "minus",
+      "square"
+    ],
+    "caption": "a black and white square icon with an empty sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMonitor.svg",
+    "component_id": "fi:FiMonitor",
+    "aliases": [
+      "fi",
+      "monitor"
+    ],
+    "caption": "a computer monitor icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMoon.svg",
+    "component_id": "fi:FiMoon",
+    "aliases": [
+      "fi",
+      "moon"
+    ],
+    "caption": "a black and white line drawing of a crescent",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMoreHorizontal.svg",
+    "component_id": "fi:FiMoreHorizontal",
+    "aliases": [
+      "fi",
+      "more",
+      "horizontal"
+    ],
+    "caption": "four black dots are shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMoreVertical.svg",
+    "component_id": "fi:FiMoreVertical",
+    "aliases": [
+      "fi",
+      "more",
+      "vertical"
+    ],
+    "caption": "four black dots on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMousePointer.svg",
+    "component_id": "fi:FiMousePointer",
+    "aliases": [
+      "fi",
+      "mouse",
+      "pointer"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMove.svg",
+    "component_id": "fi:FiMove",
+    "aliases": [
+      "fi",
+      "move"
+    ],
+    "caption": "three arrows pointing in different directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiMusic.svg",
+    "component_id": "fi:FiMusic",
+    "aliases": [
+      "fi",
+      "music"
+    ],
+    "caption": "a music note icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiNavigation.svg",
+    "component_id": "fi:FiNavigation",
+    "aliases": [
+      "fi",
+      "navigation"
+    ],
+    "caption": "a black arrow pointing down on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiNavigation2.svg",
+    "component_id": "fi:FiNavigation2",
+    "aliases": [
+      "fi",
+      "navigation",
+      "2"
+    ],
+    "caption": "a black arrow pointing to the right on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiOctagon.svg",
+    "component_id": "fi:FiOctagon",
+    "aliases": [
+      "fi",
+      "octagon"
+    ],
+    "caption": "a black and white image of a hexagon",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPackage.svg",
+    "component_id": "fi:FiPackage",
+    "aliases": [
+      "fi",
+      "package"
+    ],
+    "caption": "a black and white icon of a box",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPaperclip.svg",
+    "component_id": "fi:FiPaperclip",
+    "aliases": [
+      "fi",
+      "paperclip"
+    ],
+    "caption": "a black and white image of a paper clip",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPause.svg",
+    "component_id": "fi:FiPause",
+    "aliases": [
+      "fi",
+      "pause"
+    ],
+    "caption": "a black and white image of two numbers on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPauseCircle.svg",
+    "component_id": "fi:FiPauseCircle",
+    "aliases": [
+      "fi",
+      "pause",
+      "circle"
+    ],
+    "caption": "a black and white icon with two black lines",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPenTool.svg",
+    "component_id": "fi:FiPenTool",
+    "aliases": [
+      "fi",
+      "pen",
+      "tool"
+    ],
+    "caption": "a black and white illustration of a pen and ink",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPercent.svg",
+    "component_id": "fi:FiPercent",
+    "aliases": [
+      "fi",
+      "percent"
+    ],
+    "caption": "a black and white image of a percentage sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPhone.svg",
+    "component_id": "fi:FiPhone",
+    "aliases": [
+      "fi",
+      "phone"
+    ],
+    "caption": "a black and white phone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPhoneCall.svg",
+    "component_id": "fi:FiPhoneCall",
+    "aliases": [
+      "fi",
+      "phone",
+      "call"
+    ],
+    "caption": "a phone icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPhoneForwarded.svg",
+    "component_id": "fi:FiPhoneForwarded",
+    "aliases": [
+      "fi",
+      "phone",
+      "forwarded"
+    ],
+    "caption": "a phone icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPhoneIncoming.svg",
+    "component_id": "fi:FiPhoneIncoming",
+    "aliases": [
+      "fi",
+      "phone",
+      "incoming"
+    ],
+    "caption": "a phone icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPhoneMissed.svg",
+    "component_id": "fi:FiPhoneMissed",
+    "aliases": [
+      "fi",
+      "phone",
+      "missed"
+    ],
+    "caption": "an icon of a phone with an x in the middle",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPhoneOff.svg",
+    "component_id": "fi:FiPhoneOff",
+    "aliases": [
+      "fi",
+      "phone",
+      "off"
+    ],
+    "caption": "a black and white image of a telephone icon",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPhoneOutgoing.svg",
+    "component_id": "fi:FiPhoneOutgoing",
+    "aliases": [
+      "fi",
+      "phone",
+      "outgoing"
+    ],
+    "caption": "a phone icon with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPieChart.svg",
+    "component_id": "fi:FiPieChart",
+    "aliases": [
+      "fi",
+      "pie",
+      "chart"
+    ],
+    "caption": "a black and white icon of a clock",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPlay.svg",
+    "component_id": "fi:FiPlay",
+    "aliases": [
+      "fi",
+      "play"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPlayCircle.svg",
+    "component_id": "fi:FiPlayCircle",
+    "aliases": [
+      "fi",
+      "play",
+      "circle"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPlus.svg",
+    "component_id": "fi:FiPlus",
+    "aliases": [
+      "fi",
+      "plus"
+    ],
+    "caption": "a black plus symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPlusCircle.svg",
+    "component_id": "fi:FiPlusCircle",
+    "aliases": [
+      "fi",
+      "plus",
+      "circle"
+    ],
+    "caption": "a plus sign in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPlusSquare.svg",
+    "component_id": "fi:FiPlusSquare",
+    "aliases": [
+      "fi",
+      "plus",
+      "square"
+    ],
+    "caption": "a black plus sign icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPocket.svg",
+    "component_id": "fi:FiPocket",
+    "aliases": [
+      "fi",
+      "pocket"
+    ],
+    "caption": "a black and white icon of a shield with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPower.svg",
+    "component_id": "fi:FiPower",
+    "aliases": [
+      "fi",
+      "power"
+    ],
+    "caption": "a black power symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiPrinter.svg",
+    "component_id": "fi:FiPrinter",
+    "aliases": [
+      "fi",
+      "printer"
+    ],
+    "caption": "a black and white icon of a printer",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiRadio.svg",
+    "component_id": "fi:FiRadio",
+    "aliases": [
+      "fi",
+      "radio"
+    ],
+    "caption": "a black and white icon of a wireless device",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiRefreshCcw.svg",
+    "component_id": "fi:FiRefreshCcw",
+    "aliases": [
+      "fi",
+      "refresh",
+      "ccw"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiRefreshCw.svg",
+    "component_id": "fi:FiRefreshCw",
+    "aliases": [
+      "fi",
+      "refresh",
+      "cw"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiRepeat.svg",
+    "component_id": "fi:FiRepeat",
+    "aliases": [
+      "fi",
+      "repeat"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiRewind.svg",
+    "component_id": "fi:FiRewind",
+    "aliases": [
+      "fi",
+      "rewind"
+    ],
+    "caption": "a black and white image of two arrows pointing to each other",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiRotateCcw.svg",
+    "component_id": "fi:FiRotateCcw",
+    "aliases": [
+      "fi",
+      "rotate",
+      "ccw"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiRotateCw.svg",
+    "component_id": "fi:FiRotateCw",
+    "aliases": [
+      "fi",
+      "rotate",
+      "cw"
+    ],
+    "caption": "a black and white image of a circular arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiRss.svg",
+    "component_id": "fi:FiRss",
+    "aliases": [
+      "fi",
+      "rss"
+    ],
+    "caption": "a black and white image of a rss symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSave.svg",
+    "component_id": "fi:FiSave",
+    "aliases": [
+      "fi",
+      "save"
+    ],
+    "caption": "a black and white icon with the letter h",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiScissors.svg",
+    "component_id": "fi:FiScissors",
+    "aliases": [
+      "fi",
+      "scissors"
+    ],
+    "caption": "a black and white icon of a pair of scissors",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSearch.svg",
+    "component_id": "fi:FiSearch",
+    "aliases": [
+      "fi",
+      "search"
+    ],
+    "caption": "a magnifying glass icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSend.svg",
+    "component_id": "fi:FiSend",
+    "aliases": [
+      "fi",
+      "send"
+    ],
+    "caption": "a black and white icon of a paper airplane",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiServer.svg",
+    "component_id": "fi:FiServer",
+    "aliases": [
+      "fi",
+      "server"
+    ],
+    "caption": "a black and white icon of two disk drives",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSettings.svg",
+    "component_id": "fi:FiSettings",
+    "aliases": [
+      "fi",
+      "settings"
+    ],
+    "caption": "a gear wheel icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiShare.svg",
+    "component_id": "fi:FiShare",
+    "aliases": [
+      "fi",
+      "share"
+    ],
+    "caption": "a black and white image of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiShare2.svg",
+    "component_id": "fi:FiShare2",
+    "aliases": [
+      "fi",
+      "share",
+      "2"
+    ],
+    "caption": "a black and white icon of two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiShield.svg",
+    "component_id": "fi:FiShield",
+    "aliases": [
+      "fi",
+      "shield"
+    ],
+    "caption": "a shield icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiShieldOff.svg",
+    "component_id": "fi:FiShieldOff",
+    "aliases": [
+      "fi",
+      "shield",
+      "off"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiShoppingBag.svg",
+    "component_id": "fi:FiShoppingBag",
+    "aliases": [
+      "fi",
+      "shopping",
+      "bag"
+    ],
+    "caption": "a black and white icon of a shopping bag",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiShoppingCart.svg",
+    "component_id": "fi:FiShoppingCart",
+    "aliases": [
+      "fi",
+      "shopping",
+      "cart"
+    ],
+    "caption": "a shopping cart icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiShuffle.svg",
+    "component_id": "fi:FiShuffle",
+    "aliases": [
+      "fi",
+      "shuffle"
+    ],
+    "caption": "two arrows pointing in opposite directions on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSidebar.svg",
+    "component_id": "fi:FiSidebar",
+    "aliases": [
+      "fi",
+      "sidebar"
+    ],
+    "caption": "a black and white icon of a book",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSkipBack.svg",
+    "component_id": "fi:FiSkipBack",
+    "aliases": [
+      "fi",
+      "skip",
+      "back"
+    ],
+    "caption": "a black and white image of an arrow pointing to the right",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSkipForward.svg",
+    "component_id": "fi:FiSkipForward",
+    "aliases": [
+      "fi",
+      "skip",
+      "forward"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSlack.svg",
+    "component_id": "fi:FiSlack",
+    "aliases": [
+      "fi",
+      "slack"
+    ],
+    "caption": "a black and white logo with four circles",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSlash.svg",
+    "component_id": "fi:FiSlash",
+    "aliases": [
+      "fi",
+      "slash"
+    ],
+    "caption": "a black and white image of a no entry sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSliders.svg",
+    "component_id": "fi:FiSliders",
+    "aliases": [
+      "fi",
+      "sliders"
+    ],
+    "caption": "a black and white image of three cross symbols",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSmartphone.svg",
+    "component_id": "fi:FiSmartphone",
+    "aliases": [
+      "fi",
+      "smartphone"
+    ],
+    "caption": "a black and white icon of a cell phone",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSmile.svg",
+    "component_id": "fi:FiSmile",
+    "aliases": [
+      "fi",
+      "smile"
+    ],
+    "caption": "a smiley face icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSpeaker.svg",
+    "component_id": "fi:FiSpeaker",
+    "aliases": [
+      "fi",
+      "speaker"
+    ],
+    "caption": "a speaker icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSquare.svg",
+    "component_id": "fi:FiSquare",
+    "aliases": [
+      "fi",
+      "square"
+    ],
+    "caption": "a square black and white icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiStar.svg",
+    "component_id": "fi:FiStar",
+    "aliases": [
+      "fi",
+      "star"
+    ],
+    "caption": "a star icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiStopCircle.svg",
+    "component_id": "fi:FiStopCircle",
+    "aliases": [
+      "fi",
+      "stop",
+      "circle"
+    ],
+    "caption": "a black square in a circle on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSun.svg",
+    "component_id": "fi:FiSun",
+    "aliases": [
+      "fi",
+      "sun"
+    ],
+    "caption": "a sun icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSunrise.svg",
+    "component_id": "fi:FiSunrise",
+    "aliases": [
+      "fi",
+      "sunrise"
+    ],
+    "caption": "a black and white icon of an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiSunset.svg",
+    "component_id": "fi:FiSunset",
+    "aliases": [
+      "fi",
+      "sunset"
+    ],
+    "caption": "a black and white icon of a sun rising",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTable.svg",
+    "component_id": "fi:FiTable",
+    "aliases": [
+      "fi",
+      "table"
+    ],
+    "caption": "a black and white icon of a square",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTablet.svg",
+    "component_id": "fi:FiTablet",
+    "aliases": [
+      "fi",
+      "tablet"
+    ],
+    "caption": "a black and white image of an ipad",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTag.svg",
+    "component_id": "fi:FiTag",
+    "aliases": [
+      "fi",
+      "tag"
+    ],
+    "caption": "a black and white icon of a price tag",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTarget.svg",
+    "component_id": "fi:FiTarget",
+    "aliases": [
+      "fi",
+      "target"
+    ],
+    "caption": "a black and white image of a target",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTerminal.svg",
+    "component_id": "fi:FiTerminal",
+    "aliases": [
+      "fi",
+      "terminal"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiThermometer.svg",
+    "component_id": "fi:FiThermometer",
+    "aliases": [
+      "fi",
+      "thermometer"
+    ],
+    "caption": "a thermometer icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiThumbsDown.svg",
+    "component_id": "fi:FiThumbsDown",
+    "aliases": [
+      "fi",
+      "thumbs",
+      "down"
+    ],
+    "caption": "a black and white image of a thumbs down",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiThumbsUp.svg",
+    "component_id": "fi:FiThumbsUp",
+    "aliases": [
+      "fi",
+      "thumbs",
+      "up"
+    ],
+    "caption": "a black and white icon of a thumb up",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiToggleLeft.svg",
+    "component_id": "fi:FiToggleLeft",
+    "aliases": [
+      "fi",
+      "toggle",
+      "left"
+    ],
+    "caption": "a black and white image of a circular object",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiToggleRight.svg",
+    "component_id": "fi:FiToggleRight",
+    "aliases": [
+      "fi",
+      "toggle",
+      "right"
+    ],
+    "caption": "a black and white image of a circular object",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTool.svg",
+    "component_id": "fi:FiTool",
+    "aliases": [
+      "fi",
+      "tool"
+    ],
+    "caption": "a wrench icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTrash.svg",
+    "component_id": "fi:FiTrash",
+    "aliases": [
+      "fi",
+      "trash"
+    ],
+    "caption": "a black and white icon of a cooking pot",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTrash2.svg",
+    "component_id": "fi:FiTrash2",
+    "aliases": [
+      "fi",
+      "trash",
+      "2"
+    ],
+    "caption": "a trash can icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTrello.svg",
+    "component_id": "fi:FiTrello",
+    "aliases": [
+      "fi",
+      "trello"
+    ],
+    "caption": "a black and white icon of a power switch",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTrendingDown.svg",
+    "component_id": "fi:FiTrendingDown",
+    "aliases": [
+      "fi",
+      "trending",
+      "down"
+    ],
+    "caption": "a downward arrow icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTrendingUp.svg",
+    "component_id": "fi:FiTrendingUp",
+    "aliases": [
+      "fi",
+      "trending",
+      "up"
+    ],
+    "caption": "a black arrow pointing up on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTriangle.svg",
+    "component_id": "fi:FiTriangle",
+    "aliases": [
+      "fi",
+      "triangle"
+    ],
+    "caption": "a triangle is shown on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTruck.svg",
+    "component_id": "fi:FiTruck",
+    "aliases": [
+      "fi",
+      "truck"
+    ],
+    "caption": "a truck icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTv.svg",
+    "component_id": "fi:FiTv",
+    "aliases": [
+      "fi",
+      "tv"
+    ],
+    "caption": "an icon of a television on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTwitch.svg",
+    "component_id": "fi:FiTwitch",
+    "aliases": [
+      "fi",
+      "twitch"
+    ],
+    "caption": "a black and white image of a speech bubble",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiTwitter.svg",
+    "component_id": "fi:FiTwitter",
+    "aliases": [
+      "fi",
+      "twitter"
+    ],
+    "caption": "a black and white icon of a twitter bird",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiType.svg",
+    "component_id": "fi:FiType",
+    "aliases": [
+      "fi",
+      "type"
+    ],
+    "caption": "a black and white image of the letter t",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUmbrella.svg",
+    "component_id": "fi:FiUmbrella",
+    "aliases": [
+      "fi",
+      "umbrella"
+    ],
+    "caption": "a black and white icon of an umbrella",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUnderline.svg",
+    "component_id": "fi:FiUnderline",
+    "aliases": [
+      "fi",
+      "underline"
+    ],
+    "caption": "a black and white icon of the letter u",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUnlock.svg",
+    "component_id": "fi:FiUnlock",
+    "aliases": [
+      "fi",
+      "unlock"
+    ],
+    "caption": "a black and white icon of a padlock",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUpload.svg",
+    "component_id": "fi:FiUpload",
+    "aliases": [
+      "fi",
+      "upload"
+    ],
+    "caption": "a black and white image of an upward arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUploadCloud.svg",
+    "component_id": "fi:FiUploadCloud",
+    "aliases": [
+      "fi",
+      "upload",
+      "cloud"
+    ],
+    "caption": "a cloud with an arrow pointing up",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUser.svg",
+    "component_id": "fi:FiUser",
+    "aliases": [
+      "fi",
+      "user"
+    ],
+    "caption": "an icon of a person in black and white",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUserCheck.svg",
+    "component_id": "fi:FiUserCheck",
+    "aliases": [
+      "fi",
+      "user",
+      "check"
+    ],
+    "caption": "a black and white icon of a person with a check mark",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUserMinus.svg",
+    "component_id": "fi:FiUserMinus",
+    "aliases": [
+      "fi",
+      "user",
+      "minus"
+    ],
+    "caption": "a black and white icon of a person with an arrow",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUserPlus.svg",
+    "component_id": "fi:FiUserPlus",
+    "aliases": [
+      "fi",
+      "user",
+      "plus"
+    ],
+    "caption": "a black and white icon of a person with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUserX.svg",
+    "component_id": "fi:FiUserX",
+    "aliases": [
+      "fi",
+      "user",
+      "x"
+    ],
+    "caption": "a black and white icon of a person with an x",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiUsers.svg",
+    "component_id": "fi:FiUsers",
+    "aliases": [
+      "fi",
+      "users"
+    ],
+    "caption": "a black and white icon of a person with a head",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiVideo.svg",
+    "component_id": "fi:FiVideo",
+    "aliases": [
+      "fi",
+      "video"
+    ],
+    "caption": "a video camera icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiVideoOff.svg",
+    "component_id": "fi:FiVideoOff",
+    "aliases": [
+      "fi",
+      "video",
+      "off"
+    ],
+    "caption": "a black and white image of a no sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiVoicemail.svg",
+    "component_id": "fi:FiVoicemail",
+    "aliases": [
+      "fi",
+      "voicemail"
+    ],
+    "caption": "a black and white logo with two circles",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiVolume.svg",
+    "component_id": "fi:FiVolume",
+    "aliases": [
+      "fi",
+      "volume"
+    ],
+    "caption": "a black and white icon of a speaker",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiVolume1.svg",
+    "component_id": "fi:FiVolume1",
+    "aliases": [
+      "fi",
+      "volume",
+      "1"
+    ],
+    "caption": "a black and white icon of a speaker",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiVolume2.svg",
+    "component_id": "fi:FiVolume2",
+    "aliases": [
+      "fi",
+      "volume",
+      "2"
+    ],
+    "caption": "a speaker icon on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiVolumeX.svg",
+    "component_id": "fi:FiVolumeX",
+    "aliases": [
+      "fi",
+      "volume",
+      "x"
+    ],
+    "caption": "a black and white image of a speaker with an x and a minus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiWatch.svg",
+    "component_id": "fi:FiWatch",
+    "aliases": [
+      "fi",
+      "watch"
+    ],
+    "caption": "an icon of a watch on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiWifi.svg",
+    "component_id": "fi:FiWifi",
+    "aliases": [
+      "fi",
+      "wifi"
+    ],
+    "caption": "a black wifi symbol on a white background",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiWifiOff.svg",
+    "component_id": "fi:FiWifiOff",
+    "aliases": [
+      "fi",
+      "wifi",
+      "off"
+    ],
+    "caption": "a black and white image of a wifi symbol",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiWind.svg",
+    "component_id": "fi:FiWind",
+    "aliases": [
+      "fi",
+      "wind"
+    ],
+    "caption": "a black and white icon of a wind blowing",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiX.svg",
+    "component_id": "fi:FiX",
+    "aliases": [
+      "fi",
+      "x"
+    ],
+    "caption": "a black and white icon of a crossed x",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiXCircle.svg",
+    "component_id": "fi:FiXcircle",
+    "aliases": [
+      "fi",
+      "xcircle"
+    ],
+    "caption": "a black and white image of an x in a circle",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiXOctagon.svg",
+    "component_id": "fi:FiXoctagon",
+    "aliases": [
+      "fi",
+      "xoctagon"
+    ],
+    "caption": "a black and white image of a stop sign with an x in it",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiXSquare.svg",
+    "component_id": "fi:FiXsquare",
+    "aliases": [
+      "fi",
+      "xsquare"
+    ],
+    "caption": "a black and white image of an x sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiYoutube.svg",
+    "component_id": "fi:FiYoutube",
+    "aliases": [
+      "fi",
+      "youtube"
+    ],
+    "caption": "a black and white icon of a play button",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiZap.svg",
+    "component_id": "fi:FiZap",
+    "aliases": [
+      "fi",
+      "zap"
+    ],
+    "caption": "a black and white icon of a lightning bolt",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiZapOff.svg",
+    "component_id": "fi:FiZapOff",
+    "aliases": [
+      "fi",
+      "zap",
+      "off"
+    ],
+    "caption": "a black and white image of an arrow pointing down",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiZoomIn.svg",
+    "component_id": "fi:FiZoomIn",
+    "aliases": [
+      "fi",
+      "zoom",
+      "in"
+    ],
+    "caption": "a magnifying icon with a plus sign",
+    "colors": []
+  },
+  {
+    "src_svg": "fi/FiZoomOut.svg",
+    "component_id": "fi:FiZoomOut",
+    "aliases": [
+      "fi",
+      "zoom",
+      "out"
+    ],
+    "caption": "a magnifying icon on a white background",
+    "colors": []
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "alignMain": "center",
+      "alignCross": "center",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 16,
+            "color": "#000000",
+            "fontWeight": 600,
+            "align": "center"
+          },
+          "content": "ProgressRing Showcase"
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "flex": "none",
+              "props": {
+                "percentage": 75,
+                "color": "#34C759",
+                "backgroundColor": "#d1d1d6",
+                "size": 80,
+                "strokeWidth": 6,
+                "content": "75%",
+                "textColor": "#000000",
+                "fontSize": 16,
+                "fontWeight": 600
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "flex": "none",
+              "props": {
+                "percentage": 60,
+                "color": "#007AFF",
+                "backgroundColor": "#d1d1d6",
+                "size": 80,
+                "strokeWidth": 6,
+                "iconName": "sf:heart.fill",
+                "iconSize": 32,
+                "iconColor": "#007AFF"
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "flex": "none",
+              "props": {
+                "percentage": 90,
+                "color": "#FF3B30",
+                "backgroundColor": "#d1d1d6",
+                "size": 70,
+                "strokeWidth": 5,
+                "content": "90%",
+                "textColor": "#FF3B30",
+                "fontSize": 14,
+                "fontWeight": 700
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "flex": "none",
+              "props": {
+                "percentage": 45,
+                "color": "#FF9500",
+                "backgroundColor": "#d1d1d6",
+                "size": 70,
+                "strokeWidth": 5,
+                "iconName": "sf:star.fill",
+                "iconSize": 28,
+                "iconColor": "#FF9500"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "ProgressRing",
+              "flex": "none",
+              "props": {
+                "percentage": 100,
+                "color": "#34C759",
+                "backgroundColor": "#d1d1d6",
+                "size": 70,
+                "strokeWidth": 5,
+                "iconName": "sf:checkmark",
+                "iconSize": 28,
+                "iconColor": "#34C759"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

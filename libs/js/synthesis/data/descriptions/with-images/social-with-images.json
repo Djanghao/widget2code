@@ -1,0 +1,246 @@
+{
+  "domain": "social",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "social-img-001",
+      "prompt": "A social profile widget with profile photo, username, followers count, and bio",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-002",
+      "prompt": "A story widget showing preview image, poster name, and time posted",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "story preview image",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "social-img-003",
+      "prompt": "A shared post widget with post image, caption, likes, and comments count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "shared content image",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "social-img-004",
+      "prompt": "A friend activity widget with friend photo, activity description, and timestamp",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "friend profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-005",
+      "prompt": "A group widget with group banner image, group name, and member count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "group banner or cover photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "social-img-006",
+      "prompt": "A birthday reminder widget with friend's photo, name, and birthday date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "friend profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-007",
+      "prompt": "A tagged photo widget with image, tagger's name, location, and likes",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "tagged photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "social-img-008",
+      "prompt": "A trending topic widget with topic image, hashtag, and engagement count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "trending topic visual",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-009",
+      "prompt": "An event invitation widget with event banner, title, date, and RSVP status",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "event banner or poster",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "social-img-010",
+      "prompt": "A follower milestone widget with profile photo, milestone number, and celebration graphic",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "profile photo with celebration",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "social-img-011",
+      "prompt": "A poll widget with question image, options, vote count, and time remaining",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "poll topic image",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-012",
+      "prompt": "A memory widget with throwback photo, original date, and people tagged",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "old photo or memory",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "social-img-013",
+      "prompt": "A mention widget with post image, who mentioned you, and post snippet",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "mentioned post image",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-014",
+      "prompt": "A live badge widget with streamer photo, live indicator, and viewer count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "streamer profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-015",
+      "prompt": "A photo album widget with album cover photo, album name, and photo count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "album cover photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "social-img-016",
+      "prompt": "A comment reply widget with commenter photo, comment text, and your post thumbnail",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "commenter profile and post thumbnail",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-017",
+      "prompt": "A shared article widget with article image, headline, source, and sharer's comment",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "article featured image",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "social-img-018",
+      "prompt": "A friendship anniversary widget with both friends' photos, years, and shared memories count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "two profile photos",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "social-img-019",
+      "prompt": "A reaction summary widget with post image, reaction types breakdown, and total count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "post image",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-020",
+      "prompt": "A suggested friend widget with profile photo, mutual friends count, and common interests",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "suggested profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-021",
+      "prompt": "A group event widget with event photo, group name, event title, and attendance",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "group event photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "social-img-022",
+      "prompt": "A photo collage widget with multiple images, event name, and participant count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "photo collage",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "social-img-023",
+      "prompt": "A verified badge widget with profile photo, verified checkmark, and account type",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "verified profile photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-024",
+      "prompt": "A challenge widget with challenge banner, participants count, and deadline",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "challenge banner image",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "social-img-025",
+      "prompt": "A photo contest widget with winning photo, photographer name, and vote count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "contest winning photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "social-img-026",
+      "prompt": "A shared location widget with place photo, location name, and friend who shared",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "location or place photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-027",
+      "prompt": "A collaborative playlist widget with cover art, contributors' photos, and song count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "playlist cover with contributor photos",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-028",
+      "prompt": "A anniversary post widget with celebration image, years together, and milestone text",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "anniversary celebration image",
+      "imagePlacement": "background"
+    },
+    {
+      "id": "social-img-029",
+      "prompt": "A page like widget with page logo, page name, category, and follower count",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "page logo or cover",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "social-img-030",
+      "prompt": "A neighborhood update widget with area photo, update type, and community engagement",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "neighborhood or community photo",
+      "imagePlacement": "top-large"
+    }
+  ]
+}

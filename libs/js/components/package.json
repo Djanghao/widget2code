@@ -1,0 +1,14 @@
+{
+  "name": "@widget-factory/components",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./schema": "./src/schema.js",
+    "./registry": "./src/registry.js",
+    "./generators": "./src/generators.js"
+  },
+  "dependencies": {},
+  "private": true
+}

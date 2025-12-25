@@ -1,0 +1,95 @@
+{
+  "widget": {
+    "backgroundColor": "#ffffff",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "alignMain": "between",
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 12,
+            "color": "#FF3B30",
+            "fontWeight": 700
+          },
+          "content": "WEDNESDAY"
+        },
+        {
+          "type": "leaf",
+          "component": "Text",
+          "flex": 0,
+          "props": {
+            "fontSize": 72,
+            "color": "#000000",
+            "fontWeight": 300
+          },
+          "content": "1"
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Indicator",
+              "flex": "none",
+              "props": {
+                "color": "#007AFF",
+                "thickness": 4
+              }
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 2,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 14,
+                    "color": "#007AFF",
+                    "fontWeight": 600
+                  },
+                  "content": "Yoga class"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#007AFF"
+                  },
+                  "content": "Golden Gate Park"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 13,
+                    "color": "#007AFF"
+                  },
+                  "content": "4:00-5:30PM"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

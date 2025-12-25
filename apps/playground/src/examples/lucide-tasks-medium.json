@@ -1,0 +1,215 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 2.139,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "flex": "none",
+              "props": {
+                "size": 24,
+                "color": "#34C759",
+                "name": "lu:LuCheckCircle2"
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 1,
+              "props": {
+                "fontSize": 18,
+                "color": "#1F2937",
+                "fontWeight": 700
+              },
+              "content": "Today's Tasks"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 14,
+                "color": "#9CA3AF",
+                "fontWeight": 500
+              },
+              "content": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 12,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 10,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 18,
+                    "color": "#10B981",
+                    "name": "lu:LuCheck"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#9CA3AF",
+                    "fontWeight": 400
+                  },
+                  "content": "Morning workout"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 10,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 18,
+                    "color": "#10B981",
+                    "name": "lu:LuCheck"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#9CA3AF",
+                    "fontWeight": 400
+                  },
+                  "content": "Team meeting at 10am"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 10,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 18,
+                    "color": "#10B981",
+                    "name": "lu:LuCheck"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#9CA3AF",
+                    "fontWeight": 400
+                  },
+                  "content": "Review design mockups"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 10,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 18,
+                    "color": "#D1D5DB",
+                    "name": "lu:LuCircle"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#1F2937",
+                    "fontWeight": 400
+                  },
+                  "content": "Finish project proposal"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 10,
+              "flex": 0,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Icon",
+                  "flex": "none",
+                  "props": {
+                    "size": 18,
+                    "color": "#D1D5DB",
+                    "name": "lu:LuCircle"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 15,
+                    "color": "#1F2937",
+                    "fontWeight": 400
+                  },
+                  "content": "Call dentist"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

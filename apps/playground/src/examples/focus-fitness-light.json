@@ -1,0 +1,183 @@
+{
+  "widget": {
+    "backgroundColor": "#e8c043",
+    "borderRadius": 20,
+    "padding": 25,
+    "aspectRatio": 2.123,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 16,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 8,
+          "flex": "none",
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 20,
+                "color": "rgba(255, 255, 255, 0.7)",
+                "fontWeight": 500
+              },
+              "content": "Focus Tag"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": "none",
+              "props": {
+                "fontSize": 24,
+                "color": "#ffffff",
+                "fontWeight": 700
+              },
+              "content": "Fitness"
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 16,
+          "flex": 1,
+          "alignCross": "end",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": "none",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 20,
+                    "color": "rgba(255, 255, 255, 0.7)",
+                    "fontWeight": 500
+                  },
+                  "content": "Today's Focus"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 20,
+                    "color": "#ffffff",
+                    "fontWeight": 700
+                  },
+                  "content": "1h"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 20,
+                    "color": "rgba(255, 255, 255, 0.7)",
+                    "fontWeight": 500,
+                    "marginTop": 16
+                  },
+                  "content": "Week's Focus"
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": "none",
+                  "props": {
+                    "fontSize": 20,
+                    "color": "#ffffff",
+                    "fontWeight": 700
+                  },
+                  "content": "2h 10m"
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 0,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 1,
+                    "color": "transparent"
+                  },
+                  "content": " "
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 6,
+                  "flex": "none",
+                  "alignMain": "end",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "BarChart",
+                      "width": 280,
+                      "height": 80,
+                      "flex": "none",
+                      "props": {
+                        "data": [
+                          30,
+                          30,
+                          70,
+                          50,
+                          40,
+                          25,
+                          25
+                        ],
+                        "labels": [
+                          "M",
+                          "T",
+                          "W",
+                          "T",
+                          "F",
+                          "S",
+                          "S"
+                        ],
+                        "colors": [
+                          "rgba(255,255,255,0.5)",
+                          "rgba(255,255,255,0.5)",
+                          "#ffffff",
+                          "rgba(255,255,255,0.5)",
+                          "rgba(255,255,255,0.5)",
+                          "rgba(255,255,255,0.5)",
+                          "rgba(255,255,255,0.5)"
+                        ],
+                        "theme": "light",
+                        "orientation": "vertical",
+                        "showXAxisLabels": true,
+                        "labelColor": "#ffffff",
+                        "barBorderRadius": [
+                          8,
+                          8,
+                          0,
+                          0
+                        ],
+                        "min": 0,
+                        "max": 80
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

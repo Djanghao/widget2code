@@ -1,0 +1,44 @@
+{
+  "widget": {
+    "backgroundColor": "#f2f2f7",
+    "borderRadius": 20,
+    "padding": 8,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 8,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 1,
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                { "type": "leaf", "component": "Image", "width": 72, "height": 72, "flex": "none", "props": { "borderRadius": 10, "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330" } },
+                { "type": "leaf", "component": "Image", "width": 72, "height": 72, "flex": "none", "props": { "borderRadius": 10, "url": "https://images.unsplash.com/photo-1520813792240-56fc4a3765a7" } }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 8,
+              "flex": 1,
+              "children": [
+                { "type": "leaf", "component": "Image", "width": 72, "height": 72, "flex": "none", "props": { "borderRadius": 10, "url": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" } },
+                { "type": "leaf", "component": "Image", "width": 72, "height": 72, "flex": "none", "props": { "borderRadius": 10, "url": "https://images.unsplash.com/photo-1517841905240-472988babdf9" } }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

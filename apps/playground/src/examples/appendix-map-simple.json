@@ -1,0 +1,69 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 0,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "props": { "style": { "position": "relative" } },
+          "children": [
+            {
+              "type": "leaf",
+              "component": "MapImage",
+              "props": {
+                "src": "light-google-map",
+                "width": "100%",
+                "height": "100%",
+                "style": { "borderRadius": "20px 20px 0 0" }
+              }
+            },
+            {
+              "type": "leaf",
+              "component": "Icon",
+              "props": {
+                "name": "sf:mappin.circle.fill",
+                "size": 32,
+                "color": "#FF3B30",
+                "style": {
+                  "position": "absolute",
+                  "top": "50%",
+                  "left": "50%",
+                  "transform": "translate(-50%, -50%)",
+                  "filter": "drop-shadow(0 2px 4px rgba(0,0,0,0.3))"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "col",
+          "gap": 4,
+          "padding": 16,
+          "flex": 0,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 16, "fontWeight": 600, "color": "#000000" },
+              "content": "Huawei Campus"
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "props": { "fontSize": 13, "color": "#8E8E93" },
+              "content": "Dongguan, China"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

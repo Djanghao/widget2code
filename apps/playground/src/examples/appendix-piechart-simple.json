@@ -1,0 +1,40 @@
+{
+  "widget": {
+    "backgroundColor": "#FFFFFF",
+    "borderRadius": 20,
+    "padding": 20,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "leaf",
+          "component": "Text",
+          "props": { "fontSize": 18, "fontWeight": 600, "color": "#000000" },
+          "content": "Storage"
+        },
+        {
+          "type": "leaf",
+          "component": "PieChart",
+          "props": {
+            "variant": "donut",
+            "data": [
+              { "value": 45, "name": "Apps", "color": "#FF3B30" },
+              { "value": 25, "name": "Photos", "color": "#FF9500" },
+              { "value": 15, "name": "System", "color": "#8E8E93" },
+              { "value": 15, "name": "Free", "color": "#E5E5EA" }
+            ],
+            "innerRadius": 60,
+            "outerRadius": 90,
+            "showLegend": false,
+            "theme": "light",
+            "height": "100%"
+          }
+        }
+      ]
+    }
+  }
+}

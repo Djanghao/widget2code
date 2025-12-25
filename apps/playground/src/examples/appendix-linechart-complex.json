@@ -1,0 +1,90 @@
+{
+  "widget": {
+    "backgroundColor": "#000000",
+    "borderRadius": 24,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 20,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 22, "fontWeight": 700, "color": "#FFFFFF" }, "content": "Market Trends" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 14, "color": "#8E8E93" }, "content": "Last 7 Days" }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 6,
+                  "children": [
+                    { "type": "container", "props": { "style": { "width": 8, "height": 8, "borderRadius": 4, "backgroundColor": "#30D158" } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93", "fontWeight": 600 }, "content": "HUAWEI" }
+                  ]
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "alignCross": "center",
+                  "gap": 6,
+                  "children": [
+                    { "type": "container", "props": { "style": { "width": 8, "height": 8, "borderRadius": 4, "backgroundColor": "#0A84FF" } } },
+                    { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#8E8E93", "fontWeight": 600 }, "content": "AAPL" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "flex": 1,
+          "children": [
+            {
+              "type": "leaf",
+              "component": "LineChart",
+              "props": {
+                "data": [
+                  [143, 176, 129, 191, 154, 168, 152],
+                  [332, 279, 341, 296, 283, 352, 267]
+                ],
+                "colors": ["#30D158", "#0A84FF"],
+                "seriesNames": ["HUAWEI", "AAPL"],
+                "backgroundColor": "transparent",
+                "showArea": true,
+                "gradientIntensity": 0.2,
+                "smooth": true,
+                "showXAxisLabels": true,
+                "showYAxisLabels": false,
+                "showXAxisTicks": false,
+                "showYAxisTicks": true,
+                "tickLineStyle": "dashed",
+                "tickLineColor": "rgba(255,255,255,0.1)",
+                "height": "100%",
+                "theme": "dark",
+                "labels": ["M", "T", "W", "T", "F", "S", "S"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

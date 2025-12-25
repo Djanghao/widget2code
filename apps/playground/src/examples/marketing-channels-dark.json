@@ -1,0 +1,372 @@
+{
+  "widget": {
+    "backgroundColor": "#1c1c1e",
+    "borderRadius": 20,
+    "padding": 16,
+    "aspectRatio": 0.942,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 12,
+      "flex": 1,
+      "children": [
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 8,
+          "flex": 0,
+          "alignCross": "start",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 1,
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 32,
+                    "color": "#ffffff",
+                    "fontWeight": 700
+                  },
+                  "content": "$256.45"
+                },
+                {
+                  "type": "container",
+                  "direction": "row",
+                  "gap": 6,
+                  "flex": 0,
+                  "alignCross": "center",
+                  "children": [
+                    {
+                      "type": "leaf",
+                      "component": "Icon",
+                      "flex": "none",
+                      "props": {
+                        "name": "hi2:HiArrowLongUp",
+                        "size": 14,
+                        "color": "#34C759"
+                      }
+                    },
+                    {
+                      "type": "leaf",
+                      "component": "Text",
+                      "flex": "none",
+                      "props": {
+                        "fontSize": 16,
+                        "color": "#34C759",
+                        "fontWeight": 600
+                      },
+                      "content": "$5.30 (2.40%)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "container",
+              "direction": "col",
+              "gap": 4,
+              "flex": 0,
+              "alignCross": "end",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Button",
+                  "flex": "none",
+                  "props": {
+                    "content": "Planned 30%",
+                    "backgroundColor": "#34C759",
+                    "color": "#ffffff",
+                    "borderRadius": 12,
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "padding": 10
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 0,
+                  "props": {
+                    "fontSize": 12,
+                    "color": "#8E8E93"
+                  },
+                  "content": "28 days ago"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#2c2c2e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "checked": false,
+                    "size": 16,
+                    "color": "#8E8E93"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 500
+                  },
+                  "content": "Marketing Channels"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 16,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "$22.0k"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#2c2c2e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "checked": false,
+                    "size": 16,
+                    "color": "#8E8E93"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 500
+                  },
+                  "content": "Direct Sales"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 16,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "$8.4k"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#2c2c2e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "checked": false,
+                    "size": 16,
+                    "color": "#8E8E93"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 500
+                  },
+                  "content": "Offline Channels"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 16,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "$18.6k"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "Divider",
+          "flex": "none",
+          "props": {
+            "type": "solid",
+            "color": "#2c2c2e"
+          }
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "gap": 12,
+          "flex": 0,
+          "alignCross": "center",
+          "alignMain": "between",
+          "children": [
+            {
+              "type": "container",
+              "direction": "row",
+              "gap": 8,
+              "flex": 1,
+              "alignCross": "center",
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Checkbox",
+                  "flex": "none",
+                  "props": {
+                    "checked": false,
+                    "size": 16,
+                    "color": "#8E8E93"
+                  }
+                },
+                {
+                  "type": "leaf",
+                  "component": "Text",
+                  "flex": 1,
+                  "props": {
+                    "fontSize": 16,
+                    "color": "#ffffff",
+                    "fontWeight": 500
+                  },
+                  "content": "Other Channels"
+                }
+              ]
+            },
+            {
+              "type": "leaf",
+              "component": "Text",
+              "flex": 0,
+              "props": {
+                "fontSize": 16,
+                "color": "#ffffff",
+                "fontWeight": 600
+              },
+              "content": "$15.3k"
+            }
+          ]
+        },
+        {
+          "type": "leaf",
+          "component": "LineChart",
+          "flex": 1,
+          "props": {
+            "data": [
+              [65, 68, 70, 68, 64, 58, 52, 48, 50, 56, 64, 72, 80, 86, 90, 92, 90, 86, 80, 72, 64, 58, 54, 52, 54, 58, 62, 66, 70, 72, 74, 75],
+              [55, 60, 65, 68, 70, 68, 62, 54, 45, 35, 28, 24, 25, 30, 40, 52, 66, 80, 92, 98, 96, 88, 76, 62, 50, 42, 40, 45, 55, 68, 82, 95]
+            ],
+            "labels": [],
+            "colors": ["#3a3a3c", "#FFA726"],
+            "seriesNames": ["Background", "Primary"],
+            "theme": "dark",
+            "smooth": true,
+            "showArea": true,
+            "showXAxisLabels": false,
+            "showYAxisLabels": false,
+            "showXAxisTicks": false,
+            "showYAxisTicks": false,
+            "gradientIntensity": 1,
+            "min": 0,
+            "max": 110
+          }
+        }
+      ]
+    }
+  }
+}

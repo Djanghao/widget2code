@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "generator"
+version = "0.0.0"
+description = "WidgetDSL Generator - AI-powered widget generation from images"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pillow>=10.0.0",
+    "pyyaml>=6.0",
+    "playwright>=1.40.0",
+    "aiofiles>=23.0.0",
+    "requests>=2.31.0",
+    "accelerate>=0.25.0",
+    "numpy>=1.24.0",
+    "opencv-python>=4.8.0",
+    "torch>=2.0.0",
+    "open-clip-torch>=2.20.0",
+    "transformers>=4.35.0",
+    "faiss-cpu>=1.7.4",
+    "cairosvg>=2.7.0",
+    "tqdm>=4.65.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+api = [
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+    "python-multipart>=0.0.6",
+    "python-dotenv>=1.0.0",
+    "provider-hub>=0.1.0",
+]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[project.scripts]
+generate-widget = "generator.cli:main"
+generate-widget-batch = "generator.cli:batch_main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["generator*"]
+
+[tool.setuptools.package-data]
+generator = ["**/*.yaml", "**/*.json"]

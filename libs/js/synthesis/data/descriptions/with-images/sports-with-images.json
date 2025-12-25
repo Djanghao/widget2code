@@ -1,0 +1,246 @@
+{
+  "domain": "sports",
+  "type": "with-images",
+  "descriptions": [
+    {
+      "id": "sports-img-001",
+      "prompt": "A sports match widget with team logos, score, game time, and league",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "team logos",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-002",
+      "prompt": "A player stats widget with player photo, name, season stats, and team",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "athlete photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-003",
+      "prompt": "A standings widget with league table, team positions, wins/losses, and points",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "league trophy or logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-004",
+      "prompt": "A workout plan widget with exercise photo, routine name, duration, and difficulty",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "workout or training photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-005",
+      "prompt": "A sports news widget with news image, headline, sport type, and source",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sports news photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-006",
+      "prompt": "A fantasy team widget with team logo, players lineup, points, and league rank",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "fantasy team logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-007",
+      "prompt": "A training session widget with coach photo, session type, time, and location",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "coach or trainer photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-008",
+      "prompt": "A race result widget with race photo, winner, time, and podium finishers",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "race or competition photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-009",
+      "prompt": "A sports betting widget with match preview, odds, bet slip, and stake",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sports betting visual",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-010",
+      "prompt": "A golf scorecard widget with course photo, holes, scores, and handicap",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "golf course photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-011",
+      "prompt": "A swim workout widget with pool photo, laps, distance, pace, and stroke type",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "swimming pool photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-012",
+      "prompt": "A sports ticket widget with stadium photo, seat location, date, and QR code",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "stadium or venue photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-013",
+      "prompt": "A tournament bracket widget with bracket diagram, teams, and match results",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "tournament bracket visual",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-014",
+      "prompt": "A tennis match widget with court photo, players, sets score, and serve",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "tennis court photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-015",
+      "prompt": "A nutrition plan widget with meal photo, macros, calories, and training phase",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "athlete meal photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-016",
+      "prompt": "A sports equipment widget with equipment photo, name, price, and reviews",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sports gear or equipment",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-017",
+      "prompt": "A climbing route widget with wall photo, route grade, setter, and attempts",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "climbing wall or route",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-018",
+      "prompt": "A team roster widget with team photo, player list, positions, and coach",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "team group photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-019",
+      "prompt": "A sports highlight widget with highlight video thumbnail, play, and description",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sports highlight thumbnail",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-020",
+      "prompt": "A marathon widget with race route map, distance, pace zones, and elevation",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "marathon route map",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-021",
+      "prompt": "A sports injury widget with injury diagram, type, recovery time, and exercises",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "injury diagram or body part",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-022",
+      "prompt": "A esports match widget with game screenshot, teams, score, and tournament",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "esports game screenshot",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-023",
+      "prompt": "A skiing widget with slope map, runs completed, vertical feet, and conditions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "ski slope map",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-024",
+      "prompt": "A sports scholarship widget with university logo, sport, scholarship amount, and deadline",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "university or college logo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-025",
+      "prompt": "A boxing match widget with fighters photos, weight class, rounds, and venue",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "boxers face-off photo",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-026",
+      "prompt": "A sports memorabilia widget with memorabilia photo, item, player, and authentication",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sports memorabilia item",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-027",
+      "prompt": "A sailing widget with boat photo, wind speed, course, and race position",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sailboat or racing yacht",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-028",
+      "prompt": "A sports venue widget with venue photo, capacity, upcoming events, and directions",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "sports venue exterior",
+      "imagePlacement": "top-large"
+    },
+    {
+      "id": "sports-img-029",
+      "prompt": "A sports award widget with trophy photo, award name, winner, and ceremony date",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "trophy or award photo",
+      "imagePlacement": "left-thumbnail"
+    },
+    {
+      "id": "sports-img-030",
+      "prompt": "A sports social widget with athlete post image, caption, likes, and comments",
+      "complexity": "medium",
+      "requiresImage": true,
+      "imageContext": "athlete social post image",
+      "imagePlacement": "top-large"
+    }
+  ]
+}

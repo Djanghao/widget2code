@@ -1,0 +1,174 @@
+{
+  "domain": "productivity",
+  "descriptions": [
+    {
+      "id": "productivity-001",
+      "prompt": "A widget showing task list",
+      "complexity": "medium",
+      "metrics": [
+        "tasks"
+      ]
+    },
+    {
+      "id": "productivity-002",
+      "prompt": "A widget displaying today's tasks",
+      "complexity": "medium",
+      "metrics": [
+        "tasks"
+      ]
+    },
+    {
+      "id": "productivity-003",
+      "prompt": "A widget showing tasks with checkboxes",
+      "complexity": "medium",
+      "metrics": [
+        "tasks"
+      ]
+    },
+    {
+      "id": "productivity-004",
+      "prompt": "A widget displaying task count and completion progress",
+      "complexity": "medium",
+      "metrics": [
+        "tasks"
+      ],
+      "visualization": [
+        "progress"
+      ]
+    },
+    {
+      "id": "productivity-005",
+      "prompt": "A widget showing overdue tasks",
+      "complexity": "medium",
+      "metrics": [
+        "tasks"
+      ]
+    },
+    {
+      "id": "productivity-006",
+      "prompt": "A widget showing next calendar event",
+      "complexity": "medium",
+      "metrics": [
+        "calendar"
+      ]
+    },
+    {
+      "id": "productivity-007",
+      "prompt": "A widget displaying today's schedule",
+      "complexity": "complex",
+      "metrics": [
+        "calendar"
+      ]
+    },
+    {
+      "id": "productivity-008",
+      "prompt": "A widget showing upcoming meetings",
+      "complexity": "medium",
+      "metrics": [
+        "calendar"
+      ]
+    },
+    {
+      "id": "productivity-009",
+      "prompt": "A widget displaying calendar month view",
+      "complexity": "complex",
+      "metrics": [
+        "calendar"
+      ]
+    },
+    {
+      "id": "productivity-010",
+      "prompt": "A widget showing reminders list",
+      "complexity": "medium",
+      "metrics": [
+        "reminders"
+      ]
+    },
+    {
+      "id": "productivity-011",
+      "prompt": "A widget displaying next reminder",
+      "complexity": "simple",
+      "metrics": [
+        "reminders"
+      ]
+    },
+    {
+      "id": "productivity-012",
+      "prompt": "A widget showing reminders with due times",
+      "complexity": "medium",
+      "metrics": [
+        "reminders"
+      ]
+    },
+    {
+      "id": "productivity-013",
+      "prompt": "A widget showing recent note",
+      "complexity": "simple",
+      "metrics": [
+        "notes"
+      ]
+    },
+    {
+      "id": "productivity-014",
+      "prompt": "A widget displaying note list",
+      "complexity": "medium",
+      "metrics": [
+        "notes"
+      ]
+    },
+    {
+      "id": "productivity-015",
+      "prompt": "A widget showing pinned note",
+      "complexity": "medium",
+      "metrics": [
+        "notes"
+      ]
+    },
+    {
+      "id": "productivity-016",
+      "prompt": "A widget showing focus time today",
+      "complexity": "simple",
+      "metrics": [
+        "focus"
+      ]
+    },
+    {
+      "id": "productivity-017",
+      "prompt": "A widget displaying pomodoro timer",
+      "complexity": "medium",
+      "metrics": [
+        "timer"
+      ]
+    },
+    {
+      "id": "productivity-018",
+      "prompt": "A widget showing time tracking summary",
+      "complexity": "complex",
+      "metrics": [
+        "time-tracking"
+      ],
+      "visualization": [
+        "chart"
+      ]
+    },
+    {
+      "id": "productivity-019",
+      "prompt": "A widget showing tasks and next event",
+      "complexity": "complex",
+      "metrics": [
+        "tasks",
+        "calendar"
+      ]
+    },
+    {
+      "id": "productivity-020",
+      "prompt": "A widget displaying daily productivity summary",
+      "complexity": "complex",
+      "metrics": [
+        "tasks",
+        "focus",
+        "calendar"
+      ]
+    }
+  ]
+}

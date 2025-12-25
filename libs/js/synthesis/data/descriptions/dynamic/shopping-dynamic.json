@@ -1,0 +1,307 @@
+{
+  "domain": "shopping",
+  "total": 50,
+  "generated": "2025-11-05T16:03:06.306Z",
+  "variations": [
+    {
+      "id": "shopping-dynamic-001",
+      "prompt": "A wishlist widget showing flash sale with spending chart and add to cart button",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-002",
+      "prompt": "A product widget showing order status",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-003",
+      "prompt": "A shopping widget showing spending and price drop alert",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-004",
+      "prompt": "A deals widget showing delivery tracking and add to cart button",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-005",
+      "prompt": "A cart widget showing delivery tracking",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-006",
+      "prompt": "A shopping widget showing rewards points",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-007",
+      "prompt": "A product widget showing spending",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-008",
+      "prompt": "A order widget showing recommendations",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-009",
+      "prompt": "A product widget showing deals",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-010",
+      "prompt": "A product widget showing shopping cart and price drop alert",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-011",
+      "prompt": "A order widget showing product reviews with stock indicator",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-012",
+      "prompt": "A order widget showing order history with price comparison and loyalty rewards",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-013",
+      "prompt": "A wishlist widget showing flash sale",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-014",
+      "prompt": "A wishlist widget showing rewards points with review snippets and loyalty rewards",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-015",
+      "prompt": "A wishlist widget showing recommendations with review snippets and delivery date",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-016",
+      "prompt": "A wishlist widget showing recommendations",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-017",
+      "prompt": "A product widget showing spending and delivery date",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-018",
+      "prompt": "A deals widget showing product reviews with rating stars and delivery date",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-019",
+      "prompt": "A product widget showing delivery tracking with cart summary",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-020",
+      "prompt": "A shopping widget showing budget and stock status",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-021",
+      "prompt": "A cart widget showing flash sale",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-022",
+      "prompt": "A order widget showing shopping cart and stock status",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-023",
+      "prompt": "A order widget showing spending with review snippets and delivery date",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-024",
+      "prompt": "A product widget showing savings",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-025",
+      "prompt": "A wishlist widget showing order history with review snippets",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-026",
+      "prompt": "A cart widget showing price with rating stars and stock status",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-027",
+      "prompt": "A product widget showing wishlist with spending chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-028",
+      "prompt": "A product widget showing order history and price drop alert",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-029",
+      "prompt": "A wishlist widget showing deals with review snippets and loyalty rewards",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-030",
+      "prompt": "A shopping widget showing wishlist with price comparison",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-031",
+      "prompt": "A shopping widget showing shopping cart",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-032",
+      "prompt": "A wishlist widget showing product reviews",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-033",
+      "prompt": "A order widget showing savings with countdown timer",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-034",
+      "prompt": "A product widget showing deals",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-035",
+      "prompt": "A wishlist widget showing order status with rating stars",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-036",
+      "prompt": "A product widget showing rewards points with spending chart",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-037",
+      "prompt": "A order widget showing product reviews",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-038",
+      "prompt": "A wishlist widget showing spending with rating stars",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-039",
+      "prompt": "A shopping widget showing price with review snippets",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-040",
+      "prompt": "A shopping widget showing shopping cart with rating stars",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-041",
+      "prompt": "A shopping widget showing rewards points",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-042",
+      "prompt": "A product widget showing order history and loyalty rewards",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-043",
+      "prompt": "A product widget showing product reviews",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-044",
+      "prompt": "A wishlist widget showing order history with price comparison",
+      "complexity": "medium",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-045",
+      "prompt": "A order widget showing flash sale",
+      "complexity": "simple",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-046",
+      "prompt": "A wishlist widget showing shopping cart and total price with tracking timeline",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-047",
+      "prompt": "A wishlist widget showing product details and reviews with rating stars",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-048",
+      "prompt": "A wishlist widget showing order status and delivery tracking",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-049",
+      "prompt": "A order widget showing wishlist and price alerts",
+      "complexity": "complex",
+      "generated": true
+    },
+    {
+      "id": "shopping-dynamic-050",
+      "prompt": "A deals widget showing deals and savings",
+      "complexity": "complex",
+      "generated": true
+    }
+  ]
+}

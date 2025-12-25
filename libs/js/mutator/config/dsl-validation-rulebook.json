@@ -1,0 +1,593 @@
+{
+  "validationRulebook": {
+    "description": "Fast validation rules for DSL mutation system - catches 99% of errors without full compilation",
+
+    "rootValidation": {
+      "requiredFields": {
+        "widget": {
+          "type": "object",
+          "required": ["root"],
+          "optional": ["backgroundColor", "borderRadius", "padding", "aspectRatio", "width", "height"]
+        }
+      },
+      "widgetRoot": {
+        "type": "object",
+        "required": ["type"],
+        "nodeTypes": ["container", "leaf"]
+      }
+    },
+
+    "containerValidation": {
+      "requiredFields": {
+        "type": {
+          "value": "container",
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "minLength": 0,
+          "maxLength": 20
+        }
+      },
+      "optionalFields": {
+        "direction": {
+          "type": "string",
+          "allowedValues": ["row", "col"]
+        },
+        "gap": {
+          "type": "number",
+          "min": 0,
+          "max": 100
+        },
+        "padding": {
+          "type": ["number", "string"],
+          "numberRange": { "min": 0, "max": 100 },
+          "stringPattern": "^[0-9]+(px|em|rem|%)$"
+        },
+        "alignMain": {
+          "type": "string",
+          "allowedValues": ["start", "end", "center", "between"]
+        },
+        "alignCross": {
+          "type": "string",
+          "allowedValues": ["start", "end", "center"]
+        },
+        "flex": {
+          "type": ["number", "string"],
+          "allowedStringValues": ["none", "auto"],
+          "numberRange": { "min": 0, "max": 10 }
+        },
+        "width": {
+          "type": ["number", "string"],
+          "numberRange": { "min": 0, "max": 2000 },
+          "stringPattern": "^[0-9]+(px|em|rem|%)$"
+        },
+        "height": {
+          "type": ["number", "string"],
+          "numberRange": { "min": 0, "max": 2000 },
+          "stringPattern": "^[0-9]+(px|em|rem|%)$"
+        },
+        "backgroundColor": {
+          "type": "string",
+          "patterns": [
+            "^#[0-9a-fA-F]{3}$",
+            "^#[0-9a-fA-F]{6}$",
+            "^rgba\\([0-9,\\s\\.]+\\)$",
+            "^rgb\\([0-9,\\s]+\\)$",
+            "^(transparent|inherit|initial)$"
+          ]
+        }
+      },
+      "businessRules": [
+        "Container children must be valid nodes (container or leaf)",
+        "Maximum nesting depth should not exceed 10 levels",
+        "Container with no children should have minimum height/width"
+      ]
+    },
+
+    "leafValidation": {
+      "requiredFields": {
+        "type": {
+          "value": "leaf",
+          "type": "string"
+        },
+        "component": {
+          "type": "string",
+          "allowedValues": [
+            "Text", "Icon", "Image", "MapImage", "Checkbox",
+            "Divider", "Indicator", "AppLogo", "BarChart",
+            "LineChart", "PieChart", "RadarChart", "StackedBarChart",
+            "Sparkline", "ProgressBar", "ProgressRing"
+          ]
+        }
+      },
+      "optionalFields": {
+        "props": {
+          "type": "object"
+        },
+        "flex": {
+          "type": ["number", "string"],
+          "allowedStringValues": ["none", "auto"],
+          "numberRange": { "min": 0, "max": 10 }
+        },
+        "width": {
+          "type": ["number", "string"],
+          "numberRange": { "min": 0, "max": 2000 },
+          "stringPattern": "^[0-9]+(px|em|rem|%)$"
+        },
+        "height": {
+          "type": ["number", "string"],
+          "numberRange": { "min": 0, "max": 2000 },
+          "stringPattern": "^[0-9]+(px|em|rem|%)$"
+        },
+        "content": {
+          "type": "string",
+          "maxLength": 500,
+          "applicableTo": ["Text"]
+        }
+      },
+      "businessRules": [
+        "Text component must have either content or props.children",
+        "Icon component must have valid icon name in props",
+        "Chart components must have valid data structures"
+      ]
+    },
+
+    "componentSpecificRules": {
+      "Text": {
+        "requiredProps": {},
+        "validProps": {
+          "fontSize": {
+            "type": "number",
+            "min": 8,
+            "max": 72
+          },
+          "color": {
+            "type": "string",
+            "patterns": [
+              "^#[0-9a-fA-F]{3}$",
+              "^#[0-9a-fA-F]{6}$",
+              "^rgba\\([0-9,\\s\\.]+\\)$",
+              "^rgb\\([0-9,\\s]+\\)$"
+            ]
+          },
+          "align": {
+            "type": "string",
+            "allowedValues": ["left", "center", "right"]
+          },
+          "fontWeight": {
+            "type": "number",
+            "allowedValues": [100, 200, 300, 400, 500, 600, 700, 800, 900]
+          },
+          "lineHeight": {
+            "type": "number",
+            "min": 0.8,
+            "max": 3.0
+          },
+          "children": {
+            "type": "string",
+            "maxLength": 1000
+          }
+        },
+        "contentRules": [
+          "Text component must have either content property or props.children",
+          "Content length should be reasonable (max 1000 chars)",
+          "Content should not contain null/undefined values"
+        ]
+      },
+
+      "Icon": {
+        "requiredProps": {
+          "name": {
+            "type": "string",
+            "patterns": [
+              "^sf:[a-zA-Z0-9._-]+$",
+              "^lucide:[a-zA-Z]+$",
+              "^[a-zA-Z0-9._-]+$"
+            ]
+          }
+        },
+        "validProps": {
+          "size": {
+            "type": "number",
+            "min": 8,
+            "max": 128
+          },
+          "color": {
+            "type": "string",
+            "patterns": [
+              "^#[0-9a-fA-F]{3}$",
+              "^#[0-9a-fA-F]{6}$",
+              "^rgba\\([0-9,\\s\\.]+\\)$",
+              "^rgb\\([0-9,\\s]+\\)$"
+            ]
+          }
+        },
+        "businessRules": [
+          "Icon name should start with 'sf:' or 'lucide:' prefix",
+          "If no prefix provided, fallback to SF Symbols",
+          "Icon size should be reasonable (8-128px)"
+        ]
+      },
+
+      "Image": {
+        "requiredProps": {
+          "url": {
+            "type": "string",
+            "patterns": [
+              "^https?://.*",
+              "^data:image/.*"
+            ]
+          }
+        },
+        "validProps": {
+          "borderRadius": {
+            "type": "number",
+            "min": 0,
+            "max": 100
+          }
+        },
+        "businessRules": [
+          "Image URL should be valid HTTP/HTTPS or data URL",
+          "Border radius should be reasonable (0-100px)"
+        ]
+      },
+
+      "Chart": {
+        "commonValidProps": {
+          "width": {
+            "type": ["number", "string"],
+            "allowedValues": ["100%", "auto"],
+            "numberRange": { "min": 50, "max": 1000 }
+          },
+          "height": {
+            "type": ["number", "string"],
+            "allowedValues": ["100%", "auto"],
+            "numberRange": { "min": 50, "max": 1000 }
+          },
+          "minWidth": {
+            "type": "number",
+            "min": 50,
+            "max": 1000
+          },
+          "minHeight": {
+            "type": "number",
+            "min": 50,
+            "max": 1000
+          },
+          "backgroundColor": {
+            "type": "string",
+            "patterns": [
+              "^#[0-9a-fA-F]{3}$",
+              "^#[0-9a-fA-F]{6}$",
+              "^(transparent)$"
+            ]
+          },
+          "theme": {
+            "type": "string",
+            "allowedValues": ["light", "dark"]
+          }
+        }
+      },
+
+      "BarChart": {
+        "requiredProps": {
+          "data": {
+            "type": "array",
+            "minLength": 1,
+            "maxLength": 50,
+            "itemType": "number"
+          },
+          "labels": {
+            "type": "array",
+            "minLength": 1,
+            "maxLength": 50,
+            "itemType": "string"
+          }
+        },
+        "validProps": {
+          "orientation": {
+            "type": "string",
+            "allowedValues": ["vertical", "horizontal"]
+          },
+          "showValues": {
+            "type": "boolean"
+          },
+          "color": {
+            "type": "string",
+            "patterns": ["^#[0-9a-fA-F]{6}$"]
+          },
+          "colors": {
+            "type": "array",
+            "itemType": "string",
+            "itemPattern": "^#[0-9a-fA-F]{6}$"
+          },
+          "seriesNames": {
+            "type": "array",
+            "itemType": "string",
+            "maxLength": 20
+          }
+        },
+        "businessRules": [
+          "Data array length must match labels array length",
+          "For multi-series data, all arrays should have same length",
+          "Colors array length should match series count if provided"
+        ]
+      },
+
+      "LineChart": {
+        "requiredProps": {
+          "data": {
+            "type": "array",
+            "minLength": 2,
+            "maxLength": 100,
+            "itemType": "number"
+          },
+          "labels": {
+            "type": "array",
+            "minLength": 2,
+            "maxLength": 100,
+            "itemType": "string"
+          }
+        },
+        "validProps": {
+          "smooth": {
+            "type": "boolean"
+          },
+          "showArea": {
+            "type": "boolean"
+          },
+          "showMarkers": {
+            "type": "boolean"
+          },
+          "showXTrendline": {
+            "type": "boolean"
+          },
+          "showYTrendline": {
+            "type": "boolean"
+          },
+          "color": {
+            "type": "string",
+            "patterns": ["^#[0-9a-fA-F]{6}$"]
+          }
+        },
+        "businessRules": [
+          "Data array length must match labels array length",
+          "Line charts need at least 2 data points",
+          "Data values should be finite numbers (no NaN or Infinity)"
+        ]
+      },
+
+      "PieChart": {
+        "requiredProps": {
+          "data": {
+            "type": ["array", "object"],
+            "validation": "Must be array of numbers or array of objects with 'value' property"
+          }
+        },
+        "validProps": {
+          "variant": {
+            "type": "string",
+            "allowedValues": ["pie", "donut", "ring"]
+          },
+          "innerRadius": {
+            "type": "number",
+            "min": 0,
+            "max": 95
+          },
+          "outerRadius": {
+            "type": "number",
+            "min": 10,
+            "max": 100
+          },
+          "startAngle": {
+            "type": "number",
+            "min": 0,
+            "max": 360
+          },
+          "showLabels": {
+            "type": "boolean"
+          },
+          "showValues": {
+            "type": "boolean"
+          },
+          "showPercentages": {
+            "type": "boolean"
+          },
+          "colors": {
+            "type": "array",
+            "itemType": "string",
+            "itemPattern": "^#[0-9a-fA-F]{6}$"
+          },
+          "labels": {
+            "type": "array",
+            "itemType": "string"
+          }
+        },
+        "businessRules": [
+          "Data should have at least 1 segment, maximum 12 segments",
+          "All data values should be positive numbers",
+          "Inner radius should be less than outer radius",
+          "For donut variant, inner radius should be at least 20"
+        ]
+      },
+
+      "Sparkline": {
+        "requiredProps": {
+          "data": {
+            "type": "array",
+            "minLength": 3,
+            "maxLength": 100,
+            "itemType": "number"
+          }
+        },
+        "validProps": {
+          "color": {
+            "type": "string",
+            "patterns": ["^#[0-9a-fA-F]{6}$"]
+          },
+          "fill": {
+            "type": "boolean"
+          },
+          "baseline": {
+            "type": "boolean"
+          }
+        },
+        "businessRules": [
+          "Sparkline needs at least 3 data points to show a trend",
+          "Data values should be finite numbers",
+          "Too many data points (>50) may affect performance"
+        ]
+      },
+
+      "ProgressBar": {
+        "requiredProps": {
+          "value": {
+            "type": "number",
+            "min": 0,
+            "max": 100
+          }
+        },
+        "validProps": {
+          "max": {
+            "type": "number",
+            "min": 1,
+            "max": 1000
+          },
+          "min": {
+            "type": "number",
+            "min": 0,
+            "max": 999
+          },
+          "color": {
+            "type": "string",
+            "patterns": ["^#[0-9a-fA-F]{6}$"]
+          },
+          "orientation": {
+            "type": "string",
+            "allowedValues": ["horizontal", "vertical"]
+          },
+          "variant": {
+            "type": "string",
+            "allowedValues": ["default", "success", "warning", "danger"]
+          },
+          "size": {
+            "type": "string",
+            "allowedValues": ["small", "medium", "large"]
+          }
+        },
+        "businessRules": [
+          "Value should be between min and max",
+          "Max should be greater than min",
+          "Default max should be 100 if not specified"
+        ]
+      },
+
+      "ProgressRing": {
+        "requiredProps": {
+          "value": {
+            "type": "number",
+            "min": 0,
+            "max": 100
+          }
+        },
+        "validProps": {
+          "max": {
+            "type": "number",
+            "min": 1,
+            "max": 1000
+          },
+          "min": {
+            "type": "number",
+            "min": 0,
+            "max": 999
+          },
+          "color": {
+            "type": "string",
+            "patterns": ["^#[0-9a-fA-F]{6}$"]
+          },
+          "thickness": {
+            "type": "number",
+            "min": 2,
+            "max": 20
+          }
+        },
+        "businessRules": [
+          "Value should be between min and max",
+          "Thickness should be reasonable (2-20px)",
+          "Very thick rings (>15px) may not render well"
+        ]
+      }
+    },
+
+    "globalConstraints": {
+      "maxDepth": 10,
+      "maxChildrenPerContainer": 20,
+      "maxTotalNodes": 100,
+      "maxTextLength": 1000,
+      "maxArrayLength": 100,
+      "numericRanges": {
+        "size": { "min": 0, "max": 2000 },
+        "fontSize": { "min": 8, "max": 72 },
+        "percentage": { "min": 0, "max": 100 },
+        "count": { "min": 0, "max": 1000 }
+      },
+      "forbiddenValues": {
+        "null": true,
+        "undefined": true,
+        "NaN": true,
+        "Infinity": true,
+        "-Infinity": true
+      }
+    },
+
+    "errorTypes": {
+      "critical": [
+        "Missing required fields",
+        "Invalid node type",
+        "Invalid component name",
+        "Empty or null data arrays",
+        "Invalid data structures",
+        "Circular references"
+      ],
+      "warning": [
+        "Very large numbers that may cause rendering issues",
+        "Extremely long text content",
+        "Very deep nesting (>8 levels)",
+        "Many children in container (>15)",
+        "Missing optional but recommended props"
+      ],
+      "info": [
+        "Potential performance optimizations",
+        "Design consistency suggestions",
+        "Accessibility improvements"
+      ]
+    },
+
+    "performanceRules": [
+      "Limit total node count to prevent performance issues",
+      "Avoid excessively deep nesting",
+      "Chart data arrays should be reasonable size",
+      "Text content should be truncated if too long",
+      "Image URLs should be validated for performance"
+    ],
+
+    "designConsistency": [
+      "Colors should follow theme consistency",
+      "Spacing should follow iOS design guidelines (4, 8, 12, 16, 20)",
+      "Font sizes should be readable (minimum 10px)",
+      "Border radius should be consistent (0, 4, 8, 12, 16, 20)",
+      "Aspect ratios should match iOS widget standards"
+    ],
+
+    "quickChecks": [
+      "Check for null/undefined critical values",
+      "Validate data array lengths",
+      "Verify component names exist",
+      "Check for circular references",
+      "Validate numeric ranges",
+      "Check color format validity",
+      "Verify array structure consistency"
+    ]
+  }
+}

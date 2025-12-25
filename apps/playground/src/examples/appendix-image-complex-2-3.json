@@ -1,0 +1,61 @@
+{
+  "widget": {
+    "backgroundColor": "#FF3CAC",
+    "borderRadius": 20,
+    "padding": 24,
+    "aspectRatio": 1,
+    "root": {
+      "type": "container",
+      "direction": "col",
+      "gap": 24,
+      "flex": 1,
+      "props": { "style": { "background": "linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)" } },
+      "children": [
+        {
+          "type": "container",
+          "flex": 1,
+          "padding": 16,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.3)", "backdropFilter": "blur(20px)", "borderRadius": 32, "border": "1px solid rgba(255, 255, 255, 0.4)" } },
+          "children": [
+            {
+              "type": "container",
+              "flex": 1,
+              "props": { "style": { "borderRadius": 24, "overflow": "hidden" } },
+              "children": [
+                {
+                  "type": "leaf",
+                  "component": "Image",
+                  "props": {
+                    "src": "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+                    "width": "100%",
+                    "height": "100%",
+                    "style": { "objectFit": "cover" }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "container",
+          "direction": "row",
+          "alignMain": "between",
+          "alignCross": "center",
+          "padding": 16,
+          "props": { "style": { "backgroundColor": "rgba(255, 255, 255, 0.3)", "backdropFilter": "blur(20px)", "borderRadius": 24, "border": "1px solid rgba(255, 255, 255, 0.4)" } },
+          "children": [
+            {
+              "type": "container",
+              "direction": "col",
+              "children": [
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 16, "fontWeight": 700, "color": "#FFFFFF" }, "content": "Mountain View" },
+                { "type": "leaf", "component": "Text", "props": { "fontSize": 12, "color": "#FFFFFF" }, "content": "Alps, Switzerland" }
+              ]
+            },
+            { "type": "leaf", "component": "Icon", "props": { "name": "sf:heart.fill", "size": 20, "color": "#FFFFFF" } }
+          ]
+        }
+      ]
+    }
+  }
+}
