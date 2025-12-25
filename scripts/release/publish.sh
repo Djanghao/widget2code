@@ -1,17 +1,18 @@
 #!/bin/bash
 
-# Script to push code to widget2code repository
-# This script squashes local main and gh-pages branches into single commits
-# and pushes them to widget2code remote (does not affect origin)
+# Script to publish develop branch to origin/main
+# This script squashes all develop branch commits into a single commit
+# and force pushes to origin/main (excludes scripts/release directory)
 
 set -e
 
-WIDGET2CODE_REPO="https://github.com/Djanghao/widget2code.git"
-TEMP_MAIN_BRANCH="temp-widget2code-main"
-TEMP_PAGES_BRANCH="temp-widget2code-pages"
+TARGET_REMOTE="origin"
+SOURCE_BRANCH="develop"
+TARGET_BRANCH="main"
+TEMP_BRANCH="temp-publish-main"
 EXCLUDE_PATH="scripts/release"
 
-echo "🚀 Starting push to widget2code..."
+echo "🚀 Starting publish from develop to origin/main..."
 
 # Check if we're in a git repository
 if [ ! -d .git ]; then
@@ -23,11 +24,6 @@ fi
 CURRENT_BRANCH=$(git branch --show-current)
 echo "📍 Current branch: $CURRENT_BRANCH"
 
-# Add widget2code remote if it doesn't exist
-if ! git remote get-url widget2code &> /dev/null; then
-    echo "📌 Adding widget2code remote..."
-    git remote add widget2code "$WIDGET2CODE_REPO"
-fi
 
 # Function to process a branch
 process_branch() {
@@ -37,7 +33,7 @@ process_branch() {
 
     echo ""
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    echo "Processing $source_branch → widget2code/$target_branch"
+    echo "Processing $source_branch → $TARGET_REMOTE/$target_branch"
     echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
     # Check if source branch exists
@@ -64,8 +60,8 @@ process_branch() {
     git commit -m "initial commit" --quiet
 
     # Push to target branch (force push to overwrite history)
-    echo "⬆️  Force pushing to widget2code/$target_branch..."
-    git push -f widget2code "$temp_branch:$target_branch"
+    echo "⬆️  Force pushing to $TARGET_REMOTE/$target_branch..."
+    git push -f "$TARGET_REMOTE" "$temp_branch:$target_branch"
 
     # Clean working tree and switch back
     echo "🧹 Cleaning up $temp_branch..."
@@ -73,11 +69,8 @@ process_branch() {
     git branch -D "$temp_branch" > /dev/null 2>&1
 }
 
-# Process main branch
-process_branch "main" "$TEMP_MAIN_BRANCH" "main"
-
-# Process gh-pages branch
-process_branch "gh-pages" "$TEMP_PAGES_BRANCH" "gh-pages"
+# Process develop branch
+process_branch "$SOURCE_BRANCH" "$TEMP_BRANCH" "$TARGET_BRANCH"
 
 # Return to original branch
 echo ""
@@ -85,8 +78,8 @@ echo "🔙 Returning to $CURRENT_BRANCH..."
 git checkout -q "$CURRENT_BRANCH"
 
 echo ""
-echo "✅ Successfully pushed to widget2code!"
-echo "   - main: squashed to single 'initial commit'"
-echo "   - gh-pages: squashed to single 'initial commit'"
+echo "✅ Successfully published develop to origin/main!"
+echo "   - Source: $SOURCE_BRANCH branch"
+echo "   - Target: $TARGET_REMOTE/$TARGET_BRANCH"
+echo "   - Commits: squashed to single 'initial commit'"
 echo "   - Excluded: $EXCLUDE_PATH"
-echo "   - Origin remote: unchanged"
