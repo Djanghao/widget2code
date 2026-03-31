@@ -51,6 +51,7 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
 
 
 ## 🔥🔥🔥 News
+* 📦 Mar 31, 2026: Evaluation toolkit published on [PyPI](https://pypi.org/project/widget2code-bench/)
 * 🎉 Feb 21, 2026: Accepted to CVPR 2026
 * 📦 Dec 22, 2025: Benchmark dataset uploaded to Hugging Face
 * 📄 Dec 22, 2025: Paper uploaded to arXiv
