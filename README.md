@@ -2,7 +2,7 @@
 
 <img src="./assets/logo.png" alt="Widget2Code Logo" width="55%">
 
-# 🎨 Widget2Code: From Visual Widgets to UI Code via Multimodal LLMs<br>(CVPR 2026)
+# 🎨 Widget2Code: From Visual Widgets to UI Code via Multimodal LLMs<br>(CVPR 2026 Highlight)
 
 </div>
 
@@ -31,9 +31,6 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
   - [📖 Overview](#-overview)
   - [🏗️ Architecture](#️-architecture)
     - [Generation Pipeline](#generation-pipeline)
-  - [📜 System Requirements](#-system-requirements)
-    - [Hardware Requirements](#hardware-requirements)
-    - [Software Requirements](#software-requirements)
   - [🛠️ Dependencies and Installation](#️-dependencies-and-installation)
     - [Quick Install](#quick-install)
   - [⚙️ Configuration](#️-configuration)
@@ -51,6 +48,7 @@ Widget2Code is a baseline framework that strengthens both perceptual understandi
 
 
 ## 🔥🔥🔥 News
+* 🌟 Apr 9, 2026: Selected as a CVPR 2026 Highlight
 * 📦 Mar 31, 2026: Evaluation toolkit published on [PyPI](https://pypi.org/project/widget2code-bench/)
 * 🎉 Feb 21, 2026: Accepted to CVPR 2026
 * 📦 Dec 22, 2025: Benchmark dataset uploaded to Hugging Face
@@ -86,17 +84,6 @@ Widget2Code employs a sophisticated multi-stage generation pipeline:
 <div align="center">
   <img src="./assets/framework.jpeg" alt="Widget2Code Architecture" width="100%">
 </div>
-
-## 📜 System Requirements
-
-### Hardware Requirements
-- **GPU**: NVIDIA GPU with CUDA support (recommended for icon retrieval acceleration)
-- **Memory**: Minimum 8GB RAM, 16GB+ recommended for batch processing
-
-### Software Requirements
-- **Operating System**: Linux, macOS, or Windows (WSL2)
-- **Node.js**: 18.x or higher
-- **Python**: 3.10 or higher
 
 ## 🛠️ Dependencies and Installation
 
